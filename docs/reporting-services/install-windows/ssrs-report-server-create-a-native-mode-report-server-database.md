@@ -1,10 +1,9 @@
 ---
 title: Créer une base de données du serveur de rapports en mode natif (Gestionnaire de configuration de SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 20b53dc4af07f18f4bcb9161e786b3542b162e37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 336a2feb2050f1e501408fe90b65e0e60ef4261c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322578"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Créer une base de données du serveur de rapports en mode natif
 
@@ -118,7 +118,7 @@ Pour créer une base de données du serveur de rapports ou modifier la chaîne d
   
 7.  Examinez les informations de la page Résumé pour vérifier que les paramètres sont corrects, puis cliquez sur **Suivant**.  
   
-8.  Vérifiez la connexion en sélectionnant une URL de la page URL de Report Server ou de la page URL du Gestionnaire de rapports. Les URL doivent être définies dans l'ordre pour que ce test fonctionne. Si la connexion à la base de données du serveur de rapports est valide, vous pouvez voir l'arborescence des dossiers du serveur de rapports ou le Gestionnaire de rapports dans une fenêtre de navigateur. Pour plus d’informations, consultez [Vérifier une installation de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+8.  Vérifiez la connexion en sélectionnant une URL de la page URL de Report Server. Les URL doivent être définies dans l'ordre pour que ce test fonctionne. Si la connexion à la base de données du serveur de rapports est valide, vous pouvez voir la hiérarchie des dossiers du serveur de rapports. Pour plus d’informations, consultez [Vérifier une installation de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 ## <a name="change-database-credentials"></a>Modifier les informations d’identification d’une base de données
 

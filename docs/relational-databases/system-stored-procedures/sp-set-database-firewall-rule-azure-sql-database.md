@@ -1,5 +1,5 @@
 ---
-title: sp_set_database_firewall_rule (base de données de SQL Azure) | Documents Microsoft
+title: sp_set_database_firewall_rule (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
 ms.prod: ''
@@ -28,15 +28,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 6fa2b1effae12bd8132c331d4e1ba33055c656e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984121"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Crée ou met à jour les règles de pare-feu de niveau base de données pour votre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Les règles de pare-feu de base de données peuvent être configurées pour le **master** base de données et pour les bases de données utilisateur sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les règles de pare-feu de base de données sont particulièrement utiles à l’aide de la relation contenant-contenu aux utilisateurs de base de données. Pour plus d’informations, consultez [Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Crée ou met à jour les règles de pare-feu au niveau de la base de données pour votre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Règles de pare-feu de base de données peuvent être configurées pour le **master** base de données et pour les bases de données utilisateur sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les règles de pare-feu de base de données sont particulièrement utiles quand il est à l’aide de contenu aux utilisateurs de base de données. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,18 +62,18 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  Le tableau suivant montre les arguments pris en charge et les options dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 > [!NOTE]  
->  Les tentatives de connexion à Azure sont autorisées lorsque ce champ et le *start_ip_address* ont la valeur `0.0.0.0`.  
+>  Tentatives de connexion Azure sont autorisées lorsque ce champ et le *start_ip_address* champ equals `0.0.0.0`.  
   
 ## <a name="remarks"></a>Notes  
  Les noms des paramètres de pare-feu au niveau base de données doivent être uniques. Si le nom du paramètre de pare-feu au niveau base de données spécifié pour la procédure stockée existe déjà dans le tableau des paramètres de pare-feu au niveau base de données, les adresses IP de début et de fin sont mises à jour. Sinon, un nouveau paramètre de pare-feu au niveau base de données est créé.  
   
- Lorsque vous ajoutez un paramètre de pare-feu de niveau base de données de début et fin des adresses IP sont égales à `0.0.0.0`, vous activez l’accès à votre base de données dans le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] serveur à partir de n’importe quelle ressource Azure. Spécifiez une valeur pour le *nom* n’oubliez pas de paramètre qui vous aideront à ce qui concerne le paramètre de pare-feu.  
+ Lorsque vous ajoutez un paramètre de pare-feu au niveau de la base de données où le début et fin des adresses IP sont égaux à `0.0.0.0`, vous activez l’accès à votre base de données dans le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] serveur à partir de n’importe quelle ressource Azure. Spécifiez une valeur pour le *nom* n’oubliez pas de paramètre qui vous aideront à ce qui concerne le paramètre de pare-feu.  
   
 ## <a name="permissions"></a>Autorisations  
  Exige l’autorisation **CONTROL** sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
- Le code suivant crée un pare-feu de niveau base de données appelé `Allow Azure` qui permet l’accès à votre base de données à partir d’Azure.  
+ Le code suivant crée un niveau de base de données paramètre de pare-feu nommé `Allow Azure` qui permet d’accéder à votre base de données à partir d’Azure.  
   
 ```  
 -- Enable Azure connections.  
@@ -80,7 +81,7 @@ EXECUTE sp_set_database_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- Le code suivant crée un paramètre de pare-feu au niveau base de données appelé `Example DB Setting 1` uniquement pour l'adresse IP `0.0.0.4`. Ensuite, la `sp_set_database firewall_rule` procédure stockée est appelée à nouveau pour mettre à jour l’adresse IP de fin pour `0.0.0.6`, dans ce paramètre de pare-feu. Cette opération crée une plage qui permet d’utiliser les adresses IP `0.0.0.4`, `0.0.0.5`, et `0.0.0.6` pour accéder à la base de données.
+ Le code suivant crée un paramètre de pare-feu au niveau base de données appelé `Example DB Setting 1` uniquement pour l'adresse IP `0.0.0.4`. Ensuite, le `sp_set_database firewall_rule` procédure stockée est appelée à nouveau pour mettre à jour l’adresse IP de fin pour `0.0.0.6`, dans ce paramètre de pare-feu. Cette opération crée une plage qui autorise les adresses IP `0.0.0.4`, `0.0.0.5`, et `0.0.0.6` pour accéder à la base de données.
   
 ```  
 -- Create database-level firewall setting for only IP 0.0.0.4  

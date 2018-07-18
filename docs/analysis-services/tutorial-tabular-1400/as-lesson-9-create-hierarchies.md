@@ -1,5 +1,5 @@
 ---
-title: 'Leçon du didacticiel Analysis Services 9 : créer des hiérarchies | Documents Microsoft'
+title: 'Leçon du didacticiel Analysis Services 9 : créer des hiérarchies | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,22 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
 ms.openlocfilehash: df99d05373d4d3087ef1d5fa5324ec645bf000b6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973018"
 ---
 # <a name="create-hierarchies"></a>Créer des hiérarchies
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-Dans cette leçon, vous créez des hiérarchies. Les hiérarchies sont des groupes de colonnes ordonnées par niveaux. Par exemple, une hiérarchie Geography peut avoir des sous-niveaux de pays, état, comté et ville. Les hiérarchies peuvent apparaître séparément des autres colonnes dans une liste de champs de l'application cliente de création de rapports, ce qui les rend faciles à parcourir par les utilisateurs clients et à inclure dans un rapport. Pour plus d’informations, consultez [hiérarchies](../tabular-models/hierarchies-ssas-tabular.md)
+Dans cette leçon, vous créez des hiérarchies. Les hiérarchies sont des groupes de colonnes organisées en niveaux. Par exemple, une hiérarchie géographie peut comporter des sous-niveaux pour pays, état, comté et ville. Les hiérarchies peuvent apparaître séparément des autres colonnes dans une liste de champs de l'application cliente de création de rapports, ce qui les rend faciles à parcourir par les utilisateurs clients et à inclure dans un rapport. Pour plus d’informations, consultez [hiérarchies](../tabular-models/hierarchies-ssas-tabular.md)
   
-Pour créer des hiérarchies, utilisez le Générateur de modèles dans *vue de diagramme*. Créer et gérer des hiérarchies ne sont pas pris en charge dans la vue de données.  
+Pour créer des hiérarchies, utilisez le Générateur de modèles dans *vue de diagramme*. Création et la gestion des hiérarchies ne sont pas pris en charge dans la vue de données.  
   
 Durée estimée pour effectuer cette leçon : **20 minutes**  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Prérequis  
 
 Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 8 : créer des perspectives](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
   
@@ -52,7 +53,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>Pour créer des hiérarchies dans la table DimDate  
   
-1.  Dans le **DimDate** table, créer une hiérarchie nommée **calendrier**.  
+1.  Dans le **DimDate** table, créez une hiérarchie nommée **calendrier**.  
   
 3.  Ajoutez l’ordre des colonnes suivantes :
 

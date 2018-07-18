@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914144"
 ---
 # <a name="binding-arrays-of-parameters"></a>Les tableaux de paramètres de liaison
 Les applications qui utilisent des tableaux de paramètres de lier les tableaux de paramètres dans l’instruction SQL. Il existe deux styles de liaison :  

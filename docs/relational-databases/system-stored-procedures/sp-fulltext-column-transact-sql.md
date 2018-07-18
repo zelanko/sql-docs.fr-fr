@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_column (Transact-SQL) | Documents Microsoft
+title: sp_fulltext_column (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,10 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6c1a53e05eef89584526846c3f3d3c6324164a94
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018403"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -58,12 +59,12 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  Est le nom d’une colonne dans *nom_table_qualifée*. La colonne doit être de type caractère, **varbinary (max)** ou **image** colonne et ne peut pas être une colonne calculée. *column_name* est **sysname**, sans valeur par défaut.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer des index de recherche en texte intégral de données texte stockées dans des colonnes de **varbinary (max)** ou **image** type de données. Les images et les dessins ne sont pas indexés.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer des index de recherche en texte intégral de données texte stockées dans des colonnes qui sont de **varbinary (max)** ou **image** type de données. Les images et les dessins ne sont pas indexés.  
   
  [  **@action=** ] **'***action***'**  
- Action à exécuter. *action* est **varchar (20)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+ Action à exécuter. *action* est **varchar (20)**, aucune valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**add**|Ajoute *column_name* de *nom_table_qualifée* à l’index de recherche en texte intégral inactif de la table. Cette action permet d'appliquer à la colonne une indexation de texte intégral.|  
 |**DROP**|Supprime *column_name* de *nom_table_qualifée* à partir de l’index de recherche en texte intégral inactif de la table.|  
@@ -81,7 +82,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Si l'index de texte intégral est actif, tout remplissage en cours est arrêté. De plus, si le suivi des modifications est activé pour une table détenant un index de texte intégral actif, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantit la validité de l'index. Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arrête tout remplissage en cours sur la table, supprime l'index existant et démarre un nouveau remplissage.  
@@ -89,7 +90,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  Si le suivi des modifications est activé et que des colonnes doivent être ajoutées ou supprimées de l'index de texte intégral tout en préservant l'index, la table doit être désactivée puis les colonnes requises doivent être ajoutées ou supprimées. Ces actions gèlent l'index. La table peut être activée ultérieurement lorsque le démarrage d'un remplissage s'avère pratique.  
   
 ## <a name="permissions"></a>Autorisations  
- Utilisateur doit être un membre de la **db_ddladmin** fixe, un rôle de base de données ou un membre de la **db_owner** fixe, un rôle de base de données ou le propriétaire de la table.  
+ Utilisateur doit être un membre du **db_ddladmin** fixe rôle de base de données ou un membre de la **db_owner** fixe rôle de base de données ou le propriétaire de la table.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous illustre l'ajout de la colonne `DocumentSummary` de la table `Document` à l'index de texte intégral de la table.  

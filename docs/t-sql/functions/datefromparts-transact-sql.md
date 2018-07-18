@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,20 +18,21 @@ helpviewer_keywords:
 - DATEFROMPARTS function
 ms.assetid: 5b885376-87aa-41f1-9e18-04987aead250
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d74e96029a7f28e6547c74c34bc5de9e0b656d8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 705d31a9f97d8c7894cd70e20993cde65a0d361f
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786420"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Renvoie une valeur **date** pour l’année, le mois et le jour spécifiés.
+Cette fonction retourne une valeur **date** qui est mappée aux valeurs de jour, de mois et d’année.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,24 +44,24 @@ DATEFROMPARTS ( year, month, day )
   
 ## <a name="arguments"></a>Arguments  
 *year*  
-Expression entière spécifiant une année.
+Expression entière qui spécifie une année.
   
 *month*  
-Expression entière spécifiant un mois, de 1 à 12.
+Expression entière qui spécifie un mois, entre 1 et 12.
   
 *day*  
-Expression entière spécifiant un jour.
+Expression entière qui spécifie un jour.
   
 ## <a name="return-types"></a>Types de retour
 **date**
   
 ## <a name="remarks"></a>Notes   
-**DATEFROMPARTS** renvoie une valeur **date** avec la partie date définie sur l’année, le mois et le jour spécifiés, et la partie heure définie avec la valeur par défaut. Si les arguments ne sont pas valides, une erreur est générée. Si les arguments obligatoires sont NULL, la valeur NULL est retournée.
+`DATEFROMPARTS` retourne une valeur **date**, avec la partie date définie sur l’année, le mois et le jour spécifiés, et la partie heure définie avec la valeur par défaut. Pour les arguments non valides, `DATEFROMPARTS` génère une erreur. `DATEFROMPARTS` retourne une valeur Null si au moins un argument obligatoire a une valeur Null.
   
-Cette fonction peut être exécutée à distance sur des serveurs [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. Elle ne peut pas être exécutée à distance avec une version antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
+Cette fonction peut gérer la communication à distance vers des serveurs [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. Il ne peut pas gérer la communication à distance vers des serveurs avec une version antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
   
 ## <a name="examples"></a>Exemples  
-L’exemple suivant illustre la fonction **DATEFROMPARTS**.
+L’exemple suivant montre la fonction `DATEFROMPARTS` en action.
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  

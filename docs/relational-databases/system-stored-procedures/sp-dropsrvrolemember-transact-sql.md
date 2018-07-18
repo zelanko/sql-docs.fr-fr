@@ -1,5 +1,5 @@
 ---
-title: sp_dropsrvrolemember (Transact-SQL) | Documents Microsoft
+title: sp_dropsrvrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ff304ce765010d2097c76574b0186df43d8b9104
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049367"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,14 +73,14 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Seul sp_dropsrvrolemember peut servir à supprimer une connexion d’un rôle serveur fixe. Utilisez sp_droprolemember pour supprimer un membre d’un rôle de base de données.  
+ Sp_dropsrvrolemember uniquement peut être utilisé pour supprimer une connexion d’un rôle serveur fixe. Utilisez sp_droprolemember pour supprimer un membre d’un rôle de base de données.  
   
- La connexion sa ne peut pas être supprimée à partir de n’importe quel rôle de serveur fixe.  
+ Impossible de supprimer la connexion sa à partir de n’importe quel rôle de serveur fixe.  
   
  sp_dropsrvrolemember ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
 ## <a name="permissions"></a>Autorisations  
- L’appartenance au rôle serveur fixé, ou les deux autorisations ALTER ANY LOGIN sur le serveur et à partir de laquelle le membre est en cours de suppression du rôle sysadmin.  
+ Nécessite l’appartenance au rôle serveur fixé, ou les deux autorisations ALTER ANY LOGIN sur le serveur et à partir de laquelle le membre est en cours de suppression du rôle sysadmin.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime la connexion `JackO` du rôle serveur fixe `sysadmin`.  
@@ -93,7 +94,7 @@ EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

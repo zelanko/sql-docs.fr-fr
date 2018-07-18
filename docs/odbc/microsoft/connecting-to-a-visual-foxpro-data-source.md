@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898104"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>Connexion à une Source de données Visual FoxPro
 Vous pouvez vous connecter à une source de données Visual FoxPro à l’aide de votre application Microsoft Office ou à l’aide de l’API SQL.  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -39,11 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f9df0c2da8892d380635f8949f10625baf9fda3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aff3c18d4f005a2f28260abac561596da96fc07
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36247921"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -367,7 +367,7 @@ ON (p.ProductID = v.ProductID);
  *table_alias*  
  Nom d'alias de la table de sortie. *pivot_table_alias* doit être spécifié.  
   
- UNPIVOT \< unpivot_clause >  
+ UNPIVOT \<unpivot_clause>  
  Spécifie que la table d’entrée est réduite de plusieurs colonnes dans *column_list* à une seule colonne appelée *pivot_column*. Pour plus d’informations sur les opérateurs PIVOT et UNPIVOT, consultez [Utilisation des opérateurs PIVOT et UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
  AS OF \<date_time>  
@@ -440,7 +440,7 @@ ON (p.ProductID = v.ProductID);
     2.  *aggregate_function* est évalué par rapport à *value_column* sur ce sous-groupe et son résultat est retourné en tant que valeur *output_column* correspondante. Si le sous-groupe est vide, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une valeur NULL pour *output_column*. Si la fonction d'agrégation est COUNT et si le sous-groupe est vide, la valeur zéro (0) est retournée.  
 
 > [!NOTE]
-> Les identificateurs de colonne dans la clause `UNPIVOT` suivent le classement de catalogue. Pour [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], le classement est toujours `SQL_Latin1_General_CP1_CI_AS`. Pour les bases de données à relation contenant-contenu partielles [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], le classement est toujours `Latin1_General_100_CI_AS_KS_WS_SC`. Si la colonne est combinée avec d’autres colonnes, une clause Collate (`COLLATE DATABASE_DEFAULT`) doit être ajoutée pour éviter les conflits.   
+> Les identificateurs de colonne dans la clause `UNPIVOT` suivent le classement de catalogue. Pour [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], le classement est toujours `SQL_Latin1_General_CP1_CI_AS`. Pour les bases de données partiellement autonomes [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], le classement est toujours `Latin1_General_100_CI_AS_KS_WS_SC`. Si la colonne est combinée avec d’autres colonnes, une clause Collate (`COLLATE DATABASE_DEFAULT`) doit être ajoutée pour éviter les conflits.   
   
  Pour plus d’informations sur les opérateurs PIVOT et UNPIVOT, et obtenir des exemples, consultez [Utilisation des opérateurs PIVOT et UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   

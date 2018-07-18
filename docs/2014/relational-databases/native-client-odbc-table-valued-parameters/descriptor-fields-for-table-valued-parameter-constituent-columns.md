@@ -1,0 +1,52 @@
+---
+title: Champs de descripteur pour les colonnes constituantes des paramètres Table-Valued | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology: native-client
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- table-valued parameters (ODBC), descriptor fields for constituent columns
+ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
+caps.latest.revision: 22
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 94d8663f92a68bb210d093d4d10d034b753d1ee0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415074"
+---
+# <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Champs de descripteur pour les colonnes constituantes des paramètres table
+  Les champs de descripteur de paramètre table décrites dans cette section sont manipulés en utilisant [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) et [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) avec le handle pour le descripteur de paramètre de mise en œuvre ( IPD).  
+  
+## <a name="remarks"></a>Notes  
+ SQL_DESC_AUTO_UNIQUE_VALUE est utilisé pour les paramètres table ainsi que pour d'autres fonctionnalités.  
+  
+|Nom de l'attribut|Type|Description|  
+|--------------------|----------|-----------------|  
+|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE indique que cette colonne est une colonne d'identité.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut utiliser ces informations pour optimiser les performances, mais les applications ne sont pas obligées de définir cet pour les colonnes d’identité.|  
+  
+ Les attributs suivants sont ajoutés à tous les types de paramètres du descripteur de paramètre d'application (APD, Application Parameter Descriptor) et du descripteur IPD :  
+  
+|Nom de l'attribut|Type|Description|  
+|--------------------|----------|-----------------|  
+|SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE indique que cette colonne est calculée.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut utiliser ces informations pour optimiser les performances, mais les applications ne sont pas obligées de définir cet pour les colonnes calculées.<br /><br /> Cet attribut est ignoré pour les liaisons qui ne sont pas des colonnes de paramètres table.|  
+|SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE indique qu'une colonne de paramètre table participe à une clé unique. Cela peut accroître les performances des requêtes. Cet attribut est ignoré pour les liaisons qui ne sont pas des colonnes de paramètres table.|  
+|SQL_CA_SS_COLUMN_SORT_ORDER|SQLSMALLINT|Indique l'ordre de tri d'une colonne de paramètre table. Cela peut accroître les performances des requêtes. Cet attribut est ignoré pour les liaisons qui ne sont pas des colonnes de paramètres table. Les valeurs possibles sont les suivantes :<br /><br /> -DIFFÉRENTES DE SQL_SS_ASCENDING_ORDER<br />-SQL_SS_DESCENDING_ORDER<br />-SQL_SS_ORDER_UNSPECIFIED<br /><br /> Les valeurs différentes de SQL_SS_ASCENDING_ORDER et SQL_SS_DESCENDING_ORDER génèrent une erreur avec SQLSTATE HY024 et le message « Valeur d'attribut non valide » ; par ailleurs, elles sont traitées en tant que SQL_SS_ORDER_UNSPECIFIED, qui représente la valeur par défaut de cet attribut.|  
+|SQL_CA_SS_COLUMN_SORT_ORDINAL|SQLSMALLINT|Indique l'ordinal d'une colonne de paramètre table dans le jeu des colonnes qui définissent l'ordre global d'un paramètre table. Cela peut accroître les performances des requêtes. Cet attribut est ignoré pour les liaisons qui ne sont pas des colonnes de paramètres table. Les ordinaux de tri commencent à 1. La valeur 0 (valeur par défaut) indique qu'une colonne de paramètre table n'a pas d'ordre de tri.|  
+|SQL_CA_SS_COLUMN_HAS_DEFAULT_VALUE|SQLSMALLINT|Indique si toutes les lignes du paramètre table ont la valeur par défaut de cette colonne. Pour les paramètres table, il n'est pas possible de sélectionner la valeur par défaut ligne par ligne. Une valeur SQL_FALSE indique que les lignes ont des valeurs qui ne sont pas définies par défaut. Il s'agit du paramètre par défaut. Une valeur SQL_TRUE indique que cette colonne a des valeurs par défaut pour toutes les lignes.<br /><br /> Avec SQL_TRUE, aucune donnée n'est envoyée au serveur.<br /><br /> Ce champ peut également être utilisé avec des colonnes d'identité ou des colonnes calculées, si les valeurs de colonnes ne sont pas requises pour le traitement serveur.|  
+  
+ Ces attributs sont uniquement valides pour les colonnes de paramètres table. Ils sont ignorés pour les autres paramètres.  
+  
+ Si SQL_CA_SS_COL_HAS_DEFAULT_VALUE est défini pour une colonne de paramètre table, la valeur de SQL_DESC_DATA_PTR pour cette colonne doit être un pointeur Null. Sinon, SQLExecute ou SQLExecDirect retourne SQL_ERROR. Un enregistrement de diagnostic est généré avec SQLSTATE = 07 s 01 et le message « utilisation non valide du paramètre par défaut pour le paramètre \<p >, colonne \<c > », où \<p > est le paramètre ordinale et \<c > est le numéro de colonne.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Paramètres table &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+  
+  

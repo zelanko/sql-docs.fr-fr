@@ -1,0 +1,119 @@
+---
+title: Renommer un ordinateur qui héberge une instance autonome de SQL Server | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- remote login errors [SQL Server]
+- standalone computer names [SQL Server]
+- names [SQL Server], standalone instances of SQL Server
+- renaming standalone instances of SQL Server
+- sysservers system table
+- removing remote logins
+- deleting remote logins
+- dropping remote logins
+ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
+caps.latest.revision: 30
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 66c8ddd5a5ab207f9e9f29367ace2c73b8d2811b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209659"
+---
+# <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Renommer un ordinateur qui héberge une instance autonome de SQL Server
+  Lorsque vous modifiez le nom de l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le nouveau nom est reconnu au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous n'avez pas besoin de réexécuter le programme d'installation pour réinitialiser le nom d'ordinateur. À la place, utilisez la procédure suivante pour mettre à jour les métadonnées système qui sont stockées dans sys.servers et signalées par la fonction système @@SERVERNAME. Mettez à jour les métadonnées système pour refléter les modifications opérées dans les noms d’ordinateurs pour les connexions à distance et les applications qui utilisent @@SERVERNAME, ou qui interrogent le nom du serveur à partir de sys.servers.  
+  
+ Les procédures suivantes ne vous permettent pas de renommer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles ne peuvent être utilisées que pour renommer la partie du nom de l'instance qui correspond au nom de l'ordinateur. Par exemple, vous pouvez remplacer le nom d'un ordinateur nommé MB1 qui héberge une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommée Instance1 par un autre nom, tel que MB2. Cependant, la partie d'instance du nom, Instance1, restera inchangée. Dans cet exemple, la partie \\\\*Nom_ordinateur*\\*Nom_instance* nommée \\\MB1\Instance1 sera remplacée par \\\MB2\Instance1.  
+  
+ **Avant de commencer**  
+  
+ Avant d'entamer la procédure consistant à attribuer un nouveau nom, prenez connaissance des informations suivantes :  
+  
+-   Lorsqu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait partie d'un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le processus permettant de renommer l'ordinateur diffère du processus permettant de renommer un ordinateur qui héberge une instance autonome.  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge la modification de nom des ordinateurs impliqués dans la réplication, excepté lorsque vous utilisez la copie des journaux de transaction avec la réplication. L'ordinateur secondaire pour la copie des journaux de transaction peut être renommé si l'ordinateur principal est définitivement perdu. Pour plus d’informations, consultez [Copie des journaux de transaction et réplication &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md).  
+  
+-   Lorsque vous renommez un ordinateur configuré pour utiliser [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut ne pas être disponible après la modification du nom d'ordinateur. Pour plus d’informations, consultez [Changement de nom d’un ordinateur serveur de rapports](../../reporting-services/report-server/rename-a-report-server-computer.md).  
+  
+-   Lorsque vous renommez un ordinateur configuré pour utiliser la mise en miroir de bases de données, vous devez désactiver cette fonction avant de modifier le nom. Ensuite, vous devez la réactiver avec le nouveau nom de l'ordinateur. Les métadonnées de la mise en miroir de la base de données ne seront pas mises à jour automatiquement de façon à refléter le nouveau nom de l'ordinateur. Procédez comme suit pour mettre à jour les métadonnées système :  
+  
+-   Les utilisateurs qui se connectent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais d'un groupe Windows utilisant une référence codée en dur au nom de l'ordinateur risquent de ne pas pouvoir se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cela peut se produire après l'attribution du nouveau nom si le groupe Windows spécifie l'ancien nom d'ordinateur. Pour vous assurer que ces groupes Windows bénéficient de la connectivité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après l'opération de changement de nom, mettez à jour le groupe Windows pour spécifier le nouveau nom de l'ordinateur.  
+  
+ Vous pouvez vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du nouveau nom d'ordinateur après avoir redémarré [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous assurer que @@SERVERNAME retourne le nom mis à jour de l’instance de serveur local, vous devez exécuter manuellement la procédure suivante qui s’applique à votre scénario. La procédure à utiliser varie selon que vous mettez à jour un ordinateur qui héberge une instance par défaut ou une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Pour renommer un ordinateur qui héberge une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+  
+-   Dans le cas d'un ordinateur renommé qui héberge une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exécutez les procédures ci-dessous :  
+  
+    ```  
+    sp_dropserver <old_name>;  
+    GO  
+    sp_addserver <new_name>, local;  
+    GO  
+    ```  
+  
+     Redémarrez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+-   Dans le cas d'un ordinateur renommé qui héberge une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exécutez les procédures ci-dessous :  
+  
+    ```  
+    sp_dropserver <old_name\instancename>;  
+    GO  
+    sp_addserver <new_name\instancename>, local;  
+    GO  
+    ```  
+  
+     Redémarrez l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+## <a name="after-the-renaming-operation"></a>Après l'opération d'attribution d'un nouveau nom  
+ Une fois l'ordinateur redémarré, toutes les connexions qui utilisaient l'ancien nom d'ordinateur doivent se connecter à l'aide du nouveau nom.  
+  
+#### <a name="to-verify-that-the-renaming-operation-has-completed-successfully"></a>Pour vérifier si la modification du nom s'est effectuée correctement  
+  
+-   Sélectionnez des informations à partir de @@SERVERNAME ou sys.servers. La fonction @@SERVERNAME renvoie le nouveau nom et la table sys.servers affiche le nouveau nom. L’exemple suivant illustre l’utilisation de @@SERVERNAME.  
+  
+    ```  
+    SELECT @@SERVERNAME AS 'Server Name';  
+    ```  
+  
+## <a name="additional-considerations"></a>Considérations supplémentaires  
+ **Ouvertures de sessions distantes** - Si des sessions à distance sont ouvertes sur l’ordinateur, l’exécution de **sp_dropserver** risque de générer une erreur semblable à la suivante :  
+  
+ `Server: Msg 15190, Level 16, State 1, Procedure sp_dropserver, Line 44 There are still remote logins for the server 'SERVER1'.`  
+  
+ Pour résoudre l'erreur, vous devez supprimer les ouvertures de session à distance du serveur.  
+  
+#### <a name="to-drop-remote-logins"></a>Pour supprimer les ouvertures de session à distance  
+  
+-   Dans le cas d'une instance par défaut, suivez la procédure ci-dessous :  
+  
+    ```  
+    sp_dropremotelogin old_name;  
+    GO  
+    ```  
+  
+-   Dans le cas d'une instance nommée, suivez la procédure ci-dessous :  
+  
+    ```  
+    sp_dropremotelogin old_name\instancename;  
+    GO  
+    ```  
+  
+ **Configurations de serveur lié** - Les configurations de serveur lié seront affectées par l’opération d’attribution d’un nouveau nom à l’ordinateur. Utilisez `sp_addlinkedserver` ou `sp_setnetname` pour mettre à jour les références de nom d'ordinateur. Pour plus d’informations, consultez [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) ou [sp_setnetname &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setnetname-transact-sql).  
+  
+ **Noms d’alias client** - Les alias client qui utilisent des canaux nommés seront affectés par l’opération d’attribution d’un nouveau nom à l’ordinateur. Par exemple, si un alias « PROD_SRVR » a été créé pour désigner SRVR1 et utilise le protocole de canaux nommés, le nom de canal ressemblera à `\\SRVR1\pipe\sql\query`. Après avoir renommé l'ordinateur, le chemin d'accès du canal nommé ne sera plus valide. Pour plus d’informations sur les canaux nommés, consultez [Création d’une chaîne de connexion valide à l’aide de canaux nommés](http://go.microsoft.com/fwlink/?LinkId=111063).  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Installer SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
+  
+  

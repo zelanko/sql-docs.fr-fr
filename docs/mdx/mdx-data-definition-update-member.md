@@ -1,6 +1,6 @@
 ---
 title: Instruction UPDATE MEMBER (MDX) | Documents Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cd74ca9c5ebe5195dd65c88f657587583be55e92
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 829aabfa7028814e20bcecd47a53495f6dc6bc6a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579841"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742708"
 ---
 # <a name="mdx-data-definition---update-member"></a>Définition de données MDX - membre de la mise à jour
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Met à jour un membre calculé existant.  
   
@@ -61,7 +61,7 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 |Identificateur de propriété|Signification|  
 |-------------------------|-------------|  
-|FORMAT_STRING|A [!INCLUDE[msCoName](../includes/msconame-md.md)] chaîne de format de style Office que l’application cliente peut utiliser pour afficher les valeurs de cellule.|  
+|FORMAT_STRING|Une chaîne de format de style Office que l’application cliente peut utiliser pour afficher les valeurs de cellule.|  
 |VISIBLE|Valeur qui indique si le membre calculé est visible dans un ensemble de lignes de schéma. Calculés visibles membres peuvent être ajoutés à un jeu à le [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) (fonction). Une valeur autre que zéro indique que le membre calculé est visible. La valeur par défaut de cette propriété est *Visible*.<br /><br /> Les membres calculés qui ne sont pas visibles sont généralement utilisés comme étapes intermédiaires dans des membres calculés plus complexes. Ces membres calculés peuvent également être référencés par d'autres types de membres, tels que des mesures.|  
 |NON_EMPTY_BEHAVIOR|Mesure ou jeu utilisé par MDX pour déterminer le comportement des membres calculés lors de la résolution des cellules vides.|  
 |CAPTION|Valeur de chaîne qui spécifie la légende que l'application cliente utilise pour afficher le membre.|  

@@ -1,5 +1,5 @@
 ---
-title: Élément IsDefaultMeasure (XML) | Documents Microsoft
+title: Élément IsDefaultMeasure (XML) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8bf91c689addd9aa08054c716c0ceb714769d759
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578311"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050504"
 ---
 # <a name="isdefaultmeasure-element-xml"></a>Élément IsDefaultMeasure (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34578311"
 </RelationshipEndVisualizationProperties>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -47,6 +47,6 @@ ms.locfileid: "34578311"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Pour **RelationshipEndVisualizationProperties** éléments, le **IsDefaultMeasure** élément indique qu’il est possible d’obtenir la mesure par défaut pour cette entité en accédant à l’autre extrémité de cette relation. La valeur par défaut **false** indique il n’existe aucune mesure par défaut doit être obtenu.  
+ Pour **RelationshipEndVisualizationProperties** éléments, le **IsDefaultMeasure** élément indique qu’il est possible d’obtenir la mesure par défaut pour cette entité en accédant à l’autre extrémité de Cette relation. La valeur par défaut **false** indique il n’y a aucune mesure par défaut doivent être obtenues.  
   
   

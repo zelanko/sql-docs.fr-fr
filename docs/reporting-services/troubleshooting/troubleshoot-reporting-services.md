@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030268"
 ---
 # <a name="troubleshoot-reporting-services"></a>Dépannage de Reporting Services
   Les rubriques répertoriées dans cette section visent à identifier et à résoudre les problèmes liés à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

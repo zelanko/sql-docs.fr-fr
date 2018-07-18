@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: service
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7900eb74181b04de940793b2ae2d384a1a4e2e0c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 901f654ff2586dbb9b18304aed4a91664c444d4c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35327974"
 ---
 # <a name="folder-properties-dialog-box"></a>Propriétés du dossier, boîte de dialogue
   Un dossier contient des projets et des environnements dans le catalogue **SSISDB** . Chaque dossier définit des autorisations qui s'appliquent au contenu du dossier. Pour plus d’informations sur les autorisations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consultez [catalog.grant_permission &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md).  

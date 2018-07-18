@@ -1,5 +1,5 @@
 ---
-title: Scénarios de globalisation pour Analysis Services | Documents Microsoft
+title: Scénarios de globalisation pour Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdc6ec79432d97d8ed53cade4a7db4c0b8bbec82
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031901"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Scénarios de globalisation pour Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -62,8 +63,8 @@ ms.lasthandoff: 05/10/2018
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge des traductions dans Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Internationalisation pour les Applications Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Atteindre le centre de développement](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Applications de l’écriture Windows Store avec conception adaptative en fonction des paramètres régionaux](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Accédez au centre de développement](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Applications d’écriture Windows Store avec conception adaptative en fonction des paramètres régionaux](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [Développement d’applications Windows universelles avec c# et XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

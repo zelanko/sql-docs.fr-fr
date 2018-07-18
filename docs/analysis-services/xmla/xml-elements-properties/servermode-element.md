@@ -1,5 +1,5 @@
 ---
-title: Élément ServerMode | Documents Microsoft
+title: Élément ServerMode | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21e9344ef945311b3af07398e6e927482718f5ff
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34576261"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968492"
 ---
 # <a name="servermode-element"></a>Élément ServerMode
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34576261"
 </Server>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "34576261"
 |Valeur|Description|  
 |-----------|-----------------|  
 |*Multidimensionnel*|Mode multidimensionnel et d'exploration de données|  
-|*Sous forme de tableau*|Mode tabulaire|  
+|*Tabulaire*|Mode tabulaire|  
 |*SharePoint*|Mode SharePoint|  
   
 ## <a name="see-also"></a>Voir aussi

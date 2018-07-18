@@ -1,5 +1,5 @@
 ---
-title: Messagerie de base de données et les alertes par courrier électronique avec l’Agent SQL sur Linux | Documents Microsoft
+title: Messagerie de base de données et les alertes par courrier électronique à l’Agent SQL sur Linux | Microsoft Docs
 description: Cet article décrit comment utiliser la messagerie de base de données et les alertes par courrier électronique avec SQL Server sur Linux
 author: meet-bhagdev
 ms.author: meetb
@@ -13,17 +13,17 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: f9ce71d799414171019143912bde19330742ec27
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34585191"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984261"
 ---
-# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Messagerie de base de données et les alertes par courrier électronique avec l’Agent SQL sur Linux
+# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Messagerie de base de données et les alertes par courrier électronique à l’Agent SQL sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Les étapes suivantes vous montrent comment configurer la messagerie de base de données et l’utiliser avec l’Agent SQL Server (**mssql-server-agent**) sur Linux. 
+Les étapes suivantes vous montrent comment configurer la messagerie de base de données et l’utiliser avec SQL Server Agent (**mssql-server-agent**) sur Linux. 
 
 ## <a name="1-enable-db-mail"></a>1. Activer la messagerie de base de données
 
@@ -65,7 +65,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 GO
 ```
 
-## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4. Ajoutez le compte de messagerie de base de données à un profil de messagerie de base de données
+## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4. Ajouter le compte de messagerie de base de données à un profil de messagerie de base de données
 ```sql
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp 
 @profile_name = 'default', 
@@ -73,7 +73,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 @is_default = 1 ; 
  ```
  
-## <a name="5-add-account-to-profile"></a>5. Ajouter un compte au profil 
+## <a name="5-add-account-to-profile"></a>5. Ajoutez le compte au profil 
 ```sql
 EXECUTE msdb.dbo.sysmail_add_profileaccount_sp   
 @profile_name = 'default',   
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
  
 ## <a name="6-send-test-email"></a>6. Envoyer un courrier électronique de test
 > [!NOTE]
-> Vous devrez accéder à votre client de messagerie et activer la « moins sécurisées clients autorisés à envoyer du courrier. » Pas tous les clients reconnaissent la messagerie de base de données comme un démon par courrier électronique.
+> Vous devrez peut-être accéder à votre client de messagerie et activer les « clients moins sécurisées envoyer du courrier autoriser ». Pas tous les clients reconnaissent la messagerie de base de données comme un démon de messagerie.
 
 ```
 EXECUTE msdb.dbo.sp_send_dbmail 
@@ -95,7 +95,7 @@ GO
 ```
 
 ## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Définir le profil de messagerie de base de données à l’aide de la variable d’environnement ou mssql-conf
-Vous pouvez utiliser les utilitaires de mssql-conf ou des variables d’environnement pour inscrire votre profil de messagerie de base de données. Dans ce cas, nous allons appeler de notre valeur par défaut du profil.
+Vous pouvez utiliser l’utilitaire de mssql-conf ou les variables d’environnement pour enregistrer votre profil de messagerie de base de données. Dans ce cas, nous allons appeler notre valeur par défaut du profil.
 
 ```bash
 # via mssql-conf
@@ -104,7 +104,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```
 
-## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. Définir un opérateur pour les notifications de tâche SQLAgent 
+## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. Configurer un opérateur pour les notifications de tâche SQLAgent 
 
 ```sql
 EXEC msdb.dbo.sp_add_operator 
@@ -115,7 +115,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Envoyer un courrier électronique lors de réussite du travail de Test de l’Agent 
+## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Envoyer un e-mail lors de réussite du travail de Test de l’Agent 
 
 ```
 EXEC msdb.dbo.sp_update_job 
@@ -126,4 +126,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour plus d’informations sur l’utilisation de l’Agent SQL Server pour créer, planifier et exécuter des travaux, consultez [exécuter un travail de l’Agent SQL Server sur Linux](sql-server-linux-run-sql-server-agent-job.md).
+Pour plus d’informations sur l’utilisation de l’Agent SQL Server pour créer, planifier et exécuter des tâches, consultez [exécuter un travail de l’Agent SQL Server sur Linux](sql-server-linux-run-sql-server-agent-job.md).

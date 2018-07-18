@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,14 +23,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server]
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 caps.latest.revision: 72
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0762a4dfb78edcad361cb8d51dd2c61579ccfef9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb214529ca2762fb8b269c6d07ce766cfb72e054
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782546"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ CREATE SYMMETRIC KEY key_name
  Spécifie un fournisseur EKM (Extensible Key Management) et un nom. La clé n'est pas exportée à partir du périphérique EKM. Le fournisseur doit d'abord être défini à l'aide de l'instruction CREATE PROVIDER. Pour plus d’informations sur la création de fournisseurs de clés externes, consultez [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
  KEY_SOURCE **='***pass_phrase***'**  
  Spécifie une phrase secrète à partir de laquelle la clé doit être dérivée.  
@@ -95,7 +95,7 @@ CREATE SYMMETRIC KEY key_name
  Spécifie le nom référencé dans le fournisseur EKM (Extensible Key Management).  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
  CREATION_DISPOSITION **=** CREATE_NEW  
  Crée une clé sur le périphérique EKM (Extensible Key Management).  S'il existe déjà une clé sur le périphérique, l'instruction échoue et génère une erreur.  

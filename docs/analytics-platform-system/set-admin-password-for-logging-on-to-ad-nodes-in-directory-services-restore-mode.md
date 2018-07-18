@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538379"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Définir le mot de passe administrateur pour ouvrir une session sur les nœuds AD dans les Services d’annuaire de restauration en Mode (DSRM) - système de plateforme Analytique
 Mode de restauration des Services annuaire (DSRM) est un mode de démarrage pour réparer ou de récupérer les Services de domaine Active Directory (AD DS). Il est utilisé pour se connecter aux nœuds DISPOSITIF AD une fois les services AD DS a échoué ou lorsque les services AD DS doit être restaurée. Le mot de passe DSRM a été initialisée lors de l’installation de l’application sur le site de fournisseur de matériel et doit être modifié par l’administrateur de matériel. Système de plateforme Analytique a deux services AD DS (contrôleurs de domaine) ; ***appliance_domain *-AD01** et ***appliance_domain *-AD02**. Pour chaque nœud DISPOSITIF AD, modifiez le mot de passe DSRM en procédant comme suit.  

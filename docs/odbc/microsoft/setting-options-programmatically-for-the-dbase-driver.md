@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904664"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>Paramètre Options par programmation pour le pilote dBASE
 |Option| Description|Méthode|  

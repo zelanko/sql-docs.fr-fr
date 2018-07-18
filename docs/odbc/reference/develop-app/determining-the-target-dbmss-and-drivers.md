@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911944"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Détermination de la cible SGBD et les pilotes
 La question suivante à prendre en compte est, quelles sont la SGBD cible pour l’application et les pilotes sont disponibles qui prennent en charge ces SGBD ? Étant donné que les applications génériques ont tendance à être hautement interopérable, la question de cible de SGBD est plus applicable à des applications personnalisées et verticales. Toutefois, la question de pilotes cibles s’applique à toutes les applications, car les pilotes peuvent varier dans la vitesse, la qualité, la prise en charge de la fonctionnalité et disponibilité. Également, si les pilotes doivent être redistribué par l’application, le coût et la disponibilité des régimes de licences en doivent être pris en compte.  

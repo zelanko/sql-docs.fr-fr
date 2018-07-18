@@ -2,7 +2,6 @@
 title: Lecture, ReadText, écriture et WriteText, méthodes-exemple (VB) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a6478b0df357d4c4c23398733c1a9d76b3eb95b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4c4f2c4ed48a8a388f770e41d12488594124353
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280788"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Lecture, ReadText, écriture et WriteText, méthodes-exemple (VB)
 Cet exemple montre comment lire le contenu d’une zone de texte dans les deux un texte [flux](../../../ado/reference/ado-api/stream-object-ado.md) et un fichier binaire **flux**. Incluent d’autres propriétés et méthodes indiqués [Position](../../../ado/reference/ado-api/position-property-ado.md), [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), et [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

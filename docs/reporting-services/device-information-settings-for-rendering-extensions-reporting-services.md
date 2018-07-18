@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015976"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Paramètres d'informations de périphérique pour les extensions de rendu (Reporting Services)
   Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], les paramètres d'informations de périphérique sont utilisés pour passer les paramètres de rendu à l'extension de rendu définie. Chaque extension de rendu reçoit un jeu de paramètres spécifique.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913824"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Exécution asynchrone (méthode d’interrogation)
 Avant d’ODBC 3.8 et le Kit de développement logiciel Windows 7, opérations asynchrones ont été autorisées uniquement sur les fonctions de l’instruction. Pour plus d’informations, consultez la **l’exécution asynchrone d’opérations d’instruction**, plus loin dans cette rubrique.  

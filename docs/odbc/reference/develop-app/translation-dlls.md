@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915958"
 ---
 # <a name="translation-dlls"></a>DLL de traduction
 L’application et la source de données stockent souvent des données dans plusieurs jeux de caractères. ODBC fournit un mécanisme générique qui permet au pilote de convertir les données d’un jeu de caractères à un autre. Il se compose d’une DLL qui implémente les fonctions de conversion **SQLDriverToDataSource** et **SQLDataSourceToDriver**, qui sont appelé par le pilote à traduire toutes les données circulent entre la source de données et le pilote. Cette DLL peuvent être écrites par le développeur d’applications, le développeur de pilotes, ou un tiers.  

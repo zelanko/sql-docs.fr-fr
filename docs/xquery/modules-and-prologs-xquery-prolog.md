@@ -1,5 +1,5 @@
 ---
-title: Prologue XQuery | Documents Microsoft
+title: Prologue XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,12 +26,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: debf4aac70b13c5bb5cbb37db2b71687f33a3df1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974552"
 ---
-# <a name="modules-and-prologs---xquery-prolog"></a>Modules et prologues - prologue XQuery
+# <a name="modules-and-prologs---xquery-prolog"></a>Modules et prologues : prologue XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Une requête XQuery se compose d'un prologue et d'un corps. Le prologue XQuery est une série de déclarations et de définitions qui créent ensemble l'environnement requis pour le traitement des requêtes. Dans SQL Server, le prologue XQuery peut inclure des déclarations d'espace de noms. Le corps XQuery se compose d'une séquence d'expressions qui spécifient le résultat de requête voulu.  
@@ -46,9 +47,9 @@ FROM  Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
--   Le prologue XQuery inclut une déclaration de préfixe (AWMI) d’espace de noms, `(namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
+-   Le prologue XQuery inclut une déclaration de préfixe (AWMI) espace de noms, `(namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
   
 -   Le mot clé `declare namespace` définit un préfixe d'espace de noms utilisé ultérieurement dans le corps de la requête.  
   
@@ -80,7 +81,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Pour plus d’informations, consultez, [espaces de noms à ajouter à des requêtes avec WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ Pour plus d’informations, consultez, [espaces de noms à ajouter aux requêtes avec WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
 ### <a name="default-namespace-declaration"></a>Déclaration d'espace de noms par défaut  
  Au lieu de déclarer un préfixe d'espace de noms à l'aide de la déclaration `declare namespace`, vous pouvez utiliser la déclaration `declare default element namespace` pour lier un espace de noms par défaut pour des noms d'élément. Dans ce cas, vous ne spécifiez aucun préfixe.  

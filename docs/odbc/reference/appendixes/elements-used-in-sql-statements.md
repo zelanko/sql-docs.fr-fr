@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909704"
 ---
 # <a name="elements-used-in-sql-statements"></a>Éléments utilisés dans les instructions SQL
 Les éléments suivants sont utilisés dans les instructions SQL répertoriées précédemment.  

@@ -1,42 +1,23 @@
 ---
 title: Instruction CREATE ACTION (MDX) | Documents Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE ACTION
-- Action
-- CREATE
-- CREATE_ACTION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- invocation types [MDX]
-- dimensions [Analysis Services], actions
-- CREATE ACTION statement
-- cubes [Analysis Services], actions
-- actions [MDX]
-- hierarchies [Analysis Services], actions
-ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dbb6e815e1cc9c66706641c16a9e169bb217ad6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741288"
 ---
 # <a name="mdx-data-definition---create-action"></a>Définition de données MDX - créer une ACTION
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Crée une action qui peut être associée à un cube, une dimension, une hiérarchie ou un objet subordonné.  
   
@@ -95,12 +76,12 @@ FOR
  Les applications clientes peuvent créer et exécuter des actions qui ne sont pas sûres ; elles peuvent également utiliser des fonctions peu sûres. Pour éviter ces situations, utilisez la **des Options de sécurité** propriété. Pour plus d'informations, consultez la propriété Safety Options.  
   
 > [!NOTE]  
->  Cette instruction est comprise pour des raisons de compatibilité descendante. Actions nouvelles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], telles que les actions d’extraction ou un rapport, n’est pas pris en charge.  
+>  Cette instruction est comprise pour des raisons de compatibilité descendante. Actions nouvelles dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], telles que les actions d’extraction ou un rapport, n’est pas pris en charge.  
   
 ## <a name="action-types"></a>Types d’action  
- Le tableau suivant décrit les différents types d’actions disponibles dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Le tableau suivant décrit les différents types d’actions disponibles dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-|Type d'action| Description|  
+|Type d'action|Description|  
 |-----------------|-----------------|  
 |**URL**|La chaîne d'action retournée est une URL qui doit être ouverte dans un navigateur Internet.<br /><br /> Remarque : Si cette action ne commence pas par `http://` ou `https://`, l’action n’est pas disponible dans le navigateur, sauf si **SafetyOptions** a la valeur **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|La chaîne d'action retournée est un script HTML. Cette chaîne doit être enregistrée dans un fichier, qui devra être rendu à l'aide d'un navigateur Internet. Dans ce cas, un script entier peut être exécuté en tant que partie du fichier HTML généré.|  
@@ -113,7 +94,7 @@ FOR
 ## <a name="invocation-types"></a>Types d'invocations  
  Le tableau ci-dessous décrit les différents types d'invocations disponibles dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Le type d'invocation n'est utilisé que par l'application cliente pour déterminer à quel moment appeler l'action. Il ne détermine pas réellement le comportement d'invocation de l'action.  
   
-|Type d'invocation| Description|  
+|Type d'invocation|Description|  
 |---------------------|-----------------|  
 |**INTERACTIVE**|Cette action doit être appelée par l'application cliente via l'interaction de l'utilisateur.|  
 |**ON_OPEN**|Cette action doit être appelée par l'application cliente lors de l'ouverture de l'objet cible. Ce type d'invocation n'est actuellement pas implémenté.|  

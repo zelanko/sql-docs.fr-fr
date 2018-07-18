@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538769"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Configurer un système Windows externe pour recevoir une copie de table distante à l’aide de InfiniBand - Parallel Data Warehouse
 Décrit comment acheter et configurer un système de Windows sur le matériel non connecté à l’aide du réseau InfiniBand pour une utilisation avec la fonctionnalité de copie de table distante dans SQL Server PDW. Le système Windows destiné à héberger la base de données SQL Server qui reçoit la copie de la table distante à partir d’une base de données SQL Server PDW. Il est achetée séparément à partir de l’application et connecté au réseau InfiniBand appliance.  

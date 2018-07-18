@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed6b502b0d8b2034624518344c78ed0195dce6b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: deffdb98790baa64eaa1983fee6839a65289d0d4
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307288"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Types de curseurs (pilote SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ Lorsque vous créez un jeu de résultats avec [sqlsrv_query](../../connect/php/s
   
 Vous pouvez créer un jeu de résultats avec un curseur de défilement, ce qui vous permet d’accéder à toute ligne dans le jeu de résultats, dans n’importe quel ordre. Le tableau suivant répertorie les valeurs qui peuvent être passés à la **Scrollable** option sqlsrv_query ou sqlsrv_prepare.  
   
-|Option| Description|  
+|Option|Description|  
 |----------|---------------|  
 |SQLSRV_CURSOR_FORWARD|Vous permet de déplacer une ligne à la fois en commençant à la première ligne du résultat défini jusqu'à ce que vous atteignez la fin du jeu de résultats.<br /><br />Il s’agit du type de curseur par défaut.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) renvoie une erreur pour les jeux de résultats créé avec ce type de curseur.<br /><br />**transférer** est la forme abrégée de SQLSRV_CURSOR_FORWARD.|  
 |SQLSRV_CURSOR_STATIC|Permet d’accéder aux lignes dans n’importe quel ordre, mais ne reflète pas les modifications dans la base de données.<br /><br />**statique** est la forme abrégée de SQLSRV_CURSOR_STATIC.|  
@@ -46,7 +46,7 @@ Après avoir créé un jeu de résultats, vous pouvez utiliser [sqlsrv_fetch](..
   
 Le tableau suivant décrit les valeurs que vous pouvez spécifier dans le *ligne* paramètre.  
   
-|Paramètre| Description|  
+|Paramètre|Description|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|Spécifie la ligne suivante. Ceci est la valeur par défaut, si vous ne spécifiez pas le *ligne* paramètre pour un jeu de résultats déroulables.|  
 |SQLSRV_SCROLL_PRIOR|Spécifie la ligne avant la ligne actuelle.|  

@@ -1,14 +1,11 @@
 ---
-title: Attributs personnalisés pour les Routines CLR | Documents Microsoft
+title: Les attributs personnalisés pour les Routines CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -27,23 +24,24 @@ caps.latest.revision: 82
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f5672efbc82371c5447fc927b208e41efad20d2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 865d305e5d85fd58ab85148f74cc5159323674bb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356121"
 ---
-# <a name="clr-integration-custom-attributes-for-clr-routines"></a>Attributs personnalisés de l’intégration CLR pour les Routines CLR
+# <a name="clr-integration-custom-attributes-for-clr-routines"></a>Intégration CLR des attributs personnalisés pour les Routines CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Les attributs répertoriés peuvent être appliquées au common language runtime (CLR) routines, types définis par l’utilisateur et les agrégats définis par l’utilisateur qui sont inscrits dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si l'attribut n'est pas appliqué, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise la valeur par défaut. Les attributs répertoriés sont définis dans le **Microsoft.SqlServer.Server** espace de noms.  
+  Les attributs répertoriés peuvent être appliqués au common language runtime (CLR) routines, types définis par l’utilisateur et les agrégats définis par l’utilisateur qui sont inscrits dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si l'attribut n'est pas appliqué, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise la valeur par défaut. Les attributs répertoriés sont définis dans le **Microsoft.SqlServer.Server** espace de noms.  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>Attribut SqlUserDefinedAggregate  
- Le **SqlUserDefinedAggregate** attribut indique que la méthode doit être enregistrée comme un agrégat défini par l’utilisateur. Chaque agrégat défini par l'utilisateur doit être annoté avec cet attribut.  
+ Le **SqlUserDefinedAggregate** attribut indique que la méthode doit être inscrit en tant qu’un agrégat défini par l’utilisateur. Chaque agrégat défini par l'utilisateur doit être annoté avec cet attribut.  
   
  Pour plus d’informations, consultez [SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626).  
   
 ## <a name="the-sqlfunction-attribute"></a>Attribut SqlFunction  
- Le **SqlFunction** attribut indique que la méthode doit être inscrite en tant que fonction, avec le jeu d’attributs de fonction appropriée.  
+ Le **SqlFunction** attribut indique la méthode doit être inscrit en tant que fonction, avec l’ensemble d’attributs de fonction appropriée.  
   
  Pour plus d’informations, consultez [SqlFunctionAttribute](http://go.microsoft.com/fwlink/?LinkId=128019).  
   
@@ -53,12 +51,12 @@ ms.lasthandoff: 05/03/2018
  Pour plus d’informations, consultez [SqlFacetAttribute](http://go.microsoft.com/fwlink/?LinkId=128020).  
   
 ## <a name="the-sqlprocedure-attribute"></a>Attribut SqlProcedure  
- Le **SqlProcedure** attribut indique que la méthode doit être inscrite en tant qu’une procédure stockée. Cet attribut est utilisé uniquement par Visual Studio pour inscrire automatiquement la méthode spécifiée en tant que procédure stockée ; il n'est pas utilisé par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Le **SqlProcedure** attribut indique que la méthode doit être enregistrée comme une procédure stockée. Cet attribut est utilisé uniquement par Visual Studio pour inscrire automatiquement la méthode spécifiée en tant que procédure stockée ; il n'est pas utilisé par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Pour plus d’informations, consultez [SqlProcedureAttribute](http://go.microsoft.com/fwlink/?LinkId=128021).  
   
 ## <a name="the-sqltrigger-attribute"></a>Attribut SqlTrigger  
- Le **SqlTrigger** attribut indique que la méthode doit être inscrite en tant que déclencheur.  
+ Le **SqlTrigger** attribut indique la méthode doit être inscrit en tant que déclencheur.  
   
  Pour plus d’informations, consultez [SqlTriggerContext](http://go.microsoft.com/fwlink/?LinkId=128022) et [SqlTriggerAttribute](http://go.microsoft.com/fwlink/?LinkId=203898).  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 05/03/2018
  Pour plus d’informations, consultez [SqlUserDefinedTypeAttribute](http://go.microsoft.com/fwlink/?LinkId=128024).  
   
 ## <a name="the-sqlmethod-attribute"></a>Attribut SqlMethod  
- Le **SqlMethod** attribut est utilisé pour indiquer les propriétés d’accès déterminisme et les données d’une méthode ou une propriété sur un type UDT.  
+ Le **SqlMethod** attribut est utilisé pour indiquer les propriétés d’accès de données et de déterminisme d’une méthode ou une propriété sur un type UDT.  
   
  Pour plus d’informations, consultez [SqlMethodAttribute](http://go.microsoft.com/fwlink/?LinkId=128025).  
   

@@ -1,5 +1,5 @@
 ---
-title: Fonction Count (XQuery) | Documents Microsoft
+title: Fonction Count (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: fc9e161196787413b6c4fe3a3943ff197f0b5d79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987481"
 ---
-# <a name="aggregate-functions---count"></a>Fonctions d’agrégation - nombre
+# <a name="aggregate-functions---count"></a>Fonctions d’agrégation : count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne le nombre d’éléments contenus dans la séquence spécifiée par *$arg*.  
@@ -67,15 +68,15 @@ FROM Production.ProductModel
 WHERE Production.ProductModel.ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le **espace de noms** mot clé dans [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit un préfixe d’espace de noms. Le préfixe est ensuite utilisé dans le corps XQuery.  
   
 -   La requête construit le document XML qui comprend l'élément <`NoOfWorkStations`>.  
   
--   Le **count()** de fonction dans le corps XQuery détermine le nombre de <`Location`> éléments.  
+-   Le **count()** fonctionner dans le corps XQuery détermine le nombre de <`Location`> éléments.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID   Name                 WorkCtrCount       
@@ -98,14 +99,14 @@ FROM Production.ProductModel
 WHERE Production.ProductModel.ProductModelID= 7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <NoOfWorkStations ProductModelID="7"   
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- Comme le montre la requête ci-après, vous pouvez renvoyer ces valeurs en tant que type non-xml, plutôt que sous la forme de données XML. La requête utilise le [le méthode value() (type de données xml)](../t-sql/xml/value-method-xml-data-type.md) pour récupérer le nombre.  
+ Comme le montre la requête ci-après, vous pouvez renvoyer ces valeurs en tant que type non-xml, plutôt que sous la forme de données XML. La requête utilise le [méthode value() (type de données xml)](../t-sql/xml/value-method-xml-data-type.md) pour récupérer le nombre.  
   
 ```  
 SELECT  ProductModelID,   
@@ -116,7 +117,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID    Name            WorkCtrCount  

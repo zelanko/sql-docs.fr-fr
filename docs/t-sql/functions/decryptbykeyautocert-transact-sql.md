@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,20 +18,21 @@ helpviewer_keywords:
 - DECRYPTBYKEYAUTOCERT function
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3bf53e51d3896953e66e3360aaa810a5c13c51ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f7541b3f935ab66997315f04f43980beae24698d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790210"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Permet le déchiffrement à l'aide d'une clé symétrique qui est automatiquement déchiffrée avec un certificat.  
-  
+Cette fonction déchiffre les données avec une clé symétrique. Cette clé symétrique est automatiquement déchiffrée avec un certificat.  
+
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -47,40 +47,40 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
   
 ## <a name="arguments"></a>Arguments  
  *cert_ID*  
- ID du certificat servant à protéger la clé symétrique. *cert_ID* est de type **int**.  
+ID du certificat utilisé pour protéger la clé symétrique. *cert_ID* a le type de données **int**.  
   
- *cert_password*  
- Mot de passe qui protège la clé privée du certificat. Peut être NULL si la clé privée est protégée par la clé principale de la base de données. *cert_password* est de type **nvarchar**.  
+*cert_password*  
+Mot de passe utilisé pour chiffrer la clé privée du certificat. Peut avoir une valeur `NULL` si la clé principale de la base de données protège la clé privée. *cert_password* a le type de données **nvarchar**.  
+
+'*ciphertext*'  
+Chaîne de données chiffrées avec la clé. *ciphertext* a le type de données **varbinary**.  
+
+@ciphertext  
+Variable de type **varbinary** contenant des données chiffrées avec la clé.  
+
+*add_authenticator*  
+Indique si le processus de chiffrement d’origine comprend et chiffre un authentificateur avec le texte en clair. Doit correspondre à la valeur passée à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) durant le processus de chiffrement des données. *add_authenticator* a la valeur 1 si le processus de chiffrement utilise un authentificateur. *add_authenticator* a le type de données **int**.  
   
- '*ciphertext*'  
- Données chiffrées avec la clé. *ciphertext* est de type **varbinary**.  
+@add_authenticator  
+Variable indiquant si le processus de chiffrement d’origine comprend et chiffre un authentificateur avec le texte en clair. Doit correspondre à la valeur passée à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) durant le processus de chiffrement des données. *@add_authenticator* a le type de données **int**.  
   
- @ciphertext  
- Variable de type **varbinary** contenant des données qui ont été chiffrées avec la clé.  
+*authenticator*  
+Données utilisées comme base pour la génération de l’authentificateur. Doit correspondre à la valeur fournie à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* a le type de données **sysname**.  
   
- *add_authenticator*  
- Indique si un authentificateur a été chiffré en même temps que le texte en clair. Il doit s’agir de la valeur transmise à EncryptByKey lors du chiffrement des données. Égale à **1** si un authentificateur a été utilisé. *add_authenticator* est de type **int**.  
-  
- @add_authenticator  
- Indique si un authentificateur a été chiffré en même temps que le texte en clair. Il doit s'agir de la valeur transmise à EncryptByKey lors du chiffrement des données.  
-  
- *authenticator*  
- Données à partir desquelles un authentificateur peut être généré. Doit correspondre à la valeur qui a été fournie à EncryptByKey. *authenticator* est de type **sysname**.  
-  
- @authenticator  
- Variable contenant les données à partir desquelles l'authentificateur sera généré. Doit correspondre à la valeur qui a été fournie à EncryptByKey.  
+@authenticator  
+Variable contenant des données à partir desquelles un authentificateur est généré. Doit correspondre à la valeur fournie à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* a le type de données **sysname**.  
   
 ## <a name="return-types"></a>Types de retour  
- **varbinary** d’une taille maximale de 8 000 octets.  
+**varbinary** d’une taille maximale de 8 000 octets.  
   
 ## <a name="remarks"></a>Notes   
- DecryptByKeyAutoCert combine les fonctionnalités de OPEN SYMMETRIC KEY et de DecryptByKey. Dans une même opération, il déchiffre une clé symétrique et l'utilise pour déchiffrer le texte chiffré.  
+`DECRYPTBYKEYAUTOCERT` combine les fonctionnalités d’`OPEN SYMMETRIC KEY` et de `DECRYPTBYKEY`. Dans une même opération, il déchiffre d’abord une clé symétrique, puis déchiffre le texte chiffré avec cette clé.  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l'autorisation VIEW DEFINITION sur la clé symétrique et CONTROL sur le certificat.  
+Nécessite l’autorisation `VIEW DEFINITION` sur la clé symétrique et l’autorisation `CONTROL` sur le certificat.   
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant montre comment utiliser `DecryptByKeyAutoCert` pour simplifier le code qui effectue le déchiffrement. Ce code doit être exécuté sur une base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] qui n'a pas encore de clé principale de base de données.  
+L’exemple suivant montre comment `DECRYPTBYKEYAUTOCERT` peut simplifier le code de déchiffrement. Ce code doit s’exécuter sur une base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] qui n’a pas encore de clé principale de base de données.  
   
 ```  
 --Create the keys and certificate.  

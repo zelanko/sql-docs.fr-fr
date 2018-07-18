@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911784"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL aux exemples de Conversion de données C
 Les exemples présentés dans le tableau suivant illustrent la façon dont le pilote SQL convertit les données en données C :  

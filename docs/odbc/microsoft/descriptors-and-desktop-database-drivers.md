@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903804"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Descripteurs et les pilotes de base de données de bureau
 Un descripteur est une structure de données qui conserve des informations sur les données de la colonne ou de paramètres dynamiques. **SQLGetDescField** peut être utilisé pour récupérer les descripteurs de prise en charge répertoriées ci-dessous. Descripteurs de paramètre d’implémentation (IPD) ne sont pas remplies automatiquement, car **SQLDescribeParam** n’est pas pris en charge. Champs de descripteur qui ne sont pas disponibles via Jet (par exemple, SQL_DESC_BASE_TABLE_NAME) ne sont pas également pris en charge.  

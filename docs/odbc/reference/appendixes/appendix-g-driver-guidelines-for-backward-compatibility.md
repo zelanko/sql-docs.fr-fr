@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906027"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>Annexe g : les instructions de pilote pour la compatibilité descendante
 Cette annexe contient des informations pour les rédacteurs de pilotes vous travaillez sur ODBC 3. *x* pilotes doivent prendre en charge d’ODBC 2. *x* applications. Pour plus d’informations sur la compatibilité descendante, consultez [la compatibilité descendante et la conformité aux normes](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  

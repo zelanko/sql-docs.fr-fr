@@ -2,7 +2,6 @@
 title: ObjectProxy (ADO - syntaxe WFC) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd42478c8da0cc0eba4471ac46a66ec4a08d5bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ce52d661b5fffe6f0263baa81808dc7d1e9fd3b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279658"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - syntaxe WFC)
 Un **ObjectProxy** objet représente un serveur et est retourné par la **createObject** méthode de la [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objet. La classe ObjectProxy possède une méthode, **appeler**, qui peut appeler une méthode sur le serveur et retourner un objet à cet appel.  
@@ -42,7 +42,7 @@ public Object ObjectProxy.( String method, Object[] args)
 ```  
   
 #### <a name="returns"></a>Valeur renvoyée  
- Objet  
+ Object  
  Objet qui résulte de l’appel de la méthode.  
   
 #### <a name="parameters"></a>Paramètres  
@@ -53,4 +53,4 @@ public Object ObjectProxy.( String method, Object[] args)
  Chaîne contenant le nom de la méthode à appeler sur le serveur.  
   
  *args*  
- Ce paramètre est facultatif. Un tableau d’objets qui sont des arguments de la méthode sur le serveur. Types de données Java sont automatiquement convertis en types de données pouvant être utilisée sur le serveur.
+ Facultatif. Un tableau d’objets qui sont des arguments de la méthode sur le serveur. Types de données Java sont automatiquement convertis en types de données pouvant être utilisée sur le serveur.

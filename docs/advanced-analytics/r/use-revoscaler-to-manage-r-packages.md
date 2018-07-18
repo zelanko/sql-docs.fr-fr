@@ -8,10 +8,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: d92b3e993968ce48d7489b0c17d6bdba005809a3
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34707527"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Comment utiliser les fonctions RevoScaleR pour rechercher ou installer des packages R sur SQL Server
@@ -34,7 +34,7 @@ Le tableau suivant décrit les fonctions utilisées pour la gestion et l’insta
 | [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) | Copier des informations sur une package de bibliothèque entre le système de fichiers et de la base de données, le contexte de calcul spécifiée. |
 | [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages) | Supprime les packages à partir d’un contexte de calcul spécifiée. Il calcule des dépendances et garantit que les packages qui ne sont plus utilisés par d’autres packages sur SQL Server sont supprimés pour libérer des ressources. |
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prérequis
 
 + [Activer la gestion à distance des packages R sur SQL Server](r-package-how-to-enable-or-disable.md)
 
@@ -97,7 +97,7 @@ connString <- paste("Driver=SQL Server;Server=", instance_name, ";Database=", da
 sqlcc <- RxInSqlServer(connectionString = connString, wait = sqlWait, consoleOutput = sqlConsoleOutput, numTasks = 4);
 ```
 
-Selon où se trouve le serveur et le modèle de sécurité, vous devrez peut-être fournir une spécification de domaine et un sous-réseau dans la chaîne de connexion, ou utiliser une connexion SQL. Par exemple :
+Selon où se trouve le serveur et le modèle de sécurité, vous devrez peut-être fournir une spécification de domaine et un sous-réseau dans la chaîne de connexion, ou utiliser une connexion SQL. Exemple :
 
 ```R
 connStr <- "Driver=SQL Server;Server=myserver.financeweb.contoso.com;Database=Finance;Uid=RUser1;Pwd=RUserPassword"

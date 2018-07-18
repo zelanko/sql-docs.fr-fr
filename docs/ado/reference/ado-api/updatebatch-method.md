@@ -2,7 +2,6 @@
 title: Méthode UpdateBatch | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75fa802b85b1bdb9f2dcd97af8c244a41f7ec37b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c7b25df0679596485586393993ba718f08542bf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282808"
 ---
 # <a name="updatebatch-method"></a>Méthode UpdateBatch
 Écrit toutes les mises à jour par lot en attente sur le disque.  
@@ -39,10 +39,10 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>Paramètres  
  *AffectRecords*  
- Ce paramètre est facultatif. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valeur qui indique le nombre d’enregistrements le **UpdateBatch** méthode affectera.  
+ Facultatif. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valeur qui indique le nombre d’enregistrements le **UpdateBatch** méthode affectera.  
   
  *PreserveStatus*  
- Ce paramètre est facultatif. A **booléenne** valeur qui spécifie si les modifications locales, comme indiqué par le [état](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriété, doivent être validées. Si cette valeur est définie sur **True**, le **état** propriété de chaque enregistrement reste inchangée après la mise à jour est terminée.  
+ Facultatif. A **booléenne** valeur qui spécifie si les modifications locales, comme indiqué par le [état](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriété, doivent être validées. Si cette valeur est définie sur **True**, le **état** propriété de chaque enregistrement reste inchangée après la mise à jour est terminée.  
   
 ## <a name="remarks"></a>Notes  
  Utilisez le **UpdateBatch** méthode lorsque vous modifiez un **Recordset** objet en mode de mise à jour par lot pour transmettre toutes les modifications apportées dans un **Recordset** objet à la base de données sous-jacente.  

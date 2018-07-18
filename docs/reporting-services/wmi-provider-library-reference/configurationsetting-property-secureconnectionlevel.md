@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030646"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>Propriété ConfigurationSetting - SecureConnectionLevel
   Retourne le niveau de connexion sécurisée qui est spécifié dans le fichier RSReportServer.config. En lecture seule.  

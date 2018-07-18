@@ -1,37 +1,36 @@
 ---
-title: Sessions | Documents Microsoft
+title: Sessions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6de9aa78a6cbdd26900eb4565f3edc7783acdeb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06d705cb21fe6a10ed30daab57a3534856d633f3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416838"
 ---
 # <a name="sessions"></a>Sessions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session du fournisseur OLE DB Native Client représente une connexion unique à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session du fournisseur OLE DB Native Client représente une seule connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif requiert que les sessions délimitent l’espace de transaction pour une source de données. Tous les objets de commande créés à partir d'un objet session spécifique participent à la transaction locale ou distribuée de l'objet session.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB Native nécessite que les sessions délimitent l’espace de transaction pour une source de données. Tous les objets de commande créés à partir d'un objet session spécifique participent à la transaction locale ou distribuée de l'objet session.  
   
  Le premier objet session créé sur la source de données initialisée reçoit la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] établie au moment de l'initialisation. Lorsque toutes les références sur les interfaces de l'objet session sont libérées, la connexion à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est accessible à un autre objet session créé sur la source de données.  
   
@@ -186,14 +185,14 @@ EXIT:
 }  
 ```  
   
- Connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets session du fournisseur OLE DB Native Client à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent générer une surcharge significative pour les applications qui en permanence de créer et de libérer les objets de session. La surcharge peut être réduite grâce à la gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efficacement les objets session du fournisseur OLE DB Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Applications de fournisseur OLE DB du Client natives peuvent conserver la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion d’un objet de session active en gérant une référence sur au moins une interface de l’objet.  
+ Connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets session du fournisseur OLE DB Native Client à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut générer une surcharge significative pour les applications qui en permanence de créer et de libérer des objets de session. La surcharge peut être réduite en gérant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efficacement les objets session du fournisseur OLE DB Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les applications natives du fournisseur OLE DB du Client peuvent conserver la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion d’un objet de session active en gérant une référence au moins une interface de l’objet.  
   
- Par exemple, la gestion d'un pool de références d'objet de création de commande maintient des connexions actives pour ces objets session dans le pool. Objets session étant requis, le code de maintenance de pool passe valide **IDBCreateCommand** pointeur d’interface pour la méthode d’application qui requiert la session. Lorsque la méthode d'application ne requiert plus la session, la méthode retourne le pointeur d'interface au code de gestion du pool plutôt que de libérer la référence de l'application à l'objet de création de commande.  
+ Par exemple, la gestion d'un pool de références d'objet de création de commande maintient des connexions actives pour ces objets session dans le pool. Objets session étant requis, le code de maintenance de pool passe valide **IDBCreateCommand** pointeur d’interface vers la méthode d’application qui requiert la session. Lorsque la méthode d'application ne requiert plus la session, la méthode retourne le pointeur d'interface au code de gestion du pool plutôt que de libérer la référence de l'application à l'objet de création de commande.  
   
 > [!NOTE]  
->  Dans l’exemple précédent, le **IDBCreateCommand** interface est utilisée, car le **ICommand** interface implémente le **GetDBSession** (méthode), la seule méthode dans l’étendue ensemble de lignes ou de la commande qui permet à un objet déterminer la session à laquelle il a été créé. Par conséquent, un objet commande, et uniquement un objet commande, permet à une application de récupérer un pointeur d'objet source de données à partir duquel des sessions supplémentaires peuvent être créées.  
+>  Dans l’exemple précédent, le **IDBCreateCommand** interface est utilisée, car le **ICommand** interface implémente la **GetDBSession** (méthode), la seule méthode de commande ou de la portée d’ensemble de lignes qui permet à un objet déterminer la session sur lequel il a été créé. Par conséquent, un objet commande, et uniquement un objet commande, permet à une application de récupérer un pointeur d'objet source de données à partir duquel des sessions supplémentaires peuvent être créées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets Source de données & #40 ; OLE DB & #41 ;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objets Source de données &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

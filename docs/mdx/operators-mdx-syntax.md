@@ -1,6 +1,6 @@
 ---
 title: Opérateurs (syntaxe MDX) | Documents Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580661"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742748"
 ---
 # <a name="operators-mdx-syntax"></a>Opérateurs (syntaxe MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Dans la syntaxe MDX (Multidimensional Expressions), les opérateurs permettent d'exécuter les actions suivantes :  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34580661"
  Si vous utilisez plusieurs opérateurs, l'ordre dans lequel la syntaxe MDX les évalue est important. De même, l'utilisateur des opérateurs peut exiger la conversion d'un type de données en un autre avant que les opérateurs puissent être évalués.  
   
 ## <a name="evaluating-complex-expressions"></a>Évaluation d'expressions complexes  
- Vous pouvez créer une expression en utilisant des opérateurs pour combiner plusieurs expressions plus petites. Dans ces expressions complexes, la syntaxe MDX évalue les opérateurs de commande basée sur la définition de priorité des opérateurs utilisée par [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX exécute des opérateurs avec une priorité plus élevée avant d’effectuer des opérateurs avec une priorité inférieure.  
+ Vous pouvez créer une expression en utilisant des opérateurs pour combiner plusieurs expressions plus petites. Dans ces expressions complexes, la syntaxe MDX évalue les opérateurs de commande basée sur la définition de priorité des opérateurs utilisée par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX exécute des opérateurs avec une priorité plus élevée avant d’effectuer des opérateurs avec une priorité inférieure.  
   
 ### <a name="understanding-operator-precedence"></a>Description de la priorité des opérateurs  
  La liste suivante présente les opérateurs par ordre de priorité décroissant. Les opérateurs contenus dans la même ligne ont une priorité équivalente et sont évalués de gauche à droite sauf contrainte due à la présence de parenthèses :  

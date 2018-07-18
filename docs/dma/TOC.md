@@ -1,14 +1,12 @@
 # [Vue d’ensemble de Data Migration Assistant](dma-overview.md)
 
 # [Nouveautés de Data Migration Assistant](dma-whatsnew.md)
-# [nouvelles articles et articles mises à jour](new-updated-dma.md)
 # [Évaluer votre migration vers SQL Server](dma-assesssqlonprem.md)
-# [Consolider les rapports d’évaluation](dma-consolidatereports.md)
-# [Rapports Power BI pour les évaluations consolidées](dma-powerbiassesreport.md)
-# [Effectuer la migration d’une installation SQL Server locale](dma-migrateonpremsql.md)
-# [Migration des comptes de connexion SQL Server](dma-migrateserverlogins.md)
+# [Mise à niveau SQL Server vers une version ultérieure](dma-migrateonpremsql.md)
+# [Migrer SQL Server vers Azure SQL Database](dma-migrateonpremsqltosqldb.md)
+# [Migrer des connexions SQL Server](dma-migrateserverlogins.md)
 # [Bonnes pratiques pour Data Migration Assistant](dma-bestpractices.md)
-# [Exécution à partir de la ligne de commande](dma-commandline.md)
-# [Paramètres de configuration](dma-configurationsettings.md)
-
-
+# [Consolider les rapports d’évaluation](dma-consolidatereports.md)
+# [Rapports Power BI pour les évaluations](dma-powerbiassesreport.md)
+# [Exécuter à partir de la ligne de commande](dma-commandline.md)
+# [Configurer les paramètres](dma-configurationsettings.md)

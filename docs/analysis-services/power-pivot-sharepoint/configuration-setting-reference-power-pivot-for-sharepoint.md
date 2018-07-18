@@ -1,5 +1,5 @@
 ---
-title: Paramètre de référence (PowerPivot pour SharePoint) de configuration | Documents Microsoft
+title: Paramètre de référence (Power Pivot pour SharePoint) de configuration | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bcc526e6527431c3f8dc1a09f112ff40c556fe3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6e2da78373d8bcb613bb11dca54857bc7b98dfe1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982611"
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Référence de paramètre de configuration (Power Pivot pour SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="LoadingData"></a> Délai d'attente du chargement de données  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont récupérées et chargées par les instances du serveur Analysis Services de la batterie. Selon le moment où le dernier accès aux données s'est produit et la façon dont il s'est produit, les données seront chargées à partir d'une bibliothèque de contenu ou d'un cache de fichiers local. Les données sont chargées en mémoire à chaque réception d'une requête ou d'une demande de traitement. Pour optimiser la disponibilité globale du serveur, vous pouvez définir une valeur de délai d'attente qui indique au serveur d'interrompre une demande de chargement de données si elle ne peut pas être exécutée dans le délai imparti.  
   
-|Nom|Par défaut|Valeurs valides| Description|  
+|Nom   |Valeur par défaut|Valeurs valides|Description|  
 |----------|-------------|------------------|-----------------|  
 |Délai d'attente du chargement de données|1800 (en secondes)|1 à 3600|Spécifie la durée pendant laquelle une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] attend une réponse d'une instance spécifique du serveur Analysis Services.<br /><br /> Par défaut, l'application de service attendra 30 minutes une charge utile de données en provenance de l'instance du service de moteur à laquelle elle a transféré une requête spécifique.<br /><br /> Si la source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne peut pas être chargée dans ce laps de temps, le thread sera arrêté et un nouveau sera démarré.|  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/10/2018
   
  Chaque type de pool de connexions a des limites supérieures que vous pouvez configurer afin de garantir une utilisation optimale de la mémoire système pour la gestion des connexions.  
   
-|Nom|Par défaut|Valeurs valides| Description|  
+|Nom   |Valeur par défaut|Valeurs valides|Description|  
 |----------|-------------|------------------|-----------------|  
 |Délai d'attente du pool de connexions|1800 (en secondes)|1 à 3 600.|Ce paramètre s'applique aux pools de connexions de données.<br /><br /> Il spécifie la durée pendant laquelle une connexion inactive peut rester dans un pool de connexions avant d'être supprimée.<br /><br /> Par défaut, l'application de service supprime une connexion si celle-ci est inactive depuis plus de cinq minutes.|  
 |Taille maximale du pool de connexions utilisateur|1000|-1, 0 ou 1 à 10000.<br /><br /> -1 spécifie un nombre illimité de connexions inactives.<br /><br /> 0 signifie qu'aucune connexion inactive n'est conservée. Les nouvelles connexions à une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] doivent être créées à chaque fois.|Ce paramètre s'applique au nombre de connexions inactives dans tous les pools de connexions de données créés pour une instance spécifique d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Les pools de connexions individuels sont créés pour les combinaisons uniques d'un utilisateur SharePoint, de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et d'une instance du service. Si vous avez de nombreux utilisateurs qui accèdent à diverses sources de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , une augmentation de la taille du pool de connexions peut améliorer les performances du serveur.<br /><br /> S'il existe plus de 100 connexions inactives à une instance de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , les connexions devenues inactives le plus récemment sont déconnectées au lieu de rejoindre le pool.|  
@@ -64,25 +65,25 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="AllocationScheme"></a> Équilibrage de charge  
  L'une des fonctions qu'assure le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] consiste à déterminer où les données Analysis Services seront chargées parmi les instances du service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] disponibles. Le paramètre **AllocationMethod** spécifie les critères selon lesquels une instance du service est sélectionnée.  
   
-|Nom|Par défaut|Valeurs valides| Description|  
+|Nom   |Valeur par défaut|Valeurs valides|Description|  
 |----------|-------------|------------------|-----------------|  
 |Méthode d'allocation|RoundRobin|Tourniquet (round robin)<br /><br /> Selon l'intégrité|Méthode d'allocation des requêtes de chargement parmi deux instances du serveur Analysis Services ou davantage.<br /><br /> Par défaut, le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] alternera les demandes selon l'intégrité du serveur. La méthode selon l'intégrité alloue les requêtes au serveur où les ressources système disponibles sont les plus importantes, d'après la mémoire disponible et l'utilisation du processeur.<br /><br /> La méthode « tourniquet » (round robin) passe les demandes entre les serveurs disponibles dans un ordre séquentiel, indépendamment de la charge actuelle ou de l'intégrité du serveur.|  
   
 ##  <a name="DataRefresh"></a> Actualisation des données  
  Spécifiez la plage horaire qui définit la journée de travail normale ou classique dans votre organisation. Ces paramètres de configuration déterminent quand, après les heures d'ouverture, le traitement des données intervient pour les opérations d'actualisation des données. Le traitement après les heures d'ouverture peut commencer à l'heure où se termine la journée de travail. Le traitement après les heures d’ouverture est une option de planification pour les propriétaires de documents qui souhaitent actualiser une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] avec les données transactionnelles qui ont été générées pendant les heures d’ouverture normales.  
   
-|Nom|Par défaut|Valeurs valides| Description|  
+|Nom   |Valeur par défaut|Valeurs valides|Description|  
 |----------|-------------|------------------|-----------------|  
 |Heure de début|4h00|1 à 12 heures, où la valeur est un entier valide appartenant à cette plage.<br /><br /> Le type est Time.|Définit la limite inférieure d'une plage d'heures d'ouverture.|  
 |Heure de fin|08:00 PM|1 à 12 heures, où la valeur est un entier valide appartenant à cette plage.<br /><br /> Le type est Time.|Définit la limite supérieure d'une plage d'heures d'ouverture.|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Compte d’actualisation des données sans assistance|Aucun|ID d'une application cible|Ce compte est utilisé pour exécuter des travaux d'actualisation des données de la part d'un propriétaire de planification.<br /><br /> Le compte d'actualisation des données sans assistance doit être défini au préalable, avant de pouvoir être référencé dans la page de configuration d'application de service. Pour plus d’informations, consultez [Configurer le compte d’actualisation des données PowerPivot sans assistance (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).|  
-|Autoriser les utilisateurs à entrer des informations d'identification Windows personnalisées|Activé|Booléen|Détermine si la page de configuration d'actualisation des données planifiée affiche une option qui permet à un propriétaire de planification de spécifier le compte d'utilisateur Windows et le mot de passe correspondant pour exécuter un travail d'actualisation des données.<br /><br /> Le service Banque d'informations sécurisé doit être activé pour que cette option fonctionne. Pour plus d’informations, consultez [Configurer les informations d’identification stockées pour l’actualisation des données PowerPivot (Power Pivot pour SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Compte d’actualisation des données sans assistance|None|ID d'une application cible|Ce compte est utilisé pour exécuter des travaux d'actualisation des données de la part d'un propriétaire de planification.<br /><br /> Le compte d'actualisation des données sans assistance doit être défini au préalable, avant de pouvoir être référencé dans la page de configuration d'application de service. Pour plus d’informations, consultez [Configurer le compte d’actualisation des données PowerPivot sans assistance (PowerPivot pour SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).|  
+|Autoriser les utilisateurs à entrer des informations d'identification Windows personnalisées|Activé|Booléen|Détermine si la page de configuration d'actualisation des données planifiée affiche une option qui permet à un propriétaire de planification de spécifier le compte d'utilisateur Windows et le mot de passe correspondant pour exécuter un travail d'actualisation des données.<br /><br /> Le service Banque d'informations sécurisé doit être activé pour que cette option fonctionne. Pour plus d’informations, consultez [Configurer les informations d’identification stockées pour l’actualisation des données PowerPivot (Power Pivot pour SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).|  
 |Longueur maximale de l'historique de traitement|365|1 à 5000 jours|Détermine la durée de conservation de l'historique d'actualisation des données dans la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d'informations, consultez [Power Pivot Usage Data Collection](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).|  
   
 ##  <a name="UsageData"></a> Collecte des données d'utilisation  
  Les rapports d’utilisation qui s’affichent dans le Tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] peuvent fournir des informations importantes à propos de l’utilisation des classeurs compatibles [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Les paramètres de configuration suivants contrôlent les aspects de la collecte des données d'utilisation pour les événements de serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] présentés par la suite dans des rapports d'utilisation ou d'activité.  
   
-|Nom|Par défaut|Valeurs valides| Description|  
+|Nom   |Valeur par défaut|Valeurs valides|Description|  
 |----------|-------------|------------------|-----------------|  
 |Intervalle de consignation des requêtes|300 (en secondes)|1 à n secondes, où n est un entier valide.|Pour faire en sorte que cette collecte des données d'utilisation ne consomme pas une part trop importante de la capacité de transfert de données de la batterie de serveurs, les statistiques sur les requêtes sont collectées sur chaque connexion et consignées dans les rapports comme un événement unique. L'intervalle de consignation des requêtes détermine la fréquence à laquelle un événement est signalé. Par défaut, les statistiques de requêtes font l'objet d'un rapport toutes les 5 minutes.<br /><br /> Parce que les connexions sont fermées immédiatement après l'envoi d'une requête, le système génère un grand nombre de connexions, même pour un seul utilisateur accédant à une seule source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . De ce fait, les pools de connexions sont créés pour chaque combinaison utilisateur/source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] afin qu'une connexion, une fois créée, puisse être réutilisée par le même utilisateur pour les mêmes données. Régulièrement, selon l'intervalle spécifié par le biais de ce paramètre de configuration, l'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] crée un rapport des données d'utilisation de chaque connexion du pool.<br /><br /> Plus la valeur de cet intervalle est élevée, moins le nombre d'événements journalisés est important. Toutefois, si vous choisissez une valeur trop élevée, vous risquez de perdre les données d'événement en cas de redémarrage du serveur ou de fermeture d'une connexion.<br /><br /> Abaisser cette valeur entraîne la journalisation d’un plus grand nombre d’événements, à une fréquence plus élevée, ce qui se traduit par l’ajout de davantage de données d’utilisation relatives à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]au système de collecte de données de la base de données d’utilisation SharePoint.<br /><br /> Ainsi, nous vous recommandons généralement de ne pas modifier ce paramètre de configuration, hormis pour résoudre un problème spécifique (par exemple, si la base de données d’utilisation croît trop rapidement en raison des données d’utilisation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ).|  
 |Historique des données d'utilisation|365 (en jours)|0 ou 1 à n jours, où n est un entier valide.<br /><br /> 0 signifie que l'historique est conservé indéfiniment, jamais supprimé.|Par défaut, les données d'utilisation sont conservées pendant un an dans la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Les enregistrements datant de plus d'un an sont supprimés de la base de données.<br /><br /> Un contrôle des données d'historique ayant expiré est effectué quotidiennement, lors de l'exécution du travail Traitement des données d'utilisation de Microsoft SharePoint Foundation. Le travail du minuteur lit ce paramètre et déclenche une commande de suppression des données de l'historique expiré dans la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer et configurer une application de service Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [Actualisation des données Power Pivot avec SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [Actualisation des données Power Pivot avec SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Configuration des comptes de service Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Tableau de bord de gestion Power Pivot et données d’utilisation](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  

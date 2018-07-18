@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a36683429987afff72c3ee9aa98124c4ee0f613
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 146365e4a4a0a287992bb1873a104f62cc79fc0b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307888"
 ---
 # <a name="logging-activity"></a>Journalisation de l’activité
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +44,7 @@ pdo_sqlsrv.log_severity = <number>
 |---------|---------------|  
 |0|La journalisation est désactivée (valeur par défaut si rien n’est défini).|  
 |-1|Spécifie que les erreurs, avertissements et avis sont enregistrés.|  
-|1|Spécifie que les erreurs sont enregistrées.|  
+| 1|Spécifie que les erreurs sont enregistrées.|  
 |2|Spécifie que les avertissements sont enregistrés.|  
 |4|Spécifie que les avis sont enregistrés.|  
   
@@ -65,7 +65,7 @@ Vous pouvez activer la journalisation à l’aide de la [sqlsrv_configure](../..
   
 Le tableau suivant décrit les constantes que vous pouvez utiliser comme valeur du paramètre **LogSubsystems** :  
   
-|Valeur (entier équivalent entre parenthèses)| Description|  
+|Valeur (entier équivalent entre parenthèses)|Description|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|Active la journalisation de tous les sous-systèmes.|  
 |SQLSRV_LOG_SYSTEM_OFF (0)|Désactive la journalisation. Il s'agit du paramètre par défaut.|  
@@ -96,7 +96,7 @@ Après avoir activé la journalisation, vous devez spécifier les éléments à 
   
 Le tableau suivant décrit les constantes que vous pouvez utiliser comme valeur du paramètre **LogSeverity** :  
   
-|Valeur (entier équivalent entre parenthèses)| Description|  
+|Valeur (entier équivalent entre parenthèses)|Description|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Spécifie que les erreurs, avertissements et avis sont enregistrés.|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|Spécifie que les erreurs sont enregistrées. Il s'agit du paramètre par défaut.|  

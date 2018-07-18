@@ -6,7 +6,6 @@ ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6da3515ceafb7540cbcb2b538c1951a9b4c0bc2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a38e5df65def060668e60ee470dc379b873ab35
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273608"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Référencer les bibliothèques ADO dans une Application Visual C++
 Pour utiliser la dernière version de l’objet ADO dans une application Visual C++, utilisez ce qui suit `#import` directive :  
@@ -37,7 +37,7 @@ Pour utiliser la dernière version de l’objet ADO dans une application Visual 
   
  Pour utiliser ADO MD ou ADOX, vous devez importer *msadomd.dll* ou *msadox.dll*, en utilisant la syntaxe ci-dessus.  
   
-## <a name="backward-compatibility"></a>Compatibilité descendante  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  Pour utiliser une version antérieure de l’objet ADO, remplacez *msado15.dll* ci-dessus avec l’une des bibliothèques de types suivantes.  
   
 -   *msado27.tlb*, bibliothèque de types 2.7 ADO  

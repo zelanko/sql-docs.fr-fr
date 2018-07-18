@@ -1,5 +1,5 @@
 ---
-title: Sys.database_connection_stats (base de données de SQL Azure) | Documents Microsoft
+title: Sys.database_connection_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: ''
@@ -28,26 +28,27 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 2de813bc474d59deb417b5aec1e1d02b5e9f5967
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029512"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contient des statistiques pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)] base de données **connectivité** événements, qui fournissent une vue d’ensemble du nombre d’échecs et réussites de connexion de base de données. Pour plus d’informations sur les événements de connectivité, consultez les Types d’événements dans [sys.event_log &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Contient des statistiques pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)] base de données **connectivité** événements, qui fournissent une vue d’ensemble de réussites de connexion de base de données et d’échecs. Pour plus d’informations sur les événements de connectivité, consultez Types d’événements dans [sys.event_log &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Statistique|Type| Description|  
+|Statistique|Type|Description|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nom de la base de données.|  
-|**start_time**|**datetime2**|Date et heure UTC indiquant le début de l'intervalle d'agrégation. L'heure est toujours un multiple de 5 minutes. Par exemple :<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|Date et heure UTC indiquant la fin de l'intervalle d'agrégation. **End_time** correspond toujours exactement 5 minutes plus tard correspondant **heure_début** dans la même ligne.|  
-|**success_count**|**int**|Nombre de connexions réussies.|  
-|**total_failure_count**|**int**|Nombre total d'échecs de connexion. C’est la somme de **connection_failure_count**, **terminated_connection_count**, et **throttled_connection_count**et n’inclut pas les événements de blocage.|  
-|**connection_failure_count**|**int**|Nombre d'échecs de connexion.|  
-|**terminated_connection_count**|**int**|***Applicable uniquement aux [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Nombre de connexions terminées.|  
-|**throttled_connection_count**|**int**|***Applicable uniquement aux [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Nombre de connexions limitées.|  
+|**start_time**|**datetime2**|Date et heure UTC indiquant le début de l'intervalle d'agrégation. L'heure est toujours un multiple de 5 minutes. Exemple :<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**end_time**|**datetime2**|Date et heure UTC indiquant la fin de l'intervalle d'agrégation. **End_time** est toujours exactement à cinq minutes plus tard correspondant **start_time** dans la même ligne.|  
+|**success_count**|**Int**|Nombre de connexions réussies.|  
+|**total_failure_count**|**Int**|Nombre total d'échecs de connexion. C’est la somme de **connection_failure_count**, **terminated_connection_count**, et **throttled_connection_count**et n’inclut pas les événements de blocage.|  
+|**connection_failure_count**|**Int**|Nombre d'échecs de connexion.|  
+|**terminated_connection_count**|**Int**|***Applicable uniquement pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Nombre de connexions terminées.|  
+|**throttled_connection_count**|**Int**|***Applicable uniquement pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11.***<br /><br /> Nombre de connexions limitées.|  
   
 ## <a name="remarks"></a>Notes  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/04/2018
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>Heure de début (start_time) et heure de fin (end_time) de l'intervalle  
- Un événement est inclus dans un intervalle d’agrégation lorsque l’événement se produit *sur* ou *après *** heure_début** et *avant *** heure_fin** pour cet intervalle. Par exemple, un événement se produisant exactement à `2012-10-30 19:25:00.0000000` est inclus uniquement dans le deuxième intervalle indiqué ci-dessous :  
+ Un événement est inclus dans un intervalle d’agrégation lorsque l’événement se produit *sur* ou *après *** start_time** et *avant *** end_time** pour cet intervalle. Par exemple, un événement se produisant exactement à `2012-10-30 19:25:00.0000000` est inclus uniquement dans le deuxième intervalle indiqué ci-dessous :  
   
 ```  
   
@@ -79,7 +80,7 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>Erreurs non incluses.  
  Cette vue peut ne pas inclure toutes les informations de connexion et d'erreur :  
   
--   Cette vue n’inclut pas tous les [!INCLUDE[ssSDS](../../includes/sssds-md.md)] erreurs qui peuvent se produire, uniquement celles spécifiées dans les Types d’événements dans la base de données [sys.event_log &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+-   Cette vue n’inclut pas toutes [!INCLUDE[ssSDS](../../includes/sssds-md.md)] erreurs peuvent se produire, uniquement celles spécifiées dans les Types d’événements dans la base de données [sys.event_log &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
 -   En cas de défaillance d'un ordinateur dans le centre de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)], un faible volume de données du serveur logique peuvent être manquantes dans la table d'événement.  
   
@@ -89,7 +90,7 @@ start_time                    end_time
  Les utilisateurs autorisés à accéder à la **master** base de données ont un accès en lecture seule à cette vue.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre une requête de **sys.database_connection_stats** pour renvoyer un résumé des connexions de base de données qui se sont produites entre midi le 25/9/2011 et MIDI le 28/9/2011 (UTC). Par défaut, les résultats de la requête sont triés par **heure_début** (ordre croissant).  
+ L’exemple suivant montre une requête de **sys.database_connection_stats** pour retourner un résumé des connexions de base de données qui se sont produites entre midi le 25/9/2011 et MIDI le 28/9/2011 (UTC). Par défaut, les résultats de requête sont triés par **start_time** (ordre croissant).  
   
 ```  
 SELECT *  
@@ -98,6 +99,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résolution des problèmes de base de données SQL Azure Windows](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
+ [Résolution des problèmes de Windows Azure SQL Database](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
   
   

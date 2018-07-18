@@ -1,8 +1,6 @@
 ---
 title: Paramètres globaux (éditeur) (DB2ToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0b769911e861d68e4d17b5d3e46e85f63f639c0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 879c4c268a0052a9450c3ba056aa0a5898c722a8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775145"
 ---
 # <a name="global-settings-editor-db2tosql"></a>Paramètres globaux (éditeur) (DB2ToSQL)
 Utilisez la page de l’éditeur de la **paramètres globaux** boîte de dialogue pour spécifier les paramètres pour les fenêtres de l’éditeur de code.  

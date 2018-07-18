@@ -1,7 +1,7 @@
 ---
 title: Guide d’architecture de traitement des requêtes | Microsoft Docs
 ms.custom: ''
-ms.date: 02/16/2018
+ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -14,27 +14,51 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
+- row mode execution
+- batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15fd6269a2e879eba086af8d1d143cc0e0cffc1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842902"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] traite les requêtes sur diverses architectures de stockage des données, telles que des tables locales, des tables partitionnées et des tables distribuées sur plusieurs serveurs. Les rubriques suivantes expliquent comment [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] traite les requêtes et optimise leur réutilisation grâce à la mise en cache du plan d’exécution.
 
+## <a name="execution-modes"></a>Modes d’exécution
+Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] peut traiter les instructions SQL à selon deux modes de traitement distincts :
+- Exécution en mode ligne
+- Exécution en mode batch
+
+### <a name="row-mode-execution"></a>Exécution en mode ligne
+*L’exécution en mode ligne* est une méthode de traitement des requêtes utilisée avec les tables traditionnelles des SGBDR, où les données sont stockées à un format ligne. Quand une requête est exécutée et accède aux données dans des tables contenant des lignes, les opérateurs de l’arborescence d’exécution et les opérateurs enfants lisent chaque ligne nécessaire, dans toutes les colonnes spécifiées dans le schéma de table. Pour chaque ligne lue, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] récupère ensuite les colonnes qui sont nécessaires pour le jeu de résultats, telles qu’elles sont référencées par une instruction SELECT, un prédicat JOIN ou un prédicat de filtre.
+
+> [!NOTE]
+> L’exécution en mode ligne est très efficace pour les scénarios OLTP, mais elle peut s’avérer moins efficace lors de l’analyse de grandes quantités de données, par exemple dans les scénarios d’entreposage de données.
+
+### <a name="batch-mode-execution"></a>Exécution en mode batch  
+*L’exécution en mode batch* est une méthode de traitement des requêtes utilisée pour traiter plusieurs lignes ensemble (d’où le terme « batch »). Chaque colonne d’un batch est stockée sous forme de vecteur dans une zone distincte de la mémoire : ainsi, le traitement en mode batch est basé sur les vecteurs. Le traitement en mode batch utilise aussi des algorithmes qui sont optimisés pour les processeurs multicœurs et un débit mémoire amélioré qui se trouvent sur le matériel moderne.      
+
+L’exécution en mode batch est étroitement intégrée au format de stockage columnstore et optimisée pour celui-ci. Le traitement en mode batch s’effectue quand c’est possible sur des données compressées et il élimine les [opérateurs d’échange](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange) utilisés par le traitement en mode ligne. Le résultat est un meilleur parallélisme et des performances plus rapides.    
+
+Quand une requête est exécutée en mode batch et qu’elle accède à des données dans des index columnstore, les opérateurs de l’arborescence d’exécution et les opérateurs enfants lisent plusieurs lignes à la fois dans les segments de colonne. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] lit seulement les colonnes nécessaires pour le résultat, telles qu’elles sont référencées par une instruction SELECT, un prédicat JOIN ou un prédicat de filtre.    
+Pour plus d’informations sur les index columnstore, consultez [Architecture des index columnstore](../relational-databases/sql-server-index-design-guide.md#columnstore_index).  
+
+> [!NOTE]
+> L’exécution en mode batch est très efficace dans les scénarios d’entreposage des données, où de grandes quantités de données sont lues et agrégées.
+
 ## <a name="sql-statement-processing"></a>Traitement des instructions SQL
+Le traitement d’une seule instruction [!INCLUDE[tsql](../includes/tsql-md.md)] est le cas le plus simple d’exécution des instructions SQL par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les étapes de traitement d’une instruction `SELECT` unique qui ne fait référence qu’à des tables de base locales (et non à des vues ou à des tables distantes) illustrent le processus de base.
 
-Le traitement d'une instruction SQL unique est le cas le plus simple d'exécution par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les étapes de traitement d’une instruction `SELECT` unique qui ne fait référence qu’à des tables de base locales (et non à des vues ou à des tables distantes) illustrent le processus de base.
-
-#### <a name="logical-operator-precedence"></a>Priorité des opérateurs logiques
+### <a name="logical-operator-precedence"></a>Priorité des opérateurs logiques
 
 Quand une instruction contient plusieurs opérateurs logiques, `NOT` est traité en premier, ensuite `AND` et enfin `OR`. Les opérateurs arithmétiques, et au niveau du bit, sont traités avant les opérateurs logiques. Pour plus d’informations, consultez [Priorité des opérateurs](../t-sql/language-elements/operator-precedence-transact-sql.md).
 
@@ -68,7 +92,7 @@ WHERE ProductModelID = 20 OR (ProductModelID = 21
 GO
 ```
 
-#### <a name="optimizing-select-statements"></a>Optimisation des instructions SELECT
+### <a name="optimizing-select-statements"></a>Optimisation des instructions SELECT
 
 Une instruction `SELECT` est non procédurale ; elle ne précise pas les étapes exactes à suivre par le serveur de base de données pour extraire les données demandées. Cela signifie que le serveur de base de données doit analyser l'instruction afin de déterminer la manière la plus efficace d'extraire les données demandées. Cette opération est nommée optimisation de l’instruction `SELECT` . Le composant qui s’en charge est l’optimiseur de requête. L’entrée de l’optimiseur de requête est composée de la requête, du schéma de base de données (définitions des tables et des index) et de ses statistiques de base de données. La sortie de l’optimiseur de requête est un plan d’exécution de la requête, parfois appelé plan de requête ou simplement plan. Le contenu d'un plan de requête est détaillé plus loin dans cette rubrique.
 
@@ -104,7 +128,7 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est important, car il permet l’ajustement dynamique du serveur de base de données au fur et à mesure que la base de données évolue sans recourir à l’intervention d’un programmeur ou d’un administrateur de bases de données. Cela permet aux programmeurs de se concentrer sur la description du résultat final de la requête. Ils peuvent faire confiance à l’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans son choix d’un plan d’exécution efficace pour l’état de la base de données à chaque exécution de l’instruction.
 
-#### <a name="processing-a-select-statement"></a>Traitement d'une instruction SELECT
+### <a name="processing-a-select-statement"></a>Traitement d'une instruction SELECT
 
 Les étapes permettant à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de traiter une instruction SELECT unique sont les suivantes : 
 
@@ -114,7 +138,7 @@ Les étapes permettant à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 4. Le moteur relationnel lance le plan d'exécution. Pendant le traitement des étapes qui requièrent des données issues des tables de base, le moteur relationnel demande que le moteur de stockage transmette les données des ensembles de lignes demandés à partir du moteur relationnel.
 5. Le moteur relationnel traite les données retournées du moteur de stockage dans le format défini pour le jeu de résultats et retourne ce jeu au client.
 
-#### <a name="processing-other-statements"></a>Traitement des autres instructions
+### <a name="processing-other-statements"></a>Traitement des autres instructions
 
 Les étapes de base décrites pour le traitement d’une instruction `SELECT` s’appliquent également aux autres instructions SQL telles que `INSERT`, `UPDATE`et `DELETE`. Les instructions`UPDATE` et `DELETE` doivent toutes deux cibler l’ensemble de lignes à modifier ou à supprimer. Le processus d’identification de ces lignes est le même que celui utilisé pour identifier les lignes sources qui participent au jeu de résultats d’une instruction `SELECT` . Les instructions `UPDATE` et `INSERT` peuvent toutes deux contenir des instructions SELECT incorporées qui fournissent les valeurs de données à mettre à jour ou à insérer.
 
@@ -170,7 +194,7 @@ WHERE OrderDate > '20020531';
 
 La fonctionnalité Showplan de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio montre que le moteur relationnel crée le même plan d’exécution pour ces deux instructions `SELECT`.
 
-#### <a name="using-hints-with-views"></a>Utilisation d'indicateurs avec les vues
+### <a name="using-hints-with-views"></a>Utilisation d'indicateurs avec les vues
 
 Les indicateurs placés sur une vue dans une requête peuvent être en conflit avec d'autres indicateurs découverts lors du développement de la vue pour l'accès à ses tables de base. Lorsque cela se produit, la requête retourne une erreur. Imaginons par exemple la vue suivante, dont la définition contient un indicateur de table :
 

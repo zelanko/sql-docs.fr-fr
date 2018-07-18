@@ -11,11 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842812"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurer une base de données SQL Server dans un conteneur Linux Docker
 
@@ -30,7 +31,7 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
 > * Exécuter les instructions Transact-SQL pour afficher et modifier la base de données.
 > * Sauvegarder la base de données modifiée.
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prérequis
 
 * Moteur de docker 1.8 + sur n’importe quelle distribution de Linux prise en charge ou Docker pour Mac et Windows. Pour plus d’informations, consultez [Installer Docker](https://docs.docker.com/engine/installation/).
 * Au moins 2 Go d’espace disque
@@ -102,7 +103,7 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
 
 Ce didacticiel utilise la [base de données exemple Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md). Utilisez les étapes suivantes pour télécharger et copier le fichier de sauvegarde de base de données de Wide World Importers dans votre conteneur de SQL Server.
 
-1. Tout d’abord, utilisez **docker exec** pour créer un dossier de sauvegarde. La commande suivante crée un répertoire **/var/opt/mssql/** à l’intérieur du conteneur de SQL Server.
+1. Tout d’abord, utilisez **docker exec** pour créer un dossier de sauvegarde. La commande suivante crée un **/var/opt/mssql/backup** répertoire à l’intérieur du conteneur de SQL Server.
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup

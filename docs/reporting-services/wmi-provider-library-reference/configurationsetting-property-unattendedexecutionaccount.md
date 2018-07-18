@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030626"
 ---
 # <a name="configurationsetting-property---unattendedexecutionaccount"></a>Propriété ConfigurationSetting - UnattendedExecutionAccount
   Retourne le compte d'utilisateur dont le serveur de rapports emprunte l'identité lorsqu'il exécute des rapports sans assistance. En lecture seule.  

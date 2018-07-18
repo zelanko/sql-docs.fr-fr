@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912314"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Les Types de données spécifique au pilote, les Types de descripteur, les Types d’informations, les Types de Diagnostic et les attributs
 Pilotes peuvent allouer des valeurs spécifiques au pilote pour les éléments suivants :  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,20 +20,21 @@ helpviewer_keywords:
 - SOUNDEX values
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e5ab09ee3ae088382fee86a8add2aa112d9efa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 692d3124814aaaeb25e7ec5507dc0a4ccf968b34
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781560"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Renvoie sous la forme d'un entier la différence entre les valeurs SOUNDEX de deux expressions de caractères.  
+Cette fonction retourne sous la forme d’un entier la différence entre les valeurs [SOUNDEX()](./soundex-transact-sql.md) de deux expressions de caractères différentes.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,19 +45,19 @@ DIFFERENCE ( character_expression , character_expression )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *expression_caractère*  
- [Expression](../../t-sql/language-elements/expressions-transact-sql.md) alphanumérique de données caractères. *character_expression* peut être une constante, une variable ou une colonne.  
+*expression_caractère*  
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) alphanumérique de données caractères. *character_expression* peut être une constante, une variable ou une colonne.  
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
-  
+**Int**  
+ 
 ## <a name="remarks"></a>Notes   
- L'entier renvoyé est le nombre de caractères identiques dans les valeurs SOUNDEX. La valeur renvoyée est comprise entre 0 et 4 : 0 indique une similarité nulle ou faible, et 4 indique une forte similarité ou des valeurs identiques.  
+`DIFFERENCE` compare deux valeurs `SOUNDEX` différentes, et retourne une valeur entière. Cette valeur mesure le degré de correspondance des valeurs `SOUNDEX`, sur une échelle de 0 à 4. La valeur 0 indique une similarité faible ou nulle entre les valeurs SOUNDEX ; 4 indique des valeurs SOUNDEX fortement similaires, ou même identiques.  
   
- DIFFERENCE et SOUNDEX respectent le classement.  
+`DIFFERENCE` et `SOUNDEX` respectent le classement.  
   
 ## <a name="examples"></a>Exemples  
- Dans la première partie de l'exemple qui suit, les valeurs `SOUNDEX` de deux chaînes très similaires sont comparées. Pour un classement Latin1_General collation, `DIFFERENCE` renvoie la valeur `4`. Dans la deuxième partie de l’exemple suivant, les valeurs `SOUNDEX` de deux chaînes très différentes sont comparées et, pour un classement Latin1_General, `DIFFERENCE` renvoie la valeur `0`.  
+La première partie de l’exemple suivant compare les valeurs `SOUNDEX` de deux chaînes très similaires. Pour un classement Latin1_General, `DIFFERENCE` retourne la valeur `4`. La deuxième partie de l’exemple compare les valeurs `SOUNDEX` de deux chaînes très différentes et, pour un classement Latin1_General, `DIFFERENCE` retourne la valeur `0`.  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  

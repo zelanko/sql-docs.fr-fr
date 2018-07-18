@@ -1,5 +1,5 @@
 ---
-title: SQL :Column() (fonction) (XQuery) | Documents Microsoft
+title: SQL :Column() (fonction) (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,17 +24,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19a427f43667718225120cdd72a571eba66cd041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981941"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Fonctions de XQuery Extension - SQL :Column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Comme décrit dans la rubrique [de liaison de données relationnelles à l’intérieur de XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), vous pouvez utiliser la **:Column()** fonctionnent lorsque vous utilisez [les méthodes de Type de données XML](../t-sql/xml/xml-data-type-methods.md) pour exposer une valeur relationnelle dans XQuery.  
+  Comme décrit dans la rubrique, [liaison de données relationnelles à l’intérieur de XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), vous pouvez utiliser la **:Column()** fonctionnent lorsque vous utilisez [les méthodes de Type de données XML](../t-sql/xml/xml-data-type-methods.md) pour exposer une valeur relationnelle à l’intérieur de XQuery.  
   
- Par exemple, le [méthode query() (type de données XML)](../t-sql/xml/query-method-xml-data-type.md) est utilisée pour spécifier une requête sur une instance XML qui est stockée dans une variable ou une colonne de **xml** type. Il se peut également que vous vouliez que votre requête utilise des valeurs provenant d'une autre colonne non XML, afin de regrouper des données relationnelles et des données XML. Pour ce faire, vous utilisez la **SQL :Column()** (fonction).  
+ Par exemple, le [méthode query() (type de données XML)](../t-sql/xml/query-method-xml-data-type.md) est utilisé pour spécifier une requête sur une instance XML stockée dans une variable ou une colonne de **xml** type. Il se peut également que vous vouliez que votre requête utilise des valeurs provenant d'une autre colonne non XML, afin de regrouper des données relationnelles et des données XML. Pour ce faire, vous utilisez le **SQL :Column()** (fonction).  
   
  La valeur SQL est alors mappée à sa valeur XQuery correspondante et son type à son type de base XQuery équivalent au type SQL.  
   
@@ -48,7 +49,7 @@ sql:column("columnName")
 ## <a name="remarks"></a>Notes  
  Notez qu’une référence à une colonne spécifiée dans le **SQL :Column()** fonction à l’intérieur d’une requête XQuery fait référence à une colonne dans la ligne qui est en cours de traitement.  
   
- Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous pouvez uniquement faire référence à un **xml** instruction d’insertion de l’instance dans le contexte de l’expression source d’un XML-DML ; sinon, vous ne peut pas faire référence aux colonnes de type **xml** ou un type défini par l’utilisateur CLR.  
+ Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous pouvez uniquement faire référence à un **xml** instruction d’insertion de l’instance dans le contexte de l’expression source d’un XML-DML ; sinon, vous ne pouvez pas référencer les colonnes qui sont de type **xml** ou un type CLR type défini par l’utilisateur.  
   
  Le **SQL :Column()** fonction n’est pas prise en charge dans les opérations de jointure. Vous pouvez utiliser l'opération APPLY à la place.  
   
@@ -68,7 +69,7 @@ sql:column("columnName")
   
 -   Le **ProductID**, **ProductName**, et **ProductPrice** valeurs d’attribut sont obtenues à partir de la **produit** table.  
   
--   Le **ProductModelID** valeur d’attribut est extraite de la **ProductModel** table.  
+-   Le **ProductModelID** valeur d’attribut est récupérée à partir de la **ProductModel** table.  
   
 -   Pour rendre la requête plus intéressante, la **ProductModelName** valeur d’attribut est obtenue à partir de la **CatalogDescription** colonne de **type xml**. Comme les informations du catalogue de modèles de produits XML ne sont pas stockées pour tous les modèles de produits, l'instruction `if` ne permet de récupérer la valeur que si elle existe.  
   
@@ -93,15 +94,15 @@ sql:column("columnName")
     ORDER By PM.ProductModelID  
     ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Les valeurs étant issues de deux tables différentes, la clause FROM doit mentionner ces deux tables. La condition stipulée dans la clause WHERE filtre le résultat et ne récupère ainsi que les produits dont les modèles disposent d'une description mentionnée dans le catalogue.  
   
--   Le **espace de noms** mot clé dans le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit le préfixe d’espace de noms XML, « pd », qui est utilisé dans le corps de la requête. Il reste à noter que les alias de table, à savoir « P » et « PM », sont définis dans la clause FROM de la requête même.  
+-   Le **espace de noms** mot clé dans le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit le préfixe d’espace de noms XML, « pd », qui est utilisé dans le corps de requête. Il reste à noter que les alias de table, à savoir « P » et « PM », sont définis dans la clause FROM de la requête même.  
   
 -   Le **SQL :Column()** fonction est utilisée pour afficher des valeurs non-XML dans du code XML.  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 ProductID               Result  

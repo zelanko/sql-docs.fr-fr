@@ -3,12 +3,10 @@ title: Actions et groupes d’actions SQL Server Audit | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,14 +22,15 @@ helpviewer_keywords:
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
-ms.openlocfilehash: deef1b6db596acc7462fbd67eaae827fec759640
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c819f291b09620a7151a8f6c6e9f5ba1a2cd26a
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942105"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Actions et groupes d’actions SQL Server Audit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
 |BACKUP_RESTORE_GROUP|Cet événement est déclenché chaque fois qu'une commande de sauvegarde ou de restauration est émise. Équivaut à la [Audit Backup and Restore Event Class](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
 |BROKER_LOGIN_GROUP|Cet événement est déclenché pour signaler des messages d'audit relatifs à la sécurité du transport Service Broker. Équivaut à la [classe d’événements Audit Broker Login](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Cet événement est déclenché lors de la création, de la modification ou de la suppression d'une base de données. Cet événement est déclenché chaque fois qu'une base de données est créée, modifiée ou supprimée. Équivaut à la [classe d’événements Audit Database Management](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Cet événement est déclenché lorsqu'un utilisateur de base de données à relation contenant-contenu se déconnecte d'une base de données. Équivalent à la classe d'événements Audit Database Logout.|  
+|DATABASE_LOGOUT_GROUP|Cet événement est déclenché lorsqu'un utilisateur de base de données autonome se déconnecte d'une base de données. Équivalent à la classe d'événements Audit Database Logout.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Cet événement est déclenché pour signaler des messages d'audit relatifs à la sécurité du transport de la mise en miroir de bases de données. Équivaut à la [classe d’événements Audit Database Mirroring Login](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
 |DATABASE_OBJECT_ACCESS_GROUP|Cet événement est déclenché à chaque accès à des objets de base de données tels qu'un type de message, un assembly ou un contrat. Cet événement est déclenché pour tout accès à toute base de données. Remarque : cela peut générer des enregistrements d’audit volumineux.<br /><br /> Équivaut à la [classe d’événements Audit Database Object Access](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Cet événement est déclenché lorsqu'une instruction CREATE, ALTER ou DROP est exécutée sur des objets de base de données, tels que des schémas. Cet événement est déclenché chaque fois qu'un objet de base de données est créé, modifié ou supprimé. Remarque : cela peut générer de très grandes quantités d’enregistrements d’audit.<br /><br /> Équivaut à la [classe d’événements Audit Database Object Management](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
@@ -97,7 +96,7 @@ ms.lasthandoff: 05/03/2018
 |DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’opération d’emprunt d’identité dans la portée de la base de données, telle que EXECUTE AS \<principal> ou SETPRINCIPAL. Cet événement est déclenché pour les emprunts d'identité effectués dans une base de données. Équivaut à la [classe d’événements Audit Database Principal Impersonation](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md).|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'une connexion est ajoutée à un rôle de base de données ou en est supprimée. Cette classe d'événements est déclenchée pour les procédures stockées sp_addrolemember, sp_changegroup et sp_droprolemember. Cet événement est déclenché en cas de modification d'un membre de rôle Base de données dans toute base de données. Équivaut à la [classe d’événements Audit Add Member to DB Role](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|Cet événement est déclenché chaque fois qu'un principal émet une commande DBCC. Équivaut à la [classe d’événements Audit DBCC](../../../relational-databases/event-classes/audit-dbcc-event-class.md).|  
-|FAILED_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal a tenté de se connecter à une base de données à relation contenant-contenu et a échoué. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Équivaut à la [classe d’événements Audit Login Failed](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|  
+|FAILED_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal a tenté de se connecter à une base de données autonome et a échoué. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Équivaut à la [classe d’événements Audit Login Failed](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|  
 |FAILED_LOGIN_GROUP|Indique qu'un principal a essayé de se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et a échoué. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Équivaut à la [classe d’événements Audit Login Failed](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|  
 |FULLTEXT_GROUP|Indique qu'un événement de texte intégral s'est produit. Équivaut à la [classe d’événements Audit Fulltext](../../../relational-databases/event-classes/audit-fulltext-event-class.md).|  
 |LOGIN_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois qu'un mot de passe de connexion est modifié via une instruction ALTER LOGIN ou une procédure stockée sp_password. Équivaut à la [classe d’événements Audit Login Change Password](../../../relational-databases/event-classes/audit-login-change-password-event-class.md).|  
@@ -115,11 +114,11 @@ ms.lasthandoff: 05/03/2018
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’opération d’emprunt d’identité dans la portée du serveur, telle que EXECUTE AS \<login>. Équivaut à la [classe d’événements Audit Server Principal Impersonation](../../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md).|  
 |SERVER_ROLE_MEMBER_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'une connexion est ajoutée ou supprimée d'un rôle serveur fixe. Cet événement est déclenché pour les procédures stockées sp_addsrvrolemember et sp_dropsrvrolemember. Équivaut à la [classe d’événements Audit Add Login to Server Role](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md).|  
 |SERVER_STATE_CHANGE_GROUP|Cet événement est déclenché lorsque l'état du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est modifié. Équivaut à la [classe d’événements Audit Server Starts and Stops](../../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md).|  
-|SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal s'est connecté à une base de données à relation contenant-contenu. Équivalent à la classe d'événements Audit Successful Database Authentication.|  
+|SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal s'est connecté à une base de données autonome. Équivalent à la classe d'événements Audit Successful Database Authentication.|  
 |SUCCESSFUL_LOGIN_GROUP|Indique qu'un principal s'est connecté à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Équivaut à la [classe d’événements Audit Login](../../../relational-databases/event-classes/audit-login-event-class.md).|  
 |TRACE_CHANGE_GROUP|Cet événement est déclenché pour toutes les instructions qui vérifient l'autorisation ALTER TRACE. Équivaut à la [classe d’événements Audit Server Alter Trace](../../../relational-databases/event-classes/audit-server-alter-trace-event-class.md).|  
 |TRANSACTION_GROUP|Cet événement est déclenché pour les opérations BEGIN TRANSACTION et COMMIT TRANSACTION ROLLBACK TRANSACTION, à la fois pour les appels explicites à ces instructions et pour les opérations de transaction implicite. Cet événement est également déclenché pour les opérations UNDO des instructions causées par la restauration d’une transaction.|  
-|USER_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois que le mot de passe d'un utilisateur de base de données à relation contenant-contenu est modifié à l'aide de l'instruction ALTER USER.|  
+|USER_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois que le mot de passe d'un utilisateur de base de données autonome est modifié à l'aide de l'instruction ALTER USER.|  
 |USER_DEFINED_AUDIT_GROUP|Ce groupe surveille les événements déclenchés à l’aide de [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). En règle générale, les déclencheurs ou procédures stockées incluent des appels à **sp_audit_write** pour activer l’audit d’événements importants.|  
   
 ### <a name="considerations"></a>Observations  
@@ -138,7 +137,7 @@ ms.lasthandoff: 05/03/2018
 |AUDIT_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'un audit est créé, modifié ou supprimé. Cet événement est déclenché chaque fois qu'une spécification d'audit est créée, modifiée ou supprimée. Toute modification apportée à un audit est auditée dans cet audit. Équivaut à la [classe d’événements Audit Change Audit](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
 |BACKUP_RESTORE_GROUP|Cet événement est déclenché chaque fois qu'une commande de sauvegarde ou de restauration est émise. Équivaut à la [Audit Backup and Restore Event Class](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Cet événement est déclenché lors de la création, de la modification ou de la suppression d'une base de données. Équivaut à la [classe d’événements Audit Database Management](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
-|DATABASE_LOGOUT_GROUP|Cet événement est déclenché lorsqu'un utilisateur de base de données à relation contenant-contenu se déconnecte d'une base de données. Équivaut à la [Audit Backup and Restore Event Class](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
+|DATABASE_LOGOUT_GROUP|Cet événement est déclenché lorsqu'un utilisateur de base de données autonome se déconnecte d'une base de données. Équivaut à la [Audit Backup and Restore Event Class](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
 |DATABASE_OBJECT_ACCESS_GROUP|Cet événement est déclenché en cas d'accès à des objets de base de données tels que des certificats et des clés asymétriques. Équivaut à la [classe d’événements Audit Database Object Access](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
 |DATABASE_OBJECT_CHANGE_GROUP|Cet événement est déclenché lorsqu'une instruction CREATE, ALTER ou DROP est exécutée sur des objets de base de données, tels que des schémas. Équivaut à la [classe d’événements Audit Database Object Management](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Cet événement est déclenché lorsqu'une modification de propriétaire pour des objets dans la portée de la base de données a lieu. Équivaut à la [classe d’événements Audit Database Object Take Ownership](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  
@@ -150,13 +149,13 @@ ms.lasthandoff: 05/03/2018
 |DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Cet événement est déclenché en cas d’emprunt d’identité dans la portée de la base de données, par exemple EXECUTE AS \<utilisateur>. Équivaut à la [classe d’événements Audit Database Principal Impersonation](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md).|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'une connexion est ajoutée à un rôle de base de données ou en est supprimée. Cette classe d’événements est utilisée avec les procédures stockées sp_addrolemember, sp_changegroup et sp_droprolemember. Équivaut à la [classe d’événements Audit Add Member to DB Role](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md)|  
 |DBCC_GROUP|Cet événement est déclenché chaque fois qu'un principal émet une commande DBCC. Équivaut à la [classe d’événements Audit DBCC](../../../relational-databases/event-classes/audit-dbcc-event-class.md).|  
-|FAILED_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal a tenté de se connecter à une base de données à relation contenant-contenu et a échoué. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Cet événement est déclenché.|  
+|FAILED_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal a tenté de se connecter à une base de données autonome et a échoué. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions. Cet événement est déclenché.|  
 |SCHEMA_OBJECT_ACCESS_GROUP|Cet événement est déclenché chaque fois qu'une autorisation d'objet a été utilisée dans le schéma. Équivaut à la [classe d’événements Audit Schema Object Access](../../../relational-databases/event-classes/audit-schema-object-access-event-class.md).|  
 |SCHEMA_OBJECT_CHANGE_GROUP|Cet événement est déclenché lorsqu'une opération CREATE, ALTER ou DROP est effectuée sur un schéma. Équivaut à la [classe d’événements Audit Schema Object Management](../../../relational-databases/event-classes/audit-schema-object-management-event-class.md).<br /><br /> Cet événement est déclenché sur les objets de schéma. Équivaut à la [classe d’événements Audit Object Derived Permission](../../../relational-databases/event-classes/audit-object-derived-permission-event-class.md). Équivaut également à la [classe d’événements Audit Statement Permission](../../../relational-databases/event-classes/audit-statement-permission-event-class.md).|  
 |SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP|Cet événement est déclenché lorsque les autorisations nécessaires pour modifier le propriétaire d'un objet de schéma, tel qu'une table, procédure ou fonction, sont activées. Cela intervient lorsque l'instruction ALTER AUTHORIZATION est utilisée pour affecter un propriétaire à un objet. Équivaut à la [classe d’événements Audit Schema Object Take Ownership](../../../relational-databases/event-classes/audit-schema-object-take-ownership-event-class.md).|  
 |SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP|Cet événement est déclenché chaque fois qu'une opération d'accord, de refus ou de révocation est émise pour un objet de schéma. Équivaut à la [classe d’événements Audit Schema Object GDR](../../../relational-databases/event-classes/audit-schema-object-gdr-event-class.md).|  
-|SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal s'est connecté à une base de données à relation contenant-contenu. Équivalent à la classe d'événements Audit Successful Database Authentication.|  
-|USER_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois que le mot de passe d'un utilisateur de base de données à relation contenant-contenu est modifié à l'aide de l'instruction ALTER USER.|  
+|SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|Indique qu'un principal s'est connecté à une base de données autonome. Équivalent à la classe d'événements Audit Successful Database Authentication.|  
+|USER_CHANGE_PASSWORD_GROUP|Cet événement est déclenché chaque fois que le mot de passe d'un utilisateur de base de données autonome est modifié à l'aide de l'instruction ALTER USER.|  
 |USER_DEFINED_AUDIT_GROUP|Ce groupe surveille les événements déclenchés à l’aide de [sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
   
 ## <a name="database-level-audit-actions"></a>Actions d'audit de niveau base de données  

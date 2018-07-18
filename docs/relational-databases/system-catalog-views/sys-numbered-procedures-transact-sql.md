@@ -1,5 +1,5 @@
 ---
-title: fonctionnalité sys.numbered_procedures (Transact-SQL) | Documents Microsoft
+title: Sys.numbered_procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d16757a007b423ab6c4ed8ff8a002a73c9c583dd
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33178755"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987441"
 ---
 # <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Contient une ligne pour chaque procédure stockée SQL Server créée en tant que procédure numérotée, sauf pour la procédure stockée de base (numéro = 1). Entrées pour les procédures stockées de base sont accessibles dans les vues comme **sys.objects** et **sys.procedures**.  
+  Contient une ligne pour chaque procédure stockée SQL Server créée en tant que procédure numérotée, sauf pour la procédure stockée de base (numéro = 1). Entrées pour les procédures stockées de base se trouve dans les vues comme **sys.objects** et **sys.procedures**.  
   
 > [!IMPORTANT]  
 >  Les procédures numérotées ont été déconseillées. L'utilisation de procédures numérotées est déconseillée. Un événement DEPRECATION_ANNOUNCEMENT est déclenché lorsqu'une requête qui utilise cette vue de catalogue est compilée.  

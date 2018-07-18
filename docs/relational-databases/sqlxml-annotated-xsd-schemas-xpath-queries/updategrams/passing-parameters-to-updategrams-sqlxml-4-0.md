@@ -1,5 +1,5 @@
 ---
-title: Passage de paramètres aux codes (SQLXML 4.0) | Documents Microsoft
+title: Passage de paramètres aux codes (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,22 +23,23 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d89d8d78b2d9f2439711756ae97f5fae5220724d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035470"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Passage de paramètres aux codes de mise à jour (updategrams) (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Les codes de mise à jour sont des modèles ; par conséquent, vous pouvez leur passer des paramètres. Pour plus d’informations sur le passage de paramètres aux modèles, consultez [considérations de sécurité de mise à jour &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md).  
   
- Les codes de mise à jour vous permettent de passer NULL comme valeur de paramètre. Pour passer la valeur de paramètre NULL, vous spécifiez la **nullvalue** attribut. La valeur est affectée à la **nullvalue** attribut est alors fourni en tant que la valeur du paramètre. Les codes de mise à jour traitent cette valeur comme NULL.  
+ Les codes de mise à jour vous permettent de passer NULL comme valeur de paramètre. Pour transmettre la valeur de paramètre NULL, vous spécifiez le **nullvalue** attribut. La valeur est assignée à la **nullvalue** attribut est ensuite fourni comme la valeur du paramètre. Les codes de mise à jour traitent cette valeur comme NULL.  
   
 > [!NOTE]  
->  Dans  **\<sql:header >** et  **\<updg:header >**, vous devez spécifier le **nullvalue** comme non qualifié, tandis que, dans  **\<updg:sync >**, vous spécifiez la **nullvalue** comme qualifié (par exemple, **NullValue**).  
+>  Dans  **\<sql:header >** et  **\<updg:header >**, vous devez spécifier le **nullvalue** comme non qualifié, tandis que, dans  **\<updg:sync >**, vous spécifiez le **nullvalue** comme qualifié (par exemple, **NullValue**).  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l’aide de la procédure ci-après, vous devez respecter la configuration requise spécifiée dans [configuration requise pour exécuter les exemples de SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples de travail utilisant les exemples suivants, vous devez respecter les exigences spécifiées dans [configuration requise pour exécuter les exemples de SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  Avant d'utiliser les exemples de code de mise à jour, notez les points suivants :  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900674"
 ---
 # <a name="product-support"></a>Prise en charge du produit
 Support technique pour ODBC est fourni par les Services de Support technique de Microsoft. Étant donné que de nombreux produits Microsoft utilisent ODBC comme un composant principal et également redistribuer les pilotes ODBC, Services de Support technique Microsoft considère ODBC pour faire partie de chaque produit qui intègre ODBC comme un composant. Prend en charge d’ODBC est conforme au contrat de prise en charge de ce produit. Consultez la documentation du produit pour plus d’informations.

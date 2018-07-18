@@ -1,13 +1,12 @@
 ---
-title: Appeler des procédures stockées (ODBC) | Documents Microsoft
+title: Appeler des procédures stockées (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,13 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 787eba6f732ef6796f46459e22d69171f050beec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b6f189ce8e2a118178c2da6c40a63cf5a8d1834
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431658"
 ---
-# <a name="running-stored-procedures---call-stored-procedures"></a>Les procédures stockées en cours d’exécution - appeler des procédures stockées
+# <a name="running-stored-procedures---call-stored-procedures"></a>Exécution de procédures stockées - appeler des procédures stockées
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
     {? = CALL procname (?,?)}  
     ```  
   
-2.  Appelez [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) pour chaque entrée, entrée/sortie et paramètre de sortie et pour la procédure retourne la valeur (le cas échéant).  
+2.  Appelez [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) pour chaque entrée, entrée/sortie et paramètre de sortie et pour connaître la procédure retourne la valeur (le cas échéant).  
   
 3.  Exécutez l’instruction avec [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
   

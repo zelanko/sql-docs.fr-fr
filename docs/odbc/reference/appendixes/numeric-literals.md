@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906444"
 ---
 # <a name="numeric-literals"></a>Littéraux numériques
 Littéraux numériques sont utilisés lorsque les valeurs de données numériques sont stockées dans des chaînes de caractères. Pour la conversion de données SQL numériques en une chaîne SQL_C_CHAR ou de conversion de données C numériques sur une chaîne SQL_CHAR ou SQL_VARCHAR, syntaxe de littéral numérique est utilisé pour spécifier ce qui est stocké dans la cible. Pour la conversion de numérique stockée sous forme de chaîne SQL_C_CHAR numérique de données SQL ou numérique stockée sous forme de chaîne SQL_CHAR à des données numériques C, cette syntaxe est utilisée pour valider ce qui est stocké dans la source.  

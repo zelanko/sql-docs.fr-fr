@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901054"
 ---
 # <a name="native-error"></a>Erreur native
 Codes d’erreur natif positifs sont générées par les pilotes de base de données de bureau. Codes d’erreur négatifs sont générés par Microsoft Jet. Pour plus d’informations, consultez la *Guide du programmeur moteur Microsoft Jet de base de données*.

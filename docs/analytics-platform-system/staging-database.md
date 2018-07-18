@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544653"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>À l’aide d’une base de données mise en lots dans Parallel Data Warehouse (PDW)
 SQL Server Parallel Data Warehouse (PDW) utilise une base de données intermédiaire pour stocker des données temporairement pendant le processus de chargement. Par défaut, SQL Server PDW utilise la base de données de destination en tant que la base de données intermédiaire, ce qui peut entraîner la fragmentation des tables. Pour réduire la fragmentation de la table, vous pouvez créer une base de données mise en lots défini par l’utilisateur. Ou bien, lors de la restauration à partir d’un échec de chargement n’est pas un problème, vous pouvez utiliser le mode de chargement de fastappend pour améliorer les performances par la non-exécution de la table temporaire et de charger directement dans la table de destination.  

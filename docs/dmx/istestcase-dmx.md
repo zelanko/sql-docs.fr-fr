@@ -1,31 +1,20 @@
 ---
 title: IsTestCase (DMX) | Documents Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- IsTestCase
-dev_langs:
-- DMX
-helpviewer_keywords:
-- IsTestCase function
-ms.assetid: 7ff4b895-9bb4-4e26-ab1b-c9049cfc2291
-caps.latest.revision: 10
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 1534dd83efab97d7f3e450bbe955453013e4c2e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: eefb9269a3eb0dc7a6b95e84accb4c68c6737a13
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841792"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,6 +55,6 @@ WHERE IsTestCase()
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Requêtes d’exploration de données](../analysis-services/data-mining/data-mining-queries.md)   
- [Apprentissage et jeux de données de test](../analysis-services/data-mining/training-and-testing-data-sets.md)  
+ [Jeux de données d’apprentissage et de test](../analysis-services/data-mining/training-and-testing-data-sets.md)  
   
   

@@ -2,7 +2,6 @@
 title: ObjectTypeEnum | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,22 +19,23 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3654a63d4fc327a2fd3ea6d8ff60c59fba75404
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c9cb6239cee3bd6416e587dc77d55e287da68e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286758"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 Spécifie le type d’objet de base de données pour lequel définir des autorisations ou la propriété.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|L’objet est une colonne.|  
 |**adPermObjDatabase**|3|L’objet est une base de données.|  
 |**adPermObjProcedure**|4|L’objet est une procédure.|  
 |**adPermObjProviderSpecific**|-1|L’objet est un type défini par le fournisseur. Une erreur se produit si le *ObjectType* paramètre est **adPermObjProviderSpecific** et un *ObjectTypeId* n’est pas fourni.|  
-|**adPermObjTable**|1|L’objet est une table.|  
+|**adPermObjTable**| 1|L’objet est une table.|  
 |**adPermObjView**|5|L’objet est une vue.|  
   
 ## <a name="applies-to"></a>S'applique à  

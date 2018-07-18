@@ -26,9 +26,10 @@
 # [Déployer et exécuter des packages dans Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [Tutoriel - Déployer et exécuter un package dans Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
 ## [Se connecter aux données avec l’authentification Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
-## [Se connecter aux fichiers et partages de fichiers](lift-shift/ssis-azure-files-file-shares.md)
-## [Se connecter à SSISDB dans Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Enregistrer les fichiers et se connecter aux partages de fichiers](lift-shift/ssis-azure-files-file-shares.md)
+## [Se connecter au catalogue SSIS dans Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Valider les packages déployés sur Azure](lift-shift/ssis-azure-validate-packages.md)
+## [Exécuter des packages dans Azure](lift-shift/ssis-azure-run-packages.md)
 ## [Planifier les packages dans Azure](lift-shift/ssis-azure-schedule-packages.md)
 ## [Planifier les packages dans Azure avec SSMS](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
@@ -72,6 +73,7 @@
 # [Requêtes](integration-services-ssis-queries.md)
 # [Transactions](integration-services-transactions.md)
 # [Déployer des packages](packages/deploy-integration-services-ssis-projects-and-packages.md)
+# [Exécuter des packages](packages/run-integration-services-ssis-packages.md)
 # [Montée en puissance parallèle](scale-out/integration-services-ssis-scale-out.md)
 
 # [Catalogue et serveur](catalog/integration-services-ssis-server-and-catalog.md)

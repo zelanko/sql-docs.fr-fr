@@ -2,7 +2,6 @@
 title: Méthodes ADOX | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf7837fb749222fe3083671632758ea04a112728
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ced2fbeb94aacd1035b28b56a46b10535f17c192
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284798"
 ---
 # <a name="adox-methods"></a>Méthodes ADOX
 |||  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 |[Append (vues)](../../../ado/reference/adox-api/append-method-adox-views.md)|Ajoute un nouveau **vue** de l’objet à la **vues** collection.|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Modifie le mot de passe pour un compte d’utilisateur.|  
 |[Créer](../../../ado/reference/adox-api/create-method-adox.md)|Crée un nouveau catalogue.|  
-|[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Supprime un objet d’une collection.|  
+|[Supprimer](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Supprime un objet d’une collection.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Retourne le propriétaire d’un objet dans un catalogue.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Retourne les autorisations pour un groupe ou utilisateur sur un objet.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Spécifie le propriétaire d’un objet dans un catalogue.|  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_external_script_execution_stats | Documents Microsoft
+title: Sys.dm_external_script_execution_stats | Microsoft Docs
 ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.openlocfilehash: 01380a29665d848fff1620787a97aabbcdac4033
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023813"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/23/2018
 > [!NOTE]  
 >  Cette vue de gestion dynamique est disponible uniquement si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution du script externe. Pour plus d’informations sur la manière de procéder pour les scripts R, consultez [Configurer SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |langue|**nvarchar**|Nom du langage enregistré de script externe. Chaque script externe doit spécifier le langage dans la demande de requête utilisé pour le démarrage du lanceur associé. |  
 |counter_name|**nvarchar**|Nom de la fonction enregistrée de script externe. N'accepte pas la valeur NULL.|  
@@ -64,7 +65,7 @@ Par conséquent, les compteurs suivis par cette vue de gestion dynamique sont co
 ### <a name="r-counter-values"></a>Valeurs de compteur R
  Actuellement, le seul langage de script externe pris en charge dans [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] est R. Les demandes de script externes pour le langage R sont traitées par [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]. 
 
-Pour R, cette DMV suit le nombre d’appels de R sont effectuées sur une instance. Par exemple, si `rxLinMod` est appelé et s’exécute en parallèle, le compteur est incrémenté d’une unité.
+Pour R, cette DMV suit le nombre d’appels R effectués sur une instance. Par exemple, si `rxLinMod` est appelé et s’exécute en parallèle, le compteur est incrémenté d’une unité.
  
 Pour le langage R, les valeurs de compteur affichées dans le champ *counter_name* représentent le nom des fonctions ScaleR enregistrées. Les valeurs du champ *counter_value* représentent le nombre cumulé des instances de fonctions spécifiques ScaleR. 
 

@@ -1,5 +1,5 @@
 ---
-title: Entrepôt de données SQL et les données en parallèle de l’entrepôt de vues de catalogue | Documents Microsoft
+title: Affichages catalogue de l’entrepôt SQL Data Warehouse et Parallel Data | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: ''
@@ -19,12 +19,13 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f82ec61d5f78b2590f463cade01b044aae459dbc
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029724"
 ---
-# <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>Entrepôt de données SQL et les vues de catalogue de l’entrepôt de données en parallèle
+# <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse et les vues de catalogue Parallel Data Warehouse
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Cette rubrique répertorie les [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] affichages catalogue.  

@@ -1,29 +1,28 @@
 ---
-title: Recherche de plus d’informations sur SQL Server Native Client | Documents Microsoft
+title: Recherche d’informations de Client natif SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLNCLI, additional resources
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 639ca13ec6cedf95c08ed8be75e25c5a40dcd31b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06b8b102293ed8bea4af80650a4eaef67da0441b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416698"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Recherche d'informations supplémentaires concernant SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 
   Pour plus d'informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et d'autres types de programmation d'accès aux données, consultez les ressources en ligne suivantes :  
   
- [Accès aux données et le centre de développement](http://go.microsoft.com/fwlink?linkid=4173)  
+ [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)  
  Ce site contient des articles techniques, des exemples de code et d'autres ressources pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et d'autres technologies d'accès aux données.  
   
  [Blog de l’accès aux données](http://go.microsoft.com/fwlink/?LinkId=48617)  

@@ -13,11 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 65999c781c4e13dc42b40c6e47ecd82a18a5fead
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8965d870164a146156031232d050bbee0a35e9ad
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812153"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Index columnstore - Nouveautés
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,15 +26,15 @@ ms.lasthandoff: 05/03/2018
   Récapitulatif des fonctionnalités columnstore disponibles pour chaque version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et pour les dernières versions de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > Pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les index columnstore sont disponibles dans les niveaux Premium, Standard (S3 et ultérieur) et vCore de SQL Database. Pour SQL Server (2016 SP1 et versions ultérieures), les index columnstore sont disponibles dans toutes les éditions. Pour SQL Server (2016 et versions antérieures), les index columnstore sont uniquement disponibles dans l’édition Entreprise.
+ > Pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les index columnstore sont disponibles dans les niveaux Premium, Standard (S3 et ultérieur) et dans tous les niveaux vCore de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Pour [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et ultérieur, les index columnstore sont disponibles dans toutes les éditions. Pour [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (avant SP1), les index columnstore sont disponibles seulement dans l’édition Entreprise.
  
 ## <a name="feature-summary-for-product-releases"></a>Synthèse des fonctionnalités pour les versions du produit  
  Ce tableau récapitule les principales fonctionnalités des index columnstore et des produits dans lesquels ils sont disponibles.  
 
 |Fonctionnalité d’index columnstore|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|Exécution par lot de requêtes multithread|oui|oui|oui|oui|oui|oui| 
-|Exécution par lot de requêtes monothread|||oui|oui|oui|oui|  
+|Exécution en mode batch pour les requêtes multithread|oui|oui|oui|oui|oui|oui| 
+|Exécution en mode batch pour les requêtes monothread|||oui|oui|oui|oui|  
 |Option de compression de l’archivage||oui|oui|oui|oui|oui|  
 |Isolement de capture instantanée et isolement de capture instantanée Read Committed|||oui|oui|oui|oui| 
 |Spécifier l’index columnstore lors de la création d’une table|||oui|oui|oui|oui|  

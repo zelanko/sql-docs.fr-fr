@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905484"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>À l’aide d’Applications 16 bits avec les pilotes 32 bits
 > [!IMPORTANT]  

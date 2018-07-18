@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909254"
 ---
 # <a name="creating-and-terminating-threads"></a>Création et arrêter des Threads
 Les applications multithread qui utilisent ODBC doivent appeler les fonctions de la bibliothèque Runtime de Microsoft® Visual C++® **_beginthread** et **_endthread** (ou **_beginthreadex** et **_endthreadex**) pour créer et terminer des threads qui appellent le Gestionnaire de pilotes ODBC. Si les applications appellent les fonctions Microsoft Windows NT® **CreateThread** et **EndThread** au lieu de cela, mémoire fuites seront produit, car le Gestionnaire de pilotes et certains pilotes ODBC appellent les fonctions runtime C qui ne fonctionnera pas sur un thread créé par l’appel **CreateThread**. Pour plus d’informations, consultez la documentation de Microsoft Windows®.

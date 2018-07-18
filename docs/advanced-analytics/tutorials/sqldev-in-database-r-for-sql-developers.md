@@ -1,20 +1,21 @@
 ---
-title: Dans base de données analytique de R pour les développeurs SQL (didacticiel) | Documents Microsoft
+title: Didacticiel d’analytique R incorporé pour les développeurs de SQL Server Machine Learning | Documents Microsoft
+description: Le didacticiel expliquant comment incorporer R dans SQL Server procédures stockées et fonctions T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3d2b77d73bb1b8f5d4c507b884d0a09f4647012b
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34585271"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250022"
 ---
-# <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>Analytique de R dans base de données pour les développeurs SQL (didacticiel)
+# <a name="tutorial-embedded-r-in-stored-procedures-and-t-sql-functions"></a>Didacticiel : Incorporé R dans les procédures stockées et fonctions de T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 L’objectif de ce didacticiel est de fournir des programmeurs SQL avec une expérience pratique de créer une solution dans SQL Server d’apprentissage. Dans ce didacticiel, vous allez apprendre à intégrer R dans une application ou d’une solution Décisionnelle en insérant le code R dans les procédures stockées.
@@ -31,41 +32,30 @@ Toutefois, une fois que la solution est créée, vous pouvez facilement la dépl
 
 Dans ce didacticiel, nous supposons que vous avez reçu tout le code R requis pour la solution, puis de se concentrer sur la création et déploiement de la solution à l’aide de SQL Server.
 
-- [Leçon 1 : Télécharger les exemples de données](../tutorials/sqldev-download-the-sample-data.md)
+- [Leçon 1 : Télécharger les exemples de données et les scripts](../tutorials/sqldev-download-the-sample-data.md)
 
-    Téléchargez l’exemple de dataset et les exemples de fichiers de script SQL sur un ordinateur local.
+- [Leçon 2 : Configurer l’environnement du didacticiel](../r/sqldev-import-data-to-sql-server-using-powershell.md)
 
-- [Leçon 2 : Importer des données vers SQL Server à l’aide de PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [Leçon 3 : Explorer et visualiser la forme de données et la distribution en appelant les fonctions R dans des procédures stockées](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-    Exécutez un script PowerShell qui crée une base de données et une table sur l’instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , et charge les exemples de données dans la table.
-
-- [Leçon 3 : Explorer et visualiser les données](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-    Effectuez une exploration et une visualisation de données de base en appelant des packages R et des fonctions de procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] .
-
-- [Leçon 4 : Créer des fonctionnalités de données à l’aide de T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
-
-    Créez des caractéristiques de données à l’aide de fonctions personnalisées.
+- [Leçon 4 : Créer des fonctionnalités de données à l’aide de R dans les fonctions T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
--   [Leçon 5 : L’apprentissage et enregistrer un modèle R à l’aide de T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
-
-    Générer un modèle d’apprentissage à l’aide de R dans les procédures stockées. Enregistrez le modèle à une table SQL Server.
+- [Leçon 5 : L’apprentissage et enregistrer un modèle R à l’aide des fonctions et procédures stockées](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
--   [Leçon 6 : Rendez le modèle opérationnel.](../tutorials/sqldev-operationalize-the-model.md)
+- [Leçon 6 : Code de retour à la ligne R dans une procédure stockée à l’Opérationnalisation](../tutorials/sqldev-operationalize-the-model.md). 
+  Une fois que le modèle a été enregistré dans la base de données, appelez-le pour la prédiction dans [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de procédures stockées.
 
-    Une fois que le modèle a été enregistré dans la base de données, appelez-le pour la prédiction dans [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de procédures stockées.
-
-### <a name="scenario"></a>Scénario
+## <a name="scenario"></a>Scénario
 
 Ce didacticiel utilise un dataset publique connu, basé sur les boucles dans taxi de New York city. Pour exécuter l’exemple de code plus rapide, nous avons créé un échantillonnage représentatif de 1 % des données. Ces données vous permet de générer un modèle de classification binaire qui prévoit si un voyage particulier est susceptible d’obtenir un Conseil ou non, en fonction des colonnes, telles que l’heure du jour, distance et l’emplacement d’extraction.
 
-### <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Spécifications
 
-Ce didacticiel s’adresse aux utilisateurs qui sont familiarisés avec les opérations de base de données telles que la création de bases de données et de tables, l’importation de données dans des tables et l’écriture de requêtes SQL. Tout le code R est fourni, aucun environnement de développement R n’est donc nécessaire. Un programmeur expérimenté de SQL peut utiliser [ ! INCLUDE [tsql] (.. /.. / inclut/tsql-md.md)] dans [ ! INCLUDE [ssManStudioFull] (.. /.. / inclut / ssmanstudiofull-md.md) et exécutez le script PowerShell fourni pour compléter cet exemple. Toutefois, avant de commencer ce didacticiel, vous devez effectuer les préparatifs suivants :
+Ce didacticiel suppose que vous êtes familiarisé avec les opérations de base de données telles que la création de bases de données et de tables, l’importation de données et l’écriture de requêtes SQL. Il n’assume pas que vous savez R. Par conséquent, tout le code R est fourni. Un programmeur expérimenté de SQL peut utiliser un script PowerShell fourni, exemples de données sur GitHub, et [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour compléter cet exemple. 
 
-Toutefois, avant de commencer le didacticiel, vous devez effectuer ces tâches de préparation :
+Avant de commencer le didacticiel :
 
-- Se connecter à une instance de SQL Server 2016 avec R Services ou 2017 du serveur SQL avec les Services de Machine Learning et R activée.
+- Vérifiez que vous avez une instance configurée de [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) ou [SQL Server 2017 Machine Learning Services avec R activé](../install/sql-machine-learning-services-windows-install.md#verify-installation). En outre, [Confirmez que les bibliothèques R](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location).
 - La connexion que vous utilisez pour ce didacticiel doit avoir les autorisations nécessaires pour créer des bases de données et autres objets, télécharger des données, sélectionnez les données et exécuter des procédures stockées.
 
 > [!NOTE]

@@ -1,36 +1,33 @@
 ---
-title: Découverte des métadonnées | Documents Microsoft
+title: Découverte des métadonnées | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b0d537e3762c9eb295cdd4d7dccf508beed8e59e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 51421229b4d5e8799e4a3995b9aed680fdaa026a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423428"
 ---
 # <a name="metadata-discovery"></a>Découverte des métadonnées
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  L’amélioration de découverte des métadonnées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les applications clientes natives pour vous assurer que les métadonnées de colonne ou de paramètre retournées par l’exécution d’une requête sont identiques ou compatibles avec le format de métadonnées que vous avez spécifié avant l’exécution de la requête. Vous recevrez une erreur si les métadonnées retournées après l'exécution de la requête ne sont pas compatibles avec le format des métadonnées que vous avez spécifié avant l'exécution de la requête.  
+  L’amélioration de découverte de métadonnées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les applications clientes natives pour vous assurer que les métadonnées colonne ou du paramètre retournée à partir de l’exécution d’une requête soient identique à ou compatibles avec les métadonnées que vous avez spécifié avant de mettre en forme vous avez exécuté la requête. Vous recevrez une erreur si les métadonnées retournées après l'exécution de la requête ne sont pas compatibles avec le format des métadonnées que vous avez spécifié avant l'exécution de la requête.  
   
  Dans les fonctions bcp et ODBC, et dans les interfaces IBCPSession et  IBCPSession2, vous pouvez maintenant spécifier une lecture différée (découverte des métadonnées retardée) pour éviter la découverte de métadonnées pour des opérations de requête. Cela améliore la performance et élimine les échecs de découverte des métadonnées.  
   
- Si vous développez une application en utilisant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] mais se connectent à une version de serveur antérieure à [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], fonctionnalité correspond à la version du serveur de découverte des métadonnées.  
+ Si vous développez une application à l’aide [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] mais de vous connecter à une version de serveur antérieure à [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], découverte de métadonnées fonctionnalité correspondront à la version du serveur.  
   
 ## <a name="remarks"></a>Notes  
  Les fonctions bcp suivantes ont été améliorées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] afin de fournir une fonctionnalité améliorée de découverte des métadonnées :  

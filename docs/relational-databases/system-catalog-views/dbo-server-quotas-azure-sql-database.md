@@ -1,5 +1,5 @@
 ---
-title: dbo.server_quotas (base de données de SQL Azure) | Documents Microsoft
+title: dbo.server_quotas (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: ''
@@ -26,10 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ada6f943e451e6c468adaed27bfe4618407d2dc7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029667"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,15 +42,15 @@ ms.lasthandoff: 05/04/2018
   
  Retourne les types de quota de base de données disponibles sur le serveur.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|quota_name|**nvarchar**|Type de quota du serveur. Le type **Premium_database** est équivalent aux bases de données avec une réservation de ressources.|  
-|quota_value|**int**|Nombre de types de quota autorisé dans le serveur.|  
+|quota_name|**nvarchar**|Type de quota du serveur. Le type **Premium_database** équivaut aux bases de données avec une réservation de ressources.|  
+|quota_value|**Int**|Nombre de types de quota autorisé dans le serveur.|  
   
 ## <a name="permissions"></a>Autorisations  
- Cette vue est disponible pour tous les rôles d’utilisateur disposant des autorisations pour se connecter à virtuel **master** base de données.  
+ Cette vue est disponible pour tous les rôles d’utilisateur avec des autorisations pour se connecter à virtuel **master** base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion des bases de données Premium](http://go.microsoft.com/fwlink/?LinkID=311927)  
+ [La gestion des bases de données Premium](http://go.microsoft.com/fwlink/?LinkID=311927)  
   
   

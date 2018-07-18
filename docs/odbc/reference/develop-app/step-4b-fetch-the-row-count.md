@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915254"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>Étape 4 b : extraire le nombre de lignes
 L’étape suivante consiste à extraire le nombre de lignes, comme indiqué dans l’illustration suivante.  

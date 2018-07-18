@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018696"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Boîte de dialogue Sections de rapport (Générateur de rapports)
   Lorsque vous ouvrez un rapport, le Générateur de rapports vérifie que le rapport contient un seul élément **\<Section>** RDL (Report Definition Language). L’ouverture d’un rapport avec plusieurs éléments **\<Section>** n’est pas prise en charge.  

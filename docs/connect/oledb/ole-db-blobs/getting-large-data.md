@@ -2,10 +2,10 @@
 title: Obtention de données volumineuses | Documents Microsoft
 description: Obtention de données volumineuses à l’aide du pilote OLE DB pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-blobs
+ms.component: oledb|ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0e71eb252a447491205f9a8ed803e8c385612430
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7da19bac472558efadd3671e5dbfe09b5962f30f
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666199"
 ---
 # <a name="getting-large-data"></a>Obtention de données volumineuses
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   En règle générale, les consommateurs doivent isoler le code qui crée un pilote OLE DB pour l’objet de stockage de SQL Server à partir de tout autre code qui gère les données qui ne sont pas référencées via un **ISequentialStream** pointeur d’interface.  
   
@@ -152,6 +155,6 @@ HRESULT GetUnboundData
   
 ## <a name="see-also"></a>Voir aussi  
  [Objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
- [À l’aide des Types de valeur élevée](../../oledb/features/using-large-value-types.md)  
+ [Utilisation de types de valeur élevée](../../oledb/features/using-large-value-types.md)  
   
   

@@ -2,7 +2,6 @@
 title: PersistFormatEnum | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,20 +19,21 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 141590f2755323422f44aacb4617905191d3a154
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aa6ce5a4341c85f7763d407b0d39599b24d9441
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280608"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 Spécifie le format dans lequel enregistrer un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|Indique le format Microsoft Advanced Data TableGram (ADTG).|  
-|**adPersistADO**|1|Indique que le format Extensible Markup Language (XML) de d’ADO sera utilisé. Cette valeur est identique à adPersistXML et est inclus pour des raisons de compatibilité descendante.|  
-|**adPersistXML**|1|Indique le format de langage XML (Extensible Markup).|  
+|**adPersistADO**| 1|Indique que le format Extensible Markup Language (XML) de d’ADO sera utilisé. Cette valeur est identique à adPersistXML et est inclus pour des raisons de compatibilité descendante.|  
+|**adPersistXML**| 1|Indique le format de langage XML (Extensible Markup).|  
 |**adPersistProviderSpecific**|2|Indique que le fournisseur maintient la **Recordset** à l’aide de son propre format.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  

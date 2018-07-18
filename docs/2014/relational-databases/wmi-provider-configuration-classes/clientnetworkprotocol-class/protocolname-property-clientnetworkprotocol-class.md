@@ -1,0 +1,56 @@
+---
+title: ProtocolName, propriété (classe ClientNetworkProtocol) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- ProtocolName Property (ClientNetworkProtocol Class)
+api_location:
+- sqlmgmproviderxpsp2up.mof
+topic_type:
+- apiref
+helpviewer_keywords:
+- ProtocolName property
+ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
+caps.latest.revision: 35
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 71c1cb6ea19e9bc29308af6150856f57e8866dea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227131"
+---
+# <a name="protocolname-property-clientnetworkprotocol-class"></a>Propriété ProtocolName (classe ClientNetworkProtocol)
+  Obtient le nom complet du protocole réseau actuel spécifié par le [configurer des protocoles clients](http://technet.microsoft.com/library/ms181035.aspx).  
+  
+## <a name="syntax"></a>Syntaxe  
+  
+```  
+  
+object  
+.ProtocolName [= value]  
+```  
+  
+## <a name="parts"></a>Éléments  
+ *object*  
+ A [classe ClientNetworkProtocol](clientnetworkprotocol-class.md) qui représente le protocole réseau utilisé par le client [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+  
+## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
+ Valeur de chaîne qui spécifie le nom du client actuel protocole réseau référencé par le [setordervalue, méthode (classe ClientNetworkProtocol)](http://technet.microsoft.com/library/ms179295.aspx).  
+  
+## <a name="remarks"></a>Notes  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Configuration des bibliothèques réseau et des protocoles réseau clients](http://technet.microsoft.com/library/ms181035.aspx)  
+  
+  

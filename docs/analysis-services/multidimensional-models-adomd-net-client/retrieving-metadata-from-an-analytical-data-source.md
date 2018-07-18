@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021166"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Récupération de métadonnées à partir d'une source de données analytiques
   Les métadonnées s'avèrent importantes pour les applications qui récupèrent et utilisent des données analytiques. Lorsqu'il s'agit de récupérer les données d'une source de données, la dimensionnalité de telles données est prévisible, même en présence de dataset imbriqués. Les jeux de résultats d'une base de données relationnelle présentent généralement une structure bidimensionnelle ou scalaire. Toutefois, les données extraites de sources de données analytiques peuvent avoir une dimensionnalité variable, organisées selon des hiérarchies d'une grande profondeur potentielle.  

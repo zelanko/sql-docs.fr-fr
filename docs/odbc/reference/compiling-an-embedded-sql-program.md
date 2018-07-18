@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908934"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Compilez un programme SQL incorporé
 Comme un programme SQL incorporé contient une combinaison d’instructions de langage SQL et l’hôte, il ne peut pas être soumis directement à un compilateur pour le langage hôte. Au lieu de cela, il est compilé dans un processus en plusieurs étapes. Bien que ce processus est différent du produit, les étapes sont à peu près les mêmes pour tous les produits.  

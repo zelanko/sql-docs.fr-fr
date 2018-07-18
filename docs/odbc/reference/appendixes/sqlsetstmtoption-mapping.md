@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909234"
 ---
 # <a name="sqlsetstmtoption-mapping"></a>Mappage de SQLSetStmtOption
 Lorsqu’une application appelle **SQLSetStmtOption** via un ODBC 3 *.x* pilote, l’appel à  

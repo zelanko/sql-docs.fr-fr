@@ -1,5 +1,5 @@
 ---
-title: La gestion des données relationnelles de requêtes XQuery | Documents Microsoft
+title: Requêtes XQuery pour la gestion des données relationnelles | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b03a2aa4b8e6f2327a58884defe1e9435bfbc326
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987371"
 ---
 # <a name="xqueries-handling-relational-data"></a>Requêtes XQuery pour la gestion des données relationnelles
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +41,11 @@ ms.lasthandoff: 05/03/2018
   
 -   **SQL :variable()** (fonction)  
   
- Vous pouvez utiliser ces extensions XQuery lorsque vous spécifiez une requête XQuery dans le **query()** méthode de la **xml** type de données. Par conséquent, le **query()** méthode peut produire du code XML qui combine des données à partir de XML et non-**xml** des types de données.  
+ Vous pouvez utiliser ces extensions XQuery lorsque vous spécifiez une requête XQuery dans la **query()** méthode de la **xml** type de données. Par conséquent, le **query()** méthode peut produire du code XML qui combine des données à partir de XML et non-**xml** types de données.  
   
- Vous pouvez également utiliser ces fonctions lorsque vous utilisez la **xml** méthodes du type de données **modify()**, **value()**, **query()**, et **exist()** pour exposer une valeur relationnelle dans du code XML.  
+ Vous pouvez également utiliser ces fonctions lorsque vous utilisez le **xml** méthodes de type de données **modify()**, **value()**, **query()**, et  **EXIST()** pour exposer une valeur relationnelle dans du code XML.  
   
- Pour plus d’informations, consultez [fonction SQL :Column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) et [:variable() (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
+ Pour plus d’informations, consultez [fonction SQL :Column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) et [fonction SQL :variable() (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Données XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   

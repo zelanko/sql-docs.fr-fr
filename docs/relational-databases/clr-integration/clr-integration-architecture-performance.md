@@ -1,14 +1,11 @@
 ---
-title: Performances de l’intégration du CLR | Documents Microsoft
+title: Performances d’intégration du CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -19,13 +16,14 @@ caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ad749572b54e76c751002db3516fdf46ce31f729
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 21480acac0ba1d54ede060c127114da46d0ba8a3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355061"
 ---
-# <a name="clr-integration-architecture----performance"></a>Architecture d’intégration CLR - performances
+# <a name="clr-integration-architecture----performance"></a>Architecture d’intégration de CLR - performances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique aborde certains choix de conception qui améliorent les performances de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégration avec le [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common language runtime (CLR).  
   
@@ -51,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="streaming-table-valued-functions"></a>Fonctions table en continu  
  Les applications doivent souvent retourner une table comme résultat de l'appel d'une fonction. Les exemples incluent la lecture de données tabulaires à partir d'un fichier dans le cadre d'une opération d'importation et la conversion de valeurs séparées par des virgules dans le cas d'une représentation relationnelle. En général, vous pouvez accomplir ces actions en matérialisant la table de résultats et en la remplissant avant qu'elle ne puisse être consommée par l'appelant. L'intégration du CLR dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduit un nouveau mécanisme d'extensibilité appelé fonction table en continu. Les fonctions table en continu offrent de meilleures performances que les implémentations de procédure stockée étendue comparables.  
   
- Table en continu est des fonctions managées qui retournent un **IEnumerable** interface. **IEnumerable** a des méthodes pour naviguer dans le jeu de résultats retourné par la fonction table en continu. Lorsque la fonction table en continu est appelé, retourné **IEnumerable** est directement connecté au plan de requête. Le plan de requête appelle **IEnumerable** méthodes lorsqu’il a besoin extraire les lignes. Ce modèle d'itération permet que les résultats soient consommés immédiatement après que la première ligne a été créée, au lieu d'attendre que la totalité de la table soit remplie. Il réduit aussi considérablement la mémoire consommée en appelant la fonction.  
+ Table en continu est des fonctions managées qui retournent un **IEnumerable** interface. **IEnumerable** a des méthodes pour parcourir le jeu de résultats retourné par la fonction table en continu. Lorsque la fonction table en continu est appelé, retourné **IEnumerable** est directement connecté au plan de requête. Le plan de requête appelle **IEnumerable** méthodes lorsqu’il a besoin extraire les lignes. Ce modèle d'itération permet que les résultats soient consommés immédiatement après que la première ligne a été créée, au lieu d'attendre que la totalité de la table soit remplie. Il réduit aussi considérablement la mémoire consommée en appelant la fonction.  
   
 ### <a name="arrays-vs-cursors"></a>Différences entre les tableaux et les Curseurs  
  Lorsque les curseurs [!INCLUDE[tsql](../../includes/tsql-md.md)] doivent parcourir des données qui sont plus aisément exprimées en tableau, le code managé peut être utilisé avec des gains de performance significatifs.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="native-serialization-for-user-defined-types"></a>Sérialisation native pour les types définis par l'utilisateur  
  Les types définis par l'utilisateur (UDT) sont conçus comme mécanisme d'extensibilité du système de types scalaires. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente un format de sérialisation pour les UDT appelé **Format.Native**. Pendant la compilation, la structure du type est examinée pour générer un langage MSIL personnalisé pour cette définition de type particulière.  
   
- La sérialisation native est l'implémentation par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La sérialisation définie par l'utilisateur appelle une méthode définie par le créateur du type pour effectuer la sérialisation. **Format.Native** la sérialisation doit être utilisée lorsque cela est possible pour de meilleures performances.  
+ La sérialisation native est l'implémentation par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La sérialisation définie par l'utilisateur appelle une méthode définie par le créateur du type pour effectuer la sérialisation. **Format.Native** sérialisation doit être utilisée lorsque cela est possible pour de meilleures performances.  
   
 ### <a name="normalization-of-comparable-udts"></a>Normalisation d'UDT comparables  
  Les opérations relationnelles, telles que le tri et la comparaison d'UDT, fonctionnent directement sur la représentation binaire de la valeur. Cette tâche s'effectue en stockant une représentation normalisée (classement binaire) de l'état de l'UDT sur le disque.  

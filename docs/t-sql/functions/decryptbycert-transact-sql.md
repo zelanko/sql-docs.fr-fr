@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - DECRYPTBYCERT function
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 789afb1973a38b877c8fec60b1603d23166acaec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d94bc1ba7a11f9d934118ba649bff58e84b9fb3
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787090"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Déchiffre les données à l'aide de la clé privée d'un certificat.  
+Cette fonction utilise la clé privée d’un certificat pour déchiffrer les données chiffrées.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,32 +47,32 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>Arguments  
  *certificate_ID*  
- Identificateur d'un certificat dans la base de données. *certificate*_ID est de type **int**.  
+ID d'un certificat de la base de données. *certificate_ID* a le type de données **int**.  
   
  *ciphertext*  
- Chaîne de données chiffrée à l'aide de la clé publique du certificat.  
+Chaîne de données chiffrée avec la clé publique du certificat.  
   
  @ciphertext  
- Variable de type **varbinary** contenant des données qui ont été chiffrées avec le certificat.  
+Variable de type **varbinary** contenant des données chiffrées avec le certificat.  
   
  *cert_password*  
- Mot de passe utilisé pour chiffrer la clé privée du certificat. Il doit s'agir d'une chaîne Unicode.  
+Mot de passe utilisé pour chiffrer la clé privée du certificat. *cert_password* doit avoir un format de données Unicode.  
   
  @cert_password  
- Variable de type **nchar** ou **nvarchar** contenant le mot de passe utilisé pour chiffrer la clé privée du certificat. Il doit s'agir d'une chaîne Unicode.  
-  
+Variable de type **nchar** ou **nvarchar** contenant le mot de passe utilisé pour chiffrer la clé privée du certificat. *@cert_password* doit avoir un format de données Unicode.  
+
 ## <a name="return-types"></a>Types de retour  
- **varbinary** d’une taille maximale de 8 000 octets.  
+**varbinary** d’une taille maximale de 8 000 octets.  
   
 ## <a name="remarks"></a>Notes   
- Cette fonction déchiffre les données à l'aide de la clé privée d'un certificat. Les opérations de chiffrement/déchiffrement qui utilisent des clés asymétriques consomment une grande quantité de ressources. C'est pourquoi EncryptByCert et DecryptByCert ne conviennent pas pour le chiffrement régulier des données utilisateur.  
-  
+Cette fonction déchiffre les données à l'aide de la clé privée d'un certificat. Les opérations de chiffrement/déchiffrement qui utilisent des clés asymétriques consomment une grande quantité de ressources. Nous recommandons donc aux développeurs d’éviter d’utiliser [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) et DECRYPTBYCERT pour les opérations de chiffrement/déchiffrement de routine des données utilisateur.  
+
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'autorisation CONTROL sur le certificat.  
+`DECRYPTBYCERT` nécessite l’autorisation CONTROL sur le certificat.  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant sélectionne des lignes de `[AdventureWorks2012].[ProtectedData04]` qui sont marquées en tant que `data encrypted by certificate JanainaCert02`. L'exemple déchiffre le texte chiffré à l'aide de la clé privée du certificat `JanainaCert02`, laquelle est préalablement déchiffrée à l'aide du mot de passe du certificat, `pGFD4bb925DGvbd2439587y`. Les données déchiffrées sont converties du type **varbinary** en type **nvarchar**.  
-  
+Cet exemple sélectionne des lignes de `[AdventureWorks2012].[ProtectedData04]` marquées comme données chiffrées à l’origine par le certificat `JanainaCert02`. L’exemple déchiffre tout d’abord la clé privée du certificat `JanainaCert02` avec le mot de passe du certificat `pGFD4bb925DGvbd2439587y`. L’exemple déchiffre ensuite le texte chiffré avec cette clé privée. L’exemple convertit les données déchiffrées du type **varbinary** en type **nvarchar**.  
+
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
     ProtectedData, N'pGFD4bb925DGvbd2439587y'))  

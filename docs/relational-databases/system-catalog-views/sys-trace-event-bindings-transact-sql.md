@@ -1,5 +1,5 @@
 ---
-title: Sys.trace_event_bindings (Transact-SQL) | Documents Microsoft
+title: Sys.trace_event_bindings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 287f5cb11acb3ddf23b0a1f77f4039a97b9da9ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981431"
 ---
 # <a name="systraceeventbindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +41,10 @@ ms.lasthandoff: 05/04/2018
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt les affichages catalogue des événements étendus.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**trace_event_id**|**smallint**|ID de l'événement de trace. Cette colonne figure également dans le **sys.trace_events** affichage catalogue.|  
-|**trace_column_id**|**smallint**|ID de la colonne de trace. Cette colonne figure également dans le **sys.trace_columns** affichage catalogue.|  
+|**trace_event_id**|**smallint**|ID de l'événement de trace. Cette colonne figure également dans le **sys.trace_events** vue de catalogue.|  
+|**trace_column_id**|**smallint**|ID de la colonne de trace. Cette colonne figure également dans le **sys.trace_columns** vue de catalogue.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

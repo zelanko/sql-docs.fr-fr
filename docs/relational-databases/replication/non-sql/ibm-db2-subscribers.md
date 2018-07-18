@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +21,12 @@ caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 452c82ff5fb19f90b3c20ad030c77b40f6de33d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0af7787982a49f82edafe1a39878e9e9f581356b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349851"
 ---
 # <a name="ibm-db2-subscribers"></a>Abonnés IBM DB2
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Ne publiez pas des tables sur des Abonnés DB2 à l'aide de la réplication transactionnelle si une ou plusieurs colonnes clés primaire a le type de données DECIMAL(32-38, 0-38) ou NUMERIC(32-38, 0-38). La réplication transactionnelle identifie les lignes à l'aide de la clé primaire ; des échecs peuvent se produire car ces types de données sont mappés à VARCHAR(41) sur l'Abonné. Les tables avec des clés primaires qui utilisent ces types de données peuvent être publiées à l'aide de la réplication d'instantané.  
   
--   Si vous souhaitez créer préalablement ces tables sur l'Abonné plutôt qu'elles soient créées par la réplication, utilisez l'option Prise en charge de la réplication uniquement. Pour plus d’informations, consultez [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+-   Si vous souhaitez créer préalablement ces tables sur l'Abonné plutôt qu'elles soient créées par la réplication, utilisez l'option Prise en charge de la réplication uniquement. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autorise des noms de colonnes et de tables plus longs que DB2 :  
   

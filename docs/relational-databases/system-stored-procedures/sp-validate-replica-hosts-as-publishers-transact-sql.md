@@ -1,5 +1,5 @@
 ---
-title: sp_validate_replica_hosts_as_publishers (Transact-SQL) | Documents Microsoft
+title: sp_validate_replica_hosts_as_publishers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 408d6c239afd528deeae25f925b8626968dff6bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037747"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **sp_validate_replica_hosts_as_publishers** est une extension de **sp_validate_redirected_publisher** qui permet à tous les réplicas secondaires d’être validés, plutôt que de simplement le réplica principal actuel. **sp_validate_replicat_hosts_as_publisher** valide une topologie de réplication entière Always On. **sp_validate_replica_hosts_as_publishers** doit être exécutée directement sur le serveur de distribution à l’aide d’une session Bureau à distance afin d’éviter une erreur de sécurité de double-saut (21892).  
+  **sp_validate_replica_hosts_as_publishers** est une extension de **sp_validate_redirected_publisher** qui permet à tous les réplicas secondaires d’être validés, au lieu de simplement le réplica principal actuel. **sp_validate_replicat_hosts_as_publisher** valide une topologie de réplication entière Always On. **sp_validate_replica_hosts_as_publishers** doit être exécutée directement sur le serveur de distribution à l’aide d’une session Bureau à distance pour éviter une erreur de sécurité de double-saut (21892).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,7 +68,7 @@ sp_validate_replica_hosts_as_publishers
   
  Si la validation réussit, **sp_validate_redirected_publisher** retourne une indication de réussite.  
   
- Si la validation échoue, les erreurs appropriées sont générées.  **sp_validate_redirected_publisher** fait de son mieux pour déclencher tous les problèmes et pas seulement la première rencontré.  
+ Si la validation échoue, les erreurs appropriées sont générées.  **sp_validate_redirected_publisher** rend a rencontré un meilleur effort pour déclencher tous les problèmes et pas seulement la première.  
   
 > [!NOTE]  
 >  **sp_validate_replica_hosts_as_publishers** échoue avec l’erreur suivante lors de la validation des hôtes de réplica secondaire qui n’autorisent pas l’accès en lecture, ou nécessitent la spécification de l’intention de lecture.  
@@ -79,7 +80,7 @@ sp_validate_replica_hosts_as_publishers
 >  Une ou plusieurs erreurs de validation de serveur de publication ont été rencontrées pour l'hôte de réplica 'MyReplicaHostName'.  
   
 ## <a name="permissions"></a>Autorisations  
- L’appelant doit être un membre de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe pour la base de données de distribution ou un membre d’une liste d’accès à une publication définie associée à la base de données du serveur de publication.  
+ L’appelant doit être un membre de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe pour la base de données de distribution ou un membre d’une liste d’accès à une publication définie associé à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sys.database_event_session_fields (de base de données SQL Azure) | Documents Microsoft
+title: Sys.database_event_session_fields (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +19,13 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0a7c7ee610ae5eb3a56a46c5b8c7ba1645b64532
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981851"
 ---
-# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>Sys.database_event_session_fields (de base de données SQL Azure)
+# <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>Sys.database_event_session_fields (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque colonne personnalisable définie explicitement sur les événements et les cibles.  
@@ -33,11 +34,11 @@ ms.lasthandoff: 05/04/2018
 |-|  
 |**S’applique aux**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 et les versions ultérieures.|  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
-|object_id|**int**|ID de l'objet auquel est associé ce champ. N'accepte pas la valeur NULL.|  
-|name|**sysname**|Le nom du champ. N'accepte pas la valeur NULL.|  
+|event_session_id|**Int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
+|object_id|**Int**|ID de l'objet auquel est associé ce champ. N'accepte pas la valeur NULL.|  
+|NAME|**sysname**|Le nom du champ. N'accepte pas la valeur NULL.|  
 |valeur|**sql_variant**|La valeur du champ. N'accepte pas la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  

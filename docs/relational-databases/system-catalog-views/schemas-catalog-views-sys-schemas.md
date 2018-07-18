@@ -1,5 +1,5 @@
 ---
-title: Sys.Schemas (Transact-SQL) | Documents Microsoft
+title: Sys.Schemas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fb74ca331e580ffa71111f987bf3a93450f2b56
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33178335"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049946"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>Affichages - catalogue de schémas sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "33178335"
 |**principal_id**|**Int**|Identificateur du principal qui possède ce schéma.|  
   
 ## <a name="remarks"></a>Notes  
- Schémas de base de données agissent comme des espaces de noms ou des conteneurs d’objets, tels que des tables, vues, procédures et fonctions, qui se trouvent dans le **sys.objects** affichage catalogue.  
+ Schémas de base de données agissent comme des espaces de noms ou des conteneurs pour les objets, tels que des tables, vues, procédures et fonctions, qui se trouve dans le **sys.objects** vue de catalogue.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -1,6 +1,6 @@
 ---
 title: Propriétés OLAP | Documents Microsoft
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5739c93f7a3c20960f5470c3fd2cdb24c72cf09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239289"
 ---
 # <a name="olap-properties"></a>Propriétés OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur OLAP répertoriées dans les tableaux suivants. Pour plus d’informations sur les autres propriétés de serveur et sur la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **S'applique à :** Mode serveur multidimensionnel uniquement  
@@ -48,12 +50,12 @@ ms.lasthandoff: 05/10/2018
  Propriété booléenne qui spécifie si le traitement différé des agrégations est activé.  
   
  **SleepIntervalSecs**  
- Propriété dont la valeur est un entier 32 bits signé qui définit l'intervalle, en secondes, en fonction duquel le serveur vérifie s'il y a des travaux de traitement différé en attente.  
+ Propriété dont la valeur est un entier 32 bits signé qui définit l'intervalle, en secondes, en fonction duquel le serveur vérifie s'il y a des travaux de traitement différé en attente.  
   
  **MaxCPUUsage**  
  Propriété dont la valeur est un nombre 64 bits signé en virgule flottante double précision qui définit sous la forme d'un pourcentage l'utilisation maximale de l'unité centrale pour les traitements différés. Le serveur surveille l'utilisation moyenne de l'unité centrale en prenant des instantanés à intervalles réguliers. Il est normal que l'unité centrale dépasse temporairement ce seuil lors des pointes d'activité.  
   
- La valeur par défaut de cette propriété, 0,5, indique qu'un maximum de 50 % de l'unité centrale sera consacré au traitement différé.  
+ La valeur par défaut de cette propriété, 0,5, indique qu'un maximum de 50 % de l'unité centrale sera consacré au traitement différé.  
   
  **MaxObjectsInParallel**  
  Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de partitions pouvant faire l'objet d'un traitement différé en parallèle.  
@@ -138,7 +140,7 @@ ms.lasthandoff: 05/10/2018
  **BufferRecordLimit**  
  Propriété dont la valeur est un entier 32 bits signé qui définit le nombre d'enregistrements qu'il est possible de stocker en mémoire tampon durant le traitement.  
   
- La valeur par défaut de cette propriété est 1 048 576 (enregistrements).  
+ La valeur par défaut de cette propriété est 1 048 576 (enregistrements).  
   
  **CacheRecordLimit**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -226,9 +228,9 @@ ms.lasthandoff: 05/10/2018
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **DefaultDrillthroughMaxRows**  
- Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de lignes qui seront renvoyées par une requête qui effectue une extraction.  
+ Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de lignes qui seront renvoyées par une requête qui effectue une extraction.  
   
- La valeur par défaut de cette propriété est 10 000 (lignes).  
+ La valeur par défaut de cette propriété est 10 000 (lignes).  
   
  **DimensionPropertyCacheSize**  
  Propriété dont la valeur est un entier 32 bits signé qui spécifie la quantité de mémoire (en octets) utilisée pour mettre en cache les membres de dimension utilisés dans une requête.  
@@ -243,12 +245,13 @@ ms.lasthandoff: 05/10/2018
   
 -   Affecte toutes les bases de données sur le serveur. **DimensionPropertyCachesize** est une propriété à l’échelle du serveur. La modification de cette propriété affecte toutes les bases de données exécutées sur l'instance actuelle.  
   
- Approche pour estimer la configuration requise du cache de dimension :  
+Approche pour estimer la configuration requise du cache de dimension :  
   
 1.  Commencez par augmenter la taille en entrant un grand nombre pour déterminer si l'augmentation de la taille du cache de dimension présente un avantage. Par exemple, doublez la valeur par défaut lors de l'étape initiale.  
   
 2.  Si une amélioration des performances est visible, réduisez la valeur de manière incrémentielle jusqu'à ce qu'un équilibre entre les performances et l'utilisation de la mémoire soit atteint.  
-  
+
+
  **ExpressNonEmptyUseEnabled**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -345,7 +348,7 @@ ms.lasthandoff: 05/10/2018
  **DataCache\ MemoryModel\ Tax**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="jobs"></a>Travaux  
+## <a name="jobs"></a>travaux  
  **ProcessAggregation\ MemoryModel\ Income**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -393,6 +396,6 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d’une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907384"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>Mappage de SQLGetStmtOption
 Lorsqu’une application appelle **SQLGetStmtOption** à un ODBC 3 *.x* pilote qui ne prend pas en charge il, l’appel à  

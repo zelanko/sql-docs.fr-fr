@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908414"
 ---
 # <a name="commit-mode"></a>Mode de validation
 Transactions dans ODBC peuvent être dans un des deux modes : mode de validation automatique ou le mode de validation manuelle.  

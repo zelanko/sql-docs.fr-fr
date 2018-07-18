@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900454"
 ---
 # <a name="functions-accepting-string-parameters"></a>Fonctions acceptant des paramètres de chaîne
 Toutes les fonctions qui prennent des paramètres de chaîne seront converties au format Unicode. (La forme « W » de la fonction est exportée.) Nombre d’octets est converti en nombre de caractères de ces API ODBC applicable. Cela s’applique aux fonctions suivantes :  

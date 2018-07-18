@@ -1,8 +1,6 @@
 ---
 title: Rapport de Migration de données (DB2ToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bba7d7e2734ad40d47e6e7e0037df6406e97b0ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c5bd5856819ebee48becb347345c891ef7a1fdd
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774947"
 ---
 # <a name="data-migration-report-db2tosql"></a>Rapport de Migration de données (DB2ToSQL)
 Le **rapport de Migration de données** boîte de dialogue s’affiche après la migration des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -31,7 +30,7 @@ Le **rapport de Migration de données** boîte de dialogue s’affiche après la
 **État**  
 Indique l’état de la migration des données à partir de la source de la base de données cible.  
   
-**De**  
+**From**  
 La table source.  
   
 **Pour**  

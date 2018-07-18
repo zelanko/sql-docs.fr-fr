@@ -1,32 +1,22 @@
 ---
-title: (Division) (DMX) | Documents Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- / (divide)
-- divide operator (/)
-ms.assetid: 7afc06cd-054b-48c3-9c3c-9a0c17d15e63
-caps.latest.revision: 14
-author: Minewiskan
+title: (Diviser) (DMX) | Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 00e4712dd44860c673f67d62d7eb1d6ff0bd5d5c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8ab2b355c551b868cec3ee4329460f8bb0532236
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972665"
 ---
-# <a name="divide-dmx"></a>(Division) (DMX)
+# <a name="divide-dmx"></a>(Diviser) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Exécute une opération arithmétique qui divise un nombre par un autre.  
@@ -39,13 +29,13 @@ Dividend / Divisor
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *dividende*  
+ *Dividende*  
  Expression DMX (Data Mining Extensions) valide qui retourne une valeur numérique.  
   
- *diviseur*  
+ *Diviseur*  
  Expression DMX valide qui retourne une valeur numérique.  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  Valeur qui possède le type de données du paramètre doté de la priorité la plus élevée.  
   
 ## <a name="remarks"></a>Notes  
@@ -57,7 +47,7 @@ Dividend / Divisor
  [Opérateurs arithmétiques &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Opérateurs &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [Diviser &#40;Expression SSIS&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [Diviser &#40;SSIS Expression&#41;](../integration-services/expressions/divide-ssis-expression.md)   
  [&#40;Diviser&#41; &#40;Transact-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

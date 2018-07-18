@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907674"
 ---
 # <a name="using-data-type-identifiers"></a>À l’aide d’identificateurs de Type de données
 Applications utilisent des identificateurs de type de données de deux façons : pour décrire les tampons pour le pilote et de récupérer des métadonnées relatives à l’ensemble du pilote afin qu’ils puissent identifier le type de C met en mémoire tampon pour stocker les données de résultats. Les applications appellent les fonctions suivantes pour effectuer ces tâches :  

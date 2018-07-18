@@ -1,5 +1,5 @@
 ---
-title: Principes fondamentaux de XQuery | Documents Microsoft
+title: Principes fondamentaux de XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 726bf0f34e8fe8d8b5d0713ca74b8f07f9e94483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970621"
 ---
 # <a name="xquery-basics"></a>Concepts de base de XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
  [Séquence et QNames &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
  Décrit la séquence ainsi que les QName et les espaces de noms prédéfinis.  
   
- [Contexte de l’expression et d’évaluation de la requête &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
+ [Contexte des expressions et évaluation de la requête &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
  Décrit les deux contextes dans lesquels XQuery est évalué. Ces deux contextes sont le contexte statique et le contexte dynamique.  
   
  [L’atomisation &#40;XQuery&#41;](../xquery/atomization-xquery.md)  

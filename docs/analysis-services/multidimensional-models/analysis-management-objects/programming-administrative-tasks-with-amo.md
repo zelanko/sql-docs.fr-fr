@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020816"
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>Programmation de tâches administratives avec AMO
   AMO (Analysis Management Objects) est une bibliothèque de programmation utilisée à partir d'applications clientes pour gérer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Dans cette section, vous allez apprendre à programmer avec les objets AMO.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb904d5e7c0804f4c0f9c84936bb3099c86e28be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca00fb5bce7f97fd76482c89701c5f7144f3f14f
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36925710"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilité de FILESTREAM avec d'autres fonctionnalités SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,8 @@ ms.lasthandoff: 05/03/2018
   
 -   [SQL Server Express](#SQLServerExpress)  
   
--   [Bases de données à relation contenant-contenu](#contained)  
+-   
+  [Bases de données autonomes](#contained)  
   
 ##  <a name="ssis"></a> SQL Server Integration Services (SSIS)  
  SQL Server Integration Services (SSIS) gère les données FILESTREAM dans le flux de données comme toutes les autres données BLOB en utilisant le type de données SSIS DT_IMAGE.  
@@ -120,10 +120,12 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="SQLServerExpress"></a> SQL Server Express  
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] prend en charge FILESTREAM. La limite de taille de base de données de 10 Go n'inclut pas le conteneur de données FILESTREAM.  
   
-##  <a name="contained"></a> Bases de données à relation contenant-contenu  
+##  
+  <a name="contained">
+  </a> Bases de données autonomes  
  La fonctionnalité FILESTREAM requiert une configuration spécifique hors de la base de données. Par conséquent, une base de données qui utilise FILESTREAM ou FileTable n'est pas entièrement contenue.  
   
- Vous pouvez définir la relation contenant-contenu de la base de données sur PARTIAL si vous souhaitez utiliser certaines fonctionnalités des bases de données à relation contenant-contenu, telles que les utilisateurs contenus. Dans ce cas, toutefois, vous devez savoir qu'une partie des paramètres de la base de données ne sont pas contenus dans la base de données et ne sont pas automatiquement déplacés avec celle-ci.  
+ Vous pouvez définir l’autonomie de la base de données sur PARTIAL si vous souhaitez utiliser certaines fonctionnalités des bases de données autonomes, telles que les utilisateurs autonomes. Dans ce cas, toutefois, vous devez savoir qu'une partie des paramètres de la base de données ne sont pas contenus dans la base de données et ne sont pas automatiquement déplacés avec celle-ci.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Objets binaires volumineux &#40;Objet BLOB&#41; Données &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  

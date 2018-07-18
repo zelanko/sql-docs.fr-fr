@@ -2,10 +2,10 @@
 title: Prise en charge les Transactions locales | Documents Microsoft
 description: Transactions locales dans le pilote OLE DB pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-transactions
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: de00c4aac3125209bb56a1867f07b1f395804cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25d6c98c17c139a1658d0711bcff0c1c8f3f1d18
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689362"
 ---
 # <a name="supporting-local-transactions"></a>Prise en charge des transactions locales
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Une session délimite l’étendue de transaction pour un pilote OLE DB pour la transaction locale de SQL Server. Lorsque, à l’initiative d’un consommateur, le pilote OLE DB pour SQL Server soumet une demande à une instance connectée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la demande constitue une unité de travail pour le pilote OLE DB pour SQL Server. Transactions locales encapsulent toujours une ou plusieurs unités de travail sur un pilote OLE DB unique pour la session SQL Server.  
   
@@ -132,6 +135,6 @@ if (FAILED(hr))
   
 ## <a name="see-also"></a>Voir aussi  
  [Transactions](../../oledb/ole-db-transactions/transactions.md)   
- [Utilisation de l’isolement d’instantané](../../oledb/features/working-with-snapshot-isolation.md)  
+ [Utilisation du niveau d’isolement de capture instantanée](../../oledb/features/working-with-snapshot-isolation.md)  
   
   

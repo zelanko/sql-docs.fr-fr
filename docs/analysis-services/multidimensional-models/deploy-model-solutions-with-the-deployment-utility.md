@@ -1,5 +1,5 @@
 ---
-title: Déployer des Solutions de modèle avec l’utilitaire de déploiement | Documents Microsoft
+title: Déployer des Solutions de modèle avec l’utilitaire de déploiement | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975160"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Déployer des solutions de modèle avec l'utilitaire de déploiement
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -21,7 +22,7 @@ ms.lasthandoff: 05/10/2018
   L'utilitaire **Microsoft.AnalysisServices.Deployment** permet de démarrer le moteur de déploiement de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir de l'invite de commandes. Comme un fichier d'entrée, l'utilitaire emploie les fichiers de sorties XML générés par la construction d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Les fichiers d'entrées sont facilement modifiables pour personnaliser le déploiement d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le script de déploiement généré peut alors être immédiatement exécuté ou enregistré en vue d'un déploiement ultérieur.  
   
 > [!NOTE]
-> Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant/utilitaire de déploiement est installé avec [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). Veillez à l’aide de la version la plus récente. Par défaut, la dernière version de l’Assistant de déploiement est installée vers C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio. 
+> Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant/utilitaire de déploiement est installé avec [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). Veillez à l’aide de la dernière version. Par défaut, la dernière version de l’Assistant de déploiement est installée pour C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio. 
 
 ## <a name="syntax"></a>Syntaxe  
   

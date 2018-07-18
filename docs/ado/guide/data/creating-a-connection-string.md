@@ -2,7 +2,6 @@
 title: Création d’une chaîne de connexion | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,14 +17,15 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc700bdc0006a4591e61e15f2796b73c194dc5a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 106aacb0fbdda6e00d32b42a8bae49564ee1adbc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270558"
 ---
 # <a name="creating-a-connection-string"></a>Création d’une chaîne de connexion
-Une chaîne de connexion se compose d’une liste de paires de valeur d’argument (autrement dit, les paramètres), séparée par des points-virgules. Par exemple :  
+Une chaîne de connexion se compose d’une liste de paires de valeur d’argument (autrement dit, les paramètres), séparée par des points-virgules. Exemple :  
   
 ```  
 "arg1=val1; arg2=val2; ... argN=valN;"  
@@ -35,7 +35,7 @@ Une chaîne de connexion se compose d’une liste de paires de valeur d’argume
   
  ADO reconnaît les cinq arguments dans une chaîne de connexion suivants.  
   
-|Argument| Description|  
+|Argument|Description|  
 |--------------|-----------------|  
 |*Fournisseur*|Spécifie le nom d’un fournisseur à utiliser pour la connexion.|  
 |*Nom de fichier*|Spécifie le nom d’un fichier spécifique au fournisseur (par exemple, un objet de source de données persistantes) contenant des informations de connexion prédéfinies.|  

@@ -1,26 +1,27 @@
 ---
 title: Charger des données SQL Server dans Azure SQL Data Warehouse (SSIS) | Microsoft Docs
 description: Indique comment créer un package SQL Server Integration Services (SSIS) pour déplacer des données vers SQL Data Warehouse à partir d’un large éventail de sources de données.
-services: sql-data-warehouse
 documentationcenter: NA
-author: douglaslMS
-manager: craigg-msft
 ms.service: sql-data-warehouse
+ms.component: data-movement
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 04/04/2018
 ms.author: douglasl
-ms.openlocfilehash: e627fdad03bf3159a0ed9c730381fde53c86ee9f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+author: douglaslMS
+manager: craigg-msft
+ms.openlocfilehash: 84295d9d1e43a9d10724ab8381aa4308f50c8513
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36887405"
 ---
 # <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Charger des données SQL Server dans Azure SQL Data Warehouse à l’aide de SQL Server Integration Services (SSIS)
 
-Créez un package SQL Server Integration Services (SSIS) pour charger des données SQL Server dans [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index.md). Vous pouvez éventuellement restructurer, transformer et nettoyer les données qui traversent le flux de données SSIS.
+Créez un package SQL Server Integration Services (SSIS) pour charger des données SQL Server dans [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index). Vous pouvez éventuellement restructurer, transformer et nettoyer les données qui traversent le flux de données SSIS.
 
 Dans ce didacticiel, vous apprenez à :
 

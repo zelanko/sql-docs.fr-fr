@@ -1,25 +1,26 @@
 ---
 title: Déployer et exécuter un package SSIS dans Azure | Microsoft Docs
+description: Découvrez comment déployer un projet SQL Server Integration Services (SSIS) sur le catalogue SSIS sur Azure SQL Database et exécuter un package.
 ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 3bd32f6f60342a0224ebf353de6cda15696d8900
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262493"
 ---
-# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Déployer et exécuter un package SSIS dans Azure
-Ce didacticiel vous montre comment déployer un projet SQL Server Integration Services sur la base de données de catalogues SSISDB dans Azure SQL Database, comment exécuter un package dans le runtime d’intégration Azure SSIS et comment surveiller le package en cours d’exécution.
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutoriel : Déployer et exécuter un package SQL Server Integration Services (SSIS) dans Azure
+Ce tutoriel vous montre comment déployer un projet SQL Server Integration Services sur le catalogue SSIS dans Azure SQL Database, comment exécuter un package dans le runtime d’intégration Azure-SSIS et comment surveiller le package en cours d’exécution.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
@@ -93,7 +94,7 @@ Pour en savoir plus sur le déploiement de packages et sur l’Assistant Déploi
   
 3.  Dans la page **Sélectionner la destination**, sélectionnez la destination du projet.
     -   Entrez le nom complet du serveur au format `<server_name>.database.windows.net`.
-    -   Fournissez des informations d’authentification et sélectionnez **Se connecter**.
+    -   Fournissez les informations d’authentification et sélectionnez **Se connecter**.
     -   Sélectionnez ensuite **Parcourir** pour sélectionner le dossier cible dans SSISDB.
     -   Ensuite, sélectionnez **Suivant** pour ouvrir la page **Vérifier**. (Le bouton **Suivant** est activé seulement si vous sélectionnez **Se connecter**.)
   
@@ -101,7 +102,8 @@ Pour en savoir plus sur le déploiement de packages et sur l’Assistant Déploi
     -   Vous pouvez changer vos choix en sélectionnant **Précédent**, ou en sélectionnant l’une des étapes du volet gauche.
     -   Sélectionnez **Déployer** pour démarrer le processus de déploiement.
 
-    > ! [REMARQUE] Si le message d’erreur **Il n’y a aucun Worker Agent actif (Fournisseur de données SqlClient .Net)**  s’affiche, vérifiez que le Runtime d’intégration Azure-SSIS est en cours d’exécution. Cette erreur se produit si vous essayez de déployer pendant que le Runtime d’intégration Azure-SSIS est à l’état arrêté.
+    > [!NOTE]
+    > Si le message d’erreur **Il n’y a aucun Worker Agent actif (Fournisseur de données SqlClient .Net)** s’affiche, vérifiez que le Runtime d’intégration Azure-SSIS est en cours d’exécution. Cette erreur se produit si vous essayez de déployer pendant que le Runtime d’intégration Azure-SSIS est à l’état arrêté.
 
 5.  Une fois le processus de déploiement effectué, la page **Résultats** s’affiche. Cette page indique la réussite ou l’échec de chaque action.
     -   En cas d’échec de l’action, sélectionnez **Échec** dans la colonne **Résultat** pour afficher une explication de l’erreur.
@@ -190,9 +192,17 @@ Vous pouvez également sélectionner un package dans l’Explorateur d’objets,
 
 Pour plus d’informations sur la surveillance des packages en cours d’exécution dans SSMS, consultez la section [Surveiller les packages en cours d’exécution et autres opérations](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
 
+## <a name="monitor-the-execute-ssis-package-activity"></a>Surveiller l’activité Exécuter le package SSIS
+
+Si vous exécutez un package dans le cadre d’un pipeline Azure Data Factory avec l’activité Exécuter le package SSIS, vous pouvez surveiller les exécutions du pipeline dans l’interface utilisateur de Data Factory. Vous pouvez obtenir l’ID de l’exécution de SSISDB à partir de la sortie de l’exécution de l’activité, puis l’utiliser pour examiner des messages d’erreur et des journaux d’exécution plus complets dans SSMS.
+
+![Obtenir l’ID d’exécution de package dans Data Factory](media/ssis-azure-deploy-run-monitor-tutorial/get-execution-id.png)
+
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Surveiller le runtime d’intégration Azure SSIS
 
-Pour obtenir des informations d’état sur le runtime d’intégration Azure-SSIS dans lequel les packages sont en cours d’exécution, utilisez les commandes PowerShell suivantes. Pour chacune des commandes, spécifiez les noms de la fabrique de données, du runtime d’intégration Azure-SSIS et du groupe de ressources. Pour plus d’informations, consultez [Surveiller le runtime d’intégration Azure-SSIS](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
+Pour obtenir des informations d’état sur le runtime d’intégration Azure-SSIS dans lequel les packages sont en cours d’exécution, utilisez les commandes PowerShell suivantes. Pour chacune des commandes, spécifiez les noms de la fabrique de données, du runtime d’intégration Azure-SSIS et du groupe de ressources.
+
+Pour plus d’informations, consultez [Surveiller le runtime d’intégration Azure-SSIS](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Obtenir des métadonnées sur le runtime d’intégration Azure SSIS
 

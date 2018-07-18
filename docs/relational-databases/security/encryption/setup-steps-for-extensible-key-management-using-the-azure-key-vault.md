@@ -1,14 +1,11 @@
 ---
-title: Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault | Microsoft Docs
+title: Gestion de clés extensible de SQL server TDE avec Azure Key Vault - Étapes de configuration | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 06/11/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,26 +14,27 @@ helpviewer_keywords:
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1d49310aa2c1d178dfb47f05a72ccac73cd0882f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702980"
 ---
-# <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault
+# <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gestion de clés extensible de SQL server TDE avec Azure Key Vault - Étapes de configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Les étapes suivantes parcourent l’installation et la configuration du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]pour Azure Key Vault.  
+  Les étapes suivantes permettent l’installation et la configuration du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour Azure Key Vault.  
   
 ## <a name="before-you-start"></a>Avant de commencer  
  Pour utiliser Azure Key Vault avec votre serveur SQL Server, il existe quelques conditions préalables :  
   
 -   Vous devez disposer d’un abonnement Azure  
   
--   Installez la dernière version d’ [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) (version 1.0.1 ou ultérieure).  
+-   Installez la dernière version [d’Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) (5.2.0 ou ultérieure).  
 
 -   Créez un répertoire Azure Active Directory  
 
@@ -53,7 +51,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
 ## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>Partie I : Configurer un principal du service Azure Active Directory  
  Pour accorder à votre service Azure Key Vault des autorisations d’accès à SQL Server, vous avez besoin d’un compte de principal du Service dans Azure Active Directory (AAD).  
   
-1.  Accédez au [portail Azure Classic](https://manage.windowsazure.com), puis connectez-vous.  
+1.  Accédez au [portail Azure](https://ms.portal.azure.com/), puis connectez-vous.  
   
 2.  Inscrivez une application auprès d’Azure Active Directory. Pour obtenir des instructions pas à pas expliquant comment inscrire une application, consultez la section **Get an identity for the application** (Obtenir une identité pour l’application) du [billet de blog Azure Key Vault](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/).  
   
@@ -71,7 +69,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
 1.  **Ouvrir PowerShell et se connecter**  
   
-     Installez et démarrez la [dernière version d’Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (version 1.0.1 ou ultérieure). Connectez-vous à votre compte Azure à l’aide de la commande suivante :  
+     Installez et démarrez la [dernière version d’Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (5.2.0 ou ultérieure). Connectez-vous à votre compte Azure à l’aide de la commande suivante :  
   
     ```powershell  
     Login-AzureRmAccount  
@@ -171,25 +169,28 @@ Version de SQL Server  |Lien d’installation du package redistribuable
 5.  **Générer une clé asymétrique dans le coffre de clés**  
   
      Il existe deux manières de générer une clé dans Azure Key Vault : 1) importer une clé existante ou 2) créer une clé.  
-
+                  
+      > [!NOTE]
+        >  SQL Server prend en charge seulement les clés RSA 2 048 bits.
+        
     ### <a name="best-practice"></a>Recommandation :
     
     Pour garantir la récupération rapide de clé et être en mesure d’accéder à vos données en dehors d’Azure, nous recommandons les meilleures pratiques suivantes :
  
-    1. Créer votre clé de chiffrement localement sur un appareil HSM local. (S’assurer qu’il s’agit d’une clé RSA 2048 bits asymétrique, et donc stockable dans Azure Key Vault.)
+    1. Créer votre clé de chiffrement localement sur un appareil HSM local. (Vérifiez qu’il s’agit d’une clé RSA 2 048 bits asymétrique, donc prise en charge par SQL Server.)
     2. Importer la clé de chiffrement dans Azure Key Vault. Consultez les étapes ci-dessous pour connaître la marche à suivre.
     3. Avant d’utiliser la clé dans le coffre de clés Azure pour la première fois, sauvegardez une clé Azure Key Vault. En savoir plus sur la commande [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) .
-    4. Chaque fois que des modifications sont apportées à la clé (par exemple, ajout de listes de contrôle d’accès, ajout de balises, ajout d’attributs clé), veillez à sauvegarder une autre clé Azure Key Vault.
+    4. Chaque fois que des modifications sont apportées à la clé (par exemple, ajout de listes de contrôle d’accès, ajout d’étiquettes, ajout d’attributs de clé), veillez à faire une autre sauvegarde de la clé Azure Key Vault.
 
         > [!NOTE]  
-        >  La sauvegarde d’une clé est une opération de clé Azure Key Vault qui retourne un fichier qui peut être enregistré n’importe où.
+        >  La sauvegarde d’une clé est une opération de clé Azure Key Vault qui retourne un fichier que vous pouvez enregistrer à l’emplacement de votre choix.
 
     ### <a name="types-of-keys"></a>Types de clés :
-    Il existe deux types de clés que vous pouvez générer dans Azure Key Vault. Les deux sont des clés RSA asymétriques 2 048 bits.  
+    Vous pouvez générer deux types de clés dans Azure Key Vault qui fonctionnent avec SQL Server. Les deux sont des clés RSA asymétriques 2 048 bits.  
   
     -   **À protection logicielle :** traitées dans le logiciel et chiffrées au repos. Les opérations sur les clés à protection logicielle ont lieu sur les machines virtuelles Azure. Recommandé pour les clés qui ne sont pas utilisées dans un déploiement de production.  
   
-    -   **Protégées par HSM :** créées et protégées par un module de sécurité matériel HSM pour une sécurité renforcée. Coûte environ 1 $ par version de clé.  
+    -   **Protégées par HSM :** créées et protégées par un module de sécurité matériel HSM pour une sécurité renforcée. Le coût est d’environ 1 $ par version de clé.  
   
         > [!IMPORTANT]  
         >  Le connecteur SQL Server exige que le nom de clé utilise uniquement les caractères « a-z », « A-Z », « 0-9 » et « - », avec une limite de 26 caractères.   
@@ -213,12 +214,11 @@ Version de SQL Server  |Lien d’installation du package redistribuable
     ```  
  
     > [!IMPORTANT]  
-    > L'importation de la clé asymétrique est fortement recommandée dans les scénarios de production, car elle permet à l'administrateur de déposer la clé dans un système de dépôt de clés (Key escrow). Si la clé asymétrique est créée dans le coffre, elle ne peut pas être déposée, car la clé privée ne peut jamais sortir du coffre. Les clés utilisées pour protéger les données critiques doivent être déposées. La perte d'une clé asymétrique rend une partie des données définitivement irrécupérable.  
+    > L'importation de la clé asymétrique est fortement recommandée dans les scénarios de production, car elle permet à l'administrateur de déposer la clé dans un système de dépôt de clés (Key escrow). Si la clé asymétrique est créée dans le coffre, elle ne peut pas être déposée, car la clé privée ne peut jamais sortir du coffre. Les clés utilisées pour protéger les données critiques doivent être déposées. La perte d’une clé asymétrique entraîne une perte définitive des données.  
 
     ### <a name="create-a-new-key"></a>Créer une clé
-
-    ##### <a name="example"></a>Exemple :  
-    Si vous le souhaitez, vous pouvez créer une nouvelle clé de chiffrement directement dans Azure Key Vault, et la doter d’une protection logicielle ou HSM. Dans cet exemple, nous allons créer une clé à protection logicielle à l’aide de l’ `Add-AzureKeyVaultKey cmdlet`:  
+    #### <a name="example"></a>Exemple :  
+    Vous pouvez aussi créer une nouvelle clé de chiffrement directement dans Azure Key Vault, et la protéger par logiciel ou par HSM.  Dans cet exemple, nous allons créer une clé à protection logicielle à l’aide de l’ `Add-AzureKeyVaultKey cmdlet`:  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -237,8 +237,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
     Id         : https://contosodevkeyvault.vault.azure.net:443/  
                  keys/ContosoRSAKey0/<guid>  
     ```  
-
-    > [!IMPORTANT]  
+ > [!IMPORTANT]  
     >  Le coffre de clés prend en charge plusieurs versions de la même clé nommée, mais les clés que le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit utiliser ne doivent pas avoir une version ou être restaurées. Si l'administrateur veut modifier la clé utilisée pour le chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , une nouvelle clé avec un autre nom doit être créée dans le coffre et utilisée pour chiffrer la clé de chiffrement des données.  
    
   
@@ -264,7 +263,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
   
 ## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>Partie IV : Configurer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- Reportez-vous à [B. Forum Aux Questions (FAQ)](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) pour lire une note concernant les niveaux d’autorisation minimaux nécessaires pour chaque action de cette section.  
+ Reportez-vous à [B. Forum aux questions](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) pour lire une remarque concernant les niveaux d’autorisation minimaux nécessaires pour chaque action de cette section.  
   
 1.  **Lancer sqlcmd.exe ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio**  
   
@@ -290,7 +289,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
 3.  **Inscrire (créer) le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en tant que fournisseur EKM avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     -- Créez un fournisseur de services de chiffrement à l’aide du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , qui est un fournisseur EKM pour le coffre Azure Key Vault.    
+     -- Créez un fournisseur de services de chiffrement à l’aide du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], qui est un fournisseur EKM pour le coffre Azure Key Vault.    
     L’exemple suivant utilise le nom `AzureKeyVault_EKM_Prov`.  
   
     ```sql  
@@ -316,7 +315,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
      Modifiez le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] ci-dessous comme suit :  
   
     -   Modifiez l’argument `IDENTITY` (`ContosoDevKeyVault`) de sorte qu’il pointe vers votre coffre Azure Key Vault.
-        - Si vous utilisez **public Azure**, remplacez l’argument `IDENTITY` par le nom de votre coffre Azure Key Vault de la Partie II.
+        - Si vous utilisez **Azure global**, remplacez l’argument `IDENTITY` par le nom de votre coffre Azure Key Vault de la Partie II.
         - Si vous utilisez un **cloud privé Azure** (par exemple, Azure Government, Azure China ou Azure Germany), remplacez l’argument `IDENTITY` par l’URI du coffre renvoyée à l’étape 3 de la Partie II. N’incluez pas « https:// » dans l’URI du coffre.   
     -   Remplacez la première partie de l’argument `SECRET` par l’ **ID client** Azure Active Directory mentionné dans la Partie I. Dans cet exemple, l’ **ID client** est `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -362,6 +361,4 @@ Maintenant que vous avez terminé la configuration de base, découvrez comment [
   
 ## <a name="see-also"></a> Voir aussi  
  [Gestion de clés extensible à l'aide d'Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
-[Résolution des problèmes et maintenance du connecteur SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
-  
-  
+[Résolution des problèmes et maintenance du connecteur SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)

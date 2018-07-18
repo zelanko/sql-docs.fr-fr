@@ -1,13 +1,12 @@
 ---
-title: SQLGetInfo | Documents Microsoft
+title: SQLGetInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5279fcdb04a83508d45a77155125917206ed1ec8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10f47bc9d185835931afa8a80a7759f33cd79b55
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432768"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 
   Le tableau montre les valeurs retournées par **SQLGetInfo**. Ces valeurs peuvent varier en fonction du numéro de version du serveur connecté.  
   
- **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client diffère de **SQLGetInfo** dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le pilote ODBC (Sqlsrv32). DLL) lorsque **SQLGetInfo** est appelé avec SQL_KEYWORDS et une longueur de la mémoire tampon de 0.  Le pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS, mais le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne SQL_SUCCESS_WITH_INFO.  Toutefois, lorsqu’elle est appelée avec une longueur de mémoire tampon différente de zéro est inférieure à la chaîne de mot clé de sortie, **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS_WITH_INFO et un SQLState 01004.  
+ **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client diffère **SQLGetInfo** dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le pilote ODBC (Sqlsrv32). DLL) lorsque **SQLGetInfo** est appelé avec SQL_KEYWORDS et une longueur de la mémoire tampon de 0.  Le pilote [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS, mais le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne SQL_SUCCESS_WITH_INFO.  Toutefois, lorsqu’elle est appelée avec une longueur de mémoire tampon différente de zéro est inférieure à la chaîne de mot clé de sortie, **SQLGetInfo** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client retourne SQL_SUCCESS_WITH_INFO et un SQLState égale à 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_CONNECTIONS|Le nombre de connexions est limité par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pilote retourne 0 pour ce **SQLGetInfo** demande.|  
 |SQL_ACTIVE_ENVIRONMENTS|Le nombre d'environnements n'est pas limité par le pilote. Le pilote retourne 0 pour ce **SQLGetInfo** demande.|  
-|SQL_ACTIVE_STATEMENTS|Le pilote retourne 1 pour ce **SQLGetInfo** demande. Le nombre de descripteurs d'instruction disponibles pour une application n'est pas limité par le pilote, mais l'exécution par défaut sur un descripteur d'instruction bloquera l'exécution sur tout autre descripteur.|  
+|SQL_ACTIVE_STATEMENTS|Le pilote retourne 1 pour cette **SQLGetInfo** demande. Le nombre de descripteurs d'instruction disponibles pour une application n'est pas limité par le pilote, mais l'exécution par défaut sur un descripteur d'instruction bloquera l'exécution sur tout autre descripteur.|  
 |SQL_ALTER_DOMAIN|FALSE|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN SQL_AT_ADD_COLUMN_DEFAULT SQL_AT_ADD_COLUMN_SINGLE SQL_AT_ADD_CONSTRAINT SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
@@ -56,11 +56,11 @@ ms.lasthandoff: 05/03/2018
 |SQL_COLLATION_SEQ|Séquence de classement actuellement affectée pour la connexion et le serveur.|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|Aucune prise en charge de la conversion du type de données ODBC SQL_BIGINT. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge du pilote ODBC Native Client le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Decimal (19,0)** SQL_DECIMAL de type du type de données ODBC. Voir SQL_CONVERT_DECIMAL ci-dessous.|  
+|SQL_CONVERT_BIGINT|Aucune prise en charge de la conversion du type de données ODBC SQL_BIGINT. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge du pilote ODBC Native Client le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Decimal (19,0)** type de données comme ODBC type SQL_DECIMAL. Voir SQL_CONVERT_DECIMAL ci-dessous.|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|Aucune prise en charge de la conversion du type de données ODBC SQL_TYPE_DATE. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge du pilote ODBC Native Client le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** SQL_TYPE_TIMESTAMP de type du type de données ODBC. Voir SQL_CONVERT_TIMESTAMP ci-dessous.|  
+|SQL_CONVERT_DATE|Aucune prise en charge de la conversion du type de données ODBC SQL_TYPE_DATE. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge du pilote ODBC Native Client le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** type de données comme ODBC type SQL_TYPE_TIMESTAMP. Voir SQL_CONVERT_TIMESTAMP ci-dessous.|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_DOUBLE|Aucune prise en charge de la conversion du type de données ODBC SQL_DOUBLE. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge le type de données ODBC SQL_DOUBLE comme SQL_FLOAT. Voir SQL_CONVERT_FLOAT ci-dessous.|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|Aucune prise en charge de la conversion du type de données ODBC SQL_TYPE_TIME. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge du pilote ODBC Native Client le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** SQL_TYPE_TIMESTAMP de type du type de données ODBC. Voir SQL_CONVERT_TIMESTAMP ci-dessous.|  
+|SQL_CONVERT_TIME|Aucune prise en charge de la conversion du type de données ODBC SQL_TYPE_TIME. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge du pilote ODBC Native Client le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** type de données comme ODBC type SQL_TYPE_TIMESTAMP. Voir SQL_CONVERT_TIMESTAMP ci-dessous.|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TIMESTAMP SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_SENSITIVE|  
-|SQL_DATA_SOURCE_NAME|Nom de la source de données actuelle. Définit la valeur pointée par *StringLengthPtr* à 0 si la connexion n’a pas spécifié un nom de source de données.|  
+|SQL_DATA_SOURCE_NAME|Nom de la source de données actuelle. Définit la valeur indiquée par *StringLengthPtr* à 0 si la connexion n’a pas spécifié un nom de source de données.|  
 |SQL_DATA_SOURCE_READ_ONLY|Dépend de la définition de l'attribut de connexion SQL_ATTR_ACCESS_MODE.|  
 |SQL_DATABASE_NAME|Base de données active de la connexion.|  
 |SQL_DBMS_NAME|"Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"|  
@@ -124,14 +124,14 @@ ms.lasthandoff: 05/03/2018
 |SQL_IDENTIFIER_QUOTE_CHAR|" (guillemet double)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|Demande non prise en charge par le pilote.|  
-|SQL_INFO_SS_NETLIB_NAME|Attribut spécifique au pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Nom de la bibliothèque réseau en cours d'utilisation par la connexion.<br /><br /> Par défaut, DBNETLIB est retourné.  Dans cette situation, DBNETLIB fait référence à la bibliothèque réseau et n’est pas associé au fichier dbnetlib.dll.|  
+|SQL_INFO_SS_NETLIB_NAME|Attribut spécifique au pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Nom de la bibliothèque réseau en cours d'utilisation par la connexion.<br /><br /> Par défaut, DBNETLIB est retourné.  Dans cette situation, DBNETLIB fait référence à la bibliothèque de réseau et n’est pas associé au fichier dbnetlib.dll.|  
 |SQL_INTEGRITY|"Y"|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  
 |SQL_KEYWORDS|BREAK BROWSE BULK CHECKPOINT CLUSTERED COMMITTED COMPUTE CONFIRM CONTROLROW DATABASE DBCC DISK DISTRIBUTED DUMMY DUMP ERRLVL ERROREXIT EXIT FILE FILLFACTOR FLOPPY HOLDLOCK IDENTITY_INSERT IDENTITYCOL IF KILL LINENO LOAD MIRROREXIT NONCLUSTERED OFF OFFSETS ONCE OVER PERCENT PERM PERMANENT PLAN PRINT PROC PROCESSEXIT RAISERROR READ READTEXT RECONFIGURE REPEATABLE RETURN ROWCOUNT RULE SAVE SERIALIZABLE SETUSER SHUTDOWN STATISTICS TAPE TEMP TEXTSIZE TRAN TRIGGER TRUNCATE TSEQUEL UNCOMMITTED UPDATETEXT USE WAITFOR WHILE WRITETEXT|  
 |SQL_LIKE_ESCAPE_CLAUSE|"Y"|  
 |SQL_LOCK_TYPES|SQL_LCK_NO_CHANGE|  
-|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|1|  
+|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS| 1|  
 |SQL_MAX_BINARY_LITERAL_LEN|131072|  
 |SQL_MAX_CATALOG_NAME_LEN|128|  
 |SQL_MAX_CHAR_LITERAL_LEN|131072|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_MAX_COLUMNS_IN_ORDER_BY|16|  
 |SQL_MAX_COLUMNS_IN_SELECT|4000|  
 |SQL_MAX_COLUMNS_IN_TABLE|250|  
-|SQL_MAX_CONCURRENT_ACTIVITIES|1|  
+|SQL_MAX_CONCURRENT_ACTIVITIES| 1|  
 |SQL_MAX_CURSOR_NAME_LEN|128|  
 |SQL_MAX_DRIVER_CONNECTIONS|0|  
 |SQL_MAX_IDENTIFIER_LEN|128|  
@@ -215,7 +215,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_USER_NAME|Nom d'utilisateur actuel.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonction SQLGetInfo](http://go.microsoft.com/fwlink/?LinkId=59354)   
- [Détails d’implémentation API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [SQLGetInfo, fonction](http://go.microsoft.com/fwlink/?LinkId=59354)   
+ [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

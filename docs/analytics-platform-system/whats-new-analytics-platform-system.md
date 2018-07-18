@@ -1,61 +1,70 @@
 ---
-title: Nouveautés du système de plateforme Analytique – un entrepôt de données de la montée en puissance parallèle
-description: Voir quelles sont les nouveautés dans le système de plateforme Microsoft® Analytique, un dispositif de montée en puissance parallèle sur site qui héberge MPP SQL Server Parallel Data Warehouse.
+title: Quelles sont les nouveautés d’Analytique Platform System – un entrepôt de données de la montée en puissance
+description: Voir quelles sont les nouveautés dans Microsoft® Analytique Platform System, une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse.
 author: mzaman1
 manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/24/2018
+ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c2408e84e7ff81f54ad00a98f85cd8dce7b04131
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: b1eee6b3ca692c7935b061696b37842cda0f8326
+ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137888"
 ---
-# <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Nouveautés du système de plateforme Analytique, un entrepôt de données MPP montée en puissance parallèle
-Voir quelles sont les nouveautés dans les dernières mises à jour pour Microsoft® Analytique système de plateforme (APS). Points d’accès est un appareil de montée en puissance parallèle sur site qui héberge MPP SQL Server Parallel Data Warehouse. 
+# <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quelles sont les nouveautés d’Analytique Platform System, un entrepôt de données MPP montée en puissance
+Consultez les nouveautés introduite dans les dernières mises à jour de matériel pour Microsoft® Analytique Platform System (APS). APS est une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse. 
 
+::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 
-## <a name="aps-au7"></a>POINTS D’ACCÈS AU7
-APS2016 est une condition préalable à la mise à niveau vers AU7. Voici les nouvelles fonctionnalités pour les points d’accès AU7 :
+## <a name="aps-au7"></a>APS AU7
+APS 2016 est une condition préalable à la mise à niveau vers AU7. Les éléments suivants sont Nouveautés dans APS AU7 :
 
 ### <a name="auto-create-and-auto-update-statistics"></a>Création automatique et la mise à jour automatique des statistiques
-APS AU7 crée et met à jour les statistiques automatiquement, par défaut. Pour mettre à jour les paramètres de statistiques, les administrateurs peuvent utiliser un nouvel élément de menu de commutateur de fonctionnalité dans le [Configuration Manager](appliance-configuration.md#CMTasks). Le [commutateur de la fonctionnalité](appliance-feature-switch.md) contrôle les auto-create, la mise à jour automatique et le comportement de mise à jour asynchrone des statistiques. Vous pouvez également mettre à jour les paramètres des statistiques avec le [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) instruction.
+APS AU7 crée et met à jour les statistiques automatiquement, par défaut. Pour mettre à jour les paramètres de statistiques, les administrateurs peuvent utiliser un nouvel élément de menu de commutateur de fonctionnalité dans le [Configuration Manager](appliance-configuration.md#CMTasks). Le [commutateur de fonctionnalité](appliance-feature-switch.md) contrôle l’auto-create, la mise à jour automatique et le comportement de mise à jour asynchrone des statistiques. Vous pouvez également mettre à jour les paramètres de statistiques avec le [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) instruction.
 
 ### <a name="t-sql"></a>T-SQL
-Sélectionnez @var est désormais prise en charge. Pour plus d’informations, consultez [Sélectionnez variable locale] (/ sql/t-sql/language-elements/select-local-variable-transact-sql) 
+Sélectionnez @var est désormais pris en charge. Pour plus d’informations, consultez [variable locale Sélectionnez] (/ sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Indicateurs de requête hachage et l’ordre de groupe sont désormais prises en charge. Pour plus d’informations, consultez [Hints(Transact-SQL) - requête] (/ sql/t-sql/requêtes/indicateurs-transact-sql-query)
+Indicateurs de requête HASH et ordre de groupe sont désormais pris en charge. Pour plus d’informations, consultez [Hints(Transact-SQL) - requête] (/ / t-sql/requêtes/indicateurs-transact-sql-requête sql)
 
 ### <a name="feature-switch"></a>Commutateur de fonctionnalité
 APS AU7 introduit le commutateur de fonctionnalité dans [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled et DmsProcessStopMessageTimeoutInSeconds sont désormais des options configurables qui peuvent être modifiées par les administrateurs.
 
 ### <a name="known-issues"></a>Problèmes connus
-APS AU7 logiciels, nous sommes empaquetage et la mise à jour du BIOS Intel qui résout les « attaques côté canal de l’exécution spéculative » (alias. Vulnérabilités spectre et Meltdown). Bien que regroupés, la mise à jour du BIOS est installé manuellement et ne fait pas partie du logiciel APS AU7 installer. Microsoft recommande à tous les clients installent le BIOS mis à jour. Microsoft a mesuré l’effet de l’atténuation de noyau virtuels adresse occultation (KVAS), du noyau Page Table Indirection (KPTI) et prédiction de branche indirecte (IBP) sur les différentes charges de travail SQL dans différents environnements et une dégradation significative sur certaines charges de travail. Nous vous recommandons de tester l’effet de performances de l’activation de la mise à jour avant de les déployer dans un environnement de production. Si l’effet de performances de l’activation de ces fonctionnalités est trop élevée pour une application existante, vous pouvez envisager si isole votre solution de points d’accès de code non fiable en cours d’exécution est une meilleure résistance de votre application. Consultez les conseils de SQL Server [ici](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
+Avec le logiciel de APS AU7, une mise à jour du BIOS Intel est fourni qui résout un problème appelé *attaques par canal latéral de l’exécution spéculative*. Les attaques visent à exploiter sont appelées *vulnérabilités Spectre et Meltdown*. Bien qu’il est empaqueté avec les points d’accès, la mise à jour du BIOS est installé manuellement et non comme faisant partie de l’installation du logiciel AU7 de points d’accès.
+
+Microsoft conseille à tous les clients pour installer le BIOS mis à jour. Microsoft a mesuré l’effet de noyau virtuels adresse occultation (KVAS), Kernel Page Table Indirection (KPTI) et l’atténuation de prédiction de branchement Indirect (IBP) sur les différentes charges de travail SQL dans différents environnements. Les mesures de trouver une dégradation importante sur certaines charges de travail. En fonction des résultats, il est recommandé que vous tester l’effet de performances de l’activation de la mise à jour avant de les déployer dans un environnement de production. Consultez l’aide de SQL Server [ici](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
+
+::: moniker-end
+::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
 
 ## <a name="aps-2016"></a>APS 2016
-Voici les nouvelles fonctionnalités pour les points d’accès 2016 :
+Cette section décrit les nouvelles fonctionnalités pour APS 2016-AU6.
 
-### <a name="sql-server-2016"></a>SQL Server 2016
+### <a name="sql-server-2016"></a>SQL Server 2016
 
-APS 2016 s’exécute sur la dernière version de SQL Server 2016 et utilise le niveau de compatibilité de base de données par défaut 130.  SQL Server 2016 permet de prendre en charge certaines des nouvelles fonctionnalités telles que les index secondaires pour l’index columnstore cluster et Kerberos pour PolyBase. 
+APS AU6 s’exécute sur la dernière version de SQL Server 2016 et utilise le niveau de compatibilité de base de données 130 par défaut. SQL Server 2016 permet la prise en charge de nouvelles fonctionnalités telles que :
 
+- Index secondaires pour les index columnstore en cluster.
+- Protocole Kerberos pour PolyBase.
 
 ### <a name="t-sql"></a>T-SQL
-APS 2016 prend en charge ces améliorations de compatibilité de T-SQL.  Ces éléments de langage supplémentaires facilitent la migration à partir de SQL Server et d’autres sources de données. 
+APS AU6 prend en charge ces améliorations de compatibilité de T-SQL.  Ces éléments de langage supplémentaires facilitent la migration à partir de SQL Server et d’autres sources de données. 
 
-- [Classements SQL au niveau des colonnes][] sont désormais pris en charge en plus des classements Windows.
-- [Index non cluster sur les index columnstore en cluster][] améliorer les performances des requêtes qui recherchent des valeurs spécifiques dans l’index columnstore cluster. 
+- [Classements SQL au niveau des colonnes][] sont désormais pris en charge, en plus des classements de Windows.
+- [Index non cluster sur les index columnstore en cluster][] améliorer les performances des requêtes qui recherchent des valeurs spécifiques dans l’index cluster columnstore. 
 - [SÉLECTIONNEZ... DANS][] 
 - [sp_spaceused()][] affiche l’espace disque utilisé ou réservé dans une table ou une base de données.
-- [Tableaux larges][] prise en charge est le même que SQL Server 2016. La limite précédente de 32 Ko pour la taille de ligne n’existe plus. 
+- [Tableaux larges][] prise en charge est identique à SQL Server 2016. La limite de 32 Ko pour la taille de ligne n’existe plus. 
 
 **Types de données**
 
-- [Varchar (max)][], [nvarchar (max)][] et [varbinary (max)][]. Ces types de données LOB ont une taille maximale de 2 Go. Pour charger ces objets utilisent [utilitaire bcp][]. Polybase et dwloader ne prennent pas actuellement en charge ces types de données. 
+- [Varchar (max)][], [nvarchar (max)][] et [varbinary (max)][]. Ces types de données LOB ont une taille maximale de 2 Go. Pour charger ces objets utilisent [utilitaire bcp][]. Actuellement, Polybase et dwloader ne prennent en charge ces types de données. 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][] et types de données décimal.
@@ -81,34 +90,41 @@ APS 2016 prend en charge ces améliorations de compatibilité de T-SQL.  Ces él
 ### <a name="polybasehadoop-enhancements"></a>Améliorations de PolyBase/Hadoop
 
 - Compatibilité avec Hortonworks HDP 2.4 et HDP 2.5
-- Prise en charge Kerberos via les informations d’identification de la portée de la base de données
+- Prise en charge de Kerberos via les informations d’identification de niveau base de données
 - Prise en charge des informations d’identification avec des objets BLOB de stockage Azure
 
-### <a name="install-and-upgrade-enhancements"></a>Installer et des améliorations de la mise à niveau
+### <a name="install-and-upgrade-enhancements"></a>Installation et les améliorations de la mise à niveau
 
-**Les mises à jour Enterprise architecture** la mise à niveau de l’appliance existante vers APS 2016 installe le dernier microprogramme et les mises à jour du pilote, qui incluent les correctifs de sécurité. 
+**Mises à jour de Enterprise architecture** mise à niveau de votre appliance existante vers APS AU6 installe la dernière version du microprogramme et les mises à jour du pilote, qui incluent des correctifs de sécurité. 
 
-Un nouveau matériel à partir de HPE ou DELL inclut toutes les dernières mises à jour plus :
+Un nouveau matériel à partir de HPE ou DELL inclut toutes les dernières mises à jour ainsi que :
 
-- Dernière génération la prise en charge (Broadwell)
-- Mettre à jour vers DDR4 DIMM
-- Débit DIMM améliorés
+- Prise en charge de dernière génération processeur (Broadwell)
+- Mettre à jour vers inférieur de barrettes DIMM DDR4
+- Améliorer le débit DIMM
 
 **Intégration**
 
-- Entièrement prise en charge du nom de domaine complet (FQDN) rend possible de configurer une approbation de domaine à l’appliance. 
-- Pour utiliser le nom de domaine complet, vous devez effectuer une mise à niveau complète et de participer au cours de la mise à niveau. 
+- Entièrement prise en charge du nom de domaine complet (FQDN) permet de configurer une approbation de domaine à l’appliance. 
+- Pour utiliser le nom de domaine complet, vous devez effectuer une mise à niveau complète et participer au cours de la mise à niveau. 
 
-**Temps mort réduit** l’installation ou la mise à niveau vers les points d’accès 2016 sont plus rapide et nécessite moins de temps mort que les versions précédentes. Pour réduire les temps d’arrêt, l’installation ou la mise à niveau : 
+**Temps mort réduit** installation ou mise à niveau vers les points d’accès AU6 est plus rapide et nécessite moins de temps d’arrêt que les versions précédentes. Pour réduire les temps d’arrêt, l’installation ou la mise à niveau : 
 
- - Rationalise application des mises à jour WSUS à l’aide d’une image qui contient toutes les mises à jour juin 2016
- - Applique les mises à jour de sécurité avec les mises à jour de pilote et de microprogramme
- - Place les derniers correctifs logiciels et l’utilitaire de vérification de matériel (PAV) sur votre appareil afin qu’ils soient prêtes à être installées sans avoir à les télécharger.
+ - Rationalise application des mises à jour WSUS à l’aide d’une image qui contient toutes les mises à jour via juin 2016
+ - Applique les mises à jour de sécurité avec les mises à jour du microprogramme et du pilote
+ - Place les derniers correctifs et l’utilitaire de vérification d’appliance (PAV) sur votre appliance, afin qu’ils soient prêtes à être installées sans avoir à les télécharger.
 
+::: moniker-end
 
-<!--MSDN references-->
-[database compatibility level 130]:/sql/t-sql/statements/alter-database-transact-sql-compatibility-level
-[Classements SQL au niveau des colonnes]:/sql/relational-databases/collations/collation-and-unicode-support
+<!--
+Link references to other articles in this same GitHub repo.
+
+The link format that starts with '/sql/what-ever/my-artlcle' is not appropriate for common links within the same repo (as most of these link are).  The first couple links have been edited to show the proper syntax, but all other links in this article need to be similarly edited.
+The proper formats have at least two big advantages.  One big advantage is that the proper formats enable the OPS Build system to detect broken links at Pull Request build time, instead of only later during run time.
+-->
+[database compatibility level 130]: ../t-sql/statements/alter-database-transact-sql-compatibility-level.md
+[Classements SQL au niveau des colonnes]: ~/relational-databases/collations/collation-and-unicode-support.md
+
 [Index non cluster sur les index columnstore en cluster]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR (MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
 [NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql

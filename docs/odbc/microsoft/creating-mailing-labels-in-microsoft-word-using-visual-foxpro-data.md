@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899554"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Création d’étiquettes de publipostage dans Microsoft Word à l’aide de données Visual FoxPro
 Vous pouvez utiliser des données Visual FoxPro dans Microsoft Word pour les documents Windows 95 ou Windows 98. Par exemple, vous souhaiterez créer des étiquettes à partir des informations client stockées dans une table Visual FoxPro.  

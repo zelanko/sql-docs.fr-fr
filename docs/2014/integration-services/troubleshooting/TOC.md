@@ -1,0 +1,7 @@
+# [Outils de dépannage pour le développement des packages](troubleshooting-tools-for-package-development.md)
+## [Débogage du flux de contrôle](debugging-control-flow.md)
+## [Débogage de script](debugging-script.md)
+## [Débogage d’un flux de données](debugging-data-flow.md)
+## [Déboguer un package en définissant des points d’arrêt sur une tâche ou un conteneur](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)
+## [Ajouter une visionneuse de données à un flux de données](../add-a-data-viewer-to-a-data-flow.md)
+## [Configurer une sortie d’erreur dans un composant de flux de données](../configure-an-error-output-in-a-data-flow-component.md)

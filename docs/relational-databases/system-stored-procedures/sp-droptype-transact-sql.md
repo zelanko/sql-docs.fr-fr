@@ -1,5 +1,5 @@
 ---
-title: sp_droptype (Transact-SQL) | Documents Microsoft
+title: sp_droptype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 6f898820839afe4057805d9d6ed8bc4e53341065
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970311"
 ---
 # <a name="spdroptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Supprime un type de données d’alias de **systypes**.  
+  Supprime un type de données d’alias à partir de **systypes**.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +51,7 @@ sp_droptype [ @typename = ] 'type'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Le **type** alias type de données ne peut pas être supprimé si des tables ou autres objets de base de données font référence.  
@@ -59,7 +60,7 @@ sp_droptype [ @typename = ] 'type'
 >  Vous ne pouvez pas supprimer un type de données alias si celui-ci est utilisé dans une définition de table ou si une règle ou une valeur par défaut lui est associée.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **db_owner** rôle de base de données fixe ou la **db_ddladmin** rôle de base de données fixe.  
+ Nécessite l’appartenance dans le **db_owner** rôle de base de données fixe ou le **db_ddladmin** rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime le type de données alias `birthday`.  

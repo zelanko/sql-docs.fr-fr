@@ -31,7 +31,7 @@
 ## Interopérabilité avec d’autres fonctionnalités
 ### [Suivi des modifications et capture de données modifiées](replicate-track-change-data-capture-always-on-availability.md)  
 ### [Configurer la réplication](configure-replication-for-always-on-availability-groups-sql-server.md)  
-### [Bases de données à relation contenant-contenu](contained-databases-with-always-on-availability-groups-sql-server.md)  
+### [Bases de données autonomes](contained-databases-with-always-on-availability-groups-sql-server.md)  
 ### [Instantanés de base de données](database-snapshots-with-always-on-availability-groups-sql-server.md)  
 ### [Transactions distribuées](transactions-always-on-availability-and-database-mirroring.md)  
 #### [DTC du cluster](cluster-dtc-for-sql-server-2016-availability-groups.md)  
@@ -61,6 +61,7 @@
 ### [Configurer la sauvegarde sur les réplicas](configure-backup-on-availability-replicas-sql-server.md)  
 ### [Configurer des groupes de disponibilité distribués](configure-distributed-availability-groups.md)
 ### [Configurer les transactions distribuées](configure-availability-group-for-distributed-transactions.md)
+### [Configurer le groupe de disponibilité avec échelle lecture](configure-read-scale-availability-groups.md)
 ### [Configurer un réplica avec accès en lecture seule](configure-read-only-access-on-an-availability-replica-sql-server.md)  
 ### [Configurer le routage en lecture seule](configure-read-only-routing-for-an-availability-group-sql-server.md)  
 ### [Supprimer un écouteur](remove-an-availability-group-listener-sql-server.md)  

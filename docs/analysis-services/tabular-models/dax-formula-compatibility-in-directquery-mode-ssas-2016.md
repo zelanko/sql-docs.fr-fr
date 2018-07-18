@@ -1,5 +1,5 @@
 ---
-title: Compatibilité des formules DAX en mode DirectQuery | Documents Microsoft
+title: Compatibilité des formules DAX en mode DirectQuery | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,23 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2005742b524db0ec5587ad3f8d959b03dec6965b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4bcebbcf8702c2605d36df844f5db7c7b5699a22
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985381"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilité des formules DAX en mode DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Pour les modèles tabulaires 1200 et les versions ultérieures en mode DirectQuery, plusieurs limitations fonctionnelles dans les versions antérieures ne s’appliquent plus. Pour les formules DAX en particulier :
+Pour les modèles tabulaires 1200 et versions ultérieures en mode DirectQuery, de nombreuses limitations fonctionnelles dans les versions antérieures ne s’appliquent plus. Pour les formules DAX en particulier :
 
 - DirectQuery génère maintenant des requêtes plus simples, offrant des performances améliorées.
 - Sécurité au niveau des lignes (RLS) est maintenant pris en charge en mode DirectQuery.
-- Les colonnes calculées sont désormais pris en charge pour les modèles tabulaires en mode DirectQuery.
+- Les colonnes calculées sont maintenant pris en charge pour les modèles tabulaires en mode DirectQuery.
 
 ## <a name="dax-functions-in-directquery-mode"></a>Fonctions DAX en mode DirectQuery
 
-En bref, toutes les fonctions DAX sont prises en charge pour les modèles DirectQuery. Toutefois, pas toutes les fonctions sont prises en charge pour tous les types de formule, et pas toutes les fonctions ont été optimisées pour les modèles DirectQuery. Pour simplifier, nous pouvons classer les fonctions DAX en deux catégories : les fonctions optimisées et les fonctions non optimisées. Examinons d’abord de plus près les fonctions optimisées.
+En bref, toutes les fonctions DAX sont prises en charge pour les modèles DirectQuery. Toutefois, certaines fonctions ne sont prises en charge pour tous les types de formule, et pas toutes les fonctions ont été optimisées pour les modèles DirectQuery. Pour simplifier, nous pouvons classer les fonctions DAX en deux catégories : les fonctions optimisées et les fonctions non optimisées. Examinons d’abord de plus près les fonctions optimisées.
 
 
 ### <a name="optimized-for-directquery"></a>Optimisées pour DirectQuery
@@ -33,21 +34,21 @@ Ce sont des fonctions qui retournent principalement des résultats scalaires ou 
 
 | Prises en charge dans toutes les formules DAX                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Prises en charge seulement dans les formules de mesure et de requête                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ABS</br>  ACOS</br>  ACOT</br>  AND</br>  ASIN</br>  ATAN</br>  Vide</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  Monétaire (Currency)</br>  DATE</br>  DATEDIFF</br>  DATEVALUE</br>  DAY</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  FIND</br>  HOUR</br>  IF</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  LEFT</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  LOWER</br>  MAX</br>  MID</br>  MIN</br>  MINUTE</br>  MOD</br>  MONTH</br>  MROUND</br>  NOT</br>  NOW</br>  - ou -</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  RIGHT</br>  ROUND</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  SECOND</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  SWITCH</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  TODAY</br>  TRIM</br>  TRUE</br>  TRUNC</br>  UNICODE</br>  UPPER</br>  USERNAME</br>  USERELATIONSHIP</br>  VALUE</br>  WEEKDAY</br>  WEEKNUM</br>  YEAR</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> AVERAGE</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> SUM</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
+| ABS</br>  ACOS</br>  ACOT</br>  AND</br>  ASIN</br>  ATAN</br>  Vide</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  Monétaire (Currency)</br>  DATE</br>  DATEDIFF</br>  DATEVALUE</br>  DAY</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  FIND</br>  HOUR</br>  IF</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  LEFT</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  LOWER</br>  MAX</br>  MID</br>  MIN</br>  MINUTE</br>  MOD</br>  MONTH</br>  MROUND</br>  NOT</br>  NOW</br>  - ou -</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  RIGHT</br>  ROUND</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  SECOND</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  SWITCH</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  TODAY</br>  TRIM</br>  TRUE</br>  TRUNC</br>  UNICODE</br>  UPPER</br>  USERNAME</br>  USERELATIONSHIP</br>  Value</br>  WEEKDAY</br>  WEEKNUM</br>  YEAR</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> AVERAGE</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> SUM</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
 
 
 
 ### <a name="non-optimized-for-directquery"></a>Non optimisées pour DirectQuery
-Ces fonctions n’ont pas été optimisées pour l’utilisation de DirectQuery. Ces fonctions *ne sont pas du tout* prises en charge dans les formules de colonne calculée et de sécurité au niveau des lignes. Cependant, ces fonctions *sont prises en charge* dans les formules de mesure et de requête, mais avec des performances incertaines.
+Ces fonctions n’ont pas été optimisées pour fonctionner avec DirectQuery. Ces fonctions *ne sont pas du tout* prises en charge dans les formules de colonne calculée et de sécurité au niveau des lignes. Cependant, ces fonctions *sont prises en charge* dans les formules de mesure et de requête, mais avec des performances incertaines.
 
  Nous n’allons pas répertorier ici toutes les fonctions. Si elle ne se trouve pas dans une des listes des fonctions optimisées ci-dessus, c’est une fonction non optimisée pour DirectQuery.
 
 Les raisons pour lesquelles une fonction particulière n’est pas optimisée pour DirectQuery sont que le moteur relationnel sous-jacent ne peut pas effectuer de calculs équivalents à ceux effectués par le moteur xVelocity, ou que la formule ne peut pas être convertie en une expression SQL équivalente. Dans d’autres cas, les performances de l’expression convertie et des calculs résultants peuvent ne pas être acceptables.
 
-Pour obtenir des informations sur toutes les fonctions DAX, consultez la [référence des fonctions DAX]. (https://msdn.microsoft.com/en-us/library/ee634396.aspx)
+Pour en savoir plus sur toutes les fonctions DAX, consultez la [référence des fonctions DAX]. (https://msdn.microsoft.com/library/ee634396.aspx)
 
 ## <a name="dax-operators-in-directquery-mode"></a>Opérateurs DAX en mode DirectQuery
-Tous les opérateurs de comparaison et d’arithmétique DAX sont entièrement pris en charge en mode DirectQuery. Pour plus d’informations, consultez [Référence des opérateurs DAX](https://msdn.microsoft.com/library/ee634237.aspx).
+Tous les opérateurs de comparaison et arithmétiques DAX sont entièrement pris en charge en mode DirectQuery. Pour plus d’informations, consultez [Référence des opérateurs DAX](https://msdn.microsoft.com/library/ee634237.aspx).
 
 
  
@@ -99,7 +100,7 @@ Notez que dans Transact-SQL une valeur Null n'est jamais égale à une valeur Nu
   
 ### <a name="casts"></a>Casts  
   
-Il n'existe aucune fonction cast telle que dans DAX, mais les casts implicites sont effectués dans nombre de comparaisons et d'opérations arithmétiques. La comparaison ou l'opération arithmétique détermine le type de données du résultat. Par exemple :  
+Il n'existe aucune fonction cast telle que dans DAX, mais les casts implicites sont effectués dans nombre de comparaisons et d'opérations arithmétiques. La comparaison ou l'opération arithmétique détermine le type de données du résultat. Par exemple,  
   
 -   Les valeurs booléennes sont traitées en tant que valeurs numériques dans les opérations arithmétiques, telles que TRUE + 1, ou la fonction MIN appliquée à une colonne de valeurs booléennes. Une opération NOT retourne également une valeur numérique.  
   
@@ -116,7 +117,7 @@ En mode DirectQuery, les conversions des représentations sous forme de chaîne 
 Les modèles qui utilisent la banque de données en mémoire utilisent une plage plus limitée de formats de texte pour les dates que les formats de chaîne pour les dates prises en charge par SQL Server. Toutefois, DAX prend en charge les formats de date et d'heure personnalisés.  
   
 **Conversion d'une chaîne en d'autres valeurs non booléennes**  
-Lors de la conversion de chaînes en valeurs non booléennes, le mode DirectQuery se comporte de la même manière que SQL Server. Pour plus d’informations, consultez [CAST et CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
+Lors de la conversion de chaînes en valeurs non booléennes, le mode DirectQuery se comporte de la même manière que SQL Server. Pour plus d’informations, consultez [CAST et CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
 **Conversion de nombres en chaîne non autorisée**  
 EXEMPLE : `CONCATENATE(102,”,345”)`  
@@ -341,7 +342,7 @@ Dans un modèle en mémoire, le résultat se termine au dernier caractère de ch
 
 
 ## <a name="see-also"></a>Voir aussi  
-[Mode DirectQuery](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[Mode DirectQuery](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

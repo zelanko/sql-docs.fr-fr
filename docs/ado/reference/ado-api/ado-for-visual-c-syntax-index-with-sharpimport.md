@@ -1,8 +1,7 @@
 ---
-title: 'ADO pour les Index de la syntaxe Visual C++ avec #import | Documents Microsoft'
+title: 'ADO pour les Index de la syntaxe Visual C++ avec #import | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,20 +21,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f841b7d15682d30062ae498dbfe692b7ee39432
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 88843691166fab6300f2a2f4a092b25ce9552ac3
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957702"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO pour les Index de la syntaxe Visual C++ avec #import
 Cet index est un renvoi à la référence du langage ADO basé sur Microsoft Visual C++ et le **#import** directive.  
   
- Cet index a été déduite de la compilation d’un programme avec le **#import** directive par rapport à la DLL ADO, reformatant le fichier *.tlh qui a été généré. Uniquement les informations sur les méthodes, propriétés et événements a été conservées. La syntaxe alternative déclarée pour chaque propriété est indiquée par le correspondant «`__declspec(property...)`» la directive.  
+ Cet index a été déduite de la compilation d’un programme avec le **#import** directive sur le fichier .dll ADO, puis en reformatant le \*fichier .tlh qui a été généré. Uniquement les informations sur les méthodes, propriétés et événements a été conservées. La syntaxe alternative déclarée pour chaque propriété est indiquée par le correspondant «`__declspec(property...)`» la directive.  
   
  Il est vivement recommandé de lire [programmation ADO Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md) pour plus d’informations.  
   
- Syntaxe de méthode et la propriété dans Visual C++ avec la **#import** la directive est répertoriée pour les éléments suivants :  
+ Syntaxe de méthode et la propriété dans Visual C++ avec la **#import** directive est répertoriée pour les éléments suivants :  
   
 -   [Collections ADO](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -55,11 +55,11 @@ Cet index est un renvoi à la référence du langage ADO basé sur Microsoft Vis
   
 -   [Objet Recordset](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objet de flux](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
+-   [Objet de Stream](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Événements de connexion](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Événements Recordset](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
+-   [Événements de jeu d’enregistrements](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Index de la syntaxe ADO pour Visual C++ pour COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

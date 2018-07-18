@@ -28,11 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 911e983816453ede6a40375aad7e09bf399567b0
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: a934f7311096e9f97463fc9c7e826aab1fe063f6
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812163"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guide de conception et d’architecture d’index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -642,37 +643,33 @@ Quand nous parlons des index columnstore, nous utilisons les termes *rowstore* e
 
 - Un **columnstore** représente des données qui sont organisées logiquement sous la forme d’une table avec des lignes et des colonnes, et stockées physiquement dans un format de données selon les colonnes.
   
-Un index columnstore stocke physiquement la plupart des données au format columnstore. Au format columnstore, les données sont compressées et décompressées sous la forme de colonnes. Il n’est pas nécessaire de décompresser les autres valeurs de chaque ligne qui ne sont pas demandées par la requête. Cela permet d’analyser rapidement une colonne entière d’une table volumineuse. 
+  Un index columnstore stocke physiquement la plupart des données au format columnstore. Au format columnstore, les données sont compressées et décompressées sous la forme de colonnes. Il n’est pas nécessaire de décompresser les autres valeurs de chaque ligne qui ne sont pas demandées par la requête. Cela permet d’analyser rapidement une colonne entière d’une table volumineuse. 
 
 - Un **rowstore** représente des données qui sont organisées logiquement sous la forme d’une table avec des lignes et des colonnes, puis stockées physiquement dans un format de données selon les lignes. Il s’agit de la méthode standard de stockage des données de table relationnelles, comme un segment de mémoire ou un index d’arbre B (B-tree) cluster.
 
-Un index columnstore stocke également physiquement des lignes dans un format rowstore appelé « deltastore ». Le deltastore, également appelé « rowgroups delta », est un espace de stockage pour les lignes qui sont en trop petit nombre pour bénéficier de la compression dans le columnstore. Chaque rowgroup delta est implémenté comme un index B-tree cluster. 
+  Un index columnstore stocke également physiquement des lignes dans un format rowstore appelé « deltastore ». Le deltastore, également appelé « rowgroups delta », est un espace de stockage pour les lignes qui sont en trop petit nombre pour bénéficier de la compression dans le columnstore. Chaque rowgroup delta est implémenté comme un index B-tree cluster. 
 
 - Le **deltastore** est un espace de stockage pour les lignes qui sont en trop petit nombre pour être compressées dans le columnstore. Le deltastore stocke les lignes au format rowstore. 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>Les opérations sont effectuées sur des rowgroups et des segments de colonne
 
-L’index columnstore regroupe des lignes en unités gérables. Chacune de ces unités est appelée « rowgroup ». Pour des performances optimales, le nombre de lignes dans le rowgroup doit être suffisamment important pour améliorer le taux de compression et suffisamment petit pour tirer parti des opérations en mémoire.
-
-* Un **rowgroup** est un groupe de lignes sur lequel l’index columnstore effectue des opérations de gestion et de compression. 
+L’index columnstore regroupe des lignes en unités gérables. Chacune de ces unités est appelée **rowgroup**. Pour des performances optimales, le nombre de lignes dans le rowgroup doit être suffisamment important pour améliorer le taux de compression et suffisamment petit pour tirer parti des opérations en mémoire.
 
 Par exemple, l’index columnstore effectue les opérations suivantes sur des rowgroups :
 
 * Compresse les rowgroups dans le columnstore. La compression est effectuée sur chaque segment de colonne d’un rowgroup.
-* Fusionne des rowgroups lors d’une opération ALTER INDEX REORGANIZE.
-* Crée des rowgroups lors d’une opération ALTER INDEX REBUILD.
+* Fusionne les rowgroups lors d’une opération `ALTER INDEX ... REORGANIZE`.
+* Crée des rowgroups lors d’une opération `ALTER INDEX ... REBUILD`.
 * Génère des rapports sur l’intégrité et la fragmentation des rowgroups dans des vues de gestion dynamique (DMV).
 
-Le deltastore se compose d’un ou de plusieurs rowgroups appelés « rowgroups delta ». Chaque rowgroup delta est un index B-tree cluster qui stocke des lignes quand elles sont en trop petit nombre pour être compressées dans le columnstore.  
+Le deltastore se compose d’un ou plusieurs rowgroups appelés **rowgroups delta**. Chaque rowgroup delta est un index d’arborescence binaire en cluster qui stocke de petits chargements en bloc et insère des données jusqu’à ce que le rowgroup contienne 1 048 576 lignes ou jusqu’à ce que l’index soit reconstruit.  Quand un rowgroup delta contient 1 048 576 lignes, il est marqué comme étant fermé et attend qu’un processus appelle le moteur de tuple pour le compresser dans le columnstore. 
 
-* Un **rowgroup delta** est un index B-tree cluster qui stocke de petits chargements en masse et insère des données jusqu’à ce que le rowgroup contienne 1 048 576 lignes ou jusqu’à ce que l’index soit reconstruit.  Quand un rowgroup delta contient 1 048 576 lignes, il est marqué comme étant fermé et attend qu’un processus appelle le moteur de tuple pour le compresser dans le columnstore. 
+Chaque colonne a certaines de ses valeurs dans chaque rowgroup. Ces valeurs sont appelées **segments de colonne**. Chaque rowgroup contient un segment de colonne pour chaque colonne dans la table. Chaque colonne a un seul segment de colonne dans chaque rowgroup.
 
-Chaque colonne a certaines de ses valeurs dans chaque rowgroup. Ces valeurs sont appelées « segments de colonne ». Quand l’index columnstore compresse un rowgroup, il compresse chaque segment de colonne séparément. Pour décompresser la totalité d’une colonne, l’index columnstore doit simplement décompresser un segment de colonne dans chaque rowgroup.
-
-* Un **segment de colonne** est la partie des valeurs de colonne dans un rowgroup. Chaque rowgroup contient un segment de colonne pour chaque colonne dans la table. Chaque colonne a un segment de colonne dans chaque rowgroup. 
-  
- ![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
  
+Quand l’index columnstore compresse un rowgroup, il compresse chaque segment de colonne séparément. Pour décompresser la totalité d’une colonne, l’index columnstore doit simplement décompresser un segment de colonne dans chaque rowgroup.   
+
 #### <a name="small-loads-and-inserts-go-to-the-deltastore"></a>Les petits chargements et les petites insertions sont placés dans le deltastore
 Un index columnstore améliore la compression columnstore et les performances en compressant au moins 102 400 lignes à la fois dans l’index columnstore. Pour compresser des lignes en masse, l’index columnstore accumule les petits chargements et les petites insertions dans le deltastore. Les opérations deltastore sont effectuées en coulisse. Pour retourner des résultats de requête corrects, l'index columnstore cluster associe les résultats de columnstore et de deltastore. 
 

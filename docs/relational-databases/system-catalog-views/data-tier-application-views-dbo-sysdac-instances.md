@@ -1,5 +1,5 @@
 ---
-title: dbo.sysdac_instances (Transact-SQL) | Documents Microsoft
+title: dbo.sysdac_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -26,17 +26,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 813a786f68fe02431073033172d37ffe2c682ee0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031337"
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>Vues de l’Application de couche données - dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Affiche une ligne pour chaque instance d’application (DAC) de couche données déployée sur une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. sysdac_instances appartient au schéma dbo dans la base de données msdb. Le tableau suivant décrit les colonnes de la vue sysdac_instances.  
+  Affiche une ligne pour chaque instance d’application (DAC) de couche données déployée sur une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. sysdac_instances appartient au schéma dbo dans la base de données msdb. Le tableau suivant décrit les colonnes dans la vue sysdac_instances.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|Identificateur de l'instance DAC.|  
 |nom_instance|**sysname**|Nom de l'instance DAC spécifiée quand la DAC a été déployée.|  

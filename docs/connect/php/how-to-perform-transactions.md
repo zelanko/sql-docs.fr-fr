@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe11037ad2b7a5ae0f927a0880537adf67594899
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307658"
 ---
 # <a name="how-to-perform-transactions"></a>Procédure : effectuer des transactions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,7 +65,7 @@ Les étapes d’exécution d’une transaction peuvent se résumer comme suit :
   
 ## <a name="example"></a>Exemple  
   
-### <a name="description"></a> Description  
+### <a name="description"></a>Description  
 L’exemple suivant exécute plusieurs requêtes dans le cadre d’une transaction. Si toutes les requêtes réussissent, la transaction est validée. Si l’une des requêtes échoue, la transaction est restaurée.  
   
 L’exemple vise à supprimer une commande client de la table *Sales.SalesOrderDetail* et à ajuster le niveau de stock de chaque produit figurant dans cette commande dans la table *Product.ProductInventory* . Ces requêtes sont incluses dans une transaction, car elles doivent toutes réussir pour que la base de données reflète avec exactitude l’état des commandes et la disponibilité des produits.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908694"
 ---
 # <a name="general-error-checks"></a>Vérifications des erreurs générales
 Le Gestionnaire de pilotes vérifie une erreur générale. Cette propriété retourne toujours SQL_ERROR lorsqu’il rencontre l’erreur suivante : la fonction doit être pris en charge par le pilote.

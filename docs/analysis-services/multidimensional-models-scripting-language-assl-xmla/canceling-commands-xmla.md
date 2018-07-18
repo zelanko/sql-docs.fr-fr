@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020256"
 ---
 # <a name="canceling-commands-xmla"></a>Annulation de commandes (XMLA)
   En fonction des autorisations d’administration de l’utilisateur qui émet la commande, le [Annuler](../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md) commande en XML pour Analysis (XMLA) peut annuler une commande sur une session, une session, une connexion, un processus serveur, ou une session associée ou.  

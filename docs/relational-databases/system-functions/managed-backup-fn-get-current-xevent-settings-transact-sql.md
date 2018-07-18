@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_current_xevent_settings (Transact-SQL) | Documents Microsoft
+title: managed_backup.fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26fc0678d8597cc8a56211e829bdc598c734f168
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029534"
 ---
 # <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +53,10 @@ smart_admin.fn_get_current_xevent_settings ()
 ## <a name="table-returned"></a>Table retournée  
  Les canaux d'administration, analytique et opérationnel des événements étendus sont nécessaires, activés par défaut et non configurables.  
   
-|Nom de la colonne|Type de données| Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|Type d'événement étendu|  
-|is_configurable|NVARCHAR(128)|Cette option est définie **True** si l’événement est configurable, sinon elle valeur **False**.|  
+|is_configurable|NVARCHAR(128)|Il est défini sur **True** si l’événement est configurable, sinon il valeur **False**.|  
 |is_enabled|NVARCHAR(128)|A la valeur True si l'événement est activé, sinon, a la valeur False. Utilisez smart_admin.sp_set_parameter pour activer les événements de débogage.|  
   
 ## <a name="security"></a>Sécurité  

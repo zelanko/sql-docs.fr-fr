@@ -2,7 +2,6 @@
 title: Append (méthode) (Index ADOX) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b25f75f89181f2020238f3a113b7a9908c6a88d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22f3dbde110252950694431040bd943c59344938
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284738"
 ---
 # <a name="append-method-adox-indexes"></a>Append (méthode) (Index ADOX)
 Ajoute un nouveau [Index](../../../ado/reference/adox-api/index-object-adox.md) de l’objet à la [index](../../../ado/reference/adox-api/indexes-collection-adox.md) collection.  
@@ -40,8 +40,8 @@ Indexes.Append Index [,Columns]
  *Index*  
  Le **Index** objet à ajouter ou le nom de l’index à créer et à ajouter.  
   
- *Columns*  
- Ce paramètre est facultatif. A **Variant** valeur qui spécifie l’ou les noms des colonnes à indexer. Le *colonnes* paramètre correspond à l’ou les valeurs de la [nom](../../../ado/reference/adox-api/name-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md) ou les objets.  
+ *Colonnes*  
+ Facultatif. A **Variant** valeur qui spécifie l’ou les noms des colonnes à indexer. Le *colonnes* paramètre correspond à l’ou les valeurs de la [nom](../../../ado/reference/adox-api/name-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md) ou les objets.  
   
 ## <a name="remarks"></a>Notes  
  Le *colonnes* paramètre peut prendre le nom d’une colonne ou un tableau de noms de colonnes.  

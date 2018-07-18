@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020386"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>Créer et modifier des sources de données incorporées
   Une source de données incorporée est définie dans une définition de rapport et utilisée uniquement par ce rapport.  

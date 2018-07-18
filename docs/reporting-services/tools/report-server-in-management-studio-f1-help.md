@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029456"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Aide du serveur de rapports dans Management Studio accessible par la touche F1
   Cette section contient des rubriques sur les boîtes de dialogue de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] qui peuvent servir à gérer les serveurs de rapports.  

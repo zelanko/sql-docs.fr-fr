@@ -1,26 +1,25 @@
 ---
 title: Prise en charge de SQL Server Integration Services (SSIS) Scale Out pour la haute disponibilité | Microsoft Docs
-ms.description: This article describes how to configure SSIS Scale Out for high availability
-ms.custom: ''
-ms.date: 12/19/2017
+description: Cet article explique comment configurer SSIS Scale Out pour la haute disponibilité.
+ms.custom: performance
+ms.date: 05/23/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 8cd79327b3733de9f7463f1d5f9d8f924b58a46b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3af4b868e42a1f327af5ee8616fe5629e0e2a485
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411801"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Prise en charge de Scale Out pour la haute disponibilité
 
@@ -47,7 +46,7 @@ Ce compte doit pouvoir accéder ultérieurement à SSISDB sur le nœud secondair
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Inclure le nom d’hôte DNS du service Scale Out Master dans les noms communs (CN) du certificat Scale Out Master
 
-Ce nom d’hôte est utilisé dans le point de terminaison de Scale Out Master. 
+Ce nom d’hôte est utilisé dans le point de terminaison de Scale Out Master. (Veillez à fournir un nom d’hôte DNS, et non un nom de serveur.)
 
 ![Configuration de Master à haute disponibilité](media/ha-master-config.PNG)
 
@@ -61,9 +60,9 @@ Utilisez le même certificat Scale Out Master que celui utilisé sur le nœud pr
 > [!NOTE]
 > Vous pouvez configurer plusieurs Scale Out Masters de sauvegarde en répétant ces opérations pour le Scale Out Master sur d’autres nœuds secondaires.
 
-## <a name="4-set-up-ssisdb-always-on"></a>4. Configurer Always On pour SSISDB
+## <a name="4-set-up-and-configure-ssisdb-support-for-always-on"></a>4. Configurer la prise en charge de SSISDB pour Always On
 
-Pour configurer Always On pour SSISDB, suivez les indications fournies dans [Always On pour le catalogue SSIS (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
+Pour configurer la prise en charge de SSISDB pour Always On, suivez les instructions dans [Always On pour le catalogue SSIS (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
 
 Vous devez également créer un écouteur de groupe de disponibilité pour le groupe de disponibilité auquel vous ajoutez SSISDB. Consultez [Créer ou configurer un écouteur de groupe de disponibilité](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
@@ -85,7 +84,7 @@ Appelez la procédure stockée `[catalog].[update_logdb_info]` avec les valeurs 
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7. Configurer le rôle du service Scale Out Master du cluster de basculement Windows
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7. Configurer le rôle du service Scale Out Master du cluster de basculement Windows Server
 
 1.  Dans le Gestionnaire du cluster de basculement, connectez-vous au cluster pour Scale Out. Sélectionnez le cluster. Sélectionnez **Action** dans le menu, puis sélectionnez **Configurer un rôle**.
 
@@ -96,6 +95,12 @@ Appelez la procédure stockée `[catalog].[update_logdb_info]` avec les valeurs 
     ![Assistant Haute disponibilité 1](media/ha-wizard1.PNG)
 
 4.  Terminez l’Assistant.
+
+Sur les machines virtuelles Azure, cette opération de configuration nécessite des étapes supplémentaires. L’explication complète de ces concepts et de ces étapes dépasse le cadre de cet article.
+
+1.  Vous devez configurer un domaine Azure. Le clustering de basculement Windows Server nécessite que tous les ordinateurs du cluster soient membres du même domaine. Pour plus d’informations, consultez [Activer Azure Active Directory Domain Services à l’aide du portail Azure](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+
+2. Vous devez configurer un équilibreur de charge Azure. Cette opération est obligatoire pour l’écouteur du groupe de disponibilité. Pour plus d’informations, consultez [Tutoriel : équilibrer la charge du trafic interne vers les machines virtuelles avec un équilibreur de charge de base à l’aide du portail Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Mettre à jour l’adresse Scale Out Master dans SSISDB
 

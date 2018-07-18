@@ -1,13 +1,11 @@
 ---
-title: Appel de fonctions d’agrégation définies par l’utilisateur CLR | Documents Microsoft
+title: Appel de fonctions d’agrégation définies par l’utilisateur CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -23,11 +21,12 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 967475fc3c9781a999fe3d4dabc2f79d6324a492
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca243bc1961b703839ff72e5b559349e3a4c3e36
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355371"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>Agrégat défini par l’utilisateur CLR - appel de fonctions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -241,7 +240,7 @@ GROUP BY BookID;
   
 |BookID|Noms d'auteur|  
 |------------|------------------|  
-|1|Johnson|  
+| 1|Johnson|  
 |2|Taylor, Mayler|  
 |3|Roberts, Michaels, Steven|  
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539539"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Se connecter à des nœuds de matériel dans le système de plateforme Analytique
 Cet article explique les différentes façons de se connecter à chaque nœud au niveau du matériel de système de plateforme Analytique.  

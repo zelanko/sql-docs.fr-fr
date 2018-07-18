@@ -1,8 +1,6 @@
 ---
 title: Génération de rapports (OracleToSQL) | Documents Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +17,12 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 61739e71974525a450313af85068e2f91a4dbb1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b14bed167e3023be984c8afeb836407f42180a8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777485"
 ---
 # <a name="generating-reports-oracletosql"></a>Génération de rapports (OracleToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générés dans la Console SSMA au niveau d’arborescence objet.  
@@ -36,8 +35,8 @@ Utilisez la procédure suivante pour générer des rapports :
   
     ||||  
     |-|-|-|  
-    |**Sl. Non.**|**Command**|**Titre de rapport**|  
-    |1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
+    |**Sl. Non.**|**Commande**|**Titre de rapport**|  
+    | 1|Générer--rapport d’évaluation|AssessmentReport&lt;n&gt;. XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|migrer des données|DataMigrationReport&lt;n&gt;. XML|  
     |4|instruction CONVERT-sql|ConvertSQLReport&lt;n&gt;.XML|  
@@ -54,7 +53,7 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|verbose = « false »|Génère un rapport de synthèse de l’activité.|  
+    | 1|verbose = « false »|Génère un rapport de synthèse de l’activité.|  
     |2|verbose = « true »|Génère un rapport d’état résumées et détaillées pour chaque activité.|  
   
     > [!NOTE]  
@@ -65,7 +64,7 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|signaler les erreurs = « false »|Aucun détail d’erreur / avertissement / messages d’informations.|  
+    | 1|signaler les erreurs = « false »|Aucun détail d’erreur / avertissement / messages d’informations.|  
     |2|signaler les erreurs = « true »|Erreur détaillée / avertissement / messages d’informations.|  
   
     > [!NOTE]  

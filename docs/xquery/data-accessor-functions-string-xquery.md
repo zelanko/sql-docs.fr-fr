@@ -1,5 +1,5 @@
 ---
-title: Fonction String (XQuery) | Documents Microsoft
+title: Fonction String (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c20973cdaa3b3d80124a9713a104d7294d6c20f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968871"
 ---
-# <a name="data-accessor-functions---string-xquery"></a>Fonctions d’accesseur de données - string (XQuery)
+# <a name="data-accessor-functions---string-xquery"></a>Fonctions d’accesseur de données : string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne la valeur de *$arg* représenté sous forme de chaîne.  
@@ -50,7 +51,7 @@ fn:string($arg as item()?) as xs:string
   
 -   Si *$arg* est la séquence vide, la chaîne de longueur nulle est retournée.  
   
--   Si *$arg* est un nœud, la fonction retourne la valeur de chaîne du nœud qui est obtenue à l’aide de l’accesseur de la valeur de chaîne. Celui-ci est défini dans les spécifications W3C XQuery 1.0 et XPath 2.0 Data Model.  
+-   Si *$arg* est un nœud, la fonction retourne la valeur de chaîne du nœud qui est obtenu à l’aide de l’accesseur de la valeur de chaîne. Celui-ci est défini dans les spécifications W3C XQuery 1.0 et XPath 2.0 Data Model.  
   
 -   Si *$arg* est une valeur atomique, la fonction retourne la même chaîne est retournée par l’expression de cast en tant que **xs : String**, *$arg*, sauf si spécifié autrement.  
   
@@ -73,7 +74,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <PD:Features xmlns:PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
@@ -86,7 +87,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- Si vous spécifiez la **string()** (fonction), vous recevez la valeur de chaîne du nœud spécifié.  
+ Si vous spécifiez le **string()** (fonction), vous recevez la valeur de chaîne du nœud spécifié.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -125,7 +126,7 @@ just text
 select @x.query('string(/)')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 This is a comment 10  
@@ -145,7 +146,7 @@ select @x.query('string(/processing-instruction()[1])')
 select @x.query('string(/comment()[1])')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 This is a comment   

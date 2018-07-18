@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908848"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>Allocation et libération de descripteurs
 Les descripteurs sont implicitement ou explicitement alloués, comme décrit dans les sections suivantes.  

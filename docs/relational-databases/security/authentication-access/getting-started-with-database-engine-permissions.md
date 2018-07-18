@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 045067a2e564d9e7c04aa4542d3ef24491b1356a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 824a83a460688e3aecb8f0be984b45995ad8328f
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708427"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942265"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Prise en main des autorisations du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +44,8 @@ ms.locfileid: "34708427"
  Utilisateurs de base de données  
  Pour qu’une connexion puisse accéder à une base de données, un utilisateur de base de données doit être créé dans une base de données, puis mappé à la connexion. En général, le nom d’utilisateur de base de données est le même que le nom de connexion, mais ce n’est pas obligatoire. Chaque utilisateur de base de données est mappé à une seule connexion. Une connexion ne peut être mappée qu’à un seul utilisateur dans une base de données, mais peut être mappée comme utilisateur de base de données dans plusieurs bases de données.  
   
- En outre, les utilisateurs de base de données peuvent être créés sans avoir de connexion correspondante. Ils sont appelés *utilisateurs de base de données à relation contenant-contenu*. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourage l’utilisation de ces utilisateurs, car elle facilite le déplacement de votre base de données vers un autre serveur. Comme une connexion, un utilisateur de base de données à relation contenant-contenu peut utiliser l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+ En outre, les utilisateurs de base de données peuvent être créés sans avoir de connexion correspondante. Ils sont appelés *utilisateurs de base de données autonome*. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourage l’utilisation de ces utilisateurs, car elle facilite le déplacement de votre base de données vers un autre serveur. Comme une connexion, un utilisateur de base de données autonome peut utiliser l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Il existe 12 types d’utilisateurs, qui varient légèrement selon la façon dont ils s’authentifient et qui ils représentent. Pour voir une liste d’utilisateurs, consultez [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
@@ -88,7 +87,7 @@ ms.locfileid: "34708427"
   
 1.  Créez une connexion pour les groupes Windows. (Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignorez les étapes d’Active Directory et créez ici des connexions d’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  
   
-2.  Dans la base de données utilisateur, créez un utilisateur de base de données à relation contenant-contenu pour le groupe Windows. (Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignorez les étapes d’Active Directory et créez ici une authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’utilisateur de base de données à relation contenant-contenu.)  
+2.  Dans la base de données utilisateur, créez un utilisateur de base de données autonome pour le groupe Windows. (Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ignorez les étapes d’Active Directory et créez ici une authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’utilisateur de base de données autonome.)  
   
 3.  Dans la base de données utilisateur, créez un ou plusieurs rôles de base de données définis par l’utilisateur, chacun représentant une fonction similaire. Par exemple, analyste financier et analyste des ventes.  
   

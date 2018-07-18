@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024376"
 ---
 # <a name="report-builder-functions---countrows-function"></a>Fonctions du Générateur de rapports - CountRows
   Retourne le nombre de lignes dans l'étendue spécifiée, y compris celles contenant des valeurs Null.  

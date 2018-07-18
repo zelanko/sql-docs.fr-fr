@@ -1,5 +1,5 @@
 ---
-title: Configurer les propriétés de création de rapports pour les rapports Power View | Documents Microsoft
+title: Configurer les propriétés de création de rapports pour les rapports Power View | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,24 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033428"
 ---
 # <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>Supplémentaires leçon - configurer les propriétés de création de rapports pour les rapports Power View
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-Dans cette leçon supplémentaire, vous allez définir les propriétés du projet AW Internet Sales. Les propriétés de création de rapports facilitent la sélection et l'affichage des données du modèle dans Power View. Vous définirez également des propriétés permettant de masquer certaines colonnes et tables, et vous créerez des données à utiliser dans des graphiques.   
+Dans cette leçon supplémentaire, vous allez définir le signalement des propriétés pour le projet AW Internet Sales. Les propriétés de création de rapports facilitent la sélection et l'affichage des données du modèle dans Power View. Vous définirez également des propriétés permettant de masquer certaines colonnes et tables, et vous créerez des données à utiliser dans des graphiques.   
   
 Durée estimée pour effectuer cette leçon : **30 minutes**  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Prérequis  
 Cette leçon supplémentaire fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d'effectuer les tâches de cette leçon supplémentaire, vous devez avoir terminé toutes les leçons précédentes.  
 Pour pouvoir effectuer cette leçon supplémentaire, les composants suivants doivent également être installés :  
   
--   Le projet AW Internet Sales (terminé ce didacticiel) prêt à être déployé ou déjà déployé sur un serveur Analysis Services.  
+-   Le projet AW Internet Sales (terminé via ce didacticiel) prêt à être déployé ou déjà déployé sur un serveur Analysis Services.  
   
   
 ## <a name="model-properties-that-affect-reporting"></a>Propriétés de modèle qui affectent la création de rapports  
@@ -68,7 +69,7 @@ Il peut parfois s'avérer nécessaire de créer des données dans votre modèle 
     |Year Month|=[Calendar Year] & FORMAT([Month],"#00")|  
   
 ## <a name="default-field-set"></a>Ensemble de champs par défaut  
-L’ensemble de champs par défaut est une liste prédéfinie de colonnes et des mesures pour une table qui sont automatiquement ajoutés à un canevas de rapport lorsque la table est activée dans la liste de champs du rapport. Pour l'essentiel, vous pouvez indiquer les colonnes, les mesures et l'ordre des champs par défaut qui seront affichés dans cette table visualisée dans des rapports Power View.  Pour le modèle Internet Sales, vous allez définir un ensemble de champs par défaut et l'ordre pour les tables Customer, Geography et Product. Seules sont incluses les colonnes les plus courantes qui seront affichées lors de l'analyse des données Adventure Works Internet Sales à l'aide de rapports Power View.  
+Le champ défini par défaut est une liste prédéfinie de colonnes et des mesures pour une table qui sont automatiquement ajoutés à un canevas de rapport lors de la table est activée dans la liste de champs du rapport. Pour l'essentiel, vous pouvez indiquer les colonnes, les mesures et l'ordre des champs par défaut qui seront affichés dans cette table visualisée dans des rapports Power View.  Pour le modèle Internet Sales, vous allez définir un ensemble de champs par défaut et l'ordre pour les tables Customer, Geography et Product. Seules sont incluses les colonnes les plus courantes qui seront affichées lors de l'analyse des données Adventure Works Internet Sales à l'aide de rapports Power View.  
   
 Pour obtenir des informations détaillées sur l’ensemble de champs par défaut, consultez [configurer champ défini par défaut pour les rapports Power View](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md) dans la documentation en ligne de SQL Server.  
   
@@ -130,7 +131,7 @@ Pour plus d’informations sur les propriétés de comportement de la Table, con
 ## <a name="reporting-properties-for-columns"></a>Propriétés de création de rapports pour les colonnes  
 Il existe plusieurs propriétés de colonne de base et propriétés de création de rapports spécifiques sur les colonnes que vous pouvez définir pour améliorer l'expérience de création de rapports d'un modèle. Par exemple, il n'est peut-être pas nécessaire que toutes les colonnes s'affichent dans chacune des tables. Tout comme vous avez masqué les tables Product Category et Product Subcategory précédemment, vous pouvez masquer des colonnes spécifiques d'une table en utilisant la propriété Hidden d'une colonne. D'autres propriétés, telles que le Format de date et Trier par colonne, peuvent également affecter le mode d'affichage des données de colonne dans les rapports. Vous allez maintenant définir certaines de ces propriétés sur des colonnes spécifiques. D'autres colonnes ne nécessitent aucune intervention, et ne figurent pas ci-dessous.  
   
-Vous n'allez définir que quelques propriétés de colonne, mais il en existe de nombreuses autres. Pour plus d’informations sur les propriétés de colonne, consultez [propriétés de la colonne](../analysis-services/tabular-models/column-properties-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
+Vous n'allez définir que quelques propriétés de colonne, mais il en existe de nombreuses autres. Pour plus d’informations sur le signalement des propriétés de colonne, consultez [propriétés de la colonne](../analysis-services/tabular-models/column-properties-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
   
 #### <a name="to-set-properties-for-columns"></a>Pour définir les propriétés des colonnes  
   
@@ -146,7 +147,7 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
   
     **Customer**  
   
-    |Colonne|Propriété|Valeur|  
+    |colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Birth Date|Format de données|Date courte|  
@@ -154,9 +155,9 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
     **Date**  
   
     > [!NOTE]  
-    > Étant donné que la table Date a été sélectionnée comme table de date du modèle à l'aide du paramètre Marquer en tant que table de dates, dans la leçon 7 : Marquer en tant que table de dates, et la colonne Date de la table Date comme la colonne à utiliser en tant qu'identificateur unique, la propriété Identificateur de ligne de la colonne Date se verra automatiquement affecter la valeur True, et ne pourra pas être modifiée. Lorsque vous utilisez les fonctions Time Intelligence dans des formules DAX, vous devez spécifier une table de dates. Dans ce modèle, vous avez créé plusieurs mesures à l'aide de fonctions Time Intelligence pour calculer les données de vente de plusieurs périodes, telles que les trimestres précédents et actuel, ainsi qu'à des fins d'utilisation dans des indicateurs de performance clés. Pour plus d’informations sur la spécification d’une table de dates, consultez [spécifier la marque comme Table de dates à utiliser avec Time Intelligence](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
+    > Étant donné que la table Date a été sélectionnée comme table de date du modèle à l'aide du paramètre Marquer en tant que table de dates, dans la leçon 7 : Marquer en tant que table de dates, et la colonne Date de la table Date comme la colonne à utiliser en tant qu'identificateur unique, la propriété Identificateur de ligne de la colonne Date se verra automatiquement affecter la valeur True, et ne pourra pas être modifiée. Lorsque vous utilisez les fonctions Time Intelligence dans des formules DAX, vous devez spécifier une table de dates. Dans ce modèle, vous avez créé plusieurs mesures à l'aide de fonctions Time Intelligence pour calculer les données de vente de plusieurs périodes, telles que les trimestres précédents et actuel, ainsi qu'à des fins d'utilisation dans des indicateurs de performance clés. Pour plus d’informations sur la spécification d’une table de dates, consultez [spécifier la marque comme Table de Date pour l’utiliser avec Time Intelligence](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) dans la documentation en ligne de SQL Server.  
   
-    |Colonne|Propriété|Valeur|  
+    |colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Date|Format de données|Date courte|  
     |Day Number of Week|Hidden|True|  
@@ -164,7 +165,7 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
     |Day of Week|Hidden|True|  
     |Day of Month|Hidden|True|  
     |Day of Year|Hidden|True|  
-    |Month Name|Trier par colonne|Mois|  
+    |Month Name|Trier par colonne|Month|  
     |Month|Hidden|True|  
     |Month Calendar|Hidden|True|  
     |Fiscal Quarter|Hidden|True|  
@@ -173,14 +174,14 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
   
     **Geography**  
   
-    |Colonne|Propriété|Valeur|  
+    |colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
     **Product**  
   
-    |Colonne|Propriété|Valeur|  
+    |colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|Étiquette par défaut|True|  
@@ -190,7 +191,7 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
   
     **Internet Sales**  
   
-    |Colonne|Propriété|Valeur|  
+    |colonne|Propriété|Valeur|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  
@@ -207,7 +208,7 @@ Vous n'allez définir que quelques propriétés de colonne, mais il en existe de
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Pour redéployer le modèle tabulaire Internet Sales Adventure Works  
   
--   Dans SSDT, cliquez sur le **générer** menu, puis sur **déployer Adventure Works Internet Sales Model**.  
+-   Dans SSDT, cliquez sur le **Build** menu, puis sur **déployer Adventure Works Internet Sales Model**.  
   
     La boîte de dialogue **Déployer** apparaît et affiche l’état de déploiement des métadonnées, ainsi que de chaque table incluse dans le modèle.  
   

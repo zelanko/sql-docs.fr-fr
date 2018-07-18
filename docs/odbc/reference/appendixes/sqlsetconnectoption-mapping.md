@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910254"
 ---
 # <a name="sqlsetconnectoption-mapping"></a>Mappage de SQLSetConnectOption
 Lorsqu’une application ODBC 2. *x* application appelle **SQLSetConnectOption** via un ODBC 3 *.x* pilote, l’appel à  

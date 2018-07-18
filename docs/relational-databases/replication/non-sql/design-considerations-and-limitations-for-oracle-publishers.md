@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38df2896997fe55f9072c481eb7678ce6c870aa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c762e0ceedad4c535f5eda7bafe017ed2d61d6d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351711"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Problèmes et limitations de conception des serveurs de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ ms.lasthandoff: 05/03/2018
 -   Les modifications de schéma apportées aux tables Oracle publiées ne sont pas prises en charge. Pour apporter des modifications au schéma, commencez par supprimer la publication, apportez vos modifications puis recréez la publication et les abonnements.  
   
     > [!NOTE]  
-    >  Si les modifications du schéma ainsi que la suppression et recréation ultérieures de la publication et des abonnements sont effectuées à un moment où il n'y a aucune activité sur les tables publiées, vous pouvez spécifier l'option « Prise en charge de la réplication uniquement » pour les abonnements. Ils peuvent ainsi être synchronisés sans devoir copier un instantané sur chaque Abonné. Pour plus d’informations, consultez [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+    >  Si les modifications du schéma ainsi que la suppression et recréation ultérieures de la publication et des abonnements sont effectuées à un moment où il n'y a aucune activité sur les tables publiées, vous pouvez spécifier l'option « Prise en charge de la réplication uniquement » pour les abonnements. Ils peuvent ainsi être synchronisés sans devoir copier un instantané sur chaque Abonné. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
 ### <a name="replication-security-model"></a>Modèle de sécurité de la réplication  
  Le modèle de sécurité pour la publication Oracle est identique à celui de la réplication transactionnelle standard, à ces différences près :  

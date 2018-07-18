@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899974"
 ---
 # <a name="setting-tracing-options"></a>Définition des Options de suivi
 Le **suivi** onglet de la **administrateur de sources de données ODBC** boîte de dialogue vous permet de configurer la manière dont les appels de fonction ODBC sont suivis.  

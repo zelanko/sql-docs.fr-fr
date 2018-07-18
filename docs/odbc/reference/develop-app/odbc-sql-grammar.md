@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912324"
 ---
 # <a name="odbc-sql-grammar"></a>Grammaire SQL ODBC
 Applications interopérables doivent toujours utiliser la grammaire SQL ODBC dans les instructions SQL. Toutefois, une variation importante est possible même dans cette grammaire. Pour plus d’informations, consultez [interopérabilité of SQL Statements](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md).

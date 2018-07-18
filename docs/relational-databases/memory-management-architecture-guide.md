@@ -1,7 +1,7 @@
 ---
 title: Guide d’architecture de gestion de la mémoire | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -20,11 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d01610b3ac4d87b747398bd71bdd63f1842a3ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 048a6b5a2a704a353fddce56a9d565e8f3792b92
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239369"
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,8 +76,7 @@ L’utilisation d’AWE et du privilège de verrouillage des pages en mémoire v
 > Les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent s’exécuter sur un système d’exploitation 32 bits. L’accès à plus de 4 gigaoctets (Go) de mémoire sur un système d’exploitation 32 bits nécessite AWE (Address Windowing Extensions) pour gérer la mémoire. Cela n’est pas nécessaire lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est exécuté sur des systèmes d’exploitation 64 bits. Pour plus d’informations sur AWE, consultez [Espace d’adressage de processus](http://msdn.microsoft.com/library/ms189334.aspx) et [Gestion de la mémoire pour des bases de données volumineuses](http://msdn.microsoft.com/library/ms191481.aspx) dans la documentation de [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)].   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Changements apportés à la gestion de la mémoire à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-
-Dans les versions antérieures de SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), la mémoire était allouée par cinq mécanismes différents :
+Dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), la mémoire était allouée selon cinq mécanismes différents :
 -  **Allocateur de page unique (SPA)**, comprenant uniquement les allocations de mémoire inférieures ou égales à 8 Ko dans le processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les options de configuration *Mémoire maximum du serveur (Mo)* et *Mémoire minimum du serveur (Mo)* déterminaient les limites de la mémoire physique consommée par SPA. Le pool de tampons était aussi le mécanisme pour SPA et le plus grand consommateur d’allocations de pages uniques.
 -  **Allocateur de plusieurs pages (MPA)**, pour les allocations de mémoire demandant plus de 8 Ko.
 -  **Allocateur du CLR**, comprenant les segments de mémoire du CLR SQL et ses allocations globales créées durant l’initialisation du CLR.
@@ -109,7 +109,6 @@ Ce comportement est généralement observé durant les opérations suivantes :
 -  Traçage d’opérations qui doivent stocker des paramètres d’entrée volumineux
 
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Changements apportés à « memory_to_reserve » à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
-
 Dans les versions antérieures de SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), le Gestionnaire de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réservait une partie de l’espace d’adressage virtuel (VAS) des processus à **l’allocateur de plusieurs pages (MPA)**, à **l’allocateur du CLR**, aux allocations de mémoire pour les **piles de threads** dans le processus SQL Server et aux **allocations Windows directes (DWA)**. Cette partie de l’espace d’adressage virtuel est également appelée « Mem-To-Leave » ou « pool non-tampon ».
 
 L’espace d’adressage virtuel réservé pour ces allocations est déterminé par l’option de configuration ***memory_to_reserve***. La valeur par défaut utilisée par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est de 256 Mo. Pour remplacer la valeur par défaut, utilisez le paramètre de démarrage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Pour plus d’informations sur le paramètre de démarrage *-g*, consultez la page [Options de démarrage du service moteur de base de données](../database-engine/configure-windows/database-engine-service-startup-options.md) dans la documentation.
@@ -127,12 +126,11 @@ Le tableau suivant indique si un type spécifique d’allocation de mémoire app
 |Allocations directes de Windows|Oui|Oui|
 
 ## <a name="dynamic-memory-management"></a> Gestion dynamique de la mémoire
-
-Le comportement par défaut de la gestion de la mémoire du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] consiste à acquérir autant de mémoire que nécessaire sans causer d’insuffisance de mémoire sur le système. Pour cela, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les API de notification de mémoire de Microsoft Windows.
+Le comportement par défaut de la gestion de la mémoire du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est d’acquérir autant de mémoire que nécessaire sans provoquer une insuffisance de mémoire sur le système. Pour cela, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les API de notification de mémoire de Microsoft Windows.
 
 Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise dynamiquement la mémoire, il interroge régulièrement le système afin de déterminer la mémoire physique disponible. La conservation de cette mémoire libre empêche le système d'exploitation de paginer. S'il y a moins de mémoire, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en libère pour le système d'exploitation. S’il y a plus de mémoire disponible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut allouer davantage de mémoire. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’ajoute de la mémoire que lorsque sa charge de travail en requiert davantage. Un serveur au repos n’augmente pas la taille de son espace d’adressage virtuel.  
   
-**L’option [max server memory](../database-engine/configure-windows/server-memory-server-configuration-options.md)** contrôle l’allocation de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la mémoire de compilation, tous les caches (notamment le pool de mémoires tampons), les allocations de mémoire d’exécution des requêtes, la mémoire du gestionnaire de verrous et la mémoire du CLR<sup>1</sup> (essentiellement les régisseurs de mémoire se trouvant dans **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
+L’option **[Mémoire maximum du serveur](../database-engine/configure-windows/server-memory-server-configuration-options.md)** contrôle l’allocation de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la mémoire de compilation, tous les caches (notamment le pool de mémoires tampons), les [allocations de mémoire d’exécution des requêtes](#effects-of-min-memory-per-query), la [mémoire du gestionnaire de verrous](#memory-used-by-sql-server-objects-specifications) et la mémoire du CLR<sup>1</sup> (essentiellement les régisseurs de mémoire se trouvant dans **[sys.dm_os_memory_clerks](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**). 
 
 <sup>1</sup> La mémoire du CLR est gérée dans le cadre des allocations max_server_memory à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
 
@@ -170,13 +168,12 @@ FROM sys.dm_os_process_memory;
 
 Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] démarre, il calcule la taille de l'espace d'adressage virtuel pour le pool de mémoires tampons d'après plusieurs paramètres, dont la quantité de mémoire physique du système, le nombre de threads serveur et diverses options de démarrage. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réserve la quantité ainsi calculée de son espace d’adressage virtuel de processus pour le pool de mémoires tampons, mais il acquiert (valide) uniquement la quantité nécessaire de mémoire physique pour la charge actuelle.
 
-L'instance continue alors à acquérir de la mémoire comme l'exige la prise en charge de la charge de travail. Au fur et à mesure que des utilisateurs se connectent et exécutent des requêtes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acquiert la mémoire physique supplémentaire à la demande. Une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] continue d’acquérir de la mémoire physique jusqu’à ce qu’elle atteigne sa cible d’allocation de mémoire maximum du serveur ou jusqu’à ce que Windows indique qu’il n’y a plus de mémoire disponible en surplus. Elle libère de la mémoire quand elle en a plus que la valeur de mémoire minimum du serveur paramétrée et si Windows indique qu’il y a une insuffisance de mémoire disponible.
+L'instance continue alors à acquérir de la mémoire comme l'exige la prise en charge de la charge de travail. Au fur et à mesure que des utilisateurs se connectent et exécutent des requêtes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acquiert la mémoire physique supplémentaire à la demande. Une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] continue d’acquérir de la mémoire physique jusqu’à ce qu’elle atteigne sa cible d’allocation de mémoire maximum du serveur, ou jusqu’à ce que le système d’exploitation indique qu’il n’y a plus de mémoire disponible en surplus. Elle libère de la mémoire quand elle en a plus que la valeur de mémoire minimum du serveur paramétrée et si le système d’exploitation indique qu’il y a une insuffisance de mémoire disponible. 
 
 Étant donné que d'autres applications sont démarrées sur l'ordinateur exécutant une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], elles consomment de la mémoire et la quantité de mémoire physique disponible descend en dessous de la cible de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . L'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] règle sa consommation de mémoire. Si une autre application est arrêtée, la mémoire disponible est augmentée, et l’instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] augmente la taille de son allocation de mémoire. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut libérer et acquérir plusieurs mégaoctets de mémoire chaque seconde, ce qui lui permet de s’adapter rapidement aux changements d’allocation de mémoire.
 
 ## <a name="effects-of-min-and-max-server-memory"></a>Effets des options de configuration « min server memory » et « max server memory »
-
-Les options de configuration min server memory et max server memory permettent d’établir les limites supérieure et inférieure de la quantité de mémoire utilisée par le pool de mémoires tampons et d’autres caches du moteur de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le pool de mémoires tampons n'obtient pas immédiatement la quantité de mémoire spécifiée dans min server memory. En effet, il commence seulement avec la mémoire nécessaire à l'initialisation. Au fur et à mesure que la charge de travail du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] augmente, celui-ci acquiert la mémoire nécessaire à la prise en charge de ces travaux. Le pool de mémoires tampons ne libère aucune partie de la mémoire acquise avant d'atteindre la valeur spécifiée dans min server memory. Dès lors que la quantité spécifiée dans min server memory est atteinte, le pool de mémoires tampons utilise l'algorithme standard pour acquérir et libérer la mémoire en fonction des besoins. La seule différence réside dans le fait que le pool de mémoires tampons ne diminue jamais son allocation de mémoire en dessous de la valeur spécifiée dans min server memory et n'obtient jamais plus de mémoire que le niveau spécifié dans max server memory.
+Les options de configuration *min server memory* et *max server memory* permettent d’établir les limites supérieure et inférieure de la quantité de mémoire utilisée par le pool de mémoires tampons et d’autres caches du moteur de base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Le pool de mémoires tampons n'obtient pas immédiatement la quantité de mémoire spécifiée dans min server memory. En effet, il commence seulement avec la mémoire nécessaire à l'initialisation. Au fur et à mesure que la charge de travail du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] augmente, celui-ci acquiert la mémoire nécessaire à la prise en charge de ces travaux. Le pool de mémoires tampons ne libère aucune partie de la mémoire acquise avant d'atteindre la valeur spécifiée dans min server memory. Dès lors que la quantité spécifiée dans min server memory est atteinte, le pool de mémoires tampons utilise l'algorithme standard pour acquérir et libérer la mémoire en fonction des besoins. La seule différence réside dans le fait que le pool de mémoires tampons ne diminue jamais son allocation de mémoire en dessous de la valeur spécifiée dans min server memory et n'obtient jamais plus de mémoire que le niveau spécifié dans max server memory.
 
 > [!NOTE]
 > En tant que processus,[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acquiert plus de mémoire qu’indiqué par l’option max server memory. Les composants internes et externes peuvent allouer de la mémoire en dehors du pool de mémoires tampons, qui consomme un supplément de mémoire, mais la mémoire allouée au pool de mémoires tampons représente généralement la plus grande part de mémoire consommée par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -187,8 +184,7 @@ Si la valeur spécifiée pour min server memory et max server memory est identiq
 
 Si une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctionne sur un ordinateur sur lequel d’autres applications sont régulièrement arrêtées ou démarrées, l’allocation et la désallocation de mémoire par l’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut ralentir le démarrage de ces applications. De même, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est une application serveur parmi d’autres exécutées sur un seul ordinateur, l’administrateur système doit éventuellement contrôler la quantité de mémoire allouée à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour ce faire, il peut utiliser les options min server memory et max server memory pour contrôler la quantité de mémoire utilisable par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les options **min server memory** et **max server memory** sont spécifiées en mégaoctets. Pour en savoir plus, consultez les [Options de configuration de la mémoire du serveur](../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
-## <a name="memory-used-by-includessnoversionincludesssnoversion-mdmd-objects-specifications"></a>Utilisation de la mémoire par les spécifications d’objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-
+## <a name="memory-used-by-sql-server-objects-specifications"></a>Mémoire utilisée par les spécifications d’objets SQL Server
 La liste suivante décrit la quantité estimée de mémoire utilisée par différents objets dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les quantités indiquées sont des estimations. Elles peuvent varier en fonction de l’environnement et de la manière dont les objets sont créés :
 
 * Verrou (tel qu’il est géré par le Gestionnaire de verrous) : 64 octets + 32 octets par propriétaire   
@@ -198,12 +194,33 @@ La **taille des paquets réseau** représente la taille des paquets TDS (Tabular
 
 Lorsque la fonctionnalité MARS (Multiple Active Result Sets) est activée, la connexion utilisateur est environ (3 + 3 \* nombre_connexions_logiques) \* taille_paquet_réseau + 94 Ko.
 
-## <a name="buffer-management"></a>Gestion des tampons
+## <a name="effects-of-min-memory-per-query"></a>Effets de min memory per query
+L’option de configuration *min memory per query* spécifie la quantité minimale de mémoire (en kilo-octets) allouée pour l’exécution d’une requête. Cela est également appelé « allocation de mémoire minimale ». Avant de commencer à s’exécuter, toutes les requêtes doivent attendre jusqu’à ce que la mémoire minimale demandée soit sécurisée, ou jusqu’à ce que la valeur spécifiée dans l’option de configuration du serveur Attente de la requête soit dépassée. Le type d’attente qui est accumulé dans ce scénario est RESOURCE_SEMAPHORE.
 
+> [!IMPORTANT]
+> Ne définissez pas l’option de configuration du serveur min memory per query sur une valeur trop élevée, en particulier sur des systèmes très sollicités, car cela peut aboutir à :         
+> - Une concurrence accrue pour les ressources mémoire.         
+> - Une concurrence réduite en augmentant la quantité de mémoire pour chaque requête individuelle, même si la mémoire nécessaire à l’exécution est inférieure à cette configuration.    
+>    
+> Pour obtenir des recommandations sur l’utilisation de cette configuration, consultez [Configurer l’option de configuration de serveur min memory per query](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
+
+### <a name="memory-grant-considerations"></a>Considérations sur l’allocation de mémoire
+Pour **l’exécution en mode ligne**, l’allocation de mémoire initiale ne peut être dépassée en aucune circonstance. Si plus de mémoire que l’allocation initiale est nécessaire pour exécuter des opérations de **hachage** ou de **tri**, leur dépassement est transféré sur le disque. Une opération de hachage qui connaît un dépassement est prise en charge par un fichier de travail dans TempDB, tandis qu’une opération de tri avec dépassement est prise en charge par une [table de travail](../relational-databases/query-processing-architecture-guide.md#worktables).   
+
+Un dépassement qui se produit pendant une opération de tri est appelé [avertissement de tri](../relational-databases/event-classes/sort-warnings-event-class.md). Les avertissements de tri indiquent que les opérations de tri ne peuvent pas être effectuées en mémoire. Ceci n’inclut pas les opérations de tri impliquant la création d’index, mais seulement les opérations de tri effectuées dans une requête (comme une clause `ORDER BY` utilisée dans une instruction `SELECT`).
+
+Un dépassement qui se produit pendant une opération de hachage est appelé [avertissement de hachage](../relational-databases/event-classes/hash-warning-event-class.md). Ceci se produit quand une récurrence de hachage ou une cessation de hachage (interruption de hachage) s’est produite pendant une opération de hachage.
+-  Une récurrence de hachage se produit lorsque l'entrée de construction n'est pas adaptée à la mémoire disponible, ce qui entraîne une fragmentation de l'entrée en plusieurs parties traitées séparément. Si une de ces partitions n’est toujours pas adaptée à la mémoire disponible, elle est à nouveau fragmentée en sous-partitions, qui sont également traitées séparément. Ce processus de fragmentation se poursuit jusqu’à ce que toutes les partitions soient adaptées à la mémoire disponible ou jusqu’à ce que le niveau maximal de récursivité soit atteint.
+-  L'interruption de hachage a lieu lorsqu'une opération de hachage atteint son niveau maximal de récursivité et se décale à un plan auxiliaire pour traiter les données partitionnées restantes. Ces événements peuvent entraîner une baisse des performances de votre serveur.
+
+Pour **l’exécution en mode batch**, l’allocation de mémoire initiale peut augmenter dynamiquement jusqu’à un certain seuil interne par défaut. Ce mécanisme d’allocation de mémoire dynamique est conçu pour permettre l’exécution en mémoire des opérations de **hachage** ou de **tri** qui s’exécutent en mode batch. Si ces opérations ne tiennent toujours pas dans la mémoire, elles sont transférées sur le disque.
+
+Pour plus d’informations sur les modes d’exécution, consultez le [Guide d’architecture de traitement des requêtes](../relational-databases/query-processing-architecture-guide.md#execution-modes).
+
+## <a name="buffer-management"></a>Gestion des tampons
 L'objectif principal d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est de stocker et de récupérer les données, l'utilisation intensive d'E/S sur disque est donc une caractéristique centrale du moteur de base de données. Étant donné que les opérations d'E/S sur disque peuvent consommer beaucoup de ressources et durent relativement longtemps, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s'attache à rendre ces opérations efficaces. La gestion des tampons joue un rôle essentiel pour parvenir à cette efficacité. Le composant de gestion des tampons comprend deux mécanismes : le **gestionnaire de tampons** qui permet d’accéder et de mettre à jour les pages de la base de données, et le **cache des tampons** (également appelé **pool de tampons**), qui permet de réduire les opérations d’E/S du fichier de la base de données. 
 
 ### <a name="how-buffer-management-works"></a>Fonctionnement de la gestion des tampons
-
 Un tampon est une page de 8 Ko en mémoire dont la taille est similaire à une page d’index ou de données. Ainsi, le cache des tampons est divisé en pages de 8 Ko. Le gestionnaire des tampons gère les fonctions de lecture des pages d'index ou de données à partir des fichiers de disque de base de données dans le cache de tampons ainsi que la réécriture sur le disque des pages modifiées. Une page reste dans le cache des tampons jusqu'à ce que le gestionnaire de tampons ait besoin de la zone de mémoire tampon pour lire davantage de données. Les données ne sont réécrites sur le disque que si elles sont modifiées. Les données dans le cache de tampons peuvent être modifiées plusieurs fois avant leur réécriture sur le disque. Pour plus d’informations, consultez [Lecture de pages](../relational-databases/reading-pages.md) et [Écriture de pages](../relational-databases/writing-pages.md).
 
 Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] démarre, il calcule la taille de l’espace d’adressage virtuel pour le cache des tampons d’après plusieurs paramètres, dont la quantité de mémoire physique du système, le nombre de threads serveur maximum configuré et diverses options de démarrage. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réserve la quantité ainsi calculée de son espace d’adressage virtuel de processus (appelée cible mémoire) pour le cache des tampons, mais il acquiert (valide) uniquement la quantité de mémoire physique nécessaire pour la charge actuelle. Vous pouvez interroger les colonnes **bpool_commit_target** et **bpool_committed** dans la vue du catalogue [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) pour retourner le nombre de pages réservées comme cible mémoire et le nombre de pages actuellement réservées dans le cache des tampons, respectivement.
@@ -217,7 +234,6 @@ Comme le gestionnaire de tampons consomme l'essentiel de la mémoire dans les pr
 * le gestionnaire du journal pour la journalisation préalable.  
 
 ### <a name="supported-features"></a>Fonctionnalités prises en charge
-
 Le gestionnaire de tampons prend en charge les fonctionnalités suivantes.
 
 * Le gestionnaire de tampons est compatible avec la technologie **NUMA (Non-Uniform Memory Access)**. Les pages de cache des tampons sont réparties sur les nœuds NUMA matériels, ce qui permet à un thread d'accéder à une page de tampons allouée sur le nœud NUMA local au lieu de la mémoire étrangère. 
@@ -257,6 +273,30 @@ Les opérations d'E/S longues sont aussi parfois causées par un composant dans 
 
 Les opérations d'E/S longues isolées qui ne présentent à priori aucun rapport avec les conditions décrites plus haut sont peut-être causées par un problème de matériel ou de pilote. Le journal d'événements système peut contenir un événement connexe qui permet de diagnostiquer le problème.
 
+### <a name="memory-pressure-detection"></a>Détection de la forte sollicitation de la mémoire
+La forte sollicitation de la mémoire est une situation résultant d’un manque de mémoire et peut entraîner les effets suivants :
+- E/S supplémentaires (par exemple un thread d’arrière-plan d’écriture différée très actif)
+- Taux de recompilation plus élevé
+- Exécution plus longue des requêtes (dans le cas où des allocations de mémoire sont en attente)
+- Cycles d’UC supplémentaires
+
+Cette situation peut se produire pour des raisons externes ou internes. Les raisons externes peuvent être les suivantes :
+- La mémoire physique (RAM) disponible est faible. Ceci fait que le système raccourcit les plages de travail des processus actuellement en cours d’exécution, ce qui peut aboutir à un ralentissement global. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut réduire la cible de validation du pool de mémoires tampons et commencer à réduire les caches internes plus souvent. 
+- La mémoire système globale disponible (qui inclut le fichier d’échange système) est faible. Ceci peut entraîner l’échec des allocations de mémoire par le système, car il ne peut pas paginer la mémoire actuellement allouée.
+Les raisons internes peuvent être les suivantes :
+- En réponse à une forte sollicitation de la mémoire externe, quand le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] définit des limites plus basses d’utilisation de la mémoire.
+- Les paramètres mémoire ont été abaissés manuellement via une réduction de la configuration de *max server memory*. 
+- Des modifications de la distribution en mémoire de composants internes entre les différents caches.
+
+Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] implémente une infrastructure dédiée à la détection et à la gestion de la forte sollicitation de la mémoire dans le cadre de sa gestion de la mémoire dynamique. Cette infrastructure inclut la tâche d’arrière-plan appelée **Moniteur de ressource**. La tâche Moniteur de ressource surveille l’état des indicateurs de la mémoire interne et externe. Une fois qu’un de ces indicateurs change d’état, il calcule la notification correspondante et la diffuse. Ces notifications sont des messages internes provenant de chacun des composants du moteur et elles sont stockées dans des mémoires tampons en anneau. 
+
+Deux mémoires tampons en anneau contiennent des informations relatives à la gestion de la mémoire dynamique : 
+- La mémoire tampon en anneau Moniteur de ressource, qui assure le suivi de l’activité du Moniteur de ressource, par exemple si une forte sollicitation de la mémoire a été ou non signalée. Cette mémoire tampon en anneau contient des informations d’état dépendant de la condition actuelle de *RESOURCE_MEMPHYSICAL_HIGH*, *RESOURCE_MEMPHYSICAL_LOW*, *RESOURCE_MEMPHYSICAL_STEADY* ou *RESOURCE_MEMVIRTUAL_LOW*.
+- La mémoire tampon Gestionnaire d’allocation mémoire, qui contient des enregistrements des notifications de mémoire pour chaque pool de ressources de Resource Governor. Comme une forte sollicitation de la mémoire interne est détectée, une notification de mémoire insuffisante est activée pour les composants qui allouent de la mémoire, de façon à déclencher des actions destinées à équilibrer la mémoire entre les caches. 
+
+Les gestionnaires d’allocation mémoire surveillent la consommation de la demande de mémoire par chaque composant et, en fonction des informations collectées, ils calculent une valeur optimale de mémoire pour chacun de ces composants. Il existe un ensemble de gestionnaires pour chaque pool de ressources du Resource Governor. Ces informations sont diffusées auprès de chacun des composants, qui augmente ou diminue son utilisation en fonction de ce qui lui est indiqué.
+Pour plus d’informations sur les gestionnaires d’allocation mémoire, consultez [sys.dm_os_memory_brokers](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-brokers-transact-sql.md). 
+
 ### <a name="error-detection"></a>Détection d'erreurs  
 Les pages de base de données peuvent faire appel à deux mécanismes facultatifs qui permettent de garantir l'intégrité de la page depuis son écriture sur le disque à sa relecture : les protections de la somme de contrôle et de la page endommagée. Ces mécanismes offrent une méthode indépendante de vérification de l'exactitude du stockage des données ainsi que des composants matériels tels que les contrôleurs, les pilotes, les câbles et même le système d'exploitation. La protection est ajoutée à la page juste avant l'écriture sur le disque, puis elle est vérifiée après sa lecture sur le disque.
 
@@ -278,7 +318,6 @@ La protection de la somme de contrôle, introduite dans [!INCLUDE[ssVersion2005]
 > Même si la valeur TORN_PAGE_DETECTION utilise moins de ressources, elle ne fournit qu'un sous-ensemble limité de la protection offerte par CHECKSUM.
 
 ## <a name="understanding-non-uniform-memory-access"></a>Présentation de l'accès NUMA (Non-uniform Memory Access)
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est compatible avec la technologie NUMA (Non-Uniform Memory Access) et fonctionne correctement avec l'accès NUMA matériel sans configuration particulière. À mesure que la vitesse et le nombre de processeurs augmentent, il devient de plus en plus difficile de réduire le temps de réponse de la mémoire requis pour exploiter cette puissance de traitement supplémentaire. Pour contourner ce problème, les fournisseurs de matériel proposent des caches L3 de grande capacité, mais cette solution présente des limites. L’architecture NUMA fournit une solution évolutive à ce problème. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été conçu pour tirer parti des ordinateurs reposant sur la technologie NUMA sans qu’il soit nécessaire d’apporter des modifications aux applications. Pour en savoir plus, référez-vous à [Procédure : configurer SQL Server pour utiliser soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
 
 ## <a name="see-also"></a> Voir aussi

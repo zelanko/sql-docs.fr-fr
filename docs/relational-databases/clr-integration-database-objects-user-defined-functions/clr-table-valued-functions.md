@@ -1,13 +1,11 @@
 ---
-title: Les fonctions table CLR | Documents Microsoft
+title: Les fonctions table CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -23,11 +21,12 @@ caps.latest.revision: 88
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6f1881b43a716c8c6d6573338a27d7e93d919ada
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c60817f8bb736eef6cdbbb6c15636b19876d4421
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37360221"
 ---
 # <a name="clr-table-valued-functions"></a>Fonctions table CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,20 +35,20 @@ ms.lasthandoff: 05/03/2018
  Depuis [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étend les fonctionnalités des fonctions table en vous permettant de définir une fonction table dans n'importe quel langage managé. Données sont retournées à partir d’une fonction table via une **IEnumerable** ou **IEnumerator** objet.  
   
 > [!NOTE]  
->  Pour les fonctions table, les colonnes du type de table de retour ne peut pas inclure des colonnes timestamp ou des colonnes de type de données de chaîne non-Unicode (tel que **char**, **varchar**, et **texte**). La contrainte NOT NULL n'est pas prise en charge.  
+>  Pour les fonctions table, les colonnes du type de table de retour ne peut pas inclure des colonnes timestamp ou les colonnes de type de données de chaîne non-Unicode (tel que **char**, **varchar**, et **texte**). La contrainte NOT NULL n'est pas prise en charge.  
   
- Pour plus d’informations sur les fonctions table CLR, consultez 'MSSQLTips [les fonctions de table Introduction à SQL Server CLR !](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
+ Pour plus d’informations sur les fonctions Table du CLR, consultez 'MSSQLTips [Introduction à CLR SQL Server de fonctions table !](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Différences entre les fonctions table Transact-SQL et CLR  
  Les fonctions table [!INCLUDE[tsql](../../includes/tsql-md.md)] matérialisent les résultats de l'appel de la fonction dans une table intermédiaire. Dans la mesure où elles utilisent une table intermédiaire, elles peuvent prendre en charge des contraintes et des index uniques sur les résultats. Ces fonctionnalités peuvent être extrêmement utiles lorsque des résultats sont retournés en grande quantité.  
   
- Par opposition, les fonctions table CLR représentent une solution d'accès en continu. Il n'est pas obligatoire que le jeu de résultats entier soit matérialisé dans une table unique. Le **IEnumerable** objet retourné par la fonction managée est appelé directement par le plan d’exécution de la requête qui appelle la fonction table, et les résultats sont consommés de façon incrémentielle. Ce modèle d'accès en continu garantit que les résultats peuvent être consommés dès que la première ligne est disponible, au lieu d'attendre le remplissage de la table entière. Il s'agit également d'une solution plus appropriée si de très nombreuses lignes sont retournées, car elles n'ont pas à être matérialisées en totalité en mémoire. Par exemple, une fonction table managée peut être utilisée pour analyser un fichier texte et retourner chaque ligne de texte sous forme de ligne de table.  
+ Par opposition, les fonctions table CLR représentent une solution d'accès en continu. Il n'est pas obligatoire que le jeu de résultats entier soit matérialisé dans une table unique. Le **IEnumerable** objet retourné par la fonction managée est appelé directement par le plan d’exécution de la requête qui appelle la fonction table, et les résultats sont utilisés de façon incrémentielle. Ce modèle d'accès en continu garantit que les résultats peuvent être consommés dès que la première ligne est disponible, au lieu d'attendre le remplissage de la table entière. Il s'agit également d'une solution plus appropriée si de très nombreuses lignes sont retournées, car elles n'ont pas à être matérialisées en totalité en mémoire. Par exemple, une fonction table managée peut être utilisée pour analyser un fichier texte et retourner chaque ligne de texte sous forme de ligne de table.  
   
 ## <a name="implementing-table-valued-functions"></a>Implémentation de fonctions table  
- Vous devez implémenter les fonctions table en tant que méthodes d'une classe dans un assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Votre code de fonction table doit implémenter la **IEnumerable** interface. Le **IEnumerable** interface est définie dans le .NET Framework. Les types représentant les tableaux et des collections dans le .NET Framework déjà implémentent la **IEnumerable** interface. Cela facilite l'écriture de fonctions table qui convertissent une collection ou un tableau en un jeu de résultats.  
+ Vous devez implémenter les fonctions table en tant que méthodes d'une classe dans un assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Votre code de fonction table doit implémenter le **IEnumerable** interface. Le **IEnumerable** interface est définie dans le .NET Framework. Types représentant les tableaux et collections dans le .NET Framework déjà implémenter le **IEnumerable** interface. Cela facilite l'écriture de fonctions table qui convertissent une collection ou un tableau en un jeu de résultats.  
   
 ## <a name="table-valued-parameters"></a>Paramètres table  
- Les paramètres table sont des types de tables définis par l'utilisateur et passés à une procédure ou une fonction, et qui offrent un moyen efficace pour passer plusieurs lignes de données au serveur. Ils procurent une fonctionnalité semblable aux tableaux de paramètres, mais offrent une meilleure souplesse et une intégration plus étroite à [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ils sont également susceptibles de générer de meilleures performances. Paramètres table aident également à réduire le nombre d’allers-retours au serveur. Au lieu d’envoyer plusieurs demandes au serveur, comme avec une liste de paramètres scalaires, données peuvent être envoyées au serveur en tant qu’un paramètre table. Un type de table défini par l'utilisateur ne peut pas être passé en tant que paramètre table à une fonction ou à une procédure stockée managée s'exécutant dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ni être retourné à partir de ces dernières. Pour plus d’informations sur les paramètres table, consultez [utiliser des paramètres table & #40 ; moteur de base de données & #41 ;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Les paramètres table sont des types de tables définis par l'utilisateur et passés à une procédure ou une fonction, et qui offrent un moyen efficace pour passer plusieurs lignes de données au serveur. Ils procurent une fonctionnalité semblable aux tableaux de paramètres, mais offrent une meilleure souplesse et une intégration plus étroite à [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ils sont également susceptibles de générer de meilleures performances. Paramètres table aident également à réduire le nombre d’allers-retours au serveur. Au lieu d’envoyer plusieurs demandes au serveur, comme avec une liste de paramètres scalaires, données peuvent être envoyées au serveur en tant qu’un paramètre table. Un type de table défini par l'utilisateur ne peut pas être passé en tant que paramètre table à une fonction ou à une procédure stockée managée s'exécutant dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ni être retourné à partir de ces dernières. Pour plus d’informations sur les paramètres table, consultez [Utiliser les paramètres table &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Paramètres de sortie et fonctions table  
  Des informations peuvent être retournées à partir de fonctions table via des paramètres de sortie. Le paramètre correspondant de la fonction table du code d'implémentation doit utiliser un paramètre passé par référence en guise d'argument. Notez que Visual Basic ne prend pas en charge les paramètres de sortie de la même manière que Visual C#. Vous devez spécifier le paramètre par référence et appliquer le \<Out() > attribut pour représenter un paramètre de sortie, comme suit :  
@@ -61,7 +60,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Définition d'une fonction table dans Transact-SQL  
- La syntaxe permettant de définir une fonction table CLR est similaire à celle d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] fonction table, avec l’ajout de la **nom externe** clause. Par exemple :  
+ La syntaxe permettant de définir une fonction table CLR est semblable à celle d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] fonction table, avec l’ajout de la **nom externe** clause. Exemple :  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  
@@ -83,7 +82,7 @@ select * from table t cross apply function(t.column);
   
 -   Les fonctions table sont générées à partir de données externes. Par exemple, une fonction table peut lire le journal des événements et l'exposer sous forme de table.  
   
- **Remarque** une fonction table peut uniquement accéder aux données via un [!INCLUDE[tsql](../../includes/tsql-md.md)] de requête dans le **InitMethod** (méthode) et non dans le **FillRow** (méthode). Le **InitMethod** doit être marqué avec le **SqlFunction.DataAccess.Read** si la propriété d’attribut un [!INCLUDE[tsql](../../includes/tsql-md.md)] requête est exécutée.  
+ **Remarque** une fonction table peut uniquement accéder aux données via un [!INCLUDE[tsql](../../includes/tsql-md.md)] de requête dans le **InitMethod** (méthode) et non dans le **FillRow** (méthode). Le **InitMethod** doit être marquée avec le **SqlFunction.DataAccess.Read** propriété d’attribut si un [!INCLUDE[tsql](../../includes/tsql-md.md)] requête est exécutée.  
   
 ## <a name="a-sample-table-valued-function"></a>Exemple de fonction table  
  La fonction table suivante retourne des informations du journal des événements système. La fonction accepte un seul argument de chaîne contenant le nom du journal des événements à lire.  

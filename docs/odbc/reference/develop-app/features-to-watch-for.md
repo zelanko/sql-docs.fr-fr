@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911364"
 ---
 # <a name="features-to-watch-for"></a>Fonctionnalités à surveiller
 Cette section décrit un nombre de fonctions qui les développeurs d’applications utilisent souvent pour reçoivent. En fait, ces fonctionnalités varient largement dans prise en charge et les modalités de prise en charge entre des SGBD ; Échec de code pour les est susceptible de causer des problèmes dans les applications interopérables.  

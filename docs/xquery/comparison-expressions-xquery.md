@@ -1,5 +1,5 @@
 ---
-title: Expressions de comparaison (XQuery) | Documents Microsoft
+title: Expressions de comparaison (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f80838771b36f59f58203dfc687957ea2f208522
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984351"
 ---
 # <a name="comparison-expressions-xquery"></a>Expressions de comparaison (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  Le tableau suivant énumère les opérateurs généraux.  
   
-|Opérateur| Description|  
+|Opérateur|Description|  
 |--------------|-----------------|  
 |=|Égal à|  
 |!=|Non égal|  
@@ -126,7 +127,7 @@ WHERE ContactID=1
   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 \<act:number   
@@ -144,7 +145,7 @@ WHERE ContactID=1
   
  Le tableau suivant énumère les opérateurs de comparaison de valeurs.  
   
-|Opérateur| Description|  
+|Opérateur|Description|  
 |--------------|-----------------|  
 |eq|Égal à|  
 |ne|Non égal|  
@@ -157,7 +158,7 @@ WHERE ContactID=1
   
  Ces opérateurs fonctionnent uniquement sur des valeurs atomiques singleton. Autrement dit, vous ne pouvez pas spécifier une séquence en tant qu'opérande.  
   
- Par exemple, la requête suivante récupère \<image > éléments pour un modèle de produit lorsque la taille de l’image est « petite :  
+ Par exemple, la requête suivante récupère \<image > éléments pour un modèle de produit où la taille de l’image est « petite :  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -170,7 +171,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19         
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   `declare namespace` définit le préfixe d'espace de noms qui est utilisé par la suite dans la requête.  
   
@@ -178,7 +179,7 @@ WHERE ProductModelID=19
   
 -   Étant donné que les opérateurs de valeur fonctionnent uniquement sur les valeurs atomiques, le **data()** fonction est implicitement utilisée pour récupérer la valeur du nœud. Autrement dit, `data($P/PD:Size) eq "small"` donne le même résultat.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 \<PD:Picture   
@@ -212,7 +213,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7           
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID       Result          
@@ -229,7 +230,7 @@ ProductModelID       Result
   
 -   `>>` : Ne **opérande 1** suivez **opérande 2** dans l’ordre du document.  
   
- La requête suivante retourne la valeur True si la description du catalogue produit le \<garantie > élément apparaissant avant le \<Maintenance > élément dans l’ordre des documents pour un produit particulier.  
+ La requête suivante retourne la valeur True si la description du catalogue produit le \<garantie > élément apparaissant avant la \<Maintenance > élément dans l’ordre du document pour un produit particulier.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -243,7 +244,7 @@ FROM  Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le **value()** méthode de la **xml**type de données est utilisé dans la requête.  
   

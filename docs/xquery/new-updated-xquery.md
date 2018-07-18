@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32739301"
 ---
 # <a name="new-and-recently-updated-xquery-for-sql-server"></a>Nouveaux et mis à jour récemment : XQuery pour SQL Server
 

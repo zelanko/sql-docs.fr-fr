@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030046"
 ---
 # <a name="configurationsetting-property---databaselogontimeout"></a>Propriété ConfigurationSetting - DatabaseLogonTimeout
   Spécifie le délai d'attente, en secondes, avant l'échec d'une tentative de connexion à la base de données du serveur de rapports. La valeur **0** indique une durée d’attente illimitée. Lecture seule.  

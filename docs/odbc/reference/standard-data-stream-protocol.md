@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915224"
 ---
 # <a name="standard-data-stream-protocol"></a>Protocole de flux de données standard
 Un protocole de flux de données standard est une façon d’accéder aux données dans le SGBD hétérogènes. En fait, les protocoles de flux de données standard existent déjà : la norme ANSI/ISO à distance de base de données Access (RDA) ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615)) et le IBM DRDA Distributed Relational Database Architecture () ([ http://www.netstoreusa.com/cbbooks/007/0070351384.shtml ](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml)). Bien que les deux systèmes montrent la promesse, ni est aujourd'hui largement implémentée.

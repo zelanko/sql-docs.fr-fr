@@ -1,14 +1,11 @@
 ---
-title: Création d’un Assembly | Documents Microsoft
+title: Création d’un Assembly | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - creating assemblies
@@ -18,15 +15,15 @@ helpviewer_keywords:
 - EXTERNAL_ACCESS assemblies
 - assemblies [CLR integration], creating
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b22443461b5bb11d4e4ca1933d4f1d1f931fda9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 018783af12eb63273b4fec17da3e6e31b2f80fdf
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37360191"
 ---
 # <a name="creating-an-assembly"></a>Création d'un assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,6 +137,6 @@ WITH PERMISSION_SET = UNSAFE;
  [Suppression d’un Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [Sécurité d’accès du Code CLR Integration](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Propriété de base de données TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md)   
- [Autoriser partiellement approuvé appelants](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Autorisation d’appelants partiellement approuvés](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

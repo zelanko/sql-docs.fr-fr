@@ -7,18 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d886466d7bf4f0c86c1cd9505480a3fadb6e66ef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d549b06b9fe371dc2b1966c62776ec4e88c45726
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740828"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Utiliser Python avec revoscalepy pour créer un modèle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans cette leçon, vous allez apprendre à exécuter le code Python à partir d’un client de développement à distance, pour créer un modèle de régression linéaire dans SQL Server. 
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prérequis
 
 + Cette leçon utilise les leçons précédentes des données différentes. Vous n’avez pas besoin effectuer les leçons précédentes en premier. Toutefois, si vous avez terminé les leçons précédentes et disposez d’un serveur déjà configuré pour s’exécuter Python, utiliser ce serveur et la base de données en tant qu’un contexte de calcul.
 + Pour exécuter le code Python à l’aide de SQL Server comme un calcul contexte nécessite SQL Server 2017 ou version ultérieure. En outre, vous devez installer explicitement et puis activez la fonctionnalité, **Machine Learning Services**, en choisissant l’option de langage Python.
@@ -82,7 +83,6 @@ from revoscalepy import RxComputeContext, RxInSqlServer, RxSqlServerData
 from revoscalepy import rx_lin_mod, rx_predict, rx_summary
 from revoscalepy import RxOptions, rx_import
 
-from pandas import Categorical
 import os
 
 def test_linmod_sql():

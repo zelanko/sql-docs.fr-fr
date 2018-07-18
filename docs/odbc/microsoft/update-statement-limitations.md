@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906594"
 ---
 # <a name="update-statement-limitations"></a>Limitations d’instruction de mise à jour
 Pour le pilote Paradox mettre à jour une table, la table doit avoir un index unique (clé primaire). Lorsque vous utilisez le pilote Paradox sans implémenter le moteur de base de données Borland, il n’est pas possible de mettre à jour une table Paradox.  

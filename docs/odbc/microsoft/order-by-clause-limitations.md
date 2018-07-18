@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899527"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY Clause Limitations
 Si une instruction SELECT contient une clause GROUP BY et une clause ORDER BY, la clause ORDER BY peut contenir uniquement une colonne du jeu de résultats ou une expression dans la clause GROUP BY.

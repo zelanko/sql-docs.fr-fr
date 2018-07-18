@@ -1,14 +1,11 @@
 ---
-title: Sys.sp_rda_reconcile_batch (Transact-SQL) | Documents Microsoft
+title: Sys.sp_rda_reconcile_batch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -19,24 +16,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_batch stored procedure
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b26ea87ae8efc750a83d5f42119e09a34d0fe4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 190c1ef35e8269cd909bfe6a8c17a7d360ae1041
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409568"
 ---
 # <a name="syssprdareconcilebatch-transact-sql"></a>Sys.sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Rapproche l’ID de lot stocké dans la table compatible Stretch SQL Server avec l’ID de lot stocké dans la table Azure distante.  
   
- En général, vous devez uniquement exécuter **sp_rda_reconcile_batch** si vous avez supprimé manuellement des données plus récemment migrées à partir de la table distante. Lorsque vous supprimez manuellement les données à distance qui inclut le traitement de la plus récent, les ID de lot ne sont pas synchronisées, et la migration s’arrête.  
+ En général, vous devez uniquement exécuter **sp_rda_reconcile_batch** si vous avez supprimé manuellement les données plus récemment migrées à partir de la table distante. Lorsque vous supprimez manuellement les données distantes qui inclut le lot la plus récente, les ID de lot ne sont pas synchronisés et la migration s’arrête.  
  
- Pour supprimer des données qui a déjà été migrées vers Azure, consultez les notes sur cette page.
+ Pour supprimer les données qui a déjà été migrées vers Azure, consultez la section Notes sur cette page.
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
    
@@ -60,9 +57,9 @@ sp_rda_reconcile_batch @objname = '@objname'
   
 1.  Suspendre la migration des données. Pour plus d’informations, consultez [Suspension et reprise de la migration de données &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   
-2.  Supprimer les données de la table intermédiaire de SQL Server en exécutant une commande de suppression avec l’indicateur STAGE_ONLY. Pour plus d’informations, consultez [effectuer des mises à jour administratives et les suppressions](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md#adminHints).
+2.  Supprimer les données de la table intermédiaire de SQL Server en exécutant une commande de suppression avec l’indicateur STAGE_ONLY. Pour plus d’informations, consultez [apporter des mises à jour administratives et les suppressions](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md#adminHints).
   
-3.  Supprimez les données de la table Azure distante en exécutant une commande de suppression avec l’indicateur REMOTE_ONLY.  
+3.  Supprimer les mêmes données à partir de la table Azure à distance en exécutant une commande de suppression avec l’indicateur REMOTE_ONLY.  
   
 4.  Exécutez **sp_rda_reconcile_batch**.  
   

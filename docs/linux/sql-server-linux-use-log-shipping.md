@@ -1,6 +1,6 @@
 ---
-title: Configurer l’envoi de journaux pour SQL Server sur Linux | Documents Microsoft
-description: Ce didacticiel montre un exemple de base de la réplication d’une instance de SQL Server sur Linux sur une instance secondaire à l’aide des journaux de transaction.
+title: Configurer l’envoi de journaux pour SQL Server sur Linux | Microsoft Docs
+description: Ce didacticiel montre un exemple de base de la réplication d’une instance de SQL Server sur Linux pour une instance secondaire à l’aide de l’envoi de journaux.
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
@@ -12,29 +12,30 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2d2057779b13141c6b1fee49fa1b3d299a660862
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.openlocfilehash: 8371660357848226ef00a9c843177ebae38c8790
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982031"
 ---
-# <a name="get-started-with-log-shipping-on-linux"></a>Prise en main l’envoi de journaux sur Linux
+# <a name="get-started-with-log-shipping-on-linux"></a>Bien démarrer avec l’envoi de journaux sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Envoi de journaux du serveur SQL est une configuration à haute disponibilité où une base de données à partir d’un serveur principal est répliquée sur un ou plusieurs serveurs secondaires. En bref, une sauvegarde de la base de données est restaurée sur le serveur secondaire. Puis le serveur principal crée des sauvegardes du journal des transactions régulièrement, et les serveurs secondaires de les restaurent, mise à jour de la copie secondaire de la base de données. 
+Envoi de journaux du serveur SQL est une configuration de haute disponibilité où une base de données à partir d’un serveur principal est répliquée sur un ou plusieurs serveurs secondaires. En bref, une sauvegarde de la base de données source est restaurée sur le serveur secondaire. Puis le serveur principal crée des sauvegardes du journal des transactions régulièrement, et les serveurs secondaires de les restaurent, la mise à jour de la copie secondaire de la base de données. 
 
-  ![Sauvegardes](https://preview.ibb.co/hr5Ri5/logshipping.png)
+  ![Logshipping](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
 Comme décrit dans cette image, une session de copie des journaux implique les étapes suivantes :
 
-- Sauvegarde du fichier journal des transactions sur l’instance principale de SQL Server
+- Sauvegarder le fichier journal des transactions sur l’instance principale de SQL Server
 - Copie le fichier de sauvegarde du journal des transactions sur le réseau à une ou plusieurs instances de SQL Server secondaire
 - Restaurer le fichier de sauvegarde du journal de transactions sur les instances de SQL Server secondaire
 
-## <a name="prerequisites"></a>Configuration requise
-- [Installer l’Agent SQL Server sur Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
+## <a name="prerequisites"></a>Prérequis
+- [Installer l’Agent SQL Server sur Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Configurez un partage réseau pour l’envoi de journaux à l’aide de CIFS 
 
@@ -48,7 +49,7 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     sudo apt-get install samba #For Ubuntu
     sudo yum -y install samba #For RHEL/CentOS
     ```
--   Créez un répertoire pour stocker les journaux pour l’envoi de journaux et mssql les autorisations requises
+-   Créez un répertoire pour stocker les journaux pour l’envoi de journaux et de donner des autorisations requises de mssql
 
     ```bash
     mkdir /var/opt/mssql/tlogs
@@ -56,7 +57,7 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     chmod 0700 /var/opt/mssql/tlogs
     ```
 
--   Modifiez le fichier /etc/samba/smb.conf (vous avez besoin des autorisations de racine pour cette) et ajoutez la section suivante :
+-   Modifiez le fichier /etc/samba/smb.conf (vous avez besoin des autorisations de racine pour que) et ajoutez la section suivante :
 
     ```bash
     [tlogs]
@@ -87,7 +88,7 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     sudo yum -y install cifs-utils #For RHEL/CentOS
     ```
 
--   Créer un fichier pour stocker vos informations d’identification. Utilisez le mot de passe que récemment défini pour votre compte de Samba mssql 
+-   Créer un fichier pour stocker vos informations d’identification. Utilisez le mot de passe que vous définissez récemment pour votre compte de Samba mssql 
 
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
@@ -95,7 +96,7 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
         domain=<domain>
         password=<password>
 
--   Exécutez les commandes suivantes pour créer un répertoire vide pour le montage et de définir des autorisations et la propriété correctement
+-   Exécutez les commandes suivantes pour créer un répertoire vide pour le montage et définir des autorisations et la propriété correctement
     ```bash   
     mkdir /var/opt/mssql/tlogs
     sudo chown root:root /var/opt/mssql/tlogs
@@ -113,7 +114,7 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     sudo mount -a
     ```
        
-## <a name="setup-log-shipping-via-t-sql"></a>Le programme d’installation de journaux de transaction via T-SQL
+## <a name="setup-log-shipping-via-t-sql"></a>Configurer des journaux de transaction par le biais de T-SQL
 
 - Exécutez ce script à partir de votre serveur principal
 
@@ -287,9 +288,9 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     END 
     ```
 
-## <a name="verify-log-shipping-works"></a>Vérifiez le fonctionnement de l’envoi de journaux
+## <a name="verify-log-shipping-works"></a>Vérifier le fonctionnement de l’envoi de journaux
 
-- Vérifiez que l’envoi de journaux fonctionne en démarrant la tâche suivante sur le serveur principal
+- Vérifiez que l’envoi de journaux fonctionne en démarrant le travail suivant sur le serveur principal
 
     ```tsql
     USE msdb ;  
@@ -299,7 +300,7 @@ Comme décrit dans cette image, une session de copie des journaux implique les �
     GO  
     ```
 
-- Vérifiez que l’envoi de journaux fonctionne en démarrant la tâche suivante sur le serveur secondaire
+- Vérifiez que l’envoi de journaux fonctionne en démarrant le travail suivant sur le serveur secondaire
  
     ```tsql
     USE msdb ;  

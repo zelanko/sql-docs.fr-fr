@@ -1,7 +1,7 @@
 ---
 title: Inscrire un fournisseur de données .NET Framework standard (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/18/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -22,11 +22,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 68c34c7ce77c3986d4df390c3512617e27de23b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cfd6cbea6bfefca9b695af4071727ba3d2550a1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550430"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Inscrire un fournisseur de données .NET Framework standard (SSRS)
   Pour utiliser un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tiers afin d’extraire des données pour un dataset de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez déployer et inscrire l’assembly de fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à deux emplacements : sur le client de création de rapports et sur le serveur de rapports. Sur le client de création de rapports, vous devez inscrire le fournisseur de données comme type de source des données et l'associer à un concepteur de requêtes. Vous pouvez ensuite sélectionner ce fournisseur de données comme type de source des données lorsque vous créez un dataset de rapport. Le concepteur de requêtes associé s'ouvre pour vous permettre de créer des requêtes pour ce type de source de données. Sur le serveur de rapports, vous devez inscrire le fournisseur de données comme type de source de données. Vous pouvez ensuite traiter les rapports publiés qui extraient les données d'une source de données à l'aide de ce fournisseur de données.  
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/03/2018
  L'appartenance d'URL n'est qu'une des nombreuses conditions d'appartenance que vous pouvez sélectionner pour le fournisseur de données.  
   
 ### <a name="verifying-the-deployment-and-registration"></a>Vérification du déploiement et de l'inscription  
- Vous pouvez vérifier si le fournisseur de données a été correctement déployé vers le serveur de rapports en ouvrant le Gestionnaire de rapports et en vérifiant que le fournisseur de données est inclut dans la liste des sources de données disponibles. Pour plus d’informations sur le Gestionnaire de rapports et les sources de données, consultez [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+ Vous pouvez vérifier si le fournisseur de données a été correctement déployé vers le serveur de rapports en ouvrant le portail web et en vérifiant que le fournisseur de données est inclut dans la liste des sources de données disponibles. Pour plus d’informations sur le portail web et les sources de données, consultez [Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
 ## <a name="registering-a-net-framework-data-provider-on-the-report-designer-client"></a>Inscription d'un fournisseur de données .NET Framework sur le client du Concepteur de rapports  
  Afin de créer des rapports qui utilisent ce fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour une source de données, vous devez installer l'assembly sur votre ordinateur client qui exécute le Concepteur de rapports. Vous devez modifier deux fichiers de configuration. Modifiez le fichier RSReportDesigner.config pour inscrire le fournisseur de données comme source de données et pour utiliser le concepteur de requêtes générique. Modifiez le fichier RSPreviewPolicy.config pour octroyer les autorisations de la sécurité d'accès du code pour l'assembly de fournisseur de données.  
@@ -198,7 +199,7 @@ ms.lasthandoff: 05/03/2018
  Avant de vérifier le déploiement, vous devez fermer toutes les instances de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sur votre ordinateur local. Une fois que vous avez clôturé toutes les sessions en cours, vous pouvez vérifier si le fournisseur de données s’est déployé correctement dans le Concepteur de rapports en créant un projet de rapport dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Le fournisseur de données doit être inclus dans la liste des types de source de données disponible lorsque vous créez un nouveau jeu de données pour votre rapport.  
   
 ## <a name="platform-considerations"></a>Considérations relatives à la plateforme  
- Sur une plateforme 64 bits (x64), [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] s'exécute en mode WOW 32 bits. Lorsque vous publiez des rapports sur une plateforme x64, vous devez disposer de fournisseurs de données 32 bits sur le client de création de rapports pour prévisualiser vos rapports. Si vous publiez le rapport sur le même système, il vous faut des fournisseurs de données x64 pour prévisualiser le rapport à l'aide du Gestionnaire de rapports.  
+ Sur une plateforme 64 bits (x64), [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] s'exécute en mode WOW 32 bits. Lorsque vous publiez des rapports sur une plateforme x64, vous devez disposer de fournisseurs de données 32 bits sur le client de création de rapports pour prévisualiser vos rapports. Si vous publiez le rapport sur le même système, vous devez disposer de fournisseurs de données x64 pour afficher le rapport dans le portail web.  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’est pas pris en charge pour les plateformes [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
   

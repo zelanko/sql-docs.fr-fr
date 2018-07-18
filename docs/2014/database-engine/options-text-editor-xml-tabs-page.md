@@ -1,0 +1,55 @@
+---
+title: 'Options (Page de l’éditeur : XML:Tabs texte) | Microsoft Docs'
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- VS.ToolsOptionsPages.Text_Editor.XML.Tabs
+ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
+caps.latest.revision: 19
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 2843acbc8935d8bd9f505a9265c704a342ddee3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324919"
+---
+# <a name="options-text-editorxmltabs-page"></a>Options (Page : XML:Tabs de l’éditeur de texte)
+  Cette boîte de dialogue vous permet de modifier le comportement de tabulation de l'Éditeur XML, qui permet de modifier des documents XML. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils** , développez le dossier **Éditeur de texte** , puis le sous-dossier **XML** , et cliquez ensuite sur **Tabulations**.  
+  
+## <a name="setting-options-in-multiple-locations"></a>Définition d'options en plusieurs emplacements  
+ Les options de l'Éditeur XML peuvent également être définies dans la boîte de dialogue **Tous les langages Général** . Si vous utilisez les boîtes de dialogue **Tous les langages** afin de définir différentes options pour les autres éditeurs [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , comme les éditeurs DMX ou MDX, vous devez réinitialiser les options de l'Éditeur XML à l'aide de cette boîte de dialogue.  
+  
+## <a name="indenting"></a>Mise en retrait  
+ **Aucun**  
+ Lorsque cette option est activée, la nouvelle ligne créée grâce à la touche ENTRÉE n'est pas mise en retrait. Le curseur est placé au niveau de la première colonne de la nouvelle ligne.  
+  
+ **Bloc**  
+ Lorsque cette option est sélectionnée, la nouvelle ligne créée lorsque vous appuyez sur Entrée est automatiquement mise en retrait comme la ligne précédente.  
+  
+ **Intelligent**  
+ Lorsque cette option est activée, la nouvelle ligne créée grâce à la touche ENTRÉE est positionnée en fonction du contexte. Par exemple, après une accolade ouvrante ({), les lignes incluses sont automatiquement mises en retrait d'une tabulation supplémentaire. L'accolade fermante (}) correspondante est réalignée sur l'accolade ouvrante.  
+  
+## <a name="tabs"></a>Tabulations  
+ **Taille des tabulations**  
+ Définit la distance en espaces entre les taquets de tabulation. La valeur par défaut est quatre espaces.  
+  
+ **Taille du retrait**  
+ Définit la taille en espaces d'une mise en retrait automatique. La valeur par défaut est quatre espaces. Des tabulations et/ou des espaces sont insérés pour occuper la taille spécifiée.  
+  
+ **Insérer des espaces**  
+ Lorsque cette option est activée, les opérations de mise en retrait insèrent uniquement des espaces et non des tabulations. Si par exemple **Taille du retrait** a la valeur 5, cinq espaces sont insérés à chaque fois que vous appuyez sur la touche TABULATION ou que vous cliquez sur le bouton **Augmenter le retrait** dans la barre d'outils de la fenêtre principale de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .  
+  
+ **Conserver les tabulations**  
+ Lorsque cette option est activée, les opérations de mise en retrait insèrent autant de tabulations que possible. Chaque tabulation remplit le nombre d'espaces spécifié dans **Taille de tabulation**. Si la valeur de **Taille du retrait** n'est pas un multiple pair de la valeur de **Taille de tabulation**, des espaces sont ajoutés pour remplir la différence.  
+  
+  

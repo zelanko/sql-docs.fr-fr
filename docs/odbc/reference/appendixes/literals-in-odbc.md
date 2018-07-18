@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905524"
 ---
 # <a name="literals-in-odbc"></a>Littéraux dans ODBC
 La syntaxe dans les sections suivantes est utilisée pour l’intervalle et des littéraux numériques dans ODBC. Cette syntaxe est fournie ici comme une aide pour les writers de pilote lors de conversions sont effectuées à partir d’un type de chaîne de caractères à un type numérique ou d’intervalle, ou d’un type numérique ou intervalle en un type de chaîne de caractères. Pour plus d’informations, consultez [littéraux de l’intervalle](../../../odbc/reference/appendixes/interval-literals.md) et [littéraux numériques](../../../odbc/reference/appendixes/numeric-literals.md) annexe d : Types de données.  

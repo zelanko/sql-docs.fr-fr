@@ -1,5 +1,5 @@
 ---
-title: Type d’élément (DimensionAttribute) (ASSL) | Documents Microsoft
+title: Type d’élément (DimensionAttribute) (ASSL) | Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,10 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f1b0a959e57d4df5db8fa4616cf8a31536cf1689
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971451"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Élément Type (DimensionAttribute) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -35,20 +36,20 @@ ms.lasthandoff: 05/10/2018
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|*Regular*|  
-|Cardinalité|0-1: élément facultatif qui peut apparaître une fois et une seule.|  
+|Valeur par défaut|*Régulière*|  
+|Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
   
 |Relation|Élément|  
 |------------------|-------------|  
 |Élément parent|[DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)|  
-|Éléments enfants|Aucune|  
+|Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |*Compte*|L'attribut représente le nom d'un compte.|  
 |*AccountNumber*|L'attribut représente le numéro d'un compte.|  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/10/2018
 |*CaptionDescription*|L'attribut représente une description.|  
 |*Channel*|L'attribut représente un canal.|  
 |*Ville*|L'attribut représente une ville.|  
-|*Société*|L'attribut représente une société.|  
+|*Entreprise*|L'attribut représente une société.|  
 |*Continent*|L'attribut représente un continent.|  
 |*Pays*|L'attribut représente un pays ou une région.|  
 |*Comté*|L'attribut représente un pays.|  
@@ -82,7 +83,7 @@ ms.lasthandoff: 05/10/2018
 |*CurrencySource*|L'attribut représente la devise source d'une opération de change.|  
 |*CustomerGroup*|L'attribut représente un groupe de clients.|  
 |*CustomerHousehold*|L'attribut représente une famille de clients.|  
-|*Customers*|L'attribut représente un client.|  
+|*Clients*|L'attribut représente un client.|  
 |*Date*|L'attribut représente une date.|  
 |*DateCanceled*|L'attribut représente une date d'annulation.|  
 |*DateDuration*|L'attribut représente une durée.|  
@@ -90,12 +91,12 @@ ms.lasthandoff: 05/10/2018
 |*DateModified*|L'attribut représente une date de modification.|  
 |*DateStart*|L'attribut représente une date de début.|  
 |*DayOfHalfYears*|L'attribut représente l'ordinal de jour d'un semestre.|  
-|*dayOfMonth*|L'attribut représente l'ordinal de jour d'un mois.|  
+|*DayOfMonth*|L'attribut représente l'ordinal de jour d'un mois.|  
 |*DayOfQuarter*|L'attribut représente l'ordinal de jour d'un trimestre.|  
 |*DayOfTrimester*|L'attribut représente l'ordinal de jour d'un quadrimestre.|  
-|*dayOfWeek*|L'attribut représente l'ordinal de jour d'une semaine.|  
-|*dayOfYear*|L'attribut représente l'ordinal de jour d'une année.|  
-|*Jours d’utilisation*|L'attribut représente des jours.|  
+|*DayOfWeek*|L'attribut représente l'ordinal de jour d'une semaine.|  
+|*DayOfYear*|L'attribut représente l'ordinal de jour d'une année.|  
+|*Jours*|L'attribut représente des jours.|  
 |*DaysOfTenDays*|L'attribut représente l'ordinal de jour d'une période de dix jours.|  
 |*FiscalDay*|L'attribut représente des jours dans un calendrier fiscal.|  
 |*FiscalDayOfHalfYears*|L'attribut représente l'ordinal de jour d'un semestre dans un calendrier fiscal.|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/10/2018
 |*FiscalDayOfYear*|L'attribut représente l'ordinal de jour d'une année dans un calendrier fiscal.|  
 |*FiscalHalfYears*|L'attribut représente des semestres dans un calendrier fiscal.|  
 |*FiscalHalfYearsOfYear*|L'attribut représente l'ordinal de semestre d'une année dans un calendrier fiscal.|  
-|*Fiscal*|L'attribut représente des mois dans un calendrier fiscal.|  
+|*FiscalMonth*|L'attribut représente des mois dans un calendrier fiscal.|  
 |*FiscalMonthOfHalfYears*|L'attribut représente l'ordinal de mois d'un semestre dans un calendrier fiscal.|  
 |*FiscalMonthOfQuarter*|L'attribut représente l'ordinal de mois d'un trimestre dans un calendrier fiscal.|  
 |*FiscalMonthOfTrimester*|L'attribut représente l'ordinal de mois d'un quadrimestre dans un calendrier fiscal.|  
@@ -204,7 +205,7 @@ ms.lasthandoff: 05/10/2018
 |*PhysicalWeight*|L'attribut représente un poids.|  
 |*PhysicalWidth*|L'attribut représente une largeur.|  
 |*Point*|L'attribut représente un point.|  
-|*PostalCode*|L'attribut représente un code postal.|  
+|*Code postal*|L'attribut représente un code postal.|  
 |*Product*|L'attribut représente un produit.|  
 |*ProductBrand*|L'attribut représente une marque de produit.|  
 |*ProductCategory*|L'attribut représente une catégorie de produit.|  
@@ -218,14 +219,14 @@ ms.lasthandoff: 05/10/2018
 |*Promotion*|L'attribut représente une promotion.|  
 |*QtyRangeHigh*|L'attribut représente la valeur maximale d'une gamme de quantités.|  
 |*QtyRangeLow*|L'attribut représente la valeur minimale d'une gamme de quantités.|  
-|*Quantitative*|L'attribut représente un attribut quantitatif.|  
+|*Quantitatives*|L'attribut représente un attribut quantitatif.|  
 |*QuarterOfHalfYear*|L'attribut représente l'ordinal de trimestre d'un semestre.|  
 |*QuarterOfYear*|L'attribut représente l'ordinal de trimestre d'une année.|  
 |*Trimestres*|L'attribut représente des trimestres.|  
-|*Taux de*|L'attribut représente un taux.|  
+|*Taux*|L'attribut représente un taux.|  
 |*RateType*|L'attribut représente un type de taux.|  
 |*Region*|L'attribut représente une région définie par le client.|  
-|*Regular*|L'attribut représente un attribut régulier.|  
+|*Régulière*|L'attribut représente un attribut régulier.|  
 |*RelationToParent*|L'attribut représente une relation avec un parent.|  
 |*ReportingDay*|L'attribut représente des jours dans un calendrier de rapports.|  
 |*ReportingDayOfHalfYears*|L'attribut représente l'ordinal de jour d'un semestre dans un calendrier de rapports.|  
@@ -282,13 +283,13 @@ ms.lasthandoff: 05/10/2018
 |*Semaines*|L'attribut représente des semaines.|  
 |*Années*|L'attribut représente des années.|  
   
- L’énumération qui correspond aux valeurs autorisées pour **Type** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.AttributeType>.  
+ L’énumération qui correspond aux valeurs autorisées pour **Type** dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.AttributeType>.  
   
- L’élément qui correspond au parent de **Type** dans l’objet d’objets AMO (Analysis Management) est modèle <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
+ L’élément qui correspond au parent de **Type** dans l’objet d’objets AMO (Analysis Management) modèle est <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Attributs d’élément &#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Élément dimension & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [Propriétés & #40 ; ASSL & #41 ;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Dimension élément &#40;ASSL&#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [Propriétés &#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

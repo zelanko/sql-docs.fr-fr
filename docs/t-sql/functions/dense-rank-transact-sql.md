@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,22 +21,23 @@ helpviewer_keywords:
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 caps.latest.revision: 47
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54121ef549fb76639ec526b3128ffa8abfd7a849
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b23535671b4f438a979a93eef12b2a6e9856fdd
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789150"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retourne le rang des lignes à l'intérieur de la partition d'un jeu de résultats, sans aucun vide dans le classement. Le rang d'une ligne est égal à un plus le nombre de rangs distincts précédant la ligne en question.  
+Cette fonction retourne le rang de chaque ligne dans une partition de jeu de résultats, sans vide dans les valeurs de classement. Le rang d’une ligne spécifique est égal à un plus le nombre de valeurs de rang distinctes précédant cette ligne particulière.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,25 +47,25 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>Arguments  
  \<partition_by_clause>  
- Divise le jeu de résultats généré par la clause [FROM](../../t-sql/queries/from-transact-sql.md) en partitions auxquelles la fonction DENSE_RANK est appliquée. Pour la syntaxe de PARTITION BY, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+Divise d’abord le jeu de résultats produit par la clause [FROM](../../t-sql/queries/from-transact-sql.md) en partitions. La fonction `DENSE_RANK` est ensuite appliquée à chaque partition. Pour connaître la syntaxe de `PARTITION BY`, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  \<order_by_clause>  
- Détermine l'ordre dans lequel la fonction DENSE_RANK est appliquée aux lignes dans une partition.  
+Détermine l’ordre dans lequel la fonction `DENSE_RANK` s’applique aux lignes d’une partition.  
   
 ## <a name="return-types"></a>Types de retour  
  **bigint**  
   
 ## <a name="remarks"></a>Notes   
- Si au moins deux lignes sont liées à un rang de la même partition, elles reçoivent le même rang. Par exemple, si les deux meilleurs vendeurs ont la même valeur SalesYTD, leur rang à tous deux est un. Le commercial dont la valeur SalesYTD est immédiatement inférieure reçoit le rang deux. Cela correspond à un rang de plus que le nombre de lignes distinctes précédant cette ligne. Par conséquent, les nombres retournés par la fonction DENSE_RANK ne comportent pas de vides et définissent toujours des rangs consécutifs.  
+Si deux lignes, ou plus, ont la même valeur de rang dans la même partition, chacune de ces lignes reçoit le même rang. Par exemple, si les deux meilleurs vendeurs ont la même valeur SalesYTD, ils ont tous les deux la valeur de rang 1. Le vendeur dont la valeur SalesYTD est immédiatement inférieure a la valeur de rang 2. Cette valeur est supérieure de 1 au nombre de lignes distinctes précédant la ligne en question. Par conséquent, les valeurs retournées par la fonction `DENSE_RANK` ne comportent pas de vides et définissent toujours des valeurs de rang consécutives.  
   
- L'ordre de tri utilisé pour l'ensemble de la requête détermine l'ordre d'apparition des lignes dans un résultat. Cela implique qu'une ligne ayant le rang numéro un n'est pas nécessairement la première ligne de la partition.  
+L’ordre de tri utilisé pour l’ensemble de la requête détermine l’ordre des lignes dans le jeu de résultats. Cela implique qu'une ligne ayant le rang numéro un n'est pas nécessairement la première ligne de la partition.  
   
- DENSE_RANK n'est pas déterministe. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+`DENSE_RANK` n’est pas déterministe. Consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md) pour plus d’informations.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-ranking-rows-within-a-partition"></a>A. Classement des lignes d'une partition  
- L'exemple suivant classe les produits d'inventaire aux emplacements d'inventaire suivants en fonction de leurs quantités. Le jeu de résultats est partitionné par `LocationID` et classé logiquement par `Quantity`. Notez que les produits 494 et 495 ont la même quantité. Étant liés, ils sont tous deux classés numéro un.  
+L’exemple suivant classe les produits de l’inventaire par les emplacements d’inventaire spécifiés, en fonction de leurs quantités. `DENSE_RANK` partitionne le jeu de résultats par `LocationID` et classe logiquement le jeu de résultats par `Quantity`. Notez que les produits 494 et 495 ont la même quantité. Étant donné que tous les deux ont la même valeur de quantité, ils ont tous les deux la valeur de rang 1.  
   
 ```  
 USE AdventureWorks2012;  
@@ -102,7 +102,7 @@ ProductID   Name                               LocationID Quantity Rank
 ```  
   
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Classement de toutes les lignes dans un jeu de résultats  
- L'exemple suivant retourne les dix principaux employés classés en fonction de leur salaire. Étant donné qu'aucune clause PARTITION BY n'a été spécifiée, la fonction DENSE_RANK a été appliquée à toutes les lignes du jeu de résultats.  
+L’exemple suivant retourne les dix principaux employés classés en fonction de leur salaire. Étant donné que l’instruction `SELECT` n’a pas spécifié de clause `PARTITION BY`, la fonction `DENSE_RANK` a été appliquée à toutes les lignes du jeu de résultats.  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,7 +130,14 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. Quatre fonctions de classement utilisées dans la même requête  
- Dans l'exemple suivant, les quatre fonctions de classement sont utilisées dans la même requête. Pour consulter des exemples spécifiques à ces fonctions, consultez les rubriques consacrées à chacune d’elles.  
+L’exemple suivant présente les quatre fonctions de classement
+
++ [DENSE_RANK()](./dense-rank-transact-sql.md)
++ [NTILE()](./ntile-transact-sql.md)
++ [RANK()](./rank-transact-sql.md)
++ [ROW_NUMBER()](./row-number-transact-sql.md)
+
+utilisées dans la même requête. Reportez-vous aux rubriques consacrées à chaque fonction de classement pour obtenir des exemples qui leur sont spécifiques.  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +179,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-ranking-rows-within-a-partition"></a>D. Classement des lignes dans une partition  
- L’exemple suivant classe par rang les représentants commerciaux dans chaque secteur de vente en fonction de leurs ventes totales. L'ensemble de lignes est partitionné par `SalesTerritoryGroup` et trié par `SalesAmountQuota`.  
+L’exemple suivant classe les commerciaux de chaque secteur de vente en fonction de leurs ventes totales. `DENSE_RANK` partitionne l’ensemble de lignes par `SalesTerritoryGroup` et trie le jeu de résultats par `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -183,7 +190,7 @@ FROM dbo.DimEmployee AS e
 INNER JOIN dbo.FactSalesQuota AS sq ON e.EmployeeKey = sq.EmployeeKey  
 INNER JOIN dbo.DimSalesTerritory AS st ON e.SalesTerritoryKey = st.SalesTerritoryKey  
 WHERE SalesPersonFlag = 1 AND SalesTerritoryGroup != N'NA'  
-GROUP BY LastName,SalesTerritoryGroup;  
+GROUP BY LastName, SalesTerritoryGroup;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

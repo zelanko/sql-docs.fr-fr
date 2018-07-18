@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/30/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,19 +16,20 @@ helpviewer_keywords:
 - DECOMPRESS function
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d2b965d3177be06b46bb51b8f5238f5a4b21dee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c2eb8c020127211b25b762d96e6e376be7e234c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792140"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Décompresse l’expression d’entrée à l’aide de l’algorithme GZIP. Le résultat de la compression est un tableau d’octets (type VARBINARY(MAX)).  
+Cette fonction décompresse une valeur d’expression d’entrée à l’aide de l’algorithme GZIP. `DECOMPRESS` retourne un tableau d’octets (type VARBINARY(MAX)).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +41,17 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
- **varbinary(***n***)**, **varbinary(max)** ou **binary(***n***)**. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+Valeur **varbinary(***n***)**, **varbinary(max)** ou **binary(***n***)**. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
- Retourne le type de données du type **varbinary(max)**. L’argument d’entrée est décompressé à l’aide de l’algorithme ZIP. L’utilisateur doit explicitement convertir le résultat en un type cible si nécessaire.  
+Valeur ayant le type de données **varbinary(max)**. `DECOMPRESS` utilise l’algorithme ZIP pour décompresser l’argument d’entrée. Si nécessaire, l’utilisateur doit explicitement caster le résultat en type de cible.  
   
 ## <a name="remarks"></a>Notes   
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-decompress-data-at-query-time"></a>A. Décompresser les données au moment de la requête  
- L’exemple suivant montre comment compresser les données à partir d’une table :  
+Cet exemple montre comment retourner des données de table compressées :  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -60,10 +60,10 @@ FROM player;
 ```  
   
 ### <a name="b-display-compressed-data-using-computed-column"></a>B. Afficher les données compressées à l’aide d’une colonne calculée  
- L’exemple suivant montre comment créer une table pour stocker les données décompressées :  
+Cet exemple montre comment créer une table de stockage des données décompressées :  
   
 ```  
-CREATE TABLE (  
+CREATE TABLE example_table (  
     _id int primary key identity,  
     name nvarchar(max),  
     surname nvarchar(max),  

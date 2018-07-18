@@ -1,0 +1,203 @@
+---
+title: Déclenchement et définition d’événements dans une tâche personnalisée | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- docset-sql-devref
+- integration-services
+ms.tgt_pltfrm: ''
+ms.topic: reference
+dev_langs:
+- VB
+- CSharp
+helpviewer_keywords:
+- SSIS events, custom
+- status information [SQL Server], task events
+- custom tasks [Integration Services], events
+- SSIS custom tasks, events
+- IDTSComponentEvents interface
+- events [Integration Services], custom
+- events [Integration Services], runtime
+- custom events [Integration Services]
+- SSIS events, runtime
+- IDTSEvents interface
+ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
+caps.latest.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8424a0c38144dd26fadf0c0437064d541a3b5b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155100"
+---
+# <a name="raising-and-defining-events-in-a-custom-task"></a>Déclenchement et définition d'événements dans une tâche personnalisée
+  Le moteur d’exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] propose une collection d’événements qui fournissent l’état d’avancement d’une tâche lors de sa validation et de son exécution. L'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> définit ces événements et elle est fournie aux tâches en tant que paramètre pour les méthodes <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  
+  
+ Il existe un autre jeu d'événements, définis dans l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>, déclenchée de la part de la tâche par l'objet <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>. L'objet <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> déclenche des événements qui se produisent avant et après la validation et l'exécution, tandis que la tâche déclenche des événements qui se produisent pendant l'exécution et la validation.  
+  
+## <a name="creating-custom-events"></a>Création d'événements personnalisés  
+ Les développeurs de tâches personnalisées peuvent définir de nouveaux événements personnalisés en créant un objet <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> dans leur implémentation substituée de la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>. Une fois que l'objet <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> est créé, il est ajouté à la collection `EventInfos` à l'aide de la méthode <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A>. La signature de la méthode <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> est la suivante :  
+  
+ `public void Add(string eventName, string description, bool allowEventHandlers, string[] parameterNames, TypeCode[] parameterTypes, string[] parameterDescriptions);`  
+  
+ L'exemple de code suivant présente la méthode `InitializeTask` d'une tâche personnalisée, où deux événements personnalisés sont créés et leurs propriétés sont définies. Les nouveaux événements sont ensuite ajoutés à la collection <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>.  
+  
+ Pour le premier événement personnalisé, *eventName* a la valeur « **OnBeforeIncrement** » et *description* a la valeur « **Fires after the initial value is updated.** ». Le paramètre suivant, la valeur `true` indique que cet événement doit autoriser la création d'un conteneur de gestionnaire d'événements pour gérer l'événement. Le gestionnaire d'événements est un conteneur qui fournit une structure dans un package et des services à des tâches, comme d'autres conteneurs tels que le package, Séquence, ForLoop et ForEachLoop. Lorsque le *allowEventHandlers* paramètre est `true`, <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> objets sont créés pour l’événement. Tous les paramètres définis pour l'événement sont maintenant disponibles pour l'objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> dans la collection de variables de l'objet <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
+  
+```csharp  
+public override void InitializeTask(Connections connections,  
+   VariableDispenser variables, IDTSInfoEvents events,  
+   IDTSLogging log, EventInfos eventInfos,  
+   LogEntryInfos logEntryInfos, ObjectReferenceTracker refTracker)  
+{  
+    this.eventInfos = eventInfos;  
+    string[] paramNames = new string[1];  
+    TypeCode[] paramTypes = new TypeCode[1]{TypeCode.Int32};  
+    string[] paramDescriptions = new string[1];  
+  
+    paramNames[0] = "InitialValue";  
+    paramDescriptions[0] = "The value before it is incremented.";  
+  
+    this.eventInfos.Add("OnBeforeIncrement",   
+      "Fires before the task increments the value.",  
+      true,paramNames,paramTypes,paramDescriptions);  
+    this.onBeforeIncrement = this.eventInfos["OnBeforeIncrement"];  
+  
+    paramDescriptions[0] = "The value after it has been incremented.";  
+    this.eventInfos.Add("OnAfterIncrement",  
+      "Fires after the initial value is updated.",  
+      true,paramNames, paramTypes,paramDescriptions);  
+    this.onAfterIncrement = this.eventInfos["OnAfterIncrement"];  
+}  
+```  
+  
+```vb  
+Public Overrides Sub InitializeTask(ByVal connections As Connections, _  
+ByVal variables As VariableDispenser, ByVal events As IDTSInfoEvents, _  
+ByVal log As IDTSLogging, ByVal eventInfos As EventInfos, _  
+ByVal logEntryInfos As LogEntryInfos, ByVal refTracker As ObjectReferenceTracker)   
+  
+    Dim paramNames(0) As String  
+    Dim paramTypes(0) As TypeCode = {TypeCode.Int32}  
+    Dim paramDescriptions(0) As String  
+  
+    Me.eventInfos = eventInfos  
+  
+    paramNames(0) = "InitialValue"  
+    paramDescriptions(0) = "The value before it is incremented."  
+  
+    Me.eventInfos.Add("OnBeforeIncrement", _  
+      "Fires before the task increments the value.", _  
+      True, paramNames, paramTypes, paramDescriptions)  
+    Me.onBeforeIncrement = Me.eventInfos("OnBeforeIncrement")  
+  
+    paramDescriptions(0) = "The value after it has been incremented."  
+    Me.eventInfos.Add("OnAfterIncrement", _  
+      "Fires after the initial value is updated.", True, _  
+      paramNames, paramTypes, paramDescriptions)  
+    Me.onAfterIncrement = Me.eventInfos("OnAfterIncrement")  
+  
+End Sub  
+```  
+  
+## <a name="raising-custom-events"></a>Déclenchement d'événements personnalisés  
+ Les événements personnalisés sont déclenchés en appelant la méthode <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A>. La ligne de code suivante déclenche un événement personnalisé.  
+  
+```csharp  
+componentEvents.FireCustomEvent(this.onBeforeIncrement.Name,  
+   this.onBeforeIncrement.Description, ref arguments,  
+   null, ref bFireOnBeforeIncrement);  
+```  
+  
+```vb  
+componentEvents.FireCustomEvent(Me.onBeforeIncrement.Name, _  
+Me.onBeforeIncrement.Description, arguments, _  
+Nothing,  bFireOnBeforeIncrement)  
+```  
+  
+## <a name="sample"></a>Exemple  
+ L'exemple suivant montre une tâche qui définit un événement personnalisé dans la méthode `InitializeTask`, qui ajoute l'événement personnalisé à la collection <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>, puis qui déclenche l'événement personnalisé pendant sa méthode `Execute` en appelant la méthode <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A>.  
+  
+```csharp  
+[DtsTask(DisplayName = "CustomEventTask")]  
+    public class CustomEventTask : Task  
+    {  
+        public override DTSExecResult Execute(Connections connections,   
+          VariableDispenser variableDispenser, IDTSComponentEvents componentEvents,  
+           IDTSLogging log, object transaction)  
+        {  
+            bool fireAgain;  
+            object[] args = new object[1] { "The value of the parameter." };  
+            componentEvents.FireCustomEvent( "MyCustomEvent",   
+              "Firing the custom event.", ref args,  
+              "CustomEventTask" , ref fireAgain );  
+            return DTSExecResult.Success;  
+        }  
+  
+        public override void InitializeTask(Connections connections,  
+          VariableDispenser variableDispenser, IDTSInfoEvents events,  
+          IDTSLogging log, EventInfos eventInfos,  
+          LogEntryInfos logEntryInfos, ObjectReferenceTracker refTracker)  
+        {  
+            string[] names = new string[1] {"Parameter1"};  
+            TypeCode[] types = new TypeCode[1] {TypeCode.String};  
+            string[] descriptions = new string[1] {"Parameter description." };  
+  
+            eventInfos.Add("MyCustomEvent",  
+             "Fires when my interesting event happens.",  
+             true, names, types, descriptions);  
+  
+        }  
+   }  
+```  
+  
+```vb  
+<DtsTask(DisplayName = "CustomEventTask")> _   
+    Public Class CustomEventTask  
+     Inherits Task  
+        Public Overrides Function Execute(ByVal connections As Connections, _  
+          ByVal variableDispenser As VariableDispenser, _  
+          ByVal componentEvents As IDTSComponentEvents, _  
+          ByVal log As IDTSLogging, ByVal transaction As Object) _  
+          As DTSExecResult  
+  
+            Dim fireAgain As Boolean  
+            Dim args() As Object =  New Object(1) {"The value of the parameter."}  
+  
+            componentEvents.FireCustomEvent("MyCustomEvent", _  
+              "Firing the custom event.", args, _  
+              "CustomEventTask" ,  fireAgain)  
+            Return DTSExecResult.Success  
+        End Function  
+  
+        Public Overrides  Sub InitializeTask(ByVal connections As Connections, _  
+          ByVal variableDispenser As VariableDispenser,  
+          ByVal events As IDTSInfoEvents,  
+          ByVal log As IDTSLogging, ByVal eventInfos As EventInfos, ByVal logEnTryInfos As LogEnTryInfos, ByVal refTracker As ObjectReferenceTracker)  
+  
+            Dim names() As String =  New String(1) {"Parameter1"}  
+            Dim types() As TypeCode =  New TypeCode(1) {TypeCode.String}  
+            Dim descriptions() As String =  New String(1) {"Parameter description."}  
+  
+            eventInfos.Add("MyCustomEvent", _  
+              "Fires when my interesting event happens.", _  
+              True, names, types, descriptions)  
+  
+        End Sub  
+  
+    End Class  
+```  
+  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Gestionnaires d’événements Integration Services &#40;SSIS&#41](../../integration-services-ssis-event-handlers.md)   
+ [Ajouter un gestionnaire d’événements à un package](../../add-an-event-handler-to-a-package.md)  
+  
+  

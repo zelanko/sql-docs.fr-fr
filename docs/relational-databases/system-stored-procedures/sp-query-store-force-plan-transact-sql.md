@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_force_plan (Transact-SQL) | Documents Microsoft
+title: sp_query_store_force_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,17 +27,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f479710b8916fae3b315981663f97bac8488fb19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036117"
 ---
 # <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Permet de forcer un plan spécifique pour une requête particulière.  
   
- Lorsqu’un plan est forcé pour une requête particulière, chaque fois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rencontre la requête, il tente de forcer le plan de l’optimiseur. Si le forçage de plan échoue, un XEvent est déclenché et l’optimiseur est tenue d’optimisation de façon normale.  
+ Lorsqu’un plan est forcé pour une requête particulière, chaque fois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rencontre la requête, il tente de forcer le plan de l’optimiseur. Si le forçage de plan échoue, un XEvent est déclenché et l’optimiseur est tenue d’optimiser de façon normale.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +62,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert le **EXECUTE** sur la base de données, et **insérer**, **mise à jour**, et **supprimer** autorisation sur les affichages catalogue du magasin de requête.  
+ Nécessite le **EXECUTE** autorisation sur la base de données, et **insérer**, **mise à jour**, et **supprimer** autorisation sur le catalogue de magasin de requête Affichage.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne des informations sur les requêtes dans le magasin de requêtes.  
@@ -75,7 +76,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Après avoir identifié les query_id et plan_id que vous souhaitez forcer, utilisez l’exemple suivant pour forcer la requête à utiliser un plan.  
+ Après avoir identifié le query_id et plan_id que vous souhaitez forcer, utilisez l’exemple suivant afin de forcer la requête à utiliser un plan.  
   
 ```  
 EXEC sp_query_store_force_plan 3, 3;  

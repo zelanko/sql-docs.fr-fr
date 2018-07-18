@@ -1,14 +1,11 @@
 ---
-title: Restrictions sur les connexions normales et contextuelles | Documents Microsoft
+title: Restrictions sur les connexions normales et contextuelles | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
@@ -18,15 +15,16 @@ caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 93a08bc27c73db40f1ee388455ce7ffbc7c38557
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e3f290a689cc1914548204e95a3a690d045a7d4
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358161"
 ---
-# <a name="context-connections-and-regular-connections---restrictions"></a>Connexions de contexte et des connexions normales - Restrictions
+# <a name="context-connections-and-regular-connections---restrictions"></a>Connexions contextuelles et connexions standard - Restrictions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique décrit les restrictions associées à l’exécution de code dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processus via des connexions normales et contextuelles.  
+  Cette rubrique traite des restrictions associées à l’exécution de code dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processus via des connexions normales et contextuelles.  
   
 ## <a name="restrictions-on-context-connections"></a>Restrictions applicables aux connexions contextuelles  
  Lorsque vous développez votre application, prenez en considération les restrictions suivantes qui s'appliquent aux connexions contextuelles :  
@@ -45,18 +43,18 @@ ms.lasthandoff: 05/03/2018
   
 -   Aucun autre mot clé de chaîne de connexion ne peut être utilisé lorsque vous utilisez « context connection=true ».  
   
--   Le **SqlConnection.DataSource** propriété retourne la valeur null si la chaîne de connexion pour le **SqlConnection** est « connexion contextuelle = true », au lieu du nom de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Le **SqlConnection.DataSource** propriété retourne null si la chaîne de connexion pour le **SqlConnection** est « connexion contextuelle = true », au lieu du nom de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Définition de la **SqlCommand.CommandTimeout** propriété n’a aucun effet lorsque la commande est exécutée sur une connexion de contexte.  
   
 ## <a name="restrictions-on-regular-connections"></a>Restrictions applicables aux connexions normales  
  Lorsque vous développez votre application, prenez en considération les restrictions suivantes qui s'appliquent aux connexions normales :  
   
--   L'exécution de commande asynchrone contre des serveurs internes n'est pas prise en charge. Y compris « async = true » dans la chaîne de connexion d’une commande, suivie de l’exécution génère la commande, **System.NotSupportedException** levée. Le message suivant apparaît : « Le traitement asynchrone n'est pas pris en charge en cas d'exécution à l'intérieur du processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ».  
+-   L'exécution de commande asynchrone contre des serveurs internes n'est pas prise en charge. Y compris « async = true » dans la chaîne de connexion d’une commande, puis exécuter la commande, entraîne la **System.NotSupportedException** levée. Le message suivant apparaît : « Le traitement asynchrone n'est pas pris en charge en cas d'exécution à l'intérieur du processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ».  
   
 -   **SqlDependency** objet n’est pas pris en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connexion de contexte](../../../relational-databases/clr-integration/data-access/context-connection.md)  
+ [Connexion contextuelle](../../../relational-databases/clr-integration/data-access/context-connection.md)  
   
   

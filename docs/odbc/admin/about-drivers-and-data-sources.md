@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904964"
 ---
 # <a name="about-drivers-and-data-sources"></a>Sur les pilotes et les Sources de données
 *Pilotes* sont les composants qui traitent des demandes d’ODBC et retournent des données à l’application. Si nécessaire, pilotes de modifier la requête d’une application dans un formulaire qui est interprété par la source de données. Vous devez utiliser le programme d’installation du pilote pour ajouter ou supprimer un pilote à partir de votre ordinateur.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897914"
 ---
 # <a name="having-clause-limitations"></a>AVEC les Limitations de Clause
 Le nombre maximal de conditions de recherche dans une clause HAVING est 40.

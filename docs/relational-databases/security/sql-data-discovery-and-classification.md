@@ -2,8 +2,6 @@
 title: Découverte et classification des données SQL | Microsoft Docs
 description: Découverte et classification des données SQL
 documentationcenter: ''
-author: giladm
-manager: shaik
 ms.reviewer: carlrab
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
@@ -13,20 +11,22 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+author: giladm
+manager: shaik
+ms.openlocfilehash: 96861baa7fa28ef9f16f35c13f26327b824b44cc
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926330"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Découverte et classification des données SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 La fonctionnalité Découverte et classification des données introduit un nouvel outil intégré à SQL Server Management Studio (SSMS) pour la **découverte**, la **classification**, **l’étiquetage** &  la **création de rapport** concernant les données sensibles dans vos bases de données.
-La découverte et la classification de vos données les plus sensibles (professionnelles, financières, médicales, PII, etc.) peuvent jouer un rôle essentiel dans la protection des informations de votre organisation. Cette fonctionnalité peut servir d’infrastructure pour :
-* Permettre de répondre aux standards de confidentialité des données et aux exigences de conformité réglementaires, comme RGPD.
+La découverte et la classification de vos données les plus sensibles (professionnelles, financières, médicales, etc.) peuvent jouer un rôle essentiel dans la protection des informations de votre organisation. Cette fonctionnalité peut servir d’infrastructure pour :
+* Contribuer à répondre aux normes de confidentialité des données.
 * Contrôler l’accès aux bases de données/colonnes contenant des données sensibles et en renforcer la sécurité.
-
 
 > [!NOTE]
 > La fonctionnalité Découverte et classification des données est **prise en charge pour SQL Server 2008 et versions ultérieures**. Pour Azure SQL Database, consultez [Découverte et classification des données Azure SQL Database](https://go.microsoft.com/fwlink/?linkid=866265).
@@ -94,7 +94,57 @@ La classification comprend deux attributs de métadonnées :
     ![Volet de navigation][10]
 
 
-## <a id="subheading-3"></a>Étapes suivantes
+## <a id="subheading-3"></a>Accès aux métadonnées de classification
+
+Les métadonnées de classification des *types d’informations* et des *étiquettes de sensibilité* sont stockées dans les propriétés étendues suivantes : 
+* sys_information_type_name
+* sys_sensitivity_label_name
+
+Les métadonnées sont accessibles à l’aide de l’affichage catalogue [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) dans les propriétés étendues.
+
+L’exemple de code suivant retourne toutes les colonnes classifiées avec leurs classifications correspondantes :
+
+```sql
+SELECT
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    sensitivity_label 
+FROM
+    (
+        SELECT
+            IT.major_id,
+            IT.minor_id,
+            IT.information_type,
+            L.sensitivity_label 
+        FROM
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS information_type 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_information_type_name'
+        ) IT 
+        FULL OUTER JOIN
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS sensitivity_label 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_sensitivity_label_name'
+        ) L 
+        ON IT.major_id = L.major_id AND IT.minor_id = L.minor_id
+    ) EP
+    JOIN sys.objects O
+    ON  EP.major_id = O.object_id 
+    JOIN sys.columns C 
+    ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
+```
+
+## <a id="subheading-4"></a>Étapes suivantes
 
 Pour Azure SQL Database, consultez [Découverte et classification des données Azure SQL Database](https://go.microsoft.com/fwlink/?linkid=866265).
 
@@ -106,7 +156,8 @@ Protégez vos colonnes sensibles en appliquant des mécanismes de sécurité au 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Next Steps]: #subheading-3
+[Accessing the classification metadata]: #subheading-3
+[Next Steps]: #subheading-4
 
 <!--Image references-->
 [1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png

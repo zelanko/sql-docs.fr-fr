@@ -2,7 +2,7 @@
 title: Fonctionnalités de SQL Server OLE DB pilote | Documents Microsoft
 description: Pilote OLE DB pour les fonctionnalités de SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3f1cc26981dae02bd76133c204c5eff142db76c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbc52f29aa0bfc6c60d9f8b7cb47b138c11b561
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612354"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Pilote de base de données OLE pour les fonctionnalités SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -44,16 +45,16 @@ ms.lasthandoff: 05/03/2018
  [Utilisation de types de données XML](../../oledb/features/using-xml-data-types.md)  
  Explique comment pilote OLE DB pour SQL Server prend en charge le type de données XML, qui est un type de données XML qui peut être utilisé comme un type de colonne, le type de variable, le type de paramètre ou le type de retour de fonction.  
   
- [À l’aide des Types définis par l’utilisateur](../../oledb/features/using-user-defined-types.md)  
+ [Utilisation de types définis par l’utilisateur](../../oledb/features/using-user-defined-types.md)  
  Explique comment pilote OLE DB pour SQL Server prend en charge User-Defined Types (UDT), qui étend le système de type SQL en vous permettant de stocker des objets et des structures de données personnalisées dans un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données.  
   
- [À l’aide des Types de valeur élevée](../../oledb/features/using-large-value-types.md)  
+ [Utilisation de types de valeur élevée](../../oledb/features/using-large-value-types.md)  
  Explique comment pilote OLE DB pour SQL Server prend en charge les types de données de valeur élevée, qui sont des types de données objet volumineux (LOB).  
   
  [Changement des mots de passe par programmation](../../oledb/features/changing-passwords-programmatically.md)  
  Explique comment pilote OLE DB pour SQL Server prend en charge la gestion des mots de passe périmés afin que les mots de passe peuvent désormais être modifiés sur le client sans intervention de l’administrateur.  
   
- [Utilisation de l’isolement d’instantané](../../oledb/features/working-with-snapshot-isolation.md)  
+ [Utilisation du niveau d’isolement de capture instantanée](../../oledb/features/working-with-snapshot-isolation.md)  
  Explique comment pilote OLE DB pour SQL Server prend en charge l’extension pour le contrôle de version de ligne qui améliore les performances de la base de données en évitant les scénarios de blocage de lecteur-writer.  
   
  [Utilisation de notifications de requêtes](../../oledb/features/working-with-query-notifications.md)  

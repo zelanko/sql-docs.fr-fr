@@ -2,7 +2,6 @@
 title: BookmarkEnum | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,19 +19,20 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a1ccea205d27e024288c1b69484103ca15985a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 370d6094e3a05e884c29c37eb5078bed349741c2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276098"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 Spécifie un signet qui indique où doit commencer l’opération.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adBookmarkCurrent**|0|Démarre à l’enregistrement actif.|  
-|**adBookmarkFirst**|1|Démarre au premier enregistrement.|  
+|**adBookmarkFirst**| 1|Démarre au premier enregistrement.|  
 |**adBookmarkLast**|2|Démarre au dernier enregistrement.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  

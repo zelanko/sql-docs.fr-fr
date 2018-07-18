@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/06/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,11 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77947f8263b66f1b7f26e8ee5a5d52a4d019aeb2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef21e9e7e053e4bff873978c6628cb620f1d1c41
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36251871"
 ---
 # <a name="-equals-transact-sql"></a>= (Equals) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,15 +53,15 @@ expression = expression
  Booléen  
   
 ## <a name="remarks"></a>Notes   
- Lorsque vous comparez deux expressions NULL, le résultat dépend du paramètre `ANSI_NULLS` :  
+ Quand vous effectuez une comparaison à l’aide d’une expression NULL, le résultat dépend du paramètre `ANSI_NULLS` :  
   
--   Si `ANSI_NULLS` a la valeur ON, le résultat est NULL, selon la convention ANSI stipulant qu’une valeur NULL (ou inconnue) n’est pas égale à une autre valeur NULL ou inconnue.  
+-   Si `ANSI_NULLS` a la valeur ON, le résultat de toute comparaison avec la valeur NULL est UNKNOWN, conformément à la convention ANSI selon laquelle NULL est une valeur inconnue qui ne peut être comparée à aucune autre valeur, notamment d’autres valeurs NULL.  
   
--   Si `ANSI_NULLS` a la valeur OFF, le résultat de la comparaison entre NULL et NULL est TRUE.  
+-   Si `ANSI_NULLS` a la valeur OFF, le résultat de la comparaison de NULL à NULL est TRUE, et le résultat de la comparaison de NULL à toute autre valeur est FALSE.  
 
 Pour plus d’informations, consultez [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).
   
- Tout type de comparaison d’une valeur NULL (une inconnue) à une valeur non-NULL a toujours FALSE pour résultat.  
+ Une expression booléenne ayant pour résultat UNKNOWN se comporte de manière similaire à FALSE dans la plupart des cas, mais pas tous. Pour plus d’informations, consultez [NULL et UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md) et [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
   
   
 ## <a name="examples"></a>Exemples  

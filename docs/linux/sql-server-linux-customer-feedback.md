@@ -4,17 +4,18 @@ description: Décrit comment les commentaires des clients de SQL Server sont col
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 66275b164e1d6514d04e0c8a6f1a666de0a02425
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 69a1e82544ad1566cdf9ec1937d88a8cc2a61975
+ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329504"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Commentaires client pour SQL Server sur Linux
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/12/2018
 
 Par défaut, Microsoft SQL Server collecte des informations sur la façon dont ses clients utilisent l’application. Plus précisément, SQL Server recueille des données sur l’expérience d’installation, l’utilisation et les performances. Elles aident Microsoft à améliorer le produit pour mieux répondre aux besoins des clients. Par exemple, Microsoft collecte des informations sur les types de codes d’erreur rencontrés par les utilisateurs afin que nous puissions corriger les bogues associés, améliorer notre documentation sur l’utilisation de SQL Server et déterminer s’il faudrait ajouter des fonctionnalités au produit pour mieux servir des clients.
 
-Ce document fournit des détails sur les types d’informations sont collectées et explique comment configurer Microsoft SQL Server sur Linux pour envoyer ce collectées des informations à Microsoft. SQL Server 2017 inclut une déclaration de confidentialité qui explique les informations que nous faire et ne collectent pas d’utilisateurs. Veuillez lire la déclaration de confidentialité.
+Ce document fournit des détails sur les types d’informations sont collectées et explique comment configurer Microsoft SQL Server sur Linux pour envoyer ce collectées des informations à Microsoft. SQL Server 2017 inclut une déclaration de confidentialité qui explique les informations que nous faire et ne collectent pas d’utilisateurs. Pour plus d’informations, consultez la [déclaration de confidentialité de](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 En particulier, Microsoft n’envoie par ce mécanisme aucune information de ces types :
 
@@ -39,6 +40,9 @@ SQL Server 2017 collecte et envoie toujours des informations sur l’expérience
 
 Cette option vous permet de modifier si SQL Server envoie des commentaires à Microsoft ou non. Par défaut, cette valeur est définie sur true. Pour modifier la valeur, exécutez les commandes suivantes :
 
+> [!IMPORTANT]
+> Vous ne pouvez pas désactiver les commentaires client gratuitement éditions de SQL Server, Express et Developer.
+
 ### <a name="on-red-hat-suse-and-ubuntu"></a>Sur Ubuntu, SUSE et Red Hat
 
 1. Exécutez le script mssql-conf en tant que racine avec le **définir** commande **telemetry.customerfeedback**. L’exemple suivant désactive les commentaires des clients en spécifiant **false**.
@@ -54,7 +58,7 @@ Cette option vous permet de modifier si SQL Server envoie des commentaires à Mi
    ```
    
 ### <a name="on-docker"></a>Sur Docker
-Pour désactiver les commentaires des clients sur docker, vous devez disposer Docker [conserver vos données](sql-server-linux-configure-docker.md). 
+Pour désactiver les commentaires des clients sur docker, vous devez disposer de Docker [conserver vos données](sql-server-linux-configure-docker.md). 
 
 1. Ajouter un `mssql.conf` fichier avec les lignes `[telemetry]` et `customerfeedback = false` dans le répertoire de l’hôte :
  
@@ -110,7 +114,7 @@ Cette option permet d’Audit Local et vous permet de définir le répertoire da
    ```
    
 ### <a name="on-docker"></a>Sur Docker
-Pour activer l’Audit Local sur docker, vous devez disposer Docker [conserver vos données](sql-server-linux-configure-docker.md). 
+Pour activer l’Audit Local docker, vous devez disposer de Docker [conserver vos données](sql-server-linux-configure-docker.md). 
 
 1. Le répertoire cible pour les nouveaux journaux d’Audit Local se trouve dans le conteneur. Créer un répertoire cible pour les nouveaux journaux d’Audit Local dans le répertoire de l’hôte sur votre ordinateur. L’exemple suivant crée un nouveau **/audit** active :
 

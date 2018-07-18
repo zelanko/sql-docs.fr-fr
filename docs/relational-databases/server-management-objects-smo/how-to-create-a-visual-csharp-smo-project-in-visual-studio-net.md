@@ -1,5 +1,5 @@
 ---
-title: Créer un projet SMO Visual c# dans Visual Studio .NET | Documents Microsoft
+title: Créer un projet SMO Visual c# dans Visual Studio .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,30 +19,30 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 25e06aa3493b10e5a282fc5a709605eae18cb5fd
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708317"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974189"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Comment créer un projet SMO Visual c# dans Visual Studio .NET
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Cette section décrit comment élaborer une application de console SMO simple.  
   
- Cet exemple importe des espaces de noms, qui permettent au programme de référencer des types SMO. L’importation de la **Agent** espace de noms est facultative. Utilisez-la lorsque vous écrivez un programme qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Le **commune** espace de noms est requis pour établir une connexion sécurisée à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le **SqlClient** espace de noms est utilisé pour traiter les erreurs d’exception SQL.  
+ Cet exemple importe des espaces de noms, qui permettent au programme de référencer des types SMO. L’importation de la **Agent** espace de noms est facultative. Utilisez-le lorsque vous écrivez un programme qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Le **commune** espace de noms est requis pour établir une connexion sécurisée à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le **SqlClient** espace de noms est utilisé pour traiter les erreurs d’exception SQL.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Création d'un projet SMO Visual C# dans Visual Studio.NET  
   
 1. Démarrez Visual Studio
   
-2. Sur le **fichier** menu, cliquez sur **nouveau** , puis **projet**.  La boîte de dialogue **Nouveau projet** s'affiche.   
+2. Sur le **fichier** menu, cliquez sur **New** , puis **projet**.  La boîte de dialogue **Nouveau projet** s'affiche.   
   
-3. Dans le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **installé** volet, accédez à **modèles**\\**Visual C#**\\**Windows** et sélectionnez **Application Console**.  
+3. Dans le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **installé** volet, accédez à **modèles**\\**Visual C#**\\**Windows** Sélectionnez **Application Console**.  
   
 4. (Facultatif) Dans le **nom** texte, tapez le nom de la nouvelle application.  
 
-5. Cliquez sur **OK** pour charger le modèle d’application console.  
+5. Cliquez sur **OK** pour charger le modèle d’application de console.  
 
 6. Suivez les instructions de [l’installation de SMO](installing-smo.md) pour installer le package pour votre projet à référencer.
   

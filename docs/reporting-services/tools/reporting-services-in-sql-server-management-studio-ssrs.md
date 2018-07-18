@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031466"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services pour SQL Server Management Studio (SSRS)
   Les administrateurs du serveur de rapports peuvent utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour :  

@@ -21,18 +21,30 @@ caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d3b40219a412b498e891d0550a10a99e23b7adf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c25b54f30a9e8c0ce66c1a833aef4c5daf35e6b8
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771455"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612254"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Afficher et lire les fichiers journaux d’installation de SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Par défaut, le programme d’installation de SQL Server crée des fichiers journaux dans un dossier de journal horodaté à l’emplacement %programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log. Le format du nom du dossier de journal horodaté est AAAAMMJJ_hhmmss. Quand le programme d’installation est exécuté en mode sans assistance, les journaux sont créés dans %temp%\sqlsetup*.log. Tous les fichiers du dossier de journal sont archivés dans le fichier Log\*.cab dans leur dossier de journal respectif.  
+Le programme d’installation de SQL Server crée des fichiers journaux dans un dossier horodaté par défaut dans **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log**, où *nnn* est un nombre correspondant à la version de SQL à installer. Le format du nom du dossier de journal horodaté est AAAAMMJJ_hhmmss. Quand le programme d’installation est exécuté en mode sans assistance, les journaux sont créés dans %temp%\sqlsetup*.log. Tous les fichiers du dossier des journaux sont archivés dans le fichier Log\*.cab, dans leur dossier des journaux respectif.  
+
+   | Fichier           | Chemin d'accès |
+   | :------        | :----------------------------- |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
+   | **Summary_\<nom_machine>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMJJ_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMJJ_hhmmss|
+   | **Banque de données** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMJJ_hhmmss\Datastore
+   | **Fichiers journaux MSI** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMJJ_hhmmss\\\<nom>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMJJ_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\AAAAMMJJ_hhmmss |
+   | **Pour des installations sans assistance** | %temp%\sqlsetup*.log |
+
 
  ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
@@ -46,9 +58,9 @@ Par défaut, le programme d’installation de SQL Server crée des fichiers jour
 3.  Action demandée par l’utilisateur : autorise l’utilisateur à sélectionner et personnaliser des fonctionnalités
   
 
-Ce flux de travail génère un journal résumé et un journal détaillé dans le cas d’une installation RTM ou deux journaux détaillés quand le média est intégré.
+Ce flux de travail produit un journal résumé, et soit un journal détaillé pour une installation de SQL Server de base, soit deux journaux détaillés quand une mise à jour comme un Service Pack est installée en même temps que l’installation de base. 
   
-Les fichiers de banque de données contiennent un instantané de l’état de tous les objets de configuration qui sont suivis par le processus d’installation et qui sont utiles pour réparer les erreurs de configuration. Des fichiers de vidage XML sont créés à chaque phase d’exécution et sont enregistrés dans le sous-dossier de journal de banque de données sous le dossier de journal horodaté. 
+De plus, des fichiers de banque de données contiennent un instantané de l’état de tous les objets de configuration qui sont suivis par le processus d’installation et qui sont utiles pour réparer les erreurs de configuration. Des fichiers de vidage XML sont créés à chaque phase d’exécution et sont enregistrés dans le sous-dossier de journal de banque de données sous le dossier de journal horodaté. 
 
 Les sections suivantes décrivent les fichiers journaux d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -130,6 +142,8 @@ Les sections suivantes décrivent les fichiers journaux d'installation de [!INCL
   
 ### <a name="location"></a>Emplacement  
 Le fichier SystemConfigurationCheck_Report.htm se trouve à l’emplacement %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMJJ_HHMM>\\.
+
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)

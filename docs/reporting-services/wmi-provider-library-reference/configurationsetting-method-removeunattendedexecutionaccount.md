@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030446"
 ---
 # <a name="configurationsetting-method---removeunattendedexecutionaccount"></a>Méthode ConfigurationSetting - RemoveUnattendedExecutionAccount
   Supprime l'entrée de compte d'exécution sans assistance du fichier de configuration du serveur de rapports.  

@@ -1,0 +1,50 @@
+---
+title: Ajouter l’Intelligence des dimensions à une Dimension | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Business Intelligence enhancements [Analysis Services], dimension intelligence
+- dimensions [Analysis Services], Business Intelligence enhancements
+- dimension intelligence [Analysis Services]
+- Type property
+ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
+caps.latest.revision: 32
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fcd7ea323857e0db796b6e4a17bf8c2dde21e199
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208129"
+---
+# <a name="add-dimension-intelligence-to-a-dimension"></a>Ajouter de l'intelligence de dimensions à une dimension
+  Ajoutez l'intelligence des dimensions à un cube ou à une dimension pour spécifier un type d'entreprise standard pour une dimension. Cette amélioration spécifie également les types correspondants pour les attributs de la dimension. Les applications clientes peuvent utiliser ces spécifications de type lors de l'analyse de données.  
+  
+ Pour ajouter l’intelligence des dimensions, utilisez l’Assistant Business Intelligence, puis sélectionnez l’option **Définir l’intelligence des dimensions** dans la page **Choisir des améliorations** . Cet Assistant vous guide tout au long des étapes de sélection d'une dimension à laquelle vous souhaitez appliquer l'intelligence des dimensions et d'identification des attributs pour la dimension sélectionnée.  
+  
+## <a name="selecting-a-dimension"></a>Sélection d'une dimension  
+ Dans la première page **Définir les options d’intelligence des dimensions** de l’Assistant, vous spécifiez la dimension à laquelle vous souhaitez appliquer l’intelligence des dimensions. L'amélioration que constitue l'intelligence des dimensions ajoutée à cette dimension se traduit par des modifications de la dimension. Ces modifications seront héritées par tous les cubes contenant la dimension sélectionnée.  
+  
+> [!NOTE]  
+>  Si vous sélectionnez **Compte** comme dimension, vous spécifierez l’intelligence comptable pour la dimension. Pour plus d’informations, consultez [Ajouter de l’intelligence comptable à une dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
+  
+## <a name="specifying-dimension-attributes"></a>Spécification des attributs de dimension  
+ Sur le **définir l’Intelligence des dimensions** page **Type de Dimension** liste, la sélection que vous effectuez définit la dimension `Type` propriété. Le `Type` paramètre de propriété fournit des informations sur les serveurs et clients applications sur le contenu d’une dimension. Certains paramètres permettent uniquement de guider les applications clientes ; ces paramètres sont facultatifs. D'autres paramètres, tels que Comptes ou Temps, déterminent des comportements spécifiques et peuvent être requis pour implémenter des améliorations de décisionnel particulières. Par exemple, SQL Server Management Studio utilise le type de dimension pour identifier une dimension Devise et définir les règles de conversion monétaire appropriées. La définition par défaut du **Type de dimension** est **Normal**et ne fournit aucune information théorique sur le contenu de la dimension.  
+  
+ Après avoir sélectionné le type de dimension, dans **Attributs de la dimension**, dans la colonne **Inclure** , cochez la case à côté de chaque type d’attribut standard pour lequel il existe un attribut correspondant dans la dimension. Enfin, dans la colonne **Attribut de dimension** , développez la liste déroulante, puis sélectionnez l’attribut de la dimension qui correspond au type d’attribut sélectionné. La sélection de l'attribut dans la liste définit la propriété `Type` d'attribut pour les attributs.  
+  
+ Par exemple, vous souhaitez ajouter l'intelligence des dimensions à une dimension Comptes. Dans **Type de dimension**, vous sélectionnez **Comptes**. Ensuite, si la dimension a les attributs **Type de compte** et **Description du compte** , dans la colonne **Inclure** , cochez les cases pour les types de comptes **Nom du compte** et **Type de compte** . Dans la colonne **Attribut de dimension** , vous associez ensuite ces types de comptes aux attributs **Description du compte** et **Type de compte** , respectivement, dans la dimension.  
+  
+## <a name="see-also"></a>Voir aussi  
+ [Définir des calculs Time Intelligence à l’aide de l’Assistant Business Intelligence](define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
+  
+  

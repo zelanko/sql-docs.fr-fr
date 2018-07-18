@@ -1,5 +1,5 @@
 ---
-title: Fonction SUM (XQuery) | Documents Microsoft
+title: Fonction SUM (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 071394e1c2889c94c65a8e42179fd1bdbf5cf383
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38022627"
 ---
-# <a name="aggregate-functions---sum"></a>Fonctions d’agrégation - sum
+# <a name="aggregate-functions---sum"></a>Fonctions d’agrégation : sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne la somme d'une série de nombres.  
@@ -46,16 +47,16 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  Série de valeurs atomiques dont la somme est à calculer.  
   
 ## <a name="remarks"></a>Notes  
- Tous les types de valeurs atomisées transmises à **sum()** doivent être des sous-types du même type de base. Les types de base acceptés sont les trois types de base numériques intégrés ou xdt:untypedAtomic. Les valeurs de type xdt:untypedAtomic sont converties en xs:double. S’il existe un mélange de ces types, ou si d’autres valeurs d’autres types sont passés, une erreur statique est déclenchée.  
+ Tous les types de valeurs atomisées transmises à **sum()** doivent être des sous-types du même type de base. Les types de base acceptés sont les trois types de base numériques intégrés ou xdt:untypedAtomic. Les valeurs de type xdt:untypedAtomic sont converties en xs:double. S’il existe un mélange de ces types, ou si d’autres valeurs d’autres types sont passés, une erreur statique est générée.  
   
  Le résultat de **sum()** reçoit le type de base des types transmis tel que xs : double dans le cas de xdt : untypedAtomic, même si l’entrée est éventuellement la séquence vide. Si l'entrée est vide statiquement, le résultat est 0 avec le type statique et dynamique de xs:integer.  
   
- Le **sum()** fonction renvoie la somme des valeurs numériques. Si une valeur xdt : untypedAtomic ne peut pas être convertie en xs : double, la valeur est ignorée dans la séquence d’entrée, *$arg*. Si l'entrée est une séquence vide calculée dynamiquement, la valeur 0 du type de base utilisé est retournée.  
+ Le **sum()** fonction retourne la somme des valeurs numériques. Si une valeur xdt : untypedAtomic ne peut pas être convertie en xs : double, la valeur est ignorée dans la séquence d’entrée, *$arg*. Si l'entrée est une séquence vide calculée dynamiquement, la valeur 0 du type de base utilisé est retournée.  
   
  La fonction retourne une erreur d'exécution en cas d'exception de dépassement de capacité ou de valeur hors limite.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** type des colonnes dans le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. Utilisation de la fonction XQuery sum() pour rechercher le nombre total d'heures de travail pour tous les ateliers inclus dans le processus de fabrication  
  La requête ci-dessous permet de trouver le nombre total d'heures de travail pour tous les ateliers inclus dans le processus de fabrication de tous les modèles de produits pour lesquels des instructions de fabrication sont stockées.  
@@ -118,7 +119,7 @@ ProductModelID Name                 TotalLaborHours
   
 -   Le **sum()** fonction mappe tous les entiers à xs : decimal.  
   
--   Le **sum()** fonction sur des valeurs de type xs : Duration n’est pas pris en charge.  
+-   Le **sum()** fonction sur les valeurs de type xs : Duration n’est pas pris en charge.  
   
 -   Les séquences faisant intervenir plusieurs types dérivés de différents types de base ne sont pas prises en charge.  
   

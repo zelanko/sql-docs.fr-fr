@@ -1,30 +1,28 @@
 ---
-title: Paramètres table (ODBC) | Documents Microsoft
+title: Paramètres table (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8f8c0f95a894b92c3522fa98d4022d28540d4a29
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: aace2d320b23110b286ee4f3d06124f830d3bede
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34707297"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430768"
 ---
 # <a name="table-valued-parameters-odbc"></a>Paramètres table (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +30,13 @@ ms.locfileid: "34707297"
 
   La prise en charge des paramètres table par ODBC permet à une application cliente d'envoyer plus efficacement des données paramétrables au serveur par l'envoi de plusieurs lignes au serveur en un seul appel.  
   
- Pour plus d’informations sur les paramètres table sur le serveur, consultez [utiliser des paramètres &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Pour plus d’informations sur les paramètres table sur le serveur, consultez [utiliser les paramètres &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  Dans ODBC, vous pouvez envoyer des paramètres table au serveur de deux manières :  
   
--   Toutes les données de paramètre table peuvent être dans la mémoire à la fois SQLExecDirect ou SQLExecute est appelée. Ces données sont stockées dans des tableaux si la valeur de table contient plusieurs lignes.  
+-   Toutes les données de paramètre table peuvent être en mémoire à la fois SQLExecDirect ou SQLExecute est appelée. Ces données sont stockées dans des tableaux si la valeur de table contient plusieurs lignes.  
   
--   Une application peut spécifier data-at-execution pour un paramètre table lorsque SQLExecDirect ou SQLExecute est appelée. Dans ce cas, les lignes de données de la valeur de table peuvent être fournies par lots, ou une par une pour réduire la mémoire requise.  
+-   Une application peut spécifier-data-at-execution pour un paramètre table lorsque SQLExecDirect ou SQLExecute est appelée. Dans ce cas, les lignes de données de la valeur de table peuvent être fournies par lots, ou une par une pour réduire la mémoire requise.  
   
  La première option permet aux procédures stockées de renfermer une logique métier plus importante. Par exemple, une même procédure stockée peut encapsuler une transaction d'enregistrement de commande entière lorsque les éléments de la commande sont passés sous la forme de paramètre table. Cette option est très efficace, car un seul aller-retour sur le serveur est requis. Vous pouvez également utiliser différentes procédures pour gérer séparément l'en-tête de commande et les éléments de commande, ce qui nécessiterait davantage de code et un contrat plus complexe entre le client et le serveur.  
   
@@ -72,7 +70,7 @@ ms.locfileid: "34707297"
  Décrit comment une application peut obtenir des métadonnées pour un appel de procédure préparé.  
   
  [Métadonnées de paramètres table supplémentaires](../../relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md)  
- Décrit comment utiliser SQLProcedureColumns SQLTables et SQLColumns pour récupérer des métadonnées pour un paramètre table.  
+ Décrit comment utiliser SQLColumns, SQLProcedureColumns et SQLTables pour récupérer des métadonnées pour un paramètre table.  
   
  [Conversion des données des paramètres table, et autres erreurs et avertissements](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Décrit comment traiter les erreurs sur les valeurs de colonne de paramètre table.  
@@ -83,7 +81,7 @@ ms.locfileid: "34707297"
  [Récapitulatif des API de paramètre table ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  Répertorie les fonctions ODBC qui prennent en charge les paramètres table.  
   
- [Exemples de programmation du paramètre table ODBC](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
+ [Exemples de programmation de paramètres table ODBC](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
  Décrit comment réaliser des tâches courantes.  
   
 ## <a name="see-also"></a>Voir aussi  

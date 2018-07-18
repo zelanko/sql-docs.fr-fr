@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913514"
 ---
 # <a name="parameter-binding-offsets"></a>Décalages de liaison de paramètre
 Une application peut spécifier qu’un décalage est ajouté lié des adresses de mémoire tampon de paramètre et l’indicateur de longueur/correspondante des adresses de mémoire tampon quand **SQLExecDirect** ou **SQLExecute** est appelée. Le résultat de ces ajouts détermine les adresses utilisées dans ces opérations.  

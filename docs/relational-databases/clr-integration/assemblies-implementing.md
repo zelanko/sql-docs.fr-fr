@@ -1,14 +1,11 @@
 ---
-title: Implémentation d’assemblys | Documents Microsoft
+title: Implémentation d’assemblys | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
@@ -17,13 +14,14 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ba5a73921a2690c10f1b2610c6fb071824baf89
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8145f722068b6e160d6c1c801fdadeca2051f1b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353091"
 ---
-# <a name="assemblies---implementing"></a>Assemblys - mise en œuvre
+# <a name="assemblies---implementing"></a>Assemblys - implémentation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique fournit des informations sur les concepts suivants, afin de vous aider à implémenter et à utiliser les assemblys dans vos bases de données :  
   
@@ -31,7 +29,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Modification des assemblys  
   
--   La suppression, désactivation et activation des assemblys  
+-   Suppression, désactivation et activation des assemblys  
   
 -   La gestion des versions d’assembly  
   
@@ -76,14 +74,14 @@ ms.lasthandoff: 05/03/2018
   
 -   [Supprimer des objets](http://msdn.microsoft.com/library/49541441-179c-40d3-ba0c-01bcae545984)  
   
- Par défaut, l'exécution de tous les assemblys créés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est désactivée. Vous pouvez utiliser la **clr activé** option de le **sp_configure** procédures stockées système pour désactiver ou activer l’exécution de tous les assemblys chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La désactivation de l'exécution d'un assembly empêche l'exécution des fonctions CLR (Common Language Runtime), des procédures stockées, des déclencheurs, des agrégats et des types définis par l'utilisateur, de même qu'elle arrête leur exécution si celle-ci est en cours. Elle n'entrave cependant pas la possibilité de créer, de modifier ou de supprimer des assemblys. Pour plus d’informations, consultez [Server Configuration Option clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
+ Par défaut, l'exécution de tous les assemblys créés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est désactivée. Vous pouvez utiliser la **clr activé** possibilité du **sp_configure** procédures stockées système pour désactiver ou activer l’exécution de tous les assemblys sont chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La désactivation de l'exécution d'un assembly empêche l'exécution des fonctions CLR (Common Language Runtime), des procédures stockées, des déclencheurs, des agrégats et des types définis par l'utilisateur, de même qu'elle arrête leur exécution si celle-ci est en cours. Elle n'entrave cependant pas la possibilité de créer, de modifier ou de supprimer des assemblys. Pour plus d’informations, consultez [Server Configuration Option clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   
  **Pour désactiver et activer l’exécution de l’assembly**  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
 ##  <a name="_managing"></a> La gestion des Versions d’Assembly  
- Quand un assembly est chargé dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est stocké et géré dans les catalogues système de la base de données. Toutes les modifications apportées à la définition de l’assembly dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doivent être propagées à l’assembly qui est stocké dans le catalogue de base de données.  
+ Quand un assembly est chargé dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est stocké et géré dans les catalogues système de la base de données. Toutes les modifications apportées à la définition de l’assembly dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit être propagée à l’assembly qui est stocké dans le catalogue de base de données.  
   
  Quand vous modifiez un assembly, vous devez émettre une instruction ALTER ASSEMBLY pour le mettre à jour dans la base de données, de façon à le remplacer par la dernière copie des modèles [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] contenant son implémentation.  
   
@@ -96,13 +94,13 @@ ms.lasthandoff: 05/03/2018
 > [!CAUTION]  
 >  Si WITH UNCHECKED DATA n'est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d'empêcher ALTER ASSEMBLY de s'exécuter si la nouvelle version de l'assembly affecte des données existantes dans des tables, des index ou dans d'autres sites persistants. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne garantit cependant pas que les colonnes, les index, les vues indexées ou les expressions calculés seront cohérents avec les routines et les types sous-jacents une fois l'assembly CLR mis à jour. Soyez prudent lorsque vous exécutez ALTER ASSEMBLY pour vous assurer qu'il n'y a pas de discordance entre le résultat d'une expression et une valeur basée sur cette expression stockée dans l'assembly.  
   
- Seuls les membres de la **db_owner** et **db_ddlowner** rôle de base de données fixe peut exécuter ALTER ASSEMBLY à l’aide de la clause WITH UNCHECKED DATA.  
+ Seuls les membres de la **db_owner** et **db_ddlowner** rôle de base de données fixe permettre exécuter ALTER ASSEMBLY à l’aide de la clause WITH UNCHECKED DATA.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publie un message dans le journal des événements des applications Windows indiquant que l'assembly a été modifié avec les données non vérifiées des tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marque ensuite les tables contenant les données dépendant de l'assembly comme comportant des données non vérifiées. Le **has_unchecked_assembly_data** colonne de la **sys.tables** affichage catalogue contient la valeur 1 pour les tables qui contiennent des données non vérifiées et 0 pour les tables sans les données non vérifiées.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publie un message dans le journal des événements des applications Windows indiquant que l'assembly a été modifié avec les données non vérifiées des tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marque ensuite les tables contenant les données dépendant de l'assembly comme comportant des données non vérifiées. Le **has_unchecked_assembly_data** colonne de la **sys.tables** affichage catalogue contient la valeur 1 pour les tables qui contiennent des données non vérifiées et la valeur 0 pour les tables sans données non vérifiées.  
   
- Pour résoudre l’intégrité des données est désactivées, exécutez DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS sur chaque table qui comporte des données est désactivées. Si DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS échoue, vous devez supprimer les lignes de table qui ne sont pas valides ou modifier le code de l’assembly à résoudre les problèmes et ensuite, émettez les instructions ALTER ASSEMBLY supplémentaires.  
+ Pour résoudre l’intégrité des données non vérifiées, exécutez DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS sur chaque table qui comporte des données non contrôlées. Si DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS échoue, vous devez supprimer les lignes de table qui ne sont pas valides ou modifier le code de l’assembly à résoudre les problèmes et alors émettre des instructions ALTER ASSEMBLY supplémentaires.  
   
- ALTER ASSEMBLY modifie la version de l'assembly. La culture et le jeton de clé publique de l’assembly restent les mêmes. SQL Server n’autorise pas l’inscription de différentes versions d’un assembly avec le même nom, la culture et la clé publique.  
+ ALTER ASSEMBLY modifie la version de l'assembly. La culture et le jeton de clé publique de l’assembly restent les mêmes. SQL Server n’autorise pas l’inscription des versions différentes d’un assembly avec le même nom, la culture et la clé publique.  
   
 ### <a name="interactions-with-computer-wide-policy-for-version-binding"></a>Interactions avec la stratégie de l'ordinateur en matière de liaison des versions  
  Si des références à des assemblys stockés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont redirigées vers des versions spécifiques à l'aide de la stratégie du serveur de publication ou de la stratégie de l'administrateur de l'ordinateur, vous devez procéder de l'une des façons suivantes :  
@@ -118,7 +116,7 @@ ms.lasthandoff: 05/03/2018
 -   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assemblys & #40 ; moteur de base de données & #41 ;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Assemblys &#40;moteur de base de données&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Obtention d’informations sur les assemblys](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

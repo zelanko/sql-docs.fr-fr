@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909204"
 ---
 # <a name="driver-manager-diagnostic-example"></a>Exemple de Diagnostic du Gestionnaire de pilotes
 Le Gestionnaire de pilotes peut également générer des messages de diagnostic. Par exemple, si une application a transmis une option non valide de direction pour **SQLDataSources**, le Gestionnaire de pilotes peut mettre en forme et renvoyer les valeurs suivantes à partir de **SQLGetDiagRec**:  

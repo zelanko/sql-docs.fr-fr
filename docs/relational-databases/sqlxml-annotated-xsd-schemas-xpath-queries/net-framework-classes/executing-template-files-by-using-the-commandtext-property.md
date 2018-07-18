@@ -22,11 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a97f18ab83742d3adde940c4f528f50e4ac347d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d96e75c3cd077b6985d76994cef35cb0b9dc7853
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619496"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Exécution de fichiers modèles à l'aide de la propriété CommandText
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +98,7 @@ class Test
   
 5.  À l'invite de commandes, exécutez DocSample.exe.  
   
- Si vous passez un paramètre à un modèle, le nom du paramètre doit commencer par le signe arobase (@) ; par exemple, p.Name= «@ContactID», où p est un objet SqlXmlParameter.  
+ Si vous passez un paramètre à un modèle, le nom du paramètre doit commencer par le signe arobase (@) ; par exemple, p.Name= «\@ContactID », où p est un objet SqlXmlParameter.  
   
  Voici le modèle mis à jour qui prend un paramètre.  
   

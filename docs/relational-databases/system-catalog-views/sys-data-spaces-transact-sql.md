@@ -1,5 +1,5 @@
 ---
-title: Sys.data_spaces (Transact-SQL) | Documents Microsoft
+title: Sys.data_spaces (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,20 +26,21 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: b21f3768283b2702ce094114bf1ce1769c217a2b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989391"
 ---
 # <a name="sysdataspaces-transact-sql"></a>sys.data_spaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Contient une ligne pour espace de données. Il peut s'agir d'un groupe de fichiers, d'un schéma de partition ou d'un groupe de fichiers de données FILESTREAM.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Nom de l'espace de données, unique dans la base de données.|  
-|data_space_id|**int**|Numéro d'identification de l'espace de données, unique dans la base de données.|  
+|NAME|**sysname**|Nom de l'espace de données, unique dans la base de données.|  
+|data_space_id|**Int**|Numéro d'identification de l'espace de données, unique dans la base de données.|  
 |Type|**char(2)**|Type de l'espace de données :<br /><br /> FG = groupe de fichiers<br /><br /> FD = groupe de fichiers de données FILESTREAM<br /><br /> FX = Groupe de fichiers de tables optimisée en mémoire<br /><br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> PS = schéma de partition|  
 |type_desc|**nvarchar(60)**|Description du type de l'espace de données :<br /><br /> FILESTREAM_DATA_FILEGROUP<br /><br /> MEMORY_OPTIMIZED_DATA_FILEGROUP<br /><br /> **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> PARTITION_SCHEME<br /><br /> ROWS_FILEGROUP|  
 |is_default|**bit**|1 = Espace de données par défaut. Espace de données par défaut utilisé lorsqu'un groupe de fichiers ou un schéma de partition n'est pas spécifié dans une instruction CREATE TABLE ou CREATE INDEX.<br /><br /> 0 = N'est pas l'espace de données par défaut.|  

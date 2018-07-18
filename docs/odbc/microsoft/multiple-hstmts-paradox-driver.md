@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899520"
 ---
 # <a name="multiple-hstmts-paradox-driver"></a>Plusieurs hstmts (pilote Paradox)
 Lorsque le pilote ODBC Paradox est utilisé, si vous souhaitez utiliser plusieurs *hstmt* pour exécuter des requêtes sur une table, la table doit avoir un index unique (clé primaire).

@@ -1,5 +1,5 @@
 ---
-title: Considérations sur la sécurité SQLXML de base | Documents Microsoft
+title: Considérations sur la sécurité SQLXML de base | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,10 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f3e0f77d2e6ee7a225288e5c83006c1f37650d98
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971904"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Considérations de base relatives à la sécurité SQLXML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,13 +45,13 @@ ms.lasthandoff: 05/03/2018
   
 -   SQLXML peut apporter des modifications de mise en forme aux données en question en fonction des différences entre les modèles de données XML et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par exemple, le format pour spécifier une heure est différent. SQLXML tente de résoudre ces différences. En conséquence, une perte de certaines informations de précision est envisageable.  
   
--   SQLXML n'impose aucune limite sur la durée nécessaire pour traiter les données. Le traitement va continuer jusqu'à ce qu’une erreur se produit ou le traitement est terminé.  
+-   SQLXML n'impose aucune limite sur la durée nécessaire pour traiter les données. Le traitement continuera jusqu'à ce qu’une erreur se produit ou le traitement est terminé.  
   
 -   SQLXML n'écrit pas dans le système de fichiers. Si les utilisateurs souhaitent enregistrer les données qu'ils extraient de la base de données, ils doivent le faire dans leur code.  
   
 -   SQLXML permet aux utilisateurs d'exécuter toute requête SQL sur la base de données. Étant donné que cette fonctionnalité ouvre essentiellement la base de données SQL sans provision à tous les utilisateurs, elle ne doit jamais être exposée à une source non sécurisée ou non contrôlée.  
   
--   Lors de l’exécution de codes, SQLXML traduit les **updg:sync** blocs dans les commandes INSERT, UPDATE et DELETE sur la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. Ces commandes affectent uniquement les données existantes. Les commandes générées par SQLXML ne modifient jamais la base de données. Les utilisateurs doivent émettre des commandes explicites pour modifier la structure de la base de données, Par exemple, en les incluant dans un **SQL :** bloc d’un modèle.  
+-   Lors de l’exécution de codes, SQLXML traduit les **updg:sync** blocs en commandes DELETE, UPDATE et INSERT par rapport à la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. Ces commandes affectent uniquement les données existantes. Les commandes générées par SQLXML ne modifient jamais la base de données. Les utilisateurs doivent émettre des commandes explicites pour modifier la structure de la base de données, Par exemple, en les incluant dans un **SQL :** bloc d’un modèle.  
   
 -   Lors de l'exécution de codes de différence (diffgrams), SQLXML les traduit en commandes DELETE, UPDATE et INSERT par rapport à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ces commandes affectent uniquement les données existantes. Les commandes générées par SQLXML ne modifient jamais la base de données. Les utilisateurs doivent émettre des commandes explicites pour modifier la structure de la base de données, Par exemple, en les incluant dans un **SQL :** bloc d’un modèle.  
   

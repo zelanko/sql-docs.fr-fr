@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,14 +24,15 @@ helpviewer_keywords:
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 caps.latest.revision: 64
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 00939442ed98e69daf12b8450fce7a98586ea9b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ec76374712bfc1b0d32c2044c766382539d58591
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787660"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  Applique l'étendue de la notification d'événement à l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si SERVER est spécifié, la notification se déclenche lorsque l'événement spécifié dans la clause FOR se produit n'importe où dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
  DATABASE  
  Applique l'étendue de la notification d'événement à la base de données actuelle. Si DATABASE est spécifié, la notification se déclenche lorsque l'événement spécifié dans la clause FOR se produit n'importe où dans la base de données actuelle.  
@@ -102,7 +102,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  Spécifie une instance de Service Broker par rapport à laquelle *broker_service* est résolu. La valeur d’un Service Broker spécifique peut être obtenue en interrogeant la colonne **service_broker_guid** de la vue de catalogue **sys.databases**. Utilisez **'current database'** pour définir l’instance de Service Broker dans la base de données actuelle. **'current database'** est un littéral de chaîne qui tient compte de la casse.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
 ## <a name="remarks"></a>Notes   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] intègre un type de message et un contrat spécialement conçus pour les notifications d'événements. Par conséquent, il n'est pas nécessaire de créer un service d'initialisation Service Broker car il en existe déjà un qui spécifie le nom de contrat suivant :`http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  

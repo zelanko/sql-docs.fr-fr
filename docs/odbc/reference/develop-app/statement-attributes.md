@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912424"
 ---
 # <a name="statement-attributes"></a>Attributs d'instruction
 Les attributs d’instruction sont caractéristiques de l’instruction. Par exemple, s’il faut pour utiliser des signets et quel type de curseur à utiliser avec le résultat de l’instruction sont des attributs d’instruction.  

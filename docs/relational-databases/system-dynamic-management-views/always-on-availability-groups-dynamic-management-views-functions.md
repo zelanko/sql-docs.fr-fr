@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34464545"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Toujours sur les vues de gestion dynamique de groupes de disponibilité - fonctions
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

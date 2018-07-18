@@ -3,7 +3,6 @@ title: Service Broker avec les groupes de disponibilité Always On (SQL Server) 
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1febefd8e60b0ff054f1e556f23665da14b29320
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 540ecf6bef4dc74d8052a58c96543c5c9b159b5b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770735"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker avec les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,10 @@ ms.lasthandoff: 05/03/2018
     ```  
   
      Pour plus d’informations, consultez [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
-  
+
+    > [!NOTE]  
+    SQL Server Broker ne prend pas en charge plusieurs sous-réseaux. Veillez à définir « registerallprovidersip » avec la valeur 0 et vérifiez que vous n’utilisez pas d’adresses IP statiques sur DNS donnant l’autorisation requise au cluster sur DNS, comme décrit dans https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. Broker peut retarder le message avec l’état « CONVERSING » tentant d’utiliser une adresse IP désactivée.
+
 3.  **Accordez l'autorisation CONNECT sur le point de terminaison.**  
   
      Accordez l'autorisation CONNECT sur le point de terminaison Service Broker sur PUBLIC ou sur une connexion.  

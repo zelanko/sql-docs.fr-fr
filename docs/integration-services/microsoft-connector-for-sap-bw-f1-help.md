@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e583cd99ce68c0e6a4b7986d71ab42865e5a2302
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: ce13efdb6b0373280d4691de4a50bdf1e02c987e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411431"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Aide (F1) sur Microsoft Connector 1.1 pour SAP BW
   Cette section contient des rubriques d'aide (F1) pour les trois composants de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ces rubriques sont également accessibles à partir de l'interface utilisateur en appuyant sur la touche F1 ou en cliquant sur Aide dans les pages et dans les boîtes de dialogue de l'Assistant.  

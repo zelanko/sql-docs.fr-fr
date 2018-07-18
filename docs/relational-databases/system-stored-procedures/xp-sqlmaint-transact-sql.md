@@ -1,5 +1,5 @@
 ---
-title: xp_sqlmaint (Transact-SQL) | Documents Microsoft
+title: xp_sqlmaint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b5509b126a88ab2500fca0509789b61182af2ad2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979381"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Appelle le **sqlmaint** utilitaire avec une chaîne qui contienne **sqlmaint**commutateurs. Le **sqlmaint** utilitaire exécute un ensemble d’opérations de maintenance sur une ou plusieurs bases de données.  
+  Appelle le **sqlmaint** utilitaire avec une chaîne qui contienne **sqlmaint**commutateurs. Le **sqlmaint** utilitaire effectue un ensemble d’opérations de maintenance sur une ou plusieurs bases de données.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -55,7 +56,7 @@ xp_sqlmaint 'switch_string'
  Aucun. Retourne une erreur si le **sqlmaint** utilitaire échoue.  
   
 ## <a name="remarks"></a>Notes  
- Si cette procédure est appelée par un utilisateur connecté à l’aide de l’authentification SQL Server, le **- U «***login_id***»** et **-P «***mot de passe***»** commutateurs sont ajoutés au début *chaîne_de_commutateurs* avant l’exécution. Si l’utilisateur est connecté avec l’authentification Windows, *chaîne_de_commutateurs* est transmis sans modification à **sqlmaint**.  
+ Si cette procédure est appelée par un utilisateur connecté à l’aide de l’authentification SQL Server, le **- U »***login_id***»** et **-P »***mot de passe***»** commutateurs sont ajoutés au début *chaîne_de_commutateurs* avant l’exécution. Si l’utilisateur est connecté avec l’authentification Windows, *chaîne_de_commutateurs* est transmis sans modification à **sqlmaint**.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
@@ -75,7 +76,7 @@ The command(s) executed successfully.
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilitaire sqlmaint](../../tools/sqlmaint-utility.md)   
+ [sqlmaint (utilitaire)](../../tools/sqlmaint-utility.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

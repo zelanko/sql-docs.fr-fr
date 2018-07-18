@@ -1,13 +1,12 @@
 ---
-title: Persistante des objets Source de données | Documents Microsoft
+title: Les objets de Source de données persistants | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,22 +15,22 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b516f66963b0c3a6d72614c9218d01313d9e6f7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8fd9e0cbb3ce90e40e53965000452d8a2dca1de
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419388"
 ---
 # <a name="persisted-data-source-objects"></a>Objets source de données persistants
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client prend en charge les objets de source de données persistantes avec la **IPersistFile** interface.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client prend en charge les objets de source de données persistant avec la **IPersistFile** interface.  
   
 ## <a name="examples"></a>Exemples  
  **A. Conserver l’initialisation de source de données :**  
@@ -233,9 +232,9 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- Le **IPersistFile::Save** méthode peut être appelée avant ou après l’appel **IDBInitialize::Initialize**. Appel de la méthode après un retour réussi de **IDBInitialize::Initialize** garantit une spécification de source de données valide est rendue persistante.  
+ Le **IPersistFile::Save** méthode peut être appelée avant ou après l’appel **IDBInitialize::Initialize**. Appeler cette méthode après un retour réussi de **IDBInitialize::Initialize** garantit une spécification de source de données valide est conservée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets Source de données & #40 ; OLE DB & #41 ;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objets Source de données &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

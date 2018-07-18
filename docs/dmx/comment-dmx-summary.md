@@ -1,31 +1,20 @@
 ---
-title: --(Commentaire) (DMX) Résumé | Documents Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- commenting characters
-- double hyphens
-- -- (comment character)
-ms.assetid: 487b580b-5b81-4e52-8868-4fa809e4ef58
-caps.latest.revision: 14
-author: Minewiskan
+title: --(Commentaire) (DMX) Résumé | Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 77100332ecdd3e0ef0421a33400e676e99412206
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031447"
 ---
 # <a name="---comment-dmx-summary"></a>--(Commentaire) (DMX) Résumé
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

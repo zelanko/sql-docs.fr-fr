@@ -5,18 +5,18 @@ author: MightyPen
 ms.date: 04/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: connect
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.openlocfilehash: f281fff6085048bb5918901a9e12af702b71b3e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfb1ac82894ef8fed001077d54665c9f89239787
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306218"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Page d’accueil de la programmation avec Microsoft SQL Server du client
 
@@ -199,7 +199,7 @@ D’autres pilotes de connectivité utilisent ODBC en interne.
 Le contenu d’ODBC dans cette section se concentre sur l’accès à SQL Server ou base de données SQL Azure, à partir de C++. Le tableau suivant répertorie un plan approximatif de la documentation principale pour ODBC.
 
 
-| Domaine | Sous-zone |  Description |
+| Domaine | Sous-zone | Description |
 | :--- | :------ | :---------- |
 | [ODBC pour C++](./odbc/index.md) | Racine de notre documentation. |
 | [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Informations sur l’utilisation de ODBC sur les systèmes d’exploitation Linux ou MacOS. |
@@ -252,7 +252,7 @@ Vous pouvez utiliser Python pour interagir avec SQL Server.
 
 #### <a name="documentation"></a>Documentation
 
-| Domaine |  Description |
+| Domaine | Description |
 | :--- | :---------- |
 | [Python à SQL Server](./python/index.md) | Racine de notre documentation. |
 | [pymssql pilote](./python/pymssql/index.md) | Microsoft ne conservent pas ou le pilote pymssql de test.<br /><br />Le pilote de connexion pymssql est une interface simple pour les bases de données SQL à utiliser dans les programmes de Python. Pymssql s’appuie sur FreeTDS pour fournir une interface API DB Python (PEP 249) à Microsoft SQL Server. |

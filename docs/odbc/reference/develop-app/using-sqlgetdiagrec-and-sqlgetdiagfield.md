@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916034"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>À l’aide de SQLGetDiagRec et SQLGetDiagField
 Appel d’applications **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer les informations de diagnostic. Ces fonctions acceptent un handle d’environnement, connexion, instruction ou descripteur et retournent des diagnostics à partir de la fonction qui gère la dernière utilisation. Les tests de diagnostic enregistrés sur un handle particulier sont ignorés lorsqu’une fonction est appelée à l’aide de ce descripteur. Si la fonction a renvoyé plusieurs enregistrements de diagnostic, l’application appelle ces fonctions plusieurs fois ; le nombre total d’enregistrements d’état est récupéré en appelant **SQLGetDiagField** pour l’enregistrement d’en-tête (enregistrement 0) avec l’option SQL_DIAG_NUMBER.  

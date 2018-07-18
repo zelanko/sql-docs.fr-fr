@@ -1,14 +1,11 @@
 ---
-title: Environnement de CLR hébergé | Documents Microsoft
+title: CLR hébergé d’environnement | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - type-safe code [CLR integration]
@@ -32,13 +29,14 @@ caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 603b0d66a4a8b7f406708442f18e9c98c4414b26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50343b871322c373b297e5b1a062df844621ba2d
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352811"
 ---
-# <a name="clr-integration-architecture---clr-hosted-environment"></a>Architecture d’intégration CLR - environnement hébergé CLR
+# <a name="clr-integration-architecture---clr-hosted-environment"></a>Architecture d’intégration de CLR - environnement hébergé CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L'intégration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le Common Language Runtime (CLR) .NET Framework permet aux programmeurs de base de données d'utiliser des langages tels que Visual C#, Visual Basic .NET et Visual C++. Les fonctions, procédures stockées, déclencheurs, types de données et agrégats sont parmi les types de logique métier que les programmeurs peuvent écrire avec ces langages.  
   
@@ -72,7 +70,7 @@ ms.lasthandoff: 05/03/2018
 ###### <a name="security"></a>Sécurité  
  Le code utilisateur qui s'exécute dans la base de données doit suivre les règles d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et d'autorisation lors de l'accès à des objets de base de données tels que les tables et les colonnes. De plus, les administrateurs de base de données doivent être en mesure de contrôler l'accès aux ressources du système d'exploitation, tel que l'accès aux fichiers et au réseau, à partir du code utilisateur qui s'exécute dans la base de données. Cela devient important alors que les langages de programmation managés (contrairement aux langages non managés tels que Transact-SQL) fournissent des API pour accéder à ces ressources. Le système doit fournir une méthode sécurisée pour que le code utilisateur accède aux ressources d'ordinateur à l'extérieur du processus du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour plus d’informations, consultez [Sécurité de l’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
-###### <a name="performance"></a>Performance  
+###### <a name="performance"></a>Performances  
  Le code utilisateur managé qui s'exécute dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit avoir des performances de calcul comparables au même code exécuté hors du serveur. L'accès à la base de données à partir du code utilisateur managé n'est pas aussi rapide que pour [!INCLUDE[tsql](../../includes/tsql-md.md)] natif. Pour plus d’informations, consultez [performances d’intégration du CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="clr-services"></a>Services CLR  
@@ -102,7 +100,7 @@ ms.lasthandoff: 05/03/2018
   
 -   ExternalProcessMgmt, qui indique si l'API expose une méthode pour contrôler le processus hôte.  
   
- Étant donné ces attributs, l'hôte peut spécifier une liste de HPA, tels que l'attribut SharedState, qui doivent être rejetés dans l'environnement hébergé. Dans ce cas, le CLR refuse les tentatives d'appel par code utilisateur des API annotées par les HPA dans la liste interdite. Pour plus d’informations, consultez [attributs de Protection d’hôte et de la programmation de l’intégration CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
+ Étant donné ces attributs, l'hôte peut spécifier une liste de HPA, tels que l'attribut SharedState, qui doivent être rejetés dans l'environnement hébergé. Dans ce cas, le CLR refuse les tentatives d'appel par code utilisateur des API annotées par les HPA dans la liste interdite. Pour plus d’informations, consultez [les attributs de Protection hôte et programmation de l’intégration de CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Comment SQL Server et le CLR fonctionnent-ils ensemble ?  
  Cette section explique comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intègre le threading, la planification, la synchronisation et les modèles de gestion de la mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et du CLR. En particulier, cette section examine l'intégration du point de vue de l'évolutivité, de la fiabilité et des objectifs en matière de sécurité. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agit essentiellement comme un système d'exploitation pour le CLR lorsque celui-ci est hébergé au sein de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le CLR appelle les routines de bas niveau implémentées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le threading, la planification, la synchronisation et la gestion de la mémoire. Ce sont les mêmes primitives que le reste du moteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise. Cette approche fournit plusieurs avantages en termes d'évolutivité, de fiabilité et de sécurité.  
@@ -132,7 +130,7 @@ ms.lasthandoff: 05/03/2018
 |Sécurité d’accès du code|Exécution uniquement|Exécution + accès aux ressources externes|Illimité|  
 |Restrictions du modèle de programmation|Oui|Oui|Aucune restriction|  
 |Vérifiabilité requise|Oui|Oui|non|  
-|Possibilité d'appeler du code natif|non|Non|Oui|  
+|Possibilité d'appeler du code natif|non|non|Oui|  
   
  SAFE est le mode le plus fiable et sécurisé avec des restrictions associées quant au modèle de programmation autorisé. Les assemblys SAFE bénéficient d'autorisations suffisantes pour s'exécuter, effectuer des calculs et avoir accès à la base de données locale. Les assemblys SAFE doivent être de type sécurisé vérifié et ne sont pas autorisés à appeler du code non managé.  
   

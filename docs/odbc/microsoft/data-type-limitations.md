@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900624"
 ---
 # <a name="data-type-limitations"></a>Limitations de Type de données
 Les pilotes de base de données Microsoft ODBC Desktop impose des limitations sur les types de données :  

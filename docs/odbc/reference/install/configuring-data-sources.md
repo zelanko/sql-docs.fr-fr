@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914704"
 ---
 # <a name="configuring-data-sources"></a>Configuration des Sources de données
 Informations sur les sources de données sont stockées dans le Registre système. Les utilisateurs modifier les informations de source de données via un programme d’administration. Cela peut être l’administrateur ODBC, l’appareil ODBC le panneau de configuration ou un programme d’administration écrit par un développeur d’application ou le pilote.  

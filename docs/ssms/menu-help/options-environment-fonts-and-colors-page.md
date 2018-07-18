@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33045226"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Options (Environnement - Page Polices et couleurs)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +60,7 @@ Répertorie les tailles en points disponibles pour la police sélectionnée. La 
 Répertorie les éléments dont vous pouvez modifier la couleur de premier plan et d'arrière-plan.  
   
 > [!NOTE]  
-> **L’**élément affiché par défaut est Texte. Les propriétés assignées au texte seront de ce fait remplacées par les propriétés assignées aux autres éléments affichés. Par exemple, si vous assignez la couleur bleue au **texte** et la couleur verte à l’identificateur, tous les identificateurs apparaîtront alors en vert. Dans cet exemple, les propriétés de l'Identificateur se substituent à celles du Texte.  
+> **L’** élément affiché par défaut est Texte. Les propriétés assignées au texte seront de ce fait remplacées par les propriétés assignées aux autres éléments affichés. Par exemple, si vous assignez la couleur bleue au **texte** et la couleur verte à l’identificateur, tous les identificateurs apparaîtront alors en vert. Dans cet exemple, les propriétés de l'Identificateur se substituent à celles du Texte.  
   
 Voici quelques-uns des éléments affichés.  
   

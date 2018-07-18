@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911644"
 ---
 # <a name="ordinary-arguments"></a>Arguments ordinaires
 Quand un argument de chaîne de fonction de catalogue est un argument ordinaire, il est traité comme une chaîne littérale. Un argument ordinaire n’accepte ni un modèle de recherche de chaîne, ni une liste de valeurs. Le cas d’un argument ordinaire est significatif et caractères de guillemets dans la chaîne sont prises littéralement. Ces arguments sont traités en tant qu’arguments ordinaires, si l’attribut d’instruction SQL_ATTR_METADATA_ID a la valeur SQL_FALSE ; elles sont traitées en tant qu’arguments de l’identificateur à la place si cet attribut a la valeur SQL_TRUE.  

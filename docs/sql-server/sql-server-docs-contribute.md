@@ -2,23 +2,21 @@
 title: Guide pratique pour contribuer à la documentation SQL Server | Microsoft Docs
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bdbc55a67865e195ea06a10610af8224edf06b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52bc0371c7f60b7b6fcff5c64c5972d7a178b629
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926530"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Guide pratique pour contribuer à la documentation SQL Server
 
@@ -75,7 +73,7 @@ Pour apporter votre contribution à l’aide de cette méthode, consultez les ar
 - [Créer un compte GitHub](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [Installer des outils de création de contenu](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [Configurer localement un dépôt Git](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Apporter sa contribution à l’aide d’outils](https://docs.microsoft.com/contribute/full-workflow)
+- [Apporter sa contribution à l’aide d’outils](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
 
 Si vous envoyez une demande de tirage avec d’importants changements à apporter à la documentation, un commentaire s’affiche dans GitHub vous demandant d’envoyer un **contrat de licence de contribution** (CLA, Contribution License Agreement) en ligne. Pour que votre demande de tirage soit acceptée, vous devez au préalable compléter le formulaire en ligne.
 
@@ -138,5 +136,3 @@ Explorez le [dépôt sql-docs](https://github.com/MicrosoftDocs/sql-docs) sur Gi
 Recherchez un article, envoyez une modification et aidez la Communauté SQL Server. 
 
 Merci !
-
-

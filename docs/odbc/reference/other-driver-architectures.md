@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916874"
 ---
 # <a name="other-driver-architectures"></a>Autres Architectures de pilote
 Certains pilotes ODBC ne sont pas strictement conformes à l’architecture décrite précédemment. Cela peut être, car les pilotes de remplir des fonctions autres que ceux d’un pilote ODBC traditionnel ou ne sont pas des pilotes dans le sens normal.  

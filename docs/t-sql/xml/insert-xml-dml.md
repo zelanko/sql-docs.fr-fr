@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|xml
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,11 +21,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c851283cd546038c11700ed111282a9aa1a039ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dafe9f57203f33a08bcf618a5795335b1dbf71ca
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36246091"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ GO
 ```  
   
 ### <a name="c-inserting-attributes-into-a-document"></a>C. Insertion d'attributs dans un document  
- L’exemple suivant montre comment insérer des attributs dans un document. En premier lieu, un document est affecté à une variable de type **xml**. Ensuite, une série d’instructions DML XML **insert** est utilisée pour insérer les attributs dans le document. Après chaque insertion d'attribut, l'instruction SELECT affiche le résultat.  
+ L’exemple suivant illustre l’insertion d’attributs dans un document. En premier lieu, un document est affecté à une variable de type **xml**. Ensuite, une série d’instructions DML XML **insert** est utilisée pour insérer les attributs dans le document. Après chaque insertion d'attribut, l'instruction SELECT affiche le résultat.  
   
 ```  
 USE AdventureWorks;  

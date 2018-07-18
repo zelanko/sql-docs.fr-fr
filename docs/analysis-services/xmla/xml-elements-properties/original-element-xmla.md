@@ -1,5 +1,5 @@
 ---
-title: Élément original (XMLA) | Documents Microsoft
+title: Élément d’origine (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0ddf701f236e66680f562fa0721bcc8a2eb179f8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34575931"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050387"
 ---
 # <a name="original-element-xmla"></a>Élément Original (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34575931"
 </Folder>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "34575931"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Le **d’origine** élément contient un chemin d’accès UNC à remplacer par la valeur de la [nouveau](../../../analysis-services/xmla/xml-elements-properties/new-element-xmla.md) élément contenu dans le parent **dossier** élément pour tous les objets restaurés ou synchronisés, respectivement, pendant un [restaurer](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) ou [synchroniser](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) commande. La valeur de cet élément est comparée à la valeur de la [StorageLocation](../../../analysis-services/scripting/properties/storagelocation-element-assl.md) , élément pour chaque cube, groupe de mesures ou partition et, si une correspondance est trouvée, la valeur de la **nouveau** élément est utilisé pour mettre à jour le **%{storagelocation/}** de l’objet pendant la restauration ou la synchronisation.  
+ Le **d’origine** élément contient un chemin d’accès UNC à remplacer par la valeur de la [New](../../../analysis-services/xmla/xml-elements-properties/new-element-xmla.md) élément contenu dans le parent **dossier** élément pour tous les objets restaurés ou synchronisé, respectivement, pendant un [restaurer](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md) ou [synchroniser](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) commande. La valeur de cet élément est comparée à la valeur de la [StorageLocation](../../../analysis-services/scripting/properties/storagelocation-element-assl.md) élément pour chaque groupe de mesures, la partition ou le cube et, si une correspondance est trouvée, la valeur de la **New** élément est utilisé pour mettre à jour le  **StorageLocation** de l’objet pendant la restauration ou de synchronisation.  
   
- Pour plus d’informations sur la sauvegarde et restauration des objets, consultez [sauvegarde, restauration et synchronisation de bases de données de &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
+ Pour plus d’informations sur la sauvegarde et restauration d’objets, consultez [sauvegarde, restauration et synchronisation de bases de données de &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   
 ## <a name="see-also"></a>Voir aussi
  [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898014"
 ---
 # <a name="date-arithmetic-limitations"></a>Limitations arithmétique de date
 Arithmétique de date n’est pas pris en charge pour la soustraction d’un type de données DATE à partir d’un type de données DATE.

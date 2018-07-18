@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32954304"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Créer une stratégie ou Ouvrir une stratégie, boîte de dialogue (page Général)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
  Les stratégies exécutées avec le mode d'évaluation **À la demande** n'utilisent pas cette case à cocher.  
   
  **Vérifier la condition**  
- Sélectionnez la condition de la Gestion basée sur des stratégies utilisée par cette stratégie. Toutes les conditions sur le serveur pour la facette de la Gestion basée sur des stratégies associée sont répertoriées. Cliquez sur **Nouvelle condition** pour créer une condition. Cliquez sur le bouton**…**pour modifier la condition.  
+ Sélectionnez la condition de la Gestion basée sur des stratégies utilisée par cette stratégie. Toutes les conditions sur le serveur pour la facette de la Gestion basée sur des stratégies associée sont répertoriées. Cliquez sur **Nouvelle condition** pour créer une condition. Cliquez sur le bouton **…** pour modifier la condition.  
   
  **Par rapport aux cibles**  
  Sélectionnez les types de cibles disponibles pour cette facette afin d'achever une expression de filtre.  

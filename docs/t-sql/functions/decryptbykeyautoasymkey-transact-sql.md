@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,19 +18,20 @@ helpviewer_keywords:
 - DECRYPTBYKEYAUTOASYMSKEY function
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7378e62b4cf30697ca69868602dc7483649abcd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5e036e7c80218750161ffc2322a5969dcbd6e1e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784580"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Déchiffre à l'aide d'une clé symétrique automatiquement déchiffrée à l'aide d'une clé asymétrique.  
+Cette fonction déchiffre les données chiffrées. Pour ce faire, elle commence par déchiffrer une clé symétrique avec une clé asymétrique distincte, puis déchiffre les données chiffrées avec la clé symétrique extraite à la première étape.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,41 +47,49 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
   
 ## <a name="arguments"></a>Arguments  
  *akey_ID*  
- ID de la clé asymétrique servant à protéger la clé symétrique. *akey_ID* est de type **int**.  
+ID de la clé asymétrique servant à chiffrer la clé symétrique. *akey_ID* a le type de données **int**.  
   
  *akey_password*  
- Mot de passe qui protège la clé privée de la clé asymétrique. Peut être NULL si la clé privée est protégée par la clé principale de la base de données. *akey_password* est de type **nvarchar**.  
+Mot de passe protégeant la clé asymétrique. *akey_password* peut avoir une valeur NULL si la clé principale de base de données protège la clé privée asymétrique. *akey_password* a le type de données **nvarchar**.  
   
- '*ciphertext*'  
- Données chiffrées avec la clé. *ciphertext* est de type **varbinary**.  
+ *ciphertext* Données chiffrées avec la clé. *ciphertext* a le type de données **varbinary**.  
   
  @ciphertext  
- Variable de type **varbinary** contenant des données qui ont été chiffrées avec la clé.  
+Variable de type **varbinary** contenant des données chiffrées avec la clé symétrique.  
   
  *add_authenticator*  
- Indique si un authentificateur a été chiffré en même temps que le texte en clair. Il doit s'agir de la valeur transmise à EncryptByKey lors du chiffrement des données. La valeur est 1 si un authentificateur a été utilisé. *add_authenticator* est de type **int**.  
+Indique si le processus de chiffrement d’origine comprend et chiffre un authentificateur avec le texte en clair. Doit correspondre à la valeur passée à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) durant le processus de chiffrement des données. *add_authenticator* a la valeur 1 si le processus de chiffrement utilise un authentificateur. *add_authenticator* a le type de données **int**.  
   
  @add_authenticator  
- Indique si un authentificateur a été chiffré en même temps que le texte en clair. Il doit s'agir de la valeur transmise à EncryptByKey lors du chiffrement des données.  
+Variable indiquant si le processus de chiffrement d’origine comprend et chiffre un authentificateur avec le texte en clair. Doit correspondre à la valeur passée à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) durant le processus de chiffrement des données. *@add_authenticator* a le type de données **int**.
   
  *authenticator*  
- Données à partir desquelles un authentificateur peut être généré. Doit correspondre à la valeur qui a été fournie à EncryptByKey. *authenticator* est de type **sysname**.  
+Données utilisées comme base pour la génération de l’authentificateur. Doit correspondre à la valeur fournie à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* a le type de données **sysname**.  
   
  @authenticator  
- Variable contenant les données à partir desquelles l'authentificateur sera généré. Doit correspondre à la valeur qui a été fournie à EncryptByKey.  
+Variable contenant des données à partir desquelles un authentificateur est généré. Doit correspondre à la valeur fournie à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* a le type de données **sysname**.  
   
+@add_authenticator  
+Variable indiquant si le processus de chiffrement d’origine comprend et chiffre un authentificateur avec le texte en clair. Doit correspondre à la valeur passée à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) durant le processus de chiffrement des données. *@add_authenticator* a le type de données **int**.  
+
+*authenticator*  
+Données utilisées comme base pour la génération de l’authentificateur. Doit correspondre à la valeur fournie à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* a le type de données **sysname**.
+
+@authenticator  
+Variable contenant des données à partir desquelles un authentificateur est généré. Doit correspondre à la valeur fournie à [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* a le type de données **sysname**.  
+
 ## <a name="return-types"></a>Types de retour  
- **varbinary** d’une taille maximale de 8 000 octets.  
+**varbinary** d’une taille maximale de 8 000 octets.  
   
 ## <a name="remarks"></a>Notes   
- DecryptByKeyAutoAsymKey combine les fonctionnalités de OPEN SYMMETRIC KEY et de DecryptByKey. Dans une même opération, il déchiffre une clé symétrique et l’utilise pour déchiffrer le texte chiffré.  
+`DECRYPTBYKEYAUTOASYMKEY` combine les fonctionnalités d’`OPEN SYMMETRIC KEY` et de `DECRYPTBYKEY`. Dans une même opération, il déchiffre d’abord une clé symétrique, puis déchiffre le texte chiffré avec cette clé.  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l'autorisation VIEW DEFINITION sur la clé symétrique et CONTROL sur la clé asymétrique.  
+Nécessite l’autorisation `VIEW DEFINITION` sur la clé symétrique et `CONTROL` sur la clé asymétrique.  
   
-## <a name="examples"></a>Exemples  
- L'exemple suivant montre comment utiliser `DecryptByKeyAutoAsymKey` pour simplifier le code qui effectue le déchiffrement. Ce code doit être exécuté sur une base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] qui n'a pas encore de clé principale de base de données.  
-  
+## <a name="examples"></a>Exemples
+L’exemple suivant montre comment `DECRYPTBYKEYAUTOASYMKEY` peut simplifier le code de déchiffrement. Ce code doit s’exécuter sur une base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] qui n’a pas encore de clé principale de base de données.  
+
 ```  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  

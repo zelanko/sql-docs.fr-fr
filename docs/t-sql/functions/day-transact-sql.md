@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,20 +23,21 @@ helpviewer_keywords:
 - dateparts [SQL Server], day
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c248e735b25dbdbc2f7bd263698007acfc8600e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ca9030afd32df6ffd50fe75d16675a6a50b0307
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781590"
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Retourne un entier représentant le jour (jour du mois) de la *date* spécifiée.
+Cette fonction retourne un entier représentant le jour (jour du mois) de la *date* spécifiée.
   
 Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
@@ -51,7 +51,16 @@ DAY ( date )
   
 ## <a name="arguments"></a>Arguments  
 *date*  
-Expression qui peut être résolue en valeur **time**, **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**. L’argument *date* peut être une expression, une expression de colonne, une variable définie par l’utilisateur ou un littéral de chaîne.
+Expression qui est résolue en l’un des types de données suivants :
+
++ **date**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
+
+Pour *date*, `DAY` accepte une expression de colonne, une expression, un littéral de chaîne ou une variable définie par l’utilisateur.
   
 ## <a name="return-type"></a>Type de retour  
 **Int**
@@ -59,16 +68,16 @@ Expression qui peut être résolue en valeur **time**, **date**, **smalldatetime
 ## <a name="return-value"></a>Valeur retournée  
 DAY retourne la même valeur que [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**day**, *date*).
   
-Si *date* contient uniquement une partie heure, la valeur renvoyée est 1, le jour de base.
+Si *date* contient uniquement une partie heure, `DAY` retourne 1, le jour de base.
   
 ## <a name="examples"></a>Exemples  
-L'instruction suivante retourne `30`. Il s'agit du numéro du jour.
+Cette instruction retourne `30`, le numéro du jour lui-même.
   
 ```sql
 SELECT DAY('2015-04-30 01:01:01.1234567');  
 ```  
   
-L'instruction suivante retourne `1900, 1, 1`. L’argument pour *date* est le chiffre `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète `0` comme le 1er janvier 1900.
+Cette instruction retourne `1900, 1, 1`. L’argument *date* a la valeur numérique `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprète `0` comme le 1er janvier 1900.
   
 ```sql
 SELECT YEAR(0), MONTH(0), DAY(0);  

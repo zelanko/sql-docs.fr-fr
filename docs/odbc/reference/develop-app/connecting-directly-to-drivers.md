@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909794"
 ---
 # <a name="connecting-directly-to-drivers"></a>Se connecter directement à des pilotes
 Comme mentionné dans [choisir une Source de données ou le pilote](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md), plus haut dans cette section, certaines applications ne souhaitez pas utiliser une source de données du tout. Au lieu de cela, ils souhaitent se connecter directement à un pilote. **SQLDriverConnect** fournit un moyen de l’application de se connecter directement à un pilote sans spécifier une source de données. Point de vue conceptuel, une source de données temporaire est créée au moment de l’exécution.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539419"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Réinitialisation du mot de passe - système de plateforme Analytique
 Le **mot de passe réinitialisé** page permet de modifier le mot de passe pour les comptes d’administrateur utilisé par le système de plateforme d’Analytique.  

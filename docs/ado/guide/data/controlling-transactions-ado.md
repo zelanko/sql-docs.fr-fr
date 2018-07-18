@@ -2,7 +2,6 @@
 title: Contrôle des Transactions (ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69fc2fb748f1c67f8253b2ae7f350da430e7f937
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b036998fba22c19e47e9e5ced581aabeec9b07b8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270978"
 ---
 # <a name="controlling-transactions-ado"></a>Contrôle des Transactions (ADO)
 ADO prend en charge le traitement des transactions dans une connexion à l’aide de la **BeginTrans**, **CommitTrans**, et **RollbackTrans** méthodes sur un  **Connexion** objet. L’idée générale de l’implémentation du traitement des transactions dans ADO est illustrée dans l’extrait de code simple suivant.  

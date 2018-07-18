@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020586"
 ---
 # <a name="amo-classes---introduction"></a>Classes AMO - Introduction
   Objets AMO (Analysis Management) est une bibliothèque de classes conçue pour gérer une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] à partir d’une application cliente. Les classes AMO sont des classes que vous utilisez pour administrer des objets [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tels que les bases de données, les dimensions, les cubes, les structures et modèles d'exploration de données, les rôles et autorisations, les exceptions, etc.  

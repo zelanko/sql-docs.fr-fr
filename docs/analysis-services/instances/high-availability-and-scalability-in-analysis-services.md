@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33270141fc67581adaeaeca9df8411c68fe0ac50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700900"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Haute disponibilité et extensibilité dans Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/10/2018
 |Modèles multidimensionnels utilisant un stockage MOLAP|Choisissez une configuration équilibrée qui combine l’E/S disque pour charger des données rapidement et une mémoire RAM suffisante pour les données en cache.|  
 |Modèles multidimensionnels utilisant un stockage ROLAP|Optimisez l’E/S disque et réduisez la latence du réseau au minimum.|  
   
-## <a name="highly-availability-and-redundancy-through-wsfc"></a>Haute disponibilité et redondance via WSFC  
+## <a name="high-availability-and-redundancy-through-wsfc"></a>Haute disponibilité et redondance via WSFC  
  Analysis Services peut être installé dans un cluster de basculement Windows Server (WSFC) existant pour obtenir une haute disponibilité qui restaure le service dans les plus brefs délais.  
   
  Les clusters de basculement fournissent un accès complet (lecture et écriture différée) à la base de données, mais un nœud à la fois. Les bases de données secondaires s’exécutent sur des nœuds supplémentaires dans le cluster, constituant des serveurs de remplacement si le premier nœud tombe en panne.  

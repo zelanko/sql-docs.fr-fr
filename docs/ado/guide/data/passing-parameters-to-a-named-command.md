@@ -2,7 +2,6 @@
 title: Passage de paramètres à une commande nommée | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94f5d5fb25406b581ccd1bdadbaef5934360c7de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 51243e0b57bf9cfe4619368e1abf49c048a19fd7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272358"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passage de paramètres à une commande nommée
 Tout comme le résultat de la commande est transmis en tant qu’une *out* variable de la commande nommée, les paramètres pour une commande paramétrée peut été passé en tant que *dans* variables à la commande nommée.  

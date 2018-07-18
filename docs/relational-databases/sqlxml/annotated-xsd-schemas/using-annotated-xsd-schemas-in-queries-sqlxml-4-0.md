@@ -1,5 +1,5 @@
 ---
-title: À l’aide de XSD schémas annotés dans les requêtes (SQLXML 4.0) | Documents Microsoft
+title: À l’aide de XSD schémas annotés dans les requêtes (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -28,10 +28,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cc4d6f7c2d77f2c375765bd745bee8e35e70f622
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035512"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Utilisation de schémas XSD annotés dans les requêtes (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="using-inline-mapping-schemas"></a>Utilisation de schémas de mappage insérés  
  Un schéma annoté peut être inclus directement dans un modèle ; une requête XPath peut ensuite être spécifiée dans le modèle par rapport au schéma inséré. Le modèle peut également être un code de mise à jour (updategram).  
   
- Un modèle peut inclure plusieurs schémas insérés. Pour utiliser un schéma en ligne qui est inclus dans un modèle, spécifiez la **id** de l’attribut avec une valeur unique du  **\<xsd : Schema >** élément, puis utiliser **#idvalue** pour référencer le schéma inline. Le **id** attribut est un comportement identique à la **prefix** ({urn : schemas-microsoft-com-sql} id) utilisée dans les schémas XDR.  
+ Un modèle peut inclure plusieurs schémas insérés. Pour utiliser un schéma en ligne qui est inclus dans un modèle, spécifiez la **id** attribut avec une valeur unique sur le  **\<xsd : Schema >** élément, puis utiliser **#idvalue**pour référencer le schéma inline. Le **id** attribut est un comportement identique à la **SQL : ID** ({urn : schemas-microsoft-com-sql} id) utilisé dans les schémas XDR.  
   
  Par exemple, le modèle suivant spécifie deux schémas annotés insérés :  
   
@@ -124,19 +125,19 @@ ms.lasthandoff: 05/03/2018
   
  Lorsque vous spécifiez un schéma inline dans le modèle, le **sql : is-mapping-schema** annotation doit également être spécifiée sur le  **\<xsd : Schema >** élément. Le **sql : is-mapping-schema** prend une valeur booléenne (0 = Faux, 1 = true). Un schéma inline avec **sql : is-mapping-schema = « 1 »** est traité comme un schéma annoté inséré et n’est pas retourné dans le document XML.  
   
- Le **sql : is-mapping-schema** annotation appartient à l’espace de noms du modèle **urn : schemas-microsoft-com : sql**.  
+ Le **sql : is-mapping-schema** annotation appartient à l’espace de noms de modèle **urn : schemas-microsoft-com-sql**.  
   
  Pour tester cet exemple, enregistrez le modèle (InlineSchemaTemplate.xml) dans un répertoire local, puis créez et utilisez le script de test SQLXML 4.0 (Sqlxml4test.vbs) afin d'exécuter le modèle. Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- En plus de spécifier le **schéma de mappage** de l’attribut le  **\<XPath-requête >** élément dans un modèle (lorsqu’il existe une requête XPath) ou sur  **\<updg:sync >** élément dans une mise à jour, vous pouvez procédez comme suit :  
+ Outre la spécification de la **schéma de mappage** d’attribut sur le  **\<XPath-requête >** élément dans un modèle (lorsqu’il existe une requête XPath) ou sur  **\< updg:sync >** élément dans une mise à jour, vous pouvez procédez comme suit :  
   
--   Spécifiez le **schéma de mappage** de l’attribut le  **\<racine >** élément (déclaration globale) dans le modèle. Ce schéma de mappage devient ensuite le schéma par défaut qui sera utilisé par tous les nœuds de XPath et de mise à jour qui n’explicite **schéma de mappage** annotation.  
+-   Spécifiez le **schéma de mappage** d’attribut sur le  **\<racine >** élément (déclaration globale) dans le modèle. Ce schéma de mappage devient alors le schéma par défaut qui sera utilisé par tous les nœuds de XPath et de mise à jour qui ont n’explicite **schéma de mappage** annotation.  
   
--   Spécifiez le **schéma de mappage** à l’aide d’ADO **commande** objet.  
+-   Spécifiez le **schéma de mappage** attribut à l’aide d’ADO **commande** objet.  
   
- Le **schéma de mappage** attribut qui est spécifié sur le  **\<-requête xpath >** ou  **\<updg:sync >** élément a la priorité la plus élevée ; ADO **commande** objet a la priorité la plus faible.  
+ Le **schéma de mappage** attribut qui est spécifié sur le  **\<-requête xpath >** ou  **\<updg:sync >** élément a le plus élevé obtenu priorité ; ADO **commande** objet a la priorité la plus basse.  
   
- Notez que si vous spécifiez une requête XPath dans un modèle et que vous ne spécifiez pas un schéma de mappage sur lequel la requête XPath est exécutée, la requête XPath est traitée comme un **dbobject** requête de type. Considérons par exemple le modèle suivant :  
+ Notez que si vous spécifiez une requête XPath dans un modèle et que vous ne spécifiez pas un schéma de mappage par rapport à laquelle la requête XPath est exécutée, la requête XPath est traitée comme un **dbobject** requête de type. Considérons par exemple le modèle suivant :  
   
 ```  
 <sql:xpath-query   
@@ -145,6 +146,6 @@ ms.lasthandoff: 05/03/2018
 </sql:xpath-query>  
 ```  
   
- Le modèle spécifie une requête XPath mais ne spécifie pas de schéma de mappage. Par conséquent, cette requête est traitée comme un **dbobject** une requête de type dans laquelle Production.ProductPhoto est le nom de table et @ProductPhotoID= '100' représente un prédicat qui recherche une photo du produit avec la valeur d’ID de 100. @LargePhoto est la colonne à partir de laquelle récupérer la valeur.  
+ Le modèle spécifie une requête XPath mais ne spécifie pas de schéma de mappage. Par conséquent, cette requête est traitée comme un **dbobject** type de requête dans laquelle Production.ProductPhoto est le nom de table et @ProductPhotoID= '100' représente un prédicat qui recherche une photo du produit avec la valeur d’ID de 100. @LargePhoto est la colonne à partir de laquelle récupérer la valeur.  
   
   

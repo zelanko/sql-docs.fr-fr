@@ -1,5 +1,5 @@
 ---
-title: Déployer des Solutions Power Pivot pour SharePoint | Documents Microsoft
+title: Déployer des Solutions Power Pivot pour SharePoint | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 51dffaf4569cf1aa0527ee0ba4d59379d4faab46
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 94f887aa48a63fbc84e941e6259839bff1327bd3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984761"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Déployer des solutions Power Pivot sur SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  La valeur de retour devrait être **False**. Si la valeur est **True**, vous n’avez pas accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] avec cette application Web.  
   
 ##  <a name="bkmk_farm"></a> Étape 1 : déployer la solution de batterie de serveurs  
- Cette section montre comment déployer des solutions à l’aide de PowerShell, mais vous pouvez également utiliser l’outil de configuration [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour effectuer cette tâche. Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Cette section montre comment déployer des solutions à l’aide de PowerShell, mais vous pouvez également utiliser l’outil de configuration [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour effectuer cette tâche. Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Cette tâche ne doit être effectuée qu’une seule fois, après l’installation de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint.  
   
@@ -118,7 +119,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Cliquez sur **Retirer la solution**.  
   
- Si vous rencontrez des problèmes de déploiement de serveur que vous attribuez à la solution de batterie de serveurs, vous pouvez recommencer en exécutant l’option **Réparer** dans l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il est préférable de réparer les opérations via l'outil, car vous aurez moins d'étapes à effectuer. Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Si vous rencontrez des problèmes de déploiement de serveur que vous attribuez à la solution de batterie de serveurs, vous pouvez recommencer en exécutant l’option **Réparer** dans l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il est préférable de réparer les opérations via l'outil, car vous aurez moins d'étapes à effectuer. Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  Si vous souhaitez néanmoins redéployer toutes les solutions, veillez à le faire dans cet ordre :  
   
@@ -141,7 +142,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  La solution d’application Web est d’abord déployée sur l’Administration centrale, puis sur d’autres applications Web qui prendront en charge les demandes de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour déployer la solution d’application Web sur l’Administration centrale, vous devez utiliser l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou l’applet de commande PowerShell. Pour toutes les autres applications Web, vous pouvez déployer la solution d'application Web manuellement à l'aide de l'Administration centrale ou de PowerShell.  
   
-|Solution| Description|  
+|Solution|Description|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Ajoute Microsoft.AnalysisServices.SharePoint.Integration.dll à l'assembly global.<br /><br /> Ajoute Microsoft.AnalysisServices.ChannelTransport.dll à l'assembly global.<br /><br /> Installe des fonctionnalités et des fichiers de ressources, et enregistre des types de contenu.<br /><br /> Ajoute des modèles de bibliothèque pour la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et les bibliothèques de flux de données.<br /><br /> Ajoute des pages d’application pour la configuration de l’application de service, le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , l’actualisation des données et la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |powerpivotwebapp.wsp|Ajoute les fichiers de ressources Microsoft.AnalysisServices.SharePoint.Integration.dll au dossier des extensions du serveur Web sur le Web frontal.<br /><br /> Ajoute le service web [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] au serveur web frontal.<br /><br /> Ajoute la génération de miniatures pour la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  

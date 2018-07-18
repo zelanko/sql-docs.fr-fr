@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544811"
 ---
 # <a name="backup-and-restore"></a>Sauvegarde et restauration
 Décrit comment les données de sauvegarde et restauration fonctionne pour Parallel Data Warehouse (PDW). Opérations de sauvegarde et de restauration sont utilisées pour la récupération d’urgence. Sauvegarde et restauration peuvent également servir à copier une base de données à partir d’une application sur un autre matériel.  

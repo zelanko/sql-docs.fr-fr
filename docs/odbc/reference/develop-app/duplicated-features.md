@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913362"
 ---
 # <a name="duplicated-features"></a>Fonctionnalités en double
 ODBC 2 suivante. *x* fonctions ont été dupliquées par ODBC 3. *x* fonctions. Par conséquent, l’API ODBC 2. *x* fonctions sont déconseillées dans ODBC 3. *x*. ODBC 3. *x* fonctions sont appelées fonctions de remplacement.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911634"
 ---
 # <a name="diagnostic-handling-rules"></a>Règles de gestion des Diagnostics
 Les règles suivantes régissent la gestion de diagnostic dans **SQLGetDiagRec** et **SQLGetDiagField**.  

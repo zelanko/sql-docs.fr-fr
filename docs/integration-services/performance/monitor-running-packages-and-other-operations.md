@@ -1,14 +1,12 @@
 ---
 title: Surveiller les packages en cours d’exécution et autres opérations | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
+ms.custom: supportability
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed3dff81ab07e210b9b239987fc2a7c9c2c52b2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e3a7c929dd3335c5200efc3d4009ba05053f84a
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403121"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Surveiller les packages en cours d’exécution et autres opérations
   Vous pouvez surveiller les exécutions des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les validations de projet et d’autres opérations en utilisant un ou plusieurs des outils suivants. Certains outils tels que les drainages de données ne sont disponibles que pour les projets déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -45,7 +44,12 @@ ms.lasthandoff: 05/03/2018
      Pour plus d’informations, consultez [Compteurs de performances](../../integration-services/performance/performance-counters.md).  
   
 -   Drainages de données  
-  
+
+> [!NOTE]
+> Cet article décrit comment monitorer des packages SSIS en cours d’exécution de manière générale et comment les monitorer au niveau local. Vous pouvez également exécuter et monitorer des packages SSIS dans Azure SQL Database. Pour plus d’informations, consultez [Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+>
+> Bien que vous puissiez également exécuter des packages SSIS sur Linux, aucun outil de monitoring n’est fourni sur Linux. Pour plus d’informations, consultez [Extraire, transformer et charger des données sur Linux avec SSIS](../../linux/sql-server-linux-migrate-ssis.md).
+
 ## <a name="operation-types"></a>Types d'opération  
  Plusieurs types d’opérations différents sont surveillés dans le catalogue **SSISDB** , sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Plusieurs messages peuvent être associés à chaque opération. Chaque message peut être classifié dans l'un des différents types. Par exemple, un message peut être de type Informations, Warning ou Error. Pour obtenir la liste complète des types de messages, consultez la documentation de la vue Transact-SQL [catalog.operation_messages &#40;Base de données SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md). Pour obtenir une liste complète des types d’opérations, consultez [catalog.operations &#40;Base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
   

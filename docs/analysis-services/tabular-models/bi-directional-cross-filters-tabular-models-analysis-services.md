@@ -1,5 +1,5 @@
 ---
-title: Bidirectionnelles entre les filtres dans les modèles tabulaires | Documents Microsoft
+title: Bidirectionnelle entre les filtres dans les modèles tabulaires | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,12 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033307"
 ---
-# <a name="bi-directional-cross-filters-in-tabular-models"></a>Les filtres croisés bidirectionnels dans les modèles tabulaires
+# <a name="bi-directional-cross-filters-in-tabular-models"></a>Des filtres croisés bidirectionnels dans les modèles tabulaires
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   L’une des nouveautés de SQL Server 2016 est son approche intégrée d’activation des *filtres croisés bidirectionnels* dans les modèles tabulaires. Grâce à elle, plus besoin de concevoir manuellement des solutions de contournement DAX pour propager un contexte de filtre dans les relations de table.  
   
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/10/2018
   
  ![SSAS-BIDI-1-Filteroption](../../analysis-services/tabular-models/media/ssas-bidi-1-filteroption.PNG "SSAS-BIDI-1-Filteroption")  
   
- Il existe deux types de filtre croisé : le filtrage unidirectionnel ou bidirectionnel. Le filtrage unidirectionnel est la direction de filtrage classique de type plusieurs-à-un entre tables de faits et tables dimensionnelles d’une même relation. Le filtrage bidirectionnel est un filtrage croisé qui permet d’appliquer le contexte de filtre d’une relation à une autre relation de table, les deux relations ayant une table en commun.  
+ Il existe deux types de filtres croisés : filtrage d’unidirectionnels et bidirectionnels. Le filtrage unidirectionnel est la direction de filtrage classique de type plusieurs-à-un entre tables de faits et tables dimensionnelles d’une même relation. Le filtrage bidirectionnel est un filtrage croisé qui permet d’appliquer le contexte de filtre d’une relation à une autre relation de table, les deux relations ayant une table en commun.  
   
  Quand **DimDate** et **DimProduct** sont associés à des relations de clé étrangère avec **FactOnlineSales**, un filtre croisé bidirectionnel revient à utiliser simultanément **FactOnlineSales-to-DimDate** et **FactOnlineSales-to-DimProduct** .  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/10/2018
   
  ![SSAS-bidi-6-prodcount-withfilter](../../analysis-services/tabular-models/media/ssas-bidi-6-prodcount-withfilter.png "ssas-bidi-6-prodcount-withfilter")  
   
-## <a name="learn-step-by-step"></a>Obtenir des informations étape par étape  
+## <a name="learn-step-by-step"></a>Découvrez pas à pas  
  Vous pouvez tester le filtrage croisé bidirectionnel en parcourant cette procédure pas à pas. Pour ce faire, voici ce dont vous avez besoin :  
   
 -   Instance de SQL Server 2016 Analysis Services, mode tabulaire, dernière version de CTP  
@@ -197,8 +198,8 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer et gérer des relations dans Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
- [Un exemple pratique de la gestion des relations plusieurs-à-plusieurs simples dans Power Pivot et les modèles tabulaires](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
- [Résolution des relations plusieurs-à-plusieurs exploitant DAX entre le filtrage de table](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
+ [Un exemple pratique de gestion des relations plusieurs-à-plusieurs simples dans Power Pivot et les modèles tabulaires](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
+ [Résolution de relations plusieurs-à-plusieurs exploitant DAX filtrage de table croisée](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   
  [Révolution (blog SQLBI)](http://www.sqlbi.com/articles/many2many/)  
   
   

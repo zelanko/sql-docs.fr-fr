@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911494"
 ---
 # <a name="arguments-in-catalog-functions"></a>Arguments de fonctions de catalogue
 Toutes les fonctions de catalogue acceptent des arguments avec lequel une application peut restreindre l’étendue des données retournées. Par exemple, les premier et deuxième appels à **SQLTables** dans le code suivant retourne un jeu de résultats contenant plus d’informations sur toutes les tables, tandis que le troisième appel retourne des informations sur la table Orders :  

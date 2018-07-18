@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021596"
 ---
 # <a name="amo-data-mining-classes"></a>Classes d'exploration de données AMO
   Les classes d'exploration de données vous permettent de créer, modifier, supprimer et traiter les objets d'exploration de données. L'utilisation d'objets d'exploration de données consiste notamment à créer des structures d'exploration de données, à créer des modèles d'exploration de données et à traiter les modèles.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913474"
 ---
 # <a name="procedure-parameters"></a>Paramètres de procédure
 Paramètres dans les appels de procédure peuvent utiliser en entrée, d’entrée/sortient ou paramètres de sortie. Cela est différent des paramètres de toutes les autres instructions de SQL, qui sont toujours des paramètres d’entrée.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907124"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>Commandes de jeu pris en charge (le pilote ODBC Visual FoxPro)
 Votre application peut envoyer le Visual FoxPro suivant **définir** commandes à une source de données :  

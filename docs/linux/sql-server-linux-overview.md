@@ -1,10 +1,10 @@
 ---
-title: Vue d’ensemble de SQL Server sur Linux | Documents Microsoft
-description: Cet article décrit comment SQL Server s’exécute sur Linux et fournit des informations sur la façon d’en savoir plus.
+title: Vue d’ensemble de SQL Server sur Linux | Microsoft Docs
+description: Cet article décrit comment SQL Server s’exécute sur Linux et fournit des informations sur comment en savoir plus.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 05/24/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 2c67e5d1563ef2420f45ec4b1d0093de888dd157
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
-ms.translationtype: MT
+ms.openlocfilehash: 16ea8b69f1d55e5b338931f0531bdf8a2e037707
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020137"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server sur Linux
 
@@ -28,7 +29,7 @@ SQL Server 2017 s’exécute désormais également sur Linux. C'est le même mot
 
 Pour démarrer, installez SQL Server sur Linux en suivant l'une des sections de démarrage rapide suivantes :
 
-- [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Installation sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installer sur Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Exécuter sur Docker](quickstart-install-connect-docker.md)
@@ -41,10 +42,10 @@ Pour démarrer, installez SQL Server sur Linux en suivant l'une des sections de 
 
 Après l’installation, connectez-vous à l’instance de SQL Server installée sur un ordinateur Linux. Vous pouvez vous connecter localement ou à distance via un large éventail d’outils et de pilotes. Les didacticiels de démarrage rapide montrent comment utiliser l'outil en ligne de commande [sqlcmd](sql-server-linux-setup-tools.md). Les autres outils possibles sont les suivants :
 
-| Outil | Didacticiel |
+| Tool | Didacticiel |
 |-----|-----|
-| Visual Studio Code (Code de Visual Studio) | [Utilisation de Code de Visual Studio avec SQL Server sur Linux](sql-server-linux-develop-use-vscode.md) |
-| SQL Server Management Studio (SSMS) | [Utilisez SSMS sur Windows pour se connecter à SQL Server sur Linux](sql-server-linux-manage-ssms.md) |
+| Visual Studio Code (VS Code) | [Utiliser VS Code avec SQL Server sur Linux](sql-server-linux-develop-use-vscode.md) |
+| SQL Server Management Studio (SSMS) | [Utiliser SSMS sur Windows pour se connecter à SQL Server sur Linux](sql-server-linux-manage-ssms.md) |
 | Outils de données SQL Server (SSDT) | [Utiliser SSDT avec SQL Server sur Linux](sql-server-linux-develop-use-ssdt.md) |
 
 ## <a name="explore"></a>Explorer

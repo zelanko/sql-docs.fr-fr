@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908074"
 ---
 # <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>Prise en charge des fonctions scalaires (le pilote ODBC Visual FoxPro)
 Le pilote ODBC Visual FoxPro prend en charge trois types de fonctions scalaires définies dans la grammaire SQL ODBC : chaîne, numériques et fonctions de date et d’heure.  

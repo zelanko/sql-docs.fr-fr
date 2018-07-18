@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907004"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Substitution de précision par défaut et l’échelle pour les Types de données numériques
 Lorsque le champ SQL_DESC_TYPE dans un ARD a la valeur SQL_C_NUMERIC, en appelant **SQLBindCol** ou **SQLSetDescField**, le champ SQL_DESC_SCALE dans le ARD est défini sur 0 et le champ SQL_DESC_PRECISION est défini avec une précision par défaut définie par le pilote. Cela est également vrai lorsque le champ SQL_DESC_TYPE dans un APD a la valeur SQL_C_NUMERIC, en appelant **SQLBindParameter** ou **SQLSetDescField**. Cela est vrai pour les paramètres de sortie, d’entrée/sortie ou d’entrée.  

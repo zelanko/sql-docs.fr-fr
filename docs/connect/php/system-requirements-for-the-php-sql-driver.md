@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c1eae99587a1f447b809becee9509d5a04136e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8b98b10ee285c8e6be4e34214689eeaa7d7049f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309798"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Configuration système requise pour les pilotes Microsoft pour PHP pour SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +52,7 @@ Pour plus d’informations sur la façon de télécharger et installer les derni
     > [!NOTE]  
     > Microsoft prend en charge uniquement IIS.  
 
-## <a name="odbc-driver"></a>Pilote ODBC
+## <a name="odbc-driver"></a>Pilote ODBC
 
 La version correcte du pilote Microsoft ODBC pour SQL Server est requis sur l’ordinateur sur lequel s’exécute PHP. Télécharger à partir des liens suivants :
 - [Pilote ODBC Microsoft 17 pour SQL Server](https://www.microsoft.com/en-us/download/details.aspx?id=56567)
@@ -80,11 +80,11 @@ Bases de données SQL Azure sont pris en charge. Pour plus d’informations, con
 |Instance gérée de SQL Azure<br/> (Version préliminaire privée étendue)|O|O| | | |
 |Azure SQL Data Warehouse|O|O| | | |
 |SQL Server 2017   |O|O| | | |
-|SQL Server 2016   |O|O|O| | |
+|SQL Server 2016   |O|O|O| | |
 |SQL Server 2014   |O|O|O|O|O|
 |SQL Server 2012   |O|O|O|O|O|
-|SQL Server 2008 R2|O|O|O|O|O|
-|SQL Server 2008   | | |O|O|O|
+|SQL Server 2008 R2|O|O|O|O|O|
+|SQL Server 2008   | | |O|O|O|
 
 ## <a name="operating-systems"></a>Systèmes d'exploitation
 Les systèmes d’exploitation pris en charge pour les versions du pilote sont les suivantes :

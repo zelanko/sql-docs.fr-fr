@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,14 +24,15 @@ helpviewer_keywords:
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 caps.latest.revision: 76
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 366a5352806860cf80b289976350e4150787c16b
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 10e01507c7c33f272872ecf5022ad287ccaeafa6
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942925"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ALTER ASSEMBLY assembly_name
  Spécifie la propriété de l'ensemble d'autorisation du code d'accès [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] de l'assembly. Pour plus d’informations sur cette propriété, consultez [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md).  
   
 > [!NOTE]  
->  Les options EXTERNAL_ACCESS et UNSAFE ne sont pas disponibles dans une base de données à relation contenant-contenu.  
+>  Les options EXTERNAL_ACCESS et UNSAFE ne sont pas disponibles dans une base de données autonome.  
   
  VISIBILITY = { ON | OFF }  
  Indique si l'assembly est visible pour créer des fonctions, des procédures stockées, des déclencheurs, des types et des fonctions d'agrégation définis par l'utilisateur CLR (Common Language Runtime). Avec la valeur OFF, l'assembly ne peut être appelé que par d'autres assemblys. S'il existe des objets de base de données CLR créés sur l'assembly, sa visibilité ne peut pas être modifiée. Tout assembly référencé par *assembly_name* est chargé par défaut comme n’étant pas visible.  
@@ -118,13 +118,13 @@ ALTER ASSEMBLY assembly_name
  Supprime le nom de fichier associé à l'assembly ou tous les fichiers associés à l'assembly, de la base de données. Si DROP FILE est utilisé avec ADD FILE qui suit, il s'exécute en premier. Cela vous permet de remplacer un fichier avec le même nom de fichier.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
  [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
  Charge un fichier à associer à l’assembly, par exemple du code source, des fichiers de débogage ou d’autres informations apparentées, sur le serveur et l’affiche dans la vue de catalogue **sys.assembly_files**. *client_file_specifier* spécifie l’emplacement à partir duquel le fichier est chargé. *file_bits* peut être utilisé à la place pour spécifier la liste des valeurs binaires qui constituent le fichier. *file_name* spécifie le nom sous lequel le fichier doit être stocké dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *file_name* doit être spécifié si *file_bits* est spécifié, et est facultatif si *client_file_specifier* est spécifié. Si *file_name* n’est pas spécifié, la partie file_name de *client_file_specifier* est utilisée comme *file_name*.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
 ## <a name="remarks"></a>Notes   
  ALTER ASSEMBLY n'interrompt pas les sessions en cours qui exécutent du code dans l'assembly modifié. Ces sessions se terminent en utilisant les bits non modifiés de l'assembly.  

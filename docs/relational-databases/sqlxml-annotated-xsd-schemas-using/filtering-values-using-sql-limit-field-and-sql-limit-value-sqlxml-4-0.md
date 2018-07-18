@@ -1,5 +1,5 @@
 ---
-title: 'Filtrage des valeurs à l’aide de SQL : limit-champ et SQL : limit-value (SQLXML 4.0) | Documents Microsoft'
+title: 'Filtrage des valeurs à l’aide de SQL : limit-champ et SQL : limit-value (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,21 +25,22 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cc72a5c28166d3eac2b1ee9200bb1c6549b818cf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032579"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrage de valeurs à l'aide des annotations sql:limit-field et sql:limit-value (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Vous pouvez limiter les lignes qui sont retournées à partir d'une requête de base de données et d'après une valeur de limitation. Le **SQL : limit-champ** et **SQL : limit-valeur** les annotations sont utilisées pour identifier la colonne de base de données qui contient les valeurs de limitation et spécifiez une valeur de limitation spécifique à utiliser pour filtrer les données retournées.  
+  Vous pouvez limiter les lignes qui sont retournées à partir d'une requête de base de données et d'après une valeur de limitation. Le **SQL : limit-champ** et **SQL : limit-valeur** les annotations sont utilisées pour identifier la colonne de base de données qui contient les valeurs de limitation et spécifiez une valeur de limitation spécifique à utiliser pour filtrer les données retourné.  
   
- Le **SQL : limit-champ** annotation est utilisée pour identifier une colonne qui contient une valeur de limitation ; elle n’est autorisée sur chaque élément ou attribut mappé.  
+ Le **SQL : limit-champ** annotation est utilisée pour identifier une colonne qui contient une valeur de limitation ; elle est autorisée sur chaque élément ou attribut mappé.  
   
  Le **SQL : limit-valeur** annotation est utilisée pour spécifier la valeur limitée dans la colonne qui est spécifiée dans le **SQL : limit-champ** annotation. Le **SQL : limit-valeur** annotation est facultative. Si **SQL : limit-valeur** est ne pas spécifié, une valeur NULL est supposée.  
   
 > [!NOTE]  
->  Lorsque vous travaillez avec un **SQL : limit-champ** où la colonne SQL mappée est de type **réel**, SQLXML 4.0 effectue une conversion sur le **SQL : limit-valeur** tel que spécifié dans les schémas XML en tant qu’un **nvarchar** valeur spécifiée. Pour cela, les valeurs de limite décimales doivent être spécifiées à l'aide de la notation scientifique complète. Pour plus d'informations, consultez l'exemple B ci-dessous.  
+>  Lorsque vous travaillez avec un **SQL : limit-champ** où la colonne SQL mappée est de type **réel**, SQLXML 4.0 effectue une conversion sur le **SQL : limit-valeur** comme indiqué dans les schémas XML comme un **nvarchar** valeur spécifiée. Pour cela, les valeurs de limite décimales doivent être spécifiées à l'aide de la notation scientifique complète. Pour plus d'informations, consultez l'exemple B ci-dessous.  
   
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide de ces exemples, vous devez avoir installé les composants suivants :  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/03/2018
   
  Un client peut disposer d'une adresse de livraison et/ou d'une adresse de facturation. Les valeurs de la colonne AddressType sont Shipping et Billing.  
   
- Il s’agit du schéma de mappage dans lequel le **ShipTo** attribut de schéma est mappé à la colonne StreetAddress dans la relation Addresses. Les valeurs qui sont retournées pour cet attribut sont limitées aux seules les adresses shipping en spécifiant le **SQL : limit-champ** et **SQL : limit-valeur** annotations. De même, la **BillTo** attribut de schéma retourne uniquement l’adresse de facturation d’un client.  
+ Il s’agit du schéma de mappage dans lequel le **ShipTo** attribut de schéma est mappé à la colonne StreetAddress dans la relation Addresses. Les valeurs qui sont retournées pour cet attribut sont limitées à uniquement les adresses de livraison en spécifiant le **SQL : limit-champ** et **SQL : limit-valeur** annotations. De même, le **BillTo** attribut de schéma retourne uniquement l’adresse de facturation d’un client.  
   
  Voici le schéma :  
   
@@ -154,7 +155,7 @@ ms.lasthandoff: 05/03/2018
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -176,7 +177,7 @@ ms.lasthandoff: 05/03/2018
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Il s’agit du schéma de mappage dans lequel le **OrderID** attribut sur les détails de commande est mappé à la colonne OrderID dans la relation orders. Les valeurs retournées pour cet attribut sont limitées à celles qui ont une valeur de 2, 0000000e-001 (0,2) comme spécifié pour le **remise** d’attribut à l’aide de la **SQL : limit-champ** et **SQL : limit-valeur** annotations.  
+ Il s’agit du schéma de mappage dans lequel le **OrderID** attribut sur les détails de commande est mappé à la colonne OrderID dans la relation orders. Les valeurs qui sont retournées pour cet attribut sont limitées à celles qui ont une valeur de 2, 0000000e-001 (0,2) que celui spécifié pour le **Discount** attribut à l’aide de la **SQL : limit-champ** et **SQL : limit-valeur** annotations.  
   
  Voici le schéma :  
   
@@ -293,7 +294,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  Exécutez le fichier TestQuery.vbs en cliquant dessus dans l'Explorateur Windows.  
   
-     Voici le résultat obtenu :  
+     Voici le résultat obtenu :  
   
     ```  
     <root>  

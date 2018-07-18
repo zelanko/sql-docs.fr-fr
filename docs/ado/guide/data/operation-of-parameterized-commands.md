@@ -2,7 +2,6 @@
 title: Fonctionnement des commandes paramétrées | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce4d9977628e4024539a2e3e9fe8950513100620
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ea5f45e5f7fa1b60bb9f6b4884fcb1e480534d00
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272168"
 ---
 # <a name="operation-of-parameterized-commands"></a>Fonctionnement des commandes paramétrées
 Si vous travaillez avec un enfant **Recordset**, en particulier par rapport à la taille du parent **Recordset**, mais avez besoin d’accéder uniquement quelques chapitres enfant, il peut s’avérer plus efficace d’utiliser un commande paramétrable.  
@@ -78,7 +78,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  À l’aide d’une hiérarchie non paramétrée, il n’existe aucun moyen pour relier les tables de jeux et les équipes de sorte que l’enfant **Recordset** pour chaque équipe contienne sa planification complète. Vous pouvez créer des chapitres contenant le calendrier à domicile ou la planification de la feuille de route, mais pas les deux. Il s’agit, car la clause RELATE vous limite à des relations parent-enfant de l’écran (pc1 = cc1) AND (pc2 = pc2). Par conséquent, si votre commande inclut « RELATE team_id TO home_team, team_id TO visiting_team », vous obtiendrez uniquement les jeux où une équipe lu lui-même. Vous souhaitez "(team_id=home_team) ou (team_id = visiting_team) », mais le fournisseur Shape ne prend pas en charge la clause OR.  
   
- Pour obtenir le résultat souhaité, vous pouvez utiliser une commande paramétrée. Par exemple :  
+ Pour obtenir le résultat souhaité, vous pouvez utiliser une commande paramétrée. Exemple :  
   
 ```  
 SHAPE {SELECT * FROM teams}   

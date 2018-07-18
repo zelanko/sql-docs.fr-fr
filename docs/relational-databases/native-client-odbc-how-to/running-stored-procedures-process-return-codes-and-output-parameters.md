@@ -1,31 +1,30 @@
 ---
-title: Traiter les Codes de retour et les paramètres de sortie (ODBC) | Documents Microsoft
+title: Traiter les Codes de retour et les paramètres de sortie (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b17a4c623e280e2ae8b1e16f9b4b998dba562b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b64711f2cf375ee602e26a77a00d8a22e9e16e4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423988"
 ---
-# <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Procédures stockées en cours d’exécution - traiter des Codes de retour et les paramètres de sortie
+# <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Exécution de procédures stockées - traiter des Codes de retour et les paramètres de sortie
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  Construisez une instruction SQL qui utilise la séquence d'échappement ODBC CALL. L'instruction doit utiliser des marqueurs de paramètre pour chaque paramètre d'entrée, d'entrée/sortie et de sortie et pour la valeur de retour de la procédure (le cas échéant).  
   
-2.  Appelez [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) pour chaque entrée, entrée/sortie et paramètre de sortie et pour la procédure retourne la valeur (le cas échéant).  
+2.  Appelez [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) pour chaque entrée, entrée/sortie et paramètre de sortie et pour connaître la procédure retourne la valeur (le cas échéant).  
   
 3.  Exécutez l'instruction avec **SQLExecDirect**.  
   
@@ -199,6 +198,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Appeler des procédures stockées & #40 ; ODBC & #41 ;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
+[Appeler des procédures stockées &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   

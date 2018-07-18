@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014096"
 ---
 # <a name="removing-a-data-processing-extension"></a>Suppression d'une extension pour le traitement des données
   Pour supprimer une extension pour le traitement des données, supprimez simplement l’élément **Extension** de votre extension pour le traitement des données du fichier de configuration. Si vous avez créé des entrées pour un serveur de rapports et le Concepteur de rapports, supprimez l’élément **Extension** des fichiers RSReportServer.config et RSReportDesigner.config. Une fois les informations de configuration supprimées, l'extension pour le traitement des données n'est plus accessible au composant.  

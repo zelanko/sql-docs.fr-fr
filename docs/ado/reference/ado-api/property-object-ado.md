@@ -2,7 +2,6 @@
 title: Objet de propriété (ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b646b698f8d14e6440368dbffb6e472360c2832d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4256e213e6ce9d6c96b55bda013fbf79f1a49cda
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280758"
 ---
 # <a name="property-object-ado"></a>Objet de propriété (ADO)
 Représente une caractéristique dynamique d’un objet ADO qui est défini par le fournisseur.  

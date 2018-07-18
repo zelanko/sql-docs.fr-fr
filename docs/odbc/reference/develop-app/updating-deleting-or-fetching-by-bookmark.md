@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914854"
 ---
 # <a name="updating-deleting-or-fetching-by-bookmark"></a>Mise à jour, la suppression ou l’extraction par le signet
 Signets peuvent être utilisés pour identifier les données à jour dans le jeu de résultats, supprimé à partir du résultat définie ou récupérée depuis le jeu de résultats pour les tampons de l’ensemble de lignes. Ces opérations sont effectuées par un appel à **SQLBulkOperations** avec un *Option* argument de SQL_UPDATE_BY_BOOKMARK, SQL_DELETE_BY_BOOKMARK ou SQL_FETCH_BY_BOOKMARK. Les signets utilisées dans ces opérations sont stockés dans des tampons de lignes de la colonne 0. Lors de la mise à jour par un signet, qui résultent des colonnes du jeu de données sont mises à jour est récupérée à partir de mémoires tampons de l’ensemble de lignes. Pour plus d’informations, consultez [mise à jour des données avec SQLBulkOperations](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md).

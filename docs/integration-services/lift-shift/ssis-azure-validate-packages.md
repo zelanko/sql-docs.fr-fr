@@ -1,25 +1,27 @@
 ---
 title: Valider les packages SSIS déployés sur Azure | Microsoft Docs
+description: Découvrez comment l’Assistant Déploiement de packages SSIS recherche dans les packages les problèmes connus qui peuvent les empêcher de s’exécuter comme prévu dans Azure.
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 09086d0f4ff9c5a3f69a922e0c17c046c84001fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5dcdd0f396f0cb6a272af121fd03757dc8bb2b72
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262053"
 ---
-# <a name="validate-ssis-packages-deployed-to-azure"></a>Valider les packages SSIS déployés sur Azure
-Quand vous déployez un projet SQL Server Integration Services (SSIS) sur la base de données de catalogue SSIS (SSISDB) sur un serveur Azure, l’Assistant Déploiement de package ajoute une étape de validation après la page **Vérifier**. Cette étape de validation inspecte les packages du projet à la recherche de problèmes connus susceptibles d’impacter leur exécution dans Azure SSIS Integration Runtime. L’Assistant affiche ensuite tous les avertissements applicables dans la page **Valider**.
+# <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Valider les packages SSIS (SQL Server Integration Services) déployés sur Azure
+
+Quand vous déployez un projet SQL Server Integration Services (SSIS) sur le catalogue SSIS (SSISDB) sur un serveur Azure, l’Assistant Déploiement de package ajoute une étape de validation supplémentaire après la page **Passer en revue**. Cette étape de validation inspecte les packages du projet à la recherche de problèmes connus susceptibles d’impacter leur exécution dans Azure SSIS Integration Runtime. L’Assistant affiche ensuite tous les avertissements applicables dans la page **Valider**.
 
 > [!IMPORTANT]
 > La validation décrite dans cet article se produit quand vous déployez un projet avec SQL Server Data Tools (SSDT) version 17.4 ou ultérieure. Pour obtenir la dernière version de SSDT, consultez [Télécharger SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md).
@@ -29,7 +31,7 @@ Pour plus d’informations sur l’Assistant Déploiement de package, consultez 
 ## <a name="validate-connection-managers"></a>Valider les gestionnaires de connexions
 
 L’Assistant inspecte certains gestionnaires de connexions à la recherche des problèmes suivants qui peuvent entraîner l’échec de la connexion :
-- **Authentification Windows**. Si une chaîne de connexion utilise l’authentification Windows, la validation génère un avertissement. L’authentification Windows nécessite des étapes de configuration supplémentaires. Pour plus d’informations, consultez [Se connecter à des sources de données locales avec l’authentification Windows](ssis-azure-connect-with-windows-auth.md).
+- **Authentification Windows**. Si une chaîne de connexion utilise l’authentification Windows, la validation génère un avertissement. L’authentification Windows nécessite des étapes de configuration supplémentaires. Pour plus d’informations, consultez [Se connecter à des données et des partages de fichiers avec l’authentification Windows](ssis-azure-connect-with-windows-auth.md).
 - **Chemin du fichier**. Si une chaîne de connexion contient un chemin de fichier local codé en dur, comme `C:\\...`, la validation génère un avertissement. Les packages contenant un chemin absolu peuvent échouer.
 - **Chemin UNC**. Si une chaîne de connexion contient un chemin UNC, la validation génère un avertissement. Les packages contenant un chemin UNC peuvent échouer, car ce chemin nécessite généralement l’authentification Windows pour l’octroi de l’accès.
 - **Nom d’hôte**. Si une propriété de serveur contient un nom d’hôte au lieu d’une adresse IP, la validation génère un avertissement. Les packages contenant un nom d’hôte peuvent échouer, car le réseau virtuel Azure exige généralement la bonne configuration DNS pour prendre en charge la résolution de noms DNS.
@@ -80,4 +82,4 @@ La validation génère un avertissement si un package contient une tâche de scr
 Le format Orc n’est pas pris en charge dans la destination HDFS et la destination Azure Data Lake Store.
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour savoir comment planifier l’exécution d’un package sur Azure, consultez [Planifier l’exécution d’un package SSIS sur Azure](ssis-azure-schedule-packages.md).
+Pour découvrir comment planifier l’exécution d’un package sur Azure, consultez [Planifier l’exécution de packages SSIS sur Azure](ssis-azure-schedule-packages.md).

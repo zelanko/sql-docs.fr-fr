@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024756"
 ---
 # <a name="amo-olap-classes"></a>Classes OLAP AMO
   Les classes OLAP AMO (Analysis Management Objects) permettent de créer, modifier, supprimer et traiter les cubes, les dimensions et les objets connexes tels que les indicateurs de performance clés, les actions et la mise en cache proactive.  

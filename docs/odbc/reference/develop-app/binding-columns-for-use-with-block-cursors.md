@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909644"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Liaison de colonnes pour une utilisation avec les curseurs de bloc
 Étant donné que les curseurs de bloc retournent plusieurs lignes, les applications qui les utilisent doivent lier un tableau de variables à chaque colonne plutôt qu’une variable unique. Ces tableaux est désignés collectivement par le *tampons de l’ensemble de lignes*. Voici les deux styles de liaison :  

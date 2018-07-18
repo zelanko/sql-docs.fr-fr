@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915206"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>Introduction à SQL et ODBC
 ODBC a été créé pour fournir une méthode uniforme d’accès aux systèmes de gestion des différents ou hétérogènes, de la base de données (SGBD). Cette introduction présente les concepts liés au développement d’ODBC.  

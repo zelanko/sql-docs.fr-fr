@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913244"
 ---
 # <a name="getting-long-data"></a>Obtention de données de type Long
 Définir des SGBD *données longues* sous forme de n’importe quel caractère ou binaire sur une certaine taille, tels que 255 caractères. Ces données peuvent être assez petites pour être stocké dans une mémoire tampon unique, telle qu’une description de partie de plusieurs caractères de milliers. Toutefois, il peut être trop long pour stocker en mémoire, telles que des documents de texte long ou de bitmaps. Étant donné que ces données ne peut pas être stockées dans un tampon unique, il est extraite du pilote dans des parties avec **SQLGetData** après les autres données de la ligne a été extraite.  

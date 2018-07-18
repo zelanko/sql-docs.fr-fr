@@ -2,7 +2,6 @@
 title: EventReasonEnum | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b9645e05ce3387ea5948cca07b91ecdc80cd4b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b173fb6838b082b0600714f3756858dcc1615ba2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278438"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 Spécifie la raison qui a provoqué un événement se produise.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|1|Une opération a ajouté un nouvel enregistrement.|  
+|**adRsnAddNew**| 1|Une opération a ajouté un nouvel enregistrement.|  
 |**adRsnClose**|9|Une opération a fermé le **Recordset**.|  
 |**adRsnDelete**|2|Une opération a supprimé un enregistrement.|  
 |**adRsnFirstChange**|11|Une opération effectuée la première modification à un enregistrement.|  

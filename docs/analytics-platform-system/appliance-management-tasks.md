@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538829"
 ---
 # <a name="appliance-management-tasks-for-analytics-platform-system"></a>Tâches de gestion de matériel pour système de plateforme Analytique
 Ce guide décrit comment effectuer des tâches d’administration de solution pour le système de plateforme Analytique (APS).  

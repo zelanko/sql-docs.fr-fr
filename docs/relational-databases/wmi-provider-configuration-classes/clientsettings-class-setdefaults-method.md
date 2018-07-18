@@ -1,5 +1,5 @@
 ---
-title: Méthode SetDefaults (classe ClientSettings) | Documents Microsoft
+title: Méthode SetDefaults (classe ClientSettings) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,14 +24,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bedc2c0b326b0007c3a4d3edbc6301090fd709d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989111"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>Classe ClientSettings - SetDefaults, méthode
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Définit toutes les valeurs par défaut pour l’instance de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client avec l’option pour remplacer les données existantes.  
+  Définit toutes les valeurs par défaut pour l’instance de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client avec l’option permettant de remplacer les données existantes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,12 +42,12 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
- A **ClientSettings** objet qui représente un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance du client.  
+ *object*  
+ Un **ClientSettings** objet qui représente un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance du client.  
   
 #### <a name="parameters"></a>Paramètres  
   
-|Paramètre| Description|  
+|Paramètre|Description|  
 |---------------|-----------------|  
 |*OverwriteAll*|Valeur booléenne qui spécifie s'il faut remplacer les valeurs existantes sur l'instance du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **true** pour remplacer les données existantes ou **false** si les données existantes ne doivent pas être remplacées.|  
   

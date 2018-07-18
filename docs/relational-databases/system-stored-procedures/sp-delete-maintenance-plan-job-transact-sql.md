@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_job (Transact-SQL) | Documents Microsoft
+title: sp_delete_maintenance_plan_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5617e3d37b6c880e2d35b9f562e26714eea05a51
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974009"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ## <a name="remarks"></a>Notes  
  **sp_delete_maintenance_plan_job** doit être exécuté à partir de la **msdb** base de données.  
   
- Lorsque tous les travaux ont été supprimés du plan de maintenance, nous vous recommandons d’exécutent les utilisateurs **sp_delete_maintenance_plan_db** pour supprimer les bases de données à partir du plan.  
+ Lorsque tous les travaux ont été supprimés du plan de maintenance, nous recommandons que les utilisateurs exécuter **sp_delete_maintenance_plan_db** pour supprimer les bases de données à partir du plan.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_delete_maintenance_plan_job**.  

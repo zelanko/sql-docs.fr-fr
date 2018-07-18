@@ -3,7 +3,6 @@ title: Clustering de basculement Windows Server avec SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 35
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 31c8079053cc729a5ca5445dc1aebd7ccf32e738
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 43117124b43bf234f8d72c9e2974d6e42631d06c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772465"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clustering de basculement Windows Server avec SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
  Entité physique ou logique qui peut être détenue par un nœud, être mise en ligne et hors connexion, déplacée entre des nœuds et être gérée comme un objet cluster. Une ressource de cluster ne peut appartenir qu'à un seul nœud à un moment donné.  
   
  Role  
- Collection de ressources de cluster gérée comme un même objet de cluster pour fournir des fonctionnalités spécifiques. Pour SQL Server, un rôle est un groupe de disponibilité Always On ou une instance de cluster de basculement Always On. Un rôle contient toutes les ressources de cluster qui sont requises pour un groupe de disponibilité ou une instance de cluster de basculement. Le basculement et la restauration automatique agissent toujours dans le contexte des rôles. Pour une instance de cluster de basculement, le rôle contient une ressource d’adresse IP, une ressource de nom de réseau et les ressources SQL Server. Un rôle de groupe de disponibilité contient la ressource de groupe de disponibilité et, si un écouteur est configuré, un nom de réseau et une ressource d’adresse IP. 
+ Collection de ressources de cluster gérée comme objet de cluster unique pour fournir des fonctionnalités spécifiques. Pour SQL Server, un rôle est un groupe de disponibilité Always On ou une instance de cluster de basculement Always On. Un rôle contient toutes les ressources de cluster qui sont requises pour un groupe de disponibilité ou une instance de cluster de basculement. Le basculement et la restauration automatique agissent toujours dans le contexte des rôles. Pour une instance de cluster de basculement, le rôle contient une ressource d’adresse IP, une ressource de nom de réseau et les ressources SQL Server. Un rôle de groupe de disponibilité contient la ressource de groupe de disponibilité et, si un écouteur est configuré, un nom de réseau et une ressource IP. 
 
  Ressource de nom réseau  
  Nom de serveur logique qui est géré en tant que ressource de cluster. La ressource de nom réseau doit être utilisée avec une ressource d'adresse IP. Ces entrées peuvent nécessiter des objets dans Active Directory Domain Services et/ou DNS. 

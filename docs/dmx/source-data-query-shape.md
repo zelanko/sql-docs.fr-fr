@@ -1,32 +1,20 @@
 ---
-title: FORME (DMX) | Documents Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SHAPE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SHAPE statement
-- multiple data sources
-ms.assetid: b9526ec2-40bc-4bf5-b4e5-774f71075065
-caps.latest.revision: 37
-author: Minewiskan
+title: FORME (DMX) | Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 0c31d8d4725d90200f7f2811f974ffd9b98bcaa2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8e5c86484252d45c8c7edbd79690159e116d9b3a
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985292"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;requête de source de données&gt; -forme
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,13 +40,13 @@ APPEND ({ <child table query> }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *requête principale*  
+ *requête maître*  
  Requête retournant la table parent.  
   
  *requête de table enfant*  
  Requête retournant la table imbriquée.  
   
- *colonne de référence*  
+ *colonne maître*  
  Colonne de la table parent permettant d'identifier les lignes enfants dans le résultat d'une requête de table enfant.  
   
  *colonne enfant*  
@@ -71,7 +59,7 @@ APPEND ({ <child table query> }
  Vous devez ordonner les requêtes par la colonne qui relie la table parent à la table enfant.  
   
 ## <a name="examples"></a>Exemples  
- Vous pouvez utiliser l’exemple suivant dans un [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) instruction pour former un modèle contenant une table imbriquée. Les deux tables au sein de la **forme** instruction au moyen du **OrderNumber** colonne.  
+ Vous pouvez utiliser l’exemple suivant dans un [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) instruction pour former un modèle contenant une table imbriquée. Les deux tables au sein de la **forme** instruction associées par le biais du **OrderNumber** colonne.  
   
 ```  
 SHAPE {  
@@ -85,8 +73,8 @@ SHAPE {
   
 ## <a name="see-also"></a>Voir aussi  
  [&#60;requête de source de données&#62;](../dmx/source-data-query.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
- [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

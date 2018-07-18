@@ -1,38 +1,27 @@
 ---
-title: PredictAssociation (DMX) | Documents Microsoft
-ms.custom: ''
-ms.date: 09/14/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictAssociation
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictAssociation function
-ms.assetid: 33eb66b5-84c6-449f-aaae-316345bc4ad5
-caps.latest.revision: 33
-author: Minewiskan
+title: PredictAssociation (DMX) | Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: e1d65c529dd268560b34d25a1cb767aefe4575db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7a23407b546bcde2dd1fde81654da4fe861e0719
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989541"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Prévoit une appartenance associative.  
   
-Par exemple, vous pouvez utiliser la fonction PredictAssociation pour obtenir l’ensemble des recommandations, étant donné l’état actuel du panier d’achat d’un client. 
+Par exemple, vous pouvez utiliser la fonction PredictAssociation pour obtenir l’ensemble des recommandations compte tenu de l’état actuel du panier d’achat pour un client. 
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,17 +34,17 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
  Algorithmes qui contiennent des tables imbriquées prévisibles, y compris l’association et certains algorithmes de classification. Les algorithmes de classification qui prennent en charge des tables imbriquées sont le [!INCLUDE[msCoName](../includes/msconame-md.md)] arbres de décision, [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes, et [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes de réseau neuronal.  
   
 ## <a name="return-type"></a>Type de retour  
- \<Expression de table >  
+ \<expression de table >  
   
 ## <a name="remarks"></a>Notes  
- Les options pour le **PredictAssociation** fonction incluent EXCLUDE_NULL, INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (par défaut), INPUT_ONLY, INCLUDE_STATISTICS et INCLUDE_NODE_ID.  
+ Les options pour le **PredictAssociation** fonction inclure EXCLUDE_NULL, INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (par défaut), INPUT_ONLY, INCLUDE_STATISTICS et INCLUDE_NODE_ID.  
   
 > [!NOTE]  
 >  INCLUSIVE, EXCLUSIVE, INPUT_ONLY et INCLUDE_STATISTICS s'appliquent uniquement à une référence de colonne de table, et EXCLUDE_NULL et INCLUDE_NULL s'appliquent uniquement à une référence de colonne scalaire.  
   
  INCLUDE_STATISTICS retourne uniquement **$Probability** et **$AdjustedProbability**.  
   
- Si le paramètre numérique *n* est spécifié, le **PredictAssociation** fonction retourne les n premières valeurs probablement selon la probabilité :  
+ Si le paramètre numérique *n* est spécifié, le **PredictAssociation** fonction retourne les n premières valeurs probables selon la probabilité :  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
@@ -72,7 +61,7 @@ SELECT
 From  
   [Association]  
 ```  
-L’exemple suivant montre comment vous pouvez utiliser une table imbriquée comme entrée pour la fonction de prédiction, à l’aide de la clause SHAPE. La requête SHAPE crée un ensemble de lignes avec customerId comme une seule colonne et une table imbriquée en tant que deuxième colonne, qui contient la liste des produits de qu'un client a déjà. 
+L’exemple suivant montre comment vous pouvez utiliser une table imbriquée comme entrée pour la fonction de prédiction, à l’aide de la clause de forme. La requête SHAPE crée un ensemble de lignes avec customerId comme une seule colonne et une table imbriquée en tant que deuxième colonne, qui contient la liste des produits, qu'un client a déjà apporté. 
 
 ~~~~
 SELECT T.[CustomerId], PredictAssociation(MyNestedTable, 5) // returns top 5 associated items

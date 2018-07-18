@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539599"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacité de traitement et de stockage dans le système de plateforme Analytique
 Vos exigences professionnelles de déterminer le nombre d’unités d’échelle de données et la taille des disques de nœud de calcul dont vous avez besoin dans votre solution de système de plateforme Analytique (APS). Utilisez ces calculs de traitement et de stockage pour guider la capacité de votre achat et les décisions de planification.  

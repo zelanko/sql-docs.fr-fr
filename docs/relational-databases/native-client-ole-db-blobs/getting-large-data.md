@@ -1,13 +1,12 @@
 ---
-title: Obtention de données volumineuses | Documents Microsoft
+title: Obtention de données volumineuses | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,22 +15,22 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 313fdc999b80c8c1797f6be376836b41adc710e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ed32d379c0a0a58af6a4239899af434027a904f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421558"
 ---
 # <a name="getting-large-data"></a>Obtention de données volumineuses
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  En règle générale, les consommateurs doivent isoler le code qui crée un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet de stockage de fournisseur OLE DB Native Client depuis un autre code qui gère les données non référencées via un **ISequentialStream** pointeur d’interface.  
+  En règle générale, les consommateurs doivent isoler le code qui crée un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet de stockage de fournisseur OLE DB Native Client à partir de tout autre code qui gère les données non référencées via un **ISequentialStream** pointeur d’interface.  
   
  Cette rubrique aborde les fonctionnalités disponibles avec les fonctions suivantes :  
   
@@ -41,9 +40,9 @@ ms.lasthandoff: 05/03/2018
   
 -   ICommand::Execute  
   
- Si la propriété DBPROP_ACCESSORDER (dans le groupe de propriétés d’ensemble de lignes) est définie à une des valeurs DBPROPVAL_AO_SEQUENTIAL ou la valeur DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, le consommateur doit extraire une seule ligne de données dans un appel à la **GetNextRows** méthode étant donné que les données BLOB ne sont pas mis en mémoire tampon. Si la valeur de DBPROP_ACCESSORDER a DBPROPVAL_AO_RANDOM, le consommateur peut extraire plusieurs lignes de données dans **GetNextRows**.  
+ Si la propriété DBPROP_ACCESSORDER (dans le groupe de propriétés d’ensemble de lignes) est définie à une des valeurs DBPROPVAL_AO_SEQUENTIAL ou la valeur DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, le consommateur doit extraire une seule ligne de données dans un appel à la **GetNextRows**  (méthode), car les données BLOB ne sont pas mis en mémoire tampon. Si la valeur de DBPROP_ACCESSORDER est définie sur DBPROPVAL_AO_RANDOM, le consommateur peut extraire plusieurs lignes de données dans **GetNextRows**.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client ne récupère pas de données volumineuses de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jusqu'à ce que la demande par le consommateur. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif ne récupère pas de données volumineuses depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jusqu'à ce que la demande par le consommateur. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple extrait une valeur de données volumineuses d'une colonne unique :  
@@ -155,6 +154,6 @@ HRESULT GetUnboundData
   
 ## <a name="see-also"></a>Voir aussi  
  [Objets BLOB et OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [À l’aide des Types de valeur élevée](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [Utilisation de types de valeur élevée](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

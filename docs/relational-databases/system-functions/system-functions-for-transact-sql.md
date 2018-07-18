@@ -20,18 +20,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0cd40177729800f0fc307f0e9ebce99a64efbee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970511"
 ---
 # <a name="system-functions-for-transact-sql"></a>Fonctions système pour Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fournit des groupes suivants de fonctions système.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les groupes suivants de fonctions système.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Fonctions de groupes de disponibilité AlwaysOn](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
+ [Fonctions de groupes de disponibilité Always On](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
  [Fonctions de Capture de données modifiées](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
  [Fonctions de suivi des modifications](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  
  [Fonctions de collecteur de données](../../relational-databases/system-functions/data-collector-functions-transact-sql.md)  
@@ -46,5 +47,5 @@ ms.lasthandoff: 05/04/2018
  [Fonctions de recherche sémantique de recherche en texte intégral](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)  
  [Fonctions de métadonnées système](../../relational-databases/system-functions/system-metadata-functions.md)  
  [Fonctions de sécurité système](../../relational-databases/system-functions/system-security-functions.md)  
- [Fonctions de suivi système](../../relational-databases/system-functions/system-trace-functions.md)  
+ [Fonctions de Trace système](../../relational-databases/system-functions/system-trace-functions.md)  
   

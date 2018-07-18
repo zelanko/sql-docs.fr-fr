@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908654"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Compatibilité descendante et la conformité aux normes
 Compatibilité descendante est la possibilité de nouveaux composants ODBC pour travailler avec les anciens composants ODBC. Les sections suivantes décrivent comment ces composants sont affectés par les modifications dans ODBC 3 *.x*. Les informations contenues dans les principalement traite l’écriture d’un ODBC 3 *.x* application et comment vers l’arrière des problèmes de compatibilité sont traités par les pilotes ODBC. Pour obtenir des instructions spécifiques sur la compatibilité ascendante comment problèmes affectent l’écriture d’un ODBC 3 *.x* pilote, consultez [annexe g : pilote recommandations pour la compatibilité descendante](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  

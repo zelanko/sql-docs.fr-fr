@@ -2,10 +2,10 @@
 title: Paramètres de sortie de diffusion en continu la prise en charge pour l’objet BLOB | Documents Microsoft
 description: Diffusion en continu de la prise en charge pour les paramètres de sortie BLOB
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-blobs
+ms.component: oledb|ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 76168e9574b670036644e2a0920b821a0b526564
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f53688497cba5fb5397a25b04a94731262ed1d5
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665169"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Prise en charge de la diffusion en continu pour les paramètres de sortie BLOB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Cet article contient un exemple qui montre de diffusion en continu de la prise en charge pour les paramètres de sortie BLOB, qui lie l’objet BLOB de sortie paramètres qu’interfaces ISequentialStreams.  
   

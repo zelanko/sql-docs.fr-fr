@@ -1,5 +1,5 @@
 ---
-title: Administration de serveur de tableau croisé dynamique et de Configuration dans l’Administration centrale de l’alimentation | Documents Microsoft
+title: Power Pivot Server Administration et Configuration dans l’Administration centrale | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fd681ec1859195219f73f6aacc6fd1f8665681a6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 87e2903607b476b04c44ac81ba337ea38e68a58b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983491"
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>Administration et configuration d’un serveur Power Pivot dans l’Administration centrale
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,12 +40,12 @@ ms.lasthandoff: 05/10/2018
   
  Contrairement aux outils de configuration de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ou aux applets de commande PowerShell, l’Administration centrale fournit des pages qui spécifient toutes les options que vous pouvez définir lors de la configuration d’une application ou d’un serveur. Les autres méthodes réduisent le nombre d'étapes impliquées dans le flux de travail de configuration, ou nécessitent des connaissances préalables concernant la configuration d'un serveur SharePoint à l'aide de PowerShell.  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  [Configuration de Power Pivot à l’aide de Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
  [Outils de configuration de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
-## <a name="related-tasks"></a>Tâches associées  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Lien|Type|Description de la tâche|  
 |----------|----------|----------------------|  
@@ -52,10 +53,10 @@ ms.lasthandoff: 05/10/2018
 |[Création et configuration d’une application de service Power Pivot dans l'Administration centrale](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|Requis|Cette étape configure le service système [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
 |[Activer l’intégration des fonctionnalités Power Pivot pour des collections de sites dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|Requis|Cette étape active les fonctionnalités [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] au niveau de la collection de sites.|  
 |[Ajouter MSOLAP.5 en tant que fournisseur de données approuvé dans Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Requis|Cette étape ajoute le fournisseur OLE DB Analysis Services en tant que fournisseur approuvé dans Excel Services.|  
-|[Actualisation des données Power Pivot avec SharePoint 2010](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|Recommandation|L'actualisation des données est facultative mais recommandée. Elle vous permet de planifier les mises à jour sans assistance des données [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] dans les classeurs Excel publiés.|  
-|[Configurer le compte d’actualisation des données PowerPivot sans assistance (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)|Recommandation|Cette étape configure un compte spécial qui peut être utilisé pour exécuter des travaux d'actualisation des données sur le serveur.|  
+|[Actualisation des données Power Pivot avec SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|Recommandation|L'actualisation des données est facultative mais recommandée. Elle vous permet de planifier les mises à jour sans assistance des données [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] dans les classeurs Excel publiés.|  
+|[Configurer le Power Pivot (Power Pivot pour SharePoint) de compte d’actualisation des données sans assistance](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)|Recommandation|Cette étape configure un compte spécial qui peut être utilisé pour exécuter des travaux d'actualisation des données sur le serveur.|  
 |[Configurer la collecte des données d’utilisation &#40;PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Ce paramètre est facultatif|La collecte des données d'utilisation est configurée par défaut. Vous pouvez utiliser ces étapes pour modifier les paramètres par défaut.|  
-|[Configurer un traitement d’actualisation des données uniquement ou de requêtes uniquement (Power Pivot pour SharePoint)](http://msdn.microsoft.com/en-us/5e027605-1086-4941-bb01-f315df8f829b)|Ce paramètre est facultatif|Une instance [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] peut être consacrée uniquement aux travaux ou requêtes d’actualisation des données. En outre, vous pouvez modifier les paramètres par défaut pour les travaux parallèles d'actualisation des données.|  
+|[Configurer l’actualisation des données uniquement ou le traitement des requêtes uniquement (Power Pivot pour SharePoint)](http://msdn.microsoft.com/5e027605-1086-4941-bb01-f315df8f829b)|Ce paramètre est facultatif|Une instance [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] peut être consacrée uniquement aux travaux ou requêtes d’actualisation des données. En outre, vous pouvez modifier les paramètres par défaut pour les travaux parallèles d'actualisation des données.|  
 |[Configurer des comptes de service Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)|Ce paramètre est facultatif|Explique comment mettre à jour les mots de passe ou modifier les comptes de service.|  
 |[Connecter une application de service Power Pivot à une application web SharePoint dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Ce paramètre est facultatif|Explique comment modifier les associations de service.|  
 |[Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Ce paramètre est facultatif|Explique comment ajouter la galerie [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] en tant qu’emplacement approuvé.|  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/10/2018
 |[Ajouter un type de contenu de connexion du modèle sémantique BI à une bibliothèque &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)|Ce paramètre est facultatif|Explique comment étendre une bibliothèque de documents pour prendre en charge la création de fichiers de connexion de modèles sémantiques BI.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installation de Power Pivot pour SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
+ [PowerPivot pour SharePoint 2010 Installation](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Référence de paramètre de configuration &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Récupération d’urgence pour PowerPivot pour SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   

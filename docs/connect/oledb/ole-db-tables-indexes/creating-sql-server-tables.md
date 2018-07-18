@@ -2,10 +2,10 @@
 title: Création de Tables SQL Server | Documents Microsoft
 description: Création de tables SQL Server à l’aide du pilote OLE DB pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5497a74c256282fd14f7c5301f7eea4cfa9aa596
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9c2e60b177a38e684eb92c1b406e091b575d675
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689592"
 ---
 # <a name="creating-sql-server-tables"></a>Création de tables SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Le pilote OLE DB pour SQL Server expose la **ITableDefinition::CreateTable** fonction, ce qui permet aux consommateurs de créer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables. Les consommateurs utilisent **CreateTable** pour créer des tables permanentes nommées consommateur et des tables permanentes ou temporaires avec un nom unique généré par le pilote OLE DB pour SQL Server.  
   
@@ -55,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
  Les propriétés des colonnes dans une structure DBCOLUMNDESC se définissent de la manière suivante.  
   
-|ID de propriété| Description|  
+|ID de propriété|Description|  
 |-----------------|-----------------|  
 |DBPROP_COL_AUTOINCREMENT|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE Description : définit la propriété d'identité dans la colonne créée. Pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la propriété d'identité est valide pour une colonne unique au sein d'une table. Définissez la propriété à VARIANT_TRUE pour plus d’informations qu’une seule colonne génère une erreur lorsque le pilote OLE DB pour SQL Server tente de créer la table sur le serveur.<br /><br /> Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propriété d’identité est valide uniquement pour les **entier**, **numérique**, et **décimal** types lors de l’échelle est 0. La propriété à VARIANT_TRUE sur une colonne de tout autre type de données génère une erreur lorsque le pilote OLE DB pour SQL Server tente de créer la table sur le serveur.<br /><br /> Le pilote OLE DB pour SQL Server retourne DB_S_ERRORSOCCURRED lorsque DBPROP_COL_AUTOINCREMENT et DBPROP_COL_NULLABLE sont les deux VARIANT_TRUE et *dwOption* de DBPROP_COL_NULLABLE n’est pas DBPROPOPTIONS_REQUIRED. DB_E_ERRORSOCCURRED est retourné lorsque DBPROP_COL_AUTOINCREMENT et DBPROP_COL_NULLABLE sont les deux VARIANT_TRUE et *dwOption* de DBPROP_COL_NULLABLE est égale à DBPROPOPTIONS_REQUIRED. La colonne est définie avec la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propriété d’identité et la DBPROP_COL_NULLABLE *dwStatus* membre est défini sur DBPROPSTATUS_CONFLICTING.|  
 |DBPROP_COL_DEFAULT|R/W : lecture/écriture<br /><br /> Valeur par défaut : aucune<br /><br /> Description : crée une contrainte DEFAULT [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour la colonne.<br /><br /> Le *vValue* membre DBPROP peut être un nombre quelconque de types. Le *vValue.vt* membre doit spécifier un type compatible avec le type de données de la colonne. Par exemple, le choix de BSTR N/A comme valeur par défaut d'une colonne définie en tant que DBTYPE_WSTR offre une valeur de correspondance compatible. Définition de la même valeur par défaut sur une colonne en tant que DBTYPE_R8 une erreur lorsque le pilote OLE DB pour SQL Server tente de créer la table sur le serveur.|  
@@ -67,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
  Lorsque le consommateur appelle **ITableDefinition::CreateTable**, le pilote OLE DB pour SQL Server interprète les propriétés de la table comme suit.  
   
-|ID de propriété| Description|  
+|ID de propriété|Description|  
 |-----------------|-----------------|  
 |DBPROP_TBL_TEMPTABLE|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE Description : par défaut, le pilote OLE DB pour SQL Server crée des tables nommées par le consommateur. Lorsque la valeur VARIANT_TRUE, le pilote OLE DB pour SQL Server génère un nom de table temporaire pour le consommateur. Le consommateur attribue la *pTableID* paramètre de **CreateTable** avec la valeur NULL. Le *ppTableID* paramètre doit contenir un pointeur valide.|  
   
@@ -221,6 +224,6 @@ SAFE_EXIT:
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et des index](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
+ [Tables et index](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

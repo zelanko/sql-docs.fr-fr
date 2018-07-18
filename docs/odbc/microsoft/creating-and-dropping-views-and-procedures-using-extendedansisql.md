@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897824"
 ---
 # <a name="creating-and-dropping-views-and-procedures-using-extendedansisql"></a>Créer et supprimer des vues et procédures à l’aide de ExtendedAnsiSQL
 Lorsque l’indicateur ExtendedAnsiSQL est activée, Jet 4.0 prend en charge la possibilité de créer et supprimer des vues et procédures via SQL. Ces vues et les procédures ne seront pas visibles via l’accès.

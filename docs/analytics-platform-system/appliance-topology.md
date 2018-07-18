@@ -1,5 +1,5 @@
 ---
-title: Topologie d’appliances - système de plateforme Analytique | Documents Microsoft
+title: Topologie d’appliances - Analytique Platform System | Microsoft Docs
 description: Affiche des informations résumées sur l’ensemble du système plateforme Analytique.
 author: mzaman1
 manager: craigg
@@ -9,19 +9,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9691da25c866e51e901aad1960b712b59fbd522b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: fac27805730a7afa9541ed835f7900acf6e309d2
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909759"
 ---
-# <a name="appliance-topology---analytics-platform-system"></a>Topologie d’appliances - système de plateforme Analytique
+# <a name="appliance-topology---analytics-platform-system"></a>Topologie d’appliances - Analytique Platform System
 Affiche des informations résumées sur l’ensemble du système plateforme Analytique.  
   
-Développez les éléments de cette section pour configurer les informations qui s’applique à l’application entière. Sélectionnez les sections parallèles topologie de l’entrepôt de données ou de la topologie de HDInsight pour configurer les informations qui s’applique à uniquement cette région de l’application.  
+La page répertorie une version en lecture seule de tous les hôtes et les nœuds de fabric dans la solution en cours, y compris leurs adresses IP de Infiniband et Ethernet.  
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/appliance-topology/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
 ## <a name="see-also"></a>Voir aussi  
-[Lancez le Gestionnaire de Configuration &#40;Analytique plate-forme système&#41;](launch-the-configuration-manager.md)  
+[Lancez le Gestionnaire de Configuration &#40;Analytique Platform System&#41;](launch-the-configuration-manager.md)  
   

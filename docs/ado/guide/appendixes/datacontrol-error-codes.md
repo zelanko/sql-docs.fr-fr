@@ -2,7 +2,6 @@
 title: Codes d’erreur DataControl | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,16 +17,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34d749e90ed9e2d3c7819e23a9d7c552e0b4e8c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f42d65ef0ff274ecf1e671315fc019347586e903
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271128"
 ---
 # <a name="datacontrol-object-error-codes"></a>Codes d’erreur DataControl objet
 Le tableau suivant répertorie les [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) codes d’erreur de l’objet. La traduction décimale positive des deux octets basses, la traduction décimale négative du code d’erreur complet et les valeurs hexadécimales sont affichés.
 
-|RDS. Codes d’erreur DataControl|Number| Description|
+|RDS. Codes d’erreur DataControl|Number|Description|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107 -2146824175 0x800A1011|Impossible d’effectuer l’opération pendant une opération asynchrone est en attente.|
 |**IDS_BadInlineTablegram**|4105 -2146824183 0x800A1009|Inline incorrect tablegram.|

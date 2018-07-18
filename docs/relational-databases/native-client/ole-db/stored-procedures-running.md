@@ -1,5 +1,5 @@
 ---
-title: Exécution de procédures stockées (OLE DB) | Documents Microsoft
+title: Exécution de procédures stockées (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 49e6aa17727fac3bdbf9e44cc92b978355a7891e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ed9df8c1c51143442b622e9aa14831ede809a1b6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415398"
 ---
 # <a name="stored-procedures---running"></a>Procédures stockées - en cours d’exécution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 -   des fonctionnalités supplémentaires.  
   
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client prend en charge trois des mécanismes qui [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les procédures stockées utilisent pour retourner des données :  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client prend en charge trois des mécanismes qui [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisent des procédures stockées pour retourner des données :  
   
 -   Chaque instruction SELECT dans la procédure génère un jeu de résultats.  
   
@@ -52,11 +53,11 @@ ms.lasthandoff: 05/03/2018
   
  L'application doit être en mesure de gérer toutes ces sorties provenant de procédures stockées.  
   
- Des fournisseurs OLE DB différents retournent des paramètres de sortie et des valeurs de retour à des moments différents pendant le traitement des résultats. Dans le cas de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif, les codes de retour et les paramètres de sortie ne sont pas fournis tant une fois que le consommateur a récupéré ou annulé les jeux de résultats retournés par la procédure stockée. Les codes de retour et les paramètres de sortie sont retournés dans le dernier paquet TDS provenant du serveur.  
+ Des fournisseurs OLE DB différents retournent des paramètres de sortie et des valeurs de retour à des moments différents pendant le traitement des résultats. Dans le cas de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif, les paramètres de sortie et les codes de retour ne sont pas fournis tant que le consommateur a récupéré ou annulé les jeux de résultats retournés par la procédure stockée. Les codes de retour et les paramètres de sortie sont retournés dans le dernier paquet TDS provenant du serveur.  
   
  Les fournisseurs utilisent la propriété DBPROP_OUTPUTPARAMETERAVAILABILITY pour signaler quand les paramètres de sortie et les valeurs de retour sont retournés. Cette propriété figure dans le jeu de propriétés DBPROPSET_DATASOURCEINFO.  
   
- Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif définit la propriété DBPROP_OUTPUTPARAMETERAVAILABILITY sur DBPROPVAL_OA_ATROWRELEASE pour indiquer que les codes de retournés et les paramètres de sortie ne sont pas retournés jusqu'à ce que le jeu de résultats est traité ou libéré.  
+ Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif définit la propriété DBPROP_OUTPUTPARAMETERAVAILABILITY sur DBPROPVAL_OA_ATROWRELEASE pour indiquer que codes de retour et les paramètres de sortie ne sont pas retournées jusqu'à ce que le jeu de résultats est traité ou libéré.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées](../../../relational-databases/native-client/ole-db/stored-procedures.md)  

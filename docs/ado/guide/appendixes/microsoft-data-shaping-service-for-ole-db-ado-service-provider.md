@@ -2,7 +2,6 @@
 title: Microsoft Data mise en forme de Service pour OLE DB (fournisseur de services ADO) | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3020789835820519e07ac3e465899c3ac93b0ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b661ac56f26ffa1a467c65f332ec4b506b2e09e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271348"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Données de Microsoft Service pour une vue d’ensemble de la base de données OLE de mise en forme
 > [!IMPORTANT]
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="dynamic-properties"></a>Propriétés dynamiques
  Lorsque ce fournisseur de services est appelé, les propriétés dynamiques suivantes sont ajoutées à la [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection de la[connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.
 
-|Nom de la propriété dynamique| Description|
+|Nom de la propriété dynamique|Description|
 |---------------------------|-----------------|
 |**Noms de la mise en forme unique**|Indique si **Recordset** objets avec des valeurs en double pour leurs **nom de remodeler** les propriétés sont autorisées. Si cette propriété dynamique est **True** et un nouveau **Recordset** est créé avec le même nom de la mise en forme spécifiée par l’utilisateur comme existant **Recordset**, puis la nouvelle  **Jeu d’enregistrements** nom de la mise en forme de l’objet est modifié pour le rendre unique. Si cette propriété est **False** et un nouveau **Recordset** est créé avec le même nom de la mise en forme spécifiée par l’utilisateur qu’existants **Recordset**, à la fois **Recordset**  objets ont le même nom de la mise en forme. Par conséquent, aucune des deux **Recordset** peut être redessinée en tant que les deux jeux d’enregistrements existe.<br /><br /> La valeur par défaut de la propriété **False**.|
 |**Fournisseur de données**|Indique le nom du fournisseur qui fournira les lignes à mettre en forme. Cette valeur peut être aucun si un fournisseur ne doit pas être utilisé pour fournir des lignes.|

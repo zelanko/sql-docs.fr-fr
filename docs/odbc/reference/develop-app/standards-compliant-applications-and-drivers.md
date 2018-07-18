@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913784"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Applications conformes aux normes et les pilotes
 Une application conforme aux normes ou le pilote est celui qui est conforme à la spécification d’IAO groupe Open « données Management : SQL au niveau de l’appel Interface (CLI) » et la norme ISO/IEC 9075-3:1995 (E) Interface de niveau d’appel (SQL/CLI).  

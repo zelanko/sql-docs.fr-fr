@@ -1,5 +1,5 @@
 ---
-title: Expressions XQuery | Documents Microsoft
+title: Expressions XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3858da8849775173d77bdb6db0aa5ac3cbd183e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030357"
 ---
 # <a name="xquery-expressions"></a>Expressions XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
  [Expressions primaires &#40;XQuery&#41;](../xquery/primary-expressions-xquery.md)  
  Décrit les expressions principales XQuery. Celles-ci comprennent des littéraux, des références de variables, des expressions d'éléments de contexte, des constructeurs et des appels de fonction.  
   
- [Expressions de chemin d’accès &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
+ [Expressions de chemin &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
  Décrit les expressions de chemin d'accès XQuery. Celles-ci recherchent des nœuds, tels que des nœuds d'élément, d'attribut et de texte, dans un document.  
   
  [Expressions de séquence &#40;XQuery&#41;](../xquery/sequence-expressions-xquery.md)  
@@ -58,13 +59,13 @@ ms.lasthandoff: 05/03/2018
  [Instruction et itération FLWOR &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
  Décrit la syntaxe d'itération FLOWR. Cet acronyme représente FOR, LET, ORDER BY, WHERE et RETURN. LET n'est pas pris en charge.  
   
- [Ordonnées et désordonnés Expressions &#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
- Décrit le mode de classement des opérations XQuery. Par défaut, le mode de tri a la valeur **classés**.  
+ [Ordonnées et non ordonné Expressions &#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
+ Décrit le mode de classement des opérations XQuery. Par défaut, le mode de classement est défini **classés**.  
   
  [Expressions conditionnelles &#40;XQuery&#41;](../xquery/conditional-expressions-xquery.md)  
- Décrit la prise en charge de XQuery pour l’attribut conditional **if-then-else** instruction.  
+ Décrit la prise en charge de XQuery pour l’instruction conditionnelle **if-then-else** instruction.  
   
- [Quantifié Expressions &#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
+ [Quantifiée Expressions &#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
  Décrit les quantificateurs existentiels et universels de XQuery.  
   
  [Expressions SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)  

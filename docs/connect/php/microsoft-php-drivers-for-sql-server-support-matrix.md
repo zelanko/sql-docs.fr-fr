@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,11 +13,12 @@ caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: b8f1fad66e906b71ff5ea247ba4615e7be774f63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9aae3c88e1460304cf4b2bea7dbc529f31393bde
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307918"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Pilotes Microsoft PHP pour la matrice de prise en charge SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,11 +56,11 @@ ms.lasthandoff: 05/03/2018
 |Instance gérée de SQL Azure<br/> (Version préliminaire privée étendue)|O|O| | | | | |
 |Azure SQL Data Warehouse|O|O| | | | | |
 |SQL Server 2017   |O|O| | | | | |
-|SQL Server 2016   |O|O|O| | | | |
+|SQL Server 2016   |O|O|O| | | | |
 |SQL Server 2014   |O|O|O|O|O| | |
 |SQL Server 2012   |O|O|O|O|O|O| |
-|SQL Server 2008 R2|O|O|O|O|O|O|O|
-|SQL Server 2008   | | |O|O|O|O|O|
+|SQL Server 2008 R2|O|O|O|O|O|O|O|
+|SQL Server 2008   | | |O|O|O|O|O|
 
 ## <a name="php-version-support"></a>Prise en charge de la Version PHP
  Les versions suivantes de PHP sont pris en charge avec cette version des pilotes Microsoft PHP :

@@ -2,7 +2,6 @@
 title: ObjectStateEnum | Documents Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,19 +19,20 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a8d7ba4da1908d2434049c8a71039a259bab8ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46030a27b9a2567f023c2c0d7946536703c91195
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279979"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 Spécifie si un objet est ouvert ou fermé, la connexion à une source de données, l’exécution d’une commande ou la récupération des données.  
   
-|Constante|Valeur| Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|Indique que l’objet est fermé.|  
-|**adStateOpen**|1|Indique que l’objet est ouvert.|  
+|**adStateOpen**| 1|Indique que l’objet est ouvert.|  
 |**adStateConnecting**|2|Indique que l’objet se connecte.|  
 |**adStateExecuting**|4|Indique que l’objet s’exécute une commande.|  
 |**adStateFetching**|8|Indique que les lignes de l’objet sont récupérés.|  

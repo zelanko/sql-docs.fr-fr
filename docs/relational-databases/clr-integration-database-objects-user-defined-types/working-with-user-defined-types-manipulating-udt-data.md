@@ -1,13 +1,11 @@
 ---
-title: Manipulation de données UDT | Documents Microsoft
+title: Manipulation de données UDT | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -34,18 +32,19 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 754687e8fd100950b851f50d34e14aa968da37dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: baf3dad1ff4db835e825eacf9a411d56c7d72923
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354271"
 ---
-# <a name="working-with-user-defined-types---manipulating-udt-data"></a>Utilisation des Types définis par l’utilisateur - de manipulation de données UDT
+# <a name="working-with-user-defined-types---manipulating-udt-data"></a>Utilisation de Types définis par l’utilisateur - manipulation de données UDT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ne fournit aucune syntaxe spécialisée pour les instructions INSERT, UPDATE ou DELETE lors de la modification de données dans des colonnes de type défini par l'utilisateur (UDT). Les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST ou CONVERT sont utilisées pour convertir des types de données natives en type UDT.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Insertion de données dans une colonne UDT  
- Les éléments suivants [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions insèrent trois lignes d’exemples de données dans le **Points** table. Le **Point** type de données se compose de X et Y entier des valeurs qui sont exposées comme propriétés de l’UDT. Vous devez utiliser soit la fonction CAST ou CONVERT pour effectuer un cast de la virgule délimitée par des valeurs X et Y le **Point** type. Les deux premières instructions utilisent la fonction CONVERT pour convertir une valeur de chaîne pour le **Point** type et la troisième instruction utilise la fonction CAST :  
+ Ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions insèrent trois lignes d’exemples de données dans le **Points** table. Le **Point** type de données se compose de X et Y entières des valeurs qui sont exposées en tant que propriétés de l’UDT. Vous devez utiliser soit la fonction CAST ou CONVERT pour convertir les virgules délimité par des valeurs X et Y le **Point** type. Les deux premières instructions utilisent la fonction CONVERT pour convertir une valeur de chaîne pour le **Point** type et la troisième instruction utilise la fonction CAST :  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -105,7 +104,7 @@ IDxValyVal
 ```  
   
 ## <a name="working-with-variables"></a>Utilisation de Variables  
- Vous pouvez utiliser des variables à l'aide de l'instruction DECLARE pour attribuer une variable à un type UDT. Les instructions suivantes attribuent une valeur à l’aide de la [!INCLUDE[tsql](../../includes/tsql-md.md)] définir l’instruction et afficher les résultats en appelant de l’UDT **ToString** méthode sur la variable :  
+ Vous pouvez utiliser des variables à l'aide de l'instruction DECLARE pour attribuer une variable à un type UDT. Les instructions suivantes attribuent une valeur à l’aide de la [!INCLUDE[tsql](../../includes/tsql-md.md)] définir l’instruction et afficher les résultats en appelant l’UDT **ToString** méthode sur la variable :  
   
 ```  
 DECLARE @PointValue Point;  
@@ -161,9 +160,9 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Appel de méthodes UDT  
- Vous pouvez également appeler des méthodes qui sont définies dans votre type UDT dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le **Point** classe contient trois méthodes, **Distance**, **DistanceFrom**, et **DistanceFromXY**. Pour les listes de code définissant ces trois méthodes, consultez [Coding User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Vous pouvez également appeler des méthodes qui sont définies dans votre type UDT dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le **Point** classe contient trois méthodes, **Distance**, **DistanceFrom**, et **DistanceFromXY**. Pour les listings de code définissant ces trois méthodes, consultez [Coding User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- Les éléments suivants [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction appelle la **PointValue.Distance** méthode :  
+ Ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction appelle la **PointValue.Distance** méthode :  
   
 ```  
 SELECT ID, PointValue.X AS [Point.X],   
@@ -182,7 +181,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- Le **DistanceFrom** méthode prend un argument de **Point** type de données et affiche la distance entre le point spécifié au PointValue :  
+ Le **DistanceFrom** méthode prend un argument de **Point** type de données et affiche la distance à partir du point spécifié au PointValue :  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -190,7 +189,7 @@ SELECT ID, PointValue.ToString() AS Pnt,
 FROM dbo.Points;  
 ```  
   
- Les résultats affichent les résultats de la **DistanceFrom** pour chaque ligne dans la table :  
+ Les résultats affichent les résultats de la **DistanceFrom** méthode pour chaque ligne dans la table :  
   
 ```  
 ID PntDistanceFromPoint  
@@ -269,6 +268,6 @@ WHERE ID = 2
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation des Types définis par l’utilisateur dans SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
+ [Utilisation de types définis par l’utilisateur dans SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
   
   

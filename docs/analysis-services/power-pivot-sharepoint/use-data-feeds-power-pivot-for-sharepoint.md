@@ -1,5 +1,5 @@
 ---
-title: Utiliser des flux de données (PowerPivot pour SharePoint) | Documents Microsoft
+title: Utiliser des flux de données (PowerPivot pour SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac7d32ccb99776a85d82c3bc310bc29cdd82954b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979863"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Utiliser des flux de données (Power Pivot pour SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +26,7 @@ ms.lasthandoff: 05/10/2018
   
  Cette rubrique contient les sections suivantes :  
   
- [Configuration requise](#prereq)  
+ [Conditions préalables](#prereq)  
   
  [Créer un flux de données à partir d'une liste SharePoint](#sharepointlist)  
   
@@ -33,12 +34,12 @@ ms.lasthandoff: 05/10/2018
   
  [Créer un flux à partir d'un document de service de données](#dsdoc)  
   
-##  <a name="prereq"></a> Configuration requise  
+##  <a name="prereq"></a> Conditions préalables  
  Vous devez disposer de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel pour importer un flux de données dans Excel 2010.  
   
  Vous devez disposer d'un service Web ou d'un service de données qui fournit des données au format Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et SharePoint 2010 peuvent fournir des données à ce format.  
   
- Avant de pouvoir exporter une liste SharePoint sous forme de flux de données, vous devez installer ADO.NET Data Services sur le serveur SharePoint. Pour plus d’informations, voir [Installation d’ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Avant de pouvoir exporter une liste SharePoint sous forme de flux de données, vous devez installer ADO.NET Data Services sur le serveur SharePoint. Pour plus d’informations, voir [Installation d’ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="sharepointlist"></a> Créer un flux de données à partir d'une liste SharePoint  
  Dans une batterie de serveurs SharePoint 2010, une liste SharePoint présente un bouton Exporter en tant que flux de données dans le ruban Liste. Vous pouvez cliquer sur ce bouton pour exporter la liste en tant que flux. Pour vous offrir les meilleurs résultats, votre station de travail doit être équipée d’Excel 2010 et de l’application cliente [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L’application cliente [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est lancée en réponse à l’exportation du flux de données et crée une table [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui contient la liste.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  Si vous avez choisi **Ouvrir**, utilisez l'Assistant Importation de table pour importer le flux dans une feuille de travail. Le flux de données est ajouté en tant que nouvelle table dans la fenêtre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
- Une erreur se produira si ADO.NET Data Services 3.5.1 n'est pas installé sur le serveur SharePoint. Pour plus d’informations sur cette erreur et sur sa résolution, voir [Installation d’ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
+ Une erreur se produira si ADO.NET Data Services 3.5.1 n'est pas installé sur le serveur SharePoint. Pour plus d’informations sur cette erreur et sur sa résolution, voir [Installation d’ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac).  
   
 ##  <a name="rsreport"></a> Créer un flux de données à partir d'un rapport Reporting Services  
  Si vous avez un déploiement de SQL Server 2008 R2 Reporting Services, vous pouvez utiliser la nouvelle extension de rendu Atom pour générer un flux de données à partir d'un rapport existant. Pour vous offrir les meilleurs résultats, votre station de travail doit être équipée d’Excel 2010 et de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel. L’application cliente [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est lancée en réponse à l’exportation du flux de données et ajoute et met automatiquement en relation les tables et colonnes à mesure qu’elles sont transmises.  

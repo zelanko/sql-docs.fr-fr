@@ -1,31 +1,20 @@
 ---
-title: PredictHistogram (DMX) | Documents Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictHistogram
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictHistogram function
-ms.assetid: 85ffc542-96e7-4f58-aaa3-34d76befcedf
-caps.latest.revision: 34
-author: Minewiskan
+title: PredictHistogram (DMX) | Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a7b6c9df43d66d69b9dea1e06bea646a6a31d4dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985358"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,10 +35,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  Table.  
   
 ## <a name="remarks"></a>Notes  
- Un histogramme génère des colonnes statistiques. La structure de colonne de l’histogramme retourné dépend du type de référence de colonne qui est utilisée avec la **PredictHistogram** (fonction).  
+ Un histogramme génère des colonnes statistiques. La structure de colonne de l’histogramme retourné dépend du type de référence de colonne qui est utilisé avec le **PredictHistogram** (fonction).  
   
 ## <a name="scalar-columns"></a>Colonnes scalaires  
- Pour un \<référence de colonne scalaire >, l’histogramme qui le **PredictHistogram** retours de fonction comprend des colonnes suivantes :  
+ Pour un \<référence de colonne scalaire >, l’histogramme qui le **PredictHistogram** retours de fonction se compose des colonnes suivantes :  
   
 -   La valeur actuellement en cours de prévision  
   
@@ -67,10 +56,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$AdjustedProbability**  
   
-     Le **$AdjustedProbability** colonne est un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extension pour le [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB pour l’exploration de données.  
+     Le **$AdjustedProbability** colonne est un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extension pour le [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB pour la spécification d’exploration de données.  
   
 ## <a name="cluster-columns"></a>Colonnes de cluster  
- L’histogramme qui le **PredictHistogram** fonction retourne pour un \<référence de colonne de cluster > comporte les colonnes suivantes :  
+ L’histogramme qui le **PredictHistogram** fonction retourne pour un \<référence de colonne de cluster > se compose des colonnes suivantes :  
   
 -   **$Cluster** (représente le nom du cluster)  
   
@@ -79,7 +68,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 -   **$Probability**  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant retourne l'état prévisible de la colonne Bike Buyer (Acheteur de bicyclette) dans une requête singleton. La requête retourne également les États les plus probables deux premiers de l’attribut Bike Buyer, selon la probabilité ajustée obtenue à l’aide de la **PredictHistogram** (fonction).  
+ L'exemple suivant retourne l'état prévisible de la colonne Bike Buyer (Acheteur de bicyclette) dans une requête singleton. La requête retourne également les États les plus probables de l’attribut Bike Buyer, selon la probabilité ajustée obtenue à l’aide de deux premiers le **PredictHistogram** (fonction).  
   
 ```  
 SELECT  
@@ -103,7 +92,7 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  

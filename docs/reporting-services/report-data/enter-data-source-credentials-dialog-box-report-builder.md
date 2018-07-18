@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018676"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Boîte de dialogue Entrez les informations d'identification pour la source de données (Générateur de rapports)
   Utilisez la boîte de dialogue **Entrez les informations d'identification pour la source de données** pour fournir les informations d'identification nécessaires à la récupération des données de la source de données.  
