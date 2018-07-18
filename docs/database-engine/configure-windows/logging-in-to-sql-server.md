@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 769bb9418b3d631648f6f493aeb084b5fea0a619
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867714"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324433"
 ---
 # <a name="logging-in-to-sql-server"></a>Connexion à SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "32867714"
 |Connexion à une instance par défaut qui n'écoute pas sur le port TCP par défaut, en spécifiant le port utilisé, dans le cas présent 2828. (Cela n'est pas nécessaire si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] écoute sur le port par défaut (1433).)|APPHOST,2828|  
 |Connexion à une instance nommée sur un port TCP désigné, dans le cas présent 2828. (Cela est souvent nécessaire si le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser ne s'exécute pas sur l'ordinateur hôte.)|APPHOST,2828|  
 |Connexion à une instance par défaut qui n'écoute pas sur le port TCP par défaut, en spécifiant à la fois l'adresse IP et le port TCP utilisés, dans le cas présent 2828.|192.168.17.28,2828|  
-|Connexion à une instance nommée en spécifiant à la fois l'adresse IP et le port TCP utilisés, dans le cas présent 2828.|192.168.17.28,2828|  
+|Connexion à une instance nommée en spécifiant à la fois l'adresse IP et le port TCP utilisés, dans le cas présent 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Connexion à une instance par défaut par son nom, en imposant une connexion TCP.|tcp:APPHOST|  
 |Connexion à une instance nommée par son nom, en imposant une connexion TCP.|tcp:APPHOST\SQLEXPRESS|  
 |Connexion à une instance par défaut en spécifiant un nom de canal nommé.|\\\APPHOST\pipe\unit\app|  

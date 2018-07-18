@@ -12,20 +12,22 @@ ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 05/08/2018
-ms.author: rebeccaz
+ms.date: 07/09/2018
+ms.author: aliceku
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1f545dcc5ea5ef018a6e2aaa750305245c211e69
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 49a3745e67a51ee8f5eb9625d518328f61593514
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695530"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934851"
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>TDE pour SQL Database et Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-TDE vous aide à protéger Azure SQL Database et Azure Data Warehouse contre les menaces d’activités malveillantes. Il effectue un chiffrement et un déchiffrement en temps réel de la base de données, des sauvegardes associées et des fichiers journaux transactionnels au repos, sans qu’il soit nécessaire de modifier l’application. Par défaut, TDE est activé pour toutes les bases de données Azure SQL Database nouvellement déployées, mais il peut être nécessaire de l’activer manuellement pour les bases de données plus anciennes.  
+TDE vous aide à protéger Azure SQL Database et Azure Data Warehouse contre les menaces d’activités malveillantes. Il effectue un chiffrement et un déchiffrement en temps réel de la base de données, des sauvegardes associées et des fichiers journaux transactionnels au repos, sans qu’il soit nécessaire de modifier l’application. Par défaut, TDE est activé pour toutes les bases de données Azure SQL Database récemment déployées. TDE ne peut pas être utilisé pour chiffrer la base de données **principale** logique dans SQL Database.  La base de données **principale** contient des objets qui sont nécessaires pour effectuer les opérations TDE sur les bases de données utilisateur.
+
+TDE doit être activé manuellement pour les bases de données plus anciennes ou Azure SQL Data Warehouse.  
 
 TDE chiffre le stockage d’une base de données entière en utilisant une clé symétrique appelée clé de chiffrement de la base de données. Cette clé de chiffrement de base de données est protégée par le protecteur TDE. Le protecteur est un certificat géré par le service (TDE géré par le service) ou une clé asymétrique stockée dans Azure Key Vault (Bring Your Own Key). Vous définissez le protecteur TDE au niveau du serveur. 
 

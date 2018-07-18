@@ -33,12 +33,12 @@ caps.latest.revision: 128
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5828db704dac636f034329d8e0c7de4b99922f72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8af2acc0708f595a77b2ca4859df4aaaa3f5d7f5
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870374"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854301"
 ---
 # <a name="server-configuration-options-sql-server"></a>Options de configuration du serveur (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,8 @@ Les options à configuration automatique correspondent aux options que [!INCLUDE
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0| 1|0|  
     |[Sécurité CLR stricte](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0| 1|0|  
     |[common criteria compliance enabled](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0| 1|0|  
-    |[contained database authentication](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0| 1|0|  
+    |
+  [authentification de la base de données autonome](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0| 1|0|  
     |[cost threshold for parallelism](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
     |[cross db ownership chaining](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)|0| 1|0|  
     |[cursor threshold](../../database-engine/configure-windows/configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
@@ -138,7 +139,7 @@ Les options à configuration automatique correspondent aux options que [!INCLUDE
     |[remote data archive](../../database-engine/configure-windows/configure-the-remote-data-archive-server-configuration-option.md)|0| 1|0|  
     |[remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)|0|2147483647|10|  
     |[remote proc trans](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)|0| 1|0|  
-    |[remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|0|  
+    |[remote query timeout](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|600|  
     |[Replication XPs Option](../../database-engine/configure-windows/replication-xps-server-configuration-option.md) (A)|0| 1|0|  
     |[scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md) (A, RR)|0| 1|0|  
     |[server trigger recursion](../../database-engine/configure-windows/server-trigger-recursion-server-configuration-option.md)|0| 1| 1|  

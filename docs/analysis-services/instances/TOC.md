@@ -1,5 +1,6 @@
 # [Gestion d’instances](analysis-services-instance-management.md)  
 # [Installer](../../analysis-services/instances/install-windows/install-analysis-services.md)
+# [Vérifier la version de build de la mise à jour cumulative d’Analysis Services](analysis-services-component-version.md)
 # [Configuration consécutive à l’installation](post-install-configuration-analysis-services.md)  
 ## [Configurer le Pare-feu Windows](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 ## [Configurer le compte de service](configure-service-accounts-analysis-services.md)  
