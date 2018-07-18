@@ -1,5 +1,5 @@
 ---
-title: Opérateurs logiques (DMX) | Documents Microsoft
+title: Opérateurs logiques (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 254215318a79971e384ab8e08e3e7a17959b58d8
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841842"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989531"
 ---
-# <a name="operators---logical"></a>Opérateurs - logiques
+# <a name="operators---logical"></a>Opérateurs logiques
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Vous pouvez utiliser des opérateurs logiques dans les expressions d’Extensions DMX (Data Mining) pour évaluer des valeurs et retourner une valeur booléenne dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_index_keywords_position_by_document (Transact-SQL) | Documents Microsoft
+title: Sys.dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b02615dbc260c951a08d3bfa5279b20464653203
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463653"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000891"
 ---
 # <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>Sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,24 +45,24 @@ OBJECT_ID('table_name')
 ```  
   
 ## <a name="arguments"></a>Arguments  
- DB_ID ('*nom_base_de_données*')  
- Un appel à la [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) (fonction). Cette fonction accepte un nom de base de données et retourne l’ID de base de données, les sys.dm_fts_index_keywords_position_by_document utilise pour rechercher la base de données spécifié.  
+ DB_ID ('*database_name*»)  
+ Un appel à la [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) (fonction). Cette fonction accepte un nom de base de données et retourne l’ID de base de données, quels sys.dm_fts_index_keywords_position_by_document utilise pour rechercher la base de données spécifié.  
   
- object_id ('*table_name*')  
+ object_id («*table_name*»)  
  Un appel à la [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) (fonction). Cette fonction accepte un nom de table et retourne l'ID de la table contenant l'index de recherche en texte intégral à examiner.  
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Colonne|Data type| Description|  
+|colonne|Data type|Description|  
 |------------|---------------|-----------------|  
 |mot clé|**varbinary(128)**|Qui représente le mot clé de chaîne binaire.|  
 |display_term|**nvarchar(4000)**|Format explicite du mot clé. Ce format est dérivé du format interne stocké dans l'index de recherche en texte intégral.|  
-|column_id|**int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
+|column_id|**Int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
 |document_id|**bigint**|ID de la ligne ou du document à partir duquel le terme actuel a été indexé en texte intégral. Cet ID correspond à la valeur de clé de texte intégral de cette ligne ou de ce document.|  
-|position|**int**|La position du mot clé dans le document.|  
+|position|**Int**|La position du mot clé dans le document.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez la vue de gestion dynamique pour identifier l’emplacement des mots indexés dans les documents indexés. Cette DMV peut être utilisée pour résoudre les problèmes lorsque **sys.dm_fts_index_keywords_by_document** indique les mots sont dans l’index de recherche en texte intégral, mais lorsque vous exécutez une requête à l’aide de ces mots, le document n’est pas retourné.  
+ Utiliser la DMV pour identifier l’emplacement des mots indexés dans les documents indexés. Cette vue de gestion dynamique peut être utilisé pour dépanner des problèmes lorsque **sys.dm_fts_index_keywords_by_document** indique les mots sont dans l’index de recherche en texte intégral, mais lorsque vous exécutez une requête à l’aide de ces mots, le document n’est pas retourné.  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation SELECT sur les colonnes couvertes par l'index de recherche en texte intégral et les autorisations CREATE FULLTEXT CATALOG.  
@@ -82,7 +82,7 @@ SELECT * FROM sys.dm_fts_index_keywords_position_by_document
 GO  
 ```  
   
- Vous pouvez ajouter un prédicat sur les autres columns_id comme dans l’exemple de requête suivant, afin de mieux identifier les emplacements.  
+ Vous pouvez ajouter un prédicat sur les autres columns_id comme dans l’exemple de requête suivant, afin d’isoler les emplacements.  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_position_by_document  

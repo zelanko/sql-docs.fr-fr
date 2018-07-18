@@ -1,5 +1,5 @@
 ---
-title: sp_trace_setstatus (Transact-SQL) | Documents Microsoft
+title: sp_trace_setstatus (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8e3a2234d4213b78cbc828e71c602602e7a2481
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261928"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038317"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
 ## <a name="arguments"></a>Arguments  
  [  **@traceid=** ] *trace_id*  
- ID de la trace à modifier. *l’argument trace_id* est **int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur pour identifier, modifier et contrôler la trace. Pour plus d’informations sur la récupération de la *trace_id*, consultez [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+ ID de la trace à modifier. *trace_id* est **int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur à identifier, modifier et contrôler la trace. Pour plus d’informations sur la récupération de la *trace_id*, consultez [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
  [  **@status=** ] *état*  
  Indique l'action à implémenter sur la trace. *état* est **int**, sans valeur par défaut.  
   
  Le tableau ci-après répertorie les états qui peuvent être spécifiés.  
   
-|État| Description|  
+|État|Description|  
 |------------|-----------------|  
 |**0**|Arrête la trace spécifiée.|  
 |**1**|Démarre la trace spécifiée.|  
@@ -67,7 +67,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Le tableau suivant décrit les valeurs de code que les utilisateurs peuvent recevoir à la fin de l'exécution de la procédure stockée.  
   
-|Code de retour| Description|  
+|Code de retour|Description|  
 |-----------------|-----------------|  
 |**0**|Aucune erreur.|  
 |**1**|Erreur inconnue.|  
@@ -78,7 +78,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
  Si la trace est déjà dans l’état spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retournera **0**.  
   
 ## <a name="remarks"></a>Notes  
- Les paramètres de Trace de SQL toutes les procédures stockées (**sp_trace_xx**) sont de type strict. Si ces paramètres ne sont pas appelés avec des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée renvoie une erreur.  
+ Paramètres de Trace de SQL toutes les procédures stockées (**sp_trace_xx**) sont strictement typés. Si ces paramètres ne sont pas appelés avec des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée renvoie une erreur.  
   
  Pour obtenir un exemple d’utilisation de procédures stockées de trace, consultez [Créer une trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   

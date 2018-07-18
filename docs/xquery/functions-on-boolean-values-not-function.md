@@ -1,5 +1,5 @@
 ---
-title: pas de fonction (XQuery) | Documents Microsoft
+title: Fonction NOT (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f3da41971a8af3fe92fc8c7034fa6cd749a68ac8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077656"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999811"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Fonctions sur des valeurs booléennes - pas de fonction 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,13 +67,13 @@ WHERE CatalogDescription.exist('
      ) = 0  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Étant donné que le document utilise des espaces de noms, l'exemple recourt à l'instruction WITH NAMESPACES. Une autre option consiste à utiliser le **déclarer l’espace de noms** mot clé dans le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) pour définir le préfixe.  
   
 -   La requête construit ensuite le document XML qui comprend le <`Product`> élément et ses **ProductModelID** attribut.  
   
--   La clause WHERE utilise le [méthode exist() (type de données XML)](../t-sql/xml/exist-method-xml-data-type.md) pour filtrer les lignes. Le **exist()** méthode retourne la valeur True s’il n’y \<ProductDescription > les éléments qui n’ont pas \<spécification > des éléments enfants. Notez l’utilisation de la **not()** (fonction).  
+-   La clause WHERE utilise le [méthode exist() (type de données XML)](../t-sql/xml/exist-method-xml-data-type.md) pour filtrer les lignes. Le **exist()** méthode retourne la valeur True s’il existe \<ProductDescription > éléments qui n’ont pas \<spécification > éléments enfants. Notez l’utilisation de la **not()** (fonction).  
   
  Ce jeu de résultats est vide, car chaque description de catalogue de modèles de produit comprend le \<spécifications > élément.  
   
@@ -101,7 +101,7 @@ WHERE ProductModelID=7
   
 -   Dans la requête, le **pas (@MachineHours)** prédicat retourne la valeur True s’il existe aucune **MachineHours** attribut.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID Result   

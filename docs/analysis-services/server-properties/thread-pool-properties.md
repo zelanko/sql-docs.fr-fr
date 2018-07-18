@@ -1,5 +1,5 @@
 ---
-title: Propriétés du Pool de threads | Documents Microsoft
+title: Propriétés du Pool de threads | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239249"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050600"
 ---
 # <a name="thread-pool-properties"></a>Propriétés du pool de threads
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -275,7 +275,7 @@ Nous vous recommandons la mise à jour cumulative 1 (CU1) de SQL Server 2016 ou 
  [À propos des processus et des threads](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
  [Plusieurs processeurs](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
  [Groupes de processeurs](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
- [Modifications du Pool Thread Analysis Services dans SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [Modifications de SQL Server 2012 du Pool de threads Analysis Services](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 Configuration settings (Wordpress Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Prise en charge des systèmes dotés de plus de 64 processeurs](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [Guide des opérations SQL Server Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)  

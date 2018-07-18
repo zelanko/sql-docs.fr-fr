@@ -1,5 +1,5 @@
 ---
-title: Opérateurs XQuery sur le Type de données xml | Documents Microsoft
+title: Opérateurs XQuery sur le Type de données xml | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 62c4875c74d6ff67e8d1760a29ac48672fc7765a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077566"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988174"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Opérateurs XQuery sur le type de données xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "33077566"
 ### <a name="a-using-general-operators"></a>A. Utilisation d'opérateurs généraux  
  La requête illustre l'utilisation d'opérateurs généraux qui s'appliquent à des séquences et qui comparent également des séquences. La requête récupère une séquence de numéros de téléphone pour chaque client à partir de la **AdditionalContactInfo** colonne de la **Contact** table. Cette séquence est ensuite comparée à la séquence de deux numéros de téléphone ("111-111-1111", "222-2222").  
   
- La requête utilise le **=** opérateur de comparaison. Chaque nœud de la séquence situé à droite de la **=** opérateur est comparée à chaque nœud de la séquence situé à gauche. Si les nœuds correspondent, la comparaison de nœud est **TRUE**. Elle est ensuite convertie en int et comparée à 1, puis la requête retourne l'ID de client.  
+ La requête utilise le **=** opérateur de comparaison. Chaque nœud dans la séquence situé à droite de la **=** opérateur est comparé à chaque nœud de la séquence situé à gauche. Si les nœuds correspondent, la comparaison de nœud est **TRUE**. Elle est ensuite convertie en int et comparée à 1, puis la requête retourne l'ID de client.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -99,7 +99,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Étant donné que les opérandes de le **eq** opérateur sont des valeurs atomiques, l’opérateur de valeur est utilisée dans la requête. Vous pouvez écrire la même requête en utilisant l’opérateur de comparaison générale ( **=** ).  
+ Étant donné que les deux opérandes pour le **eq** opérateur sont des valeurs atomiques, l’opérateur de valeur est utilisé dans la requête. Vous pouvez écrire la même requête en utilisant l’opérateur de comparaison générale ( **=** ).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions XQuery impliquant le Type de données xml](../xquery/xquery-functions-against-the-xml-data-type.md)   

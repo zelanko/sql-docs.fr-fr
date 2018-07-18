@@ -1,5 +1,5 @@
 ---
-title: Opérateurs arithmétiques (DMX) | Documents Microsoft
+title: Opérateurs arithmétiques (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: edbe8a3404217f330b5b62a9d433c7d560b28656
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842222"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989652"
 ---
-# <a name="operators---arithmetic"></a>Opérateurs - arithmétique
+# <a name="operators---arithmetic"></a>Opérateurs arithmétiques
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Vous pouvez utiliser des opérateurs arithmétiques dans les Extensions DMX (Data Mining) pour les calculs arithmétiques de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], y compris l’addition, soustraction, multiplication et division.  
+  Vous pouvez utiliser des opérateurs arithmétiques dans Extensions DMX (Data Mining) pour effectuer des calculs arithmétiques dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], y compris l’addition, soustraction, multiplication et division.  
   
  Le tableau ci-dessous identifie les opérateurs arithmétiques pris en charge par DMX.  
   

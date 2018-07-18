@@ -1,5 +1,5 @@
 ---
-title: PredictAssociation (DMX) | Documents Microsoft
+title: PredictAssociation (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7a23407b546bcde2dd1fde81654da4fe861e0719
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842972"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989541"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Prévoit une appartenance associative.  
   
-Par exemple, vous pouvez utiliser la fonction PredictAssociation pour obtenir l’ensemble des recommandations, étant donné l’état actuel du panier d’achat d’un client. 
+Par exemple, vous pouvez utiliser la fonction PredictAssociation pour obtenir l’ensemble des recommandations compte tenu de l’état actuel du panier d’achat pour un client. 
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,17 +34,17 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
  Algorithmes qui contiennent des tables imbriquées prévisibles, y compris l’association et certains algorithmes de classification. Les algorithmes de classification qui prennent en charge des tables imbriquées sont le [!INCLUDE[msCoName](../includes/msconame-md.md)] arbres de décision, [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes, et [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes de réseau neuronal.  
   
 ## <a name="return-type"></a>Type de retour  
- \<Expression de table >  
+ \<expression de table >  
   
 ## <a name="remarks"></a>Notes  
- Les options pour le **PredictAssociation** fonction incluent EXCLUDE_NULL, INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (par défaut), INPUT_ONLY, INCLUDE_STATISTICS et INCLUDE_NODE_ID.  
+ Les options pour le **PredictAssociation** fonction inclure EXCLUDE_NULL, INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (par défaut), INPUT_ONLY, INCLUDE_STATISTICS et INCLUDE_NODE_ID.  
   
 > [!NOTE]  
 >  INCLUSIVE, EXCLUSIVE, INPUT_ONLY et INCLUDE_STATISTICS s'appliquent uniquement à une référence de colonne de table, et EXCLUDE_NULL et INCLUDE_NULL s'appliquent uniquement à une référence de colonne scalaire.  
   
  INCLUDE_STATISTICS retourne uniquement **$Probability** et **$AdjustedProbability**.  
   
- Si le paramètre numérique *n* est spécifié, le **PredictAssociation** fonction retourne les n premières valeurs probablement selon la probabilité :  
+ Si le paramètre numérique *n* est spécifié, le **PredictAssociation** fonction retourne les n premières valeurs probables selon la probabilité :  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
@@ -61,7 +61,7 @@ SELECT
 From  
   [Association]  
 ```  
-L’exemple suivant montre comment vous pouvez utiliser une table imbriquée comme entrée pour la fonction de prédiction, à l’aide de la clause SHAPE. La requête SHAPE crée un ensemble de lignes avec customerId comme une seule colonne et une table imbriquée en tant que deuxième colonne, qui contient la liste des produits de qu'un client a déjà. 
+L’exemple suivant montre comment vous pouvez utiliser une table imbriquée comme entrée pour la fonction de prédiction, à l’aide de la clause de forme. La requête SHAPE crée un ensemble de lignes avec customerId comme une seule colonne et une table imbriquée en tant que deuxième colonne, qui contient la liste des produits, qu'un client a déjà apporté. 
 
 ~~~~
 SELECT T.[CustomerId], PredictAssociation(MyNestedTable, 5) // returns top 5 associated items
