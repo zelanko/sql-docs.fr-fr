@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -12,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed7e6aeb0630a20ee39d512fc17dfe24040737f2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0fb3c753e4bde29eb9b5cbb5f287fc18d03a117a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702513"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782430"
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -132,7 +131,7 @@ Le fait de restaurer une sauvegarde dans une appliance dotée d’un plus grand 
   
 Par exemple, si vous restaurez une base de données de 60 Go d’une appliance à 2 nœuds (30 Go par nœud) vers une appliance à 6 nœuds, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] crée une base de données de 180 Go (6 nœuds à raison de 30 Go par nœud) dans l’appliance à 6 nœuds. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] commence par restaurer la base de données sur 2 nœuds pour être en adéquation avec la configuration source, puis redistribue les données aux 6 nœuds.  
   
- À l’issue de la redistribution, chaque nœud de calcul contient moins de données réelles et plus d’espace libre que chaque nœud de calcul de l’appliance source de plus petite taille. Profitez de l’espace supplémentaire pour ajouter davantage de données à la base de données. Si la taille de la base de données restaurée est plus grande qu’il ne faut, vous pouvez utiliser [ALTER DATABASE &#40;Parallel Data Warehouse&#41; ](../../t-sql/statements/alter-database-parallel-data-warehouse.md) pour réduire la taille des fichiers de base de données.  
+ À l’issue de la redistribution, chaque nœud de calcul contient moins de données réelles et plus d’espace libre que chaque nœud de calcul de l’appliance source de plus petite taille. Profitez de l’espace supplémentaire pour ajouter davantage de données à la base de données. Si la taille de la base de données restaurée est plus grande qu’il ne faut, vous pouvez utiliser [ALTER DATABASE &#40;Parallel Data Warehouse&#41; ](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw) pour réduire la taille des fichiers de base de données.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Dans le cadre de ces limitations et restrictions, l’appliance source est celle à partir de laquelle la sauvegarde de base de données a été créée, tandis que l’appliance cible est celle sur laquelle la base de données est restaurée.  

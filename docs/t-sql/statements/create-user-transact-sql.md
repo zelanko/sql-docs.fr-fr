@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -30,16 +29,16 @@ helpviewer_keywords:
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 caps.latest.revision: 111
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0f7d8f9a4eadec915a52c3dfc39ba79f1ab177b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d549a589d7b68351033db83b48690e44c59765d
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075528"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942115"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,13 +52,13 @@ ms.locfileid: "33075528"
 -   Utilisateur basé sur un compte de connexion utilisant l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `CREATE USER Mary;`  
   
 **Utilisateurs qui s’authentifient auprès de la base de données** Recommandé pour accroître la portabilité de votre base de données.  
- Toujours autorisé dans [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Autorisé uniquement dans une base de données à relation contenant-contenu dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
+ Toujours autorisé dans [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Autorisé uniquement dans une base de données autonome dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
 -   Utilisateur basé sur un utilisateur Windows qui ne dispose d'aucun compte de connexion. `CREATE USER [Contoso\Fritz];`    
 -   Utilisateur basé sur un groupe Windows qui ne dispose d'aucun compte de connexion. `CREATE USER [Contoso\Sales];`  
 -   Utilisateur dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] basé sur un utilisateur Azure Active Directory. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
 
--   Utilisateur de base de données à relation contenant-contenu avec mot de passe. (Non disponible dans [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
+-   Utilisateur de base de données autonome avec mot de passe. (Non disponible dans [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].) `CREATE USER Mary WITH PASSWORD = '********';`   
   
 **Utilisateurs basés sur des principaux Windows qui se connectent via des comptes de connexion de groupe Windows**  
   
@@ -174,12 +173,12 @@ CREATE USER user_name
  Spécifie le premier schéma que le serveur doit interroger pour résoudre les noms des objets associés à cet utilisateur de base de données.  
   
  '*windows_principal*'  
- Spécifie le principal Windows pour lequel l'utilisateur de la base de données est créé. *windows_principal* peut être un utilisateur Windows ou un groupe Windows. L’utilisateur est créé même si le *windows_principal* ne dispose pas de compte de connexion. Lors de la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si *windows_principal* ne dispose pas de compte de connexion, le principal Windows doit s’authentifier auprès du [!INCLUDE[ssDE](../../includes/ssde-md.md)] via l’appartenance à un groupe Windows qui dispose d’un compte de connexion, ou la chaîne de connexion doit spécifier la base de données à relation contenant-contenu comme catalogue initial. Quand vous créez un utilisateur à partir d’un principal Windows, utilisez le format **[***\<NomDomaine>***\\***\<NomCompteConnexion>***]**. Pour obtenir des exemples, consultez [Résumé de syntaxe](#SyntaxSummary). Les utilisateurs basés sur des utilisateurs Active Directory sont limités aux noms de moins de 21 caractères.    
+ Spécifie le principal Windows pour lequel l'utilisateur de la base de données est créé. *windows_principal* peut être un utilisateur Windows ou un groupe Windows. L’utilisateur est créé même si le *windows_principal* ne dispose pas de compte de connexion. Lors de la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si *windows_principal* ne dispose pas de compte de connexion, le principal Windows doit s’authentifier auprès du [!INCLUDE[ssDE](../../includes/ssde-md.md)] via l’appartenance à un groupe Windows qui dispose d’un compte de connexion, ou la chaîne de connexion doit spécifier la base de données autonome comme catalogue initial. Quand vous créez un utilisateur à partir d’un principal Windows, utilisez le format **[***\<NomDomaine>***\\***\<NomCompteConnexion>***]**. Pour obtenir des exemples, consultez [Résumé de syntaxe](#SyntaxSummary). Les utilisateurs basés sur des utilisateurs Active Directory sont limités aux noms de moins de 21 caractères.    
   
  '*Azure_Active_Directory_principal*'  
  **S’applique à** : [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
- Spécifie le principal Azure Active Directory pour lequel l’utilisateur de la base de données est créé. *Azure_Active_Directory_principal* peut être un utilisateur Azure Active Directory ou un groupe Azure Active Directory. (Les utilisateurs Azure Active Directory ne peuvent pas avoir de comptes de connexion d’authentification Windows [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ; seuls les utilisateurs de base de données le peuvent.) La chaîne de connexion doit spécifier la base de données à relation contenant-contenu comme catalogue initial. 
+ Spécifie le principal Azure Active Directory pour lequel l’utilisateur de la base de données est créé. *Azure_Active_Directory_principal* peut être un utilisateur Azure Active Directory ou un groupe Azure Active Directory. (Les utilisateurs Azure Active Directory ne peuvent pas avoir de comptes de connexion d’authentification Windows [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ; seuls les utilisateurs de base de données le peuvent.) La chaîne de connexion doit spécifier la base de données autonome comme catalogue initial. 
 
  Pour les utilisateurs, vous utilisez l’alias complet de leur principal de domaine.   
  
@@ -196,7 +195,7 @@ CREATE USER user_name
 WITH PASSWORD = '*password*'  
  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Peut être utilisé uniquement dans une base de données à relation contenant-contenu. Spécifie le mot de passe de l'utilisateur en cours de création. Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.  
+ Peut être utilisé uniquement dans une base de données autonome. Spécifie le mot de passe de l'utilisateur en cours de création. Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.  
   
 WITHOUT LOGIN  
  Indique que l'utilisateur ne doit pas être mappé à une connexion existante.  
@@ -217,12 +216,13 @@ DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*
  Spécifie la langue par défaut du nouvel utilisateur. Si une langue par défaut est spécifiée pour l'utilisateur et que la langue par défaut de la base de données est changée ultérieurement, la langue par défaut des utilisateurs reste comme spécifié. Si aucune langue par défaut n'est spécifiée, la langue par défaut de l'utilisateur correspondra à la langue par défaut de la base de données. Si la langue par défaut n'est pas spécifiée pour l'utilisateur et que la langue par défaut de la base de données est changée ultérieurement, la langue par défaut de l'utilisateur est remplacée par la nouvelle langue par défaut de la base de données.  
   
 > [!IMPORTANT]  
->  *DEFAULT_LANGUAGE* est utilisé uniquement pour un utilisateur de base de données à relation contenant-contenu.  
+>  
+  *DEFAULT_LANGUAGE* est utilisé uniquement pour un utilisateur de base de données autonome.  
   
 SID = *sid*  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- S'applique uniquement aux utilisateurs munis de mots de passe (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) dans une base de données à relation contenant-contenu. Spécifie le SID du nouvel utilisateur de base de données. Si cette option n'est pas sélectionnée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attribue automatiquement un SID. Utilisez le paramètre SID pour créer des utilisateurs dans plusieurs bases de données qui ont la même identité (SID). Cela s’avère utile lors de la création d’utilisateurs dans plusieurs bases de données pour la préparation du basculement AlwaysOn. Pour déterminer le SID d’un utilisateur, interrogez sys.database_principals.  
+ S'applique uniquement aux utilisateurs munis de mots de passe (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) dans une base de données autonome. Spécifie le SID du nouvel utilisateur de base de données. Si cette option n'est pas sélectionnée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attribue automatiquement un SID. Utilisez le paramètre SID pour créer des utilisateurs dans plusieurs bases de données qui ont la même identité (SID). Cela s’avère utile lors de la création d’utilisateurs dans plusieurs bases de données pour la préparation du basculement AlwaysOn. Pour déterminer le SID d’un utilisateur, interrogez sys.database_principals.  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ] ]  
  **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -275,7 +275,7 @@ GO
   
 **Utilisateurs qui s’authentifient auprès de la base de données**  
   
- La liste suivante affiche la syntaxe possible pour les utilisateurs qui peuvent être utilisés uniquement dans une base de données à relation contenant-contenu. Les utilisateurs créés ne seront liés à aucun compte de connexion dans la base de données **Master**. Les options de langue et de schéma par défaut ne sont pas répertoriées.  
+ La liste suivante affiche la syntaxe possible pour les utilisateurs qui peuvent être utilisés uniquement dans une base de données autonome. Les utilisateurs créés ne seront liés à aucun compte de connexion dans la base de données **Master**. Les options de langue et de schéma par défaut ne sont pas répertoriées.  
   
 > [!IMPORTANT]  
 >  Cette syntaxe accorde aux utilisateurs un accès à la base de données, ainsi qu’un nouvel accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -290,7 +290,7 @@ GO
   
  Cette syntaxe est semblable aux utilisateurs basés sur des comptes de connexion dans master, mais cette catégorie d'utilisateurs ne dispose pas de compte de connexion dans master. L’utilisateur doit avoir accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)] via un compte de connexion de groupe Windows.  
   
- Cette syntaxe est semblable à celle utilisées pour les utilisateurs de base de données à relation contenant-contenu basés sur des principaux Windows, mais cette catégorie d’utilisateurs n’obtient pas un nouvel accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Cette syntaxe est semblable à celle utilisées pour les utilisateurs de base de données autonome basés sur des principaux Windows, mais cette catégorie d’utilisateurs n’obtient pas un nouvel accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 -   `CREATE USER [Domain1\WindowsUserBarry]`  
 -   `CREATE USER [Domain1\WindowsUserBarry] FOR LOGIN Domain1\WindowsUserBarry`  
@@ -312,16 +312,16 @@ GO
 ## <a name="security"></a>Sécurité  
  La création d'un utilisateur accorde l'accès à une base de données, mais n'accorde pas automatiquement l'accès aux objets d'une base de données. Après avoir créé un utilisateur, les actions communes consistent à ajouter des utilisateurs aux rôles de base de données qui ont l'autorisation d'accéder aux objets de base de données ou d'octroyer des autorisations relatives aux objets à l'utilisateur. Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-### <a name="special-considerations-for-contained-databases"></a>Considérations spéciales pour les bases de données à relation contenant-contenu  
- Lors de la connexion à une base de données à relation contenant-contenu, si l’utilisateur ne dispose pas de compte de connexion dans la base de données **Master**, la chaîne de connexion doit inclure le nom de la base de données à relation contenant-contenu comme catalogue initial. Le paramètre de catalogue initial est toujours requis pour un utilisateur de base de données à relation contenant-contenu avec mot de passe.  
+### <a name="special-considerations-for-contained-databases"></a>Considérations spéciales pour les bases de données autonomes  
+ Lors de la connexion à une base de données autonome, si l'utilisateur ne dispose pas de compte de connexion dans la base de données **master**, la chaîne de connexion doit inclure le nom de base de données autonome comme catalogue initial. Le paramètre de catalogue initial est toujours requis pour un utilisateur de base de données autonome avec mot de passe.  
   
- Dans une base de données à relation contenant-contenu, la création d’utilisateurs permet de séparer la base de données de l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] afin que la base de données puisse être déplacée facilement vers une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md) et [Utilisateurs de base de données à relation contenant-contenu - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Pour changer un utilisateur de base de données basé sur un compte de connexion d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisateur de base de données à relation contenant-contenu avec mot de passe, consultez [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
+ Dans une base de données autonome, la création d’utilisateurs permet de séparer la base de données de l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] afin que la base de données puisse être déplacée facilement vers une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md) et [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Pour changer un utilisateur de base de données basé sur un compte de connexion d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisateur de base de données autonome avec mot de passe, consultez [sp_migrate_user_to_contained &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- Dans une base de données à relation contenant-contenu, les utilisateurs n’ont pas besoin de disposer d’un compte de connexion dans la base de données **Master**. Les administrateurs du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doivent comprendre que l'accès à une base de données à relation contenant-contenu peut être accordé au niveau de la base de données, plutôt qu'au niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour plus d'informations, consultez [Bonnes pratiques de sécurité avec les bases de données à relation contenant-contenu](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ Dans une base de données autonome, les utilisateurs n'ont pas besoin d'un compte de connexion dans la base de données **master**. Les administrateurs du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doivent comprendre que l'accès à une base de données autonome peut être accordé au niveau de la base de données, plutôt qu'au niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour plus d'informations, consultez [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
- En cas d'utilisateurs de base de données à relation contenant-contenu [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configurez l'accès à l'aide d'une règle de pare-feu de niveau base de données, et non d'une règle de pare-feu de niveau serveur. Pour plus d’informations, consultez [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
+ En cas d'utilisateurs de base de données autonome [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configurez l'accès à l'aide d'une règle de pare-feu de niveau base de données, et non d'une règle de pare-feu de niveau serveur. Pour plus d’informations, consultez [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
-Pour les utilisateurs de base de données à relation contenant-contenu [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], SSMS peut prendre en charge l’authentification multifacteur. Pour plus d’informations, consultez [Prise en charge SSMS pour Azure AD MFA avec SQL Database et SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+Pour les utilisateurs de base de données autonome [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], SSMS peut prendre en charge l’authentification multifacteur. Pour plus d’informations, consultez [Prise en charge SSMS pour Azure AD MFA avec SQL Database et SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
 ### <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY USER sur la base de données.  
@@ -393,8 +393,8 @@ REVERT ;
 GO  
 ```  
   
-### <a name="e-creating-a-contained-database-user-with-password"></a>E. Création d'un utilisateur de base de données à relation contenant-contenu avec mot de passe  
- L'exemple suivant crée un utilisateur de base de données à relation contenant-contenu avec mot de passe. Cet exemple ne peut être exécuté que dans une base de données à relation contenant-contenu.  
+### <a name="e-creating-a-contained-database-user-with-password"></a>E. Création d'un utilisateur de base de données autonome avec mot de passe  
+ L'exemple suivant crée un utilisateur de base de données autonome avec mot de passe. Cet exemple ne peut être exécuté que dans une base de données autonome.  
   
 **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Cet exemple fonctionne dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] si DEFAULT_LANGUAGE est supprimé.  
   
@@ -408,8 +408,8 @@ WITH PASSWORD='RN92piTCh%$!~3K9844 Bl*'
 GO   
 ```  
   
-### <a name="f-creating-a-contained-database-user-for-a-domain-login"></a>F. Création d'un utilisateur de base de données à relation contenant-contenu pour un compte de connexion de domaine  
- L'exemple suivant crée un utilisateur de base de données à relation contenant-contenu pour une connexion nommée Fritz dans un domaine appelé Contoso. Cet exemple ne peut être exécuté que dans une base de données à relation contenant-contenu.  
+### <a name="f-creating-a-contained-database-user-for-a-domain-login"></a>F. Création d'un utilisateur de base de données autonome pour un compte de connexion de domaine  
+ L'exemple suivant crée un utilisateur de base de données autonome pour une connexion nommée Fritz dans un domaine appelé Contoso. Cet exemple ne peut être exécuté que dans une base de données autonome.  
   
 **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -420,8 +420,8 @@ CREATE USER [Contoso\Fritz] ;
 GO   
 ```  
   
-### <a name="g-creating-a-contained-database-user-with-a-specific-sid"></a>G. Création d'un utilisateur de base de données à relation contenant-contenu avec un SID spécifique  
- L'exemple suivant crée un utilisateur de base de données à relation contenant-contenu authentifié par SQL Server et nommé CarmenW. Cet exemple ne peut être exécuté que dans une base de données à relation contenant-contenu.  
+### <a name="g-creating-a-contained-database-user-with-a-specific-sid"></a>G. Création d'un utilisateur de base de données autonome avec un SID spécifique  
+ L'exemple suivant crée un utilisateur de base de données autonome authentifié par SQL Server et nommé CarmenW. Cet exemple ne peut être exécuté que dans une base de données autonome.  
   
 **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -457,7 +457,8 @@ Vous pouvez également [octroyer (GRANT) des autorisations sur un objet](../../t
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)   
+ 
+  [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)   
  [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [Prise en main des autorisations du moteur de base de données](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
   

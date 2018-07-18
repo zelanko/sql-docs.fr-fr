@@ -44,7 +44,7 @@ ADO pour Windows Foundation Classes (ADO/WFC) repose sur le modèle d’événem
   
      Le premier argument de la **ConnectionEventHandler** constructeur est une référence à la classe qui contient le Gestionnaire d’événements nommé dans le deuxième argument.  
   
-3.  Ajouter votre gestionnaire d’événements à une liste de gestionnaires chargés de traiter un type particulier d’événement. Utilisez la méthode avec un nom tel que **addOn *** EventName*(*gestionnaire*).  
+3.  Ajouter votre gestionnaire d’événements à une liste de gestionnaires chargés de traiter un type particulier d’événement. Utilisez la méthode avec un nom tel que **addOn** *EventName*(*gestionnaire*).  
   
 4.  ADO/WFC implémente en interne tous les gestionnaires d’événements ADO. Par conséquent, un événement déclenché par un **connexion** ou **Recordset** opération est interceptée par un gestionnaire d’événements ADO/WFC.  
   
@@ -62,7 +62,7 @@ ADO pour Windows Foundation Classes (ADO/WFC) repose sur le modèle d’événem
   
 6.  Retourner à partir de votre gestionnaire d’événements au gestionnaire ADO/WFC pour l’événement ADO. ADO/WFC copie pertinentes membres de données d’événement ADO/WFC dans les paramètres d’événement ADO et renvoie le Gestionnaire d’événements ADO.  
   
-7.  Lorsque vous avez terminé le traitement, supprimez votre gestionnaire dans la liste des gestionnaires d’événements ADO/WFC. Utilisez la méthode avec un nom tel que **removeOn *** EventName*(*gestionnaire*).  
+7.  Lorsque vous avez terminé le traitement, supprimez votre gestionnaire dans la liste des gestionnaires d’événements ADO/WFC. Utilisez la méthode avec un nom tel que **removeOn** *EventName*(*gestionnaire*).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Résumé du Gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5257fc78e43295131685d2fbdededa2f71d2b7de
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 486715799d2fee564c51336bd958eb603cd1b490
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702112"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789693"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE Statements - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,8 +88,6 @@ FROM <backup_device> [ ,...n ]
  Indique que la bande est automatiquement rembobinée et démontée lorsque la restauration est terminée. UNLOAD est définie par défaut lorsqu'une nouvelle session utilisateur démarre. Elle reste valide jusqu'à ce que NOUNLOAD soit spécifiée. Cette option n'est utilisée que dans le cas d'unités de bande. Si une unité autre qu'un lecteur de bandes est utilisée pour la restauration, cette option est ignorée.  
   
  NOUNLOAD  
- Indique que la bande ne sera pas démontée automatiquement du lecteur de bande après une restauration. NOUNLOAD reste valide jusqu'à ce que UNLOAD soit spécifiée.  
-  
  Indique que la bande ne sera pas démontée automatiquement du lecteur de bande après une restauration. NOUNLOAD reste valide jusqu'à ce que UNLOAD soit spécifiée.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  

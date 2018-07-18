@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,15 +24,15 @@ helpviewer_keywords:
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 caps.latest.revision: 51
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ee7492ffa3c18730ac1bb10ce11ea11b0bfbc7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 53609e5c73daad45497c046b54ff800fefe00da7
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068196"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784160"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,13 +84,13 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
  Spécifie le chemin d'accès du fichier de nom à partir duquel il convient de charger la paire de clés.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
  EXECUTABLE FILE ='*path_to_executable_file*'  
  Spécifie un fichier d'assembly à partir duquel il convient de charger la clé publique. Limité à 260 caractères par MAX_PATH dans l'API Windows.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
  ASSEMBLY *Assembly_Name*  
  Spécifie le nom d'un assembly à partir duquel il convient de charger la clé publique.  

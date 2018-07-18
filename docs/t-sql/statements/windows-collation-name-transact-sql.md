@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - Collation Designator
 ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de2d55bbe2dafaa02886a1e0deeb675a43469e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1be59e84a5b40444e6218c2b390b832516193ecf
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075156"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782690"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nom de classement Windows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -167,7 +166,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Malayalam (Inde)|Indic_General_100_<sup>1</sup>|Non disponible|  
 |Maltais (Malte)|Maltese_100_|Non disponible|  
 |Maori (Nouvelle-Zélande)|Maori_100_|Non disponible|  
-|Mapudungun (Chili)|Mapudungan_100_|Non disponible|  
+|Mapuche (Chili)|Mapudungan_100_|Non disponible|  
 |Marathe (Inde)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
 |Mohawk (Canada)|Mohawk_100_|Non disponible|  
 |Mongol (République populaire de Chine)|Cyrillic_General_100_|Non disponible|  
@@ -216,7 +215,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Xhosa (Afrique du Sud)|Latin1_General_100_|Non disponible|  
 |Iakoute (Russie)|Yakut_100_|Non disponible|  
 |Yi (RPC)|Latin1_General_100_|Non disponible|  
-|Yorouba (Nigeria)|Latin1_General_100_|Non disponible|  
+|Yoruba (Nigeria)|Latin1_General_100_|Non disponible|  
 |Zoulou (Afrique du Sud)|Latin1_General_100_|Non disponible|  
 |Déconseillé, non disponible au niveau serveur dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures|Hindi|Hindi|  
 |Déconseillé, non disponible au niveau serveur dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures|Korean_Wansung_Unicode|Korean_Wansung_Unicode|  
@@ -231,7 +230,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
  [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   

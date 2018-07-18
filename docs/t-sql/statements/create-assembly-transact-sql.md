@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,16 +23,16 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 caps.latest.revision: 94
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2e051de3a64a66beb0be82542dba16678c900c5d
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 9d9116a6382c71ae988c5f79660a3b8c9ded914a
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702832"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942331"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -79,7 +78,7 @@ Spécifie le chemin d'accès local ou l'emplacement sur le réseau où se trouve
  Liste des valeurs binaires qui composent l'assembly et ses assemblys dépendants. La première valeur de la liste est considérée comme l'assembly de niveau racine. Les valeurs correspondant aux assemblys dépendants peuvent être fournies dans n'importe quel ordre. Toutes les valeurs qui ne correspondent pas à des dépendances de l'assembly racine sont ignorées.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
  *varbinary_literal*  
  Est un littéral **varbinary**.  
@@ -98,12 +97,12 @@ Spécifie le chemin d'accès local ou l'emplacement sur le réseau où se trouve
  EXTERNAL_ACCESS permet à des assemblys d'accéder à certaines ressources système externes telles que les fichiers, les réseaux, les variables d'environnement et le Registre.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
  UNSAFE permet à des assemblys d'accéder sans restrictions aux ressources, à l'intérieur ou à l'extérieur d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le code qui s'exécute dans un assembly UNSAFE peut appeler du code non managé.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
 > [!IMPORTANT]  
 >  SAFE est le paramètre recommandé pour les autorisations des assemblys qui effectuent des calculs et des tâches de gestion des données sans accéder à des ressources extérieures à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
