@@ -1,5 +1,5 @@
 ---
-title: TopCount (DMX) | Documents Microsoft
+title: TopCount (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842772"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989850"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,19 +32,19 @@ TopCount(<table expression>, <rank expression>, <count>)
  Une expression qui retourne une table, comme un \<référence de colonne de table >, ou une fonction qui retourne une table.  
   
 ## <a name="return-type"></a>Type de retour  
- \<Expression de table >  
+ \<expression de table >  
   
 ## <a name="remarks"></a>Notes  
- La valeur fournie par le \<rank expression > argument détermine l’ordre décroissant de classement pour les lignes qui sont fournis dans le \<expression de table > argument et le nombre de lignes supérieur spécifié dans le \<count > argument est retourné.  
+ La valeur est fournie par le \<rank expression > argument détermine l’ordre décroissant du classement pour les lignes qui sont fournis dans le \<expression de table > argument et le nombre de lignes de premier plan qui est spécifié dans le \<nombre > argument est retourné.  
   
- La fonction TopCount a été introduite initialement pour activer les prédictions associatives et, en général, produit les mêmes résultats qu’une instruction qui inclut **SELECT TOP** et **ORDER BY** clauses. Vous obtiendrez de meilleures performances pour les prédictions associatives si vous utilisez la **prédire (DMX)** (fonction), qui prend en charge la spécification d’un nombre de prédictions à retourner.  
+ La fonction TopCount a été introduite initialement pour activer les prédictions associatives et, en général, produit les mêmes résultats qu’une instruction qui inclut **SELECT TOP** et **ORDER BY** clauses. Vous obtiendrez de meilleures performances pour les prédictions associatives si vous utilisez le **prédire (DMX)** (fonction), qui prend en charge la spécification d’un nombre de prédictions à retourner.  
   
- Toutefois, il existe des situations où vous devrez peut-être encore utiliser TopCount. Par exemple, DMX ne prend pas en charge la **haut** qualificateur dans une instruction de sous-sélection. Le [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) fonction également ne gère pas l’ajout de **haut**.  
+ Toutefois, il existe des situations où vous faudra peut-être encore utiliser TopCount. Par exemple, DMX ne prend pas en charge la **haut** qualificateur dans une instruction de sous-sélection. Le [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) fonction également ne prend pas en charge l’ajout de **haut**.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants illustrent des requêtes de prédiction sur le modèle d’Association que vous créez à l’aide de la [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Les requêtes retournent les mêmes résultats, mais le premier exemple utilise TopCount et le deuxième exemple utilise la fonction de prédiction.  
+ Les exemples suivants sont des requêtes de prédiction sur le modèle d’Association que vous générez à l’aide de la [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Les requêtes retournent les mêmes résultats, mais le premier exemple utilise TopCount et le deuxième exemple utilise la fonction Predict.  
   
- Pour comprendre le fonctionnement de TopCount, il peut être utile d’abord exécuter une requête de prédiction qui retourne uniquement la table imbriquée.  
+ Pour comprendre le fonctionne de TopCount, il peut être utile pour tout d’abord exécuter une requête de prédiction qui retourne uniquement la table imbriquée.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -72,7 +72,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- La fonction TopCount prend les résultats de cette requête et retourne le nombre spécifié de lignes plus petite valeur.  
+ La fonction TopCount prend les résultats de cette requête et retourne le nombre spécifié de lignes à valeur plus petite.  
   
 ```  
 SELECT   
@@ -87,11 +87,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Le premier argument à la fonction TopCount est le nom d’une colonne de table. Dans cet exemple, la table imbriquée est retournée en appelant la fonction de prédiction et à l’aide de l’argument INCLUDE_STATISTICS.  
+ Le premier argument à la fonction TopCount est le nom d’une colonne de table. Dans cet exemple, la table imbriquée est retournée en appelant la fonction Predict et à l’aide de l’argument INCLUDE_STATISTICS.  
   
- Le deuxième argument à la fonction TopCount est la colonne dans la table imbriquée qui vous permettent de classer les résultats. Dans cet exemple, l'option INCLUDE_STATISTICS retourne les colonnes $SUPPORT, $PROBABILTY et $ADJUSTED PROBABILITY. Cet exemple utilise $SUPPORT pour classer les résultats.  
+ Le deuxième argument à la fonction TopCount est la colonne dans la table imbriquée qui vous permet de classer les résultats. Dans cet exemple, l'option INCLUDE_STATISTICS retourne les colonnes $SUPPORT, $PROBABILTY et $ADJUSTED PROBABILITY. Cet exemple utilise $SUPPORT pour classer les résultats.  
   
- Le troisième argument de la fonction TopCount indique le nombre de lignes à retourner, sous forme d’entier. Pour obtenir les trois produits supérieurs, tel que classé par $SUPPORT, tapez 3.  
+ Le troisième argument de la fonction TopCount Spécifie le nombre de lignes à retourner, sous forme d’entier. Pour obtenir les trois produits supérieurs, tel que classé par $SUPPORT, tapez 3.  
   
  Résultats de l'exemple :  
   
@@ -103,7 +103,7 @@ NATURAL PREDICTION JOIN
   
  Toutefois, ce type de requête peut affecter les performances dans un environnement de production. Cela est dû au fait que la requête retourne un ensemble de toutes les prédictions de l'algorithme, trie ces prédictions et retourne les 3 prédictions supérieures.  
   
- L'exemple suivant fournit une autre instruction qui retourne les mêmes résultats mais s'exécute beaucoup plus rapidement. Cet exemple remplace TopCount par la fonction de prédiction, qui accepte un nombre de prédictions en tant qu’argument. Cet exemple utilise également la **$SUPPORT** mot clé pour récupérer directement la colonne de table imbriquée.  
+ L'exemple suivant fournit une autre instruction qui retourne les mêmes résultats mais s'exécute beaucoup plus rapidement. Cet exemple remplace TopCount par la fonction Predict, qui accepte un nombre de prédictions en tant qu’argument. Cet exemple utilise également le **$SUPPORT** mot clé pour récupérer directement la colonne de table imbriquée.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  

@@ -1,5 +1,5 @@
 ---
-title: L’utilisation du chiffrement | Documents Microsoft
+title: À l’aide du chiffrement | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -26,22 +26,22 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 36b39fc4a13e3236e569af2209c680e7cdb0d534
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969734"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995798"
 ---
 # <a name="using-encryption"></a>Utilisation du chiffrement
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Dans SMO, la clé principale du service est représentée par la <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> objet. Elle est référencée par la <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Server> objet. Elle peut être régénérée à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> (méthode).  
+  Dans SMO, la clé principale du service est représentée par le <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> objet. Elle est référencée par le <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Server> objet. Elle peut être régénérée à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> (méthode).  
   
- La clé principale de base de données est représentée par la <xref:Microsoft.SqlServer.Management.Smo.MasterKey> objet. Le <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> propriété indique si la clé principale de base de données est chiffrée par la clé principale du service. La copie chiffrée dans la base de données master est automatiquement mise à jour à chaque modification de la clé principale de la base de données.  
+ La clé principale de base de données est représentée par le <xref:Microsoft.SqlServer.Management.Smo.MasterKey> objet. Le <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> propriété indique si la clé principale de base de données est chiffrée par la clé principale du service. La copie chiffrée dans la base de données master est automatiquement mise à jour à chaque modification de la clé principale de la base de données.  
   
- Il est possible de supprimer le chiffrement à clé de service à l’aide du <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> (méthode) et de chiffrer la clé principale de base de données avec un mot de passe. Dans cette situation, vous devrez ouvrir explicitement la clé principale de base de données avant d'accéder aux clés privées qu'elle sécurise.  
+ Il est possible de supprimer la clé de chiffrement de service à l’aide du <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> (méthode) et chiffrer la clé principale de base de données avec un mot de passe. Dans cette situation, vous devrez ouvrir explicitement la clé principale de base de données avant d'accéder aux clés privées qu'elle sécurise.  
   
- Lorsqu’une base de données est attachée à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous devez fournir le mot de passe pour la clé principale de base de données ou exécuter la <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> méthode pour créer une copie non chiffrée de la clé principale de base de données disponibles pour le chiffrement par clé principale du service. Cette étape est recommandée pour éviter d'avoir à ouvrir explicitement la clé principale de base de données.  
+ Quand une base de données est attachée à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous devez fournir le mot de passe pour la clé principale de base de données ou exécuter la <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> méthode permettant d’apporter une copie non chiffrée de la clé principale de base de données disponibles pour le chiffrement avec le service clé principale. Cette étape est recommandée pour éviter d'avoir à ouvrir explicitement la clé principale de base de données.  
   
  Le <xref:Microsoft.SqlServer.Management.Smo.MasterKey.Regenerate%2A> méthode régénère la clé principale de base de données. Lorsque la clé principale de base de données est régénérée, toutes les clés qu'elle a permis de chiffrer sont déchiffrées, puis elles sont à nouveau chiffrées au moyen de la nouvelle clé principale de base de données. Le <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> méthode supprime le chiffrement de la clé principale de base de données par la clé principale du service. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> entraîne le chiffrement d'une copie de la clé principale à l'aide de la clé principale du service, puis le stockage de cette clé à la fois dans la base de données actuelle et dans la base de données master.  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_help_fulltext_catalogs (Transact-SQL) | Documents Microsoft
+title: sp_help_fulltext_catalogs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5490c7e8d8658ddc8048e63d082d48ea92249c08
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243392"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989351"
 ---
 # <a name="sphelpfulltextcatalogs-transact-sql"></a>sp_help_fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33243392"
   Retourne l'identificateur, le nom, le répertoire racine, l'état et le nombre de tables indexées en texte intégral du catalogue de texte intégral spécifié.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez le [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) affichage du catalogue à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez le [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) vue de catalogue à la place.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,13 +56,13 @@ sp_help_fulltext_catalogs [ @fulltext_catalog_name = ] 'fulltext_catalog_name'
 ## <a name="result-sets"></a>Jeux de résultats  
  Cette table montre le jeu de résultats, classé selon le paramètre **ftcatid**.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|Identificateur du catalogue de texte intégral.|  
 |**NOM**|**sysname**|Nom du catalogue de texte intégral.|  
 |**PATH**|**nvarchar(260)**|À partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], cette clause n'a aucun effet.|  
-|**ÉTAT**|**int**|État du remplissage de l'index de recherche en texte intégral du catalogue :<br /><br /> 0 = Inactif <br /><br /> 1 = Remplissage complet en cours<br /><br /> 2 = En pause <br /><br /> 3 = Accéléré<br /><br /> 4 = Récupération<br /><br /> 5 = Arrêt<br /><br /> 6 = Remplissage incrémentiel en cours<br /><br /> 7 = Indexation en cours<br /><br /> 8 = Disque plein Suspendu<br /><br /> 9 = Suivi des modifications<br /><br /> NULL = L'utilisateur n'a pas l'autorisation VIEW sur le catalogue de texte intégral, la base de données n'est pas activée en texte intégral ou le composant de texte intégral n'est pas installé.|  
-|**NUMBER_FULLTEXT_TABLES**|**int**|Nombre de tables indexées en texte intégral associées au catalogue.|  
+|**ÉTAT**|**Int**|État du remplissage de l'index de recherche en texte intégral du catalogue :<br /><br /> 0 = Inactif <br /><br /> 1 = Remplissage complet en cours<br /><br /> 2 = En pause <br /><br /> 3 = Accéléré<br /><br /> 4 = Récupération<br /><br /> 5 = Arrêt<br /><br /> 6 = Remplissage incrémentiel en cours<br /><br /> 7 = Indexation en cours<br /><br /> 8 = Disque plein Suspendu<br /><br /> 9 = Suivi des modifications<br /><br /> NULL = L'utilisateur n'a pas l'autorisation VIEW sur le catalogue de texte intégral, la base de données n'est pas activée en texte intégral ou le composant de texte intégral n'est pas installé.|  
+|**NUMBER_FULLTEXT_TABLES**|**Int**|Nombre de tables indexées en texte intégral associées au catalogue.|  
   
 ## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution reviennent par défaut aux membres du rôle **public** .  
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [FULLTEXTCATALOGPROPERTY & #40 ; Transact-SQL & #41 ;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [sp_fulltext_catalog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
  [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

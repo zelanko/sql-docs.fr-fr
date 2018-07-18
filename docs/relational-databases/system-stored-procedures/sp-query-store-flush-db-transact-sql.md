@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_flush_db (Transact-SQL) | Documents Microsoft
+title: sp_query_store_flush_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0dca89f1d5876d437ccce2009db77614ba04ce4c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247035"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993629"
 ---
 # <a name="spquerystoreflushdb-transact-sql"></a>sp_query_store_flush_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Vide la partie en mémoire des données de magasin de requêtes sur le disque.  
+  Vide la partie en mémoire des données de requête Store sur le disque.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,10 +53,10 @@ sp_query_store_flush_db [;]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert le **EXECUTE** sur la base de données, et **supprimer** autorisation sur les affichages catalogue du magasin de requête.  
+ Nécessite le **EXECUTE** autorisation sur la base de données, et **supprimer** autorisation sur les affichages catalogue du magasin de requête.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant vide la partie en mémoire des données de magasin de requêtes sur le disque.  
+ L’exemple suivant vide la partie en mémoire des données de requête Store sur le disque.  
   
 ```  
 EXEC sp_query_store_flush_db;  

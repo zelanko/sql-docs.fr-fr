@@ -1,5 +1,5 @@
 ---
-title: Sys.server_role_members (Transact-SQL) | Documents Microsoft
+title: Sys.server_role_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,26 +26,26 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 83d2548be09bc19a664dab70f18da8611bc31bc5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221080"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039013"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Renvoie une ligne pour chaque membre de chaque rôle serveur fixe et défini par l'utilisateur.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**role_principal_id**|**int**|ID du principal de serveur du rôle.|  
-|**member_principal_id**|**int**|ID du principal de serveur du membre.|  
+|**role_principal_id**|**Int**|ID du principal de serveur du rôle.|  
+|**member_principal_id**|**Int**|ID du principal de serveur du membre.|  
   
  Pour ajouter ou supprimer l’appartenance au rôle de serveur, utilisez le [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)instruction.  
   
 ## <a name="permissions"></a>Autorisations  
- Les connexions peuvent afficher leur propre appartenance au rôle de serveur et les principal_id des membres des rôles serveur fixes. Pour afficher tous les rôles de serveur nécessite le **VIEW DEFINITION ON SERVER ROLE** autorisation ou l’appartenance dans le **securityadmin** rôle serveur fixe.  
+ Les connexions peuvent afficher leur propre appartenance au rôle de serveur et les principal_id des membres des rôles serveur fixes. Pour afficher tous les appartenance au rôle de serveur nécessite le **VIEW DEFINITION ON SERVER ROLE** autorisation ou l’appartenance dans le **securityadmin** rôle serveur fixe.  
   
  Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

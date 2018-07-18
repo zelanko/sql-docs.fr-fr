@@ -1,5 +1,5 @@
 ---
-title: L’octroi, révocation et refus d’autorisations | Documents Microsoft
+title: Octroi, révocation et refus d’autorisations | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77c9bb9b74b4d0b7dee5ec09724db144852dc73b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969514"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990638"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Octroi, révocation et refus d'autorisations
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "32969514"
  Les autorisations relatives à la base de données et les autorisations relatives aux objets de base de données peuvent être attribuées de la même façon en utilisant l'objet <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> et l'objet <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Octroi d'autorisations de serveur en Visual Basic  
  Cet exemple de code octroie les autorisations Create Endpoint et Alter Any Endpoint à la connexion spécifiée, puis énumère et affiche les autorisations. L'une des autorisations est révoquée, puis les autorisations sont à nouveau énumérées. Cet exemple suppose que la connexion spécifiée dispose des autorisations de démarrage requises.  

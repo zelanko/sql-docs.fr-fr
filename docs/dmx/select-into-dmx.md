@@ -1,5 +1,5 @@
 ---
-title: SELECT INTO (DMX) | Documents Microsoft
+title: SELECT INTO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842232"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040417"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Crée un modèle d'exploration de données, sur la base de la structure d'exploration de données d'un modèle existant. Le **SELECT INTO** crée le nouveau modèle d’exploration de données en copiant le schéma et autres informations qui ne sont pas spécifiques à l’algorithme.  
+  Crée un modèle d'exploration de données, sur la base de la structure d'exploration de données d'un modèle existant. Le **SELECT INTO** instruction crée le nouveau modèle d’exploration de données en copiant le schéma et autres informations qui ne sont pas spécifiques à l’algorithme.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +34,10 @@ FROM <existing model>
  *nouveau modèle*  
  Nom unique du nouveau modèle en cours de création.  
   
- *Algorithme*  
+ *algorithme*  
  Nom défini par le fournisseur d'un algorithme d'exploration de données  
   
- *Liste de paramètres*  
+ *liste de paramètres*  
  Facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
   
  *expression*  
@@ -75,8 +75,8 @@ FROM [TM Clustering]
 >  Les filtres appliqués à la table de cas peuvent être modifiés à l'aide de l'instruction SELECT INTO, tel qu'indiqué dans cet exemple ; toutefois, si le modèle d'origine contient un filtre sur une table imbriquée, ce filtre ne peut pas être modifié ou supprimé en utilisant cette syntaxe, mais il est copié tel quel à partir du modèle d'origine. Pour créer un modèle avec un autre filtre sur une table imbriquée, utilisez la syntaxe ALTER STRUCTURE...ADD MODEL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

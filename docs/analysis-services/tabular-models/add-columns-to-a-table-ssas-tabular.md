@@ -1,5 +1,5 @@
 ---
-title: Ajouter des colonnes à une table | Documents Microsoft
+title: Ajouter des colonnes à une table | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77be2e392add4811d011d85ebc1ee9efbf52191d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043453"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991471"
 ---
 # <a name="add-columns-to-a-table"></a>Ajouter des colonnes à une table
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Cet article décrit comment ajouter des colonnes à une table existante.  
   
-## <a name="add-columns-from-the-datasource"></a>Ajouter des colonnes de la source de données  
+## <a name="add-columns-from-the-datasource"></a>Ajouter des colonnes à partir de la source de données  
  Lorsque vous utilisez l'Assistant Importation de table pour importer des données depuis une table de source de données, une table est créée dans le modèle qui inclut toutes les colonnes de la table source, ou si vous choisissez de filtrer certaines colonnes à l'aide de la fonctionnalité Afficher un aperçu et filtrer, seulement les colonnes et les données filtrées que vous sélectionnez. Vous pouvez aussi écrire une requête SQL qui spécifie uniquement certaines colonnes à importer. Vous pouvez toutefois déterminer ultérieurement si une table source possède des colonnes supplémentaires à ajouter à la table de modèle, ou si vous devez ajouter une colonne calculée avec des valeurs dérivées d'une formule DAX.  
   
  Si, par exemple, lorsque vous avez initialement effectué une importation à partir d'une source de données, vous avez utilisé la fonctionnalité Afficher un aperçu et filtrer dans l'Assistant Importation de table afin de sélectionner un nombre limité de colonnes de la table source, vous déterminez plus tard que vous devez ajouter une autre colonne qui existe au niveau de la table source, mais qui n'existe pas encore dans la table de modèle. Par exemple, une nouvelle colonne AdjustedProfit a été ajoutée à la table FactSales au niveau de la source de données, et vous souhaitez maintenant ajouter la même colonne AdjustedProfit et des données à la table Sales dans le modèle.  
@@ -62,7 +62,7 @@ ms.locfileid: "34043453"
 2.  Cliquez sur la cellule supérieure, puis tapez un nom et appuyez sur ENTRÉE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modifier la boîte de dialogue Propriétés de table](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
+ [Modifier la boîte de dialogue Propriétés table](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
  [Changer des mappages de filtres de lignes, de tables ou de colonnes](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

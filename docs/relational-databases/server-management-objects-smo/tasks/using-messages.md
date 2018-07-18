@@ -1,5 +1,5 @@
 ---
-title: À l’aide de Messages | Documents Microsoft
+title: À l’aide de Messages | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6d1b0f54854c6eebcbdfdf28d93e7df700cf4eb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968684"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037847"
 ---
 # <a name="using-messages"></a>Utilisation de messages
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

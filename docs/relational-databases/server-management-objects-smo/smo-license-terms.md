@@ -1,27 +1,26 @@
 ---
-title: Partagé de SQL Server Management Objects (SMO) - termes du contrat de licence | Documents Microsoft
+title: SQL Server Shared Management Objects (SMO) - termes du contrat de licence | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd92f1a4d3dd24e4eab1c4f886b28dad158d9fd1
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235096"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040427"
 ---
-# <a name="sql-server-shared-management-objects-smo-license-terms"></a>Contrat de licence de gestion des objets (SMO) partagé de SQL Server
+# <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termes du contrat de licence Management Objects (SMO) partagée de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ## <a name="microsoft-software-license-terms"></a>TERMES DU CONTRAT DE LICENCE LOGICIEL MICROSOFT
@@ -55,7 +54,7 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii.   Conditions de distribution. Pour tout Code Distribuable que vous distribuez, vous devez**
 * y ajouter des fonctionnalités importantes et principales au sein de vos programmes ;
-* pour tout Code distribuable ayant une extension de nom de fichier du fichier .dll, distribuer seulement les résultats de l’exécution de ce Code distribuable via un éditeur de liens avec votre programme ;
+* pour tout Code distribuable dont l’extension de nom de fichier .dll, distribuer seulement les résultats de l’exécution de ce Code distribuable via un éditeur de liens avec votre programme ;
 * exiger des distributeurs et des utilisateurs finaux externes qu’ils acceptent les termes qui protègent le Code Distribuable de manière au moins équivalente à ceux du présent contrat ; 
 * afficher votre propre mention de droits d’auteur valable dans vos programmes, et
 * garantir et défendre Microsoft contre toute réclamation, y compris pour les honoraires d’avocats, qui résulterait de la distribution ou de l’utilisation de vos programmes.

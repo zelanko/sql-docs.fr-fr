@@ -1,5 +1,5 @@
 ---
-title: PredictCaseLikelihood (DMX) | Documents Microsoft
+title: PredictCaseLikelihood (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8159af8ac4b3c9bf21dcdc68a0cfb30c46e33e5
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841775"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040307"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,13 +36,13 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  La valeur de retour contient la probabilité brute du cas, qui est le produit des probabilités des attributs de cas.  
   
 ## <a name="applies-to"></a>S'applique à  
- Modèles qui sont générés à l’aide de la [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering et [!INCLUDE[msCoName](../includes/msconame-md.md)] des algorithmes Sequence Clustering.  
+ Modèles qui sont générés à l’aide de la [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering et [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithmes Sequence Clustering.  
   
 ## <a name="return-type"></a>Type de retour  
  Nombre à virgule flottante double précision compris entre 0 et 1. Un nombre plus proche de 1 indique que le cas a une probabilité plus élevée de se produire dans ce modèle. Un nombre plus proche de 0 indique qu'il est moins probable que le cas se produise dans ce modèle.  
   
 ## <a name="remarks"></a>Notes  
- Par défaut, le résultat de la **PredictCaseLikelihood** fonction est normalisée. Les valeurs normalisées sont généralement plus utiles lorsque le nombre d'attributs d'un cas augmente et que les différences entre les probabilités brutes de deux cas deviennent beaucoup moins importantes.  
+ Par défaut, le résultat de la **PredictCaseLikelihood** (fonction) est normalisée. Les valeurs normalisées sont généralement plus utiles lorsque le nombre d'attributs d'un cas augmente et que les différences entre les probabilités brutes de deux cas deviennent beaucoup moins importantes.  
   
  L'équation suivante est utilisée pour calculer les valeurs normalisées pour des valeurs x et y données :  
   
@@ -78,7 +78,7 @@ NATURAL PREDICTION JOIN
 |-------------------------|----------------------------|---------------------|  
 |6.30672792729321E-08|6.30672792729321E-08|9.5824454056846E-48|  
   
- La différence entre ces résultats montre l'effet de la normalisation. La valeur brute de **CaseLikelihood** suggère que la probabilité du cas est d’environ 20 pour cent ; Toutefois, lorsque vous normalisez les résultats, il devient évidente que la probabilité du cas est très faible.  
+ La différence entre ces résultats montre l'effet de la normalisation. La valeur brute pour **CaseLikelihood** suggère que la probabilité du cas est d’environ 20 pour cent ; Cependant, quand vous normalisez les résultats, il devient évident que la probabilité du cas est très faible.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

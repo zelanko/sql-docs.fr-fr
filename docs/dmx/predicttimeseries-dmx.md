@@ -1,5 +1,5 @@
 ---
-title: PredictTimeSeries (DMX) | Documents Microsoft
+title: PredictTimeSeries (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7b4f9303a96e6197cc6580a5c799404f48e5c4a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842742"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040437"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,9 +49,9 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  *début de n, n-fin*  
  Spécifie une plage d'étapes de série chronologique.  
   
- *n-start* doit être un entier et ne peut pas être 0.  
+ *n-début* doit être un entier et ne peut pas être 0.  
   
- *n-end* doit être un entier supérieur à *n-début*.  
+ *n-fin* doit être un entier supérieur à *n-début*.  
   
  *\<requête source >*  
  Définit les données externes qui sont utilisées pour faire des prédictions.  
@@ -66,7 +66,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  Ces arguments peuvent être uniquement utilisés lorsque les nouvelles données sont ajoutées à l'aide d'une instruction PREDICTION JOIN. Si vous utilisez une requête PREDICTION JOIN et que vous ne spécifiez pas d'argument, la valeur par défaut est EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Type de retour  
- A \< *expression de table*>.  
+ Un \< *expression de table*>.  
   
 ## <a name="remarks"></a>Notes  
  L'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series) ne prend pas en charge la prédiction historique lorsque vous utilisez l'instruction PREDICTION JOIN pour ajouter de nouvelles données.  
@@ -85,13 +85,13 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   Le troisième exemple indique comment utiliser le paramètre EXTEND_MODEL_CASES pour mettre à jour un modèle d'exploration de données avec de nouvelles données.  
   
- Pour en savoir plus sur l’utilisation des modèles de série chronologique, consultez le didacticiel d’exploration de données, [leçon 2 : génération d’un scénario de prévision &#40;didacticiel intermédiaire sur l’exploration de données&#41; ](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) et [temps série de prédiction DMX Didacticiel](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Pour en savoir plus sur l’utilisation des modèles de série chronologique, consultez le didacticiel d’exploration de données, [leçon 2 : génération d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41; ](http://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) et [temps série de prédiction DMX Didacticiel](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  Vous pouvez obtenir des résultats différents de votre modèle ; les résultats des exemples suivants sont fournis uniquement pour illustrer le format de résultat.  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>Exemple 1 : Prédiction de plusieurs tranches de temps  
- L’exemple suivant utilise le **PredictTimeSeries** fonction pour retourner une prédiction pour la prochaine heure trois étapes et limite les résultats de la série M200 dans les régions Europe et Pacifique. Dans ce modèle particulier, l’attribut prédictible est Quantity, vous devez donc utiliser `[Quantity]` comme premier argument à la fonction PredictTimeSeries.  
+ L’exemple suivant utilise le **PredictTimeSeries** fonction pour retourner une prédiction pour la prochaine heure trois étapes et limite les résultats à la série M200 dans les régions Europe et Pacifique. Dans ce modèle particulier, l’attribut prédictible est Quantity, vous devez donc utiliser `[Quantity]` comme premier argument à la fonction PredictTimeSeries.  
   
 ```  
 SELECT FLATTENED  
@@ -163,7 +163,7 @@ ON
 |M200 Pacific|25/9/2008 12:00:00 AM|84|  
   
 ### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>Exemple 3 : ajout de nouvelles données et utilisation d'EXTEND_MODEL_CASES  
- Exemple 3 illustre l’utilisation de la *EXTEND_MODEL_CASES* possibilité de fournir de nouvelles données, qui sont ajoutées à la fin d’une série de données existante. Plutôt que de remplacer les points de données existants, les nouvelles données sont ajoutées au modèle.  
+ Exemple 3 illustre l’utilisation de la *EXTEND_MODEL_CASES* option pour fournir de nouvelles données, qui sont ajoutées à la fin d’une série de données existante. Plutôt que de remplacer les points de données existants, les nouvelles données sont ajoutées au modèle.  
   
  Dans l'exemple suivant, les nouvelles données sont fournies dans l'instruction SELECT qui suit NATURAL PREDICTION JOIN. Vous pouvez fournir plusieurs lignes de nouvelle entrée avec cette syntaxe, mais chaque nouvelle ligne d'entrée doit avoir un horodatage unique :  
   
@@ -186,7 +186,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- Étant donné que la requête utilise le *EXTEND_MODEL_CASES* option [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] effectue les actions suivantes pour faire ses prédictions :  
+ Étant donné que la requête utilise le *EXTEND_MODEL_CASES* option, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] effectue les actions suivantes pour faire ses prédictions :  
   
 -   Augmente la taille totale des cas d'apprentissage en ajoutant les deux nouveaux mois de données au modèle.  
   
@@ -219,7 +219,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |11/25/2008 0:00|38|  
   
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Exemple 4 : retour de statistiques dans une prédiction de série chronologique  
- Le **PredictTimeSeries** (fonction) ne prend pas en charge *INCLUDE_STATISTICS* en tant que paramètre. Toutefois, la requête suivante peut être utilisée pour retourner les statistiques de prédiction pour une requête de série chronologique. Cette approche peut également être suivie avec des modèles qui ont des colonnes de tables imbriquées.  
+ Le **PredictTimeSeries** fonction ne prend pas en charge *INCLUDE_STATISTICS* en tant que paramètre. Toutefois, la requête suivante peut être utilisée pour retourner les statistiques de prédiction pour une requête de série chronologique. Cette approche peut également être suivie avec des modèles qui ont des colonnes de tables imbriquées.  
   
  Dans ce modèle particulier, l’attribut prédictible est Quantity, vous devez donc utiliser `[Quantity]` comme premier argument à la fonction PredictTimeSeries. Si votre modèle utilise un autre attribut prédictible, vous pouvez substituer un nom de colonne différent.  
   
@@ -254,7 +254,7 @@ OR [Model Region] = 'M200 North America'
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Exemples de requête de modèle de série de temps](../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Exemples de requêtes de modèle de série chronologique](../analysis-services/data-mining/time-series-model-query-examples.md)   
  [Prédire &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

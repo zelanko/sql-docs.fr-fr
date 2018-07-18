@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_io_cluster_valid_path_names (Transact-SQL) | Documents Microsoft
+title: Sys.dm_io_cluster_valid_path_names (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,18 +27,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73be0586ae8f12633fff733f763f021f7133d119
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468285"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038807"
 ---
 # <a name="sysdmioclustervalidpathnames-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Retourne des informations sur tous les disques partagés valides, y compris les volumes partagés de cluster, pour une instance de cluster de basculement SQL Server. Si l'instance n'est pas en cluster, un ensemble de lignes vide est retourné.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom_chemin**|**Nvarchar(512)**|Point de montage de volume ou chemin d'accès de lecteur pouvant être utilisé comme répertoire racine pour la base de données et les fichiers journaux. N'accepte pas la valeur NULL.|  
 |**cluster_owner_node**|**Nvarchar(64)**|Propriétaire actuel du disque. Pour les volumes partagés de cluster (CSV), le propriétaire est le nœud qui héberge le serveur de métadonnées. N'accepte pas la valeur NULL.|  

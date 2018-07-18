@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_pdw_query_stats_xe (Transact-SQL) | Documents Microsoft
+title: Sys.dm_pdw_query_stats_xe (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -18,32 +18,32 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 32d5cf452735bab9915afce6df6311dd6279a52d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000681"
 ---
 # <a name="sysdmpdwquerystatsxe-transact-sql"></a>Sys.dm_pdw_query_stats_xe (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Cette DMV est déconseillée et sera supprimée dans une version ultérieure. Dans cette version, il retourne 0 ligne.  
+  Cette DMV est déconseillée et sera supprimée dans une version ultérieure. Dans cette version, elle retourne 0 ligne.  
   
-|Nom de la colonne|Type de données| Description|Plage|  
+|Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |événement|**nvarchar(60)**|Clé pour cette vue.||  
 |event_id|**nvarchar(36)**|||  
 |create_time|**datetime**|||  
-|session_id|**int**|Id de la session.|Consultez session_id dans [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|cpu|**int**|||  
-|reads|**int**|Nombre de lectures logiques depuis le début de l’événement.||  
-|writes|**int**|Nombre d’écritures logiques depuis le début de l’événement.||  
+|session_id|**Int**|Id de la session.|Consultez session_id dans [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|cpu|**Int**|||  
+|reads|**Int**|Nombre de lectures logiques depuis le début de l’événement.||  
+|writes|**Int**|Nombre d’écritures logiques depuis le début de l’événement.||  
 |sql_text|**nvarchar(4000)**|||  
 |client_app_name|**nvarchar(255)**|||  
 |pile_tsql|**nvarchar(255)**|||  
-|pdw_node_id|**int**|Nœud sur lequel cette instance Xevent est en cours d’exécution.|  
+|pdw_node_id|**Int**|Nœud sur lequel cette instance Xevent est en cours d’exécution.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Entrepôt de données SQL et les données en parallèle de l’entrepôt de vues de gestion dynamique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Vues de gestion dynamique de l’entrepôt SQL Data Warehouse et Parallel Data &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

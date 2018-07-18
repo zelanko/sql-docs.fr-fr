@@ -1,5 +1,5 @@
 ---
-title: Existe (DMX) | Documents Microsoft
+title: Existe (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 936612dba4f466c5bc78f20f5a3ea07954a20a1c
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843022"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998581"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>Arguments  
  *subquery*  
- Une instruction SELECT sous la forme SELECT * FROM \<nom de colonne > [où \<liste_prédicats >].  
+ Une instruction SELECT sous la forme SELECT * FROM \<nom_colonne > [où \<liste_prédicats >].  
   
 ## <a name="result-type"></a>Type de résultat  
  Retourne **true** si le jeu de résultats retourné par la sous-requête contient au moins une ligne ; sinon, retourne **false**.  
@@ -54,7 +54,7 @@ WHERE [[Model] = 'Patch kit'
 )  
 ```  
   
- Un autre pour afficher les mêmes données que celui qui sont retournées par cette requête consiste à ouvrir le modèle dans la visionneuse d’associations, cliquez sur le jeu d’éléments **Patch kit = Existing**, sélectionnez le **extraire** option et sélectionnez **cas de modèles uniquement**.  
+ Un autre pour afficher les mêmes données que celui qui sont retournées par cette requête consiste à ouvrir le modèle dans la visionneuse d’associations, cliquez sur le jeu d’éléments **Patch kit = Existing**, sélectionnez le **extraire** option, puis Sélectionnez **cas de modèles uniquement**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   

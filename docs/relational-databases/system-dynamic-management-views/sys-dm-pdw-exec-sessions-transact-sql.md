@@ -18,11 +18,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 93a6f3b3ca257a6f6d4c848b2d83bf441ab73cf4
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36759614"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040407"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>Sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "36759614"
 |is_transactional|**bit**|Capture si une session est actuellement dans une transaction ou non.|0 pour la validation automatique, 1 pour transactionnelle.|  
 |client_id|**nvarchar(255)**|Capture des informations de client pour la session.|N’importe quelle chaîne valide.|  
 |app_name|**nvarchar(255)**|Capture des informations de nom d’application si vous le souhaitez définie en tant que partie du processus de connexion.|N’importe quelle chaîne valide.|  
-|sql_spid|**Int**|Numéro d’identification du SPID. Utilisez le `session_id` cette session. Utilisez le `sql_spid` colonne pour joindre au **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Avertissement \* \* ** cette colonne contient des SPID fermés.||  
+|sql_spid|**Int**|Numéro d’identification du SPID. Utilisez le `session_id` cette session. Utilisez le `sql_spid` colonne pour joindre au **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Avertissement \* \***  cette colonne contient des SPID fermés.||  
   
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section de valeurs de la vue système maximales dans le [valeurs minimales et maximales (SQL Server PDW)](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9) rubrique.  
   

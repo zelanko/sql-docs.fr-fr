@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_hadr_is_primary_replica (Transact-SQL) | Documents Microsoft
+title: Sys.fn_hadr_is_primary_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebfd66acdc93f1a5148981e06f8adf1c507e1705
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240509"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995629"
 ---
 # <a name="sysfnhadrisprimaryreplica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- '*dbname*'  
+ «*dbname*»  
  Nom de la base de données. *dbname* est de type sysname.  
   
 ## <a name="returns"></a>Valeur renvoyée  
@@ -77,7 +77,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de groupes de disponibilité AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [Groupes de disponibilité AlwaysOn & #40 ; SQL Server & #41 ;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [Affichages catalogue des groupes de disponibilité AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  

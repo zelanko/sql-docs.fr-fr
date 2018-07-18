@@ -1,5 +1,5 @@
 ---
-title: Data Mining Extensions (DMX) des éléments de syntaxe | Documents Microsoft
+title: Data Mining Extensions (DMX) les éléments de syntaxe | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842382"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989921"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Éléments de syntaxe DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez utiliser divers éléments de syntaxe pour définir des instructions d’Extensions DMX (Data Mining) que vous pouvez utiliser pour créer, gérer et à utiliser des modèles d’exploration de données. Les rubriques suivantes décrivent ces éléments de syntaxe.  
+  Dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez utiliser divers éléments de syntaxe pour définir les déclarations d’Extensions DMX (Data Mining) que vous pouvez utiliser pour créer, gérer et à utiliser des modèles d’exploration de données. Les rubriques suivantes décrivent ces éléments de syntaxe.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Identificateurs &#40;DMX&#41;](../dmx/identifiers-dmx.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "34842382"
  Expression qui prend zéro ou une ou plusieurs valeurs d'entrée et retourne une valeur scalaire ou une table.  
   
  [Commentaires &#40;DMX&#41;](../dmx/comments-dmx.md)  
- Éléments de texte que vous pouvez insérer dans des instructions DMX ou des scripts pour expliquer l'objectif d'une instruction. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] n’exécute pas les commentaires.  
+ Éléments de texte que vous pouvez insérer dans des instructions DMX ou des scripts pour expliquer l'objectif d'une instruction. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] n’exécute pas de commentaires.  
   
  [Mots clés réservés &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)  
  Mots réservés à l'utilisation de DMX qui ne doivent pas être employés pour nommer des objets dans une base de données.  
@@ -49,10 +49,10 @@ ms.locfileid: "34842382"
  [Distributions &#40;DMX&#41;](../dmx/distributions-dmx.md)  
  Définit la distribution des données au sein d'une colonne.  
   
- [L’utilisation de &#40;DMX&#41;](../dmx/usage-dmx.md)  
+ [Utilisation &#40;DMX&#41;](../dmx/usage-dmx.md)  
  Définissez de quelle manière un modèle utilise les colonnes qu'il contient.  
   
- [Les indicateurs de modélisation &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
+ [Indicateurs de modélisation &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
  Définissez les indicateurs supplémentaires utilisés par l'algorithme pour traiter un modèle d'exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  

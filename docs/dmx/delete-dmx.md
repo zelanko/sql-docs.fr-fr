@@ -1,5 +1,5 @@
 ---
-title: DELETE (DMX) | Documents Microsoft
+title: DELETE (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5b11bda21fe877af419442cb8b98acd4d29c21b
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841272"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989911"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
  Identificateur de la structure  
   
 ## <a name="remarks"></a>Notes  
- Si vous ne spécifiez pas **modèle d’exploration de données** ou **STRUCTURE d’exploration de données**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recherche le type d’objet en fonction du nom et traite l’objet correct. Si le serveur contient une structure d'exploration de données et un modèle d'exploration de données portant le même nom, une erreur est retournée.  
+ Si vous ne spécifiez pas **MINING MODEL** ou **STRUCTURE d’exploration de données**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recherche le type d’objet en fonction du nom et traite l’objet correct. Si le serveur contient une structure d'exploration de données et un modèle d'exploration de données portant le même nom, une erreur est retournée.  
   
  Le tableau ci-dessous décrit le résultat obtenu en utilisant différentes formes de la syntaxe.  
   
@@ -45,7 +45,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 |---------------|------------|  
 |SUPPRIMER à partir de la STRUCTURE d’exploration de données*\<structure >*<br /><br /> ou Gestionnaire de configuration<br /><br /> SUPPRIMER à partir de la STRUCTURE d’exploration de données*\<structure >*. CONTENU|Effectue ProcessClear sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données et de ses modèles d'exploration de données associés.|  
 |SUPPRIMER à partir de la STRUCTURE d’exploration de données*\<structure >*. CAS|Effectue ProcessClearStructureOnly sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données, en laissant ses modèles d'exploration de données associés intacts. Une fois la structure d'exploration de données supprimée, l'extraction dans les modèles d'exploration de données associés échoue.|  
-|Supprimer dans le modèle d’exploration de données*\<modèle >*<br /><br /> ou Gestionnaire de configuration<br /><br /> Supprimer dans le modèle d’exploration de données*\<modèle >*. CONTENU|Exécute ProcessClear sur le modèle d’exploration de données, mais laisse les valeurs d’état intactes. Les valeurs d'état correspondent aux états possibles d'une colonne. Par exemple, les valeurs d'état d'une colonne Gender seraient Male ou Female.|  
+|SUPPRIMER à partir de modèle d’exploration de données*\<modèle >*<br /><br /> ou Gestionnaire de configuration<br /><br /> SUPPRIMER à partir de modèle d’exploration de données*\<modèle >*. CONTENU|Exécute ProcessClear sur le modèle d’exploration de données, mais laisse les valeurs d’état intactes. Les valeurs d'état correspondent aux états possibles d'une colonne. Par exemple, les valeurs d'état d'une colonne Gender seraient Male ou Female.|  
   
  Pour plus d’informations sur les types de traitement, consultez [élément Type &#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md).  
   
@@ -57,8 +57,8 @@ DELETE FROM NB_Sample.CONTENT
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

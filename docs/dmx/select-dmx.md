@@ -1,5 +1,5 @@
 ---
-title: SELECT (DMX) | Documents Microsoft
+title: SELECT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: def96304f13f57095679056e6eab0a004b5c47d9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842642"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989878"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,17 +41,17 @@ FROM <model/structure>[.aspect]
 ## <a name="flattened"></a>FLATTENED  
  Certains clients d'exploration de données n'acceptent pas les jeux de résultats en format hiérarchique provenant d'un fournisseur d'exploration de données. Ces clients n'ont peut-être pas la possibilité de gérer les hiérarchies ou ils doivent stocker les résultats dans une table dénormalisée unique. Pour convertir les données provenant de tables imbriquées en tables à plat, vous devez exiger que les résultats de requête soient aplatis.  
   
- Pour aplatir les résultats de requête, utilisez la **sélectionnez** syntaxe avec le **FLATTENED** option, comme indiqué dans l’exemple suivant :  
+ Pour aplatir les résultats de requête, utilisez le **sélectionnez** syntaxe avec la **FLATTENED** option, comme illustré dans l’exemple suivant :  
   
 ```  
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
 ## <a name="top-n-and-order-by"></a>HAUT \<n > et ORDER BY  
- Vous pouvez trier les résultats d’une requête à l’aide d’une expression, puis de retourner un sous-ensemble des résultats en utilisant une combinaison de la **ORDER BY** et **haut** clauses. Ceci s'avère utile dans les scénarios du type publipostage ciblé dans lesquels vous souhaitez uniquement envoyer les résultats aux personnes les plus probables. Vous pouvez classer les résultats d’une requête de prédiction de publipostage par la probabilité de prédiction de cible et puis retourner uniquement la partie supérieure \<n > résultats.  
+ Vous pouvez trier les résultats d’une requête à l’aide d’une expression et que vous pouvez ensuite revenir un sous-ensemble des résultats en utilisant une combinaison de la **ORDER BY** et **haut** clauses. Ceci s'avère utile dans les scénarios du type publipostage ciblé dans lesquels vous souhaitez uniquement envoyer les résultats aux personnes les plus probables. Vous pouvez classer les résultats d’une cible de requête de prédiction de publipostage par la probabilité de prédiction et puis retourner uniquement la partie supérieure \<n > résultats.  
   
 ## <a name="select-list"></a>Select list  
- Le  *\<liste de sélection >* peuvent inclure des références de colonnes scalaires, fonctions de prédiction et des expressions. Les options disponibles dépendent de l'algorithme et des contextes suivants :  
+ Le  *\<liste de sélection >* peut inclure des références de colonnes scalaires, des fonctions de prédiction et des expressions. Les options disponibles dépendent de l'algorithme et des contextes suivants :  
   
 -   si vous interrogez une structure ou un modèle d'exploration de données ;  
   
@@ -77,7 +77,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- Vous pouvez limiter les cas qui sont retournées par la requête en utilisant un **où** clause. Le **où** spécifie les références de cette colonne dans la **où** l’expression doit avoir la même sémantique que les références de colonne dans la  *\<liste de sélection >* de la **sélectionnez** instruction et peut, renvoie uniquement une expression booléenne. La syntaxe de la **où** est la clause suivante  
+ Vous pouvez limiter les cas qui sont retournés par la requête en utilisant un **où** clause. Le **où** clause spécifie que la colonne fait référence dans le **où** expression doit avoir la même sémantique que les références de colonne dans la  *\<liste de sélection >* de la **sélectionnez** instruction et peut uniquement retourner une expression booléenne. La syntaxe pour le **où** clause se présente comme suit  
   
 ```  
 WHERE < condition expression >  
@@ -109,7 +109,7 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
  Pour plus d’informations sur la création de requêtes de prédiction, consultez [Structure et l’utilisation de requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md).  
   
 ## <a name="clause-syntax"></a>Syntaxe des clauses  
- En raison de la complexité de la navigation avec le **sélectionnez** instruction, les éléments de syntaxe détaillée et les arguments décrits par clause. Pour plus d'informations sur chaque clause, cliquez sur une rubrique dans la liste suivante :  
+ En raison de la complexité de la navigation avec le **sélectionnez** instruction, les éléments de syntaxe détaillée et les arguments sont décrits par la clause. Pour plus d'informations sur chaque clause, cliquez sur une rubrique dans la liste suivante :  
   
  [SELECT DISTINCT FROM &#60;modèle &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   
@@ -128,9 +128,9 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
  [SELECT FROM &#60;structure&#62;. CAS](../dmx/select-from-structure-cases.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)  
+ [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)  
   
   

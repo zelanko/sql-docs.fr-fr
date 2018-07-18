@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_available_backups (Transact-SQL) | Documents Microsoft
+title: managed_backup.fn_available_backups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7899bdcc0ef397534a723abae15d7263d371d5ee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230854"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040357"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 Si une base de données est supprimée, puis recréée, les jeux de sauvegarde de toutes les bases de données sont retournés. La sortie est classée par database_guid, qui identifie de façon unique chaque base de données.   
 S'il existe des ruptures dans la séquence des LSN, indiquant qu'il existe une rupture dans la séquence de journaux de transactions consécutifs, la table contiendra une ligne spéciale pour chaque segment LSN manquant.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|URL du fichier de sauvegarde.|  
 |backup_type|NVARCHAR(6)|« DB » pour la sauvegarde de base de données « LOG » pour la sauvegarde de journal|  
@@ -68,7 +68,7 @@ S'il existe des ruptures dans la séquence des LSN, indiquant qu'il existe une r
 |last_recovery_fork_id|UNIQUEIDENTIFIER|Numéro d'identification du branchement de récupération de fin.|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|ID du branchement de récupération de début. Pour les sauvegardes de données, first_recovery_fork_guid équivaut à last_recovery_fork_guid.|  
 |fork_point_lsn|NUMERIC(25, 0)|Si first_recovery_fork_id n'équivaut pas à last_recovery_fork_id, il s'agit du numéro séquentiel dans le journal du point du branchement. Dans les autres cas, cette valeur est NULL.|  
-|availability_group_guid|UNIQUEIDENTIFIER|Si une base de données est une base de données Always On, c’est le GUID du groupe de disponibilité. Sinon, cette valeur est NULL.|  
+|availability_group_guid|UNIQUEIDENTIFIER|Si une base de données est une base de données Always On, ceci est le GUID du groupe de disponibilité. Sinon, cette valeur est NULL.|  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès) ou 1 (échec).  

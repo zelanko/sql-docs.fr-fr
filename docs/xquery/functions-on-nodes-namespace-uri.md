@@ -1,5 +1,5 @@
 ---
-title: uri de l’espace de noms, fonction (XQuery) | Documents Microsoft
+title: Fonction namespace-uri (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0107819414ce52418b369401feecff73441b63bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077246"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039631"
 ---
-# <a name="functions-on-nodes---namespace-uri"></a>Fonctions sur les nœuds - namespace-uri
+# <a name="functions-on-nodes---namespace-uri"></a>Fonctions sur les nœuds : namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne l’espace de noms URI du QName spécifié dans *$arg* comme un xs : String.  
+  Retourne l’espace de noms URI du nom qualifié spécifié dans *$arg* comme un xs : String.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -79,7 +79,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  

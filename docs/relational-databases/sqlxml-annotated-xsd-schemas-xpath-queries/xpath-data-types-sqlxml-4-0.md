@@ -1,5 +1,5 @@
 ---
-title: Types de données XPath (SQLXML 4.0) | Documents Microsoft
+title: Types de données XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -34,20 +34,20 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7762ba02f4368b64fc4073936cb04c293029e9d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973284"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049778"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Types de données XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath et XML Schema (XSD) sont dotés de types de données très différents. Par exemple, XPath n'affiche aucun type de données integer ou date tandis que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et XSD en possèdent un grand nombre. XSD utilise une précision à la nanoseconde pour les valeurs temporelles ; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche au maximum une précision de 1/300ème de seconde. Par conséquent, le mappage d'un type de données à un autre n'est pas toujours possible. Pour plus d’informations sur le mappage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données aux types de données XSD, consultez [forçages de Type de données et de l’Annotation SQL : DataType &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
- XPath possède trois types de données : **chaîne**, **nombre**, et **booléenne**. Le **nombre** type de données est toujours une IEEE 754 virgule flottante double précision. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float (53)** type de données est le plus proche XPath **nombre**. Toutefois, **float (53)** n’est pas exactement IEEE 754. Par exemple, ni la valeur NaN (Not-a-Number,), ni une valeur infinie n'est employée. Tente de convertir une chaîne non numérique en **nombre** et la tentative de division par zéro génère une erreur.  
+ XPath possède trois types de données : **chaîne**, **nombre**, et **booléenne**. Le **nombre** type de données est toujours une IEEE 754 double précision à virgule flottante. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float (53)** type de données est la plus proche XPath **nombre**. Toutefois, **float (53)** n’est pas exactement IEEE 754. Par exemple, ni la valeur NaN (Not-a-Number,), ni une valeur infinie n'est employée. Tente de convertir une chaîne non numérique en **nombre** et de division par zéro entraîne une erreur.  
   
 ## <a name="xpath-conversions"></a>Conversions XPath  
- Lorsque vous utilisez une requête XPath, telle que `OrderDetail[@UnitPrice > "10.0"]`, les conversions de type de données implicites et explicites peuvent modifier la signification de la requête de manière subtile. Par conséquent, il est primordial de comprendre la manière dont les types de données Xpath sont implémentés. La spécification du langage XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation du 8 octobre 1999, sont accessibles sur le site Web de W3C à http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ Lorsque vous utilisez une requête XPath, telle que `OrderDetail[@UnitPrice > "10.0"]`, les conversions de type de données implicites et explicites peuvent modifier la signification de la requête de manière subtile. Par conséquent, il est primordial de comprendre la manière dont les types de données Xpath sont implémentés. La spécification du langage XPath, XML Path Language (XPath) version 1.0 W3C Proposed Recommendation du 8 octobre 1999, peut être trouvée sur le site Web de W3C à http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
  Les opérateurs XPath sont divisés en quatre catégories :  
   
@@ -63,34 +63,34 @@ ms.locfileid: "32973284"
   
 |Opérande|Opérateur relationnel|Opérateur d'égalité|  
 |-------------|-------------------------|-----------------------|  
-|Les deux opérandes sont des éléments node-set.|TRUE si et seulement s’il existe un nœud dans un jeu et un nœud dans le deuxième jeu justifiant que la comparaison de leurs **chaîne** valeurs a la valeur TRUE.|Idem.|  
-|Un est un élément node-set, l’autre un **chaîne**.|TRUE si et seulement s’il existe un nœud dans l’ensemble de nœuds tels que lorsque converti en **nombre**, sa comparaison avec le **chaîne** converti en **nombre** a la valeur TRUE.|TRUE si et seulement s’il existe un nœud dans l’ensemble de nœuds tels que lorsque converti en **chaîne**, sa comparaison avec le **chaîne** a la valeur TRUE.|  
-|Un est un élément node-set, l’autre un **nombre**.|TRUE si et seulement s’il existe un nœud dans l’ensemble de nœuds tels que lorsque converti en **nombre**, sa comparaison avec le **nombre** a la valeur TRUE.|Idem.|  
-|Un est un élément node-set, l’autre un **booléenne**.|TRUE si et seulement s’il existe un nœud dans l’ensemble de nœuds tels que lorsque converti en **booléenne** puis **nombre**, sa comparaison avec le **booléenne** converti en **nombre** a la valeur TRUE.|TRUE si et seulement s’il existe un nœud dans l’ensemble de nœuds tels que lorsque converti en **booléenne**, sa comparaison avec le **booléenne** a la valeur TRUE.|  
-|Ni l'un ni l'autre n'est un élément node-set.|Convertir les deux opérandes de **numéro** , puis comparez-les.|Convertissez les deux opérandes en un type commun, puis comparez-les. Convertir en **booléenne** si une est **booléenne**, **nombre** si une est **nombre**; sinon, convertir en **chaîne**.|  
+|Les deux opérandes sont des éléments node-set.|TRUE si et uniquement s’il existe un nœud dans un jeu et un nœud dans le deuxième jeu justifiant que la comparaison de leurs **chaîne** valeurs a la valeur TRUE.|Idem.|  
+|Un est un élément node-set, l’autre un **chaîne**.|TRUE si et uniquement s’il existe un nœud dans l’ensemble de nœuds tels que lorsque converti en **nombre**, sa comparaison avec la **chaîne** converti en **nombre** a la valeur TRUE.|TRUE si et uniquement s’il existe un nœud dans l’ensemble de nœuds tels que lorsque converti en **chaîne**, sa comparaison avec la **chaîne** a la valeur TRUE.|  
+|Un est un élément node-set, l’autre un **nombre**.|TRUE si et uniquement s’il existe un nœud dans l’ensemble de nœuds tels que lorsque converti en **nombre**, sa comparaison avec la **nombre** a la valeur TRUE.|Idem.|  
+|Un est un élément node-set, l’autre un **booléenne**.|TRUE si et uniquement s’il existe un nœud dans l’ensemble de nœuds tels que lorsque converti en **booléenne** puis **nombre**, sa comparaison avec la **booléenne** converti en **nombre** a la valeur TRUE.|TRUE si et uniquement s’il existe un nœud dans l’ensemble de nœuds tels que lorsque converti en **booléenne**, sa comparaison avec la **booléenne** a la valeur TRUE.|  
+|Ni l'un ni l'autre n'est un élément node-set.|Convertir les deux opérandes de **nombre** , puis comparez-les.|Convertissez les deux opérandes en un type commun, puis comparez-les. Convertir en **booléenne** si une est **booléenne**, **nombre** si une est **nombre**; sinon, convertir **chaîne**.|  
   
 > [!NOTE]  
->  Étant donné que les opérateurs relationnels XPath convertissent toujours leurs opérandes en **nombre**, **chaîne** les comparaisons ne sont pas possibles. Pour inclure des comparaisons de dates, SQL Server 2000 propose cette variation à la spécification XPath : lorsqu’un opérateur relationnel compare une **chaîne** à un **chaîne**, un node-set à un **chaîne**, ou un valeur de chaîne node-set à un valeur de chaîne élément node-set, un **chaîne** comparaison (pas un **nombre** comparaison) est effectuée.  
+>  Étant donné que les opérateurs relationnels XPath convertissent toujours leurs opérandes en **nombre**, **chaîne** comparaisons ne sont pas possibles. Pour inclure des comparaisons de date, SQL Server 2000 offre cette variation à la spécification XPath : lorsqu’un opérateur relationnel compare une **chaîne** à un **chaîne**, un node-set à une **chaîne**, ou un valeur de chaîne node-set à une valeur de chaîne-collection de nœuds, un **chaîne** comparaison (pas un **nombre** comparaison) est effectuée.  
   
 ## <a name="node-set-conversions"></a>Conversions des éléments node-set  
- Les conversions des éléments node-set ne sont pas toujours intuitives. Un élément node-set est converti en un **chaîne** en prenant la valeur de chaîne du premier nœud dans le jeu. Un élément node-set est converti en **nombre** en le convertissant à **chaîne**, puis convertissez **chaîne** à **nombre**. Un élément node-set est converti en **booléenne** en vérifiant son existence.  
+ Les conversions des éléments node-set ne sont pas toujours intuitives. Un élément node-set est converti en un **chaîne** en prenant la valeur de chaîne du premier nœud dans le jeu. Un élément node-set est converti en **nombre** en les convertissant en à **chaîne**, puis convertissez **chaîne** à **nombre**. Un élément node-set est converti en **booléenne** en testant son existence.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne procède à aucune sélection positionnelle sur les éléments node-set : par exemple, la requête XPath `Customer[3]` désigne le troisième client ; ce type de sélection positionnelle n'est pas pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, le nœud-défini-à-**chaîne** ou nœud-défini-à-**nombre** conversions comme décrit dans la spécification XPath ne sont pas implémentées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise une sémantique « quelconque » partout où la recommandation XPath spécifie la « première » sémantique. Par exemple, en fonction de la spécification XPath du W3C, la requête XPath `Order[OrderDetail/@UnitPrice > 10.0]` sélectionne les commandes dont le premier **OrderDetail** qui a un **UnitPrice** supérieure à 10.0. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette requête XPath sélectionne les commandes avec les **OrderDetail** qui a un **UnitPrice** supérieure à 10.0.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne procède à aucune sélection positionnelle sur les éléments node-set : par exemple, la requête XPath `Customer[3]` désigne le troisième client ; ce type de sélection positionnelle n'est pas pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, le nœud-défini-à-**chaîne** ou nœud-défini-à-**nombre** conversions comme décrit dans la recommandation XPath ne sont pas implémentées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise une sémantique « quelconque » partout où la recommandation XPath spécifie la « première » sémantique. Par exemple, selon la spécification XPath du W3C, la requête XPath `Order[OrderDetail/@UnitPrice > 10.0]` sélectionne les commandes dont le premier **OrderDetail** qui a un **UnitPrice** supérieure à 10.0. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette requête XPath sélectionne les commandes avec n’importe quel **OrderDetail** qui a un **UnitPrice** supérieure à 10.0.  
   
- La conversion en **booléenne** génère une existence test ; par conséquent, la requête XPath `Products[@Discontinued=true()]` est équivalente à l’expression SQL « Products.Discontinued n’est pas null », pas l’expression SQL « Products.Discontinued = 1 ». Pour rendre la requête équivaut à la dernière expression SQL, convertissez d’abord l’élément node-set en non -**booléenne** type, tel que **nombre**. Par exemple, `Products[number(@Discontinued) = true()]`.  
+ Conversion en **booléenne** génère une existence test ; par conséquent, la requête XPath `Products[@Discontinued=true()]` est équivalente à l’expression SQL « Products.Discontinued n’est pas null », pas l’expression SQL « Products.Discontinued = 1 ». Pour rendre la requête équivalente à la dernière expression SQL, tout d’abord convertir l’élément node-set non -**booléenne** type, tel que **nombre**. Par exemple, `Products[number(@Discontinued) = true()]`.  
   
  Du fait que la plupart des opérateurs sont définis pour être vrais (TRUE) s'ils le sont pour un nœud quelconque ou l'un des nœuds de l'élément node-set, ces opérations prennent toujours la valeur FALSE si l'élément node-set est vide. Ainsi donc, si A est vide, `A = B` et `A != B` ont tous les deux la valeur FALSE et `not(A=B)` et `not(A!=B)` ont la valeur TRUE.  
   
  En règle générale, un attribut ou un élément qui est mappé à une colonne existe si la valeur de cette colonne dans la base de données n’est pas **null**. Les éléments mappés aux lignes existent si tous leurs enfants existent.  
   
 > [!NOTE]  
->  Éléments annotés avec **constante est** existe toujours. Par conséquent, les prédicats XPath ne peut pas être utilisés sur **constante est** éléments.  
+>  Éléments annotés avec **constante est** existent toujours. Par conséquent, les prédicats XPath ne peut pas être utilisés sur **constante est** éléments.  
   
  Lorsqu’un élément node-set est converti en **chaîne** ou **nombre**, son type XDR (le cas échéant) est examiné dans le schéma annoté et ce type est utilisé pour déterminer la conversion est requise.  
   
 ## <a name="mapping-xdr-data-types-to-xpath-data-types"></a>Mappage des types de données XDR et XPath  
- Le type de données XPath d’un nœud est dérivé du type de données XDR dans le schéma, comme indiqué dans le tableau suivant (le nœud **EmployeeID** sert à des fins d’illustration).  
+ Le type de données XPath d’un nœud est dérivé du type de données XDR dans le schéma, comme indiqué dans le tableau suivant (le nœud **EmployeeID** sert fins d’illustration).  
   
 |Type de données XDR|Équivalent<br /><br /> Type de données XPath|Conversion SQL Server utilisée|  
 |-------------------|------------------------------------|--------------------------------|  
@@ -99,10 +99,10 @@ ms.locfileid: "32973284"
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|nombre|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|chaîne|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/A (aucun type de données XPath n'équivaut au type de données XDR fixed14.4)|CONVERT(money, EmployeeID)|  
-|date|chaîne|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|Date|chaîne|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|chaîne|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
- Les conversions de date et d’heure sont conçues pour fonctionner si la valeur est stockée dans la base de données à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** type de données ou un **chaîne**. Notez que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** type de données n’utilise pas **fuseau horaire** et a une précision moins importante que le code XML **temps** type de données. Pour inclure la **fuseau horaire** type de données ou une précision supplémentaire, stocker les données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide un **chaîne** type.  
+ Les conversions de date et d’heure sont conçues pour fonctionner si la valeur est stockée dans la base de données à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** type de données ou un **chaîne**. Notez que le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** type de données n’utilise pas **fuseau horaire** et a une précision moins importante que le code XML **temps** type de données. Pour inclure le **fuseau horaire** type de données ou une précision supplémentaire, stocker les données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide un **chaîne** type.  
   
  Lorsque vous convertissez un nœud du type de données XDR en type de données XPath, une conversion supplémentaire est parfois nécessaire (d'un type de données XPath vers un autre type de données XPath). Par exemple, imaginez la requête XPath suivante :  
   
@@ -110,13 +110,13 @@ ms.locfileid: "32973284"
 (@m + 3) = 4  
 ```  
   
- Si @m est de le **fixed14.4** type de données XDR, la conversion de type de données XDR en type de données s’effectue à l’aide de XPath :  
+ Si @m est du **fixed14.4** type de données XDR, la conversion de type de données XDR en type de données s’effectue à l’aide de XPath :  
   
 ```  
 CONVERT(money, m)  
 ```  
   
- Dans cette conversion, le nœud `m` est converti en **fixed14.4** à **money**. Toutefois, l'ajout de la valeur 3 nécessite une autre conversion :  
+ Dans cette conversion, le nœud `m` est convertie à partir de **fixed14.4** à **money**. Toutefois, l'ajout de la valeur 3 nécessite une autre conversion :  
   
 ```  
 CONVERT(float(CONVERT(money, m))  
@@ -140,7 +140,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-convert-a-data-type-in-an-xpath-query"></a>A. Convertir un type de données dans une requête XPath  
- Dans la requête XPath suivante spécifiée par rapport à un schéma XSD annoté, la requête sélectionne tous les **employé** nœuds avec le **EmployeeID** la valeur de E-1, où « E- » est le préfixe spécifié à l’aide de l’attribut le **SQL : ID-préfixe** annotation.  
+ Dans la requête XPath suivante spécifiée par rapport à un schéma XSD annoté, la requête sélectionne tous les **employé** nœuds avec le **EmployeeID** valeur de E-1, où « E- » est le préfixe spécifié à l’aide de l’attribut le **SQL : ID-préfixe** annotation.  
   
  `Employee[@EmployeeID="E-1"]`  
   
@@ -148,7 +148,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  `N'E-' + CONVERT(nvarchar(4000), Employees.EmployeeID, 126) = N'E-1'`  
   
- Étant donné que **EmployeeID** est un de la **id** (**idref**, **idrefs**, **nmtoken**, **nmtokens**, et ainsi de suite) les valeurs de type de données dans le schéma XSD, **EmployeeID** est converti en la **chaîne** type de données XPath à l’aide des règles de conversion décrites précédemment.  
+ Étant donné que **EmployeeID** parmi les **id** (**idref**, **idrefs**, **nmtoken**,  **NMTOKENS**, et ainsi de suite) les valeurs de type de données dans le schéma XSD, **EmployeeID** est convertie en la **chaîne** type de données XPath à l’aide de règles de conversion décrites précédemment.  
   
  `CONVERT(nvarchar(4000), Employees.EmployeeID, 126)`  
   
@@ -157,7 +157,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>B. Effectuer plusieurs conversions de types de données dans une requête XPath.  
  Examinez la requête XPath suivante définie par rapport à un schéma XSD annoté : `OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- Cette requête XPath retourne tous les  **\<OrderDetail >** éléments satisfaisant le prédicat `@UnitPrice * @OrderQty > 98`. Si le **UnitPrice** est annoté avec un **fixed14.4** de type de données dans le schéma annoté, ce prédicat est équivalent à l’expression SQL :  
+ Cette requête XPath retourne tous les  **\<OrderDetail >** éléments satisfaisant le prédicat `@UnitPrice * @OrderQty > 98`. Si le **UnitPrice** est annoté avec un **fixed14.4** de type de données dans le schéma annoté, ce prédicat équivaut à l’expression SQL :  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   
@@ -167,7 +167,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 CONVERT(money, OrderDetail.UnitPrice))   
 ```  
   
- Étant donné que les opérateurs arithmétiques convertissent leurs opérandes en le **nombre** type de données XPath, la deuxième conversion (d’un type de données XPath à un autre type de données XPath) est appliquée dans lequel la valeur est convertie en **float (53)** (**float (53)** est proche de l’expression XPath **nombre** type de données) :  
+ Étant donné que les opérateurs arithmétiques convertissent leurs opérandes en le **nombre** type de données XPath, la deuxième conversion (à partir d’un type de données XPath à un autre type de données XPath) est appliquée dans lequel la valeur est convertie en **float (53)**  (**float (53)** est proche de l’expression XPath **nombre** type de données) :  
   
 ```  
 CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice))   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xe_database_session_event_actions (de base de données SQL Azure) | Documents Microsoft
+title: Sys.dm_xe_database_session_event_actions (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,13 +17,13 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b52adfa82c532a8144e142f5d87c991a249becf8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468655"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040227"
 ---
-# <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>Sys.dm_xe_database_session_event_actions (de base de données SQL Azure)
+# <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>Sys.dm_xe_database_session_event_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations sur les actions de la session d'événements. Les actions sont exécutées lorsque les événements sont déclenchés. Cette vue de gestion totalise des statistiques sur le nombre d'exécutions d'une action et la durée totale de son exécution.  
@@ -32,7 +32,7 @@ ms.locfileid: "34468655"
 |-|  
 |**S’applique aux**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 et toutes les futures versions.|  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|Adresse mémoire de la session d'événements. N'accepte pas la valeur NULL.|  
 |action_name|**nvarchar(60)**|Le nom de l’action. N'accepte pas la valeur NULL.|  

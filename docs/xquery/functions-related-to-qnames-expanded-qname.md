@@ -1,5 +1,5 @@
 ---
-title: Expanded-QName (XQuery) | Documents Microsoft
+title: Expanded-QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b76f85fae2f01322838c40b79227da896fabd01c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077766"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039620"
 ---
-# <a name="functions-related-to-qnames---expanded-qname"></a>Fonctions relatives aux QName - expanded-QName
+# <a name="functions-related-to-qnames---expanded-qname"></a>Fonctions relatives aux QName : expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne une valeur du type xs : QName avec l’espace de noms URI spécifié dans le *$paramURI* et le nom local spécifié dans le *$paramLocal*. Si *$paramURI* est une chaîne vide ou la séquence vide, il ne représente aucun espace de noms.  
@@ -49,27 +49,27 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  Partie du nom local du QName.  
   
 ## <a name="remarks"></a>Notes  
- Les éléments suivants s’applique à la **expanded-QName()** (fonction) :  
+ Ce qui suit s’applique à la **se solde par** (fonction) :  
   
 -   Si le *$paramLocal* valeur spécifiée n’est pas dans la forme lexicale correcte pour le type xs : NCName, la séquence vide est retournée et représente une erreur dynamique.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend en charge la conversion du type xs:QName vers aucun autre type. Pour cette raison, le **expanded-QName()** fonction ne peut pas être utilisée dans la construction XML. Par exemple, lorsque vous construisez un nœud, tel que `<e> expanded-QName(…) </e>`, la valeur doit être non typée. Cela suppose que vous convertissiez la valeur de type xs:QName renvoyée par `expanded-QName()` en xdt:untypedAtomic. Toutefois, cette opération n'est pas prise en charge. Une solution est proposée dans un exemple, plus loin dans cette rubrique.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend en charge la conversion du type xs:QName vers aucun autre type. Pour cette raison, le **se solde par** fonction ne peut pas être utilisée dans la construction XML. Par exemple, lorsque vous construisez un nœud, tel que `<e> expanded-QName(…) </e>`, la valeur doit être non typée. Cela suppose que vous convertissiez la valeur de type xs:QName renvoyée par `expanded-QName()` en xdt:untypedAtomic. Toutefois, cette opération n'est pas prise en charge. Une solution est proposée dans un exemple, plus loin dans cette rubrique.  
   
--   Vous pouvez modifier ou comparer les valeurs de type QName existantes. Par exemple, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` compare la valeur de l’élément, <`e`>, avec le QName renvoyé par le **expanded-QName()** (fonction).  
+-   Vous pouvez modifier ou comparer les valeurs de type QName existantes. Par exemple, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` compare la valeur de l’élément, <`e`>, au QName renvoyé par le **se solde par** (fonction).  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** type des colonnes dans le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. Remplacement d'une valeur de nœud de type QName  
  Cet exemple montre comment vous pouvez modifier la valeur d'un nœud d'élément de type QName. Cet exemple illustre les opérations suivantes :  
   
 -   Crée une collection de schémas XML qui définit un élément de type QName.  
   
--   Crée une table avec une **xml** colonne de type à l’aide de la collection de schémas XML.  
+-   Crée une table avec un **xml** colonne de type à l’aide de la collection de schémas XML.  
   
 -   Enregistre une instance XML dans la table.  
   
--   Utilise le **modify()** méthode du type de données xml pour modifier la valeur de l’élément de type QName dans l’instance. Le **expanded-QName()** fonction est utilisée pour générer la nouvelle valeur de type QName.  
+-   Utilise le **modify()** méthode du type de données xml pour modifier la valeur de l’élément de type QName dans l’instance. Le **se solde par** fonction est utilisée pour générer la nouvelle valeur de type QName.  
   
 ```  
 -- If XML schema collection (if exists)  
@@ -106,7 +106,7 @@ go
 </Root>   
 ```  
   
- Dans la requête suivante, le <`ElemQN`> valeur de l’élément est remplacée à l’aide de la **modify()** méthode de type de données xml et la valeur de remplacement de XML DML, comme indiqué.  
+ Dans la requête suivante, le <`ElemQN`> valeur de l’élément est remplacé à l’aide de la **modify()** méthode de type de données xml et la valeur de remplacement de XML DML, comme indiqué.  
   
 ```  
 -- the value.  
@@ -194,7 +194,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- Vous pouvez comparer la valeur QName, comme le montre la requête ci-après. La requête retourne uniquement le <`root`> les éléments dont les valeurs correspondent le nom qualifié de type valeur retournée par la **expanded-QName()** (fonction).  
+ Vous pouvez comparer la valeur QName, comme le montre la requête ci-après. La requête retourne uniquement le <`root`> les éléments dont les valeurs correspondent le nom qualifié de type valeur retournée par la **se solde par** (fonction).  
   
 ```  
 SELECT xmlCol.query('  
@@ -208,7 +208,7 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>Limites de mise en œuvre  
- Il existe une limite : le **expanded-QName()** accepte la séquence vide comme second argument de fonction et retourne un résultat vide au lieu de déclencher une erreur d’exécution lorsque le deuxième argument est incorrect.  
+ Il existe une limite : la **se solde par** fonction accepte la séquence vide comme deuxième argument et retourne un résultat vide au lieu de lever une erreur d’exécution lorsque le deuxième argument est incorrect.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions relatives aux QName &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  

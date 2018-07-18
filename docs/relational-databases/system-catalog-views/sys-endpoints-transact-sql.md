@@ -1,5 +1,5 @@
 ---
-title: Sys.Endpoints (Transact-SQL) | Documents Microsoft
+title: Sys.Endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,23 +25,23 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 929cbba80469c80bd7384d97ae22abacda501a8a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180765"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998151"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne par point de terminaison créé dans le système. Il existe toujours un point de terminaison SYSTEM.  
   
-|Nom de la colonne|Type de données| Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom du point de terminaison, unique dans le serveur. N'accepte pas la valeur NULL.|  
-|**endpoint_id**|**int**|ID du point de terminaison, unique dans le serveur. Un point de terminaison doté d'un ID inférieur à 65 536 est un point de terminaison système. N'accepte pas la valeur NULL.|  
-|**principal_id**|**int**|Identificateur du principal qui a créé ce point de terminaison et qui en est propriétaire. Autorise la valeur NULL.|  
-|**Protocole**|**tinyint**|Protocole du point de terminaison.<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = Canaux nommés<br /><br /> 4 = Mémoire partagée<br /><br /> 5 = VIA (Virtual Interface Architecture)<br /><br /> N'accepte pas la valeur NULL.|  
+|**endpoint_id**|**Int**|ID du point de terminaison, unique dans le serveur. Un point de terminaison doté d'un ID inférieur à 65 536 est un point de terminaison système. N'accepte pas la valeur NULL.|  
+|**principal_id**|**Int**|Identificateur du principal qui a créé ce point de terminaison et qui en est propriétaire. Autorise la valeur NULL.|  
+|**protocole**|**tinyint**|Protocole du point de terminaison.<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = Canaux nommés<br /><br /> 4 = Mémoire partagée<br /><br /> 5 = VIA (Virtual Interface Architecture)<br /><br /> N'accepte pas la valeur NULL.|  
 |**protocol_desc**|**nvarchar(60)**|Description du protocole du point de terminaison. Accepte la valeur NULL. Une des valeurs suivantes :<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **VIA** Remarque : le protocole VIA est déconseillé. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**type**|**tinyint**|Type de charge utile du point de terminaison.<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> N'accepte pas la valeur NULL.|  
 |**type_desc**|**nvarchar(60)**|Description du type de charge utile du point de terminaison. Autorise la valeur NULL. Une des valeurs suivantes :<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  

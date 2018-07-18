@@ -1,5 +1,5 @@
 ---
-title: Sys.assembly_types (Transact-SQL) | Documents Microsoft
+title: Sys.assembly_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,20 +26,20 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d519c57b76e45a297598b6821658c640e8e97989
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178575"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998181"
 ---
 # <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Contient une ligne pour chaque type défini par l'utilisateur et par un assembly CLR. Les éléments suivants **sys.assembly_types** apparaissent dans la liste des colonnes héritées (consultez [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) après **rule_object_id**.  
+  Contient une ligne pour chaque type défini par l'utilisateur et par un assembly CLR. Ce qui suit **sys.assembly_types** apparaissent dans la liste des colonnes héritées (consultez [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) après **rule_object_id**.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**int**|ID de l'assembly à partir duquel ce type est créé.|  
+|**assembly_id**|**Int**|ID de l'assembly à partir duquel ce type est créé.|  
 |**assembly_class**|**sysname**|Nom de la classe dans l'assembly qui définit ce type.|  
 |**is_binary_ordered**|**bit**|Trier les octets de ce type revient à trier les opérateurs de comparaison sur ce même type.|  
 |**is_fixed_length**|**bit**|La longueur du type est toujours identique à max_length.|  

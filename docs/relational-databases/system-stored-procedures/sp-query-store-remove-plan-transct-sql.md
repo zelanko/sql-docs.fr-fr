@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_remove_plan (Transct-SQL) | Documents Microsoft
+title: sp_query_store_remove_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,13 +27,13 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f3efe5d6bac67d639877a2434fd3b97bec84d5da
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250179"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993618"
 ---
-# <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transct-SQL)
+# <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Supprime un plan unique à partir du magasin de requête.  
@@ -57,7 +57,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert le **EXECUTE** sur la base de données, et **supprimer** autorisation sur les affichages catalogue du magasin de requête.  
+ Nécessite le **EXECUTE** autorisation sur la base de données, et **supprimer** autorisation sur les affichages catalogue du magasin de requête.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne des informations sur les requêtes dans le magasin de requêtes.  

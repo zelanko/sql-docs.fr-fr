@@ -1,5 +1,5 @@
 ---
-title: Sys.database_usage (base de données de SQL Azure) | Documents Microsoft
+title: Sys.database_usage (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -28,34 +28,35 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: affdc08bb7ae507ca30edfa986cd68a81ba564f2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038817"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Remarque : Cela s’applique uniquement aux V11 de base de données SQL Azure.**  
+  **Remarque : Cela s’applique uniquement à Azure SQL Database V11.**  
   
- Indique le nombre, le type et la durée des bases de données de la [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
+ Répertorie le nombre, le type et la durée des bases de données sur le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server.  
   
  Le **sys.database_usage** vue contient les colonnes suivantes.  
   
-|Nom de la colonne| Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |time|Date à laquelle les événements d'utilisation se sont produits.|  
 |sku|Le type de niveau de service pour la base de données : **Web**, **Business**, **base**, **Standard**, **Premium**|  
 |quantity|Nombre maximal de bases de données d'un type de SKU ayant existé pendant cette journée.|  
   
 ## <a name="permissions"></a>Autorisations  
- Accès en lecture seule à cette vue est disponible pour tous les utilisateurs disposant d’autorisations pour se connecter à la **master** base de données.  
+ Accès en lecture seule à cette vue est disponible pour tous les utilisateurs disposant des autorisations pour se connecter à la **master** base de données.  
   
 ## <a name="remarks"></a>Notes  
  Le **sys.database_usage** vue retourne une ligne pour chaque jour de votre abonnement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détails de tarification de base de données SQL](http://go.microsoft.com/fwlink/?LinkID=394978)   
- [Comptes et facturation dans Windows Azure SQL Database](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [Tarification – base de données SQL](http://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Comptes et facturation dans Microsoft Azure SQL Database](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

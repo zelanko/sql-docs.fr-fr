@@ -1,5 +1,5 @@
 ---
-title: espace de noms uri à partir de QName (XQuery) | Documents Microsoft
+title: namespace-uri-from-QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 67475f0f7e10f8d49e4adefab8b44c2d4cefc272
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077486"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999801"
 ---
-# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Fonctions relatives aux QName - espace de noms uri à partir de QName
+# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Fonctions relatives aux QName : namespace-uri-from-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retourne une chaîne qui représente l’uri d’espace de noms du QName spécifié par *$arg*. Le résultat est la séquence vide si *$arg* est la séquence vide.  
+  Retourne une chaîne représentant l’uri d’espace de noms du nom qualifié spécifié par *$arg*. Le résultat est la séquence vide si *$arg* correspond à la séquence vide.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,7 +49,7 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. Récupération d'un URI d'espace de noms à partir d'un QName  
- Pour obtenir un exemple fonctionnel, consultez [nom local de QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
+ Pour obtenir un exemple fonctionnel, consultez [local-nom-from-QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md).  
   
 ### <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limitations suivantes s'appliquent :  

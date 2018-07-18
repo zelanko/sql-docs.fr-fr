@@ -1,5 +1,5 @@
 ---
-title: Sys.server_permissions (Transact-SQL) | Documents Microsoft
+title: Sys.server_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,25 +26,25 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 16200de0c63979912b893fa84e7b36cf93a4ec62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221936"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038870"
 ---
 # <a name="sysserverpermissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Retourne une ligne pour chaque autorisation de niveau serveur.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifie la classe d'éléments sur laquelle l'autorisation existe.<br /><br /> 100 = serveur<br /><br /> 101 = principal serveur<br /><br /> 105 = point de terminaison|  
 |**class_desc**|**nvarchar(60)**|Description de la classe sur laquelle l'autorisation existe. Une des valeurs suivantes :<br /><br /> **SERVEUR**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
-|**major_id**|**int**|ID de l'élément sécurisable sur lequel l'autorisation existe, interprété selon la classe. Il s'agit généralement de l'ID qui s'applique à ce que la classe représente. L'interprétation des éléments non standard s'effectue ainsi :<br /><br /> 100 = toujours 0|  
-|**minor_id**|**int**|ID secondaire d'un élément sur lequel l'autorisation existe, interprété selon la classe.|  
-|**grantee_principal_id**|**int**|ID du principal du serveur auquel les autorisations sont accordées.|  
-|**grantor_principal_id**|**int**|ID du principal du serveur de la personne qui accorde ces autorisations.|  
+|**major_id**|**Int**|ID de l'élément sécurisable sur lequel l'autorisation existe, interprété selon la classe. Il s'agit généralement de l'ID qui s'applique à ce que la classe représente. L'interprétation des éléments non standard s'effectue ainsi :<br /><br /> 100 = toujours 0|  
+|**minor_id**|**Int**|ID secondaire d'un élément sur lequel l'autorisation existe, interprété selon la classe.|  
+|**grantee_principal_id**|**Int**|ID du principal du serveur auquel les autorisations sont accordées.|  
+|**grantor_principal_id**|**Int**|ID du principal du serveur de la personne qui accorde ces autorisations.|  
 |**type**|**char (4)**|Type d'autorisation serveur. Pour obtenir la liste des types d'autorisations, consultez le tableau ci-dessous.|  
 |**permission_name**|**nvarchar(128)**|Nom de l’autorisation.|  
 |**state**|**char(1)**|État de l'autorisation :<br /><br /> D = Refusée<br /><br /> R = Révoquée<br /><br /> G = Accordée<br /><br /> W = GRANT WITH GRANT OPTION|  

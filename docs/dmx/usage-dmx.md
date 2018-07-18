@@ -1,5 +1,5 @@
 ---
-title: Utilisation (DMX) | Documents Microsoft
+title: Utilisation (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 459d6a0240ac2588c0924eae7bdae348a71f5946
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841432"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990983"
 ---
 # <a name="usage-dmx"></a>Utilisation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34841432"
   
 -   **Clé**  
   
--   **Séquence de touches**  
+-   **Séquence clé**  
   
 -   **Temps clé**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34841432"
   
  Colonnes qui sont spécifiées en tant que le **Predict** type sont utilisées en tant que colonnes d’entrée et de sortie. Colonnes qui sont spécifiées en tant que **PredictOnly** sont uniquement utilisées comme colonnes de sortie. Il est possible que des algorithmes spécifiques considèrent les colonnes de type Predict différemment.  
   
- Pour plus d’informations sur la colonne de l’utilisation de types que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge, consultez [colonnes du modèle d’exploration de données](../analysis-services/data-mining/mining-model-columns.md).  
+ Pour plus d’informations sur la colonne types d’utilisation qui [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge, consultez [colonnes du modèle d’exploration de données](../analysis-services/data-mining/mining-model-columns.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

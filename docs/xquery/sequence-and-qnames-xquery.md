@@ -1,5 +1,5 @@
 ---
-title: Séquence et QNames (XQuery) | Documents Microsoft
+title: Séquence et QNames (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30d463050f129bbc232c0261f1d6af481744ef93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077996"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990008"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Séquence et QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ WHERE ProductModelID=7;
   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <step1> Step 1 description goes here </step1>  
@@ -151,7 +151,7 @@ WHERE ProductModelID=7;
 |xml|`http://www.w3.org/XML/1998/namespace`|  
 |(aucun préfixe)|`http://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- Chaque base de données que vous créez a la **sys** collection de schémas XML. Elle réserve ces schémas de sorte qu'ils soient accessibles à partir de toute collection de schémas XML créée par l'utilisateur.  
+ Chaque base de données que vous créez a le **sys** collection de schémas XML. Elle réserve ces schémas de sorte qu'ils soient accessibles à partir de toute collection de schémas XML créée par l'utilisateur.  
   
 > [!NOTE]  
 >  Cette implémentation ne prend pas en charge la `local` préfixe comme décrit dans la spécification XQuery dans http://www.w3.org/2004/07/xquery-local-functions.  
