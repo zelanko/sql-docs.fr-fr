@@ -1,5 +1,5 @@
 ---
-title: Sys.trace_events (Transact-SQL) | Documents Microsoft
+title: Sys.trace_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2d564d08dce5dbc89c0071625aefc2cfef80ec36
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220650"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969621"
 ---
 # <a name="systraceevents-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "33220650"
  Pour plus d’informations sur ces événements de trace, consultez [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|Identificateur unique de l'événement. Cette colonne figure également dans le **sys.trace_event_bindings** et **sys.trace_subclass_values** affichages catalogue.|  
-|**category_id**|**smallint**|Identificateur de la catégorie de l'événement. Cette colonne figure également dans le **sys.trace_categories** affichage catalogue.|  
+|**category_id**|**smallint**|Identificateur de la catégorie de l'événement. Cette colonne figure également dans le **sys.trace_categories** vue de catalogue.|  
 |**nom**|**nvarchar(128)**|Nom unique de cet événement. Ce paramètre n'est pas localisé.|  
   
 ## <a name="permissions"></a>Autorisations  

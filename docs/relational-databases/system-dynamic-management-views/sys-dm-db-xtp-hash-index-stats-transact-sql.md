@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Documents Microsoft
+title: Sys.dm_db_xtp_hash_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fdb15a0c64b11eb0fc57772ccaf37adcc1cc599e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465225"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969771"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ ms.locfileid: "34465225"
 Les chaînes de type Long peuvent affecter les performances des opérations DML sur des lignes, notamment SELECT et INSERT. Les chaînes de type Short avec un nombre de compartiments vides élevé sont une indication de bucket_count trop élevé. Cela altère les performances des analyses d'index.  
   
 > [!WARNING]
-> **Sys.dm_db_xtp_hash_index_stats** analyse la table entière. Par conséquent, s’il existe de grandes tables dans votre base de données, **sys.dm_db_xtp_hash_index_stats** peut prendre beaucoup de temps exécution.  
+> **Sys.dm_db_xtp_hash_index_stats** analyse la table entière. Par conséquent, si il existe de grandes tables dans votre base de données, **sys.dm_db_xtp_hash_index_stats** peut prendre un certain temps exécution.  
   
 Pour plus d’informations, consultez [index de hachage pour les Tables optimisées en mémoire](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Nom de colonne|Type| Description|  
+|Nom de colonne|Type|Description|  
 |-----------------|----------|-----------------|  
-|object_id|**int**|ID d'objet d'une table parent.|  
+|object_id|**Int**|ID d'objet d'une table parent.|  
 |xtp_object_id|**bigint**|ID de la table optimisée en mémoire.|  
-|index_id|**int**|ID d'index.|  
+|index_id|**Int**|ID d'index.|  
 |total_bucket_count|**bigint**|Nombre total de compartiments de hachage dans l'index.|  
 |empty_bucket_count|**bigint**|Nombre total de compartiments de hachage vides dans l'index.|  
 |avg_chain_length|**bigint**|Longueur moyenne des chaînes de ligne sur tous les compartiments de hachage dans l'index.|  
@@ -67,7 +67,7 @@ Pour plus d’informations, consultez [index de hachage pour les Tables optimis�
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. Résolution de problèmes liés au nombre de compartiments d’index de hachage
 
-La requête suivante peut être utilisée pour dépanner le nombre de compartiments des index de hachage d’une table existante. La requête retourne des statistiques sur le pourcentage de compartiments vides et de longueur de chaîne pour tous les index de hachage sur les tables utilisateur.
+La requête suivante peut être utilisée pour résoudre les problèmes le nombre de compartiments des index de hachage d’une table existante. La requête retourne des statistiques sur le pourcentage de compartiments vides et la longueur de chaîne pour tous les index de hachage sur les tables utilisateur.
 
 ```sql
   SELECT  
@@ -91,11 +91,11 @@ La requête suivante peut être utilisée pour dépanner le nombre de compartime
   ORDER BY [table], [index];  
 ``` 
 
-Pour plus d’informations sur la façon d’interpréter les résultats de cette requête, consultez [dépannage des index de hachage pour les Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
+Pour plus d’informations sur la façon d’interpréter les résultats de cette requête, consultez [résolution des problèmes des index de hachage pour les Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. Statistiques d’index de hachage pour les tables internes
 
-Certaines fonctionnalités utilisent des tables internes qui tirent parti des index de hachage, par exemple des index columnstore sur des tables optimisées en mémoire. La requête suivante retourne les statistiques de l’index de hachage sur les tables internes qui sont liées aux tables utilisateur.
+Certaines fonctionnalités utilisent des tables internes qui tirent parti des index de hachage, par exemple les index columnstore sur des tables optimisées en mémoire. La requête suivante retourne des statistiques pour les index de hachage sur les tables internes qui sont liées aux tables de l’utilisateur.
 
 ```sql
   SELECT  
@@ -118,7 +118,7 @@ Certaines fonctionnalités utilisent des tables internes qui tirent parti des in
 
 Notez que la valeur de BUCKET_COUNT d’index sur les tables internes ne peut pas être modifié, par conséquent, la sortie de cette requête doit être considérée comme une information uniquement. Aucune action n'est requise.  
 
-Cette requête n’est pas censée retourner toutes les lignes sauf si vous utilisez une fonctionnalité qui tire parti des index de hachage sur les tables internes. Le tableau suivant optimisées en mémoire contient un index columnstore. Après avoir créé ce tableau, vous verrez des index de hachage sur les tables internes.
+Cette requête n’est pas censée retourner toutes les lignes, sauf si vous utilisez une fonctionnalité qui tire parti des index de hachage sur les tables internes. Le tableau suivant mémoire optimisé contient un index columnstore. Après avoir créé cette table, vous verrez des index de hachage sur les tables internes.
 
 ```sql
   CREATE TABLE dbo.table_columnstore
@@ -129,6 +129,6 @@ Cette requête n’est pas censée retourner toutes les lignes sauf si vous util
 ```
 
 ## <a name="see-also"></a>Voir aussi  
- [Vues de gestion dynamique des tables optimisées en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Vues de gestion dynamique de Table optimisé en mémoire &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

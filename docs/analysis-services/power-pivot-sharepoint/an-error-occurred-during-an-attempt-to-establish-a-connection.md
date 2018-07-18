@@ -1,5 +1,5 @@
 ---
-title: Une erreur s’est produite lors d’une tentative pour établir une connexion | Documents Microsoft
+title: Une erreur s’est produite lors d’une tentative pour établir une connexion | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b4a588919b553f076d49a68f695e7f0763177a78
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9c2d31e1ba50ed11668a6a67bc9a393fe6025211
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023206"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980341"
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection"></a>Une erreur s’est produite lors d’une tentative pour établir une connexion
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "34023206"
  L’erreur se produit lorsque vous découpez ou filtrez des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] alors que le moteur d’interrogation n’est pas disponible.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Installez [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint ou déplacez le classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vers un environnement SharePoint dans lequel [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint est installé. Pour plus d’informations, voir [Installation de PowerPivot pour SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f).  
+ Installez [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint ou déplacez le classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vers un environnement SharePoint dans lequel [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint est installé. Pour plus d’informations, voir [Installation de PowerPivot pour SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f).  
   
  Si le logiciel est installé, vérifiez que l’instance SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) est en cours d’exécution. Sélectionnez **Gérer les services sur le serveur** dans Administration centrale. Sélectionnez également l'application de console Services dans Outils d'administration.  
   
- Pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] créés dans une version SQL Server 2008 R2 de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel, vous devez installer la version SQL Server 2008 R2 du fournisseur OLE DB Analysis Services. Cette erreur se produira si vous avez installé le fournisseur, mais n'avez pas enregistré le fichier Microsoft.AnalysisServices.ChannelTransport.dll. Pour plus d’informations sur l’enregistrement du fichier, consultez [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] créés dans une version SQL Server 2008 R2 de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel, vous devez installer la version SQL Server 2008 R2 du fournisseur OLE DB Analysis Services. Cette erreur se produira si vous avez installé le fournisseur, mais n'avez pas enregistré le fichier Microsoft.AnalysisServices.ChannelTransport.dll. Pour plus d’informations sur l’enregistrement du fichier, consultez [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
 ## <a name="see-also"></a>Voir aussi  
- [La connexion de données utilise l’authentification Windows et les informations d’identification de l’utilisateur n’a pas pu être déléguées. Échec de l’actualisation des connexions suivantes : Données Power Pivot](../../analysis-services/power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md)  
+ [La connexion de données utilise l’authentification Windows, et les informations d’identification utilisateur n’ont pas pu être déléguées. Échec de l’actualisation des connexions suivantes : Données Power Pivot](../../analysis-services/power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.trusted_assemblies (Transact-SQL) | Documents Microsoft
+title: Sys.trusted_assemblies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -26,24 +26,24 @@ ms.author: thmullan
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 80fd8a091aa04d0574da5c5a2377628b2e8c376a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220860"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969545"
 ---
 # <a name="systrustedassemblies-transact-sql"></a>Sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Contient une ligne pour chaque assembly approuvé pour le serveur.
+Contient une ligne pour chaque assembly de confiance pour le serveur.
 
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
-|Nom de colonne |Type de données | Description |
+|Nom de colonne |Type de données |Description |
 |--- |--- |--- |
 |hachage |varbinary (8000) |SHA2_512 hachage du contenu de l’assembly. |
-|description |nvarchar(4000) |Description définie par l’utilisateur facultative de l’assembly. Microsoft recommande d’utiliser le nom canonique qui encode le nom simple numéro de version, culture, clé publique et architecture de l’assembly de confiance. Cette valeur identifie l’assembly sur le côté du common language runtime (CLR) de manière unique et est identique à la valeur clr_name dans sys.assemblies. |
+|description |nvarchar(4000) |Description définie par l’utilisateur facultative de l’assembly. Microsoft recommande d’utiliser le nom canonique qui encode le nom simple numéro de version, culture, clé publique et architecture de l’assembly à approuver. Cette valeur identifie l’assembly sur le côté du common language runtime (CLR) et est identique à la valeur clr_name dans sys.assemblies de manière unique. |
 |create_date |datetime2 |Date de que l’assembly a été ajouté à la liste des assemblys de confiance. |
 |created_by |nvarchar (128) |Nom de connexion du principal qui a ajouté l’assembly à la liste. |
 | | | |

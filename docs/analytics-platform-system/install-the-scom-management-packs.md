@@ -1,6 +1,6 @@
 ---
-title: Installer des packs d’administration SCOM - système de plateforme Analytique | Documents Microsoft
-description: Suivez ces étapes pour télécharger et installer les packs d’administration de System Center Operations Manager (SCOM) pour SQL Server PDW. Les packs d’administration sont requises pour analyser SQL Server PDW de SCOM.
+title: Installer les packs d’administration SCOM - Analytique Platform System | Microsoft Docs
+description: Suivez ces étapes pour télécharger et installer les packs d’administration de System Center Operations Manager (SCOM) pour SQL Server PDW. Les packs d’administration sont requises pour analyser SQL Server PDW à partir de SCOM.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,41 +9,41 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 163ab893074e171decb573d876c5f98334437985
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 8a870ed2fb711599556178132e133039098f3051
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31544681"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909819"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Installer des packs d’administration de SQL Server Operations Manager (SCOM) pour le système de plateforme d’Analytique
-Suivez ces étapes pour télécharger et installer les packs d’administration de System Center Operations Manager (SCOM) pour SQL Server PDW. Les packs d’administration sont requises pour analyser SQL Server PDW de SCOM.  
+Suivez ces étapes pour télécharger et installer les packs d’administration de System Center Operations Manager (SCOM) pour SQL Server PDW. Les packs d’administration sont requises pour analyser SQL Server PDW à partir de SCOM.  
   
 ## <a name="BeforeBegin"></a>Avant de commencer  
-**Configuration requise**  
+**Conditions préalables**  
   
-System Center Operations Manager doivent être installés et en cours d’exécution. SQL Server 2012 PDW nécessite System Center Operations Manager 2007 R2, System Center Operations Manager 2012 ou System Center Operations Manager 2012 service pack 1.  
+System Center Operations Manager doit être installé et en cours d’exécution. SQL Server 2012 PDW nécessite System Center Operations Manager 2007 R2, System Center Operations Manager 2012 ou System Center Operations Manager 2012 service pack 1.  
   
 ## <a name="Step1"></a>Étape 1 : Télécharger les packs d’administration  
-Pour la charge de travail APS PDW, téléchargez le [System Center Management Pack pour le système de plateforme Microsoft Analytique](http://go.microsoft.com/fwlink/?LinkId=396857).  
+Pour la charge de travail APS PDW, téléchargez le [System Center Management Pack pour le système de plateforme d’Analytique Microsoft](http://go.microsoft.com/fwlink/?LinkId=396857).  
   
-Pour la gestion du matériel, téléchargez le [Pack d’administration SQL Server Appliance Base](http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11436).  
+Pour la gestion de l’appliance, téléchargez le [le Pack d’administration de la Base de Appliance SQL Server](http://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=11436).  
   
-Pour les versions antérieures de PDW sans points d’accès, téléchargez le[System Center Monitoring Pack pour Microsoft SQL Server 2012 parallèle données Warehouse Appliance](http://go.microsoft.com/fwlink/p/?LinkId=282661).  
+Pour les versions antérieures de PDW sans APS, téléchargez le[Pack d’analyse System Center pour Microsoft SQL Server 2012 Parallel Data Warehouse Appliance](http://go.microsoft.com/fwlink/p/?LinkId=282661).  
   
-Pour la charge de travail HDInsight, téléchargez le [System Center Management Pack pour HDInsight](http://go.microsoft.com/fwlink/?LinkId=390208).  
+<!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](http://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
 ## <a name="Step2"></a>Étape 2 : Installer les packs d’administration  
   
-### <a name="install-the-sql-server-appliance-base-management-pack"></a>Installer le Pack d’administration de Base SQL Server Appliance  
+### <a name="install-the-sql-server-appliance-base-management-pack"></a>Installez le Pack de gestion de la Base de SQL Server Appliance  
   
-1.  Pour exécuter l’installation, double-cliquez sur le Pack de gestion Base téléchargé SQL Server Appliance.  
+1.  Pour exécuter l’installation, double-cliquez sur le Pack d’administration Base téléchargé SQL Server Appliance.  
   
 2.  Acceptez le contrat de licence, puis cliquez sur **suivant**.  
   
     ![Acceptez le contrat de licence](./media/install-the-scom-management-packs/SCOM_licnse_agrmt.png "SCOM_licnse_agrmt")  
   
-3.  Sélectionnez votre dossier d’installation, ou utiliser la valeur par défaut du dossier d’Installation de pack d’administration.  
+3.  Sélectionner votre propre dossier d’installation, ou utiliser la valeur par défaut du dossier d’Installation de Pack de gestion.  
   
     ![Sélectionnez le dossier d’Installation](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
@@ -57,13 +57,13 @@ Pour la charge de travail HDInsight, téléchargez le [System Center Management 
   
 ### <a name="install-the-monitoring-pack-for-sql-server-pdw-appliance"></a>Installer le Pack de surveillance pour SQL Server PDW Appliance  
   
-1.  Pour exécuter l’installation, double-cliquez sur téléchargé SQL Server PDW Appliance Management Pack.  
+1.  Pour exécuter l’installation, double-cliquez sur le Pack d’administration Appliance téléchargé SQL Server PDW.  
   
 2.  Acceptez le contrat de licence, puis cliquez sur **suivant**.  
   
     ![Acceptez le contrat de licence](./media/install-the-scom-management-packs/SCOM_licnse_agmtB.png "SCOM_licnse_agmtB")  
   
-3.  Sélectionnez le répertoire qui contiendra les fichiers extraits. Le dossier d’installation de pack d’administration par défaut est affiché par défaut. Sélectionnez la valeur par défaut, ou sélectionner votre propre dossier d’installation.  
+3.  Choisissez le répertoire qui contiendra les fichiers extraits. Le dossier d’installation de Pack d’administration par défaut s’affichent par défaut. Sélectionnez la valeur par défaut, ou votre propre dossier d’installation.  
   
     ![Dossier d’installation sélectionnez](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
@@ -73,10 +73,10 @@ Pour la charge de travail HDInsight, téléchargez le [System Center Management 
   
 5.  Cliquez sur **Fermer**.  
   
-    ![Installation complète](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
+    ![Installation terminée](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## <a name="next-step"></a>Étape suivante  
-Maintenant que vous avez les packs d’administration installés, passez à l’étape suivante : [importer le Pack d’administration SCOM pour PDW &#40;système de plateforme Analytique&#41;](import-the-scom-management-pack-for-pdw.md).  
+Maintenant que vous avez les packs d’administration installés, passez à l’étape suivante : [importer le Pack d’administration SCOM pour PDW &#40;Analytique Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
