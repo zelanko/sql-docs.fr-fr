@@ -1,5 +1,5 @@
 ---
-title: Impossible d’actualiser les données pour une connexion de données dans le classeur | Documents Microsoft
+title: Impossible d’actualiser les données pour une connexion de données dans le classeur | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d1fabd45d3b9858114e48e3bdde258ed6ccc8362
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 211aecdb0158cff593c7f3f9ef241244db6ca051
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037423"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981711"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Impossible d'actualiser les données pour une connexion de données dans le classeur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,17 +40,17 @@ ms.locfileid: "34037423"
   
  Le classeur que vous essayez d’ouvrir peut avoir été créé dans la version SQL Server 2008 R2 de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel. Très probablement, le fournisseur de données Analysis Services qui est spécifié dans la chaîne de connexion de données n'est pas présent sur l'ordinateur qui gère la demande.  
   
- Si c’est le cas, vous trouverez ce message dans le journal ULS : « Échec de l’actualisation '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t données » dans le classeur '\<URL du classeur >' », suivi par « Impossible d’obtenir une connexion ».  
+ Si c’est le cas, vous trouverez ce message dans le journal ULS : « Échec de l’actualisation '[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t données » dans le classeur '\<URL du classeur >' », suivi de « Impossible d’obtenir une connexion ».  
   
  Pour déterminer la version du classeur, ouvrez-le dans Excel et vérifiez quel fournisseur de données est spécifié dans la chaîne de connexion. Un classeur SQL Server 2008 R2 utilise MSOLAP.4 comme fournisseur de données.  
   
- Pour contourner ce problème, vous pouvez mettre à niveau le classeur. Ou bien, vous pouvez installer les bibliothèques clientes de la version SQL Server 2008 R2 d’Analysis Services sur des ordinateurs physiques exécutant [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint ou Excel Services. Voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Pour contourner ce problème, vous pouvez mettre à niveau le classeur. Ou bien, vous pouvez installer les bibliothèques clientes de la version SQL Server 2008 R2 d’Analysis Services sur des ordinateurs physiques exécutant [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint ou Excel Services. Voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
  **Scénario 2b : Excel Services s'exécute sur un serveur d'applications qui a une version incorrecte des bibliothèques clientes**  
   
  Par défaut, SharePoint Server 2010 installe la version SQL Server 2008 du fournisseur OLE DB Analysis Services sur les serveurs d'applications qui exécutent Excel Services. Dans une batterie de serveurs qui prend en charge l’accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , tous les serveurs physiques exécutant des applications qui demandent des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , par exemple Excel Services et [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, doivent utiliser une version ultérieure du fournisseur de données.  
   
- Les serveurs qui exécutent [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint obtiennent le fournisseur de données OLE DB mis à jour automatiquement. D’autres serveurs, tels que ceux qui exécutent une instance autonome d’Excel Services sans [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint sur le même ordinateur, doivent être corrigés pour utiliser les bibliothèques clientes plus récentes. Pour plus d’informations, voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Les serveurs qui exécutent [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint obtiennent le fournisseur de données OLE DB mis à jour automatiquement. D’autres serveurs, tels que ceux qui exécutent une instance autonome d’Excel Services sans [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint sur le même ordinateur, doivent être corrigés pour utiliser les bibliothèques clientes plus récentes. Pour plus d’informations, voir [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)(Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint).  
   
  **Scénario 3 : le contrôleur de domaine n'est pas disponible**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34037423"
   
  Pour contourner ce problème, joignez l’ordinateur au même domaine que le serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou installez un contrôleur de domaine sur votre ordinateur local. La deuxième solution, l'installation du contrôleur de domaine, oblige à créer des comptes de domaine locaux pour tous les services et utilisateurs. Vous devrez configurer des comptes de service et des autorisations SharePoint pour les comptes que vous définissez.  
   
- L’installation d’un contrôleur de domaine sur votre ordinateur est utile si votre objectif est d’utiliser [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint hors connexion. Pour obtenir des instructions détaillées sur l’utilisation de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] hors connexion, consultez le billet de blog pour « prendre votre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] serveur sur le réseau » sur [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
+ L’installation d’un contrôleur de domaine sur votre ordinateur est utile si votre objectif est d’utiliser [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint hors connexion. Pour obtenir des instructions détaillées sur l’utilisation [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] hors connexion, consultez l’entrée de blog « prendre votre [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server hors du réseau » sur [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
  **Scénario 4 : serveur instable**  
   

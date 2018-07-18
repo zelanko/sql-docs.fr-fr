@@ -1,5 +1,5 @@
 ---
-title: Expressions conditionnelles (XQuery) | Documents Microsoft
+title: Expressions conditionnelles (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,16 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3634414fb0353c9152d317c718707c3ce26ec812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076158"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979011"
 ---
 # <a name="conditional-expressions-xquery"></a>Expressions conditionnelles (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery prend en charge l’attribut conditional suivant **if-then-else** instruction :  
+  XQuery prend en charge l’instruction conditionnelle suivante **if-then-else** instruction :  
   
 ```  
 if (<expression1>)  
@@ -45,7 +45,7 @@ else
   <expression3>  
 ```  
   
- Suivant la valeur booléenne effective de `expression1`, `expression2` ou `expression3` est évaluée. Par exemple :  
+ Suivant la valeur booléenne effective de `expression1`, `expression2` ou `expression3` est évaluée. Exemple :  
   
 -   Si l'expression de test, `expression1`, aboutit à une séquence vide, le résultat est False.  
   
@@ -61,7 +61,7 @@ else
   
 -   Le **else** expression est requise. Si vous n'en avez pas besoin, vous pouvez renvoyer « ( ) », comme le montrent les exemples de cette rubrique.  
   
- Par exemple, la requête suivante porte sur la **xml** variable de type. Le **si** condition teste la valeur de la variable SQL (@v) à l’intérieur de l’expression XQuery à l’aide de la [:variable()](../xquery/xquery-extension-functions-sql-variable.md) fonction d’extension. Si la valeur de la variable est « FirstName », elle renvoie l'élément <`FirstName`>. Sinon, elle renvoie l'élément <`LastName`>.  
+ Par exemple, la requête suivante porte sur le **xml** variable de type. Le **si** condition teste la valeur de la variable SQL (@v) à l’intérieur de l’expression XQuery à l’aide de la [:variable()](../xquery/xquery-extension-functions-sql-variable.md) fonction d’extension. Si la valeur de la variable est « FirstName », elle renvoie l'élément <`FirstName`>. Sinon, elle renvoie l'élément <`LastName`>.  
   
 ```  
 declare @x xml  
@@ -80,7 +80,7 @@ if ( sql:variable("@v")="FirstName" ) then
 ')  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <FirstName>fname</FirstName>  
@@ -110,9 +110,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Dans la requête précédente, la condition dans la **si** expression vérifie s’il existe plus de deux éléments enfants <`Features`>. Si tel est le cas, elle renvoie l'élément `\<there-is-more/>` dans le résultat.  
+ Dans la requête précédente, la condition dans le **si** expression vérifie s’il existe plus de deux éléments enfants de <`Features`>. Si tel est le cas, elle renvoie l'élément `\<there-is-more/>` dans le résultat.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
@@ -147,7 +147,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <WorkCenterLocation LocationID="30" />  

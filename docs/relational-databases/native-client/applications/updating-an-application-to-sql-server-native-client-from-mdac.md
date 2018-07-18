@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0365cedaa710627b8dab6b2060c9c414f126cf99
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428568"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972363"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Mise à jour d'une application vers SQL Server Native Client à partir de MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "37428568"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client autorise l'ambiguïté dans les chaînes de connexion (par exemple, quelques mots clés peuvent être spécifiés plusieurs fois et des mots clés en conflit peuvent être autorisés avec la résolution basée sur la position ou la précédence) pour des raisons de compatibilité descendante. Les versions ultérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client n'autoriseront peut-être pas l'ambiguïté dans les chaînes de connexion. Lors de la modification d'applications, il est conseillé d'utiliser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client pour éliminer toute dépendance vis-à-vis de l'ambiguïté de chaîne de connexion.  
   
--   Si vous utilisez un appel ODBC ou OLE DB pour démarrer des transactions, une différence de comportement existe entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et MDAC : les transactions commencent immédiatement avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, tandis qu'elles commencent après le premier accès à la base de données avec MDAC. Cela peut affecter le comportement des procédures stockées et lots car [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessite@TRANCOUNT soient identiques après un lot ou une procédure stockée termine son exécution telle qu’elle était au démarrage de la procédure stockée ou le lot.  
+-   Si vous utilisez un appel ODBC ou OLE DB pour démarrer des transactions, une différence de comportement existe entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et MDAC : les transactions commencent immédiatement avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, tandis qu'elles commencent après le premier accès à la base de données avec MDAC. Cela peut affecter le comportement de procédures stockées et de lots, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessitant que @@TRANCOUNT soit le même entre le démarrage et la fin de l’exécution d’un lot ou d’une procédure stockée.  
   
 -   Avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ITransactionLocal::BeginTransaction entraîne une transaction doit être démarré immédiatement. Avec MDAC le démarrage de transaction est différé jusqu'à ce que l'application exécute une instruction qui requiert une transaction en mode de transaction implicite. Pour plus d’informations, consultez [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   

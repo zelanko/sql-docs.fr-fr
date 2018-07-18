@@ -1,5 +1,5 @@
 ---
-title: Prédicats de sélection, spécification dans le chemin d’accès d’emplacement (SQLXML 4.0) | Documents Microsoft
+title: Sélection de spécification de prédicats dans le chemin d’accès d’emplacement (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7e32ce8235adfe6774b339219ced7ecb6a38f505
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971224"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972302"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Spécification de prédicats de sélection dans le chemin d'accès d'emplacement (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,16 +37,16 @@ ms.locfileid: "32971224"
  XPath autorise également un filtrage basé sur les positions. Une expression de prédicat qui correspond à un nombre sélectionne ce nœud ordinal. Par exemple, le chemin d'accès d'emplacement `Customer[3]` retourne le troisième client. De tels prédicats numériques ne sont pas pris en charge. Seules les expressions de prédicat qui retournent un résultat booléen sont prises en charge.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les limitations de cette implémentation XPath de XPath et les différences entre eux et la spécification W3C, consultez [Introduction à l’aide de requêtes XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+>  Pour plus d’informations sur les limitations de cette implémentation XPath de XPath et les différences entre elle et la spécification W3C, consultez [Introduction à l’aide de requêtes XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="selection-predicate-example-1"></a>Prédicat de sélection : Exemple 1  
- L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tous les le  **\<client >** éléments enfants qui ont le **CustomerID** attribut avec la valeur ALFKI :  
+ L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tous les  **\<client >** éléments enfants qui ont le **CustomerID** attribut avec la valeur ALFKI :  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- Dans cette requête XPath, `child` et `attribute` sont les noms d'axes. `Customer` est le test de nœud (TRUE si `Customer` est un  **\<nœud d’élément >**, car  **\<élément >** est le type de nœud principal pour le `child` axe). `attribute::CustomerID="ALFKI"` est le prédicat. Dans le prédicat, `attribute` est l’axe et `CustomerID` est le test de nœud (TRUE si **CustomerID** est un attribut du nœud de contexte, car  **\<attribut >** est le type de nœud principal de **attribut** axe).  
+ Dans cette requête XPath, `child` et `attribute` sont les noms d'axes. `Customer` est le test de nœud (TRUE si `Customer` est un  **\<nœud d’élément >**, car  **\<élément >** est le type de nœud principal pour le `child` axe). `attribute::CustomerID="ALFKI"` est le prédicat. Dans le prédicat, `attribute` est l’axe et `CustomerID` est le test de nœud (TRUE si **CustomerID** est un attribut du nœud de contexte, car  **\<attribut >** est le principal type de nœud de **attribut** axe).  
   
  À l'aide de la syntaxe abrégée, la requête XPath peut également être spécifiée de la façon suivante :  
   
@@ -70,13 +70,13 @@ ms.locfileid: "32971224"
 ```  
   
 ## <a name="selection-predicate-example-3"></a>Prédicat de sélection : Exemple 3  
- L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne dans le nœud de contexte actuel tous les  **\<client >** enfants qui possèdent un ou plusieurs  **\<ContactName >** enfants :  
+ L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tous les  **\<client >** enfants qui ont une ou plusieurs  **\<ContactName >** enfants :  
   
 ```  
 child::Customer[child::ContactName]  
 ```  
   
- Cet exemple suppose que le  **\<ContactName >** est un élément enfant de le  **\<client >** élément dans le document XML, qui est appelé *mappage centré sur l’élément* dans un schéma XSD annoté.  
+ Cet exemple suppose que le  **\<ContactName >** est un élément enfant de le  **\<client >** élément dans le document XML, qui est appelé  *mappage centré sur l’élément* dans un schéma XSD annoté.  
   
  Dans cette expression XPath, `child` est le nom de l'axe. `Customer` est le test de nœud (TRUE si `Customer` est un  **\<élément >** nœud, car  **\<élément >** est le type de nœud principal pour `child` axe). `child::ContactName` est le prédicat. Dans le prédicat, `child` est l’axe et `ContactName` est le test de nœud (TRUE si `ContactName` est un  **\<élément >** nœud).  
   
@@ -95,7 +95,7 @@ Customer[ContactName]
 child::Customer[not(child::ContactName)]  
 ```  
   
- Cet exemple suppose que  **\<ContactName >** est un élément enfant de le  **\<client >** élément dans le document XML et le champ ContactName n’est pas requis dans la base de données.  
+ Cet exemple suppose que  **\<ContactName >** est un élément enfant de le  **\<client >** élément dans le document XML et le champ ContactName n’est pas requis dans le base de données.  
   
  Dans cet exemple, `child` est l'axe. `Customer` est le test de nœud (TRUE si `Customer` est un \<élément > nœud). `not(child::ContactName)` est le prédicat. Dans le prédicat, `child` est l’axe et `ContactName` est le test de nœud (TRUE si `ContactName` est un \<élément > nœud).  
   
@@ -131,6 +131,6 @@ Customer[Order/@OrderDate=Order/@ShipDate]
   
 ## <a name="see-also"></a>Voir aussi  
  [Introduction aux schémas XSD annotés &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
- [La mise en forme XML côté client & #40 ; SQLXML 4.0 & #41 ;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [La mise en forme XML côté client &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

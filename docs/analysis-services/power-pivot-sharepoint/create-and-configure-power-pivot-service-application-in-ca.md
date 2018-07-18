@@ -1,5 +1,5 @@
 ---
-title: Créer et configurer l’Application de Service PowerPivot dans l’autorité de certification | Documents Microsoft
+title: Créer et configurer l’Application de Service PowerPivot dans l’autorité de certification | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 581bcc4777121d42b8f7e6b629d98e26b49b425d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025166"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982601"
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Créer et configurer l’Application de Service PowerPivot dans l’autorité de certification
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -106,9 +106,9 @@ ms.locfileid: "34025166"
   
 9. Dans Actualisation des données, sous **Heures d'ouverture**, vous pouvez spécifier la plage d'heures qui détermine un jour ouvrable. Les planifications d'actualisation des données peuvent s'exécuter à la fin d'une journée de travail pour récupérer les données transactionnelles qui ont été générées pendant les heures d'ouverture normales.  
   
-10. Dans **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sans assistance**, vous pouvez spécifier une application cible du service Banque d'informations sécurisé prédéfinie qui stocke un compte prédéfini pour l'exécution des travaux d'actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Veillez à spécifier le nom de l'application cible, et pas l'ID. L'application cible pour l'actualisation des données sans assistance est créée automatiquement si vous avez utilisé l'option Nouveau serveur dans le programme d'installation de SQL Server pour installer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Sinon, vous devez créer l'application cible manuellement. Pour obtenir des instructions sur la manière de configurer le compte, consultez [Configurer le compte d’actualisation des données Power Pivot sans assistance (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493).  
+10. Dans **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sans assistance**, vous pouvez spécifier une application cible du service Banque d'informations sécurisé prédéfinie qui stocke un compte prédéfini pour l'exécution des travaux d'actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Veillez à spécifier le nom de l'application cible, et pas l'ID. L'application cible pour l'actualisation des données sans assistance est créée automatiquement si vous avez utilisé l'option Nouveau serveur dans le programme d'installation de SQL Server pour installer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint. Sinon, vous devez créer l'application cible manuellement. Pour obtenir des instructions sur la manière de configurer le compte, consultez [Configurer le compte d’actualisation des données Power Pivot sans assistance (PowerPivot pour SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).  
   
-11. Dans **Autoriser les utilisateurs à entrer des informations d'identification Windows personnalisées**, vous pouvez activer ou désactiver la case à cocher pour spécifier si les propriétaires de planifications peuvent entrer des informations d'identification Windows arbitraires pour exécuter une planification d'actualisation des données. Si vous activez cette case à cocher, l'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] crée et gère une application cible pour chaque ensemble d'informations d'identification stockées. Pour plus d’informations, consultez [Configurer les informations d’identification stockées pour l’actualisation des données Power Pivot (Power Pivot pour SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
+11. Dans **Autoriser les utilisateurs à entrer des informations d'identification Windows personnalisées**, vous pouvez activer ou désactiver la case à cocher pour spécifier si les propriétaires de planifications peuvent entrer des informations d'identification Windows arbitraires pour exécuter une planification d'actualisation des données. Si vous activez cette case à cocher, l'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] crée et gère une application cible pour chaque ensemble d'informations d'identification stockées. Pour plus d’informations, consultez [Configurer les informations d’identification stockées pour l’actualisation des données Power Pivot (Power Pivot pour SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
   
 12. Dans **Longueur maximale de l'historique de traitement**, vous pouvez spécifier la durée de rétention d'un enregistrement d'historique du traitement de l'actualisation des données. Ces informations s'affichent dans les pages d'historique de l'actualisation des données qui sont conservées pour chaque classeur utilisant l'actualisation des données. Elles s'affichent également dans le tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   

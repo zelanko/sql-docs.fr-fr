@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geography_histogram (Transact-SQL) | Documents Microsoft
+title: sp_help_spatial_geography_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a2eadfd9864c3d595d9d93078cd028a66b5d22ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263115"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019787"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,21 +51,21 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  Les guillemets ne sont nécessaires que si une une table qualifiée est spécifiée. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *tabname* est **sysname**, sans valeur par défaut.  
   
  [  **@colname =** ] **'***columnname***'**  
- Nom de la colonne spatiale spécifiée. *nom de colonne* est un **sysname**, sans valeur par défaut.  
+ Nom de la colonne spatiale spécifiée. *ColumnName* est un **sysname**, sans valeur par défaut.  
   
  [  **@resolution =** ] **'***résolution***'**  
  Résolution du rectangle englobant. Les valeurs possibles sont comprises entre 10 et 5000. *résolution* est un **tinyint**, sans valeur par défaut.  
   
  [  **@sample =** ] **'***exemple***'**  
- Pourcentage de la table utilisée. Les valeurs valides sont comprises entre 0 et 100. *TABLESAMPLE* est un **float**. Valeur par défaut est 100.  
+ Pourcentage de la table utilisée. Les valeurs valides sont compris entre 0 et 100. *TABLESAMPLE* est un **float**. Valeur par défaut est 100.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Une valeur de table est retournée. La grille suivante décrit le contenu de colonne de la table.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**cellid**|**int**|Représente l'ID unique de chaque cellule, avec un nombre initial de 1.|  
-|**Cellule**|**geography**|Polygone rectangulaire qui représente chaque cellule. La forme de cellule est identique à la forme de cellule utilisée pour l'indexation spatiale.|  
+|**cellid**|**Int**|Représente l'ID unique de chaque cellule, avec un nombre initial de 1.|  
+|**cellule**|**geography**|Polygone rectangulaire qui représente chaque cellule. La forme de cellule est identique à la forme de cellule utilisée pour l'indexation spatiale.|  
 |**row_count**|**bigint**|Indique le nombre d'objets spatiaux qui touchent ou contiennent la cellule.|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -77,16 +77,16 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 > [!NOTE]  
 >  Les objets dans la table peuvent couvrir plusieurs cellules ; par conséquent, la somme de cellules de la table peut être supérieure au nombre d'objets réels.  
   
- Le rectangle englobant pour le **geography** type est le globe entier.  
+ Cadre englobant pour le **geography** type est le globe entier.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant appelle **sp_help_spatial_geography_histogram** sur la `Person.Address` de table dans le [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données.  
+ L’exemple suivant appelle **sp_help_spatial_geography_histogram** sur le `Person.Address` table dans le [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données.  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les procédures stockées d’Index spatial &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
+ [Procédures stockées d’Index spatial &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

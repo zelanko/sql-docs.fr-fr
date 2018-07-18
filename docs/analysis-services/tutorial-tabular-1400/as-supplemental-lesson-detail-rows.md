@@ -1,5 +1,5 @@
 ---
-title: 'Leçon supplémentaire de Analysis Services tutorial : les lignes de détails | Documents Microsoft'
+title: 'Leçon supplémentaire du Analysis Services tutorial : lignes de détails | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,39 +10,39 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0518cdd7707c5973bfd055af997a75c9b67d7479
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045743"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017792"
 ---
-# <a name="supplemental-lesson---detail-rows"></a>Leçon supplémentaire - les lignes de détails
+# <a name="supplemental-lesson---detail-rows"></a>Leçon supplémentaire – lignes de détails
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-Dans cette leçon supplémentaire, vous utilisez l’éditeur DAX pour définir une Expression de lignes de détail personnalisée. Une Expression de lignes de détail est une propriété sur une mesure, en fournissant aux utilisateurs plus d’informations sur les résultats agrégés d’une mesure. 
+Dans cette leçon supplémentaire, vous utilisez l’éditeur DAX pour définir une Expression de lignes de détail personnalisée. Une Expression de lignes de détail est une propriété sur une mesure, en fournissant aux utilisateurs finaux plus d’informations sur les résultats agrégés d’une mesure. 
   
 Durée estimée pour effectuer cette leçon : **10 minutes**  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Prérequis  
 
-Cet article de la leçon supplémentaire fait partie d’un didacticiel de modélisation tabulaire. Avant d’effectuer les tâches de cette leçon supplémentaire, vous devez avoir terminé toutes les leçons précédentes ou avoir un projet de modèle d’exemple Adventure Works Internet Sales terminé.  
+Cet article de leçon supplémentaire fait partie d’un didacticiel de modélisation tabulaire. Avant d’effectuer les tâches de cette leçon supplémentaire, vous devez avoir terminé toutes les leçons précédentes ou disposer d’un projet de modèle d’exemple Adventure Works Internet Sales terminé.  
   
 ## <a name="whats-the-issue"></a>Quel est le problème ?
 
-Examinons les détails de la mesure InternetTotalSales, avant d’ajouter une Expression de lignes de détail.
+Examinons les détails de la mesure InternetTotalSales avant d’ajouter une Expression de lignes de détail.
 
 1.  Dans SSDT, cliquez sur le **modèle** menu > **analyser dans Excel** pour ouvrir Excel et créer un tableau croisé dynamique vide.
   
-2.  Dans **PivotTable Fields**, ajoutez le **InternetTotalSales** mesure à partir de la table FactInternetSales **valeurs**, **CalendarYear** à partir de la table DimDate pour **colonnes**, et **EnglishCountryRegionName** à **lignes**. Le tableau croisé dynamique fournit maintenant des résultats agrégés dans la mesure InternetTotalSales par régions et l’année. 
+2.  Dans **PivotTable Fields**, ajoutez le **InternetTotalSales** mesure à partir de la table FactInternetSales à **valeurs**, **CalendarYear** à partir de la table DimDate à **colonnes**, et **EnglishCountryRegionName** à **lignes**. Le tableau croisé dynamique permet à présent les résultats agrégés à partir de la mesure InternetTotalSales par région et par année. 
 
     ![en tant que-leçon-détail-lignes-tableau croisé dynamique](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
 
-3. Dans le tableau croisé dynamique, double-cliquez sur une valeur agrégée pour une année et un nom de région. Ici, nous avons double-cliqué sur la valeur de l’Australie et l’année 2014. Une nouvelle feuille s’ouvre, contenant des données, mais les données inutiles.
+3. Dans le tableau croisé dynamique, double-cliquez sur une valeur agrégée pour une année et un nom de région. Ici, nous avons double-cliqué sur la valeur pour l’Australie et de l’année 2014. Une nouvelle feuille s’ouvre, contenant des données, mais pas l’utilité.
 
     ![en tant que-leçon-détail-lignes-tableau croisé dynamique](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
   
-Ce que nous voulons ici est une table contenant des colonnes et lignes de données qui contribuent au résultat de la mesure InternetTotalSales agrégé. Pour ce faire, nous pouvons ajouter une Expression de lignes de détail en tant que propriété de la mesure.
+Nous voulons voir ici une table contenant des colonnes et lignes de données qui contribuent au résultat agrégé de la mesure InternetTotalSales. Pour ce faire, nous pouvons ajouter une Expression de lignes de détail en tant que propriété de la mesure.
 
 ## <a name="add-a-detail-rows-expression"></a>Ajouter une Expression de lignes de détail
 
@@ -69,17 +69,17 @@ Ce que nous voulons ici est une table contenant des colonnes et lignes de donné
 
     ```
 
-    Cette expression spécifie les noms de colonnes, et les résultats de mesure à partir de la table FactInternetSales et les tables associées sont retournés lorsqu’un utilisateur double-clique sur un résultat agrégé dans un tableau croisé dynamique ou un rapport.
+    Cette expression indique des noms, des colonnes et les résultats de mesure à partir de la table FactInternetSales et les tables associées sont retournés lorsqu’un utilisateur double-clique sur un résultat agrégé dans un tableau croisé dynamique ou un rapport.
 
-4. Dans Excel, supprimez de la feuille créée à l’étape 3, puis double-cliquez sur une valeur agrégée. Cette fois, avec une propriété d’Expression de lignes de détail définie pour la mesure, une nouvelle feuille s’ouvre contenant des données beaucoup plus utiles.
+4. De retour dans Excel, supprimez la feuille créée à l’étape 3, puis double-cliquez sur une valeur agrégée. Cette fois, avec une propriété d’Expression de lignes de détails définie pour la mesure, une nouvelle feuille s’ouvre contenant des données beaucoup plus utiles.
 
     ![en tant que-leçon-détail-lignes-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
 
-5. Redéployer votre modèle.
+5. Redéployez votre modèle.
 
   
 ## <a name="see-also"></a>Voir aussi  
 
-[Fonction SELECTCOLUMNS (DAX)](https://msdn.microsoft.com/library/mt761759.aspx)  
+[Selectcolumns, fonction (DAX)](https://msdn.microsoft.com/library/mt761759.aspx)  
 [Leçon supplémentaire - Sécurité dynamique](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [Leçon supplémentaire - Hiérarchies déséquilibrées](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)  

@@ -1,5 +1,5 @@
 ---
-title: Définition des propriétés - SMO | Documents Microsoft
+title: Définition de propriétés - SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d8c7072b8f36aeb00df1975c1544f73b37820153
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971764"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970768"
 ---
-# <a name="setting-properties---smo"></a>Définition des propriétés - SMO
+# <a name="setting-properties---smo"></a>Définition de propriétés - SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Les propriétés sont des valeurs qui stockent des informations descriptives sur l'objet. Par exemple, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les options de configuration sont représentées par le <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> propriétés de l’objet. Les propriétés sont accessibles soit directement, soit indirectement par le biais de la collection de propriétés. L'accès aux propriétés utilise directement la syntaxe suivante :  
@@ -37,7 +37,7 @@ ms.locfileid: "32971764"
  Une valeur de propriété peut être modifiée ou récupérée selon que la propriété dispose d'un accès en lecture/écriture ou d'un accès en lecture seule. Il est également nécessaire de définir certaines propriétés avant qu'un objet ne puisse être créé. Pour plus d'informations, consultez la référence SMO pour l'objet particulier.  
   
 > [!NOTE]  
->  Les collections d'objets enfants apparaissent en tant que propriété d'un objet. Par exemple, la collection **Tables** est une propriété d'un objet **Server** . Pour plus d'informations, voir [Using Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md).  
+>  Les collections d'objets enfants apparaissent en tant que propriété d'un objet. Par exemple, la collection **Tables** est une propriété d'un objet **Server** . Pour plus d’informations, consultez [à l’aide des Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md).  
   
  Les propriétés d'un objet sont membres de la collection Properties. La collection Properties peut être utilisée pour parcourir chaque propriété d'un objet.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "32971764"
   
 -   La version du serveur ne prend pas en charge la propriété, notamment si vous essayez d'accéder à une propriété représentant une nouvelle fonctionnalité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une ancienne version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Le serveur ne fournit pas de données pour la propriété, notamment si vous essayez d'accéder à une propriété représentant un composant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui n'est pas installé.  
+-   Le serveur ne fournit pas de données pour la propriété, par exemple si vous essayez d’accéder à une propriété qui représente un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] composant qui n’est pas installé.  
   
  Vous pouvez gérer ces circonstances en interceptant les exceptions SMO <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> et <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException>.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "32971764"
  La méthode <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> définit le comportement de chargement des propriétés pour le reste de l'application ou jusqu'à ce qu'elle soit réinitialisée. Vous pouvez enregistrer le comportement d’origine en utilisant la <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> méthode et la restaurer en fonction des besoins.  
   
 ## <a name="examples"></a>Exemples  
-Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Obtention et définition d'une propriété en Visual Basic  
- Cet exemple de code montre comment obtenir le <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Information> objet et comment définir le <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propriété le **ExecuteSql** membre de la <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> type énuméré.  
+ Cet exemple de code montre comment obtenir le <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Information> objet et comment définir le <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propriété du <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propriété le **ExecuteSql** membre de la <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> énumérées type.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -80,7 +80,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Obtention et définition d'une propriété en Visual C#  
- Cet exemple de code montre comment obtenir le <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Information> objet et comment définir le <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propriété le **ExecuteSql** membre de la <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> type énuméré.  
+ Cet exemple de code montre comment obtenir le <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> propriété de la <xref:Microsoft.SqlServer.Management.Smo.Information> objet et comment définir le <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> propriété du <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propriété le **ExecuteSql** membre de la <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> énumérées type.  
   
 ```csharp  
 {   
@@ -161,7 +161,7 @@ tb.Create();
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Parcours de toutes les propriétés d'un objet en Visual Basic  
  Cet exemple de code effectue une itération dans le **propriétés** collection de la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> de l’objet et les affiche sur la [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] écran de sortie.  
   
- Dans l’exemple, le <xref:Microsoft.SqlServer.Management.Smo.Property> objet a été placé en entre crochets car elle est également un [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] (mot clé).  
+ Dans l’exemple, le <xref:Microsoft.SqlServer.Management.Smo.Property> objet a été placé en entre crochets, car il est également un [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] mot clé.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.

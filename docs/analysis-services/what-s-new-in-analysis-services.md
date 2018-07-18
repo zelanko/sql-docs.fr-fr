@@ -1,5 +1,5 @@
 ---
-title: Ce que&#39;nouveauté dans Analysis Services | Documents Microsoft
+title: Ce que&#39;nouveauté d’Analysis Services | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045593"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016086"
 ---
-# <a name="what39s-new-in-analysis-services"></a>Ce que&#39;nouveauté dans Analysis Services
+# <a name="what39s-new-in-analysis-services"></a>Ce que&#39;nouveauté d’Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
-SQL Server 2016 Analysis Services inclut de nombreuses nouvelles améliorations de fournir des performances améliorées, solution plus facile de création, de gestion automatisée de la base de données améliorée des relations avec bidirectionnelles entre le filtrage, le traitement des partitions parallèles et bien plus encore. Au cœur de la plupart des améliorations apportées à cette version se trouve le nouveau niveau de compatibilité 1200 pour les bases de données model tabulaires.     
+SQL Server 2016 Analysis Services inclut de nombreuses nouvelles améliorations améliorer les performances, la création de solutions plus facile, gestion de la base de données automatisées, traitement des partitions, en parallèle améliorée des relations avec filtrage, croisé bidirectionnel et bien plus encore. Au cœur de la plupart des améliorations apportées à cette version se trouve le nouveau niveau de compatibilité 1200 pour les bases de données model tabulaires.     
 
 ## <a name="azure-analysis-services"></a>Azure Analysis Services
-Comme nous l’avons annoncé lors de la conférence SQL PASS de 2016, Analysis Services est désormais disponible dans le cloud comme un service Azure. **Azure Analysis Services** prend en charge les modèles tabulaires aux niveaux de compatibilité 1200 et supérieurs. DirectQuery, les partitions, la sécurité de niveau ligne, les relations bidirectionnelles et les traductions sont toutes prises en charge. Pour en savoir plus et effectuer un essai gratuit, consultez [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
+Comme nous l’avons annoncé lors de la conférence SQL PASS de 2016, Analysis Services est désormais disponible dans le cloud comme un service Azure. **Azure Analysis Services** prend en charge les modèles tabulaires aux niveaux de compatibilité 1200 et supérieur. DirectQuery, les partitions, la sécurité de niveau ligne, les relations bidirectionnelles et les traductions sont toutes prises en charge. Pour en savoir plus et effectuer un essai gratuit, consultez [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 
 
 ## <a name="whats-new-in-sql-server-2016-service-pack-1-sp1-analysis-services"></a>Nouveautés dans SQL Server 2016 Service Pack 1 (SP1) Analysis Services
 
@@ -39,7 +39,7 @@ En particulier, SQL Server 2016 SP1 Analysis Services offre des améliorations d
 Des tests de performances et de scalabilité ont montré des gains de débit de requête significatifs lors de l’exécution de SQL Server 2016 SP1 Analysis Services sur de grands serveurs d’entreprise à plusieurs nœuds.
 
 
-## <a name="whats-new-in-sql-server-2016-analysis-services"></a>Nouveautés de SQL Server 2016 Analysis Services
+## <a name="whats-new-in-sql-server-2016-analysis-services"></a>Quelles sont les nouveautés dans SQL Server 2016 Analysis Services
 
 Alors que la plupart des améliorations apportées à cette version sont spécifiques aux modèles tabulaires, un certain nombre ont été apportées aux modèles multidimensionnels, par exemple, l’optimisation ROLAP du comptage de valeurs pour les sources de données telles que DB2 et Oracle, la prise en charge de plusieurs sélections pour l’extraction avec Excel 2016 et les optimisations de requête Excel.    
 
@@ -63,7 +63,7 @@ Avec cette version, vous n’avez plus besoin de deux versions de SSDT pour cré
 Les dossiers d’affichage sont désormais disponibles pour les modèles 1200 tabulaires. Définis dans SQL Server Data Tools et affichés dans les applications clientes comme Excel ou Power BI Desktop, les dossiers d’affichage vous permettent d’organiser facilement des mesures en grand nombre dans des dossiers individuels. De cette façon, les mesures sont présentées de façon hiérarchique, ce qui simplifie la navigation dans les listes de champs.
 ### <a name="bi-directional-cross-filtering"></a>Filtrage croisé bidirectionnel
 L’une des nouveautés de cette version est son approche intégrée d’activation des filtres croisés bidirectionnels dans les modèles tabulaires. Grâce à elle, plus besoin de concevoir manuellement des solutions de contournement DAX pour propager un contexte de filtre dans les relations de table. Les filtres sont créés automatiquement uniquement si la direction des filtres peut être établie avec un haut degré de certitude. S’il existe une ambiguïté en ce qui concerne le format de plusieurs chemins de requête sur les relations de table, les filtres ne sont pas créés automatiquement. Pour plus d’informations, consultez [Filtres croisés bidirectionnels pour modèles tabulaires dans SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) .
- ### <a name="translations"></a>Traductions    
+ ### <a name="translations"></a>Translations    
  Vous pouvez désormais stocker des métadonnées traduites dans un modèle 1200 tabulaire. Les métadonnées du modèle incluent des champs pour la **Culture**, les légendes traduites et les descriptions traduites. Pour ajouter des traductions, utilisez la commande **Modèle** > **Traductions** dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Pour plus d’informations, consultez [Traductions dans les modèles tabulaires &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).    
  ### <a name="pasted-tables"></a>Tables collées    
  Si vous utilisez un modèle tabulaire 1100 ou 1103 qui contient des tables collées, vous pouvez désormais le mettre à niveau vers un modèle 1200. Nous vous recommandons d’utiliser [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Dans SSDT, définissez **CompatibilityLevel** à la valeur 1200 et effectuez le déploiement sur une instance [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] d’ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) .    
@@ -80,7 +80,7 @@ Une *table calculée* est une construction de modèle uniquement qui est basée 
  ### <a name="administer-tabular-1200-models-in-ssms"></a>Administration de modèles 1200 tabulaires dans SSMS    
  Dans cette version, une instance d’Analysis Services en mode serveur tabulaire peut exécuter les modèles tabulaires à tous les niveaux de compatibilité (1100, 1103, 1200). La dernière version de [SQL Server Management Studio](http://msdn.microsoft.com/library/mt238290.aspx) a été mise à jour pour afficher les propriétés et permettre l’administration de modèles de base de données pour les modèles tabulaires au niveau de compatibilité 1200.    
  ### <a name="parallel-processing-for-multiple-table-partitions-in-tabular-models"></a>Traitement en parallèle de plusieurs partitions de tables dans les modèles tabulaires    
- Cette version inclut une nouvelle fonctionnalité de traitement en parallèle des tables avec plusieurs partitions, ce qui améliore les performances de traitement. Il n’y a pas de paramètres de configuration pour cette fonctionnalité. Pour plus d’informations sur la configuration des partitions et de traiter les tables, consultez [des Partitions de modèles tabulaires](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
+ Cette version inclut une nouvelle fonctionnalité de traitement en parallèle des tables avec plusieurs partitions, ce qui améliore les performances de traitement. Il n’y a pas de paramètres de configuration pour cette fonctionnalité. Pour plus d’informations sur la configuration des partitions et de traitement des tables, consultez [Partitions de modèles tabulaires](../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md).    
  ### <a name="add-computer-accounts-as-administrators-in-ssms"></a>Ajout de comptes d’ordinateur en tant qu’administrateurs dans SSMS    
  Les administrateurs de[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent désormais utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour configurer des comptes d’ordinateur en tant que membres du groupe d’administrateurs [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , définissez l’option **Emplacements** pour le domaine des ordinateurs, puis ajoutez le type d’objet **Ordinateurs** . Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).    
  ### <a name="dbcc-for-analysis-services"></a>DBCC pour Analysis Services    
@@ -197,7 +197,7 @@ Cette version comporte des améliorations significatives dans DirectQuery pour l
 -   L’optimisation des performances inclut l’élimination des jointures redondantes pour VertiPaq et DirectQuery. 
 
 ### <a name="new-data-sources-for-directquery-mode"></a>Nouvelles sources de données pour le mode DirectQuery    
- Sources de données pris en charge pour les modèles tabulaires 1200 dans le mode DirectQuery maintenant incluent Oracle, Teradata et Microsoft Analytique Platform (anciennement Parallel Data Warehouse).    
+ Sources de données pris en charge pour les modèles 1200 tabulaires en mode DirectQuery désormais incluent Oracle, Teradata et Microsoft Analytique Platform (anciennement Parallel Data Warehouse).    
     
 Pour plus d’informations, consultez [DirectQuery Mode](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).    
 

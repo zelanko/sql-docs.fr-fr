@@ -1,5 +1,5 @@
 ---
-title: Concepts d’exploration de données | Documents Microsoft
+title: Concepts d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ae6b7a5014cd9d8c669a75a5ea1a6d86f8d0e225
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6dc15187198b5355d9e6f5a2171e57d52406e839
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018656"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982001"
 ---
 # <a name="data-mining-concepts"></a>Concepts d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "34018656"
 ##  <a name="ExploringData"></a> Exploration des données  
  La troisième étape du processus d'exploration de données, mise en évidence dans le diagramme suivant, consiste à explorer les données préparées.  
   
- ![Troisième étape d’exploration : exploration de données](../../analysis-services/data-mining/media/dmprocess-exploring.gif "troisième étape d’exploration : exploration de données")  
+ ![Troisième étape de données d’exploration de données : exploration de données](../../analysis-services/data-mining/media/dmprocess-exploring.gif "troisième étape de données d’exploration de données : exploration de données")  
   
  Vous devez vous familiariser avec les données afin de prendre les décisions appropriées lors de la création des modèles d’exploration. Les techniques d'exploration comprennent le calcul des valeurs minimales et maximales, le calcul des écarts moyens et types, et l'examen de la distribution des données. Par exemple, vous pouvez déterminer en examinant les valeurs maximales, minimales et moyennes que les données ne sont pas représentatives de vos clients ou de vos processus d’entreprise, et que vous devez par conséquent obtenir des données plus équilibrées ou examiner les hypothèses sur lesquelles reposent vos attentes. Les écarts types et autres valeurs de distribution peuvent fournir des informations utiles sur la stabilité et la précision des résultats. Un grand écart type peut indiquer que l'ajout de données supplémentaires est susceptible d’améliorer le modèle. Les données qui se différencient fortement d'une distribution standard peuvent être faussées ou représenter l’image exacte d'un problème vécu, mais elles permettent difficilement d’ajuster un modèle en fonction des données.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "34018656"
   
  Vous définissez les colonnes de données que vous souhaitez utiliser en créant une structure d'exploration de données. La structure d'exploration de données est liée à la source de données, mais ne contient pas de données tant qu’elle n'a pas fait l'objet d'un traitement. Lorsque vous traitez la structure d'exploration de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère des agrégats et d'autres informations statistiques qui peuvent être utilisés pour l'analyse. Ces informations peuvent être utilisées par n'importe quel modèle d’exploration de données basé sur la structure. Pour plus d’informations sur l’association des structures d’exploration de données avec les modèles d’exploration de données, consultez [Architecture logique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md).  
   
- Avant de traiter la structure et le modèle, un modèle d'exploration de données n'est qu'un conteneur spécifiant les colonnes utilisées pour l'entrée, l'attribut prédit et les paramètres indiquant à l'algorithme comment traiter les données. Le traitement d'un modèle est souvent appelé *apprentissage*. L’apprentissage fait référence au processus visant à appliquer un algorithme mathématique spécifique aux données de la structure pour extraire des motifs. Les schémas trouvés dans le processus d’apprentissage dépendent de la sélection des données d'apprentissage, de l'algorithme choisi et de la manière dont vous avez configuré cet algorithme. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]contient de nombreux algorithmes différents, chacun étant adapté à un autre type de tâche et la création d’un autre type de modèle. Pour obtenir la liste des algorithmes fournis avec [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Avant de traiter la structure et le modèle, un modèle d'exploration de données n'est qu'un conteneur spécifiant les colonnes utilisées pour l'entrée, l'attribut prédit et les paramètres indiquant à l'algorithme comment traiter les données. Le traitement d'un modèle est souvent appelé *apprentissage*. L’apprentissage fait référence au processus visant à appliquer un algorithme mathématique spécifique aux données de la structure pour extraire des motifs. Les schémas trouvés dans le processus d’apprentissage dépendent de la sélection des données d'apprentissage, de l'algorithme choisi et de la manière dont vous avez configuré cet algorithme. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] contient de nombreux algorithmes différents, chacun étant adapté à un type de tâche différent et créant un type de modèle différent. Pour obtenir la liste des algorithmes fournis avec [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez [Algorithmes d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
  Vous pouvez également utiliser des paramètres pour ajuster chaque algorithme et appliquer des filtres aux données d'apprentissage pour utiliser uniquement un sous-ensemble des données, créant ainsi des résultats différents. Une fois les données transférées dans le modèle, l'objet du modèle d'exploration de données contient des résumés et des motifs qui peuvent être interrogés ou utilisés à des fins de prédiction.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "34018656"
   
  Avant de déployer un modèle dans un environnement de production, vous voudrez vérifier si ce modèle fonctionne bien. De plus, lorsque vous générez un modèle, vous créez généralement plusieurs modèles avec des configurations différentes et testez tous les modèles pour déterminer lequel produit les meilleurs résultats par rapport à votre problème et vos données.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Fournit des outils qui vous aident à séparer vos données dans l’apprentissage et jeux de données de test qui vous pouvez d’évaluer avec précision les performances de tous les modèles sur les mêmes données. Le jeu de données d'apprentissage sert à générer le modèle tandis que le jeu de données de test sert à vérifier la précision du modèle en créant des requêtes de prédictions. Ce partitionnement peut être effectué automatiquement lors de la génération du modèle d’exploration de données. Pour plus d’informations, consultez [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit des outils qui permettent de séparer vos données en jeux de données d’apprentissage et en jeux de données de test afin d’évaluer correctement la performance de tous les modèles sur les mêmes données. Le jeu de données d'apprentissage sert à générer le modèle tandis que le jeu de données de test sert à vérifier la précision du modèle en créant des requêtes de prédictions. Ce partitionnement peut être effectué automatiquement lors de la génération du modèle d’exploration de données. Pour plus d’informations, consultez [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
- Vous pouvez explorer les tendances et les motifs trouvés par les algorithmes en utilisant les visionneuses du Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Pour plus d’informations, consultez [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md). Vous pouvez également tester la qualité des prédictions créées par les modèles à l'aide des outils du Concepteur, tels que le graphique de courbes d'élévation et la matrice de classification. Pour vérifier si le modèle est spécifique à vos données ou s’il peut être utilisé pour faire des inférences générales, vous pouvez utiliser la technique statistique appelée *validation croisée* pour créer automatiquement des sous-ensembles de données et tester le modèle avec chaque sous-ensemble. Pour plus d’informations, consultez [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+ Vous pouvez explorer les tendances et les motifs trouvés par les algorithmes en utilisant les visionneuses du Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Pour plus d’informations, consultez [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md). Vous pouvez également tester la qualité des prédictions créées par les modèles à l'aide des outils du Concepteur, tels que le graphique de courbes d'élévation et la matrice de classification. Pour vérifier si le modèle est spécifique à vos données ou s’il peut être utilisé pour faire des inférences générales, vous pouvez utiliser la technique statistique appelée *validation croisée* pour créer automatiquement des sous-ensembles de données et tester le modèle avec chaque sous-ensemble. Pour plus d’informations, consultez [Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
  Si aucun des modèles créés à l'étape [Création des modèles](#BuildingModels) ne fonctionne bien, vous devrez peut-être revenir à une étape antérieure du processus et redéfinir le problème ou analyser de nouveau les données du jeu de données d'origine.  
   
@@ -148,13 +148,13 @@ ms.locfileid: "34018656"
   
  Une fois que les modèles d'exploration de données sont déployés dans un environnement de production, vous pouvez effectuer de nombreuses tâches selon vos besoins. Voici quelques-unes des tâches que vous pouvez effectuer :  
   
--   Utilisez les modèles pour créer des prédictions qui peuvent ensuite servir à prendre des décisions professionnelles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fournit le langage DMX que vous pouvez utiliser pour créer des requêtes de prédiction et Générateur de requête de prédiction pour vous aider à créer ces requêtes. Pour plus d’informations, consultez [Guide de référence du langage DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
+-   Utilisez les modèles pour créer des prédictions qui peuvent ensuite servir à prendre des décisions professionnelles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit le langage DMX que vous pouvez utiliser pour créer des requêtes de prédictions et le Générateur de requêtes de prédiction pour vous aider à créer ces requêtes. Pour plus d’informations, consultez [Guide de référence du langage DMX & #40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
   
 -   Créer des requêtes de contenu pour extraire des statistiques, des règles ou des formules du modèle. Pour plus d’informations, consultez [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md).  
   
 -   Incorporer la fonctionnalité d'exploration de données directement dans une application. Vous pouvez inclure des objets AMO (Analysis Management Objects) contenant un jeu d'objets qui peuvent être utilisés par votre application pour créer, modifier, traiter et supprimer des structures et des modèles d'exploration de données. Vous pouvez aussi envoyer directement des messages XML for Analysis (XMLA) à une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations, consultez [Développement (Analysis Services - Exploration de données)](https://technet.microsoft.com/library/bb522473\(v=sql.110\).aspx).  
   
--   Utiliser [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour créer un package dans lequel un modèle d'exploration de données est utilisé pour répartir intelligemment les données entrantes dans plusieurs tables. Par exemple, si une base de données est continuellement mise à jour avec des noms de clients potentiels, vous pouvez utiliser un modèle d'exploration de données avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour séparer les données entrantes en deux catégories : clients susceptibles d'acheter un produit et clients susceptibles de ne pas acheter un produit. Pour plus d’informations, consultez [Utilisations courantes d’Integration Services](http://msdn.microsoft.com/en-us/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca).  
+-   Utiliser [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour créer un package dans lequel un modèle d'exploration de données est utilisé pour répartir intelligemment les données entrantes dans plusieurs tables. Par exemple, si une base de données est continuellement mise à jour avec des noms de clients potentiels, vous pouvez utiliser un modèle d'exploration de données avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour séparer les données entrantes en deux catégories : clients susceptibles d'acheter un produit et clients susceptibles de ne pas acheter un produit. Pour plus d’informations, consultez [Utilisations courantes d’Integration Services](http://msdn.microsoft.com/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca).  
   
 -   Créer un rapport permettant aux utilisateurs d'effectuer directement des requêtes sur un modèle d'exploration de données existant. Pour plus d’informations, consultez [Reporting Services dans les outils de données SQL Server &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
@@ -163,7 +163,7 @@ ms.locfileid: "34018656"
 -   Mettre à jour les modèles dynamiquement lorsque des données supplémentaires entrent dans l'entreprise et apporter des modifications constantes pour améliorer l'efficacité de la solution doivent faire partie de la stratégie de déploiement. Pour plus d’informations, consultez [Gestion des solutions et des objets d’exploration de données](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
+ [Solutions d'exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
  [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)  
   
   

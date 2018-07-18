@@ -1,5 +1,5 @@
 ---
-title: sp_validate_redirected_publisher (Transact-SQL) | Documents Microsoft
+title: sp_validate_redirected_publisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 89bb592d13d395bff62a09668efb9a3d0ecae60c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999620"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978941"
 ---
 # <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "32999620"
  Nom de la base de données publiée. *publisher_db* est **sysname**, sans valeur par défaut.  
   
  [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- La cible de redirection spécifiée lorsque **sp_redirect_publisher** a été appelé pour la paire serveur de publication/base de données. *redirected_publisher* est **sysname**, sans valeur par défaut.  
+ La cible de redirection spécifiée lorsque **sp_redirect_publisher** a été appelée pour la paire serveur de publication/base de données. *redirected_publisher* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -71,7 +71,7 @@ ms.locfileid: "32999620"
  Si la validation échoue, des erreurs sont générées, qui décrivent l'échec.  
   
 ## <a name="permissions"></a>Autorisations  
- L’appelant doit être un membre de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe pour la base de données de distribution ou un membre d’une liste d’accès à une publication définie associée à la base de données du serveur de publication.  
+ L’appelant doit être un membre de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe pour la base de données de distribution ou un membre d’une liste d’accès à une publication définie associé à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

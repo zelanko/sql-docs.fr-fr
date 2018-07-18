@@ -1,6 +1,6 @@
 ---
-title: Prise en main 2017 du serveur SQL sur Red Hat Enterprise Linux | Documents Microsoft
-description: Ce démarrage rapide montre comment installer SQL Server 2017 sur Red Hat Enterprise Linux puis créer et interroger une base de données avec sqlcmd.
+title: Bien démarrer avec SQL Server 2017 sur Red Hat Enterprise Linux | Microsoft Docs
+description: Ce démarrage rapide montre comment installer SQL Server 2017 sur Red Hat Enterprise Linux et ensuite créer et interroger une base de données avec sqlcmd.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,11 +13,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.openlocfilehash: de149b0a75a550101e761baa109bc07dac062fcd
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455338"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020416"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur Red Hat
 
@@ -28,15 +28,15 @@ Dans ce guide de démarrage rapide, vous installez d’abord SQL Server 2017 sur
 > [!TIP]
 > Ce didacticiel nécessite une saisie de la part de l’utilisateur et une connexion Internet. Si vous êtes intéressé par les procédures d'installation [sans assistance](sql-server-linux-setup.md#unattended) ou [hors connexion](sql-server-linux-setup.md#offline), consultez [aide à l’installation de SQL Server sur Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prérequis
 
-Vous devez avoir un 7.3 RHEL ou ordinateur 7.4 avec **au moins 2 Go** de mémoire.
+Vous devez avoir un RHEL 7.3 ou 7.4 machine avec **au moins 2 Go** de mémoire.
 
-Pour installer Red Hat Enterprise Linux sur votre propre ordinateur, accédez à [ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Vous pouvez également créer des machines virtuelles RHEL dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec l’interface CLI Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)et utiliser `--image RHEL` dans l’appel à `az vm create`.
+Pour installer Red Hat Enterprise Linux sur votre propre machine, accédez à [ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Vous pouvez également créer des machines virtuelles RHEL dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)et utiliser `--image RHEL` dans l’appel à `az vm create`.
 
 Pour les autres exigences système, consultez [configuration système requise pour SQL Server sur Linux](sql-server-linux-setup.md#system).
 
-## <a id="install"></a>Installation de SQL Server
+## <a id="install"></a>Installer SQL Server
 
 Pour configurer SQL Server sur RHEL, exécutez les commandes suivantes dans un terminal pour installer le package **mssql-server** : 
 

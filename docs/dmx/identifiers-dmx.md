@@ -1,5 +1,5 @@
 ---
-title: Identificateurs (DMX) | Documents Microsoft
+title: Identificateurs (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca1a3bd1754659548f6d1bc23764fd167006974a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842412"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978603"
 ---
 # <a name="identifiers-dmx"></a>Identificateurs (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Tous les objets de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] doit avoir un identificateur. Le nom d'un objet constitue son identificateur. Les serveurs, les bases de données et les objets de base de données tels que sources de données, vues de source de données, cubes, dimensions, modèles d'exploration de données, etc., ont tous un identificateur.  
+  Tous les objets dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] doit avoir un identificateur. Le nom d'un objet constitue son identificateur. Les serveurs, les bases de données et les objets de base de données tels que sources de données, vues de source de données, cubes, dimensions, modèles d'exploration de données, etc., ont tous un identificateur.  
   
  Dans DMX (Data Mining Extensions), il existe deux catégories d'identificateurs :  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34842412"
   
 -   [Identificateurs délimités](#DelimitedIdentifiers)  
   
- L'identificateur d'un objet se crée lorsque vous définissez l'objet. Ensuite, vous utilisez l’identificateur pour référencer l’objet. Les identificateurs doivent avoir un maximum de 100 caractères.  
+ L'identificateur d'un objet se crée lorsque vous définissez l'objet. Vous utilisez ensuite l’identificateur pour référencer l’objet. Les identificateurs doivent avoir un maximum de 100 caractères.  
   
 ##  <a name="RegularIdentifiers"></a> Identificateurs réguliers  
  Les identificateurs réguliers dans DMX respectent les règles [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] relatives au format des identificateurs. Ils ne nécessitent pas de délimiteurs. Voici un exemple d’une instruction DMX qui utilise un identificateur régulier, non délimité par des virgules :  
@@ -41,13 +41,13 @@ SELECT * FROM Clustering.CONTENT;
   
 1.  Le premier caractère d'un identificateur régulier doit être l'un des suivants :  
   
-    -   Des lettres définies par Unicode Standard 2.0. Cela inclut les caractères latins de a à z et de A à Z, et les lettres d'autres langues.  
+    -   Une lettre comme défini par la convention Unicode Standard 2.0. Cela inclut les caractères latins de a à z et de A à Z, et les lettres d'autres langues.  
   
     -   Un caractère de soulignement (_).  
   
 2.  Les caractères suivants peuvent être :  
   
-    -   Lettres définies dans Unicode Standard 2.0.  
+    -   Lettres définies dans la convention Unicode Standard 2.0.  
   
     -   Des nombres décimaux de Basic Latin ou d'autres scripts nationaux.  
   
@@ -76,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Lorsque vous utilisez des mots réservés pour des noms d'objet ou des parties de noms d'objet.  
   
-     Il est conseillé de ne pas utiliser de mots clés réservés en tant que noms d'objet. Bases de données que vous mettez à niveau des versions antérieures de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent contenir des identificateurs qui incluent des mots qui n’étaient pas réservés dans la version antérieure de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mais qui sont des mots réservés pour[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez utiliser un identificateur délimité pour faire référence à ce type d'objet jusqu'à ce que vous puissiez renommer l'objet.  
+     Il est conseillé de ne pas utiliser de mots clés réservés en tant que noms d'objet. Bases de données que vous mettez à niveau des versions antérieures de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent contenir des identificateurs comportant des mots qui n’étaient pas réservés dans la version antérieure de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mais qui sont des mots réservés pour[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez utiliser un identificateur délimité pour faire référence à ce type d'objet jusqu'à ce que vous puissiez renommer l'objet.  
   
 -   Lorsque vous utilisez des caractères non répertoriés comme identificateurs qualifiés.  
   

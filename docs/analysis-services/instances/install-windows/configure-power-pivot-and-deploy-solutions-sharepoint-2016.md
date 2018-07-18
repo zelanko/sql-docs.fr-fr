@@ -1,5 +1,5 @@
 ---
-title: Configurer PowerPivot et déployer des Solutions (SharePoint 2016) | Documents Microsoft
+title: Configurer PowerPivot et déployer des Solutions (SharePoint 2016) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58315c0a956a4d9ecadfdfee8e9c1a0adbbc2c22
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e464a6863a45bc654b3874a5ea86945b9041c7aa
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018166"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984061"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Configurer PowerPivot et déployer des solutions (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34018166"
   
 -   Pour plus d’informations sur les services principaux et l’installation d’un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , consultez [Installer Analysis Services en mode Power Pivot](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
- Pour plus d’informations sur l’installation de le [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour l’outil de Configuration de SharePoint 2016, consultez [installer ou désinstaller le Power Pivot pour SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
+ Pour plus d’informations sur l’installation de la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour l’outil de Configuration de SharePoint 2016, consultez [installer ou désinstaller le PowerPivot pour SharePoint Add-in (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Exécuter Configuration de PowerPivot pour SharePoint 2016  
  **Remarque :** pour effectuer les étapes suivantes, vous devez être administrateur de batterie de serveurs. Si un message d'erreur semblable au suivant s'affiche :  
@@ -51,7 +51,7 @@ ms.locfileid: "34018166"
   
     4.  Cliquez sur **Créer une collection de sites** dans la fenêtre de gauche. Notez l' **URL du site** afin de pouvoir y faire référence dans les étapes ultérieures. Si le serveur SharePoint n'est pas déjà configuré, l'Assistant de configuration définit par défaut l'application Web et les URL de collection de sites sur la racine de `http://[ServerName]`. Pour modifier les valeurs par défaut, examinez les pages suivantes dans la fenêtre de gauche : **Créer une application Web par défaut** et **Déployer une solution d'application Web**.  
   
-5.  Éventuellement, examinez les valeurs d'entrée restantes utilisées pour effectuer chaque action. Cliquez sur chaque action dans la fenêtre à gauche pour afficher et passer en revue les détails de l'action. Pour plus d’informations sur chacune d’elles, consultez la section Valeurs d’entrée utilisées pour configurer le serveur dans [Configurer ou réparer PowerPivot pour SharePoint 2010 (outil de configuration de PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) dans cette rubrique.  
+5.  Éventuellement, examinez les valeurs d'entrée restantes utilisées pour effectuer chaque action. Cliquez sur chaque action dans la fenêtre à gauche pour afficher et passer en revue les détails de l'action. Pour plus d’informations sur chacune d’elles, consultez la section Valeurs d’entrée utilisées pour configurer le serveur dans [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de PowerPivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) dans cette rubrique.  
   
 6.  Éventuellement, supprimez toutes les actions que vous ne souhaitez pas traiter à ce stade. Par exemple, si vous souhaitez configurer le Service Banque d’informations sécurisé ultérieurement, cliquez sur **Configurer le Service Banque d’informations sécurisé**, puis désactivez la case à cocher **Inclure cette action dans la liste des tâches**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34018166"
   
 8.  Sélectionnez **Exécuter** pour traiter toutes les actions de la liste des tâches. Notez qu' **Exécuter** devient disponible lorsque vous avez validé les actions. Si **Exécuter** n’est pas activé, sélectionnez d’abord **Valider** .  
   
- Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+ Pour plus d’informations, consultez [Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
 ##  <a name="bkmk_verify_powerpivot"></a> Vérifier la configuration de PowerPivot  
  **Services :**  
@@ -117,7 +117,7 @@ ms.locfileid: "34018166"
   
 5.  Sélectionnez **OK**.  
   
- Pour plus d’informations sur l’actualisation des données de dépannage, consultez [dépannage actualisation des données PowerPivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
+ Pour plus d’informations sur l’actualisation des données de dépannage, consultez [dépannage Power Pivot d’actualisation des données](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
  Pour plus d'informations sur l'outil de configuration, consultez [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

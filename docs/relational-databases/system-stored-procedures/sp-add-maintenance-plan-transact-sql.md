@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan (Transact-SQL) | Documents Microsoft
+title: sp_add_maintenance_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12b5a6f22c7cfdde137b7e15b6a146175838ddd0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238130"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018466"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_add_maintenance_plan** doit être exécuté à partir de la **msdb** de base de données et crée un plan de maintenance de nouveau, mais il est vide. Pour ajouter une ou plusieurs bases de données et les associer à un ou plusieurs travaux, exécutez **sp_add_maintenance_plan_db** et **sp_add_maintenance_plan_job**.  
+ **sp_add_maintenance_plan** doit être exécuté à partir de la **msdb** crée un plan de maintenance de nouveau, mais il est vide et la base de données. Pour ajouter une ou plusieurs bases de données et les associer à un travail ou les travaux, exécutez **sp_add_maintenance_plan_db** et **sp_add_maintenance_plan_job**.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_maintenance_plan**.  

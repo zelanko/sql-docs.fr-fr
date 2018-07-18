@@ -1,5 +1,5 @@
 ---
-title: Propriétés du serveur dans Analysis Services | Documents Microsoft
+title: Propriétés du serveur dans Analysis Services | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238819"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975097"
 ---
 # <a name="server-properties-in-analysis-services"></a>Propriétés du serveur dans Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   Un administrateur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut modifier les propriétés de configuration par défaut du serveur d’une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Chaque instance a ses propriétés de configuration propres, qui sont définies indépendamment des autres instances présentes sur le même serveur.  
   
- Pour configurer le serveur, utilisez SQL Server Management Studio ou modifier le fichier msmdsrv.ini d’une instance spécifique de SQL Server Analysis Services.  
+ Pour configurer le serveur, utilisez SQL Server Management Studio ou modifiez le fichier msmdsrv.ini d’une instance de SQL Server Analysis Services spécifique.  
  
 Les pages de propriétés dans SQL Server Management Studio affichent un sous-ensemble des propriétés susceptibles d’être modifiées. La liste complète des propriétés figure dans le fichier msmdsrv.ini.   
   
 > [!NOTE]  
->  Dans une installation de SQL Server Analysis Services par défaut, msmdsrv.ini peut être trouvé dans le Program Files\Microsoft SQL Server\MSAS13. MSSQLSERVER\OLAP\Config dossier.
+>  Dans une installation de SQL Server Analysis Services par défaut, msmdsrv.ini peut être trouvé dans le Files\Microsoft SQL Server\MSAS13. Dossier de MSSQLSERVER\OLAP\Config.
 > 
 > Parmi les autres propriétés qui affectent la configuration du serveur figurent les propriétés de configuration de déploiement dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur ces propriétés, consultez [Spécification de paramètres de configuration pour le déploiement de solutions](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  

@@ -1,5 +1,5 @@
 ---
-title: Création, modification et suppression des procédures stockées | Documents Microsoft
+title: Création, modification et suppression de procédures stockées | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 780f289ae9ecd7ccfaeba41d5a9dd07e594441f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968184"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029773"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Création, modification et suppression des procédures stockées
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), les procédures stockées sont représentées par la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objet.  
+  Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), les procédures stockées sont représentées par le <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objet.  
   
- Création d’un <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objet dans SMO requiert le paramètre de la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> propriété le [!INCLUDE[tsql](../../../includes/tsql-md.md)] script qui définit la procédure stockée. Les paramètres requièrent le préfixe @ et doivent être créés individuellement en utilisant des objets <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> et en les ajoutant à la collection <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> de l'objet <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
+ Création d’un <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objet dans SMO requiert la définition du <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> propriété le [!INCLUDE[tsql](../../../includes/tsql-md.md)] script qui définit la procédure stockée. Les paramètres requièrent le préfixe @ et doivent être créés individuellement en utilisant des objets <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> et en les ajoutant à la collection <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> de l'objet <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Création, modification et suppression d'une procédure stockée en Visual Basic  
  Cet exemple de code montre comment créer une procédure stockée pour le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de données. L'exemple retourne le nom d'un employé lorsque le numéro d'ID d'employé est fourni. La procédure stockée requiert un paramètre d'entrée pour spécifier le numéro d'ID d'employé et un paramètre de sortie pour retourner le nom de l'employé.  

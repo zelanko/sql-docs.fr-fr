@@ -1,5 +1,5 @@
 ---
-title: (Division) (DMX) | Documents Microsoft
+title: (Diviser) (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ab2b355c551b868cec3ee4329460f8bb0532236
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842372"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972665"
 ---
-# <a name="divide-dmx"></a>(Division) (DMX)
+# <a name="divide-dmx"></a>(Diviser) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Exécute une opération arithmétique qui divise un nombre par un autre.  
@@ -29,10 +29,10 @@ Dividend / Divisor
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *dividende*  
+ *Dividende*  
  Expression DMX (Data Mining Extensions) valide qui retourne une valeur numérique.  
   
- *diviseur*  
+ *Diviseur*  
  Expression DMX valide qui retourne une valeur numérique.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -47,7 +47,7 @@ Dividend / Divisor
  [Opérateurs arithmétiques &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Opérateurs &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [Diviser &#40;Expression SSIS&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [Diviser &#40;SSIS Expression&#41;](../integration-services/expressions/divide-ssis-expression.md)   
  [&#40;Diviser&#41; &#40;Transact-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

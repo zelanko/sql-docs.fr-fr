@@ -1,5 +1,5 @@
 ---
-title: Open (méthode) (ADO MD) | Documents Microsoft
+title: Open, méthode (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,15 +20,15 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69f746be975d56c4cb6ff6bcb4fd85905acd71bb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 49d811ed0eb60bb02767579c604a6a4be3c5b337
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284538"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982631"
 ---
-# <a name="open-method-ado-md"></a>Open (méthode) (ADO MD)
-Récupère les résultats d’une requête multidimensionnelle et renvoie les résultats vers un [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
+# <a name="open-method-ado-md"></a>Open, méthode (ADO MD)
+Récupère les résultats d’une requête multidimensionnelle et renvoie les résultats vers un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,21 +39,21 @@ Cellset.Open Source, ActiveConnection
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Facultatif. A **Variant** qui correspond à une requête multidimensionnelle valide, par exemple une requête MDX (Multidimensional Expression). Le *Source* argument correspond à la [Source](../../../ado/reference/ado-md-api/source-property-ado-md.md) propriété. Pour plus d’informations sur MDX, consultez le [OLE DB pour OLAP Online Analytical Processing ()](http://msdn.microsoft.com/en-us/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) documentation dans le Microsoft Data Access Components SDK.  
+ Facultatif. Un **Variant** qui correspond à une requête multidimensionnelle valide, telles qu’une requête MDX (Multidimensional Expression). Le *Source* argument correspond à la [Source](../../../ado/reference/ado-md-api/source-property-ado-md.md) propriété. Pour plus d’informations sur MDX, consultez le [OLE DB pour OLAP Online Analytical Processing ()](http://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) documentation dans Microsoft Data Access Components SDK.  
   
  *ActiveConnection*  
- Facultatif. A **Variant** qui correspond à une chaîne spécifiant un ADO valide [connexion](../../../ado/reference/ado-api/connection-object-ado.md) de l’objet nom de variable ou une définition d’une connexion. Le *ActiveConnection* argument spécifie la connexion dans lequel ouvrir le [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objet. Si vous passez une définition de connexion pour cet argument, ADO ouvre une nouvelle connexion à l’aide des paramètres spécifiés. Le *ActiveConnection* argument correspond à la [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) propriété.  
+ Facultatif. Un **Variant** qui correspond à une chaîne spécifiant un ADO valide [connexion](../../../ado/reference/ado-api/connection-object-ado.md) de l’objet nom de variable ou une définition d’une connexion. Le *ActiveConnection* argument spécifie la connexion dans lequel ouvrir le [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objet. Si vous transmettez une définition de la connexion pour cet argument, ADO ouvre une nouvelle connexion à l’aide des paramètres spécifiés. Le *ActiveConnection* argument correspond à la [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) propriété.  
   
 ## <a name="remarks"></a>Notes  
- Le **ouvrir** méthode génère une erreur si un de ses paramètres est omis et que sa valeur de propriété correspondante n’a pas été définie avant d’essayer d’ouvrir le **ensemble de cellules**.  
+ Le **ouvrir** méthode génère une erreur si un de ses paramètres est omis et que sa valeur de propriété correspondante n’a pas été défini avant d’essayer d’ouvrir le **Cellset**.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Cellset, objet (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple d’ensemble de cellules (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [Exemple avec Cellset (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [ActiveConnection, propriété (ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
- [Close (méthode) (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
- [Objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Close, méthode (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
+ [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Source, propriété (ADO MD)](../../../ado/reference/ado-md-api/source-property-ado-md.md)   
  [State, propriété (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)

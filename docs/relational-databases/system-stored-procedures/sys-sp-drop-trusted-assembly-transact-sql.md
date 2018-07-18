@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_drop_trusted_assembly (Transact-SQL) | Documents Microsoft
+title: Sys.sp_drop_trusted_assembly (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ffdc0c87a798b23ce25e544b26ea63132495b53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255332"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971851"
 ---
 # <a name="sysspdroptrustedassembly-transact-sql"></a>Sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_drop_trusted_assembly
 ## <a name="arguments"></a>Arguments
 
 [ @hash =] '*valeur*'  
-La valeur de hachage SHA2_512 de l’assembly à supprimer de la liste des assemblys de confiance pour le serveur. Assemblys de confiance peuvent charger lorsque clr stricte de sécurité est activée, même si l’assembly n’est pas signé ou la base de données n’est pas marquée comme digne de confiance.
+La valeur de hachage SHA2_512 de l’assembly à supprimer de la liste des assemblys de confiance pour le serveur. Assemblys de confiance peuvent se charger lors de la sécurité clr stricte est activée, même si l’assembly n’est pas signé ou la base de données n’est pas marquée comme digne de confiance.
 
 ## <a name="remarks"></a>Notes  
 

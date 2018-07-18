@@ -1,5 +1,5 @@
 ---
-title: Déployer le modèle R et l’utiliser dans SQL (procédure pas à pas) | Documents Microsoft
+title: Déployer le modèle R et l’utiliser dans SQL (procédure pas à pas) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,33 +7,33 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8476381c60a63d85ce6d3cb0153578416856f8fb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 290659402622ab04de85e81f05328778b0f0c1eb
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31204181"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983011"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Déployer le modèle R et l’utiliser dans SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dans cette leçon, vous utilisez vos modèles R dans un environnement de production, en appelant un modèle formé à partir d’une procédure stockée. Vous pouvez ensuite appeler la procédure stockée à partir de R ou n’importe quel langage de programmation d’application qui prend en charge [!INCLUDE[tsql](../../includes/tsql-md.md)] (par exemple, c#, Java, Python, etc.), pour utiliser le modèle pour élaborer des prédictions sur les nouvelles observations.
+Dans cette leçon, vous utilisez vos modèles R dans un environnement de production, en appelant un modèle formé à partir d’une procédure stockée. Vous pouvez ensuite appeler la procédure stockée à partir de R ou n’importe quel langage de programmation d’application qui prend en charge [!INCLUDE[tsql](../../includes/tsql-md.md)] (par exemple, c#, Java, Python, etc.), pour utiliser le modèle pour élaborer des prédictions sur de nouvelles observations.
 
-Cet exemple illustre les deux méthodes les plus courantes d’utiliser un modèle de score :
+Cet exemple montre les deux manières courantes d’utiliser un modèle de notation :
 
-- **Mode de score par lot** est utilisé lorsque vous avez besoin créer plusieurs prédictions très rapides, en passant une SQL de requête ou de table en tant qu’entrée. Un tableau de résultats est retourné, que vous pouvez insérer directement dans une table ou écrire dans un fichier.
+- **Mode de notation par lots** est utilisé lorsque vous avez besoin créer plusieurs prédictions très rapides, en passant une instance SQL de requête ou de table en tant qu’entrée. Une table de résultats est retournée, que vous pouvez insérer directement dans une table ou écrire dans un fichier.
 
-- **Mode de calcul de score individuel** est utilisé lorsque vous avez besoin créer des prédictions une à la fois. Vous passez un jeu de valeurs individuelles à la procédure stockée. Les valeurs correspondent aux fonctionnalités dans le modèle, le modèle utilise pour créer une prévision, ou génèrent un autre résultat tel qu’une valeur de probabilité. Vous pouvez ensuite rétablir cette valeur à l’application, ou l’utilisateur.
+- **Mode d’évaluation individuelle** est utilisé lorsque vous avez besoin créer des prédictions une à la fois. Vous transmettez un ensemble de valeurs individuelles à la procédure stockée. Les valeurs correspondent aux fonctionnalités dans le modèle, le modèle utilise pour créer une prédiction, ou génèrent un autre résultat tel qu’une valeur de probabilité. Vous pouvez ensuite retourner cette valeur à l’application, ou l’utilisateur.
 
-## <a name="batch-scoring"></a>Calcul du score du lot
+## <a name="batch-scoring"></a>Notation par lot
 
-Une procédure stockée pour le calcul du score du lot a été créée lorsque vous avez initialement exécuté le script PowerShell. Cette procédure stockée, *PredictTipBatchMode*, effectue les opérations suivantes :
+Une procédure stockée pour la notation par lot a été créée quand vous avez exécuté le script PowerShell. Cette procédure stockée, *PredictTipBatchMode*, effectue les opérations suivantes :
 
 - Elle obtient un jeu de données d’entrée sous la forme d’une requête SQL.
 - Elle appelle le modèle de régression logistique formé que vous avez enregistré à la leçon précédente.
-- Prédit la probabilité que le pilote Obtient toutes les info-bulle non nulle
+- Prédit la probabilité que le pilote Obtient les info-bulle différente de zéro
 
-1. Prenez une minute pour rechercher dans le script pour la procédure stockée, *PredictTipBatchMode*. Il illustre plusieurs aspects de la façon dont un modèle peut être mis en œuvre à l’aide de [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
+1. Prenez une minute pour vérifier le script pour la procédure stockée, *PredictTipBatchMode*. Il illustre plusieurs aspects de la façon dont un modèle peut être mis en œuvre à l’aide de [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].
   
     ```tsql
     CREATE PROCEDURE [dbo].[PredictTipBatchMode]
@@ -59,15 +59,15 @@ Une procédure stockée pour le calcul du score du lot a été créée lorsque v
     END
     ```
 
-    + Vous utilisez une instruction SELECT pour appeler le modèle stocké à partir d’une table SQL. Le modèle est récupéré à partir de la table en tant que **varbinary (max)** données stockées dans la variable SQL _@lmodel2_et passé comme paramètre *mod* dans le système de la procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + Vous utilisez une instruction SELECT pour appeler le modèle stocké à partir d’une table SQL. Le modèle est récupéré à partir de la table en tant que **varbinary (max)** données, stockées dans la variable SQL _@lmodel2_et passée comme paramètre *mod* au système stocké procédure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Les données utilisées en tant qu’entrées pour le score est défini comme une requête SQL et stocké sous forme de chaîne dans la variable SQL _@input_. Comme les données sont récupérées à partir de la base de données, il est stocké dans une trame de données appelée *InputDataSet*, qui est simplement le nom par défaut pour les données d’entrée pour le [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procédure ; vous pouvez définir un autre nom de variable si nécessaire en utilisant le paramètre *_@input_data_1_name_*.
+    + Les données utilisées comme entrées pour la notation est définie comme une requête SQL et stockée sous forme de chaîne dans la variable SQL _@input_. Comme les données sont récupérées à partir de la base de données, il est stocké dans une trame de données appelée *InputDataSet*, qui est simplement le nom par défaut pour les données d’entrée pour le [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procédure ; vous pouvez définir un autre nom de variable si nécessaire en utilisant le paramètre *_@input_data_1_name_*.
 
     + Pour générer les scores, la procédure stockée appelle la fonction `rxPredict` à partir de la bibliothèque **RevoScaleR** .
 
-    + La valeur de retour, *Score*, est la probabilité, le modèle donné, le pilote Obtient une info-bulle. Si vous le souhaitez, vous pouvez appliquer facilement une sorte de filtre pour les valeurs renvoyées pour classer les valeurs de retour dans des « Conseil » et « aucun Conseil ».  Par exemple, une probabilité inférieure à 0,5 signifie qu'une info-bulle est peu probable.
+    + La valeur de retour, *Score*, est la probabilité, compte tenu du modèle, ce pilote Obtient une info-bulle. Si vous le souhaitez, vous pouvez facilement appliquer une sorte de filtre aux valeurs retournées pour classer les valeurs de retour dans des « tip » et « aucun pourboire ».  Par exemple, une probabilité de moins de 0,5 signifie qu'une info-bulle est peu probable.
   
-2.  Pour appeler la procédure stockée en mode batch, vous définissez la requête requise en tant qu’entrée à la procédure stockée. Voici la requête SQL. Vous pouvez l’exécuter dans SSMS afin de vérifier qu’elle fonctionne.
+2.  Pour appeler la procédure stockée en mode batch, vous définissez la requête requise en tant qu’entrée à la procédure stockée. Voici la requête SQL. Vous pouvez l’exécuter dans SSMS pour vérifier qu’elle fonctionne.
 
     ```SQL
     SELECT TOP 10
@@ -95,23 +95,23 @@ Une procédure stockée pour le calcul du score du lot a été créée lorsque v
     q <- paste("EXEC PredictTipBatchMode @inquery = ", input, sep="");
     ```
 
-4. Pour exécuter la procédure stockée à partir de R, appelez le **sqlQuery** méthode de la **RODBC** du package et d’utiliser la connexion SQL `conn` que vous avez défini précédemment :
+4. Pour exécuter la procédure stockée à partir de R, appelez le **sqlQuery** méthode de la **RODBC** empaqueter et utiliser la connexion SQL `conn` que vous avez défini précédemment :
 
     ```R
     sqlQuery (conn, q);
     ```
 
-    Si vous obtenez une erreur ODBC, vérifiez la syntaxe de requête, et si vous devez le bon nombre de guillemets. 
+    Si vous obtenez une erreur ODBC, vérifiez la syntaxe de requête, et si vous êtes le nombre approprié de guillemets. 
     
-    Si vous obtenez une erreur d’autorisation, vérifiez que la connexion a la possibilité d’exécuter la procédure stockée.
+    Si vous obtenez une erreur d’autorisations, assurez-vous que la connexion a la possibilité d’exécuter la procédure stockée.
 
-## <a name="single-row-scoring"></a>Ligne unique de calcul de score
+## <a name="single-row-scoring"></a>Ligne unique de score
 
-Lorsque vous appelez le modèle de prévision sur une ligne par ligne de base, vous passez un jeu de valeurs qui représentent des fonctionnalités pour chaque cas. La procédure stockée retourne ensuite une prédiction unique ou la probabilité. 
+Lorsque vous appelez le modèle pour la prédiction sur une ligne par ligne de base, vous passez un ensemble de valeurs qui représentent des fonctionnalités pour chaque cas. Ensuite, la procédure stockée retourne une prédiction unique ou une probabilité. 
 
-La procédure stockée *PredictTipSingleMode* illustre cette approche. Il prend comme plusieurs paramètres représentant les valeurs de fonctionnalités (par exemple, selon la distance nombre et le voyage de passagers) d’entrée, évalue ces fonctionnalités à l’aide du modèle R stocké et renvoie la probabilité d’info-bulle.
+La procédure stockée *PredictTipSingleMode* illustre cette approche. Il prend comme plusieurs paramètres représentant les valeurs de fonctionnalité (par exemple, selon la distance nombre et le voyage de passagers) d’entrée, évalue ces fonctionnalités à l’aide du modèle R stocké et renvoie la probabilité d’info-bulle.
 
-1. Si la procédure stockée *PredictTipSingleMode* n’a été créé par le script PowerShell initial, vous pouvez exécuter l’instruction Transact-SQL suivante pour créer maintenant.
+1. Si la procédure stockée *PredictTipSingleMode* n’a été créé par le script PowerShell initial, vous pouvez exécuter l’instruction Transact-SQL suivante pour la créer maintenant.
 
     ```tsql
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0,
@@ -165,23 +165,23 @@ La procédure stockée *PredictTipSingleMode* illustre cette approche. Il prend 
     END
     ```
 
-2. Dans SQL Server Management Studio, vous pouvez utiliser la [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** procédure (ou **EXECUTE**) pour appeler la procédure stockée et lui passer les entrées requises. Par exemple, essayez d’exécuter cette instruction dans Management Studio :
+2. Dans SQL Server Management Studio, vous pouvez utiliser la [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** procédure (ou **EXECUTE**) pour appeler la procédure stockée et passer les entrées requises. Par exemple, essayez d’exécuter cette instruction dans Management Studio :
 
     ```SQL
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    Les valeurs passées ici sont, respectivement, pour les variables _passagers\_nombre_, _trip_distance_, _voyage\_temps\_dans\_secondes_, _collecte\_latitude_, _collecte\_longitude_, _cette chute\_latitude_, et _cette chute\_longitude_.
+    Les valeurs transmises ici sont, respectivement, pour les variables _passagers\_nombre_, _trip_distance_, _voyage\_temps\_dans\_secondes_, _pickup\_latitude_, _pickup\_longitude_, _arrivée\_latitude_, et _arrivée\_longitude_.
 
-3. Pour exécuter ce même appel de code R, vous définissez simplement une variable R qui contient l’appel de procédure stockée, comme celle-ci :
+3. Pour exécuter ce même appel à partir de code R, vous définissez simplement une variable R qui contient l’appel de procédure stockée complet, similaire à celle-ci :
 
     ```R
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    Les valeurs passées ici sont, respectivement, pour les variables _passagers\_nombre_, _voyage\_distance_, _voyage\_temps\_dans\_secondes_, _collecte\_latitude_, _collecte\_longitude_, _cette chute\_latitude_, et _cette chute\_longitude_.
+    Les valeurs transmises ici sont, respectivement, pour les variables _passagers\_nombre_, _voyage\_distance_, _voyage\_temps\_dans\_secondes_, _pickup\_latitude_, _pickup\_longitude_, _arrivée\_ Latitude_, et _arrivée\_longitude_.
 
-4. Appelez `sqlQuery` (à partir de la **RODBC** package) et passez la chaîne de connexion, ainsi que la variable de chaîne qui contient l’appel de procédure stockée.
+4. Appelez `sqlQuery` (à partir de la **RODBC** package) et passez la chaîne de connexion, ainsi que la variable de chaîne contenant l’appel de procédure stockée.
 
     ```R
     # predict with stored procedure in single mode
@@ -189,15 +189,15 @@ La procédure stockée *PredictTipSingleMode* illustre cette approche. Il prend 
     ```
 
     >[!TIP]
-    > R Tools pour Visual Studio (RTV) fournit une parfaite intégration avec SQL Server et R. Consultez cet article pour plus d’exemples d’utilisation de RODBC avec une connexion SQL Server : [fonctionne avec SQL Server et R](https://docs.microsoft.com/en-us/visualstudio/rtvs/sql-server)
+    > Outils R pour Visual Studio (RTVS) fournit une intégration étroite avec SQL Server et R. Consultez cet article pour plus d’exemples d’utilisation de RODBC avec une connexion SQL Server : [fonctionne avec SQL Server et R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
 ## <a name="summary"></a>Résumé
 
-Maintenant que vous avez appris à utiliser avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données et rendre persistantes des modèles R formés à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il doit être relativement facile de créer de nouveaux modèles basés sur ce jeu de données. Par exemple, vous pouvez essayer de création de ces modèles supplémentaires :
+Maintenant que vous avez appris à travailler avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données et conserver des modèles R formés pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il devrait être relativement facile de créer de nouveaux modèles basés sur ce jeu de données. Par exemple, vous pouvez essayer de créer ces modèles supplémentaires :
 
 - Un modèle de régression qui prédit le montant du pourboire
 
-- Un modèle de classification multiclasse qui prédit si l’info-bulle est petite, moyenne ou grande
+- Un modèle de classification multiclasse qui prédit si l’info-bulle est grande, moyenne ou petite
 
 Nous vous recommandons également de consulter certains de ces exemples et ressources supplémentaires :
 
@@ -211,7 +211,7 @@ Nous vous recommandons également de consulter certains de ces exemples et resso
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Générer un modèle R et l’enregistrer dans SQL Server](walkthrough-build-and-save-the-model.md)
+[Créer un modèle R et l’enregistrer dans SQL Server](walkthrough-build-and-save-the-model.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

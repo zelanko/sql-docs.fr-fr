@@ -1,6 +1,6 @@
 ---
-title: Installer la recherche en texte intégral SQL Server sur Linux | Documents Microsoft
-description: Cet article décrit comment installer la recherche en texte intégral de SQL Server sur Linux.
+title: Installer la recherche en texte intégral SQL Server sur Linux | Microsoft Docs
+description: Cet article décrit comment installer la recherche en texte intégral SQL Server sur Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,11 +13,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 401eb2569a1da86964543f9122d213398f39eff4
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324000"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021205"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installer la recherche en texte intégral SQL Server sur Linux
 
@@ -28,7 +28,7 @@ Les étapes suivantes installent la [recherche en texte intégral de SQL Server]
 > [!NOTE]
 > Avant d’installer la recherche en texte intégral de SQL Server, tout d'abord [installer SQL Server](sql-server-linux-setup.md#platforms). Cela configure les clés et les référentiels que vous utiliserez pour installer le package **mssql-server-fts**.
 
-Installer la recherche en texte intégral de SQL Server pour votre plateforme :
+Installer la recherche en texte intégral SQL Server pour votre plateforme :
 
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
@@ -69,7 +69,7 @@ sudo apt-get install -y mssql-server-fts
 
 Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de recherche en texte intégral dans les [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les étapes d’installation hors connexion décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Installez SLES</a>
+## <a name="SLES">Installer sur SLES</a>
 
 Utilisez les commandes suivantes pour installer le package **mssql-server-fts** sur SUSE Linux Enterprise Server. 
 
@@ -90,12 +90,12 @@ Si vous avez besoin d’une installation hors connexion, recherchez le télécha
 
 La recherche en texte intégral utilise [des analyseurs lexicaux](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) qui déterminent comment identifier les mots individuels en fonction de la langue. Vous pouvez obtenir une liste des analyseurs lexicaux inscrits en interrogeant la vue d'affichage catalogue **sys.fulltext_languages**. Les analyseurs lexicaux pour les langues suivantes sont installés avec SQL Server 2017 :
 
-| Langage | ID de langue |
+| Langue | ID de langue |
 |---|---|
 | Neutre | 0 |
 | Arabe | 1025 |
 | Bengali (India) | 1093 |
-| Bokmål | 1044 |
+| Bokmal | 1044 |
 | Portugais (Brésil) | 1046 |
 | British English | 2057 |
 | Bulgare | 1026 |
@@ -109,7 +109,7 @@ La recherche en texte intégral utilise [des analyseurs lexicaux](../relational-
 | Néerlandais | 1043 |
 | Anglais | 1033 |
 | Français | 1036 |
-| Allemand | 1031 |
+| German | 1031 |
 | Greek | 1032 |
 | Goudjrati | 1095 |
 | Hébreu | 1037 |
@@ -158,7 +158,7 @@ Vous pouvez afficher une liste des filtres installés en exécutant la procédur
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ASC | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ascx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
-|.asm | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|dumps .asm | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.ASP | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.aspx | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |
 |.asx | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -166,7 +166,7 @@ Vous pouvez afficher une liste des filtres installés en exécutant la procédur
 |.bat | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.bcp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.c | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.cc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|*.cc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.CLS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.cmd | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.cpp | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
@@ -262,7 +262,7 @@ Vous pouvez afficher une liste des filtres installés en exécutant la procédur
 ## <a name="semantic-search"></a>Recherche sémantique
 [La recherche sémantique](../relational-databases/search/semantic-search-sql-server.md) s’appuie sur la fonctionnalité de recherche en texte intégral pour extraire et indexer les *expressions clés* statistiquement pertinentes. Cela vous permet d’interroger la signification à l'intérieur des documents stockés dans votre base de données. Cela permet également d’identifier les documents similaires.
 
-Pour pouvoir utiliser la recherche sémantique, vous devez d’abord restaurer la base de données de statistiques linguistiques de sémantique sur votre ordinateur.
+Pour pouvoir utiliser la recherche sémantique, vous devez tout d’abord restaurer la base de données de statistiques linguistiques de sémantique sur votre ordinateur.
 
 1. Utilisez un outil, tel que [sqlcmd](sql-server-linux-setup-tools.md)pour exécuter la commande Transact-SQL suivante sur votre instance de SQL Server de Linux. Cette commande restaure la base de données de statistiques linguistiques.
 
@@ -275,7 +275,7 @@ Pour pouvoir utiliser la recherche sémantique, vous devez d’abord restaurer l
    ```
 
    > [!NOTE]
-   > Si nécessaire, mettez à jour les chemins d’accès de la commande de restauration précédente pour s’adapter à votre configuration.
+   > Si nécessaire, mettez à jour les chemins d’accès dans la commande de restauration précédente pour s’ajuster à votre configuration.
 
 1. Exécutez la commande Transact-SQL suivante pour inscrire la base de données de statistiques linguistiques de sémantique.
 
@@ -286,4 +286,4 @@ Pour pouvoir utiliser la recherche sémantique, vous devez d’abord restaurer l
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur la recherche en texte intégral, consultez [recherche en texte intégral de SQL Server](../relational-databases/search/full-text-search.md). 
+Pour plus d’informations sur la recherche en texte intégral, consultez [recherche en texte intégral SQL Server](../relational-databases/search/full-text-search.md). 

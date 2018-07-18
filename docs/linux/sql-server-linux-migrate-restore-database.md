@@ -1,6 +1,6 @@
 ---
-title: Migrer une base de données SQL Server à partir de Windows et Linux | Documents Microsoft
-description: Ce didacticiel montre comment exécuter la sauvegarde une base de données SQL Server sur Windows et de restauration sur un ordinateur Linux en cours d’exécution SQL Server 2017.
+title: Migrer une base de données SQL Server à partir de Windows et Linux | Microsoft Docs
+description: Ce didacticiel montre comment sauvegarder une base de données SQL Server sur Windows et restaurez-la sur une machine Linux en cours d’exécution SQL Server 2017.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -13,13 +13,13 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.openlocfilehash: 559ae24a819cfff1172d1829ef3ca5e679a40122
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322930"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020187"
 ---
-# <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrer une base de données SQL Server à partir de Windows et Linux à l’aide de la sauvegarde et restauration
+# <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrer une base de données SQL Server à partir de Windows pour Linux à l’aide de la sauvegarde et restauration
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -28,27 +28,27 @@ La sauvegarde et la restauration SQL Server est la méthode recommandée pour mi
 > [!div class="checklist"]
 > * Créer un fichier de sauvegarde sur Windows SSMS
 > * Installer un interpréteur de commandes Bash sur Windows
-> * Déplacer le fichier de sauvegarde pour Linux à partir du shell Bash
+> * Déplacer le fichier de sauvegarde pour Linux à partir de l’interpréteur de commandes Bash
 > * Restaurer le fichier de sauvegarde sur Linux avec Transact-SQL
 > * Exécuter une requête pour vérifier la migration
 
 Vous pouvez également créer un SQL Server groupe de disponibilité AlwaysOn pour migrer une base de données SQL Server à partir de Windows et Linux. Consultez [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md).
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prérequis
 
-Les conditions préalables suivantes sont requises pour effectuer ce didacticiel :
+Les conditions préalables suivantes sont nécessaires pour suivre ce didacticiel :
 
-* Ordinateur Windows avec les éléments suivants :
+* Machine Windows avec les éléments suivants :
   * [SQL Server](https://www.microsoft.com/sql-server/sql-server-2016-editions) installé.
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) installé.
   * Base de données cible à migrer.
 
-* Ordinateur Linux avec les éléments suivants :
+* Ordinateur Linux avec les composants suivants :
   * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), ou [Ubuntu](quickstart-install-connect-ubuntu.md)) avec les outils de ligne de commande.
 
 ## <a name="create-a-backup-on-windows"></a>Créer une sauvegarde sur Windows
 
-Il existe plusieurs façons de créer un fichier de sauvegarde de base de données sur Windows. Les étapes suivantes utilisent SQL Server Management Studio (SSMS).
+Il existe plusieurs façons de créer un fichier de sauvegarde d’une base de données sur Windows. Les étapes suivantes utilisent SQL Server Management Studio (SSMS).
 
 1. Démarrez **SQL Server Management Studio** sur votre ordinateur Windows. 
 
@@ -56,16 +56,16 @@ Il existe plusieurs façons de créer un fichier de sauvegarde de base de donné
 
 1. Dans l’Explorateur d’objets, développez **bases de données**.
 
-1. Avec le bouton droit de votre base de données cible, sélectionnez **tâches**, puis cliquez sur **sauvegarder...** .
+1. Cliquez sur votre base de données cible, sélectionnez **tâches**, puis cliquez sur **sauvegarder...** .
 
-   ![Utilisez SSMS pour créer un fichier de sauvegarde](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
+   ![Utiliser SSMS pour créer un fichier de sauvegarde](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
 
 1. Dans la boîte de dialogue **Sauvegarder une base de données**, vérifiez que **Type de sauvegarde** est défini sur **Complète** et **Sauvegarder vers** sur **Disque**. Notez le nom et l’emplacement du fichier. Par exemple, une base de données nommée **YourDB** sur SQL Server 2016 utilise `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak` comme chemin de sauvegarde par défaut.
 
 1. Cliquez sur **OK** pour sauvegarder votre base de données.
 
 > [!NOTE]
-> Une autre option consiste à exécuter une requête Transact-SQL pour créer le fichier de sauvegarde. La commande Transact-SQL suivante effectue les mêmes actions que les étapes précédentes pour une base de données appelée **YourDB**:
+> Une autre option consiste à exécuter une requête Transact-SQL pour créer le fichier de sauvegarde. La commande Transact-SQL suivante exécute les mêmes actions que les étapes précédentes pour une base de données appelée **YourDB**:
 >
 > ```sql
 > BACKUP DATABASE [YourDB] TO  DISK =
@@ -82,13 +82,13 @@ Pour restaurer la base de données, vous devez d’abord transférer le fichier 
 1. Installez un interpréteur de commandes Bash sur votre ordinateur Windows qui prend en charge la **scp** (copie sécurisée) et les commandes **ssh** (connexion à distance). Deux exemples incluent :
 
    * Le [sous-système Windows pour Linux](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
-   * L’interface de l’interpréteur de commandes Git ([https://git-scm.com/downloads](https://git-scm.com/downloads))
+   * L’interpréteur de commandes Git Bash ([https://git-scm.com/downloads](https://git-scm.com/downloads))
 
-1. Ouvrez une session d’interpréteur de commandes sous Windows.
+1. Ouvrez une session Bash sur Windows.
 
 ## <a id="scp"></a> Copiez le fichier de sauvegarde pour Linux
 
-1. Dans votre session d’interpréteur de commandes, accédez au répertoire contenant votre fichier de sauvegarde. Par exemple :
+1. Dans votre session d’interpréteur de commandes, accédez au répertoire contenant votre fichier de sauvegarde. Exemple :
 
    ```bash
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
@@ -99,14 +99,14 @@ Pour restaurer la base de données, vous devez d’abord transférer le fichier 
    ```bash
    scp YourDB.bak user1@192.0.2.9:./
    ```
-   ![commande de SCP](./media/sql-server-linux-migrate-restore-database/scp-command.png)
+   ![commande SCP](./media/sql-server-linux-migrate-restore-database/scp-command.png)
 
 > [!TIP]
 > Il existe des alternatives à l’utilisation de scp pour le transfert de fichiers. L'une consiste à utiliser [Samba](https://help.ubuntu.com/community/Samba) pour configurer un partage de réseau SMB entre Windows et Linux. Pour une procédure pas à pas sur Ubuntu, consultez [la création d’un partage réseau Via Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!). Une fois établie, vous pouvez y accéder en tant que partage de fichier réseau à partir de Windows, tel que  **\\ \\machinenameorip\\partager**.
 
 ## <a name="move-the-backup-file-before-restoring"></a>Déplacer le fichier de sauvegarde avant la restauration
 
-À ce stade, le fichier de sauvegarde est sur votre serveur Linux dans votre répertoire de base. Avant de restaurer la base de données vers SQL Server, vous devez placer la sauvegarde dans un sous-répertoire de **/var/opt/mssql**.
+À ce stade, le fichier de sauvegarde est sur votre serveur Linux dans votre répertoire de base utilisateur. Avant de restaurer la base de données vers SQL Server, vous devez placer la sauvegarde dans un sous-répertoire de **/var/opt/mssql**.
 
 1. Dans la même session Windows Bash, connectez-vous à distance à votre ordinateur Linux cible avec **ssh**. L’exemple suivant se connecte à l’ordinateur Linux **192.0.2.9** en tant qu’utilisateur **user1**.
 
@@ -114,7 +114,7 @@ Pour restaurer la base de données, vous devez d’abord transférer le fichier 
    ssh user1@192.0.2.9
    ```
 
-   Vous exécutez maintenant des commandes sur le serveur Linux distant.
+   Vous exécutez à présent commandes sur le serveur Linux distant.
 
 1. Activez le mode super utilisateur.
 
@@ -192,7 +192,7 @@ Dans ce didacticiel, vous avez appris comment sauvegarder une base de données s
 > * Installer un interpréteur de commandes Bash sur Windows
 > * Utiliser **scp** pour déplacer les fichiers de sauvegarde à partir de Windows et Linux
 > * Utiliser **ssh** pour se connecter à distance à l’ordinateur Linux
-> * Déplacer le fichier de sauvegarde pour la préparation de la restauration
+> * Déplacer le fichier de sauvegarde pour préparer la restauration
 > * Utiliser **sqlcmd** pour exécuter des commandes Transact-SQL
 > * Restaurer la sauvegarde de base de données avec la commande **RESTORE DATABASE** 
 > * Exécutez la requête pour vérifier la migration

@@ -1,5 +1,5 @@
 ---
-title: Configurer SQL Server toujours sur le groupe de disponibilité sur Windows et Linux | Documents Microsoft
+title: Configurer SQL Server toujours sur le groupe de disponibilité sur Windows et Linux | Microsoft Docs
 description: Configurer le groupe de disponibilité SQL Server avec des réplicas sur Windows et Linux.
 author: MikeRayMSFT
 ms.author: mikeray
@@ -14,37 +14,37 @@ ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9ccd5cb5fdc7d5c5bc6ff62b203bee0bbce6e5e8
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322760"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983911"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configurer SQL Server groupe de disponibilité AlwaysOn sur Windows et Linux (multiplateforme)
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Cet article explique les étapes pour créer un toujours sur disponibilité Group (AG) avec un réplica sur un serveur Windows et l’autre réplica sur un serveur Linux. Cette configuration est inter-plateformes, car les réplicas sont sur différents systèmes d’exploitation. Utilisez cette configuration pour la migration à partir d’une plateforme à l’autre ou la récupération d’urgence (DR). Cette configuration ne prend pas en charge la haute disponibilité, car il n’existe aucune solution de cluster pour gérer une configuration inter-plateformes. 
+Cet article explique les étapes pour créer un toujours sur groupe de disponibilité (AG) avec un réplica sur un serveur Windows et l’autre réplica sur un serveur Linux. Cette configuration est multiplateforme, car les réplicas se trouvent sur différents systèmes d’exploitation. Utilisez cette configuration pour la migration à partir d’une plateforme à l’autre ou de récupération d’urgence (DR). Cette configuration ne prend pas en charge la haute disponibilité, car il n’existe aucune solution de cluster pour gérer une configuration inter-plateformes. 
 
 ![Hybride None](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Avant de continuer, vous devez être familiarisé avec l’installation et la configuration pour les instances de SQL Server sur Windows et Linux. 
+Avant de continuer, vous devez connaître avec l’installation et configuration pour les instances de SQL Server sur Windows et Linux. 
 
 ## <a name="scenario"></a>Scénario
 
-Dans ce scénario, deux serveurs se trouvent sur différents systèmes d’exploitation. Un serveur Windows Server 2016 nommé `WinSQLInstance` héberge le réplica principal. Un serveur Linux nommé `LinuxSQLInstance` héberger le réplica secondaire.
+Dans ce scénario, deux serveurs se trouvent sur différents systèmes d’exploitation. Un serveur Windows Server 2016 nommée `WinSQLInstance` héberge le réplica principal. Un serveur Linux nommé `LinuxSQLInstance` héberger le réplica secondaire.
 
 ## <a name="configure-the-ag"></a>Configurer le groupe de disponibilité 
 
-Les étapes pour créer le groupe de disponibilité sont les mêmes que les étapes pour créer un groupe de disponibilité pour les charges de travail en lecture à l’échelle. Le type de cluster du groupe de disponibilité est NONE, car il n’existe aucun gestionnaire du cluster. 
+Les étapes pour créer le groupe de disponibilité sont le même que les étapes pour créer un groupe de disponibilité pour les charges de travail en lecture à l’échelle. Le type de cluster du groupe de disponibilité est NONE, car il n’existe aucun gestionnaire du cluster. 
 
    >[!NOTE]
    >Pour les scripts dans cet article, les crochets pointus `<` et `>` identifient des valeurs que vous devez remplacer pour votre environnement. Les crochets pointus eux-mêmes ne sont pas requises pour les scripts. 
 
-1. Installer SQL Server 2017 sur Windows Server 2016, activer les groupes de disponibilité AlwaysOn à partir du Gestionnaire de Configuration SQL Server et définir le mode d’authentification mixte. 
+1. Installer SQL Server 2017 sur Windows Server 2016, activer des groupes de disponibilité AlwaysOn à partir du Gestionnaire de Configuration SQL Server et définir l’authentification en mode mixte. 
 
    >[!TIP]
-   >Si vous validez cette solution dans Azure, placez les deux serveurs dans le même groupe de disponibilité défini pour s’assurer qu’ils sont séparés dans le centre de données. 
+   >Si vous validez cette solution dans Azure, placez les deux serveurs dans le même groupe à haute disponibilité pour vous assurer qu’ils sont séparés dans le centre de données. 
 
    **Activer les groupes de disponibilité**
 
@@ -54,7 +54,7 @@ Les étapes pour créer le groupe de disponibilité sont les mêmes que les éta
 
    Gestionnaire de Configuration SQL Server indique que l’ordinateur n’est pas un nœud dans un cluster de basculement. 
 
-   Après avoir activé les groupes de disponibilité, redémarrez SQL Server.
+   Après avoir activé groupes de disponibilité, redémarrez SQL Server.
 
    **Définition de l’authentification en mode mixte**
 
@@ -62,7 +62,7 @@ Les étapes pour créer le groupe de disponibilité sont les mêmes que les éta
 
 1. Installer SQL Server 2017 sur Linux. Pour obtenir des instructions, consultez [installer SQL Server](sql-server-linux-setup.md). Activer `hadr` via mssql-conf.
 
-   Pour activer `hadr` via conf mssql à partir d’une invite de commandes, exécutez la commande suivante :
+   Pour activer `hadr` via mssql-conf à partir d’une invite de commandes, exécutez la commande suivante :
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
@@ -74,11 +74,11 @@ Les étapes pour créer le groupe de disponibilité sont les mêmes que les éta
 
    ![Activer Linux de groupes de disponibilité](./media/sql-server-linux-availability-group-cross-platform/2-sqlserver-linux-set-hadr.png)
 
-1. Configurer le fichier hosts sur les deux serveurs ou d’inscrire les noms de serveur DNS.
+1. Configurer le fichier hosts sur les deux serveurs ou d’inscrire les noms de serveur avec DNS.
 
-1. Ouvrir des ports de pare-feu pour TPC 1433 et 5022 sur Windows et Linux.
+1. Ouvrez les ports de pare-feu pour TPC 1433 et 5022 sur Windows et Linux.
 
-1. Sur le réplica principal, créez une connexion de base de données et le mot de passe.
+1. Sur le réplica principal, créez une connexion de base de données et un mot de passe.
 
    ```sql
    CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -86,7 +86,7 @@ Les étapes pour créer le groupe de disponibilité sont les mêmes que les éta
    GO
    ```
 
-1. Sur le réplica principal, créez une clé principale et le certificat, puis sauvegardez le certificat avec une clé privée.
+1. Sur le réplica principal, créez une clé principale et un certificat, puis sauvegardez le certificat avec une clé privée.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -100,11 +100,11 @@ Les étapes pour créer le groupe de disponibilité sont les mêmes que les éta
    GO
    ```
 
-1. Copiez le certificat et la clé privée pour le serveur Linux (réplica secondaire) au `/var/opt/mssql/data`. Vous pouvez utiliser `pscp` pour copier les fichiers vers le serveur Linux. 
+1. Copier le certificat et la clé privée pour le serveur Linux (réplica secondaire) à `/var/opt/mssql/data`. Vous pouvez utiliser `pscp` pour copier les fichiers vers le serveur Linux. 
 
-1. Définir le groupe et le propriétaire de la clé privée et le certificat à `mssql:mssql`.
+1. Définir le groupe et la propriété de la clé privée et le certificat à `mssql:mssql`.
 
-   Le script suivant définit le groupe et la possession des fichiers. 
+   Le script suivant définit le groupe et la propriété des fichiers. 
 
    ```bash
    sudo chown mssql:mssql /var/opt/mssql/data/dbm_certificate.pvk
@@ -116,7 +116,7 @@ Les étapes pour créer le groupe de disponibilité sont les mêmes que les éta
    ![Activer Linux de groupes de disponibilité](./media/sql-server-linux-availability-group-cross-platform/3-cert-key-owner-group.png)
 
 
-1. Sur le réplica secondaire, créez une connexion de base de données et le mot de passe et créer une clé principale.
+1. Sur le réplica secondaire, créez une connexion de base de données et un mot de passe et créer une clé principale.
 
    ```sql
    CREATE LOGIN dbm_login WITH PASSWORD = '<C0m9L3xP@55w0rd!>';
@@ -126,7 +126,7 @@ Les étapes pour créer le groupe de disponibilité sont les mêmes que les éta
    GO
    ```
 
-1. Sur le réplica secondaire, restaurez le certificat que vous avez copié dans `/var/opt/mssql/data`. 
+1. Sur le réplica secondaire, restaurez le certificat que vous avez copiée dans `/var/opt/mssql/data`. 
 
    ```sql
    CREATE CERTIFICATE dbm_certificate   
@@ -162,13 +162,13 @@ Les étapes pour créer le groupe de disponibilité sont les mêmes que les éta
 1. Sur le réplica principal, créez le groupe de disponibilité avec `CLUSTER_TYPE = NONE`. L’exemple de script utilise `SEEDING_MODE = AUTOMATIC` pour créer le groupe de disponibilité. 
 
    >[!NOTE]
-   >Lorsque l’instance de Windows de SQL Server utilise des chemins d’accès pour les fichiers journaux et de données, l’amorçage échoue à l’instance de Linux de SQL Server, car ces chemins d’accès n’existent pas sur le réplica secondaire automatique. Pour utiliser le script suivant pour un groupe de disponibilité inter-plateformes, la base de données requiert le même chemin d’accès pour les données et fichiers journaux sur le serveur Windows. Vous pouvez également mettre à jour le script pour définir `SEEDING_MODE = MANUAL` ensuite sauvegarder et restaurer la base de données avec `NORECOVERY` pour amorcer la base de données. 
+   >Lorsque l’instance de Windows de SQL Server utilise des chemins d’accès différents pour les données et fichiers journaux, l’amorçage ne parvient pas à l’instance de SQL Server Linux, car ces chemins d’accès n’existent pas sur le réplica secondaire automatique. Pour utiliser le script suivant pour un groupe de disponibilité inter-plateformes, la base de données requiert le même chemin d’accès pour les données et fichiers journaux sur le serveur Windows. Vous pouvez également mettre à jour le script pour définir `SEEDING_MODE = MANUAL` et ensuite sauvegarder et restaurer la base de données avec `NORECOVERY` pour amorcer la base de données. 
    >
-   >Ce comportement s’applique aux images Azure Marketplace. 
+   >Ce comportement s’applique aux images de place de marché Azure. 
    >
    >Pour plus d’informations sur l’amorçage automatique, consultez [l’amorçage automatique - disposition du disque](../database-engine/availability-groups/windows/automatic-seeding-secondary-replicas.md#disklayout). 
 
-   Avant d’exécuter le script, mettez à jour les valeurs de vos groupes de disponibilité.
+   Avant d’exécuter le script, mettez à jour les valeurs pour vos groupes de disponibilité.
 
       * Remplacez `<WinSQLInstance>` avec le nom du serveur de l’instance de SQL Server du réplica principal.
 
@@ -199,7 +199,7 @@ Les étapes pour créer le groupe de disponibilité sont les mêmes que les éta
    GO
    ```
    
-   Pour plus d’informations, consultez [créer le groupe de disponibilité (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md).
+   Pour plus d’informations, consultez [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md).
 
 1. Sur le réplica secondaire, joignez le groupe de disponibilité.
 
@@ -229,24 +229,24 @@ Les étapes pour créer le groupe de disponibilité sont les mêmes que les éta
    GO
    ```
 
-1. Effectuer une sauvegarde complète de la base de données. 
+1. Effectuez une sauvegarde complète de la base de données. 
 
-1. Si vous n’utilisez pas l’amorçage automatique, restaurez la base de données sur le serveur réplica secondaire (Linux). [Migrer une base de données SQL Server à partir de Windows et Linux à l’aide de la sauvegarde et restauration](sql-server-linux-migrate-restore-database.md). Restaurer la base de données `WITH NORECOVERY` sur le réplica secondaire. 
+1. Si vous n’utilisez pas l’amorçage automatique, restaurez la base de données sur le serveur de réplica secondaire (Linux). [Migrer une base de données SQL Server à partir de Windows pour Linux à l’aide de la sauvegarde et restauration](sql-server-linux-migrate-restore-database.md). Restaurer la base de données `WITH NORECOVERY` sur le réplica secondaire. 
 
-1. Ajouter la base de données pour le groupe de disponibilité. Mettre à jour de l’exemple de script. Remplacez `<TestDB>` par le nom de votre base de données. Sur le réplica principal, exécutez la requête SQL pour ajouter la base de données pour le groupe de disponibilité.
+1. Ajouter la base de données au groupe de disponibilité. Mettre à jour l’exemple de script. Remplacez `<TestDB>` par le nom de votre base de données. Sur le réplica principal, exécutez la requête SQL pour ajouter la base de données au groupe de disponibilité.
 
    ```sql
    ALTER AG [ag1] ADD DATABASE <TestDB>
    GO
    ```
 
-1. Vérifiez que la base de données est rempli de mise en route sur le réplica secondaire. 
+1. Vérifiez que la base de données est bien remplie sur le réplica secondaire. 
 
 ## <a name="fail-over-the-primary-replica"></a>Basculer le réplica principal
 
 [!INCLUDE[Force failover](../includes/ss-force-failover-read-scale-out.md)]
 
-Cet article passé en revue les étapes pour créer un groupe de disponibilité inter-plateformes pour prendre en charge les charges de travail de migration ou en lecture à l’échelle. Il peut être utilisé pour la récupération d’urgence manuelle. Il explique également comment basculer le groupe de disponibilité. Un groupe de disponibilité inter-plateformes utilise le type de cluster `NONE` et ne prend pas en charge la haute disponibilité, car il n’existe aucun outil entre-plates-formes de cluster. 
+Cet article passé en revue les étapes pour créer un groupe de disponibilité multiplateforme pour prendre en charge les charges de travail de migration ou d’échelle de lecture. Il peut être utilisé pour la récupération d’urgence manuelle. Vous avez également appris comment basculer le groupe de disponibilité. Un groupe de disponibilité inter-plateformes utilise le type de cluster `NONE` et ne prend pas en charge la haute disponibilité, car il n’existe aucun cluster outil entre les plateformes autres que. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 

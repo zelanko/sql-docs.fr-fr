@@ -1,5 +1,5 @@
 ---
-title: En bloc charge des considérations de sécurité (SQLXML 4.0) | Documents Microsoft
+title: En bloc charge des considérations de sécurité (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd240ede23b5ff4845531bebf24529bd0219c5ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969574"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971841"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Considérations de sécurité relatives au chargement en masse (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Vous trouverez ci-après des instructions de sécurité relatives au chargement en masse XML :  
   
--   Lorsque vous spécifiez que le chargement en masse opération doit être effectuée comme une transaction, vous utilisez la **TempFilePath** propriété pour spécifier un dossier dans lequel créer les fichiers temporaires.  
+-   Lorsque vous spécifiez que le chargement en masse opération doit être effectuée comme une transaction, vous utilisez le **TempFilePath** propriété pour spécifier un dossier dans lequel créer les fichiers temporaires.  
   
      Le processus de chargement en masse crée ces fichiers temporaires avec les autorisations suivantes :  
   
@@ -61,6 +61,6 @@ ms.locfileid: "32969574"
 -   Si l'utilisateur définit un fichier journal des erreurs pour SQLXML, chaque fois que le chargement en masse est exécuté, le fichier est écrasé avec les données du dernier processus de chargement en masse.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Effectuer le chargement en masse des données XML & #40 ; SQLXML 4.0 & #41 ;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Chargement en masse des données XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

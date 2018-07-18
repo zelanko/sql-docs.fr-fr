@@ -1,5 +1,5 @@
 ---
-title: Sources de données pris en charge dans les modèles tabulaires 1200 de SQL Server Analysis Services | Documents Microsoft
+title: Sources de données prises en charge dans les modèles 1200 tabulaires SQL Server Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,29 +10,29 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 31ef1eb37f85e3e9ec7a7ea7d7eadee03b6c9c20
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044703"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017527"
 ---
-# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Sources de données pris en charge dans SQL Server Analysis Services les modèles tabulaires 1200
+# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>Sources de données pris en charge dans SQL Server Analysis Services les modèles 1200 tabulaires
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   
-Cet article décrit les types de sources de données qui peuvent être utilisés avec les modèles tabulaires SQL Server Analysis Services à 1200 et le niveau de compatibilité inférieur. 
+Cet article décrit les types de sources de données qui peuvent être utilisées avec les modèles tabulaires SQL Server Analysis Services à 1200 et niveau de compatibilité inférieur. 
 
-Pour les niveaux de compatibilité 1400 les modèles, consultez [des sources de données pris en charge dans les modèles 1400 tabulaires SQL Server Analysis Services](data-sources-supported-ssas-tabular-1400.md).
+Pour les modèles aux niveaux de compatibilité 1400, consultez [des sources de données prises en charge dans les modèles tabulaires 1400 SQL Server Analysis Services](data-sources-supported-ssas-tabular-1400.md).
 
 Pour Azure Analysis Services, consultez [des sources de données prises en charge dans Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
   
-##  <a name="bkmk_supported_ds"></a> Sources de données pris en charge pour les modèles tabulaires en mémoire  
+##  <a name="bkmk_supported_ds"></a> Sources de données prises en charge pour les modèles tabulaires en mémoire  
 Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le programme d'installation n'installe pas les fournisseurs répertoriés pour chaque source de données. Certains fournisseurs peuvent être installés avec d’autres applications sur votre ordinateur. Dans d’autres cas, vous devrez peut-être télécharger et installer le fournisseur.  
   
 |||||  
 |-|-|-|-|  
 |Source|Versions|Type de fichier|Fournisseurs|  
 |Bases de données Access|Microsoft Access 2010 et versions ultérieures.|.accdb ou .mdb|Fournisseur OLE DB ACE 14|  
-|Bases de données relationnelles SQL Server|SQL Server 2008 et versions ultérieur, SQL Server 2008 de l’entrepôt de données et version ultérieure, Azure SQL Database, Azure SQL Data Warehouse, système de plateforme Analytique (APS)<br /><br /> <br /><br /> Système de plateforme Analytique (APS) était anciennement en tant que SQL Server Parallel Data Warehouse (PDW). À l’origine, la connexion à PDW à partir d’Analysis Services nécessitait un fournisseur de données spécial. Ce fournisseur a été remplacé dans SQL Server 2012. À partir de SQL Server 2012, le client natif SQL Server est utilisé pour les connexions à PDW/APS. |(non applicable)|Fournisseur OLE DB pour SQL Server<br /><br /> Fournisseur OLE DB SQL Server Native Client<br /><br /> Fournisseur OLE DB SQL Server Native Client 10.0<br /><br /> Fournisseur de données .NET Framework pour SQL Client|  
+|Bases de données relationnelles SQL Server|SQL Server 2008 et versions ultérieur, SQL Server 2008 de l’entrepôt de données et version ultérieure, Azure SQL Database, Azure SQL Data Warehouse, Analytique Platform System (APS)<br /><br /> <br /><br /> Analytique Platform System (APS) s’appelait auparavant en tant que SQL Server Parallel Data Warehouse (PDW). À l’origine, la connexion à PDW à partir d’Analysis Services nécessitait un fournisseur de données spécial. Ce fournisseur a été remplacé dans SQL Server 2012. À partir de SQL Server 2012, le client natif SQL Server est utilisé pour les connexions à PDW/APS. |(non applicable)|Fournisseur OLE DB pour SQL Server<br /><br /> Fournisseur OLE DB SQL Server Native Client<br /><br /> Fournisseur OLE DB SQL Server Native Client 10.0<br /><br /> Fournisseur de données .NET Framework pour SQL Client|  
 |Bases de données relationnelles Oracle|Oracle 9i et versions ultérieures.|(non applicable)|Fournisseur OLE DB Oracle<br /><br /> Fournisseur de données .NET Framework pour client Oracle<br /><br /> Fournisseur de données .NET Framework pour SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bases de données relationnelles Teradata|Teradata V2R6 et versions ultérieures|(non applicable)|Fournisseur OLE DB TDOLEDB<br /><br /> Fournisseur de données .Net pour Teradata|  
 |Bases de données relationnelles Informix||(non applicable)|Fournisseur OLE DB Informix|  
@@ -48,14 +48,14 @@ Lorsque vous installez [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudio
   
   
 ##  <a name="bkmk_supported_ds_dq"></a> Sources de données prises en charge pour les modèles DirectQuery  
- DirectQuery est une alternative au mode de stockage en mémoire : cette approche consiste à router les requêtes vers des systèmes de données back-end d’où sont retournés directement les résultats, plutôt qu’à stocker toutes les données à l’intérieur du modèle (et dans la mémoire RAM, une fois le modèle est chargé). Analysis Services doit formuler des requêtes dans la syntaxe de requête de base de données native, un sous-ensemble réduit de sources de données est prise en charge pour ce mode.  
+ DirectQuery est une alternative au mode de stockage en mémoire : cette approche consiste à router les requêtes vers des systèmes de données back-end d’où sont retournés directement les résultats, plutôt qu’à stocker toutes les données à l’intérieur du modèle (et dans la mémoire RAM, une fois le modèle est chargé). Étant donné que Analysis Services doit formuler des requêtes dans la syntaxe de requête de base de données native, un sous-ensemble réduit de sources de données est prise en charge pour ce mode.  
   
 Source de données   |Versions  |Fournisseurs
 ---------|---------|---------
 Microsoft SQL Server    |  2008 et versions ultérieures      |       Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client  
-Base de données SQL Microsoft Azure    |   Tous      |  Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client            
-Microsoft Azure SQL Data Warehouse     |   Tous     |  Fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client       
-Microsoft SQL Analytics Platform System (APS)     |   Tous      |  Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client       
+Base de données SQL Microsoft Azure    |   All      |  Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client            
+Microsoft Azure SQL Data Warehouse     |   All     |  Fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client       
+Microsoft SQL Analytics Platform System (APS)     |   All      |  Fournisseur OLE DB pour SQL Server, fournisseur SQL Server Native Client OLE DB, fournisseur de données .NET Framework pour SQL Client       
 Bases de données relationnelles Oracle     |  Oracle 9i et versions ultérieures       |  Fournisseur OLE DB Oracle       
 Bases de données relationnelles Teradata    |  Teradata V2R6 et versions ultérieures     | Fournisseur de données .Net pour Teradata    
 

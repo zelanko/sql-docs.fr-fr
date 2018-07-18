@@ -1,5 +1,5 @@
 ---
-title: sp_db_increased_partitions | Documents Microsoft
+title: sp_db_increased_partitions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b63255e4f15505dc75dfdf92f550a1d6d4149028
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237687"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970411"
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +49,8 @@ sp_dp_increased_partitions
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @dbname=] '*nom_base_de_données*'  
- Nom de la base de données. *dbname* est **sysname** avec une valeur par défaut NULL. Si *dbname* n’est pas spécifié, la base de données en cours est utilisé.  
+ [ @dbname=] '*database_name*'  
+ Nom de la base de données. *dbname* est **sysname** avec une valeur par défaut NULL. Si *dbname* n’est pas spécifié, la base de données actuelle est utilisée.  
   
  [ @increased_partitions=] '*increased_partitions*'  
  Active ou désactive la prise en charge de 15 000 partitions sur la base de données spécifiée. *increased_partitions* est **varchar(6)** avec NULL comme valeur par défaut. Les valeurs acceptées sont ON ou TRUE pour activer la prise en charge et OFF ou FALSE pour la désactiver. Si *increased_partitions* n’est pas spécifié, la procédure retourne 1 pour indiquer la prise en charge est activée pour la base de données spécifiée ou 0 pour indiquer la prise en charge est désactivée.  

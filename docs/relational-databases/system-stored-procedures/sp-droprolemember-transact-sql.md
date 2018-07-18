@@ -1,5 +1,5 @@
 ---
-title: sp_droprolemember (Transact-SQL) | Documents Microsoft
+title: sp_droprolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9bb4bf48955c2b8c2f3039aa9e8e0f68e097f516
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258551"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974169"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,18 +60,18 @@ sp_droprolemember 'role' ,
  [  **@rolename =** ] **'***rôle***'**  
  Nom du rôle duquel le membre est supprimé. *rôle* est **sysname**, sans valeur par défaut. *rôle* doit exister dans la base de données actuelle.  
   
- [  **@membername =** ] **'***celui-ci***'**  
- Nom du compte de sécurité supprimé du rôle. *celui-ci* est **sysname**, sans valeur par défaut. *celui-ci* peut être un utilisateur de base de données, un autre rôle de base de données, une connexion Windows ou un groupe Windows. *celui-ci* doit exister dans la base de données actuelle.  
+ [  **@membername =** ] **'***auxquels celui-ci a***'**  
+ Nom du compte de sécurité supprimé du rôle. *celui-ci* est **sysname**, sans valeur par défaut. *celui-ci* peut être un utilisateur de base de données, un autre rôle de base de données, un compte de connexion Windows ou un groupe Windows. *celui-ci* doit exister dans la base de données actuelle.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- sp_droprolemember supprime un membre d’un rôle de base de données en supprimant une ligne dans la table sysmembers. Lorsqu'un membre est supprimé d'un rôle, il perd toutes les autorisations accordées par son appartenance à ce rôle.  
+ sp_droprolemember supprime un membre d’un rôle de base de données en supprimant une ligne de la table sysmembers. Lorsqu'un membre est supprimé d'un rôle, il perd toutes les autorisations accordées par son appartenance à ce rôle.  
   
- Pour supprimer un utilisateur à partir d’un rôle serveur fixe, utilisez sp_dropsrvrolemember. Impossible de supprimer les utilisateurs du rôle public, et dbo ne peut pas être supprimé dans aucun rôle.  
+ Pour supprimer un utilisateur d’un rôle serveur fixe, utilisez sp_dropsrvrolemember. Les utilisateurs ne peuvent pas être supprimés du rôle public, et dbo ne peut pas être supprimé dans aucun rôle.  
   
- Utilisez sp_helpuser pour afficher les membres d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de rôle et utilisez ALTER de rôle pour ajouter un membre à un rôle.  
+ Utilisez sp_helpuser pour afficher les membres d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôle et utilisez ALTER de rôle pour ajouter un membre à un rôle.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER sur le rôle.  
