@@ -1,5 +1,5 @@
 ---
-title: Spécification d’opérateurs relationnels dans des requêtes XPath (SQLXML 4.0) | Documents Microsoft
+title: Spécification d’opérateurs relationnels dans des requêtes XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 71d17e2b77670ec02e345bfd30211d92ca3ab556
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971244"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032437"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Spécification d'opérateurs de relation dans les requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Les exemples suivants montrent comment les opérateurs de relation sont spécifiés dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath & #40 ; SQLXML 4.0 & #41 ; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Les exemples suivants montrent comment les opérateurs de relation sont spécifiés dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-specify-relational-operator"></a>A. Spécifier un opérateur relationnel  
- Cette requête XPath retourne les éléments enfants de la  **\<client >** élément où la **CustomerID** valeur d’attribut est « 1 » et où tout enfant  **\<ordre >** les éléments contiennent une  **\<OrderDetail >** enfant avec un **OrderQty** attribut avec une valeur supérieure à 3 :  
+ Cette requête XPath retourne les éléments enfants de la  **\<client >** élément où la **CustomerID** valeur d’attribut est « 1 » et où tout enfant  **\<ordre >** les éléments contiennent un  **\<OrderDetail >** enfant avec un **OrderQty** attribut avec une valeur supérieure à 3 :  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
@@ -92,7 +92,7 @@ ms.locfileid: "32971244"
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
 ```  
   
- Un raccourci vers le **attribut** axe (@) peut être spécifié et parce que le **enfant** axe est la valeur par défaut, il peut être omis dans la requête :  
+ Un raccourci vers le **attribut** axe (@) peut être spécifié et parce que le **enfant** axe est la valeur par défaut, il peut être omis de la requête :  
   
 ```  
 /Customer/Order[(@SalesPersonID < 270)=true()]  

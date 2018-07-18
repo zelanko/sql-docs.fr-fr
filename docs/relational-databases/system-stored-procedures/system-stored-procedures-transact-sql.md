@@ -1,5 +1,5 @@
 ---
-title: Procédures système (Transact-SQL) | Documents Microsoft
+title: Procédures système (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 481b0c451f5161231cf64402c5c758870a07be62
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708637"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979461"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procédures stockées système (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,32 +45,32 @@ ms.locfileid: "34708637"
   
 |Catégorie|Description|  
 |--------------|-----------------|  
-|[Géo-réplication Active les procédures stockées](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Utilisé pour gérer les configurations de géo-réplication Active dans la base de données SQL Azure|  
+|[Procédures stockées de géo-réplication Active](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Utilisé pour gérer les configurations de géo-réplication Active dans la base de données SQL Azure|  
 |[Procédures stockées du catalogue](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|Permettent d'implémenter les fonctions du dictionnaire de données ODBC et d'isoler les applications ODBC des modifications apportées aux tables système concernées.|  
-|[Les procédures stockées de Capture de données modifiées](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Permettent d'activer, de désactiver ou de créer des rapports sur des objets de capture des données modifiées.|  
+|[Procédures stockées de Capture de données modifiées](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|Permettent d'activer, de désactiver ou de créer des rapports sur des objets de capture des données modifiées.|  
 |[Procédures stockées de curseur](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Permettent d'implémenter les fonctionnalités de variable de curseur.|  
 |[Procédures stockées du collecteur de données](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)|Utilisé pour fonctionner avec le collecteur de données et les composants suivants : jeux d'éléments de collecte, éléments de collecte et types de collections.|  
 |[Procédures stockées du moteur de base de données](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|Utilisé pour la maintenance générale de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Procédures stockées de messagerie de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Permettent d'exécuter des opérations de messagerie électronique à partir d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Procédures stockées de Plan de Maintenance de base de données](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Permettent de définir les tâches de maintenance principales nécessaires pour gérer les performances des bases de données.|  
 |[Procédures stockées de requêtes distribuées](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Servent à implémenter et gérer les requêtes distribuées.|  
-|[FileStream et procédures stockées FileTable &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Utilisé pour configurer et gérer les fonctionnalités FILESTREAM et FileTable.|  
+|[FileStream et des procédures stockées FileTable &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Utilisé pour configurer et gérer les fonctionnalités FILESTREAM et FileTable.|  
 |[Procédures stockées de règles de pare-feu &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Utilisé pour configurer le pare-feu de base de données SQL Azure.|  
 |[Procédures stockées de recherche en texte intégral](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Utilisées pour implémenter et effectuer les requêtes des index de texte intégral.|  
 |[Procédures stockées étendues générales](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|Permettent de fournir une interface depuis une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux programmes externes pour plusieurs activités de maintenance.|  
-|[Des journaux de procédures stockées](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)|Permettent de configurer, modifier et surveiller les configurations de la copie des journaux de transaction.|  
-|[Les procédures stockées de l’entrepôt de données de gestion &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Utilisé pour configurer l’entrepôt de données de gestion.|  
+|[Envoi de journaux de procédures stockées](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)|Permettent de configurer, modifier et surveiller les configurations de la copie des journaux de transaction.|  
+|[Procédures stockées de l’entrepôt de données de gestion &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Utilisé pour configurer l’entrepôt de données de gestion.|  
 |[Procédures stockées OLE Automation](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Permettent d'activer des objets Automation standard pour une utilisation dans un lot [!INCLUDE[tsql](../../includes/tsql-md.md)] standard.|  
-|[Procédures stockées de gestion basée sur la stratégie](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Utilisées pour la Gestion basée sur des stratégies.|  
-|[Procédures stockées PolyBase](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Ajouter ou supprimer un ordinateur d’un groupe de scale-out PolyBase.|  
-|[Procédures stockées du magasin de requête &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Utilisé pour régler les performances.|  
+|[Procédures stockées de gestion basée sur des stratégies](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Utilisées pour la Gestion basée sur des stratégies.|  
+|[Procédures stockées PolyBase](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Ajouter ou supprimer un ordinateur à partir d’un groupe de scale-out PolyBase.|  
+|[Procédures stockées de Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Utilisé pour régler les performances.|  
 |[Procédures stockées de réplication](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Servent à gérer la réplication.|  
 |[Procédures stockées de sécurité](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Servent à gérer la sécurité.|  
 |[Sauvegarde des procédures stockées de capture instantanée](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Utilisé pour supprimer la sauvegarde FILE_SNAPSHOT, ainsi que tous ses instantanés ou pour supprimer un instantané du fichier de sauvegarde individuels.|  
-|[Les procédures stockées d’Index spatial](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Utilisé pour analyser et améliorer les performances d’indexation des index spatiaux.|  
-|[Procédures stockées de l’Agent SQL Server](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Utilisées par [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour contrôler les performances et l'activité.|  
-|[Procédures stockées SQL Server Profiler](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Utilisées par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de gérer les activités planifiées et liées aux événements.|  
-|[Étendre la base de données stockée procédures](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Utilisé pour gérer les bases de données stretch.|  
+|[Procédures stockées d’Index spatial](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|Utilisé pour analyser et améliorer les performances d’indexation des index spatiaux.|  
+|[Procédures stockées de SQL Server Agent](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|Utilisées par [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour contrôler les performances et l'activité.|  
+|[Procédures stockées de SQL Server Profiler](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|Utilisées par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de gérer les activités planifiées et liées aux événements.|  
+|[Stretch Database stockée procédures](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|Utilisé pour gérer des bases de données stretch.|  
 |[Procédures stockées de Tables temporelles](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|Utilisation des tables temporelles|  
 |[Procédures stockées XML](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|Permettent de gérer le texte XML.|  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34708637"
 >  Sauf spécification contraire, toutes les procédures stockées système retournent la valeur 0 pour indiquer la réussite d'une procédure. Pour indiquer un échec, la procédure retourne une valeur différente de zéro.  
   
 ## <a name="api-system-stored-procedures"></a>Procédures système API  
- Les utilisateurs qui exécutent le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sur des applications ADO, OLE DB et ODBC peuvent remarquer que celles-ci utilisent des procédures stockées système non abordées dans le manuel de référence [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ces procédures stockées sont utilisées par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur Native Client OLE DB et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client à implémenter les fonctionnalités d’une API de base de données. Ces procédures stockées sont simplement le mécanisme utilisé par le fournisseur ou le pilote afin de communiquer les requêtes des utilisateurs à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles sont uniquement destinées à l'utilisation interne du fournisseur ou du pilote. Les appeler explicitement à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-applications n’est pas pris en charge.  
+ Les utilisateurs qui exécutent le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sur des applications ADO, OLE DB et ODBC peuvent remarquer que celles-ci utilisent des procédures stockées système non abordées dans le manuel de référence [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ces procédures stockées sont utilisées par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur Native Client OLE DB et le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client pour implémenter les fonctionnalités d’une API de base de données. Ces procédures stockées sont simplement le mécanisme utilisé par le fournisseur ou le pilote afin de communiquer les requêtes des utilisateurs à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles sont uniquement destinées à l'utilisation interne du fournisseur ou du pilote. Les appeler explicitement à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-applications n’est pas pris en charge.  
   
  Le stockées sp_createorphan et sp_droporphans procédures sont utilisées pour ODBC **ntext**, **texte**, et **image** de traitement.  
   

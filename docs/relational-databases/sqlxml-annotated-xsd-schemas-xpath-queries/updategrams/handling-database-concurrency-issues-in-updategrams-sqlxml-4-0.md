@@ -1,5 +1,5 @@
 ---
-title: La gestion des problèmes d’accès concurrentiel de base de données dans les codes (SQLXML 4.0) | Documents Microsoft
+title: Gestion des problèmes de concurrence de base de données dans les codes (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -27,20 +27,20 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 73ae79d0831820366f5ec6454573df26c7b36e01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973134"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031267"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Gestion des problèmes d'accès concurrentiel aux bases de données dans les codes de mise à jour (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Comme d'autres mécanismes de mise à jour de base de données, les codes de mise à jour doivent faire face à des mises à jour simultanées de données dans un environnement multi-utilisateur. Les codes de mise à jour utilisent le contrôle d'accès concurrentiel optimiste, qui utilise la comparaison des données de champ sélectionnées comme instantanés pour garantir que les données à mettre à jour n'ont pas été altérées par une autre application utilisateur depuis qu'elles ont été lues à partir de la base de données. Codes incluent ces valeurs d’instantané dans le  **\<avant >** bloc des codes. Avant la mise à jour de la base de données, mise à jour vérifie les valeurs qui sont spécifiés dans le  **\<avant >** bloc par rapport aux valeurs actuellement dans la base de données pour vous assurer que la mise à jour est valide.  
+  Comme d'autres mécanismes de mise à jour de base de données, les codes de mise à jour doivent faire face à des mises à jour simultanées de données dans un environnement multi-utilisateur. Les codes de mise à jour utilisent le contrôle d'accès concurrentiel optimiste, qui utilise la comparaison des données de champ sélectionnées comme instantanés pour garantir que les données à mettre à jour n'ont pas été altérées par une autre application utilisateur depuis qu'elles ont été lues à partir de la base de données. Codes incluent ces valeurs d’instantané dans le  **\<avant >** bloc des codes. Avant la mise à jour de la base de données, mise à jour vérifie les valeurs qui sont spécifiés dans le  **\<avant >** bloc aux valeurs actuellement dans la base de données pour vous assurer que la mise à jour est valide.  
   
  Le contrôle d'accès concurrentiel optimiste offre trois niveaux de protection dans un code de mise à jour : bas (aucune), intermédiaire et haut. Vous pouvez décider de quel niveau de protection vous avez besoin en spécifiant le code de mise à jour en conséquence.  
   
 ## <a name="lowest-level-of-protection"></a>Niveau de protection le plus bas  
- Ce niveau correspond à une mise à jour aveugle, dans laquelle la mise à jour est traitée sans se référer aux autres mises à jour effectuées depuis la dernière lecture de la base de données. Dans ce cas, vous spécifiez uniquement les colonnes clés primaires dans le  **\<avant >** bloquer pour identifier l’enregistrement et que vous spécifiez les informations mises à jour dans le  **\<après >** bloc.  
+ Ce niveau correspond à une mise à jour aveugle, dans laquelle la mise à jour est traitée sans se référer aux autres mises à jour effectuées depuis la dernière lecture de la base de données. Dans ce cas, vous spécifiez uniquement les colonnes clés primaires dans le  **\<avant >** blocage afin d’identifier l’enregistrement, et que vous spécifiez les informations mises à jour dans le  **\<après >** bloc.  
   
  Par exemple, le nouveau numéro de téléphone du contact dans le code de mise à jour suivant est correct, indépendamment de ce que le numéro de téléphone était précédemment. Notez comment la  **\<avant >** bloc spécifie uniquement la colonne clé primaire (ContactID).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "32973134"
   
  Vous pouvez obtenir ce niveau de protection en spécifiant les colonnes de clé primaires et l’ou les colonnes que vous mettez à jour dans le  **\<avant >** bloc.  
   
- Par exemple, ce code de mise à jour modifie la valeur dans la colonne Phone de la table Person.Contact pour le contact dont ContactID a la valeur 1. Le  **\<avant >** bloc spécifie le **téléphone** attribut pour vérifier que cette valeur d’attribut correspond à la valeur dans la colonne correspondante dans la base de données avant d’appliquer la valeur mise à jour.  
+ Par exemple, ce code de mise à jour modifie la valeur dans la colonne Phone de la table Person.Contact pour le contact dont ContactID a la valeur 1. Le  **\<avant >** bloc spécifie le **téléphone** attribut pour vous assurer que cette valeur d’attribut correspond à la valeur dans la colonne correspondante dans la base de données avant d’appliquer la valeur mise à jour .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -84,9 +84,9 @@ ms.locfileid: "32973134"
   
 -   Spécifier des colonnes supplémentaires dans la table dans le  **\<avant >** bloc.  
   
-     Si vous spécifiez des colonnes supplémentaires dans le  **\<avant >** bloc, la mise à jour compare les valeurs sont spécifiées pour ces colonnes avec les valeurs qui étaient dans la base de données avant d’appliquer la mise à jour. Si l'une quelconque des colonnes d'enregistrement a changé depuis que votre transaction a lu l'enregistrement, le code de mise à jour n'effectue pas la mise à jour.  
+     Si vous spécifiez des colonnes supplémentaires dans le  **\<avant >** bloc, la mise à jour compare les valeurs qui sont spécifiées pour ces colonnes avec les valeurs qui étaient dans la base de données avant d’appliquer la mise à jour. Si l'une quelconque des colonnes d'enregistrement a changé depuis que votre transaction a lu l'enregistrement, le code de mise à jour n'effectue pas la mise à jour.  
   
-     Par exemple, la mise à jour suivant met à jour le nom de l’équipe, mais spécifie des colonnes supplémentaires (StartTime, EndTime) dans le  **\<avant >** bloc, en demandant ainsi un niveau supérieur de protection contre les mises à jour simultanées.  
+     Par exemple, la mise à jour suivant met à jour le nom de l’équipe, mais spécifie des colonnes supplémentaires (StartTime, EndTime) dans le  **\<avant >** bloc, en demandant ainsi un niveau plus élevé de protection contre simultanées met à jour.  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -108,7 +108,7 @@ ms.locfileid: "32973134"
   
 -   Spécifier la colonne timestamp (si disponible) dans le  **\<avant >** bloc.  
   
-     Au lieu de spécifier toutes les colonnes d’enregistrement dans le  **\<avant**> bloc, vous pouvez spécifiez simplement la colonne timestamp (si la table possède un), ainsi que les colonnes clés primaires dans le  **\<avant >** bloc. La base de données met à jour la colonne timestamp en spécifiant une valeur unique après chaque mise à jour de l'enregistrement. Dans ce cas, le code de mise à jour compare la valeur de l'horodateur avec la valeur correspondante dans la base de données. La valeur d'horodateur stockée dans la base de données est une valeur binaire. Par conséquent, la colonne timestamp doit être spécifiée dans le schéma en tant que **dt:type="bin.hex »**, **dt:type="bin.base64 »**, ou **SQL : DataType = « timestamp »**. (Vous pouvez spécifier le **xml** type de données ou le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données.)  
+     Au lieu de spécifier toutes les colonnes d’enregistrement dans le  **\<avant**> bloc, vous pouvez simplement spécifier la colonne timestamp (si la table possède une), ainsi que les colonnes de clé primaires dans le  **\<avant >** bloc. La base de données met à jour la colonne timestamp en spécifiant une valeur unique après chaque mise à jour de l'enregistrement. Dans ce cas, le code de mise à jour compare la valeur de l'horodateur avec la valeur correspondante dans la base de données. La valeur d'horodateur stockée dans la base de données est une valeur binaire. Par conséquent, la colonne timestamp doit être spécifiée dans le schéma en tant que **dt:type="bin.hex »**, **dt:type="bin.base64 »**, ou **SQL : DataType = « timestamp »**. (Vous pouvez spécifier le **xml** type de données ou le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données.)  
   
 #### <a name="to-test-the-updategram"></a>Pour tester le code de mise à jour  
   

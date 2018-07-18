@@ -1,5 +1,5 @@
 ---
-title: La gestion des espaces de noms dans XQuery | Documents Microsoft
+title: Gestion des espaces de noms dans XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4602c1234c00b15191ca616ed56352f0eb784d9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077916"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031387"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Gestion des espaces de noms dans XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +50,14 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>. </AWMI:step>  
 …  
 ```  
   
- Notez que la **espace de noms** (mot clé) est utilisé pour définir un nouveau préfixe d’espace de noms, « AWMI : ». Ce préfixe doit ensuite être utilisé dans la requête pour tous les éléments couverts par l'étendue de cet espace de noms.  
+ Notez que le **espace de noms** mot clé est utilisé pour définir un nouveau préfixe d’espace de noms, « AWMI : ». Ce préfixe doit ensuite être utilisé dans la requête pour tous les éléments couverts par l'étendue de cet espace de noms.  
   
 ### <a name="b-declaring-a-default-namespace"></a>B. Déclaration d'un espace de noms par défaut  
  Dans la requête précédente, un nouveau préfixe d'espace de noms a été défini. Il a fallu ensuite utiliser ce préfixe dans la requête pour sélectionner les structures XML appropriées. Une alternative consiste à déclarer un espace de noms par défaut, comme le montre la requête modifiée suivante :  
@@ -95,7 +95,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
   
@@ -123,7 +123,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. Construction à l'aide des espaces de noms par défaut  
- Vous pouvez aussi définir un espace de noms par défaut en vue de son utilisation dans le code XML construit. Par exemple, la requête suivante montre comment vous pouvez spécifier un espace de noms par défaut, « SomeNamespace »\\, à utiliser en tant que la valeur par défaut pour les éléments nommés localement qui sont construits, comme le `<Result>` élément.  
+ Vous pouvez aussi définir un espace de noms par défaut en vue de son utilisation dans le code XML construit. Par exemple, la requête suivante montre comment vous pouvez spécifier un espace de noms par défaut, « SomeNamespace »\\, à utiliser comme la valeur par défaut pour les éléments nommés localement qui sont construites, telles que le `<Result>` élément.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -137,7 +137,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
   

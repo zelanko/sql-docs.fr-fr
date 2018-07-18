@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_unforce_plan (Transact-SQL) | Documents Microsoft
+title: sp_query_store_unforce_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 13525b0f1c77a3c570f35f1a745b4402f6ef9cbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253977"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036157"
 ---
 # <a name="spquerystoreunforceplan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
  Est l’id de la requête. *query_id* est un **bigint**, sans valeur par défaut.  
   
  [  **@plan_id =** ] *plan_id*  
- Est l’id du plan de requête qui sera n’est plus appliqué. *plan_id* est un **bigint**, sans valeur par défaut.  
+ Est l’id du plan de requête qui ne sera plus appliqué. *plan_id* est un **bigint**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -60,7 +60,7 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## <a name="remarks"></a>Notes  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert le **EXECUTE** sur la base de données, et **insérer**, **mise à jour**, et **supprimer** autorisation sur les affichages catalogue du magasin de requête.  
+ Nécessite le **EXECUTE** autorisation sur la base de données, et **insérer**, **mise à jour**, et **supprimer** autorisation sur le catalogue de magasin de requête Affichage.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne des informations sur les requêtes dans le magasin de requêtes.  
@@ -74,7 +74,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Après avoir identifié les query_id et plan_id que vous souhaitez annuler son application forcée, utilisez l’exemple suivant pour annuler l’application forcée du plan.  
+ Après avoir identifié le query_id et plan_id que vous souhaitez annuler l’application forcée, utilisez l’exemple suivant pour annuler l’application forcée du plan.  
   
 ```  
 EXEC sp_query_store_unforce_plan 3, 3;  

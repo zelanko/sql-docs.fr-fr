@@ -1,5 +1,5 @@
 ---
-title: Spécification d’opérateurs arithmétiques dans des requêtes XPath (SQLXML 4.0) | Documents Microsoft
+title: Spécification d’opérateurs arithmétiques dans des requêtes XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c6dbbac19be8ff9bd138995cb021012ee3b16373
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970616"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032357"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Spécification d'opérateurs arithmétiques dans des requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  L'exemple suivant montre comment les opérateurs arithmétiques sont spécifiés dans les requêtes XPath. La requête XPath de cet exemple est spécifiée par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath & #40 ; SQLXML 4.0 & #41 ; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  L'exemple suivant montre comment les opérateurs arithmétiques sont spécifiés dans les requêtes XPath. La requête XPath de cet exemple est spécifiée par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Spécifier l'opérateur arithmétique *  
- Cette requête XPath retourne  **\<OrderDetail >** les éléments qui satisfont le prédicat spécifié :  
+ Cette requête XPath retourne  **\<OrderDetail >** les éléments qui répondent au prédicat spécifié :  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Dans la requête, `child` est l’axe et `OrderDetail` est le test de nœud (TRUE si **OrderDetail** est un  **\<nœud d’élément >**, car le  **\<élément >** nœud est le nœud principal pour le **enfant** axe). Pour toutes les  **\<OrderDetail >** nœuds d’élément, le test dans le prédicat est appliqué, et seuls les nœuds qui répondent à la condition sont retournés.  
+ Dans la requête, `child` est l’axe et `OrderDetail` est le test de nœud (TRUE si **OrderDetail** est un  **\<nœud d’élément >**, car le  **\< élément >** nœud est le nœud principal pour le **enfant** axe). Pour tous les  **\<OrderDetail >** nœuds d’élément, le test dans le prédicat est appliqué, et seuls les nœuds qui satisfont la condition sont retournés.  
   
 > [!NOTE]  
 >  Dans XPath, les nombres sont des nombres à virgule flottante double précision et la comparaison de nombres à virgule flottante comme dans l'exemple entraîne un arrondi.  

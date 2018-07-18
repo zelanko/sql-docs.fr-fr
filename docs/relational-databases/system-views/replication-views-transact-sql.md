@@ -1,5 +1,5 @@
 ---
-title: Vues de réplication (Transact-SQL) | Documents Microsoft
+title: Vues de réplication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -31,16 +31,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9215cc303d4a6541e958a86dbdd352802bd64bd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007726"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030877"
 ---
 # <a name="replication-views-transact-sql"></a>Vues de réplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Ces vues contiennent des informations qui sont utilisées par la réplication dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les vues permettent de faciliter l’accès aux données dans [tables système de réplication](../../relational-databases/system-tables/replication-tables-transact-sql.md). Les vues sont créées dans une base de données utilisateur lorsque celle-ci est activée en tant que base de données de publication ou d'abonnement. Tous les objets de réplication sont supprimés de la base de données utilisateur lorsque celle-ci est supprimée d'une topologie de réplication. La méthode recommandée pour accéder aux métadonnées de réplication est à l’aide de [procédures stockées de réplication](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
+  Ces vues contiennent des informations qui sont utilisées par la réplication dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les vues permettent de faciliter l’accès aux données dans [tables système de réplication](../../relational-databases/system-tables/replication-tables-transact-sql.md). Les vues sont créées dans une base de données utilisateur lorsque celle-ci est activée en tant que base de données de publication ou d'abonnement. Tous les objets de réplication sont supprimés de la base de données utilisateur lorsque celle-ci est supprimée d'une topologie de réplication. La méthode recommandée pour l’accès aux métadonnées de réplication est à l’aide de [procédures stockées de réplication](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  Les vues système ne doivent pas être modifiées directement par l'utilisateur.  

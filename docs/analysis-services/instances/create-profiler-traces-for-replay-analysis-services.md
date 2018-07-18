@@ -1,5 +1,5 @@
 ---
-title: Créer des Traces du Générateur de profils pour la relecture (Analysis Services) | Documents Microsoft
+title: Créer des Traces de Profiler pour la relecture (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d5928325ffe5b0b98da2058529b1cbb036a445be
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014786"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031637"
 ---
 # <a name="create-profiler-traces-for-replay-analysis-services"></a>Créer des traces de SQL Server Profiler pour la relecture (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34014786"
   
 -   Classe d’événements Audit Login avec toutes ses colonnes de données. Cette classe d'événements fournit des informations sur les utilisateurs qui se sont connectés et sur les paramètres de leurs sessions. Le SPID fournit la référence à la session utilisateur. Pour plus d’informations, consultez [Colonnes de données Audit de sécurité](../../analysis-services/trace-events/security-audit-data-columns.md).  
   
--   Classe d’événements Discover Begin avec toutes ses colonnes de données. La colonne TextData fournit le \<RequestType > partie de la demande de découverte et de la colonne RequestProperties fournit le \<Propriétés > partie de la demande de découverte. La colonne EventSubclass fournit le type de découverte. Pour plus d’informations, consultez [Colonnes de données des événements de découverte](../../analysis-services/trace-events/discover-events-data-columns.md).  
+-   Classe d’événements Discover Begin avec toutes ses colonnes de données. La colonne TextData fournit le \<RequestType > partie de la demande de découverte et la colonne RequestProperties fournit les \<Propriétés > partie de la demande de découverte. La colonne EventSubclass fournit le type de découverte. Pour plus d’informations, consultez [Colonnes de données des événements de découverte](../../analysis-services/trace-events/discover-events-data-columns.md).  
   
 -   Classe d'événements Discover End avec toutes ses colonnes de données. Cette classe d'événements vérifie l'état de la demande de découverte. Pour plus d’informations, consultez [Colonnes de données des événements de découverte](../../analysis-services/trace-events/discover-events-data-columns.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34014786"
 -   Classe d'événements Command End avec toutes ses colonnes de données. Cette classe d'événements vérifie l'état de la commande. Pour plus d’informations, consultez [Colonnes de données des événements de commande](../../analysis-services/trace-events/command-events-data-columns.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Événements de Trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)   
- [Introduction à la surveillance d’Analysis Services avec SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)  
+ [Événements de trace Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)   
+ [Introduction à la surveillance d’Analysis Services à l’aide de SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)  
   
   

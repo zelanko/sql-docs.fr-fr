@@ -1,5 +1,5 @@
 ---
-title: Expressions primaires (XQuery) | Documents Microsoft
+title: Expressions primaires (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7f9fdcd3eaa54b74366f90891893c88cbf1aa32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078116"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031437"
 ---
 # <a name="primary-expressions-xquery"></a>Expressions primaires (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   L'importation de modules n'est pas prise en charge.  
   
--   Les déclarations de variable externe ne sont pas prises en charge. Une solution à ce problème consiste à utiliser le [:variable()](../xquery/xquery-extension-functions-sql-variable.md).  
+-   Les déclarations de variable externe ne sont pas prises en charge. Une solution consiste à utiliser le [:variable()](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="context-item-expressions"></a>Expressions d'élément contextuel  
  L'élément contextuel est l'élément en cours de traitement dans le cadre d'une expression de chemin d'accès. Il est initialisé dans une instance non-NULL de type XML avec le nœud de document. Il peut également être modifié par la méthode nodes(), dans le contexte des expressions XPath ou prédicats [].  
@@ -180,7 +180,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>Appels de fonction  
- Vous pouvez appeler les fonctions XQuery intégrées et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctions SQL :variable() et SQL :Column(). Pour obtenir la liste des fonctions implémentées, consultez [fonctions XQuery impliquant le Type de données xml](../xquery/xquery-functions-against-the-xml-data-type.md).  
+ Vous pouvez appeler les fonctions XQuery intégrées et les [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fonctions SQL :variable() et SQL :Column(). Pour obtenir la liste des fonctions implémentées, consultez [fonctions XQuery impliquant le Type de données xml](../xquery/xquery-functions-against-the-xml-data-type.md).  
   
 #### <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limites de la mise en œuvre sont les suivantes :  

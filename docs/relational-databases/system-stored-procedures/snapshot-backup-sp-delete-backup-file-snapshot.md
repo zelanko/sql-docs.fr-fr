@@ -1,5 +1,5 @@
 ---
-title: sp_delete_backup_file_snapshot (Transact-SQL) | Documents Microsoft
+title: sp_delete_backup_file_snapshot (Transact-SQL) | Microsoft Docs
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12cb91c23c87e32d25d73f551d7aa6b76fa66288
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236546"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036207"
 ---
 # <a name="spdeletebackupfilesnapshot-transact-sql"></a>sp_delete_backup_file_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Supprime un instantané de sauvegarde spécifié à partir de la base de données spécifié. Utilisez cette procédure stockée système conjointement avec la **sys.fn_db_backup_file_snapshots** fonction système pour identifier et supprimer des orphelins des instantanés de sauvegarde. Pour plus d’informations, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+  Supprime un instantané de sauvegarde spécifié à partir de la base de données spécifié. Utilisez cette procédure stockée système conjointement avec le **sys.fn_db_backup_file_snapshots** fonction système pour identifier et supprimer des orphelins des instantanés de sauvegarde. Pour plus d’informations, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
 
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -43,10 +43,10 @@ sys.sp_delete_backup_file_snapshot
   
 ## <a name="arguments"></a>Arguments  
  *[ @db_name =] nom_base_de_données*  
- Le nom de la base de données contenant l’instantané doit être supprimé, fournie sous forme de chaîne Unicode.  
+ Le nom de la base de données contenant la capture instantanée pour être supprimé, fournie sous forme de chaîne Unicode.  
   
  *[ @snapshot_url = ] snapshot_url*  
- L’URL de l’instantané doit être supprimé, fournie sous forme de chaîne Unicode.  
+ L’URL de l’instantané pour être supprimé, fournie sous forme de chaîne Unicode.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation ALTER ANY DATABASE.  

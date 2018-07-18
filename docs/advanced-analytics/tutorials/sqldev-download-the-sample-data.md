@@ -1,6 +1,6 @@
 ---
-title: Exemples de données leçon 1 téléchargement et les scripts incorporés R (SQL Server Machine Learning) | Documents Microsoft
-description: Le didacticiel expliquant comment incorporer R dans SQL Server procédures stockées et fonctions T-SQL
+title: Exemples de téléchargement de la leçon 1 données et des scripts pour incorporé R (SQL Server Machine Learning) | Microsoft Docs
+description: Didacticiel expliquant comment incorporer R dans SQL Server des procédures stockées et fonctions T-SQL
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/07/2018
@@ -9,18 +9,18 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249832"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030377"
 ---
-# <a name="lesson-1-download-data-and-scripts"></a>Leçon 1 : Télécharger des données et des scripts
+# <a name="lesson-1-download-data-and-scripts"></a>Leçon 1 : Télécharger des données et les scripts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article fait partie d’un didacticiel pour les développeurs SQL sur la façon d’utiliser R dans SQL Server.
+Cet article fait partie d’un didacticiel pour les développeurs SQL sur l’utilisation de R dans SQL Server.
 
-Dans cette étape, vous allez télécharger l’exemple de dataset et le [!INCLUDE[tsql](../../includes/tsql-md.md)] script des fichiers qui sont utilisés dans ce didacticiel. Les données et les fichiers de script sont partagés sur GitHub, mais le script PowerShell va télécharger les fichiers de script et de données dans un répertoire local de votre choix.
+Dans cette étape, vous allez télécharger l’exemple de dataset et le [!INCLUDE[tsql](../../includes/tsql-md.md)] script des fichiers qui sont utilisés dans ce didacticiel. Les données et les fichiers de script sont partagés sur GitHub, mais le script PowerShell télécharge les fichiers de script et de données dans un répertoire local de votre choix.
 
 ## <a name="download-tutorial-files-from-github"></a>Télécharger les fichiers du didacticiel à partir de Github
 
@@ -62,7 +62,7 @@ Dans cette étape, vous allez télécharger l’exemple de dataset et le [!INCLU
   
 ## <a name="next-lesson"></a>Leçon suivante
 
-[Leçon 2 : Importer des données vers SQL Server à l’aide de PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[Leçon 2 : Importer des données dans SQL Server à l’aide de PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
 
 ## <a name="previous-lesson"></a>Leçon précédente
 

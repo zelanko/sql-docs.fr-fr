@@ -1,5 +1,5 @@
 ---
-title: Sys.partition_parameters (Transact-SQL) | Documents Microsoft
+title: Sys.partition_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,26 +26,27 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e0287d1c3a88281bb1b56a6d632e77beeeb7791f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036382"
 ---
 # <a name="syspartitionparameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   Contient une ligne pour chaque paramètre d'une fonction de partition.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**function_id supérieures**|**int**|Identificateur de la fonction de partition à laquelle appartient ce paramètre.|  
-|**parameter_id**|**int**|ID du paramètre. Unique au sein de la fonction de partition, en commençant par 1.|  
-|**system_type_id**|**tinyint**|Identificateur du type système du paramètre. Correspond à la **system_type_id** colonne de la **sys.types** affichage catalogue.|  
+|**function_id**|**Int**|Identificateur de la fonction de partition à laquelle appartient ce paramètre.|  
+|**parameter_id**|**Int**|ID du paramètre. Unique au sein de la fonction de partition, en commençant par 1.|  
+|**system_type_id**|**tinyint**|Identificateur du type système du paramètre. Correspond à la **system_type_id** colonne de la **sys.types** vue de catalogue.|  
 |**max_length**|**smallint**|Longueur maximale du paramètre, en octets.|  
-|**precision**|**tinyint**|Précision du paramètre s'il est de type numérique ; sinon, 0.|  
-|**scale**|**tinyint**|Échelle du paramètre s'il est de type numérique ; sinon, 0.|  
+|**précision**|**tinyint**|Précision du paramètre s'il est de type numérique ; sinon, 0.|  
+|**mise à l’échelle**|**tinyint**|Échelle du paramètre s'il est de type numérique ; sinon, 0.|  
 |**collation_name**|**sysname**|Nom du classement du paramètre s'il est constitué de caractères alphanumériques, sinon NULL.|  
-|**user_type_id**|**int**|ID du type. Unique dans la base de données. Pour les types de données système **user_type_id** = **system_type_id**.|  
+|**user_type_id**|**Int**|ID du type. Unique dans la base de données. Pour les types de données système **user_type_id** = **system_type_id**.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

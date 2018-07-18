@@ -1,6 +1,6 @@
 ---
-title: 'Démarrage rapide : Se connecter et de requêtes SQL Server à l’aide des opérations de SQL Studio (version préliminaire) | Documents Microsoft'
-description: Ce démarrage rapide montre comment utiliser les Studio des opérations SQL (aperçu) pour se connecter à SQL Server et d’exécuter une requête
+title: 'Démarrage rapide : Se connecter et interroger SQL Server à l’aide de SQL Operations Studio (version préliminaire) | Microsoft Docs'
+description: Ce démarrage rapide montre comment utiliser SQL Operations Studio (version préliminaire) pour vous connecter à SQL Server et exécuter une requête
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql
@@ -13,15 +13,15 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 94a760c815b9933ff4d8d7da3dd24c292fcdc641
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 7f8963de448c39709a4df102cdf764a361b7654c
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235389"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985071"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Démarrage rapide : Se connecter et interroger à l’aide de SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-Ce démarrage rapide montre comment utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter à SQL Server, puis utilisez les instructions Transact-SQL (T-SQL) pour créer le *TutorialDB* utilisé dans [!INCLUDE[name-sos](../includes/name-sos-short.md)] didacticiels.
+Ce démarrage rapide montre comment utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter à SQL Server, puis utiliser les instructions Transact-SQL (T-SQL) pour créer le *TutorialDB* utilisé dans [!INCLUDE[name-sos](../includes/name-sos-short.md)] didacticiels.
 
 ## <a name="prerequisites"></a>Configuration requise
 
@@ -29,10 +29,10 @@ Pour effectuer ce démarrage rapide, vous devez [!INCLUDE[name-sos](../includes/
 
 - [Installer [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
 
-Si vous n’avez pas accès à un serveur SQL Server, sélectionnez votre plateforme parmi les liens suivants (veillez à vous souvenez de votre compte de connexion SQL et le mot de passe !) :
+Si vous n’avez pas accès à un serveur SQL, sélectionnez votre plateforme parmi les liens suivants (pensez à mémoriser votre compte de connexion SQL et le mot de passe !) :
 - [Windows : Téléchargez SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS : Téléchargez SQL Server 2017 sur Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux - téléchargement SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -vous ne devez suivre les étapes jusqu'à *créer et interroger des données*.
+- [macOS : Téléchargez SQL Server 2017 sur Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+- [Linux - téléchargement SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -vous ne devez suivre les étapes jusqu'à *créer et interroger des données*.
 
 
 ## <a name="connect-to-a-sql-server"></a>Se connecter à un serveur SQL Server
@@ -58,7 +58,7 @@ Si vous n’avez pas accès à un serveur SQL Server, sélectionnez votre platef
 
 ## <a name="create-a-database"></a>création d'une base de données ;
 
-La procédure suivante crée une base de données nommée **TutorialDB**:
+Les étapes suivantes créent une base de données nommée **TutorialDB**:
 
 1. Cliquez avec le bouton droit sur votre serveur, **localhost**, puis sélectionnez **nouvelle requête.**
 1. Collez l’extrait de code suivant dans la fenêtre de requête : 
@@ -84,7 +84,7 @@ Une fois la requête terminée, le nouveau **TutorialDB** apparaît dans la list
 
 ## <a name="create-a-table"></a>Créer une table
 
-L’éditeur de requête est toujours connecté à la *master* base de données, mais souhaitez créer une table dans le *TutorialDB* base de données. 
+L’éditeur de requête est toujours connecté à la *master* base de données, mais nous voulons créer une table dans le *TutorialDB* base de données. 
 
 1. Modifier le contexte de connexion au **TutorialDB**:
 
@@ -95,7 +95,7 @@ L’éditeur de requête est toujours connecté à la *master* base de données,
 1. Collez l’extrait de code suivant dans la fenêtre de requête et cliquez sur **exécuter**:
 
    > [!NOTE]
-   > Vous pouvez l’ajouter à ou remplacer la requête précédente dans l’éditeur. Notez qu’un clic sur **exécuter** exécute uniquement la requête sélectionnée. Si rien n’est sélectionné, cliquez sur **exécuter** exécute toutes les requêtes dans l’éditeur.
+   > Vous pouvez l’ajouter à ou remplacer la requête précédente dans l’éditeur. Notez qu’un clic sur **exécuter** exécute uniquement la requête sélectionnée. Si rien n’est sélectionné, un clic sur **exécuter** exécute toutes les requêtes dans l’éditeur.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -148,6 +148,6 @@ Une fois la requête terminée, le nouveau **clients** table apparaît dans la l
 
 
 ## <a name="next-steps"></a>Étapes suivantes
-Maintenant que vous êtes connecté à SQL Server et exécutez une requête, essayez le [didacticiel de l’éditeur de Code](tutorial-sql-editor.md).
+Maintenant que vous avez correctement connecté à SQL Server et exécutez une requête, essayez le [didacticiel de l’éditeur de Code](tutorial-sql-editor.md).
 
 

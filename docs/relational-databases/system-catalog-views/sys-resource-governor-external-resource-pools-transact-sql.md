@@ -1,5 +1,5 @@
 ---
-title: Sys.resource_governor_external_resource_pools (Transact-SQL) | Documents Microsoft
+title: Sys.resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b5681bfb81bfc4b18a0052f5ce397973ae90688f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181285"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985152"
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>Sys.resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "33181285"
 
 Retourne la configuration de pool de ressources externes stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque ligne de la vue détermine la configuration d'un pool.
   
-|Nom de colonne|Type de données| Description|
+|Nom de colonne|Type de données|Description|
 |-----------------|---------------|-----------------|
-|pool_id|**int**|ID unique du pool de ressources. N'accepte pas la valeur NULL.<br /><br /> **Remarque :** peut être renommée dans le futur.|
-|name|**sysname**|Nom du pool de ressources. N'accepte pas la valeur NULL.|
-|max_cpu_percent|**int**|Bande passante processeur moyenne maximale pour toutes les demandes dans le pool de ressources en cas de contention du processeur. N'accepte pas la valeur NULL.|
-|max_memory_percent|**int**|Pourcentage de la mémoire totale du serveur qui peut être utilisé par les demandes dans ce pool de ressources. N'accepte pas la valeur NULL. La valeur maximale effective dépend des valeurs minimales du pool. Par exemple, max_memory_percent peut avoir la valeur 100, alors que sa valeur maximale effective est inférieure.|
-|max_processes|**int**|Nombre maximal de processus externes simultanées. La valeur par défaut 0 spécifie qu'il n'y a pas de limite. N'accepte pas la valeur NULL.|
+|pool_id|**Int**|ID unique du pool de ressources. N'accepte pas la valeur NULL.<br /><br /> **Remarque :** peut être renommée dans le futur.|
+|NAME|**sysname**|Nom du pool de ressources. N'accepte pas la valeur NULL.|
+|max_cpu_percent|**Int**|Bande passante processeur moyenne maximale pour toutes les demandes dans le pool de ressources en cas de contention du processeur. N'accepte pas la valeur NULL.|
+|max_memory_percent|**Int**|Pourcentage de la mémoire totale du serveur qui peut être utilisé par les demandes dans ce pool de ressources. N'accepte pas la valeur NULL. La valeur maximale effective dépend des valeurs minimales du pool. Par exemple, max_memory_percent peut avoir la valeur 100, alors que sa valeur maximale effective est inférieure.|
+|max_processes|**Int**|Nombre maximal de processus externes simultanées. La valeur par défaut 0 spécifie qu'il n'y a pas de limite. N'accepte pas la valeur NULL.|
 |version|**bigint**|Numéro de version interne.|
   
 ## <a name="permissions"></a>Autorisations

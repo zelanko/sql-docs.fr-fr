@@ -1,5 +1,5 @@
 ---
-title: Fournisseurs et les composants de service | Documents Microsoft
+title: Les composants et les fournisseurs de services | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,18 +18,18 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc5f0b18568e7056d4456ed8209fc931f7233fcd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 085e0caa494baf624468ccb4f4c4bd99020c588b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272558"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984311"
 ---
-# <a name="service-providers-and-components"></a>Fournisseurs de services et de composants
+# <a name="service-providers-and-components"></a>Composants et fournisseurs de services
 Fournisseurs de services sont des composants qui étendent les fonctionnalités des fournisseurs de données en implémentant les interfaces étendues qui ne sont pas prise en charge par le magasin de données.  
   
- Universal Data Access offre une *architecture du composant* qui permet des composants individuels spécialisés d’implémenter des ensembles indépendants de fonctionnalités de base de données, ou « services », sur des magasins moins performant. Par conséquent, plutôt que de magasins de données pour fournir sa propre implémentation de fonctionnalités étendues ou forcer des applications génériques pour implémenter les fonctionnalités de base de données en interne, les composants du service fournissent une implémentation commune n’importe quelle application peut Utilisez pour accéder à n’importe quel magasin de données. Le fait que certaines fonctionnalités sont implémentée en mode natif par le magasin de données et certains via les composants génériques est transparent pour l’application.  
+ Accès aux données universel fournit un *architecture du composant* qui permet à des composants individuels spécialisés à implémenter des ensembles indépendants de fonctionnalités de base de données, ou « services », sur des magasins moins performant. Par conséquent, plutôt que de magasins de données pour fournir sa propre implémentation de fonctionnalité étendue ou de forcer les applications génériques pour implémenter les fonctionnalités de base de données en interne, les composants de service fournissent une implémentation commune n’importe quelle application peut utiliser pour accéder à n’importe quel magasin de données. Le fait que certaines fonctionnalités sont implémentée en mode natif par le magasin de données et certains à travers les composants génériques est transparent pour l’application.  
   
- Par exemple, un curseur de moteur, tel que [le Service de curseur pour OLE DB](http://msdn.microsoft.com/en-us/57638feb-4ecd-4051-becb-8f828d21cf44), est un composant de service qui peut utiliser des données à partir d’un magasin de données séquentielles et en avant uniquement pour produire des données permettant le défilement. Incluent d’autres fournisseurs de services généralement utilisés par ADO le [Microsoft OLE DB fournisseur de persistance (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (pour l’enregistrement de données dans un fichier,) le [Service de mise en forme des données Microsoft pour OLE DB (fournisseur de services ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (pour hiérarchique **jeux d’enregistrements**) et le [fournisseur Microsoft OLE DB la communication à distance (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (pour l’appel des fournisseurs de données sur un ordinateur distant).  
+ Par exemple, un curseur de moteur, tel que [le Service de curseur pour OLE DB](http://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44), est un composant de service qui peut utiliser des données à partir d’un magasin de données séquentielles et en avant uniquement pour produire des données à défilement. Incluent d’autres fournisseurs de services couramment utilisés par ADO le [Microsoft OLE DB Persistence Provider (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (pour l’enregistrement des données dans un fichier,) la [Microsoft Data Shaping Service pour OLE DB (fournisseur de services ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (pour hiérarchique **Recordsets**) et le [fournisseur Microsoft OLE DB communication à distance (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (pour l’appel des fournisseurs de données sur un ordinateur distant).  
   
- Pour plus d’informations sur les fournisseurs de services et de données, consultez [annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md).
+ Pour plus d’informations sur les fournisseurs de données et de service, consultez [annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md).

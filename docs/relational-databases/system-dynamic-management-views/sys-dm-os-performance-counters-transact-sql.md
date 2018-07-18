@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_performance_counters (Transact-SQL) | Documents Microsoft
+title: Sys.dm_os_performance_counters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1bdbd9ea7029aaf8b18631a2303fdd1228ff0198
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980813"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -37,16 +37,16 @@ ms.locfileid: "34466875"
   Renvoie une ligne par compteur de performance maintenu par le serveur. Pour plus d’informations sur chaque compteur de performance, consultez [utiliser des objets SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
 > [!NOTE]  
->  Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_performance_counters**.  
+>  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_performance_counters**.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar(128)**|Catégorie à laquelle ce compteur appartient.|  
-|**counter_name**|**nchar(128)**|Nom du compteur. Pour obtenir plus d’informations sur un compteur, c’est le nom de la rubrique à sélectionner à partir de la liste des compteurs dans [utiliser des objets SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
-|**nom_instance**|**nchar(128)**|Nom d'une instance particulière du compteur. Contient souvent le nom de la base de données.|  
+|**counter_name**|**nchar(128)**|Nom du compteur. Pour obtenir plus d’informations sur un compteur, il s’agit du nom de la rubrique à sélectionner à partir de la liste des compteurs dans [utiliser des objets SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
+|**instance_name**|**nchar(128)**|Nom d'une instance particulière du compteur. Contient souvent le nom de la base de données.|  
 |**cntr_value**|**bigint**|Valeur actuelle du compteur.<br /><br /> **Remarque :** pour les compteurs par seconde, cette valeur est cumulative. La valeur de la fréquence doit se calculer en échantillonnant la valeur à des intervalles de temps discrets. La différence entre deux valeurs prélevées successives est égale à la fréquence de l'intervalle de temps utilisé.|  
-|**cntr_type**|**int**|Type de compteur défini par l'architecture de performances Windows. Consultez [WMI Performance Counter Types](http://msdn2.microsoft.com/library/aa394569.aspx) sur MSDN ou votre documentation Windows Server pour plus d’informations sur les types de compteurs de performances.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**cntr_type**|**Int**|Type de compteur défini par l'architecture de performances Windows. Consultez [Types de compteurs de performances WMI](http://msdn2.microsoft.com/library/aa394569.aspx) sur MSDN ou votre documentation Windows Server pour plus d’informations sur les types de compteurs de performances.|  
+|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 ## <a name="remarks"></a>Notes  
  Si l'instance d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'affiche pas les compteurs de performance du système d'exploitation Windows, utilisez la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante pour vérifier si les compteurs de performance ont été désactivés.  

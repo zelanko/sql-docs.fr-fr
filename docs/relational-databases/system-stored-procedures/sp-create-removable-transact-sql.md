@@ -1,5 +1,5 @@
 ---
-title: sp_create_removable (Transact-SQL) | Documents Microsoft
+title: sp_create_removable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac999e58a6c88d8a121d7708b6fc9e954cf7419
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239499"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035237"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33239499"
   Cette procédure crée une base de données sur un support amovible. Elle crée trois fichiers minimum (un pour les tables de catalogue système, un pour le journal des transactions et un ou plus pour les tables de données) et place la base de données sur ces fichiers.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser [créer la base de données](../../t-sql/statements/create-database-sql-server-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) à la place.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -96,7 +96,7 @@ sp_create_removable
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Si vous souhaitez faire une copie de votre base de données sur un support amovible (par exemple un CD-ROM) pour la distribuer à d'autres utilisateurs, utilisez cette procédure stockée.  

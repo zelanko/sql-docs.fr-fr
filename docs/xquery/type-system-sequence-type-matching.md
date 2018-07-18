@@ -1,5 +1,5 @@
 ---
-title: Correspondance des types de séquence | Documents Microsoft
+title: Correspondance des types de séquence | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ce01e8b2f587527b264a3ea11021257375fb842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078026"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980021"
 ---
 # <a name="type-system---sequence-type-matching"></a>Système - de type correspondance des types de séquence
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Une valeur d'expression XQuery est toujours une séquence de zéro élément ou plus. Un élément peut être soit une valeur atomique, soit un nœud. Le type de séquence fait référence à la possibilité de mettre en correspondance le type de séquence retourné par une expression de requête avec un type spécifique. Par exemple :  
+  Une valeur d'expression XQuery est toujours une séquence de zéro élément ou plus. Un élément peut être soit une valeur atomique, soit un nœud. Le type de séquence fait référence à la possibilité de mettre en correspondance le type de séquence retourné par une expression de requête avec un type spécifique. Exemple :  
   
 -   Si la valeur d'expression est atomique, vous voudrez peut-être savoir s'il s'agit d'un type entier, décimal ou chaîne.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33078026"
   
 -   Vous voudrez peut-être savoir si l'expression retourne un élément XML ou un nœud d'attribut d'un nom et d'un type spécifiques.  
   
- Vous pouvez utiliser l'opérateur booléen `instance of` dans la mise en correspondance du type de séquence. Pour plus d’informations sur la `instance of` expression, consultez [sequencetype, Expressions &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
+ Vous pouvez utiliser l'opérateur booléen `instance of` dans la mise en correspondance du type de séquence. Pour plus d’informations sur la `instance of` expression, consultez [Expressions SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Comparaison du type de valeur atomique retourné par une expression  
  Si une expression retourne une séquence de valeurs atomiques, vous pouvez être amené à rechercher le type de la valeur dans la séquence. Les exemples ci-dessous illustrent comment utiliser la syntaxe de type de séquence pour évaluer le type de valeur atomique retourné par une expression.  
@@ -168,7 +168,7 @@ GO
  Si les deux conditions sont remplies, l'expression `instance of` retourne True.  
   
 ### <a name="example-querying-against-an-xml-type-column"></a>Exemple : interrogation d'une colonne de type xml  
- Dans l’exemple suivant, une requête est spécifiée sur une colonne Instructions de **xml** de type dans le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données. Il s'agit d'une colonne XML typée car un schéma lui est associé. Le schéma XML définit l'attribut `LocationID` du type entier. Par conséquent, dans l’expression de séquence, la `instance of xs:integer?` retourne la valeur True.  
+ Dans l’exemple suivant, une requête est spécifiée sur une colonne Instructions de **xml** tapez dans la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données. Il s'agit d'une colonne XML typée car un schéma lui est associé. Le schéma XML définit l'attribut `LocationID` du type entier. Par conséquent, dans l’expression de séquence, la `instance of xs:integer?` retourne la valeur True.  
   
 ```  
 SELECT Instructions.query('   
@@ -314,7 +314,7 @@ GO
     ```  
   
 ### <a name="example-b"></a>Exemple B  
- L'exemple ci-dessous illustre comment déterminer si le nœud retourné par une expression est un nœud d'élément avec un nom spécifique. Elle utilise le **element()** de test.  
+ L'exemple ci-dessous illustre comment déterminer si le nœud retourné par une expression est un nœud d'élément avec un nom spécifique. Il utilise le **element()** tester.  
   
  Dans l'exemple ci-dessous, les deux éléments <`Customer`> de l'instance XML qui font l'objet de la requête sont de deux types différents, `CustomerType` et `SpecialCustomerType`. Supposons que vous voulez connaître le type de l'élément <`Customer`> retourné par l'expression. La collection de schémas XML suivante définit les types `CustomerType` et `SpecialCustomerType`.  
   
@@ -428,7 +428,7 @@ RETURN
 ### <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limites spécifiques sont répertoriées ci-dessous :  
   
--   Dans le test de l’élément, le nom de type doit être suivi par l’indicateur d’occurrence (**?**).  
+-   Dans le test de l’élément, le nom de type doit être suivi de l’indicateur d’occurrence (**?**).  
   
 -   **ELEMENT (ElementName, TypeName)** n’est pas pris en charge.  
   

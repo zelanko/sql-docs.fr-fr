@@ -1,5 +1,5 @@
 ---
-title: Exploration de données et modélisation prédictive avec R dans l’apprentissage de SQL Server | Documents Microsoft
+title: Exploration des données et modélisation prédictive avec R dans SQL Server Machine Learning | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,34 +7,34 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9f808c2fffe0b008590ae1eaac51124471c02e5d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 60a899de027f2e9de591a70971dbee3f4300d87d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203061"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984711"
 ---
-# <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Exploration de données et modélisation prédictive avec R dans SQL Server
+# <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Exploration des données et modélisation prédictive avec R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article décrit les améliorations apportées au processus de science des données qui sont possibles via l’intégration avec SQL Server.
+Cet article décrit les améliorations apportées au processus de science des données qui sont possibles grâce à l’intégration avec SQL Server.
 
-S’applique à : SQL Server 2016 R Services, SQL Server 2017 Machine Learnign Services
+S’applique à : SQL Server 2016 R Services, Services SQL Server 2017 Machine calculateur
 
 ## <a name="the-data-science-process"></a>Le processus de science des données
 
 Les spécialistes de données adoptent le langage R pour explorer les données et créer des modèles prédictifs. C’est généralement un processus itératif d’essais et d’erreurs qui s’exécute jusqu’à obtenir un bon modèle prédictif. En tant que spécialiste des données, vous pouvez vous connecter à la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et extraire les données vers votre poste de travail local à l’aide du package RODBC, explorer vos données et créer un modèle prédictif à l’aide des packages R standard.
 
-Toutefois, cette approche présente plusieurs inconvénients, qui possèdent rigoureuse l’adoption plus large de R dans l’entreprise. 
+Toutefois, cette approche présente plusieurs inconvénients, qui possèdent entravé la plus large adoption de R dans l’entreprise. 
 
 + Le déplacement des données peuvent être lent, inefficace ou non sécurisé
-+ R lui-même présente des limitations de performances et évolutivité
++ R lui-même présente des limitations de performances et de mise à l’échelle
 
 Ces inconvénients deviennent plus évidents lorsque vous avez besoin de déplacer et d’analyser de grandes quantités de données ou d’utiliser des jeux de données plus grands que la mémoire disponible de votre ordinateur.
 
-La nouvelle, évolutives et les fonctions R incluses avec [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] vous aider à résoudre la plupart de ces défis. 
+Le nouveau, évolutives et les fonctions R incluses avec [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] vous aider à relever ces défis. 
 
-## <a name="whats-different-about-revoscaler"></a>Quelle est la différence sur RevoScaleR ?
+## <a name="whats-different-about-revoscaler"></a>Nouveautés RevoScaleR ?
 
 Le package **RevoScaleR** contient des implémentations de certaines fonctions R plus populaires, qui ont été repensées pour fournir les fonctionnalités de parallélisme et mise à l’échelle. Pour plus d’informations, consultez [Distributed Computing à l’aide de RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing).
 
@@ -46,7 +46,7 @@ L’environnement R pris en charge dans [!INCLUDE[rsql_productname](../../includ
 
 ### <a name="using-other-r-packages"></a>À l’aide d’autres Packages R
 
-En plus des bibliothèques R propriétaires inclus avec Microsoft Machine Learning, vous pouvez utiliser presque toutes les packages R dans votre solution, y compris :
+Outre les bibliothèques R propriétaires inclus avec l’apprentissage de Microsoft, vous pouvez utiliser presque tous les packages R dans votre solution, notamment :
 
 + Packages R génériques de référentiels publics. Vous pouvez obtenir les packages R open source les plus populaires auprès de référentiels publics, tels que le CRAN, lequel héberge plus de 6 000 packages utilisables par les scientifiques des données.
   
@@ -60,21 +60,21 @@ En plus des bibliothèques R propriétaires inclus avec Microsoft Machine Learni
   
      Le package **RevoPemaR** vous permet de développer vos propres algorithmes de mémoire externe parallèle dans R.  
   
-     Pour plus d’informations sur ces packages et leur utilisation, consultez [What ' s RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) et [prise en main RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started). 
+     Pour plus d’informations sur ces packages et leur utilisation, consultez [What ' s RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) et [bien démarrer avec RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started). 
 
-+ **MicrosoftML** contient une collection d’algorithmes d’apprentissage automatique hautement optimisée et les transformations de données à partir de l’équipe de science des données de Microsoft. Un grand nombre des algorithmes sont également utilisés dans Azure Machine Learning. Pour plus d’informations, consultez [à l’aide du MicrosoftML Package](../../advanced-analytics/using-the-microsoftml-package.md).
++ **MicrosoftML** contient une collection d’algorithmes d’apprentissage automatique hautement optimisée et les transformations de données à partir de l’équipe de science des données de Microsoft. La plupart des algorithmes sont également utilisés dans Azure Machine Learning. Pour plus d’informations, consultez [à l’aide du MicrosoftML Package](../../advanced-analytics/using-the-microsoftml-package.md).
 
 ### <a name="r-development-tools"></a>Outils de développement R
 
-Lorsque vous développez votre solution R, veillez à télécharger le Client Microsoft R. Ce téléchargement gratuit comprend les bibliothèques nécessaires pour prendre en charge des contextes de calcul à distance et évolutive alorithms :
+Lorsque vous développez votre solution R, veillez à télécharger Microsoft R Client. Ce téléchargement gratuit comprend les bibliothèques nécessaires pour prendre en charge les contextes de calcul distants et alorithms évolutive :
 
 + **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] :** distribution du runtime R et ensemble de packages, tels que la bibliothèque Intel Math Kernel Library, qui améliore les performances des opérations standard de R.  
   
 + **RevoScaleR :** package R qui permet de transférer (pushing) des calculs à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]. Il inclut également un ensemble de fonctions R courantes qui ont été repensées pour offrir de meilleures performances et une plus grande scalabilité. Le préfixe **rx** identifie ces fonctions améliorées. Il inclut aussi des fournisseurs de données améliorées pour diverses sources. Ces fonctions ont le préfixe **Rx**.
 
-Vous pouvez utiliser n’importe quel éditeur de code basé sur Windows qui prend en charge de R, tels que [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] ou RStudio. Le téléchargement de [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] inclut également des outils en ligne de commande courants pour R, comme RGui.exe.
+Vous pouvez utiliser n’importe quel éditeur de code basé sur Windows qui prend en charge R, tel que [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] ou RStudio. Le téléchargement de [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] inclut également des outils en ligne de commande courants pour R, comme RGui.exe.
 
-## <a name="use-new-data-sources-and-compute-contexts"></a>Utilisation des Sources de données et les contextes de calcul
+## <a name="use-new-data-sources-and-compute-contexts"></a>Utilisation de nouvelles Sources de données et les contextes de calcul
 
 Lorsque vous utilisez le package RevoScaleR pour vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], recherchez ces fonctions à utiliser dans votre code R :
 
@@ -86,10 +86,10 @@ Lorsque vous utilisez le package RevoScaleR pour vous connecter à [!INCLUDE[ssN
   
      Quand vous définissez le contexte de calcul, cela s’applique uniquement aux calculs qui prennent en charge le contexte d’exécution à distance, c’est-à-dire les opérations R fournies par le package RevoScaleR et les fonctions associées. En règle générale, les solutions R basées sur les packages CRAN standard ne peuvent pas s’exécuter dans un contexte de calcul à distance, mais elles peuvent être exécutées sur l’ordinateur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] si elles sont démarrées par T-SQL. Vous pouvez toutefois utiliser la fonction `rxExec` pour appeler des fonctions R de façon individuelle et les exécuter à distance dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 
-Pour obtenir des exemples montrant comment créer et utiliser des sources de données et les contextes d’exécution, consultez les didacticiels :
+Pour obtenir des exemples montrant comment créer et utiliser des sources de données et les contextes d’exécution, consultez ces didacticiels :
 
 + [Immersion dans la science des données](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
-+  [Analyse des données à l’aide de Microsoft R](https://msdn.microsoft.com/en-us/microsoft-r/data-analysis-in-microsoft-r)
++  [Analyse de données à l’aide de Microsoft R](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 
 ## <a name="deploy-r-code-to-production"></a>Déployer le Code R en Production
 
@@ -97,7 +97,7 @@ La science des données consiste principalement à échanger des analyses entre 
 
 Pour plus d’informations sur la migration de votre code vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Operationalizing Your R Code](../../advanced-analytics/r/operationalizing-your-r-code.md).
 
-En général, le processus de déploiement commence par nettoyer votre script afin d’éliminer le code qui n’est pas nécessaire en production. Lorsque vous déplacez des calculs plus proche pour les données, vous constaterez peut-être façons de déplacer plus efficacement, résumer ou présenter des données que tous les éléments de R.  Nous recommandons que les spécialistes des données, consultez avec un développeur de base de données sur les façons d’améliorer les performances, surtout si la solution de nettoyage de données ou une fonctionnalité d’ingénierie qui peut être plus efficace dans SQL. Les processus ETL peuvent nécessiter des modifications qui vous assurent que les flux de travail de construction ou d’évaluation d’un modèle n’échouent pas et que les données d’entrée sont disponibles dans le format approprié.
+En général, le processus de déploiement commence par nettoyer votre script afin d’éliminer le code qui n’est pas nécessaire en production. Lorsque vous déplacez des calculs plus près aux données, vous pouvez trouver des façons de déplacer plus efficacement, résumer ou présenter les données que tout faire dans R.  Nous recommandons que les spécialistes des données, consultez avec un développeur de base de données sur les moyens d’améliorer les performances, surtout si la solution de nettoyage de données ou d’ingénierie qui peut être plus efficace dans SQL. Les processus ETL peuvent nécessiter des modifications qui vous assurent que les flux de travail de construction ou d’évaluation d’un modèle n’échouent pas et que les données d’entrée sont disponibles dans le format approprié.
 
 ## <a name="see-also"></a>Voir aussi
 

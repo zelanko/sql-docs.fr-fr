@@ -1,5 +1,5 @@
 ---
-title: Élément Statement (XMLA) | Documents Microsoft
+title: Élément d’instruction (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49238b50457a586bbf23cc75ee454003c57ac04e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575021"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979161"
 ---
 # <a name="statement-element-xmla"></a>Élément Statement (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contient une requête ou une instruction à envoyer à l’aide de la **Execute** procédé à une instance d’Analysis Services.  
+  Contient une requête ou une instruction à transmettre à l’aide de la **Execute** méthode à une instance d’Analysis Services.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34575021"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  

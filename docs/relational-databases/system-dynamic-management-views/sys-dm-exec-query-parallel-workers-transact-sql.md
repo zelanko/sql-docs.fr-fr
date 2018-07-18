@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_parallel_workers (Transact-SQL) | Documents Microsoft
+title: Sys.dm_exec_query_parallel_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql
@@ -25,25 +25,25 @@ ms.author: pelopes
 manager: ajayj
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f2bc4634a5e2fddb4a3c8eda009eb28019089596
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463965"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036307"
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>Sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Retourne des informations de disponibilité de travailleur par nœud.  
+  Retourne des informations de disponibilité de worker par nœud.  
   
-|Nom|Type de données| Description|  
+|Nom   |Type de données|Description|  
 |----------|---------------|-----------------|  
-|**node_id**|**int**|ID de nœud NUMA.|  
-|**scheduler_count**|**int**|Nombre de planificateurs sur ce nœud.|  
-|**max_worker_count**|**int**|Nombre maximal de threads de travail pour les requêtes parallèles.|  
-|**reserved_worker_count**|**int**|Nombre de threads de travail réservés par les requêtes parallèles, ainsi que le nombre de traitements principales utilisé par toutes les demandes.| 
-|**free_worker_count**|**int**|Nombre de threads de travail disponibles pour les tâches.<br /><br />**Remarque :** chaque demande entrante consomme au moins 1 processus de travail est soustrait du nombre de travail disponible.  Il est possible que le nombre de travail disponible peut être un nombre négatif sur un serveur très chargé.| 
-|**used_worker_count**|**int**|Nombre de workers utilisé par les requêtes parallèles.|  
+|**node_id**|**Int**|ID de nœud NUMA.|  
+|**scheduler_count**|**Int**|Nombre de planificateurs sur ce nœud.|  
+|**max_worker_count**|**Int**|Nombre maximal de travailleurs pour les requêtes parallèles.|  
+|**reserved_worker_count**|**Int**|Nombre de traitements réservés par les requêtes parallèles, plus le nombre de workers principales utilisé par toutes les demandes.| 
+|**free_worker_count**|**Int**|Nombre de travailleurs disponibles pour les tâches.<br /><br />**Remarque :** chaque requête entrante consomme au moins 1 worker, ce qui est soustrait du nombre de travail gratuit.  Il est possible que le nombre de travail gratuit peut être un nombre négatif sur un serveur très chargé.| 
+|**used_worker_count**|**Int**|Nombre de workers utilisé par les requêtes parallèles.|  
   
 ## <a name="permissions"></a>Autorisations  
 
@@ -52,7 +52,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
  
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-viewing-current-parallel-worker-availability"></a>A. Affichage de la disponibilité de travail parallèle en cours  
+### <a name="a-viewing-current-parallel-worker-availability"></a>A. Affichage de la disponibilité de travail parallèles en cours  
 
 ```sql 
 SELECT * FROM sys.dm_exec_query_parallel_workers;  

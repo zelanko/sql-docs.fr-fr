@@ -1,5 +1,5 @@
 ---
-title: sp_bindsession (Transact-SQL) | Documents Microsoft
+title: sp_bindsession (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 7e1654987b889848fdc81f7be273aca10cd1d231
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237907"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036227"
 ---
 # <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33237907"
   Lie ou la dissociation d’une session à d’autres sessions dans la même instance de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. La liaison de sessions permet à deux sessions ou plus de participer à la même transaction et d'en partager les verrous jusqu'à l'émission d'une instruction ROLLBACK TRANSACTION ou COMMIT TRANSACTION.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt MARS (Multiple Active Results Sets) ou des transactions distribuées. Pour plus d’informations, consultez [à l’aide de Multiple Active Result Sets & #40 ; MARS & #41 ; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt MARS (Multiple Active Results Sets) ou des transactions distribuées. Pour plus d’informations, consultez [à l’aide de Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,8 +47,8 @@ sp_bindsession { 'bind_token' | NULL }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **'** *bind_token* **'**  
- Jeton qui identifie la transaction obtenue à l’origine à l’aide de **sp_getbindtoken** ou Open Data Services **srv_getbindtoken** (fonction). *bind_token*est **varchar (255)**.  
+ **«** *bind_token* **»**  
+ Est le jeton qui identifie la transaction obtenu à l’origine à l’aide de **sp_getbindtoken** ou Open Data Services **srv_getbindtoken** (fonction). *bind_token*est **varchar (255)**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -62,7 +62,7 @@ sp_bindsession { 'bind_token' | NULL }
   
  **sp_bindsession** échoue avec une erreur si elle utilise un jeton qui n’est pas actif.  
   
- Détacher une session à l’aide **sp_bindsession** sans spécifier *bind_token* ou en passant NULL dans *bind_token*.  
+ Détacher une session à l’aide **sp_bindsession** sans spécifier *bind_token* ou en passant la valeur NULL dans *bind_token*.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
@@ -81,7 +81,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_getbindtoken & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
+ [sp_getbindtoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
  [srv_getbindtoken &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

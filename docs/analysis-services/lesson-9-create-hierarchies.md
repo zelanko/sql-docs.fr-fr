@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 10 : Créer des hiérarchies | Documents Microsoft'
+title: 'Leçon 10 : Créer des hiérarchies | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,22 +10,22 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4c1fc4905c52351b61a4e79b2ff21f47501f337
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016326"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033370"
 ---
 # <a name="lesson-9-create-hierarchies"></a>Leçon 9 : Créer des hiérarchies
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Dans cette leçon, vous allez créer des hiérarchies. Les hiérarchies sont des groupes de colonnes ordonnées par niveaux ; par exemple, une hiérarchie Geography peut avoir des sous-niveaux Country, State, County et City. Les hiérarchies peuvent apparaître séparément des autres colonnes dans une liste de champs de l'application cliente de création de rapports, ce qui les rend faciles à parcourir par les utilisateurs clients et à inclure dans un rapport. Pour plus d’informations, consultez [hiérarchies](../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
-Pour créer des hiérarchies, vous allez utiliser le Générateur de modèles dans *vue de diagramme*. Créer et gérer des hiérarchies ne sont pas pris en charge dans la vue de données.  
+Pour créer des hiérarchies, vous allez utiliser le Générateur de modèles dans *vue de diagramme*. Création et la gestion des hiérarchies ne sont pas pris en charge dans la vue de données.  
   
 Durée estimée pour effectuer cette leçon : **20 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
 Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 8 : créer des Perspectives](../analysis-services/lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Créer des hiérarchies  
@@ -45,7 +45,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
 5.  Avec le bouton droit le **ModelName** colonne > **ajouter à la hiérarchie**, puis sélectionnez **catégorie**. Faites de même pour **EnglishProductName**. Renommez ces colonnes dans la hiérarchie **modèle** et **produit**.  
 
-    ![en tant que tableau-lesson9-catégorie](../analysis-services/media/as-tabular-lesson9-category.png)
+    ![en tant que-tabulaire-lesson9-catégorie](../analysis-services/media/as-tabular-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>Pour créer des hiérarchies dans la table DimDate  
   

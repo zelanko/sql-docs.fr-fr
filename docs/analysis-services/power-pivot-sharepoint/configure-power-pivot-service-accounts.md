@@ -1,5 +1,5 @@
 ---
-title: Configuration des comptes de Service Power Pivot | Documents Microsoft
+title: Configuration des comptes de Service Power Pivot | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed619d7a0a4e593193f0ac3f736f059d9826512d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 54dc66e30356f3896d7ce509bf83e56a1973c5b2
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025726"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984841"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configuration des comptes de service Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -99,16 +99,16 @@ ms.locfileid: "34025726"
   
 #### <a name="analysis-services-service-account"></a>Compte de service Analysis Services  
   
-|Condition requise| Description|  
+|Condition requise|Description|  
 |-----------------|-----------------|  
 |Spécification relative à la configuration|Ce compte doit être spécifié pendant l’installation de SQL Server dans la page **Analysis Services - Configuration** de l’Assistant Installation (ou dans le paramètre d’installation **ASSVCACCOUNT** dans le cas d’une installation en ligne de commande).<br /><br /> Vous pouvez modifier le nom d'utilisateur ou le mot de passe à l'aide de l'Administration centrale, de PowerShell ou de l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'utilisation d'autres outils pour modifier les comptes et les mots de passe n'est pas prise en charge.|  
 |Spécification relative au compte d'utilisateur de domaine|Ce compte doit être un compte d'utilisateur de domaine Windows. Les comptes d'ordinateur intégrés (tels que Service réseau ou Service local) sont interdits. Le programme d'installation de SQL Server répond à la nécessité d'un compte d'utilisateur de domaine en bloquant l'installation chaque fois qu'un compte d'ordinateur est spécifié.|  
-|Spécifications relatives aux autorisations|Ce compte doit être membre du SQLServerMSASUser$\<serveur > $PowerPivot les groupe de sécurité et les groupes de sécurité WSS_WPG sur l’ordinateur local. Ces autorisations doivent être accordées automatiquement. Pour plus d’informations sur la vérification ou l’octroi des autorisations, consultez [Accorder manuellement des autorisations administratives au compte de service Power Pivot](#updatemanually) dans cette rubrique et [Configuration initiale (Power Pivot pour SharePoint)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).|  
+|Spécifications relatives aux autorisations|Ce compte doit être un membre du SQLServerMSASUser$\<serveur > $PowerPivot les groupe de sécurité et les groupes de sécurité WSS_WPG sur l’ordinateur local. Ces autorisations doivent être accordées automatiquement. Pour plus d’informations sur la vérification ou l’octroi des autorisations, consultez [Accorder manuellement des autorisations administratives au compte de service Power Pivot](#updatemanually) dans cette rubrique et [Configuration initiale (Power Pivot pour SharePoint)](http://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).|  
 |Spécifications relatives à la montée en puissance parallèle|Si vous installez plusieurs instances de serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint dans une batterie, toutes les instances de serveur Analysis Services doivent s'exécuter sous le même compte d'utilisateur de domaine. Par exemple, si vous configurez la première instance du [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] de sorte qu’elle s’exécute sous le nom Contoso\ssas-srv01, toutes les instances du [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] supplémentaires que vous déployez par la suite dans la même batterie doivent aussi s’exécuter sous le nom Contoso\ssas-srv01.<br /><br /> La configuration de toutes les instances de service de sorte qu'elles s'exécutent sous le même compte permet au service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d'allouer les travaux de traitement des requêtes ou d'actualisation des données à n'importe quelle instance du service Analysis Services de la batterie de serveurs. Cette configuration permet en outre d'utiliser la fonctionnalité Compte géré de l'Administration centrale pour les instances du serveur Analysis Services. En utilisant le même compte pour toutes les instances du [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] , vous pouvez modifier le compte ou le mot de passe une seule fois, et toutes les instances de service qui utilisent ces informations d'identification seront automatiquement mises à jour.<br /><br /> Le programme d'installation de SQL Server répond à la nécessité d'un même compte. Dans un déploiement avec montée en puissance parallèle où une instance de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint est déjà installée sur la batterie de serveurs SharePoint, le programme d’installation bloquera la nouvelle installation si vous spécifiez un compte de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] différent de celui déjà utilisé dans la batterie.|  
   
 #### <a name="power-pivot-service-application-pool"></a>Pool d'applications de service Power Pivot  
   
-|Condition requise| Description|  
+|Condition requise|Description|  
 |-----------------|-----------------|  
 |Spécification relative à la configuration|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une ressource partagée de la batterie de serveurs qui devient disponible lorsque vous créez une application de service. Le pool d'applications de service doit être spécifié lors de la création de l'application de service. Il peut être spécifié de deux façons, soit à l'aide de l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , soit par le biais de commandes PowerShell.<br /><br /> Vous pouvez avoir configuré l'identité du pool d'applications de sorte qu'il s'exécute sous un compte unique. Si ce n'est pas le cas, envisagez de le modifier maintenant de manière à l'exécuter sous un autre compte.|  
 |Spécification relative au compte d'utilisateur de domaine|L'identité du pool d'applications doit être un compte d'utilisateur de domaine Windows. Les comptes d'ordinateur intégrés (tels que Service réseau ou Service local) sont interdits.|  
@@ -124,7 +124,7 @@ ms.locfileid: "34025726"
   
 3.  Cliquez sur **Exécuter maintenant**.  
   
- En dernier recours, vous pouvez garantir des autorisations appropriées en accordant des autorisations d’Administration système Analysis Services pour le [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] application de service, puis ajoutez spécifiquement l’identité d’application de service à SQLServerMSASUser$\<nom_serveur > groupe de sécurité $PowerPivot Windows. Vous devez répéter ces étapes pour chaque instance Analysis Services intégrée avec la batterie de serveurs SharePoint.  
+ En dernier recours, vous pouvez vous assurer des autorisations appropriées en octroyant des autorisations d’Administration système Analysis Services pour le [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] application de service, puis en ajoutant spécifiquement l’identité d’application de service à SQLServerMSASUser$\<nom_serveur > groupe de sécurité $PowerPivot Windows. Vous devez répéter ces étapes pour chaque instance Analysis Services intégrée avec la batterie de serveurs SharePoint.  
   
  Vous devez être administrateur local pour mettre à jour des groupes de sécurité Windows.  
   
@@ -181,6 +181,6 @@ ms.locfileid: "34025726"
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer ou arrêter un serveur PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [Configurer le compte d’actualisation des données PowerPivot sans assistance (PowerPivot pour SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [Configurer le Power Pivot (Power Pivot pour SharePoint) de compte d’actualisation des données sans assistance](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

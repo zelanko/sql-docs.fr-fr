@@ -1,5 +1,5 @@
 ---
-title: sp_attach_single_file_db (Transact-SQL) | Documents Microsoft
+title: sp_attach_single_file_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae97ca9a273b7467bd5ec6e35f68602ec1c7c101
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238799"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981871"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33238799"
   Associe au serveur actif une base de données qui ne possède qu'un seul fichier de données. **sp_attach_single_file_db** ne peut pas être utilisé avec plusieurs fichiers de données.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser CREATE DATABASE *nom_base_de_données* pour attacher à la place. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). N'utilisez pas cette procédure sur une base de données répliquée.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser CREATE DATABASE *database_name* pour attacher à la place. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). N'utilisez pas cette procédure sur une base de données répliquée.  
   
 > [!IMPORTANT]  
 >  Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou le code défini par l’utilisateur, de la base de données.  
@@ -66,12 +66,12 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Utilisez **sp_attach_single_file_db** uniquement sur les bases de données qui ont été préalablement détachées du serveur à l’aide d’explicite **sp_detach_db** opération ou sur des bases de données copiées.  
   
- **sp_attach_single_file_db** fonctionne uniquement sur les bases de données qui ont un seul fichier journal. Lorsque **sp_attach_single_file_db** attache la base de données sur le serveur, il crée un nouveau fichier journal. Si la base de données est en lecture seule, le journal est créé au même endroit que le précédent.  
+ **sp_attach_single_file_db** fonctionne uniquement sur les bases de données qui ont un seul fichier journal. Lorsque **sp_attach_single_file_db** attache la base de données sur le serveur, il génère un nouveau fichier journal. Si la base de données est en lecture seule, le journal est créé au même endroit que le précédent.  
   
 > [!NOTE]  
 >  Un instantané de base de données ne peut pas être détaché ni attaché.  
@@ -79,7 +79,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  N'utilisez pas cette procédure sur une base de données répliquée.  
   
 ## <a name="permissions"></a>Autorisations  
- Pour plus d’informations sur la gestion des autorisations lorsqu’une base de données est attachée, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Pour plus d’informations sur la gestion des autorisations lorsqu’une base de données est attaché, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
  Dans l'exemple suivant, [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est détaché, puis un des fichiers d'[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est attaché au serveur actif.  

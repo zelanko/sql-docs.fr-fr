@@ -1,5 +1,5 @@
 ---
-title: numéro de fonction (XQuery) | Documents Microsoft
+title: numéro de fonction (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 65faec31c6e89421ce05bab28dae97e18195bdde
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077786"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031517"
 ---
 # <a name="functions-on-nodes---number"></a>Fonctions sur les nœuds - nombre
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ set @x='<ROOT>111</ROOT>'
 select @x.query('/ROOT[number()=111]')  
 ```  
   
- Si la valeur du nœud n’est pas une représentation lexicale correcte d’un type simple numérique, tel que défini dans **XML Schema Part 2 : Datatypes, recommandation du W3C**, la fonction retourne une séquence vide. Les valeurs NaN ne sont pas prises en charge.  
+ Si la valeur du nœud n’est pas une représentation lexicale correcte d’un type numérique simple, tel que défini dans **XML Schema Part 2 : Datatypes, recommandation du W3C**, la fonction retourne une séquence vide. Les valeurs NaN ne sont pas prises en charge.  
   
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
@@ -80,15 +80,15 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
--   Le **number()** fonction n’est pas requise, comme indiqué par la requête pour le **LotSizeA** attribut. Il s'agit d'une fonction XPath 1.0 qui est incluse pour garantir la compatibilité ascendante.  
+-   Le **number()** fonction n’est pas obligatoire, comme indiqué par la requête pour le **LotSizeA** attribut. Il s'agit d'une fonction XPath 1.0 qui est incluse pour garantir la compatibilité ascendante.  
   
 -   La requête XQuery **LotSizeB** spécifie la fonction number et est redondant.  
   
 -   La requête pour **LotSizeD** illustre l’utilisation d’une valeur numérique dans une opération arithmétique.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID   Result  
@@ -104,7 +104,7 @@ ProductModelID   Result
   
 -   Le **number()** fonction accepte uniquement les nœuds. Elle n'accepte pas de valeurs atomiques.  
   
--   Lorsque les valeurs ne peuvent pas être retournés sous forme de nombre, la **number()** fonction retourne la séquence vide au lieu de la valeur NaN.  
+-   Lorsque les valeurs ne peuvent pas être retournées en tant que nombre, le **number()** fonction retourne la séquence vide au lieu de NaN.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions XQuery impliquant le type de données xml](../xquery/xquery-functions-against-the-xml-data-type.md)  

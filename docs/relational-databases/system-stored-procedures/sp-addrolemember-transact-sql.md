@@ -1,5 +1,5 @@
 ---
-title: sp_addrolemember (Transact-SQL) | Documents Microsoft
+title: sp_addrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 147547c7392acaf528b7aef98c88affb8487fe99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239819"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032337"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,8 +59,8 @@ sp_addrolemember 'role', 'security_account'
  [ @rolename=] '*rôle*'  
  Nom du rôle de base de données dans la base de données actuelle. *rôle* est un **sysname**, sans valeur par défaut.  
   
- [ @membername=] '*celui-ci*'  
- Compte de sécurité ajouté au rôle. *celui-ci* est un **sysname**, sans valeur par défaut. *celui-ci* peut être un utilisateur de base de données, un rôle de base de données, une connexion Windows ou un groupe Windows.  
+ [ @membername=] '*auxquels celui-ci a*'  
+ Compte de sécurité ajouté au rôle. *celui-ci* est un **sysname**, sans valeur par défaut. *celui-ci* peut être un utilisateur de base de données, d’un rôle de base de données, d’une connexion de Windows ou d’un groupe de Windows.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -70,7 +70,7 @@ sp_addrolemember 'role', 'security_account'
   
  Un rôle ne peut pas s'inclure lui-même en tant que membre. Des définitions « circulaires » de ce type ne sont pas valides, même si l'appartenance est seulement déduite indirectement par une ou plusieurs appartenances intermédiaires.  
   
- sp_addrolemember ne peut pas ajouter un rôle de base de données fixe, rôle serveur fixe ou dbo à un rôle. sp_addrolemember ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
+ sp_addrolemember ne peut pas ajouter un rôle de base de données fixe, le rôle serveur fixe ou le dbo à un rôle. sp_addrolemember ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
  Utilisez uniquement sp_addrolemember pour ajouter un membre à un rôle de base de données. Pour ajouter un membre à un rôle de serveur, utilisez [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
@@ -113,7 +113,7 @@ EXEC sp_addrolemember 'Production', 'Mary5';
  L’exemple suivant ajoute la connexion `LoginMary` à la `AdventureWorks2008R2` base de données en tant qu’utilisateur `UserMary`. L'utilisateur `UserMary` est ensuite ajouté au rôle `Production`.  
   
 > [!NOTE]  
->  Étant donné que la connexion `LoginMary` est connu comme l’utilisateur de base de données `UserMary` dans les [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de base de données, le nom d’utilisateur `UserMary` doit être spécifié. L'instruction échoue à moins qu'un nom de connexion `Mary5` n'existe. Connexions et les utilisateurs ont généralement le même nom. Cet exemple utilise des noms différents pour distinguer les actions qui affectent la connexion et l’utilisateur.  
+>  Étant donné que la connexion `LoginMary` est connu comme l’utilisateur de base de données `UserMary` dans le [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de base de données, le nom d’utilisateur `UserMary` doit être spécifié. L'instruction échoue à moins qu'un nom de connexion `Mary5` n'existe. Connexions et les utilisateurs ont généralement le même nom. Cet exemple utilise des noms différents pour différencier les actions qui affectent la connexion et l’utilisateur.  
   
 ```  
 -- Uses AdventureWorks  
@@ -133,7 +133,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md)  

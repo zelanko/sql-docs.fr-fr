@@ -1,5 +1,5 @@
 ---
-title: sp_adduser (Transact-SQL) | Documents Microsoft
+title: sp_adduser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: d4f7afe6646fd22ff24aa6aee4e5dcde416420e9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239439"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036097"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_adduser [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Arguments  
  [  **@loginame =** ] **'***connexion***'**  
- Nom de la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows. *connexion* est un **sysname**, sans valeur par défaut. *connexion* doit être un existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou connexion Windows.  
+ Nom de la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows. *connexion* est un **sysname**, sans valeur par défaut. *connexion* doit être un existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou connexion de Windows.  
   
  [  **@name_in_db =** ] **'***utilisateur***'**  
- Nom du nouvel utilisateur de base de données. *utilisateur* est un **sysname**, avec NULL comme valeur par défaut. Si *utilisateur* n’est pas spécifié, le nom du nouvel utilisateur de base de données par défaut est la *connexion* nom. Spécification de *utilisateur* donne au nouvel utilisateur un nom dans la base de données est différent du nom de connexion au niveau du serveur.  
+ Nom du nouvel utilisateur de base de données. *utilisateur* est un **sysname**, avec NULL comme valeur par défaut. Si *utilisateur* n’est pas spécifié, le nom du nouvel utilisateur de base de données par défaut est le *connexion* nom. Spécification *utilisateur* donne au nouvel utilisateur un nom dans la base de données différent du nom de connexion au niveau du serveur.  
   
  [  **@grpname =** ] **'***rôle***'**  
  Rôle de base de données dont le nouvel utilisateur devient membre. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* doit être un rôle de base de données valide dans la base de données actuelle.  
@@ -66,11 +66,11 @@ sp_adduser [ @loginame = ] 'login'
   
  Une fois qu'un utilisateur a été ajouté, utilisez les instructions GRANT, DENY et REVOKE afin de définir les autorisations contrôlant les activités effectuées par l'utilisateur.  
   
- Utilisez **sys.server_principals** pour afficher une liste de noms de connexion valide.  
+ Utilisez **sys.server_principals** pour afficher une liste de noms de connexion valides.  
   
- Utilisez **sp_helprole** pour afficher une liste de noms de rôle valides. Lorsque vous spécifiez un rôle, l'utilisateur obtient automatiquement les autorisations définies pour ce rôle. Si un rôle n’est pas spécifié, l’utilisateur bénéficie des autorisations accordées à la valeur par défaut **public** rôle. Pour ajouter un utilisateur à un rôle, une valeur pour le *nom d’utilisateur* doit être fourni. (*nom d’utilisateur* peut être le même que *login_id*.)  
+ Utilisez **sp_helprole** pour afficher une liste des noms de rôles valides. Lorsque vous spécifiez un rôle, l'utilisateur obtient automatiquement les autorisations définies pour ce rôle. Si un rôle n’est pas spécifié, l’utilisateur obtient les autorisations accordées à la valeur par défaut **public** rôle. Pour ajouter un utilisateur à un rôle, une valeur pour le *nom d’utilisateur* doit être fourni. (*nom d’utilisateur* peut être le même que *login_id*.)  
   
- Utilisateur **invité** existe déjà dans chaque base de données. Ajout d’un utilisateur **invité** activera l’utilisateur, si elle a été précédemment désactivée. Par défaut, utilisateur **invité** est désactivée dans les nouvelles bases de données.  
+ Utilisateur **invité** existe déjà dans chaque base de données. Ajout de l’utilisateur **invité** activera, s’il a été précédemment désactivé. Par défaut, utilisateur **invité** est désactivée dans les nouvelles bases de données.  
   
  **sp_adduser** ne peut pas être exécutée à l’intérieur d’une transaction définie par l’utilisateur.  
   

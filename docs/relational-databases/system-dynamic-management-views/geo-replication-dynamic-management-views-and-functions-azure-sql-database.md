@@ -1,5 +1,5 @@
 ---
-title: Fonctions (base de données SQL Azure) et les vues de gestion dynamique de géo-réplication | Documents Microsoft
+title: Vues de gestion dynamique de géo-réplication et de fonctions (base de données SQL Azure) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 76e405d57c5cc47b15af7a8943c506b04c09c19c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465385"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981661"
 ---
 # <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>Fonctions (base de données SQL Azure) et les vues de gestion dynamique de géo-réplication
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
