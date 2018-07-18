@@ -1,5 +1,5 @@
 ---
-title: sp_dropserver (Transact-SQL) | Documents Microsoft
+title: sp_dropserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 82f030a0f35a75bb1494035c9db8cd0ae0f002c0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242180"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049337"
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ sp_dropserver [ @server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@server =** ] **'***server***'**  
+ [  **@server =** ] **'***server***»**  
  Serveur à supprimer. *server* est de type **sysname**et n'a pas de valeur par défaut. *serveur* doit exister.  
   
  [  **@droplogins =** ] **'droplogins'** | VALEUR NULL  
- Indique que les connexions de serveur lié et distant pour *server* doit également être supprimé si **droplogins** est spécifié. **@droplogins** est **char (10)**, avec NULL comme valeur par défaut.  
+ Indique qui de connexion de serveur lié et distant pour liés *server* doit également être supprimé si **droplogins** est spécifié. **@droplogins** est **char (10)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -77,7 +77,7 @@ sp_dropserver 'ACCOUNTS', 'droplogins';
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpserver & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

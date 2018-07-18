@@ -1,5 +1,5 @@
 ---
-title: Expressions Validate (XQuery) | Documents Microsoft
+title: Expressions Validate (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc8f8006679709e7ea8f9d73aed1f3757072ad53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076278"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036697"
 ---
 # <a name="validate-expressions-xquery"></a>Expressions validate (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "33076278"
   Dans cette implémentation, le **valider** expression n’est pas prise en charge. Le résultat des expressions de construction XQuery sont toujours non typées. Si le résultat d’une expression XQuery doit être typé, utilisez l’expression SQL CAST pour convertir le résultat en un **xml** type de données avec la collection de schémas par défaut.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions de chemin d’accès &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)   
+ [Expressions de chemin &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)   
  [Expressions XQuery](../xquery/xquery-expressions.md)  
   
   

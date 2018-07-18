@@ -1,5 +1,5 @@
 ---
-title: Fonctions de prédiction générales (DMX) | Documents Microsoft
+title: Fonctions de prédiction générales (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c8de92033c58f2583fc7ba93e6c326d4a406c90a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842672"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985431"
 ---
 # <a name="general-prediction-functions-dmx"></a>Fonctions de prédiction générales (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Vous pouvez utiliser la **sélectionnez** instruction dans les Extensions DMX (Data Mining) pour créer différents types de requêtes. Une requête peut être utilisée pour retourner des informations sur le modèle d'exploration de données lui-même, afin de faire de nouvelles prédictions ou encore modifier le modèle en effectuant un apprentissage avec de nouvelles données. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit un éventail de fonctions spécialisées qui contrôlent le type d’informations qui sont retournées dans une requête. En ajoutant ces fonctions à une requête DMX, vous pouvez récupérer des statistiques ou des colonnes de données supplémentaires. Toutefois, pour chaque type de requête et chaque type de modèle, seules certaines fonctions sont prises en charge.  
+  Vous pouvez utiliser la **sélectionnez** instruction dans les Extensions DMX (Data Mining) pour créer différents types de requêtes. Une requête peut être utilisée pour retourner des informations sur le modèle d'exploration de données lui-même, afin de faire de nouvelles prédictions ou encore modifier le modèle en effectuant un apprentissage avec de nouvelles données. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Fournit une variété de fonctions spécialisées qui contrôlent le type d’informations qui sont retournées dans une requête. En ajoutant ces fonctions à une requête DMX, vous pouvez récupérer des statistiques ou des colonnes de données supplémentaires. Toutefois, pour chaque type de requête et chaque type de modèle, seules certaines fonctions sont prises en charge.  
   
 ## <a name="common-functions"></a>Fonctions communes  
  Vous pouvez utiliser des fonctions pour étendre les résultats retournés par un modèle d'exploration de données. Vous pouvez utiliser les fonctions suivantes pour toute **sélectionnez** instruction qui retourne une expression de table :  
@@ -57,7 +57,7 @@ ms.locfileid: "34842672"
 ## <a name="functions-specific-to-select-syntax"></a>Fonctions spécifiques à la syntaxe SELECT  
  Le tableau suivant répertorie les fonctions que vous pouvez utiliser pour chaque type de **sélectionnez** instruction.  
   
- Pour obtenir des informations générales sur les fonctions dans DMX, consultez [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md).  
+ Pour obtenir des informations générales sur les fonctions dans DMX, consultez [Data Mining Extensions &#40;DMX&#41; référence des fonctions](../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 |Type de requête|Fonctions prises en charge|Notes|  
 |----------------|-------------------------|-------------|  

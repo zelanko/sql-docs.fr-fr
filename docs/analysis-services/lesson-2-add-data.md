@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Ajouter des données | Documents Microsoft'
+title: 'Leçon 2 : Ajouter des données | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,35 +10,35 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a7c3756e6c8c35472b760d9fa3100b4f40ecfdc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019206"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38034678"
 ---
 # <a name="lesson-2-add-data"></a>Leçon 2 : Ajouter des données
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-Dans cette leçon, vous utiliserez l’Assistant Importation de Table dans SSDT pour se connecter à la base de données SQL AdventureWorksDW, sélectionnez données, afficher un aperçu et filtrer les données et puis importer les données dans votre espace de travail modèle.  
+Dans cette leçon, vous utiliserez l’Assistant Importation de Table dans SSDT pour se connecter à la base de données SQL AdventureWorksDW, sélectionner des données, afficher un aperçu et filtrer les données et puis importer les données dans votre espace de travail du modèle.  
   
-À l'aide de l'Assistant Importation de Table, vous pouvez importer des données provenant de diverses sources relationnelles : Access, SQL, Oracle, Sybase, Informix, DB2, Teradata et bien plus encore. Les étapes d'importation de données à partir des différentes sources relationnelles sont très semblables à celles qui suivent. Les données peuvent également être sélectionnées à l’aide d’une procédure stockée. Pour en savoir plus sur l’importation de données et les différents types de sources de données que vous pouvez importer à partir de, consultez [des Sources de données](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
+À l'aide de l'Assistant Importation de Table, vous pouvez importer des données provenant de diverses sources relationnelles : Access, SQL, Oracle, Sybase, Informix, DB2, Teradata et bien plus encore. Les étapes d'importation de données à partir des différentes sources relationnelles sont très semblables à celles qui suivent. Données peuvent également être sélectionnées à l’aide d’une procédure stockée. Pour en savoir plus sur l’importation de données et les différents types de sources de données que vous pouvez importer à partir de, consultez [des Sources de données](../analysis-services/tabular-models/data-sources-ssas-tabular.md).  
   
 Durée estimée pour effectuer cette leçon : **20 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
 Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 1 : Créer un projet de modèle tabulaire](../analysis-services/lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Créer une connexion  
   
-#### <a name="to-create-a-connection-to-a-the-adventureworksdw2014-database"></a>Pour créer une connexion à une base de données de la AdventureWorksDW2014  
+#### <a name="to-create-a-connection-to-a-the-adventureworksdw2014-database"></a>Pour créer une connexion à une la base de données AdventureWorksDW2014  
   
 1.  Dans l’Explorateur de modèles tabulaires, cliquez sur **des Sources de données** > **importer à partir de la Source de données**.  
   
-    Cette opération lance l’Assistant d’importation de Table, qui vous guide tout au long de la configuration d’une connexion à une source de données. Si vous ne voyez pas l’Explorateur de modèles tabulaires, double-cliquez sur **Model.bim** dans **l’Explorateur de solutions** pour ouvrir le modèle dans le concepteur. 
+    Cette action lance l’Assistant d’importation de Table, qui vous guide à travers la configuration d’une connexion à une source de données. Si vous ne voyez pas l’Explorateur de modèles tabulaires, double-cliquez sur **Model.bim** dans **l’Explorateur de solutions** pour ouvrir le modèle dans le concepteur. 
     
-    ![en tant que tableau-lesson2-durée](../analysis-services/media/as-tabular-lesson2-tme.png) 
+    ![en tant que-tabulaire-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
 
-    Remarque : Si vous créez votre modèle au niveau de compatibilité 1400, vous verrez la nouvelle expérience d’obtenir des données au lieu de l’Assistant Importation de Table. Les boîtes de dialogue seront affiche un peu différentes de la procédure ci-dessous, mais vous serez toujours en mesure de suivre son déroulement. 
+    Remarque : Si vous créez votre modèle au niveau de compatibilité 1400, vous verrez la nouvelle expérience d’obtenir des données au lieu de l’Assistant Importation de Table. Les boîtes de dialogue seront affiche un peu différentes de la procédure ci-dessous, mais vous serez toujours en mesure de suivre la procédure. 
   
 2.  Dans l’Assistant Importation de Table, sous **bases de données relationnelles**, cliquez sur **Microsoft SQL Server** > **suivant**.  
   
@@ -62,17 +62,17 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
     **NE CLIQUEZ PAS** sur **Terminer**.  
   
 ## <a name="FilterData"></a>Filter the table data  
-La table DimCustomer que vous importez à partir de la base de données exemple contient un sous-ensemble des données à partir de la base de données d’origine de SQL Server Adventure Works. Vous allez filtrer d’autres colonnes de la table DimCustomer qui ne sont pas nécessaires lors de l’importation dans votre modèle. Lorsque cela est possible, que vous souhaitez filtrer les données qui ne seront pas utilisées afin d’économiser de l’espace mémoire utilisé par le modèle.  
+La table DimCustomer que vous importez à partir de la base de données exemple contient un sous-ensemble des données à partir de la base de données SQL Server Adventure Works d’origine. Vous allez filtrer d’autres colonnes de la table DimCustomer qui ne sont pas nécessaires lors de l’importation dans votre modèle. Dans la mesure du possible, vous souhaitez filtrer les données qui ne sont pas utilisées afin d’économiser l’espace mémoire utilisé par le modèle.  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>Pour filtrer les données de table avant l'importation  
   
-1.  Sélectionnez la ligne de la **DimCustomer** de table, puis cliquez sur **aperçu et filtrer**. La fenêtre **Aperçu de la table sélectionnée** s'affiche en présentant toutes les colonnes de la table source DimCustomer.  
+1.  Sélectionnez la ligne de la **DimCustomer** table, puis cliquez sur **aperçu et filtrer**. La fenêtre **Aperçu de la table sélectionnée** s'affiche en présentant toutes les colonnes de la table source DimCustomer.  
   
 2.  Désactivez la case à cocher en haut des colonnes suivantes : **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**. 
 
-    ![en tant que-tabulaire-lesson2-tiw-clair](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
+    ![en tant que-tabulaire-lesson2-tiw-clear](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   
-    Étant donné que les valeurs de ces colonnes ne sont pas appropriées à l'analyse des ventes sur Internet, il est inutile de les importer. Éliminer les colonnes inutiles réduira votre modèle plus petites et plus efficace.  
+    Étant donné que les valeurs de ces colonnes ne sont pas appropriées à l'analyse des ventes sur Internet, il est inutile de les importer. Éliminer les colonnes inutiles rendra votre modèle plus petits et plus efficace.  
   
 3.  Vérifiez que toutes les autres colonnes sont cochées, puis cliquez sur **OK**.  
   
@@ -85,7 +85,7 @@ La table DimCustomer que vous importez à partir de la base de données exemple 
     
     **DimDate**
     
-      |Colonne|  
+      |colonne|  
       |--------|  
       |**DateKey**|  
       |**SpanishDayNameOfWeek**|  
@@ -95,7 +95,7 @@ La table DimCustomer que vous importez à partir de la base de données exemple 
   
     **DimGeography**
   
-      |Colonne|  
+      |colonne|  
       |-------------|  
       |**SpanishCountryRegionName**|  
       |**FrenchCountryRegionName**|  
@@ -103,7 +103,7 @@ La table DimCustomer que vous importez à partir de la base de données exemple 
   
     **DimProduct**
   
-      |Colonne|  
+      |colonne|  
       |-----------|  
       |**SpanishProductName**|  
       |**FrenchProductName**|  
@@ -118,28 +118,28 @@ La table DimCustomer que vous importez à partir de la base de données exemple 
   
     **DimProductCategory**
   
-      |Colonne|  
+      |colonne|  
       |--------------------|  
       |**SpanishProductCategoryName**|  
       |**FrenchProductCategoryName**|  
   
     **DimProductSubcategory**
   
-      |Colonne|  
+      |colonne|  
       |-----------------------|  
       |**SpanishProductSubcategoryName**|  
       |**FrenchProductSubcategoryName**|  
   
     **FactInternetSales**
   
-      |Colonne|  
+      |colonne|  
       |------------------|  
       |**OrderDateKey**|  
       |**DueDateKey**|  
       |**ShipDateKey**|   
   
 ## <a name="Import"></a>Import the selected tables and column data  
-Maintenant que vous avez prévisualisé et filtré les données inutiles, vous pouvez importer les données que vous ne souhaitez pas que les autres. L'Assistant importe les données de la table avec toutes les relations entre les tables. Nouvelles tables et colonnes sont créées dans le modèle et les données filtrées ne seront pas importées.  
+Maintenant que vous avez prévisualisé et filtré les données inutiles, vous pouvez importer le reste des données souhaitées. L'Assistant importe les données de la table avec toutes les relations entre les tables. Les nouvelles tables et les colonnes sont créées dans le modèle et les données filtrées ne seront pas importées.  
   
 #### <a name="to-import-the-selected-tables-and-column-data"></a>Pour importer les tables sélectionnées et les données de colonne  
   
@@ -154,7 +154,7 @@ Maintenant que vous avez prévisualisé et filtré les données inutiles, vous p
   
 2.  Cliquez sur **Fermer**.  
   
-    L’Assistant se ferme et le Générateur de modèles affiche maintenant votre tables importées. 
+    L’Assistant se ferme et le Générateur de modèles affiche maintenant vos tables importées. 
   
 ## <a name="save-your-model-project"></a>Enregistrer votre projet de modèle  
 Il est important de sauvegarder fréquemment votre projet de modèle.  

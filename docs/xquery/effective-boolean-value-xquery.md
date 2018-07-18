@@ -1,5 +1,5 @@
 ---
-title: Valeur booléenne effective (XQuery) | Documents Microsoft
+title: Valeur booléenne effective (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4ab470f5643335cd1ed26edd07aa93284bab1d47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077516"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987431"
 ---
 # <a name="effective-boolean-value-xquery"></a>Valeur booléenne effective (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "33077516"
   
 -   [Expressions conditionnelles](../xquery/conditional-expressions-xquery.md)  
   
--   [Expressions quantifiées](../xquery/quantified-expressions-xquery.md)  
+-   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
  Voici un exemple de valeur booléenne effective. Lorsque le **si** expression est traitée, la valeur booléenne effective de la condition est déterminée. Puisque l'expression `/a[1]` renvoie une séquence vide, la valeur booléenne effective est false. Le résultat est renvoyé au format XML avec un nœud de texte (false).  
   

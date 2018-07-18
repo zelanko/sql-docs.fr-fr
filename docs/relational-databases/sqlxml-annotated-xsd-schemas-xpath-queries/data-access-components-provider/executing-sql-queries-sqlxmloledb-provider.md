@@ -1,5 +1,5 @@
 ---
-title: L’exécution de requêtes SQL (fournisseur SQLXMLOLEDB) | Documents Microsoft
+title: Exécution de requêtes SQL (fournisseur SQLXMLOLEDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b14c8101d7d7ef5266f63cf8a278f82ff985d40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968034"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050027"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>Exécution de requêtes SQL (fournisseur SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

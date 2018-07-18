@@ -1,5 +1,5 @@
 ---
-title: AVG, fonction (XQuery) | Documents Microsoft
+title: AVG, fonction (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6c347eb78dd3ac8e58075cc91edeee87b3a4418d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077155"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983458"
 ---
-# <a name="aggregate-functions---avg"></a>Fonctions d’agrégation - moyenne
+# <a name="aggregate-functions---avg"></a>Fonctions d’agrégation : avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne la moyenne d'une série de nombres.  
@@ -45,13 +45,13 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  Série de valeurs atomiques dont la moyenne est calculée.  
   
 ## <a name="remarks"></a>Notes  
- Tous les types de valeurs atomisées transmises à **avg()** doivent être un sous-type d’exactement un des trois types de base numériques intégrés ou xdt : untypedAtomic. Ils ne peuvent pas être un mélange. Les valeurs de type xdt:untypedAtomic sont traitées comme valeurs xs:double. Le résultat de **avg()** reçoit le type de base des types transmis, tel que xs : double dans le cas de xdt : untypedAtomic.  
+ Tous les types de valeurs atomisées transmises à **avg()** doivent être un sous-type d’exactement un des trois types de base numériques intégrés ou xdt : untypedAtomic. Ils ne peuvent pas être un mélange. Les valeurs de type xdt:untypedAtomic sont traitées comme valeurs xs:double. Le résultat de **avg()** reçoit le type de base des types transmis, tels que xs : double dans le cas de xdt : untypedAtomic.  
   
  Si l'entrée est vide statiquement, le caractère vide en est déduit et une erreur statique est générée.  
   
- Le **avg()** fonction retourne la moyenne des nombres calculés. Par exemple :  
+ Le **avg()** fonction retourne la moyenne des nombres calculés. Exemple :  
   
- **SUM (** *$arg* **) div count (** *$arg* **)**  
+ **Somme (** *$arg* **) div count (** *$arg* **)**  
   
  Si *$arg* est une séquence vide, la séquence vide est retournée.  
   
@@ -70,7 +70,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
 -   Le **avg()** fonction mappe tous les entiers à xs : decimal.  
   
--   Le **avg()** fonction sur des valeurs de type xs : Duration n’est pas pris en charge.  
+-   Le **avg()** fonction sur les valeurs de type xs : Duration n’est pas pris en charge.  
   
 -   Les séquences faisant intervenir plusieurs types dérivés de différents types de base ne sont pas prises en charge.  
   

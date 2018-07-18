@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 8 : Créer des indicateurs de Performance clés | Documents Microsoft'
+title: 'Leçon 8 : Créer des indicateurs de Performance clés | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e56d4a533caaf95077eb06fabb5fd0bc0c42b07
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015476"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033407"
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>Leçon 7 : Créer des indicateurs de Performance clés
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,14 +23,14 @@ Au cours de cette leçon, vous allez créer des indicateurs de performance clés
   
 Durée estimée pour effectuer cette leçon : **15 minutes**  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
 Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 6 : créer des mesures](../analysis-services/lesson-6-create-measures.md).   
   
 ## <a name="create-key-performance-indicators"></a>Créer des indicateurs de performance clé (KPI)  
   
 #### <a name="to-create-an-internetcurrentquartersalesperformance-kpi"></a>Pour créer un KPI InternetCurrentQuarterSalesPerformance  
   
-1.  Dans le Générateur de modèles, cliquez sur le **FactInternetSales** table (onglet).  
+1.  Dans le Concepteur de modèles, cliquez sur le **FactInternetSales** table (onglet).  
   
 2.  Dans la grille de mesures, cliquez sur une cellule vide.  
   
@@ -53,7 +53,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
     ![en tant que-tabulaire-lesson7-indicateur de performance clé](../analysis-services/media/as-tabular-lesson7-kpi.png)
     
     > [!TIP]  
-    > Notez l’extensible **Descriptions** étiquette sous les styles d’icônes disponibles. Cela permet d’entrer des descriptions pour les différents éléments de l’indicateur de performance clé pour les rendre plus identifiable dans les applications clientes.  
+    > Notez l’extensible **Descriptions** étiquette sous les styles d’icône disponibles. Utilisez-la pour entrer des descriptions pour les différents éléments KPI afin de les rendre plus identifiables dans les applications clientes.  
   
 9. Cliquez sur **OK** pour terminer le KPI.  
   
@@ -71,7 +71,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
  
 3.  Avec le bouton droit **InternetCurrentQuarterMarginPerformance** > **créer un KPI**.  
   
-4.  Dans la boîte de dialogue indicateur de Performance clé (KPI) dans **cible** sélectionnez **valeur absolue**, puis tapez **1.25**.   
+4.  Dans la boîte de dialogue indicateur de Performance clé (KPI) dans **cible** sélectionnez **valeur absolue**, puis tapez **1,25**.   
   
 5.  Dans **Définir les seuils d’état**, faites glisser le secteur gauche (bas) du curseur jusqu’à ce que le champ affiche **0.8**, puis faites glisser le secteur droit (élevé) du curseur jusqu’à ce que le champ affiche **1.03**.  
   

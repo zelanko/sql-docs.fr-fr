@@ -1,5 +1,5 @@
 ---
-title: Data Mining Extensions (DMX) les Conventions de syntaxe | Documents Microsoft
+title: Data Mining Extensions (DMX) les Conventions de syntaxe | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cf80ef73ae3f55f58978d95b0d12b8c69b81dfff
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843042"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037327"
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>Conventions de syntaxe DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

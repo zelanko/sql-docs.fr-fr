@@ -1,5 +1,5 @@
 ---
-title: Opérateurs (DMX) | Documents Microsoft
+title: Opérateurs (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 072d0a36a4803f4de1d50ba066e4e86e5d171c5c
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842882"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989671"
 ---
 # <a name="operators-dmx"></a>Opérateurs (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Vous pouvez utiliser des opérateurs d’Extensions DMX (Data Mining) pour effectuer des opérations arithmétiques, de comparaison, concaténation et opérations logiques dans une requête dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Vous pouvez utiliser les opérateurs d’Extensions DMX (Data Mining) pour effectuer des opérations arithmétiques, de comparaison, concaténation et opérations logiques dans une requête dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise les opérateurs pour effectuer les actions suivantes :  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34842882"
   
 -   Implémenter une décision entre des valeurs ou des expressions.  
   
- DMX utilise plusieurs catégories d'opérateurs, décrites ci-dessous. Pour plus d’informations sur chacun des opérateurs, consultez [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md).  
+ DMX utilise plusieurs catégories d'opérateurs, décrites ci-dessous. Pour plus d’informations sur les opérateurs individuels, consultez [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md).  
   
 |Catégorie d'opérateurs|Type d’opération|  
 |-----------------------|-----------------------|  

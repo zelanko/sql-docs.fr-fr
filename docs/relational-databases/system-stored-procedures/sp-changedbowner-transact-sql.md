@@ -1,5 +1,5 @@
 ---
-title: sp_changedbowner (Transact-SQL) | Documents Microsoft
+title: sp_changedbowner (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: cb7d6df77a581b82ca79e1962c80df827ffd1718
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238257"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038827"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_changedbowner [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Arguments  
  [ @loginame=] '*connexion*'  
- ID de connexion du nouveau propriétaire de la base de données active. *connexion* est **sysname**, sans valeur par défaut. *connexion* doit être un existant déjà [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou utilisateur Windows. *connexion* ne peut pas devenir le propriétaire de la base de données actuelle si elle a déjà accès à la base de données via un compte de sécurité utilisateur existant dans la base de données. Pour éviter cela, supprimez d'abord l'utilisateur de la base de données active.  
+ ID de connexion du nouveau propriétaire de la base de données active. *connexion* est **sysname**, sans valeur par défaut. *connexion* doit être déjà un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un utilisateur de Windows. *connexion* ne peut pas devenir le propriétaire de la base de données actuelle si elle a déjà accès à la base de données via un compte de sécurité utilisateur existant dans la base de données. Pour éviter cela, supprimez d'abord l'utilisateur de la base de données active.  
   
  [ @map=] *remap_alias_flag*  
- Le *remap_alias_flag* paramètre est déconseillé, car l’alias de connexion ont été supprimées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. À l’aide de la *remap_alias_flag* paramètre ne provoque pas d’erreur mais n’a aucun effet.  
+ Le *remap_alias_flag* paramètre est déconseillé, car l’alias de connexion ont été supprimés de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. À l’aide de la *remap_alias_flag* paramètre ne génère pas d’erreur mais n’a aucun effet.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -81,7 +81,7 @@ EXEC sp_changedbowner 'Albert';
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [la procédure sp_dropalias &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
+ [sp_dropalias &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
  [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   

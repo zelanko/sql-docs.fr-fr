@@ -1,5 +1,5 @@
 ---
-title: SELECT DISTINCT FROM &lt;modèle &gt; (DMX) | Documents Microsoft
+title: SELECT DISTINCT FROM &lt;modèle &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842712"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985324"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modèle &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,14 +39,14 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *model*  
  Identificateur du modèle  
   
- *liste des conditions*  
+ *liste de conditions*  
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
  Facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
- Le **SELECT DISTINCT FROM** instruction fonctionne uniquement avec une seule colonne ou un ensemble de colonnes associées. Cette clause ne fonctionne pas avec un ensemble de colonnes non associées.  
+ Le **SELECT DISTINCT FROM** instruction fonctionne uniquement avec une seule colonne ou avec un ensemble de colonnes associées. Cette clause ne fonctionne pas avec un ensemble de colonnes non associées.  
   
  Le **SELECT DISTINCT FROM** instruction vous permet de référencer directement une colonne à l’intérieur d’une table imbriquée. Exemple :  
   
@@ -103,7 +103,7 @@ FROM [TM Decision Tree]
  L'exemple de code suivant retourne le point milieu et les valeurs maximales et minimales de chaque compartiment créé par l'algorithme pour la colonne, [`Yearly Income]`. Pour reproduire les résultats de cet exemple, vous devez créer une nouvelle structure d'exploration de données identique à `[Targeted Mailing]`. Dans l’Assistant, modifiez le type de contenu de la `Yearly Income` colonne à partir de **continu** à **Discretized**.  
   
 > [!NOTE]  
->  Vous pouvez également modifier le modèle d'exploration de données créé dans le Didacticiel sur l'exploration de données de base afin de discrétiser la colonne de structure d'exploration de données, [`Yearly Income]`. Pour plus d’informations sur la procédure à suivre, consultez [modifier la discrétisation d’une colonne dans un modèle d’exploration de données](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md). Toutefois, le fait de modifier le discrétisation de la colonne force le retraitement de la structure d'exploration de données et modifie les résultats des autres modèles créés à l'aide de cette structure.  
+>  Vous pouvez également modifier le modèle d'exploration de données créé dans le Didacticiel sur l'exploration de données de base afin de discrétiser la colonne de structure d'exploration de données, [`Yearly Income]`. Pour savoir comment procéder, consultez [modifier la discrétisation d’une colonne dans un modèle d’exploration de données](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md). Toutefois, le fait de modifier le discrétisation de la colonne force le retraitement de la structure d'exploration de données et modifie les résultats des autres modèles créés à l'aide de cette structure.  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   
@@ -136,7 +136,7 @@ FROM [TM Decision Tree]
   
 ## <a name="see-also"></a>Voir aussi  
  [SÉLECTIONNEZ &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

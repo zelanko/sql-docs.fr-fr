@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;structure&gt;. CAS | Documents Microsoft
+title: SELECT FROM &lt;structure&gt;. CAS | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842102"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985261"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;structure&gt;. CAS
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "34842102"
   
  Si l'extraction n'est pas activée sur la structure, l'instruction échoue. Par ailleurs, l'instruction échoue si l'utilisateur ne dispose pas d'autorisations d'extraction sur la structure d'exploration de données.  
   
- Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], l’extraction sur de nouvelles structures d’exploration de données est activée par défaut. Pour vérifier si l’extraction est activée pour une structure particulière, vérifiez si la valeur de la **CacheMode** est définie sur **KeepTrainingCases**.  
+ Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], l’extraction sur les nouvelles structures d’exploration de données est activée par défaut. Pour vérifier si l’extraction est activée pour une structure particulière, vérifiez si la valeur de la **CacheMode** propriété est définie sur **KeepTrainingCases**.  
   
- Si la valeur de **CacheMode** est remplacée par **ClearAfterProcessing**, les cas de structure sont effacés du cache et vous ne pouvez pas utiliser l’extraction.  
+ Si la valeur de **CacheMode** est remplacée par **ClearAfterProcessing**, les cas de structure sont effacés à partir du cache et vous ne pouvez pas utiliser l’extraction.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas activer ou désactiver l'extraction sur la structure d'exploration de données à l'aide des extensions DMX (Data Mining Extensions).  
@@ -50,7 +50,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *structure*  
  Nom de la structure.  
   
- *Expression de condition*  
+ *expression de condition*  
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
@@ -63,7 +63,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
 SELECT StructureColumn('<column name>') FROM <model>.CASES  
 ```  
   
- Par conséquent, pour protéger les données sensibles ou personnelles, vous devez construire votre vue de source de données pour masquer les informations personnelles et accorder **AllowDrillthrough** sur une structure d’exploration de données ou d’un modèle d’exploration de données uniquement lorsque cela est nécessaire.  
+ Par conséquent, pour protéger les données sensibles ou personnelles, vous devez construire votre vue de source de données pour masquer les informations personnelles et accorder **AllowDrillthrough** autorisation sur un modèle ou une structure d’exploration de données uniquement lorsque nécessaire.  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants sont basés sur la structure d’exploration de données Targeted Mailing, qui est basé sur le [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] de base de données et les modèles d’exploration de données associée. Pour plus d’informations, consultez [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
@@ -91,8 +91,8 @@ WHERE IsTestCase();
   
 ## <a name="see-also"></a>Voir aussi  
  [SÉLECTIONNEZ &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

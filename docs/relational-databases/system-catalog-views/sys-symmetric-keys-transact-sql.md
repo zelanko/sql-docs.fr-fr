@@ -1,5 +1,5 @@
 ---
-title: Sys.symmetric_keys (Transact-SQL) | Documents Microsoft
+title: Sys.symmetric_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -26,23 +26,23 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9920ff9e4b648c4911568b44374d860cc2d18710
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221932"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985281"
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie une ligne pour chaque clé symétrique créée avec l'instruction CREATE SYMMETRIC KEY.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom de la clé. Unique dans la base de données.|  
-|**principal_id**|**int**|ID du principal de la base de données propriétaire de la clé.|  
-|**symmetric_key_id**|**int**|ID de la clé. Unique dans la base de données.|  
-|**key_length**|**int**|Longueur de la clé en bits.|  
+|**principal_id**|**Int**|ID du principal de la base de données propriétaire de la clé.|  
+|**symmetric_key_id**|**Int**|ID de la clé. Unique dans la base de données.|  
+|**key_length**|**Int**|Longueur de la clé en bits.|  
 |**key_algorithm**|**char(2)**|Algorithme utilisé avec la clé :<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM Key|  
 |**algorithm_desc**|**nvarchar(60)**|Description de l'algorithme utilisé avec la clé :<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (algorithmes de gestion de clés extensible uniquement)|  
 |**create_date**|**datetime**|Date de création de la clé.|  
