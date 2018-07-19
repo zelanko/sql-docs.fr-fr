@@ -1,6 +1,6 @@
 ---
-title: Afficher l’utilisation des capacités dans le système de plateforme Analytique | Documents Microsoft
-description: Afficher l’utilisation des capacités dans le système de plateforme d’Analytique.
+title: Afficher l’utilisation de la capacité d’Analytique Platform System | Microsoft Docs
+description: Afficher l’utilisation de la capacité d’Analytique Platform System.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,27 +9,27 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fcd440f3add9ff6823c9104fc94af736d3fdee4e
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 5fe722e6ce3d75f6e271e19d66551ccf951d045f
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539219"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909729"
 ---
-# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Utilisation de la capacité d’affichage dans le système de plateforme Analytique
-Cette rubrique explique comment afficher l’utilisation des capacités dans l’appliance SQL Server PDW.  
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>Utilisation de la capacité de vue d’Analytique Platform System
+Cette rubrique explique comment afficher l’utilisation de la capacité dans l’appliance SQL Server PDW.  
   
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Pour afficher l’utilisation de la capacité en utilisant la Console d’administration  
-Pour afficher l’espace utilisé, ouvrez la Console d’administration, puis cliquez sur le **stockage** onglet. Il existe un **stockage** onglet pour la région PDW et la région HDI.  
+Pour afficher l’espace utilisé, ouvrez la Console d’administration, puis cliquez sur le **stockage** onglet. Il existe un **stockage** onglet pour la région PDW.  
   
 ![Stockage de la Console d’administration PDW](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>Pour afficher l’utilisation de la capacité à l’aide de requêtes  
-Pour comprendre si un nœud est espace insuffisant, le système de surveillance de l’intégrité de SQL Server PDW analyse déjà l’espace libre pour tous les volumes au sein de chaque nœud.  
+Pour comprendre si un nœud manque d’espace, le système de surveillance de l’intégrité de SQL Server PDW analyse déjà l’espace libre pour tous les volumes au sein de chaque nœud.  
   
-Si l’espace libre dans un volume devient inférieure à 30 %, SQL Server PDW génère une **avertissement** alerte dans [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  L’alerte reste jusqu'à ce que l’espace libre est mis à disposition.  
+Si l’espace libre dans un volume chutent en dessous de 30 %, SQL Server PDW génère un **avertissement** alerte dans [sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md).  L’alerte reste jusqu'à ce que l’espace libre est mis à disposition.  
   
-Si l’espace libre dans un volume tombe sous 10 %, SQL Server PDW génère une **critique** alerte. Cela est considéré comme critique, car les requêtes peut échouer si elles provoquent la base de données pour le développer.  
+Si l’espace libre dans un volume soit inférieure à 10 %, SQL Server PDW génère un **critique** alerte. Cela est considéré comme critique, car les requêtes peut échouer si elles entraînent la base de données développer.  
   
 Pour récupérer l’utilisation du volume, consultez l’exemple suivant.  
   
@@ -68,7 +68,7 @@ GROUP BY space.[pdw_node_id] , space.[node_name] , space.[component_instance_id]
 ORDER BY space.[pdw_node_id], MAX(space.[volume_name]);  
 ```  
   
-Pour récupérer l’espace utilisé par les bases de données entre les nœuds du matériel, consultez l’exemple suivant.  
+Pour récupérer l’espace utilisé par les bases de données entre les nœuds d’appliance, consultez l’exemple suivant.  
   
 ```sql  
 SELECT   
@@ -105,5 +105,5 @@ ORDER BY [db_name], [pdw_node_id];
   
 ## <a name="see-also"></a>Voir aussi  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Surveillance de l’appliance &#40;Analytique plate-forme système&#41;](appliance-monitoring.md)  
+[Surveillance de l’appliance &#40;Analytique Platform System&#41;](appliance-monitoring.md)  
   

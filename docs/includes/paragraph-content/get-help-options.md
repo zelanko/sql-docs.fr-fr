@@ -3,7 +3,7 @@
 - [UserVoice : une amélioration de SQL Server à proposer ?](https://feedback.azure.com/forums/908035-sql-server)
 - [Installation et mise à niveau : forum MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools : forum MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
-- [Transact-SQL - forum MSDN](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
+- [Transact-SQL - Forum MSDN](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
 - [DBA Stack Exchange (balise sql-server) : poser des questions concernant SQL Server](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [Stack Overflow (balise sql-server) : fournit aussi des réponses sur le développement SQL](http://stackoverflow.com/questions/tagged/sql-server) 
 - [Reddit : discussion générale sur SQL Server](https://www.reddit.com/r/SQLServer/)

@@ -1,5 +1,5 @@
 ---
-title: Développer et déployer SQL Server databases pour Linux | Documents Microsoft
+title: Développer et déployer SQL Server databases pour Linux | Microsoft Docs
 description: ''
 author: rothja
 ms.author: jroth
@@ -12,14 +12,14 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: efc03030c4d0c329fa7736e3622c621f684eecb3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.openlocfilehash: 6f5a4b479c9ca217d0bde9535c28b301ea7715bc
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322590"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978901"
 ---
-# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utilisez Visual Studio pour créer des bases de données pour SQL Server sur Linux
+# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utiliser Visual Studio pour créer des bases de données pour SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -27,7 +27,7 @@ SQL Server Data Tools (SSDT) transforme Visual Studio en un puissant environneme
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Installer Visual Studio et SQL Server Data Tools
 
-1. Si vous n'avez pas encore installé Visual Studio sur votre ordinateur Windows, [Télécharger et installer Visual Studio]. Si vous n'avez pas de licence Visual Studio, Visual Studio Community Edition est un IDE gratuit et complet pour les étudiants, les développeurs open-source et les développeurs individuels.
+1. Si vous n'avez pas encore installé Visual Studio sur votre ordinateur Windows, [téléchargez et installez Visual Studio]. Si vous n'avez pas de licence Visual Studio, Visual Studio Community Edition est un IDE gratuit et complet pour les étudiants, les développeurs open-source et les développeurs individuels.
 
 2. Pendant l’installation de Visual Studio, sélectionnez **personnalisé** pour **choisir le type d’installation**. Cliquez sur **Suivant**.
 
@@ -61,7 +61,7 @@ SQL Server 2017 sur Linux est pris en charge par SSDT version 17.0 RC ou ultéri
 
 5. Entrez **TutorialDB** pour le nom et cliquez sur **OK** pour créer un nouveau projet de base de données.
 
-## <a name="create-a-new-table-in-the-database-project"></a>Créer une nouvelle table dans le projet de base de données
+## <a name="create-a-new-table-in-the-database-project"></a>Créez une nouvelle table dans le projet de base de données
 
 1. Sélectionnez **l’Explorateur de solutions** sur le menu **Affichage**.
 
@@ -109,12 +109,12 @@ Vous avez créé une base de données sur l'instance SQL Server sur Linux et vou
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous utilisez T-SQL, consultez [Didacticiel : écriture d'instructions Transact-SQL] et [Référence de Transact-SQL (moteur de base de données)].
+Si vous débutez avec T-SQL, consultez [Didacticiel : écriture d'instructions Transact-SQL] et [référence Transact-SQL (moteur de base de données)].
 
-Pour plus d’informations sur le développement d’une base de données avec les outils de données SQL, consultez [documents de MSDN SSDT]
+Pour plus d’informations sur le développement d’une base de données avec les outils de données SQL, consultez [Documents MSDN SSDT]
 
-[Télécharger et installer Visual Studio]:https://www.visualstudio.com/downloads/
+[Téléchargez et installez Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
-[Documents de MSDN SSDT]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
+[Documents MSDN SSDT]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
 [Didacticiel : écriture d'instructions Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
-[Référence de Transact-SQL (moteur de base de données)]:https://msdn.microsoft.com/library/bb510741.aspx
+[Référence Transact-SQL (moteur de base de données)]:https://msdn.microsoft.com/library/bb510741.aspx

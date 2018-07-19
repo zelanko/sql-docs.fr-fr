@@ -68,7 +68,7 @@ Parce que la pile de cluster est différente, les groupes de disponibilité sont
 
 * WSFC 
 * External
-* Aucune
+* None
 
 Tous les groupes de disponibilité qui ont besoin de disponibilité doivent utiliser un cluster sous-jacent. Dans le cas de SQL Server 2017, il s’agit d’un cluster WSFC ou de Pacemaker. Pour les groupes de disponibilité de base Windows Server qui utilisent un cluster WSFC sous-jacent, le type de cluster par défaut est WSFC et ne doit pas nécessairement être défini. Pour les groupes de disponibilité Linux, lors de la création du groupe de disponibilité, vous devez définir le type de cluster sur Externe. L’intégration à Pacemaker est configurée après la création du groupe de disponibilité, tandis que sur un cluster WSFC, elle est effectuée au moment de la création.
 
@@ -132,7 +132,7 @@ Si les objectifs de point de récupération et de délai de récupération sont 
 > [!IMPORTANT] 
 > Sur Linux, les travaux de SQL Server Agent ne font pas partie de l’installation de SQL Server elle-même. Ils sont disponibles dans le package mssql-server-Agent jobs qui doit également être installé pour utiliser la copie des journaux de transaction.
 
-![Copie des journaux de transaction][LogShipping]
+![Copie des journaux de transactions][LogShipping]
  
 Le principal avantage de l’utilisation de la copie des journaux de transaction dans une capacité est sans doute qu’elle prend en compte l’erreur humaine. L’application des journaux de transactions peut être différée. Par conséquent, si un utilisateur envoie une commande de type UPDATE sans clause WHERE, le serveur de secours peut ne pas avoir pris en compte le changement et vous pouvez donc l’utiliser pendant que vous réparez le système principal. Bien que la copie des journaux de transaction soit facile à configurer, le basculement du réplica principal sur un secours semi-automatique, appelé changement de rôle, est toujours manuel. Un changement de rôle est lancé via Transact-SQL et, tout comme pour un groupe de disponibilité, tous les objets qui ne sont pas capturés dans le journal des transactions doivent être synchronisés manuellement. Par ailleurs, la copie des journaux de transaction doit être configurée pour chaque base de données, tandis qu’un seul groupe de disponibilité peut contenir plusieurs bases de données. Contrairement au groupe de disponibilité ou à l’instance FCI, la copie des journaux de transaction ne récupère rien pour le changement de rôle. Les applications doivent être en mesure de le gérer. Des techniques comme l’alias DNS (CNAME) peuvent être utilisées, mais il existe des avantages et des inconvénients, par exemple, le temps que prend le système DNS pour l’actualisation après le basculement.
 

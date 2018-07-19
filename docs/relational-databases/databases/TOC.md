@@ -10,8 +10,7 @@
 ## [Fonctionnalités modifiées (base de données autonome)](modified-features-contained-database.md)  
 ## [Classements de base de données autonome](contained-database-collations.md)  
 ## [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](security-best-practices-with-contained-databases.md)  
-## 
-  [Migrer vers une base de données partiellement autonome](migrate-to-a-partially-contained-database.md)  
+## [Migrer vers une base de données partiellement autonome](migrate-to-a-partially-contained-database.md)  
 # [Fichiers de données SQL Server dans Microsoft Azure](sql-server-data-files-in-microsoft-azure.md)  
 # [Groupes de fichiers et fichiers de base de données](database-files-and-filegroups.md)  
 # [États d’une base de données](database-states.md)  

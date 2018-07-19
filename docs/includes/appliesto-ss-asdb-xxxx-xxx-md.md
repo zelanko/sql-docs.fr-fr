@@ -1,2 +1,2 @@
-<Token>**Cette rubrique s’applique à :** ![Oui](media/yes.png)SQL Server![Oui](media/yes.png)base de données SQL Azure![aucun](media/no.png)Azure SQL Data Warehouse ![aucun](media/no.png) Parallel Data Warehouse</Token>
+<Token>**CETTE RUBRIQUE S’APPLIQUE À :** ![oui](media/yes.png)SQL Server![oui](media/yes.png)Azure SQL Database ![non](media/no.png)Azure SQL Data Warehouse ![non](media/no.png)Parallel Data Warehouse </Token>
 

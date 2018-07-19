@@ -1,1 +1,1 @@
- Voici le jeu des résultats. 
+ Voici l'ensemble des résultats. 
