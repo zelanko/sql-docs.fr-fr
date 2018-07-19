@@ -1,5 +1,5 @@
 ---
-title: Élément Translation (XMLA) | Documents Microsoft
+title: Élément Translation (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8b6c50664cdce599128be9f0ad15a10e33b77ec6
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576631"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047183"
 ---
 # <a name="translation-element-xmla"></a>Élément Translation (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34576631"
 </Translations>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: Requêtes XQuery impliquant une hiérarchie | Documents Microsoft
+title: Requêtes XQuery impliquant une hiérarchie | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,21 +24,21 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dd9e93969bd8677311edc22ae61f314c8b89c5d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077226"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048289"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Requêtes XQuery impliquant une hiérarchie
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  La plupart des **xml** type des colonnes dans le **AdventureWorks** base de données sont des documents semi-structurés. Par conséquent, les documents stockés dans chaque ligne peuvent avoir un aspect différent. Les exemples de requêtes fournis dans cette rubrique montrent comment extraire des informations de ces divers documents.  
+  La plupart des **xml** colonnes de type le **AdventureWorks** base de données sont des documents semi-structurés. Par conséquent, les documents stockés dans chaque ligne peuvent avoir un aspect différent. Les exemples de requêtes fournis dans cette rubrique montrent comment extraire des informations de ces divers documents.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Extraction, à partir des instructions de fabrication, des postes de travail ainsi que de la première étape de fabrication réalisée sur ces différents postes  
- Pour le modèle de produit 7, la requête construit le document XML qui comprend le <`ManuInstr`> élément, avec **ProductModelID** et **ProductModelName** attributs et un ou plusieurs <`Location`> des éléments enfants.  
+ Pour le modèle de produit 7, la requête construit le document XML qui comprend le <`ManuInstr`> élément, avec **ProductModelID** et **ProductModelName** attributs et un ou plusieurs <`Location`> éléments enfants.  
   
  Chaque élément <`Location`> dispose de son propre ensemble d'attributs et d'un élément enfant <`step`>. Cet élément enfant <`step`> représente la première étape de fabrication réalisée sur le poste de travail.  
   
@@ -61,9 +61,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
--   Le **espace de noms** mot clé dans le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit un préfixe d’espace de noms. Ce préfixe est utilisé ultérieurement dans le corps de la requête.  
+-   Le **espace de noms** mot clé dans le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit un préfixe d’espace de noms. Ce préfixe est utilisé ultérieurement dans le corps de requête.  
   
 -   Les jetons de basculement de contexte, {) et (}, sont utilisés pour faire passer la requête de la construction XML à sa propre évaluation.  
   
@@ -106,7 +106,7 @@ FROM  Person.Contact
 WHERE ContactID = 1  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 \<act:number   

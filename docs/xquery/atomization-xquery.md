@@ -1,5 +1,5 @@
 ---
-title: L’atomisation (XQuery) | Documents Microsoft
+title: ATOMISATION (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a704ccc0b5be37a668984ce4d8d543984f360b54
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077796"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053973"
 ---
 # <a name="atomization-xquery"></a>Atomisation (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ set @x='<ROOT><Location LID="1" SetupTime="1.1" LaborHours="3.3" />
 SELECT @x.query('sum(/ROOT/Location/@LaborHours)')  
 ```  
   
- Mais ne pas obligatoire, vous pouvez également spécifier explicitement le **data()** fonction :  
+ Bien que non obligatoire, vous pouvez également spécifier explicitement le **data()** fonction :  
   
 ```  
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- Un autre exemple d'atomisation implicite réside dans l'utilisation d'opérateurs arithmétiques. Le **+** opérateur requiert des valeurs atomiques et **data()** est appliquée implicitement pour récupérer la valeur atomique de l’attribut LaborHours. La requête est spécifiée sur la colonne Instructions de la **xml** type dans la table ProductModel. La requête suivante renvoie trois fois l'attribut LaborHours. À ce sujet, vous remarquerez que :  
+ Un autre exemple d'atomisation implicite réside dans l'utilisation d'opérateurs arithmétiques. Le **+** opérateur requiert des valeurs atomiques et **data()** est appliquée implicitement pour extraire la valeur atomique de l’attribut LaborHours. La requête est spécifiée sur la colonne Instructions de la **xml** type dans la table ProductModel. La requête suivante renvoie trois fois l'attribut LaborHours. À ce sujet, vous remarquerez que :  
   
 -   Lors de la construction de l'attribut OriginalLaborHours, l'atomisation s'applique implicitement à la séquence singleton renvoyée par (`$WC/@LaborHours`). La valeur typée de l'attribut LaborHours est affectée à OriginalLaborHours.  
   
@@ -70,7 +70,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <WC OriginalLaborHours="2.5"   
@@ -80,7 +80,7 @@ where ProductModelID=7
   
  L'atomisation entraîne donc une instance d'un type simple, un ensemble vide ou une erreur de type statique.  
   
- L’atomisation se produit également dans les paramètres transmis aux fonctions, les valeurs retournées par les fonctions, d’expressions de comparaison **cast()** expressions et les expressions de tri transmises dans l’ordre par clause.  
+ L’atomisation se produit également dans les paramètres d’expressions de comparaison passés aux fonctions, les valeurs retournées par les fonctions, **cast()** expressions et les expressions de tri transmises dans l’ordre par clause.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Principes fondamentaux de XQuery](../xquery/xquery-basics.md)   

@@ -1,6 +1,6 @@
 ---
-title: Prise en main 2017 du serveur SQL sur Ubuntu | Documents Microsoft
-description: Ce démarrage rapide montre comment installer SQL Server 2017 sur Ubuntu puis créer et interroger une base de données avec sqlcmd.
+title: Bien démarrer avec SQL Server 2017 sur Ubuntu | Microsoft Docs
+description: Ce démarrage rapide montre comment installer SQL Server 2017 sur Ubuntu et ensuite créer et interroger une base de données avec sqlcmd.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,45 +13,46 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: ebe7da1e1024cefc14c52d0a02e0517b764c8d07
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057317"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Ce guide de démarrage rapide, vous d’abord installez SQL Server 2017 sur Ubuntu 16.04. Puis vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
+Dans ce démarrage rapide, vous d’abord installer SQL Server 2017 sur Ubuntu 16.04. Puis vous vous connectez avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
 
 > [!TIP]
 > Ce didacticiel nécessite une saisie de la part de l’utilisateur et une connexion Internet. Si vous êtes intéressé par les procédures d'installation [sans assistance](sql-server-linux-setup.md#unattended) ou [hors connexion](sql-server-linux-setup.md#offline), consultez [aide à l’installation de SQL Server sur Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prérequis
 
 Vous devez disposer d’un ordinateur Ubuntu 16.04 avec **au moins 2 Go** de mémoire.
 
-Pour installer Ubuntu sur votre propre ordinateur, accédez à [ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server). Vous pouvez également créer des machines virtuelles de Ubuntu dans Azure. Consultez [créer et gérer les machines virtuelles Linux avec l’interface CLI Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+Pour installer Ubuntu sur votre propre machine, accédez à [ http://www.ubuntu.com/download/server ](http://www.ubuntu.com/download/server). Vous pouvez également créer des machines virtuelles Ubuntu dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec l’interface CLI Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
 
 > [!NOTE]
 > À ce stade, le [sous-système Windows pour Linux](https://msdn.microsoft.com/commandline/wsl/about) pour Windows 10 n’est pas pris en charge comme cible d’installation.
 
 Pour les autres exigences système, consultez [configuration système requise pour SQL Server sur Linux](sql-server-linux-setup.md#system).
 
-## <a id="install"></a>Installation de SQL Server
+## <a id="install"></a>Installer SQL Server
 
 Pour configurer SQL Server sur Ubuntu, exécutez les commandes suivantes dans un terminal pour installer le package **mssql-serveur**.
 
 > [!IMPORTANT]
 > Si vous avez déjà installé une version CTP ou RC de SQL Server 2017, vous devez d’abord supprimer l’ancien référentiel avant d’inscrire un des référentiels de la disponibilité générale (GA). Pour plus d’informations, consultez [passer du référentiel de version préliminaire au référentiel de disponibilité générale](sql-server-linux-change-repo.md).
 
-1. Importer les clés GPG référentiel public :
+1. Importez les clés GPG de référentiel public :
 
    ```bash
    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Enregistrer le référentiel Microsoft SQL Server Ubuntu :
+1. Inscrivez le référentiel Microsoft SQL Server Ubuntu :
 
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
@@ -107,7 +108,7 @@ Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubu
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Mettre à jour la liste des sources et exécutez la commande d’installation avec le kit du développeur unixODBC.
+1. Mettre à jour la liste de sources et exécutez la commande d’installation avec le package de développeur unixODBC.
 
    ```bash
    sudo apt-get update 

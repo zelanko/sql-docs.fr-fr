@@ -1,6 +1,6 @@
 ---
-title: Installer SQL Server Integration Services sur Linux | Documents Microsoft
-description: Cet article décrit la procédure d’installation de SQL Server Integration Services (SSIS) sur Linux.
+title: Installer SQL Server Integration Services sur Linux | Microsoft Docs
+description: Cet article décrit comment installer SQL Server Integration Services (SSIS) sur Linux.
 author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
@@ -13,10 +13,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: d2e72c77ad5f200c07a6e71025a3461d6397032a
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062048"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installer SQL Server Integration Services (SSIS) sur Linux
 
@@ -51,7 +52,7 @@ Pour installer le package `mssql-server-is` sur Ubuntu, procédez comme suit :
    sudo apt-get install -y mssql-server-is
    ```
 
-4. Après l’installation d’Integration Services, exécutez `ssis-conf`. Pour plus d’informations, consultez [configurer de SSIS sur Linux avec ssis-conf](sql-server-linux-configure-ssis.md).
+4. Après avoir installé Integration Services, exécutez `ssis-conf`. Pour plus d’informations, consultez [configurer de SSIS sur Linux avec ssis-conf](sql-server-linux-configure-ssis.md).
 
    ```bash
    sudo /opt/ssis/bin/ssis-conf setup
@@ -63,7 +64,7 @@ Pour installer le package `mssql-server-is` sur Ubuntu, procédez comme suit :
    export PATH=/opt/ssis/bin:$PATH
    ```
 
-### <a name="update-ssis"></a>Mise à jour SSIS
+### <a name="update-ssis"></a>Mettre à jour de SSIS
 Si vous avez déjà `mssql-server-is` installé, vous pouvez mettre à jour vers la dernière version avec la commande suivante :
 
 ```bash
@@ -104,7 +105,7 @@ Pour installer le package `mssql-server-is` sur RHEL, procédez comme suit :
    export PATH=/opt/ssis/bin:$PATH
    ```
 
-### <a name="update-ssis"></a>Mise à jour SSIS
+### <a name="update-ssis"></a>Mettre à jour de SSIS
 Si vous avez déjà `mssql-server-is` installé, vous pouvez mettre à jour vers la dernière version avec la commande suivante :
 
 ```bash
@@ -119,14 +120,14 @@ sudo yum remove mssql-server-is
 
 ## <a name="unattended-installation"></a>Installation sans assistance
 Pour exécuter une installation sans assistance lorsque vous exécutez `ssis-conf setup`, procédez comme suit :
-1.  Spécifiez le `-n` (sans invite) option.
-2.  Fournir les valeurs requises en définissant les variables d’environnement.
+1.  Spécifiez le `-n` (aucune invite) option.
+2.  Indiquez les valeurs requises en définissant les variables d’environnement.
 
 L’exemple suivant effectue les opérations suivantes :
 -   Installe SSIS.
 -   Spécifie l’Édition Developer en fournissant une valeur pour le `SSIS_PID` variable d’environnement.
 -   Accepte le CLUF en fournissant une valeur pour le `ACCEPT_EULA` variable d’environnement.
--   Exécute une installation sans assistance en spécifiant le `-n` (sans invite) option.
+-   Exécute une installation sans assistance en spécifiant le `-n` (aucune invite) option.
 
 ```
 sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
@@ -134,17 +135,17 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>Variables d’environnement pour l’installation sans assistance
 
-| Variable d'environnement |  Description |
+| Variable d'environnement | Description |
 |---|---|
-| **ACCEPT_EULA** | Accepte le contrat de licence de SQL Server lorsque la valeur n’importe quelle valeur (par exemple, `Y`).|
-| **SSIS_PID** | Définit la clé de produit ou d’édition de SQL Server. Les valeurs possibles sont :<br/>Evaluation<br/>Développeur<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Une clé de produit<br/><br/>Si vous spécifiez une clé de produit, la clé de produit doit être sous la forme `#####-#####-#####-#####-#####`, où `#` est une lettre ou un chiffre.  |
+| **ACCEPT_EULA** | Accepte le contrat de licence de SQL Server lorsque la valeur à n’importe quelle valeur (par exemple, `Y`).|
+| **SSIS_PID** | Définit la clé de produit ou d’édition de SQL Server. Voici les valeurs possibles :<br/>Evaluation<br/>Développeur<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>Une clé de produit<br/><br/>Si vous spécifiez une clé de produit, la clé de produit doit être sous la forme `#####-#####-#####-#####-#####`, où `#` est une lettre ou un chiffre.  |
 | | |
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour exécuter des packages SSIS sur Linux, consultez [extraction, de transformation et de charger les données pour SQL Server sur Linux avec SSIS](sql-server-linux-migrate-ssis.md).
+Pour exécuter des packages SSIS sur Linux, consultez [extraire, transformer et charger des données pour SQL Server sur Linux avec SSIS](sql-server-linux-migrate-ssis.md).
 
-Pour configurer des paramètres supplémentaires SSIS sur Linux, consultez [configurer SQL Server Integration Services sur Linux avec ssis-conf](sql-server-linux-configure-ssis.md).
+Pour configurer des paramètres supplémentaires de SSIS sur Linux, consultez [configurer SQL Server Integration Services sur Linux avec ssis-conf](sql-server-linux-configure-ssis.md).
 
 ## <a name="related-content-about-ssis-on-linux"></a>Contenu associé sur SSIS sur Linux
 -   [Extraire, transformer et charger des données sur Linux avec SSIS](sql-server-linux-migrate-ssis.md)

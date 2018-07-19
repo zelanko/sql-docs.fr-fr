@@ -1,5 +1,5 @@
 ---
-title: Gérer les rôles à l’aide de SSMS | Documents Microsoft
+title: Gérer les rôles à l’aide de SSMS | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 08cd1e2c1244304f0a6310485b4cac49d3174e33
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045213"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045347"
 ---
 # <a name="manage-roles-by-using-ssms"></a>Gérer les rôles à l'aide de SSMS 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34045213"
   
 6.  Dans la fenêtre de paramètres d'appartenance, cliquez sur **Ajouter**, puis dans la boîte de dialogue **Sélectionner les utilisateurs ou les groupes** , ajoutez les utilisateurs ou groupes Windows que vous souhaitez ajouter comme membres.  
   
-7.  Si le rôle que vous créez dispose d'autorisations de lecture, vous pouvez ajouter des filtres de lignes à une table à l'aide d'une formule DAX. Pour ajouter des filtres de lignes, dans le **propriétés du rôle - \<rolename >** boîte de dialogue **sélectionner une page**, cliquez sur **les filtres de lignes**.  
+7.  Si le rôle que vous créez dispose d'autorisations de lecture, vous pouvez ajouter des filtres de lignes à une table à l'aide d'une formule DAX. Pour ajouter des filtres de lignes, dans le **propriétés du rôle - \<rolename >** boîte de dialogue **sélectionner une page**, cliquez sur **filtres de lignes**.  
   
 8.  Dans la fenêtre de filtres de lignes, sélectionnez une table, puis cliquez sur le **filtre DAX** champ, puis dans le **filtre DAX - \<tablename >** , tapez une formule DAX.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "34045213"
   
 -   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez la base de données model tabulaire qui contient le rôle que vous souhaitez modifier, développez **Rôles**, cliquez avec le bouton droit sur le rôle, puis cliquez sur **Propriétés**.  
   
-     Dans le **propriétés du rôle** \<rolename > boîte de dialogue, vous pouvez modifier les autorisations, ajouter ou supprimer des membres et des filtres de lignes d’ajouter/modifier.  
+     Dans le **propriétés du rôle** \<rolename > boîte de dialogue, vous pouvez modifier les autorisations, ajouter ou supprimer des membres, et ajouter/modifier des filtres de lignes.  
   
 ###  <a name="bkmk_deletet_role"></a> Pour supprimer un rôle  
   

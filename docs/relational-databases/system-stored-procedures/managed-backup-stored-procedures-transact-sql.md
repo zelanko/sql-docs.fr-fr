@@ -1,5 +1,5 @@
 ---
-title: Géré des procédures stockées de sauvegarde (Transact-SQL) | Documents Microsoft
+title: Gérés des procédures stockées de sauvegarde (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9a7903f06c1e38e9ff34210e01c3da72fd2e3c35
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236414"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046028"
 ---
-# <a name="managed-backup-stored-procedures-transact-sql"></a>Sauvegarde les procédures stockées managées (Transact-SQL)
+# <a name="managed-backup-stored-procedures-transact-sql"></a>Sauvegarde des procédures stockées managées (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Les procédures stockées suivantes peuvent être utilisés pour configurer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  

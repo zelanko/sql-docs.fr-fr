@@ -1,5 +1,5 @@
 ---
-title: Création, modification et suppression de règles | Documents Microsoft
+title: Création, modification et suppression de règles | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2e46039c71863f6cfb60f63c8e1e926f8f68231d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969204"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046177"
 ---
 # <a name="creating-altering-and-removing-rules"></a>Création, modification et suppression de règles
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "32969204"
  La définition dans la propriété <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> doit contenir une variable qui fait référence à la valeur de données entrée. Vous pouvez utiliser n'importe quel nom ou symbole pour représenter la valeur lors de la création de la règle, mais le premier caractère doit être le symbole @.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>Création, modification et suppression d'une règle en Visual Basic  
  Cet exemple de code montre comment créer une règle, l'attacher à une colonne, modifier des propriétés de l'objet <xref:Microsoft.SqlServer.Management.Smo.Rule>, la détacher de la colonne, puis la supprimer.  
   
- Le **Dim** instruction pour le <xref:Microsoft.SqlServer.Management.Smo.Rule> objet est spécifié avec le chemin d’accès complet de l’assembly pour éviter toute ambiguïté avec un <xref:Microsoft.SqlServer.Management.Smo.Rule> objet de l’assembly System.Data.  
+ Le **Dim** instruction pour la <xref:Microsoft.SqlServer.Management.Smo.Rule> objet est spécifié avec le chemin d’accès complet de l’assembly pour éviter toute ambiguïté avec un <xref:Microsoft.SqlServer.Management.Smo.Rule> objet de l’assembly System.Data.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -70,7 +70,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-visual-c"></a>Création, modification et suppression d'une règle en Visual C#  
  Cet exemple de code montre comment créer une règle, l'attacher à une colonne, modifier des propriétés de l'objet <xref:Microsoft.SqlServer.Management.Smo.Rule>, la détacher de la colonne, puis la supprimer.  
   
- Le **Dim** instruction pour le <xref:Microsoft.SqlServer.Management.Smo.Rule> objet est spécifié avec le chemin d’accès complet de l’assembly pour éviter toute ambiguïté avec un <xref:Microsoft.SqlServer.Management.Smo.Rule> objet de l’assembly System.Data.  
+ Le **Dim** instruction pour la <xref:Microsoft.SqlServer.Management.Smo.Rule> objet est spécifié avec le chemin d’accès complet de l’assembly pour éviter toute ambiguïté avec un <xref:Microsoft.SqlServer.Management.Smo.Rule> objet de l’assembly System.Data.  
   
 ```csharp  
 {  
@@ -103,7 +103,7 @@ ru.Drop()
 ## <a name="creating-altering-and-removing-a-rule-in-powershell"></a>Création, modification et suppression d'une règle dans PowerShell  
  Cet exemple de code montre comment créer une règle, l'attacher à une colonne, modifier des propriétés de l'objet <xref:Microsoft.SqlServer.Management.Smo.Rule>, la détacher de la colonne, puis la supprimer.  
   
- Le **Dim** instruction pour le <xref:Microsoft.SqlServer.Management.Smo.Rule> objet est spécifié avec le chemin d’accès complet de l’assembly pour éviter toute ambiguïté avec un <xref:Microsoft.SqlServer.Management.Smo.Rule> objet de l’assembly System.Data.  
+ Le **Dim** instruction pour la <xref:Microsoft.SqlServer.Management.Smo.Rule> objet est spécifié avec le chemin d’accès complet de l’assembly pour éviter toute ambiguïté avec un <xref:Microsoft.SqlServer.Management.Smo.Rule> objet de l’assembly System.Data.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

@@ -1,5 +1,5 @@
 ---
-title: Diagramme du modèle objet SMO | Documents Microsoft
+title: Diagramme du modèle objet SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7e23c88851afef3d990c3dcac8d83bd7091a72f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966154"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046217"
 ---
 # <a name="smo-object-model-diagram"></a>Diagramme du modèle objet SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

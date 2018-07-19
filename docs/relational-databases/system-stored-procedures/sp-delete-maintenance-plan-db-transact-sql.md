@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_db (Transact-SQL) | Documents Microsoft
+title: sp_delete_maintenance_plan_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247162"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049547"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
  [  **@plan_id =**] **'***plan_id***'**  
  ID du plan de maintenance. *plan_id* est **uniqueidentifier**.  
   
- [  **@db_name =**] **'***nom_base_de_données***'**  
+ [  **@db_name =**] **'***database_name***'**  
  Nom de la base de données à supprimer du plan de maintenance. *database_name* est de type **sysname**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -65,7 +65,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="remarks"></a>Notes  
  **sp_delete_maintenance_plan_db** doit être exécuté à partir de la **msdb** base de données.  
   
- Le **sp_delete_maintenance_plan_db** procédure stockée supprime l’association entre le plan de maintenance et de la base de données spécifiée ; elle ne pas supprimer ou détruire la base de données.  
+ Le **sp_delete_maintenance_plan_db** procédure stockée supprime l’association entre le plan de maintenance et de la base de données spécifié ; il ne pas supprimer ou détruire la base de données.  
   
  Lorsque **sp_delete_maintenance_plan_db** supprime la dernière base de données à partir du plan de maintenance, la procédure stockée supprime également le plan de maintenance.  
   
@@ -73,7 +73,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_delete_maintenance_plan_db**.  
   
 ## <a name="examples"></a>Exemples  
- Supprime le plan de maintenance dans la **AdventureWorks2012** base de données, précédemment ajouté à l’aide de **sp_add_maintenance_plan_db**.  
+ Supprime le plan de maintenance dans le **AdventureWorks2012** base de données, ajouté précédemment à l’aide de **sp_add_maintenance_plan_db**.  
   
 ```  
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  

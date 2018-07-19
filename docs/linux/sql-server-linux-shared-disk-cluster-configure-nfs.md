@@ -1,5 +1,5 @@
 ---
-title: Configurer le stockage instance cluster de basculement NFS - SQL Server sur Linux | Documents Microsoft
+title: Configurer le stockage instance cluster de basculement NFS - SQL Server sur Linux | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,11 +12,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: e0432452021919690c4d170f040e183e7de6b635
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322960"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061877"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configuration d’instance de cluster de basculement - NFS - SQL Server sur Linux
 
@@ -52,7 +52,7 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
 
     \<IPAddressOfNFSServer > est l’adresse IP du serveur NFS que vous vous apprêtez à utiliser.
 
-3. Pour les bases de données système ou les informations stockées dans l’emplacement de données par défaut, procédez comme suit. Sinon, passez à l’étape 4.
+3. Pour les bases de données système ou quoi que ce soit stocké dans l’emplacement de données par défaut, procédez comme suit. Sinon, passez à l’étape 4.
  
    * Vérifiez que SQL Server est arrêté sur le serveur que vous utilisez.
 
@@ -228,11 +228,11 @@ Vérifiez que vos normes de sécurité sont appliquées pour l'accès. Quand vou
   
    * Tapez exit pour ne plus plus être super utilisateur.
 
-   * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, basculer vers elle, vérifiez les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
+   * Pour tester, créez une base de données dans ce dossier. L’exemple suivant utilise sqlcmd pour créer une base de données, changer le contexte vers elle, vérifiez que l’option les fichiers existent au niveau du système d’exploitation, puis supprime l’emplacement temporaire. Vous pouvez utiliser SSMS.
 
     ![15-createtestdatabase][4]
  
-   * Démontez le partage 
+   * Démonter le partage 
 
     ```bash
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>

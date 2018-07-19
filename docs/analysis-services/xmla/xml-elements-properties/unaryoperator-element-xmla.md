@@ -1,5 +1,5 @@
 ---
-title: Élément UnaryOperator (XMLA) | Documents Microsoft
+title: Élément UnaryOperator (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 062cf977e04eabfc09e6598167bc7530f1254436
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576721"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051577"
 ---
 # <a name="unaryoperator-element-xmla"></a>Élément UnaryOperator (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34576721"
 </Attribute>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "34576721"
  Pour plus d’informations sur les expressions MDX, consultez [Expressions &#40;MDX&#41;](../../../mdx/expressions-mdx.md).  
   
 ## <a name="see-also"></a>Voir aussi
- [Insérer l’élément &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Insérer un élément &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Mettre à jour d’élément &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
  [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   

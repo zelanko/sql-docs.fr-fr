@@ -1,5 +1,5 @@
 ---
-title: Élément SynchronizeSecurity (XMLA) | Documents Microsoft
+title: Élément SynchronizeSecurity (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f99f4c0ddf212d2fac33abd08c33ccf3dbe7998
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576481"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046923"
 ---
 # <a name="synchronizesecurity-element-xmla"></a>Élément SynchronizeSecurity (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Indique comment synchroniser les définitions de sécurité, notamment les rôles et autorisations, pendant un [synchroniser](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) commande.  
+  Indique comment synchroniser des définitions de sécurité, notamment les rôles et autorisations, pendant un [synchroniser](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) commande.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,12 +31,12 @@ ms.locfileid: "34576481"
 </Synchronize>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |Type de données et longueur|Chaîne (énumération)|  
-|Valeur par défaut|*skipMembership*|  
+|Valeur par défaut|*SkipMembership*|  
 |Cardinalité|0-1 : élément facultatif qui peut apparaître une fois et une seule.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  
@@ -53,7 +53,7 @@ ms.locfileid: "34576481"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|*skipMembership*|Inclut les définitions de sécurité mais exclut les informations d'appartenance au cours d'une commande **Synchronize** .|  
+|*SkipMembership*|Inclut les définitions de sécurité mais exclut les informations d'appartenance au cours d'une commande **Synchronize** .|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance au cours d'une commande **Synchronize** .|  
 |*IgnoreSecurity*|Exclut les définitions de sécurité au cours d'une commande **Synchronize** .|  
   

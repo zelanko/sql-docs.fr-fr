@@ -1,5 +1,5 @@
 ---
-title: Fonction min (XQuery) | Documents Microsoft
+title: Fonction min (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8e5ce4f5ac16b337db62633d8b0a72ca98c708a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077406"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051707"
 ---
-# <a name="aggregate-functions---min"></a>-Les fonctions d’agrégation min
+# <a name="aggregate-functions---min"></a>Fonctions d’agrégation : min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Renvoie, à partir d’une séquence de valeurs atomiques, *$arg*, le seul élément dont la valeur est inférieure à celle de toutes les autres.  
+  Renvoie, à partir d’une séquence de valeurs atomiques, *$arg*, le seul élément dont la valeur est inférieure à celle de tous les autres.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,11 +47,11 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  Séquence d'éléments à partir de laquelle la valeur minimale est renvoyée.  
   
 ## <a name="remarks"></a>Notes  
- Tous les types de valeurs atomisées transmises à **min()** doivent être des sous-types du même type de base. Types de base acceptés sont les types qui prennent en charge la **gt** opération. Ces types incluent les trois types numériques de base intégrés, les types de base date/heure et les types xs:string (chaîne), xs:boolean (booléen) et xdt:untypedAtomic (atomique non typé). Les valeurs de type xdt:untypedAtomic sont converties en xs:double. S’il existe un mélange de ces types, ou si d’autres valeurs d’autres types sont passés, une erreur statique est déclenchée.  
+ Tous les types de valeurs atomisées transmises à **min()** doivent être des sous-types du même type de base. Types de base acceptés sont les types qui prennent en charge la **gt** opération. Ces types incluent les trois types numériques de base intégrés, les types de base date/heure et les types xs:string (chaîne), xs:boolean (booléen) et xdt:untypedAtomic (atomique non typé). Les valeurs de type xdt:untypedAtomic sont converties en xs:double. S’il existe un mélange de ces types, ou si d’autres valeurs d’autres types sont passés, une erreur statique est générée.  
   
- Le résultat de **min()** reçoit le type de base des types transmis, tel que xs : double dans le cas de xdt : untypedAtomic. Si l'entrée est statiquement vide, vide est implicite et une erreur statique est générée.  
+ Le résultat de **min()** reçoit le type de base des types transmis, tels que xs : double dans le cas de xdt : untypedAtomic. Si l'entrée est statiquement vide, vide est implicite et une erreur statique est générée.  
   
- Le **min()** fonction retourne la valeur de la séquence qui est plus petite que n’importe quel autre dans la séquence d’entrée. Pour les valeurs xs:string, le classement par défaut des points de code Unicode est utilisé. Si une valeur xdt : untypedAtomic ne peut pas être convertie en xs : double, la valeur est ignorée dans la séquence d’entrée, *$arg*. Si l'entrée est une séquence vide calculée de manière dynamique, la séquence vide est renvoyée.  
+ Le **min()** fonction retourne une valeur dans la séquence est inférieure à toute autre dans la séquence d’entrée. Pour les valeurs xs:string, le classement par défaut des points de code Unicode est utilisé. Si une valeur xdt : untypedAtomic ne peut pas être convertie en xs : double, la valeur est ignorée dans la séquence d’entrée, *$arg*. Si l'entrée est une séquence vide calculée de manière dynamique, la séquence vide est renvoyée.  
   
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
@@ -74,7 +74,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le **espace de noms** mot clé dans le prologue XQuery définit un préfixe d’espace de noms. Ce préfixe est utilisé ultérieurement dans le corps de la requête.  
   
@@ -82,7 +82,7 @@ WHERE ProductModelID=7
   
 -   La requête récupère également l'identificateur et le nom du modèle de produit.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID   Name              Result  
@@ -95,7 +95,7 @@ ProductModelID   Name              Result
   
 -   Le **min()** fonction mappe tous les entiers à xs : decimal.  
   
--   Le **min()** fonction sur des valeurs de type xs : Duration n’est pas pris en charge.  
+-   Le **min()** fonction sur les valeurs de type xs : Duration n’est pas pris en charge.  
   
 -   Les séquences faisant intervenir plusieurs types dérivés de différents types de base ne sont pas prises en charge.  
   

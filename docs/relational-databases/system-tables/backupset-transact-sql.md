@@ -1,5 +1,5 @@
 ---
-title: jeu de sauvegarde (Transact-SQL) | Documents Microsoft
+title: jeu de sauvegarde (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1089a1a30e50b389b05c79cf9af2443f7dc55d6e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263275"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042747"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -40,24 +40,24 @@ ms.locfileid: "33263275"
  Cette table est stockée dans le **msdb** base de données.  
 
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|Numéro d'identification unique du jeu de sauvegardes Identité, clé primaire.|  
+|**backup_set_id**|**Int**|Numéro d'identification unique du jeu de sauvegardes Identité, clé primaire.|  
 |**backup_set_uuid**|**uniqueidentifier**|Numéro d'identification unique du jeu de sauvegardes|  
-|**media_set_id**|**int**|Numéro d'identification unique du support de sauvegarde contenant le jeu de sauvegardes. Références **backupmediaset (media_set_id)**.|  
+|**media_set_id**|**Int**|Numéro d'identification unique du support de sauvegarde contenant le jeu de sauvegardes. Références **backupmediaset (media_set_id)**.|  
 |**first_family_number**|**tinyint**|Numéro de famille du support qui est le premier du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**first_media_number**|**smallint**|Numéro du support qui est le premier du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**last_family_number**|**tinyint**|Numéro de famille du support qui est le dernier du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**last_media_number**|**smallint**|Numéro du support qui est le dernier du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**catalog_family_number**|**tinyint**|Numéro de famille du support contenant le début du répertoire du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**catalog_media_number**|**smallint**|Numéro du support de sauvegardes contenant le début du répertoire du jeu de sauvegardes. Sa valeur peut être NULL.|  
-|**position**|**int**|Position du jeu de sauvegardes utilisée lors de la restauration pour localiser les fichiers et le jeu de sauvegardes appropriés. Sa valeur peut être NULL. Pour plus d’informations, consultez le fichier dans [sauvegarde &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**Int**|Position du jeu de sauvegardes utilisée lors de la restauration pour localiser les fichiers et le jeu de sauvegardes appropriés. Sa valeur peut être NULL. Pour plus d’informations, consultez le fichier dans [sauvegarde &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Date et heure d'expiration du jeu de sauvegardes. Sa valeur peut être NULL.|  
-|**software_vendor_id**|**int**|Numéro d'identification du fournisseur du logiciel qui a écrit l'en-tête de support de sauvegardes Sa valeur peut être NULL.|  
+|**software_vendor_id**|**Int**|Numéro d'identification du fournisseur du logiciel qui a écrit l'en-tête de support de sauvegardes Sa valeur peut être NULL.|  
 |**nom**|**nvarchar(128)**|Nom du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**description**|**nvarchar(255)**|Description du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**user_name**|**nvarchar(128)**|Nom de l'utilisateur effectuant la sauvegarde Sa valeur peut être NULL.|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Numéro de version principale. Sa valeur peut être NULL.|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] numéro de version principale. Sa valeur peut être NULL.|  
 |**software_minor_version**|**tinyint**|Numéro de version secondaire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sa valeur peut être NULL.|  
 |**software_build_version**|**smallint**|Numéro de build de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sa valeur peut être NULL.|  
 |**time_zone**|**smallint**|Différence entre l'heure locale (lieu où l'opération de sauvegarde se déroule) et le temps universel UTC, exprimée en intervalles de 15 minutes. Les valeurs peuvent être comprises entre - 48 et + 48 incluses. La valeur 127 signifie inconnu. Par exemple, -20 correspond à l'heure de l'Est (USA) soit 5 heures après l'heure universelle UTC. Sa valeur peut être NULL.|  
@@ -70,17 +70,17 @@ ms.locfileid: "33263275"
 |**backup_start_date**|**datetime**|Date et heure de début de la sauvegarde Sa valeur peut être NULL.|  
 |**backup_finish_date**|**datetime**|Date et heure de fin de la sauvegarde Sa valeur peut être NULL.|  
 |**type**|**char(1)**|Type de sauvegarde. Valeurs possibles :<br /><br /> D = Base de données<br /><br /> I = Base de données différentielle<br /><br /> L = Journal<br /><br /> F = Fichier ou groupe de fichiers<br /><br /> G =Fichier différentiel<br /><br /> P = Partiel<br /><br /> Q = Partielle différentielle<br /><br /> Sa valeur peut être NULL.|  
-|**sort_order**|**smallint**|Ordre de tri utilisé par le serveur effectuant la sauvegarde. Sa valeur peut être NULL. Pour plus d’informations sur les ordres de tri et les classements, consultez [prise en charge Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).|  
-|**code_page**|**smallint**|Page de codes du serveur effectuant la sauvegarde. Sa valeur peut être NULL. Pour plus d’informations sur les pages de codes, consultez [prise en charge Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).|  
+|**sort_order**|**smallint**|Ordre de tri utilisé par le serveur effectuant la sauvegarde. Sa valeur peut être NULL. Pour plus d’informations sur les ordres de tri et les classements, consultez [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|  
+|**code_page**|**smallint**|Page de codes du serveur effectuant la sauvegarde. Sa valeur peut être NULL. Pour plus d’informations sur les pages de codes, consultez [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**compatibility_level**|**tinyint**|Paramètres définissant le niveau de compatibilité de la base de données. Valeurs possibles :<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Sa valeur peut être NULL.<br /><br /> Pour plus d’informations sur les niveaux de compatibilité, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
-|**database_version**|**int**|Numéro de version de la base de données. Sa valeur peut être NULL.|  
+|**database_version**|**Int**|Numéro de version de la base de données. Sa valeur peut être NULL.|  
 |**backup_size**|**numeric(20,0)**|Taille du jeu de sauvegardes en octets. Sa valeur peut être NULL. Pour les sauvegardes VSS, backup_size est une valeur estimée.|  
 |**database_name**|**nvarchar(128)**|Nom de la base de données impliquée dans la sauvegarde. Sa valeur peut être NULL.|  
 |**server_name**|**nvarchar(128)**|Nom du serveur exécutant la sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sa valeur peut être NULL.|  
 |**machine_name**|**nvarchar(128)**|Nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est exécuté. Sa valeur peut être NULL.|  
-|**flags**|**int**|Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le **indicateurs** colonne a été déconseillée et est remplacée par les colonnes de bits suivantes :<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Sa valeur peut être NULL.<br /><br /> Dans des jeux de sauvegarde à partir de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bits d'indicateur :<br />1 = La sauvegarde contient des données consignées de façon minimale. <br />2 = WITH SNAPSHOT a été utilisé. <br />4 = La base de données était accessible en lecture seule au moment de la sauvegarde.<br />8 = La base de données était en mode mono-utilisateur au moment de la sauvegarde.|  
-|**unicode_locale**|**int**|Paramètres régionaux Unicode. Sa valeur peut être NULL.|  
-|**unicode_compare_style**|**int**|Style de comparaison Unicode. Sa valeur peut être NULL.|  
+|**flags**|**Int**|Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le **indicateurs** colonne a été déconseillée et est remplacée par les colonnes de bits suivantes :<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Sa valeur peut être NULL.<br /><br /> Dans des jeux de sauvegarde à partir de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bits d'indicateur :<br />1 = La sauvegarde contient des données consignées de façon minimale. <br />2 = WITH SNAPSHOT a été utilisé. <br />4 = La base de données était accessible en lecture seule au moment de la sauvegarde.<br />8 = La base de données était en mode mono-utilisateur au moment de la sauvegarde.|  
+|**unicode_locale**|**Int**|Paramètres régionaux Unicode. Sa valeur peut être NULL.|  
+|**unicode_compare_style**|**Int**|Style de comparaison Unicode. Sa valeur peut être NULL.|  
 |**collation_name**|**nvarchar(128)**|Nom du classement. Sa valeur peut être NULL.|  
 |**Is_password_protected**|**bit**|Jeu de sauvegardes<br /><br /> protégé par mot de passe :<br /><br /> 0 = Non protégé<br /><br /> 1 = Protégé|  
 |**recovery_model**|**nvarchar(60)**|Mode de récupération de la base de données :<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
@@ -99,7 +99,7 @@ ms.locfileid: "33263275"
 |**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** n’est pas égal à **last_recovery_fork_guid**, il s’agit du numéro de séquence de journal du point du branchement. Dans le cas contraire, la valeur est NULL.|  
 |**database_guid**|**uniqueidentifier**|ID unique de la base de données. Cela correspond à **BindingID** de RESTORE HEADERONLY. Lors de la restauration de la base de données, une nouvelle valeur est attribuée.|  
 |**family_guid**|**uniqueidentifier**|ID unique de la base de données d'origine lors de sa création. Cette valeur demeure identique lors de la restauration de la base de données, même sous un nom différent.|  
-|**differential_base_lsn**|**numeric(25,0)**|Numéro de séquence d'enregistrement de base pour les sauvegardes différentielles. Pour une sauvegarde différentielle unique ; modifications avec un LSN supérieurs ou égales à **differential_base_lsn** sont inclus dans la sauvegarde différentielle.<br /><br /> Pour une sauvegarde différentielle multiple, la valeur est NULL et la base de LSN doit être déterminée au niveau du fichier (voir [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Pour les types de sauvegarde non différentiels, la valeur est toujours NULL.|  
+|**differential_base_lsn**|**numeric(25,0)**|Numéro de séquence d'enregistrement de base pour les sauvegardes différentielles. Pour une sauvegarde différentielle unique ; modifications avec un LSN supérieurs ou égal à **differential_base_lsn** sont inclus dans la sauvegarde différentielle.<br /><br /> Pour une sauvegarde différentielle multiple, la valeur est NULL et que le LSN de base doit être déterminé au niveau du fichier (voir [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> Pour les types de sauvegarde non différentiels, la valeur est toujours NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|Pour une sauvegarde différentielle unique, cette valeur constitue l'identificateur unique de la base différentielle.<br /><br /> Pour les sauvegardes différentielles multiples, cette valeur est NULL, tandis que la base différentielle doit être déterminée au niveau du fichier.<br /><br /> Pour les types de sauvegarde non différentiels, la valeur est NULL.|  
 |**compressed_backup_size**|**Numeric(20,0)**|Nombre total d'octets de la sauvegarde stocké sur le disque.<br /><br /> Pour calculer le taux de compression, utilisez **compressed_backup_size** et **backup_size**.<br /><br /> Pendant une **msdb** mise à niveau, cette valeur est définie sur NULL. ce qui indique une sauvegarde non compressée.|  
 |**key_algorithm**|**nvarchar(32)**|Algorithme de chiffrement utilisé pour chiffrer la sauvegarde. La valeur NO_Encryption indique que la sauvegarde n'est pas chiffrée.|  
@@ -107,7 +107,7 @@ ms.locfileid: "33263275"
 |**encryptor_type**|**nvarchar(32)**|Type de chiffreur utilisé : certificat ou clé asymétrique . Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
   
 ## <a name="remarks"></a>Notes  
- RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY remplit la colonne de la **backupmediaset** table avec les valeurs appropriées de l’en-tête du support de sauvegarde.  
+ RESTORE VERIFYONLY FROM *backup_device* avec LOADHISTORY remplit la colonne de la **backupmediaset** table avec les valeurs appropriées de l’en-tête de support de sauvegarde.  
   
  Pour réduire le nombre de lignes dans cette table et dans d’autres tables d’historique de sauvegarde et, exécutez le [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procédure stockée.  
   

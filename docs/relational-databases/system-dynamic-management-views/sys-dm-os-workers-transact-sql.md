@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_workers (Transact-SQL) | Documents Microsoft
+title: Sys.dm_os_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ea9d2aa6365c421bcf8e04920c2cf1bd4ab415a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467705"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052378"
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "34467705"
   Retourne une ligne pour chaque processus de travail du système.  
   
 > [!NOTE]  
->  Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_workers**.  
+>  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_workers**.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary(8)**|Adresse mémoire du processus de travail.|  
-|status|**int**|À usage interne uniquement|  
+|status|**Int**|À usage interne uniquement|  
 |is_preemptive|**bit**|1 = le processus de travail s'exécute avec une planification préemptive. Tout processus de travail qui exécute du code externe est exécuté en mode de planification préemptive.|  
 |is_fiber|**bit**|1 = le processus de travail s'exécute en mode Regroupement léger. Pour plus d'informations, consultez [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
 |is_sick|**bit**|1 = le processus de travail est bloqué car il essaie toujours d'obtenir un verrouillage total de l'UC. Si ce bit est défini, cela peut signaler un problème de contention sur un objet auquel les accès sont fréquents.|  
@@ -50,27 +50,27 @@ ms.locfileid: "34467705"
 |is_fatal_exception|**bit**|Indique si le processus de travail a reçu une exception fatale.|  
 |is_inside_catch|**bit**|1 = le processus de travail gère actuellement une exception.|  
 |is_in_polling_io_completion_routine|**bit**|1 = le processus de travail exécute actuellement une routine d'exécution d'E/S pour une E/S en attente. Pour plus d’informations, consultez [sys.dm_io_pending_io_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
-|context_switch_count|**int**|Nombre de changements de contexte du planificateur qui sont exécutés par ce processus de travail.|  
-|pending_io_count|**int**|Nombre d'E/S physiques qui sont effectuées par ce processus de travail.|  
+|context_switch_count|**Int**|Nombre de changements de contexte du planificateur qui sont exécutés par ce processus de travail.|  
+|pending_io_count|**Int**|Nombre d'E/S physiques qui sont effectuées par ce processus de travail.|  
 |pending_io_byte_count|**bigint**|Nombre total d'octets correspondant à toutes les E/S physiques en attente pour ce processus de travail.|  
-|pending_io_byte_average|**int**|Nombre moyen d'octets des E/S physiques pour ce processus de travail.|  
-|wait_started_ms_ticks|**bigint**|Point dans le temps, dans [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), où ce processus de travail est passé à l’état suspendu. Lorsque cette valeur est soustraite de ms_ticks dans [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) retourne le nombre de millisecondes qu’attend le processus de travail.|  
-|wait_resumed_ms_ticks|**bigint**|Point dans le temps, dans [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), où ce processus de travail est passé à l’état RUNNABLE. Lorsque cette valeur est soustraite de ms_ticks dans [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) retourne le nombre de millisecondes que le processus de travail a passé dans la file d’attente exécutable.|  
-|task_bound_ms_ticks|**bigint**|Point dans le temps, dans [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), lorsqu’une tâche est liée à ce processus de travail.|  
-|worker_created_ms_ticks|**bigint**|Point dans le temps, dans [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), lorsqu’un processus de travail est créé.|  
-|exception_num|**int**|Numéro d'erreur de la dernière exception rencontrée par ce processus de travail.|  
-|exception_severity|**int**|Gravité de la dernière exception rencontrée par ce processus de travail.|  
+|pending_io_byte_average|**Int**|Nombre moyen d'octets des E/S physiques pour ce processus de travail.|  
+|wait_started_ms_ticks|**bigint**|Moment précis, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), où ce processus de travail est passé à l’état suspendu. En soustrayant cette valeur de ms_ticks dans [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) retourne le nombre de millisecondes pendant lesquelles le travail a été en attente.|  
+|wait_resumed_ms_ticks|**bigint**|Moment précis, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), où ce processus de travail est passé à l’état RUNNABLE. En soustrayant cette valeur de ms_ticks dans [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) retourne le nombre de millisecondes que le processus de travail a passé dans la file d’attente exécutable.|  
+|task_bound_ms_ticks|**bigint**|Moment précis, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), quand une tâche est liée à ce processus de travail.|  
+|worker_created_ms_ticks|**bigint**|Moment précis, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), lorsqu’un processus de travail est créé.|  
+|exception_num|**Int**|Numéro d'erreur de la dernière exception rencontrée par ce processus de travail.|  
+|exception_severity|**Int**|Gravité de la dernière exception rencontrée par ce processus de travail.|  
 |exception_address|**varbinary(8)**|Adresse du code qui a levé l'exception.|  
 |affinité|**bigint**|Affinité de thread du processus de travail. Correspond à l’affinité du thread dans [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
 |state|**nvarchar(60)**|État du processus de travail. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> INIT = le processus de travail est en cours d'initialisation.<br /><br /> RUNNING = le processus de travail est en cours d'exécution, en mode non préemptif ou préemptif.<br /><br /> RUNNABLE = le processus de travail est prêt à s'exécuter sur le planificateur.<br /><br /> SUSPENDED = le processus de travail est actuellement interrompu car il attend qu'un événement lui envoie un signal.|  
 |start_quantum|**bigint**|Temps, en millisecondes, au début de l'exécution actuelle de ce processus de travail.|  
 |end_quantum|**bigint**|Temps, en millisecondes, à la fin de l'exécution actuelle de ce processus de travail.|  
 |last_wait_type|**nvarchar(60)**|Type de la dernière attente. Pour obtenir la liste des types d’attente, consultez [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
-|return_code|**int**|Valeur retournée par la dernière attente. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|return_code|**Int**|Valeur retournée par la dernière attente. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|À usage interne uniquement|  
 |max_quantum|**bigint**|À usage interne uniquement|  
-|boost_count|**int**|À usage interne uniquement|  
-|tasks_processed_count|**int**|Nombre de tâches traitées par ce processus de travail.|  
+|boost_count|**Int**|À usage interne uniquement|  
+|tasks_processed_count|**Int**|Nombre de tâches traitées par ce processus de travail.|  
 |fiber_address|**varbinary(8)**|Adresse mémoire de la fibre à laquelle ce processus de travail est associé.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas configuré pour le regroupement léger.|  
 |task_address|**varbinary(8)**|Adresse mémoire de la tâche active. Pour plus d’informations, consultez [sys.dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
 |memory_object_address|**varbinary(8)**|Adresse mémoire de l'objet mémoire du processus de travail. Pour plus d’informations, consultez [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
@@ -78,7 +78,7 @@ ms.locfileid: "34467705"
 |signal_worker_address|**varbinary(8)**|Adresse mémoire du processus de travail qui a signalé cet objet en dernier lieu. Pour plus d’informations, consultez [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |scheduler_address|**varbinary(8)**|Adresse mémoire du planificateur. Pour plus d’informations, consultez [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Stocke l'ID de groupe du processeur attribué à ce thread.|  
-|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 ## <a name="remarks"></a>Notes  
  Si le processus de travail est à l'état RUNNING et qu'il s'exécute de façon non préemptive, son adresse correspond à la valeur de active_worker_address dans sys.dm_os_schedulers.  

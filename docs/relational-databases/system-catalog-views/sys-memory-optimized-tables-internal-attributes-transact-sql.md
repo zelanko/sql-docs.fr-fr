@@ -1,5 +1,5 @@
 ---
-title: Sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Documents Microsoft
+title: Sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -26,24 +26,24 @@ ms.author: jodebrui
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ea18b7493e5a5ff35a50a63f9d8d57d22149838c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180435"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058211"
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Contient une ligne pour chaque table optimisée en mémoire interne utilisé pour stocker les tables utilisateur optimisées en mémoire. Chaque table utilisateur correspond à une ou plusieurs tables internes. Une seule table est utilisée pour le stockage de données principal. Les tables internes supplémentaires servent à la prise en charge des fonctionnalités telles que les index columnstore temporels et le stockage (LOB) hors ligne des tables optimisées en mémoire.
  
-| Nom de colonne  | Type de données  |  Description |
+| Nom de colonne  | Type de données  | Description |
 | :------ |:----------| :-----|
-|object_id  |**int**|       Identifiant de la table utilisateur. Les tables optimisées en mémoire internes destinées à la prise en charge d’une table utilisateur (par exemple, le stockage hors ligne ou les lignes supprimées dans le cas de combinaisons Hk/Columnstore) ont le même object_id que leurs parents. |
+|object_id  |**Int**|       Identifiant de la table utilisateur. Les tables optimisées en mémoire internes destinées à la prise en charge d’une table utilisateur (par exemple, le stockage hors ligne ou les lignes supprimées dans le cas de combinaisons Hk/Columnstore) ont le même object_id que leurs parents. |
 |xtp_object_id  |**bigint**|    ID de l’objet In-Memory OLTP correspondant à la table optimisée en mémoire interne utilisée pour prendre en charge la table utilisateur. Il est unique dans la base de données, et peut évoluer au fil de la durée de vie de l’objet. 
-|Type|  **int** |   Type de la table interne.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|Type|  **Int** |   Type de la table interne.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   Description du type<br/><br/>DELETED_ROWS_TABLE -> Lignes supprimées de suivi de table interne pour un index columnstore<br/>USER_TABLE -> Table contenant les données de ligne utilisateur<br/>DICTIONARIES_TABLE -> Dictionnaires pour un index columnstore<br/>SEGMENTS_TABLE -> Segments compressés pour un index columnstore<br/>ROW_GROUPS_INFO_TABLE -> Métadonnées à propos des groupes de lignes compressés d’un index columnstore<br/>INTERNAL OFF-ROW DATA TABLE -> Table interne utilisée pour le stockage d’une colonne hors ligne. Dans ce cas, minor_id reflète column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Fin à chaud de la table d’historique basée sur le disque. Tout d’abord, les lignes insérées dans l’historique sont insérées dans cette table optimisée en mémoire interne. Il existe une tâche en arrière-plan qui déplace de manière asynchrone les lignes de cette table interne vers la table d’historique sur disque. |
-|minor_id|  **int**|    0 indique une table utilisateur ou interne<br/><br/>Non-0 indique l’ID d’une colonne stockée hors ligne. Se joint à column_id dans sys.columns.<br/><br/>Chaque colonne stockée hors ligne a une ligne correspondante dans cette vue système.|
+|minor_id|  **Int**|    0 indique une table utilisateur ou interne<br/><br/>Non-0 indique l’ID d’une colonne stockée hors ligne. Se joint à column_id dans sys.columns.<br/><br/>Chaque colonne stockée hors ligne a une ligne correspondante dans cette vue système.|
 
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -102,7 +102,7 @@ WHERE moa.type=5;
 
 ### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>C. Retour de la consommation de mémoire des index columnstore sur les tables optimisées en mémoire
 
-La requête suivante permet d’afficher la consommation de mémoire des index columnstore sur les tables mémoire optimisées :
+Utilisez la requête suivante pour afficher la consommation de mémoire des index columnstore sur les tables optimisées en mémoire :
 
 ```Transact-SQL
 SELECT
@@ -118,7 +118,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-Utilisez la requête suivante de répartition la consommation de mémoire entre les structures internes utilisées pour l’index columnstore sur des tables optimisées en mémoire :
+Utilisez le saut suivant de requête vers le bas de la consommation de mémoire entre les structures internes utilisées pour les index columnstore sur les tables optimisées en mémoire :
 
 ```Transact-SQL
 SELECT

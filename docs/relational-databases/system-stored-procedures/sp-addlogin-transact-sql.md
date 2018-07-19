@@ -1,5 +1,5 @@
 ---
-title: sp_addlogin (Transact-SQL) | Documents Microsoft
+title: sp_addlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 5f9458c1459aef35bcf9d6e47963025f87000c32
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239919"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060154"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,12 +72,12 @@ sp_addlogin [ @loginame = ] 'login'
  Est la langue par défaut du compte de connexion. *langage* est **sysname**, avec NULL comme valeur par défaut. Si *langage* n’est pas spécifié, la valeur par défaut *langage* du nouveau compte de connexion est définie sur la langue par défaut actuelle du serveur.  
   
  [ @sid=] '*sid*'  
- Correspond au numéro d'identification de sécurité. *SID* est **varbinary (16)**, avec NULL comme valeur par défaut. Si *sid* est NULL, le système génère un SID pour le compte de connexion. Malgré l’utilisation d’un **varbinary** type de données, valeurs autres que NULL doit être de 16 octets exactement et ne doit pas déjà exister. Spécification de *sid* est utile, par exemple, script ou de déplacement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions à partir d’un serveur à un autre et que vous souhaitez qu’ont le même SID sur des serveurs différents.  
+ Correspond au numéro d'identification de sécurité. *SID* est **varbinary (16)**, avec NULL comme valeur par défaut. Si *sid* est NULL, le système génère un SID pour la nouvelle connexion. Malgré l’utilisation d’un **varbinary** type de données, valeurs autres que NULL doit être de 16 octets exactement et ne doit pas déjà exister. Spécification *sid* est utile, par exemple, lorsque vous scripting ou déplacez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions d’un serveur vers une autre, vous souhaitez que les connexions à avoir le même SID sur des serveurs différents.  
   
  [ @encryptopt=] '*encryption_option*'  
  Spécifie si le mot de passe est transmis en texte clair ou sous forme de hachage du mot de passe en texte clair. Notez qu'il n'y a aucun chiffrement. Le mot « chiffrement » est utilisé dans cette description à des fins de compatibilité ascendante. Si un mot de passe en texte clair est transmis, il est haché. Le hachage est stocké. *encryption_option* est **varchar (20)**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |NULL|Le mot de passe est transmis en clair. Il s'agit du paramètre par défaut.|  
 |**skip_encryption**|Le mot de passe est déjà haché. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit stocker la valeur sans hacher à nouveau.|  
@@ -101,7 +101,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  Le tableau suivant présente plusieurs procédures stockées qui sont utilisées avec sp_addlogin.  
   
-|Procédure stockée| Description|  
+|Procédure stockée|Description|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|Ajoute un utilisateur ou un groupe Windows.|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|Modifie le mot de passe d'un utilisateur.|  

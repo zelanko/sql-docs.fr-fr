@@ -1,5 +1,5 @@
 ---
-title: Fonctions constructeur (XQuery) | Documents Microsoft
+title: Fonctions constructeur (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6db36cc2dbd664869633d1d2f198684098ba29b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077722"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059730"
 ---
 # <a name="constructor-functions-xquery"></a>Fonctions constructeur (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  Tout type XSD intégré.  
   
 ## <a name="remarks"></a>Notes  
- Les constructeurs sont pris en charge pour les types XSD de base et dérivés. Toutefois, les sous-types de **xs : Duration**, qui inclut la **xdt : yearmonthduration et xdt : daytimeduration**, et **xs : QName**, **xs : NMTOKEN**, et **xs : notation** ne sont pas pris en charge. Les types atomiques définis par l'utilisateur présents dans les collections de schémas associées sont également disponibles, sous réserve qu'ils soient directement ou indirectement dérivés des types ci-après.  
+ Les constructeurs sont pris en charge pour les types XSD de base et dérivés. Toutefois, les sous-types de **xs : Duration**, qui inclut **xdt : yearmonthduration et xdt : daytimeduration**, et **xs : QName**, **xs : NMTOKEN**, et **xs : notation** ne sont pas pris en charge. Les types atomiques définis par l'utilisateur présents dans les collections de schémas associées sont également disponibles, sous réserve qu'ils soient directement ou indirectement dérivés des types ci-après.  
   
 #### <a name="supported-base-types"></a>Types de base pris en charge  
  Les types de base pris en charge sont les suivants :  
@@ -146,7 +146,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Utilisation de la fonction XQuery dateTime() pour extraire les anciennes descriptions de produits  
- Dans cet exemple, un document XML est attribué au préalable une **xml** variable de type. Ce document contient trois exemples d'éléments <`ProductDescription`>, possédant chacun un élément enfant <`DateCreated`>.  
+ Dans cet exemple, un exemple de document XML est attribué au préalable un **xml** variable de type. Ce document contient trois exemples d'éléments <`ProductDescription`>, possédant chacun un élément enfant <`DateCreated`>.  
   
  La variable est ensuite interrogée afin que ne soient extraites que les descriptions de produits créées avant une date spécifique. À des fins de comparaison, la requête utilise le **:DateTime()** fonction constructeur à taper les dates.  
   
@@ -179,15 +179,15 @@ select @x.query('
  ')  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   La structure de bouclage FOR ... Structure de boucle WHERE est utilisée pour récupérer le \<ProductDescription > élément répondant à la condition spécifiée dans la clause WHERE.  
   
--   Le **dateTime()** fonction constructeur est utilisée pour construire **dateTime** tapez des valeurs afin qu’elles puissent être comparées correctement.  
+-   Le **dateTime()** fonction constructeur sert à construire **dateTime** tapez des valeurs afin qu’ils puissent être comparées correctement.  
   
 -   La requête construit ensuite le document XML obtenu. Étant donné que vous construisez une séquence d'attributs, des virgules et des parenthèses sont utilisées dans la construction XML.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Product   

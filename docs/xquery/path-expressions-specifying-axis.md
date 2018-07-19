@@ -1,5 +1,5 @@
 ---
-title: Spécification de l’axe dans une étape d’Expression de chemin d’accès | Documents Microsoft
+title: Spécification de l’axe dans une étape d’Expression de chemin d’accès | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -30,27 +30,28 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2acb1aa6b9eddd2cf30f97da0d594db56b94e456
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046877"
 ---
-# <a name="path-expressions---specifying-axis"></a>Expressions de chemin d’accès - spécification de l’axe
+# <a name="path-expressions---specifying-axis"></a>Expressions de chemin : spécification de l’axe
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Une étape d'axe dans une expression de chemin d'accès inclut les composants suivants :  
   
 -   Axe  
   
--   A [test de nœud](../xquery/path-expressions-specifying-node-test.md)  
+-   Un [test de nœud](../xquery/path-expressions-specifying-node-test.md)  
   
 -   [Zéro ou plusieurs qualificateurs d’étape (facultatifs)](../xquery/path-expressions-specifying-predicates.md)  
   
- Pour plus d’informations, consultez [Expressions de chemin d’accès &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
+ Pour plus d’informations, consultez [Expressions de chemin &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
   
  L'implémentation de XQuery dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge les étapes d'axe suivantes :  
   
-|Axis| Description|  
+|Axis|Description|  
 |----------|-----------------|  
 |**child**|Retourne l'enfant du nœud du contexte.|  
 |**descendant**|Retourne tous les descendants du nœud du contexte.|  
@@ -59,15 +60,15 @@ ms.lasthandoff: 05/03/2018
 |**self**|Retourne le nœud du contexte lui-même.|  
 |**descendant-or-self**|Retourne le nœud du contexte et tous ses descendants.|  
   
- Tous ces axes, sauf le **parent** axe, sont des axes vers l’avant. Le **parent** axe est un axe inverse, parce qu’il recherche vers l’arrière dans la hiérarchie du document. Par exemple, l'expression de chemin d'accès relative `child::ProductDescription/child::Summary` comprend deux étapes, chacune spécifiant un axe `child`. La première étape extrait le \<ProductDescription > éléments enfants du nœud de contexte. Pour chaque \<ProductDescription > nœud d’élément, la seconde étape extrait la \<Résumé > enfants du nœud élément.  
+ Tous ces axes, sauf le **parent** axe, sont des axes vers l’avant. Le **parent** axe est un axe vers l’arrière, parce qu’il recherche vers l’arrière dans la hiérarchie du document. Par exemple, l'expression de chemin d'accès relative `child::ProductDescription/child::Summary` comprend deux étapes, chacune spécifiant un axe `child`. La première étape extrait le \<ProductDescription > éléments enfants du nœud de contexte. Pour chaque \<ProductDescription > nœud d’élément, la seconde étape extrait le \<Résumé > enfants du nœud élément.  
   
- L'expression de chemin d'accès relative `child::root/child::Location/attribute::LocationID` comporte quant à elle trois étapes. Les deux premières définissent un axe `child`, et la troisième, un axe `attribute`. Lors de l’exécution sur les instructions de fabrication des documents XML dans le **Production.ProductModel** table, l’expression retourne la `LocationID` attribut de la \<emplacement > enfant du nœud la \<racine > élément.  
+ L'expression de chemin d'accès relative `child::root/child::Location/attribute::LocationID` comporte quant à elle trois étapes. Les deux premières définissent un axe `child`, et la troisième, un axe `attribute`. Lorsque les instructions de fabrication exécutée des documents XML dans le **Production.ProductModel** table, l’expression retourne la `LocationID` attribut de la \<emplacement > enfant de nœud d’élément de la \<racine > élément.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples de requête dans cette rubrique sont définis sur **xml** type des colonnes dans le **AdventureWorks** base de données.  
+ Les exemples de requête dans cette rubrique sont définis sur **xml** colonnes de type le **AdventureWorks** base de données.  
   
 ### <a name="a-specifying-a-child-axis"></a>A. Spécification de l'axe enfant  
- Pour un modèle de produit spécifique, la requête suivante extrait le \<fonctionnalités > enfants du nœud élément de la \<ProductDescription > nœud d’élément à partir de la description du catalogue de produits stockée dans le `Production.ProductModel` table.  
+ Pour un modèle de produit spécifique, la requête suivante extrait le \<fonctionnalités > enfants de nœud d’élément de la \<ProductDescription > nœud d’élément à partir de la description du catalogue de produits stockée dans le `Production.ProductModel` table.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -77,14 +78,14 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le `query()` méthode de la **xml** type de données spécifie l’expression de chemin d’accès.  
   
 -   Les deux étapes de cette expression définissent un axe `child` et les noms des nœuds, `ProductDescription` et `Features` en tant que tests de nœuds. Pour plus d’informations sur les tests de nœud, consultez [spécification de Test de nœud dans une étape d’Expression de chemin d’accès](../xquery/path-expressions-specifying-node-test.md).  
   
 ### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>B. Définition des axes descendant et descendant-or-self  
- L'exemple ci-dessous utilise des axes descendant et descendant-or-self. La requête dans cet exemple est spécifiée sur un **xml** variable de type. L'instance XML est simplifiée pour illustrer facilement la différence dans les résultats générés.  
+ L'exemple ci-dessous utilise des axes descendant et descendant-or-self. La requête dans cet exemple est spécifiée par rapport à un **xml** variable de type. L'instance XML est simplifiée pour illustrer facilement la différence dans les résultats générés.  
   
 ```  
 declare @x xml  
@@ -130,7 +131,7 @@ select @y
   
  Si vous spécifiez un axe descendant-or-self au lieu d'un axe descendant, `/child::a/child::b/descendant-or-self::*` retourne le nœud du contexte, l'élément <`b`> et son descendant.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <b>text1  
@@ -181,7 +182,7 @@ WHERE  ProductModelID=19
   
  L'exemple ci-dessous illustre un emploi plus utile de l'axe parent.  
   
- Chaque description du catalogue de produits stockée dans le **CatalogDescription** colonne de la **ProductModel** table a un `<ProductDescription>` élément qui possède le `ProductModelID` attribut et `<Features>` élément enfant, comme indiqué dans le fragment suivant :  
+ Chaque description de catalogue de modèles de produits stockée dans le **CatalogDescription** colonne de la **ProductModel** table a un `<ProductDescription>` élément qui possède le `ProductModelID` attribut et `<Features>`élément enfant, comme indiqué dans le fragment suivant :  
   
 ```  
 <ProductDescription ProductModelID="..." >  
@@ -217,7 +218,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <Feature ProductModelID="19">  

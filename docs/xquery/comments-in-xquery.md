@@ -1,5 +1,5 @@
 ---
-title: Commentaires dans XQuery | Documents Microsoft
+title: Commentaires dans XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 459507805f8b1a1803382e400722d910c802605b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076046"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042327"
 ---
 # <a name="comments-in-xquery"></a>Commentaires dans XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Vous pouvez ajouter des commentaires à une requête XQuery. Les chaînes de commentaires sont ajoutées à l'aide des séparateurs « `(:` » et « `:)` ». Par exemple :  
+  Vous pouvez ajouter des commentaires à une requête XQuery. Les chaînes de commentaires sont ajoutées à l'aide des séparateurs « `(:` » et « `:)` ». Exemple :  
   
 ```  
 declare @x xml  

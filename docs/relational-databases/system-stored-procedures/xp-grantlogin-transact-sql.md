@@ -1,5 +1,5 @@
 ---
-title: xp_grantlogin (Transact-SQL) | Documents Microsoft
+title: xp_grantlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 0fd1ba37422fa5491d6dd834bc35cdd536830b97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258846"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058787"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
   
 ## <a name="arguments"></a>Arguments  
  [  **@loginame =** ] **'***connexion***'**  
- Nom de l'utilisateur ou du groupe Windows à ajouter. L’utilisateur ou groupe Windows doit être qualifié avec un nom de domaine Windows sous la forme *domaine*\\*utilisateur*. *connexion* est **sysname**, sans valeur par défaut.  
+ Nom de l'utilisateur ou du groupe Windows à ajouter. L’utilisateur de Windows ou le groupe doit être qualifié avec un nom de domaine Windows sous la forme *domaine*\\*utilisateur*. *connexion* est **sysname**, sans valeur par défaut.  
   
  [  **@logintype =** ] **'***logintype***'**  
- Niveau de sécurité du nom de connexion auquel l'accès est accordé. *LoginType* est **varchar (5)**, avec NULL comme valeur par défaut. Uniquement **admin** peut être spécifié. Si **admin** est spécifié, *connexion* a accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et ajouté en tant que membre de la **sysadmin** rôle serveur fixe.  
+ Niveau de sécurité du nom de connexion auquel l'accès est accordé. *le LoginType* est **varchar (5)**, avec NULL comme valeur par défaut. Uniquement **administrateur** peut être spécifié. Si **administrateur** est spécifié, *connexion* a accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et ajouté en tant que membre de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- **xp_grantlogin** est désormais un système stockées procédure au lieu d’une procédure stockée étendue. **xp_grantlogin** appelle **sp_grantlogin** et **sp_addsrvrolemember**.  
+ **xp_grantlogin** est maintenant un système de procédure stockée au lieu une procédure stockée étendue. **xp_grantlogin** appels **sp_grantlogin** et **sp_addsrvrolemember**.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **securityadmin** rôle serveur fixe. Lorsque vous modifiez le *logintype*, nécessite l’appartenance dans le **sysadmin** rôle serveur fixe.  

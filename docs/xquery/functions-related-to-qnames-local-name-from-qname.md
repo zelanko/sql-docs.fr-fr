@@ -1,5 +1,5 @@
 ---
-title: local-nom-de-QName (XQuery) | Documents Microsoft
+title: local-nom-from-QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 691e26b9e58bbb83706fb987a06280321dc37656
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077756"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061357"
 ---
-# <a name="functions-related-to-qnames---local-name-from-qname"></a>Fonctions relatives aux QName - nom local de QName
+# <a name="functions-related-to-qnames---local-name-from-qname"></a>Fonctions relatives aux QName : local-nom-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne un xs : NCName qui représente la partie locale de QName indiquée par *$arg*. Le résultat est une séquence vide si *$arg* est la séquence vide.  
+  Retourne un xs : NCName qui représente la partie locale de QName indiquée par *$arg*. Le résultat est une séquence vide si *$arg* correspond à la séquence vide.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,9 +44,9 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  QName d'où le nom local doit être extrait.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** type des colonnes dans le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
- L’exemple suivant utilise le **local-name-from-QName()** fonction pour récupérer le nom local et l’URI d’espace de noms de pièces à partir d’une valeur de type QName. Cet exemple illustre les opérations suivantes :  
+ L’exemple suivant utilise le **local-name-from-QName()** fonction pour récupérer le nom local et l’URI de l’espace de noms des parties d’une valeur de type QName. Cet exemple illustre les opérations suivantes :  
   
 -   La requête crée une collection de schémas XML.  
   

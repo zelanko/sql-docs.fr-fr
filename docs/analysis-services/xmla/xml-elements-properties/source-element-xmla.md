@@ -1,5 +1,5 @@
 ---
-title: Source de l’élément (XMLA) | Documents Microsoft
+title: Élément (XMLA) source | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8aaef002e649e01a51b99bd007ae5459e8cdbd97
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576421"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061057"
 ---
 # <a name="source-element-xmla"></a>Élément Source (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Représente une partition source à fusionner lors une [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande.  
+  Représente une partition source à fusionner lors un [MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) commande.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,7 @@ ms.locfileid: "34576421"
 </Sources>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "34576421"
 |Éléments enfants|[CubeID](../../../analysis-services/xmla/xml-elements-properties/cubeid-element-xmla.md), [DatabaseID](../../../analysis-services/xmla/xml-elements-properties/databaseid-element-xmla.md), [MeasureGroupID](../../../analysis-services/xmla/xml-elements-properties/measuregroupid-element-xmla.md), [PartitionID](../../../analysis-services/xmla/xml-elements-properties/partitionid-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
- Le **Source** élément est une référence d’objet à une partition unique à fusionner dans une partition cible spécifiée par la **cible** élément du parent **MergePartitions** élément.  
+ Le **Source** élément est une référence d’objet à une partition unique à fusionner dans une partition cible spécifiée par le **cible** élément du parent **MergePartitions** élément.  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant associe l'ensemble des quatre partitions du groupe de mesures `Internet Sales` dans la partition cible `Internet_Sales_2004` . L’exemple fait référence à la **Adventure Works** cube de la [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] exemple [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] base de données.  
@@ -70,7 +70,7 @@ ms.locfileid: "34576421"
 ```  
   
 ## <a name="see-also"></a>Voir aussi
- [Cibler élément &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
+ [Élément Target &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
  [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

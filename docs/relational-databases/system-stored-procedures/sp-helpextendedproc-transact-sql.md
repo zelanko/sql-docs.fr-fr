@@ -1,5 +1,5 @@
 ---
-title: sp_helpextendedproc (Transact-SQL) | Documents Microsoft
+title: sp_helpextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a7e9cc50f543232dea6b5ce39153eee2292284ac
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248053"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052247"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,16 +55,16 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom de la procédure stockée étendue.|  
 |**DLL**|**nvarchar(255)**|Nom de la DLL.|  
   
 ## <a name="remarks"></a>Notes  
- Lorsque *procédure* est spécifié, **sp_helpextendedproc** rapports spécifiées de procédure stockée étendue. Lorsque ce paramètre n’est pas fourni, **sp_helpextendedproc** retourne toutes les étendues des noms de procédure stockée et les noms de DLL pour laquelle chaque procédure stockée étendue appartient.  
+ Lorsque *procédure* est spécifié, **sp_helpextendedproc** procédure stockée étendue de rapports sur le texte spécifié. Lorsque ce paramètre n’est pas fourni, **sp_helpextendedproc** retourne toutes les étendues des noms de procédures stockées et les noms de DLL à laquelle chaque procédure stockée étendue appartient.  
   
 ## <a name="permissions"></a>Autorisations  
- L’autorisation d’exécuter **sp_helpextendedproc** est accordée aux **public**.  
+ Autorisation d’exécuter **sp_helpextendedproc** est accordée aux **public**.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -79,7 +79,7 @@ GO
 ```  
   
 ### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>B. Indication d'aide sur une procédure stockée étendue  
- L’exemple suivant indique les `xp_cmdshell` la procédure stockée étendue.  
+ L’exemple suivant signale sur le `xp_cmdshell` la procédure stockée étendue.  
   
 ```  
 USE master;  

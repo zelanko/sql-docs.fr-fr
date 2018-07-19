@@ -1,5 +1,5 @@
 ---
-title: Spécification d’Axes dans les requêtes XPath (SQLXML 4.0) | Documents Microsoft
+title: Spécification d’Axes dans les requêtes XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -25,22 +25,22 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8e4f7d99951749a147db2e0432bb74ce61113335
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974104"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053767"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Spécification d'axes dans les requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Les exemples suivants montrent comment spécifier des axes dans les requêtes XPath.  
   
- Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath & #40 ; SQLXML 4.0 & #41 ; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+ Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. Récupérer les éléments enfants du nœud de contexte  
- La requête XPath suivante sélectionne tous les  **\<Contact >** des éléments enfants du nœud de contexte :  
+ La requête XPath suivante sélectionne tous les  **\<Contact >** éléments enfants du nœud de contexte :  
   
 ```  
 /child::Contact  
@@ -91,13 +91,13 @@ ms.locfileid: "32974104"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Récupérer les petits-enfants du nœud de contexte  
- La requête XPath suivante sélectionne tous les le  **\<ordre >** éléments enfants de la  **\<client >** éléments enfants du nœud de contexte :  
+ La requête XPath suivante sélectionne tous les  **\<ordre >** éléments enfants de la  **\<client >** éléments enfants du nœud de contexte :  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- Dans la requête, `child` est l’axe et `Customer` et `Order` sont les tests de nœud (ces tests de nœud ont la valeur TRUE si Customer et Order sont  **\<élément >** nœuds, car le  **\<élément >** nœud est le nœud principal pour le **enfant** axe). Pour chaque nœud correspondant  **\<client >**, les nœuds correspondant  **\<commandes >** sont ajoutés au résultat. Uniquement  **\<ordre >** est retourné dans le jeu de résultats.  
+ Dans la requête, `child` est l’axe et `Customer` et `Order` sont les tests de nœud (ces tests de nœud ont la valeur TRUE si Customer et Order sont  **\<élément >** nœuds, car le  **\<élément >** nœud est le nœud principal pour le **enfant** axe). Pour chaque nœud correspondant  **\<client >**, les nœuds correspondant  **\<Orders >** sont ajoutés au résultat. Uniquement  **\<ordre >** est retourné dans le jeu de résultats.  
   
  Le **enfant** axe est la valeur par défaut. Par conséquent, la requête peut être spécifiée sous la forme :  
   
@@ -166,10 +166,10 @@ ms.locfileid: "32974104"
 </ROOT>  
 ```  
   
- Si la requête XPath est spécifiée en tant que `Customer/Order/OrderDetail`, à partir de chaque nœud correspondant  **\<client >** la requête accède à ses  **\<ordre >** éléments. Et pour chaque nœud correspondant  **\<ordre >**, la requête ajoute les nœuds  **\<OrderDetail >** au résultat. Uniquement  **\<OrderDetail >** est retourné dans le jeu de résultats.  
+ Si la requête XPath est spécifiée en tant que `Customer/Order/OrderDetail`, à partir de chaque nœud correspondant à  **\<client >** la requête accède à son  **\<ordre >** éléments. Et pour chaque nœud correspondant  **\<ordre >**, la requête ajoute les nœuds  **\<OrderDetail >** au résultat. Uniquement  **\<OrderDetail >** est retourné dans le jeu de résultats.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Utiliser... pour spécifier l'axe parent  
- La requête suivante récupère tous les le  **\<ordre >** éléments avec un parent  **\<client >** élément avec un **CustomerID** attribut la valeur 1. La requête utilise le **enfant** axe dans le prédicat pour rechercher le parent de la  **\<ordre >** élément.  
+ La requête suivante récupère tous les  **\<ordre >** éléments avec un parent  **\<client >** élément avec un **CustomerID** attribut valeur 1. La requête utilise le **enfant** axe dans le prédicat pour rechercher le parent de la  **\<ordre >** élément.  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -188,7 +188,7 @@ ms.locfileid: "32974104"
 ```  
   
 > [!NOTE]  
->  La requête XPath `/Order[../@CustomerID="1"]` retournera une erreur, car il n’y a aucun parent  **\<ordre >**. Bien qu’il peut y avoir des éléments dans le schéma de mappage contenant  **\<ordre >**, l’expression XPath n’a pas commencé sur un d'entre eux ; par conséquent,  **\<ordre >** est considéré comme étant le type d’élément de niveau supérieur dans le document.  
+>  La requête XPath `/Order[../@CustomerID="1"]` retournera une erreur, car il n’y a aucun parent  **\<ordre >**. Bien qu’il peut y avoir des éléments dans le schéma de mappage qui contiennent  **\<ordre >**, l’expression XPath n’a pas commencé sur un d’eux ; par conséquent,  **\<ordre >** est considéré comme étant le type d’élément de niveau supérieur dans le document.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   
@@ -253,7 +253,7 @@ ms.locfileid: "32974104"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Spécifier l'axe attribute  
- La requête XPath suivante sélectionne tous les  **\<client >** des éléments enfants du nœud de contexte avec un **CustomerID** attribut la valeur 1 :  
+ La requête XPath suivante sélectionne tous les  **\<client >** les éléments enfants du nœud de contexte avec un **CustomerID** attribut la valeur 1 :  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  

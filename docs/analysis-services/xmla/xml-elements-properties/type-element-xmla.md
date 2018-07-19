@@ -1,5 +1,5 @@
 ---
-title: Type d’élément (XMLA) | Documents Microsoft
+title: Type d’élément (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a080a1af46df731befc8ab66ce925b961be9b16
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34576711"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051597"
 ---
 # <a name="type-element-xmla"></a>Élément Type XMLA
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34576711"
 </Process>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34576711"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur les options de traitement disponibles pour les objets sur une instance d’Analysis Services, consultez [du traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Pour plus d’informations sur les options de traitement disponibles pour les objets sur une instance d’Analysis Services, consultez [traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  La valeur de la **Type** élément est limitée à une des chaînes répertoriées dans le tableau suivant.  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_xml_handles (Transact-SQL) | Documents Microsoft
+title: Sys.dm_exec_xml_handles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 66702418faae18f1c4582a28353e2f5ae7c156bc
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468215"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046107"
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -51,23 +51,23 @@ dm_exec_xml_handles (session_id | 0 )
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|ID de session de la session qui détient ce handle de document XML.|  
-|**document_id**|**int**|ID de handle de document XML retourné par **sp_xml_preparedocument**.|  
-|**namespace_document_id**|**int**|ID de handle interne utilisé pour le document de l’espace de noms associé qui a été passé en tant que troisième paramètre à **sp_xml_preparedocument**. NULL s'il n'y a pas de document d'espace de noms.|  
+|**session_id**|**Int**|ID de session de la session qui détient ce handle de document XML.|  
+|**document_id**|**Int**|ID de handle de document XML renvoyé par **sp_xml_preparedocument**.|  
+|**namespace_document_id**|**Int**|ID de handle interne utilisé pour le document de l’espace de noms associé qui a été passé en tant que troisième paramètre à **sp_xml_preparedocument**. NULL s'il n'y a pas de document d'espace de noms.|  
 |**sql_handle**|**varbinary(64)**|Handle du texte du code SQL où le handle a été défini.|  
-|**statement_start_offset**|**int**|Nombre de caractères dans l’en cours d’exécution par lots ou la procédure stockée à laquelle le **sp_xml_preparedocument** appel se produit. Peut être utilisé avec le **sql_handle**, le **statement_end_offset**et le **sys.dm_exec_sql_text** fonction de gestion dynamique pour extraire l’instruction en cours d’exécution de la demande.|  
-|**statement_end_offset**|**int**|Nombre de caractères dans l’en cours d’exécution par lots ou la procédure stockée à laquelle le **sp_xml_preparedocument** appel se produit. Peut être utilisé avec le **sql_handle**, le **statement_start_offset**et le **sys.dm_exec_sql_text** fonction de gestion dynamique pour extraire l’instruction en cours d’exécution de la demande.|  
-|**creation_time**|**datetime**|Horodatage lors de la **sp_xml_preparedocument** a été appelée.|  
+|**statement_start_offset**|**Int**|Nombre de caractères dans l’en cours d’exécution par lots ou procédure stockée à laquelle le **sp_xml_preparedocument** appel se produit. Peut être utilisé conjointement avec le **sql_handle**, le **statement_end_offset**et le **sys.dm_exec_sql_text** fonction de gestion dynamique pour récupérer l’actuellement l’exécution d’instruction pour la demande.|  
+|**statement_end_offset**|**Int**|Nombre de caractères dans l’en cours d’exécution par lots ou procédure stockée à laquelle le **sp_xml_preparedocument** appel se produit. Peut être utilisé conjointement avec le **sql_handle**, le **statement_start_offset**et le **sys.dm_exec_sql_text** fonction de gestion dynamique pour récupérer l’actuellement l’exécution d’instruction pour la demande.|  
+|**creation_time**|**datetime**|Horodatage lorsque **sp_xml_preparedocument** a été appelée.|  
 |**original_document_size_bytes**|**bigint**|Taille du document XML non analysé, en octets.|  
 |**original_namespace_document_size_bytes**|**bigint**|Taille du document d'espace de noms XML non analysé, en octets. NULL s'il n'y a pas de document d'espace de noms.|  
 |**num_openxml_calls**|**bigint**|Nombre d'appels OPENXML avec ce handle de document.|  
 |**row_count**|**bigint**|Nombre de lignes retournées par tous les appels OPENXML précédents pour ce handle de document.|  
-|**dormant_duration_ms**|**bigint**|Nombre de millisecondes depuis le dernier appel OPENXML. Si OPENXML n’a pas été appelé, retourne le nombre de millisecondes depuis le **sp_xml_preparedocument**appel.|  
+|**dormant_duration_ms**|**bigint**|Nombre de millisecondes depuis le dernier appel OPENXML. Si OPENXML n’a pas été appelé, retourne le nombre de millisecondes depuis le **sp_xml_preparedocument**appel de t.|  
   
 ## <a name="remarks"></a>Notes  
- La durée de vie de **sql_handles** utilisé pour récupérer le texte SQL qui a exécuté un appel à **sp_xml_preparedocument** est supérieure à celle du plan mis en cache utilisé pour exécuter la requête. Si le texte de la requête n'est pas disponible dans le cache, les données ne peuvent pas être récupérées à l'aide des informations fournies dans le résultat de fonction. Cela peut se produire si vous exécutez de nombreux traitements de grande taille.  
+ La durée de vie de **sql_handles** permet de récupérer le texte SQL qui a exécuté un appel à **sp_xml_preparedocument** est supérieure à celle du plan mis en cache utilisé pour exécuter la requête. Si le texte de la requête n'est pas disponible dans le cache, les données ne peuvent pas être récupérées à l'aide des informations fournies dans le résultat de fonction. Cela peut se produire si vous exécutez de nombreux traitements de grande taille.  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW SERVER STATE sur le serveur afin d'afficher toutes les sessions ou les ID de session qui ne sont pas détenus par l'appelant. Un appelant peut toujours voir les données de son propre ID de session actuelle.      

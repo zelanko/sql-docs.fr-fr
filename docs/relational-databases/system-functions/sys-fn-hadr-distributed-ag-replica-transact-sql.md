@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_hadr_distributed_ag_replica (Transact-SQL) | Documents Microsoft
+title: Sys.fn_hadr_distributed_ag_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ba68c331ee4fea313bd0186516d5cc9675758c20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234466"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049607"
 ---
 # <a name="sysfnhadrdistributedagreplica-transact-sql"></a>Sys.fn_hadr_distributed_ag_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,23 +46,23 @@ sys.fn_hadr_distributed_ag_replica( lag_Id, replica_id )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- '*lag_Id*'  
- Est l’identificateur du groupe de disponibilité distribués. *lag_Id* est de type **uniqueidentifier**.  
+ «*lag_Id*»  
+ Est l’identificateur du groupe de disponibilité distribué. *lag_Id* est de type **uniqueidentifier**.  
   
- '*replica_id*'  
+ «*replica_id*»  
  Est l’identificateur d’un réplica dans le groupe de disponibilité distribué. *replica_id* est de type **uniqueidentifier**.  
   
 ## <a name="tables-returned"></a>Tables retournées  
  Retourne les informations suivantes.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|Identificateur unique (GUID) du groupe de disponibilité local.|  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="using-sysfnhadrdistributedagreplica"></a>À l’aide de sys.fn_hadr_distributed_ag_replica  
- L’exemple suivant retourne une table avec l’identificateur de groupe de disponibilité local qui est associé avec le groupe de disponibilité distribué spécifié et le réplica.  
+ L’exemple suivant retourne une table avec l’identificateur de groupe de disponibilité local est associé avec le groupe de disponibilité distribué spécifié et le réplica.  
   
 ```  
 DECLARE @lagId uniqueidentifier = '4A03D1A8-4AE6-B153-E7E9-ED22A546008D'  
@@ -74,9 +74,9 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions de groupes de disponibilité AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [Groupes de disponibilité AlwaysOn & #40 ; SQL Server & #41 ;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Groupes de disponibilité de Distributed &#40;groupes de disponibilité AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
+ [Groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Groupes de disponibilité distribués &#40;groupes de disponibilité AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [GROUPE DE DISPONIBILITÉ ALTER &#40; Transact-SQL &#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
+ [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   

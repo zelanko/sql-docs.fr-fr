@@ -1,5 +1,5 @@
 ---
-title: sp_addextendedproc (Transact-SQL) | Documents Microsoft
+title: sp_addextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 2083d370479fa19049a083ef401574f21740929c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239789"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046087"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enregistre le nom d’une nouvelle procédure stockée étendue à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Inscrit le nom d’une nouvelle procédure stockée étendue à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez l’ [intégration CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) à la place.  
@@ -58,14 +58,14 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Après la création d’une procédure stockée étendue, il doit être ajouté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de **sp_addextendedproc**. Pour plus d’informations, consultez [Ajout d’une procédure stockée étendue à SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
   
  Cette procédure peut être exécutée uniquement dans les **master** base de données. Pour exécuter une procédure stockée étendue à partir d’une base de données autre que **master**, qualifiez le nom de la procédure stockée étendue avec **master**.  
   
- **sp_addextendedproc** ajoute des entrées à la [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vue de catalogue, l’inscription du nom de la nouvelle procédure stockée étendue avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il ajoute également une entrée dans le [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) affichage catalogue.  
+ **sp_addextendedproc** ajoute des entrées à la [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vue de catalogue, l’inscription du nom de la nouvelle procédure stockée étendue avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il ajoute également une entrée dans le [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) vue de catalogue.  
   
 > [!IMPORTANT]  
 >  Les DLL existantes qui n'ont pas été inscrites avec leur chemin complet ne fonctionneront plus après une mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour corriger le problème, utilisez **sp_dropextendedproc** pour annuler l’inscription de la DLL, puis inscrivez-la avec **sp_addextendedproc**, en spécifiant le chemin d’accès complet.  

@@ -1,5 +1,5 @@
 ---
-title: Représentation (tabulaire) de la partition | Documents Microsoft
+title: Représentation (tabulaire) de partition | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 289b58b5547b515dbc82cb0823def8c6087a9bb3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34038996"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054707"
 ---
-# <a name="tables---partition-representation"></a>Tables - représentation sous forme de Partition
+# <a name="tables---partition-representation"></a>Tables - représentation d’une Partition
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   À des fins opérationnelles, une table peut être divisée en différents sous-ensembles de lignes qui une fois combinés forment la table ; chacun de ces sous-ensembles est une partition de la table.  
   

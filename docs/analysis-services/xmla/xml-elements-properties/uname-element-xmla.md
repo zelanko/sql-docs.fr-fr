@@ -1,5 +1,5 @@
 ---
-title: Élément UName (XMLA) | Documents Microsoft
+title: Élément UName (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c860bcd21f6c717bae06478ca1ec1194383a75b
-ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34577981"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062517"
 ---
 # <a name="uname-element-xmla"></a>Élément UName (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34577981"
 </HierarchyInfo>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34577981"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Pour **HierarchyInfo** éléments, le **UName** élément contient le nom de la propriété qui fournit le membre unique des noms de la hiérarchie. La valeur est équivalente à la propriété MEMBER_UNIQUE_NAME définie pour les ensembles de lignes d'axe dans la spécification OLE DB pour OLAP.  
+ Pour **HierarchyInfo** éléments, le **UName** élément contient le nom de la propriété qui fournit des noms de la hiérarchie du membre unique. La valeur est équivalente à la propriété MEMBER_UNIQUE_NAME définie pour les ensembles de lignes d'axe dans la spécification OLE DB pour OLAP.  
   
  Pour **membre** éléments, le **UName** élément contient le nom unique du parent **membre** élément.  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_wait_stats (base de données de SQL Azure) | Documents Microsoft
+title: Sys.dm_db_wait_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
@@ -27,11 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: af54ac9890cf903e0646d9b6d8eefe031924ffce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467865"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051401"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34467865"
   
  Des types spécifiques de temps d'attente pendant l'exécution des requêtes peuvent indiquer des goulots d'étranglement ou des points de blocage dans la requête. De la même façon, des temps d'attente élevés, ou des nombres d'attente à l'échelle du serveur peuvent indiquer des goulots d'étranglement ou des zones réactives en interaction avec l'instance du serveur. Par exemple, des attentes de verrou indiquent une contention de données par les requêtes ; des attentes de verrou interne d'E/S de page indiquent des temps de réponse E/S lents ; des attentes de mise à jour de verrous internes de page indiquent une mise en page de fichier incorrecte.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|Nom du type d'attente. Pour plus d’informations, consultez [Types d’attentes](#WaitTypes), plus loin dans cette rubrique.|  
 |waiting_tasks_count|**bigint**|Nombre d'attentes sur ce type d'attente. Ce compteur est incrémenté au début de chaque attente.|  
@@ -81,11 +81,11 @@ ms.locfileid: "34467865"
   
  Bien que le thread ne soit plus en train d'attendre, il n'a pas à redémarrer immédiatement. En effet, ce type de thread est d'abord placé dans la file d'attente des travaux pouvant s'exécuter et doit attendre qu'un quantum s'exécute sur le planificateur.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les compteurs de temps d’attente sont **bigint** les valeurs et par conséquent, ne sont pas sujets à la substitution de compteur en tant que les compteurs équivalents des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les compteurs de temps d’attente sont **bigint** valeurs et par conséquent ne sont pas sujets à la substitution de compteur en tant que les compteurs équivalents des versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Le tableau suivant récapitule les types d'attente que rencontrent les tâches.  
   
-|Type d’attente| Description|  
+|Type d’attente|Description|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|Se produit pendant l'accès exclusif au chargement d'un assembly.|  
@@ -257,17 +257,17 @@ ms.locfileid: "34467865"
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|Se produit lorsque le planificateur du système d'exploitation (SQLOS) bascule en mode préemptif pour fermer une unité de sauvegarde virtuelle.|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|Se produit lorsque le planificateur du système d'exploitation (SQLOS) bascule en mode préemptif pour effectuer des opérations de cluster de basculement Windows.|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|Se produit lorsque le planificateur du système d'exploitation (SQLOS) bascule en mode préemptif pour créer un objet COM.|  
-|PREEMPTIVE_HADR_LEASE_MECHANISM|Groupes de disponibilité AlwaysOn concèdent la planification de gestionnaire pour les diagnostics CSS.|  
+|PREEMPTIVE_HADR_LEASE_MECHANISM|Groupes de disponibilité AlwaysOn de bail responsable de planification pour les diagnostics CSS.|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|Utilisé pour attendre que des processus utilisateur se terminent dans une base de données qui a subi un changement d'état suite à l'utilisation de la clause de terminaison ALTER DATABASE. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Se produit lorsqu'une tâche en arrière-plan attend la fin de la tâche en arrière-plan qui reçoit (par interrogation) des notifications de clustering de basculement Windows Server.  À usage interne uniquement|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|Ajout, de remplacer et/ou de supprimer une opération est en attente de saisir un verrou d’écriture sur une liste interne Always On (par exemple, une liste de réseaux, les adresses réseau ou les écouteurs de groupe de disponibilité).  À usage interne uniquement|  
-|PWAIT_HADR_OFFLINE_COMPLETED|Une Always On disponibilité groupe opération de suppression est en attente pour le groupe de disponibilité cible passe en mode hors connexion avant de détruire des objets de Clustering de basculement Windows Server.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|Un ajout, remplacement et/ou de suppression opération attend de saisir un verrou d’écriture sur une liste interne Always On (par exemple, une liste de réseaux, les adresses réseau ou les écouteurs de groupe de disponibilité).  À usage interne uniquement|  
+|PWAIT_HADR_OFFLINE_COMPLETED|Une Always On disponibilité groupe opération de suppression est en attente pour le groupe de disponibilité cible soit hors connexion avant la destruction d’objets de Clustering de basculement Windows Server.|  
 |PWAIT_HADR_ONLINE_COMPLETED|Un Always On créer ou opération de groupe de disponibilité de basculement est en attente pour le groupe de disponibilité cible passe en ligne.|  
-|PWAIT_HADR_POST_ONLINE_COMPLETED|Une Always On disponibilité groupe opération de suppression est en attente de l’arrêt d’une tâche en arrière-plan qui était planifiée dans le cadre d’une commande précédente. Par exemple, une tâche en arrière-plan peut effectuer la transition de bases de données de disponibilité vers le rôle principal. La DLL DROP AVAILABILITY GROUP doit attendre la fin de cette tâche en arrière-plan afin d'éviter des conditions de concurrence.|  
+|PWAIT_HADR_POST_ONLINE_COMPLETED|Une Always On disponibilité groupe opération de suppression est en attente de l’arrêt d’une tâche en arrière-plan qui a été planifiée dans le cadre d’une commande précédente. Par exemple, une tâche en arrière-plan peut effectuer la transition de bases de données de disponibilité vers le rôle principal. La DLL DROP AVAILABILITY GROUP doit attendre la fin de cette tâche en arrière-plan afin d'éviter des conditions de concurrence.|  
 |PWAIT_HADR_WORKITEM_COMPLETED|Attente interne par un thread attendant la fin d'une tâche de travail asynchrone. Il s'agit d'une attente prévue, à l'usage de CSS.|  
 |PWAIT_MD_LOGIN_STATS|Se produit durant la synchronisation interne dans les métadonnées des statistiques de connexion.|  
 |PWAIT_MD_RELATION_CACHE|Se produit durant la synchronisation interne dans les métadonnées de la table ou de l'index.|  

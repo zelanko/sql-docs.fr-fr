@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_compute_node_errors (Transact-SQL) | Documents Microsoft
+title: Sys.dm_exec_compute_node_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,30 +27,31 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4038eed706e25ae779d6f0a2fd16babb5a951fac
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048757"
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>Sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Erreurs retourne qui se produisent sur PolyBase les nœuds de calcul.  
+  Nœuds de calcul retourne survenues sur PolyBase.  
   
-|Nom de la colonne|Type de données| Description|Plage|  
+|Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|error_id|**nvarchar(36)**|Id numérique unique associé à l’erreur.|Unique pour toutes les erreurs de requête dans le système|  
+|error_id|**nvarchar(36)**|Id numérique unique associé à l’erreur.|Unique dans toutes les erreurs de requête dans le système|  
 |source|**nvarchar(255)**|Description de thread ou processus source||  
 |Type|**nvarchar(255)**|Type d'erreur||  
 |create_time|**datetime**|L’heure de l’occurrence de l’erreur||  
-|compute_node_id|**int**|Identificateur de nœud de calcul spécifique|Consultez compute_node_id de [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
-|rexecution_id|**nvarchar(36)**|Identificateur de la requête de PolyBase, le cas échéant.||  
-|spid|**int**|Identificateur de la session SQL Server||  
-|thread_id|**int**|Identificateur numérique du thread sur lequel l’erreur s’est produite.||  
-|détails|nvarchar(4000)|Obtenir une description complète des détails de l’erreur.||  
+|compute_node_id|**Int**|Identificateur du nœud de calcul spécifique|Consultez compute_node_id de [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|rexecution_id|**nvarchar(36)**|Identificateur de la requête PolyBase, le cas échéant.||  
+|spid|**Int**|Identificateur de la session de SQL Server||  
+|thread_id|**Int**|Identificateur numérique du thread sur lequel l’erreur s’est produite.||  
+|détails|nvarchar(4000)|Description complète des détails de l’erreur.||  
   
 ## <a name="see-also"></a>Voir aussi  
- [PolyBase, résolution des problèmes avec les vues de gestion dynamique](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Résolution des problèmes avec les vues de gestion dynamique de PolyBase](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées à la base de données &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

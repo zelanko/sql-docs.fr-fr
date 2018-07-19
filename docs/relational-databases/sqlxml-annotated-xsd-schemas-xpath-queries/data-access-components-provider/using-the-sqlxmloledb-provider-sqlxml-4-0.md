@@ -1,5 +1,5 @@
 ---
-title: À l’aide du fournisseur SQLXMLOLEDB (SQLXML 4.0) | Documents Microsoft
+title: À l’aide du fournisseur SQLXMLOLEDB (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e2c9d60c84cde37eeef80dd5c916544a0ca83e6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968774"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053807"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Utilisation du fournisseur SQLXMLOLEDB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

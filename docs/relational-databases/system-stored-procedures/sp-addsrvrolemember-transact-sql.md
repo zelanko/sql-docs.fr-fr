@@ -1,5 +1,5 @@
 ---
-title: sp_addsrvrolemember (Transact-SQL) | Documents Microsoft
+title: sp_addsrvrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 8d718d3cb44a4a1f148cd92df72dde7465b61762
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238879"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056097"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>Arguments  
  [ @loginame **=** ] **'***connexion***'**  
- Nom de la connexion ajoutée au rôle serveur fixe. *connexion* est **sysname**, sans valeur par défaut. *connexion* peut être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou une connexion Windows. Si la connexion Windows n'a pas encore été autorisée à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle l'est automatiquement.  
+ Nom de la connexion ajoutée au rôle serveur fixe. *connexion* est **sysname**, sans valeur par défaut. *connexion* peut être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un compte de connexion Windows. Si la connexion Windows n'a pas encore été autorisée à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle l'est automatiquement.  
   
  [ @rolename **=** ] **'***rôle***'**  
  Nom du rôle serveur fixe auquel est ajoutée la connexion. *rôle* est **sysname**, avec NULL comme valeur par défaut et doit être une des valeurs suivantes :  

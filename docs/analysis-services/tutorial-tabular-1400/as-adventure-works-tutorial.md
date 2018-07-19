@@ -1,5 +1,5 @@
 ---
-title: Didacticiel de Analysis Services Adventure Works (1400) | Documents Microsoft
+title: Didacticiel de Analysis Services Adventure Works (1400) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,45 +10,45 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28aa401eb037fecadca17ededf041ab82a4bc498
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044573"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042447"
 ---
 # <a name="tabular-modeling-1400-compatibility-level"></a>Modélisation tabulaire (niveau de compatibilité 1400)
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-Ce didacticiel inclut des leçons sur la façon de créer et déployer un modèle tabulaire à le [le niveau de compatibilité 1400](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md). Si vous utilisez Analysis Services et de modélisation tabulaire, ils auront terminé ce didacticiel est le moyen le plus rapide pour apprendre à créer et déployer un modèle tabulaire de base à l’aide de Visual Studio. Une fois que vous disposez des prérequis sur place, il doit prendre deux à trois heures.  
+Ce didacticiel inclut des leçons sur la façon de créer et déployer un modèle tabulaire à le [niveau de compatibilité 1400](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md). Si vous découvrez Analysis Services et la modélisation tabulaire, suivre ce didacticiel est le moyen le plus rapide pour savoir comment créer et déployer un modèle tabulaire de base à l’aide de Visual Studio. Une fois que vous disposez des prérequis sur place, il doit prendre deux ou trois heures.  
   
 ## <a name="what-you-learn"></a>Vous découvrez   
   
--   Comment créer un nouveau projet de modèle tabulaire à le **le niveau de compatibilité 1400** dans Visual Studio avec SSDT.
+-   Comment créer un nouveau projet de modèle tabulaire à le **niveau de compatibilité 1400** dans Visual Studio avec SSDT.
   
--   Comment importer des données à partir d’une base de données relationnelle dans une base de données du espace de travail du projet de modèle tabulaire.  
+-   Comment importer des données à partir d’une base de données relationnelle dans une base de données espace de travail de projet modèle tabulaire.  
   
 -   Créer et gérer des relations entre des tables dans le modèle.  
   
--   Comment créer des colonnes calculées, les mesures et indicateurs de Performance clés qui aideront les utilisateurs à analyser les métriques commerciales critiques.  
+-   Comment créer des colonnes calculées, les mesures et indicateurs de Performance clés qui permettent aux utilisateurs d’analyser des métriques métier critiques.  
   
--   Comment créer et gérer des perspectives et des hiérarchies qui aident les utilisateurs à parcourir facilement les données de modèle en fournissant l’entreprise et les points de vue spécifiques à l’application.  
+-   Comment créer et gérer des perspectives et des hiérarchies qui permettent aux utilisateurs plus facilement parcourir les données de modèle en fournissant des entreprises et les points de vue spécifiques à l’application.  
   
 -   Créer des partitions qui divisent les données des tables en plus petites parties logiques pouvant être traitées indépendamment des autres partitions.  
   
 -   Sécuriser les objets et les données du modèle en créant des rôles à l'aide des membres utilisateurs.  
   
--   Comment déployer un modèle tabulaire à un **Azure Analysis Services** serveur ou **2017 Analysis Services SQL Server** serveur à l’aide de SSDT.  
+-   Comment déployer un modèle tabulaire sur un **Azure Analysis Services** server ou **SQL Server Analysis Services 2017** serveur à l’aide de SSDT.  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Prérequis  
 
-Pour effectuer ce didacticiel, vous devez :  
+Pour suivre ce didacticiel, vous devez :  
   
--   Un serveur Azure Analysis Services ou un serveur SQL Server 2017 Analysis Services en mode tabulaire. Inscrivez-vous gratuitement [essai Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) et [créer un serveur](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server) ou télécharger gratuitement [2017 Developer Edition de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
+-   Un serveur Azure Analysis Services ou un serveur SQL Server 2017 Analysis Services en mode tabulaire. Inscrivez-vous pour bénéficier d’un [version d’évaluation d’Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) et [créer un serveur](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server) ou téléchargez gratuitement [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
--   Un [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) avec la **base de données exemple AdventureWorksDW**, ou d’un entrepôt de données locale SQL Server avec un [base de données exemple AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Lorsque vous installez une base de données AdventureWorksDW à un entrepôt de données locale SQL Server, utilisez la version de données d’exemple qui correspond avec votre version du serveur. 
+-   Un [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) avec la **base de données exemple AdventureWorksDW**, ou un serveur local SQL Data Warehouse avec un [base de données exemple AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Lorsque vous installez une base de données AdventureWorksDW à un entrepôt de données locale SQL Server, utilisez la version de base de données d’exemple qui correspond avec votre version de serveur. 
 
-    **Important :** si vous installez la base de données à un entrepôt de données locale SQL Server et que vous déployez votre modèle à un serveur Azure Analysis Services, un [passerelle de données locale](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway) est requis.
+    **Important :** si vous installez la base de données à un entrepôt de données locale SQL Server et que vous déployez votre modèle sur un serveur Azure Analysis Services, un [passerelle de données locale](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway) est requis.
 
 -   La dernière version de [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx). Ou, si vous disposez déjà de Visual Studio 2017, vous pouvez télécharger et installer [projets Microsoft Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) package (VSIX). Pour ce didacticiel, les références à SSDT et Visual Studio sont synonymes. 
 
@@ -58,11 +58,11 @@ Pour effectuer ce didacticiel, vous devez :
 
 ## <a name="scenario"></a>Scénario  
 
-Ce didacticiel est basé sur Adventure Works Cycles, une société fictive. Adventure Works est une société de fabrication volumineuse, multinationale qui produit et distribue des bicyclettes, les parties et accessoires pour les marchés d’Amérique du Nord, Europe et Asie. La société emploie 500 employés. En outre, Adventure Works emploie plusieurs équipes commerciales régionales pour couvrir son marché. Votre projet est à créer un modèle tabulaire pour les utilisateurs de ventes et marketing analyser les données des ventes Internet dans la base de données AdventureWorksDW.  
+Ce didacticiel est basé sur Adventure Works Cycles, une société fictive. Adventure Works est une société de fabrication volumineuse, multinationale qui produit et distribue des bicyclettes, des parties et des accessoires pour les marchés d’Amérique du Nord, Europe et Asie. La société emploie 500 personnes. En outre, Adventure Works emploie plusieurs équipes commerciales régionales pour couvrir son marché. Votre projet consiste à créer un modèle tabulaire pour les utilisateurs ventes et marketing analyser les données des ventes Internet dans la base de données AdventureWorksDW.  
   
-Pour exécuter ce didacticiel, vous devez effectuer plusieurs leçons. Dans chaque leçon, des tâches. Chaque tâche dans l’ordre est nécessaire pour terminer la leçon. Dans une leçon donnée il peut y avoir plusieurs tâches qui accomplissent des résultats similaires, mais comment vous effectuez chaque tâche est légèrement différente. Cette méthode affiche il existe souvent plusieurs façons pour terminer une tâche et à utiliser les compétences que vous avez appris dans les tâches et les leçons précédentes.  
+Pour suivre ce didacticiel, vous devez suivre plusieurs leçons. Dans chaque leçon, il existe des tâches. Chaque tâche dans l’ordre est nécessaire pour terminer la leçon. Tandis que dans une leçon donnée il peut y avoir plusieurs tâches qui aboutissent au même résultat, mais comment vous effectuez chaque tâche est légèrement différente. Cette méthode affiche il existe souvent plusieurs façons d’effectuer une tâche et à vous demander à l’aide des compétences que vous avez appris dans les tâches et les leçons précédentes.  
   
-L’objectif des leçons est pour vous guider dans la création d’un modèle tabulaire de base à l’aide de nombreuses fonctionnalités incluses dans SSDT. Chaque leçon découle de la leçon précédente, c'est pourquoi vous devez effectuer les leçons dans l'ordre.
+L’objectif des leçons consiste à vous guide tout au long de la création d’un modèle tabulaire de base à l’aide de la plupart des fonctionnalités incluses dans SSDT. Chaque leçon découle de la leçon précédente, c'est pourquoi vous devez effectuer les leçons dans l'ordre.
   
 Ce didacticiel ne fournit pas de leçons sur la gestion d’un serveur dans le portail Azure, la gestion d’un serveur ou une base de données à l’aide de SSMS, ou à l’aide d’une application cliente pour parcourir les données de modèle. 
 
@@ -89,18 +89,18 @@ Ce didacticiel inclut les leçons suivantes :
   
 ## <a name="supplemental-lessons"></a>Leçons supplémentaires  
 
-Ces leçons ne sont pas requises pour effectuer ce didacticiel, mais il peuvent être utiles pour une meilleure compréhension modèle tabulaire avancé fonctionnalités de création.  
+Ces leçons ne sont pas nécessaires pour suivre ce didacticiel, mais il peuvent être utiles pour mieux comprendre avancés modèles tabulaires fonctionnalités de création.  
   
 |Leçon|Durée estimée|  
 |----------|------------------------------|  
 |[Lignes de détails](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)|10 minutes|
 |[Sécurité dynamique](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)|30 minutes|
-|[Hiérarchies irrégulières](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)|20 minutes| 
+|[Hiérarchies déséquilibrées](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)|20 minutes| 
 
   
 ## <a name="next-steps"></a>Étapes suivantes  
 
-Pour commencer, consultez [leçon 1 : créer un projet de modèle tabulaire](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
+Pour commencer, consultez [leçon 1 : créer un nouveau projet de modèle tabulaire](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
   
   
   

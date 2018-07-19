@@ -1,5 +1,5 @@
 ---
-title: Configurer le stockage iSCSI basculement cluster instance - SQL Server sur Linux | Documents Microsoft
+title: Configurer le basculement cluster instance stockage iSCSI - SQL Server sur Linux | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,10 +12,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 6876ac9f3aa6641efe4e08e6c434870347315bc6
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057337"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurer l’instance de cluster de basculement - iSCSI - SQL Server sur Linux
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/19/2018
 
 Cet article explique comment configurer le stockage iSCSI pour une instance de cluster de basculement (FCI) sur Linux. 
 
-## <a name="configure-iscsi"></a>Configurer l’iSCSI 
+## <a name="configure-iscsi"></a>Configurer iSCSI 
 iSCSI utilise le réseau pour présenter les disques à partir d’un serveur configuré comme une cible pour les serveurs. Les serveurs qui se connectent à la cible iSCSI nécessitent qu’un initiateur iSCSI soit configuré. Les disques sur le serveur cible disposent d’autorisations explicites afin qu’uniquement les initiateurs qui doivent être en mesure d’y accéder puissent le faire. La cible elle-même doit être hautement disponible et fiable.
 
 ### <a name="important-iscsi-target-information"></a>Informations de la cible iSCSI important
@@ -50,7 +51,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     ```
     ![7-setiscsinetwork][6]
  
-2.  Modifier `/var/lib/iscsi/ifaces/iSCSIIfaceName`. Assurez-vous que les valeurs suivantes sont renseignés :
+2.  Modifier `/var/lib/iscsi/ifaces/iSCSIIfaceName`. Vérifiez que les valeurs suivantes sont renseignés :
 
     - iface.net_ifacename est le nom de la carte réseau comme indiqué dans le système d’exploitation.
     - iface.hwaddress est l’adresse MAC du nom unique qui sera créé pour cette interface ci-dessous.
@@ -67,7 +68,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     sudo iscsiadm -m discovery -t sendtargets -I <iSCSINetName> -p <TargetIPAddress>:<TargetPort>
     ```
 
-     \<iSCSINetName > est le nom unique/convivial pour le réseau, \<TargetIPAddress > est l’adresse IP de la cible iSCSI, et \<TargetPort > est le port de la cible iSCSI. 
+     \<iSCSINetName > est l’unique/nom convivial pour le réseau, \<TargetIPAddress > est l’adresse IP de la cible iSCSI, et \<TargetPort > est le port de la cible iSCSI. 
 
     ![iSCSITargetResults][3]
 
@@ -78,7 +79,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     sudo iscsiadm -m node -I <iSCSIIfaceName> -p TargetIPAddress -l
     ```
 
-    \<iSCSIIfaceName > est le nom unique/convivial pour le réseau et \<TargetIPAddress > est l’adresse IP de la cible iSCSI.
+    \<iSCSIIfaceName > est l’unique/nom convivial pour le réseau et \<TargetIPAddress > est l’adresse IP de la cible iSCSI.
 
     ![iSCSITargetLogin][4]
 
@@ -91,7 +92,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     ![iSCSIVerify][5]
 
  
-6.  Vérifiez les disques iSCSI reliés
+6.  Vérifier les disques iSCSI attachés
 
     ```bash
     sudo grep “Attached SCSI” /var/log/messages
@@ -115,19 +116,19 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
 
     \<VolumeGroupName > est le nom du groupe de volumes et \<devicename > est le nom de l’appareil à partir de l’étape 6. 
  
-9.  Créer et vérifier le volume logique pour le disque.
+9.  Créer et vérifier le volume pour le disque logique.
 
     ```bash
     sudo lvcreate -Lsize -n <LogicalVolumeName> <VolumeGroupName>
     ```
     
-    \<taille > est la taille du volume à créer et peut être spécifié avec G (Go), T (téraoctets), etc.,\<LogicalVolumeName > est le nom du volume logique, et \<VolumeGroupName > est le nom du groupe de volumes à partir de la étape précédente. 
+    \<taille > est la taille du volume à créer et peuvent être spécifiés avec G (Go), T (téraoctets), etc.,\<LogicalVolumeName > est le nom du volume logique, et \<VolumeGroupName > est le nom du groupe de volumes à partir de la étape précédente. 
 
-    L’exemple ci-dessous crée un volume de 25 Go.
+    L’exemple suivant crée un volume de 25 Go.
  
     ![Create25GBVol][10]
 
-10. Exécutez `sudo lvs` pour afficher le Gestionnaire de volume logique qui a été créé.
+10. Exécutez `sudo lvs` pour voir le LVM qui a été créé.
  
 11. Formater le volume logique avec un système de fichiers pris en charge. Pour EXT4, utilisez l’exemple suivant :
 
@@ -137,7 +138,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
 
     \<VolumeGroupName > est le nom du groupe de volumes à partir de l’étape précédente. \<LogicalVolumeName > est le nom du volume logique à partir de l’étape précédente.  
 
-12. Pour les bases de données système ou les informations stockées dans l’emplacement de données par défaut, procédez comme suit. Sinon, passez à l’étape 13.
+12. Pour les bases de données système ou quoi que ce soit stocké dans l’emplacement de données par défaut, procédez comme suit. Sinon, passez à l’étape 13.
 
    *    Vérifiez que SQL Server est arrêté sur le serveur que vous utilisez.
 
@@ -191,7 +192,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     rm – f /var/opt/mssql/data/*
     ```
 
-   *    Vérifiez que les fichiers ont été supprimés. L’illustration ci-dessous montre un exemple de toute la séquence de c à h.
+   *    Vérifiez que les fichiers ont été supprimés. L’illustration ci-dessous montre un exemple de la séquence entière de c à h.
 
     ```bash
     ls /var/opt/mssql/data
@@ -207,7 +208,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > est le nom du groupe de volumes et \<LogicalVolumeName > est le nom du volume logique qui a été créé. L’exemple de syntaxe suivante correspond au groupe de volumes et des volumes logiques à partir de la commande précédente.
+    \<VolumeGroupName > est le nom du groupe de volumes et \<LogicalVolumeName > est le nom du volume logique qui a été créé. L’exemple de syntaxe suivant correspond au groupe de volumes et volume logique à partir de la commande précédente.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
@@ -287,7 +288,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
     ```
 
-    \<VolumeGroupName> est le nom du groupe de volumes, \<LogicalVolumeName> le nom du volume logique créé et \<FolderName> le nom du dossier. Un exemple de syntaxe est illustré ci-dessous. Exemple de syntaxe est illustré ci-dessous.
+    \<VolumeGroupName> est le nom du groupe de volumes, \<LogicalVolumeName> le nom du volume logique créé et \<FolderName> le nom du dossier. Un exemple de syntaxe est illustré ci-dessous. Exemple de syntaxe est indiqué ci-dessous.
 
     ```bash
     mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
@@ -323,13 +324,13 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
   
     ![50-ExampleCreateSSMS][9]
 
-   *    Démontez le partage 
+   *    Démonter le partage 
 
     ```bash
     sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
     ```
 
-    \<VolumeGroupName> est le nom du groupe de volumes, \<LogicalVolumeName> le nom du volume logique créé et \<FolderName> le nom du dossier. Un exemple de syntaxe est illustré ci-dessous. Exemple de syntaxe est illustré ci-dessous.
+    \<VolumeGroupName> est le nom du groupe de volumes, \<LogicalVolumeName> le nom du volume logique créé et \<FolderName> le nom du dossier. Un exemple de syntaxe est illustré ci-dessous. Exemple de syntaxe est indiqué ci-dessous.
 
     ```bash
     sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
@@ -360,7 +361,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
  
 17. Au démarrage de Linux, il monte le système de fichiers. Pour vous assurer que seul Pacemaker peut monter le disque iSCSI, régénérez l’image de système du fichiers racine. 
 
-    Exécutez la commande suivante, ce qui peut prendre quelques instants. Vous n’obtenez aucun message de retour en cas de réussite.
+    Exécutez la commande suivante, ce qui peut prendre quelques instants. Vous n’obtiendrez aucun message de retour en cas de réussite.
 
     ```bash
     sudo dracut -H -f /boot/initramfs-$(uname -r).img $(uname -r)
@@ -388,14 +389,14 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-25. Répétez les étapes 1 à 6 sur les autres serveurs qui participeront à la FCI.
+25. Répétez les étapes 1 à 6 sur les autres serveurs qui participeront à l’instance FCI.
 
 Vous êtes maintenant prêt à configurer l’instance FCI.
 
 |Distribution |Rubrique 
 |----- |-----
-|**Red Hat Enterprise Linux avec un module complémentaire à haute disponibilité** |[Configurer](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Opérer](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**SUSE Linux Enterprise Server avec un module complémentaire à haute disponibilité** |[Configurer](sql-server-linux-shared-disk-cluster-sles-configure.md)
+|**Red Hat Enterprise Linux avec le module complémentaire HA** |[Configurer](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Opérer](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+|**SUSE Linux Enterprise Server avec le module complémentaire HA** |[Configurer](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

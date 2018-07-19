@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_profiles (Transact-SQL) | Documents Microsoft
+title: Sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b3acec798d858f31aac79231060d0533a3499b3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468095"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046137"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "34468095"
 ## <a name="table-returned"></a>Table retournée  
  Les compteurs retournés sont par opérateur par thread. Les résultats sont dynamiques et ne correspondent pas aux résultats des options existantes telles que SET STATISTICS XML ON qui crée uniquement une sortie quand la requête est terminée.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifie la session dans laquelle cette requête s'exécute. Référence dm_exec_sessions.session_id.|  
-|request_id|**int**|Identifie la demande cible. Référence dm_exec_sessions.request_id.|  
+|request_id|**Int**|Identifie la demande cible. Référence dm_exec_sessions.request_id.|  
 |sql_handle|**varbinary(64)**|Identifie la requête cible. Référence dm_exec_query_stats.sql_handle.|  
 |plan_handle|**varbinary(64)**|Identifie la requête cible (références dm_exec_query_stats.plan_handle).|  
 |physical_operator_name|**nvarchar (256)**|Nom de l'opérateur physique.|  
-|node_id|**int**|Identifie un nœud d'opérateur dans l'arborescence de requête.|  
-|thread_id|**int**|Fait la distinction entre les threads (pour une requête parallèle) qui appartiennent au même nœud d'opérateur de requête.|  
+|node_id|**Int**|Identifie un nœud d'opérateur dans l'arborescence de requête.|  
+|thread_id|**Int**|Fait la distinction entre les threads (pour une requête parallèle) qui appartiennent au même nœud d'opérateur de requête.|  
 |task_address|**varbinary(8)**|Identifie la tâche SQLOS utilisée par ce thread. Référence dm_os_tasks.task_address.|  
 |row_count|**bigint**|Nombre de lignes retournées par l'opérateur jusqu'à présent.|  
 |rewind_count|**bigint**|Nombre de rembobinages jusqu'à présent.|  
@@ -63,8 +63,8 @@ ms.locfileid: "34468095"
 |elapsed_time_ms|**bigint**|Temps total écoulé (en millisecondes) utilisé par les opérations du nœud cible jusqu'à présent.|  
 |cpu_time_ms|**bigint**|Temps processeur total écoulé (en millisecondes) utilisé par les opérations du nœud cible jusqu'à présent.|  
 |database_id|**smallint**|ID de la base de données qui contient l'objet sur lequel les opérations de lecture et d'écriture sont effectuées.|  
-|object_id|**int**|Identificateur de l'objet sur lequel les opérations de lecture et écriture sont effectuées. Fait référence à sys.objects.object_id.|  
-|index_id|**int**|Index (le cas échéant) dans lequel l'ensemble de lignes est ouvert.|  
+|object_id|**Int**|Identificateur de l'objet sur lequel les opérations de lecture et écriture sont effectuées. Fait référence à sys.objects.object_id.|  
+|index_id|**Int**|Index (le cas échéant) dans lequel l'ensemble de lignes est ouvert.|  
 |scan_count|**bigint**|Nombre d'analyses de tables ou d'index jusqu'à présent.|  
 |logical_read_count|**bigint**|Nombre de lectures logiques jusqu'à présent.|  
 |physical_read_count|**bigint**|Nombre de lectures physiques jusqu'à présent.|  
@@ -73,10 +73,10 @@ ms.locfileid: "34468095"
 |lob_logical_read_count|**bigint**|Nombre de lectures logiques LOB jusqu'à présent.|  
 |lob_physical_read_count|**bigint**|Nombre de lectures physiques LOB jusqu'à présent.|  
 |lob_read_ahead_count|**bigint**|Nombre de lectures anticipées LOB jusqu'à présent.|  
-|segment_read_count|**int**|Nombre de lectures anticipées de segment jusqu'à présent.|  
-|segment_skip_count|**int**|Nombre de segments ignorés jusqu'à présent.| 
-|actual_read_row_count|**bigint**|Nombre de lignes lues par un opérateur avant que le prédicat résiduel a été appliqué.| 
-|estimated_read_row_count|**bigint**|**S’applique à :** compter [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Nombre de lignes estimé pour être lus par un opérateur avant que le prédicat résiduel a été appliqué.|  
+|segment_read_count|**Int**|Nombre de lectures anticipées de segment jusqu'à présent.|  
+|segment_skip_count|**Int**|Nombre de segments ignorés jusqu'à présent.| 
+|actual_read_row_count|**bigint**|Nombre de lignes lues par un opérateur avant le prédicat résiduel a été appliqué.| 
+|estimated_read_row_count|**bigint**|**S’applique à :** compter [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Nombre de lignes estimé pour être lu par un opérateur avant le prédicat résiduel a été appliqué.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Si le nœud du plan de requête n'a pas d'E/S, tous les compteurs d'E/S sont définis sur NULL.  
@@ -87,10 +87,10 @@ ms.locfileid: "34468095"
   
 -   En cas d'analyse parallèle, cette vue de gestion dynamique indique des compteurs pour chaque threads parallèles de l'analyse.
  
- En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, les statistiques d’exécution de requête standard infrastructure de profilage existe côte à côte avec une statistiques d’exécution de requête léger infrastructure de profilage. La nouvelle requête l’exécution du profilage infrastructure de statistiques réduit considérablement la charge de travail de collecte de statistiques de l’exécution de requête par l’opérateur, telles que nombre réel de lignes. Cette fonctionnalité peut être activée à l’aide global démarrage [indicateur de trace 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), ou est automatiquement activé lorsque des événements étendus query_thread_profile est utilisé.
+ En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, les statistiques d’exécution de requête standard infrastructure de profilage existe côte à côte avec une infrastructure de profilage des statistiques d’exécution léger de requête. La nouvelle requête d’exécution statistiques profilage infrastructure réduit considérablement la surcharge de performances de collecte de statistiques de l’exécution de requête par opérateur, comme le nombre réel de lignes. Cette fonctionnalité peut être activée à l’aide de global démarrage [indicateur de trace 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), ou est activée automatiquement lorsque l’événement étendu query_thread_profile est utilisé.
 
 >[!NOTE]
-> Processeur et le temps écoulé ne sont pas pris en charge sous l’infrastructure de profilage de statistiques d’exécution de requête léger pour réduire l’impact sur les performances.
+> Processeur et le temps écoulé ne sont pas pris en charge sous l’infrastructure de profilage de statistiques d’exécution de requêtes simplifié afin de réduire l’impact sur les performances.
 
  SET STATISTICS XML ON et SET STATISTICS PROFILE ON toujours utiliser les statistiques d’exécution de requête hérité infrastructure de profilage.
   
@@ -132,7 +132,7 @@ ORDER BY node_id;
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

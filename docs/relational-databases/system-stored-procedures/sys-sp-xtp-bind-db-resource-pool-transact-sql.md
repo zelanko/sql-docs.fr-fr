@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Documents Microsoft
+title: Sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ce8af4df2491d6b80acf931ae769b1a0299504b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260292"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056087"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Binding to a resource pool is not supported for system database 'master'. This o
   
 **Pool de ressources n’existe pas**  
  Le pool de ressources identifié par resource_pool_name doit exister avant l'exécution de `sp_xtp_bind_db_resource_pool`.  S'il n'existe aucun pool avec l'ID spécifié, l'erreur suivante est retournée :  
-*Pool de ressources %s n’existe pas.  Entrez un nom de pool de ressources valide.*  
+*Pool de ressources %s n’existe pas.  Veuillez entrer un nom de pool de ressources valide.*  
   
 ```  
 Msg 41370, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -96,9 +96,9 @@ Msg 41373, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, L
 Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'. A database can only be bound only to a user resource pool.  
 ```  
   
-**Base de données est déjà lié à un autre Pool de ressources**  
+**Base de données est déjà liée à un autre Pool de ressources**  
  Une base de données ne peut être liée qu'à un seul pool de ressources à un moment donné. Les liaisons de bases de données aux pools de ressources doivent être supprimées explicitement avant de pouvoir être associées à un autre pool. Consultez [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
-*Base de données %s est déjà lié au pool de ressources %s.  Vous devez annuler la liaison avant de pouvoir créer une nouvelle liaison.*  
+*Base de données %s est déjà liée au pool de ressources %s.  Vous devez annuler la liaison avant de pouvoir créer une nouvelle liaison.*  
   
 ```  
 Msg 41372, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 54  
@@ -120,7 +120,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  La liaison prendra effet lors de la prochaine mise en ligne (ONLINE) de la base de données.  
  
- B. Exemple développé d’exemple qui inclut des vérifications de base ci-dessus.  Exécutez le code suivant [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. Exemple développé d’exemple qui inclut certaines vérifications de base ci-dessus.  Exécutez l’instruction suivante [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -157,7 +157,7 @@ END
 -   Requiert l'autorisation CONTROL SERVER.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Lier une base de données avec des tables optimisées en mémoire à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Sys.sp_xtp_unbind_db_resource_pool & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [Lier une base de données avec des tables mémoire optimisées à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [Sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

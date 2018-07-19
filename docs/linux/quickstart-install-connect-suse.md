@@ -1,5 +1,5 @@
 ---
-title: Prise en main 2017 du serveur SQL sur SUSE Linux Enterprise Server | Documents Microsoft
+title: Bien démarrer avec SQL Server 2017 sur SUSE Linux Enterprise Server | Microsoft Docs
 description: Ce démarrage rapide montre comment installer SQL Server 2017 sur SUSE Linux Enterprise Server puis créer et interroger une base de données avec sqlcmd.
 author: rothja
 ms.author: jroth
@@ -13,11 +13,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.openlocfilehash: 77dd13139eba88a40cbf20094b880c5046ebfb05
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455348"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057628"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur SUSE Linux Enterprise Server
 
@@ -28,18 +28,18 @@ Dans ce guide de démarrage rapide, vous installez d’abord SQL Server 2017 sur
 > [!TIP]
 > Ce didacticiel nécessite une saisie de la part de l’utilisateur et une connexion Internet. Si vous êtes intéressé par les procédures d'installation [sans assistance](sql-server-linux-setup.md#unattended) ou [hors connexion](sql-server-linux-setup.md#offline), consultez [aide à l’installation de SQL Server sur Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prérequis
 
 Vous devez disposer d’un ordinateur SP2 SLES v12 avec **au moins 3,25 Go** de mémoire. Le système de fichiers doit être **XFS** ou **EXT4**. D'autres systèmes de fichiers tels que **BTRFS**, ne sont pas pris en charge.
 
-Pour installer SUSE Linux Enterprise Server sur votre propre ordinateur, accédez à [ https://www.suse.com/products/server ](https://www.suse.com/products/server). Vous pouvez également créer des machines virtuelles SLES dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec l’interface CLI Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)et utiliser `--image SLES` dans l’appel à `az vm create`.
+Pour installer SUSE Linux Enterprise Server sur votre propre machine, accédez à [ https://www.suse.com/products/server ](https://www.suse.com/products/server). Vous pouvez également créer des machines virtuelles SLES dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)et utiliser `--image SLES` dans l’appel à `az vm create`.
 
 > [!NOTE]
 > À ce stade, le [sous-système Windows pour Linux](https://msdn.microsoft.com/commandline/wsl/about) pour Windows 10 n’est pas pris en charge comme cible d’installation.
 
 Pour les autres exigences système, consultez [configuration système requise pour SQL Server sur Linux](sql-server-linux-setup.md#system).
 
-## <a id="install"></a>Installation de SQL Server
+## <a id="install"></a>Installer SQL Server
 
 Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un terminal pour installer le package **mssql-serveur** :
 
@@ -55,7 +55,7 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un t
    > [!NOTE]
    > Il s’agit du référentiel de mise à jour cumulative (CU). Pour plus d’informations sur les options de votre référentiel et leurs différences, consultez [modifier les référentiels sources](sql-server-linux-change-repo.md).
 
-1. Actualiser vos référentiels.
+1. Actualisez vos référentiels.
 
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
@@ -104,7 +104,7 @@ Pour créer une base de données, vous devez vous connecter avec un outil qui pe
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. Installer **mssql-tools** avec le kit du développeur unixODBC.
+1. Installer **mssql-tools** avec le package de développeur unixODBC.
 
    ```bash
    sudo zypper install -y mssql-tools unixODBC-devel

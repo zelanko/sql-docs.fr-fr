@@ -1,5 +1,5 @@
 ---
-title: sp_delete_database_firewall_rule (base de données de SQL Azure) | Documents Microsoft
+title: sp_delete_database_firewall_rule (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
 ms.prod: ''
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0178f70f2ea71af12f53109b4dbde0240977c9d9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241347"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049487"
 ---
 # <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Supprime un paramètre de pare-feu de niveau base de données de votre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Les règles de pare-feu de base de données peuvent être configurés et supprimés de la base de données master et pour les bases de données utilisateur sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].   
+  Supprime un paramètre de pare-feu au niveau de la base de données de votre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Les règles de pare-feu de base de données peuvent être configurés et supprimés de la base de données master et pour les bases de données utilisateur sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].   
   
  
 ## <a name="syntax"></a>Syntaxe  
@@ -52,10 +52,10 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
  Nom du paramètre de pare-feu de niveau base de données qui sera supprimé. *nom* est **nvarchar (128)** sans valeur par défaut. L’identificateur Unicode `N` est facultatif pour [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
 ## <a name="permissions"></a>Autorisations  
- Uniquement au niveau du serveur principale connexion créée par le processus de déploiement ou d’une entité de sécurité Azure Active Directory désigné comme administrateur peut supprimer les règles de pare-feu de niveau base de données.  
+ Uniquement au niveau du serveur principal connexion créée par le processus d’approvisionnement ou une entité de sécurité Azure Active Directory affecté comme administrateur peut supprimer les règles de pare-feu au niveau de la base de données.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant supprime le paramètre nommé de pare-feu de niveau base de données `Example DB Setting 1`.
+ L’exemple suivant supprime le paramètre nommé de pare-feu de niveau de base de données `Example DB Setting 1`.
   
 ```  
 -- Remove database-level firewall setting  

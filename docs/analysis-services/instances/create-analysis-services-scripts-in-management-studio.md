@@ -1,5 +1,5 @@
 ---
-title: Créer des Scripts Analysis Services dans Management Studio | Documents Microsoft
+title: Créer des Scripts Analysis Services dans Management Studio | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28b1b0068f9ddd9bf47bc2fe93177db469c8b4f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016816"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057817"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Créer des scripts Analysis Services dans Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inclut des fonctionnalités de génération de script, des modèles et des éditeurs dont vous pouvez vous servir pour créer des scripts d'objets et de tâches Analysis Services.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inclut des fonctionnalités de génération de script, des modèles et des éditeurs dont vous pouvez vous servir pour créer des scripts d’objets et de tâches Analysis Services.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Créer des scripts de tâches Analysis Services dans Management Studio  
  Les tâches de script dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sont accomplies en cliquant sur l’une des options de script dans une boîte de dialogue orientée tâche. Toutes les boîtes de dialogue que vous utilisez pour effectuer des tâches telles que la sauvegarde ou la restauration de la base de données, pour traiter un objet, ou pour concevoir un regroupement, incluent une option de script en haut de la boîte de dialogue. La sélection de l'une de ces options génère un script XMLA en fonction des informations et des paramètres de la boîte de dialogue.  
@@ -62,6 +62,6 @@ ms.locfileid: "34016816"
     >  Généralement, vous sélectionnez **Fichier** pour créer plusieurs versions différentes du fichier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de requête XMLA & #40 ; Analysis Services - données multidimensionnelles & #41 ;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
+ [Éditeur de requête XMLA &#40;Analysis Services - données multidimensionnelles&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

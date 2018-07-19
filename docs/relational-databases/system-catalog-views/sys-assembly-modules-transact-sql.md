@@ -1,5 +1,5 @@
 ---
-title: Sys.assembly_modules (Transact-SQL) | Documents Microsoft
+title: Sys.assembly_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,25 +26,25 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d457f00cdab5d8b7e6584c895c9a9070a1d9e395
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180275"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062024"
 ---
 # <a name="sysassemblymodules-transact-sql"></a>sys.assembly_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Renvoie une ligne pour chaque fonction, procédure ou déclencheur défini pour un assembly CLR (Common Language Runtime). Cet affichage catalogue mappe des procédures stockées CLR, des déclencheurs CLR ou des fonctions CLR avec leur implémentation sous-jacente. Les objets de type TA, AF, PC, FS et FT ont un module d'assembly associé. Pour trouver l'association entre l'objet et l'assembly, vous pouvez joindre cet affichage catalogue à d'autres. Par exemple, lorsque vous créez une procédure stockée CLR, il est représenté par une ligne dans **sys.objects**, une ligne dans **sys.procedures** (qui hérite de **sys.objects**) et une ligne dans **sys.assembly_modules**. La procédure stockée elle-même est représentée par les métadonnées dans **sys.objects** et **sys.procedures**. Références à l’implémentation CLR sous-jacente de la procédure sont trouvent dans **sys.assembly_modules**.  
+  Renvoie une ligne pour chaque fonction, procédure ou déclencheur défini pour un assembly CLR (Common Language Runtime). Cet affichage catalogue mappe des procédures stockées CLR, des déclencheurs CLR ou des fonctions CLR avec leur implémentation sous-jacente. Les objets de type TA, AF, PC, FS et FT ont un module d'assembly associé. Pour trouver l'association entre l'objet et l'assembly, vous pouvez joindre cet affichage catalogue à d'autres. Par exemple, lorsque vous créez une procédure stockée CLR, il est représenté par une ligne dans **sys.objects**, une ligne dans **sys.procedures** (qui hérite **sys.objects**), et une ligne dans **sys.assembly_modules**. La procédure stockée elle-même est représentée par les métadonnées dans **sys.objects** et **sys.procedures**. Références à l’implémentation CLR sous-jacente de la procédure sont trouvent dans **sys.assembly_modules**.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|Numéro d'identification de l'objet SQL. Unique dans une base de données.|  
-|**assembly_id**|**int**|ID de l'assembly à partir duquel ce module a été créé.|  
+|**object_id**|**Int**|Numéro d'identification de l'objet SQL. Unique dans une base de données.|  
+|**assembly_id**|**Int**|ID de l'assembly à partir duquel ce module a été créé.|  
 |**assembly_class**|**sysname**|Nom de la classe dans l'assembly qui définit ce module.|  
 |**assembly_method**|**sysname**|Nom de la méthode dans le **assembly_class** qui définit ce module.<br /><br /> Les fonctions d'agrégation (AF) ont la valeur NULL.|  
 |**null_on_null_input**|**bit**|Le module a été déclaré pour produire une sortie NULL pour toute entrée NULL.|  
-|**execute_as_principal_id**|**int**|ID de la base de données principale dans laquelle le contexte est exécuté, comme spécifié par la clause EXECUTE AS de la fonction, la procédure stockée ou le déclencheur CLR.<br /><br /> NULL = EXECUTE AS CALLER. Il s'agit du paramètre par défaut.<br /><br /> ID du principal de base de données spécifiée = EXECUTE AS SELF, EXECUTE AS *nom_utilisateur*, ou EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**Int**|ID de la base de données principale dans laquelle le contexte est exécuté, comme spécifié par la clause EXECUTE AS de la fonction, la procédure stockée ou le déclencheur CLR.<br /><br /> NULL = EXECUTE AS CALLER. Il s'agit du paramètre par défaut.<br /><br /> ID du principal de base de données spécifiée = EXECUTE AS SELF, EXECUTE AS *user_name*, ou EXECUTE AS *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

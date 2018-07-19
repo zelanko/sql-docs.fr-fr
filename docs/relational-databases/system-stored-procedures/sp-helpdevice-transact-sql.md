@@ -1,5 +1,5 @@
 ---
-title: sp_helpdevice (Transact-SQL) | Documents Microsoft
+title: sp_helpdevice (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 041cd12fe621a8f74b60b81d7a8964752caa4fde
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242797"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049297"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33242797"
   Transmet des informations sur les unités de sauvegarde Microsoft® SQL Server™.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser le [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) affichage du catalogue à la place  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser le [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) à la place de vue de catalogue  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,17 +55,17 @@ sp_helpdevice [ [ @devname = ] 'name' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Nom de périphérique logique.|  
 |**physical_name**|**nvarchar(260)**|Nom de fichier physique.|  
 |**description**|**nvarchar(255)**|Description du périphérique.|  
-|**status**|**int**|Un nombre qui correspond à la description de l’état dans le **description** colonne.|  
+|**status**|**Int**|Un nombre qui correspond à la description d’état dans le **description** colonne.|  
 |**cntrltype**|**smallint**|Type de contrôleur du périphérique :<br /><br /> 2 = unité de disque<br /><br /> 5 = périphérique à bandes|  
-|**size**|**int**|Taille du périphérique (en pages de 2 Ko).|  
+|**size**|**Int**|Taille du périphérique (en pages de 2 Ko).|  
   
 ## <a name="remarks"></a>Notes  
- Si *nom* est spécifié, **sp_helpdevice** affiche des informations sur l’unité de vidage spécifiée. Si *nom* n’est pas spécifié, **sp_helpdevice** affiche des informations sur toutes les unités de vidage dans le **sys.backup_devices** affichage catalogue.  
+ Si *nom* est spécifié, **sp_helpdevice** affiche des informations sur l’unité de vidage spécifiée. Si *nom* n’est pas spécifié, **sp_helpdevice** affiche des informations sur toutes les unités de vidage dans le **sys.backup_devices** vue de catalogue.  
   
  Unités de vidage sont ajoutées au système à l’aide de **sp_addumpdevice**.  
   

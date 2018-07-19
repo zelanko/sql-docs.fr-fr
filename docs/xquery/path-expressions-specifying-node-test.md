@@ -1,5 +1,5 @@
 ---
-title: Spécification de Test de nœud dans une étape d’Expression de chemin d’accès | Documents Microsoft
+title: Spécification d’un Test de nœud dans une étape d’Expression de chemin d’accès | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3460ecf0a821d5c7ffa39f242650e06c0e8ddaf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077666"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058299"
 ---
-# <a name="path-expressions---specifying-node-test"></a>Expressions de chemin d’accès - spécification de Test de nœud
+# <a name="path-expressions---specifying-node-test"></a>Expressions de chemin : spécification d’un Test de nœud
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Une étape d'axe dans une expression de chemin d'accès inclut les composants suivants :  
@@ -39,7 +39,7 @@ ms.locfileid: "33077666"
   
 -   [Zéro ou plusieurs qualificateurs d’étape (facultatifs)](../xquery/path-expressions-specifying-predicates.md)  
   
- Pour plus d’informations, consultez [Expressions de chemin d’accès &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
+ Pour plus d’informations, consultez [Expressions de chemin &#40;XQuery&#41;](../xquery/path-expressions-xquery.md).  
   
  Un test de nœud est une condition et représente le deuxième composant de l'étape d'axe dans une expression de chemin d'accès. Tous les nœuds sélectionnés par une étape doivent satisfaire cette condition. Dans le cas de l'expression du chemin d'accès `/child::ProductDescription`, le test de nœud correspond donc à `ProductDescription`. En d'autres termes, cette étape ne récupère que les enfants du nœud élément dont le nom est ProductDescription.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33077666"
 >  Les noms de nœuds précisés dans les expressions de chemin d'accès XQuery ne sont pas soumis aux mêmes règles dépendantes du classement que les requêtes Transact-SQL et respectent toujours la casse.  
   
 ## <a name="node-name-as-node-test"></a>Nom de nœud en tant que test de nœud  
- Pour indiquer un nom de nœud en tant que test de nœud dans une étape d'expression du chemin d'accès, vous devez au préalable comprendre le concept de type de nœud principal. Chaque axe child (enfant), parent ou attribute (attribute) possède un type de nœud principal. Par exemple :  
+ Pour indiquer un nom de nœud en tant que test de nœud dans une étape d'expression du chemin d'accès, vous devez au préalable comprendre le concept de type de nœud principal. Chaque axe child (enfant), parent ou attribute (attribute) possède un type de nœud principal. Exemple :  
   
 -   Un axe attribute ne peut contenir que des attributs. L'axe attribute correspond par conséquent au type de nœud principal de l'axe.  
   
@@ -75,9 +75,9 @@ child::ProductDescription
   
  L'expression du chemin d'accès `/child::PD:ProductDescription/child::PD:Features/descendant::*,` possède pour sa part trois étapes. Ces étapes indiquent les axes child et descendant. Dans chacune des étapes, le nom du nœud est spécifié comme test de nœud. Le caractère générique (à savoir `*`) de la troisième étape indique tous les nœuds du type de nœud principal correspondant à l'axe descendant. Le type de nœud principal de l'axe détermine en effet le type de nœuds sélectionné, ainsi que les filtres de nom de nœud que les nœuds ont sélectionnés.  
   
- Par conséquent, lorsque cette expression est exécutée par rapport aux documents XML de catalogue de produits dans le **ProductModel** table, elle récupère tous les enfants de nœud d’élément de la \<fonctionnalités > enfant du nœud du \<ProductDescription > élément.  
+ Par conséquent, lorsque cette expression est exécutée sur les documents XML de catalogue de produits dans le **ProductModel** table, elle récupère tous les enfants de nœud d’élément de la \<fonctionnalités > enfant de nœud d’élément de la \< ProductDescription > élément.  
   
- L’expression de chemin d’accès, `/child::PD:ProductDescription/attribute::ProductModelID`, est constitué de deux étapes. Ces deux étapes indiquent un nom de nœud comme test de nœud. La deuxième étape utilise également un axe attribute. Ainsi, chaque étape sélectionne des nœuds du type de nœud principal de son axe portant le nom spécifié comme test de nœud. Par conséquent, l’expression retourne **ProductModelID** nœud d’attribut de le \<ProductDescription > nœud d’élément.  
+ L’expression de chemin d’accès, `/child::PD:ProductDescription/attribute::ProductModelID`, se compose de deux étapes. Ces deux étapes indiquent un nom de nœud comme test de nœud. La deuxième étape utilise également un axe attribute. Ainsi, chaque étape sélectionne des nœuds du type de nœud principal de son axe portant le nom spécifié comme test de nœud. Par conséquent, l’expression retourne **ProductModelID** nœud d’attribut de la \<ProductDescription > nœud d’élément.  
   
  En spécifiant les noms des nœuds comme tests de nœud, vous pouvez également utiliser le caractère générique (*) dans le nom local d'un nœud ou dans le préfixe de son espace de noms, comme illustré dans l'exemple suivant :  
   
@@ -111,13 +111,13 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- De même, `/child::ProductDescription/child::Features/child::comment()` récupère les enfants du nœud de commentaire le \<fonctionnalités > enfant du nœud du \<ProductDescription > nœud d’élément.  
+ De même, `/child::ProductDescription/child::Features/child::comment()` récupère les enfants du nœud de commentaire le \<fonctionnalités > enfant de nœud d’élément de la \<ProductDescription > nœud d’élément.  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants comparent nom de nœud et type de nœud.  
   
 ### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. Résultats de la spécification du nom de nœud et du type de nœud en tant que tests de nœuds dans une expression de chemin d'accès  
- Dans l’exemple suivant, un document XML simple est attribué à un **xml** variable de type. Le document est interrogé à l'aide de plusieurs expressions de chemin d'accès. Les résultats sont ensuite comparés.  
+ Dans l’exemple suivant, un document XML simple est affecté à un **xml** variable de type. Le document est interrogé à l'aide de plusieurs expressions de chemin d'accès. Les résultats sont ensuite comparés.  
   
 ```  
 declare @x xml  
@@ -153,7 +153,7 @@ select @x.query('
   
  Cette expression renvoie le nœud élément `<b>` ainsi que les nœuds éléments descendants. En renvoyant les nœuds descendants, le type de nœud primaire de l'axe descendant-or-self, correspondant au type de nœud élément, détermine les type de nœuds qui sont renvoyés.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <b>text1  
@@ -175,7 +175,7 @@ select @x.query('
 /child::a/child::b/descendant::node()  
 ```  
   
- Étant donné que `node()` est un type de nœud, vous allez recevoir tous les nœuds de l’axe descendant. Voici le résultat obtenu :  
+ Étant donné que `node()` est un type de nœud, vous allez recevoir tous les nœuds de l’axe descendant. Voici le résultat obtenu :  
   
 ```  
 text1  
@@ -219,7 +219,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Le mot clé `namespace` mentionné dans le prologue XQuery définit un préfixe utilisé dans le corps de la requête. Pour plus d’informations sur le prologue XQuery, consultez [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) .  
   
@@ -229,7 +229,7 @@ WHERE ProductModelID=19
   
  La requête renvoie les enfants de l'élément <`Warranty`> issus de l'enfant de l'élément <`Features`> provenant lui même de l'élément <`ProductDescription`>.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <wm:Warranty xmlns:wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain">  
@@ -303,7 +303,7 @@ WHERE ProductModelID=19
   
 -   L'expression renvoie les enfants du nœud de texte issus de l'enfant de l'élément <`Features`> provenant lui-même du nœud élément <`ProductDescription`>.  
   
- Un seul nœud de texte est renvoyé. Voici le résultat obtenu :  
+ Un seul nœud de texte est renvoyé. Voici le résultat obtenu :  
   
 ```  
 These are the product highlights.   
@@ -321,13 +321,13 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   La deuxième étape indique un type de nœud comme test de nœud.  
   
 -   La requête renvoie comme résultat les enfants du nœud de commentaire provenant des nœuds éléments <`ProductDescription`>.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <!-- add one or more of these elements... one for each specific product in this product model -->  
@@ -346,7 +346,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <?xml-stylesheet href="ProductDescription.xsl" type="text/xsl"?>   

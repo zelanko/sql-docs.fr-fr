@@ -1,5 +1,5 @@
 ---
-title: Exemple de schéma XSD annoté pour obtenir des exemples XPath (SQLXML 4.0) | Documents Microsoft
+title: Exemple de schéma XSD annoté pour les exemples de XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6af6bcbd760cb74c55bda4caa3164bc304dadcd8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968604"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053727"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>Exemple de schéma XSD annoté pour les exemples XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Les exemples de requêtes XPath de cette section font référence à un schéma de mappage. Le schéma de mappage est un fichier de schéma XML (XSD) annoté. Pour plus d’informations sur les schémas de mappage, consultez [Introduction aux schémas de XSD annoté &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
+  Les exemples de requêtes XPath de cette section font référence à un schéma de mappage. Le schéma de mappage est un fichier de schéma XML (XSD) annoté. Pour plus d’informations sur les schémas de mappage, consultez [Introduction aux schémas XSD annotés &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
   
  Les éléments suivants sont nécessaires pour exécuter des requêtes XPath sur un schéma XSD annoté :  
   

@@ -1,5 +1,5 @@
 ---
-title: Les données d’exploration de données de référence des instructions Extensions (DMX) | Documents Microsoft
+title: Data Mining Extensions (DMX) de référence des instructions | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1baab80455cc5267686bf26251629a1d47065344
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841492"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042117"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Instructions Data Mining Extensions (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Utilisation des données des modèles d’exploration de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] implique les principales tâches suivantes :  
+  Utilisation de données des modèles d’exploration de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] implique les principales tâches suivantes :  
   
 -   Création de structures et de modèles d'exploration de données  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34841492"
   
 -   Copie de modèles d'exploration de données  
   
--   Parcourir les modèles d’exploration de données  
+-   Exploration des modèles d’exploration de données  
   
 -   Prévision dans des modèles d'exploration de données  
   
@@ -41,16 +41,16 @@ ms.locfileid: "34841492"
  Utilisez le [CREATE MINING MODEL &#40;DMX&#41; ](../dmx/create-mining-model-dmx.md) instruction pour créer la structure d’exploration de données associé et de modèle d’exploration de données.  
   
  Traitement des structures et des modèles d'exploration de données  
- Utilisez le [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) instruction pour traiter une structure et un modèle d’exploration de données.  
+ Utilisez le [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) instruction pour traiter une structure d’exploration de données et le modèle d’exploration.  
   
  Suppression de structures ou de modèles d'exploration de données  
- Utilisez le [supprimer &#40;DMX&#41; ](../dmx/delete-dmx.md) instruction pour supprimer toutes les données d’apprentissage à partir d’un modèle ou une structure d’exploration de données. Utilisez le [DROP MINING STRUCTURE &#40;DMX&#41; ](../dmx/drop-mining-structure-dmx.md) ou [DROP MINING MODEL &#40;DMX&#41; ](../dmx/drop-mining-model-dmx.md) instructions pour le supprimer complètement une structure ou un modèle d’exploration de données à partir d’une base de données.  
+ Utilisez le [supprimer &#40;DMX&#41; ](../dmx/delete-dmx.md) instruction pour supprimer toutes les données d’apprentissage à partir d’un modèle d’exploration de données ou la structure d’exploration. Utilisez le [DROP MINING STRUCTURE &#40;DMX&#41; ](../dmx/drop-mining-structure-dmx.md) ou [DROP MINING MODEL &#40;DMX&#41; ](../dmx/drop-mining-model-dmx.md) instructions pour supprimer complètement un modèle ou une structure d’exploration de données à partir d’une base de données.  
   
  Copie de modèles d'exploration de données  
- Utilisez le [SELECT INTO &#40;DMX&#41; ](../dmx/select-into-dmx.md) instruction pour copier la structure d’un modèle d’exploration de données existant dans un nouveau modèle d’exploration de données et pour l’apprentissage du nouveau modèle avec les mêmes données.  
+ Utilisez le [SELECT INTO &#40;DMX&#41; ](../dmx/select-into-dmx.md) instruction pour copier la structure d’un modèle d’exploration de données existant dans un nouveau modèle d’exploration de données et pour former le modèle de nouveau avec les mêmes données.  
   
- Parcourir les modèles d’exploration de données  
- Utilisez le [sélectionnez &#40;DMX&#41; ](../dmx/select-dmx.md) instruction pour rechercher les informations que l’algorithme d’exploration de données calcule et stocke dans le modèle d’exploration de données pendant l’apprentissage du modèle. Comme avec [!INCLUDE[tsql](../includes/tsql-md.md)], vous pouvez utiliser plusieurs clauses avec l’instruction SELECT, d’étendre sa puissance. Ces clauses incluent [DISTINCT FROM \<modèle >](../dmx/select-distinct-from-model-dmx.md), [FROM \<modèle >. CAS](../dmx/select-from-model-cases-dmx.md), [FROM \<modèle >. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md), [FROM \<modèle >. CONTENU](../dmx/select-from-model-content-dmx.md) et [FROM \<modèle >. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
+ Exploration des modèles d’exploration de données  
+ Utilisez le [sélectionnez &#40;DMX&#41; ](../dmx/select-dmx.md) instruction pour parcourir les informations que l’algorithme d’exploration de données calcule et stocke dans le modèle d’exploration de données au cours de l’apprentissage du modèle. Comme avec [!INCLUDE[tsql](../includes/tsql-md.md)], vous pouvez utiliser plusieurs clauses avec l’instruction SELECT, d’étendre sa puissance. Ces clauses incluent [DISTINCT FROM \<modèle >](../dmx/select-distinct-from-model-dmx.md), [FROM \<modèle >. CAS](../dmx/select-from-model-cases-dmx.md), [FROM \<modèle >. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md), [FROM \<modèle >. CONTENU](../dmx/select-from-model-content-dmx.md) et [FROM \<modèle >. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
   
  Prévision dans des modèles d'exploration de données  
  Utilisez le [PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) clause de l’instruction SELECT pour créer des prédictions basées sur un modèle d’exploration de données existant.  
@@ -61,8 +61,8 @@ ms.locfileid: "34841492"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)|Fait partie du langage de définition de données (DDL). utilisé pour définir un nouveau modèle d'exploration de données (y compris l'apprentissage) ou pour supprimer un modèle d'exploration de données existant d'une base de données.|  
-|[Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)|Fait partie du langage de manipulation de données (DML). Est utilisé pour utiliser les modèles d'exploration de données existants, notamment pour explorer un modèle ou pour créer des prévisions.|  
+|[Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)|Fait partie du langage de définition de données (DDL). utilisé pour définir un nouveau modèle d'exploration de données (y compris l'apprentissage) ou pour supprimer un modèle d'exploration de données existant d'une base de données.|  
+|[Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)|Fait partie du langage de manipulation de données (DML). Est utilisé pour utiliser les modèles d'exploration de données existants, notamment pour explorer un modèle ou pour créer des prévisions.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   

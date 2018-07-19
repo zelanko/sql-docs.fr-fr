@@ -1,5 +1,5 @@
 ---
-title: Élément Capability (XMLA) | Documents Microsoft
+title: Élément Capability (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 ms.openlocfilehash: dca8f668f64ab8ced157cf817be1f9f8f6390133
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574981"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062977"
 ---
 # <a name="capability-element-xmla"></a>Élément Capability (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34574981"
 </ProtocolCapabilities>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "34574981"
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
- Le **fonctionnalité** élément indique qu’une fonctionnalité particulière, telles que la compression, ou binaire est prise en charge soit par l’application qui a inclus le **ProtocolCapabilities** élément d’en-tête dans le En-tête SOAP de la demande SOAP, ou par l’instance d’Analysis Services incluant les **ProtocolCapabilities** élément d’en-tête dans l’en-tête SOAP de la réponse SOAP. La valeur de la **fonctionnalité** élément est le nom de la capacité à prendre en charge.  
+ Le **fonctionnalité** élément indique que l’utilisation d’une fonctionnalité particulière, tels que le fichier binaire ou la compression, est pris en charge soit par l’application incluant le **ProtocolCapabilities** élément d’en-tête dans le En-tête SOAP de la demande SOAP ou par l’instance d’Analysis Services incluant les **ProtocolCapabilities** élément d’en-tête dans l’en-tête SOAP de la réponse SOAP. La valeur de la **fonctionnalité** élément est le nom de la capacité à prendre en charge.  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge les fonctionnalités répertoriées dans le tableau suivant.  
   

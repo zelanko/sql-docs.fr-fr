@@ -1,5 +1,5 @@
 ---
-title: Mesures | Documents Microsoft
+title: Mesures | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043983"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045327"
 ---
-# <a name="measures"></a>Mesures
+# <a name="measures"></a>mesures
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Dans les modèles tabulaires, une mesure est un calcul créé à l'aide d'une formule DAX pour une utilisation dans un client de création de rapport. Les mesures sont évaluées en fonction des champs, des filtres, et des segments que les utilisateurs choisissent dans l'application cliente de création de rapports.  
   
@@ -70,7 +70,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_properties"></a> Propriétés des mesures  
  Chaque mesure a des propriétés qui la caractérisent. Les propriétés de mesures, ainsi que les propriétés des colonnes associées, peuvent être modifiées dans la fenêtre Propriétés. Les mesures ont les propriétés suivantes :  
   
-|Propriété|Paramètre par défaut| Description|  
+|Propriété|Paramètre par défaut|Description|  
 |--------------|---------------------|-----------------|  
 |**Description**|Vide|Description de la mesure. La description n'apparaîtra pas avec la mesure dans un client de création de rapports.|  
 |**Format**|Déterminé automatiquement à partir du type de données de la colonne référencée dans l'expression de formule.|Format de la mesure. Par exemple, devise ou pourcentage.|  
@@ -84,7 +84,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Créer et gérer des mesures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|Décrit comment créer et gérer des mesures à l'aide de la grille de mesures dans le générateur de modèles.|  
   

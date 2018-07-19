@@ -1,5 +1,5 @@
 ---
-title: sp_delete_firewall_rule (base de données de SQL Azure) | Documents Microsoft
+title: sp_delete_firewall_rule (base de données Azure SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: ''
@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 5d5f53e8bd0062ca5ecf46c4462e326db5cdc243
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243828"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049473"
 ---
 # <a name="spdeletefirewallrule-azure-sql-database"></a>sp_delete_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]

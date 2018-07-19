@@ -1,5 +1,5 @@
 ---
-title: Autres Annotations (SQLXML 4.0) | Documents Microsoft
+title: Autres Annotations (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,13 +28,13 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6f3941965ceadbc98f4215d646dda4e87fea752b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967114"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053969"
 ---
-# <a name="annotation-interpretation---other-annotations"></a>Interprétation d’annotation - autres Annotations
+# <a name="annotation-interpretation---other-annotations"></a>Interprétation des annotations - autres Annotations
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Outre les annotations présentées dans les rubriques précédentes de cette section, le chargement en masse XML interprète les annotations suivantes, comme suit :  
   
@@ -57,6 +57,6 @@ ms.locfileid: "32967114"
  Le chargement en masse XML ignore toujours cette annotation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Interprétation d’annotation & #40 ; SQLXML 4.0 & #41 ;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+ [Interprétation des annotations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

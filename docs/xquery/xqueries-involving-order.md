@@ -1,5 +1,5 @@
 ---
-title: Requêtes XQuery impliquant un ordre | Documents Microsoft
+title: Requêtes XQuery impliquant un ordre | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 978e800ba5539878eb805c16f2460de3761dda59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077132"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051677"
 ---
 # <a name="xqueries-involving-order"></a>Requêtes XQuery impliquant un ordre
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   Les expressions entre accolades sont remplacées par le résultat de son évaluation. Pour plus d’informations, consultez [Construction XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md).  
   
@@ -73,9 +73,9 @@ WHERE ProductModelID=7
   
 -   L'itération FLWOR (FOR ... RETURN) récupère tous les éléments enfants <`step`> du deuxième poste de travail.  
   
--   Le [fonction SQL :Column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) inclut la valeur relationnelle dans le code XML qui est en cours de construction.  
+-   Le [fonction SQL :Column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) contient la valeur relationnelle dans le code XML qui est en cours de construction.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ManuStep ProdModelID="7" ProductModelName="HL Touring Frame">  
@@ -89,7 +89,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- La requête précédente récupère uniquement les nœuds de texte. Si vous souhaitez que l’ensemble <`step`> élément retourné à la place, supprimez le **string()** fonction à partir de la requête :  
+ La requête précédente récupère uniquement les nœuds de texte. Si vous souhaitez que la totalité <`step`> élément retourné à la place, supprimez le **string()** fonction à partir de la requête :  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Recherche des matières et outils utilisés sur le deuxième poste de travail au cours de la fabrication d'un produit  
  Pour un modèle de produit spécifique, la requête suivante récupère les outils et les matières utilisés sur le deuxième poste de travail dans l'ordre des postes de travail que comprend le processus de fabrication.  
@@ -121,13 +121,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
--   La requête construit le < paramètres régionaux`tion`> élément et récupère les valeurs de son attribut à partir de la base de données.  
+-   La requête construit le < Loca`tion`> élément et récupère son attribut de valeurs à partir de la base de données.  
   
 -   Elle utilise deux itérations FLWOR (for...return) : la première pour récupérer les outils et la deuxième pour récupérer les matières.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Location LocationID="10" SetupHours=".5"   
@@ -163,13 +163,13 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
  Le corps de la requête construit du code XML qui englobe l'élément <`ProductModel`> ayant ProductModelID et ProductModelName comme attributs.  
   
--   La requête utilise une boucle FOR ... RETURN pour récupérer les descriptions des composants du modèle de produit. Le **position()** fonction est utilisée pour récupérer les deux premiers composants.  
+-   La requête utilise une boucle FOR ... RETURN pour récupérer les descriptions des composants du modèle de produit. Le **position()** fonction est utilisée pour récupérer les deux premières caractéristiques.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
@@ -212,7 +212,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Location LocationID="10" SetupHours=".5"   
@@ -242,7 +242,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <LastTwoManuSteps>  

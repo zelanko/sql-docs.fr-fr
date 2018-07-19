@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_on_demand (Transact-SQL) | Documents Microsoft
+title: managed_backup.sp_backup_on_demand (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d95bdd7fa337598c289aaa7a958c33513eec12d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239339"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058037"
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ EXEC managed_backup.sp_backup_on_demand
  Nom de la base de données sur laquelle la sauvegarde doit être effectuée. Le @database_name est **SYSNAME**.  
   
  @type  
- Type de sauvegarde à effectuer : base de données ou journal. Le @type paramètre est **NVARCHAR(32)**.  
+ Type de sauvegarde à effectuer : base de données ou journal. Le @type paramètre est **nvarchar (32)**.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (réussite) ou 1 (échec)  
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance au **db_backupoperator** de la base de données de rôle, avec **ALTER ANY CREDENTIAL** autorisations, et **EXECUTE** autorisations sur **sp_delete_backuphistory**procédure stockée.  
+ Nécessite l’appartenance au **db_backupoperator** rôle, de base de données avec **ALTER ANY CREDENTIAL** autorisations, et **EXECUTE** autorisations sur **sp_delete_ backuphistory**procédure stockée.  
   
 ## <a name="examples"></a>Exemples  
  Dans l'exemple ci-dessous, une sauvegarde de base de données est demandée pour la base de données « TestDB ». La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est activée pour cette base de données.  

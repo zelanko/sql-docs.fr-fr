@@ -1,5 +1,5 @@
 ---
-title: Spécification d’un Test de nœud dans le chemin d’accès d’emplacement (SQLXML 4.0) | Documents Microsoft
+title: Spécification d’un Test de nœud dans le chemin d’accès d’emplacement (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e2c25b27a36a8505f0608ad8690ea13d6c60c197
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970284"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053747"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Spécification d'un test de nœud dans le chemin d'accès d'emplacement (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "32970284"
 >  Le test de nœud générique * (par exemple, `child::*`) n'est pas pris en charge.  
   
 ## <a name="node-test-example-1"></a>Test de nœud : Exemple 1  
- Le chemin d’accès d’emplacement `child::Customer` sélectionne  **\<client >** éléments enfants du nœud de contexte.  
+ Le chemin d’accès de l’emplacement `child::Customer` sélectionne  **\<client >** éléments enfants du nœud de contexte.  
   
- Dans cet exemple, `child` est l'axe et `Customer` est le test de nœud. Le type de nœud principal pour le **enfant** axe est  **\<élément >**. Par conséquent, le test de nœud a la valeur TRUE si le  **\<client >** le nœud est un  **\<élément >** nœud. Si le nœud de contexte n’a pas  **\<client >** enfants, un ensemble de nœuds vide est retourné.  
+ Dans cet exemple, `child` est l'axe et `Customer` est le test de nœud. Le type de nœud principal pour le **enfant** axe est  **\<élément >**. Par conséquent, le test de nœud est TRUE si le  **\<client >** nœud est un  **\<élément >** nœud. Si le nœud de contexte n’a pas  **\<client >** enfants, un ensemble de nœuds vide est retourné.  
   
 ## <a name="node-test-example-2"></a>Test de nœud : exemple 2  
- Le chemin d’accès d’emplacement `attribute::CustomerID` sélectionne le **CustomerID** attribut du nœud de contexte.  
+ Le chemin d’accès de l’emplacement `attribute::CustomerID` sélectionne le **CustomerID** attribut du nœud de contexte.  
   
- Dans l’exemple, `attribute` est l’axe et `CustomerID` est le test de nœud. Le type de nœud principal de la **attribut** axe est  **\<attribut >**. Par conséquent, le test de nœud a la valeur TRUE si **CustomerID** est un  **\<attribut >** nœud. Si le nœud de contexte n’a pas **CustomerID**, un ensemble de nœuds vide est retourné.  
+ Dans l’exemple, `attribute` est l’axe et `CustomerID` est le test de nœud. Le type de nœud principal de le **attribut** axe est  **\<attribut >**. Par conséquent, le test de nœud est TRUE si **CustomerID** est un  **\<attribut >** nœud. Si le nœud de contexte n’a pas **CustomerID**, un ensemble de nœuds vide est retourné.  
   
 > [!NOTE]  
->  Dans cette implémentation de XPath, si une étape d’emplacement fait référence à un  **\<élément >** ou  **\<attribut >** type qui n’est pas déclaré dans le schéma, une erreur est générée. Dans une implémentation de XPath dans MSXML, un ensemble de nœud vide est renvoyé.  
+>  Dans cette implémentation de XPath, si une étape de localisation fait référence à un  **\<élément >** ou un  **\<attribut >** type qui n’est pas déclaré dans le schéma, une erreur est générée. Dans une implémentation de XPath dans MSXML, un ensemble de nœud vide est renvoyé.  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>Syntaxe abrégée des axes  
  La syntaxe abrégée suivante est prise en charge pour le chemin d'accès d'emplacement :  

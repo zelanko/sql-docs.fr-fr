@@ -1,5 +1,5 @@
 ---
-title: Insertion de données à l’aide de codes XML (SQLXML 4.0) | Documents Microsoft
+title: Insertion de données à l’aide de codes XML (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -40,15 +40,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 563a79b68a39a886d70234f2e9f6eaae118d11ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973494"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046147"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertion de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Une mise à jour indique une opération d’insertion lorsqu’une instance d’enregistrement apparaît dans les  **\<après >** bloc mais ne pas dans le correspondant  **\<avant >** bloc. Dans ce cas, la mise à jour insère l’enregistrement dans le  **\<après >** bloc dans la base de données.  
+  Une mise à jour indique une opération d’insertion lorsqu’une instance d’enregistrement apparaît dans le  **\<après >** bloc mais ne pas dans le correspondantes  **\<avant >** bloc. Dans ce cas, la mise à jour insère l’enregistrement dans le  **\<après >** bloc dans la base de données.  
   
  Voici le format du code de mise à jour pour une opération d'insertion :  
   
@@ -72,24 +72,24 @@ ms.locfileid: "32973494"
 ```  
   
 ## <a name="before-block"></a>\<avant de > bloc  
- Le  **\<avant >** bloc peut être omis pour une opération d’insertion. Si le paramètre facultatif **schéma de mappage** attribut n’est pas spécifié, le  **\<ElementName >** qui est spécifié dans les cartes de mise à jour pour une table de base de données et les éléments enfants ou des attributs de mappage à des colonnes dans la table.  
+ Le  **\<avant >** bloc peut être omis pour une opération d’insertion. Si le paramètre facultatif **schéma de mappage** attribut n’est pas spécifié, le  **\<ElementName >** qui est spécifié dans les cartes de mise à jour pour une table de base de données et les éléments enfants ou attributs sont mappés aux colonnes de la table.  
   
 ## <a name="after-block"></a>\<une fois > bloc  
  Vous pouvez spécifier un ou plusieurs enregistrements dans la  **\<après >** bloc.  
   
- Si le  **\<après >** bloc ne fournit pas une valeur pour une colonne particulière, la mise à jour utilise la valeur par défaut qui est spécifiée dans le schéma annoté (si un schéma a été spécifié). Si le schéma ne spécifie pas de valeur par défaut pour la colonne, la mise à jour ne spécifie pas de valeur explicite pour cette colonne et attribue à la place, le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valeur par défaut (si spécifié) pour cette colonne. S'il n'y a aucune valeur par défaut [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et que la colonne accepte une valeur NULL, le code de mise à jour attribue la valeur NULL à la colonne. Si la colonne ne possède pas de valeur par défaut et qu'elle n'accepte pas de valeur NULL, la commande échoue et le code de mise à jour retourne une erreur. Le paramètre facultatif **updg:returnid** attribut est utilisé pour retourner la valeur d’identité générée par le système lorsqu’un enregistrement est ajouté dans une table avec une colonne de type IDENTITY.  
+ Si le  **\<après >** bloc ne fournit pas une valeur pour une colonne particulière, la mise à jour utilise la valeur par défaut qui est spécifiée dans le schéma annoté (si un schéma a été spécifié). Si le schéma ne spécifie pas de valeur par défaut pour la colonne, la mise à jour ne spécifie pas de valeur explicite pour cette colonne et attribue à la place, le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valeur par défaut (si spécifié) à cette colonne. S'il n'y a aucune valeur par défaut [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et que la colonne accepte une valeur NULL, le code de mise à jour attribue la valeur NULL à la colonne. Si la colonne ne possède pas de valeur par défaut et qu'elle n'accepte pas de valeur NULL, la commande échoue et le code de mise à jour retourne une erreur. Le paramètre facultatif **updg:returnid** attribut est utilisé pour retourner la valeur d’identité générée par le système lorsqu’un enregistrement est ajouté dans une table avec une colonne de type IDENTITY.  
   
 ## <a name="updgid-attribute"></a>Attribut updg:id  
- Si la mise à jour insère uniquement des enregistrements, la mise à jour ne nécessite pas le **updg : ID** attribut. Pour plus d’informations sur **updg : ID**, consultez [mise à jour des données à l’aide de programmes &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
+ Si la mise à jour insère uniquement des enregistrements, la mise à jour ne nécessite pas la **updg : ID** attribut. Pour plus d’informations sur **updg : ID**, consultez [mise à jour des données à l’aide de programmes &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 ## <a name="updgat-identity-attribute"></a>Attribut updg:at-identity  
- Lorsqu’une mise à jour insère un enregistrement dans une table qui comporte une colonne de type IDENTITY, la mise à jour peut capturer la valeur attribuée au système à l’aide de l’option **updg : à l’identité** attribut. Le code de mise à jour peut utiliser ensuite cette valeur dans les opérations suivantes. Lors de l’exécution de mise à jour, vous pouvez retourner la valeur d’identité qui est générée en spécifiant le **updg:returnid** attribut.  
+ Lorsqu’une mise à jour insère un enregistrement dans une table qui comporte une colonne de type IDENTITY, mise à jour peut capturer la valeur attribuée au système à l’aide de l’élément facultatif **updg : à l’identité** attribut. Le code de mise à jour peut utiliser ensuite cette valeur dans les opérations suivantes. Lors de l’exécution de mise à jour, vous pouvez retourner la valeur d’identité qui est générée en spécifiant le **updg:returnid** attribut.  
   
 ## <a name="updgguid-attribute"></a>Attribut updg:guid  
- Le **updg : GUID** attribut est un attribut facultatif qui génère un identificateur global unique. Cette valeur reste dans la portée de l’ensemble du  **\<synchronisation >** bloc dans lequel elle est spécifiée. Vous pouvez utiliser cette valeur n’importe où dans le  **\<synchronisation >** bloc. L’attribut appelle la **::NewGuid()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fonction pour générer l’identificateur unique.  
+ Le **updg : GUID** attribut est un attribut facultatif qui génère un identificateur global unique. Cette valeur reste dans la portée pour l’ensemble de  **\<synchronisation >** bloc dans lequel elle est spécifiée. Vous pouvez utiliser cette valeur n’importe où dans le  **\<synchronisation >** bloc. L’attribut appelle le **::NewGuid()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fonction permettant de générer l’identificateur unique.  
   
 ## <a name="examples"></a>Exemples  
- Pour créer des exemples fonctionnels à l’aide de la procédure ci-après, vous devez respecter la configuration requise spécifiée dans [configuration requise pour exécuter les exemples de SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Pour créer des exemples de travail utilisant les exemples suivants, vous devez respecter les exigences spécifiées dans [configuration requise pour exécuter les exemples de SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  Avant d'utiliser les exemples de code de mise à jour, notez les points suivants :  
   
@@ -191,7 +191,7 @@ ms.locfileid: "32973494"
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Une autre version de cet exemple est une mise à jour qui utilise deux  **\<après >** blocs, au lieu d’un bloc pour insérer les deux employés. Cette opération est valide et peut être encodée comme suit :  
+ Une autre version de cet exemple est une mise à jour qui utilise deux distinct  **\<après >** blocs, au lieu d’un bloc pour insérer les deux employés. Cette opération est valide et peut être encodée comme suit :  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -215,12 +215,12 @@ ms.locfileid: "32973494"
 ```  
   
 ### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. Utilisation de caractères SQL Server valides qui ne sont pas valides en XML  
- Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les noms de table peuvent inclure un espace, comme la table Order Details dans la base de données Northwind. Toutefois, cela n’est pas valide dans les caractères XML valides [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificateurs, mais des identificateurs XML non valides peuvent être encodés à l’aide de ' __xHHHH\_\_' comme valeur d’encodage, où HHHH représente le code de UCS-2 hexadécimal à quatre chiffres du caractère dans l’ordre du premier bit plus significatif.  
+ Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les noms de table peuvent inclure un espace, comme la table Order Details dans la base de données Northwind. Toutefois, cela n’est pas valide dans les caractères XML valides [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificateurs, mais des identificateurs XML non valides peuvent être encodées à l’aide de « __xHHHH\_\_» comme valeur d’encodage, où HHHH représente le code de UCS-2 hexadécimal à quatre chiffres le caractère dans l’ordre du premier bit plus significatif.  
   
 > [!NOTE]  
->  Cet exemple utilise l'exemple de base de données Northwind. Vous pouvez installer la base de données Northwind à l’aide d’un script SQL disponible en téléchargement à partir de ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=30196).  
+>  Cet exemple utilise l'exemple de base de données Northwind. Vous pouvez installer la base de données Northwind à l’aide d’un script SQL disponible pour téléchargement à partir de ce [site Web de Microsoft](http://go.microsoft.com/fwlink/?LinkId=30196).  
   
- En outre, le nom d’élément doit figurer entre crochets ([]). Étant donné que les caractères [et] ne sont pas valide dans XML, vous devez les encoder comme _x005B\_ et _x005D\_, respectivement. (Si vous utilisez un schéma de mappage, vous pouvez fournir des noms d'élément qui ne contiennent pas de caractères non valides, tels que des espaces blancs. Le schéma de mappage effectue le mappage nécessaire ; par conséquent, il est inutile d'encoder ces caractères).  
+ En outre, le nom d’élément doit être encadrée de crochets ([]). Étant donné que les caractères [et] ne sont pas valides dans XML, vous devez les encoder en tant que _x005B\_ et _x005D\_, respectivement. (Si vous utilisez un schéma de mappage, vous pouvez fournir des noms d'élément qui ne contiennent pas de caractères non valides, tels que des espaces blancs. Le schéma de mappage effectue le mappage nécessaire ; par conséquent, il est inutile d'encoder ces caractères).  
   
  Ce code de mise à jour ajoute un enregistrement à la table Order Details dans la base de données Northwind :  
   
@@ -240,9 +240,9 @@ ms.locfileid: "32973494"
 </ROOT>  
 ```  
   
- La colonne UnitPrice dans la table Order Details est de le **money** type. Pour appliquer la conversion de type approprié (à partir d’un **chaîne** type à un **money** type), le signe dollar ($) doit être ajouté en tant que partie de la valeur. Si la mise à jour ne spécifie pas un schéma de mappage, le premier caractère de la **chaîne** valeur est évaluée. Si le premier caractère est le signe $, la conversion appropriée est appliquée.  
+ La colonne UnitPrice dans la table Order Details est du **money** type. Pour appliquer la conversion de type approprié (à partir d’un **chaîne** type à un **money** type), le caractère de signe dollar ($) doit être ajouté en tant que partie de la valeur. Si la mise à jour ne spécifie pas un schéma de mappage, le premier caractère de la **chaîne** valeur est évaluée. Si le premier caractère est le signe $, la conversion appropriée est appliquée.  
   
- Si la mise à jour est spécifiée par rapport à un schéma de mappage dans lequel la colonne est marquée de façon appropriée en tant que **dt:type="fixed.14.4 »** ou **SQL : DataType = « money »**, le signe dollar ($) n’est pas nécessaire et la conversion est contrôlée par le mappage. Il s'agit de la méthode recommandée pour garantir que la conversion de type appropriée a lieu.  
+ Si la mise à jour est spécifiée par rapport à un schéma de mappage où la colonne est marquée de façon appropriée, soit comme **dt:type="fixed.14.4 »** ou **SQL : DataType = « argent »**, le signe dollar ($) n’est pas requis et le conversion est contrôlée par le mappage. Il s'agit de la méthode recommandée pour garantir que la conversion de type appropriée a lieu.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Pour tester un exemple de requête XPath sur le schéma  
   
@@ -255,7 +255,7 @@ ms.locfileid: "32973494"
 ### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. Utilisation de l'attribut at-identity pour récupérer la valeur ayant été insérée dans la colonne de type IDENTITY  
  Le code de mise à jour suivant insère deux enregistrements : un dans la table Sales.SalesOrderHeader et un autre dans la table Sales.SalesOrderDetail.  
   
- En premier lieu, le code de mise à jour ajoute un enregistrement à la table Sales.SalesOrderHeader. Dans cette table, la colonne SalesOrderID est une colonne de type IDENTITY. Par conséquent, lorsque vous ajoutez cet enregistrement à la table, la mise à jour utilise le **à identité** attribut pour capturer la valeur SalesOrderID attribuée en tant que « x » (une valeur d’espace réservé). L’est utilisé spécifie ensuite cette **à identité** variable en tant que la valeur de l’attribut SalesOrderID dans le \<Sales.SalesOrderDetail > élément.  
+ En premier lieu, le code de mise à jour ajoute un enregistrement à la table Sales.SalesOrderHeader. Dans cette table, la colonne SalesOrderID est une colonne de type IDENTITY. Par conséquent, lorsque vous ajoutez cet enregistrement à la table, la mise à jour utilise le **à identité** attribut pour capturer la valeur SalesOrderID attribuée en tant que « x » (une valeur d’espace réservé). L’est utilisé spécifie ensuite cette **à identité** variable comme valeur de l’attribut SalesOrderID dans le \<Sales.SalesOrderDetail > élément.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -292,7 +292,7 @@ ms.locfileid: "32973494"
 </ROOT>  
 ```  
   
- Si vous voulez retourner la valeur d’identité générée par le **updg : à l’identité** attribut, vous pouvez utiliser la **updg:returnid** attribut. Le code de mise à jour modifié suivant retourne cette valeur d'identité. (Ce code de mise à jour ajoute deux enregistrements de commande et deux enregistrements de détail de commande pour rendre l'exemple un peu plus complexe.)  
+ Si vous souhaitez retourner la valeur d’identité générée par le **updg : à l’identité** attribut, vous pouvez utiliser la **updg:returnid** attribut. Le code de mise à jour modifié suivant retourne cette valeur d'identité. (Ce code de mise à jour ajoute deux enregistrements de commande et deux enregistrements de détail de commande pour rendre l'exemple un peu plus complexe.)  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -354,7 +354,7 @@ ms.locfileid: "32973494"
 </ROOT>  
 ```  
   
- Mise à jour Spécifie le **returnid** attribut. En conséquence, le GUID généré est retourné :  
+ Spécifie la mise à jour le **returnid** attribut. En conséquence, le GUID généré est retourné :  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -456,7 +456,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ```  
   
 ### <a name="g-using-the-xsinil-attribute-to-insert-null-values-in-a-column"></a>G. Utilisation de l'attribut xsi:nil pour insérer des valeurs Null dans une colonne  
- Si vous souhaitez insérer une valeur null dans la colonne correspondante dans la table, vous pouvez spécifier le **xsi : nil** attribut sur un élément dans une mise à jour. Dans le schéma XSD correspondant, le schéma XSD **nillable** attribut doit être spécifié.  
+ Si vous souhaitez insérer une valeur null dans la colonne correspondante dans la table, vous pouvez spécifier le **xsi : nil** attribut sur un élément dans une mise à jour. Dans le schéma XSD correspondant, le schéma XSD **nillable** attribut doit également être spécifié.  
   
  Considérons par exemple ce schéma XSD :  
   
@@ -488,7 +488,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </xsd:schema>  
 ```  
   
- Le schéma XSD spécifie **nillable = « true »** pour le  **\<fname >** élément. Le code de mise à jour suivant utilise ce schéma :  
+ Spécifie le schéma XSD **nillable = « true »** pour le  **\<fname >** élément. Le code de mise à jour suivant utilise ce schéma :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
@@ -617,11 +617,11 @@ CustOrder(OrderID, EmployeeID, OrderType)
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. Insertion de données dans une colonne de type de données XML  
- Le **xml** type de données a été introduit dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Vous pouvez utiliser les codes pour insérer et mettre à jour les données stockées dans **xml** colonnes avec les conditions suivantes :  
+ Le **xml** type de données a été introduit dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Vous pouvez utiliser les codes pour insérer et mettre à jour les données stockées dans **xml** colonnes avec les dispositions suivantes de type de données :  
   
 -   Le **xml** colonne ne peut pas être utilisée pour identifier une ligne existante. Par conséquent, il ne peut pas être inclus dans le **updg : avant** section d’une mise à jour.  
   
--   Espaces de noms dans la portée du fragment XML inséré dans le **xml** colonne est conservée et leurs déclarations d’espace de noms sont ajoutées à l’élément supérieur du fragment inséré.  
+-   Espaces de noms qui sont dans la portée du fragment XML inséré dans le **xml** colonne est conservée et leurs déclarations d’espace de noms sont ajoutées à l’élément supérieur du fragment inséré.  
   
  Par exemple, dans la mise à jour suivant (SampleUpdateGram.xml), le  **\<Desc >** élément met à jour la colonne ProductDescription dans la Production > productModel table les [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de données exemple. Le résultat de cette mise à jour est que le contenu XML de la colonne ProductDescription est mises à jour avec le contenu XML de la  **\<Desc >** élément.  
   
@@ -724,7 +724,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 1.  Copiez le schéma ci-dessus et collez-le dans un fichier texte. Enregistrez le fichier sous le nom XSD-SampleSchema.xml.  
   
     > [!NOTE]  
-    >  Codes prenant en charge le mappage par défaut, il n’existe aucun moyen pour identifier le début et la fin de la **xml** type de données. Cela signifie qu’un schéma de mappage est requis lors de l’insertion ou de mise à jour des tables avec **xml** colonnes de type de données. Lorsqu'un schéma n'est pas fourni, SQLXML retourne une erreur indiquant que l'une des colonnes est absente de la table.  
+    >  Codes prenant en charge le mappage par défaut, il n’existe aucun moyen pour identifier le début et la fin de la **xml** type de données. Cela signifie qu’un schéma de mappage est nécessaire pendant l’insertion ou la mise à jour des tables avec **xml** colonnes de type de données. Lorsqu'un schéma n'est pas fourni, SQLXML retourne une erreur indiquant que l'une des colonnes est absente de la table.  
   
 2.  Copiez le code de mise à jour ci-dessus et collez-le dans un fichier texte. Enregistrez le fichier sous le nom SampleUpdategram.xml dans le même dossier que celui utilisé pour enregistrer SampleSchema.xml.  
   

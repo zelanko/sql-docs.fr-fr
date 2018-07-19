@@ -1,5 +1,5 @@
 ---
-title: Sys.database_event_session_events (de base de données SQL Azure) | Documents Microsoft
+title: Sys.database_event_session_events (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9287bfe2f99e4bebc7a57b9ac527c04ada95bf9b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178365"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38065477"
 ---
-# <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>Sys.database_event_session_events (de base de données SQL Azure)
+# <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>Sys.database_event_session_events (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque événement d'une session d'événements.  
@@ -34,11 +34,11 @@ ms.locfileid: "33178365"
 |-|  
 |**S’applique aux**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 et les versions ultérieures.|  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
-|event_id|**int**|ID de l'événement. Cet ID est unique au sein d'une session d'événements. N'accepte pas la valeur NULL.|  
-|name|**sysname**|Nom de l’événement. N'accepte pas la valeur NULL.|  
+|event_session_id|**Int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
+|event_id|**Int**|ID de l'événement. Cet ID est unique au sein d'une session d'événements. N'accepte pas la valeur NULL.|  
+|NAME|**sysname**|Nom de l’événement. N'accepte pas la valeur NULL.|  
 |package|**sysname**|Nom du package d'événement qui contient l'événement. N'accepte pas la valeur NULL.|  
 |module|**sysname**|Nom du module qui contient l'événement. N'accepte pas la valeur NULL.|  
 |prédicat|**nvarchar(3000)**|L’expression de prédicat est appliquée à l’événement. Autorise la valeur NULL.|  

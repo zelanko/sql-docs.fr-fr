@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_virtualservernodes (Transact-SQL) | Documents Microsoft
+title: Sys.fn_virtualservernodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,11 +29,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4073c1668ef43e7d303a3e534d16763d33939e45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231470"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042787"
 ---
 # <a name="sysfnvirtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -53,7 +53,7 @@ fn_virtualservernodes()
 ```  
   
 ## <a name="tables-returned"></a>Tables retournées  
- Si le serveur actuel est un serveur en cluster, **fn_virtualservernodes** renvoie une liste de nœuds d’instance de cluster de basculement sur lequel l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini.  
+ Si le serveur actuel est un serveur en cluster, **fn_virtualservernodes** retourne une liste de nœuds d’instance de cluster de basculement sur lequel l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini.  
   
  Si l’instance de serveur actuelle n’est pas un serveur en cluster, **fn_virtualservernodes** retourne un ensemble de lignes vide.  
   

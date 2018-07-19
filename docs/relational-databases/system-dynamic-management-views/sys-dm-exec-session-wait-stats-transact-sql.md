@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_session_wait_stats (Transact-SQL) | Documents Microsoft
+title: Sys.dm_exec_session_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d5932d5fa878f3816c636b6106c2723a40834be
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465075"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046067"
 ---
 # <a name="sysdmexecsessionwaitstats-transact-sql"></a>Sys.dm_exec_session_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Retourne des informations sur toutes les attentes des threads exécutés pour chaque session. Vous pouvez utiliser cette vue pour diagnostiquer les problèmes de performances avec la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session ainsi qu’avec des requêtes spécifiques et des traitements.  Cette vue renvoie session les mêmes informations rassemblées pour [sys.dm_os_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) , mais elles fournissent le **session_id** également.  
+  Retourne des informations sur toutes les attentes subies par les threads exécutés pour chaque session. Vous pouvez utiliser cette vue pour diagnostiquer les problèmes de performances avec la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session ainsi qu’avec des requêtes spécifiques et des lots.  Cette vue retourne session les mêmes informations qui sont agrégées pour [sys.dm_os_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) mais fournit le **session_id** également.  
   
 **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|L’id de la session.|  
 |wait_type|**nvarchar(60)**|Nom du type d'attente. Pour plus d’informations, consultez [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
@@ -49,7 +49,7 @@ ms.locfileid: "34465075"
  Pour plus d’informations sur les types d’attente, consultez [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
- Si l’utilisateur a **VIEW SERVER STATE** autorisation sur le serveur, l’utilisateur voit en cours d’exécution toutes les sessions sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; sinon, l’utilisateur voit uniquement la session active.  
+ Si l’utilisateur a **VIEW SERVER STATE** autorisation sur le serveur, l’utilisateur verra en cours d’exécution toutes les sessions sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; sinon, l’utilisateur verra uniquement la session active.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_grantlogin (Transact-SQL) | Documents Microsoft
+title: sp_grantlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: c0e5454e94024bf0cebe6d9b0b2702e1bcf989f6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248124"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054217"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_grantlogin [@loginame=] 'login'
   
 ## <a name="arguments"></a>Arguments  
  [  **@loginame =** ] **'***connexion***'**  
- Nom d'un utilisateur ou d'un groupe Windows. L’utilisateur ou groupe Windows doit être qualifié avec un nom de domaine Windows sous la forme *domaine*\\*utilisateur*; par exemple, **London\Joeb**. *connexion* est **sysname**, sans valeur par défaut.  
+ Nom d'un utilisateur ou d'un groupe Windows. L’utilisateur de Windows ou le groupe doit être qualifié avec un nom de domaine Windows sous la forme *domaine*\\*utilisateur*; par exemple, **London\Joeb**. *connexion* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

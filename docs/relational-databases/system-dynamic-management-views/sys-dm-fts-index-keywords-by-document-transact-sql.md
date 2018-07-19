@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_index_keywords_by_document (Transact-SQL) | Documents Microsoft
+title: Sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 58377295a7bccadd1a1d273ba45469e817408949
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464795"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058260"
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "34464795"
   
  sys.dm_fts_index_keywords_by_document est une fonction de gestion dynamique.  
   
- **Pour afficher les informations d’index de recherche en texte intégral niveau supérieur**  
+ **Pour afficher les informations d’index de recherche en texte intégral plus haut niveau**  
   
 -   [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)  
   
- **Pour afficher les informations de contenu au niveau de la propriété liées à une propriété de document**  
+ **Pour afficher des informations sur le contenu au niveau de la propriété liées à une propriété de document**  
   
 -   [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)  
   
@@ -59,21 +59,21 @@ sys.dm_fts_index_keywords_by_document
 ```  
   
 ## <a name="arguments"></a>Arguments  
- DB_ID ('*nom_base_de_données*')  
+ DB_ID ('*database_name*»)  
  Un appel à la [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) (fonction). Cette fonction accepte un nom de base de données et retourne l'ID de la base de données, que sys.dm_fts_index_keywords_by_document utilise pour rechercher la base de données spécifiée. Si *database_name* est omis, la fonction retourne l’ID de la base de données active.  
   
- object_id ('*table_name*')  
+ object_id («*table_name*»)  
  Un appel à la [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) (fonction). Cette fonction accepte un nom de table et retourne l'ID de la table contenant l'index de recherche en texte intégral à examiner.  
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Colonne|Data type| Description|  
+|colonne|Data type|Description|  
 |------------|---------------|-----------------|  
 |mot clé|**nvarchar(4000)**|Représentation hexadécimale du mot clé stocké dans l'index de recherche en texte intégral.<br /><br /> Remarque : OxFF représente le caractère spécial qui indique la fin d’un fichier ou un jeu de données.|  
 |display_term|**nvarchar(4000)**|Format explicite du mot clé. Ce format est dérivé du format interne stocké dans l'index de recherche en texte intégral.<br /><br /> Remarque : OxFF représente le caractère spécial qui indique la fin d’un fichier ou un jeu de données.|  
-|column_id|**int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
-|document_id|**int**|ID de la ligne ou du document à partir duquel le terme actuel a été indexé en texte intégral. Cet ID correspond à la valeur de clé de texte intégral de cette ligne ou de ce document.|  
-|occurrence_count|**int**|Nombre d’occurrences du mot clé actuel dans le document ou la ligne qui est indiqué par **document_id**. Lorsque '*search_property_name*' est spécifié, occurrence_count affiche uniquement le nombre d’occurrences du mot clé actuel dans la propriété de recherche spécifié dans le document ou la ligne.|  
+|column_id|**Int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
+|document_id|**Int**|ID de la ligne ou du document à partir duquel le terme actuel a été indexé en texte intégral. Cet ID correspond à la valeur de clé de texte intégral de cette ligne ou de ce document.|  
+|occurrence_count|**Int**|Nombre d’occurrences du mot clé actuel dans le document ou la ligne qui est indiqué par **document_id**. Lorsque «*search_property_name*' est spécifié, occurrence_count affiche uniquement le nombre d’occurrences du mot clé actuel dans la propriété de recherche spécifié dans le document ou la ligne.|  
   
 ## <a name="remarks"></a>Notes  
  Les informations retournées par sys.dm_fts_index_keywords_by_document sont utiles pour déterminer, entre autres choses, les éléments ci-dessous :  
@@ -94,7 +94,7 @@ sys.dm_fts_index_keywords_by_document
   
  Lorsque la colonne clé de texte intégral est un type de données Integer, comme cela est recommandé, document_id est directement mappé à la valeur de la clé de texte intégral dans la table de base.  
   
- En revanche, lorsque la colonne clé de texte intégral fait appel à un type de données non entier, document_id ne représente pas la clé de texte intégral dans la table de base. Dans ce cas, pour identifier la ligne dans la table de base qui est retournée par dm_fts_index_keywords_by_document, vous devez joindre cette vue avec les résultats retournés par [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Avant de pouvoir les joindre, vous devez stocker la sortie de la procédure stockée dans une table temp. Puis, vous pouvez joindre la colonne document_id de dm_fts_index_keywords_by_document avec la colonne DocId retournée par cette procédure stockée. Notez qu’un **timestamp** colonne ne peut pas recevoir des valeurs au moment de l’insertion, car elles sont générées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, le **timestamp** colonne doit être convertie en **varbinary (8)** colonnes. L'exemple suivant affiche ces étapes. Dans cet exemple, *table_id* est l’ID de votre table, *nom_base_de_données* est le nom de votre base de données, et *table_name* est le nom de votre table.  
+ En revanche, lorsque la colonne clé de texte intégral fait appel à un type de données non entier, document_id ne représente pas la clé de texte intégral dans la table de base. Dans ce cas, pour identifier la ligne dans la table de base qui est retournée par dm_fts_index_keywords_by_document, vous devez joindre cette vue avec les résultats retournés par [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Avant de pouvoir les joindre, vous devez stocker la sortie de la procédure stockée dans une table temp. Puis, vous pouvez joindre la colonne document_id de dm_fts_index_keywords_by_document avec la colonne DocId retournée par cette procédure stockée. Notez qu’un **timestamp** colonne ne peut pas recevoir des valeurs au moment de l’insertion, car elles sont générées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par conséquent, le **timestamp** colonne doit être convertie en **varbinary (8)** colonnes. L'exemple suivant affiche ces étapes. Dans cet exemple, *table_id* est l’ID de votre table, *database_name* est le nom de votre base de données, et *table_name* est le nom de votre table.  
   
 ```  
 USE database_name;  
@@ -123,7 +123,7 @@ GO
  L'exemple suivant affiche le contenu de l'index de recherche en texte intégral au niveau du document dans la table `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks2012`.  
   
 > [!NOTE]  
->  Vous pouvez créer cet index en exécutant l’exemple fourni pour la `HumanResources.JobCandidate` table [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  Vous pouvez créer cet index en exécutant l’exemple fourni pour le `HumanResources.JobCandidate` table [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks'),   

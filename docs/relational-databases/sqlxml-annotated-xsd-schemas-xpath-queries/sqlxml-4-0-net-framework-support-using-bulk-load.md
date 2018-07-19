@@ -1,5 +1,5 @@
 ---
-title: À l’aide de chargement en masse SQLXML dans l’environnement .NET | Documents Microsoft
+title: À l’aide de chargement en masse SQLXML dans l’environnement .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,20 +22,20 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 270abbb40bdf6081b7409cf76a97925a1cd2b3d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970586"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053737"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 pour Microsoft .NET Framework prise en charge - à l’aide de chargement en masse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Cette rubrique explique comment exploiter la fonctionnalité de chargement en masse XML dans l'environnement .NET. Pour plus d’informations sur le chargement en masse XML, consultez [exécution de chargement de XML des données en bloc & #40 ; SQLXML 4.0 & #41 ; ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
+  Cette rubrique explique comment exploiter la fonctionnalité de chargement en masse XML dans l'environnement .NET. Pour obtenir des informations détaillées sur le chargement en masse XML, consultez [effectuant charge de XML des données en bloc &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
   
  Pour utiliser l'objet COM de chargement en masse SQLXML depuis un environnement managé, vous devez ajouter une référence de projet à ce même objet. Ceci génère une interface de wrapper managé autour de l'objet COM de chargement en masse.  
   
 > [!NOTE]  
->  Le chargement en masse XML managé ne fonctionne pas avec les flux managés et nécessite l'intervention d'un wrapper autour des flux natifs. Le composant de chargement en masse SQLXML ne s'exécutera pas dans un environnement multithread (attribut '[MTAThread]'). Si vous essayez d’exécuter le composant de chargement en masse dans un environnement multithread, vous obtenez une exception InvalidCastException avec les informations supplémentaires suivantes : « Échec de QueryInterface pour l’interface SQLXMLBULKLOADLib.ISQLXMLBulkLoad ». La solution de contournement consiste à rendre l’objet qui contient le chargement en masse objet thread unique accessible (par exemple, à l’aide de la **[STAThread]** comme indiqué dans l’exemple d’attribut).  
+>  Le chargement en masse XML managé ne fonctionne pas avec les flux managés et nécessite l'intervention d'un wrapper autour des flux natifs. Le composant de chargement en masse SQLXML ne s'exécutera pas dans un environnement multithread (attribut '[MTAThread]'). Si vous essayez d’exécuter le composant de chargement en masse dans un environnement multithread, vous obtenez une exception InvalidCastException avec les informations supplémentaires suivantes : « Échec de QueryInterface pour l’interface SQLXMLBULKLOADLib.ISQLXMLBulkLoad ». La solution de contournement consiste à rendre l’objet qui contient le chargement en masse objet seul thread accessible (par exemple, en utilisant le **[STAThread]** comme indiqué dans l’exemple d’attribut).  
   
  Cette rubrique propose un exemple d'application C# fonctionnel pour les données XML de chargement en masse dans la base de données. Pour créer un exemple fonctionnel, procédez comme suit :  
   
@@ -122,7 +122,7 @@ ms.locfileid: "32970586"
   
 7.  Dans le **COM** onglet, sélectionnez **bibliothèque de types Microsoft SQLXML Bulkload 4.0** (xblkld4.dll) et cliquez sur **OK**. Vous verrez la **Interop.SQLXMLBULKLOADLib** assembly créé dans le projet.  
   
-8.  Remplacez la méthode Main() par le code ci-dessous. Mise à jour la **ConnectionString** propriété et le chemin d’accès de fichier pour les fichiers de schéma et les données.  
+8.  Remplacez la méthode Main() par le code ci-dessous. Mise à jour le **ConnectionString** propriété et le chemin d’accès aux fichiers de schéma et les données.  
   
     ```  
     [STAThread]  
@@ -146,7 +146,7 @@ ms.locfileid: "32970586"
 9. Pour charger le code XML dans la table que vous avez créée, créez et exécutez le projet.  
   
     > [!NOTE]  
-    >  La référence au composant de chargement en masse (xblkld4.dll) peut également être ajoutée à l'aide de l'outil tlbimp.exe disponible dans le cadre de l'infrastructure .NET. Cet outil crée un wrapper managé pour la DLL native (xblkld4.dll) qui peut être utilisé ensuite dans tous les projets .NET. Par exemple :  
+    >  La référence au composant de chargement en masse (xblkld4.dll) peut également être ajoutée à l'aide de l'outil tlbimp.exe disponible dans le cadre de l'infrastructure .NET. Cet outil crée un wrapper managé pour la DLL native (xblkld4.dll) qui peut être utilisé ensuite dans tous les projets .NET. Exemple :  
   
     ```  
     c:\>tlbimp xblkld4.dll  
@@ -155,6 +155,6 @@ ms.locfileid: "32970586"
      Cet exemple crée la DLL de wrapper managé (SQLXMLBULKLOADLib.dll) que vous pouvez utiliser dans le projet .NET Framework. Dans le .NET Framework, vous ajoutez une référence de projet à toutes les nouvelles DLL que vous créez.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Effectuer le chargement en masse des données XML & #40 ; SQLXML 4.0 & #41 ;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Chargement en masse des données XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

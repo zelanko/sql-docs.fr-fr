@@ -1,5 +1,5 @@
-﻿---
-title: Sys.dm_io_virtual_file_stats (Transact-SQL) | Documents Microsoft
+---
+title: Sys.dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -25,16 +25,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2720aba7dc9b3d8c1a6e34db5a588829245ed97a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465955"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066830"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Renvoie des statistiques d'E/S sur les fichiers de données et les journaux. Cette vue de gestion dynamique remplace la [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) (fonction).  
+  Renvoie des statistiques d'E/S sur les fichiers de données et les journaux. Cette vue de gestion dynamique remplace le [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) (fonction).  
   
 > [!NOTE]  
 >  Pour appeler cette vue depuis [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], utilisez le nom **sys.dm_pdw_nodes_io_virtual_file_stats**. 
@@ -77,9 +77,9 @@ ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées 
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Nom de la base de données.</br></br>Pour SQL Data Warehouse, il s’agit de celui de la base de données stocké sur le nœud identifié par pdw_node_id. Chaque nœud a une base de données tempdb qui comporte 13 fichiers. Chaque nœud a également une base de données par distribution, et chaque base de données de la distribution a 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats indiquent 20 fichiers de base de données de distribution par pdw_node_id. 
+|**database_name**|**sysname**|Nom de la base de données.</br></br>Pour SQL Data Warehouse, il est le nom de la base de données stockée sur le nœud qui est identifié par pdw_node_id. Chaque nœud a une base de données tempdb qui comporte 13 fichiers. Chaque nœud a également une base de données par distribution, et chaque base de données de la distribution a 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats montrent 20 fichiers de base de données de distribution par pdw_node_id. 
 |**database_id**|**smallint**|ID de base de données.|  
 |**file_id**|**smallint**|ID du fichier.|  
 |**sample_ms**|**bigint**|Nombre de millisecondes écoulées depuis le démarrage de l'ordinateur. Cette colonne peut être utilisée pour comparer différents résultats de cette fonction.</br></br>Le type de données est **int** pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
@@ -92,9 +92,9 @@ ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées 
 |**io_stall**|**bigint**|Durée totale (en millisecondes) d'attente des utilisateurs pour les entrées/sorties effectuées sur le fichier.|  
 |**size_on_disk_bytes**|**bigint**|Nombre d'octets utilisés sur le disque pour ce fichier. Pour les fichiers partiellement alloués, ce nombre est le nombre réel d'octets utilisés sur le disque pour les instantanés de la base de données.|  
 |**file_handle**|**varbinary**|Descripteur de fichier Windows pour ce fichier.|  
-|**io_stall_queued_read_ms**|**bigint**|**Ne s’applique pas aux :**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les lectures. N'accepte pas la valeur NULL. Pour plus d’informations, consultez [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|**Ne s’applique pas aux :**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les écritures. N'accepte pas la valeur NULL.|
-|**pdw_node_id**|**int**|**S’applique à** : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificateur du nœud pour la distribution.
+|**io_stall_queued_read_ms**|**bigint**|**Ne pas s’applique à :**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les lectures. N'accepte pas la valeur NULL. Pour plus d’informations, consultez [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_write_ms**|**bigint**|**Ne pas s’applique à :**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les écritures. N'accepte pas la valeur NULL.|
+|**pdw_node_id**|**Int**|**S’applique à** : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificateur du nœud pour la distribution.
  
   
 ## <a name="permissions"></a>Autorisations  
@@ -115,7 +115,7 @@ GO
   
 ### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Retourner des statistiques pour le fichier dans tempdb
 
-**S’applique à :** entrepôt de données SQL Azure
+**S’applique à :** Azure SQL Data Warehouse
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
@@ -125,7 +125,7 @@ WHERE database_name = ‘tempdb’ AND file_id = 2;
 
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [I, O les fonctions et vues de gestion dynamique liées &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [E/S des fonctions et vues de gestion dynamique liées &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

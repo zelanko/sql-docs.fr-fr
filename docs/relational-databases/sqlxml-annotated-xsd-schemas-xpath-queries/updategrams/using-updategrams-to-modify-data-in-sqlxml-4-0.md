@@ -1,5 +1,5 @@
 ---
-title: Pour modifier les données dans SQLXML 4.0 à l’aide de codes | Documents Microsoft
+title: Pour modifier des données dans SQLXML 4.0 à l’aide de codes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -31,11 +31,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 09ddba31de38f515cf6810d455d4d2264fb6ab97
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708677"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047307"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Utilisation de codes de mise à jour (updategrams) pour modifier des données dans SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34708677"
  Cette section fournit des informations sur les codes de mise à jour (updategrams) et propose des exemples pour leur utilisation.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Introduction aux codes &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/introduction-to-updategrams-sqlxml-4-0.md)  
+ [Présentation des codes de mise à &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/introduction-to-updategrams-sqlxml-4-0.md)  
  Fournit des informations de base et des exemples de codes de mise à jour (updategrams).  
   
  [Spécification d’un schéma de mappage annoté dans une mise à jour &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)  
@@ -53,25 +53,25 @@ ms.locfileid: "34708677"
  [Gestion des valeurs NULL &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/null-handling-sqlxml-4-0.md)  
  Décrit comment spécifier la valeur NULL pour des valeurs d'élément et d'attribut.  
   
- [Insertion de données à l’aide de XML Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [Insertion de données à l’aide de codes XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)  
  Décrit et fournit des exemples d'utilisation de codes de mise à jour (updategrams) pour insérer des données.  
   
- [Suppression des données à l’aide de XML Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/deleting-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [Suppression des données à l’aide de codes XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/deleting-data-using-xml-updategrams-sqlxml-4-0.md)  
  Décrit et fournit des exemples d'utilisation de codes de mise à jour (updategrams) pour supprimer des données.  
   
- [Mise à jour des données à l’aide de XML Updategrams &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [La mise à jour des données à l’aide de codes XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md)  
  Décrit et fournit des exemples d'utilisation de codes de mise à jour (updategrams) pour modifier des données existantes.  
   
  [Passage de paramètres aux codes &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md)  
  Décrit et fournit des exemples de transmission de paramètres aux codes de mise à jour (updategrams).  
   
- [La gestion des problèmes de concurrence d’accès de base de données dans les codes &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
+ [Gestion des problèmes de concurrence de base de données dans les codes &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
  Décrit les divers niveaux de protection possibles pour gérer des problèmes d'accès concurrentiel dans les codes de mise à jour (updategrams) et fournit des exemples.  
   
  [Exemples de mise à jour d’Applications &#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/d2287e10-4007-4ba4-ad84-4e2b6adfede5)  
  Fournit des exemples d'applications qui utilisent des codes de mise à jour (updategrams).  
   
- [Instructions et Limitations de programmes &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
+ [Règles et Limitations des codes XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
  Répertorie certains éléments à retenir lors de l'utilisation de codes de mise à jour (updategrams).  
   
   

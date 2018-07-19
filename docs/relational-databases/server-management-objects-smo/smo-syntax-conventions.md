@@ -1,5 +1,5 @@
 ---
-title: Conventions de syntaxe SMO | Documents Microsoft
+title: Conventions de syntaxe SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 623117b4906e00096788fc1f7746a7fe715c7379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966444"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062100"
 ---
 # <a name="smo-syntax-conventions"></a>Conventions de syntaxe SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les conventions typographiques Management Objects (SMO) sont basées sur celles utilisées dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] documents de référence de Visual Studio .NET.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Conventions typographiques de Management Objects (SMO) sont basées sur celles utilisées dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] documents de référence de Visual Studio .NET.  
   
 |Convention|Utilisé pour|  
 |----------------|--------------|  

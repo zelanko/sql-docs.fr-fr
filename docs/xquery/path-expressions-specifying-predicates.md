@@ -1,5 +1,5 @@
 ---
-title: Spécification de prédicats dans une étape d’Expression de chemin d’accès | Documents Microsoft
+title: Spécification de prédicats dans une étape d’Expression de chemin d’accès | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 83e100d49f09616c429a1dd6b42550beb8bbcfa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078056"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058519"
 ---
-# <a name="path-expressions---specifying-predicates"></a>Expressions de chemin d’accès - spécification de prédicats
+# <a name="path-expressions---specifying-predicates"></a>Expressions de chemin : spécification de prédicats
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Comme décrit dans la rubrique [des Expressions de chemin d’accès dans XQuery](../xquery/path-expressions-xquery.md), une étape d’axe dans une expression de chemin d’accès inclut les composants suivants :  
+  Comme décrit dans la rubrique, [des Expressions de chemin d’accès dans XQuery](../xquery/path-expressions-xquery.md), une étape d’axe dans une expression de chemin d’accès inclut les composants suivants :  
   
 -   [Un axe](../xquery/path-expressions-specifying-axis.md).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "33078056"
 ## <a name="predicates"></a>Prédicats  
  Un prédicat permet de filtrer une séquence de nœuds en appliquant un test spécifié. L'expression de prédicat est incluse dans un crochet et est liée au dernier nœud d'une expression de chemin d'accès.  
   
- Par exemple, supposons qu’une valeur de paramètre SQL (x) de la **xml** type de données est déclaré, comme indiqué dans l’exemple suivant :  
+ Par exemple, supposons qu’une valeur de paramètre SQL (x) de la **xml** type de données est déclaré, comme illustré dans l’exemple suivant :  
   
 ```  
 declare @x xml  
@@ -131,7 +131,7 @@ WHERE ProductModelID=7
   
 1.  Si la valeur de l'expression de prédicat est une séquence vide, la valeur de vérité de prédicat est False.  
   
-     Par exemple :  
+     Exemple :  
   
     ```  
     SELECT Instructions.query('  
@@ -144,7 +144,7 @@ WHERE ProductModelID=7
   
      L'expression de chemin d'accès dans cette requête retourne uniquement les nœuds d'élément <`Location`> pour lesquels un attribut LotSize est spécifié. Si le prédicat retourne une séquence vide pour un <`Location`> spécifique, cet atelier n'est pas retourné dans le résultat.  
   
-2.  Les valeurs peuvent être uniquement xs : Integer, xs : Boolean ou nœud de prédicat\*. Nœud\*, le prédicat prend la valeur True s’il existe des nœuds, et False pour une séquence vide. Tout autre type numérique, tel que le type double et float, génère une erreur de type statique. La valeur de vérité de prédicat d'une expression est True si et seulement si l'entier résultant est égal à la valeur de la position du contexte. En outre, les valeurs littérales entier uniquement et **last()** fonction réduisent la cardinalité de l’expression d’étape filtrée à 1.  
+2.  Prédicat de valeurs peuvent uniquement être xs : Integer, xs : Boolean ou nœud\*. Nœud\*, le prédicat prend la valeur True s’il existe des nœuds et False pour une séquence vide. Tout autre type numérique, tel que le type double et float, génère une erreur de type statique. La valeur de vérité de prédicat d'une expression est True si et seulement si l'entier résultant est égal à la valeur de la position du contexte. En outre, les valeurs littérales entier uniquement et **last()** fonction réduisent la cardinalité de l’expression d’étape filtrée à 1.  
   
      Par exemple, la requête ci-dessous récupère le troisième nœud d'élément enfant de l'élément <`Features`>.  
   
@@ -158,7 +158,7 @@ WHERE ProductModelID=7
     WHERE ProductModelID=19  
     ```  
   
-     Notez les points suivants dans la requête précédente :  
+     Notez les points suivants dans la requête précédente :  
   
     -   La troisième étape de l'expression spécifie une expression de prédicat de valeur égale à 3. Par conséquent, la valeur de vérité de prédicat de cette expression est True seulement pour les nœuds dont la position de contexte est 3.  
   
@@ -197,11 +197,11 @@ WHERE ProductModelID=7
     select @y  
     ```  
   
-     Notez les points suivants dans la requête précédente :  
+     Notez les points suivants dans la requête précédente :  
   
     -   L’expression dans le **pour** boucle comporte deux étapes, et la seconde étape spécifie un prédicat. La valeur de ce prédicat est une valeur de type booléen. Si cette valeur est True, la valeur de vérité du prédicat est également True.  
   
-    -   La requête retourne les <`Customer`> éléments enfants, dont la valeur de prédicat est True, de la \<Survey > éléments enfants de la racine du document. Voici le résultat obtenu :  
+    -   La requête retourne le <`Customer`> éléments enfants, prédicat dont la valeur est True, de la \<Survey > éléments enfants de la racine du document. Voici le résultat obtenu :  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   
@@ -209,7 +209,7 @@ WHERE ProductModelID=7
   
 4.  Si la valeur de l'expression de prédicat est une séquence contenant au moins un nœud, la valeur de vérité de prédicat est True.  
   
- Par exemple, la requête suivante récupère ProductModelID pour les modèles de produit dont la description du catalogue XML inclut au moins un composant, un élément enfant de la <`Features`> élément, à partir de l’espace de noms associé à la **wm** préfixe.  
+ Par exemple, la requête suivante récupère ProductModelID pour les modèles de produit dont la description du catalogue XML inclut au moins une fonctionnalité, un élément enfant de la <`Features`> élément, à partir de l’espace de noms associé à la **wm**préfixe.  
   
 ```  
 SELECT ProductModelID  
@@ -221,13 +221,13 @@ WHERE CatalogDescription.exist('
              ') = 1  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
--   La clause WHERE spécifie les [méthode exist() (type de données XML)](../t-sql/xml/exist-method-xml-data-type.md).  
+-   La clause WHERE spécifie la [méthode exist() (type de données XML)](../t-sql/xml/exist-method-xml-data-type.md).  
   
--   L’expression de chemin d’accès à l’intérieur de la **exist()** méthode spécifie un prédicat dans la deuxième étape. Si l'expression de prédicat retourne une séquence contenant au moins une fonctionnalité, la valeur de vérité de cette expression de prédicat a la valeur True. Dans ce cas, étant donné que la **exist()** méthode retourne la valeur True, le ProductModelID est retourné.  
+-   L’expression de chemin d’accès à l’intérieur de la **exist()** méthode spécifie un prédicat dans la deuxième étape. Si l'expression de prédicat retourne une séquence contenant au moins une fonctionnalité, la valeur de vérité de cette expression de prédicat a la valeur True. Dans ce cas, étant donné que le **exist()** méthode retourne la valeur True, le ProductModelID est retourné.  
   
 ## <a name="static-typing-and-predicate-filters"></a>Déduction de type statique et filtres de prédicat  
- Les prédicats peuvent également affecter le type déduit statiquement d'une expression. Valeurs littérales entières et la **last()** fonction réduisent la cardinalité de l’expression d’étape filtrée pour au plus un.  
+ Les prédicats peuvent également affecter le type déduit statiquement d'une expression. Valeurs littérales entières et la **last()** fonction réduisent la cardinalité de l’expression d’étape filtrée au plus un.  
   
   

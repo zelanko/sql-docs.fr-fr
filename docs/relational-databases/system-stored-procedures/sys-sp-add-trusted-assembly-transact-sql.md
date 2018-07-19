@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_add_trusted_assembly (Transact-SQL) | Documents Microsoft
+title: Sys.sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: thmullan
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1a3791d82f0970ec6ed3e04ede69492abbcddb59
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256565"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055774"
 ---
 # <a name="sysspaddtrustedassembly-transact-sql"></a>Sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ Cette procédure ajoute un assembly à [sys.trusted_assemblies](../../relational
 ## <a name="arguments"></a>Arguments
 
 [ @hash =] '*valeur*'  
-La valeur de hachage SHA2_512 de l’assembly à ajouter à la liste des assemblys de confiance pour le serveur. Approuvé assemblys peuvent charger [stricte de sécurité CLR](../../database-engine/configure-windows/clr-strict-security.md) est activé, même si l’assembly n’est pas signé ou la base de données n’est pas marquée comme digne de confiance.
+La valeur de hachage SHA2_512 de l’assembly à ajouter à la liste des assemblys de confiance pour le serveur. Approuvé quand peuvent charger des assemblys [sécurité CLR stricte](../../database-engine/configure-windows/clr-strict-security.md) est activé, même si l’assembly n’est pas signé ou la base de données n’est pas marquée comme digne de confiance.
 
 [ @description =] '*description*'  
-Description définie par l’utilisateur facultative de l’assembly. Microsoft recommande d’utiliser le nom canonique qui encode le nom simple numéro de version, culture, clé publique et architecture de l’assembly de confiance. Cette valeur identifie l’assembly sur le côté du common language runtime (CLR) de manière unique et est identique à la valeur clr_name dans sys.assemblies. 
+Description définie par l’utilisateur facultative de l’assembly. Microsoft recommande d’utiliser le nom canonique qui encode le nom simple numéro de version, culture, clé publique et architecture de l’assembly à approuver. Cette valeur identifie l’assembly sur le côté du common language runtime (CLR) et est identique à la valeur clr_name dans sys.assemblies de manière unique. 
 
 ## <a name="permissions"></a>Autorisations
 
@@ -76,7 +76,7 @@ N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarch
   [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
   [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
-  [Sécurité stricte de CLR](../../database-engine/configure-windows/clr-strict-security.md)  
+  [Sécurité CLR stricte](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

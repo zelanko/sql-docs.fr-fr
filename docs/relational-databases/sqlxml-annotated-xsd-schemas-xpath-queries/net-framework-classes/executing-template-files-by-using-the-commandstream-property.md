@@ -1,5 +1,5 @@
 ---
-title: Exécution de fichiers modèles à l’aide de la propriété CommandStream | Documents Microsoft
+title: Exécution de fichiers modèles à l’aide de la propriété CommandStream | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d51834522bf6f6d3b8e3243340406d95376aac54
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971864"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051537"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Exécution de fichiers modèles à l'aide de la propriété CommandStream
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Cet exemple illustre la façon dont les fichiers de modèle qui sont composées de requêtes SQL ou XPath peuvent être spécifiés à l’aide de la propriété CommandStream de l’objet SqlXmlCommand. Dans cette application, un FileStreamobject est ouvert pour un fichier de commandes, et le flux de fichier est désignée comme la CommandStream est exécutée.  
+  Cet exemple illustre la façon dont les fichiers de modèle qui se composent de requêtes SQL ou XPath peuvent être spécifiés à l’aide de la propriété CommandStream de l’objet SqlXmlCommand. Dans cette application, un FileStreamobject est ouvert pour un fichier de commandes, et le flux de fichier est affecté comme CommandStream qui est exécutée.  
   
  Dans l’exemple suivant, la propriété CommandType est spécifiée en tant que SqlXmlCommandType.Template (et non comme TemplateFile).  
   
@@ -89,7 +89,7 @@ class Test
   
 1.  Enregistrez le modèle XML (TemplateFile.xml) fourni dans cet exemple dans un dossier.  
   
-2.  Enregistrez le code c# (DocSample.cs) fourni dans cet exemple dans le même dossier que celui dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
+2.  Enregistrez le code c# (DocSample.cs) fourni dans cet exemple dans le même dossier dans lequel le schéma est stocké. (Si vous stockez les fichiers dans un dossier différent, vous devrez modifier le code et spécifier le chemin d'accès approprié au répertoire pour le schéma de mappage.)  
   
 3.  Compilez le code. Pour compiler le code à l'invite de commandes, utilisez :  
   

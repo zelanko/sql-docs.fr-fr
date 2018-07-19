@@ -1,5 +1,5 @@
 ---
-title: Type de règles de conversion dans XQuery | Documents Microsoft
+title: Type de règles de conversion dans XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,22 +28,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3142794843083c5dcc314b7dc6b0f69cb62f889e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077906"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055244"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Règles de conversion de types dans XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Le diagramme des spécifications suivant, retraçant les fonctions et les opérateurs XQuery 1.0 et XPath 2.0 définis par le W3C, illustre les types de données intégrés. Parmi ces types, on retrouve les types intégrés de primitives et de dérivées.  
   
- ![Hiérarchie de type XQuery 1.0](../xquery/media/xquery-typing-rules.gif "hiérarchie de type XQuery 1.0")  
+ ![Hiérarchie des types XQuery 1.0](../xquery/media/xquery-typing-rules.gif "hiérarchie des types XQuery 1.0")  
   
  Cette rubrique décrit donc les règles de conversion de types applicables suivant une des deux méthodes suivantes :  
   
--   Conversion explicite vous faire utiliser **castés en tant que** ou les fonctions de constructeur de type (par exemple, `xs:integer("5")`).  
+-   Conversion explicite procéder à l’aide de **casté en** ou les fonctions de constructeur de type (par exemple, `xs:integer("5")`).  
   
 -   la conversion implicite qui a lieu pendant la promotion de type à un rang supérieur.  
   
@@ -54,23 +54,23 @@ ms.locfileid: "33077906"
   
 -   Un type de primitive intégré peut se convertir en un autre type de primitive intégré en respectant les règles en vigueur sur les données de la table.  
   
--   Un type de primitive peut également se convertir en tout autre type dérivé de ce type de primitive. Par exemple, vous pouvez effectuer un cast de **xs : decimal** à **xs : Integer**, ou à partir de **xs : decimal** à **xs : long**.  
+-   Un type de primitive peut également se convertir en tout autre type dérivé de ce type de primitive. Par exemple, vous pouvez convertir le type **xs : decimal** à **xs : Integer**, ou à partir de **xs : decimal** à **xs : long**.  
   
--   Un type dérivé peut être converti en tout autre type dont il constitue l'ancêtre dans la hiérarchie des types, et ce jusqu'à son type de primitive de base intégré. Par exemple, vous pouvez effectuer un cast de **xs : Token** à **xs : normalizedString** ou **xs : String**.  
+-   Un type dérivé peut être converti en tout autre type dont il constitue l'ancêtre dans la hiérarchie des types, et ce jusqu'à son type de primitive de base intégré. Par exemple, vous pouvez convertir le type **xs : Token** à **xs : normalizedString** ou **xs : String**.  
   
--   Un type dérivé peut également être converti en type de primitive si l'ancêtre de sa primitive peut aussi être converti dans le type cible. Par exemple, vous pouvez effectuer un cast **xs : Integer**, un type dérivé, en un **xs : String**, la primitive de type, car **xs : decimal**, **xs : Integer**l’ancêtre de primitive, peut être converti en **xs : String**.  
+-   Un type dérivé peut également être converti en type de primitive si l'ancêtre de sa primitive peut aussi être converti dans le type cible. Par exemple, vous pouvez effectuer un cast **xs : Integer**, un type dérivé, en un **xs : String**, primitifs type, car **xs : decimal**, **xs : Integer**de ancêtre de la primitive, pouvant être casté en **xs : String**.  
   
--   Un type dérivé peut également être converti en autre type dérivé si l'ancêtre de la primitive du type source peut aussi être converti en ancêtre de primitive du type cible. Par exemple, vous pouvez effectuer un cast de **xs : Integer** à **xs : Token**, car vous pouvez effectuer un cast de **xs : decimal** à **xs : String**.  
+-   Un type dérivé peut également être converti en autre type dérivé si l'ancêtre de la primitive du type source peut aussi être converti en ancêtre de primitive du type cible. Par exemple, vous pouvez convertir le type **xs : Integer** à **xs : Token**, car vous pouvez convertir le type **xs : decimal** à **xs : String**.  
   
--   Les règles pour la conversion de types définis par l'utilisateur en types intégrés revient au même que pour la conversion de types intégrés. Par exemple, vous pouvez définir un **myInteger** type dérivé **xs : Integer** type. Ensuite, **myInteger** peut être converti en **xs : Token**, car **xs : decimal** peut être converti en **xs : String**.  
+-   Les règles pour la conversion de types définis par l'utilisateur en types intégrés revient au même que pour la conversion de types intégrés. Par exemple, vous pouvez définir un **myInteger** type dérivé **xs : Integer** type. Ensuite, **myInteger** pouvant être casté en **xs : Token**, car **xs : decimal** pouvant être casté en **xs : String**.  
   
  Les types de conversion suivants ne sont pas pris en charge :  
   
--   La conversion mettant en œuvre les types de liste n'est pas autorisée. Cela inclut les types définis par l’utilisateur de liste et les types de listes intégrées telles que **xs : IDREFS**, **xs : Entities**, et **xs : NMTOKENS**.  
+-   La conversion mettant en œuvre les types de liste n'est pas autorisée. Cela inclut les types de listes définis par l’utilisateur et les types de listes intégrées telles que **xs : IDREFS**, **xs : Entities**, et **xs : NMTOKENS**.  
   
 -   Conversion vers ou depuis **xs : QName** n’est pas pris en charge.  
   
--   **xs : notation** et sous-types de durée entièrement triés **xdt : yearmonthduration** et **xdt : daytimeduration**, ne sont pas pris en charge. C'est pour cela que la conversion mettant en œuvre ces types n'est pas prise en charge.  
+-   **xs : notation** et les sous-types entièrement ordonnés de durée, **xdt : yearmonthduration** et **xdt : daytimeduration**, ne sont pas pris en charge. C'est pour cela que la conversion mettant en œuvre ces types n'est pas prise en charge.  
   
  Les exemples suivants illustrent la conversion explicite de types.  
   
@@ -142,7 +142,7 @@ go
 ```  
   
 ## <a name="implicit-casting"></a>Conversion implicite  
- La conversion implicite n'est autorisée que pour les types numériques et les types atomiques non typés. Par exemple, **min()** fonction retourne la valeur minimale de deux valeurs :  
+ La conversion implicite n'est autorisée que pour les types numériques et les types atomiques non typés. Par exemple, ce qui suit **min()** fonction retourne la valeur minimale de deux valeurs :  
   
 ```  
 min(xs:integer("1"), xs:double("1.1"))  
@@ -154,11 +154,11 @@ min(xs:integer("1"), xs:double("1.1"))
   
 -   Un type numérique dérivé peut être promu en son type de base. Par exemple, **entier** peut être promu en **décimal**.  
   
--   A **décimal** peut être promu en **float,** et un **float** peut être promu en **double**.  
+-   Un **décimal** peut être promu en **float,** et un **float** peut être promu en **double**.  
   
  La conversion implicite n'étant autorisée que pour les types numériques, ce qui suit n'est pas possible :  
   
--   La conversion implicite mettant en œuvre les types de chaîne (string) n'est pas autorisée. Par exemple, si deux **chaîne** types sont attendus mais que vous transmettez un **chaîne** et un **jeton**, aucune conversion implicite se produit et une erreur est renvoyée.  
+-   La conversion implicite mettant en œuvre les types de chaîne (string) n'est pas autorisée. Par exemple, si deux **chaîne** sont des types attendus mais que vous transmettez un **chaîne** et un **jeton**, aucune conversion implicite ne se produit et une erreur est retournée.  
   
 -   La conversion implicite des types numériques en types de chaînes n'est pas non plus autorisée. Ainsi, si vous transmettez une valeur de type integer à une fonction s'attendant à un paramètre de type string (chaîne), là encore la conversion implicite ne peut pas se produire et entraîne une erreur.  
   

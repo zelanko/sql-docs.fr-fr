@@ -1,5 +1,5 @@
 ---
-title: Sys.index_resumable_operations (Transact-SQL) | Documents Microsoft
+title: Sys.index_resumable_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql
@@ -25,38 +25,38 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 0d68f6e0946f9b5fb781448b2973939831b6cab9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180525"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058223"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**Sys.index_resumable_operations** est une vue système qui surveille et vérifie l’état d’exécution actuel pour la reconstruction d’Index peut être reprise.  
+**Sys.index_resumable_operations** est une vue système qui surveille et vérifie l’état d’exécution actuel pour la reconstruction d’Index pouvant être reprise.  
 **S’applique à**: SQL Server 2017 et Azure SQL Database 
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID de l’objet auquel cet index appartient (pas de valeur nulle).|  
-|**index_id**|**int**|ID de l’index (pas de valeur nulle). **index_id** est unique que dans l’objet.|
-|**nom**|**sysname**|Nom de l’index. **nom** est unique que dans l’objet.|  
+|**object_id**|**Int**|ID de l’objet auquel cet index appartient (qui n’autorise pas la valeur null).|  
+|**index_id**|**Int**|ID de l’index (qui n’autorise pas la valeur null). **index_id** est unique seulement dans l’objet.|
+|**nom**|**sysname**|Nom de l’index. **nom** est unique seulement dans l’objet.|  
 |**sql_text**|**nvarchar(max)**|Texte de l’instruction DDL T-SQL|
-|**last_max_dop**|**smallint**|La dernière MAX_DOP utilisé (par défaut = 0)|
-|**partition_number**|**int**|Numéro de partition dans l’index ou le segment de mémoire propriétaire. Pour les index et les tables non partitionnées ou dans le cas de toutes les partitions sont en cours régénération de la valeur de cette colonne est NULL.|
-|**state**|**tinyint**|État opérationnel de l’index peut être repris :<br /><br />0 = en cours d’exécution<br /><br />1 = pause|
-|**state_desc**|**nvarchar(60)**|Description de l’état opérationnel d’index peut être repris (en cours d’exécution ou suspendu)|  
-|**start_time**|**datetime**|Heure de début d’une opération de index (pas de valeur nulle)|
-|**last_pause_time**|**datatime**| Opération d’index dernier temps de pause (null). NULL si l’opération est en cours d’exécution et jamais en pause.|
-|**total_execution_time**|**int**|Temps total d’exécution à partir de l’heure de début en minutes (pas de valeur nulle)|
-|**percent_complete**|**real**|Achèvement dans % (pas de valeur nulle) la progression de l’opération d’index.|
-|**page_count**|**bigint**|Nombre total de pages d’index allouées par l’opération de création d’index de la nouvelle et les index de mappage (pas de valeur nulle). 
+|**last_max_dop**|**smallint**|Dernière MAX_DOP utilisé (par défaut = 0)|
+|**partition_number**|**Int**|Numéro de partition dans l’index ou le segment de mémoire propriétaire. Pour les tables non partitionnées et ou dans les cas toutes les partitions sont en cours de reconstruction de la valeur de cette colonne est NULL.|
+|**state**|**tinyint**|État opérationnel pour les index pouvant être reprise :<br /><br />0 = en cours d’exécution<br /><br />1 = pause|
+|**state_desc**|**nvarchar(60)**|Description de l’état opérationnel pour les index pouvant être reprise (en cours d’exécution ou suspendu)|  
+|**start_time**|**datetime**|Heure de début d’une opération de index (qui n’autorise pas la valeur null)|
+|**last_pause_time**|**datatime**| Opération d’index dernier temps de pause (null). NULL si l’opération est en cours d’exécution et ne sont jamais mise en pause.|
+|**total_execution_time**|**Int**|Durée d’exécution totale à partir de l’heure de début en quelques minutes (qui n’autorise pas la valeur null)|
+|**percent_complete**|**real**|Index de fin progression de l’opération dans % (pas de valeur nulle).|
+|**page_count**|**bigint**|Nombre total de pages d’index allouées par l’opération de génération d’index pour le nouveau et les index de mappage (qui n’autorise pas la valeur null). 
 
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
    
 ## <a name="example"></a>Exemple  
- Liste de toutes les opérations de reconstruction d’index peut être repris qui se trouvent dans l’état PAUSE. 
+ Répertorier toutes les opérations de reconstruction d’index pouvant être reprise qui se trouvent dans l’état PAUSE. 
   
 ```  
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  

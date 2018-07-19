@@ -1,5 +1,5 @@
 ---
-title: Accès aux fonctionnalités SQLXML dans l’environnement .NET | Documents Microsoft
+title: Accès aux fonctionnalités SQLXML dans l’environnement .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 023ffb86d8be4e2a6ba3dd897bdd64460824926b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968074"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051477"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>Accès aux fonctionnalités SQLXML dans l'environnement .NET
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cet exemple montre :  
   
--   L’utilisation de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] les Classes managées SQLXML (Microsoft.Data.SqlXml) pour accéder à Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] environnement .NET Framework.  
+-   Comment utiliser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Classes managées SQLXML (Microsoft.Data.SqlXml) pour accéder à Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] environnement .NET Framework.  
   
 -   Comment les DiffGrams générés dans l'environnement .NET Framework peuvent appliquer les mises à jour des données aux tables [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

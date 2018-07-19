@@ -1,5 +1,5 @@
 ---
-title: Fonction position (XQuery) | Documents Microsoft
+title: Fonction position (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0afc659ea30da13a520c04c3d9f7efbdfaf8681
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077926"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052407"
 ---
-# <a name="context-functions---position-xquery"></a>Fonctions relatives au contexte - position (XQuery)
+# <a name="context-functions---position-xquery"></a>Fonctions de contexte : position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Renvoie une valeur entière indiquant la position de l'élément contextuel dans la séquence d'éléments en cours de traitement.  
@@ -44,7 +44,7 @@ fn:position() as xs:integer
  Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **:position()** peut uniquement être utilisé dans le contexte d’un prédicat dépendant du contexte. Plus précisément, elle ne peut être utilisée qu'entre crochets ([ ]).Toute comparaison à cette fonction ne réduit pas la cardinalité lors de l'inférence de type statique.  
   
 ## <a name="examples"></a>Exemples  
- Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** type des colonnes dans le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
+ Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Utilisation de la fonction XQuery position() pour récupérer les deux premières caractéristiques de produits  
  La requête suivante récupère les deux premières caractéristiques de produits, correspondant aux deux premiers éléments enfants de l'élément <`Features`>, tirées de la description du catalogue retraçant les modèles de produits. Si d'autres caractéristiques sont présentes, elle ajoute un élément <`there-is-more/`> (« Et plus encore ») au résultat.  
@@ -71,11 +71,11 @@ FROM Production.ProductModel
 WHERE CatalogDescription is not null  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
--   Le **espace de noms** mot clé dans le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit un préfixe d’espace de noms qui est utilisé dans le corps de la requête.  
+-   Le **espace de noms** mot clé dans le [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit un préfixe d’espace de noms qui est utilisé dans le corps de requête.  
   
--   Le corps de la requête construit le document XML qui a un \<produit > élément avec **ProductModelID** et **ProductModelName** d’attributs et a des fonctionnalités du produit retournées en tant qu’éléments enfants.  
+-   Le corps de la requête construit du code XML qui a un \<produit > élément avec **ProductModelID** et **ProductModelName** des attributs et possède des fonctionnalités de produit retournées en tant qu’éléments enfants.  
   
 -   Le **position()** fonction est utilisée dans le prédicat pour déterminer la position de la \<fonctionnalités > élément enfant dans le contexte. Si l'élément correspond à la première ou à la deuxième caractéristique, il est renvoyé dans les résultats.  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_trace_getinfo (Transact-SQL) | Documents Microsoft
+title: Sys.fn_trace_getinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f709ba43a3dda3b219c083449869a6963da003f5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235793"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056193"
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +50,14 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
   
 ## <a name="arguments"></a>Arguments  
  *trace_id*  
- Est l’ID de la trace. *l’argument trace_id* est **int**.  Les entrées autorisées sont l'ID d'une trace ou la valeur NULL, 0 ou DEFAULT. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte. Spécifiez NULL, 0 ou DEFAULT pour retourner les informations de toutes les traces de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Est l’ID de la trace. *trace_id* est **int**.  Les entrées autorisées sont l'ID d'une trace ou la valeur NULL, 0 ou DEFAULT. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte. Spécifiez NULL, 0 ou DEFAULT pour retourner les informations de toutes les traces de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="tables-returned"></a>Tables retournées  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|traceid|**int**|Identificateur de la trace.|  
-|propriété|**int**|Propriété de la trace :<br /><br /> 1 = options de trace. Pour plus d’informations, consultez @options dans [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = nom de fichier<br /><br /> 3 = taille maxi<br /><br /> 4 = heure d'arrêt<br /><br /> 5 = statut de trace actuel. 0 = arrêtée. 1 = exécution.|  
+|traceid|**Int**|Identificateur de la trace.|  
+|propriété|**Int**|Propriété de la trace :<br /><br /> 1 = options de trace. Pour plus d’informations, consultez @options dans [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = nom de fichier<br /><br /> 3 = taille maxi<br /><br /> 4 = heure d'arrêt<br /><br /> 5 = statut de trace actuel. 0 = arrêtée. 1 = exécution.|  
 |valeur|**sql_variant**|Informations sur la propriété de la trace spécifiée.|  
   
 ## <a name="remarks"></a>Notes  

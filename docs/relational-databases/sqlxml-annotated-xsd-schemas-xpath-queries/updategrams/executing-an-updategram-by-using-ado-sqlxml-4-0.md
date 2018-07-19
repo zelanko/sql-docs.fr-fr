@@ -1,5 +1,5 @@
 ---
-title: L’exécution d’une mise à jour à l’aide d’ADO (SQLXML 4.0) | Documents Microsoft
+title: Exécution d’une mise à jour à l’aide d’ADO (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 95272db4677cafad6f1e3c84f14b5705dd5f4718
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971974"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051457"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Exécution d'un code de mise à jour (updategram) à l'aide d'ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32971974"
   
  Dans cet exemple d'application :  
   
--   Le **conn** objet (**ADODB. Connexion**) établit une connexion à une instance en cours d’exécution de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un serveur spécifique.  
+-   Le **conn** objet (**ADODB. Connexion**) établit une connexion à une instance en cours d’exécution de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur un ordinateur de serveur spécifique.  
   
 -   Le **cmd** objet (**ADODB.Command**) s’exécute sur la connexion établie.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "32971974"
   
 -   Mise à jour est copié dans le flux de commandes (**strmIn**).  
   
--   Flux de sortie de la commande est défini sur le **StrmOut** objet (**ADODB. Flux**) pour recevoir les a retourné des données.  
+-   Flux de sortie de la commande est défini sur le **StrmOut** objet (**ADODB. Stream**) pour recevoir les données renvoyées.  
   
 -   Enfin, la commande (code de mise à jour (updategram)) est exécutée.  
   
@@ -189,7 +189,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Passage de paramètres  
- Dans les applications Visual Basic fournies précédemment, les paramètres ne sont pas transmis. Dans cette application, le **ContactID** et **MiddleName** valeurs sont passées comme entrées paramétrables pour la mise à jour.  
+ Dans les applications Visual Basic fournies précédemment, les paramètres ne sont pas transmis. Dans cette application, le **ContactID** et **MiddleName** valeurs sont passées comme entrées paramétrables au mise à jour.  
   
 ```vb  
 Private Sub Form_Load()  

@@ -1,5 +1,5 @@
 ---
-title: longueur de chaîne, fonction (XQuery) | Documents Microsoft
+title: Fonction String-length (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 229aaf528780001001b9319ae352913f35d067fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078196"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059773"
 ---
-# <a name="functions-on-string-values---string-length"></a>Fonctions sur des valeurs de chaîne - longueur de chaîne
+# <a name="functions-on-string-values---string-length"></a>Fonctions sur les valeurs de chaîne : longueur de chaîne
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne la longueur de la chaîne en caractères.  
@@ -50,11 +50,11 @@ fn:string-length($arg as xs:string?) as xs:integer
 ## <a name="remarks"></a>Notes  
  Si la valeur de *$arg* est une séquence vide, un **xs : Integer** la valeur 0 est retournée.  
   
- Le comportement de paires de substitution dans les fonctions XQuery dépend du niveau de compatibilité de la base de données. Si le niveau de compatibilité est 110 ou supérieur, chaque paire de substitution est comptée comme un caractère unique. Pour les premiers niveaux de compatibilité, ils sont comptés comme deux caractères. Pour plus d’informations, consultez [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) et [prise en charge Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).  
+ Le comportement de paires de substitution dans les fonctions XQuery dépend du niveau de compatibilité de la base de données. Si le niveau de compatibilité est 110 ou supérieur, chaque paire de substitution est comptée comme un caractère unique. Pour les premiers niveaux de compatibilité, ils sont comptés comme deux caractères. Pour plus d’informations, consultez [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) et [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
  Si la valeur contient un caractère Unicode composé de 4 octets et représenté par deux caractères de substitution, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compte ces caractères de substitution séparément.  
   
- Le **Length** sans un paramètre peut être utilisé uniquement dans un prédicat. Par exemple, la requête suivante renvoie l'élément <`ROOT`> :  
+ Le **Length** sans un paramètre peut uniquement être utilisé au sein d’un prédicat. Par exemple, la requête suivante renvoie l'élément <`ROOT`> :  
   
 ```  
 DECLARE @x xml;  
@@ -63,7 +63,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caractères supplémentaires (paires de substitution)  
- Le comportement de la paire de substitution dans des fonctions XQuery dépend du niveau de compatibilité de la base de données et, dans certains cas, de l'URI de l'espace de noms par défaut des fonctions. Pour plus d’informations, consultez la section « XQuery fonctions sont substitut prenant en charge » dans la rubrique [modifications avec rupture des fonctionnalités du moteur de base de données dans SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consultez également [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) et [prise en charge Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).  
+ Le comportement de la paire de substitution dans des fonctions XQuery dépend du niveau de compatibilité de la base de données et, dans certains cas, de l'URI de l'espace de noms par défaut des fonctions. Pour plus d’informations, consultez la section « XQuery fonctions sont substitut prenant en charge » dans la rubrique [modifications avec rupture des fonctionnalités du moteur de base de données dans SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consultez également [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) et [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
@@ -85,11 +85,11 @@ FROM Production.ProductModel
 WHERE CatalogDescription.value('string-length( string( (/pd:ProductDescription/pd:Summary)[1]))', 'decimal') > 200;  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
--   La condition de la clause WHERE extrait uniquement les lignes où la description résumée stockée dans le document XML comprend plus de 200 caractères. Elle utilise le [le méthode value() (type de données XML)](../t-sql/xml/value-method-xml-data-type.md).  
+-   La condition de la clause WHERE extrait uniquement les lignes où la description résumée stockée dans le document XML comprend plus de 200 caractères. Il utilise le [méthode value() (type de données XML)](../t-sql/xml/value-method-xml-data-type.md).  
   
--   La clause SELECT construit simplement le document XML de votre choix. Elle utilise le [méthode query() (type de données XML)](../t-sql/xml/query-method-xml-data-type.md) pour construire le document XML et spécifiez l’expression XQuery nécessaire pour récupérer des données à partir du document XML.  
+-   La clause SELECT construit simplement le document XML de votre choix. Il utilise le [méthode query() (type de données XML)](../t-sql/xml/query-method-xml-data-type.md) pour construire le document XML et spécifiez l’expression XQuery nécessaire pour récupérer des données à partir du document XML.  
   
  Voici un extrait du résultat :  
   
@@ -133,13 +133,13 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription')=1;  
 ```  
   
- Notez les points suivants dans la requête précédente :  
+ Notez les points suivants dans la requête précédente :  
   
 -   **PD** et **wm** sont les préfixes d’espace de noms utilisés dans cette requête. Ils identifient les mêmes espaces de noms que ceux utilisés dans le document interrogé.  
   
--   La requête XQuery spécifie une boucle FOR imbriquée. La boucle FOR externe est nécessaire, car vous souhaitez récupérer le **ProductModelID** les attributs de la <`ProductDescription`> élément. La boucle FOR interne est requise car vous ne souhaitez obtenir que les produits dont la description de la garantie comprend moins de 20 caractères.  
+-   La requête XQuery spécifie une boucle FOR imbriquée. La boucle FOR extérieure est nécessaire, étant donné que vous souhaitez récupérer le **ProductModelID** les attributs de la <`ProductDescription`> élément. La boucle FOR interne est requise car vous ne souhaitez obtenir que les produits dont la description de la garantie comprend moins de 20 caractères.  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 Result  

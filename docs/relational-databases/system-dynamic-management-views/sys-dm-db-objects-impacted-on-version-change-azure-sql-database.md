@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_objects_impacted_on_version_change (base de données de SQL Azure) | Documents Microsoft
+title: Sys.dm_db_objects_impacted_on_version_change (base de données Azure SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -27,30 +27,30 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ae5daae796ba134c883cb074ffd4130c67e0aba1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465125"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051287"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Cette vue système dont l'étendue est la base de données est conçue pour fournir un système d'avertissement anticipé pour déterminer les objets qui seront affectés par une mise à niveau de version majeure dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Utilisez cette vue avant ou après la mise à niveau pour obtenir une énumération complète des objets affectés. Vous devez interroger cette vue dans chaque base de données pour obtenir le nombre total sur le serveur.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|class|**int** non NULL|Classe de l'objet qui sera affecté :<br /><br /> **1** = contrainte<br /><br /> **7** = index et segments|  
-|class_desc|**nvarchar (60)** non NULL|Description de la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
-|major_id|**int** non NULL|ID d'objet de la contrainte, ou ID d'objet de la table contenant l'index ou le segment de mémoire.|  
+|class|**int** pas NULL|Classe de l'objet qui sera affecté :<br /><br /> **1** = contrainte<br /><br /> **7** = index et segments|  
+|class_desc|**nvarchar (60)** pas NULL|Description de la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|major_id|**int** pas NULL|ID d'objet de la contrainte, ou ID d'objet de la table contenant l'index ou le segment de mémoire.|  
 |minor_id|**int** NULL|**NULL** pour les contraintes<br /><br /> Index_id pour les index et les segments|  
-|dependency|**nvarchar (60)** non NULL|Description de la dépendance qui provoque l'impact sur une contrainte ou un index. La valeur est également utilisée pour les avertissements générés pendant la mise à niveau.<br /><br /> Exemples :<br /><br /> **espace** (pour intrinsèque)<br /><br /> **géométrie** (pour UDT système)<br /><br /> **Geography::Parse** (pour méthode UDT système)|  
+|dependency|**nvarchar (60)** pas NULL|Description de la dépendance qui provoque l'impact sur une contrainte ou un index. La valeur est également utilisée pour les avertissements générés pendant la mise à niveau.<br /><br /> Exemples :<br /><br /> **espace** (pour intrinsèque)<br /><br /> **géométrie** (pour système UDT)<br /><br /> **Geography::Parse** (pour système de méthode UDT)|  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant illustre une requête sur **sys.dm_db_objects_impacted_on_version_change** pour rechercher les objets affectés par une mise à niveau vers la prochaine version majeure du serveur  
+ L’exemple suivant illustre une requête sur **sys.dm_db_objects_impacted_on_version_change** pour rechercher les objets affectés par une mise à niveau vers la prochaine version majeure de serveur  
   
 ```  
 SELECT * FROM sys.dm_db_objects_disabled_on_version_change;  
@@ -73,7 +73,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |JSON|Objet affecté|Action corrective|  
 |-----------|---------------------|-----------------------|  
-|1|**Index**|Reconstruisez tout index identifié par **sys.dm_db_objects_impacted_on_version_change** par exemple :  `ALTER INDEX ALL ON <table> REBUILD`<br />ou<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Objet**|Toutes les contraintes identifiées par **sys.dm_db_objects_impacted_on_version_change** doivent être revalidées lorsque les données de géométrie et géographie dans la table sous-jacente sont recalculées. Pour les contraintes, revalidez l'aide de ALTER TABLE. <br />Par exemple : <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />ou<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+| 1|**Index**|Reconstruisez tout index identifié par **sys.dm_db_objects_impacted_on_version_change** par exemple :  `ALTER INDEX ALL ON <table> REBUILD`<br />ou Gestionnaire de configuration<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Objet**|Toutes les contraintes identifiées par **sys.dm_db_objects_impacted_on_version_change** doivent être revalidées après que les données de géométrie et géographie dans la table sous-jacente sont recalculées. Pour les contraintes, revalidez l'aide de ALTER TABLE. <br />Exemple : <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />ou Gestionnaire de configuration<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.external_file_formats (Transact-SQL) | Documents Microsoft
+title: Sys.external_file_formats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f834434e2e03bad82df9221b1d66db6f4f1e300a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181058"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059126"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>Sys.external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -32,18 +32,18 @@ ms.locfileid: "33181058"
   
  Contient une ligne pour chaque format de fichier externe sur le serveur pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-|Nom de la colonne|Type de données| Description|Plage|  
+|Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|file_format_id|**int**|ID d’objet pour le format de fichier externe.||  
-|name|**sysname**|Nom du format de fichier. dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], il est unique pour la base de données. Dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], il est unique pour le serveur.||  
-|format_type|**tinyint**|Le type de format de fichier.|PARQUET DELIMITEDTEXT, RCFILE, ORC,|  
-|indicateur_fin_de_champ|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, il s’agit de la marque de fin de champ.||  
-|string_delimiter|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, c’est le délimiteur de chaîne.||  
+|file_format_id|**Int**|ID d’objet pour le format de fichier externe.||  
+|NAME|**sysname**|Nom du format de fichier. dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], il est unique pour la base de données. Dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], il est unique pour le serveur.||  
+|format_type|**tinyint**|Le type de format de fichier.|DELIMITEDTEXT, RCFILE, ORC, PARQUET|  
+|indicateur_fin_de_champ|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, c’est la marque de fin de champ.||  
+|string_delimiter|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, il s’agit du délimiteur de chaîne.||  
 |date_format|**nvarchar(50)**|Pour format_type = DELIMITEDTEXT, c’est la date défini par l’utilisateur et le format d’heure.||  
-|use_type_default|**bit**|Pour format_type = texte délimité, spécifie comment gérer les valeurs manquantes lorsque PolyBase est l’importation de données à partir de fichiers texte HDFS [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – stocker des valeurs manquantes en tant que la chaîne « NULL ».<br /><br /> 1 – stocker les valeurs manquantes en tant que valeur par défaut de la colonne.|  
+|use_type_default|**bit**|Pour format_type = texte délimité par des, spécifie comment gérer les valeurs manquantes lorsque PolyBase est l’importation de données à partir de fichiers texte HDFS [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 – stocker des valeurs manquantes en tant que la chaîne « NULL ».<br /><br /> 1 : stocker les valeurs manquantes en tant que la valeur par défaut de la colonne.|  
 |serde_method|**nvarchar(255)**|Pour format_type = RCFILE, c’est la méthode de sérialisation/désérialisation.||  
-|indicateur_fin_de_ligne|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, c’est la chaîne de caractères qui arrête chaque ligne dans le fichier Hadoop externe.|Toujours '\n'.|  
-|encodage|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, c’est la méthode de codage du fichier Hadoop externe.|Toujours « UTF-8'.|  
+|indicateur_fin_de_ligne|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, c’est la chaîne de caractère qui arrête chaque ligne dans le fichier Hadoop externe.|Toujours '\n'.|  
+|encodage|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, c’est la méthode d’encodage du fichier Hadoop externe.|Toujours 'UTF8'.|  
 |data_compression|**nvarchar(255)**|La méthode de compression de données pour les données externes.|Pour format_type = DELIMITEDTEXT :<br /><br /> -   'org.apache.hadoop.io.compress.DefaultCodec'<br />-   'org.apache.hadoop.io.compress.GzipCodec'<br /><br /> Pour format_type = RCFILE :<br /><br /> -   'org.apache.hadoop.io.compress.DefaultCodec'<br /><br /> Pour format_type = ORC :<br /><br /> -   'org.apache.hadoop.io.compress.DefaultCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'<br /><br /> Pour format_type = PARQUET :<br /><br /> -   'org.apache.hadoop.io.compress.GzipCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'|  
   
 ## <a name="permissions"></a>Autorisations  

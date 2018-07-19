@@ -1,5 +1,5 @@
 ---
-title: Conversion de schémas XDR schémas XSD équivalents (SQLXML 4.0) annotés | Documents Microsoft
+title: Conversion de schémas XSD équivalents (SQLXML 4.0), les schémas XDR annotés | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a841cf9e5bcfe3c1de5c199fa29984c709631598
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969824"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047277"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>Conversion de schémas XDR annotés en schémas XSD équivalents (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  Où :  
   
  XDRFileName  
- Est le nom du fichier XDR qui doit être converti en XSD. L'outil lit le fichier XDR d'entrée et crée un fichier de sortie XSD dans le répertoire de travail actif. Si le fichier d'entrée a une extension .xdr ou .xml, le fichier XSD de sortie est créé avec le même nom mais avec une extension .xsd. Si l’extension de nom de fichier d’entrée n’est autre que .xml ou .xdr (ou si l’extension est manquante), le fichier de sortie est créé avec le même nom et l’extension .xsd est ajoutée au nom du fichier d’entrée. Par exemple, si le nom de fichier XDR d'entrée est SampleFile.abc, le fichier XSD résultant est enregistré en tant que SampleFile.abc.xsd.  
+ Est le nom du fichier XDR qui doit être converti en XSD. L'outil lit le fichier XDR d'entrée et crée un fichier de sortie XSD dans le répertoire de travail actif. Si le fichier d'entrée a une extension .xdr ou .xml, le fichier XSD de sortie est créé avec le même nom mais avec une extension .xsd. Si l’extension de nom de fichier d’entrée est autre que .xml ou .xdr (ou si l’extension est manquante), le fichier de sortie est créé avec le même nom et l’extension .xsd est ajoutée au nom du fichier d’entrée. Par exemple, si le nom de fichier XDR d'entrée est SampleFile.abc, le fichier XSD résultant est enregistré en tant que SampleFile.abc.xsd.  
   
  -y  
  (Facultatif) Remplace le fichier XSD existant par le fichier XSD généré par l'outil de conversion. Si l'indicateur n'est pas spécifié, l'outil vous invite à spécifier si vous souhaitez remplacer le fichier XSD existant et vous donne la possibilité de modifier le nom de fichier de sortie.  

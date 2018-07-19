@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_log_space_usage (Transact-SQL) | Documents Microsoft
+title: Sys.dm_db_log_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
@@ -25,27 +25,27 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9bedbe8d5aa7b4e50ce4f486f2f3dbbf84e48a9c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464165"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061437"
 ---
 # <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Retourne l’espace informations d’utilisation pour le journal des transactions. 
+Retourne l’espace des informations d’utilisation pour le journal des transactions. 
   
 > [!NOTE]
 > Tous les fichiers journaux des transactions sont combinées.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|ID de la base de données.|  
 |total_log_size_in_bytes |**bigint** |La taille du journal  |
-|used_log_space_in_bytes |**bigint** |La taille du journal d’occupé  |     
+|used_log_space_in_bytes |**bigint** |L’état d’occupation taille du journal  |     
 |used_log_space_in_percent |**real** |La taille occupée du journal en tant que pourcentage de la taille du journal |
-|log_space_in_bytes_since_last_backup |**bigint** |La quantité d’espace utilisée depuis la dernière sauvegarde de journal <br />**S’applique à :** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] via [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
+|log_space_in_bytes_since_last_backup |**bigint** |La quantité d’espace utilisé depuis la dernière sauvegarde de journal <br />**S’applique à :** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] via [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
     
   
 ## <a name="permissions"></a>Autorisations  
@@ -56,7 +56,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. Déterminer la quantité de journal espace dans tempdb   
-La requête suivante retourne l’espace de journal total en mégaoctets (Mo) disponible dans tempdb.
+La requête suivante retourne l’espace libre total du journal en mégaoctets (Mo) disponible dans tempdb.
 
 ```sql
 USE tempdb;  

@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Documents Microsoft
+title: Sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a109d7f23ad475fa9d8f1229be5011495f94354f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236024"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060367"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Obtient le **stmt_sql_handle** pour un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction sous type de paramétrage (simple ou forcé) donné. Cela vous permet de faire référence à des requêtes stockées dans le magasin de requêtes à l’aide de leurs **stmt_sql_handle** lorsque vous connaissez leur texte.  
+  Obtient le **stmt_sql_handle** pour un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction avec le type de paramétrage (simple ou forcé) donné. Cela vous permet de faire référence aux requêtes stockées dans le Store de la requête à l’aide de leurs **stmt_sql_handle** lorsque vous savez que leur texte.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>Arguments  
  *query_sql_text*  
- Est le texte dans le magasin de requêtes que vous souhaitez que le handle de la requête. *query_sql_text* est un **nvarchar (max)**, sans valeur par défaut.  
+ Est le texte dans le magasin de requêtes que vous souhaitez le handle de la requête. *query_sql_text* est un **nvarchar (max)**, sans valeur par défaut.  
   
  *query_param_type*  
  Est le type de paramètre de la requête. *query_param_type* est un **tinyint**. Les valeurs possibles sont :  
@@ -53,16 +53,16 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 -   0 – aucun  
   
--   1 = utilisateur  
+-   1 – utilisateur  
   
 -   2 – simple  
   
 -   3 – forcé  
   
 ## <a name="columns-returned"></a>Colonnes retournées  
- Le tableau suivant répertorie les colonnes qui sys.fn_stmt_sql_handle_from_sql_stmt retourne.  
+ Le tableau suivant répertorie les colonnes que sys.fn_stmt_sql_handle_from_sql_stmt retourne.  
   
-|Nom de colonne|Type| Description|  
+|Nom de colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|Handle SQL.|  
 |**query_sql_text**|**nvarchar(max)**|Le texte de la [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction.|  
@@ -74,7 +74,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="remarks"></a>Notes  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert le **EXECUTE** sur la base de données, et **supprimer** autorisation sur les affichages catalogue du magasin de requête.  
+ Nécessite le **EXECUTE** autorisation sur la base de données, et **supprimer** autorisation sur les affichages catalogue du magasin de requête.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant exécute une instruction, puis utilise `sys.fn_stmt_sql_handle_from_sql_stmt` pour retourner le handle SQL de cette instruction.  
@@ -84,7 +84,7 @@ SELECT * FROM sys.databases;
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- Utilisez la fonction pour mettre en corrélation les données de magasin de requêtes avec d’autres vues de gestion dynamique. L’exemple suivant :  
+ Utilisez la fonction pour mettre en corrélation les données de requête Store avec d’autres vues de gestion dynamique. L’exemple suivant :  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  
