@@ -21,6 +21,7 @@
 
 ## [Abonnés à la réplication de tables optimisées en mémoire](replication-to-memory-optimized-table-subscribers.md)  
 ## [Réplication vers une base de données SQL](replication-to-sql-database.md)  
+## [Réplication avec une base de données SQL](replication-with-sql-database-managed-instance.md)
 ## [Republier des données](republish-data.md)  
 ## [Réplication sur Internet](replication-over-the-internet.md)  
 ### [Publier des données sur Internet à l’aide d’un réseau privé virtuel](publish-data-over-the-internet-using-vpn.md)  
