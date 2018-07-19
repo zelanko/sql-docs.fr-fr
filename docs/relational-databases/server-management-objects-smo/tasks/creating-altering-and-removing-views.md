@@ -1,5 +1,5 @@
 ---
-title: Création, modification et suppression de vues | Documents Microsoft
+title: Création, modification et suppression de vues | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2f0df94a2e52f1c8e4287246d8e1917db80b787d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966754"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995870"
 ---
 # <a name="creating-altering-and-removing-views"></a>Création, modification et suppression de vues
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "32966754"
  La propriété <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.View> définit la vue. Il est l’équivalent de la [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction SELECT pour créer une vue.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-basic"></a>Création, modification et suppression d'une vue en Visual Basic  
- Cet exemple de code montre comment créer une vue de deux tables en utilisant une jointure interne. La vue est créée à l’aide du mode texte, donc la <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> propriété doit être définie.  
+ Cet exemple de code montre comment créer une vue de deux tables en utilisant une jointure interne. La vue est créée à l’aide du mode texte, donc le <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> propriété doit être définie.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -57,7 +57,7 @@ myview.Drop()
 ```
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-c"></a>Création, modification et suppression d'une vue en Visual C#  
- Cet exemple de code montre comment créer une vue de deux tables en utilisant une jointure interne. La vue est créée à l’aide du mode texte, donc la <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> propriété doit être définie.  
+ Cet exemple de code montre comment créer une vue de deux tables en utilisant une jointure interne. La vue est créée à l’aide du mode texte, donc le <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> propriété doit être définie.  
   
 ```csharp  
 {  
@@ -81,7 +81,7 @@ myview.Drop()
 ```  
   
 ## <a name="creating-altering-and-removing-a-view-in-powershell"></a>Création, modification et suppression d'une vue dans PowerShell  
- Cet exemple de code montre comment créer une vue de deux tables en utilisant une jointure interne. La vue est créée à l’aide du mode texte, donc la <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> propriété doit être définie.  
+ Cet exemple de code montre comment créer une vue de deux tables en utilisant une jointure interne. La vue est créée à l’aide du mode texte, donc le <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A> propriété doit être définie.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

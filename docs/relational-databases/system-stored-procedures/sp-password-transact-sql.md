@@ -1,5 +1,5 @@
 ---
-title: sp_password (Transact-SQL) | Documents Microsoft
+title: sp_password (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 186384ed3dc9ec22264c4cbb184f9369c3677af3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258187"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993701"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_password [ [ @old = ] 'old_password' , ]
 >  N'utilisez pas de mot de passe NULL, Utilisez un mot de passe fort. Pour plus d’informations, consultez [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
  [  **@loginame=** ] **'***connexion***'**  
- Nom de la connexion affectée par la modification du mot de passe. *login* est de type **sysname**, avec NULL comme valeur par défaut. *connexion* doit déjà exister et peut être spécifié uniquement par des membres de la **sysadmin** ou **securityadmin** rôles serveur fixes.  
+ Nom de la connexion affectée par la modification du mot de passe. *login* est de type **sysname**, avec NULL comme valeur par défaut. *connexion* doit déjà exister et peut être spécifié uniquement par les membres de la **sysadmin** ou **securityadmin** rôles serveur fixes.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

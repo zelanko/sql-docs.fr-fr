@@ -1,5 +1,5 @@
 ---
-title: Programmation de tâches spécifiques | Documents Microsoft
+title: Programmation de tâches spécifiques | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,18 +25,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6878e0e429bf826d4dc3f6b57f8df42645f22dd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971694"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998122"
 ---
 # <a name="programming-specific-tasks"></a>Programmation de tâches spécifiques
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   La programmation de tâches spécifiques à l'aide d'objets SMO inclut des sujets complexes requis uniquement par les programmes ayant une fonction spécifique, par exemple la sauvegarde, l'analyse des statistiques, la réplication, la gestion des objets d'instance et la définition d'options de configuration.  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Utilisation de serveurs liés dans SMO](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|Explique comment SMO utilise l'objet <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> pour lier des serveurs OLE DB.|  
 |[Configuration de SQL Server dans SMO](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|Explique comment afficher et modifier les paramètres de configuration de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans SMO.|  

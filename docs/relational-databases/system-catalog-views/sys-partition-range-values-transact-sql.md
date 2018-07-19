@@ -1,5 +1,5 @@
 ---
-title: Sys.partition_range_values (Transact-SQL) | Documents Microsoft
+title: Sys.partition_range_values (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 35e2b56ec8338a45defd87b136db91712ef29e5d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33179565"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001211"
 ---
 # <a name="syspartitionrangevalues-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "33179565"
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**function_id supérieures**|**Int**|ID de la fonction de partition pour cette valeur limite de plage.|  
+|**function_id**|**Int**|ID de la fonction de partition pour cette valeur limite de plage.|  
 |**boundary_id**|**Int**|ID (ordinal à partir de 1) du tuple de valeur limite, dont la limite située la plus à gauche démarre à un ID de 1.|  
-|**parameter_id**|**Int**|ID du paramètre de la fonction auquel cette valeur correspond. Les valeurs de cette colonne correspondent à celles de la **parameter_id** colonne de la **sys.partition_parameters** affichage n’importe quel catalogue **function_id supérieures**.|  
+|**parameter_id**|**Int**|ID du paramètre de la fonction auquel cette valeur correspond. Les valeurs de cette colonne correspondent à celles de la **parameter_id** colonne de la **sys.partition_parameters** affichage n’importe quel catalogue **function_id**.|  
 |**value**|**sql_variant**|Valeur limite réelle.|  
   
 ## <a name="permissions"></a>Autorisations  

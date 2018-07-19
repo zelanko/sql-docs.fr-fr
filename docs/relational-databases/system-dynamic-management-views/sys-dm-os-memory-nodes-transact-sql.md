@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_memory_nodes (Transact-SQL) | Documents Microsoft
+title: Sys.dm_os_memory_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -25,27 +25,27 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: bc43a4088f2186b316616578bb71c0f31f32836a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467025"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005698"
 ---
 # <a name="sysdmosmemorynodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Les allocations qui sont internes à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent le gestionnaire de mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La différence entre les compteurs de mémoire de processus à partir de suivi **sys.dm_os_process_memory** et compteurs internes peuvent indiquer l’utilisation de la mémoire à partir des composants externes dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espace mémoire.  
+  Les allocations qui sont internes à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent le gestionnaire de mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La différence entre les compteurs de mémoire de processus à partir de suivi **sys.dm_os_process_memory** et compteurs internes peut indiquer l’utilisation de la mémoire à partir des composants externes dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espace mémoire.  
   
- Les nœuds sont créés en fonction des nœuds de mémoire NUMA physiques. Ils peuvent être différents à partir des nœuds de l’UC dans **sys.dm_os_nodes**.  
+ Les nœuds sont créés en fonction des nœuds de mémoire NUMA physiques. Ils peuvent être différents à partir des nœuds du processeur dans **sys.dm_os_nodes**.  
   
  Aucune allocation effectuée directement par le biais de routines d'allocations de mémoire Windows ne fait l'objet d'un suivi. Le tableau suivant fournit des informations sur les allocations de mémoire effectuées uniquement en utilisant des interfaces du gestionnaire de mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_memory_nodes**.  
+>  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_memory_nodes**.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**memory_node_id**|**smallint**|Spécifie l'identificateur du nœud de mémoire. Aux **memory_node_id** de **sys.dm_os_memory_clerks**. N'accepte pas la valeur NULL.|  
+|**memory_node_id**|**smallint**|Spécifie l'identificateur du nœud de mémoire. Liés aux **memory_node_id** de **sys.dm_os_memory_clerks**. N'accepte pas la valeur NULL.|  
 |**virtual_address_space_reserved_kb**|**bigint**|Indique le nombre de réservations d'adresses virtuelles, en kilo-octets (Ko), qui ne sont ni validées ni mappées à des pages physiques. N'accepte pas la valeur NULL.|  
 |**virtual_address_space_committed_kb**|**bigint**|Spécifie la quantité d'adresse virtuelle, en Ko, qui a été validée ou mappée à des pages physiques. N'accepte pas la valeur NULL.|  
 |**locked_page_allocations_kb**|**bigint**|Spécifie la quantité de mémoire physique, en Ko, qui a été verrouillée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. N'accepte pas la valeur NULL.|  
@@ -59,7 +59,7 @@ ms.locfileid: "34467025"
 |**processor_group**|**smallint**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> À usage interne uniquement N'accepte pas la valeur NULL.|  
 |**foreign_committed_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Spécifie la quantité de mémoire validée, en Ko, d'autres nœuds de mémoire. N'accepte pas la valeur NULL.|  
 |**target_kb** |**bigint** |**S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Spécifie l’objectif de la mémoire pour le nœud de mémoire, en Ko. |   
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 ## <a name="permissions"></a>Autorisations
 

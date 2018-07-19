@@ -1,5 +1,5 @@
 ---
-title: Prédire (DMX) | Documents Microsoft
+title: Prédire (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 733e3272bf67347f1e3459a0df5f13225488f677
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842832"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002101"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,9 +50,9 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  Pour les modèles de série chronologique, la fonction Predict ne prend pas en charge INCLUDE_STATISTICS.  
   
- Le paramètre INCLUDE_NODE_ID retourne la colonne $NODEID dans le résultat. NODE_ID est le nœud de contenu sur lequel la prédiction est exécutée pour un cas particulier. Ce paramètre est facultatif lors de l’utilisation de prédiction sur les colonnes de la table.  
+ Le paramètre INCLUDE_NODE_ID retourne la colonne $NODEID dans le résultat. NODE_ID est le nœud de contenu sur lequel la prédiction est exécutée pour un cas particulier. Ce paramètre est facultatif lors de l’utilisation de Predict sur les colonnes de table.  
   
- Le *n* paramètre s’applique aux colonnes de table. Il définit le nombre de lignes retournées en fonction du type de prédiction. Si la colonne sous-jacente est la séquence, il appelle la **PredictSequence** (fonction). Si la colonne sous-jacente est une série chronologique, il appelle la **PredictTimeSeries** (fonction). Pour les types de prédictions associatives, il appelle la **PredictAssociation** (fonction).  
+ Le *n* paramètre s’applique aux colonnes de table. Il définit le nombre de lignes retournées en fonction du type de prédiction. Si la colonne sous-jacente est la séquence, il appelle le **PredictSequence** (fonction). Si la colonne sous-jacente est de série chronologique, il appelle le **PredictTimeSeries** (fonction). Pour les types de prédictions associatives, il appelle le **PredictAssociation** (fonction).  
   
  Le **Predict** fonction prend en charge le polymorphisme.  
   
@@ -63,12 +63,12 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 -   [Products Purchases] est une alternative pour **Predict**([Products Purchases], EXCLUDE_NULL, EXCLUSIVE).  
   
     > [!NOTE]  
-    >  Le type de retour de cette fonction est lui-même considéré comme une référence de colonne. Cela signifie que la **Predict** fonction peut être utilisée en tant qu’argument dans d’autres fonctions qui prennent une référence de colonne en tant qu’argument (à l’exception de la **Predict** fonction elle-même).  
+    >  Le type de retour de cette fonction est lui-même considéré comme une référence de colonne. Cela signifie que le **Predict** fonction peut être utilisée en tant qu’argument dans d’autres fonctions qui acceptent une référence de colonne en tant qu’argument (à l’exception de la **Predict** fonction elle-même).  
   
- Passage INCLUDE_STATISTICS à une prédiction sur une colonne de table-valued ajoute les colonnes **$Probability** et **$Support** à la table résultante. Ces colonnes décrivent la probabilité de l'existence de l'enregistrement de table imbriquée associée.  
+ En passant INCLUDE_STATISTICS à une prédiction sur une colonne de table-valued ajoute les colonnes **$Probability** et **$Support** à la table résultante. Ces colonnes décrivent la probabilité de l'existence de l'enregistrement de table imbriquée associée.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise la fonction de prédiction pour retourner les quatre produits dans la base de données Adventure Works qui sont plus susceptibles d’être vendus ensemble. Étant donné que la fonction est la prédiction par rapport aux règles d’association des modèle d’exploration de données, il utilise automatiquement le **PredictAssociation** comme décrit précédemment.  
+ L’exemple suivant utilise la fonction Predict pour retourner les quatre produits dans la base de données Adventure Works qui sont susceptibles d’être vendus ensemble. Étant donné que la fonction est la prédiction par rapport aux règles association modèle d’exploration de données, il utilise automatiquement le **PredictAssociation** fonctionne comme décrit précédemment.  
   
 ```  
 SELECT  

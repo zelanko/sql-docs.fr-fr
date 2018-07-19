@@ -1,5 +1,5 @@
 ---
-title: CRÉER UNE STRUCTURE D’EXPLORATION DE DONNÉES (DMX) | Documents Microsoft
+title: CRÉER LA STRUCTURE D’EXPLORATION DE DONNÉES (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842752"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041266"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -96,18 +96,18 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Pour la liste des types de données, types de contenu, distributions de colonnes et indicateurs de modélisation à utiliser pour définir une colonne de structure, consultez les rubriques suivantes :  
   
--   [Types de données &#40;d’exploration de données&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Types de données &#40;exploration de données&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Types de contenu &#40;d’exploration de données&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Types de contenu &#40;exploration de données&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Distributions de colonnes &#40;d’exploration de données&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Distributions de colonnes &#40;exploration de données&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Les indicateurs de modélisation &#40;d’exploration de données&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Indicateurs de modélisation &#40;exploration de données&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Vous pouvez définir plusieurs valeurs d'indicateur de modélisation pour une colonne. Toutefois, vous ne pouvez avoir qu'un seul type de contenu et qu'un seul type de données pour une colonne.  
   
 ### <a name="column-relationships"></a>Relations de colonnes  
- Vous pouvez ajouter une clause à n'importe quelle instruction de définition de colonne pour décrire la relation entre deux colonnes. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge l’utilisation de ces \<relation de colonne > clause.  
+ Vous pouvez ajouter une clause à n'importe quelle instruction de définition de colonne pour décrire la relation entre deux colonnes. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge l’utilisation des opérations suivantes \<relation de colonne > clause.  
   
  **LIÉS À**  
  Indique une hiérarchie de valeur. La cible d'une colonne RELATED TO peut être une colonne clé dans une table imbriquée, une colonne de valeurs discrètes dans la ligne de cas ou une autre colonne RELATED TO qui indique une hiérarchie plus profonde.  
@@ -120,7 +120,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  Le **ALTER MINING STRUCTURE** instruction ne prend pas en charge les données d’exclusion.  
   
- Vous pouvez spécifier jusqu'à trois paramètres d'exclusion. Si vous spécifiez à la fois un nombre maximal de cas d'exclusion et un pourcentage d'exclusion, un pourcentage de cas est réservé jusqu'à ce que la limite de cas soit atteinte. Vous spécifiez le pourcentage d’exclusion comme un entier suivi le **%** (mot clé) et spécifiez le nombre maximal de cas comme un entier suivi le **cas** (mot clé). Vous pouvez combiner les conditions dans n'importe quel ordre, comme le montrent les exemples suivants :  
+ Vous pouvez spécifier jusqu'à trois paramètres d'exclusion. Si vous spécifiez à la fois un nombre maximal de cas d'exclusion et un pourcentage d'exclusion, un pourcentage de cas est réservé jusqu'à ce que la limite de cas soit atteinte. Vous spécifiez le pourcentage d’exclusion, utilisez un entier suivi par le **%** mot clé et spécifiez le nombre maximal de cas comme un entier suivi par le **cas** mot clé. Vous pouvez combiner les conditions dans n'importe quel ordre, comme le montrent les exemples suivants :  
   
 ```  
 WITH HOLDOUT (20 PERCENT)   
@@ -132,7 +132,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  La valeur initiale d'exclusion contrôle le point de départ du processus qui attribue aléatoirement les cas aux jeux de données d'apprentissage ou de test. En définissant une valeur initiale d'exclusion, vous pouvez vous assurer que la partition peut être répétée. Si vous ne spécifiez pas de valeur initiale d'exclusion, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise le nom de la structure d'exploration de données pour créer une valeur initiale. Si vous renommez la structure, la valeur initiale changera. Le paramètre de la valeur initiale d'exclusion peut être utilisé avec l'un ou l'autre des paramètres d'exclusion, ou les deux.  
   
 > [!NOTE]  
->  Étant donné que les informations de partition sont mis en cache avec les données d’apprentissage, pour utiliser l’exclusion, vous devez vous assurer que le **CacheMode** de la structure d’exploration de données est définie sur **KeepTrainingData**. Il s'agit du paramètre par défaut dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour les nouvelles structures d'exploration de données. Modification de la **CacheMode** propriété **ClearTrainingCases** sur une structure d’exploration de données existante qui contient d’exclusion partition n’affectera pas les modèles d’exploration de données qui ont été traités. Toutefois, si <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> n’est pas définie **KeepTrainingData**, les paramètres d’exclusion n’a aucun effet. Cela signifie que toutes les données sources seront utilisées pour l'apprentissage et qu'aucun jeu de test ne sera disponible. La définition de la partition est mise en cache avec la structure ; si vous effacez le cache des cas d'apprentissage, vous effacez également le cache des données de test et la définition du jeu d'exclusion.  
+>  Étant donné que les informations de partition sont mise en cache avec les données d’apprentissage, pour utiliser l’exclusion, vous devez vous assurer que le **CacheMode** propriété de la structure d’exploration de données est définie sur **KeepTrainingData**. Il s'agit du paramètre par défaut dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour les nouvelles structures d'exploration de données. Modification de la **CacheMode** propriété **ClearTrainingCases** sur une structure d’exploration de données existante qui contient les données d’exclusion partition n’affecte pas tous les modèles d’exploration de données qui ont été traités. Toutefois, si <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> n’a pas la valeur **KeepTrainingData**, paramètres d’exclusion n’a aucun effet. Cela signifie que toutes les données sources seront utilisées pour l'apprentissage et qu'aucun jeu de test ne sera disponible. La définition de la partition est mise en cache avec la structure ; si vous effacez le cache des cas d'apprentissage, vous effacez également le cache des données de test et la définition du jeu d'exclusion.  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants montrent comment créer une structure d'exploration de données avec exclusion à l'aide de DMX.  
@@ -179,8 +179,8 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

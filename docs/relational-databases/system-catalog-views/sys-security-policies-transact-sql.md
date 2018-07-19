@@ -1,5 +1,5 @@
 ---
-title: Sys.security_policies (Transact-SQL) | Documents Microsoft
+title: Sys.security_policies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,11 +30,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33221130"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993801"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>Sys.security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "33221130"
 |is_schemabinding_enabled|**bit**|État de la liaison au schéma pour la stratégie de sécurité :<br /><br /> 0 ou NULL = activé<br /><br /> 1 = désactivé|  
   
 ## <a name="permissions"></a>Autorisations  
- Les principaux avec le **ALTER ANY SECURITY POLICY** autorisation ont accès à tous les objets dans cet affichage catalogue, ainsi que toute personne ayant **VIEW DEFINITION** sur l’objet.  
+ Les principaux avec le **ALTER ANY SECURITY POLICY** autorisation ont accès à tous les objets dans cette vue de catalogue, ainsi que toute personne ayant **VIEW DEFINITION** sur l’objet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md)   

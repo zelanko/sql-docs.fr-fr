@@ -1,5 +1,5 @@
 ---
-title: Vues de catalogue de base de données SQL Azure | Documents Microsoft
+title: Affichages catalogue de base de données SQL Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2015
 ms.prod: ''
@@ -21,11 +21,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b504d93dca2f02d600e3de1dc39ba8bc702291d6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177352"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003371"
 ---
 # <a name="azure-sql-database-catalog-views"></a>Affichages catalogue Azure SQL Database
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: Élément Synchronize (XMLA) | Documents Microsoft
+title: Élément Synchronize (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 11804b9b6ca9ac430bdb47c0b9050b8c6995cf7f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34574561"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007180"
 ---
 # <a name="synchronize-element-xmla"></a>Élément Synchronize (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34574561"
 </Command>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "34574561"
 |Hybrid OLAP (HOLAP)|Agrégations et métadonnées|  
 |OLAP relationnel (ROLAP)|Métadonnées|  
   
- Pendant un **synchroniser** de commande, un verrou de lecture est placé sur la base de données source et un verrou d’écriture est placé sur la base de données cible. Les deux verrous sont libérés après le **synchroniser** commande est terminée.  
+ Pendant un **synchroniser** commande, un verrou de lecture est placé sur la base de données source et un verrou d’écriture est placé sur la base de données cible. Les deux verrous sont libérés après le **synchroniser** commande est terminée.  
   
  Pour plus d’informations sur la synchronisation des bases de données, consultez [sauvegarde, restauration et synchronisation de bases de données de &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).  
   

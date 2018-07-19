@@ -1,5 +1,5 @@
 ---
-title: StructureColumn (DMX) | Documents Microsoft
+title: StructureColumn (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842622"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992409"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,11 +40,11 @@ StructureColumn('structure column name')
 ## <a name="remarks"></a>Notes  
  Cette fonction est polymorphe et peut être utilisée n'importe où dans une instruction qui autorise des expressions, y compris une liste d'expressions SELECT, une expression de condition WHERE et une expression ORDER BY.  
   
- Le nom de la colonne dans la structure d’exploration de données est une valeur de chaîne et en tant que tel doit être placée entre guillemets simples : par exemple, `StructureColumn('` **colonne 1**`')`. S'il y a plusieurs colonnes qui ont le même nom, le nom est résolu dans le contexte de l'instruction SELECT englobante.  
+ Le nom de la colonne dans la structure d’exploration de données est une valeur de chaîne et par conséquent doit être placée entre guillemets simples : par exemple, `StructureColumn('` **colonne 1**`')`. S'il y a plusieurs colonnes qui ont le même nom, le nom est résolu dans le contexte de l'instruction SELECT englobante.  
   
- Les résultats sont retournés à partir d’une requête à l’aide de la **StructureColumn** (fonction) sont affectés par la présence de tous les filtres sur le modèle. Autrement dit, le filtre de modèle contrôle les cas inclus dans le modèle d'exploration de données. Par conséquent, une requête sur la colonne de structure retourne uniquement les cas qui sont utilisés dans le modèle d'exploration de données. Consultez la section Exemples de cette rubrique pour un exemple de code qui affiche l'effet des filtres de modèle d'exploration de données sur les tables de cas et une table imbriquée.  
+ Les résultats sont retournés à partir d’une requête en utilisant le **StructureColumn** (fonction) sont affectés par la présence de tous les filtres sur le modèle. Autrement dit, le filtre de modèle contrôle les cas inclus dans le modèle d'exploration de données. Par conséquent, une requête sur la colonne de structure retourne uniquement les cas qui sont utilisés dans le modèle d'exploration de données. Consultez la section Exemples de cette rubrique pour un exemple de code qui affiche l'effet des filtres de modèle d'exploration de données sur les tables de cas et une table imbriquée.  
   
- Pour plus d’informations sur la façon d’utiliser cette fonction dans une instruction DMX SELECT, consultez [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) ou [SELECT FROM &#60;structure&#62;. CAS](../dmx/select-from-structure-cases.md).  
+ Pour plus d’informations sur l’utilisation de cette fonction dans une instruction DMX SELECT, consultez [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) ou [SELECT FROM &#60;structure&#62;. CAS](../dmx/select-from-structure-cases.md).  
   
 ## <a name="error-messages"></a>Messages d'erreur  
  L'erreur de sécurité suivante est déclenchée si l'utilisateur ne dispose pas d'autorisations d'extraction sur la structure d'exploration de données parent :  
@@ -116,7 +116,7 @@ WHERE StructureColumn(‘Occupation’) = ‘Architect’
  Notez que, dans cet exemple, un filtre est appliqué à la colonne de structure pour restreindre les cas aux clients dont l’occupation est 'architecte de' (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`). Étant donné que la condition de filtre de modèle est toujours appliquée aux cas lorsque le modèle est créé, seuls les cas qui contiennent au moins une ligne éligible dans la table `Products` sont inclus dans les cas de modèles. Par conséquent, le filtre de la table imbriquée `Products` et le filtre sur le cas `(‘Occupation’)` sont appliqués.  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Exemple de requête 3 : sélection de colonnes dans une table imbriquée  
- L'exemple de requête ci-dessous retourne les noms des clients qui ont été utilisés comme cas d'apprentissage à partir du modèle. Pour chaque client, la requête retourne également une table imbriquée qui contient les détails d'achat. Bien que le modèle inclut les `ProductName` colonne, le modèle n’utilise pas de la valeur de la `ProductName` colonne. Le modèle vérifie seulement si le produit a été acheté régulièrement (`NOT``OnSale`) prix. Cette requête retourne non seulement le nom du produit mais aussi la quantité achetée, qui n'est pas incluse dans le modèle.  
+ L'exemple de requête ci-dessous retourne les noms des clients qui ont été utilisés comme cas d'apprentissage à partir du modèle. Pour chaque client, la requête retourne également une table imbriquée qui contient les détails d'achat. Bien que le modèle inclut la `ProductName` colonne, le modèle n’utilise pas la valeur de la `ProductName` colonne. Le modèle vérifie seulement si le produit a été acheté normaux (`NOT``OnSale`) prix. Cette requête retourne non seulement le nom du produit mais aussi la quantité achetée, qui n'est pas incluse dans le modèle.  
   
 ```  
 SELECT CustomerName,    

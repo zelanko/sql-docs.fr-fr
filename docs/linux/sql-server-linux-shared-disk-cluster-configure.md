@@ -1,5 +1,5 @@
 ---
-title: Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL) | Documents Microsoft
+title: Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL) | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,11 +13,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 2550c2d53f50f2c5647ed0ab61d4d73e586495e2
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323960"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001811"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL)
 
@@ -29,28 +29,28 @@ Une instance de cluster de basculement SQL Server de deux nœuds avec disque par
 > * Installer et configurer Linux
 > * Installer et configurer SQL Server
 > * Configurer le fichier hosts
-> * Configurer le stockage partagé et déplacer les fichiers de base de données
+> * Configurer le stockage partagé et déplacez les fichiers de base de données
 > * Installer et configurer Pacemaker sur chaque nœud de cluster
 > * Configurer l’instance de cluster de basculement
 
 Cet article explique comment créer une instance de cluster de basculement SQL Server (FCI) de deux nœuds avec disque partagé. L’article inclut des instructions et des exemples de script pour Red Hat Enterprise Linux (RHEL). Les distributions Ubuntu sont semblables aux RHEL et les exemples de script  fonctionnent normalement également sur Ubuntu. 
 
-Pour obtenir des informations conceptuelles, consultez [basculement SQL Server Cluster Instance () sur Linux](sql-server-linux-shared-disk-cluster-concepts.md).
+Pour obtenir des informations conceptuelles, consultez [SQL Server Cluster Instance (basculement) sur Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Prérequis
 
 Pour terminer le scénario de bout en bout suivant, vous avez besoin de deux ordinateurs pour déployer le cluster à deux nœuds et un autre serveur pour le stockage. Les étapes ci-dessous décrivent la configuration de ces serveurs.
 
 ## <a name="set-up-and-configure-linux"></a>Installer et configurer Linux
 
-La première étape consiste à configurer le système d’exploitation sur les nœuds de cluster. Sur chaque nœud du cluster, configurez une distribution linux. Utilisez la distribution et la même version sur les deux nœuds. Utilisez une ou l’autre des distributions suivantes :
+La première étape consiste à configurer le système d’exploitation sur les nœuds de cluster. Sur chaque nœud du cluster, configurer une distribution linux. Utilisez la distribution et la version même sur les deux nœuds. Utilisez une ou l’autre des distributions suivantes :
     
 * RHEL avec un abonnement valide pour le module complémentaire de haute disponibilité
 
 ## <a name="install-and-configure-sql-server"></a>Installer et configurer SQL Server
 
 1. Installer et configurer SQL Server sur les deux nœuds.  Pour obtenir des instructions détaillées, consultez [installer SQL Server sur Linux](sql-server-linux-setup.md).
-1. Désigner un nœud en tant que principal et l’autre comme secondaire, à des fins de configuration. Utiliser ces termes pour les éléments suivants ce guide.  
+1. Désignez un seul nœud en tant que principal et l’autre comme secondaire, à des fins de configuration. Utiliser ces termes pour ce qui suit ce guide.  
 1. Sur le nœud secondaire, arrêter et désactiver SQL Server.
     L’exemple suivant arrête et désactive les SQL Server : 
     ```bash
@@ -59,9 +59,9 @@ La première étape consiste à configurer le système d’exploitation sur les 
     ```
 
     > [!NOTE] 
-    > Le temps de vue d’ensemble, une clé principale du serveur est généré pour l’instance de SQL Server et mis à `var/opt/mssql/secrets/machine-key`. Sur Linux, SQL Server s’exécute toujours comme un compte local nommé mssql. S’agissant d’un compte local, son identité n’est pas partagée entre les nœuds. Par conséquent, vous devez copier la clé de chiffrement à partir du nœud principal à chaque nœud secondaire pour chaque compte mssql local puisse accéder pour déchiffrer la clé principale du serveur. 
+    > Ensemble le temps, une clé principale du serveur est générée pour l’instance de SQL Server et placé à `var/opt/mssql/secrets/machine-key`. Sur Linux, SQL Server s’exécute toujours comme un compte local appelé mssql. S’agissant d’un compte local, son identité n’est pas partagée entre les nœuds. Par conséquent, vous devez copier la clé de chiffrement à partir du nœud principal sur chaque nœud secondaire afin que chaque compte mssql local puisse accéder pour déchiffrer la clé principale du serveur. 
 
-1.  Sur le nœud principal, créez une connexion SQL server pour Pacemaker et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. STIMULATEUR utilise ce compte pour vérifier le nœud qui exécute SQL Server. 
+1.  Sur le nœud principal, créez une connexion SQL server pour Pacemaker et accorder l’autorisation de connexion pour exécuter `sp_server_diagnostics`. Pacemaker utilise ce compte pour vérifier le nœud sur lequel s’exécute SQL Server. 
 
     ```bash
     sudo systemctl start mssql-server
@@ -82,15 +82,15 @@ La première étape consiste à configurer le système d’exploitation sur les 
 
 ## <a name="configure-the-hosts-file"></a>Configurer le fichier hosts
 
-Sur chaque nœud de cluster, configurez le fichier hosts. Le fichier hosts doit inclure l’adresse IP et le nom de chaque nœud de cluster.
+Sur chaque nœud du cluster, configurez le fichier hosts. Le fichier hosts doit inclure l’adresse IP et le nom de chaque nœud de cluster.
 
-1. Vérifiez l’adresse IP pour chaque nœud. Le script suivant montre l’adresse IP du nœud actuel. 
+1. Vérifiez l’adresse IP pour chaque nœud. Le script suivant montre l’adresse IP de votre nœud actuel. 
 
     ```bash
     sudo ip addr show
     ```
 
-1. Définir le nom d’ordinateur sur chaque nœud. Donnez à chaque nœud un nom unique de 15 caractères au maximum. Définir le nom d’ordinateur en l’ajoutant à `/etc/hosts`. Le script suivant vous permet de modifier `/etc/hosts` avec `vi`. 
+1. Définissez le nom de l’ordinateur sur chaque nœud. Donnez à chaque nœud un nom unique de 15 caractères au maximum. Définir le nom d’ordinateur en l’ajoutant à `/etc/hosts`. Le script suivant vous permet de modifier `/etc/hosts` avec `vi`. 
 
    ```bash
    sudo vi /etc/hosts
@@ -104,7 +104,7 @@ Sur chaque nœud de cluster, configurez le fichier hosts. Le fichier hosts doit 
    10.128.16.77 sqlfcivm2
    ```
 
-## <a name="configure-storage--move-database-files"></a>Configurer le stockage et déplacer les fichiers de base de données  
+## <a name="configure-storage--move-database-files"></a>Configurer le stockage et transfert de fichiers de base de données  
 
 Vous devez fournir un stockage accessible aux deux nœuds. Vous pouvez utiliser SMB, NFS ou iSCSI. Configurez le stockage, présentez le stockage aux nœuds de cluster, puis déplacez les fichiers de base de données vers le nouveau stockage. Les articles suivants décrivent les étapes pour chaque type de stockage :
 
@@ -164,13 +164,13 @@ Vous devez fournir un stockage accessible aux deux nœuds. Vous pouvez utiliser 
 
 ## <a name="configure-the-failover-cluster-instance"></a>Configurer l’instance de cluster de basculement
 
-L’instance FCI est créé dans un groupe de ressources. C'est un peu plus simple, car le groupe de ressources permet de se s'affranchir des contraintes. Toutefois, ajoutez les ressources dans le groupe de ressources dans l'ordre où elles doivent démarrer. L’ordre où elles doivent démarrer est : 
+L’instance FCI sera créée dans un groupe de ressources. C'est un peu plus simple, car le groupe de ressources permet de se s'affranchir des contraintes. Toutefois, ajoutez les ressources dans le groupe de ressources dans l'ordre où elles doivent démarrer. L’ordre où elles doivent démarrer est : 
 
 1. Ressource de stockage
 2. Ressources réseau
 3. Ressource d’application
 
-Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du groupe de ressources doit être unique par rapport à n’importe quelle ressource créé dans Pacemaker.
+Cet exemple crée une instance FCI dans le groupe NewLinFCIGrp. Le nom du groupe de ressources doit être unique par rapport à n’importe quelle ressource créé dans Pacemaker.
 
 1.  Créez la ressource de disque. Vous n’obtiendrez aucune réponse s'il n'y a pas de problème. La manière de créer la ressource disque dépend du type de stockage. Voici un exemple pour chaque type de stockage. Utilisez l’exemple qui s’applique au type de stockage de votre stockage en cluster.
 
@@ -197,7 +197,7 @@ Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du
     mount -t nfs4 IPAddressOfNFSServer:FolderOnNFSServer /var/opt/mssql/data -o 
     ```
 
-    \<NFSDIskResourceName > est le nom de la ressource associé au partage NFS
+    \<NFSDIskResourceName > est le nom de la ressource associée au partage NFS
 
     \<IPAddressOfNFSServer > est l’adresse IP du serveur NFS que vous vous apprêtez à utiliser
 
@@ -205,7 +205,7 @@ Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du
 
     \<FolderToMountNFSShare > est le dossier pour monter le disque (pour les bases de données système et l’emplacement par défaut, il serait /var/opt/mssql/data)
 
-    Voici un exemple :
+    Voici un exemple ici :
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -221,7 +221,7 @@ Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du
 
     \<Nom de partage > est le nom du partage
 
-    \<Nom_dossier > est le nom du dossier créé dans la dernière étape
+    \<Nom_dossier > est le nom du dossier créé à l’étape précédente
     
     \<Nom d’utilisateur > est le nom de l’utilisateur pour accéder au partage
 
@@ -247,7 +247,7 @@ Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du
 
     \<NetworkCard > est la carte réseau associée au sous-réseau (par exemple, eth0)
 
-    \<Masque de sous-réseau > est le masque de sous-réseau (par exemple, 24)
+    \<Masque de réseau > est le masque de sous-réseau (par exemple, 24)
 
     \<RGName > est le nom du groupe de ressources
  
@@ -263,7 +263,7 @@ Cet exemple crée une instance de cluster dans le groupe NewLinFCIGrp. Le nom du
  
 4.  Exécutez la commande `sudo pcs resource`. L’instance FCI doit être en ligne.
  
-5.  Se connecter à l’instance FCI avec SSMS ou sqlcmd à l’aide du nom DNS/de ressources de l’instance FCI.
+5.  Se connecter à l’instance FCI avec SSMS ou sqlcmd en utilisant le nom DNS/de ressources de l’instance FCI.
 
 6.  Exécutez l’instruction `SELECT @@SERVERNAME`. Elle doit retourner le nom de l’instance FCI.
 
@@ -287,12 +287,12 @@ Dans ce didacticiel vous avez effectué les tâches suivantes.
 > * Installer et configurer Linux
 > * Installer et configurer SQL Server
 > * Configurer le fichier hosts
-> * Configurer le stockage partagé et déplacer les fichiers de base de données
+> * Configurer le stockage partagé et déplacez les fichiers de base de données
 > * Installer et configurer Pacemaker sur chaque nœud de cluster
 > * Configurer l’instance de cluster de basculement
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Fonctionnement de SQL Server sur Linux - instance de cluster de basculement](sql-server-linux-shared-disk-cluster-operate.md)
+- [Utiliser l’instance de cluster de basculement - SQL Server sur Linux](sql-server-linux-shared-disk-cluster-operate.md)
 
 <!--Image references-->

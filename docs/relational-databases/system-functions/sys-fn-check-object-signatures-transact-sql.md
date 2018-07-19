@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_check_object_signatures (Transact-SQL) | Documents Microsoft
+title: Sys.fn_check_object_signatures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d516472fb5ccec63498d7ab13401e2df1f4bf10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234675"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015151"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -59,21 +59,21 @@ fn_ check_object_signatures (
   
  @*classe* est **sysname**.  
   
- {@*l’empreinte numérique* }  
- Hachage SHA-1 du certificat avec lequel la clé est chiffrée ou GUID de la clé asymétrique avec laquelle la clé est chiffrée. @*l’empreinte numérique* est **varbinary(20)**.  
+ {@*empreinte* }  
+ Hachage SHA-1 du certificat avec lequel la clé est chiffrée ou GUID de la clé asymétrique avec laquelle la clé est chiffrée. @*empreinte numérique* est **varbinary(20)**.  
   
 ## <a name="tables-returned"></a>Tables retournées  
  Le tableau suivant répertorie les colonnes qui **fn_check_object_signatures** retourne.  
   
-|Colonne|Type| Description|  
+|colonne|Type|Description|  
 |------------|----------|-----------------|  
 |Type|**nvarchar(120)**|Retourne une description de type ou un assembly.|  
-|entity_id|**int**|Retourne l'ID de l'objet en cours d'évaluation.|  
-|is_signed|**int**|Retourne la valeur 0 lorsque l'objet n'est pas signé par l'empreinte numérique fournie. Retourne la valeur 1 lorsque l'objet est signé par l'empreinte numérique fournie.|  
-|is_signature_valid|**int**|Lorsque is_signed a la valeur 1, retourne la valeur 0 lorsque la signature n'est pas valide. Retourne la valeur 1 lorsque la signature est valide.<br /><br /> Lorsque is_signed a la valeur 0, retourne toujours la valeur 0.|  
+|entity_id|**Int**|Retourne l'ID de l'objet en cours d'évaluation.|  
+|is_signed|**Int**|Retourne la valeur 0 lorsque l'objet n'est pas signé par l'empreinte numérique fournie. Retourne la valeur 1 lorsque l'objet est signé par l'empreinte numérique fournie.|  
+|is_signature_valid|**Int**|Lorsque is_signed a la valeur 1, retourne la valeur 0 lorsque la signature n'est pas valide. Retourne la valeur 1 lorsque la signature est valide.<br /><br /> Lorsque is_signed a la valeur 0, retourne toujours la valeur 0.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez **fn_check_object_signatures** pour confirmer que les utilisateurs malveillants n’ont pas falsifiés objets.  
+ Utilisez **fn_check_object_signatures** pour confirmer que les utilisateurs malveillants ont falsifiés pas d’objets.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DEFINITION sur le certificat ou la clé asymétrique.  

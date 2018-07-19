@@ -1,5 +1,5 @@
 ---
-title: BottomPercent (DMX) | Documents Microsoft
+title: BottomPercent (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bfc4f178752d77fe8eb6807c91ebdc4bd3bb890
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842302"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002111"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *\<Expression de table >*  
+ *\<expression de table >*  
  Nom d'une colonne de table imbriquée ou d'une expression table.  
   
  *\<RANK expression >*  
@@ -42,12 +42,12 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  Table.  
   
 ## <a name="remarks"></a>Notes  
- Le **BottomPercent** fonction retourne les lignes les plus bas dans l’ordre croissant. Le rang est basé sur la valeur évaluée de la \<rank expression > argument pour chaque ligne, telles que la somme de la \<rank expression > valeurs soit au moins égale au pourcentage spécifié par le \<% > argument. **BottomPercent** retourne le plus petit nombre d’éléments possible tout en correspondant à la valeur du pourcentage spécifiée.  
+ Le **BottomPercent** fonction retourne les lignes les plus basses dans l’ordre croissant. Le rang est basé sur la valeur évaluée de la \<rank expression > argument pour chaque ligne, telles que la somme de la \<rank expression > valeurs soit au moins au pourcentage spécifié par le \<% > argument. **BottomPercent** retourne le plus petit nombre d’éléments possible tout en correspondant à la valeur de pourcentage spécifiée.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée une requête de prédiction sur le modèle d’Association que vous avez créé dans le [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ L’exemple suivant crée une requête de prédiction sur le modèle d’Association que vous avez créée dans le [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
- Pour comprendre le fonctionnement de BottomPercent, il peut être utile d’abord exécuter une requête de prédiction qui retourne uniquement la table imbriquée.  
+ Pour comprendre le fonctionne de BottomPercent, il peut être utile pour tout d’abord exécuter une requête de prédiction qui retourne uniquement la table imbriquée.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -75,7 +75,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- La fonction BottomPercent prend les résultats de cette requête et retourne les lignes de la plus petite valeur cette somme au pourcentage spécifié.  
+ La fonction BottomPercent prend les résultats de cette requête et retourne les lignes à valeur plus petite que somme au pourcentage spécifié.  
   
 ```  
 SELECT   
@@ -90,9 +90,9 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Le premier argument à la fonction BottomPercent est le nom d’une colonne de table. Dans cet exemple, la table imbriquée est retournée en appelant la fonction de prédiction et à l’aide de l’argument INCLUDE_STATISTICS.  
+ Le premier argument à la fonction BottomPercent est le nom d’une colonne de table. Dans cet exemple, la table imbriquée est retournée en appelant la fonction Predict et à l’aide de l’argument INCLUDE_STATISTICS.  
   
- Le deuxième argument à la fonction BottomPercent est la colonne dans la table imbriquée qui vous permettent de classer les résultats. Dans cet exemple, l'option INCLUDE_STATISTICS retourne les colonnes $SUPPORT, $PROBABILTY et $ADJUSTED PROBABILITY. Cet exemple utilise $SUPPORT car les valeurs de support ne sont pas fractionnaires et sont donc plus faciles à vérifier.  
+ Le deuxième argument à la fonction BottomPercent est la colonne dans la table imbriquée qui vous permet de classer les résultats. Dans cet exemple, l'option INCLUDE_STATISTICS retourne les colonnes $SUPPORT, $PROBABILTY et $ADJUSTED PROBABILITY. Cet exemple utilise $SUPPORT car les valeurs de support ne sont pas fractionnaires et sont donc plus faciles à vérifier.  
   
  Le troisième argument de la fonction BottomPercent Spécifie le pourcentage, en tant que double. Pour obtenir les lignes qui représentent la moitié inférieure de la prise en charge, tapez 50.  
   

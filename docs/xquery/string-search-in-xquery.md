@@ -1,5 +1,5 @@
 ---
-title: Chaîne de recherche dans XQuery | Documents Microsoft
+title: Chaîne de recherche dans XQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cdd490ca34a1fa95a341da7665031659ffd099b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077506"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041557"
 ---
 # <a name="string-search-in-xquery"></a>Recherche de chaînes dans XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ WHERE ProductModelID=19
   
  Dans la requête précédente, la `where` dans le FLOWR expression de filtre le résultat de la `for` expression et retourne uniquement les éléments qui répondent à la **contains()** condition.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <p1:Maintenance     

@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_trace_gettable (Transact-SQL) | Documents Microsoft
+title: Sys.fn_trace_gettable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e8c573a9995ee8ca0d23cd89ab2e032a88c6f9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234770"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014927"
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ fn_trace_gettable ( 'filename' , number_files )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- '*nom de fichier*'  
+ «*filename*»  
  Spécifie le fichier de trace initial à lire. *nom de fichier* est **nvarchar (256)**, sans valeur par défaut.  
   
  *number_files*  
- Spécifie le nombre de fichiers de substitution à lire. Ce nombre comprend le fichier initial spécifié dans *nom de fichier*. *number_files* est un **int**.  
+ Spécifie le nombre de fichiers de substitution à lire. Ce nombre inclut le fichier initial spécifié dans *filename*. *number_files* est un **int**.  
   
 ## <a name="remarks"></a>Notes  
- Si *number_files* est spécifié en tant que **par défaut**, **fn_trace_gettable** lit tous les fichiers de substitution jusqu'à la fin de la trace. **fn_trace_gettable** renvoie une table avec toutes les colonnes valides pour la trace spécifiée. Pour plus d’informations, consultez [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ Si *number_files* est spécifié en tant que **par défaut**, **fn_trace_gettable** lit tous les fichiers de substitution jusqu'à ce qu’il atteigne la fin de la trace. **fn_trace_gettable** renvoie une table avec toutes les colonnes valides pour la trace spécifiée. Pour plus d’informations, consultez [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- Sachez que la fonction fn_trace_gettable ne chargera pas les fichiers de substitution (lorsque cette option est spécifiée à l’aide de la *number_files* argument) où le nom de fichier de trace d’origine se termine avec un trait de soulignement et une valeur numérique. Cela ne s'applique pas au trait de soulignement et au nombre qui sont automatiquement ajoutés lors du remplacement d'un fichier. Pour résoudre ce problème, vous pouvez renommer les fichiers de trace pour supprimer les traits de soulignement dans le nom de fichier d’origine. Par exemple, si le fichier d’origine se nomme **Trace_Oct_5.trc** et le fichier de substitution nommé **Trace_Oct_5_1.trc**, vous pouvez renommer les fichiers **TraceOct5.trc** et **TraceOct5_1.trc**.  
+ N’oubliez pas que la fonction fn_trace_gettable ne chargera pas les fichiers de substitution (lorsque cette option est spécifiée à l’aide de la *number_files* argument) où le nom de fichier de trace d’origine se termine par un trait de soulignement et une valeur numérique. Cela ne s'applique pas au trait de soulignement et au nombre qui sont automatiquement ajoutés lors du remplacement d'un fichier. Pour résoudre ce problème, vous pouvez renommer les fichiers de trace pour supprimer les traits de soulignement dans le nom de fichier d’origine. Par exemple, si le fichier d’origine se nomme **Trace_Oct_5.trc** et le fichier de substitution est nommé **Trace_Oct_5_1.trc**, vous pouvez renommer les fichiers à **TraceOct5.trc** et  **TraceOct5_1.trc**.  
   
  Cette fonction peut lire une trace encore active sur l'instance sur laquelle elle est exécutée.  
   

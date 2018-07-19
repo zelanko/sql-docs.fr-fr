@@ -1,5 +1,5 @@
 ---
-title: Fonction de valeurs distinctes (XQuery) | Documents Microsoft
+title: Fonction distinct-values (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 67534172dc879b7865af535e8a85f4a69d8dfc68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076516"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040507"
 ---
-# <a name="functions-on-sequences---distinct-values"></a>Fonctions sur les séquences - valeurs distinctes
+# <a name="functions-on-sequences---distinct-values"></a>Fonctions sur les séquences : distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime les doublons de la séquence spécifiée par *$arg*. Si *$arg* est une séquence vide, la fonction retourne la séquence vide.  
+  Supprime les doublons dans la séquence spécifiée par *$arg*. Si *$arg* est une séquence vide, la fonction retourne la séquence vide.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
 ## <a name="remarks"></a>Notes  
  Tous les types de valeurs atomisées transmises à **values** doivent être des sous-types du même type de base. Types de base acceptés sont les types qui prennent en charge la **eq** opération. Ces types incluent les trois types numériques de base intégrés, les types de base date/heure et les types xs:string (chaîne), xs:boolean (booléen) et xdt:untypedAtomic (atomique non typé). Les valeurs de type xdt:untypedAtomic sont converties en type xs:string. En cas de mélange de ces types ou si des valeurs d'autres types sont transmis, une erreur statique se produit.  
   
- Le résultat de **values** reçoit le type de base des types transmis, tel que xs : String dans le cas de xdt : untypedAtomic, avec la cardinalité d’origine. Si l'entrée est vide (valeur empty) de façon statique, « empty » est alors implicite et une erreur statique est émise.  
+ Le résultat de **values** reçoit le type de base des types transmis, tels que xs : String dans le cas de xdt : untypedAtomic, avec la cardinalité d’origine. Si l'entrée est vide (valeur empty) de façon statique, « empty » est alors implicite et une erreur statique est émise.  
   
  Les valeurs de type xs:string sont comparées au classement de point de codes Unicode par défaut de XQuery.  
   
@@ -55,7 +55,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. Utilisation de la fonction distinct-values() pour supprimer les valeurs en double d'une séquence  
- Dans cet exemple, une instance XML qui contient les numéros de téléphone est affectée à un **xml** variable de type. La requête XQuery sur cette variable utilise le **values** fonction pour compiler une liste de numéros de téléphone qui ne contiennent pas de doublons.  
+ Dans cet exemple, une instance XML qui contient les numéros de téléphone est affectée à un **xml** variable de type. La requête XQuery sur cette variable utilise le **values** (fonction) pour compiler une liste de numéros de téléphone qui ne contiennent pas de doublons.  
   
 ```  
 declare @x xml  
@@ -70,7 +70,7 @@ select @x.query('
 ') as result  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 111-111-1111 222-222-2222    
@@ -93,7 +93,7 @@ select @x.query('
   
 -   Le **values** fonction mappe les valeurs entières à xs : decimal.  
   
--   Le **values** fonction prend en charge les types précédemment mentionnés uniquement et ne prend pas en charge le mélange de types de base.  
+-   Le **values** fonction prend en charge les types mentionnés précédemment uniquement et ne prend pas en charge le mélange de types de base.  
   
 -   Le **values** fonction sur les valeurs xs : Duration n’est pas pris en charge.  
   

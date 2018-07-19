@@ -1,6 +1,6 @@
 ---
-title: Restaurer une base de données SQL Server dans Docker | Documents Microsoft
-description: Ce didacticiel montre comment restaurer une sauvegarde de base de données SQL Server dans un conteneur Linux Docker.
+title: Restaurer une base de données SQL Server dans Docker | Microsoft Docs
+description: Ce didacticiel montre comment restaurer une sauvegarde de base de données SQL Server dans un nouveau conteneur Linux Docker.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,17 +12,17 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842812"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041207"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurer une base de données SQL Server dans un conteneur Linux Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde de SQL Server dans une image de conteneur de SQL Server 2017 Linux s’exécutant sur Docker.
+Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde de SQL Server dans une image de conteneur SQL Server 2017 Linux en cours d’exécution sur Docker.
 
 > [!div class="checklist"]
 > * Extraire et exécuter la dernière image conteneur Linux de SQL Server 2017
@@ -40,7 +40,7 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
 
 ## <a name="pull-and-run-the-container-image"></a>Extraire et exécuter l’image conteneur
 
-1. Ouvrez un terminal de l’interpréteur de commandes sur Linux/Mac ou une session PowerShell avec élévation de privilèges sur Windows.
+1. Ouvrez un terminal bash sur Linux/Mac ou une session PowerShell avec élévation de privilèges sur Windows.
 
 1. Extraire l’image de conteneur de SQL Server 2017 Linux à partir du Hub Docker.
 
@@ -53,7 +53,7 @@ Ce didacticiel montre comment déplacer et de restaurer un fichier de sauvegarde
     ```
 
     > [!TIP]
-    > Tout au long de ce didacticiel, les exemples de commandes docker sont indiquées pour l’interpréteur de commandes bash (Linux/Mac) et PowerShell (Windows).
+    > Tout au long de ce didacticiel, les exemples de commandes docker sont fournis pour le shell bash (Linux/Mac) et PowerShell (Windows).
 
 1. Pour exécuter l’image de conteneur avec Docker, vous pouvez utiliser la commande suivante :
 
@@ -139,7 +139,7 @@ Ce didacticiel utilise la [base de données exemple Wide World Importers](../sam
 Le fichier de sauvegarde se trouve désormais dans le conteneur. Avant de restaurer la sauvegarde, il est important de connaître les noms de fichiers logiques et les types de fichiers à l’intérieur de la sauvegarde. Les commandes Transact-SQL suivantes inspectent la sauvegarde et effectuent la restauration à l’aide de **sqlcmd** dans le conteneur.
 
 > [!TIP]
-> Ce didacticiel utilise **sqlcmd** à l’intérieur du conteneur, car le conteneur est fourni avec cet outil préinstallé. Toutefois, vous pouvez également exécuter les instructions Transact-SQL avec un autre client outils en dehors du conteneur, tel que [Visual Studio Code](sql-server-linux-develop-use-vscode.md) ou [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Pour vous connecter, utilisez le port de l’hôte qui a été mappé au port 1433 dans le conteneur. Dans cet exemple, qui est **localhost, 1401** sur l’ordinateur hôte et **Host_IP_Address, 1401** à distance.
+> Ce didacticiel utilise **sqlcmd** à l’intérieur du conteneur, car le conteneur est fourni avec cet outil préinstallé. Toutefois, vous pouvez également exécuter les instructions Transact-SQL avec d’autres clients outils en dehors du conteneur, tel que [Visual Studio Code](sql-server-linux-develop-use-vscode.md) ou [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Pour vous connecter, utilisez le port de l’hôte qui a été mappé au port 1433 dans le conteneur. Dans cet exemple, il s’agit **localhost, 1401** sur l’ordinateur hôte et **Host_IP_Address, 1401** à distance.
 
 1. Exécutez **sqlcmd** dans le conteneur pour obtenir la liste des noms de fichiers logiques et les chemins d’accès à l’intérieur de la sauvegarde. Cette opération s’effectue avec l'instruction Transact-SQL **RESTORE FILELISTONLY**.
 
@@ -276,7 +276,7 @@ Les étapes suivantes apportent une modification dans la base de données.
       -Q "UPDATE WideWorldImporters.Warehouse.StockItems SET StockItemName='USB missile launcher (Dark Green)' WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1"
    ```
 
-   Vous devez voir une sortie similaire au texte suivant :
+   Vous devez voir une sortie similaire à ce qui suit :
 
    ```
    (1 rows affected)
@@ -287,7 +287,7 @@ Les étapes suivantes apportent une modification dans la base de données.
 
 ## <a name="create-a-new-backup"></a>Créer une sauvegarde
 
-Une fois que vous avez restauré la base de données dans un conteneur, vous souhaiterez également créer régulièrement des sauvegardes de base de données à l’intérieur du conteneur en cours d’exécution. Les étapes suivent un modèle semblable à la procédure précédente, mais en sens inverse.
+Une fois que vous avez restauré votre base de données dans un conteneur, vous souhaiterez également créer régulièrement des sauvegardes de base de données à l’intérieur du conteneur en cours d’exécution. Les étapes suivent un modèle similaire aux étapes précédentes, mais dans l’ordre inverse.
 
 1. Utilisez la commande Transact-SQL **BACKUP DATABASE** pour créer une sauvegarde de base de données dans le conteneur. Ce didacticiel crée un nouveau fichier de sauvegarde, **wwi_2.bak**, dans le répertoire précédemment créé **/var/opt/mssql/backup**. 
 
@@ -322,7 +322,7 @@ Une fois que vous avez restauré la base de données dans un conteneur, vous sou
    BACKUP DATABASE successfully processed 59099 pages in 25.056 seconds (18.427 MB/sec).
    ```
 
-1. Ensuite, copiez le fichier de sauvegarde hors du conteneur et sur votre ordinateur hôte.
+1. Ensuite, copiez le fichier de sauvegarde en dehors du conteneur et sur votre ordinateur hôte.
 
    ```bash
    cd ~
@@ -396,12 +396,12 @@ En plus des sauvegardes de base de données pour protéger vos données, vous po
 Dans ce didacticiel, vous avez appris comment sauvegarder une base de données sur Windows et la déplacer vers un serveur SQL Server 2017 sous Linux. Vous avez appris à : 
 > [!div class="checklist"]
 > * Créer des images de conteneur de SQL Server 2017 Linux.
-> * Copier les sauvegardes de base de données SQL Server dans un conteneur.
+> * Copiez les sauvegardes de base de données SQL Server dans un conteneur.
 > * Exécuter des instructions Transact-SQL à l’intérieur du conteneur avec **sqlcmd**.
-> * Créer et extraire des fichiers de sauvegarde à partir d’un conteneur.
+> * Créer et extraire les fichiers de sauvegarde à partir d’un conteneur.
 > * Utiliser des conteneurs de volumes de données dans Docker pour conserver les données de SQL Server.
 
 Ensuite, passez en revue les autres configuration Docker et les scénarios de dépannage :
 
 > [!div class="nextstepaction"]
->[Guide de configuration de 2017 du serveur SQL sur Docker](sql-server-linux-configure-docker.md)
+>[Guide de configuration de SQL Server 2017 sur Docker](sql-server-linux-configure-docker.md)

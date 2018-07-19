@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 7 : Créer des mesures | Documents Microsoft'
+title: 'Leçon 7 : Créer des mesures | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 146d93bc2c7257ce409f3a293f6c9050acde9ca7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017666"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994961"
 ---
 # <a name="lesson-6-create-measures"></a>Leçon 6 : Créer des mesures
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-Dans cette leçon, vous allez créer des mesures à inclure dans votre modèle. Comme pour les colonnes calculées que vous avez créé dans la leçon précédente, une mesure est un calcul créé à l’aide d’une formule DAX. Toutefois, contrairement aux colonnes calculées, les mesures sont évaluées en fonction d'un *filtre*sélectionné par l'utilisateur ; par exemple, une colonne ou un segment particulier ajouté au champ des étiquettes de ligne dans un tableau croisé dynamique. Une valeur pour chaque cellule dans le filtre est ensuite calculée par la mesure appliquée. Les mesures sont des calculs puissants et flexibles que vous pouvez inclure dans pratiquement tous les modèles tabulaires pour effectuer des calculs dynamiques sur des données numériques. Pour plus d’informations, consultez [mesures](../analysis-services/tabular-models/measures-ssas-tabular.md).  
+Dans cette leçon, vous allez créer des mesures à inclure dans votre modèle. Comme pour les colonnes calculées que vous avez créé dans la leçon précédente, une mesure est un calcul créé à l’aide d’une formule DAX. Toutefois, contrairement aux colonnes calculées, les mesures sont évaluées en fonction d'un *filtre*sélectionné par l'utilisateur ; par exemple, une colonne ou un segment particulier ajouté au champ des étiquettes de ligne dans un tableau croisé dynamique. Une valeur pour chaque cellule dans le filtre est ensuite calculée par la mesure appliquée. Les mesures sont des calculs puissants et flexibles que vous souhaitez inclure dans quasiment tous les modèles tabulaires pour effectuer des calculs dynamiques sur des données numériques. Pour plus d’informations, consultez [mesures](../analysis-services/tabular-models/measures-ssas-tabular.md).  
   
 Pour créer des mesures, vous allez utiliser le *grille de mesures*. Par défaut, chaque table contient une grille de mesures vide ; toutefois, en général, vous ne créez pas de mesures pour chaque table. La grille de mesures s'affiche sous une table au sein du générateur de modèles dans la vue de données. Pour cacher ou afficher la grille de mesures d'une table, cliquez sur le menu **Table** , puis sur **Afficher la grille de mesures**.  
   
@@ -29,14 +29,14 @@ Dans cette leçon, vous allez créer des mesures en entrant une formule DAX dans
   
 Durée estimée pour effectuer cette leçon : **30 minutes**  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Prérequis  
 Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 5 : créer des colonnes calculées](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Créer des mesures  
   
 #### <a name="to-create-a-dayscurrentquartertodate-measure-in-the-dimdate-table"></a>Pour créer une mesure DaysCurrentQuarterToDate dans la table DimDate  
   
-1.  Dans le Générateur de modèles, cliquez sur le **DimDate** table.  
+1.  Dans le Concepteur de modèles, cliquez sur le **DimDate** table.  
   
 2.  Dans la grille de mesures, cliquez sur la cellule vide en haut à gauche.  
   
@@ -46,16 +46,16 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
     DaysCurrentQuarterToDate:=COUNTROWS( DATESQTD( 'DimDate'[Date])) 
     ```
   
-    Notez que la cellule en haut à gauche contient maintenant une mesure nommée **DaysCurrentQuarterToDate**, suivi par le résultat, **92**.
+    Notez que la cellule en haut à gauche contient maintenant une mesure nommée **DaysCurrentQuarterToDate**, suivie du résultat, **92**.
     
       ![en tant que-tabulaire-lesson6-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
     
-    Contrairement aux colonnes calculées, des formules de mesure, vous pouvez taper le nom de mesure, suivi par une virgule, suivie de l’expression de la formule.
+    Contrairement aux colonnes calculées, avec les formules de mesure, vous pouvez taper le nom de mesure, suivi par une virgule, suivie de l’expression de formule.
 
   
 #### <a name="to-create-a-daysincurrentquarter-measure-in-the-dimdate-table"></a>Pour créer une mesure DaysInCurrentQuarter dans la table DimDate  
   
-1.  Avec la **DimDate** toujours active dans le Générateur de modèles, dans la grille de mesures, cliquez sur la cellule vide sous la mesure que vous venez de créer.  
+1.  Avec le **DimDate** toujours active dans le Générateur de modèles, dans la grille de mesures, cliquez sur la cellule vide sous la mesure que vous venez de créer.  
   
 2.  Dans la barre de formule, entrez la formule suivante :  
   
@@ -84,16 +84,16 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
 1.  En utilisant la fonction de somme automatique, créez et nommez les mesures suivantes :  
   
-    |Nom de la mesure|Colonne|Somme automatique (∑)|Formule|  
+    |Nom de la mesure|colonne|Somme automatique (∑)|Formule|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Compter|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margin|Sum|=SUM([Margin])|  
-    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|Sum|=SUM([Freight])|  
+    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margin|SUM|=SUM([Margin])|  
+    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|SUM|=SUM([Freight])|  
   
 2.  En cliquant sur une cellule vide dans la grille de mesures et à l’aide de la barre de formule, créez et nommez les mesures suivantes dans l’ordre :  
   
@@ -121,7 +121,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
       InternetPreviousQuarterSalesProportionToQTD:=[InternetPreviousQuarterSales]*([DaysCurrentQuarterToDate]/[DaysInCurrentQuarter])
       ```
   
-Les mesures créées pour la table FactInternetSales peuvent être utilisées pour analyser des données financières critiques telles que les ventes et les coûts, marge bénéficiaire des éléments définis par le filtre d’utilisateur sélectionné.  
+Les mesures créées pour la table FactInternetSales peuvent être utilisées pour analyser les données financières critiques telles que les ventes, les coûts et marge pour les éléments définis par le filtre sélectionné d’utilisateur.  
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
 Accédez à la leçon suivante : [leçon 7 : créer des indicateurs de Performance clés](../analysis-services/lesson-7-create-key-performance-indicators.md).  

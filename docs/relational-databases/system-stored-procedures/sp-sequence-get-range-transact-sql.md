@@ -1,5 +1,5 @@
 ---
-title: sp_sequence_get_range (Transact-SQL) | Documents Microsoft
+title: sp_sequence_get_range (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2015
 ms.prod: sql
@@ -25,18 +25,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6b34171cf9300454dfe35e6f0961eaacff182b4a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259699"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015076"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Retourne une plage de valeurs de séquence d'un objet séquence. L'objet séquence génère et émet le nombre de valeurs demandées et fournit l'application avec les métadonnées relatives à la plage.  
   
- Pour plus d’informations sur les numéros de séquence, consultez [numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md).  
+ Pour plus d’informations sur les numéros de séquence, consultez [les numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +84,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- sp_sequence_get_rangeis dans la table système sys. schéma et peut être référencée en tant que sys.sp_sequence_get_range.  
+ sp_sequence_get_rangeis dans la table système sys. schéma et peut être référencé comme sys.sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Séquences se répétant  
  Si nécessaire, l'objet séquence se répétera le nombre de fois approprié afin de fournir la plage demandée. Le nombre de répétitions est retourné à l'appelant via le paramètre `@range_cycle_count`.  
@@ -101,7 +101,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  Requiert l'autorisation UPDATE sur l'objet séquence ou le schéma de l'objet séquence.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants utilisent un objet séquence nommé Test.RangeSeq. Utilisez l’instruction suivante pour créer une séquence Test.RangeSeq.  
+ Les exemples suivants utilisent un objet séquence nommé Test.RangeSeq. Utilisez l’instruction suivante pour créer la séquence Test.RangeSeq.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -119,7 +119,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
   
 ### <a name="a-retrieving-a-range-of-sequence-values"></a>A. Récupération d'une plage de valeurs de séquence  
- L’instruction suivante obtient quatre numéros de séquence à partir de l’objet de séquence Test.RangeSeq et retourne le premier des nombres à l’utilisateur.  
+ L’instruction suivante obtient quatre numéros séquentiels à partir de l’objet de séquence Test.RangeSeq et retourne le premier des nombres à l’utilisateur.  
   
 ```  
 DECLARE @range_first_value sql_variant ,   
@@ -135,7 +135,7 @@ SELECT @range_first_value_output AS FirstNumber ;
 ```  
   
 ### <a name="b-returning-all-output-parameters"></a>B. Retour de tous les paramètres de sortie  
- L’exemple suivant retourne toutes les valeurs de sortie de la procédure sp_sequence_get_range.  
+ L’exemple suivant retourne toutes les valeurs de sortie à partir de la procédure sp_sequence_get_range.  
   
 ```  
 DECLARE    

@@ -1,5 +1,5 @@
 ---
-title: Élément Members (XMLA) | Documents Microsoft
+title: Members, élément (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ae4326e00ba98075a86079157484c5963d0147d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34579101"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994711"
 ---
 # <a name="members-element-xmla"></a>Élément Members (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34579101"
 </CrossProduct>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -51,13 +51,13 @@ ms.locfileid: "34579101"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|Hierarchy|Attribut **String** requis. Le nom de la hiérarchie à laquelle les membres contenus par le **membres** l’élément appartient.|  
+|Hierarchy|Attribut **String** requis. Le nom de la hiérarchie à laquelle les membres contenus par le **membres** élément appartiennent.|  
   
 ## <a name="remarks"></a>Notes  
- Lorsqu’une application cliente définit le **AxisFormat** propriété *ClusterFormat*, les membres de chaque axe sont divisés en clusters dans lequel chaque cluster représente un produit croisé entre des ensembles ordonnés de membres de chaque hiérarchie. Chaque **axe** élément se compose d’un ou plusieurs **CrossProduct** éléments. Chaque **CrossProduct** élément contient un **membres** , élément pour chaque hiérarchie sur l’axe. Le **membres** élément contient à son tour, un **membre** élément pour chaque membre de la hiérarchie spécifiée incluse dans le produit croisé.  
+ Lorsqu’une application cliente définit le **AxisFormat** propriété *ClusterFormat*, les membres sur chaque axe sont divisés en clusters dans lequel chaque cluster représente un produit croisé entre des ensembles ordonnés de membres de chaque hiérarchie. Chaque **axe** élément se compose d’un ou plusieurs **CrossProduct** éléments. Chaque **CrossProduct** élément contient un **membres** élément pour chaque hiérarchie sur l’axe. Le **membres** élément contient à son tour, un **membre** élément pour chaque membre de la hiérarchie spécifiée incluse dans le produit croisé.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant illustre la structure de la **membres** élément lorsqu’un client spécifie *ClusterFormat* pour le **AxisFormat** propriété XMLA les membres suivants de l’axe :  
+ L’exemple suivant illustre la structure de la **membres** élément lorsqu’un client spécifie *ClusterFormat* pour le **AxisFormat** propriété XMLA le membres suivants de l’axe :  
   
 ||||||  
 |-|-|-|-|-|  

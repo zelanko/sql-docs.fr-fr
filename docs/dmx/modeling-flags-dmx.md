@@ -1,5 +1,5 @@
 ---
-title: Indicateurs (DMX) de modélisation | Documents Microsoft
+title: Indicateurs de modélisation (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 17280abc62cd75122fde1f54b321ca9b51a1b1d9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842942"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992461"
 ---
 # <a name="modeling-flags-dmx"></a>Indicateurs de modélisation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34842942"
  **MODEL_EXISTENCE_ONLY**  
  Les valeurs de la colonne d'attribut sont moins importantes que la présence de l'attribut. Cet indicateur est défini sur une colonne de modèle d'exploration de données.  
   
- Des algorithmes tiers peuvent prendre en charge des indicateurs de modélisation supplémentaires. Pour déterminer les indicateurs de modélisation un algorithme prend en charge, utilisez le **SUPPORTED_MODELING_FLAGS** de lignes du schéma. Vous pouvez également interroger les services d'exploration de données sur le serveur afin de déterminer les indicateurs de modélisation pris en charge pour un algorithme spécifique. Par exemple, la requête suivante retourne les indicateurs de modélisation pris en charge pour l'algorithme MLR (Microsoft Linear Regression) sur le serveur actuel :  
+ Des algorithmes tiers peuvent prendre en charge des indicateurs de modélisation supplémentaires. Pour déterminer les indicateurs de modélisation un algorithme prend en charge, utilisez le **SUPPORTED_MODELING_FLAGS** ensemble de lignes de schéma. Vous pouvez également interroger les services d'exploration de données sur le serveur afin de déterminer les indicateurs de modélisation pris en charge pour un algorithme spécifique. Par exemple, la requête suivante retourne les indicateurs de modélisation pris en charge pour l'algorithme MLR (Microsoft Linear Regression) sur le serveur actuel :  
   
 ```  
 SELECT SUPPORTED_MODELING_FLAGS  
@@ -45,9 +45,9 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>Spécification d'indicateurs de modélisation sur un modèle d'exploration de données  
- Pour obtenir des exemples de syntaxe qui [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge pour la spécification d’un indicateur sur une colonne de structure d’exploration de données, consultez [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
+ Pour obtenir des exemples de la syntaxe qui [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge pour la spécification d’un indicateur sur une colonne de structure d’exploration de données, consultez [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
- Pour obtenir un exemple de syntaxe pour la spécification d’un indicateur de modélisation sur une colonne de modèle d’exploration de données, consultez [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
+ Pour obtenir un exemple de la syntaxe de spécification d’un indicateur de modélisation sur une colonne de modèle d’exploration de données, consultez [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
  Pour plus d’informations sur l’utilisation des colonnes du modèle d’exploration de données, consultez [colonnes du modèle d’exploration de données](../analysis-services/data-mining/mining-model-columns.md).  
   

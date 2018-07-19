@@ -1,5 +1,5 @@
 ---
-title: IsTrainingCase (DMX) | Documents Microsoft
+title: IsTrainingCase (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 00344eeb38f3aae5cae7ac25c1b65b403cc85cb9
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842342"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994471"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ IsTrainingCase()
  Vous pouvez déterminer si les données d'une structure d'exploration de données particulière ont été partitionnées en jeux de test et d'apprentissage en consultant la valeur des propriétés <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> et <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A>.  
   
 > [!NOTE]  
->  Si vous souhaitez utiliser les fonctions IsTrainingCase ou IsTestCase pour retourner des détails sur les cas dans le modèle, l’extraction doit être activée sur le modèle. Pour plus d’informations, consultez [Activer l’extraction pour un modèle d’exploration de données](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md).  
+>  Extraction doit être activée sur le modèle si vous souhaitez utiliser les fonctions IsTrainingCase ou IsTestCase pour retourner des détails sur les cas dans le modèle. Pour plus d’informations, consultez [Activer l’extraction pour un modèle d’exploration de données](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md).  
   
  Pour retourner les cas qui font partie du jeu de données de test, utilisez la fonction [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   

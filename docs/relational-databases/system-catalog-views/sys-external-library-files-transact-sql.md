@@ -1,5 +1,5 @@
 ---
-title: Sys.external_library_files (Transact-SQL) | Documents Microsoft
+title: Sys.external_library_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: sql
@@ -24,23 +24,23 @@ ms.author: jeannt
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: febfe235bd7f4711e8192ab7625491b72ac050ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974794"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001171"
 ---
 # <a name="sysexternallibraryfiles-transact-sql"></a>Sys.external_library_files (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Répertorie une ligne pour chaque fichier qui compose une bibliothèque externe.
 
-|Nom de colonne |Type de données | Description|
+|Nom de colonne |Type de données |Description|
 |------|------|-----|
-|external_library_id | int |ID de l’objet de bibliothèque externe. |
+|external_library_id | INT |ID de l’objet de bibliothèque externe. |
 |content |varbinary(max) |Contenu de l’artefact de fichier de bibliothèque externe. |
-|Plateforme |tinyint |ID de la plateforme hôte sur lequel SQL Server est installé. |
-|platform_desc | nvarchar(60) |Nom de la plateforme de l’ordinateur hôte. Les valeurs valides sont 'WINDOWS', 'LINUX'. |
+|Plateforme |TINYINT |ID de la plateforme hôte sur lequel SQL Server est installé. |
+|platform_desc | nvarchar(60) |Nom de la plateforme hôte. Les valeurs valides sont « WINDOWS », « LINUX ». |
 
 ### <a name="see-also"></a>Voir aussi  
 

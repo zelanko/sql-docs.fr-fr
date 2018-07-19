@@ -1,5 +1,5 @@
 ---
-title: INSÉRER (DMX) | Documents Microsoft
+title: INSÉRER (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842652"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992438"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Traite l'objet d'exploration de données spécifié. Pour plus d’informations sur le traitement des modèles d’exploration de données et les structures d’exploration de données, consultez [le traitement des exigences et les considérations &#40;d’exploration de données&#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+  Traite l'objet d'exploration de données spécifié. Pour plus d’informations sur le traitement des modèles d’exploration de données et les structures d’exploration de données, consultez [traitement des exigences et considérations &#40;exploration de données&#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Si une structure d'exploration de données est spécifiée, l'instruction traite la structure et tous ses modèles d'exploration de données associés. Si un modèle d'exploration de données est spécifié, l'instruction traite uniquement le modèle.  
   
@@ -45,17 +45,17 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  Requête source dans le format défini par le fournisseur  
   
 ## <a name="remarks"></a>Notes  
- Si vous ne spécifiez pas **modèle d’exploration de données** ou **STRUCTURE d’exploration de données**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recherche le type d’objet en fonction du nom et traite l’objet correct. Si le serveur contient une structure d'exploration de données et un modèle d'exploration de données portant le même nom, une erreur est retournée.  
+ Si vous ne spécifiez pas **MINING MODEL** ou **STRUCTURE d’exploration de données**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recherche le type d’objet en fonction du nom et traite l’objet correct. Si le serveur contient une structure d'exploration de données et un modèle d'exploration de données portant le même nom, une erreur est retournée.  
   
- À l’aide de la deuxième forme de syntaxe, INSERT INTO*\<objet >*. COLUMN_VALUES, vous pouvez insérer des données directement dans les colonnes du modèle sans apprentissage du modèle. Cette méthode permet d'insérer des données de colonnes dans le modèle d'une manière concise et organisée, ce qui est utile lorsque vous utilisez des datasets contenant des hiérarchies ou des colonnes triées.  
+ À l’aide de la deuxième forme de syntaxe, INSERT INTO*\<objet >*. COLUMN_VALUES, vous pouvez insérer des données directement dans les colonnes du modèle sans l’apprentissage du modèle. Cette méthode permet d'insérer des données de colonnes dans le modèle d'une manière concise et organisée, ce qui est utile lorsque vous utilisez des datasets contenant des hiérarchies ou des colonnes triées.  
   
- Si vous utilisez **INSERT INTO** avec un modèle d’exploration de données ou une structure et laissez le champ désactivé le \<mappé les colonnes du modèle > et \<requête de source de données > arguments, l’instruction se comporte comme **ProcessDefault**, à l’aide de liaisons qui existent déjà. Si les liaisons n'existent pas, l'instruction retourne une erreur. Pour plus d’informations sur **ProcessDefault**, consultez [les paramètres et les Options de traitement &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). L’exemple suivant illustre la syntaxe :  
+ Si vous utilisez **INSERT INTO** avec un modèle d’exploration de données ou d’une structure d’exploration et de laisser désactivé le \<mappé les colonnes du modèle > et \<requête de source de données > arguments, l’instruction se comporte comme  **ProcessDefault**, à l’aide de liaisons qui existent déjà. Si les liaisons n'existent pas, l'instruction retourne une erreur. Pour plus d’informations sur **ProcessDefault**, consultez [les Options de traitement et de paramètres &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). L’exemple suivant montre la syntaxe :  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
 ```  
   
- Si vous spécifiez **modèle d’exploration de données** et fournir des colonnes mappées et une requête de source de données, le modèle et une structure associée est traité.  
+ Si vous spécifiez **MINING MODEL** et fournir des colonnes mappées et une requête de source de données, le modèle et une structure associée est traitée.  
   
  Le tableau ci-dessous donne une description du résultat de différentes formes de l'instruction, en fonction de l'état des objets.  
   
@@ -68,13 +68,13 @@ INSERT INTO [MINING MODEL] <model>
 |INSERT INTO MINING MODEL*\<modèle >* qui contient une requête source<br /><br /> ou Gestionnaire de configuration<br /><br /> INSERT INTO MINING STRUCTURE*\<structure >* qui contient une requête source|La structure ou le modèle contient déjà du contenu.|Échec du traitement. Vous devez supprimer les objets avant d’effectuer cette opération, à l’aide de [supprimer &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Mapped Model Columns  
- À l’aide de la \<mappé les colonnes du modèle > élément, vous pouvez mapper les colonnes de la source de données pour les colonnes dans votre modèle d’exploration de données. Le \<mappé les colonnes du modèle > élément a la forme suivante :  
+ À l’aide de la \<mappé les colonnes du modèle > élément, vous pouvez mapper les colonnes à partir de la source de données aux colonnes dans votre modèle d’exploration de données. Le \<mappé les colonnes du modèle > élément a la forme suivante :  
   
 ```  
 <column identifier> | SKIP | <table identifier> (<column identifier> | SKIP), ...  
 ```  
   
- À l’aide de **ignorer**, vous pouvez exclure certaines colonnes qui doivent exister dans la requête source, mais qui n’existent pas dans le modèle d’exploration de données. SKIP est utile lorsque vous ne contrôlez pas les colonnes incluses dans l'ensemble de lignes d'entrée. Si vous écrivez votre propre OPENQUERY, la meilleure pratique consiste à omettre la colonne de la liste de colonnes SELECT au lieu d'utiliser SKIP.  
+ À l’aide de **SKIP**, vous pouvez exclure certaines colonnes qui doivent exister dans la requête source, mais qui n’existent pas dans le modèle d’exploration de données. SKIP est utile lorsque vous ne contrôlez pas les colonnes incluses dans l'ensemble de lignes d'entrée. Si vous écrivez votre propre OPENQUERY, la meilleure pratique consiste à omettre la colonne de la liste de colonnes SELECT au lieu d'utiliser SKIP.  
   
  SKIP est également utile lorsqu'une colonne de l'ensemble de lignes d'entrée est nécessaire pour effectuer une jointure, mais que la colonne n'est pas utilisée par la structure d'exploration de données. En guise d'exemple typique, on peut citer une structure d'exploration de données et un modèle d'exploration de données qui contiennent une table imbriquée. L'ensemble de lignes d'entrée pour cette structure aura une colonne clé étrangère utilisée pour créer un ensemble de lignes hiérarchique à l'aide de la clause SHAPE, mais la colonne clé étrangère n'est presque jamais utilisée dans le modèle.  
   
@@ -104,7 +104,7 @@ FROM [vTargetMail]')
 ```  
   
 ## <a name="nested-table-example"></a>Exemple de table imbriquée  
- L’exemple suivant utilise **forme** pour former un modèle d’exploration de données d’association qui contient une table imbriquée. Notez que la première ligne contient **ignorer** à la place OrderNumber, qui est requis dans le **SHAPE_APPEND** instruction mais n’est pas utilisée dans le modèle d’exploration de données.  
+ L’exemple suivant utilise **forme** pour former un modèle d’exploration de données d’association qui contient une table imbriquée. Notez que la première ligne contient **SKIP** au lieu de cela OrderNumber, qui est requis dans le **SHAPE_APPEND** instruction mais n’est pas utilisée dans le modèle d’exploration de données.  
   
 ```  
 INSERT INTO MyAssociationModel  
@@ -121,8 +121,8 @@ AS [Models]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

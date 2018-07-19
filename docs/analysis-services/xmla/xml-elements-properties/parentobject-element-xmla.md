@@ -1,5 +1,5 @@
 ---
-title: Élément ParentObject (XMLA) | Documents Microsoft
+title: Élément ParentObject (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ff9ebc460691d9f97e5cfe64783574b00eab6915
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576001"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007031"
 ---
 # <a name="parentobject-element-xmla"></a>Élément ParentObject (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34576001"
 </Create>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -46,13 +46,13 @@ ms.locfileid: "34576001"
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Créer](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
-|Éléments enfants|Éléments ASSL (Analysis Services Scripting Language) requis. Spécifié en répertoriant les éléments de l’ID de l’objet et ses ancêtres (à l’exclusion de la **Server** objet.) Par exemple, **ParentObject** élément identifie une partition :<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
+|Éléments enfants|Éléments ASSL (Analysis Services Scripting Language) requis. Spécifié en répertoriant les éléments de l’ID de l’objet et ses ancêtres (à l’exclusion du **Server** objet.) Par exemple, ce qui suit **ParentObject** élément identifie une partition :<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
 ## <a name="remarks"></a>Notes  
  L'ordre dans lequel les identificateurs apparaissent n'a pas d'importance.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant crée la **panier** structure d’exploration de données, inclus dans le [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] base de données Analysis Services.  
+ L’exemple suivant crée la **Market Basket** structure d’exploration de données, inclus dans le [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] base de données Analysis Services.  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

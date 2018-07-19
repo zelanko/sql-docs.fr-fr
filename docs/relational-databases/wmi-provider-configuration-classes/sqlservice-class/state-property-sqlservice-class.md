@@ -1,5 +1,5 @@
 ---
-title: State, propriété (classe SqlService) | Documents Microsoft
+title: State, propriété (classe SqlService) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 350d59fa026f16007cffd279f4f6298eeca86e6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33009491"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005379"
 ---
 # <a name="state-property-sqlservice-class"></a>Propriété State (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ object.State [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) qui représente le service.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
@@ -50,7 +50,7 @@ object.State [= value]
   
  Il peut s'agir de l'une des valeurs suivantes.  
   
- 1  
+  1  
  Arrêté. Le service est arrêté.  
   
  2  

@@ -1,5 +1,5 @@
 ---
-title: 'SQL : overflow-field (SQLXML 4.0) | Documents Microsoft'
+title: 'SQL : overflow-field (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,21 +22,21 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5f4527068d0fd0f83987f5e145226c091a7913c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970224"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005812"
 ---
-# <a name="annotation-interpretation---sqloverflow-field"></a>Interprétation d’annotation - SQL : Overflow-champ
+# <a name="annotation-interpretation---sqloverflow-field"></a>Interprétation des annotations - SQL : Overflow-champ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Dans un schéma, vous pouvez identifier une colonne en tant que colonne de dépassement destinée à recevoir toutes les données non consommées du document XML. Cette colonne est spécifiée dans le schéma à l’aide de la **SQL : Overflow-champ** annotation. Un schéma peut contenir plusieurs colonnes de dépassement.  
   
- Chaque fois qu’un nœud XML (élément ou attribut) pour lesquelles il existe un **SQL : Overflow-champ** annotation définie entre dans l’étendue, la colonne de dépassement est activée et reçoit des données non consommées. Lorsque le nœud sort de la portée, la colonne de dépassement n'est plus active et le chargement en masse XML active le champ de dépassement précédent (le cas échéant).  
+ Chaque fois qu’un nœud XML (élément ou attribut) pour lesquelles il existe un **SQL : Overflow-champ** annotation définie entre dans l’étendue, la colonne de dépassement de capacité est activée et reçoit des données non consommées. Lorsque le nœud sort de la portée, la colonne de dépassement n'est plus active et le chargement en masse XML active le champ de dépassement précédent (le cas échéant).  
   
- Comme il stocke des données dans la colonne de dépassement de capacité, le chargement en masse XML stocke également les balises d’ouverture et fermeture de l’élément parent pour lequel **SQL : Overflow-champ** est défini.  
+ Quand il stocke des données dans la colonne de dépassement de capacité, le chargement en masse XML stocke également les balises d’ouverture et fermeture de l’élément parent pour lequel **SQL : Overflow-champ** est défini.  
   
- Par exemple, le schéma suivant décrit la  **\<clients >** et  **\<CustOrder >** éléments. Chacun de ces éléments identifie une colonne de dépassement :  
+ Par exemple, le schéma suivant décrit le  **\<clients >** et  **\<CustOrder >** éléments. Chacun de ces éléments identifie une colonne de dépassement :  
   
 ```  
 <?xml version="1.0" ?>  
@@ -82,7 +82,7 @@ ms.locfileid: "32970224"
   
  Dans le schéma, le  **\<client >** élément est mappé à la table Cust et  **\<ordre >** élément est mappé à la table CustOrder.  
   
- Les deux le  **\<client >** et  **\<ordre >** éléments identifient une colonne de dépassement de capacité. Par conséquent, le chargement en masse XML enregistre tous les non consommées enfants éléments et attributs de la  **\<client >** élément dans la colonne de dépassement de capacité de la table Cust et tous les éléments enfants non consommées et attributs de la  **\<ordre >** élément dans la colonne de dépassement de capacité de la table CustOrder.  
+ Les deux le  **\<client >** et  **\<ordre >** éléments identifient une colonne de dépassement de capacité. Par conséquent, le chargement en masse XML enregistre tous les non consommées enfants éléments et attributs de la  **\<client >** élément dans la colonne de dépassement de capacité de la table Cust et tous les éléments enfants non consommées et attributs de la  **\<Ordre >** élément dans la colonne de dépassement de capacité de la table CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Pour tester un exemple fonctionnel  
   

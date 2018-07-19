@@ -1,5 +1,5 @@
 ---
-title: Construction XML (XQuery) | Documents Microsoft
+title: Construction XML (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -30,16 +30,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 66dc8917b0fa80c79d385dafb4bfb4c4c96c4127
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077721"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995141"
 ---
 # <a name="xml-construction-xquery"></a>Construction XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Dans XQuery, vous pouvez utiliser la **direct** et **calculée** constructeurs pour construire des structures XML dans une requête.  
+  Dans XQuery, vous pouvez utiliser la **direct** et **calculée** constructeurs pour construire des structures XML au sein d’une requête.  
   
 > [!NOTE]  
 >  Il n’existe aucune différence entre la **direct** et **calculée** constructeurs.  
@@ -54,7 +54,7 @@ ms.locfileid: "33077721"
   
 -   Deux nœuds d’élément, \<Résumé > et \<fonctionnalités >.  
   
-    -   La \<Résumé > élément a un nœud de texte enfant dont la valeur est « Some description ».  
+    -   Le \<Résumé > élément a un nœud de texte enfant dont la valeur est « Some description ».  
   
     -   Le \<fonctionnalités > élément a trois éléments enfants de nœud, \<couleur >, \<poids >, et \<garantie >. Chacun de ces nœuds possède un nœud de texte enfant et les valeurs « Red », « 25 » et « 2 years parts and labor », respectivement.  
   
@@ -86,7 +86,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Bien que la construction d'éléments à partir d'expressions constantes, comme dans cet exemple, soit utile, la véritable puissance de cette fonctionnalité du langage XQuery réside dans la possibilité de construire un document XML qui extrait dynamiquement des données d'une base de données. Vous pouvez utiliser des accolades pour spécifier les expressions de requête. Dans le document XML obtenu, l'expression est remplacée par sa valeur. Par exemple, la requête suivante construit un élément <`NewRoot`> avec un élément enfant (<`e`>). La valeur de l’élément <`e`> est calculée en spécifiant une expression de chemin d’accès à l’intérieur des accolades (« {... }").  
+ Bien que la construction d'éléments à partir d'expressions constantes, comme dans cet exemple, soit utile, la véritable puissance de cette fonctionnalité du langage XQuery réside dans la possibilité de construire un document XML qui extrait dynamiquement des données d'une base de données. Vous pouvez utiliser des accolades pour spécifier les expressions de requête. Dans le document XML obtenu, l'expression est remplacée par sa valeur. Par exemple, la requête suivante construit un élément <`NewRoot`> avec un élément enfant (<`e`>). La valeur de l’élément <`e`> est calculée en spécifiant une expression de chemin d’accès à l’intérieur des accolades (« {...} }").  
   
 ```  
 DECLARE @x xml;  
@@ -96,7 +96,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  Les accolades font office de jetons de commutation de contexte et basculent la requête de la construction du document XML vers sa propre évaluation. Dans ce cas, l'expression de chemin d'accès XQuery entre les accolades, `/root`, est évaluée et les résultats lui sont substitués.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <NewRoot>  
@@ -106,7 +106,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- La requête suivante est similaire à la précédente. Toutefois, l’expression entre accolades spécifie la **data()** fonction pour extraire la valeur atomique de la <`root`> élément et l’affecte à l’élément construit <`e`>.  
+ La requête suivante est similaire à la précédente. Toutefois, l’expression entre accolades spécifie la **data()** fonction pour récupérer la valeur atomique de la <`root`> élément et l’assigne à l’élément construit <`e`>.  
   
 ```  
 DECLARE @x xml;  
@@ -119,7 +119,7 @@ SET @y = (SELECT @x.query('
 SELECT @y;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <NewRoot>  
@@ -138,7 +138,7 @@ SET @y = (SELECT @x.query('
 SELECT @y;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
@@ -157,7 +157,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <FirstLocation>  
@@ -250,7 +250,7 @@ This is product model catalog description.
   
  Lorsque vous construisez un attribut, vous pouvez spécifier sa valeur avec une expression entre accolades. Dans ce cas, le résultat de l'expression est renvoyé en tant que valeur de l'attribut.  
   
- Dans l’exemple suivant, la **data()** fonction n’est pas strictement nécessaire. Étant donné que vous affectez la valeur d’expression à un attribut, **data()** est appliquée implicitement pour récupérer la valeur typée de l’expression spécifiée.  
+ Dans l’exemple suivant, le **data()** fonction n’est pas strictement nécessaire. Étant donné que vous affectez la valeur d’expression à un attribut, **data()** est appliquée implicitement pour extraire la valeur typée de l’expression spécifiée.  
   
 ```  
 DECLARE @x xml;  
@@ -260,7 +260,7 @@ SET @y = (SELECT @x.query('<NewRoot attr="{ data(/root) }" ></NewRoot>'));
 SELECT @y;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <NewRoot attr="5" />  
@@ -281,7 +281,7 @@ FROM  Production.ProductModel
 where ProductModelID=7;  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <FirstLocation LocationID="10" SetupHours="0.5" >  
@@ -316,7 +316,7 @@ where ProductModelID=7;
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
-         Voici le résultat obtenu :  
+         Voici le résultat obtenu :  
   
         ```  
         <a attr="Item 5" />  
@@ -330,7 +330,7 @@ where ProductModelID=7;
   
          Dans ce cas, aucun espace n'est ajouté entre les deux valeurs de chaîne. Si vous souhaitez un espace entre les deux valeurs, vous devez le fournir explicitement.  
   
-         Voici le résultat obtenu :  
+         Voici le résultat obtenu :  
   
         ```  
         <a attr="Item5" />  
@@ -352,13 +352,13 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     Si vous appliquez le **data()** , la requête fonctionne, car il récupère la valeur atomique de l’expression, `/x`, qui est concaténée avec la chaîne. Voici une séquence de valeurs atomiques :  
+     Si vous appliquez le **data()** (fonction), la requête fonctionne, car elle récupère la valeur atomique de l’expression, `/x`, qui est concaténée avec la chaîne. Voici une séquence de valeurs atomiques :  
   
     ```  
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
-     Voici le résultat obtenu :  
+     Voici le résultat obtenu :  
   
     ```  
     <a attr="Item 5" />  
@@ -400,7 +400,7 @@ select @x.query( '
   </a>' )   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <a xmlns="a">  
@@ -419,7 +419,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <x:a xmlns:x="a">  
@@ -490,7 +490,7 @@ This is the result:
 ### <a name="xml-construction-and-white-space-handling"></a>Construction XML et gestion des espaces blancs  
  Le contenu des éléments dans la construction XML peut comprendre des espaces blancs. Ces caractères sont traités des manières suivantes :  
   
--   Les caractères d’espace blanc dans l’URI de l’espace de noms sont traités en tant que le type XSD **anyURI**. Plus particulièrement, voici comment ils sont gérés :  
+-   Les caractères d’espace blanc dans l’URI de l’espace de noms sont traités comme le type XSD **anyURI**. Plus particulièrement, voici comment ils sont gérés :  
   
     -   Tous les espaces blancs de début et de fin sont tronqués.  
   
@@ -529,7 +529,7 @@ test
   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 -- result  
@@ -552,7 +552,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>Autres constructeurs XML directs  
  Les constructeurs des instructions de traitement et des commentaires XML utilisent la même syntaxe que la construction XML correspondante. En outre, les constructeurs calculés pour les nœuds de texte sont pris en charge, mais sont essentiellement utilisés dans le langage DML XML pour construire des nœuds de texte.  
   
- **Remarque** pour obtenir un exemple de l’utilisation d’un constructeur de nœud de texte explicite, consultez l’exemple correspondant dans [insérer &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
+ **Remarque** pour obtenir un exemple d’utilisation d’un constructeur de nœud de texte explicite, consultez l’exemple spécifique dans [insérer &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
  Dans la requête suivante, le document XML construit comprend un élément, deux attributs, un commentaire et une instruction de traitement. Une virgule est utilisée avant <`FirstLocation`> car une séquence est en cours de construction.  
   
@@ -573,7 +573,7 @@ where ProductModelID=7;
   
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <?myProcessingInstr abc="value" ?>  
@@ -640,7 +640,7 @@ text{"Some text "},
   
  Les constructeurs d'éléments et d'attributs calculés, tels que définis dans la spécification XQuery, vous permettent de calculer les noms des nœuds. Lorsque vous utilisez des constructeurs directs dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous devez spécifier les noms des nœuds, tels que element et attribute, en tant que littéraux de constante. Par conséquent, il n'existe aucune différence entre les constructeurs directs et les constructeurs calculés pour les éléments et les attributs.  
   
- Dans l’exemple suivant, le contenu des nœuds construits est obtenu à partir des instructions de fabrication XML stockées dans la colonne Instructions de la **xml** type de données dans la table ProductModel.  
+ Dans l’exemple suivant, le contenu des nœuds construits est obtenu dans les instructions de fabrication XML stockées dans la colonne Instructions de la **xml** type de données dans la table ProductModel.  
   
 ```  
 SELECT Instructions.query('  
@@ -655,7 +655,7 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <FirstLocation LocationID="10">  

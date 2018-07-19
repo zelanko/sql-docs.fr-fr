@@ -1,5 +1,5 @@
 ---
-title: Espaces de noms SMO | Documents Microsoft
+title: Espaces de noms SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 66e6dfd0bd563dfc43fa1bbb44c4042159f0608a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967404"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005953"
 ---
 # <a name="smo-object-model-namespaces"></a>Noms de modèle objet SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "32967404"
   
 |Classe|Fonction|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|Contient des classes d’instance, les classes utilitaires et les énumérations qui sont utilisées pour manipuler par programme [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|<xref:Microsoft.SqlServer.Management.Smo>|Contient des classes d’instance, les classes d’utilitaire et les énumérations qui servent à manipuler par programmation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |<xref:Microsoft.SqlServer.Management.Common>|Contient les classes communes à RMO et SMO, comme les classes de connexion.|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|Contient les classes qui représentent l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|Contient les classes qui représentent le fournisseur WMI.|  

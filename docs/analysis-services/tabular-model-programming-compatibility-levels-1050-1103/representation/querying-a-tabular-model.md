@@ -1,5 +1,5 @@
 ---
-title: Interrogation d’un modèle tabulaire | Documents Microsoft
+title: Interrogation d’un modèle tabulaire | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f1e7bb0a649cef66ccb0740af04753fce4009a79
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045763"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991701"
 ---
 # <a name="querying-a-tabular-model"></a>Interrogation d'un modèle tabulaire
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -103,7 +103,7 @@ DEFINE
 |Product Category Id|Product Category Alternate Id|Product Category Name|Internet Sales|Reseller Sales|  
 |-------------------------|-----------------------------------|---------------------------|--------------------|--------------------|  
 |4|4|Accessories|$        700,759.96|$        571,297.93|  
-|1|1|Bikes|$  28,318,144.65|$  66,302,381.56|  
+| 1| 1|Bikes|$  28,318,144.65|$  66,302,381.56|  
 |3|3|Clothing|$        339,772.61|$    1,777,840.84|  
 |2|2|Components||$  11,799,076.66|  
   

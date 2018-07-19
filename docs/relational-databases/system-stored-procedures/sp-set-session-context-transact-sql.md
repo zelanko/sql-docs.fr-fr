@@ -1,5 +1,5 @@
 ---
-title: sp_set_session_context (Transact-SQL) | Documents Microsoft
+title: sp_set_session_context (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2d1396ef79eb69b96a40f075c50cd38b6ad77d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248347"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015005"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,33 +51,33 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>Arguments  
  [ @key=] 'key'  
- La clé définie, de type **sysname**. La taille de clé maximale est de 128 octets.  
+ La clé définie, de type **sysname**. La taille de clé maximale est 128 octets.  
   
  [ @value=] 'value'  
- La valeur de la clé spécifiée, de type **sql_variant**. Définition d’une valeur null libère la mémoire. La taille maximale est de 8 000 octets.  
+ La valeur de la clé spécifiée, de type **sql_variant**. Définition d’une valeur NULL comme valeur libère la mémoire. La taille maximale est de 8 000 octets.  
   
  [ @read_only= ] { 0 | 1 }  
- Un indicateur de type **bits**. La valeur 1, la valeur de la clé spécifiée ne peut pas être modifiée à nouveau sur cette connexion logique. Si 0 (valeur par défaut), alors que la valeur peut être modifiée.  
+ Un indicateur de type **bits**. La valeur 1, la valeur de la clé spécifiée ne peut pas être modifiée à nouveau sur cette connexion logique. Si 0 (valeur par défaut), alors que la valeur peut être modifié.  
   
 ## <a name="permissions"></a>Autorisations  
- N’importe quel utilisateur peut définir un contexte de session pour leur session.  
+ N’importe quel utilisateur peut définir un contexte de session pour sa session.  
   
 ## <a name="remarks"></a>Notes  
- Comme les autres procédures stockées, uniquement des littéraux et des variables (pas d’expressions ou des appels de fonction) peuvent être passés comme paramètres.  
+ Comme les autres procédures stockées, seuls les littéraux et variables (pas des expressions ou des appels de fonction) peuvent être passés comme paramètres.  
   
  La taille totale du contexte de session est limitée à 256 Ko. Si vous définissez une valeur qui entraîne le dépassement de cette limite, l’instruction échoue. Vous pouvez surveiller l’utilisation mémoire globale dans [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).  
   
- Vous pouvez surveiller l’utilisation de la mémoire globale en interrogeant [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) comme suit : `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
+ Vous pouvez surveiller l’utilisation globale de mémoire en interrogeant [sys.dm_os_memory_cache_counters &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) comme suit : `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant montre comment définir et revenir ensuite une clé de contexte de sessions nommée language avec une valeur de l’anglais.  
+ L’exemple suivant montre comment définir et retourner ensuite une clé de contexte de sessions nommée langage avec une valeur de l’anglais.  
   
 ```  
 EXEC sp_set_session_context 'language', 'English';  
 SELECT SESSION_CONTEXT(N'language');  
 ```  
   
- L’exemple suivant illustre l’utilisation de l’indicateur facultatif en lecture seule.  
+ L’exemple suivant illustre l’utilisation de l’indicateur en lecture seule facultatif.  
   
 ```  
 EXEC sp_set_session_context 'user_id', 4, @read_only = 1;  

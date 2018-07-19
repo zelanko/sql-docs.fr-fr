@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modèle&gt; (DMX) | Documents Microsoft
+title: SELECT FROM &lt;modèle&gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aac800e225eb5323b1bffeafda77d059f0a837e2
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842172"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989901"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM &lt;modèle&gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,14 +40,14 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *model*  
  Identificateur du modèle  
   
- *liste des conditions*  
+ *liste de conditions*  
  Facultatif. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
  Facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
- Les colonnes dans le *liste d’expressions* doit être défini comme predict ou predict only, ou associée à une colonne prévisible.  
+ Les colonnes dans le *liste d’expressions* doit être défini comme predict ou predict only, ou liés à une colonne prédictible.  
   
 ## <a name="naive-bayes-example"></a>Exemple de modèle Naive Bayes  
  L'exemple suivant réalise une prédiction de jointure vide sur la colonne Bike Buyer (Acheteur de bicyclette), en retournant l'état le plus probable du modèle d'exploration TM Naive Bayes.  
@@ -66,8 +66,8 @@ FROM Forecasting
   
 ## <a name="see-also"></a>Voir aussi  
  [SÉLECTIONNEZ &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

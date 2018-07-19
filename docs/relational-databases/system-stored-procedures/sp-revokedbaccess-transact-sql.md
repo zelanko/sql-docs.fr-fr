@@ -1,5 +1,5 @@
 ---
-title: sp_revokedbaccess (Transact-SQL) | Documents Microsoft
+title: sp_revokedbaccess (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 3cd5e5b13d8451ffa064783fdb27dd7cb42b0406
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250514"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005389"
 ---
 # <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
   
 ## <a name="arguments"></a>Arguments  
  [  **@name_in_db =** ] **'***nom***'**  
- Nom de l'utilisateur de la base de données à supprimer. *nom* est un **sysname** sans valeur par défaut. *nom* peut être le nom d’une connexion au serveur, une connexion Windows ou un groupe Windows et doit exister dans la base de données actuelle. Lorsque vous spécifiez une connexion Windows ou un groupe Windows, spécifiez les noms sous lesquels ils sont connus dans la base de données.  
+ Nom de l'utilisateur de la base de données à supprimer. *nom* est un **sysname** sans valeur par défaut. *nom* peut être le nom d’une connexion serveur, une connexion Windows ou un groupe Windows et doit exister dans la base de données actuelle. Lorsque vous spécifiez une connexion Windows ou un groupe Windows, spécifiez les noms sous lesquels ils sont connus dans la base de données.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -56,7 +56,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ## <a name="remarks"></a>Notes  
  Lorsque l'utilisateur de base de données est supprimé, les autorisations et les alias qui dépendent de cet utilisateur sont également supprimés.  
   
- **sp_revokedbaccess** peuvent supprimer uniquement les utilisateurs de base de données à partir de la base de données actuelle. Avant de supprimer un utilisateur de base de données qui possède des objets dans la base de données active, vous devez transférer la propriété des objets ou supprimer les objets de la base de données. Pour plus d’informations, consultez [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ **sp_revokedbaccess** pouvez supprimer uniquement les utilisateurs de base de données à partir de la base de données actuelle. Avant de supprimer un utilisateur de base de données qui possède des objets dans la base de données active, vous devez transférer la propriété des objets ou supprimer les objets de la base de données. Pour plus d’informations, consultez [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  **sp_revokedbaccess** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
@@ -74,7 +74,7 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [DROP USER & #40 ; Transact-SQL & #41 ;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)  
   
   

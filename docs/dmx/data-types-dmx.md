@@ -1,5 +1,5 @@
 ---
-title: Types de données (DMX) | Documents Microsoft
+title: Types de données (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b76e642e2760f0a10a44c77c9859876502d944ab
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841292"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992634"
 ---
 # <a name="data-types-dmx"></a>Types de données (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34841292"
   
 -   Date  
   
- Pour plus d’informations sur les données de types que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge, consultez [des Types de données &#40;d’exploration de données&#41;](../analysis-services/data-mining/data-types-data-mining.md).  
+ Pour plus d’informations sur les données de types que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge, consultez [Types de données &#40;d’exploration de données&#41;](../analysis-services/data-mining/data-types-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

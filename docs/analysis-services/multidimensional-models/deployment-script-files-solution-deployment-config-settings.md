@@ -1,5 +1,5 @@
 ---
-title: Spécification des paramètres de Configuration pour le déploiement de solutions | Documents Microsoft
+title: Spécification des paramètres de Configuration pour le déploiement de solutions | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f711dc12ed5014dbc397e5a72f97f55350da7d38
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020836"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002221"
 ---
 # <a name="deployment-script-files---solution-deployment-config-settings"></a>Fichiers de Script de déploiement - paramètres de configuration de déploiement de Solution
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit la partition et le rôle des options de déploiement que vous utilisez dans le script de déploiement à partir de la \< *nom du projet*> .configsettings fichier. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]crée ce fichier lorsque vous générez le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise les paramètres de configuration du projet actuel pour créer le \< *nom du projet*> .configsettings fichier.  
+  Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit la partition et le rôle des options de déploiement que vous utilisez dans le script de déploiement à partir de la \< *nom_projet*> .configsettings fichier. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée ce fichier lorsque vous générez le projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise les paramètres de configuration du projet actuel pour créer le \< *nom_projet*> .configsettings fichier.  
   
 ## <a name="reviewing-the-configuration-settings-for-deployment"></a>Examen des paramètres de configuration pour le déploiement  
- Voici les paramètres de configuration stockés dans le \< *nom du projet*> .configsettings fichier :  
+ Les éléments suivants sont les paramètres de configuration stockés dans le \< *nom_projet*> .configsettings fichier :  
   
 -   **Chaînes de connexion à la source de données** Il s'agit des chaînes de connexion pour chaque source de données, basées sur les valeurs spécifiées dans le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . L'ID et le mot de passe utilisateur sont systématiquement supprimés de la chaîne de connexion avant que le reste de la chaîne ne soit stocké dans ce fichier. Cependant, si l'Assistant Déploiement déploie directement vers une instance Analysis Services, vous pouvez ajouter les informations d'ID et de mot de passe utilisateur appropriées dans l'Assistant pour permettre le traitement correct de la base de données de déploiement. Ces informations de connexion ne seront pas stockées dans le script de déploiement proprement dit, si un script est enregistré par l'Assistant Déploiement.  
   
@@ -35,12 +35,12 @@ ms.locfileid: "34020836"
 -   **Report Server** Ce paramètre spécifie le serveur de rapports et l'emplacement du dossier pour chaque action de rapport définie dans chaque cube de la base de données.  
   
 ## <a name="modifying-the-configuration-settings-for-deployment"></a>Modification des paramètres de configuration pour le déploiement  
- Dans certains cas, il se pouvez que vous deviez déployer les [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de projet à l’aide des paramètres de configuration différents de ceux stockés dans le \< *nom du projet*> .configsettings fichier. Par exemple, vous pouvez modifier la chaîne de connexion à une ou plusieurs sources de données, ou spécifier des emplacements de stockage pour des partitions ou des groupes de mesures spécifiques.  
+ Dans certains cas, vous devrez peut-être déployer la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet à l’aide des paramètres de configuration différents de ceux stockés dans le \< *nom_projet*> .configsettings fichier. Par exemple, vous pouvez modifier la chaîne de connexion à une ou plusieurs sources de données, ou spécifier des emplacements de stockage pour des partitions ou des groupes de mesures spécifiques.  
   
- Pour modifier le déploiement des partitions et des rôles dans un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet, vous devez modifier ces informations dans le \< *nom du projet*> .configsettings fichier, comme décrit dans la procédure ci-dessous. Vous ne pouvez pas modifier les paramètres de partitions et de rôles au sein du projet, car le  *\<nom du projet >* **Pages de propriétés** boîte de dialogue de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’affiche pas ces options.  
+ Pour modifier le déploiement de partitions et des rôles dans un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] projet, vous devez modifier ces informations dans le \< *nom_projet*> .configsettings fichier, comme décrit dans la procédure ci-dessous. Vous ne pouvez pas modifier les paramètres de partitions et de rôles au sein du projet, car le  *\<nom_projet >* **Pages de propriétés** boîte de dialogue dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] n’affiche pas ces options.  
   
 > [!NOTE]  
->  Les paramètres de configuration peuvent s'appliquer à tous les objets ou uniquement aux objets nouvellement créés. Appliquez les paramètres de configuration uniquement aux objets nouvellement créés lorsque vous ajoutez des objets supplémentaires à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déployée antérieurement et que vous ne souhaitez pas recouvrir des objets existants. Pour spécifier si les paramètres de configuration s’appliquent à tous les objets ou uniquement aux nouvellement créés, définissez cette option le \< *nom du projet*> .deploymentoptions fichier. Pour plus d’informations, consultez [Spécification des options de déploiement de partitions et de rôles](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md).  
+>  Les paramètres de configuration peuvent s'appliquer à tous les objets ou uniquement aux objets nouvellement créés. Appliquez les paramètres de configuration uniquement aux objets nouvellement créés lorsque vous ajoutez des objets supplémentaires à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déployée antérieurement et que vous ne souhaitez pas recouvrir des objets existants. Pour spécifier si les paramètres de configuration s’appliquent à tous les objets ou uniquement aux nouveaux, définissez cette option dans le \< *nom_projet*> .deploymentoptions fichier. Pour plus d’informations, consultez [Spécification des options de déploiement de partitions et de rôles](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md).  
   
 #### <a name="to-change-configuration-settings-after-the-input-files-have-been-generated"></a>Pour modifier des paramètres de configuration après la génération des fichiers d'entrée  
   
@@ -52,11 +52,11 @@ ms.locfileid: "34020836"
   
      —ou—  
   
--   Modifier la \< *nom du projet*> fichier .configsettings à l’aide de n’importe quel éditeur de texte.  
+-   Modifier le \< *nom_projet*> fichier .configsettings à l’aide de n’importe quel éditeur de texte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécification de la cible d’Installation](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   
- [Spécification des partitions et des Options de déploiement de rôles](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)   
- [Spécification d’Options de traitement](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  
+ [Spécification de la cible d'installation](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   
+ [Spécification des options de déploiement de partitions et de rôles](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)   
+ [Spécification d’options de traitement](../../analysis-services/multidimensional-models/deployment-script-files-specifying-processing-options.md)  
   
   

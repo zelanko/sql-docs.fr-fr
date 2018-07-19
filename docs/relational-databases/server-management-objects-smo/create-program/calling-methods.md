@@ -1,5 +1,5 @@
 ---
-title: Appel de méthodes | Documents Microsoft
+title: Appel de méthodes | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a3629f2f5d5905ce17df7a5aa15936edaa876ef4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707707"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005828"
 ---
 # <a name="calling-methods"></a>Appel de méthodes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Les méthodes effectuent des tâches spécifiques liées à l’objet, telles que l’exécution une **point de contrôle** sur une base de données ou de la demande une liste énumérée d’ouvertures de session pour l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Méthodes effectuent des tâches spécifiques liées à l’objet, telles que l’exécution une **point de contrôle** sur une base de données ou de la demande d’une liste énumérée d’ouvertures de session pour l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Les méthodes effectuent une opération sur un objet. Les méthodes peuvent accepter des paramètres et possèdent souvent une valeur de retour. La valeur de retour peut être un type de données simple, un objet complexe ou une structure qui contient de nombreux membres.  
   
@@ -123,7 +123,7 @@ Next
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>Utilisation d'une méthode d'énumération qui retourne un objet DataTable en Visual C#  
  Cette section décrit comment appeler une méthode d’énumération et comment gérer les données dans la liste retournée <xref:System.Data.DataTable> objet.  
   
- Le <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> méthode retourne un système <xref:System.Data.DataTable> objet. Le <xref:System.Data.DataTable> objet nécessite davantage de navigation pour accéder à toutes les informations de classement disponibles sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Le <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> méthode retourne un système <xref:System.Data.DataTable> objet. Le <xref:System.Data.DataTable> objet requiert une navigation pour accéder à toutes les informations de classement disponibles sur l’instance de supplémentaire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   
@@ -218,7 +218,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## <a name="monitoring-server-processes-in-visual-basic"></a>Surveillance des processus serveur en Visual Basic  
- Vous pouvez obtenir les informations de type d’état actuelles sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] via les méthodes d’énumération. L'exemple de code utilise la méthode <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> pour découvrir des informations sur les processus en cours. Il montre également comment utiliser les colonnes et les lignes incluses dans l'objet <xref:System.Data.DataTable> retourné.  
+ Vous pouvez obtenir les informations de type d’état en cours sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] via les méthodes d’énumération. L'exemple de code utilise la méthode <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> pour découvrir des informations sur les processus en cours. Il montre également comment utiliser les colonnes et les lignes incluses dans l'objet <xref:System.Data.DataTable> retourné.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -240,7 +240,7 @@ Next
 ```
   
 ## <a name="monitoring-server-processes-in-visual-c"></a>Surveillance des processus serveur en Visual C#  
- Vous pouvez obtenir les informations de type d’état actuelles sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] via les méthodes d’énumération. L'exemple de code utilise la méthode <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> pour découvrir des informations sur les processus en cours. Il montre également comment utiliser les colonnes et les lignes incluses dans l'objet <xref:System.Data.DataTable> retourné.  
+ Vous pouvez obtenir les informations de type d’état en cours sur l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] via les méthodes d’énumération. L'exemple de code utilise la méthode <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> pour découvrir des informations sur les processus en cours. Il montre également comment utiliser les colonnes et les lignes incluses dans l'objet <xref:System.Data.DataTable> retourné.  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

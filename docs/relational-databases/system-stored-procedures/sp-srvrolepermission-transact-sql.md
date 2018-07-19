@@ -1,5 +1,5 @@
 ---
-title: sp_srvrolepermission (Transact-SQL) | Documents Microsoft
+title: sp_srvrolepermission (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db6b3367b1d1a048bb47e4d30b96970557f48939
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261508"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014760"
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
  [  **@srvrolename =** ] **'***rôle***'**  
  Nom du rôle serveur fixe pour lequel les autorisations sont retournées. *rôle* est **sysname**, avec NULL comme valeur par défaut. Si aucun rôle n'est spécifié, les autorisations de tous les rôles serveur fixes sont retournées. *rôle* peut avoir l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**sysadmin**|Administrateurs système|  
 |**securityadmin**|Administrateurs de la sécurité|  
@@ -66,7 +66,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|Nom d'un rôle serveur fixe|  
 |**Autorisation**|**sysname**|Autorisation associée **ServerRole**|  

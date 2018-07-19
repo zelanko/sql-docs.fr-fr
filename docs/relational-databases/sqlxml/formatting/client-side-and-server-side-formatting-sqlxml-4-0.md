@@ -1,5 +1,5 @@
 ---
-title: Côté client et côté serveur de mise en forme (SQLXML 4.0) | Documents Microsoft
+title: Côté client et côté serveur (SQLXML 4.0) de mise en forme | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a387f27bee5a4325709b3268c7e2deb6157768e3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708457"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003382"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Mise en forme côté client et côté serveur (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

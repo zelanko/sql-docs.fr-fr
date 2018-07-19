@@ -1,5 +1,5 @@
 ---
-title: xp_loginconfig (Transact-SQL) | Documents Microsoft
+title: xp_loginconfig (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 950a01041db936c83a5a3c799f1055ab3996aa34
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260322"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003171"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ xp_loginconfig ['config_name']
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **'** *nom_de_config* **'**  
+ **«** *nom_de_config* **»**  
  Valeur de configuration à afficher. Si *nom_de_config* est ne pas spécifié, toutes les valeurs de configuration sont indiquées. *nom_de_config* est **sysname**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**mode de connexion**|Mode de sécurité de connexion. Les valeurs possibles sont **mixte** et **l’authentification Windows**.<br /><br /> Remplacé par :<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**connexion par défaut**|Nom de l'ID de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut pour les utilisateurs autorisés de connexions approuvées (les utilisateurs sans nom de connexion correspondant). La connexion par défaut est **invité**. Cette valeur est fournie pour des raisons de compatibilité descendante.|  
 |**Domaine par défaut**|Nom du domaine Windows par défaut pour les utilisateurs réseau de connexions approuvées. Le domaine par défaut est le domaine de l'ordinateur exécutant Windows et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette valeur est fournie pour des raisons de compatibilité descendante.|  
 |**niveau d’audit**|Niveau d'audit. Les valeurs possibles sont **aucun**, **réussite**, **échec**, et **tous les**. Les audits sont enregistrés dans le journal des erreurs et dans l'Observateur d'événements Windows.|  
-|**nom d’hôte de l’ensemble**|Indique si le nom d'hôte de l'enregistrement de connexion client est remplacé par le nom d'utilisateur réseau Windows. Les valeurs possibles sont **true** ou **false**. S’il est défini, le nom d’utilisateur réseau apparaît dans la sortie de **sp_who**.|  
+|**nom d’hôte de l’ensemble**|Indique si le nom d'hôte de l'enregistrement de connexion client est remplacé par le nom d'utilisateur réseau Windows. Les valeurs possibles sont **true** ou **false**. S’il est défini, le nom d’utilisateur réseau s’affiche dans la sortie de **sp_who**.|  
 |**carte _**|Indique les caractères spéciaux Windows mappés sur le caractère de soulignement (_) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. Les valeurs possibles sont **séparateur de domaine** (valeur par défaut), **espace**, **null**, ou n’importe quel caractère unique. Cette valeur est fournie pour des raisons de compatibilité descendante.|  
 |**carte $**|Indique les caractères spéciaux Windows mappés sur le caractère $ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. Les valeurs possibles sont **séparateur de domaine**, **espace**, **null**, ou n’importe quel caractère unique. La valeur par défaut est **espace**. Cette valeur est fournie pour des raisons de compatibilité descendante.|  
 |**mapper #**|Indique les caractères spéciaux Windows mappés sur le caractère # [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. Les valeurs possibles sont **séparateur de domaine**, **espace**, **null**, ou n’importe quel caractère unique. La valeur par défaut est le trait d'union. Cette valeur est fournie pour des raisons de compatibilité descendante.|  
@@ -66,7 +66,7 @@ xp_loginconfig ['config_name']
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Valeur de configuration|  
 |**valeur de configuration**|**sysname**|Paramètre de la valeur de configuration|  
@@ -77,7 +77,7 @@ xp_loginconfig ['config_name']
  Pour définir le mode de connexion et le niveau d'audit, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’autorisation CONTROL sur la **master** base de données.  
+ Nécessite l’autorisation CONTROL sur le **master** base de données.  
   
 ## <a name="examples"></a>Exemples  
   

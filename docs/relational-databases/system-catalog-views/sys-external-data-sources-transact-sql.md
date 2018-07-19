@@ -1,5 +1,5 @@
 ---
-title: Sys.external_data_sources (Transact-SQL) | Documents Microsoft
+title: Sys.external_data_sources (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 944a8096c20d6ab825503d4db9f824ba0bbe208e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181795"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001231"
 ---
 # <a name="sysexternaldatasources-transact-sql"></a>Sys.external_data_sources (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -32,16 +32,16 @@ ms.locfileid: "33181795"
   
  Contient une ligne pour chaque source de données externe sur le serveur pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-|Nom de la colonne|Type de données| Description|Plage|  
+|Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|data_source_id|**int**|ID d’objet pour la source de données externe.||  
-|name|**sysname**|Nom de la source de données externe.||  
-|location|**nvarchar(4000)**|La chaîne de connexion, qui inclut le protocole, adresse IP et port pour la source de données externe.||  
-|type_desc|**nvarchar(255)**|Type de source de données affiché sous forme de chaîne.|HADOOP, RDBMS, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
+|data_source_id|**Int**|ID d’objet pour la source de données externe.||  
+|NAME|**sysname**|Nom de la source de données externe.||  
+|location|**nvarchar(4000)**|La chaîne de connexion, qui inclut le protocole, une adresse IP et un port pour la source de données externe.||  
+|type_desc|**nvarchar(255)**|Type de source de données affichée sous forme de chaîne.|HADOOP, RDBMS, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
 |Type|**tinyint**|Type de source de données affiché sous la forme d’un nombre.|0 - HADOOP<br /><br /> 1 - SGBDR<br /><br /> 2 - SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
-|resource_manager_location|**nvarchar(4000)**|Tapez HADOOP, l’adresse IP et le port de l’emplacement du Gestionnaire de ressources Hadoop. Cela est utilisé pour l’envoi d’un travail sur une source de données Hadoop.<br /><br /> NULL pour les autres types de sources de données externes.||  
-|credential_id|**int**|ID d’objet de la base de données étendue des informations d’identification utilisées pour se connecter à la source de données externe.||  
-|database_name|**sysname**|Pour type SGBDR, le nom de la base de données distante. Pour type, SHARD_MAP_MANAGER, le nom de la base de données du Gestionnaire de mappage partitions. NULL pour les autres types de sources de données externes.||  
+|resource_manager_location|**nvarchar(4000)**|Pour, tapez HADOOP, l’adresse IP et le port de l’emplacement du Gestionnaire de ressources Hadoop. Il est utilisé pour l’envoi d’un travail sur une source de données Hadoop.<br /><br /> NULL pour les autres types de sources de données externes.||  
+|credential_id|**Int**|L’ID d’objet de la base de données étendue des informations d’identification utilisées pour se connecter à la source de données externe.||  
+|database_name|**sysname**|Pour type SGBDR, le nom de la base de données distante. Pour type SHARD_MAP_MANAGER, le nom de la base de données du Gestionnaire de carte partitions. NULL pour les autres types de sources de données externes.||  
 |shard_map_name|**sysname**|Pour type SHARD_MAP_MANAGER, le nom de la carte de partitions. NULL pour les autres types de sources de données externes.||  
   
 ## <a name="permissions"></a>Autorisations  

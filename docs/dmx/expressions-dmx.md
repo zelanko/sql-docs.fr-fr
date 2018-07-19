@@ -1,5 +1,5 @@
 ---
-title: Expressions (DMX) | Documents Microsoft
+title: Expressions (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 952a99440dd866f794eca7fe04bd3c461eb1e3f1
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841992"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992661"
 ---
 # <a name="expressions-dmx"></a>Expressions (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Dans les Extensions DMX (Data Mining), une expression est une combinaison d’identificateurs, de valeurs et d’opérateurs qui [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut évaluer pour obtenir un résultat.  
+  Dans les Extensions DMX (Data Mining), une expression est une combinaison d’identificateurs, les valeurs et les opérateurs qui [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut évaluer pour obtenir un résultat.  
   
  Une expression DMX peut être simple ou complexe. Une expression simple peut être l'un des éléments suivants :  
   

@@ -1,5 +1,5 @@
 ---
-title: vide la fonction (XQuery) | Documents Microsoft
+title: vide la fonction (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f312276737406070eb07f371d5fb1c807b8e24b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077206"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040497"
 ---
-# <a name="functions-on-sequences---empty"></a>Fonctions sur les séquences - vides
+# <a name="functions-on-sequences---empty"></a>Fonctions sur les séquences : vides
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne la valeur True si la valeur de *$arg* est une séquence vide. Sinon, cette fonction renvoie la valeur False.  
@@ -47,13 +47,13 @@ fn:empty($arg as item()*) as xs:boolean
  Séquence d'éléments. Si la séquence est vide, la fonction renvoie la valeur True. Sinon, cette fonction renvoie la valeur False.  
   
 ## <a name="remarks"></a>Notes  
- Le **fn :EXISTS()** fonction n’est pas prise en charge. En guise d’alternative, le **not()** fonction peut être utilisée.  
+ Le **fn :EXISTS()** fonction n’est pas prise en charge. Comme alternative, la **not()** fonction peut être utilisée.  
   
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Utilisation de la fonction XQuery empty() pour déterminer la présence d'un attribut  
- Dans le processus de fabrication pour un modèle de produit 7, cette requête retourne tous les postes de travail qui n’ont pas un **MachineHours** attribut.  
+ Dans le processus de fabrication du modèle de produit 7, cette requête retourne tous les postes de travail qui n’ont pas un **MachineHours** attribut.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -72,7 +72,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID      Result          
@@ -104,7 +104,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID Result                         

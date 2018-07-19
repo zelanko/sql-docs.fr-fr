@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan_job (Transact-SQL) | Documents Microsoft
+title: sp_add_maintenance_plan_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 200638dc2e227ad2b8428f668deb424ab3a277c2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238347"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041087"
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
  Spécifie l'identificateur du plan de maintenance. *plan_id* est **uniqueidentifier**, et doit être un ID valide.  
   
  [  **@job_id =**] **'***job_id***'**  
- Indique l'ID du travail à associer au plan de maintenance. *job_id* est **uniqueidentifier**, et doit être un ID valide. Pour créer un ou plusieurs travaux, exécutez **sp_add_job**, ou utilisez SQL Server Management Studio.  
+ Indique l'ID du travail à associer au plan de maintenance. *job_id* est **uniqueidentifier**, et doit être un ID valide. Pour créer un travail ou les travaux, exécutez **sp_add_job**, ou utiliser SQL Server Management Studio.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

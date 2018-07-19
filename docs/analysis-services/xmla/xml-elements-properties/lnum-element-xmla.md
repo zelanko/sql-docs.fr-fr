@@ -1,5 +1,5 @@
 ---
-title: Élément LNum (XMLA) | Documents Microsoft
+title: Élément LNum (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49ab7672d51a90e30701666fbf391ffec6060f29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575471"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994941"
 ---
 # <a name="lnum-element-xmla"></a>Élément LNum (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34575471"
 </HierarchyInfo>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "34575471"
 ## <a name="remarks"></a>Notes  
  Pour **HierarchyInfo** éléments, le **LNum** élément contient le nom de la propriété qui fournit les positions ordinales des niveaux de la hiérarchie. Sa valeur est équivalente à la propriété LEVEL_NUMBER définie pour les ensembles de lignes d'axe dans la spécification OLE DB pour OLAP.  
   
- Pour **membre** éléments, le **LNum** élément contient la position ordinale base zéro, à partir du niveau racine de la hiérarchie, du membre représenté par le parent [membre](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) élément. Une valeur égale à zéro représente le niveau racine de la hiérarchie.  
+ Pour **membre** éléments, le **LNum** élément contient la position ordinale base zéro, à partir du niveau racine de la hiérarchie, du membre représenté par le parent [membre](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)élément. Une valeur égale à zéro représente le niveau racine de la hiérarchie.  
   
 ## <a name="see-also"></a>Voir aussi
  [Propriétés &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: Sys.partition_schemes (Transact-SQL) | Documents Microsoft
+title: Sys.partition_schemes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,21 +26,21 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 710a39957a01d2846dfa940230f350538ac4353d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179835"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001072"
 ---
 # <a name="syspartitionschemes-transact-sql"></a>sys.partition_schemes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Contient une ligne pour chaque espace de données est un schéma de partition avec **type** = PS.  
+  Contient une ligne pour chaque espace de données est un schéma de partition, avec **type** = PS.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**\<héritée de colonnes >**||Hérite des colonnes de [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md).|  
-|**function_id supérieures**|**int**|ID de la fonction de partition utilisée dans le schéma.|  
+|**function_id**|**Int**|ID de la fonction de partition utilisée dans le schéma.|  
   
  Pour obtenir la liste des colonnes qui hérite de cette vue, consultez [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   

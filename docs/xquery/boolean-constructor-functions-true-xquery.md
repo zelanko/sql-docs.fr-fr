@@ -1,5 +1,5 @@
 ---
-title: True (fonction) (XQuery) | Documents Microsoft
+title: True (fonction) (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 349b2f99f5db35ca9d44e3ac8459030b7f7ba55f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077586"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014029"
 ---
-# <a name="boolean-constructor-functions---true-xquery"></a>Fonctions de constructeur booléennes - true (XQuery)
+# <a name="boolean-constructor-functions---true-xquery"></a>Fonctions constructeurs booléennes : true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne la valeur xs:boolean True. Ceci équivaut à `xs:boolean("1")`.  
@@ -45,7 +45,7 @@ fn:true() as xs:boolean
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. Utilisation de la fonction booléenne XQuery true()  
- L’exemple suivant interroge non typé **xml** variable. L’expression dans le **value()** méthode retourne la valeur booléenne **true()** si « aaa » est la valeur d’attribut. Le **value()** méthode de la **xml** type de données convertit la valeur booléenne en bit et le retourne.  
+ L’exemple suivant interroge non typé **xml** variable. L’expression dans le **value()** méthode retourne la valeur booléenne **true()** si « aaa » est la valeur d’attribut. Le **value()** méthode de la **xml** convertit la valeur booléenne en bit de type de données et le retourne.  
   
 ```  
 DECLARE @x XML  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_clr_properties (Transact-SQL) | Documents Microsoft
+title: Sys.dm_clr_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f95f4d1596d84648034b51833738a26817f5e96b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465475"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998001"
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "34465475"
   
  Le **sys.dm_clr_properties** vue contient les **nom** et **valeur** colonnes. Chaque ligne de cette vue fournit des détails sur une propriété du CLR hébergé. Utilisez cette vue pour recueillir des informations sur le CLR hébergé, telles que le répertoire d'installation du CLR, sa version ou encore son état actuel. Cette vue peut vous aider à déterminer que le code d'intégration CLR ne fonctionne pas en raison de problèmes d'installation du CLR sur le serveur.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**nvarchar(128)**|Nom de la propriété.|  
-|**valeur**|**nvarchar(128)**|Valeur de la propriété.|  
+|**value**|**nvarchar(128)**|Valeur de la propriété.|  
   
-## <a name="properties"></a>Propriétés  
- Le **répertoire** propriété indique le répertoire .NET Framework a été installé sur le serveur. Il existe plusieurs façons d'installer le .NET Framework sur le serveur et la valeur de cette propriété identifie l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est utilisée.  
+## <a name="properties"></a>Properties  
+ Le **directory** propriété indique le répertoire .NET Framework a été installé sur le serveur. Il existe plusieurs façons d'installer le .NET Framework sur le serveur et la valeur de cette propriété identifie l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est utilisée.  
   
  Le **version** propriété indique la version du .NET Framework et le CLR hébergé sur le serveur.  
   
@@ -62,13 +62,13 @@ ms.locfileid: "34465475"
   
 -   CLR is stopped.  
   
- Le **Mscoree n’est pas chargé** et **Mscoree est chargé** États afficher la progression de l’initialisation du CLR hébergé au démarrage du serveur et ne sont pas susceptibles d’être consultés.  
+ Le **Mscoree n’est pas chargé** et **Mscoree est chargé** états indiquent la progression de l’initialisation du CLR hébergée sur le démarrage du serveur et ne sont pas susceptibles d’être affichés.  
   
- Le **version CLR de verrouillage avec mscoree** état peut se produire lorsque le CLR hébergé n’est pas utilisé et, par conséquent, il n'a pas encore été initialisé. Le CLR hébergé est initialisé la première fois une instruction DDL (tel que [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) ou un objet de base de données managés est exécuté.  
+ Le **version CLR verrouillée avec mscoree** état peut se produire lorsque le CLR hébergé n’est pas utilisé et, par conséquent, il n’a pas encore été initialisé. Le CLR hébergé est initialisé la première fois une instruction DDL (tel que [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) ou un objet de base de données managé est exécuté.  
   
- Le **CLR est initialisé** état indique que le CLR hébergé a été correctement initialisé. Cela n'indique pas si l'exécution de code CLR utilisateur a été activée. Si l’exécution de code CLR utilisateur est d’abord activé et désactivé à l’aide de la [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) une procédure stockée, la valeur d’état sera **CLR est initialisé**.  
+ Le **CLR est initialisé** état indique que le CLR hébergé a été correctement initialisé. Cela n'indique pas si l'exécution de code CLR utilisateur a été activée. Si l’exécution de code CLR utilisateur est d’abord activée et désactivée puis à l’aide du [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) une procédure stockée, la valeur d’état est également **CLR est initialisé**.  
   
- Le **CLR Échec d’initialisation définitivement** état indique que CLR hébergé échouée de l’initialisation. Cela est probablement dû à une insuffisance de mémoire ou à l'échec de la négociation d'hébergement entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR. Si tel est le cas, le message d'erreur 6512 ou 6513 est déclenché.  
+ Le **définitivement l’échec de l’initialisation du CLR** état indique que CLR hébergé échouée de l’initialisation. Cela est probablement dû à une insuffisance de mémoire ou à l'échec de la négociation d'hébergement entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR. Si tel est le cas, le message d'erreur 6512 ou 6513 est déclenché.  
   
  Le **CLR est arrêté état** est visible uniquement lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’arrêt.  
   

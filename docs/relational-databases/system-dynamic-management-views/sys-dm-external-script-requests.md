@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_external_script_requests | Documents Microsoft
+title: Sys.dm_external_script_requests | Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc6db4816e4ba890e132600874d5db21aa190c02
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467486"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005681"
 ---
 # <a name="sysdmexternalscriptrequests"></a>Sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ Renvoie une ligne pour chaque compte de travail actif qui exécute un script ext
 >  
 >  Cette vue de gestion dynamique est disponible uniquement si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution du script externe. Pour plus d’informations sur la manière de procéder pour les scripts R, consultez [Configurer SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md).  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**Identificateur unique**|ID du processus qui a envoyé la demande de script externe. Cela correspond à l’ID de processus comme reçu par [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**Identificateur unique**|ID du processus qui a envoyé la demande de script externe. Cela correspond à l’ID de processus, comme reçu par [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |langue|**nvarchar**|Mot clé qui représente un langage de script pris en charge. Actuellement, seul `R` est pris en charge.|  
-|degree_of_parallelism|**int**|Nombre indiquant le nombre de traitements parallèles qui ont été créés. Cette valeur peut être différente du nombre de traitements parallèles qui ont été demandés.|  
+|degree_of_parallelism|**Int**|Nombre indiquant le nombre de traitements parallèles qui ont été créés. Cette valeur peut être différente du nombre de traitements parallèles qui ont été demandés.|  
 |external_user_name|**nvarchar**|Le compte de travail Windows sous lequel le script a été exécuté.|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -82,13 +82,13 @@ Résultats
 
 external_script_request_id  |langue  |degree_of_parallelism  |external_user_name  
 ---------|---------|---------|---------
-183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01       
+183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |       1   |  MSSQLSERVER01       
 
 
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   

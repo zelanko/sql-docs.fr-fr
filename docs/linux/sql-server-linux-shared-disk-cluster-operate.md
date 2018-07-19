@@ -1,5 +1,5 @@
 ---
-title: Utiliser l’instance de cluster de basculement - SQL Server sur Linux | Documents Microsoft
+title: Utiliser l’instance de cluster de basculement - SQL Server sur Linux | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,13 +13,13 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: e48f0e7150fa24361c8b854ced6f90b22448a68b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34320510"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001682"
 ---
-# <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Fonctionnement de SQL Server sur Linux - instance de cluster de basculement
+# <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Utiliser l’instance de cluster de basculement - SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -60,7 +60,7 @@ Pour effectuer un basculement manuel, sur des serveurs Red Hat Enterprise Linux 
 ## <a name = "#slesFailover"></a> Basculement manuel (SLES)
 
 
-Dans Suse Linux Enterprise Server (SLES), utilisez la commande `migrate` pour basculer manuellement une instance FCI SQL Server. Par exemple :
+Dans Suse Linux Enterprise Server (SLES), utilisez la commande `migrate` pour basculer manuellement une instance FCI SQL Server. Exemple :
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>

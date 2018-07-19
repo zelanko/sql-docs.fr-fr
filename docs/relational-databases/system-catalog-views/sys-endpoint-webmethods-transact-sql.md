@@ -1,5 +1,5 @@
 ---
-title: Sys.endpoint_webmethods (Transact-SQL) | Documents Microsoft
+title: Sys.endpoint_webmethods (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 56939639112a61054b6896a00a978f84fc4c51fb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181725"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998062"
 ---
 # <a name="sysendpointwebmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "33181725"
   
  Contient une ligne pour chaque méthode SOAP définie sur un point de terminaison HTTP SOAP. La combinaison des colonnes endpoint_id et espace de noms est unique.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|endpoint_id|**int**|ID du point de terminaison sur lequel la méthode Web est définie.|  
+|endpoint_id|**Int**|ID du point de terminaison sur lequel la méthode Web est définie.|  
 |espace de noms|**nvarchar(384)**|Espace de noms de la méthode Web.|  
 |method_alias|**nvarchar(64)**|Alias de la méthode.<br /><br /> Remarque : [!INCLUDE[tsql](../../includes/tsql-md.md)] identificateurs autorisent des caractères qui ne sont pas autorisées dans les noms de méthode WSDL.<br /><br /> L'alias permet de mapper le nom exposé dans la description WSDL du point de terminaison avec l'objet exécutable [!INCLUDE[tsql](../../includes/tsql-md.md)] sous-jacent réel qui est appelé lorsque la méthode Web est invoquée.|  
-|object_name|**nvarchar(776)**|Nom d'objet vers lequel la méthode Web est redirigée, tel que spécifié dans l'option NAME =. Parties du nom sont séparés par un point (.) et délimités par des crochets, `[``]`.<br /><br /> Le nom d'objet doit être composé de trois parties, tel que spécifié dans l'option WSDL.|  
+|object_name|**nvarchar(776)**|Nom d'objet vers lequel la méthode Web est redirigée, tel que spécifié dans l'option NAME =. Parties de noms sont séparés par un point (.) et délimités par des crochets, `[``]`.<br /><br /> Le nom d'objet doit être composé de trois parties, tel que spécifié dans l'option WSDL.|  
 |result_schema|**tinyint**|Option qui détermine le schéma XSD éventuellement retourné avec une réponse.<br /><br /> 0 = Aucun<br /><br /> 1 = standard<br /><br /> 2 = par défaut|  
 |result_schema_desc|**nvarchar(60)**|Description de l'option qui détermine le schéma XSD éventuellement retourné avec une réponse.<br /><br /> Aucune<br /><br /> STANDARD<br /><br /> DEFAULT|  
 |result_format|**tinyint**|Option qui détermine la mise en forme des résultats dans la réponse.<br /><br /> 1 = ALL_RESULTS<br /><br /> 2 = ROWSETS_ONLY<br /><br /> 3 = AUCUNE|  

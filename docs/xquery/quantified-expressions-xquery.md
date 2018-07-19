@@ -1,5 +1,5 @@
 ---
-title: Quantification des Expressions (XQuery) | Documents Microsoft
+title: Quantifiée Expressions (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -31,10 +31,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9fa6c22aafdd0279c9205f36902bac1ef18c77df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004631"
 ---
 # <a name="quantified-expressions-xquery"></a>Expressions quantifiées (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
  Vous pouvez utiliser ces expressions dans une requête pour appliquer explicitement une quantification existentielle ou universelle à une expression sur une ou plusieurs séquences. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'expression de la clause `satisfies` doit aboutir à l'un des résultats suivants : une séquence de nœuds, une séquence vide ou une valeur booléenne. La valeur booléenne effective du résultat de cette expression est utilisée dans la quantification. La quantification existentielle qui utilise **certains** renvoie la valeur True si au moins une des valeurs liées par le quantificateur possède un résultat True dans l’expression de satisfaction. La quantification universelle qui utilise **chaque** doit avoir la valeur True pour toutes les valeurs liées par le quantificateur.  
   
- Par exemple, la requête suivante vérifie chaque \<emplacement > élément pour voir s’il dispose d’un attribut LocationID.  
+ Par exemple, la requête suivante vérifie chaque \<emplacement > élément pour voir si elle possède un attribut LocationID.  
   
 ```  
 SELECT Instructions.query('  
@@ -71,13 +72,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Étant donné que LocationID est un attribut obligatoire de le \<emplacement > élément, vous obtenez le résultat attendu :  
+ Étant donné que LocationID est un attribut requis de le \<emplacement > élément, vous obtenez le résultat attendu :  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- Au lieu d’utiliser le [méthode query()](../t-sql/xml/query-method-xml-data-type.md), vous pouvez utiliser la [méthode value()](../t-sql/xml/value-method-xml-data-type.md) pour renvoyer les résultats à l’univers relationnel, comme indiqué dans la requête suivante. La requête renvoie True si tous les sites de production possèdent l'attribut LocationID. Sinon, elle renvoie False.  
+ Au lieu d’utiliser le [méthode query()](../t-sql/xml/query-method-xml-data-type.md), vous pouvez utiliser la [méthode value()](../t-sql/xml/value-method-xml-data-type.md) pour retourner le résultat à l’univers relationnel, comme indiqué dans la requête suivante. La requête renvoie True si tous les sites de production possèdent l'attribut LocationID. Sinon, elle renvoie False.  
   
 ```  
 SELECT Instructions.value('  

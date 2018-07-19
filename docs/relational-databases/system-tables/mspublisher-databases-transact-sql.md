@@ -1,5 +1,5 @@
 ---
-title: MSpublisher_databases (Transact-SQL) | Documents Microsoft
+title: MSpublisher_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,23 +26,23 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 130a176655a7574903e85aa6cfa55037ca977448
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004776"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993501"
 ---
 # <a name="mspublisherdatabases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSpublisher_databases** table contient une ligne pour chaque paire base de données de serveur de publication/serveur de publication pris en charge par le serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|L’ID du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
-|**id**|**int**|L’ID de la ligne.|  
-|**publisher_engine_edition**|**int**|Édition du serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pouvant prendre l'une des valeurs suivantes :<br /><br /> **10** = Édition personnelle<br /><br /> **11** = desktop Engine (MSDE)<br /><br /> **20** = standard<br /><br /> **21** = groupe de travail<br /><br /> **30** = Enterprise (Evaluation)<br /><br /> **31** = developer<br /><br /> **40** = express (Express ne peut pas être un serveur de publication. Cette valeur est présente par souci d'exhaustivité.)|  
+|**id**|**Int**|L’ID de la ligne.|  
+|**publisher_engine_edition**|**Int**|Édition du serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pouvant prendre l'une des valeurs suivantes :<br /><br /> **10** = Édition personnelle<br /><br /> **11** = desktop Engine (MSDE)<br /><br /> **20** = standard<br /><br /> **21** = groupe de travail<br /><br /> **30** = Enterprise (Evaluation)<br /><br /> **31** = developer<br /><br /> **40** = express (Express ne peut pas être un serveur de publication. Cette valeur est présente par souci d'exhaustivité.)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

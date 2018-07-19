@@ -1,5 +1,5 @@
 ---
-title: Fonctions XQuery impliquant le Type de données xml | Documents Microsoft
+title: Fonctions XQuery impliquant le Type de données xml | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -25,16 +25,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: db1906027692ec40974668f48521588b2231cebd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077728"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997111"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Fonctions XQuery impliquant le type de données xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique et ses sous-rubriques décrivent les fonctions que vous pouvez utiliser lors de la spécification XQuery sur le **xml** type de données. Pour les spécifications W3C, consultez [ http://www.w3.org/TR/2004/WD-xpath-functions-20040723 ](http://go.microsoft.com/fwlink/?LinkId=4873).  
+  Cette rubrique et ses sous-rubriques décrivent les fonctions que vous pouvez utiliser lors de la spécification XQuery par rapport à la **xml** type de données. Pour les spécifications W3C, consultez [ http://www.w3.org/TR/2004/WD-xpath-functions-20040723 ](http://go.microsoft.com/fwlink/?LinkId=4873).  
   
  Les fonctions XQuery appartiennent à la http://www.w3.org/2004/07/xpath-functions espace de noms. Les spécifications W3C utilisent le préfixe d'espace de noms « fn: » pour décrire ces fonctions. Vous n'avez pas besoin de spécifier ce préfixe explicitement lorsque vous utilisez les fonctions. Par conséquent, et dans un souci de lisibilité, les préfixes d'espace de noms ne sont généralement pas utilisés dans cette documentation.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "33077728"
   
 |Catégorie|Nom de fonction|  
 |--------------|-------------------|  
-|[Fonctions sur des valeurs numériques](http://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[Plafond](../xquery/numeric-values-functions-ceiling.md)|  
+|[Fonctions sur des valeurs numériques](http://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[plafond](../xquery/numeric-values-functions-ceiling.md)|  
 ||[Floor](../xquery/numeric-values-functions-floor.md)|  
-||[Arrondir](../xquery/numeric-values-functions-round.md)|  
+||[arrondir](../xquery/numeric-values-functions-round.md)|  
 |[Fonctions XQuery sur des valeurs de chaîne](http://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
 ||[contient](../xquery/functions-on-string-values-contains.md)|  
 ||[sous-chaîne](../xquery/functions-on-string-values-substring.md)|  
@@ -52,9 +52,9 @@ ms.locfileid: "33077728"
 ||[longueur de chaîne](../xquery/functions-on-string-values-string-length.md)|  
 ||[Fonction UPPER-case &#40;XQuery&#41;](../xquery/functions-on-string-values-upper-case.md)|  
 |Fonctions sur des valeurs booléennes|[pas](../xquery/functions-on-boolean-values-not-function.md)|  
-|[Fonctions sur les nœuds](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[number](../xquery/functions-on-nodes-number.md)|  
-||[Fonction de local-name (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
-||[uri de l’espace de noms, fonction (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
+|[Fonctions sur les nœuds](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[Nombre](../xquery/functions-on-nodes-number.md)|  
+||[Fonction local-name (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
+||[Fonction namespace-uri (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
 |[Fonctions relatives au contexte](http://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
 ||[position](../xquery/context-functions-position-xquery.md)|  
 |[Fonctions sur les séquences](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[vide](../xquery/functions-on-sequences-empty.md)|  
@@ -71,8 +71,8 @@ ms.locfileid: "33077728"
 |[Fonctions de constructeur booléennes &#40;XQuery&#41;](http://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[Fonction True (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[Fonction False (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
 |[Fonctions relatives aux QName &#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[Expanded-QName (XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
-||[local-nom-de-QName (XQuery)](../xquery/functions-related-to-qnames-local-name-from-qname.md)|  
-||[espace de noms uri à partir de QName (XQuery)](../xquery/functions-related-to-qnames-namespace-uri-from-qname.md)|  
+||[local-nom-from-QName (XQuery)](../xquery/functions-related-to-qnames-local-name-from-qname.md)|  
+||[namespace-uri-from-QName (XQuery)](../xquery/functions-related-to-qnames-namespace-uri-from-qname.md)|  
 |[Fonctions d’Extension XQuery SQL Server](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)|[fonction SQL :Column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md)|  
 ||[fonction SQL :variable() (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   

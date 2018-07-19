@@ -1,5 +1,5 @@
 ---
-title: sp_execute (Transact-SQL) | Documents Microsoft
+title: sp_execute (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c96985d6bcc23427f67cdb8c6cb0fea360aba69a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262762"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041167"
 ---
 # <a name="spexecute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Exécute une commande préparée [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction à l’aide d’un handle spécifié et la valeur du paramètre facultatif. sp_execute est appelée en spécifiant ID = 12 dans un paquet de stream (TDS) de données tabulaires.  
+  Exécute une commande préparée [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction à l’aide d’un handle spécifié et la valeur du paramètre facultatif. sp_execute est appelée en spécifiant ID = 12 dans un paquet data stream (TDS).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,14 +47,14 @@ sp_execute handle OUTPUT
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Handle*  
- Est la *gérer* valeur retournée par sp_prepare. *gérer les* est un paramètre obligatoire qui demande **int** valeur d’entrée.  
+ *handle*  
+ Est le *gérer* valeur retournée par sp_prepare. *gérer* est un paramètre obligatoire qui appelle pour **int** valeur d’entrée.  
   
  *bound_param*  
- Indique l'utilisation de paramètres supplémentaires. *bound_param* est un paramètre obligatoire qui requiert des valeurs d’entrée de tout type de données pour indiquer des paramètres supplémentaires pour la procédure.  
+ Indique l'utilisation de paramètres supplémentaires. *bound_param* est un paramètre obligatoire qui demande à entrer des valeurs de n’importe quel type de données pour indiquer des paramètres supplémentaires pour la procédure.  
   
 > [!NOTE]  
->  *bound_param* doivent correspondre aux déclarations effectuées par le sp_prepare*params* valeur et peut être sous la forme  *@name = valeur* ou *valeur*.  
+>  *bound_param* doivent correspondre aux déclarations effectuées par sp_prepare*params* valeur et peut être sous la forme  *@name = value* ou *valeur*.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

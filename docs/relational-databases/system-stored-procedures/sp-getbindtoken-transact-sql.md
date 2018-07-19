@@ -1,5 +1,5 @@
 ---
-title: sp_getbindtoken (Transact-SQL) | Documents Microsoft
+title: sp_getbindtoken (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ecf272b61591124b6e7ce920ecf1c8b481a6ac5e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241827"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014914"
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33241827"
   Retourne un identificateur unique pour la transaction. Il s'agit en fait d'une chaîne utilisée pour lier des sessions à l'aide de sp_bindsession.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt MARS (Multiple Active Results Sets) ou des transactions distribuées. Pour plus d’informations, consultez [à l’aide de Multiple Active Result Sets & #40 ; MARS & #41 ; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt MARS (Multiple Active Results Sets) ou des transactions distribuées. Pour plus d’informations, consultez [à l’aide de Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +51,13 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  Jeton à utiliser pour lier les sessions. *return_value* est **varchar (255)** sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- sp_getbindtoken retourne un jeton valid uniquement lorsque la procédure stockée est exécutée dans une transaction active. Dans le cas contraire, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retournera un message d’erreur. Par exemple :  
+ sp_getbindtoken retourne un jeton valide uniquement lorsque la procédure stockée est exécutée dans une transaction active. Sinon, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retournera un message d’erreur. Exemple :  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -70,7 +70,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Lorsque sp_getbindtoken est utilisée pour inscrire une connexion de transaction distribuée dans une transaction ouverte, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le même jeton. Par exemple :  
+ Lorsque sp_getbindtoken est utilisée pour inscrire une connexion de transaction distribuée dans une transaction ouverte, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le même jeton. Exemple :  
   
 ```  
 USE AdventureWorks2012;  
@@ -131,7 +131,7 @@ SELECT @bind_token AS Token;
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_bindsession & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+ [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [srv_getbindtoken &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   

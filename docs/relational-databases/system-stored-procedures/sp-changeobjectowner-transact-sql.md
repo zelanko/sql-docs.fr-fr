@@ -1,5 +1,5 @@
 ---
-title: sp_changeobjectowner (Transact-SQL) | Documents Microsoft
+title: sp_changeobjectowner (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db97bba80119f8d460b221bcbfdb4932e1eee692
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238536"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005721"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,18 +54,18 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
  Nom d'une table, d'une vue, d'une fonction définie par l'utilisateur ou d'une procédure stockée dans la base de données actuelle. *objet* est un **nvarchar(776)**, sans valeur par défaut. *objet* peut être qualifié avec le propriétaire de l’objet existant, sous la forme *propriétaire_existant.objet ***.*** objet* si le schéma et son propriétaire ont le même nom.  
   
  [  **@newowner=**] **' *** propriétaire* **'**  
- Nom du compte de sécurité qui sera le nouveau propriétaire de l'objet. *propriétaire* est **sysname**, sans valeur par défaut. *propriétaire* doit être un utilisateur de base de données valide, le rôle de serveur, [!INCLUDE[msCoName](../../includes/msconame-md.md)] connexion Windows ou du groupe Windows ayant accès à la base de données actuelle. Un utilisateur de base de données est créé si le nouveau propriétaire est un utilisateur Windows ou un groupe Windows pour lequel il n'existe pas de principal de base de données correspondant.  
+ Nom du compte de sécurité qui sera le nouveau propriétaire de l'objet. *propriétaire* est **sysname**, sans valeur par défaut. *propriétaire* doit être un utilisateur de base de données valide, le rôle de serveur, [!INCLUDE[msCoName](../../includes/msconame-md.md)] connexion de Windows, ou un groupe Windows ayant accès à la base de données actuelle. Un utilisateur de base de données est créé si le nouveau propriétaire est un utilisateur Windows ou un groupe Windows pour lequel il n'existe pas de principal de base de données correspondant.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_changeobjectowner** supprime toutes les autorisations existantes de l’objet. Vous devez réappliquer toutes les autorisations que vous souhaitez conserver après l’exécution **sp_changeobjectowner**. Par conséquent, nous vous recommandons de générer le script des autorisations existantes avant d’exécuter **sp_changeobjectowner**. Après avoir modifié la propriété de l'objet, vous pouvez utiliser le script afin de réappliquer les autorisations. Vous devez modifier le propriétaire de l'objet dans le script des autorisations avant l'exécution.  
+ **sp_changeobjectowner** supprime toutes les autorisations existantes de l’objet. Vous devrez réappliquer toutes les autorisations que vous souhaitez conserver après l’exécution **sp_changeobjectowner**. Par conséquent, nous vous recommandons de scripter les autorisations existantes avant d’exécuter **sp_changeobjectowner**. Après avoir modifié la propriété de l'objet, vous pouvez utiliser le script afin de réappliquer les autorisations. Vous devez modifier le propriétaire de l'objet dans le script des autorisations avant l'exécution.  
   
  Pour modifier le propriétaire d'un élément sécurisable, utilisez ALTER AUTHORIZATION. Pour modifier un schéma, utilisez ALTER SCHEMA.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance au **db_owner** fixe du rôle de base de données, ou l’appartenance à la fois dans le **db_ddladmin** rôle fixe de base de données et la **db_securityadmin** fixe de base de données ainsi que l’autorisation CONTROL sur l’objet.  
+ Nécessite l’appartenance au **db_owner** fixe du rôle de base de données, ou l’appartenance à la fois dans le **db_ddladmin** rôle de base de données fixe et le **db_securityadmin** rôle de base de données fixe et également autorisation CONTROL sur l’objet.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant modifie le propriétaire de la `authors` table `Corporate\GeorgeW`.  

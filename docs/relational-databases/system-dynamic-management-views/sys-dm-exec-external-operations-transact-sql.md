@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_external_operations (Transact-SQL) | Documents Microsoft
+title: Sys.dm_exec_external_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,27 +27,27 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 75ea1d3250c88ae40abcf34280a68c7384f6557e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463215"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997961"
 ---
 # <a name="sysdmexecexternaloperations-transact-sql"></a>Sys.dm_exec_external_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Capture des informations sur les opérations de PolyBase externes.  
+  Capture des informations sur les opérations externes PolyBase.  
   
-|Nom de la colonne|Type de données| Description|Plage|  
+|Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Identificateur de requête unique associé de requête PolyBase|Consultez le code dans [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|Index de l’étape de requête|Consultez step_index dans [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
-|type de messages_|**nvarchar(128)**|Décrit une opération de Hadoop ou autres externe|'Opération externe Hadoop'|  
-|nom de messages_|**nvarchar(4000)**|Indique comment l’état du travail sous forme de pourcentage (la quantité est l’entrée consommée)|0-1 – multipliée par le facteur de 100 (terminé)|  
-|progression de Map_|**float**|Indique la façon dont l’état d’une réduction de la tâche en pourcentage, le cas échéant|0-1 – multipliée par le facteur de 100 (terminé)|  
+|execution_id|**nvarchar(32)**|Identificateur de requête unique associé de requête PolyBase|Consultez les ID dans [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**Int**|Index de l’étape de requête|Consultez step_index dans [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
+|type de messages_|**nvarchar(128)**|Décrit une opération de Hadoop ou autre opération externe|'Opération Hadoop externe'|  
+|nom de messages_|**nvarchar(4000)**|Indique comment l’état du travail en pourcentage (la quantité est l’entrée consommée)|0-1 – multiplié par le facteur de 100 (terminée)|  
+|progression de Map_|**float**|Indique la façon dont l’état d’une réduction du travail en pourcentage, le cas échéant|0-1 – multiplié par le facteur de 100 (terminée)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [PolyBase, résolution des problèmes avec les vues de gestion dynamique](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Résolution des problèmes avec les vues de gestion dynamique de PolyBase](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées à la base de données &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

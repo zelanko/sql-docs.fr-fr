@@ -1,5 +1,5 @@
 ---
-title: 'Exclusion d’éléments de schéma du Document XML en utilisant sql : mappé | Documents Microsoft'
+title: 'Exclusion d’éléments de schéma du Document XML à l’aide sql : mappé | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -29,17 +29,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 640ae49de50fec55afb9c957042f5d317f41195f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969834"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001241"
 ---
-# <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Exclusion d’éléments de schéma du Document XML en utilisant sql : mappé
+# <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Exclusion d’éléments de schéma du Document XML à l’aide sql : mappé
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Chaque élément et chaque attribut du schéma XSD sont mappés à une vue/table et à une colonne de base de données en raison du mappage par défaut. Si vous souhaitez créer un élément dans le schéma XSD qui ne correspondent pas à une table de base de données (vue) ou une colonne, et qui n’apparaît pas dans le code XML, vous pouvez spécifier le **sql : mappé** annotation.  
+  Chaque élément et chaque attribut du schéma XSD sont mappés à une vue/table et à une colonne de base de données en raison du mappage par défaut. Si vous souhaitez créer un élément dans le schéma XSD qui n’est pas mappé à aucune table de base de données (vue) ou une colonne et qui n’apparaît pas dans le code XML, vous pouvez spécifier le **sql : mappé** annotation.  
   
- Le **sql : mappé** annotation s’avère particulièrement utile si le schéma ne peut pas être modifié ou si le schéma est utilisé pour valider le XML à partir d’autres sources et qu’il contient encore des données qui ne sont pas stockées dans votre base de données. Le **sql : mappé** diffère de l’annotation **sql : constante est** dans la mesure où les éléments non mappés et les attributs n’apparaissent pas dans le document XML.  
+ Le **sql : mappé** annotation est particulièrement utile si le schéma ne peut pas être modifié ou si le schéma est utilisé pour valider le code XML à partir d’autres sources et qu’il contient encore des données qui ne sont pas stockées dans votre base de données. Le **sql : mappé** diffère de l’annotation **sql : constante est** dans la mesure où les éléments non mappés et les attributs n’apparaissent pas dans le document XML.  
   
  Le **sql : mappé** annotation accepte une valeur booléenne (0 = Faux, 1 = true). Les valeurs acceptables sont 0, 1, true et false.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "32969834"
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Spécification de l'annotation sql:mapped  
  Supposons que vous ayez un schéma XSD provenant d'une autre source. Ce schéma XSD se compose d’un  **\<Person.Contact >** élément avec **ContactID**, **FirstName**, **LastName**, et **HomeAddress** attributs.  
   
- Lors du mappage de ce schéma XSD pour la table Person.Contact dans la base de données AdventureWorks, **sql : mappé** est spécifié sur le **HomeAddress** d’attribut, car la table Employees ne stocke pas les adresses personnelles des employés. En conséquence, cet attribut n'est pas mappé avec la base de données et n'est pas retourné dans le document XML obtenu lorsqu'une requête XPath est spécifiée sur le schéma de mappage.  
+ Lors du mappage de ce schéma XSD pour la table Person.Contact dans la base de données AdventureWorks, **sql : mappé** est spécifié sur le **HomeAddress** attribut, car la table Employees ne stocke pas de la page d’accueil adresses des employés. En conséquence, cet attribut n'est pas mappé avec la base de données et n'est pas retourné dans le document XML obtenu lorsqu'une requête XPath est spécifiée sur le schéma de mappage.  
   
  Le mappage par défaut a lieu pour le reste du schéma. Le  **\<Person.Contact >** élément est mappé à la table Person.Contact et tous les attributs sont mappés aux colonnes portant le même nom dans la table Person.Contact.  
   
@@ -111,6 +111,6 @@ ms.locfileid: "32969834"
  Notez que ContactID, FirstName et LastName sont présents, mais que HomeAddress n’est pas, car le schéma de mappage a spécifié 0 pour le **sql : mappé** attribut.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mappage par défaut des éléments XSD et des attributs aux Tables et colonnes &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [Mappage par défaut d’éléments XSD et d’attributs aux Tables et colonnes &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

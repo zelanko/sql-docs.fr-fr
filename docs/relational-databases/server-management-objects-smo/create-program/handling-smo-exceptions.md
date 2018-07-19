@@ -1,5 +1,5 @@
 ---
-title: Gestion des Exceptions SMO | Documents Microsoft
+title: Gestion des Exceptions SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 85d0705776117d09584ea27d1d0b6ef68ede1b9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967274"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005731"
 ---
 # <a name="handling-smo-exceptions"></a>Gestion des exceptions SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -41,17 +41,17 @@ ms.locfileid: "32967274"
  Les exceptions peuvent être générales ou spécifiques. Les exceptions générales contiennent un jeu d'exceptions spécifiques. Plusieurs instructions **Catch** peuvent être utilisées pour gérer les erreurs anticipées et faire passer les erreurs restantes au code de gestion des exceptions générales. Les exceptions se produisent souvent dans une séquence en cascade. Il arrive fréquemment qu'une exception SMO soit provoquée par une exception SQL. Pour le savoir, utilisez successivement la propriété **InnerException** pour déterminer l'exception d'origine ayant provoqué l'exception finale de niveau supérieur.  
   
 > [!NOTE]  
->  Le **SQLException** exception est déclaré dans le **System.Data.SqlClient** espace de noms.  
+>  Le **SQLException** exception est déclarée dans le **System.Data.SqlClient** espace de noms.  
   
- ![Diagramme illustrant les niveaux à partir de laquelle une excp](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "un diagramme qui affiche les niveaux à partir de laquelle une excp")  
+ ![Un diagramme qui montre les niveaux à partir de laquelle un excp](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "un diagramme qui montre les niveaux à partir de laquelle un excp")  
   
  Le diagramme affiche le flux d'exceptions à travers les couches de l'application.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser un exemple de code fourni, vous devrez sélectionner l'environnement, le modèle et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
+ Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
   
 ## <a name="catching-an-exception-in-visual-basic"></a>Interception d'une exception en Visual Basic  
- Cet exemple de code montre comment utiliser le **essayez... Catch... Enfin** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] instruction pour intercepter une exception SMO. Toutes les exceptions SMO possèdent le type SmoException et sont répertoriées dans la référence SMO. La séquence d'exceptions internes est affichée pour indiquer la racine de l'erreur. Pour plus d'informations, consultez la documentation [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+ Cet exemple de code montre comment utiliser le **essayez... Catch... Enfin** [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] instruction pour intercepter une exception SMO. Toutes les exceptions SMO possèdent le type SmoException et sont répertoriées dans la référence SMO. La séquence d'exceptions internes est affichée pour indiquer la racine de l'erreur. Pour plus d’informations, consultez le [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] documentation .NET.  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.

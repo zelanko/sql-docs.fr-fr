@@ -1,6 +1,6 @@
 ---
-title: Prise en main des fonctionnalités de performances de SQL Server sur Linux | Documents Microsoft
-description: Cet article fournit une présentation des fonctionnalités de performances de SQL Server pour Linux aux nouveaux utilisateurs à SQL Server. La plupart de ces exemples fonctionnent sur toutes les plateformes, mais le contexte de cet article est Linux.
+title: Prise en main des fonctionnalités de performances de SQL Server sur Linux | Microsoft Docs
+description: Cet article fournit une présentation des fonctionnalités de performances de SQL Server pour les utilisateurs de Linux qui débutent avec SQL Server. La plupart de ces exemples fonctionnent sur toutes les plateformes, mais le contexte de cet article est Linux.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -13,11 +13,11 @@ ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: sql-linux
 ms.openlocfilehash: 91a83740d83cb6e121d8ea413cf6322f75b68dff
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323420"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001851"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de performances de SQL Server sur Linux
 
@@ -29,7 +29,7 @@ Si vous êtes un utilisateur Linux qui découvre SQL Server, les tâches suivant
 > Les exemples suivants utilisent l’exemple de base de données AdventureWorks. Pour obtenir des instructions sur la façon d’obtenir et d'installer cette base de données exemple, consultez [restaurer une base de données SQL Server à partir de Windows et Linux](sql-server-linux-migrate-restore-database.md).
 
 ## <a name="create-a-columnstore-index"></a>Créer un Index Columnstore
-Un index columnstore est une technologie pour le stockage et l’interrogation de grands magasins de données dans un format de données en colonnes, appelé columnstore.  
+Un index columnstore est une technologie de stockage et l’interrogation de grandes banques de données dans un format de données en colonnes, appelé columnstore.  
 
 1. Ajouter un index Columnstore à la table SalesOrderDetail en exécutant les commandes Transact-SQL suivantes :
 
@@ -62,7 +62,7 @@ Un index columnstore est une technologie pour le stockage et l’interrogation d
       AND object_id = OBJECT_ID('AdventureWorks.Sales.SalesOrderDetail');
    ```
    
-## <a name="use-in-memory-oltp"></a>Utiliser l’OLTP en mémoire
+## <a name="use-in-memory-oltp"></a>Utiliser OLTP en mémoire
 SQL Server fournit des fonctionnalités OLTP en mémoire qui peuvent améliorer considérablement les performances des systèmes d’applications.  Cette section du Guide d’évaluation vous guidera tout au long des étapes de création d’une table optimisée en mémoire et d'une procédure stockée compilée en mode natif qui peut accéder à la table sans avoir besoin d’être interprétée ou compilée.
 
 ### <a name="configure-database-for-in-memory-oltp"></a>Configurer la base de données pour OLTP en mémoire
@@ -77,7 +77,7 @@ SQL Server fournit des fonctionnalités OLTP en mémoire qui peuvent améliorer 
    GO
    ```
    
-   Si nécessaire, mettez à jour le niveau à 130 :
+   Si nécessaire, mettez à jour le niveau 130 :
 
    ```sql
    ALTER DATABASE CURRENT
@@ -101,7 +101,7 @@ SQL Server fournit des fonctionnalités OLTP en mémoire qui peuvent améliorer 
    GO
    ```
 
-### <a name="create-a-memory-optimized-table"></a>Créer une Table optimisée en mémoire
+### <a name="create-a-memory-optimized-table"></a>Créer une Table mémoire optimisée
 Le stockage des tables optimisées en mémoire est la mémoire principale, de sorte qu’à la différence des tables sur disque, les données n’ont pas besoin d'être lues à partir du disque pour les charger dans les mémoires tampons.  Pour créer une table optimisée en mémoire, utilisez la clause MEMORY_OPTIMIZED = ON.
 
 1. Exécutez la requête suivante pour créer la table optimisée en mémoire  dbo.ShoppingCart.  Par défaut, les données sont rendues persistantes sur disque pour assurer la durabilité (Notez qu'il est aussi possible de définir la durabilité pour conserver le schéma uniquement). 

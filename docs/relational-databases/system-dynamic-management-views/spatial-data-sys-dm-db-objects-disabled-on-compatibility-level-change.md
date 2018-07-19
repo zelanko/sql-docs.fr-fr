@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Documents Microsoft
+title: Sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 083af55f2629a14f2ad28b293bb84ea9184a0345
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467105"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998141"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Données spatiales - sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**class**|**int**|1 = contraintes<br /><br /> 7 = index et segments|  
+|**class**|**Int**|1 = contraintes<br /><br /> 7 = index et segments|  
 |**class_desc**|**nvarchar(60)**|OBJECT ou COLUMN pour les contraintes<br /><br /> INDEX pour les index et les segments|  
-|**major_id**|**int**|OBJECT ID des contraintes<br /><br /> OBJECT ID de la table qui contient des index et des segments|  
-|**minor_id**|**int**|NULL pour les contraintes<br /><br /> Index_id pour les index et les segments|  
-|**Dépendance**|**nvarchar(60)**|Description de la dépendance qui provoque la désactivation de la contrainte ou de l'index. Les mêmes valeurs sont également utilisées dans les avertissements générés pendant la mise à niveau. En voici quelques exemples :<br /><br /> « space » pour un type intrinsèque<br /><br /> « geometry » pour un type défini par l'utilisateur système<br /><br /> « geography::Parse » pour une méthode d'un type défini par l'utilisateur système|  
+|**major_id**|**Int**|OBJECT ID des contraintes<br /><br /> OBJECT ID de la table qui contient des index et des segments|  
+|**minor_id**|**Int**|NULL pour les contraintes<br /><br /> Index_id pour les index et les segments|  
+|**dépendance**|**nvarchar(60)**|Description de la dépendance qui provoque la désactivation de la contrainte ou de l'index. Les mêmes valeurs sont également utilisées dans les avertissements générés pendant la mise à niveau. En voici quelques exemples :<br /><br /> « space » pour un type intrinsèque<br /><br /> « geometry » pour un type défini par l'utilisateur système<br /><br /> « geography::Parse » pour une méthode d'un type défini par l'utilisateur système|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Les colonnes calculées persistantes qui utilisent des fonctions intrinsèques sont désactivées lorsque le niveau de compatibilité est modifié. En outre, les colonnes calculées persistantes qui utilisent une méthode de type geometry ou geography sont désactivées lorsqu'une base de données est mise à niveau.  
@@ -117,7 +117,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>Comportement des objets désactivés  
  **Index**  
   
- Si l’index cluster est désactivé, ou si un index non cluster est forcé, l’erreur suivante est générée : « le processeur de requêtes ne peut pas créer de plan car l’index ' %. \*%.*ls sur la table ou la vue ' %. \*%.*ls est désactivé. » Pour réactiver ces objets, reconstruisez les index après la mise à niveau en appelant **ALTER INDEX ON... RECONSTRUIRE**.  
+ Si l’index cluster est désactivé, ou si un index non cluster est forcé, l’erreur suivante est levée : « le processeur de requêtes ne peut pas créer de plan car l’index ' %. \*%.*ls sur la table ou la vue ' %. \*%.*ls est désactivé. » Pour réactiver ces objets, reconstruisez les index après mise à niveau en appelant **ALTER INDEX ON... RECONSTRUIRE**.  
   
  **Segments de mémoire**  
   
@@ -134,7 +134,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 // ErrorFirstProduct: SQL11  
 ```  
   
- Si vous essayez de reconstruire le segment lors d’une opération en ligne, une erreur est générée.  
+ Si vous essayez de reconstruire le segment de mémoire pendant une opération en ligne, une erreur est générée.  
   
  **Contraintes de validation et les clés étrangères**  
   

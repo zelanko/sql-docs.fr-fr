@@ -1,5 +1,5 @@
 ---
-title: Sys.trace_columns (Transact-SQL) | Documents Microsoft
+title: Sys.trace_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aae158d1daebfc5fbf51d18eeaccf8536d26e89e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220760"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993871"
 ---
 # <a name="systracecolumns-transact-sql"></a>sys.trace_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "33220760"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt les affichages catalogue des événements étendus.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**trace_column_id**|**smallint**|ID unique de cette colonne.|  
 |**nom**|**nvarchar(128)**|Nom unique de cette colonne. Ce paramètre n'est pas localisé.|  
 |**type_name**|**nvarchar(128)**|Nom de type de données de cette colonne.|  
-|**max_size**|**int**|Taille de données maximale de cette colonne en octets.|  
+|**max_size**|**Int**|Taille de données maximale de cette colonne en octets.|  
 |**is_filterable**|**bit**|Indique si la colonne peut être utilisée dans la spécification de filtre.<br /><br /> 0 = faux<br /><br /> 1 = vrai|  
 |**is_repeatable**|**bit**|Indique si la colonne peut être référencée dans les données de « colonne répétée ».<br /><br /> 0 = faux<br /><br /> 1 = vrai|  
 |**is_repeated_base**|**bit**|Indique si cette colonne est utilisée en tant que clé unique pour référencer des données répétées.<br /><br /> 0 = faux<br /><br /> 1 = vrai|  

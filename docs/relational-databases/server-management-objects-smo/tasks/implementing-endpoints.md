@@ -1,5 +1,5 @@
 ---
-title: Implémentation de points de terminaison | Documents Microsoft
+title: Implémentation de points de terminaison | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5bd1f57ee89138dca4354d1a558d605784cb3310
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970184"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042007"
 ---
 # <a name="implementing-endpoints"></a>Implémentation de points de terminaison
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "32970184"
   
 -   Protocole TCP  
   
- Après avoir précisé le type de charge utile, la charge utile réelle peut être définie en utilisant la <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> propriété d’objet. La propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.Payload> fournit une référence vers un objet de charge utile du type spécifié, dont les propriétés peuvent être modifiées.  
+ Après avoir précisé le type de charge utile, la charge utile réelle peut être définie en utilisant le <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> propriété d’objet. La propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.Payload> fournit une référence vers un objet de charge utile du type spécifié, dont les propriétés peuvent être modifiées.  
   
  Pour l'objet <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>, vous devez spécifier le rôle de mise en miroir et si le chiffrement est activé. Le <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> objet requiert des informations sur le transfert de messages, nombre maximal de connexions autorisées et le mode d’authentification. L'objet <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A> requiert la définition de différentes propriétés, notamment la propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A> qui spécifie les méthodes de charge utile SOAP disponibles pour les clients (procédures stockées et fonctions définies par l'utilisateur).  
   
- De la même façon, le protocole réel peut être défini à l'aide de la propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> qui référence un objet de protocole du type spécifié par propriété <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. L'objet <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> requiert une liste d'adresses IP restreintes, ainsi que des informations sur le port, le site Web et l'authentification. Le <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> objet requiert également une liste des informations de port et les adresses IP restreintes.  
+ De la même façon, le protocole réel peut être défini à l'aide de la propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A> qui référence un objet de protocole du type spécifié par propriété <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>. L'objet <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol> requiert une liste d'adresses IP restreintes, ainsi que des informations sur le port, le site Web et l'authentification. Le <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> objet requiert également une liste d’adresses IP restreintes et les informations de port.  
   
  Lorsque le point de terminaison a été créé et complètement défini, l'accès peut être accordé, révoqué ou refusé aux utilisateurs, groupes, rôles et ouvertures de session de la base de données.  
   

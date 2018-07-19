@@ -1,5 +1,5 @@
 ---
-title: la fonction de local-name (XQuery) | Documents Microsoft
+title: Fonction local-name (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a5cdd64e6c283a41a4a51f71f84381b584d03f4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078096"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997131"
 ---
-# <a name="functions-on-nodes---local-name"></a>Fonctions sur les nœuds - local-name
+# <a name="functions-on-nodes---local-name"></a>Fonctions sur les nœuds : local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retourne la partie locale du nom de *$arg* en tant que xs : String qui sera la chaîne de longueur nulle ou qui ont la forme lexicale de xs : NCName. Si l'argument n'est pas spécifié, la valeur par défaut est le nœud du contexte.  
+  Retourne la partie locale du nom de *$arg* en tant que xs : String qui sera la chaîne de longueur nulle ou aura la forme lexicale de xs : NCName. Si l'argument n'est pas spécifié, la valeur par défaut est le nœud du contexte.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -79,7 +79,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Utilisation de local-name sans argument dans un prédicat  
- La requête suivante porte sur la colonne Instructions, tapée **xml** colonne, de la table ProductModel. L'expression retourne tous les enfants de l'élément <`root`> dont la partie locale de QName est « Location ». Le **dépourvue** fonction n’est spécifiée dans le prédicat et il n’a aucun argument le nœud de contexte est utilisé par la fonction.  
+ La requête suivante porte sur la colonne Instructions, typée **xml** colonne, de la table ProductModel. L'expression retourne tous les enfants de l'élément <`root`> dont la partie locale de QName est « Location ». Le **dépourvue** fonction n’est spécifié dans le prédicat et il n’a aucun argument, le nœud de contexte est utilisé par la fonction.  
   
 ```  
 SELECT Instructions.query('  

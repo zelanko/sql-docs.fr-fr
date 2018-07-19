@@ -1,5 +1,5 @@
 ---
-title: Vue d’ensemble (SMO) | Documents Microsoft
+title: Vue d’ensemble (SMO) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 21d71757b4f8520e2ec2b3b7c2d1cb3c1407b420
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708007"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006012"
 ---
 # <a name="overview-smo"></a>Vue d'ensemble (objets SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) sont des objets conçus pour la gestion par programme de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez les utiliser pour créer des applications de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personnalisées. Même si [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est une application puissante et étendue de gestion de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une application SMO donnera dans certains cas de meilleurs résultats.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) sont conçus pour la gestion par programme de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez les utiliser pour créer des applications de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personnalisées. Même si [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est une application puissante et étendue de gestion de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une application SMO donnera dans certains cas de meilleurs résultats.  
   
  Par exemple, il est possible que les applications utilisateur qui contrôlent les tâches de gestion de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être simplifiées pour répondre aux besoins de nouveaux utilisateurs et pour réduire les coûts de formation. Vous devez peut-être créer des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personnalisées ou créer une application de création et de contrôle du rendement des index. Une application SMO peut également être utilisée pour inclure de façon transparente le matériel ou les logiciels tiers dans l'application de gestion de base de données.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34708007"
   
 -   Partitionnement d'index et de table pour le stockage des données sur un schéma de partition. Pour plus d’informations, consultez [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
--   Points de terminaison HTTP pour la gestions des requêtes SOAP. Pour plus d’informations, consultez [points de terminaison de mise en œuvre](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
+-   Points de terminaison HTTP pour la gestions des requêtes SOAP. Pour plus d’informations, consultez [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
   
 -   Isolement d'instantané et contrôle de version de ligne pour plus de concurrence. Pour plus d’informations, consultez [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34708007"
   
 -   Déclencheurs DDL pour l'ajout de fonctionnalités lorsque des événements DDL se produisent. Pour plus d'informations, consultez [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- L'espace de noms SMO est <xref:Microsoft.SqlServer.Management.Smo>. SMO est implémenté comme un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Cela signifie que le common language runtime à partir de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 2.0 doit être installée avant d’utiliser les objets SMO. Les assembly SMO sont installés par défaut dans le Global Assembly Cache (GAC) avec l'option de Kit de développement logiciel (SDK) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les assemblys se trouvent dans C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Pour plus d’informations, consultez la [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentation.  
+ L'espace de noms SMO est <xref:Microsoft.SqlServer.Management.Smo>. SMO est implémenté comme un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Cela signifie que le common language runtime à partir de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 2.0 doit être installée avant d’utiliser les objets SMO. Les assembly SMO sont installés par défaut dans le Global Assembly Cache (GAC) avec l'option de Kit de développement logiciel (SDK) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les assemblys se trouvent dans C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Pour plus d’informations, consultez le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentation.  
   
 ## <a name="smo-classes"></a>Classes SMO  
  Les classes SMO incluent deux catégories : les classes d'instance et les classes utilitaires.  
@@ -93,7 +93,7 @@ ms.locfileid: "34708007"
   
 -   Classe de générateur de script. Utilisée pour créer des fichiers de script pour la régénération des objets et de leurs dépendances.  
   
-## <a name="smo-features"></a>Fonctionnalités de SMO  
+## <a name="smo-features"></a>Fonctionnalités SMO  
  **Optimisation des performances**  
   
  L’architecture SMO est efficace en termes de mémoire, car les objets sont instanciés que partiellement dans un premier temps, et les informations de propriété minimales sont demandées à partir du serveur. L'instanciation complète des objets est différée jusqu'à ce que l'objet soit explicitement référencé. Un objet est entièrement instancié lorsqu'une propriété demandée ne figure pas dans le jeu de propriétés extrait en premier ou lorsqu'une méthode nécessitant cette propriété est appelée. La transition entre les objets partiellement instanciés et les objets entièrement instanciés est transparente pour l'utilisateur. En outre, certaines propriétés qui utilisent beaucoup de mémoire ne sont jamais récupérées, à moins que la propriété soit explicitement référencée. Ceci est illustré par la propriété <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A> de la propriété d'objet <xref:Microsoft.SqlServer.Management.Smo.Database>. Toutefois, l'instanciation partielle requiert davantage d'allers-retours sur le réseau et ne constitue peut-être pas la meilleure option pour votre application.  
@@ -149,7 +149,7 @@ ms.locfileid: "34708007"
   
  Les demandes SOAP et les demandes de mise en miroir de base de données sont gérées par des points de terminaison à l'aide de l'objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   
- **Contrôle de version de ligne / l’Isolation d’instantané**  
+ **Le contrôle de version au niveau d’Isolation/ligne d’instantané**  
   
  L'isolement d'instantané (contrôle de version de ligne) est représenté par les nouvelles propriétés de l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   

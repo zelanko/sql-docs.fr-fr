@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_health_status (Transact-SQL) | Documents Microsoft
+title: managed_backup.fn_get_health_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fa9a510f2be08329173898b7e0e6794458ea8fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229502"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041967"
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,25 +50,25 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ##  <a name="Arguments"></a> Arguments  
  [@begin_time]  
- Début de la période à partir de laquelle le nombre agrégé des erreurs est calculé.  Le @begin_time paramètre est DATETIME. La valeur par défaut est NULL. Lorsque la valeur est NULL, la fonction traite les événements signalés 30 minutes avant l'heure actuelle.  
+ Début de la période à partir de laquelle le nombre agrégé des erreurs est calculé.  Le @begin_time paramètre est de type DATETIME. La valeur par défaut est NULL. Lorsque la valeur est NULL, la fonction traite les événements signalés 30 minutes avant l'heure actuelle.  
   
  [ @end_time]  
  Fin de la période à partir de laquelle le nombre agrégé des erreurs est calculé. Le @end_time paramètre est de type DATETIME avec NULL comme valeur par défaut. Lorsque la valeur est NULL, la fonction traite les événements étendus jusqu'à l'heure actuelle.  
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de la colonne|Type de données| Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|Nombre d'erreurs de connexion lorsque le programme se connecte au compte de stockage Windows Azure.|  
-|number_of_sql_errors|int|Nombre d'erreurs retourné lorsque le programme se connecte au moteur SQL Server.|  
-|number_of_invalid_credential_errors|int|Nombre d'erreurs retourné lorsque le programme tente de s'authentifier en utilisant les informations d'identification SQL.|  
-|number_of_other_errors|int|Nombre d'erreurs dans des catégories autres que la connectivité, SQL ou les informations d'identification.|  
-|number_of_corrupted_or_deleted_backups|int|Nombre de fichiers de sauvegarde supprimés ou endommagés.|  
-|number_of_backup_loops|int|Nombre de fois où l'agent de sauvegarde analyse toutes les bases de données configurées avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|number_of_retention_loops|int|Nombre de fois où les bases de données sont analysées pour évaluer la période de rétention définie.|  
+|number_of_storage_connectivity_errors|INT|Nombre d'erreurs de connexion lorsque le programme se connecte au compte de stockage Windows Azure.|  
+|number_of_sql_errors|INT|Nombre d'erreurs retourné lorsque le programme se connecte au moteur SQL Server.|  
+|number_of_invalid_credential_errors|INT|Nombre d'erreurs retourné lorsque le programme tente de s'authentifier en utilisant les informations d'identification SQL.|  
+|number_of_other_errors|INT|Nombre d'erreurs dans des catégories autres que la connectivité, SQL ou les informations d'identification.|  
+|number_of_corrupted_or_deleted_backups|INT|Nombre de fichiers de sauvegarde supprimés ou endommagés.|  
+|number_of_backup_loops|INT|Nombre de fois où l'agent de sauvegarde analyse toutes les bases de données configurées avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|number_of_retention_loops|INT|Nombre de fois où les bases de données sont analysées pour évaluer la période de rétention définie.|  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
- Ces nombres agrégés peuvent servir à surveiller l'intégrité du système. Par exemple, si la colonne number_ of_retention_loops indique 0 pour 30 minutes, il est possible que la gestion de la rétention soit trop longue, ou ne fonctionne pas correctement. Les colonnes contenant des erreurs peuvent indiquer des problèmes et les journaux des événements étendus doivent être vérifiées pour en savoir plus les problèmes. Vous pouvez également utiliser la procédure stockée **managed_backup.sp_get_backup_diagnostics** pour obtenir la liste des événements étendus et rechercher les détails de l’erreur.  
+ Ces nombres agrégés peuvent servir à surveiller l'intégrité du système. Par exemple, si la colonne number_ of_retention_loops indique 0 pour 30 minutes, il est possible que la gestion de la rétention soit trop longue, ou ne fonctionne pas correctement. Les colonnes contenant des erreurs peuvent indiquer des problèmes et les journaux des événements étendus doivent être vérifiées pour en savoir plus de tous les problèmes. Vous pouvez également utiliser la procédure stockée **managed_backup.sp_get_backup_diagnostics** pour obtenir une liste des événements étendus et consulter les détails de l’erreur.  
   
 ## <a name="security"></a>Sécurité  
   

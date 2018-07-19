@@ -1,5 +1,5 @@
 ---
-title: Sys.server_principals (Transact-SQL) | Documents Microsoft
+title: Sys.server_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,31 +26,31 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 503ae5f7918edabd609e6176eeb0fa5c1238dd77
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221630"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039029"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Contient une ligne par principal au niveau serveur.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de l’entité de sécurité. Nom unique dans un serveur.|  
-|**principal_id**|**int**|Numéro d'identification du principal. Nom unique dans un serveur.|  
+|**nom**|**sysname**|Nom du principal. Nom unique dans un serveur.|  
+|**principal_id**|**Int**|Numéro d'identification du principal. Nom unique dans un serveur.|  
 |**sid**|**varbinary(85)**|SID (Security-IDentifier) du principal. S'il s'agit d'un principal Windows, correspond au SID Windows.|  
 |**type**|**char(1)**|Type de principal :<br /><br /> S = Nom de connexion SQL<br /><br /> U = Connexion Windows<br /><br /> G = groupe Windows<br /><br /> R = Rôle SQL Server<br /><br /> C = Connexion mappée sur un certificat<br /><br /> K = Connexion mappée sur une clé asymétrique|  
 |**type_desc**|**nvarchar(60)**|Description du type de principal :<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
-|**is_disabled**|**int**|1 = Connexion désactivée.|  
+|**is_disabled**|**Int**|1 = Connexion désactivée.|  
 |**create_date**|**datetime**|Heure de création du principal.|  
 |**modify_date**|**datetime**|Heure de dernière modification de la définition du principal.|  
 |**default_database_name**|**sysname**|Base de données par défaut de ce principal.|  
 |**default_language_name**|**sysname**|Langue par défaut de ce principal.|  
-|**credential_id**|**int**|ID d'une information d'identification associée à ce principal. Si aucune information d'identification n'est associée à ce principal, credential_id a la valeur NULL.|  
-|**owning_principal_id**|**int**|Le **principal_id** du propriétaire d’un rôle de serveur. NULL, si le principal n'est pas un rôle serveur.|  
+|**credential_id**|**Int**|ID d'une information d'identification associée à ce principal. Si aucune information d'identification n'est associée à ce principal, credential_id a la valeur NULL.|  
+|**owning_principal_id**|**Int**|Le **principal_id** du propriétaire d’un rôle de serveur. NULL, si le principal n'est pas un rôle serveur.|  
 |**is_fixed_role**|**bit**|Retourne 1 si le principal est l'un des rôles serveur fixes. Pour plus d’informations, consultez [Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
 ## <a name="permissions"></a>Autorisations  

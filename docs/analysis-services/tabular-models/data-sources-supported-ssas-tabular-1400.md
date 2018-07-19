@@ -1,5 +1,5 @@
 ---
-title: Sources de données pris en charge dans les modèles 1400 tabulaires SQL Server Analysis Services | Documents Microsoft
+title: Sources de données prises en charge dans les modèles tabulaires 1400 SQL Server Analysis Services | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 856e15e7365128bc79d119afe267334fb8470832
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043153"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041657"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Sources de données pris en charge dans SQL Server Analysis Services les modèles tabulaires 1400
 
 [!INCLUDE[ssas-appliesto-sql2017](../../includes/ssas-appliesto-sql2017.md)]
 
-Cet article décrit les types de sources de données qui peuvent être utilisés avec les modèles tabulaires SQL Server Analysis Services (SSAS) au niveau de compatibilité 1400. 
+Cet article décrit les types de sources de données qui peuvent être utilisées avec les modèles tabulaires SQL Server Analysis Services (SSAS) au niveau de compatibilité 1400. 
 
-Pour les modèles tabulaires SSAS sur les niveaux de compatibilité 1200 et inférieure, consultez [des sources de données pris en charge dans les modèles tabulaires 1200 de SQL Server Analysis Services](data-sources-supported-ssas-tabular.md).
+Pour les modèles tabulaires SSAS niveaux de compatibilité 1200 et versions antérieures, consultez [des sources de données prises en charge dans les modèles 1200 tabulaires SQL Server Analysis Services](data-sources-supported-ssas-tabular.md).
 
 Pour Azure Analysis Services, consultez [des sources de données prises en charge dans Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource).
 
@@ -34,8 +34,8 @@ Pour Azure Analysis Services, consultez [des sources de données prises en charg
 |Azure SQL Database     |   Oui      |    Oui      |
 |Azure SQL Data Warehouse     |   Oui      |   Oui       |
 |Stockage Blob Azure     |   Oui       |    non      |
-|Stockage de Table Windows Azure    |   Oui       |    non      |
-|Base de données Azure Cosmos      |  Oui        |  non        |
+|Stockage Table Azure    |   Oui       |    non      |
+|Azure Cosmos DB      |  Oui        |  non        |
 |Azure Data Lake Store     |   Oui       |    non      |
 |Azure HDInsight HDFS     |     Oui     |   non       |
 |Azure HDInsight Spark (bêta)     |   Oui       |   non       |
@@ -46,18 +46,18 @@ En mémoire et les modèles DirectQuery connexion aux sources de données Azure 
 
 ## <a name="on-premises-data-sources"></a>Sources de données locales
 
-### <a name="supported-by-in-memory-and-directquery-models"></a>Prise en charge par la mémoire et les modèles DirectQuery
+### <a name="supported-by-in-memory-and-directquery-models"></a>Pris en charge en mémoire et les modèles DirectQuery
 
-|Source de données | Fournisseur en mémoire | Fournisseur de DirectQuery |
+|Source de données | Fournisseur en mémoire | Fournisseur DirectQuery |
 |  --- | --- | --- |
-| SQL Server |SQL Server Native Client 11.0, le fournisseur Microsoft OLE DB pour SQL Server, le fournisseur de données .NET Framework pour SQL Server | Fournisseur de données .NET Framework pour SQL Server |
-| Entrepôt de données SQL Server |SQL Server Native Client 11.0, le fournisseur Microsoft OLE DB pour SQL Server, le fournisseur de données .NET Framework pour SQL Server | Fournisseur de données .NET Framework pour SQL Server |
-| Oracle |Fournisseur Microsoft OLE DB pour Oracle, le fournisseur de données Oracle pour .NET |Fournisseur de données Oracle pour .NET | |
-| Teradata |Fournisseur OLE DB pour Teradata, le fournisseur de données Teradata pour .NET |Fournisseur de données Teradata pour .NET | |
+| SQL Server |SQL Server Native Client 11.0, fournisseur Microsoft OLE DB pour SQL Server, le fournisseur de données .NET Framework pour SQL Server | Fournisseur de données .NET Framework pour SQL Server |
+| SQL Server Data Warehouse |SQL Server Native Client 11.0, fournisseur Microsoft OLE DB pour SQL Server, le fournisseur de données .NET Framework pour SQL Server | Fournisseur de données .NET Framework pour SQL Server |
+| Oracle |Fournisseur Microsoft OLE DB pour Oracle, fournisseur de données Oracle pour .NET |Fournisseur de données Oracle pour .NET | |
+| Teradata |Fournisseur OLE DB pour Teradata, fournisseur de données Teradata pour .NET |Fournisseur de données Teradata pour .NET | |
 | | | |
 
 > [!NOTE]
-> Pour les modèles en mémoire, les fournisseurs OLE DB peuvent offrir de meilleures performances pour les données à grande échelle. Lors du choix parmi différents fournisseurs pour la même source de données, essayez en premier le fournisseur OLE DB.  
+> Pour les modèles en mémoire, les fournisseurs OLE DB peuvent offrir de meilleures performances pour les données à grande échelle. Lors du choix entre différents fournisseurs pour la même source de données, essayez tout d’abord le fournisseur OLE DB.  
 
 ### <a name="supported-by-in-memory-models-only"></a>Prise en charge par les modèles en mémoire uniquement
 
@@ -81,14 +81,14 @@ En mémoire et les modèles DirectQuery connexion aux sources de données Azure 
 |Dossier     | 
 |JSON | 
 |Texte/CSV    | 
-|Tableau XML    | 
+|Table XML    | 
 |||
 
 |Services en ligne  |  
 |---------|---------|
 |Dynamics 365      |
 |Exchange Online     |
-|Objets Saleforce    | 
+|Objets Salesforce    | 
 |Rapports Salesforce     |
 |Liste SharePoint Online     |
 |||
@@ -96,7 +96,7 @@ En mémoire et les modèles DirectQuery connexion aux sources de données Azure 
 |Autres  |  
 |---------|---------|
 |Active Directory      | 
-|Exchange     |  
+|Exhange     |  
 |Flux OData     | 
 |Requête ODBC     | 
 |OLE DB  | 
@@ -105,6 +105,6 @@ En mémoire et les modèles DirectQuery connexion aux sources de données Azure 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sources de données pris en charge dans SQL Server Analysis Services les modèles tabulaires 1200](data-sources-supported-ssas-tabular.md)
+[Sources de données pris en charge dans SQL Server Analysis Services les modèles 1200 tabulaires](data-sources-supported-ssas-tabular.md)
 
 [Sources de données prises en charge dans Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   

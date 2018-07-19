@@ -1,5 +1,5 @@
 ---
-title: Élément BackupRemotePartitions (XMLA) | Documents Microsoft
+title: Élément BackupRemotePartitions (XMLA) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33e81bd76e7f900a396b1f9bfbae808092a2877e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34575081"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007112"
 ---
 # <a name="backupremotepartitions-element-xmla"></a>Élément BackupRemotePartitions (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Détermine si le parent [sauvegarde](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) commande sauvegarde des partitions distantes associées à l’objet.  
+  Détermine si le parent [sauvegarde](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) commande sauvegarde de partitions distantes associées à l’objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34575081"
 </Backup>  
 ```  
   
-## <a name="element-characteristics"></a>Caractéristiques de l’élément  
+## <a name="element-characteristics"></a>Caractéristiques d’éléments  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
