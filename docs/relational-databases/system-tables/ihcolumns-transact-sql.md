@@ -1,5 +1,5 @@
 ---
-title: IHcolumns (Transact-SQL) | Documents Microsoft
+title: IHcolumns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,34 +22,34 @@ helpviewer_keywords:
 - IHcolumns system table
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d713dbd76921955aab6066b51d163a17ca7cba9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f0235a7c4e1b13d6e85e59afd7bf0ffd57ba705
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001586"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103727"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **IHcolumns** (table système) contient une ligne pour chaque colonne publiée. Cette table est utilisée pour définir comment types de données de colonne depuis le SQL Server de publication non seront représentées lors de la publication, qui mappe les types de données entre un systèmes de gestion de base de données (SGBD) non SQL Server et SQL Server. Cette table est stockée dans la base de données de distribution.  
+  Le **IHcolumns** (table système) contient une ligne pour chaque colonne publiée. Cette table est utilisée pour définir comment les types de données de colonne à partir de la non de publication non-SQL Server seront représentées lors de la publié, qui mappe les types de données entre un systèmes de gestion de base de données (SGBD) non SQL Server et SQL Server. Cette table est stockée dans la base de données de distribution.  
   
 ## <a name="definition"></a>Définition  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**column_id**|**int**|Identifie une colonne publiée.|  
-|**publishercolumn_id**|**int**|Associe une colonne publiée avec les métadonnées de colonne stockées dans le [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) (table système).|  
+|**column_id**|**Int**|Identifie une colonne publiée.|  
+|**publishercolumn_id**|**Int**|Associe une colonne publiée avec les métadonnées de colonne stockées dans le [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) (table système).|  
 |**nom**|**sysname**|Spécifie le nom de la colonne.|  
-|**article_id**|**int**|Identifie l'article auquel appartient la colonne.|  
-|**column_ordinal**|**int**|Identifie la colonne par ordre.|  
+|**article_id**|**Int**|Identifie l'article auquel appartient la colonne.|  
+|**column_ordinal**|**Int**|Identifie la colonne par ordre.|  
 |**mapped_type**|**tinyint**|Type de données colonne de la colonne de destination chez l'abonné.|  
 |**mapped_length**|**bigint**|Longueur de la colonne chez l'abonné.|  
-|**mapped_prec**|**int**|Précision de la colonne chez l'abonné.|  
-|**mapped_scale**|**int**|Échelle de la colonne chez l'abonné.|  
+|**mapped_prec**|**Int**|Précision de la colonne chez l'abonné.|  
+|**mapped_scale**|**Int**|Échelle de la colonne chez l'abonné.|  
 |**mapped_nullable**|**bit**|Indique si la colonne sur l’abonné accepte les valeurs NULL, où **1** signifie que les valeurs NULL sont acceptées.|  
   
 ## <a name="see-also"></a>Voir aussi  

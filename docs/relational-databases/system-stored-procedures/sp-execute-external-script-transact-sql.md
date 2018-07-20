@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 07/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -24,17 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5660860a3a03a268b0903a0222753f1ea9bc5382
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f106a4ed11658856412e3e874f1f57af87e22211
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974091"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086171"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Exécute le script fourni en tant qu’argument à un emplacement externe. Le script doit être écrit dans un langage pris en charge et inscrit. Pour exécuter **sp_execute_external_script**, vous devez tout d’abord activer les scripts externes à l’aide de l’instruction, `sp_configure 'external scripts enabled', 1;`.  
+  Exécute le script fourni en tant qu’argument à un emplacement externe. Le script doit être écrit dans un langage pris en charge et inscrit (R ou Python). Pour exécuter **sp_execute_external_script**, vous devez tout d’abord activer les scripts externes à l’aide de l’instruction, `sp_configure 'external scripts enabled', 1;`.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,28 +53,30 @@ sp_execute_external_script
 ```
 
 ## <a name="arguments"></a>Arguments
- @language = N'*langage*'  
+ \@Language = N'*langage*'  
  Indique le langage de script. *langage* est **sysname**.  
 
  Les valeurs valides sont `Python` ou `R`. 
   
- @script = N'*script*'  
+ \@script = N'*script*'  
  Script de langage externe spécifié en tant qu’une entrée de littérale ou une variable. *script* est **nvarchar (max)**.  
   
- [ @input_data_1_name = N'*input_data_1_name*']  
- Spécifie le nom de la variable utilisée pour représenter la requête définie par @input_data_1. Le type de données de la variable dans le script externe dépend de la langue. En cas de R, la variable d’entrée est une trame de données. Dans le cas de Python, l’entrée doit être sous forme de tableau. *input_data_1_name* est **sysname**.  
+ [ \@input_data_1_name = N'*input_data_1_name*']  
+ Spécifie le nom de la variable utilisée pour représenter la requête définie par \@input_data_1. Le type de données de la variable dans le script externe dépend de la langue. En cas de R, la variable d’entrée est une trame de données. Dans le cas de Python, l’entrée doit être sous forme de tableau. *input_data_1_name* est **sysname**.  
   
  Valeur par défaut est `InputDataSet`.  
   
- [ @input_data_1 = N'*input_data_1*']  
+ [ \@input_data_1 = N'*input_data_1*']  
  Spécifie les données d’entrée utilisées par le script externe sous la forme d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] requête. Le type de données de *input_data_1* est **nvarchar (max)**.
   
- [ @output_data_1_name = N'*output_data_1_name*']  
+ [ \@output_data_1_name = N'*output_data_1_name*']  
  Spécifie le nom de la variable dans le script externe qui contient les données à renvoyer au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’achèvement de l’appel de procédure stockée. Le type de données de la variable dans le script externe dépend de la langue. Pour R, la sortie doit être une trame de données. Pour Python, la sortie doit être une trame de données pandas. *output_data_1_name* est **sysname**.  
   
  Valeur par défaut est « OutputDataSet ».  
   
- [ @parallel = 0 | 1] activer l’exécution parallèle de scripts R en définissant le `@parallel` paramètre 1. La valeur par défaut pour ce paramètre est 0 (Aucun parallélisme).  
+ [ \@parallèle = 0 | 1]
+
+ Activer l’exécution parallèle de scripts R en définissant le `@parallel` paramètre 1. La valeur par défaut pour ce paramètre est 0 (Aucun parallélisme).  
   
  Pour les scripts R qui n’utilisent pas de fonctions RevoScaleR, à l’aide de le `@parallel` paramètre peut être utile pour le traitement des jeux de données volumineux, en supposant que le script peut être parallélisé de manière simple. Par exemple, lors de l’utilisation de R `predict` fonction avec un modèle pour générer de nouvelles prédictions, définissez `@parallel = 1` en tant qu’indicateur pour le moteur de requête. Si la requête peut être parallélisée, les lignes sont distribuées en fonction de la **MAXDOP** paramètre.  
   
@@ -82,10 +84,11 @@ sp_execute_external_script
   
  Pour les scripts R qui utilisent les fonctions RevoScaleR, le traitement parallèle est géré automatiquement et vous ne devez pas spécifier `@parallel = 1` à la **sp_execute_external_script** appeler.  
   
- [ @params = N' *@parameter_name data_type* [OUT | SORTIE] [,.. .n]']  
+ [ \@params = N'*\@nom_paramètre data_type* [OUT | SORTIE] [,.. .n]']  
  Une liste des déclarations de paramètre d’entrée qui sont utilisés dans le script externe.  
   
- [ @parameter1 = '*value1*' [OUT | SORTIE] [,.. .n]]  
+ [ \@parameter1 = '*value1*' [OUT | SORTIE] [,.. .n]]  
+
  Une liste de valeurs pour les paramètres d’entrée utilisés par le script externe.  
 
 ## <a name="remarks"></a>Notes
@@ -119,7 +122,7 @@ Les deux le `@r_rowsPerRead` paramètre pour la diffusion en continu et la `@par
 
 ### <a name="data-types"></a>Types de données
 
-Les types de données suivants ne sont pas pris en charge lorsqu’il est utilisé dans la requête d’entrée ou des paramètres de `sp_execute_external_script` procédure et retournent une erreur de type non pris en charge.  
+Les types de données suivants ne sont pas pris en charge lorsqu’il est utilisé dans la requête d’entrée ou des paramètres de **sp_execute_external_script** procédure et retournent une erreur de type non pris en charge.  
 
 Pour résoudre ce problème, **CAST** la colonne ou la valeur à un type pris en charge dans [!INCLUDE[tsql](../../includes/tsql-md.md)] avant son envoi au script externe.  
   
@@ -147,7 +150,7 @@ Si l’entrée inclut **datetime** les valeurs qui ne tiennent pas la plage de v
 
 Valeurs flottantes (par exemple, `+Inf`, `-Inf`, `NaN`) ne sont pas pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] même si les deux langages utilisent la norme IEEE 754. Comportement actuel envoie simplement les valeurs à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directement ; par conséquent, le client SQL dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] génère une erreur. Par conséquent, ces valeurs sont converties en **NULL**.
 
-## <a name="permissions"></a>Autorisations
+## <a name="permissions"></a>Permissions
 
 Requiert **EXECUTE ANY EXTERNAL SCRIPT** autorisation de base de données.  
 

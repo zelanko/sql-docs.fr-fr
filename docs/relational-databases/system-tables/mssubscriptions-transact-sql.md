@@ -1,5 +1,5 @@
 ---
-title: MSsubscriptions (Transact-SQL) | Documents Microsoft
+title: MSsubscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,39 +22,39 @@ helpviewer_keywords:
 - MSsubscriptions system table
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05f5100843227093cd11909adede12f449cf0051
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d580a5164595a12d96ae8f7b491bc896d451fa8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007756"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102967"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSsubscriptions** table contient une ligne pour chaque article publié dans un abonnement pris en charge par le distributeur local. Cette table est stockée dans la base de données de distribution.  
+  Le **MSsubscriptions** table contient une ligne pour chaque article publié dans un abonnement pris en charge par le serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**publisher_database_id**|**int**|Identificateur de la base de données du serveur de publication.|  
+|**publisher_database_id**|**Int**|Identificateur de la base de données du serveur de publication.|  
 |**publisher_id**|**smallint**|L’ID du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
-|**publication_id**|**int**|ID de la publication.|  
-|**article_id**|**int**|L’ID de l’article.|  
+|**publication_id**|**Int**|ID de la publication.|  
+|**article_id**|**Int**|L’ID de l’article.|  
 |**subscriber_id**|**smallint**|L’ID de l’abonné.|  
 |**bd_abonné**|**sysname**|Le nom de la base de données d’abonnement.|  
-|**subscription_type**|**int**|Le type d’abonnement :<br /><br /> **0** = par envoi de données.<br /><br /> **1** = par extraction de données.<br /><br /> **2** = anonyme.|  
+|**subscription_type**|**Int**|Le type d’abonnement :<br /><br /> **0** = push.<br /><br /> **1** = par extraction.<br /><br /> **2** = anonyme.|  
 |**sync_type**|**tinyint**|Type de synchronisation :<br /><br /> **1** = automatique.<br /><br /> **2** = pas de synchronisation.|  
 |**status**|**tinyint**|L’état de l’abonnement :<br /><br /> **0** = inactif.<br /><br /> **1** = abonné.<br /><br /> **2** = actif.|  
 |**subscription_seqno**|**varbinary(16)**|Numéro de séquence de la transaction d'instantané.|  
 |**snapshot_seqno_flag**|**bit**|Indique la source du numéro de séquence de transaction de capture instantanée, où la valeur **1** signifie que **subscription_seqno** est le numéro de séquence de capture instantanée.|  
 |**independent_agent**|**bit**|Indique s'il existe un Agent de distribution autonome pour cette publication.|  
 |**subscription_time**|**datetime**|À usage interne uniquement|  
-|**loopback_detection**|**bit**|S'applique aux abonnements qui font partie d'une topologie de réplication transactionnelle bidirectionnelle. La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **1** = ne pas renvoyer.<br /><br /> **0** = renvoie les transactions.<br /><br /> Remarque : Cette colonne est pris en charge uniquement pour la compatibilité descendante avec les fonctionnalités de réplication bidirectionnelle dans [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Pour les versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez plutôt la fonctionnalité de réplication d'égal à égal. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
-|**agent_id**|**int**|ID de l'Agent.|  
+|**loopback_detection**|**bit**|S'applique aux abonnements qui font partie d'une topologie de réplication transactionnelle bidirectionnelle. La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **1** = ne pas renvoyer.<br /><br /> **0** = renvoie les transactions.<br /><br /> Remarque : Cette colonne est pris en charge uniquement pour la compatibilité descendante avec la fonctionnalité de réplication bidirectionnelle de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Pour les versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez plutôt la fonctionnalité de réplication d'égal à égal. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|**agent_id**|**Int**|ID de l'Agent.|  
 |**update_mode**|**tinyint**|Type de mise à jour.|  
 |**publisher_seqno**|**varbinary(16)**|Numéro de séquence de la transaction au niveau du serveur de publication pour cet abonnement.|  
 |**ss_cplt_seqno**|**varbinary(16)**|Numéro de séquence utilisé pour indiquer la fin du traitement de l'instantané concurrent.|  

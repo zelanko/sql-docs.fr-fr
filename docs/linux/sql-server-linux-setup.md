@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 04/06/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: bbf781d365174042f9358fd1e78a26d916f81f99
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: a2b725caa90ef277394637e4c65cfe5f241c1cc2
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982809"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102427"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Consignes d’installation pour SQL Server sur Linux
 
@@ -85,6 +85,8 @@ Vous pouvez installer SQL Server sur Linux à partir de la ligne de commande. Po
 - [Installer sur Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Exécuter sur Docker](quickstart-install-connect-docker.md)
 - [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+
+Après avoir installé, envisagez d’apporter des modifications de configuration supplémentaires pour des performances optimales. Pour plus d’informations, consultez [performances meilleures pratiques et des instructions de configuration de SQL Server sur Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a id="upgrade"></a> Mettre à jour de SQL Server
 

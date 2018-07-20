@@ -1,5 +1,5 @@
 ---
-title: MSpeer_response (Transact-SQL) | Documents Microsoft
+title: MSpeer_response (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSpeer_response system table
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9641b794b7ac71b0fc8fb555ba04b4fa5bc83a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 137fb38215788b030f1831a92ad85cec570e0421
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004606"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101957"
 ---
 # <a name="mspeerresponse-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "33004606"
   
 ## <a name="definition"></a>Définition  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**request_id**|**int**|Identifie une entrée de demande d’état dans le [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) table.|  
+|**request_id**|**Int**|Identifie une entrée de demande d’état dans le [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) table.|  
 |**homologue**|**sysname**|Homologue qui a généré la réponse.|  
 |**peer_db**|**sysname**|Base de données d'abonnement sur l'homologue qui a généré la réponse.|  
 |**received_date**|**datetime**|Date et heure de réception de la demande de l'homologue.|  

@@ -1,5 +1,5 @@
 ---
-title: Tables de Base système | Documents Microsoft
+title: Tables de Base système | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c15a0e42091cffb8010cae36ad43322d361f91fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6804649b60a1617def415ce35113685ef43902f5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263032"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102207"
 ---
 # <a name="system-base-tables"></a>Tables de base système
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "33263032"
 >  Les tables de base système sont uniquement utilisées dans [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et ne sont pas destinées à un usage général. Elles peuvent faire l'objet de modifications et la compatibilité n'est pas garantie.  
   
 ## <a name="system-base-table-metadata"></a>Métadonnées des tables de base système  
- Un bénéficiaire qui a l’autorisation CONTROL, ALTER ou VIEW DEFINITION sur une base de données peut afficher les métadonnées de table de base système dans le **sys.objects** affichage catalogue. Le bénéficiaire peut également résoudre les noms et ID d’objets des tables de base système à l’aide des fonctions intégrées comme [nom_objet](../../t-sql/functions/object-name-transact-sql.md) et [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md).  
+ Un bénéficiaire qui possède l’autorisation CONTROL, ALTER ou VIEW DEFINITION sur une base de données peut afficher les métadonnées de table de base système dans le **sys.objects** vue de catalogue. Le bénéficiaire peut également résoudre les noms et ID d’objets des tables de base système à l’aide des fonctions intégrées telles que [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md) et [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md).  
   
  Pour créer une liaison avec une table de base système, un utilisateur doit se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de la connexion administrateur dédiée. Une tentative d'exécution d'une requête SELECT à partir d'une table de base système sans connexion via la DAC provoque une erreur.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33263032"
 ## <a name="system-base-tables"></a>Tables de base système  
  Le tableau suivant répertorie et décrit l'ensemble de chaque table de base système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Table de base| Description|  
+|Table de base|Description|  
 |----------------|-----------------|  
 |**Sys.sysschobjs**|Existe dans toutes les bases de données. Chaque ligne représente un objet de la base de données.|  
 |**Sys.sysbinobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité de Service Broker dans la base de données. Les entités de Service Broker incluent les éléments suivants :<br /><br /> type de message<br /><br /> contrat de service<br /><br /> Service<br /><br /> Les noms et les types utilisent un classement binaire fixe.|  
@@ -63,7 +63,7 @@ ms.locfileid: "33263032"
 |**Sys.sysrmtlgns**|Cette table de base système existe dans le **master** uniquement la base de données. Contient une ligne pour chaque mappage d'ouverture de session distante. Cela est utilisé pour mapper les connexions entrantes issues d'un serveur correspondant et accédant à une connexion locale.|  
 |**Sys.syslnklgns**|Il existe dans le **master** uniquement la base de données. Contient une ligne pour chaque mappage de connexion liée. Les mappages de connexions liées sont utilisés par des appels de procédure distante et par des requêtes distribuées qui émanent d'un serveur local vers un serveur lié correspondant.|  
 |**Sys.sysxlgns**|Il existe dans le **master** uniquement la base de données. Contient une ligne pour chaque principal de serveur.|  
-|**Sys.sysdbfiles**|Existe dans toutes les bases de données. Si la colonne **dbid** est égal à zéro, la ligne représente un fichier appartenant à cette base de données. Dans le **master** de base de données, la colonne **dbid** peut être différente de zéro. Lorsque c'est le cas, la ligne représente un fichier maître.|  
+|**Sys.sysdbfiles**|Existe dans toutes les bases de données. Si la colonne **dbid** est égal à zéro, la ligne représente un fichier qui appartient à cette base de données. Dans le **master** de base de données, la colonne **dbid** peut être différente de zéro. Lorsque c'est le cas, la ligne représente un fichier maître.|  
 |**Sys.sysusermsg**|Il existe dans le **master** uniquement la base de données. Chaque ligne représente un message d'erreur défini par l'utilisateur.|  
 |**Sys.sysprivs**|Existe dans toutes les bases de données. Contient une ligne pour chaque autorisation de niveau base de données ou serveur.<br /><br /> Remarque : Les autorisations de niveau serveur sont stockées dans le **master** base de données.|  
 |**Sys.sysowners**|Existe dans toutes les bases de données. Chaque ligne représente un principal de base de données.|  

@@ -23,17 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 381be0b807721fb066a3fd128aa10a19c92da15e
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
+ms.openlocfilehash: b819d5904cdcdc7339036a5ec5f5a9e6fde8477e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080087"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086231"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retourne un jeu de résultats qui contient des métadonnées sur les paramètres non déclarés dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considère chaque paramètre qui est utilisé dans le **@tsql** du lot, mais non déclaré dans **@params**. Le jeu de résultats retourné contient une ligne pour chaque paramètre de ce genre, avec les informations de type déduites pour ce paramètre. La procédure retourne un résultat vide si le **@tsql** lot d’entrée n’a aucun paramètre à l’exception de ceux déclarés dans **@params**.  
+  Retourne un jeu de résultats qui contient des métadonnées sur les paramètres non déclarés dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considère chaque paramètre qui est utilisé dans le  **\@tsql** du lot, mais non déclaré dans  **\@params**. Le jeu de résultats retourné contient une ligne pour chaque paramètre de ce genre, avec les informations de type déduites pour ce paramètre. La procédure retourne un résultat vide si le  **\@tsql** lot d’entrée n’a aucun paramètre à l’exception de ceux déclarés dans  **\@params**.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,13 +47,13 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@tsql =** ] **'***SQL_batch transact***'**  
+ [  **\@tsql =** ] **'***Transact-SQL_batch***'**  
  Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] *Transact-SQL_batch* peut être **nvarchar (***n***)** ou **nvarchar (max)**.  
   
- [  **@params =** ] **N'***paramètres***'**  
- @params Fournit une chaîne de déclaration pour les paramètres pour le [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctionne de lot, de même façon que sp_executesql. *Paramètres* peut être **nvarchar (***n***)** ou **nvarchar (max)**.  
+ [  **\@params =** ] **N'***paramètres***'**  
+ \@params fournit une chaîne de déclaration pour les paramètres pour le [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctionne de lot, de même façon que sp_executesql. *Paramètres* peut être **nvarchar (***n***)** ou **nvarchar (max)**.  
   
- Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans *Transact-SQL_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. n correspond à un espace réservé pour d'autres définitions de paramètres. Si l’instruction Transact-SQL ou un lot dans l’instruction ne contient-elle pas de paramètres, @params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
+ Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans *Transact-SQL_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. n correspond à un espace réservé pour d'autres définitions de paramètres. Si l’instruction Transact-SQL ou un lot dans l’instruction ne contient-elle pas de paramètres, \@params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
  Type de données  
  Type de données du paramètre.  
@@ -100,15 +100,15 @@ sp_describe_undeclared_parameters
   
  **sp_describe_undeclared_parameters** retourne une erreur dans chacun des cas suivants.  
   
--   Si l’entrée @tsql n’est pas valide [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. La validité est déterminée en analysant le [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Toutes les erreurs provoquées par le lot pendant l’optimisation des requêtes ou lors de l’exécution ne sont pas considérés lors de la détermination de si le [!INCLUDE[tsql](../../includes/tsql-md.md)] lot est valide.  
+-   Si l’entrée \@tsql n’est pas valide [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. La validité est déterminée en analysant le [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Toutes les erreurs provoquées par le lot pendant l’optimisation des requêtes ou lors de l’exécution ne sont pas considérés lors de la détermination de si le [!INCLUDE[tsql](../../includes/tsql-md.md)] lot est valide.  
   
--   Si @params n’est pas NULL et contient une chaîne qui n’est pas une chaîne de déclaration syntaxiquement valide pour les paramètres, ou si elle contient une chaîne qui déclare un paramètre plusieurs fois.  
+-   Si \@params n’est pas NULL et contient une chaîne qui n’est pas une chaîne de déclaration syntaxiquement valide pour les paramètres, ou si elle contient une chaîne qui déclare un paramètre plusieurs fois.  
   
--   Si l’entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] lot déclare une variable locale du même nom qu’un paramètre déclaré dans @params.  
+-   Si l’entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] lot déclare une variable locale du même nom qu’un paramètre déclaré dans \@params.  
   
 -   Si l'instruction crée des tables temporaires.  
   
- Si @tsql n’a aucun paramètre, autres que ceux déclarés dans @params, la procédure retourne un jeu de résultats vide.  
+ Si \@tsql n’a aucun paramètre, autres que ceux déclarés dans \@params, la procédure retourne un jeu de résultats vide.  
   
 ## <a name="parameter-selection-algorithm"></a>Algorithme de sélection du paramètre  
  Dans le cas d'une requête avec des paramètres non déclarés, la déduction de type de données pour les paramètres non déclarés s'effectue en trois étapes.  
@@ -123,7 +123,7 @@ sp_describe_undeclared_parameters
   
 -   Expression dont les types de données ne dépendent pas des paramètres non déclarés pour toutes les entrées.  
   
- Par exemple, envisagez la requête `SELECT dbo.tbl(@p1) + c1 FROM t1 WHERE c2 = @p2 + 2`. Les expressions dbo.tbl (@p1) + c1 et c2 ont des types de données et expression @p1 et @p2 + n’est pas le cas de 2.  
+ Par exemple, envisagez la requête `SELECT dbo.tbl(@p1) + c1 FROM t1 WHERE c2 = @p2 + 2`. Les expressions dbo.tbl (\@p1) + c1 et c2 ont des types de données et expression \@p1 et \@p2 + 2 ne le faites pas.  
   
  Après cette étape, si une expression (autre qu'un appel à une fonction UDF) compte deux arguments sans types de données, la déduction du type se solde par une erreur. Les exemples suivants entraînent tous des erreurs :  
   
@@ -141,7 +141,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  **Étape 2**  
   
- Pour un paramètre non déclaré donné @p, l’algorithme de déduction de type recherche l’expression la plus profonde E (@p) qui contient @p et est une des opérations suivantes :  
+ Pour un paramètre non déclaré donné \@p, l’algorithme de déduction de type recherche l’expression la plus profonde E (\@p) qui contient \@p et est une des opérations suivantes :  
   
 -   Argument d'une comparaison ou d'opérateur d'assignation.  
   
@@ -151,7 +151,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Un argument pour un **CAST** ou **convertir**.  
   
- L’algorithme de déduction de type recherche un type de données cible TT (@p) pour E (@p). Les types de données cibles des exemples précédents sont les suivants :  
+ L’algorithme de déduction de type recherche un type de données cible TT (\@p) pour E (\@p). Les types de données cibles des exemples précédents sont les suivants :  
   
 -   Type de données de l'autre côté de la comparaison ou de l'attribution.  
   
@@ -161,32 +161,32 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Type de données vers lequel l'instruction effectue la conversion.  
   
- Par exemple, envisagez la requête `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)`. Puis E (@p1) = @p1, E (@p2) = @p2 + c1, TT (@p1) est le type de données de retour déclaré de dbo.tbl et TT (@p2) est le type de données de paramètre déclaré pour dbo.tbl.  
+ Par exemple, envisagez la requête `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)`. Puis E (\@p1) = \@p1, E (\@p2) = \@p2 + c1, TT (\@p1) est le type de données de retour déclaré de dbo.tbl et TT (\@p2) est le type de données de paramètre déclaré pour dbo.tbl.  
   
- Si @p n’est pas contenue dans une expression répertoriée au début de l’étape 2, l’algorithme de déduction de type détermine que E (@p) est la plus grande expression scalaire qui contient @p, et n’est pas le cas de l’algorithme de déduction de type calcul d’un type de données cible TT (@p) pour E (@p). Par exemple, si la requête est SELECT `@p + 2` puis E (@p) = @p + 2, et il n’existe aucun TT (@p).  
+ Si \@p n’est pas contenu dans n’importe quelle expression répertoriée au début de l’étape 2, l’algorithme de déduction de type détermine que E (\@p) est la plus grande expression scalaire qui contient \@p et l’algorithme de déduction de type est pas le cas calcul d’un type de données cible TT (\@p) pour E (\@p). Par exemple, si la requête est SELECT `@p + 2` puis E (\@p) = \@p + 2, et il n’existe aucun TT (\@p).  
   
  **Étape 3**  
   
- Maintenant que E (@p) et TT (@p) sont identifiés, l’algorithme de déduction de type déduit un type de données pour @p dans un des deux manières suivantes :  
+ Maintenant que E (\@p) et TT (\@p) sont identifiés, l’algorithme de déduction de type déduit un type de données pour \@p dans un des deux manières suivantes :  
   
 -   Déduction simple  
   
-     Si E (@p) = @p et TT (@p) existe, par exemple, si @p est directement un argument à une des expressions répertoriées au début de l’étape 2, l’algorithme de déduction de type déduit le type de données de @p être TT (@p). Exemple :  
+     Si E (\@p) = \@p et TT (\@p) existe, par exemple, si \@p est directement un argument à une des expressions répertoriées au début de l’étape 2, l’algorithme de déduction de type déduit le type de données \@p en TT ( \@p). Exemple :  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
     ```  
   
-     Le type de données pour @p1, @p2, et @p3 sera le type de données de c1, le type de données de retour de dbo.tbl et le type de données de paramètre pour dbo.tbl respectivement.  
+     Le type de données pour \@p1, \@p2, et \@p3 sera le type de données de c1, le type de données de retour de dbo.tbl, et les paramètre de type de données pour dbo.tbl respectivement.  
   
-     Comme un cas particulier, si @p est un argument dans un \<, >, \<=, ou > =, opérateur, déduction simple règles ne s’appliquent pas. L'algorithme de la déduction du type utilisera les règles de déduction générales expliquées dans la section suivante. Par exemple, si c1 est une colonne de type de données char(30), considérez les deux requêtes suivantes :  
+     Comme un cas particulier, si \@p est un argument dans un \<, >, \<=, ou > =, opérateur, déduction simple règles ne s’appliquent pas. L'algorithme de la déduction du type utilisera les règles de déduction générales expliquées dans la section suivante. Par exemple, si c1 est une colonne de type de données char(30), considérez les deux requêtes suivantes :  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
     SELECT * FROM t WHERE c1 > @p  
     ```  
   
-     Dans le premier cas, l’algorithme de déduction de type déduit **char (30)** comme type de données pour @p conformément aux règles précédemment dans cette rubrique. Dans le deuxième cas, l’algorithme de déduction de type déduit **varchar (8000)** selon les règles de déduction générales décrites dans la section suivante.  
+     Dans le premier cas, l’algorithme de déduction de type déduit **char (30)** comme type de données pour \@p conformément aux règles précédemment dans cette rubrique. Dans le deuxième cas, l’algorithme de déduction de type déduit **varchar (8000)** selon les règles de déduction générales décrites dans la section suivante.  
   
 -   Déduction générale  
   
@@ -217,7 +217,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 ### <a name="selection-criteria"></a>Critères de sélection  
  Parmi les types de données candidats, tout type de données qui invaliderait la requête est rejeté. Parmi les types de données candidats restants, l'algorithme de déduction du type en sélectionne un d'après les règles suivantes.  
   
-1.  Le type de données qui produit le plus petit nombre de conversions implicites dans E (@p) est sélectionné. Si un type de données particulier produit un type de données pour E (@p) qui est différent de TT (@p), l’algorithme de déduction de type considère qu’il s’agit d’une conversion implicite supplémentaire du type de données de E (@p) à TT (@p).  
+1.  Le type de données qui produit le plus petit nombre de conversions implicites dans E (\@p) est sélectionné. Si un type de données particulier produit un type de données pour E (\@p) qui est différent de TT (\@p), l’algorithme de déduction de type considère qu’il s’agit d’une conversion implicite supplémentaire du type de données de E (\@p) pour TT (\@p).  
   
      Exemple :  
   
@@ -225,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
     ```  
   
-     Dans ce cas, E (@p) est Col_Int + @p et TT (@p) est **int**. **int** est choisi pour @p car il ne produit pas de conversions implicites. Tout autre choix de type de données produit au moins une conversion implicite.  
+     Dans ce cas, E (\@p) est Col_Int + \@p et TT (\@p) est **int**. **int** est choisi pour \@p car il ne produit pas de conversions implicites. Tout autre choix de type de données produit au moins une conversion implicite.  
   
 2.  Si plusieurs types de données sont liés pour le plus petit nombre de conversions, le type de données dont la priorité est supérieure est utilisé. Exemple :  
   
@@ -233,9 +233,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     Dans ce cas, **int** et **smallint** entraînent une conversion. Chaque autre type de données entraîne plusieurs conversions. Étant donné que **int** est prioritaire sur **smallint**, **int** est utilisé pour @p. Pour plus d’informations sur la priorité des types de données, consultez [priorité des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+     Dans ce cas, **int** et **smallint** entraînent une conversion. Chaque autre type de données entraîne plusieurs conversions. Étant donné que **int** est prioritaire sur **smallint**, **int** est utilisé pour \@p. Pour plus d’informations sur la priorité des types de données, consultez [priorité des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-     Cette règle s'applique uniquement s'il existe une conversion implicite entre chaque type de données lié d'après la règle 1 et le type de données présentant la priorité la plus élevée. S'il n'existe aucune conversion implicite, la déduction du type de données se solde par une erreur. Par exemple, dans la requête `SELECT @p FROM t`, type de données déduction échoue, car tout type de données pour @p serait aussi bonnes. Par exemple, il n’existe aucune conversion implicite à partir de **int** à **xml**.  
+     Cette règle s'applique uniquement s'il existe une conversion implicite entre chaque type de données lié d'après la règle 1 et le type de données présentant la priorité la plus élevée. S'il n'existe aucune conversion implicite, la déduction du type de données se solde par une erreur. Par exemple, dans la requête `SELECT @p FROM t`, type de données déduction échoue, car tout type de données pour \@p serait aussi bonnes. Par exemple, il n’existe aucune conversion implicite à partir de **int** à **xml**.  
   
 3.  Si les deux types de données semblables sont liés par exemple sous la règle 1, **varchar (8000)** et **varchar (max)**, le plus petit type de données (**varchar (8000)**) est choisie. Le même principe s’applique aux **nvarchar** et **varbinary** types de données.  
   
@@ -251,10 +251,10 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  Par exemple, pour la requête `SELECT * FROM t WHERE [Col_varchar(30)] > @p`, **varchar (8000)** est choisi car la conversion (a) est préférable. Pour la requête `SELECT * FROM t WHERE [Col_char(30)] > @p`, **varchar (8000)** est encore choisi car il provoque une conversion de type (b) et un autre choix (tel que **varchar (4000)**) provoque une conversion de type (d).  
   
- En dernier exemple, considérons une requête `SELECT NULL + @p`, **int** est choisi pour @p , car il en résulte une conversion de type (c).  
+ En dernier exemple, considérons une requête `SELECT NULL + @p`, **int** est choisi pour \@p, car il en résulte une conversion de type (c).  
   
-## <a name="permissions"></a>Autorisations  
- Nécessite l’autorisation d’exécuter le @tsql argument.  
+## <a name="permissions"></a>Permissions  
+ Nécessite l’autorisation d’exécuter le \@tsql argument.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne des informations telles que le type de données attendu pour les paramètres non déclarés `@id` et `@name`.  

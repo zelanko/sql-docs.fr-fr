@@ -1,5 +1,5 @@
 ---
-title: IHsubscriptions (Transact-SQL) | Documents Microsoft
+title: IHsubscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - IHsubscriptions system table
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 437f5e75b7728e1ada248bd69996285c0dad20af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 519e81dc73977fed54709e6c1fac0f053a3ef3ba
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004066"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102987"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **IHsubscriptions** table système contient une ligne pour chaque abonnement à une publication d’un non - éditeur SQL Server à l’aide du serveur de distribution en cours. Cette table est stockée dans la base de données de distribution.  
+  Le **IHsubscriptions** (table système) contient une ligne pour chaque abonnement à une publication à partir d’une non - publication SQL Server utilisant le serveur de distribution en cours. Cette table est stockée dans la base de données de distribution.  
   
 ## <a name="definition"></a>Définition  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**article_id**|**int**|Identifie un article publié de manière unique.|  
-|**srvid**|**smallint**|L’ID du serveur de l’abonné.|  
+|**article_id**|**Int**|Identifie un article publié de manière unique.|  
+|**srvid**|**smallint**|L’ID de serveur de l’abonné.|  
 |**dest_db**|**sysname**|Nom de la base de données de destination.|  
 |**login_name**|**sysname**|Nom d’accès utilisé lors de l’ajout de l’abonnement|  
 |**distribution_jobid**|**binary (16)**|ID de travail de l’Agent de distribution|  
@@ -50,7 +50,7 @@ ms.locfileid: "33004066"
 |**queued_reinit**|**bit**|Indique si l'article est marqué pour l'initialisation ou la réinitialisation. La valeur **1** indique que l’abonnement à l’article est marqué pour l’initialisation ou la réinitialisation.|  
 |**status**|**tinyint**|L’état de l’abonnement :<br /><br /> **0** = inactif.<br /><br /> **1** = abonné.<br /><br /> **2** = actif.|  
 |**sync_type**|**tinyint**|Type de synchronisation initiale :<br /><br /> **1** = automatique.<br /><br /> **2** = none.|  
-|**subscription_type**|**int**|Le type d’abonnement :<br /><br /> **0** = par envoi de données - l’agent de distribution s’exécute sur l’abonné.<br /><br /> **1** = par extraction de données - l’agent de distribution s’exécute sur le serveur de distribution.|  
+|**subscription_type**|**Int**|Le type d’abonnement :<br /><br /> **0** = push - l’agent de distribution s’exécute sur l’abonné.<br /><br /> **1** = par extraction - l’agent de distribution s’exécute sur le serveur de distribution.|  
 |**update_mode**|**tinyint**|Mode de mise à jour :<br /><br /> **0** = lecture seule.<br /><br /> **1** = mise à jour immédiate.|  
 |**loopback_detection**|**bit**|S'applique aux abonnements qui font partie d'une topologie de réplication transactionnelle bidirectionnelle. La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **0** = renvoie les transactions.<br /><br /> **1** = ne pas renvoyer.|  
   

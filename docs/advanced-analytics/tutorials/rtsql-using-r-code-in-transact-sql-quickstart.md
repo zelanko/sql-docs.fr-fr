@@ -1,55 +1,50 @@
 ---
-title: À l’aide de code R dans Transact-SQL (R dans démarrage rapide de SQL) | Documents Microsoft
+title: Guide de démarrage rapide pour une exécution de code « Hello World » base R dans T-SQL (SQL Server Machine Learning) | Microsoft Docs
+description: Dans ce démarrage rapide pour le script R dans SQL Server, Découvrez les principes fondamentaux de la procédure stockée système sp_execute_external_script avec un exercice hello-world.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c11e2bba73cef8a8b6f59d5a92de22cddb19ccd9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e738289b39f6d390bc4d6196606d242fa4803865
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203241"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086882"
 ---
-# <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>À l’aide de code R dans Transact-SQL (R dans démarrage rapide de SQL)
+# <a name="quickstart-hello-world-r-script-in-sql-server"></a>Démarrage rapide : Un script R « Hello world » dans SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Ce didacticiel vise à vous familiariser avec les mécanismes basiques d’appel de script R à partir d’une procédure stockée T-SQL.
+SQL Server inclut la prise en charge de fonctionnalités de langage R pour l’analytique en base de données sur les données de SQL Server résidentes. Vous pouvez utiliser des fonctions R open source, des packages tiers et les packages Microsoft R intégrés pour l’analytique prédictive à l’échelle.
 
-**Vous allez apprendre**
+Dans ce démarrage rapide, vous découvrez les concepts clés en exécutant un « Hello World » R script inT-SQL, une introduction à la **sp_execute_external_script** procédure stockée système. L’exécution du script R est via des procédures stockées. Vous pouvez utiliser la [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) procédure stockée et passez R script en tant que paramètre d’entrée comme illustré dans ce démarrage rapide ou encapsuler le script R dans un [procédure stockée personnalisée](sqldev-in-database-r-for-sql-developers.md). 
 
-+ Comment incorporer R dans une fonction T-SQL
-+ Quelques conseils pour travailler avec R et SQL objets de données et les types de données
-+ Comment créer un modèle simple, puis enregistrez-le à SQL Server
-+ Comment créer des prédictions et un traçage R à l’aide du modèle
+## <a name="prerequisites"></a>Prérequis
 
-**Durée estimée**
+Cet exercice requiert l’accès à une instance de SQL Server avec l’un des déjà installé les composants suivants :
 
-30 minutes, sans l’étape de configuration
++ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md), avec le langage R installé
++ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
-## <a name="prerequisites"></a>Configuration requise
+  Votre instance SQL Server peut être dans une machine virtuelle Azure ou en local. Soyez conscient que la fonctionnalité de script externe est désactivée par défaut, vous devrez donc peut-être à [activer les scripts externes](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) et vérifiez que **service SQL Server Launchpad** est en cours d’exécution avant de commencer.
 
-Vous devez avoir accès à une instance de SQL Server avec l’un des déjà installé les composants suivants :
++ Un outil pour l’exécution de requêtes SQL. Vous pouvez utiliser n’importe quelle application qui peut se connecter à une base de données SQL Server et exécutez le code T-SQL. Les professionnels SQL peuvent utiliser SQL Server Management Studio (SSMS) ou Visual Studio.
 
-+ Services SQL Server 2017 Machine Learning, avec le langage R installé
-+ SQL Server 2016 R Services
-
-Votre instance de SQL Server peut être dans une machine virtuelle Azure ou localement. Soyez conscient que la fonctionnalité de script externe est désactivée par défaut, donc vous devrez peut-être effectuer quelques étapes supplémentaires pour qu’elle fonctionne.
-
-Pour exécuter des requêtes SQL incluant des scripts de R, vous pouvez utiliser n’importe quelle autre application qui peut se connecter à une base de données et exécutez le code T-SQL. Professionnels de l’informatique SQL peuvent utiliser SQL Server Management Studio (SSMS) ou Visual Studio.
-
-Dans ce didacticiel, pour indiquer combien il est facile à exécuter R dans SQL Server, nous avons utilisé la nouvelle **extension mssql pour le Code de Visual Studio**. Code de Visual Studio est un environnement de développement gratuit qui peut s’exécuter sur Linux, Mac OS ou Windows. Le **mssql** extension est une extension léger pour l’exécution de requêtes T-SQL. Pour l’installer, consultez cet article : [Utiliser l’extension mssql pour Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
+Pour ce didacticiel, pour montrer combien il est facile d’exécuter R dans SQL Server, nous avons utilisé le nouveau **extension mssql pour Visual Studio Code**. VS Code est un environnement de développement gratuit qui peut s’exécuter sur Linux, macOS ou Windows. Le **mssql** extension est une extension léger pour exécuter des requêtes T-SQL. Pour vous procurer Visual Studio Code, consultez [Télécharger et installer Visual Studio Code](https://code.visualstudio.com/Download). Pour ajouter le **mssql** extension, consultez cet article : [utiliser l’extension mssql pour Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Se connecter à une base de données et exécuter un script de test Hello World
 
 1. Dans Visual Studio Code, créez un fichier texte et appelez-le BasicRSQL.sql.
-2. Après avoir ouvert ce fichier, appuyez sur Ctrl + Maj + P (Commande + P sur un macOS), tapez **sql** pour afficher la liste des commandes SQL, puis sélectionnez **CONNECT**. Code Visual Studio vous invite à créer un profil à utiliser lors de la connexion à une base de données spécifique. Cela est facultatif, mais rend plus facile de basculer entre les bases de données et des connexions.
+
+2. Après avoir ouvert ce fichier, appuyez sur Ctrl + Maj + P (Commande + P sur un macOS), tapez **sql** pour afficher la liste des commandes SQL, puis sélectionnez **CONNECT**. Visual Studio Code vous invite à créer un profil à utiliser lors de la connexion à une base de données spécifique. Facultatif, mais rend plus facile de basculer entre les bases de données et des connexions.
     + Choisissez un serveur ou l’instance où R dans SQL Server a été installé.
     + Utilisez un compte qui dispose des autorisations nécessaires pour créer une base de données, exécuter des instructions SELECT et afficher les définitions de table.
+
 2. Si la connexion aboutit, les noms du serveur et de la base de données doivent figurer dans la barre d’état avec vos informations d’identification actuelles. Si la connexion échoue, vérifiez que le nom de l’ordinateur et le nom du serveur sont corrects.
+
 3. Collez cette instruction et exécutez-la.
 
     ```sql
@@ -57,36 +52,34 @@ Dans ce didacticiel, pour indiquer combien il est facile à exécuter R dans SQL
       @language =N'R',
       @script=N'OutputDataSet<-InputDataSet',
       @input_data_1 =N'SELECT 1 AS hello'
-      WITH RESULT SETS (([hello] int not null));
+      WITH RESULT SETS (([Hello World] int));
     GO
     ```
 
-    Dans Visual Studio Code, vous pouvez mettre en surbrillance le code à exécuter et appuyer sur Ctrl + Maj + E. Si vous avez peur d’oublier cette combinaison, vous pouvez la changer. Consultez [Personnaliser les combinaisons de touches de raccourci](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts).
+Entrées dans cette procédure stockée sont les suivantes :
 
-    ![rsql-basictut_hello1code](media/rsql-basictut-hello1code.PNG)
++ *@language* paramètre définit l’extension de langage à appeler, dans ce cas, R.
++ *@script* paramètre définit les commandes passées au runtime R. Votre script R entier doit être placé dans cet argument en tant que texte Unicode. Vous pouvez également ajouter le texte à une variable de type **nvarchar**, puis appeler cette variable.
++ *@input_data_1* données sont retournées par la requête passée au runtime R, qui retourne les données vers SQL Server comme une trame de données.
++ DES jeux de résultats clause définit le schéma de la table de données retournées pour SQL Server, ajout de « Hello World » comme nom de colonne, **int** pour le type de données.
 
 **Résultats**
 
 ![rsql_basictut_hello1](media/rsql-basictut-hello1.PNG)
 
-## <a name="troubleshooting"></a>Dépannage
+Si vous obtenez des erreurs à partir de cette requête, éliminer tout problème d’installation. Configuration de post-installation est nécessaire pour permettre l’utilisation des bibliothèques de code externe. Consultez [installer SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) ou [installer SQL Server 2016 R Services](../install/sql-r-services-windows-install.md). De même, assurez-vous que le service Launchpad est en cours d’exécution. 
 
-+ Si vous obtenez des erreurs de cette requête, installation peut-être être incomplet. Après avoir ajouté la fonctionnalité à l’aide de l’Assistant Installation de SQL Server, vous devez exécuter des étapes supplémentaires pour permettre l’utilisation de bibliothèques de code externes.  Consultez [installer SQL Server 2017 d’apprentissage Services](../install/sql-machine-learning-services-windows-install.md) ou [installer SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
+Selon votre environnement, vous pouvez être amené à activer les comptes de travail R pour vous connecter à SQL Server, installer des bibliothèques réseau supplémentaires, activer l’exécution de code à distance ou redémarrer l’instance une fois que tout est configuré. Pour plus d’informations, consultez [Installation de R Services et de mettre à niveau le Forum aux questions](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-+ Vérifiez que le service Launchpad est en cours d’exécution. Selon votre environnement, vous pouvez être amené à activer les comptes de travail R pour vous connecter à SQL Server, installer des bibliothèques réseau supplémentaires, activer l’exécution de code à distance ou redémarrer l’instance une fois que tout est configuré. Consultez [Questions fréquentes sur l’installation et la mise à niveau de R Services](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> [!TIP]
+> Dans Visual Studio Code, vous pouvez mettre en surbrillance le code à exécuter et appuyer sur Ctrl + Maj + E. Si vous avez peur d’oublier cette combinaison, vous pouvez la changer. Consultez [Personnaliser les combinaisons de touches de raccourci](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts).
+> 
+> ![rsql-basictut_hello1code](media/rsql-basictut-hello1code.PNG)
+> 
 
-+ Pour vous procurer Visual Studio Code, consultez [Télécharger et installer Visual Studio Code](https://code.visualstudio.com/Download).
+## <a name="next-steps"></a>Étapes suivantes
 
-## <a name="next-lesson"></a>Leçon suivante
+Maintenant que vous avez confirmé que votre instance est prêt à travailler avec R, examinons plus en détail la structuration des entrées et sorties.
 
-Maintenant que votre instance est prêt à travailler avec R, nous pouvons commencer.
-
-Leçon 1 : [utilisation des entrées et sorties](rtsql-working-with-inputs-and-outputs.md)
-
-Leçon 2 : [R et SQL objets de données et les types de données](rtsql-r-and-sql-data-types-and-data-objects.md)
-
-Leçon 3 : [fonctions à l’aide de R avec des données SQL Server](rtsql-using-r-functions-with-sql-server-data.md)
-
-Leçon 4 : [créer un modèle de prévision](rtsql-create-a-predictive-model-r.md)
-
-Leçon 5 : [prédire et traçage à partir du modèle](rtsql-predict-and-plot-from-model.md)
+> [!div class="nextstepaction"]
+> [Démarrage rapide : Gérer les entrées et sorties](rtsql-working-with-inputs-and-outputs.md)

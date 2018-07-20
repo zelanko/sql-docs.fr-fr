@@ -1,5 +1,5 @@
 ---
-title: MSreplication_subscriptions (Transact-SQL) | Documents Microsoft
+title: MSreplication_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,32 +20,32 @@ helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74fed5b79386ae09b3733a23980d0a1b32bd1c39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1caaedff89c120cc9607d06976f26a10d780a12c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005466"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103377"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSreplication_subscriptions** table contient une ligne des informations de réplication pour chaque Agent de Distribution de la base de données d’abonné locale. Cette table est stockée dans la base de données d’abonnement.  
+  Le **MSreplication_subscriptions** table contient une ligne d’informations de réplication pour chaque Agent de Distribution de la base de données d’abonné locale. Cette table est stockée dans la base de données d’abonnement.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher** (serveur de publication)|**sysname**|Le nom du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
-|**Publication**|**sysname**|Nom de la publication.|  
+|**publication**|**sysname**|Nom de la publication.|  
 |**independent_agent**|**bit**|Indique s'il existe un Agent de distribution autonome pour cette publication.|  
-|**subscription_type**|**int**|Le type d’abonnement :<br /><br /> 0 = Par envoi de données (push).<br /><br /> 1 = Par extraction de données (pull).<br /><br /> 2 = Anonyme.|  
+|**subscription_type**|**Int**|Le type d’abonnement :<br /><br /> 0 = Par envoi de données (push).<br /><br /> 1 = Par extraction de données (pull).<br /><br /> 2 = Anonyme.|  
 |**distribution_agent**|**sysname**|Nom de l'Agent de distribution.|  
 |**Time**|**smalldatetime**|Heure de la dernière mise à jour effectuée par l'Agent de distribution.|  
 |**description**|**nvarchar(255)**|Description de l'abonnement.|  
-|**transaction_timestamp**|**varbinary(16)**|Interne-usage.|  
+|**transaction_timestamp**|**varbinary(16)**|Interne-usage uniquement.|  
 |**update_mode**|**tinyint**|Type de mise à jour.|  
 |**agent_id**|**binary (16)**|ID de l'Agent.|  
 |**subscription_guid**|**binary (16)**|Identificateur global de la version de l'abonnement sur la publication.|  

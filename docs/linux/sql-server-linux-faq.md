@@ -4,19 +4,19 @@ description: Cet article fournit des réponses aux questions fréquemment posée
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/22/2018
-ms.topic: article
+ms.date: 07/17/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b0df550ee3489ba8c37ded47878096d75909343e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001791"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102227"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server sur Linux Forum aux Questions (FAQ)
 
@@ -89,6 +89,9 @@ Les sections suivantes fournissent des questions et réponses pour SQL Server s�
 1. **Quels outils sont disponibles pour surveiller les performances de SQL Server sur Linux ?**
 
    Vous pouvez utiliser [vues de gestion dynamique (DMV) système](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) pour collecter différents types d’informations sur SQL Server, y compris les informations de processus Linux. Vous pouvez utiliser [requête Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) pour améliorer les performances de requête. Autres outils, tels que le compte [tableau de bord performances](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/), travaillez à distance dans SQL Server Management Studio (SSMS) à partir de Windows.
+
+   > [!TIP]
+   > Un pour améliorer les performances consiste à configurer correctement votre système d’exploitation Linux et l’insance de SQL Server. Pour plus d’informations, consultez [performances meilleures pratiques et des instructions de configuration de SQL Server sur Linux](sql-server-linux-performance-best-practices.md).
 
 ## <a name="administration"></a>Administration
 

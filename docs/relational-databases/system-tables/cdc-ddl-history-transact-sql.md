@@ -1,5 +1,5 @@
 ---
-title: CDC.ddl_history (Transact-SQL) | Documents Microsoft
+title: CDC.ddl_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - cdc.ddl_history
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c65fd834ac53f7d1835e9c7641dbe6d6fb78d082
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 08d05d0f9064db1a536bd53e7ab2552eecda7080
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258644"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101637"
 ---
 # <a name="cdcddlhistory-transact-sql"></a>cdc.ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "33258644"
   
  Nous vous recommandons de ne pas interroger les tables système directement. À la place, exécutez le [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) procédure stockée.  
    
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**source_object_id**|**int**|Identificateur de la table source à laquelle la modification DDL a été appliquée.|  
-|**object_id**|**int**|ID de la table de modifications associée à une instance de capture pour la table source.|  
+|**source_object_id**|**Int**|Identificateur de la table source à laquelle la modification DDL a été appliquée.|  
+|**object_id**|**Int**|ID de la table de modifications associée à une instance de capture pour la table source.|  
 |**required_column_update**|**bit**|Indique que le type de données d'une colonne capturée a été modifié dans la table source. Ce changement a modifié la colonne dans la table de modifications.|  
 |**ddl_command**|**nvarchar(max)**|Instruction DDL appliquée à la table source.|  
 |**ddl_lsn**|**binary(10)**|Numéro séquentiel dans le journal associé à la validation de la modification DDL.|  

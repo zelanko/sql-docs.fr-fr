@@ -1,5 +1,5 @@
 ---
-title: MSmerge_identity_range (Transact-SQL) | Documents Microsoft
+title: MSmerge_identity_range (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSmerge_identity_range system table
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 026774d2eae738f8641c56f923bcabc981fded1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbd06dae4c34b2b5c77b81db64f9d12408539b01
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005126"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101227"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSmerge_identity_range** table est utilisée pour suivre les plages numériques affectées aux colonnes d’identité pour l’abonnement à des publications sur lesquels la réplication gère automatiquement ces affectations de plage. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|Numéro d'identification unique d'un abonnement donné.|  
 |**artid**|**uniqueidentifier**|Numéro d'identification unique de l'article donné.|  

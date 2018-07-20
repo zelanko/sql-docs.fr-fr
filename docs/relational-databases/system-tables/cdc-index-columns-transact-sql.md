@@ -1,5 +1,5 @@
 ---
-title: CDC.index_columns (Transact-SQL) | Documents Microsoft
+title: CDC.index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - cdc.index_columns
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 631566399cb1489286c36b7af9ed6bbb84e9bb7d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e955837317912d1f77c0964be575bff4cc490e8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260502"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103617"
 ---
 # <a name="cdcindexcolumns-transact-sql"></a>cdc.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "33260502"
  Nous vous recommandons de ne pas interroger les tables système directement. À la place, exécutez le [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) procédure stockée.  
 
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID de la table de modifications.|  
+|**object_id**|**Int**|ID de la table de modifications.|  
 |**column_name**|**sysname**|Nom de la colonne d'index.|  
 |**index_ordinal**|**tinyint**|Ordinal (de base 1) de la colonne dans l'index.|  
-|**column_id**|**int**|ID de la colonne dans la table source.|  
+|**column_id**|**Int**|ID de la colonne dans la table source.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [CDC.change_tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  

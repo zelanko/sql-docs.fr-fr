@@ -1,5 +1,5 @@
 ---
-title: IHpublisherconstraints (Transact-SQL) | Documents Microsoft
+title: IHpublisherconstraints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,25 +22,25 @@ helpviewer_keywords:
 - IHpublisherconstraints system table
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 001caaf03b1bef6ccacad41da171ccd6bdb65283
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e0870acce4ccf7c6431dd148b846384f23a3072
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000576"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101717"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **IHpublisherconstraints** (table système) contient une ligne pour chaque contrainte répliquée à partir de non - éditeurs SQL Server à l’aide du serveur de distribution en cours. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**publisherconstraint_id**|**int**|Identifie une contrainte publiée.|  
-|**table_id**|**int**|Identifie la table de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) auquel appartient la contrainte.|  
+|**publisherconstraint_id**|**Int**|Identifie une contrainte publiée.|  
+|**table_id**|**Int**|Identifie la table de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) auquel appartient la contrainte.|  
 |**publisher_id**|**smallint**|Identifie le serveur de publication non-SQL à partir de laquelle la colonne est publiée.|  
 |**Nom**|**sysname**|Nom de la contrainte publiée.|  
 |**Type**|**nvarchar(255)**|Un type de contrainte pris en charge à partir de la [IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md) (table système).|  

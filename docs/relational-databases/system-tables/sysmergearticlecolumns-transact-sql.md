@@ -1,5 +1,5 @@
 ---
-title: sysmergearticlecolumns (Transact-SQL) | Documents Microsoft
+title: sysmergearticlecolumns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - sysmergearticlecolumns system table
 ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f47c3e98f2453df7eff9a71dbc4792fd72fd3a75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac3cc549ee47ceff92a1213d8ae73a9244f9b2bc
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004956"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102867"
 ---
 # <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **sysmergearticlecolumns** table contient une ligne pour chaque colonne de table qui est publiée dans une publication de fusion et mappe chaque colonne à son article de fusion. Cette table est stockée dans la base de données de publication.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**artid**|**int**|Identifie un article.|  
+|**artid**|**Int**|Identifie un article.|  
 |**colid**|**smallint**|Identifie une colonne dans un article.|  
   
 ## <a name="see-also"></a>Voir aussi  

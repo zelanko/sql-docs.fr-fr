@@ -1,5 +1,5 @@
 ---
-title: MSpeer_conflictdetectionconfigrequest (Transact-SQL) | Documents Microsoft
+title: MSpeer_conflictdetectionconfigrequest (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - MSpeer_conflictdetectionconfigurerequest
 ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2823d565dd169e5b2bd90c3af157be17fcbe5324
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b23e38726cc7f0f1b30c6aeb60649305f931662e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004326"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103167"
 ---
 # <a name="mspeerconflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permet de suivre les requêtes de configuration à l'échelle d'une topologie pour une publication dans le cadre d'une réplication d'égal à égal. Cette table est stockée dans la base de données de publication.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|id|**int**|Identifie une demande de configuration en conflit. La colonne request_id dans [MSpeer_conflictdetectionconfigresponse](../../relational-databases/system-tables/mspeer-conflictdetectionconfigresponse-transact-sql.md) utilise cette valeur.|  
+|id|**Int**|Identifie une demande de configuration en conflit. La colonne request_id dans [MSpeer_conflictdetectionconfigresponse](../../relational-databases/system-tables/mspeer-conflictdetectionconfigresponse-transact-sql.md) utilise cette valeur.|  
 |publication|**sysname**|Nom de la publication d'où provient la demande de configuration de conflit.|  
 |sent_date|**datetime**|Date et heure d'émission de la demande de configuration de conflit.|  
-|délai d'expiration|**int**|Durée d'attente d'une procédure avant le retour des informations de conflit par les homologues.|  
+|délai d'expiration|**Int**|Durée d'attente d'une procédure avant le retour des informations de conflit par les homologues.|  
 |modified_date|**datetime**|Date et heure d'achèvement d'une phase.|  
 |progress_phase|**nvarchar(32)**|Identifie la phase actuelle du traitement en utilisant l'une des valeurs suivantes :<br /><br /> Démarré<br /><br /> Navigation de la topologie<br /><br /> Collecte de l'état<br /><br /> État collecté|  
 |phase_timed_out|**bit**|Indique si la phase actuelle a connu un dépassement du délai d'attente.|  

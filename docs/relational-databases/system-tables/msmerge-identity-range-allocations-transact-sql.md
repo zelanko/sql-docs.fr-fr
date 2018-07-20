@@ -1,5 +1,5 @@
 ---
-title: MSmerge_identity_range_allocations (Transact-SQL) | Documents Microsoft
+title: MSmerge_identity_range_allocations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,32 +22,32 @@ helpviewer_keywords:
 - MSmerge_identity_range_allocations system table
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7d2e628f8bd70b5e71b294b64674214dd2a0f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df286fcd67db26ac149bd56d3635425453d78405
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005476"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102787"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSmerge_identity_range_allocations** table est utilisée pour effectuer le suivi de l’historique des affectations plage identité, à des éditeurs et les abonnés, pour les articles publiés. Cette table est stockée dans la base de données de distribution.  
+  Le **MSmerge_identity_range_allocations** table est utilisée pour suivre l’historique de l’identité affectations de plage, à des éditeurs et les abonnés, pour les articles publiés. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|L’ID du serveur de publication.|  
 |**publisher_db**|**nvarchar(128)**|Le nom de la base de données de publication.|  
-|**Publication**|**nvarchar(128)**|Nom de la publication.|  
+|**publication**|**nvarchar(128)**|Nom de la publication.|  
 |**article**|**nvarchar(128)**|Le nom de l’article.|  
 |**subscriber** (Abonné)|**nvarchar(128)**|Nom de l'Abonné.|  
 |**bd_abonné**|**nvarchar(128)**|Le nom de la base de données d’abonnement.|  
 |**is_pub_range**|**bit**|Indique si la plage d'identité est affectée à un serveur de publication.|  
 |**ranges_allocated**|**tinyint**|Nombre de plages d'identité affectées.|  
-|**range_begin**|**numeric(38)**|La valeur de départ de la plage.|  
+|**range_begin**|**numeric(38)**|Valeur de départ de la plage.|  
 |**range_end**|**numeric(38)**|La dernière valeur dans la plage.|  
 |**next_range_begin**|**numeric(38)**|Valeur de début de la plage suivante à affecter.|  
 |**next_range_end**|**numeric(38)**|Valeur de fin de la plage suivante à affecter.|  

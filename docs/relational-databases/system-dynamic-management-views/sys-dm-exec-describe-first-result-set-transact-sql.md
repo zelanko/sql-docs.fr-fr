@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 60e1bc6b899861958aba64b0eede3ceb2ab9e94b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 3ed5e8ee42792d4308b3ccecb41bfcbe064dafd9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38059167"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086391"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,15 +47,15 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *@tsql*  
+ *\@TSQL*  
  Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] *Transact-SQL_batch* peut être **nvarchar (***n***)** ou **nvarchar (max)**.  
   
- *@params*  
- @params Fournit une chaîne de déclaration pour les paramètres pour le [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, similaire à sp_executesql. Les paramètres peuvent être **nvarchar (n)** ou **nvarchar (max)**.  
+ *\@params*  
+ \@params fournit une chaîne de déclaration pour les paramètres pour le [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, similaire à sp_executesql. Les paramètres peuvent être **nvarchar (n)** ou **nvarchar (max)**.  
   
- Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans le [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans stmt doit être défini dans @params. Si le [!INCLUDE[tsql](../../includes/tsql-md.md)] lot dans l’instruction ou l’instruction ne contient-elle pas de paramètres, @params n’est pas obligatoire. NULL est la valeur par défaut pour ce paramètre.  
+ Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans le [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans stmt doit être défini dans \@params. Si le [!INCLUDE[tsql](../../includes/tsql-md.md)] lot dans l’instruction ou l’instruction ne contient-elle pas de paramètres, \@params n’est pas obligatoire. NULL est la valeur par défaut pour ce paramètre.  
   
- *@include_browse_information*  
+ *\@include_browse_information*  
  Lorsque la valeur 1 est définie, chaque requête est analysée comme si elle comportait une option FOR BROWSE sur la requête. Des colonnes clés supplémentaires et les informations de table source sont retournées.  
   
 ## <a name="table-returned"></a>Table retournée  
@@ -70,8 +70,8 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**system_type_id**|**Int**|Contient le system_type_id du type de données de colonne comme spécifié dans sys.types. Pour les types CLR, bien que la colonne system_type_name retourne NULL, cette colonne retournera la valeur 240.|  
 |**system_type_name**|**nvarchar (256)**|Contient le nom et les arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données de la colonne.<br /><br /> Si le type de données est un type d’alias défini par l’utilisateur, le type de système sous-jacent est spécifié ici.<br /><br /> Si le type de données est un type clr défini par l'utilisateur, NULL est retourné dans cette colonne.|  
 |**max_length**|**smallint**|Longueur maximale (en octets) de la colonne.<br /><br /> -1 = la colonne est de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Pour **texte** colonnes, le **max_length** valeur sera 16 ou la valeur définie par **sp_tableoption 'text in row'**.|  
-|**précision**|**tinyint**|Précision de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
-|**mise à l’échelle**|**tinyint**|Échelle de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
+|**Précision**|**tinyint**|Précision de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
+|**Mise à l’échelle**|**tinyint**|Échelle de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
 |**collation_name**|**sysname**|Nom du classement de la colonne si elle est basée sur les caractères. Sinon, retourne NULL.|  
 |**user_type_id**|**Int**|Pour les types d'alias et CLR, contient l'information user_type_id du type de données de la colonne comme spécifié dans sys.types. Sinon, a la valeur NULL.|  
 |**user_type_database**|**sysname**|Pour les types d'alias et CLR, contient le nom de la base de données dans laquelle le type est défini. Sinon, a la valeur NULL.|  
@@ -112,7 +112,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 |error_type|error_type|Description|  
 |-----------------|-----------------|-----------------|  
-| 1|MISC|Toutes les erreurs qui ne font pas l'objet d'une description.|  
+|1|MISC|Toutes les erreurs qui ne font pas l'objet d'une description.|  
 |2|SYNTAX|Une erreur de syntaxe s'est produite dans le lot.|  
 |3|CONFLICTING_RESULTS|Le résultat n'a pas pu être déterminé en raison d'un conflit entre deux premières instructions possibles.|  
 |4|DYNAMIC_SQL|Le résultat n'a pas pu être déterminé en raison du SQL dynamique qui pourrait éventuellement retourner le premier résultat.|  
@@ -123,11 +123,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|Le résultat n'a pas pu être déterminé car le lot contient une instruction récursive.|  
 |10|TEMPORARY_TABLE|Le résultat n’a pas pu être déterminé car le lot contient une table temporaire et n’est pas pris en charge par **sp_describe_first_result_set** .|  
 |11|UNSUPPORTED_STATEMENT|Le résultat n’a pas pu être déterminé car le lot contient une instruction qui n’est pas pris en charge par **sp_describe_first_result_set** (par exemple, FETCH, REVERT etc..).|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|Le @object_id passé à la fonction est pas pris en charge (autrement dit, pas une procédure stockée)|  
-|13|OBJECT_DOES_NOT_EXIST|Le @object_id transmis à la fonction est introuvable dans le catalogue système.|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|Le \@object_id passé à la fonction n’est pas pris en charge (autrement dit, pas une procédure stockée)|  
+|13|OBJECT_DOES_NOT_EXIST|Le \@object_id passé à la fonction est introuvable dans le catalogue système.|  
   
-## <a name="permissions"></a>Autorisations  
- Nécessite l’autorisation d’exécuter le @tsql argument.  
+## <a name="permissions"></a>Permissions  
+ Nécessite l’autorisation d’exécuter le \@tsql argument.  
   
 ## <a name="examples"></a>Exemples  
  Pour obtenir des exemples supplémentaires dans la rubrique [sp_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) peuvent être adaptés pour utiliser **sys.dm_exec_describe_first_result_set**.  

@@ -1,5 +1,5 @@
 ---
-title: IHpublishers (Transact-SQL) | Documents Microsoft
+title: IHpublishers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - IHpublishers system table
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e59cadf84f2e05bf08690d44fb14036369fc502
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b57b1577f806aa14a9649b40c8b0cbf7b6fe533d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004036"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102177"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **IHpublishers** (table système) contient une ligne pour chaque non de publication non-SQL Server à l’aide du serveur de distribution en cours. Cette table est stockée dans la base de données de distribution.  
+  Le **IHpublishers** (table système) contient une ligne pour chaque non - publication non-SQL Server à l’aide du serveur de distribution en cours. Cette table est stockée dans la base de données de distribution.  
   
 ## <a name="definition"></a>Définition  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Identifie un serveur de publication non-SQL.|  
-|**Fournisseur**|**sysname**|Le nom du fournisseur pour la base de données non SQL Server.|  
+|**fournisseur**|**sysname**|Le nom du fournisseur pour la base de données non SQL Server.|  
 |**publisher_guid**|**uniqueidentifier**|GUID qui identifie le serveur de publication non SQL Server.|  
 |**flush_request_time**|**datetime**|Indique les date et heure auxquelles a eu lieu la dernière modification des métadonnées d'article ayant amené l'Agent de lecture du journal à mettre à jour son cache de métadonnées.|  
 |**version**|**sysname**|Une chaîne de texte qui caractérise la version de la non de publication non-SQL Server.|  

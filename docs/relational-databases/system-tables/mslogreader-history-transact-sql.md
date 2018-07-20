@@ -1,5 +1,5 @@
 ---
-title: MSlogreader_history (Transact-SQL) | Documents Microsoft
+title: MSlogreader_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,37 +22,37 @@ helpviewer_keywords:
 - MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8041a5c3dfdb216d939ef5b99e22b36c0781eda9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: def5bc1d69a3d5332f96752fcd5e6b1eaedff08e
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005836"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103097"
 ---
 # <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSlogreader_history** table contient des lignes d’historique des Agents de lecture du journal associé au serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
+  Le **MSlogreader_history** table contient des lignes d’historique pour les Agents de lecture du journal associé à un serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**agent_id**|**int**|ID de l'Agent de lecture du journal.|  
-|**runstatus**|**int**|État d'exécution :<br /><br /> 1 = Démarrage.<br /><br /> 2 = Succès.<br /><br /> 3 = En cours.<br /><br /> 4 = Inactif.<br /><br /> 5 = Nouvel essai.<br /><br /> 6 = Échec.|  
+|**agent_id**|**Int**|ID de l'Agent de lecture du journal.|  
+|**runstatus**|**Int**|État d'exécution :<br /><br /> 1 = Démarrage.<br /><br /> 2 = Succès.<br /><br /> 3 = En cours.<br /><br /> 4 = Inactif.<br /><br /> 5 = Nouvel essai.<br /><br /> 6 = Échec.|  
 |**start_time**|**datetime**|Heure de démarrage de l'exécution de la tâche|  
 |**time**|**datetime**|Heure de consignation du message dans le journal|  
-|**duration**|**int**|Durée, en secondes, de la session de message.|  
+|**duration**|**Int**|Durée, en secondes, de la session de message.|  
 |**Commentaires**|**nvarchar(255)**|Texte du message.|  
 |**xact_seqno**|**varbinary(16)**|Numéro de séquence de la dernière transaction réalisée.|  
-|**delivery_time**|**int**|La première transaction de temps est remise.|  
-|**delivered_transactions**|**int**|Nombre total des transactions transmises dans la session.|  
-|**delivered_commands**|**int**|Nombre total des commandes transmises dans la session.|  
-|**average_commands**|**int**|Nombre moyen des commandes transmises dans la session.|  
+|**delivery_time**|**Int**|La première transaction de temps est remise.|  
+|**delivered_transactions**|**Int**|Nombre total des transactions transmises dans la session.|  
+|**delivered_commands**|**Int**|Nombre total des commandes transmises dans la session.|  
+|**average_commands**|**Int**|Nombre moyen des commandes transmises dans la session.|  
 |**delivery_rate**|**float**|Moyenne des commandes transmises par seconde.|  
-|**delivery_latency**|**int**|Temps de latence entre l'entrée de la commande dans la base de données publiée et son entrée dans la base de données de distribution. En millisecondes.|  
-|**ID_erreur**|**int**|L’ID de l’erreur dans le **MSrepl_error** (table système).|  
+|**delivery_latency**|**Int**|Temps de latence entre l'entrée de la commande dans la base de données publiée et son entrée dans la base de données de distribution. En millisecondes.|  
+|**ID_erreur**|**Int**|L’ID de l’erreur dans le **MSrepl_error** (table système).|  
 |**timestamp**|**timestamp**|Colonne timestamp de cette table|  
 |**updateable_row**|**bit**|La valeur **1** si la ligne d’historique peut être remplacée.|  
   

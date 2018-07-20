@@ -1,23 +1,28 @@
 ---
-title: Créer un modèle de prévision (R dans démarrage rapide de SQL) | Documents Microsoft
+title: Démarrage rapide pour créer un modèle prédictif à l’aide de R dans SQL Server Machine Learning | Microsoft Docs
+description: Dans ce démarrage rapide, découvrez comment générer un modèle dans R à l’aide de données SQL Server pour tracer des prédictions.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3a56ddd95f0282550662cc559ff5a393d0bd236b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7ca2fcac5bef63a4abf2449b56c25a600b9255c3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202641"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086821"
 ---
-# <a name="create-a-predictive-model-r-in-sql-quickstart"></a>Créer un modèle de prévision (R dans démarrage rapide de SQL)
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Démarrage rapide : Créer un modèle prédictif à l’aide de R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Au cours de cette étape, vous allez apprendre à former un modèle utilisant R et l’enregistrer dans une table dans SQL Server. Il s’agit d’un modèle de régression simple qui prédit la distance d’arrêt d’une voiture en fonction de sa vitesse. Vous allez utiliser le `cars` dataset inclus avec R, car il est facile à comprendre et de petite taille.
+Dans ce démarrage rapide, vous allez apprendre à former un modèle à l’aide de R, puis enregistrez le modèle à une table dans SQL Server. Il s’agit d’un modèle de régression simple qui prédit la distance d’arrêt d’une voiture en fonction de sa vitesse. Vous utiliserez le `cars` inclus avec R, car elle est petite et facile à comprendre un jeu de données.
+
+## <a name="prerequisites"></a>Prérequis
+
+Un guide de démarrage rapide précédent, [Hello World dans R et SQL](rtsql-using-r-code-in-transact-sql-quickstart.md), fournit des informations et des liens pour la configuration de l’environnement R requis pour ce démarrage rapide.
 
 ## <a name="create-the-source-data"></a>Créer la source de données
 
@@ -33,7 +38,7 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'car_speed'
 ```
 
-+ Certains préfèrent utiliser les tables temporaires, mais gardez à l’esprit que certains clients R déconnectent des sessions entre les traitements.
++ Certaines personnes souhaitent utiliser des tables temporaires, mais n’oubliez pas que certains clients R déconnectent les sessions entre chaque lot.
 
 + Le runtime R contient de nombreux datasets de tailles diverses. Pour obtenir la liste des datasets installées avec R, tapez `library(help="datasets")` à partir d’une invite de commandes R.
 
@@ -48,7 +53,7 @@ Les exigences d’un modèle linéaire sont simples :
 + Fournir les données d’entrée à utiliser pour former le modèle.
 
 > [!TIP]
-> Si vous avez besoin d’un rappel sur les modèles linéaires, nous vous recommandons de ce didacticiel, qui décrit le processus d’ajustement d’un modèle à l’aide de rxLinMod : [qui respecte les modèles linéaires](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
+> Si vous ne savez plus sur les modèles linéaires, nous vous recommandons de ce didacticiel, qui décrit le processus d’ajustement d’un modèle à l’aide de rxLinMod : [ajustement des modèles linéaires](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
 
 Pour créer effectivement le modèle, vous devez définir la formule à l’intérieur de votre code R et passer les données en tant que paramètre d’entrée.
 
@@ -75,7 +80,7 @@ GO
 
 ## <a name="create-a-table-for-storing-the-model"></a>Créer une table pour stocker le modèle
 
-Ensuite, stockez le modèle afin de former à nouveau ou utiliser pour la prédiction. La sortie d’un package R qui crée un modèle est généralement un **objet binaire**. Par conséquent, la table dans laquelle vous stockez le modèle doit contenir une colonne de type **varbinary**.
+Ensuite, stockez le modèle afin de reformer ou utiliser pour la prédiction. La sortie d’un package R qui crée un modèle est généralement un **objet binaire**. Par conséquent, la table dans laquelle vous stockez le modèle doit contenir une colonne de type **varbinary**.
 
 ```sql
 CREATE TABLE stopping_distance_models (
@@ -112,7 +117,7 @@ En règle générale, la sortie de R résultant de la procédure stockée [sp_ex
 
 Cependant, vous pouvez retourner des sorties d’autres types (p. ex., scalaires), en plus de la trame de données.
 
-Par exemple, supposons que vous voulez former un modèle, mais afficher immédiatement une table de coefficients à partir du modèle. Vous pouvez créer la table de coefficients en tant que jeu de résultats principal et sortir le modèle formé dans une variable SQL. Vous pouvez utiliser immédiatement nouveau le modèle en appelant la variable, ou vous a pu enregistrer le modèle dans une table comme indiqué ici.
+Par exemple, supposons que vous voulez former un modèle, mais afficher immédiatement une table de coefficients à partir du modèle. Vous pouvez créer la table de coefficients en tant que jeu de résultats principal et sortir le modèle formé dans une variable SQL. Vous pouvez immédiatement réutiliser le modèle en appelant la variable, ou vous pouvez enregistrer le modèle à une table comme indiqué ici.
 
 ```sql
 DECLARE @model varbinary(max), @modelname varchar(30)
@@ -141,14 +146,13 @@ VALUES ('latest model', @model)
 
 N’oubliez pas ces règles pour l’utilisation des paramètres SQL et les variables de R dans `sp_execute_external_script`:
 
-+ Tous les paramètres SQL sont mappés à un script R doivent être répertoriés par nom dans la _@params_ argument.
-+ Pour sortir l’un de ces paramètres, ajoutez le mot clé OUTPUT dans la liste _@params_.
-+ Après avoir répertorié les paramètres mappés, fournissez le mappage, ligne par ligne, des paramètres SQL aux variables R, de suite après la liste _@params_.
++ Tous les paramètres SQL mappés au script R doivent être répertoriés par nom dans la  _\@params_ argument.
++ Pour sortir l’un de ces paramètres, ajoutez le mot clé OUTPUT dans le  _\@params_ liste.
++ Après avoir répertorié les paramètres mappés, fournissez le mappage, ligne par ligne, des paramètres SQL aux variables R, immédiatement après le  _\@params_ liste.
 
-## <a name="next-lesson"></a>Leçon suivante
+## <a name="next-steps"></a>Étapes suivantes
 
-Maintenant que vous disposez d’un modèle, à la dernière étape, vous allez apprendre à générer des prédictions à partir de celui-ci et représenter graphiquement les résultats.
+Maintenant que vous avez un modèle, dans le dernier démarrage rapide, vous allez apprendre à générer des prédictions à partir de celui-ci et représenter graphiquement les résultats.
 
-[Prédire et tracer à partir du modèle](../tutorials/rtsql-predict-and-plot-from-model.md)
-
-
+> [!div class="nextstepaction"]
+> [Démarrage rapide : Prédire et tracer à partir du modèle](../tutorials/rtsql-predict-and-plot-from-model.md)

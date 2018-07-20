@@ -4,20 +4,20 @@ description: Ce démarrage rapide montre comment installer SQL Server 2017 sur U
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
-ms.topic: article
+ms.date: 07/16/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: ebe7da1e1024cefc14c52d0a02e0517b764c8d07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 30c05b25301004afbd1d9ed0b2a365b5a37f256d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057317"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101821"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur Ubuntu
 
@@ -130,19 +130,11 @@ Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubu
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions interactives/de non-connexion, modifiez le **chemin d’accès** dans le fichier **~/.bashrc** avec la commande suivante :
+   Pour rendre **sqlcmd/bcp** accessible à partir de l’interface de l’interpréteur de commandes pour les sessions/non-connexion interactive, modifiez le **PATH** dans le **~/.bashrc** fichier avec la commande suivante :
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-
-> [!TIP]
-> **SQLCMD** est un outil unique pour se connecter à SQL Server afin d'exécuter des requêtes et d'effectuer des tâches de gestion et de développement. D'autres outils incluent :
->
-> * [SQL Server Operations Studio (préversion)](../sql-operations-studio/what-is.md)
-> * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
-> * [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
-> * [mssql-cli (préversion)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

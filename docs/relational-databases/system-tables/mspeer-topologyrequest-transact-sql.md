@@ -1,5 +1,5 @@
 ---
-title: MSpeer_topologyrequest (Transact-SQL) | Documents Microsoft
+title: MSpeer_topologyrequest (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - MSpeer_topologyrequest
 ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0d7b69c535b762cd136e5fa0ef86af6d2cd3a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1eb68a533cda94f9cbeaea0a065c875850cbe5de
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004646"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101727"
 ---
 # <a name="mspeertopologyrequest-transact-sql"></a>MSpeer_topologyrequest (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permet de suivre les requêtes de statut de topologie pour une publication dans le cadre d'une réplication d'égal à égal. Cette table est stockée dans la base de données de publication.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|id|**int**|Identifie une demande de statut de topologie. La colonne request_id dans [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) utilise cette valeur.|  
+|id|**Int**|Identifie une demande de statut de topologie. La colonne request_id dans [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) utilise cette valeur.|  
 |publication|**sysname**|Nom de la publication d'où provient la demande de statut de topologie.|  
 |sent_date|**datetime**|Date et heure d'émission de la demande de statut de topologie.|  
   

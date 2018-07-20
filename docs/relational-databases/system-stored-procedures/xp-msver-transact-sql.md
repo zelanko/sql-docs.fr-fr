@@ -1,5 +1,5 @@
 ---
-title: xp_msver (Transact-SQL) | Documents Microsoft
+title: xp_msver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - xp_msver
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: eb4961a51a7a4104fd47b64544727eb609618da4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0d35365cc3c1891521635b463d795c98af97f1ea
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261165"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103647"
 ---
 # <a name="xpmsver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne des informations de version sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **xp_msver** retourne également des informations sur le numéro de version du serveur et sur l’environnement de serveur. Les informations qui **xp_msver** retourne peut être utilisé dans [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, les lots, des procédures stockées et ainsi de suite, pour optimiser la logique pour le code indépendant de la plateforme.  
+  Retourne des informations de version sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **xp_msver** retourne également des informations sur le véritable numéro de build du serveur et des informations sur l’environnement de serveur. Les informations qui **xp_msver** retourne peut être utilisé au sein de [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, lots, procédures stockées et ainsi de suite, pour optimiser la logique pour le code indépendant de la plateforme.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,13 +43,13 @@ xp_msver [ optname ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *nom_option*  
+ *optname*  
  Nom d'une option ; il peut s'agir de l'une des valeurs suivantes.  
   
-|Option/Nom de colonne| Description|  
+|Option/Nom de colonne|Description|  
 |-------------------------|-----------------|  
 |**ProductName**|Nom du produit ; par exemple, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Version de produit**|Version du produit.|  
+|**ProductVersion**|Version du produit.|  
 |**Langage**|Version linguistique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Plateforme**|Nom du système d'exploitation, du constructeur et de la famille de micro-processeurs pour l'ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Commentaires**|Informations diverses sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -74,9 +73,9 @@ xp_msver [ optname ]
  1 (réussite)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- **xp_msver**, sans aucun paramètre, retourne un jeu de résultats en quatre colonnes répertoriant toutes les valeurs d’option. **xp_msver**, pour n’importe quel paramètre, retourne le résultat de quatre colonnes avec les valeurs de cette option.  
+ **xp_msver**, sans aucun paramètre, retourne un jeu de résultats en quatre colonnes qui répertorie toutes les valeurs d’option. **xp_msver**, pour n’importe quel paramètre, retourne le résultat de quatre colonnes définies avec les valeurs de cette option.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="see-also"></a>Voir aussi  

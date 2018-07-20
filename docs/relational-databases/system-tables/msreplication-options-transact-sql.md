@@ -1,5 +1,5 @@
 ---
-title: MSreplication_options (Transact-SQL) | Documents Microsoft
+title: MSreplication_options (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,29 +22,29 @@ helpviewer_keywords:
 - MSreplication_options system table
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d2626cd096000035a8d7a87eaa0be5d31a15c082
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71d3ddefd2cfe9c691f9311be12a1e09caea3c58
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004826"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103517"
 ---
 # <a name="msreplicationoptions-transact-sql"></a>MSreplication_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSreplication_options** table stocke les métadonnées qui sont utilisée en interne par la réplication. Cette table est stockée dans le **master** base de données.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom_option**|**sysname**|À usage interne uniquement|  
-|**valeur**|**bit**|À usage interne uniquement|  
-|**version_principale**|**int**|À usage interne uniquement|  
-|**version_secondaire**|**int**|À usage interne uniquement|  
-|**Révision**|**int**|À usage interne uniquement|  
-|**install_failures**|**int**|À usage interne uniquement|  
+|**optname**|**sysname**|À usage interne uniquement|  
+|**value**|**bit**|À usage interne uniquement|  
+|**version_principale**|**Int**|À usage interne uniquement|  
+|**version_secondaire**|**Int**|À usage interne uniquement|  
+|**révision**|**Int**|À usage interne uniquement|  
+|**install_failures**|**Int**|À usage interne uniquement|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

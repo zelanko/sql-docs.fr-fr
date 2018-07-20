@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8ab408179388ca10821ad79e855e39fd3ec7eb01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
+ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968761"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39164210"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,6 @@ ms.locfileid: "37968761"
 Retourne une ligne unique décrivant la configuration de l’objet de travail qui gère le processus SQL Server, ainsi que certaines statistiques de consommation de ressources au niveau de l’objet de travail. Retourne un jeu vide si SQL Server n’est pas en cours d’exécution dans un objet de tâche. 
 
 Un objet de tâche est une construction de Windows qui implémente la gouvernance des ressources processeur, mémoire et d’e/s au niveau du système d’exploitation. Pour plus d’informations sur les objets de travail, consultez [objets travail](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
-
-> [!NOTE]
-> Le sys.dm_os_job_object DMV peut actuellement être sys.dm_job_object. Ce problème est temporaire : `sys.dm_os_job_object` sera le nom permanent de cette vue de gestion dynamique. 
   
 |Colonnes|Type de données|Description|  
 |-------------|---------------|-----------------|  
@@ -60,7 +57,7 @@ Un objet de tâche est une construction de Windows qui implémente la gouvernanc
 |peak_process_memory_used_mb|**bigint**|La quantité maximale de mémoire, en Mo, ce qui a un seul processus de l’objet de travail, telles que SQL Server, a utilisé dans la mesure où l’objet de traitement a été créé.| 
 |peak_job_memory_used_mb|**bigint**|La quantité maximale de mémoire, en Mo, que tous les processus dans l’objet de traitement ont utilisé cumulativement étant donné que l’objet de travail a été créée.|
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Sur SQL Database Managed Instance nécessite `VIEW SERVER STATE` autorisation. Sur la base de données SQL, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.  
  
 ## <a name="see-also"></a>Voir aussi  
