@@ -1,7 +1,7 @@
 ---
-title: sp_adddistpublisher (Transact-SQL) | Documents Microsoft
+title: sp_adddistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -23,17 +23,17 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 3ccd9c550df21ea904c4ff8d8c7a3941908e59a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75db58f4711b946eeceeb74dcbb3a34538ea97e1
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992826"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084291"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Configure un serveur de publication pour qu'il utilise une base de données de distribution spécifique. Cette procédure stockée est exécutée sur une base de données du serveur. Notez que les procédures stockées [sp_adddistributor &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) et [sp_adddistributiondb &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) doit avoir été exécuté avant d’utiliser cette procédure procédure.  
+  Configure un serveur de publication pour qu'il utilise une base de données de distribution spécifique. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données. Notez que les procédures stockées [sp_adddistributor &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) et [sp_adddistributiondb &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) doit avoir été exécutées préalablement à l’aide de cette procédure procédure.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,6 +47,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
     [ , [ @login= ] 'login' ]   
     [ , [ @password= ] 'password' ]   
     [ , [ @working_directory= ] 'working_directory' ]   
+    [ , [ @storage_connection_string= ] 'storage_connection_string']
     [ , [ @trusted= ] 'trusted' ]   
     [ , [ @encrypted_password= ] encrypted_password ]   
     [ , [ @thirdparty_flag = ] thirdparty_flag ]  
@@ -78,18 +79,25 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 >  N'utilisez pas de mot de passe vide. Utilisez un mot de passe fort.  
   
  [  **@working_directory=**] **'***working_directory***'**  
- Nom du répertoire de travail utilisé pour stocker les fichiers de données et de schéma destinés à la publication. *working_directory* est **nvarchar (255)** et les valeurs par défaut pour le dossier ReplData pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple 'C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData'. Le nom doit être indiqué au format UNC.  
-  
+ Nom du répertoire de travail utilisé pour stocker les fichiers de données et de schéma destinés à la publication. *working_directory* est **nvarchar (255)** et les valeurs par défaut pour le dossier ReplData pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Le nom doit être indiqué au format UNC.  
+
+ Pour la base de données SQL Azure, utilisez `\\<storage_account>.file.core.windows.net\<share>`.
+
+ [  **@storage_connection_string =**] **'***storage_connection_string***'**  
+ Est requis pour la base de données SQL. Utilisez la clé d’accès à partir du portail Azure sous stockage > Paramètres.
+
+ > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
+
  [  **@trusted=**] **'***approuvé***'**  
- Ce paramètre est déconseillé et n'est fourni qu'à des fins de compatibilité ascendante. *approuvé* est **nvarchar (5)** et la valeur n’est pas défini **false** entraîne une erreur.  
+ Ce paramètre est déconseillé et n'est fourni qu'à des fins de compatibilité ascendante. *approuvé* est **nvarchar (5)** et la valeur n’est pas **false** entraîne une erreur.  
   
  [  **@encrypted_password=**] *encrypted_password*  
- Paramètre *encrypted_password* n’est plus pris en charge. Tentative de définition de cette **bits** paramètre **1** entraîne une erreur.  
+ Paramètre *encrypted_password* n’est plus pris en charge. Tentez de définir cela **bits** paramètre **1** entraîne une erreur.  
   
  [  **@thirdparty_flag =**] *thirdparty_flag*  
  Indique que le serveur de publication est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *thirdparty_flag* est **bits**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**0** (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données.|  
 |**1**|Base de données autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -97,7 +105,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [ **@publisher_type**=] **'***publisher_type***'**  
  Spécifie le type du serveur de publication lorsque celui-ci n'est pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* est de type sysname et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (par défaut)|Spécifie un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Spécifie un serveur de publication Oracle standard.|  
@@ -114,7 +122,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_adddistpublisher**.  
   
 ## <a name="see-also"></a>Voir aussi  

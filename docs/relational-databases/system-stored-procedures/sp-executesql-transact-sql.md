@@ -1,5 +1,5 @@
 ---
-title: sp_executesql (Transact-SQL) | Documents Microsoft
+title: sp_executesql (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,12 +24,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b0b0e9906c39de7875edc183e36fd5257afbe303
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 38c0cd9d348e78a10be4917172c149750da8a657
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261658"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083791"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,19 +54,19 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @stmt=] *instruction*  
- Est une chaîne Unicode contenant un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot. @stmt doit être une constante Unicode ou une variable Unicode. L'utilisation d'expressions Unicode plus complexes (comme la concaténation de deux chaînes avec l'opérateur +) n'est pas autorisée. L'utilisation de constantes de caractères n'est pas autorisée. Si une constante Unicode est spécifiée, il doit comporter une **N**. Par exemple, la constante Unicode **ne sp_who'** est valide, mais la constante caractère **'sp_who'** n’est pas. La taille de la chaîne n'est limitée que par la quantité de mémoire disponible sur le serveur de base de données. Sur les serveurs 64 bits, la taille de la chaîne est limitée à 2 Go, la taille maximale de **nvarchar (max)**.  
+ [ \@stmt =] *instruction*  
+ Est une chaîne Unicode contenant un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot. \@stmt doit être une constante Unicode ou une variable Unicode. L'utilisation d'expressions Unicode plus complexes (comme la concaténation de deux chaînes avec l'opérateur +) n'est pas autorisée. L'utilisation de constantes de caractères n'est pas autorisée. Si une constante Unicode est spécifiée, elle doit porter le préfixe avec un **N**. Par exemple, la constante Unicode **ne sp_who'** est valide, mais la constante caractère **'sp_who'** n’est pas. La taille de la chaîne n'est limitée que par la quantité de mémoire disponible sur le serveur de base de données. Sur les serveurs 64 bits, la taille de la chaîne est limitée à 2 Go, la taille maximale de **nvarchar (max)**.  
   
 > [!NOTE]  
->  @stmt peut contenir des paramètres possédant la même forme qu’un nom de variable, par exemple : `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt peut contenir des paramètres possédant la même forme qu’un nom de variable, par exemple : `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Chaque paramètre inclus dans @stmt doit posséder une entrée correspondante dans la liste des définitions de paramètres @params et dans la liste des valeurs de paramètres.  
+ Chaque paramètre inclus dans \@stmt doit posséder une entrée correspondante à la fois dans le \@liste des définitions de paramètre params et le paramètre de liste de valeurs.  
   
- [ @params=] N'@*nom_paramètre ** data_type* [,... *n* ] '  
- Chaîne contenant les définitions de tous les paramètres qui ont été incorporés dans @stmt. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans @stmtmust être défini dans @params. Si le lot ou l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] figurant dans @stmt ne contient aucun paramètre, il est inutile d'utiliser @params. La valeur par défaut de ce paramètre est NULL.  
+ [ \@params =] N'\@*nom_paramètre ** data_type* [,... *n* ] '  
+ Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans \@stmt. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans \@stmtmust être défini dans \@params. Si le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de \@stmt ne contient-elle pas de paramètres, \@params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
- [ @param1=] '*value1*'  
- Valeur du premier paramètre qui est défini dans la chaîne de paramètres. Cette valeur peut être une constante ou une variable Unicode. Il est nécessaire de fournir une valeur de paramètre pour chaque paramètre inclus dans @stmt. Aucune valeur n'est requise si l'instruction ou le traitement d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] figurant dans @stmt ne contient aucun paramètre.  
+ [ \@param1 =] '*value1*'  
+ Valeur du premier paramètre qui est défini dans la chaîne de paramètres. Cette valeur peut être une constante ou une variable Unicode. Il doit y avoir une valeur de paramètre fournie pour chaque paramètre inclus dans \@stmt. Les valeurs ne sont pas requis lorsque la [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de \@stmt n’a aucun paramètre.  
   
  [ OUT | OUTPUT ]  
  Indique que le paramètre est un paramètre de sortie. **texte**, **ntext**, et **image** paramètres peuvent être utilisés comme paramètres de sortie, sauf si la procédure est une procédure du common language runtime (CLR). Un paramètre de sortie qui utilise le mot clé OUTPUT peut être un espace réservé de curseur, sauf si la procédure est une procédure CLR (Common Language Runtime).  
@@ -83,7 +83,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="remarks"></a>Notes  
  paramètres de sp_executesql doivent être entrées dans l’ordre spécifique, comme décrit dans la section « Syntaxe » précédemment dans cette rubrique. Si les paramètres sont entrés dans le désordre, un message d'erreur se produira.  
   
- La procédure sp_executesql a le même comportement vis-à-vis des traitements d'instructions, de l'étendue des noms et du contexte de base de données que l'instruction EXECUTE. Le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de sp_executesql @stmt paramètre n’est pas compilé jusqu'à l’exécution de l’instruction sp_executesql. Le contenu de @stmt est alors compilé et exécuté en tant que plan d'exécution distinct de celui du lot qui a appelé sp_executesql. Le traitement sp_executesql ne peut pas faire référence à des variables déclarées dans le traitement qui a appelé sp_executesql. Les curseurs ou les variables locaux du traitement sp_executesql ne sont pas visibles pour le traitement qui appelle sp_executesql. Les modifications apportées au contexte de base de données ne durent que jusqu'à la fin de l'exécution de l'instruction sp_executesql.  
+ La procédure sp_executesql a le même comportement vis-à-vis des traitements d'instructions, de l'étendue des noms et du contexte de base de données que l'instruction EXECUTE. Le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de sp_executesql \@stmt paramètre n’est pas compilé jusqu'à l’exécution de l’instruction sp_executesql. Le contenu de \@stmt est alors compilé et exécuté en tant qu’un plan d’exécution distinct du plan d’exécution du lot qui a appelé sp_executesql. Le traitement sp_executesql ne peut pas faire référence à des variables déclarées dans le traitement qui a appelé sp_executesql. Les curseurs ou les variables locaux du traitement sp_executesql ne sont pas visibles pour le traitement qui appelle sp_executesql. Les modifications apportées au contexte de base de données ne durent que jusqu'à la fin de l'exécution de l'instruction sp_executesql.  
   
  La procédure sp_executesql peut être utilisée à la place de procédures stockées afin d'exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] plusieurs fois lorsque la modification des valeurs de paramètres de l'instruction constitue l'unique changement. L'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] même demeurant constante, seules les valeurs de paramètre changent. Par conséquent, l'optimiseur de requête de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut réutiliser le plan d'exécution généré pour la première exécution.  
   
@@ -139,7 +139,7 @@ SELECT @max_title;
   
 -   Le paramètre de type entier est spécifié dans son format d'origine. La conversion en Unicode n'est pas nécessaire.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -210,7 +210,7 @@ GO
  Pour cette procédure, l'utilisation de sp_executesql est plus efficace que l'utilisation d'EXECUTE pour exécuter une chaîne. Si vous utilisez sp_executesql, seules 12 versions de la chaîne INSERT sont générées (une par table mensuelle). Avec EXECUTE, chaque chaîne INSERT est unique car les valeurs de paramètres diffèrent. Bien que ces deux méthodes génèrent le même nombre de traitements d'instructions, la similitude des chaînes INSERT générées par sp_executesql renforce la probabilité de réutilisation des plans d'exécution par l'optimiseur de requête.  
   
 ### <a name="c-using-the-output-parameter"></a>C. Utilisation du paramètre OUTPUT  
- L’exemple suivant utilise une `OUTPUT` paramètre permettant de stocker le jeu de résultats généré par le `SELECT` instruction dans le `@SQLString` paramètre. Deux `SELECT` instructions sont ensuite exécutées pour utiliser la valeur de le `OUTPUT` paramètre.  
+ L’exemple suivant utilise un `OUTPUT` paramètre permettant de stocker le jeu de résultats généré par le `SELECT` instruction dans le `@SQLString` paramètre. Deux `SELECT` instructions sont ensuite exécutées qui utilisent la valeur de la `OUTPUT` paramètre.  
   
 ```  
 USE AdventureWorks2012;  

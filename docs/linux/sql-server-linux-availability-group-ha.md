@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.suite: sql
 ms.technology: linux
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 36115370063292f3a3302dac4596222bb513fb67
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: c37cba83ebea7fbced662c3e909ee4007f57225f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020618"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084661"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Haute disponibilité et protection des données pour les configurations de groupe de disponibilité
 
@@ -82,7 +82,7 @@ Un groupe de disponibilité avec deux réplicas synchrones fournit une protectio
 
 | |échelle de lecture |Protection des données
 |:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>| 1
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Nouveau réplica principal est R / w.| Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que le réplica principal précédent récupère et joint le groupe de disponibilité comme secondaire.
 |Une indisponibilité du réplica secondaire  |Principal est en lecture/écriture, exécution exposée à une perte de données. |Principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que la récupération du réplica secondaire.
 <sup>*</sup> Par défaut
@@ -110,7 +110,7 @@ La valeur par défaut `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est 0. Le ta
 
 | |Haute disponibilité & </br> protection de données | Protection des données
 |:---|---|---
-|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>| 1
+|`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Indisponibilité du réplica principal | Basculement automatique. Nouveau réplica principal est R / w. | Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur. 
 |Indisponibilité du réplica secondaire | Réplica principal est lecture/écriture, exécution exposée à une perte de données (si principal échoue et ne peuvent pas être récupérée). Aucun basculement automatique si le serveur principal échoue également. | Principal n’est pas disponible pour les transactions utilisateur. Aucun réplica vers lequel basculer principale n’échoue également. 
 |Panne de réplica configuration uniquement | Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. | Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. 

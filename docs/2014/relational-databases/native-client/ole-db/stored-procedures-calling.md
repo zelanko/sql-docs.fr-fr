@@ -21,12 +21,12 @@ caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b9f9456e5f916e886c366a292064d7ccd4dc5d8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 80e79f969fdf6d12264d5327ee13270d905f9f14
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412278"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082621"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Appel d'une procédure stockée (OLE DB)
   Une procédure stockée peut avoir entre zéro et plusieurs paramètres. Elle peut également retourner une valeur. Lorsque vous utilisez le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, les paramètres à une procédure stockée peuvent être passés par :  
@@ -36,17 +36,17 @@ ms.locfileid: "37412278"
 -   via un marqueur de paramètre (?) pour spécifier les paramètres, lier une variable de programme au marqueur de paramètre, puis placer la valeur de données dans la variable de programme.  
   
 > [!NOTE]  
->  Lors de l'appel des procédures stockées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide de paramètres nommés avec OLE DB, les noms de paramètres doivent commencer par le caractère « @ ». Il s'agit d'une restriction spécifique à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client applique cette restriction plus strictement que MDAC.  
+>  Lors de l’appel des procédures stockées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de paramètres nommés avec OLE DB, les noms de paramètres doivent commencer par le caractère « \@ ». Il s'agit d'une restriction spécifique à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client applique cette restriction plus strictement que MDAC.  
   
- Pour prendre en charge des paramètres, le **ICommandWithParameters** interface est exposée sur l’objet command. Pour utiliser des paramètres, le consommateur décrit tout d’abord les paramètres au fournisseur en appelant le **ICommandWithParameters::SetParameterInfo** (méthode) (ou éventuellement prépare une instruction qui appelle le  **GetParameterInfo** méthode). Le consommateur crée ensuite un accesseur qui spécifie la structure d'une mémoire tampon dans laquelle il place des valeurs de paramètre. Enfin, il passe le handle de l’accesseur et un pointeur vers la mémoire tampon **Execute**. Lors des appels ultérieurs à **Execute**, le consommateur place les nouvelles valeurs de paramètre dans la mémoire tampon et les appels **Execute** avec le pointeur d’accesseur handle et la mémoire tampon.  
+ Pour prendre en charge les paramètres, l’interface **ICommandWithParameters** est exposée sur l’objet de commande. Pour utiliser les paramètres, le consommateur les décrit au préalable au fournisseur en appelant la méthode **ICommandWithParameters::SetParameterInfo** (ou prépare éventuellement une instruction qui appelle la méthode **GetParameterInfo**). Le consommateur crée ensuite un accesseur qui spécifie la structure d'une mémoire tampon dans laquelle il place des valeurs de paramètre. Enfin, il passe le handle de l’accesseur et un pointeur vers la mémoire tampon à **Execute**. Lors des appels ultérieurs à **Execute**, le consommateur place de nouvelles valeurs de paramètre en mémoire tampon et appelle **Execute** avec le handle d’accesseur et le pointeur de la mémoire tampon.  
   
- Une commande qui appelle une procédure stockée temporaire à l’aide de paramètres doit d’abord appeler **ICommandWithParameters::SetParameterInfo** pour définir les informations de paramètre, avant la commande peut être correctement préparée. En effet, le nom interne d'une procédure stockée temporaire diffère du nom externe utilisé par un client ; par ailleurs, SQLOLEDB ne peut pas interroger les tables système afin de déterminer les informations de paramètre pour une procédure stockée temporaire.  
+ Une commande qui appelle une procédure stockée temporaire à l’aide de paramètres doit appeler au préalable **ICommandWithParameters::SetParameterInfo** pour définir les informations de paramètre, de sorte que la commande puisse être préparée avec succès. En effet, le nom interne d'une procédure stockée temporaire diffère du nom externe utilisé par un client ; par ailleurs, SQLOLEDB ne peut pas interroger les tables système afin de déterminer les informations de paramètre pour une procédure stockée temporaire.  
   
  Voici les étapes du processus de liaison des paramètres :  
   
-1.  Indiquez les informations de paramètre dans un tableau de structures DBPARAMBINDINFO, notamment le nom du paramètre, le nom spécifique au fournisseur pour le type de données du paramètre ou un nom de type de données standard, etc. Chaque structure du tableau décrit un paramètre. Ce tableau est ensuite transmis à la **SetParameterInfo** (méthode).  
+1.  Indiquez les informations de paramètre dans un tableau de structures DBPARAMBINDINFO, notamment le nom du paramètre, le nom spécifique au fournisseur pour le type de données du paramètre ou un nom de type de données standard, etc. Chaque structure du tableau décrit un paramètre. Ce tableau est ensuite passé à la méthode **SetParameterInfo**.  
   
-2.  Appelez le **ICommandWithParameters::SetParameterInfo** méthode pour décrire les paramètres au fournisseur. **SetParameterInfo** Spécifie le type de données natif de chaque paramètre. **SetParameterInfo** arguments sont :  
+2.  Appelez la méthode **ICommandWithParameters::SetParameterInfo** pour décrire les paramètres au fournisseur. **SetParameterInfo** spécifie le type de données natif de chaque paramètre. Les arguments de **SetParameterInfo** sont :  
   
     -   le nombre de paramètres pour lesquels définir des informations de type ;  
   
@@ -54,7 +54,7 @@ ms.locfileid: "37412278"
   
     -   un tableau de structures DBPARAMBINDINFO.  
   
-3.  Créer un accesseur de paramètre à l’aide de la **IAccessor::CreateAccessor** commande. L'accesseur spécifie la structure d'une mémoire tampon dans laquelle il place les valeurs de paramètre. Le **CreateAccessor** commande crée un accesseur à partir d’un jeu de liaisons. Ces liaisons sont décrites par le consommateur via un tableau de structures DBBINDING. Chaque liaison associe un paramètre unique à la mémoire tampon du consommateur et contient les informations suivantes :  
+3.  Créez un accesseur de paramètre en utilisant la commande **IAccessor::CreateAccessor**. L'accesseur spécifie la structure d'une mémoire tampon dans laquelle il place les valeurs de paramètre. La commande **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons. Ces liaisons sont décrites par le consommateur via un tableau de structures DBBINDING. Chaque liaison associe un paramètre unique à la mémoire tampon du consommateur et contient les informations suivantes :  
   
     -   ordinal du paramètre auquel la liaison s'applique ;  
   
@@ -64,11 +64,11 @@ ms.locfileid: "37412278"
   
     -   longueur et type de la valeur de données dans la mémoire tampon du consommateur.  
   
-     Un accesseur est identifié par son handle, qui est de type HACCESSOR. Ce handle est retourné par la **CreateAccessor** (méthode). Chaque fois que le consommateur termine à l’aide d’un accesseur, le consommateur doit appeler le **ReleaseAccessor** méthode pour libérer la mémoire détenue.  
+     Un accesseur est identifié par son handle, qui est de type HACCESSOR. Ce handle est retourné par la méthode **CreateAccessor**. Chaque fois que le consommateur finit d’utiliser un accesseur, il doit appeler la méthode **ReleaseAccessor** pour libérer la mémoire détenue.  
   
-     Lorsque le consommateur appelle une méthode, tel que **ICommand::Execute**, il passe le handle à un accesseur et un pointeur vers une mémoire tampon elle-même. Le fournisseur utilise cet accesseur pour déterminer comment transférer les données contenues en mémoire tampon.  
+     Quand le consommateur appelle une méthode, par exemple **ICommand::Execute**, il passe lui-même le handle à un accesseur et un pointeur vers une mémoire tampon. Le fournisseur utilise cet accesseur pour déterminer comment transférer les données contenues en mémoire tampon.  
   
-4.  Remplissez la structure DBPARAMS. Les variables de consommateur à partir de quel paramètre d’entrée les valeurs sont extraites et à quel paramètre de sortie sont écrits les valeurs sont passées au moment de l’exécution à **ICommand::Execute** dans la structure DBPARAMS. La structure DBPARAMS inclut trois éléments :  
+4.  Remplissez la structure DBPARAMS. Les variables de consommateur à partir desquelles les valeurs de paramètre d’entrée sont récupérées et dans lesquelles les valeurs de paramètre de sortie sont écrites sont passées au moment de l’exécution à **ICommand::Execute** dans la structure DBPARAMS. La structure DBPARAMS inclut trois éléments :  
   
     -   un pointeur vers la mémoire tampon à partir de laquelle le fournisseur récupère les données de paramètre d'entrée et dans laquelle il retourne les données de paramètre de sortie, en fonction des liaisons spécifiées par le handle d'accesseur ;  
   
@@ -76,7 +76,7 @@ ms.locfileid: "37412278"
   
     -   le handle d'accesseur créé à l'étape 3.  
   
-5.  Exécutez la commande à l’aide de **ICommand::Execute**.  
+5.  Exécutez la commande en utilisant **ICommand::Execute**.  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>Méthodes d'appel d'une procédure stockée  
  Lors de l’exécution d’une procédure stockée dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge du fournisseur OLE DB Native Client le :  
@@ -88,7 +88,7 @@ ms.locfileid: "37412278"
 -   instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE.  
   
 ### <a name="odbc-call-escape-sequence"></a>Séquence d'échappement ODBC CALL  
- Si vous connaissez les informations de paramètre, appelez **ICommandWithParameters::SetParameterInfo** méthode pour décrire les paramètres au fournisseur. Sinon, lorsque la syntaxe ODBC CALL est utilisée pour appeler une procédure stockée, le fournisseur appelle une fonction d'assistance afin de rechercher les informations de paramètre de la procédure stockée.  
+ Si vous connaissez les informations de paramètre, appelez la méthode **ICommandWithParameters::SetParameterInfo** pour décrire les paramètres au fournisseur. Sinon, lorsque la syntaxe ODBC CALL est utilisée pour appeler une procédure stockée, le fournisseur appelle une fonction d'assistance afin de rechercher les informations de paramètre de la procédure stockée.  
   
  Si vous n'êtes pas sûr des informations de paramètre (métadonnées de paramètre), la syntaxe ODBC CALL est recommandée.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "37412278"
   
  Lorsque la séquence d'échappement RPC est utilisée pour exécuter une procédure stockée, le fournisseur n'appelle pas de fonction d'assistance pour déterminer les informations de paramètre (comme il le fait dans le cas de la syntaxe ODBC CALL). La syntaxe RPC est plus simple que la syntaxe ODBC CALL ; par conséquent, la commande est analysée plus rapidement, ce qui améliore les performances. Dans ce cas, vous devez fournir les informations de paramètre en exécutant **ICommandWithParameters::SetParameterInfo**.  
   
- La séquence d'échappement RPC nécessite que vous disposiez d'une valeur de retour. Si la procédure stockée ne retourne pas de valeur, le serveur retourne 0 par défaut. De plus, vous ne pouvez pas ouvrir de curseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur la procédure stockée. La procédure stockée est préparée implicitement et l’appel à **ICommandPrepare::Prepare** échouera. En raison de l’incapacité de préparer un appel RPC, vous ne pouvez pas interroger les métadonnées de colonne ; IColumnsInfo::GetColumnInfo et IColumnsRowset::GetColumnsRowset retourneront DB_E_NOTPREPARED.  
+ La séquence d'échappement RPC nécessite que vous disposiez d'une valeur de retour. Si la procédure stockée ne retourne pas de valeur, le serveur retourne 0 par défaut. De plus, vous ne pouvez pas ouvrir de curseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur la procédure stockée. La procédure stockée est préparée implicitement et l’appel à **ICommandPrepare::Prepare** échoue. En raison de l’incapacité de préparer un appel RPC, vous ne pouvez pas interroger les métadonnées de colonne ; IColumnsInfo::GetColumnInfo et IColumnsRowset::GetColumnsRowset retourneront DB_E_NOTPREPARED.  
   
  Si vous connaissez toutes les métadonnées de paramètre, la séquence d'échappement RPC est la méthode recommandée pour exécuter les procédures stockées.  
   
@@ -120,9 +120,9 @@ ms.locfileid: "37412278"
  Pour un exemple d’application qui illustre une séquence d’échappement RPC, consultez [exécuter une procédure stockée &#40;avec la syntaxe RPC&#41; et traiter des Codes de retour et les paramètres de sortie &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instruction Transact-SQL EXECUTE  
- La séquence d’échappement ODBC CALL et la séquence d’échappement RPC sont les méthodes recommandées pour l’appel d’une procédure stockée et non le [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) instruction. Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif utilise le mécanisme RPC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour optimiser le traitement de commande. Ce protocole RPC augmente les performances en supprimant une bonne partie du traitement des paramètres et de l'analyse des instructions sur le serveur.  
+ La séquence d’échappement ODBC CALL et la séquence d’échappement RPC sont les méthodes recommandées pour l’appel d’une procédure stockée, plutôt que l’instruction [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql). Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif utilise le mécanisme RPC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour optimiser le traitement de commande. Ce protocole RPC augmente les performances en supprimant une bonne partie du traitement des paramètres et de l'analyse des instructions sur le serveur.  
   
- Il s’agit d’un exemple de la [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** instruction :  
+ Voici un exemple d’instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** :  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

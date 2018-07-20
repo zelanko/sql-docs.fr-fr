@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f580f26ac2431c7872f3a311027780900d4dd58f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162290"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083401"
 ---
 # <a name="new-folder-page-report-manager"></a>Page Nouveau dossier (Gestionnaire de rapports)
   La page Nouveau dossier vous permet de créer un dossier dans l'arborescence des dossiers du serveur de rapports. Le dossier que vous créez est un dossier virtuel qui est stocké dans une base de données du serveur de rapports. Le dossier n'est pas créé dans le système de fichiers de votre ordinateur.  
@@ -39,7 +39,7 @@ ms.locfileid: "37162290"
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifie le nom du dossier. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : @ & = +, $ / * \< > | "ou / lorsque vous spécifiez un nom.  
+ Spécifie le nom du dossier. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : \@ & = +, $ / * \< > | "ou / lorsque vous spécifiez un nom.  
   
  **Description**  
  Entrez une description du contenu du dossier. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder au dossier.  

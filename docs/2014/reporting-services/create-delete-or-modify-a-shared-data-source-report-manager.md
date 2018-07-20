@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ace3f33f02be295fbaf22fcd8f0e9d82480db2d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202689"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085081"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Créer, supprimer ou modifier une source de données partagée (Gestionnaire de rapports)
   Une source de données partagée spécifie les propriétés de connexion d'une source de données. Si une source de données est utilisée par un grand nombre de rapports, de modèles ou d'abonnements pilotés par les données, songez à créer une source de données partagée pour éliminer le temps de traitement nécessaire à la gestion des mêmes informations de connexion à plusieurs emplacements.  
@@ -43,7 +43,7 @@ icône de source de données partagée
   
 3.  Cliquez sur **Nouvelle source de données**. La page **Nouvelle source de données** s’ouvre.  
   
-4.  Tapez le nom de l'élément. Le nom doit contenir au moins un caractère et il doit commencer par une lettre. Il peut également comprendre des symboles, à l'exception des espaces ou des caractères ; ? : @ & = +, $ / * \< > | " /.  
+4.  Tapez le nom de l'élément. Le nom doit contenir au moins un caractère et il doit commencer par une lettre. Il peut également comprendre des symboles, à l'exception des espaces ou des caractères ; ? : \@ & = +, $ / * \< > | " /.  
   
 5.  Si vous le souhaitez, entrez une description renseignant les utilisateurs sur la connexion. Ce descriptif s'affiche dans la page **Contenu** du Gestionnaire de rapports.  
   

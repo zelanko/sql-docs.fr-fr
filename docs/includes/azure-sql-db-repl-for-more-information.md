@@ -1,0 +1,1 @@
+Serveur de publication et serveur de distribution des bases de données sur la base de données SQL Azure nécessitent [Managed Instance](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) pour plus d’informations, consultez [réplication avec Azure SQL Database](http://docs.microsoft.com/sql/relational-databases/replication/replication-to-sql-database).

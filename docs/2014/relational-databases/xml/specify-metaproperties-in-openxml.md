@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af67d79616f2223f62998494122787460eaa3a41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d57525fb8ed9ca6718f072ef20c9e2cefe8e7ba9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193109"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084031"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Spécifier des métapropriétés dans OPENXML
   Les attributs de métapropriétés dans un document XML décrivent les propriétés d'un élément XML (élément, attribut ou tout autre nœud DOM). Ces attributs n'existent pas physiquement dans le texte du document XML. Toutefois, OPENXML fournit ces métapropriétés pour tous les éléments XML. Ces métapropriétés vous permettent d'extraire des informations (par exemple des informations de positionnement local et d'espace de noms) sur les nœuds XML. Ces informations vous procurent davantage de détails que ceux apparents dans la représentation textuelle.  
@@ -43,21 +43,21 @@ ms.locfileid: "37193109"
   
 |Attribut de métapropriété|Description|  
 |----------------------------|-----------------|  
-|**@mp:id**|Fournit l'identificateur du nœud DOM. Cet identificateur est généré par le système et couvre l'ensemble du document. Tant que le document n'est pas réanalysé, cet ID fait référence au même nœud XML.<br /><br /> Un ID XML de valeur **0** indique que l’élément est un élément racine. Son ID XML parent vaut NULL.|  
-|**@mp:localname**|Stocke la partie locale du nom du nœud. Utilisé avec un préfixe et un URI d'espace de noms, il permet de nommer les nœuds d'éléments ou d'attributs.|  
-|**@mp:namespaceuri**|Fournit l'URI de l'espace de noms de l'élément actuel. Si la valeur de cet attribut est NULL, aucun espace de noms n'est présent.|  
-|**@mp:prefix**|Stocke le préfixe d'espace de noms de l'élément actuel.<br /><br /> Si aucun préfixe n'est présent (NULL) et qu'un URI est fourni, l'espace de noms spécifié est l'espace de noms par défaut. Si aucun URI n'est fourni, aucun espace de noms n'est attaché.|  
-|**@mp:prev**|Stocke le frère précédent relatif à un nœud. Fournit des informations sur l'ordre des éléments dans le document.<br /><br /> **@mp:prev** contient l’ID XML du frère précédent possédant le même élément parent. Si un élément figure au début de la liste des frères, **@mp:prev** a pour valeur NULL.|  
-|**@mp:xmltext**|Utilisé à des fins de traitement. Représente la sérialisation textuelle de l'élément, ainsi que de ses attributs et sous-éléments, utilisée dans la gestion de dépassement d'OPENXML.|  
+|**\@MP:ID**|Fournit l'identificateur du nœud DOM. Cet identificateur est généré par le système et couvre l'ensemble du document. Tant que le document n'est pas réanalysé, cet ID fait référence au même nœud XML.<br /><br /> Un ID XML de valeur **0** indique que l’élément est un élément racine. Son ID XML parent vaut NULL.|  
+|**\@MP:localName**|Stocke la partie locale du nom du nœud. Utilisé avec un préfixe et un URI d'espace de noms, il permet de nommer les nœuds d'éléments ou d'attributs.|  
+|**\@MP:NamespaceURI**|Fournit l'URI de l'espace de noms de l'élément actuel. Si la valeur de cet attribut est NULL, aucun espace de noms n'est présent.|  
+|**\@MP:Prefix**|Stocke le préfixe d'espace de noms de l'élément actuel.<br /><br /> Si aucun préfixe n'est présent (NULL) et qu'un URI est fourni, l'espace de noms spécifié est l'espace de noms par défaut. Si aucun URI n'est fourni, aucun espace de noms n'est attaché.|  
+|**\@MP:prev**|Stocke le frère précédent relatif à un nœud. Fournit des informations sur l'ordre des éléments dans le document.<br /><br /> **\@MP:prev** contient l’ID XML du frère précédent possédant le même élément parent. Si un élément figure au début de la liste des frères,  **\@mp:prev** a la valeur NULL.|  
+|**\@MP:xmltext**|Utilisé à des fins de traitement. Représente la sérialisation textuelle de l'élément, ainsi que de ses attributs et sous-éléments, utilisée dans la gestion de dépassement d'OPENXML.|  
   
  Ce tableau présente les propriétés parentes supplémentaires qui vous permettent d'extraire des informations sur la hiérarchie.  
   
 |Attribut de métapropriété parent|Description|  
 |-----------------------------------|-----------------|  
-|**@mp:parentid**|Correspond à **../@mp:id**|  
-|**@mp:parentlocalname**|Correspond à **../@mp:localname**|  
-|**@mp:parentnamespacerui**|Correspond à **../@mp:namespaceuri**|  
-|**@mp:parentprefix**|Correspond à **../@mp:prefix**|  
+|**\@MP:parentId**|Correspond à **... /\@mp:id**|  
+|**\@MP:parentlocalname**|Correspond à **... /\@mp:localname**|  
+|**\@MP:parentnamespacerui**|Correspond à **... /\@mp:namespaceuri**|  
+|**\@MP:parentprefix**|Correspond à **... /\@mp:prefix**|  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants illustrent l'utilisation d'OPENXML pour créer différentes vues d'ensembles de lignes.  
@@ -67,11 +67,11 @@ ms.locfileid: "37193109"
   
  L'instruction OPENXML contient les éléments suivants :  
   
--   Le paramètre **id** est mappée à l’attribut de métapropriété **@mp:id** , ce qui indique que la colonne contient l’ID XML système unique de l’élément.  
+-   Le **id** est mappée à la  **\@mp:id** attribut de métapropriété indique que la colonne contient l’ID XML système unique de l’élément.  
   
--   Le paramètre **parent** est mappée à **@mp:parentid** , ce qui indique qu’elle contient l’ID XML du parent de l’élément.  
+-   Le **parent** est mappée à  **\@mp:parentid** indique que la colonne contient l’ID XML du parent de l’élément.  
   
--   Le paramètre **parentLocalName** est mappée à **@mp:parentlocalname** , ce qui indique que la colonne contient le nom local du parent.  
+-   Le **parentLocalName** est mappée à  **\@mp:parentlocalname** indique que la colonne contient le nom local du parent.  
   
  L'instruction SELECT retourne ensuite l'ensemble de lignes fourni par OPENXML :  
   
@@ -164,13 +164,13 @@ EXEC sp_xml_removedocument @idoc
 ### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. Spécification de la métapropriété xmltext pour récupérer les données non consommées d'une colonne  
  Cet exemple utilise OPENXML pour créer une vue d'ensemble de lignes de l'exemple de document XML. Il montre comment récupérer des données XML non consommées en mappant l’attribut de métapropriété **xmltext** à une colonne d’ensemble de lignes dans OPENXML.  
   
- Le paramètre **comment** est mappée à la métapropriété **@mp:xmltext** ). Le paramètre *flags* a la valeur **9** (XML_ATTRIBUTE et XML_NOCOPY). Cela indique un mappage **centré sur l’attribut** et signifie que seules les données non consommées doivent être copiées dans la colonne de dépassement.  
+ Le **commentaire** colonne est identifiée en tant que la colonne de dépassement de capacité en la mappant à la  **\@mp:xmltext** métapropriété. Le paramètre *flags* a la valeur **9** (XML_ATTRIBUTE et XML_NOCOPY). Cela indique un mappage **centré sur l’attribut** et signifie que seules les données non consommées doivent être copiées dans la colonne de dépassement.  
   
  L'instruction SELECT retourne ensuite l'ensemble de lignes fourni par OPENXML.  
   
- Dans cet exemple, la métapropriété **@mp:parentlocalname** est définie pour une colonne ( **ParentLocalName**) de l’ensemble de lignes généré par OPENXML. Par conséquent, cette colonne contient le nom local de l'élément parent.  
+ Dans cet exemple, le  **\@mp:parentlocalname** métapropriété est définie pour une colonne, **ParentLocalName**, dans l’ensemble de lignes généré par OPENXML. Par conséquent, cette colonne contient le nom local de l'élément parent.  
   
- Deux autres colonnes sont spécifiées dans l’ensemble de lignes ( **parent** et **comment**). Le paramètre **parent** est mappée à **@mp:parentid** , ce qui indique qu’elle contient l’ID XML de l’élément parent de l’élément. La colonne comment est mappée à la métapropriété **@mp:xmltext** ).  
+ Deux autres colonnes sont spécifiées dans l’ensemble de lignes ( **parent** et **comment**). Le **parent** est mappée à  **\@mp:parentid** indique que la colonne contient l’ID XML de l’élément parent de l’élément. La colonne comment est identifiée en tant que la colonne de dépassement de capacité en la mappant à la  **\@mp:xmltext** métapropriété.  
   
 ```  
 DECLARE @idoc int  

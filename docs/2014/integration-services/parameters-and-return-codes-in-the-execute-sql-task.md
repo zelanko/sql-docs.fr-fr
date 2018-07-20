@@ -19,12 +19,12 @@ caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12739be23eb0a2104f73d9ad1c1240b3c235259c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 057d80ade08d7d5266208b2d417e08d530a8d8df
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252331"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083891"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Paramètres et codes de retour dans la tâche d'exécution SQL
   Instructions SQL et les procédures stockées utilisent fréquemment `input` paramètres, `output` paramètres et codes de retour. Dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la tâche d'exécution SQL prend en charge les types de paramètres `Input`, `Output` et `ReturnValue`. Vous utilisez le `Input` type pour les paramètres d’entrée, `Output` pour les paramètres de sortie, et `ReturnValue` pour les codes de retour.  
@@ -49,16 +49,16 @@ ms.locfileid: "37252331"
 -   [Configuration des paramètres et des codes de retour dans l’éditeur de tâche exécution de SQL](#Configure_parameters_and_return_codes)  
   
 ##  <a name="Parameter_names_and_markers"></a> À l’aide de marqueurs et des noms de paramètre  
- Selon le type de connexion que la tâche d'exécution SQL utilise, la syntaxe de la commande SQL utilise différents marqueurs de paramètres. Par exemple, le type de gestionnaire de connexions [!INCLUDE[vstecado](../includes/vstecado-md.md)] exige que la commande SQL utilise un marqueur de paramètre au format **@varParameter**, tandis que le type de connexion OLE DB requiert le marqueur de paramètre point d’interrogation (?).  
+ Selon le type de connexion que la tâche d'exécution SQL utilise, la syntaxe de la commande SQL utilise différents marqueurs de paramètres. Par exemple, le [!INCLUDE[vstecado](../includes/vstecado-md.md)] type de gestionnaire de connexion nécessite que la commande SQL utilise un marqueur de paramètre au format  **\@varParameter**, tandis que le type de connexion OLE DB nécessite le paramètre de point d’interrogation ( ?) marqueur.  
   
- Les noms que vous pouvez utiliser comme noms de paramètres dans les mappages entre variables et paramètres varient également selon le type de gestionnaire de connexions. Par exemple, le type de gestionnaire de connexions [!INCLUDE[vstecado](../includes/vstecado-md.md)] utilise un nom défini par l'utilisateur à préfixe @, tandis que le type de gestionnaire de connexions OLE DB impose l'utilisation de la valeur numérique d'un ordinal de base 0 comme nom de paramètre.  
+ Les noms que vous pouvez utiliser comme noms de paramètres dans les mappages entre variables et paramètres varient également selon le type de gestionnaire de connexions. Par exemple, le [!INCLUDE[vstecado](../includes/vstecado-md.md)] type de gestionnaire de connexion utilise un nom défini par l’utilisateur avec un \@ de préfixe, tandis que le type de gestionnaire de connexions OLE DB requiert l’utilisation de la valeur numérique d’un nombre ordinal de base 0 comme nom de paramètre.  
   
  Le tableau suivant indique les conditions requises des commandes SQL pour les types de gestionnaires de connexions que la tâche d'exécution SQL peut utiliser.  
   
 |Type de connexion|Marqueur de paramètre|Nom du paramètre|Exemple de commande SQL|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|@\<nom du paramètre>|@\<nom du paramètre>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<nom du paramètre>|\@\<nom du paramètre>|SELECT FirstName, LastName, titre de Person.Contact où ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL et OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -151,7 +151,7 @@ ms.locfileid: "37252331"
   
 -   Le type de connexion ADO peut utiliser deux noms de paramètres (par exemple, Param1 et Param2), mais les paramètres doivent être mappés selon leur position ordinale dans la liste des paramètres.  
   
--   Le type de connexion [!INCLUDE[vstecado](../includes/vstecado-md.md)] utilise les noms de paramètres @parmMinProductID et @parmMaxProductID.  
+-   Le [!INCLUDE[vstecado](../includes/vstecado-md.md)] type de connexion utilise les noms de paramètre \@parmMinProductID et \@parmMaxProductID.  
   
 ##  <a name="Stored_procedures"></a> Utilisation de paramètres avec des procédures stockées  
  Les commandes SQL qui exécutent des procédures stockées peuvent également utiliser le mappage de paramètres. Les règles d'utilisation des marqueurs de paramètres et des noms de paramètres varient selon le type de gestionnaire de connexions que la tâche d'exécution SQL utilise, tout comme les règles des requêtes paramétrables.  
@@ -196,7 +196,7 @@ ms.locfileid: "37252331"
   
 -   [Définir les propriétés d’une tâche ou d’un conteneur](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Définir les propriétés d’une tâche ou d’un conteneur](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>Contenu associé  

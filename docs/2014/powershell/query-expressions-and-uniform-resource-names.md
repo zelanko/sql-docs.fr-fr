@@ -18,12 +18,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 996fad627cebc240a39337a0f0ae3a096e53901c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ed4731450111c49bfe3936ecda2e1400a09d173
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326179"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083961"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressions de requête et noms URN
   Les modèles SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent deux types de chaînes d’expression semblables aux expressions XPath. Les expressions de requête sont des chaînes qui spécifient un jeu de critères permettant d'énumérer un ou plusieurs objets dans une hiérarchie de modèle objet. Un nom de ressource unique (URN) est un type spécifique de chaîne d'expression de requête qui identifie de façon unique un objet particulier.  
@@ -67,22 +67,22 @@ ms.locfileid: "37326179"
   
  Par exemple, spécifiez Server pour la classe **ServerCollection** et Database pour la classe **DatabaseCollection** .  
   
- @*PropertyName*  
- Spécifie le nom de l’une des propriétés de la classe associée à l’objet spécifié dans *Object*. Le nom de la propriété doit avoir pour préfixe le caractère @. Par exemple, spécifiez @IsAnsiNull pour la propriété de classe **Database** **IsAnsiNull**.  
+ \@*PropertyName*  
+ Spécifie le nom de l’une des propriétés de la classe associée à l’objet spécifié dans *Object*. Le nom de la propriété doit être précédé du \@ caractère. Par exemple, spécifier \@IsAnsiNull pour le **base de données** propriété de classe **IsAnsiNull**.  
   
- @*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*=true()  
  Énumère tous les objets où la propriété booléenne spécifiée a la valeur TRUE.  
   
- @*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*=false()  
  Énumère tous les objets où la propriété booléenne spécifiée a la valeur FALSE.  
   
- contains(@*StringPropertyName*, '*PatternString*')  
+ contient (\@*Nompropriétéchaîne*, «*PatternString*»)  
  Énumère tous les objets où la propriété de chaîne spécifiée contient au moins une occurrence du jeu de caractères spécifié dans '*PatternString*'.  
   
- @*StringPropertyName*='*PatternString*'  
+ \@*StringPropertyName*='*PatternString*'  
  Énumère tous les objets où la valeur de la propriété de chaîne spécifiée est identique au modèle de caractère spécifié dans '*PatternString*'.  
   
- @*DatePropertyName*= datetime('*DateString*')  
+ \@*DatePropertyName*= datetime('*DateString*')  
  Énumère tous les objets où la valeur de la propriété de date spécifiée correspond à la date spécifiée dans '*DateString*'. *DateString* doit être au format aaaa-mm-jj hh:mi:ss.mmm.  
   
 |||  
@@ -97,11 +97,11 @@ ms.locfileid: "37326179"
   
  Les dates spécifiées dans ce format peuvent être évaluées par rapport à tout format de date stocké dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- is_null(@*PropertyName*)  
+ is_Null (\@*PropertyName*)  
  Énumère tous les objets où la propriété spécifiée a la valeur NULL.  
   
  not(\<*PropertyExpression*>)  
- Inverse la valeur d’évaluation de *PropertyExpression*, énumérant tous les objets qui ne correspondent pas à la condition spécifiée dans *PropertyExpression*. Par exemple, not(contains(@Name, ’xyz’)) énumère tous les objets dont le nom ne contient pas la chaîne xyz.  
+ Inverse la valeur d’évaluation de *PropertyExpression*, énumérant tous les objets qui ne correspondent pas à la condition spécifiée dans *PropertyExpression*. Par exemple, pas (contient (\@nom, 'xyz')) énumère tous les objets qui n’ont pas la chaîne xyz dans leurs noms.  
   
 ## <a name="remarks"></a>Notes  
  Les expressions de requête sont des chaînes qui énumèrent les nœuds dans une hiérarchie de modèle SMO. Chaque nœud possède une expression de filtre qui spécifie les critères pour déterminer les objets qui sont énumérés au niveau de ce nœud. Les expressions de requête sont modélisées sur le langage d'expression XPath. Les expressions de requête implémentent un petit sous-ensemble des expressions qui sont prises en charge par XPath, et possèdent également quelques extensions qui ne sont pas présentes dans XPath. Les expressions XPath sont des chaînes qui spécifient un jeu de critères utilisé pour énumérer une ou plusieurs balises dans un document XML. Pour plus d'informations sur XPath, consultez [W3C XPath Language](http://www.w3.org/TR/xpath20/)(en anglais).  

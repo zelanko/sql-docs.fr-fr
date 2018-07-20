@@ -24,12 +24,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 84a20b15390463d19577ab6ae800bcb7f0579bb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 322a91c77eaac5433cada0cfef056e1688020dc6
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295049"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084001"
 ---
 # <a name="identifiers-ssis"></a>Identificateurs (SSIS)
   Dans les expressions, les identificateurs sont des colonnes et des variables disponibles pour l'opération. Les expressions peuvent utiliser des identificateurs standard et qualifiés.  
@@ -39,9 +39,9 @@ ms.locfileid: "37295049"
   
  La dénomination des identificateurs standard doit suivre les règles suivantes :  
   
--   Le premier caractère du nom doit être une lettre, comme défini dans le standard Unicode 2.0, ou un trait de soulignement « _ ».  
+-   Le premier caractère du nom doit être une lettre, comme défini dans le standard Unicode 2.0, ou un trait de soulignement « _ ».  
   
--   Les caractères suivants peuvent être des lettres ou des nombres, comme défini dans le standard Unicode 2.0, le trait de soulignement « _ » et les caractères « @ », « $ » et « # ».  
+-   Les caractères suivants peuvent être des lettres ou des nombres, comme défini dans la norme Unicode 2.0, le trait de soulignement (_), \@, $ et les caractères #.  
   
 > [!IMPORTANT]  
 >  Il n'est pas autorisé d'incorporer dans les identificateurs standard des espaces et des caractères spéciaux, autres que ceux qui sont répertoriés. Pour recourir à des espaces et à des caractères spéciaux, vous devez utiliser un identificateur qualifié au lieu d'un identificateur standard.  
@@ -89,15 +89,15 @@ ms.locfileid: "37295049"
 >  Si les deux éléments en notation ponctuée figurent dans une paire de crochets, l'évaluateur d'expression interprète celle-ci comme un identificateur unique, et non pas comme une combinaison de colonnes source.  
   
 ## <a name="variables-in-expressions"></a>Variables dans des expressions  
- Les variables référencées dans les expressions doivent comprendre le préfixe « @ ». Par exemple, la variable **Counter** est référencée sous la forme @Counter. Le caractère « @ » ne fait pas partie du nom de la variable ; il permet simplement à l'évaluateur d'expression d'identifier la variable. Si vous créez des expressions à l'aide des boîtes de dialogue du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , le caractère « @ » est automatiquement ajouté au nom de la variable. Vous ne pouvez pas insérer des espaces entre le caractère « @ » et le nom de la variable.  
+ Variables référencées dans les expressions, doivent inclure le \@ préfixe. Par exemple, le **compteur** variable est référencée à l’aide de \@compteur. Le \@ caractère ne fait pas partie du nom de variable ; il identifie uniquement la variable à l’évaluateur d’expression. Si vous créez des expressions à l’aide de la boîte de dialogue boîtes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] concepteur fournit, le \@ caractère est automatiquement ajouté au nom de variable. Il n’est pas valide pour des espaces entre les \@ caractère et le nom de variable.  
   
  Les noms de variable suivent les mêmes règles que ceux des autres identificateurs standard :  
   
 -   Le premier caractère du nom doit être une lettre, comme défini dans le standard Unicode 2.0, ou un trait de soulignement « _ ».  
   
--   Les caractères suivants peuvent être des lettres ou des nombres, comme défini dans le standard Unicode 2.0, le trait de soulignement « _ » et les caractères « @ », « $ » et « # ».  
+-   Les caractères suivants peuvent être des lettres ou des nombres, comme défini dans la norme Unicode 2.0, le trait de soulignement (_), \@, $ et les caractères #.  
   
- Si un nom de variable contient des caractères autres que ceux répertoriés, vous devez placer la variable entre crochets. Par exemple, les noms de variable contenant des espaces doivent figurer entre crochets. Le crochet ouvrant suit le caractère « @ ». Par exemple, la variable **Mon nom** est référencée sous la forme « @[Mon nom] ». Vous ne pouvez pas insérer des espaces entre le nom de la variable et les crochets.  
+ Si un nom de variable contient des caractères autres que ceux répertoriés, vous devez placer la variable entre crochets. Par exemple, les noms de variable contenant des espaces doivent figurer entre crochets. Le crochet ouvrant suit le \@ caractère. Par exemple, le **My Name** variable est référencée en tant que \@[mon nom]. Vous ne pouvez pas insérer des espaces entre le nom de la variable et les crochets.  
   
 > [!NOTE]  
 >  Les noms des variables définies par l'utilisateur et des variables système respectent la casse.  

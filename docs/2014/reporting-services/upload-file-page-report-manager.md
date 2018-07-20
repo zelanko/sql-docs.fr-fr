@@ -14,12 +14,12 @@ caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f29cf01e446c30a69bb2c205d26965b9288ef7f3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272315"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083027"
 ---
 # <a name="upload-file-page-report-manager"></a>Page Télécharger un fichier (Gestionnaire de rapports)
   La page Télécharger un fichier vous permet de publier un fichier du système de fichiers dans la base de données du serveur de rapports. Les fichiers téléchargés sont représentés comme des éléments dans l'arborescence des dossiers du serveur de rapports.  
@@ -54,7 +54,7 @@ ms.locfileid: "37272315"
  Cliquez pour choisir un fichier dans le système de fichiers.  
   
  **Nom**  
- Tapez le nom du fichier tel qu'il apparaîtra dans l'espace de noms du serveur de rapports. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : @ & = +, $ * \< > | "ou / lorsque vous spécifiez un nom d’élément.  
+ Tapez le nom du fichier tel qu'il apparaîtra dans l'espace de noms du serveur de rapports. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : \@ & = +, $ * \< > | "ou / lorsque vous spécifiez un nom d’élément.  
   
  **Remplacer l’élément s’il existe**  
  Activez cette case à cocher si vous souhaitez remplacer un élément existant par une nouvelle version. Pour remplacer une version existante, le nom du nouvel élément et celui de l'élément existant doivent être identiques.  

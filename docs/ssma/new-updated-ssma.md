@@ -1,24 +1,23 @@
 ---
-title: Mise à jour - SSMA pour la documentation de SQL Server | Documents Microsoft
-description: Extraits de l’affichage de contenu mis à jour pour la documentation récemment modifié, pour SQL Server Migration Assistant (SSMA) pour Microsoft SQL Server.
+title: Mise à jour - SSMA pour SQL Server | Microsoft Docs
+description: Affichez des extraits de contenu mis à jour récemment dans la documentation pour SQL Server Migration Assistant (SSMA) pour Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.component: ssma
 ms.date: 04/28/2018
-ms.openlocfilehash: c941c5ca367c579fd654c7c399520f371f3f59b7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 97b48abd3e470703f72441006a3ecd92b635e913
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776965"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085461"
 ---
-# <a name="new-and-recently-updated-sql-server-migration-assistant-ssma"></a>Nouveaux et mis à jour récemment : SQL Server Migration Assistant (SSMA)
+# <a name="new-and-recently-updated-sql-server-migration-assistant-ssma"></a>Nouvelles et mises à jour récentes : SQL Server Migration Assistant (SSMA)
 
 
 

@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cb12f9012055b4de29712255b427a93dfafef2db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63c244c74ac6039867834b7c289fd02de2e03b17
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201019"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083621"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Page Nouveau rapport lié (Gestionnaire de rapports)
   La page Nouveau rapport lié vous permet de créer un rapport lié. Un rapport lié est un rapport qui possède ses propres paramètres et propriétés, mais qui est lié à la définition de rapport d'un autre rapport. Les rapports liés sont utiles lorsque vous possédez un rapport de base que vous souhaitez modifier pour des groupes ou des utilisateurs spécifiques (par exemple, un rapport régional qui retourne des données différentes selon le code de région que vous spécifiez en tant que paramètre). Un rapport lié est généralement créé à partir d'un rapport paramétrable lorsque vous souhaitez modifier puis enregistrer des valeurs de paramètres différentes avec chaque instance du rapport. Toutefois, vous pouvez créer un rapport lié à partir de n'importe quel rapport auquel vous avez accès.  
@@ -51,7 +51,7 @@ ms.locfileid: "37201019"
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifie le nom du rapport lié. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. Toutefois, vous ne devez pas utiliser les caractères ; ? : @ & = +, $ / * \< > | "ou / lorsque vous spécifiez un nom.  
+ Spécifie le nom du rapport lié. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. Toutefois, vous ne devez pas utiliser les caractères ; ? : \@ & = +, $ / * \< > | "ou / lorsque vous spécifiez un nom.  
   
  **Description**  
  Tapez une description du contenu du rapport. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder au rapport.  

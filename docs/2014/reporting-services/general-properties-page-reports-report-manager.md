@@ -14,12 +14,12 @@ caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 607d50e68cef49fef5940b2729bea8156d7bf2f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d4b9885c1dc28d7786296a220d76f56e24a43e1
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189896"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084651"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Page Propriétés générales, Rapports (Gestionnaire de rapports)
   La page Propriétés générales des rapports vous permet de renommer, supprimer, déplacer ou remplacer la définition de rapport. Vous pouvez également utiliser cette page pour créer un rapport lié. Des informations détaillées sur l'utilisateur qui a créé et modifié le rapport, et la date des modifications sont affichées dans la partie supérieure de la page.  
@@ -37,7 +37,7 @@ ms.locfileid: "37189896"
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifie le nom du rapport. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : @ & = +, $ * \< >  
+ Spécifie le nom du rapport. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : \@ & = +, $ * \< >  
   
  " ou / lorsque vous spécifiez un nom.  
   

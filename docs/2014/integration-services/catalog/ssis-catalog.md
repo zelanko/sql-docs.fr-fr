@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 968676f1d56299a720a85cee508fd860d7dc1d6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160912"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084081"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
   Le `SSISDB` catalogue est le point central pour travailler avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projets (SSIS) que vous avez déployés sur le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -64,7 +64,7 @@ ms.locfileid: "37160912"
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
--   @ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite.  
+-   \@ n’est pas autorisé comme premier caractère, mais les caractères suivants peuvent utiliser \@.  
   
 -   La longueur du nom doit être supérieure à 0 et inférieure ou égale à 128.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "37160912"
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
--   @ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite.  
+-   \@ n’est pas autorisé comme premier caractère, mais les caractères suivants peuvent utiliser \@.  
   
 -   La longueur du nom doit être supérieure à 0 et inférieure ou égale à 128.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "37160912"
 |Nombre maximal de versions par projet|MAX_PROJECT_VERSIONS|  
 |Niveau d'enregistrement par défaut au niveau du serveur|SERVER_LOGGING_LEVEL|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les projets, les environnements et les packages sont contenus dans des dossiers qui sont des objets sécurisables. Vous pouvez accorder des autorisations à un dossier, notamment l'autorisation de MANAGE_OBJECT_PERMISSIONS. MANAGE_OBJECT_PERMISSIONS vous permet de déléguer l'administration du contenu du dossier à un utilisateur sans avoir à accorder à celui-ci l'appartenance au rôle ssis_admin. Vous pouvez également accorder des autorisations relatives à des projets, des environnements et des opérations. Opérations incluent l’initialisation [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], déploiement de projets, création et démarrage d’exécutions, validation des projets et des packages et la configuration du `SSISDB` catalogue.  
   
  Pour plus d’informations sur les rôles de base de données, consultez [Rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md).  
@@ -279,7 +279,7 @@ ms.locfileid: "37160912"
   
  Vous pouvez valider des projets et des packages en appelant les procédures stockées [catalog.validate_project &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-validate-project-ssisdb-database) et [catalog.validate_package &#40;base de données SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database). La vue [catalog.validations &#40;base de données SSISDB&#41;](/sql/integration-services/system-views/catalog-validations-ssisdb-database) fournit des informations sur les validations, telles que les références d’environnement serveur prises en compte dans la validation, s’il s’agit d’une validation de dépendance ou d’une validation complète, et si le runtime 32 bits ou 64 bits est utilisé pour exécuter le package.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 -   [Créer le catalogue SSIS](ssis-catalog.md)  
   

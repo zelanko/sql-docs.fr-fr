@@ -18,12 +18,12 @@ caps.latest.revision: 208
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 05cf9071049947adceaeeccf2e728f1d5045d05d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c268854800acdfa1e725b4d00b564c018dd70f94
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326399"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084071"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] déconseillées qui sont toujours disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
@@ -40,7 +40,7 @@ ms.locfileid: "37326399"
 |Objets de base de données|Possibilité de retourner les jeux de résultats à partir de déclencheurs|None|Le déclencheur retourne des résultats|12|  
 |Chiffrement|Le chiffrement à l'aide de RC4 ou RC4_128 est déconseillé et est planifié pour être supprimé dans la prochaine version. Le déchiffrement de RC4 et RC4_128 n'est pas déconseillé.|Utilisez un autre algorithme de chiffrement, par exemple AES.|Algorithme de chiffrement déconseillé|253|  
 |Serveurs distants|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Remplacez les serveurs distants à l'aide de serveurs liés. sp_addserver ne peut être utilisé qu’avec l’option « local ».|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Serveurs distants|@@remserver|Remplacez les serveurs distants à l'aide de serveurs liés.|None|None|  
+|Serveurs distants|\@\@remserver|Remplacez les serveurs distants à l'aide de serveurs liés.|None|None|  
 |Serveurs distants|SET REMOTE_PROC_TRANSACTIONS|Remplacez les serveurs distants à l'aide de serveurs liés.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Options définies|`SET ROWCOUNT` pour les instructions `INSERT`, `UPDATE` et `DELETE`|Mot clé TOP|SET ROWCOUNT|109|  
 |Indicateurs de table|Indicateur de table HOLDLOCK sans parenthèses.|Utilisez HOLDLOCK avec la parenthèse.|Indicateur de table HOLDLOCK sans parenthèses|167|  
@@ -117,7 +117,7 @@ ms.locfileid: "37326399"
 |Sécurité|Algorithmes de chiffrement RC4 et DESX|Utilisez un autre algorithme, par exemple AES.|Algorithme DESX|238|  
 |Options définies|SET FMTONLY|[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql), [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), and [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql).|SET FMTONLY|250|  
 |Options de configuration de serveur|Option c2 audit<br /><br /> Trace par défaut activée (option)|[common criteria compliance enabled (option de configuration de serveur)](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [Événements étendus](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
-|Classes SMO|`Microsoft.SQLServer.Management.Smo.Information` classe<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` classe<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` classe<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` propriété|`Microsoft.SqlServer.Management.Smo.Server` classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` classe<br /><br /> None|None|None|  
+|Classes SMO|`Microsoft.SQLServer.Management.Smo.Information` Classe<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` Classe<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` Classe<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` Propriété|`Microsoft.SqlServer.Management.Smo.Server` Classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` Classe<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` Classe<br /><br /> None|None|None|  
 |SQL Server Agent|Notification**net send** <br /><br /> Notification par radiomessagerie<br /><br /> Sous-système ActiveX|Notification par courrier électronique<br /><br /> Notification par courrier électronique<br /><br /> Scripts Command ou PowerShell|None|None|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Intégration de l’Explorateur de solutions dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]<br /><br /> Intégration du contrôle de code source [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|None|  
 |Procédures stockées système|sp_db_increased_partitions|Aucun. La prise en charge de plus de partitions est disponible par défaut dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|sp_db_increased_partitions|253|  
@@ -128,7 +128,7 @@ ms.locfileid: "37326399"
 |Compression de table|Utilisation du format de stockage vardecimal.|Le format de stockage vardecimal est déconseillé. La compression des données[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] compresse les valeurs décimales ainsi que d’autres types de données. Nous vous recommandons d'utiliser la compression de données au lieu du format de stockage vardecimal.|Format de stockage vardecimal|200|  
 |Compression de table|Utilisation de la procédure sp_db_vardecimal_storage_format.|Le format de stockage vardecimal est déconseillé. La compression des données[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] compresse les valeurs décimales ainsi que d’autres types de données. Nous vous recommandons d'utiliser la compression de données au lieu du format de stockage vardecimal.|sp_db_vardecimal_storage_format|201|  
 |Compression de table|Utilisation de la procédure sp_estimated_rowsize_reduction_for_vardecimal.|Utilisez à la place la compression de données et la procédure sp_estimate_data_compression_savings.|sp_estimated_rowsize_reduction_for_vardecimal|202|  
-|Indicateurs de table|Spécification de NOLOCK ou READUNCOMMITTED dans la clause FROM d'une instruction UPDATE ou DELETE.|Supprimez les indicateurs de table NOLOCK ou READUNCOMMITTED de la clause FROM.|NOLOCK ou READUNCOMMITTED dans UPDATE ou DELETE| 1|  
+|Indicateurs de table|Spécification de NOLOCK ou READUNCOMMITTED dans la clause FROM d'une instruction UPDATE ou DELETE.|Supprimez les indicateurs de table NOLOCK ou READUNCOMMITTED de la clause FROM.|NOLOCK ou READUNCOMMITTED dans UPDATE ou DELETE|1|  
 |Indicateurs de table|Spécification des indicateurs de table sans utilisation du mot clé WITH.|Utilisez WITH.|Indicateur de table sans WITH|8|  
 |Indicateurs de table|INSERT_HINTS||INSERT_HINTS|34|  
 |Pointeurs de texte|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|None|UPDATETEXT ou WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
@@ -143,7 +143,7 @@ ms.locfileid: "37326399"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL comme nom de colonne dans les instructions DML.|Utilisez $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL comme nom de colonne dans les instructions DML.|Utilisez $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation de #, ## comme table temporaire et noms de procédure stockée temporaires.|Utilisez au moins un caractère supplémentaire.|'#' et '##' comme nom des tables temporaires et procédures stockées|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation de @, @@ ou @@ comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)] .|N'utilisez pas @, @@ ou des noms commençant par @@ comme identificateurs.|'@' et noms commençant par '@@' comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation de \@, \@\@ ou \@\@ comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)].|N’utilisez pas \@, \@\@ ou des noms commençant par \@\@ comme identificateurs.|\@ et noms commençant par \@\@ comme identificateurs [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation du mot clé DEFAULT comme valeur par défaut.|N'utilisez pas le mot DEFAULT comme valeur par défaut.|Mot clé DEFAULT comme valeur par défaut.|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilisation d'un espace comme séparateur entre les indicateurs de table.|Utilisez une virgule pour séparer les indicateurs de table.|Indicateurs de table multiples sans virgule|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|La liste de sélection d'une vue indexée d'agrégation doit contenir COUNT_BIG (*) dans le mode de compatibilité 90.|Utilisez COUNT_BIG (*).|Liste de sélection de vue d'index sans COUNT_BIG (*)|2|  

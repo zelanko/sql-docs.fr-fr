@@ -1,25 +1,25 @@
 ---
-title: Développer des applications pour SQL Server sur Linux | Documents Microsoft
+title: Développer des applications pour SQL Server sur Linux | Microsoft Docs
 description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 11/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.custom: sql-linux
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 5445deb30d2e3c3dfd5cc4964f3b5d3ed2d9d391
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 317c2ea2064f7ffc286671a8fff7eef2f8149ee7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34454951"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084917"
 ---
-# <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Pour commencer à développer des applications pour SQL Server sur Linux
+# <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Comment commencer à développer des applications pour SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -30,7 +30,7 @@ Vous pouvez créer des applications qui se connectent et qui utilisent SQL Serve
 > [!TIP]
 > Ces mêmes options de développement vous permettent également de cibler SQL Server sur d'autres plates-formes. Les applications peuvent cibler SQL Server fonctionnant sur site ou dans le Cloud, sous Linux, sous Windows ou via Docker sur macOS. Vous pouvez également cibler la base de données SQL Azure et Azure SQL Data Warehouse
 
-## <a name="try-the-tutorials"></a>Essayez les didacticiels
+## <a name="try-the-tutorials"></a>Suivez les didacticiels
 
 La meilleure façon de démarrer et de créer des applications avec SQL Server est de l'essayer par vous-même.
 
@@ -78,7 +78,7 @@ Vous pouvez également utiliser de nouveaux outils de ligne de commande natifs p
 
 Pour démarrer, installez SQL Server sur Linux en suivant l'une des sections de démarrage rapide suivantes :
 
-- [Installer sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Installation sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installer sur Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Exécuter sur Docker](quickstart-install-connect-ubuntu.md)

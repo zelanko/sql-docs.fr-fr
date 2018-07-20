@@ -17,12 +17,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8678b9909756d89a3a5bb11c2691aaacfc828f09
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2fc62fbd298f5559dff9dc5d944bd668a17a79bd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269381"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082971"
 ---
 # <a name="syntax-ssis"></a>Syntaxe (SSIS)
   La syntaxe des expressions [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est similaire à la syntaxe utilisée par les langages C et C#. Les expressions comprennent des éléments tels que des identificateurs (colonnes et variables), des littéraux, des opérateurs et des fonctions. Cette rubrique récapitule les contraintes de la syntaxe de l'évaluateur d'expression applicables aux différents éléments d'une expression.  
@@ -39,7 +39,7 @@ ms.locfileid: "37269381"
 ## <a name="identifiers"></a>Identificateurs  
  Les expressions peuvent comprendre des identificateurs de colonne et de variable. Les colonnes peuvent provenir de la source de données ou être créées par des transformations dans le flux de données. Les expressions peuvent utiliser des identificateurs de lignage pour faire référence aux colonnes. Les identificateurs de lignage sont des nombres qui identifient de manière unique les éléments du package. Les identificateurs de lignage référencés dans une expression doivent être préfixés du signe dièse ( # ). Par exemple, l'identificateur de lignage 138 est référencé sous la forme « #138 ».  
   
- Les expressions peuvent contenir les variables système fournies par [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ainsi que des variables personnalisées. Les variables référencées dans une expression doivent comprendre le préfixe « @ ». Par exemple, la variable `Counter` est référencée sous la forme @Counter. Le caractère « @ » ne fait pas partie du nom de la variable ; il indique simplement à l'évaluateur d'expression que l'identificateur est une variable. Pour plus d’informations, consultez [Identificateurs &#40;SSIS&#41;](identifiers-ssis.md).  
+ Les expressions peuvent contenir les variables système fournies par [!INCLUDE[ssIS](../../includes/ssis-md.md)] , ainsi que des variables personnalisées. Variables référencées dans une expression, doivent inclure le \@ préfixe. Par exemple, le `Counter` variable est référencée à l’aide de \@compteur. Le \@ caractère ne fait pas partie du nom de variable ; il indique simplement à l’évaluateur d’expression que l’identificateur est une variable. Pour plus d’informations, consultez [Identificateurs &#40;SSIS&#41;](identifiers-ssis.md).  
   
 ## <a name="literals"></a>Littéraux  
  Les expressions peuvent contenir des littéraux numériques, booléens et de chaîne. Les littéraux de chaîne utilisés dans les expressions doivent être placés entre guillemets. Les littéraux numériques et booléens ne prennent pas de guillemets. Le langage des expressions comprend des séquences d'échappement pour les caractères fréquemment placés en mode échappement. Pour plus d’informations, consultez [Littéraux &#40;SSIS&#41;](numeric-string-and-boolean-literals.md).  
@@ -79,7 +79,7 @@ ms.locfileid: "37269381"
   
  Pour plus d’informations, consultez [Fonctions &#40;expression SSIS&#41;](functions-ssis-expression.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Utiliser une expression dans un composant de flux de données](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenu associé  

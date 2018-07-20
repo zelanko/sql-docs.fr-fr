@@ -1,5 +1,5 @@
 ---
-title: Paramètres (Type de mappage) du projet (DB2ToSQL) | Documents Microsoft
+title: Paramètres du projet (mappage de Type) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,26 +16,26 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8232193c56feb0a9403b9cebaad896c7dbef8ad9
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 09fddd4e94e0c8ae000c2143d08fba25b8074f0c
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775285"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038166"
 ---
-# <a name="project-settings-type-mapping-db2tosql"></a>Paramètres (Type de mappage) du projet (DB2ToSQL)
-La page mappage de Type de la **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA convertit les types de données DB2 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des types de données.  
+# <a name="project-settings-type-mapping-db2tosql"></a>Paramètres du projet (mappage de Type) (DB2ToSQL)
+La page mappage de Type de la **paramètres du projet** boîte de dialogue contient les paramètres qui personnalisent comment SSMA convertit les types de données DB2 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] types de données.  
   
-La page mappage de Type est disponible dans le **les paramètres de projet** et **les paramètres de projet par défaut** boîtes de dialogue.  
+La page mappage de Type est disponible dans le **paramètres du projet** et **par défaut des paramètres de projet** boîtes de dialogue.  
   
--   Pour spécifier les paramètres pour tous les futurs projets SSMA, sur le **outils** menu, cliquez sur **par défaut des paramètres de projet**, sélectionnez le type de projet de migration pour lequel les paramètres sont requis pour être affichées ou modifiées à partir de **Version cible de la Migration** liste déroulante, puis cliquez sur **le mappage de Type** en bas du volet gauche.  
+-   Pour spécifier les paramètres pour tous les futurs projets SSMA, sur le **outils** menu, cliquez sur **par défaut des paramètres de projet**, sélectionnez le type de projet de migration pour lequel les paramètres sont requis pour être affichées ou modifiées à partir de **Version cible de migration** liste déroulante, puis cliquez sur **le mappage de Type** en bas du volet gauche.  
   
--   Pour spécifier les paramètres pour le projet actuel, sur le **outils** menu, cliquez sur **les paramètres de projet**, puis cliquez sur **le mappage de Type** en bas du volet gauche.  
+-   Pour spécifier les paramètres pour le projet actuel, sur le **outils** menu, cliquez sur **paramètres du projet**, puis cliquez sur **le mappage de Type** en bas du volet gauche.  
   
-Pour spécifier les paramètres pour l’objet en cours ou de la classe d’objets, utilisez la **le mappage de Type** onglet dans la fenêtre principale de SSMA.  
+Pour spécifier les paramètres pour l’objet actuel ou la classe d’objets, utilisez le **le mappage de Type** onglet dans la fenêtre SSMA principale.  
   
 ## <a name="options"></a>Options  
-Le tableau suivant présente la **le mappage de Type** onglet options :  
+Le tableau suivant présente le **le mappage de Type** onglet options :  
   
 **Type de source**  
 Le type de données DB2 mappé.  
@@ -43,7 +43,7 @@ Le type de données DB2 mappé.
 **Type de cible**  
 La cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type de données pour le type de données DB2 spécifié.  
   
-Consultez les tableaux dans la section suivante pour la valeur par défaut SSMA pour les mappages de type DB2.  
+Consultez les tableaux dans la section suivante pour la valeur par défaut SSMA pour DB2 les mappages de types.  
   
 **Ajouter**  
 Cliquez pour ajouter un type de données à la liste de mappage.  
@@ -52,7 +52,7 @@ Cliquez pour ajouter un type de données à la liste de mappage.
 Cliquez pour modifier le type de données sélectionné dans la liste de mappage.  
   
 **Supprimer**  
-Cliquez pour supprimer le mappage de type de données sélectionnées à partir de la liste de mappage.  
+Cliquez pour supprimer le mappage de type de données sélectionnée dans la liste de mappage.  
   
 **Réinitialiser les valeurs par défaut**  
 Cliquez pour réinitialiser la liste de mappage de type pour les valeurs par défaut SSMA.  
@@ -60,7 +60,7 @@ Cliquez pour réinitialiser la liste de mappage de type pour les valeurs par dé
 ## <a name="default-type-mappings"></a>Mappages de Type par défaut  
 Dans SSMA pour DB2, vous pouvez définir des mappages de types personnalisés pour les arguments, les colonnes, les variables locales et les valeurs de retour. Le mappage par défaut pour les arguments et les types de retour est presque identique.  
   
-### <a name="default-argument-type-and-return-value-type-mapping"></a>Type d’Argument par défaut et le mappage de Type de valeur de retour  
+### <a name="default-argument-type-and-return-value-type-mapping"></a>Type d’Argument par défaut et de retourner le mappage de Type de valeur  
 Le tableau suivant contient le mappage de type de données par défaut pour les arguments et valeurs de retour.  
   
 |DB2 Type de données|Par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Type de données|  
@@ -101,7 +101,7 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |brut|varbinary(max)|  
 |REAL|float [53]|  
 |ID de ligne|UNIQUEIDENTIFIER|  
-|Signtype|SMALLINT|  
+|signtype|SMALLINT|  
 |SMALLINT|SMALLINT|  
 |chaîne|varchar(max)|  
 |TIMESTAMP|datetime2|  
@@ -112,9 +112,9 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |VARCHAR2|varchar(max)|  
 |XmlType|xml|  
   
-<sup>*</sup> S’applique pour retourner la valeur type mappage uniquement.  
+<sup>*</sup> S’applique pour retourner la valeur le mappage de type uniquement.  
   
-<sup>**</sup> S’applique à l’argument de type mappage uniquement.  
+<sup>**</sup> S’applique à l’argument le mappage de type uniquement.  
   
 ### <a name="default-column-type-mapping"></a>Mappage de Type de colonne par défaut  
 Le tableau suivant contient le mappage de type par défaut pour les colonnes.  
@@ -129,13 +129,13 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 |char varying [*.. \*]|varchar [*]|  
 |Char [*.. \*]|Char [*]|  
 |caractère|char|  
-|variable de caractères [*.. \*]|varchar [*]|  
+|variable de caractère [*.. \*]|varchar [*]|  
 |caractère [*.. \*]|Char [*]|  
 |CLOB|varchar(max)|  
 |Date|datetime2[0]|  
 |dec|dec[38][0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
-|DEC [*.. \*][\*.. \*]|dec[*][\*]|  
+|DEC [*.. \*][\*.. \*]|DEC [*] [\*]|  
 |Décimal|decimal[38][0]|  
 |Decimal [*.. \*]|Decimal [*] [0]|  
 |Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
@@ -168,16 +168,16 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 |numérique [*.. \*]|numérique [*]|  
 |numérique [*.. \*][\*.. \*]|numérique [*] [\*]|  
 |NVARCHAR2 [*.. \*]|nvarchar [*]|  
-|RAW [*.. \*]|varbinary [*]|  
+|brut [*.. \*]|varbinary [*]|  
 |REAL|float [53]|  
 |ID de ligne|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
 |TIMESTAMP|datetime2|  
 |horodateur avec fuseau horaire local|datetimeoffset|  
-|horodateur avec fuseau horaire local [*.. \*]|datetimeoffset[*]|  
+|horodateur avec fuseau horaire local [\*... \*]|DateTimeOffset [\*]|  
 |horodateur avec fuseau horaire|datetimeoffset|  
 |horodateur avec fuseau horaire [*.. \*]|datetimeoffset[*]|  
-|timestamp [*.. \*]|datetime2[*]|  
+|horodatage [*.. \*]|datetime2[*]|  
 |UROWID|UNIQUEIDENTIFIER|  
 |UROWID [*.. \*]|UNIQUEIDENTIFIER|  
 |varchar [*.. \*]|varchar [*]|  
@@ -193,7 +193,7 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |binary_double|float [53]|  
 |BINARY_FLOAT|float [53]|  
 |binary_interger|INT|  
-|Objet BLOB|varbinary(max)|  
+|Objet blob|varbinary(max)|  
 |Booléen|bit|  
 |Char|char|  
 |char varying [*.. 8000]|varchar [*]|  
@@ -201,15 +201,15 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |Char [*.. 8000]|Char [*]|  
 |Char [8001.. *]|varchar(max)|  
 |Caractère|char|  
-|variable de caractères [*.. 8000]|varchar [*]|  
-|variable de caractères [8001.. *]|varchar(max)|  
+|variable de caractère [*.. 8000]|varchar [*]|  
+|variable de caractère [8001.. *]|varchar(max)|  
 |caractère [*.. 8000]|Char [*]|  
 |caractère [8001.. *]|varchar(max)|  
 |CLOB|varchar(max)|  
 |Date|datetime2[0]|  
 |dec|dec[38][0]|  
 |DEC [*.. \*]|DEC [*] [0]|  
-|DEC [*.. \*][\*.. \*]|dec[*][\*]|  
+|DEC [*.. \*][\*.. \*]|DEC [*] [\*]|  
 |Décimal|decimal[38][0]|  
 |Decimal [*.. \*]|Decimal [*] [0]|  
 |Decimal [*.. \*][\*.. \*]|Decimal [*] [\*]|  
@@ -249,8 +249,8 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |NVARCHAR2 [*.. 4000]|nvarchar [*]|  
 |NVARCHAR2 [4001.. *]|nvarchar(max)|  
 |pls_integer|INT|  
-|RAW [*.. 8000]|varbinary [*]|  
-|RAW [8001.. *]|varbinary(max)|  
+|brut [*.. 8000]|varbinary [*]|  
+|brut [8001.. *]|varbinary(max)|  
 |Real|float [53]|  
 |ID de ligne|UNIQUEIDENTIFIER|  
 |Signtype|SMALLINT|  
@@ -262,7 +262,7 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |horodateur avec fuseau horaire|datetimeoffset|  
 |horodateur avec fuseau horaire local [*.. \*]|datetimeoffset[*]|  
 |horodateur avec fuseau horaire [*.. \*]|datetimeoffset[*]|  
-|timestamp [*.. \*]|datetime2[*]|  
+|horodatage [*.. \*]|datetime2[*]|  
 |UROWID|UNIQUEIDENTIFIER|  
 |UROWID [*.. \*]|UNIQUEIDENTIFIER|  
 |varchar [*.. 8000]|varchar [*]|  

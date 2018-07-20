@@ -19,12 +19,12 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c96bcc524d3c9fc6a37f252b1221bbfaab36410
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227409"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084061"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
   L'objet SQLServer:Deprecated Features de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un compteur permettant de contrôler les fonctionnalités désignées comme dépréciées. Dans tous les cas, le compteur fournit un nombre d'utilisations indiquant combien de fois la fonctionnalité déconseillée a été rencontrée depuis le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "37227409"
 |------------------------------------------------------|-----------------|  
 |'#' et '##' comme nom des tables temporaires et procédures stockées|Un identifiant ne contenant pas d'autres caractères que # a été rencontré. Utilisez au moins un caractère supplémentaire. Se produit une fois par compilation.|  
 |Syntaxe d'appel de fonction '::'|La syntaxe d'appel de fonction :: a été rencontrée pour une fonction table. Remplacez par `SELECT column_list FROM`  *\< nom_fonction >*`()`. Par exemple, remplacez `SELECT * FROM ::fn_virtualfilestats(2,1)`par `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produit une fois par compilation.|  
-|'@' et noms commençant par '@@' comme identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]|Un identificateur commençant par @ ou @@ a été rencontré. N'utilisez pas @, @@ ou des noms commençant par @@ comme identificateurs. Se produit une fois par compilation.|  
+|\@ et noms commençant par \@\@ comme identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]|Un identificateur commençant par \@ ou \@\@ a été trouvé. N’utilisez pas \@, \@\@ ou des noms commençant par \@\@ comme identificateurs. Se produit une fois par compilation.|  
 |ADDING TAPE DEVICE|La fonctionnalité déconseillée sp_addumpdevice'`tape`' a été rencontrée. Utilisez sp_addumpdevice'`disk`' à la place. Se produit une fois par utilisation.|  
 |Autorisation ALL|Nombre total de fois où la syntaxe GRANT ALL, DENY ALL ou REVOKE ALL a été rencontrée. Modifiez la syntaxe pour refuser des autorisations spécifiques. Se produit une fois par requête.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Nombre total d'utilisations de l'option TORN_PAGE_DETECTION de la fonctionnalité déconseillée ALTER DATABASE depuis le démarrage de l'instance du serveur. Utilisez à la place la syntaxe PAGE_VERIFY. Se produit une fois par utilisation dans une instruction DDL.|  
@@ -174,7 +174,7 @@ ms.locfileid: "37227409"
 |sp_defaultlanguage|La procédure sp_defaultlanguage a été rencontrée. Utilisez à la place ALTER LOGIN. Se produit une fois par compilation.|  
 |sp_denylogin|La procédure sp_denylogin a été rencontrée. Utilisez à la place ALTER LOGIN DISABLE. Se produit une fois par requête.|  
 |sp_depends|La procédure sp_depends a été rencontrée. Utilisez à la place sys.dm_sql_referencing_entities et sys.dm_sql_referenced_entities. Se produit une fois par requête.|  
-|sp_detach_db @keepfulltextindexfile|L’argument @keepfulltextindexfile a été rencontré dans une instruction sp_detach_db. N'utilisez pas cet argument.|  
+|sp_detach_db \@keepfulltextindexfile|L’argument \@keepfulltextindexfile a été rencontré dans une instruction sp_detach_db. N'utilisez pas cet argument.|  
 |sp_dropalias|La procédure sp_dropalias a été rencontrée. Remplacez les alias par une combinaison de comptes d'utilisateurs et de rôles de base de données. Utilisez sp_dropalias pour supprimer les alias dans les bases de données mises à niveau. Se produit une fois par compilation.|  
 |sp_dropapprole|La procédure sp_dropapprole a été rencontrée. Utilisez à la place DROP APPLICATION ROLE. Se produit une fois par requête.|  
 |sp_dropextendedproc|La procédure sp_dropextendedproc a été rencontrée. Utilisez à la place CLR. Se produit une fois par compilation.|  
@@ -187,10 +187,10 @@ ms.locfileid: "37227409"
 |sp_fulltext_catalog|La procédure sp_fulltext_catalog a été rencontrée. Utilisez à la place CREATE/ALTER/DROP FULLTEXT CATALOG Se produit une fois par compilation.|  
 |sp_fulltext_column|La procédure sp_fulltext_column a été rencontrée. Utilisez à la place ALTER FULLTEXT INDEX. Se produit une fois par compilation.|  
 |sp_fulltext_database|La procédure sp_fulltext_database a été rencontrée. Utilisez à la place ALTER DATABASE. Se produit une fois par compilation.|  
-|sp_fulltext_service @action=clean_up|L'option clean_up de la procédure sp_fulltext_service a été rencontrée. Se produit une fois par requête.|  
-|sp_fulltext_service @action=connect_timeout|L'option connect_timeout de la procédure sp_fulltext_service a été rencontrée. Se produit une fois par requête.|  
-|sp_fulltext_service @action=data_timeout|L'option data_timeout de la procédure sp_fulltext_service a été rencontrée. Se produit une fois par requête.|  
-|sp_fulltext_service @action=resource_usage|L'option resource_usage de la procédure sp_fulltext_service a été rencontrée. Cette option est sans effet. Se produit une fois par requête.|  
+|sp_fulltext_service \@action=clean_up|L'option clean_up de la procédure sp_fulltext_service a été rencontrée. Se produit une fois par requête.|  
+|sp_fulltext_service \@action=connect_timeout|L'option connect_timeout de la procédure sp_fulltext_service a été rencontrée. Se produit une fois par requête.|  
+|sp_fulltext_service \@action=data_timeout|L'option data_timeout de la procédure sp_fulltext_service a été rencontrée. Se produit une fois par requête.|  
+|sp_fulltext_service \@action=resource_usage|L'option resource_usage de la procédure sp_fulltext_service a été rencontrée. Cette option est sans effet. Se produit une fois par requête.|  
 |sp_fulltext_table|La procédure sp_fulltext_table a été rencontrée. Utilisez à la place CREATE/ALTER/DROP FULLTEXT INDEX. Se produit une fois par compilation.|  
 |sp_getbindtoken|La procédure sp_getbindtoken a été rencontrée. Utilisez à la place MARS (Multiple Active Result Sets) ou des transactions distribuées. Se produit une fois par compilation.|  
 |sp_grantdbaccess|La procédure sp_grantdbaccess a été rencontrée. Utilisez à la place CREATE USER. Se produit une fois par requête.|  

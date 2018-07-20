@@ -18,12 +18,12 @@ caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4baffae0ada8cddc911561f63ca32f9b4b578283
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9c35360c4cddebecf7f6237071bc430b74f726cb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152780"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082951"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Éditeur de tâche d'exécution de requête SQL (page Mappage de paramètre)
   Utilisez la page **Mappage de paramètre** de la boîte de dialogue **Éditeur de tâche d’exécution de requêtes SQL** pour associer des variables à des paramètres dans une instruction SQL.  
@@ -45,7 +45,7 @@ ms.locfileid: "37152780"
  **Nom du paramètre**  
  Fournissez un nom de paramètre.  
   
- En fonction du type de gestionnaire de connexions que la tâche utilise, vous devez utiliser des nombres ou des noms de paramètres. Avec certaines types de gestionnaires de connexions, le premier caractère du nom de paramètre doit être le signe @, des noms spécifiques tels que @Param1 doivent être utilisés ou les noms de colonnes doivent être utilisés comme noms de paramètres.  
+ En fonction du type de gestionnaire de connexions que la tâche utilise, vous devez utiliser des nombres ou des noms de paramètres. Certains types de gestionnaire de connexion requièrent que le premier caractère du nom du paramètre est le \@ signer, des noms spécifiques tels que \@Param1, ou une colonne de noms comme noms de paramètres.  
   
  **Rubriques connexes :** [Paramètres et codes de retour dans la tâche d’exécution SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
   

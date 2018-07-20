@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9418474fed667dade02caaa7eb809ee8d2e16042
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255821"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083901"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Page Propriétés générales, Dossiers (Gestionnaire de rapports)
   La page Propriétés générales des dossiers vous permet d'afficher et de définir les propriétés des dossiers que vous créez. Des informations sur la personne qui a créé ou modifié le dossier et sur la date de modification apparaissent en haut de la page des propriétés générales.  
@@ -39,7 +39,7 @@ ms.locfileid: "37255821"
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifie le nom du dossier. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères ; ? : @ & = +, $ * \< > | "ou / lorsque vous spécifiez un nom.  
+ Spécifie le nom du dossier. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères ; ? : \@ & = +, $ * \< > | "ou / lorsque vous spécifiez un nom.  
   
  **Description**  
  Tapez une description du contenu du dossier. La description apparaît dans la page Contenu. Elle est visible pour les utilisateurs qui sont autorisés à accéder au dossier.  

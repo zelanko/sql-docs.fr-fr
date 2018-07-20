@@ -16,12 +16,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 052ea58263c2167035f09d7c81c0e1732c530e03
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280665"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082721"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Page Propriétés générales, Modèles (Gestionnaire de rapports)
   La page des propriétés générales des modèles de rapport vous permet de renommer, supprimer, déplacer ou remplacer le fichier de définition de modèle (.smdl). Des informations détaillées sur l'utilisateur qui a créé ou modifié le modèle et la date des modifications sont affichées en haut de la page.  
@@ -41,7 +41,7 @@ ms.locfileid: "37280665"
  **Nom**  
  Spécifie le nom du modèle. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères suivants dans le nom :  
   
- ; ? : @ & = +, $ / * \< > | " /  
+ ; ? : \@ & = +, $ / * \< > | " /  
   
  **Description**  
  Tapez la description du modèle. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder au modèle.  

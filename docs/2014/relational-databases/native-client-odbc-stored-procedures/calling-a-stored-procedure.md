@@ -21,18 +21,18 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11c8c691cf605942ef226927c9f0c2e940b28d63
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3ec1897886a968f15eb67210f060399225317b55
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411538"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083412"
 ---
 # <a name="calling-a-stored-procedure"></a>Appel d'une procédure stockée
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge à la fois la séquence d’échappement ODBC CALL et le [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) instruction pour l’exécution des procédures stockées ; la séquence d’échappement ODBC CALL est la méthode préférée. L'utilisation de la syntaxe ODBC permet à une application de récupérer les codes de retour de procédures stockées et le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est également optimisé pour utiliser un protocole initialement développé pour envoyer des appels de procédure distante (RPC) entre des ordinateurs qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce protocole RPC augmente les performances en supprimant une bonne partie du traitement des paramètres et de l'analyse des instructions sur le serveur.  
   
 > [!NOTE]  
->  Lors de l’appel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de paramètres nommés avec ODBC des procédures stockées (pour plus d’informations, consultez [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkID=209721)), les noms de paramètre doivent commencer par le ' @' caractères. Il s'agit d'une restriction spécifique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client applique cette restriction plus strictement que MDAC (Microsoft Data Access Components).  
+>  Lors de l’appel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de paramètres nommés avec ODBC des procédures stockées (pour plus d’informations, consultez [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkID=209721)), les noms de paramètre doivent commencer par le «\@' caractères. Il s'agit d'une restriction spécifique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client applique cette restriction plus strictement que MDAC (Microsoft Data Access Components).  
   
  La séquence d'échappement ODBC CALL permettant d'appeler une procédure est la suivante :  
   

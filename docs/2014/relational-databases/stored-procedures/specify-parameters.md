@@ -17,12 +17,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea9f0725d595db5e62b064eb6e950a280e82913b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc633915c27d2e604db110b3c118c0b1c287029f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228929"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084051"
 ---
 # <a name="specify-parameters"></a>Spécifier les paramètres
   En spécifiant les paramètres de la procédure, les programmes appelants peuvent passer des valeurs dans le corps de la procédure. Ces valeurs peuvent être utilisées à plusieurs fins pendant l'exécution de la procédure. Les paramètres de la procédure peuvent également retourner des valeurs au programme appelant si le paramètre est marqué comme paramètre OUTPUT.  
@@ -32,7 +32,7 @@ ms.locfileid: "37228929"
  La section suivante fournit des informations sur la transmission des valeurs dans les paramètres et sur la façon dont chacun des attributs de paramètre est utilisé lors d'un appel de procédure.  
   
 ## <a name="passing-values-into-parameters"></a>Transmission de valeurs dans les paramètres  
- Les valeurs des paramètres fournies avec un appel de procédure doivent être des constantes ou une variable ; un nom de fonction ne peut pas être utilisé comme valeur de paramètre. Les variables peuvent être des variables système ou des variables définies par l’utilisateur, telles que @@spid.  
+ Les valeurs des paramètres fournies avec un appel de procédure doivent être des constantes ou une variable ; un nom de fonction ne peut pas être utilisé comme valeur de paramètre. Les variables peuvent être définies par l’utilisateur système ou des variables comme \@ \@spid.  
   
  Les exemples suivants illustrent la transmission de valeurs de paramètres à la procédure `uspGetWhereUsedProductID`. Ils indiquent comment transmettre des paramètres sous forme de constantes et de variables. Ils décrivent également comment utiliser une variable pour transmettre la valeur d'une fonction.  
   
@@ -60,15 +60,15 @@ GO
 ```  
   
 ## <a name="specifying-parameter-names"></a>Spécification des noms de paramètres  
- Lors de la création d'une procédure et de la déclaration d'un nom de paramètre, le nom doit commencer par un seul caractère @ et être unique dans l'étendue de la procédure.  
+ Lorsque la création d’une procédure et en déclarant un nom de paramètre, le nom du paramètre doit commencer par un seul \@ de caractères et doit être unique dans la portée de la procédure.  
   
- En nommant explicitement les paramètres et en attribuant les valeurs appropriées à chaque paramètre dans un appel de procédure, il est possible de fournir les paramètres dans n'importe quel ordre. Par exemple, si la procédure **my_proc** attend trois paramètres nommés **@first**, **@second**et **@third**, les valeurs qui lui sont transmises peuvent être assignées aux noms de paramètres de la façon suivante : `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ En nommant explicitement les paramètres et en attribuant les valeurs appropriées à chaque paramètre dans un appel de procédure, il est possible de fournir les paramètres dans n'importe quel ordre. Par exemple, si la procédure **my_proc** attend trois paramètres nommés  **\@première**,  **\@deuxième**, et  **\@troisième**, les valeurs passées à la procédure peuvent être assignées aux noms de paramètres, par exemple : `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  Si une valeur de paramètre est fournie sous la forme **@parameter =***value*, tous les paramètres suivants doivent être fournis de cette manière. Si les valeurs des paramètres ne sont pas transmises sous la forme **@parameter =***value*, elles doivent être fournies dans le même ordre (de gauche à droite) que les paramètres répertoriés dans l’instruction CREATE PROCEDURE.  
+>  Si une valeur de paramètre est fournie sous la forme **/@parameter =***value*, tous les paramètres suivants doivent être fournis de cette manière. Si les valeurs de paramètre ne sont pas transmises sous la forme **\@paramètre = *** valeur*, elles doivent être fournies dans le même ordre (de gauche à droite) que les paramètres répertoriés dans l’instruction CREATE PROCEDURE.  
   
 > [!WARNING]  
->  Un paramètre transmis sous la forme **@parameter =***value*, mais mal orthographié, génère une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et empêche l’exécution de la procédure.  
+>  Un paramètre transmis sous la forme **\@paramètre = *** valeur* avec le paramètre mal orthographié, entraîne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour générer une erreur et empêcher l’exécution de procédure.  
   
 ## <a name="specifying-parameter-data-types"></a>Spécification des types de données de paramètre  
  Les paramètres doivent être définis avec un type de données lorsqu'ils sont déclarés dans une instruction CREATE PROCEDURE. Le type de données d'un paramètre détermine le type et la plage de valeurs admis pour le paramètre lorsque la procédure est appelée. Par exemple, si vous définissez un paramètre avec le type de données `tinyint`, seules les valeurs numériques comprises entre 0 et 255 sont acceptées lorsqu'elles sont passées à ce paramètre. Une erreur est renvoyée lorsqu'une procédure est exécutée avec une valeur incompatible avec le type de données.  
@@ -128,7 +128,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Bien que vous puissiez omettre des paramètres ayant des valeurs par défaut, la liste des paramètres peut seulement être tronquée. Par exemple, si une procédure a cinq paramètres, le quatrième et le cinquième peuvent être omis. Toutefois, le quatrième ne peut pas être ignoré tant que le cinquième est inclus, sauf si les paramètres sont fournis sous la forme **@parameter =***value*.  
+ Bien que vous puissiez omettre des paramètres ayant des valeurs par défaut, la liste des paramètres peut seulement être tronquée. Par exemple, si une procédure a cinq paramètres, le quatrième et le cinquième peuvent être omis. Toutefois le quatrième paramètre ne peut pas être ignoré tant que le cinquième est inclus, sauf si les paramètres sont fournis sous la forme **\@paramètre = *** valeur*.  
   
 ## <a name="specifying-parameter-direction"></a>Spécification de la direction du paramètre  
  La direction d'un paramètre peut être une entrée (une valeur passée dans le corps de la procédure) ou une sortie (la procédure retourne une valeur au programme appelant). La valeur par défaut est un paramètre d'entrée.  
@@ -166,10 +166,10 @@ GO
   
 ```  
   
- Exécutez `usp_GetList` afin de retourner la liste des produits [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (vélos) qui coûtent moins de 700 $. Les paramètres OUTPUT **@cost** et **@compareprices** sont utilisés en conjonction avec un langage de contrôle de flux afin de retourner un message dans la fenêtre **Messages** .  
+ Exécutez `usp_GetList` afin de retourner la liste des produits [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (vélos) qui coûtent moins de 700 $. Les paramètres de sortie  **\@coût** et  **\@compareprices** sont utilisés avec le langage de contrôle de flux pour retourner un message dans le **Messages** fenêtre.  
   
 > [!NOTE]  
->  La variable OUTPUT doit être définie pendant la création de la procédure et pendant l'utilisation de la variable. Le nom du paramètre et celui de la variable ne doivent pas nécessairement correspondre. En revanche, le type de données et la position du paramètre doivent correspondre (sauf si vous utilisez **@listprice=** *variable*).  
+>  La variable OUTPUT doit être définie pendant la création de la procédure et pendant l'utilisation de la variable. Le nom du paramètre et celui de la variable ne doivent pas nécessairement correspondre. Toutefois, le type de données et la position du paramètre doivent correspondre (sauf si  **\@listprice =** *variable* est utilisé).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

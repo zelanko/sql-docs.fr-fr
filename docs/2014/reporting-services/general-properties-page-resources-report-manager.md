@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e910172bc11137f2691e1e7dda492b78bd78b26
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164175"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082903"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Page Propriétés générales, Ressources (Gestionnaire de rapports)
   La page Propriétés générales des ressources vous permet de renommer, supprimer, déplacer ou remplacer une ressource. Des informations sur la personne qui a ajouté la ressource ou modifié les propriétés apparaissent en haut de la page.  
@@ -39,7 +39,7 @@ ms.locfileid: "37164175"
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifie le nom de la ressource. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères ; ? : @ & = +, $ / * \< > | "ou / lorsque vous spécifiez un nom.  
+ Spécifie le nom de la ressource. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères ; ? : \@ & = +, $ / * \< > | "ou / lorsque vous spécifiez un nom.  
   
  **Description**  
  Tapez une description de la ressource. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder à la ressource.  

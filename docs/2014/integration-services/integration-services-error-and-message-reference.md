@@ -18,12 +18,12 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 111a6cddaae54f05bb751e569487c4b94542bf07
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b681fb6cf46ae61cf8a706925aa8d853baf38532
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299999"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085721"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
   Les tableaux suivants répertorient les erreurs, les avertissements et les messages d'information prédéfinis de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par ordre croissant en fonction de leur numéro pour chaque catégorie, avec leurs codes numériques et noms symboliques. Chacune de ces erreurs est définie comme un champ de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> dans l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -1046,7 +1046,7 @@ ms.locfileid: "37299999"
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|Ce tampon est orphelin. Le gestionnaire de tampons s'est arrêté, laissant un tampon en cours d'utilisation. Le tampon ne sera pas nettoyé. Il est possible qu'il y ait des fuites de mémoire et d'autres problèmes.|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|Échec de la recherche de la colonne d'entrée « %1 ». Code d'erreur : 0x%2!8.8X!. La colonne d'entrée spécifiée est introuvable dans la collection de colonnes d'entrée.|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|Échec de la recherche de la colonne d'entrée avec l'ID de lignage %1!d!. Code d’erreur : 0x%2!8.8X!. La colonne d'entrée est introuvable dans la collection de colonnes d'entrée.|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|L'expression contient le jeton non reconnu « %1 ». Si « %1 » est une variable, elle doit être exprimée sous la forme « @%1 ». Le jeton spécifié n'est pas valide. S'il représente un nom de variable, il doit comporter le symbole @ en préfixe.|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|L'expression contient le jeton non reconnu « %1 ». Si « %1 » est une variable, elle doit être exprimée sous la forme « \@%1 ». Le jeton spécifié n'est pas valide. Si le jeton est destiné à être un nom de variable, il doit être précédé de la \@ symbole.|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|L'expression contient le jeton non reconnu « #%1!d! ».|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|La variable « %1 » est introuvable dans la collection Variables. Cette variable n'existe peut-être pas dans l'étendue correcte.|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|Échec de l'analyse de l'expression « %1 ». L'expression contient peut-être un jeton non valide, un jeton incomplet ou un élément non valide. Peut-être qu'elle n'est pas formée de manière appropriée ou qu'il manque un élément obligatoire tel qu'une parenthèse.|  
@@ -1093,7 +1093,7 @@ ms.locfileid: "37299999"
 |0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|Le composant « %1 » n'a pas pu mettre en cache la collection de suivi des références d'objets en cours d'exécution et a retourné le code d'erreur 0x%2!8.8X!.|  
 |0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|Il existe plusieurs colonnes d'entrée nommées « %1 ». La colonne d'entrée souhaitée doit être spécifiée de façon unique en tant que [Component Name].[%2] ou référencée par un ID de lignage. Actuellement, la colonne d'entrée spécifiée existe dans plusieurs composants.|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|Échec de la recherche de la colonne d'entrée nommée « [%1].[%2] ». La colonne d'entrée est introuvable dans la collection de colonnes d'entrée.|  
-|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Il existe plusieurs variables nommées « %1 ». La variable souhaitée doit être spécifiée de façon unique en tant que @[Namespace::%2]. La variable existe dans plusieurs espaces de noms.|  
+|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Il existe plusieurs variables nommées « %1 ». La variable souhaitée doit être spécifiée de façon unique en tant que \@[namespace :: % 2]. La variable existe dans plusieurs espaces de noms.|  
 |0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|Le planificateur du moteur de flux de données n'a pas pu réduire le plan d'exécution pour le pipeline. Affectez la valeur False à la propriété OptimizedMode.|  
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|La fonction SQRT ne peut pas être exécutée sur des valeurs négatives, or une valeur négative a été transmise à cette fonction.|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|La fonction LN ne peut pas être exécutée sur des valeurs NULL ou négatives, or une valeur NULL ou négative a été transmise à cette fonction.|  
@@ -1226,7 +1226,7 @@ ms.locfileid: "37299999"
 |0xC004909D|-1073442659|DTS_E_EXPREVALSTATIC_INVALIDTOKENSINGLEEQUAL|L'expression contient un signe égal (=) inattendu. Cette erreur se produit lorsqu'un double signe égal (==) est nécessaire.|  
 |0xC00490AA|-1073442646|DTS_E_EXPREVALSTATIC_AMBIGUOUSINPUTCOLUMNNAME|Un nom de colonne d'entrée ambigu a été spécifié.  La colonne doit être nommée [Component Name].[Column Name] ou référencée par un ID de lignage. Cette erreur se produit lorsque la colonne d'entrée existe dans plusieurs composants et doit être différenciée par l'ajout du nom du composant ou en utilisant l'ID de lignage.|  
 |0xC00490AB|-1073442645|DTS_E_EXPREVALSTATIC_PLACEHOLDERINEXPRESSION|Un paramètre de fonction d'espace réservé ou un opérande a été trouvé dans une expression. Il doit être remplacé par un paramètre ou un opérande réel.|  
-|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|Un nom de variable ambigu a été spécifié. La variable souhaitée doit être nommée @[Namespace::Variable]. Cette erreur se produit lorsque la variable existe dans plusieurs espaces de noms.|  
+|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|Un nom de variable ambigu a été spécifié. La variable souhaitée doit être nommée \@[Namespace::Variable]. Cette erreur se produit lorsque la variable existe dans plusieurs espaces de noms.|  
 |0xC00490D3|-1073442605|DTS_E_EXPREVALSTATIC_BINARYOPDTSTRNOTSUPPORTED|Pour les opérandes d'opération binaire, le type de données DT_STR est uniquement pris en charge pour les colonnes d'entrée et les opérations de conversion. Un opérande DT_STR qui n'est pas une colonne d'entrée ou le résultat d'une conversion ne peut pas être utilisé avec une opération binaire. Pour effectuer cette opération, l'opérande doit être explicitement converti à l'aide d'un opérateur de conversion.|  
 |0xC00490D4|-1073442604|DTS_E_EXPREVALSTATIC_CONDITIONALOPDTSTRNOTSUPPORTED|Pour les opérandes de l'opérateur conditionnel, le type de données DT_STR est uniquement pris en charge pour les colonnes d'entrée et les opérations de conversion. Un opérande DT_STR qui n'est pas une colonne d'entrée ou le résultat d'une conversion ne peut pas être utilisé avec une opération conditionnelle. Pour effectuer cette opération, l'opérande doit être explicitement converti à l'aide d'un opérateur de conversion.|  
 |0xC00490D5|-1073442603|DTS_E_EXPREVALSTATIC_FNFINDSTRINGINVALIDOCCURRENCECOUNT|Le paramètre du nombre d'occurrences n'est pas valide pour la fonction FINDSTRING. Ce paramètre doit être supérieur à zéro.|  
@@ -2080,8 +2080,8 @@ ms.locfileid: "37299999"
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|La tâche n'a pas réussi à exécuter l'opération « %1 ».|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|Le fichier/processus « %1 » n'est pas dans le chemin d'accès.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|Le sujet est vide.|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|L'adresse dans la ligne « À » est mal formée. Le symbole « @ » est absent ou elle n'est pas valide.|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|L'adresse dans la ligne « De » est mal formée. Le symbole « @ » est absent ou elle n'est pas valide.|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|L'adresse dans la ligne « À » est mal formée. Le symbole « \@ » est manquant ou elle n’est pas valide.|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|L'adresse dans la ligne « De » est mal formée. Le symbole « \@ » est manquant ou elle n’est pas valide.|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|Les deux documents XML sont différents.|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|La validation DTD utilisera le fichier DTD défini dans la ligne DOCTYPE du document XML. Elle n'utilisera pas ce qui est attribué à la propriété « %1 ».|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|La tâche n'a pas réussi à valider « %1 ».|  
@@ -2271,7 +2271,7 @@ ms.locfileid: "37299999"
   
 |Code hexadécimal|Code décimal|Nom symbolique|Description|  
 |----------------------|------------------|-------------------|-----------------|  
-|0x1| 1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Fonction incorrecte.|  
+|0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Fonction incorrecte.|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Le système ne trouve pas le fichier spécifié.|  
 |0x100|256|DTS_MSG_SERVER_STARTING|Démarrage du service SSIS Microsoft.<br /><br /> Serveur version %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Service SSIS Microsoft démarré.<br /><br /> Serveur version %1|  
