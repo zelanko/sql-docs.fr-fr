@@ -22,11 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a128f53b779b6c3ea99aa694bfb96e61c334b722
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26bc2c58ae5355447602229bfdec9f711be4d0fd
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854271"
 ---
 # <a name="enable-indexes-and-constraints"></a>Activer les index et contraintes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Permissions  
- Nécessite une autorisation ALTER sur la table ou la vue. S’il utilise DBCC DBREINDEX, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
+ Nécessite une autorisation ALTER sur la table ou la vue. S’il utilise DBCC DBREINDEX, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner**.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   

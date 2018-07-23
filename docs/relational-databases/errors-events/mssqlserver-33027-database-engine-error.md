@@ -15,12 +15,12 @@ caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 047271007e5d0f6b9b5ef223696c4bfd8fc739df
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: e7d9b03347fb6ca83827854f4af0b75e8accc131
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34318520"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190949"
 ---
 # <a name="mssqlserver33027"></a>MSSQLSERVER_33027
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "34318520"
 |Texte du message|Impossible de charger le fournisseur de services de chiffrement '%.*ls' en raison d'une signature Authenticode non valide ou d'un chemin d'accès non valide. Recherchez d'autres défaillances dans les messages précédents.|  
   
 ## <a name="explanation"></a>Explication  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu utiliser le fournisseur de services de chiffrement répertorié dans le message d’erreur, parce que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu charger la DLL. Soit c'est le nom, soit c'est la signature Authenticode qui n'est pas valide.  
+SQL Server n’a pas pu utiliser le fournisseur de services de chiffrement indiqué dans le message d’erreur, parce qu’il n’a pas réussi à charger la DLL. Soit c'est le nom, soit c'est la signature Authenticode qui n'est pas valide.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-Vérifiez que le fichier existe et que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est autorisé à accéder à cet emplacement. Recherchez d'autres messages à ce sujet dans le journal des erreurs. Sinon, contactez le fournisseur de services de chiffrement pour plus d'informations.  
+Vérifiez que le fichier existe et que SQL Server est autorisé à accéder à cet emplacement. Recherchez d'autres messages à ce sujet dans le journal des erreurs. Sinon, contactez le fournisseur de services de chiffrement pour plus d'informations.  
   

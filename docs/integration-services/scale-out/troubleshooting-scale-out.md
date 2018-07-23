@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: ee095bce32da1d663aee1ed1c38d2cda52187a31
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 91063b4895ee46c5bd1746348b37d6564a0d4b10
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409791"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964281"
 ---
 # <a name="troubleshoot-scale-out"></a>Résoudre les problèmes de Scale Out
 
@@ -149,6 +149,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
     Type de valeur : **REG_DWORD** 
 
     Données de valeur : **2**
+
+    > [!NOTE]
+    > S’il existe des certificats non signés automatiquement dans le magasin de certificats racine, l’authentification par certificat client échoue. Pour plus d’informations, voir [Internet Information Services (IIS) 8 peut rejeter les demandes de certificat client avec une erreur HTTP 403.7 ou 403.16](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ).
 
 ## <a name="http-request-error"></a>Erreur de requête HTTP
 

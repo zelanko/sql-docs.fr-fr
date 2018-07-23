@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - NTILE function
 ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 caps.latest.revision: 63
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 614c14db8a1d87e90611394890ddc118cebfe80a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ec950ef69fd5a86c3726c22323bb43c84b8adee
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054386"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783600"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +47,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="arguments"></a>Arguments  
  *integer_expression*  
- Expression constante dont la valeur est un entier positif qui spécifie le nombre de groupes utilisés pour diviser chaque partition. *integer_expression* peut être de type **int** ou **bigint**.  
+ Expression dont la valeur est un entier positif qui spécifie le nombre de groupes utilisés pour diviser chaque partition. *integer_expression* peut être de type **int** ou **bigint**.  
   
  \<partition_by_clause>  
  Divise le jeu de résultats généré par la clause [FROM](../../t-sql/queries/from-transact-sql.md) en partitions auxquelles la fonction est appliquée. Pour la syntaxe de PARTITION BY, consultez [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  

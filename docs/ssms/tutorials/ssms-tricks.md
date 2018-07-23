@@ -18,12 +18,15 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 80d50132c4e2b38ecda9d24b3c0f4c09b93ca4e6
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+- Find SQL Server Instance
+- find instance name
+- find sql server instance name
+ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455253"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080097"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutoriel : Conseils et astuces supplémentaires pour utiliser SSMS
 Ce tutoriel vous propose des astuces supplémentaires pour utiliser SQL Server Management Studio (SSMS). Cet article vous montre comment : 
@@ -201,7 +204,7 @@ Le journal des erreurs est un fichier qui contient les détails de ce qui se pro
 
 6. Ouvrez le fichier errorlog.log dans le Bloc-notes. 
 
-## <a name="determine-sql-server-name"></a>Rechercher le nom de votre serveur SQL
+## <a name="determine-sql-server-name"></a>Trouver le nom de l’instance SQL Server
 Vous avez plusieurs options pour rechercher le nom de votre serveur SQL avant et après vous y être connecté.  
 
 ### <a name="before-you-connect-to-sql-server"></a>Avant de vous connecter à SQL Server

@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 51db3ea10ef3c4f074dbf0b6aaae2a80aac8d458
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769675"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37065999"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Créer ou configurer un écouteur de groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "34769675"
 >  Avant de créer votre premier écouteur, nous vous recommandons fortement de lire [Connectivité client Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
 ###  <a name="DNSnameReqs"></a> Conditions requises pour le nom DNS d'un écouteur de groupe de disponibilité  
- Chaque écouteur du groupe de disponibilité a besoin d'un nom d'hôte DNS unique dans le domaine et dans NetBIOS. Le nom DNS est une valeur de chaîne. Ce nom ne peut contenir que des caractères alphanumériques, des tirets (-) et des caractères de soulignement (_), dans n'importe quel ordre. Les noms d'hôte DNS ne respectent pas la casse. La longueur maximale est de 63 caractères, toutefois, dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], la longueur maximale que vous pouvez spécifier est 15 caractères.  
+ Chaque écouteur du groupe de disponibilité a besoin d'un nom d'hôte DNS unique dans le domaine et dans NetBIOS. Le nom DNS est une valeur de chaîne. Ce nom ne peut contenir que des caractères alphanumériques, des tirets/traits d’union (-) et des traits de soulignement (_), quel que soit l’ordre. Les noms d'hôte DNS ne respectent pas la casse. La longueur maximale est de 63 caractères, toutefois, dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], la longueur maximale que vous pouvez spécifier est 15 caractères.  
   
  Nous vous recommandons de spécifier une chaîne explicite. Par exemple, pour un groupe de disponibilité nommé `AG1`, un nom d'hôte DNS explicite est `ag1-listener`.  
   

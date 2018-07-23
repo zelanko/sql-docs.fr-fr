@@ -1,10 +1,9 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 06/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,19 +27,19 @@ helpviewer_keywords:
 - CREATE CERTIFICATE statement
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 caps.latest.revision: 74
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: abd46332127b1b15280df0ec5bab5655da5a148a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0f9fd16f4104e6e6d15aa4a5617f092a4c7e424
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074846"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942835"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Permet d'ajouter un certificat à une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -92,7 +91,7 @@ CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 CREATE CERTIFICATE certificate_name   
     { <generate_new_keys> | FROM <existing_keys> }  
@@ -136,7 +135,7 @@ CREATE CERTIFICATE certificate_name
  Spécifie le chemin d'accès complet, y compris le nom du fichier, à la clé privée. *path_to_private_key* peut être un chemin local ou un chemin UNC d’un emplacement réseau. L’accès au fichier s’effectue dans le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce compte doit posséder les autorisations de système de fichiers nécessaires.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données à relation contenant-contenu.  
+>  Cette option n'est pas disponible dans une base de données autonome.  
   
  asn_encoded_certificate  
  Bits de certificat encodés par ASN spécifiés comme constante binaire.  
@@ -184,7 +183,7 @@ CREATE CERTIFICATE certificate_name
 > [!NOTE]  
 >  Les fonctions intégrées de chiffrement et de signature ne vérifient pas les dates d'expiration des certificats. Les utilisateurs de ces fonctions doivent décider quand vérifier l'expiration des certificats.  
   
- Vous pouvez créer une description binaire d’un certificat à l’aide des fonctions [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) et [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md). Pour obtenir un exemple qui utilise **CERTPRIVATEKEY** et **CERTENCODED** afin de copier un certificat dans une autre base de données, consultez l’exemple B de la rubrique [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).  
+ Vous pouvez créer une description binaire d’un certificat à l’aide des fonctions [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) et [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md). L’exemple B de l’article [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) utilise **CERTPRIVATEKEY** et **CERTENCODED** afin de copier un certificat dans une autre base de données.  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CREATE CERTIFICATE sur la base de données. Les connexions Windows, les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les rôles d’application sont les seuls à pouvoir posséder des certificats. Les groupes et les rôles ne peuvent pas posséder de certificats.  
@@ -233,7 +232,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-self-signed-certificate"></a>D. Création d'un certificat auto-signé  
- L’exemple suivant crée un certificat nommé `Shipping04` sans spécifier de mot de passe de chiffrement. Cet exemple peut être utilisé avec [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+ L’exemple suivant crée un certificat nommé `Shipping04` sans spécifier de mot de passe de chiffrement. Il est utilisable avec [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ```  
 CREATE CERTIFICATE Shipping04   

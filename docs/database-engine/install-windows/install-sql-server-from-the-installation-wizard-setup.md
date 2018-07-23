@@ -17,12 +17,12 @@ caps.latest.revision: 91
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 977041d3925ed11fc6098f1617c95c263391171f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: fa00305db62ead0bd7eded16f22991914e3c80cc
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771495"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080127"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installer SQL Server à partir de l’Assistant Installation (programme d’installation)
 
@@ -68,7 +68,10 @@ Microsoft a identifié un problème avec la version spécifique des fichiers bin
   
      Pour continuer, cliquez sur **Suivant**.  
 
-4.  Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence et, si vous en acceptez les termes, activez la case à cocher **J'accepte les termes du contrat de licence.** , puis cliquez sur **Suivant**. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence et, si vous en acceptez les termes, activez la case à cocher **J'accepte les termes du contrat de licence.** , puis cliquez sur **Suivant**.  
+
+  >[!NOTE]
+  > SQL Server transmet des informations sur votre expérience d’installation, ainsi que d’autres données de performances et d’utilisation pour aider Microsoft à améliorer le produit. Pour plus d’informations sur le traitement de données SQL Server et les contrôles de confidentialité, consultez la [déclaration de confidentialité](https://privacy.microsoft.com/en-us/privacystatement) et [Configurer SQL Server pour envoyer des commentaires à Microsoft](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
   
 5.  Dans la fenêtre Règles globales, la procédure d'installation passera automatiquement à la fenêtre Mises à jour du produit s'il n'existe aucune erreur de règle.  
   
@@ -80,9 +83,9 @@ Microsoft a identifié un problème avec la version spécifique des fichiers bin
   
 9. Dans les **Règles d’installation**, le programme d’installation de SQL Server vérifie si des problèmes affectent l’exécution de l’installation. En cas d’échec, cliquez sur la colonne **État** pour plus d’informations. Sinon, cliquez sur **Suivant**. 
 
-10. Pour **Type d’installation**, indiquez si vous souhaitez effectuer une nouvelle installation ou ajouter des fonctionnalités à une installation existante. Cliquez sur **Suivant**. 
+10. S’il s’agit de la première installation de SQL Server sur l’ordinateur, la page **Type d’installation** est ignorée et l’installation passe directement à la page **Sélection de fonctionnalités**. Si, en revanche, SQL Server est déjà installé sur le système, choisissez entre effectuer une nouvelle installation et ajouter des fonctionnalités à une installation existante sur la page **Type d’installation**. Cliquez sur **Suivant**. 
   
-11. Dans la page Sélection de fonctionnalités, sélectionnez les composants que vous voulez installer. Par exemple, pour installer une nouvelle instance du moteur de base de données SQL Server, cochez la case **Services Moteur de base de données**.
+11. Sur la page **Sélection de fonctionnalités**, sélectionnez les composants que vous voulez installer. Par exemple, pour installer une nouvelle instance du moteur de base de données SQL Server, cochez la case **Services Moteur de base de données**.
 
     Une description de chaque groupe de composants apparaît dans le volet **Description du composant** une fois que vous avez sélectionné le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher. Pour plus d’informations, consultez [Éditions et composants de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) et [Éditions et fonctionnalités prises en charge de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   

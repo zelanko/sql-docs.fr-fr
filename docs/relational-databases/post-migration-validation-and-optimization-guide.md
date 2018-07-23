@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: ''
-ms.openlocfilehash: 72d3f28c6cc0e2998004b8b4883fdb846e2a92e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a38a652ad967b8e473d51eda335e430426d1187e
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956424"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297365"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guide de validation et d’optimisation post-migration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Voici quelques-uns des scénarios de performance courants rencontrés après la 
 
 **S’applique à :** migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-Quand vous faites migrer une ancienne version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ou ultérieur, et que vous passez au [niveau de compatibilité de base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) le plus récent, il est possible que les performances d’une charge de travail fassent l’objet d’une régression.
+Quand vous migrez d’une ancienne version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (ou une version ultérieure) et que vous passez au tout dernier [niveau de compatibilité de la base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), il est possible que les performances d’une charge de travail fassent l’objet d’une régression.
 
 Cela vient du fait qu’à compter de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], tous les changements de l’optimiseur de requête sont liés au [niveau de compatibilité de base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) le plus récent, de sorte que les plans ne sont pas changés au moment même de la mise à niveau, mais quand un utilisateur remplace l’option de base de données `COMPATIBILITY_LEVEL` par la plus récente. Cette fonctionnalité, en association avec le magasin de requêtes, vous offre un niveau de contrôle élevé sur les performances des requêtes dans le processus de mise à niveau. 
 

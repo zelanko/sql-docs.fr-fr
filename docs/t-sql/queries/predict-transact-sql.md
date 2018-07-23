@@ -1,10 +1,10 @@
 ---
 title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/25/2018
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|queries
+ms.component: t-sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -17,19 +17,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - PREDICT clause
-author: jeannt
-ms.author: jeannt
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: b027530565b9b138d5a8f9559e3e60e0331dd3af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: '>= sql-server-2017 || = azuresqldb-current || = sqlallproducts-allversions'
+ms.openlocfilehash: 4ec9f538c7506375adc74b4a0b2779b40bafab2f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708887"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408058"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Génère une valeur prédite ou des scores calculés à partir d’un modèle stocké.  
 
@@ -99,7 +99,7 @@ La fonction `PREDICT` ne permet pas d’afficher la structure de modèle interne
 
 ## <a name="remarks"></a>Notes 
 
-La fonction `PREDICT` est prise en charge dans toutes les éditions de SQL Server, y compris Linux, et dans Azure SQL Database, indépendamment de l’activation d’autres fonctionnalités d’apprentissage automatique. Toutefois, vous devez utiliser SQL Server 2017 ou une version ultérieure. 
+La fonction `PREDICT` est prise en charge dans toutes les éditions de SQL Server 2017 et des versions ultérieures. Cette prise en charge inclut SQL Server 2017 sous Linux. `PREDICT` est également pris en charge dans Azure SQL Database dans le cloud. Toutes ces prises en charge sont actives, qu’il y ait ou non d’autres fonctionnalités de Machine Learning activées.
 
 Vous n’avez pas besoin d’installer R, Python ou un autre langage d’apprentissage automatique sur le serveur pour utiliser la fonction `PREDICT`. Vous pouvez effectuer l’apprentissage du modèle dans un autre environnement et l’enregistrer dans une table SQL Server pour l’utiliser avec `PREDICT`, ou appeler le modèle à partir d’une autre instance de SQL Server qui contient le modèle enregistré.
 

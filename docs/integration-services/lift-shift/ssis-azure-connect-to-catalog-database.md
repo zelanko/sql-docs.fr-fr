@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 571fe7755803dcb3ef76a678969295864436f16a
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405671"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36798264"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Se connecter au catalogue SSIS (SSISDB) dans Azure
 
@@ -26,7 +27,7 @@ Découvrez les informations de connexion nécessaires pour se connecter au catal
 - informations de connexion 
 
 > [!IMPORTANT]
-> Vous ne pouvez pas créer la base de données de catalogues SSISDB sur Azure SQL Database à ce stade indépendamment de la création du runtime d’intégration Azure-SSIS dans Azure Data Factory version 2. Le runtime d’intégration Azure-SSIS est l’environnement d’exécution qui exécute les packages SSIS sur Azure. Pour une procédure pas à pas du processus, consultez [Déployer et exécuter un package SSIS dans Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
+> À l’heure actuelle, il n’est pas possible de créer la base de données du catalogue SSISDB dans Azure SQL Database indépendamment de la création d’Azure-SSIS Integration Runtime dans Azure Data Factory. Le runtime d’intégration Azure-SSIS est l’environnement d’exécution qui exécute les packages SSIS sur Azure. Pour une procédure pas à pas du processus, consultez [Déployer et exécuter un package SSIS dans Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 Avant de commencer, veillez à disposer de la version 17.2 ou ultérieure de SQL Server Management Studio (SSMS). Si la base de données de catalogue SSISDB est hébergée sur SQL Database Managed Instance (préversion), assurez-vous d’avoir la version 17.6 ou ultérieure de SSMS. Pour télécharger la dernière version de SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

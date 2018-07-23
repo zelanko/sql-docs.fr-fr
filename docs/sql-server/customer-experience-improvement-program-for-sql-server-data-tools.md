@@ -3,32 +3,29 @@ title: Programme d’amélioration du produit pour SQL Server Data Tools | Micro
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssdt
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 523e42b868bc6f461579bed208d82cfb55ebc697
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bf04dde0c16f7f7782755db0583d9f64716471b9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563797"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36886735"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Programme d’amélioration du produit pour SQL Server Data Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Découvrez comment le Programme d’amélioration du produit (CEIP) aide Microsoft à identifier les méthodes permettant d’améliorer nos logiciels.  Vous pouvez configurer les outils afin de vous abonner ou d’annuler l’abonnement au programme à tout moment.  
   
 > [!NOTE]  
->  Pour obtenir une explication des principes de collecte de données utilisateur et d’utilisation de la version Microsoft SQL Server 2016 et de tout autre produit et service, consultez la [déclaration de confidentialité de Microsoft](https://www.microsoft.com/privacystatement/en-us/SQLServer/Default.aspx).  
+> Pour obtenir une explication des pratiques de collecte et d’utilisation des données utilisateur des versions de Microsoft SQL Server, consultez cette [déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkID=868444).  
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Inscription et désinscription au CEIP pour SQL Server Data Tools  
  Le Programme d’amélioration du produit (CEIP) est un programme conçu pour aider Microsoft à améliorer ses produits au fil du temps. Ce programme collecte des informations sur le matériel informatique et la manière dont les clients utilisent notre produit, sans interrompre les utilisateurs dans leurs tâches sur l’ordinateur. Les informations recueillies aident Microsoft à identifier les fonctionnalités à améliorer. Dans ce document, nous abordons l’inscription et la désinscription au Programme d’amélioration du produit SQL Server Data Tools (SSDT) pour Visual Studio 2017, Visual Studio 2015 et Visual Studio 2013.  
@@ -75,7 +72,7 @@ Valeur = (DWORD)
 > [!CAUTION]  
 >  Une modification incorrecte du Registre peut sérieusement endommager votre système. Avant d'apporter des modifications au Registre, il convient de sauvegarder les données importantes qui se trouvent sur l'ordinateur. Vous pouvez également utiliser l'option de démarrage Dernière configuration valide connue si vous rencontrez des problèmes après l'application de modifications manuelles.  
   
- Pour plus d’informations sur les informations recueillies, traitées ou transmises par le Programme d’amélioration du produit, consultez le site [Déclaration de confidentialité pour le programme d’amélioration de l’expérience utilisateur de Microsoft](http://go.microsoft.com/fwlink/?LinkId=52143).  
+ Pour en savoir plus sur les informations recueillies, traitées ou transmises par le Programme d’amélioration du produit, consultez la [déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkID=868444).  
  
 ### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Choix et contrôle relatifs au Programme d’amélioration du produit et SQL Server Data Tools pour Visual Studio 2015  
  SSDT pour Visual Studio 2015 est l’outil de modélisation de données qui est fourni avec SQL Server 2016. Il utilise les options du Programme d’amélioration du produit qui sont intégrées à Visual Studio 2015. Pour plus d’informations sur l’envoi des commentaires par le biais du Programme d’amélioration du produit dans Visual Studio 2015, consultez ce [document d’aide pour Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).  
@@ -117,7 +114,7 @@ Valeur = (DWORD)
 > [!CAUTION]  
 >  Une modification incorrecte du Registre peut sérieusement endommager votre système. Avant d'apporter des modifications au Registre, il convient de sauvegarder les données importantes qui se trouvent sur l'ordinateur. Vous pouvez également utiliser l'option de démarrage Dernière configuration valide connue si vous rencontrez des problèmes après l'application de modifications manuelles.  
   
- Pour plus d’informations sur les informations recueillies, traitées ou transmises par le Programme d’amélioration du produit, consultez le site [Déclaration de confidentialité pour le programme d’amélioration de l’expérience utilisateur de Microsoft](http://go.microsoft.com/fwlink/?LinkId=52143).  
+ Pour en savoir plus sur les informations recueillies, traitées ou transmises par le Programme d’amélioration du produit, consultez la [déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkID=868444).  
   
 ### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>Choix et contrôle relatifs au CEIP et SQL Server Data Tools - BI (SSDT-BI)  
  Si vous utilisez SSDT-BI, vous aurez l’opportunité de participer au Programme d’amélioration du produit durant l’installation. Ultérieurement, les modifications de la configuration du Programme d’amélioration du produit (CEIP) pour SSDT-BI peuvent être effectuées à l’aide des outils clients ou en modifiant les paramètres du registre.  

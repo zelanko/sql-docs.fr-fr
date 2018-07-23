@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - DATETIMEOFFSETFROMPARTS function
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 09e705fd426963018eadae7351df1046d3d1ef0c
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8fb64790887ea8e683f20e681d7e95211db1c2c5
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698270"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791151"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Cette fonction retourne une valeur **datetimeoffset** pour les arguments de date et d’heure spécifiés. La valeur retournée a une précision spécifiée par l’argument de précision et les décalages déterminés par les arguments de décalage d’heures et de minutes.
+Retourne une valeur **datetimeoffset** pour les arguments de date et d’heure indiqués. Cette valeur a une précision spécifiée par l’argument precision et un décalage déterminé par les arguments offset.  
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,44 +43,46 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 ```  
   
 ## <a name="arguments"></a>Arguments  
+
 *year*  
-Expression entière qui spécifie une année.
+Expression entière qui spécifie une année.  
   
 *month*  
-Expression entière qui spécifie un mois.
+Expression entière qui spécifie un mois.  
   
 *day*  
-Expression entière qui spécifie un jour.
+Expression entière qui spécifie un jour.  
   
 *hour*  
-Expression entière qui spécifie des heures.
+Expression entière qui spécifie les heures.  
   
 *minute*  
-Expression entière qui spécifie des minutes.
+Expression entière qui spécifie les minutes.  
   
 *secondes*  
-Expression entière qui spécifie des secondes.
+Expression entière qui spécifie les secondes.  
   
 *fractions*  
-Expression entière qui spécifie une valeur fractionnaire.
+Expression entière qui spécifie une valeur de fraction de secondes.  
   
 *hour_offset*  
-Expression entière qui spécifie la partie heure du décalage de fuseau horaire.
+Expression entière qui spécifie la partie heure du décalage de fuseau horaire.  
   
 *minute_offset*  
-Expression entière qui spécifie la partie minute du décalage de fuseau horaire.
+Expression entière qui spécifie la partie minute du décalage de fuseau horaire.  
   
 *precision*  
-Littéral d’entier qui spécifie la précision de la valeur **datetimeoffset** que `DATETIMEOFFSETFROMPARTS` retourne.
+Valeur littérale entière qui spécifie la précision de la valeur **datetimeoffset** retournée par `DATETIMEOFFSETFROMPARTS`.  
   
 ## <a name="return-types"></a>Types de retour
-**datetimeoffset(** *precision* **)**
+**datetimeoffset(** *precision* **)**  
   
 ## <a name="remarks"></a>Notes   
-`DATETIMEOFFSETFROMPARTS` retourne un type de données **datetimeoffset** entièrement initialisé. `DATETIMEOFFSETFROMPARTS` utilise les arguments de décalage pour représenter le décalage de fuseau horaire. Si les arguments de décalage sont omis, `DATETIMEOFFSETFROMPARTS` suppose un décalage de fuseau horaire de 00:00 ; en d’autres termes, aucun décalage de fuseau horaire. Pour les arguments de décalage spécifiés, `DATETIMEOFFSETFROMPARTS` attend des valeurs pour les deux arguments, et deux valeurs positives ou deux valeurs négatives pour chacun. Pour un argument *minute_offset* spécifié sans valeur *hour_offset* spécifiée, `DATETIMEOFFSETFROMPARTS` génère une erreur. Si d’autres arguments ont des valeurs non valides, `DATETIMEOFFSETFROMPARTS` génère une erreur. `DATETIMEOFFSETFROMPARTS` retourne une valeur Null si au moins un argument obligatoire a une valeur Null. Toutefois, si l’argument *precision* a une valeur Null, `DATETIMEOFFSETFROMPARTS` génère une erreur.
-  
-L’argument *fractions* dépend de l’argument *precision*. Par exemple, pour la valeur *precision* 7, chaque fraction représente 100 nanosecondes ; pour la valeur *precision* 3, chaque fraction représente une milliseconde. Pour la valeur *precision* zéro, la valeur de *fractions* doit également être zéro ; sinon, `DATETIMEOFFSETFROMPARTS` génère une erreur.
 
+`DATETIMEOFFSETFROMPARTS` retourne un type de données **datetimeoffset** entièrement initialisé. Les arguments offset représentent le décalage de fuseau horaire. S’ils sont omis, `DATETIMEOFFSETFROMPARTS` suppose un décalage de fuseau horaire de `00:00`, soit aucun décalage de fuseau horaire. S’ils sont spécifiés, `DATETIMEOFFSETFROMPARTS` attend des valeurs, toutes deux positives ou négatives, pour les deux arguments. Si *minute_offset* a une valeur et *hour_offset* non, `DATETIMEOFFSETFROMPARTS` génère une erreur. `DATETIMEOFFSETFROMPARTS` génère également une erreur si les autres arguments ont des valeurs non valides. Si au moins un des arguments requis a une valeur `NULL`, `DATETIMEOFFSETFROMPARTS` retourne `NULL`. En revanche, si l’argument *precision* a une valeur `NULL`, `DATETIMEOFFSETFROMPARTS` génère une erreur.  
+  
+L’argument *fractions* dépend de l’argument precision. Par exemple, pour une valeur precision égale à 7, chaque fraction représente 100 nanosecondes ; si elle est de 3, chaque fraction représente une milliseconde. Lorsque precision a la valeur zéro, la valeur de fractions doit également être zéro ; sinon, `DATETIMEOFFSETFROMPARTS` génère une erreur.  
+  
 Cette fonction prend en charge la communication à distance vers des serveurs [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et versions ultérieures. Elle ne prend pas en charge la communication à distance vers des serveurs dont la version est antérieure à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Exemples  
@@ -96,17 +97,21 @@ SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Resu
   
 ```sql
 Result  
--------------------------------------------  
-2010-12-07 00:00:00.0000000 +00:00  
+----------------------------------
+2010-12-31 14:23:23.0000000 +12:00  
   
 (1 row(s) affected)  
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Exemple avec fractions de seconde  
-L’exemple suivant illustre l’utilisation des paramètres *fractions* et *precision* :
-1.   Quand *fractions* a la valeur 5 et *precision* la valeur 1, la valeur de *fractions* représente 5/10 de seconde.  
-1.   Quand *fractions* a la valeur 50 et *precision* la valeur 2, la valeur de *fractions* représente 50/100 de seconde.  
-1.   Quand *fractions* a la valeur 500 et *precision* la valeur 3, la valeur de *fractions* représente 500/1000 de seconde.  
+
+L’exemple suivant illustre l’utilisation des paramètres *fractions* et *precision* :  
+
+1. Quand *fractions* a la valeur 5 et *precision* la valeur 1, la valeur de *fractions* représente 5/10 de seconde.  
+
+2. Quand *fractions* a la valeur 50 et *precision* la valeur 2, la valeur de *fractions* représente 50/100 de seconde.  
+
+3. Quand *fractions* a la valeur 500 et *precision* la valeur 3, la valeur de *fractions* représente 500/1000 de seconde.  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -59,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9265dea7529c1f80eb2d12741193a43c216489e9
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34470290"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854341"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -246,7 +245,7 @@ ms.locfileid: "34470290"
  SIMPLE indique à l'optimiseur de requête de tenter le processus de paramétrage simple. FORCED indique à l’optimiseur de requête de tenter le processus de paramétrage forcé. Pour plus d’informations, consultez [Paramétrage forcé dans le Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) et [Paramétrage simple dans le Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
  RECOMPILE  
- Indique au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d'ignorer le plan généré pour la requête à l'issue de son exécution, forçant ainsi l'optimiseur de requête à recompiler un plan de requête lors de la prochaine exécution de cette même requête. Si RECOMPILE n’est pas spécifié, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] met en cache les plans de requête et les réutilise. Lors de la compilation des plans de requête, l'indicateur de requête RECOMPILE utilise les valeurs actuelles des variables locales de la requête, qui sont transmises aux paramètres si la requête se trouve à l'intérieur d'une procédure stockée.  
+ Envoie à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l’instruction de générer un nouveau plan temporaire pour la requête et de l’abandonner juste après la fin d’exécution de la requête. Le plan de requête généré ne remplace pas un plan stocké en cache lorsque la même requête est exécutée sans l’indicateur RECOMPILE. Si RECOMPILE n’est pas spécifié, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] met en cache les plans de requête et les réutilise. Lors de la compilation des plans de requête, l'indicateur de requête RECOMPILE utilise les valeurs actuelles des variables locales de la requête, qui sont transmises aux paramètres si la requête se trouve à l'intérieur d'une procédure stockée.  
   
  L'indicateur de requête RECOMPILE s'avère fort utile en cela qu'il vous évite de créer une procédure stockée contenant la clause WITH RECOMPILE lorsqu'il s'agit de recompiler uniquement un sous-ensemble de requêtes à l'intérieur de la procédure stockée et non pas l'ensemble de la procédure stockée. Pour plus d’informations, consultez [Recompiler une procédure stockée](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md). RECOMPILE s'avère également utile pour créer des repères de guides.  
   

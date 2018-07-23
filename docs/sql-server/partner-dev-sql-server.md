@@ -3,11 +3,6 @@ title: Partenaires pour le développement avec SQL Server | Microsoft Docs
 description: Listes de partenaires tiers avec des solutions de développement pour SQL Server.
 services: sql-server
 documentationcenter: NA
-author: MikeRayMSFT
-manager: craigg
-editor: ''
-ms.assetid: ''
-ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
@@ -17,12 +12,14 @@ ms.date: 17/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 5fe3417539d0d4bf031845804a3863b66d409f5c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: MikeRayMSFT
+manager: craigg
+ms.openlocfilehash: f85c316502c107a76e0186deb0b242068576c712
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031816"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926300"
 ---
 # <a name="sql-server-development-partners"></a>Partenaires pour le développement avec SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +51,7 @@ Pour plus d’informations sur quelques autres de nos partenaires, consultez [Pa
 <!--Datasheet Links-->
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/-->
-[click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/--> [click2cloud_marketplace] :https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
 
 <!--Press links-->
 <!--[idera_press]:-->

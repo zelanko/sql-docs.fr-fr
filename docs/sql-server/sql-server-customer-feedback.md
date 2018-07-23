@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 07/12/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 21461642f4e45faaab365ab5bb30ecc7cc93e64e
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34074302"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926410"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Configurer SQL Server pour envoyer des commentaires à Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ Pour SQL Server sur Linux, consultez la page [Commentaires client pour SQL Serve
 Après l’installation, le paramètre de collecte de données d’utilisation des instances et composants de SQL Server peut être modifié au moyen de l’application de rapports d’erreurs et d’utilisation. Cette application est disponible dans le cadre de l’installation de SQL Server. Cet outil permet à chaque instance de SQL Server de configurer son propre paramètre de données d’utilisation.
 
 > [!NOTE]
-> L’application de rapports d’erreurs et d’utilisation est listée sous les outils de configuration de SQL Server. Vous pouvez utiliser cet outil pour gérer votre préférence en matière de rapports d’erreurs et de collecte de commentaires sur l’utilisation de la même manière que dans SQL Server 2017. Les rapports d’erreurs sont distincts de la collecte de commentaires sur l’utilisation ; par conséquent, ils peuvent être activés ou désactivés indépendamment de la collecte de commentaires sur l’utilisation. Les rapports d’erreurs recueillent des vidages sur incident envoyés à Microsoft, susceptibles de contenir des informations sensibles comme l’indique la déclaration de confidentialité.
+> L’application de rapports d’erreurs et d’utilisation est listée sous les outils de configuration de SQL Server. Vous pouvez utiliser cet outil pour gérer votre préférence en matière de rapports d’erreurs et de collecte de commentaires sur l’utilisation de la même manière que dans SQL Server 2017. Les rapports d’erreurs sont distincts de la collecte de commentaires sur l’utilisation ; par conséquent, ils peuvent être activés ou désactivés indépendamment de la collecte de commentaires sur l’utilisation. Les rapports d’erreurs recueillent les vidages sur incident envoyés à Microsoft, susceptibles de contenir des informations sensibles selon la [déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 Pour lancer la création de rapports d’erreurs et d’utilisation de SQL Server, cliquez ou appuyez sur **Démarrer**, puis recherchez « Erreur » dans la zone de recherche. L’élément Rapports d’erreurs et d’utilisation de SQL Server s’affiche. Quand vous aurez lancé l’outil, vous pourrez gérer les commentaires sur l’utilisation et les erreurs graves collectés pour des instances et des composants installés sur cet ordinateur.
 

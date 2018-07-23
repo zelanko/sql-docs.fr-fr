@@ -1,7 +1,7 @@
 ---
 title: Journal des modifications de SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,42 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32f97f60a4315f7a4adc0630b386ffb250a54a37
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0f08b48b48570685a8b57bfbf76fd4a473604fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286265"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Journal des modifications de SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Ce journal des modification est pour [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Pour des publications détaillées sur les nouveautés et les modifications, consultez [le blog de l’équipe SSDT](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT pour Visual Studio 2017 (15.7.1)
+Numéro de build : 14.0.16167.0  
+Date de publication : 2 juillet 2018  
+  
+### <a name="whats-new"></a>Nouveautés
+
+**SSIS :**
+
+- Prise en charge de la nouvelle autorité AAD Azure Government (login.microsoftonline.us), utilisée avec les tâches AS.
+- Résolution du problème selon lequel l’interface utilisateur des tâches de traitement AS affichait « Méthode introuvable » lorsque la version du serveur cible était SQL Server 2016.
+- Résolution du problème selon lequel certains composants de pipeline ne pouvaient pas s’exécuter lorsque la version du serveur cible était SQL Server 2012.
+
+**Programme d’installation :**
+
+- Filtrage de la liste des instances VS de façon à exclure celles qui ne peuvent pas installer SSDT.
+
+### <a name="known-issues"></a>Problèmes connus :
+
+- La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
+- L’installation de SSDT sous Windows 10 avec « Installer la nouvelle instance SQL Server Data Tools pour Visual Studio 2017 » échoue sur « L’opération de métafichier demandée n’est pas prise en charge ». Redémarrez l’ordinateur et relancez le programme d’installation SSDT pour continuer l’installation.
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT pour Visual Studio 2017 (15.7.0)
 Numéro de build : 14.0.16165.0  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,45 +25,44 @@ helpviewer_keywords:
 - viewing filegroup names
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 877969369a9b18cd7b13db556078a5773b89c947
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b5921a0d15230df4628d4dbb084bcbe964e39b46
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33052416"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782150"
 ---
 # <a name="filegroupname-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Renvoie le nom du groupe de fichiers correspondant au numéro d'identification (ID) spécifié.  
+Cette fonction retourne le nom du groupe de fichiers correspondant au numéro d’identification (ID) spécifié.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
 ## <a name="arguments"></a>Arguments  
  *filegroup_id*  
- Numéro d'identification du groupe de fichiers dont le nom doit être retourné. *filegroup_id* est de type **smallint**.  
+
+Numéro d’identification du groupe de fichiers dont `FILEGROUP_NAME` retournera le nom. *filegroup_id* a pour type de données **smallint**.  
   
 ## <a name="return-types"></a>Types de retour  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="remarks"></a>Notes   
- *filegroup_id* correspond à la colonne **data_space_id** dans la vue de catalogue **sys.filegroups**.  
+*filegroup_id* correspond à la colonne **data_space_id** de l’affichage catalogue **sys.filegroups**.  
   
 ## <a name="examples"></a>Exemples  
- Cet exemple renvoie le nom du groupe de fichiers correspondant à l'ID du groupe de fichiers `1` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
+Cet exemple retourne le nom du groupe de fichiers correspondant à l’ID `1` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
-  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  
 GO  
 ```  

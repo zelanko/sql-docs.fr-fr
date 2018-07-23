@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -41,12 +40,12 @@ caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 270b2c8d85d9715cfde3f32003f60cf1867b245a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb4aadeab22932e1d50792cd2f812b7368f488cb
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33065306"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909539"
 ---
 # <a name="hints-transact-sql---table"></a>Indicateurs (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,36 +126,36 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
- À quelques exceptions près, les indicateurs de table sont pris en charge dans la clause FROM uniquement lorsque les indicateurs sont spécifiés à l'aide du mot clé WITH. En outre, les indicateurs de table doivent être spécifiés avec des parenthèses.  
+WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
+À quelques exceptions près, les indicateurs de table sont pris en charge dans la clause FROM uniquement lorsque les indicateurs sont spécifiés à l'aide du mot clé WITH. En outre, les indicateurs de table doivent être spécifiés avec des parenthèses.  
   
 > [!IMPORTANT]  
 >  L'omission du mot clé WITH est une fonctionnalité déconseillée : [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Les indicateurs de table suivants sont autorisés avec et sans le mot clé WITH : NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT et NOEXPAND. Lorsque ces indicateurs de table sont spécifiés sans le mot clé WITH, ils doivent être définis seuls. Exemple :  
+Les indicateurs de table suivants sont autorisés avec et sans le mot clé WITH : NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT et NOEXPAND. Lorsque ces indicateurs de table sont spécifiés sans le mot clé WITH, ils doivent être définis seuls. Exemple :  
   
 ```sql  
 FROM t (TABLOCK)  
 ```  
   
- Lorsque l'indicateur est spécifié avec une autre option, il doit être défini avec le mot clé WITH :  
+Lorsque l'indicateur est spécifié avec une autre option, il doit être défini avec le mot clé WITH :  
   
 ```sql  
 FROM t WITH (TABLOCK, INDEX(myindex))  
 ```  
   
- Nous vous recommandons d'utiliser des virgules entre les indicateurs de table.  
+Nous vous recommandons d'utiliser des virgules entre les indicateurs de table.  
   
 > [!IMPORTANT]  
 >  La séparation des indicateurs par des espaces à la place de virgules est une fonctionnalité déconseillée : [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
- NOEXPAND  
- Spécifie qu'aucune vue indexée n'est étendue pour permettre d'accéder aux tables sous-jacentes lorsque l'optimiseur de requête traite la requête. L'optimiseur de requête traite la vue comme une table avec un index cluster. NOEXPAND s'applique uniquement aux vues indexées. Pour plus d'informations, consultez la section Notes.  
+NOEXPAND  
+Spécifie qu'aucune vue indexée n'est étendue pour permettre d'accéder aux tables sous-jacentes lorsque l'optimiseur de requête traite la requête. L'optimiseur de requête traite la vue comme une table avec un index cluster. NOEXPAND s'applique uniquement aux vues indexées. Pour plus d'informations, consultez la section Notes.  
   
- INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
- La syntaxe INDEX() spécifie les noms ou les ID d'un ou de plusieurs index qui seront utilisés par l'optimiseur de requête lors du traitement de l'instruction. L'autre syntaxe INDEX = spécifie une seule valeur d'index. Un seul indicateur d'index par table peut être spécifié.  
+INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
+La syntaxe INDEX() spécifie les noms ou les ID d'un ou de plusieurs index qui seront utilisés par l'optimiseur de requête lors du traitement de l'instruction. L'autre syntaxe INDEX = spécifie une seule valeur d'index. Un seul indicateur d'index par table peut être spécifié.  
   
- S'il existe un index cluster, INDEX(0) force l'analyse de ce dernier, tandis que INDEX(1) en force l'analyse ou la recherche. S'il n'existe pas d'index cluster, INDEX(0) force l'analyse d'une table et INDEX(1) est interprété comme une erreur.  
+S'il existe un index cluster, INDEX(0) force l'analyse de ce dernier, tandis que INDEX(1) en force l'analyse ou la recherche. S'il n'existe pas d'index cluster, INDEX(0) force l'analyse d'une table et INDEX(1) est interprété comme une erreur.  
   
  Si plusieurs index sont utilisés dans une seule liste d'indicateurs, les doublons sont ignorés et les autres index répertoriés sont utilisés pour récupérer les lignes de la table. L'ordre des index dans l'indicateur d'index est très important. Un indicateur associé à plusieurs index met également en œuvre l'opérateur logique AND et l'optimiseur de requête applique autant de conditions que possible sur chaque index accessible. Si la collection d'index avec indicateur n'inclut pas toutes les colonnes référencées par la requête, une extraction est effectuée pour récupérer les colonnes restantes après que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] SQL Server a récupéré toutes les colonnes indexées.  
   
@@ -165,27 +164,30 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Le nombre maximal d'index dans l'indicateur de table est de 250 index non cluster.  
   
- KEEPIDENTITY  
- Applicable uniquement dans une instruction INSERT quand l’option BULK est utilisée avec [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
+KEEPIDENTITY  
+Applicable uniquement dans une instruction INSERT quand l’option BULK est utilisée avec [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
   
  Indique que la ou les valeurs d'identité figurant dans le fichier de données importé doivent être utilisées dans la colonne d'identité. Si KEEPIDENTITY n'est pas spécifié, les valeurs d'identité de cette colonne sont vérifiées mais pas importées, et l'optimiseur de requête affecte automatiquement des valeurs uniques en fonction d'une valeur initiale et d'un incrément spécifié lors de la création de la table.  
   
 > [!IMPORTANT]  
 >  Si le fichier de données ne contient pas de valeurs pour la colonne d'identité de la table ou de la vue, et que cette colonne n'est pas la dernière colonne de la table, vous devez ignorer cette colonne. Pour plus d’informations, consultez [Utiliser un fichier de format pour ignorer un champ de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md). Si une colonne d’identité est ignorée, l’optimiseur de requête assigne automatiquement des valeurs uniques pour la colonne d’identité dans les lignes de table importées.  
   
- Pour un exemple d'utilisation de cet indicateur dans une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...), consultez [Conserver des valeurs d’identité lors de l’importation de données en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
+Pour un exemple d'utilisation de cet indicateur dans une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...), consultez [Conserver des valeurs d’identité lors de l’importation de données en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md).  
   
- Pour plus d’informations sur la vérification de la valeur d’identité d’une table, consultez [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
+Pour plus d’informations sur la vérification de la valeur d’identité d’une table, consultez [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).  
   
- KEEPDEFAULTS  
- Applicable uniquement dans une instruction INSERT quand l’option BULK est utilisée avec [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
+KEEPDEFAULTS  
+Applicable uniquement dans une instruction INSERT quand l’option BULK est utilisée avec [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
   
- Spécifie l'insertion d'une valeur par défaut éventuelle de colonne de table, à la place de la valeur NULL, lorsqu'il manque une valeur pour la colonne dans l'enregistrement de données.  
+Spécifie l'insertion d'une valeur par défaut éventuelle de colonne de table, à la place de la valeur NULL, lorsqu'il manque une valeur pour la colonne dans l'enregistrement de données.  
   
- Pour un exemple d'utilisation de cet indicateur dans une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...), consultez [Conserver les valeurs NULL ou utiliser les valeurs par défaut lors de l’importation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
+Pour un exemple d'utilisation de cet indicateur dans une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...), consultez [Conserver les valeurs NULL ou utiliser les valeurs par défaut lors de l’importation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
- Indique que l'optimiseur de requête doit utiliser uniquement une opération de recherche d'index comme chemin d'accès aux données dans la table ou la vue. À partir de SQL Server 2008 R2 SP1, les paramètres d'index peuvent également être spécifiés. Dans ce cas, l'optimiseur de requête considère uniquement les opérations de recherche d'index par le biais de l'index spécifié utilisant au moins les colonnes d'index spécifiées.  
+FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+Indique que l'optimiseur de requête doit utiliser uniquement une opération de recherche d'index comme chemin d'accès aux données dans la table ou la vue. 
+
+> [!NOTE]
+> À partir de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1, il est également possible de spécifier des paramètres d’index. Dans ce cas, l'optimiseur de requête considère uniquement les opérations de recherche d'index par le biais de l'index spécifié utilisant au moins les colonnes d'index spécifiées.  
   
  *index_value*  
  Nom de l'index ou valeur d'ID de l'index. L'ID d'index 0 (segment) ne peut pas être spécifié. Pour retourner le nom ou l’ID de l’index, effectuez une requête sur la vue de catalogue **sys.indexes**.  
@@ -193,7 +195,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  *index_column_name*  
  Nom de la colonne d'index à inclure dans l'opération de recherche. La spécification de FORCESEEK avec des paramètres d'index s'apparente à l'utilisation de FORCESEEK avec un indicateur d'index. Toutefois, vous pouvez obtenir un meilleur contrôle du chemin d'accès utilisé par l'optimiseur de requête en spécifiant l'index sur lequel effectuer la recherche et les colonnes d'index à prendre en compte dans l'opération de recherche. L'optimiseur peut prendre en compte des colonnes supplémentaires si nécessaire. Par exemple, si un index non cluster est spécifié, l'optimiseur peut choisir d'utiliser des colonnes clés d'index cluster en plus des colonnes spécifiées.  
   
- L'indicateur FORCESEEK peut être spécifié des manières suivantes.  
+L'indicateur FORCESEEK peut être spécifié des manières suivantes.  
   
 |Syntaxe| Exemple|Description|  
 |------------|-------------|-----------------|  
@@ -201,153 +203,128 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 |Combiné avec un indicateur INDEX|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|L'optimiseur de requête considère uniquement les opérations de recherche d'index pour accéder à la table ou la vue par le biais de l'index spécifié.|  
 |Paramétrable en spécifiant un index et des colonnes d'index|`FROM dbo.MyTable WITH (FORCESEEK (MyIndex (col1, col2, col3)))`|L'optimiseur de requête considère uniquement les opérations de recherche pour accéder à la table ou la vue par le biais de l'index spécifié utilisant au moins les colonnes d'index spécifiées.|  
   
-Lors de l'utilisation de l'indicateur FORCESEEK (avec ou sans paramètres d'index), prenez en compte les recommandations suivantes.  
-  
+Si vous utilisez l’indicateur FORCESEEK (avec ou sans paramètres d’index), prenez en compte les recommandations suivantes :  
 -   L'indicateur peut être spécifié comme indicateur de table ou indicateur de requête. Pour plus d’informations sur les indicateurs de requête, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
-  
 -   Pour appliquer FORCESEEK à une vue indexée, l'indicateur NOEXPAND doit également être spécifié.  
-  
 -   L'indicateur peut être appliqué au plus une fois par table ou vue.  
-  
 -   L'indicateur ne peut pas être spécifié pour une source de données distante. L'erreur 7377 est retournée lorsque FORCESEEK est spécifié avec un indicateur d'index et l'erreur 8180 est retournée lorsque FORCESEEK est utilisé sans indicateur d'index.  
-  
 -   Si FORCESEEK empêche de trouver un plan, l'erreur 8622 est retournée.  
   
-Lorsque FORCESEEK est spécifié avec des paramètres d'index, les instructions et les restrictions suivantes s'appliquent.  
-  
+Lorsque FORCESEEK est spécifié avec des paramètres d’index, les instructions et les restrictions suivantes s’appliquent :  
 -   L'indicateur ne peut pas être spécifié pour une table qui est la cible d'une instruction INSERT, UPDATE ou DELETE.  
-  
 -   L'indicateur ne peut pas être spécifié en association avec un indicateur INDEX ou un autre indicateur FORCESEEK.  
-  
 -   Au moins une colonne doit être spécifiée et il doit s'agir de la première colonne principale.  
-  
 -   Des colonnes supplémentaires d'index peuvent être spécifiées, toutefois les colonnes clés ne peuvent pas être ignorées. Par exemple, si l'index spécifié contient les colonnes clés `a`, `b`, et `c`, la syntaxe valide inclurait `FORCESEEK (MyIndex (a))` et `FORCESEEK (MyIndex (a, b)`. La syntaxe incorrecte inclurait `FORCESEEK (MyIndex (c))` et `FORCESEEK (MyIndex (a, c)`.  
-  
 -   L'ordre des noms de colonnes spécifiés dans l'indicateur doit correspondre à l'ordre des colonnes dans l'index référencé.  
-  
 -   Les colonnes qui ne sont pas dans la définition de clé d'index ne peuvent pas être spécifiées. Par exemple, dans un index non cluster, seules les colonnes clés d'index définies peuvent être spécifiées. Les colonnes clés cluster qui sont automatiquement incluses dans l'index ne peuvent pas être spécifiées, mais elles peuvent être utilisées par l'optimiseur.  
-  
 -   Un index columnstore optimisé en mémoire xVelocity ne peut pas être spécifié comme paramètre d'index. L’erreur 366 est retournée.  
-  
 -   La modification de la définition d'index (par exemple en ajoutant ou en supprimant des colonnes) peut imposer des modifications des requêtes qui font référence à cet index.  
-  
 -   L'indicateur empêche l'optimiseur de considérer tout index spatial ou XML sur la table.  
-  
 -   L'indicateur ne peut pas être spécifié en association avec l'indicateur FORCESCAN.  
-  
 -   Pour les index partitionnés, la colonne de partitionnement implicitement ajoutée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être spécifiée dans l'indicateur FORCESEEK.  
   
 > [!CAUTION]  
->  Le fait de spécifier FORCESEEK avec des paramètres limite davantage le nombre de plans qui peuvent être considérés par l'optimiseur que le fait de spécifier FORCESEEK sans paramètre. Cela peut provoquer une erreur « Impossible de générer le plan » dans davantage de cas. Dans une version ultérieure, il se peut que des modifications internes de l'optimiseur autorisent la prise en considération de davantage de plans.  
+> Le fait de spécifier FORCESEEK avec des paramètres limite davantage le nombre de plans qui peuvent être considérés par l'optimiseur que le fait de spécifier FORCESEEK sans paramètre. Cela peut provoquer une erreur « Impossible de générer le plan » dans davantage de cas. Dans une version ultérieure, il se peut que des modifications internes de l'optimiseur autorisent la prise en considération de davantage de plans.  
   
- FORCESCAN  
- Introduit dans SQL Server 2008 R2 SP1, cet indicateur spécifie que l'optimiseur de requête doit utiliser uniquement une opération d'analyse d'index comme chemin d'accès à la table ou la vue référencée. L'indicateur FORCESCAN peut être utile pour les requêtes dans lesquelles l'optimiseur sous-estime le nombre de lignes affectées et choisit une opération de recherche plutôt qu'une opération d'analyse. Dans ce cas, la quantité de mémoire allouée pour l'opération est trop faible, ce qui nuit aux performances des requêtes.  
+FORCESCAN **S’applique à** : de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Indique que l’optimiseur de requête doit utiliser uniquement une opération d’analyse d’index comme chemin d’accès à la table ou la vue référencée. L'indicateur FORCESCAN peut être utile pour les requêtes dans lesquelles l'optimiseur sous-estime le nombre de lignes affectées et choisit une opération de recherche plutôt qu'une opération d'analyse. Dans ce cas, la quantité de mémoire allouée pour l'opération est trop faible, ce qui nuit aux performances des requêtes.  
   
- FORCESCAN peut être spécifié avec ou sans indicateur INDEX. Lorsqu'il est associé à un indicateur d'index (`INDEX = index_name, FORCESCAN`), l'optimiseur de requête considère uniquement les chemins d'accès d'analyse dans l'index spécifié lors de l'accès à la table référencée. FORCESCAN peut être spécifié avec l'indicateur d'index INDEX(0) pour forcer une opération d'analyse de table sur la table de base.  
+FORCESCAN peut être spécifié avec ou sans indicateur INDEX. Lorsqu'il est associé à un indicateur d'index (`INDEX = index_name, FORCESCAN`), l'optimiseur de requête considère uniquement les chemins d'accès d'analyse dans l'index spécifié lors de l'accès à la table référencée. FORCESCAN peut être spécifié avec l'indicateur d'index INDEX(0) pour forcer une opération d'analyse de table sur la table de base.  
   
- Pour les tables et les index partitionnés, FORCESCAN est appliqué après que les partitions ont été éliminées par le biais de l'évaluation de prédicat de requête. Cela signifie que l'analyse est appliquée uniquement aux partitions restantes, et non à la table entière.  
+Pour les tables et les index partitionnés, FORCESCAN est appliqué après que les partitions ont été éliminées par le biais de l'évaluation de prédicat de requête. Cela signifie que l'analyse est appliquée uniquement aux partitions restantes, et non à la table entière.  
   
- L'indicateur FORCESCAN est soumis aux restrictions suivantes.  
-  
+L’indicateur FORCESCAN est soumis aux restrictions suivantes :  
 -   L'indicateur ne peut pas être spécifié pour une table qui est la cible d'une instruction INSERT, UPDATE ou DELETE.  
-  
 -   L'indicateur ne peut pas être utilisé avec plusieurs indicateurs d'index.  
-  
 -   L'indicateur empêche l'optimiseur de considérer tout index spatial ou XML sur la table.  
-  
 -   L'indicateur ne peut pas être spécifié pour une source de données distante.  
-  
 -   L'indicateur ne peut pas être spécifié en association avec l'indicateur FORCESEEK.  
   
- HOLDLOCK  
- Équivalent à SERIALIZABLE. Pour plus d'informations, consultez SERIALIZABLE plus loin dans cette rubrique. L'option HOLDLOCK s'applique uniquement à la table ou à la vue pour laquelle elle est spécifiée et uniquement pour la durée de la transaction définie par l'instruction dans laquelle elle est utilisée. HOLDLOCK ne peut pas être utilisée dans une instruction SELECT qui comprend l'option FOR BROWSE.  
+HOLDLOCK  
+Équivalent à SERIALIZABLE. Pour plus d'informations, consultez SERIALIZABLE plus loin dans cette rubrique. L'option HOLDLOCK s'applique uniquement à la table ou à la vue pour laquelle elle est spécifiée et uniquement pour la durée de la transaction définie par l'instruction dans laquelle elle est utilisée. HOLDLOCK ne peut pas être utilisée dans une instruction SELECT qui comprend l'option FOR BROWSE.  
   
- IGNORE_CONSTRAINTS  
- Applicable uniquement dans une instruction INSERT quand l’option BULK est utilisée avec [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
+IGNORE_CONSTRAINTS  
+Applicable uniquement dans une instruction INSERT quand l’option BULK est utilisée avec [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
   
- Spécifie que toutes les contraintes de la table sont ignorées par l'opération d'importation en bloc. Par défaut, INSERT vérifie les [contraintes uniques et contraintes de validation](../../relational-databases/tables/unique-constraints-and-check-constraints.md), ainsi que les [contraintes de clé primaire et de clé étrangère](../../relational-databases/tables/primary-and-foreign-key-constraints.md). Lorsque IGNORE_CONSTRAINTS est spécifié pour une opération d'importation en bloc, INSERT doit ignorer ces contraintes sur une table cible. Notez que vous ne pouvez pas désactiver les contraintes UNIQUE, PRIMARY KEY ou NOT NULL.  
+Spécifie que toutes les contraintes de la table sont ignorées par l'opération d'importation en bloc. Par défaut, INSERT vérifie les [contraintes uniques et contraintes de validation](../../relational-databases/tables/unique-constraints-and-check-constraints.md), ainsi que les [contraintes de clé primaire et de clé étrangère](../../relational-databases/tables/primary-and-foreign-key-constraints.md). Lorsque IGNORE_CONSTRAINTS est spécifié pour une opération d'importation en bloc, INSERT doit ignorer ces contraintes sur une table cible. Notez que vous ne pouvez pas désactiver les contraintes UNIQUE, PRIMARY KEY ou NOT NULL.  
   
- Vous avez la possibilité de désactiver les contraintes CHECK et FOREIGN KEY si les données d'entrée contiennent des lignes qui violent des contraintes. En désactivant ces contraintes, vous pouvez importer les données, puis utiliser des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] pour les nettoyer.  
+Vous avez la possibilité de désactiver les contraintes CHECK et FOREIGN KEY si les données d'entrée contiennent des lignes qui violent des contraintes. En désactivant ces contraintes, vous pouvez importer les données, puis utiliser des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] pour les nettoyer.  
   
- Toutefois, quand les contraintes CHECK et FOREIGN KEY sont ignorées, chaque contrainte ignorée sur la table est marquée comme **is_not_trusted** dans l’affichage [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) ou [sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md), une fois l’opération terminée. À un certain stade, vous devez vérifier les contraintes sur la table entière. Si la table n'était pas vide avant l'opération d'importation en bloc, il revient plus cher de valider à nouveau la contrainte que d'appliquer des contraintes CHECK et FOREIGN KEY aux données incrémentielles.  
+Toutefois, quand les contraintes CHECK et FOREIGN KEY sont ignorées, chaque contrainte ignorée sur la table est marquée comme **is_not_trusted** dans l’affichage [sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) ou [sys.foreign_keys](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md), une fois l’opération terminée. À un certain stade, vous devez vérifier les contraintes sur la table entière. Si la table n'était pas vide avant l'opération d'importation en bloc, il revient plus cher de valider à nouveau la contrainte que d'appliquer des contraintes CHECK et FOREIGN KEY aux données incrémentielles.  
   
- IGNORE_TRIGGERS  
- Applicable uniquement dans une instruction INSERT quand l’option BULK est utilisée avec [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
+IGNORE_TRIGGERS  
+Applicable uniquement dans une instruction INSERT quand l’option BULK est utilisée avec [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).  
   
- Spécifie que tous les déclencheurs définis sur la table sont ignorés par l'opération d'importation en bloc. Par défaut, INSERT applique les déclencheurs.  
+Spécifie que tous les déclencheurs définis sur la table sont ignorés par l'opération d'importation en bloc. Par défaut, INSERT applique les déclencheurs.  
   
- Utilisez IGNORE_TRIGGERS uniquement si l'application ne dépend d'aucun déclencheur et que l'optimisation des performances est importante.  
+Utilisez IGNORE_TRIGGERS uniquement si l'application ne dépend d'aucun déclencheur et que l'optimisation des performances est importante.  
   
- NOLOCK  
- Équivalent à READUNCOMMITTED. Pour plus d'informations, consultez READUNCOMMITTED plus loin dans cette rubrique.  
-  
-> [!NOTE]  
->  Pour les instructions UPDATE ou DELETE : [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-  
- NOWAIT  
- Indique au [!INCLUDE[ssDE](../../includes/ssde-md.md)] de retourner un message dès qu'un verrou est rencontré sur la table. L'utilisation de NOWAIT est équivalente à la spécification de SET LOCK_TIMEOUT 0 pour une table spécifique. L'indicateur NOWAIT ne fonctionne pas lorsque l'indicateur TABLOCK est également inclus. Pour terminer une requête sans délai en cas d'utilisation de l'indicateur TABLOCK, préfacez plutôt la requête avec `SETLOCK_TIMEOUT 0;`.  
-  
- PAGLOCK  
- Établit des verrous de page là où des verrous individuels sont généralement utilisés sur des lignes ou des clés ou là où un verrou de table unique est généralement utilisé. Par défaut, utilise le mode de verrou approprié pour l'opération. Si cet argument est spécifié dans des transactions fonctionnant au niveau d'isolement SNAPSHOT, les verrous de page ne sont établis que si PAGLOCK est combiné avec d'autres indicateurs de table qui requièrent des verrous, tels que UPDLOCK et HOLDLOCK.  
-  
- READCOMMITTED  
- Spécifie que les opérations de lecture doivent respecter les règles du niveau d'isolation READ COMMITTED en utilisant le verrouillage ou le contrôle de version de ligne. Si l'option de base de données READ_COMMITTED_SNAPSHOT a la valeur OFF, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] acquiert des verrous partagés lorsque les données sont lues et libère ces verrous lorsque l'opération de lecture est achevée. Si l'option de base de données READ_COMMITTED_SNAPSHOT a pour valeur ON, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'acquiert pas de verrous et utilise le contrôle de version de ligne. Pour plus d’informations sur les niveaux d’isolement, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+NOLOCK  
+Équivalent à READUNCOMMITTED. Pour plus d'informations, consultez READUNCOMMITTED plus loin dans cette rubrique.  
   
 > [!NOTE]  
->  Pour les instructions UPDATE ou DELETE : [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+> Pour les instructions UPDATE ou DELETE : [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- READCOMMITTEDLOCK  
- Spécifie que les opérations de lecture doivent respecter les règles du niveau d'isolation READ COMMITTED en utilisant le verrouillage. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] acquiert des verrous partagés lorsque les données sont lues et libère ces verrous lorsque l'opération de lecture est achevée, quelle que soit la valeur de l'option de base de données READ_COMMITTED_SNAPSHOT. Pour plus d’informations sur les niveaux d’isolement, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Cet indicateur ne peut pas être spécifié sur la table cible d'une instruction INSERT ; l'erreur 4140 est retournée.  
+NOWAIT  
+Indique au [!INCLUDE[ssDE](../../includes/ssde-md.md)] de retourner un message dès qu'un verrou est rencontré sur la table. L'utilisation de NOWAIT est équivalente à la spécification de SET LOCK_TIMEOUT 0 pour une table spécifique. L'indicateur NOWAIT ne fonctionne pas lorsque l'indicateur TABLOCK est également inclus. Pour terminer une requête sans délai en cas d'utilisation de l'indicateur TABLOCK, préfacez plutôt la requête avec `SETLOCK_TIMEOUT 0;`.  
   
- READPAST  
- Spécifie que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne doit pas lire les lignes qui sont verrouillées par d'autres transactions. Quand READPAST est spécifié, les verrous de niveau ligne sont ignorés, mais les verrous de niveau page ne le sont pas. Tant que les verrous ne sont pas libérés, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ignore les lignes au lieu de bloquer la transaction actuelle. Par exemple, supposons que la table `T1` contienne une colonne entière unique avec les valeurs 1, 2, 3, 4, 5. Si la transaction A remplace la valeur 3 par 8 mais n'a pas encore validé, une instruction SELECT * FROM T1 (READPAST) obtient les valeurs 1, 2, 4, 5. READPAST permet essentiellement de réduire la contention de verrouillage lors de l’implémentation d’une file d’attente de travail qui utilise une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un lecteur de file d'attente qui utilise READPAST ignore les entrées de file d'attente verrouillées par d'autres transactions et prend en compte l'entrée de file d'attente suivante disponible, sans attendre que les autres transactions libèrent leurs verrous.  
+PAGLOCK  
+Établit des verrous de page là où des verrous individuels sont généralement utilisés sur des lignes ou des clés ou là où un verrou de table unique est généralement utilisé. Par défaut, utilise le mode de verrou approprié pour l'opération. Si cet argument est spécifié dans des transactions fonctionnant au niveau d'isolement SNAPSHOT, les verrous de page ne sont établis que si PAGLOCK est combiné avec d'autres indicateurs de table qui requièrent des verrous, tels que UPDLOCK et HOLDLOCK.  
   
- READPAST peut être spécifié pour toute table référencée dans une instruction UPDATE ou DELETE et pour toute table référencée dans une clause FROM. Lorsqu'il est spécifié dans une instruction UPDATE et quel que soit l'emplacement auquel il est défini dans celle-ci, l'argument READPAST est uniquement appliqué lorsque l'opération lit des données pour identifier les enregistrements à mettre à jour. READPAST ne peut pas être spécifié pour des tables dans la clause INTO d'une instruction INSERT. Les opérations de mise à jour ou de suppression qui utilisent READPAST peuvent se bloquer lorsqu'elles lisent des clés étrangères ou des vues indexées ou lorsqu'elles modifient des index secondaires.  
+READCOMMITTED  
+Spécifie que les opérations de lecture doivent respecter les règles du niveau d'isolation READ COMMITTED en utilisant le verrouillage ou le contrôle de version de ligne. Si l'option de base de données READ_COMMITTED_SNAPSHOT a la valeur OFF, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] acquiert des verrous partagés lorsque les données sont lues et libère ces verrous lorsque l'opération de lecture est achevée. Si l'option de base de données READ_COMMITTED_SNAPSHOT a pour valeur ON, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'acquiert pas de verrous et utilise le contrôle de version de ligne. Pour plus d’informations sur les niveaux d’isolement, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
- READPAST ne peut être spécifié que dans les transactions fonctionnant aux niveaux d'isolation READ COMMITTED ou REPEATABLE READ. Si cet argument est spécifié dans des transactions fonctionnant au niveau d'isolement SNAPSHOT, READPAST doit être combiné avec d'autres indicateurs de table qui requièrent des verrous, tels que UPDLOCK et HOLDLOCK.  
+> [!NOTE]  
+> Pour les instructions UPDATE ou DELETE : [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- L'indicateur de table READPAST ne peut pas être spécifié quand l'option de base de données READ_COMMITTED_SNAPSHOT a la valeur ON et que l'une ou l'autre des conditions suivantes a la valeur True.  
+READCOMMITTEDLOCK  
+Spécifie que les opérations de lecture doivent respecter les règles du niveau d'isolation READ COMMITTED en utilisant le verrouillage. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] acquiert des verrous partagés lorsque les données sont lues et libère ces verrous lorsque l'opération de lecture est achevée, quelle que soit la valeur de l'option de base de données READ_COMMITTED_SNAPSHOT. Pour plus d’informations sur les niveaux d’isolement, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Cet indicateur ne peut pas être spécifié sur la table cible d'une instruction INSERT ; l'erreur 4140 est retournée.  
   
+READPAST  
+Spécifie que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne doit pas lire les lignes qui sont verrouillées par d'autres transactions. Quand READPAST est spécifié, les verrous de niveau ligne sont ignorés, mais les verrous de niveau page ne le sont pas. Tant que les verrous ne sont pas libérés, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ignore les lignes au lieu de bloquer la transaction actuelle. Par exemple, supposons que la table `T1` contienne une colonne entière unique avec les valeurs 1, 2, 3, 4, 5. Si la transaction A remplace la valeur 3 par 8 mais n'a pas encore validé, une instruction SELECT * FROM T1 (READPAST) obtient les valeurs 1, 2, 4, 5. READPAST permet essentiellement de réduire la contention de verrouillage lors de l’implémentation d’une file d’attente de travail qui utilise une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un lecteur de file d'attente qui utilise READPAST ignore les entrées de file d'attente verrouillées par d'autres transactions et prend en compte l'entrée de file d'attente suivante disponible, sans attendre que les autres transactions libèrent leurs verrous.  
+  
+READPAST peut être spécifié pour toute table référencée dans une instruction UPDATE ou DELETE et pour toute table référencée dans une clause FROM. Lorsqu'il est spécifié dans une instruction UPDATE et quel que soit l'emplacement auquel il est défini dans celle-ci, l'argument READPAST est uniquement appliqué lorsque l'opération lit des données pour identifier les enregistrements à mettre à jour. READPAST ne peut pas être spécifié pour des tables dans la clause INTO d'une instruction INSERT. Les opérations de mise à jour ou de suppression qui utilisent READPAST peuvent se bloquer lorsqu'elles lisent des clés étrangères ou des vues indexées ou lorsqu'elles modifient des index secondaires.  
+  
+READPAST ne peut être spécifié que dans les transactions fonctionnant aux niveaux d'isolation READ COMMITTED ou REPEATABLE READ. Si cet argument est spécifié dans des transactions fonctionnant au niveau d'isolement SNAPSHOT, READPAST doit être combiné avec d'autres indicateurs de table qui requièrent des verrous, tels que UPDLOCK et HOLDLOCK.  
+  
+Il n’est pas possible de spécifier l’indicateur de table READPAST quand l’option de base de données READ_COMMITTED_SNAPSHOT a la valeur ON et que l’une des conditions suivantes est vraie :  
 -   Le niveau d'isolation des transactions de la session est READ COMMITTED.  
-  
 -   L'indicateur READCOMMITTED de la table est également spécifié dans la requête.  
   
- Pour spécifier l'indicateur READPAST dans ces cas, supprimez l'indicateur de table READCOMMITTED s'il est présent, et incorporez l'indicateur de table READCOMMITTEDLOCK dans la requête.  
+Pour spécifier l'indicateur READPAST dans ces cas, supprimez l'indicateur de table READCOMMITTED s'il est présent, et incorporez l'indicateur de table READCOMMITTEDLOCK dans la requête.  
   
- READUNCOMMITTED  
- Indique que les lectures erronées sont autorisées. Aucun verrou partagé n'est émis pour empêcher d'autres transactions de modifier les données lues par la transaction actuelle et les verrous exclusifs définis par les autres transactions n'empêchent pas la transaction actuelle de lire les données verrouillées. L'autorisation des lectures erronées peut accroître la concurrence, mais au prix de la lecture de modifications de données qui sont ensuite restaurées par d'autres transactions. Cela peut générer des erreurs pour votre transaction, confronter les utilisateurs à des données qui n'ont jamais été validées ou présenter aux utilisateurs deux fois les mêmes enregistrements (ou pas du tout).  
+READUNCOMMITTED  
+Indique que les lectures erronées sont autorisées. Aucun verrou partagé n'est émis pour empêcher d'autres transactions de modifier les données lues par la transaction actuelle et les verrous exclusifs définis par les autres transactions n'empêchent pas la transaction actuelle de lire les données verrouillées. L'autorisation des lectures erronées peut accroître la concurrence, mais au prix de la lecture de modifications de données qui sont ensuite restaurées par d'autres transactions. Cela peut générer des erreurs pour votre transaction, confronter les utilisateurs à des données qui n'ont jamais été validées ou présenter aux utilisateurs deux fois les mêmes enregistrements (ou pas du tout).  
   
- Les indicateurs READUNCOMMITTED et NOLOCK s'appliquent uniquement aux verrous de données. Toutes les requêtes, y compris celles dotées d'indicateurs READUNCOMMITTED et NOLOCK, obtiennent des verrous Sch-S (Stabilité du schéma) durant la compilation et l'exécution. Par conséquent, les requêtes sont bloquées lorsqu'une transaction simultanée détient un verrou de modification du schéma (Sch-M) sur la table. Par exemple, une opération DDL (Data Definition Language) acquiert un verrou Sch-M avant de modifier les informations de schéma de la table. Toutes les requêtes simultanées (y compris celles exécutées avec des indicateurs READUNCOMMITTED ou NOLOCK) sont bloquées lors des tentatives d'obtention d'un verrou Sch-S. Inversement, une requête qui détient un verrou Sch-S bloque une transaction simultanée qui tente d'acquérir un verrou Sch-M.  
+Les indicateurs READUNCOMMITTED et NOLOCK s'appliquent uniquement aux verrous de données. Toutes les requêtes, y compris celles dotées d'indicateurs READUNCOMMITTED et NOLOCK, obtiennent des verrous Sch-S (Stabilité du schéma) durant la compilation et l'exécution. Par conséquent, les requêtes sont bloquées lorsqu'une transaction simultanée détient un verrou de modification du schéma (Sch-M) sur la table. Par exemple, une opération DDL (Data Definition Language) acquiert un verrou Sch-M avant de modifier les informations de schéma de la table. Toutes les requêtes simultanées (y compris celles exécutées avec des indicateurs READUNCOMMITTED ou NOLOCK) sont bloquées lors des tentatives d'obtention d'un verrou Sch-S. Inversement, une requête qui détient un verrou Sch-S bloque une transaction simultanée qui tente d'acquérir un verrou Sch-M.  
   
- Il est impossible de spécifier READUNCOMMITTED et NOLOCK pour des tables modifiées par des opérations d'insertion, de mise à jour ou de suppression. L'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignore les indicateurs READUNCOMMITTED et NOLOCK dans la clause FROM s'appliquant à la table cible d'une instruction UPDATE ou DELETE.  
+Il est impossible de spécifier READUNCOMMITTED et NOLOCK pour des tables modifiées par des opérations d'insertion, de mise à jour ou de suppression. L'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignore les indicateurs READUNCOMMITTED et NOLOCK dans la clause FROM s'appliquant à la table cible d'une instruction UPDATE ou DELETE.  
   
 > [!NOTE]  
->  La prise en charge des indicateurs READUNCOMMITTED et NOLOCK dans la clause FROM s'appliquant à la table cible d'une instruction UPDATE ou DELETE sera supprimée dans une version future de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces indicateurs dans ce contexte lors de vos nouvelles tâches de développement, et pensez à modifier les applications qui les utilisent actuellement.  
+> La prise en charge des indicateurs READUNCOMMITTED et NOLOCK dans la clause FROM s'appliquant à la table cible d'une instruction UPDATE ou DELETE sera supprimée dans une version future de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces indicateurs dans ce contexte lors de vos nouvelles tâches de développement, et pensez à modifier les applications qui les utilisent actuellement.  
   
- Vous pouvez réduire au maximum la contention de verrouillage tout en protégeant les transactions contre les lectures erronées de modifications de données non validées en utilisant l'un des niveaux d'isolation suivants :  
-  
+Vous pouvez réduire au maximum la contention de verrouillage tout en protégeant les transactions contre les lectures erronées de modifications de données non validées en utilisant l'un des niveaux d'isolation suivants :  
 -   le niveau d'isolation READ COMMITTED avec l'option de base de données READ_COMMITTED_SNAPSHOT activée (ON) ;  
-  
 -   le niveau d'isolement SNAPSHOT.  
   
- Pour plus d’informations sur les niveaux d’isolement, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+Pour plus d’informations sur les niveaux d’isolement, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 > [!NOTE]  
->  Si vous recevez le message d'erreur 601 lorsque READUNCOMMITTED est spécifié, résolvez-le comme une erreur de blocage (1205) et relancez votre instruction.  
+> Si vous recevez le message d'erreur 601 lorsque READUNCOMMITTED est spécifié, résolvez-le comme une erreur de blocage (1205) et relancez votre instruction.  
   
- REPEATABLEREAD  
- Indique qu'une recherche est effectuée avec la même sémantique de verrouillage qu'une transaction à un niveau d'isolation REPEATABLE READ. Pour plus d’informations sur les niveaux d’isolement, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+REPEATABLEREAD  
+Indique qu'une recherche est effectuée avec la même sémantique de verrouillage qu'une transaction à un niveau d'isolation REPEATABLE READ. Pour plus d’informations sur les niveaux d’isolement, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
- ROWLOCK  
- Spécifie que les verrous de ligne sont établis lorsque les verrous de page ou de table sont généralement placés. Si cet argument est spécifié dans des transactions fonctionnant au niveau d'isolement SNAPSHOT, les verrous de ligne ne sont établis que si ROWLOCK est combiné avec d'autres indicateurs de table qui requièrent des verrous, tels que UPDLOCK et HOLDLOCK.  
+ROWLOCK  
+Spécifie que les verrous de ligne sont établis lorsque les verrous de page ou de table sont généralement placés. Si cet argument est spécifié dans des transactions fonctionnant au niveau d'isolement SNAPSHOT, les verrous de ligne ne sont établis que si ROWLOCK est combiné avec d'autres indicateurs de table qui requièrent des verrous, tels que UPDLOCK et HOLDLOCK.  
   
- SERIALIZABLE  
- Équivalent à HOLDLOCK. Étend les restrictions associées aux verrous partagés en les maintenant jusqu'à l'achèvement de la transaction, au lieu de les relâcher dès que la table ou la page de données n'est plus utilisée, que la transaction soit achevée ou non. Effectue une recherche avec la même sémantique de verrouillage qu'une transaction à un niveau d'isolation SERIALIZABLE. Pour plus d’informations sur les niveaux d’isolement, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+SERIALIZABLE  
+Équivalent à HOLDLOCK. Étend les restrictions associées aux verrous partagés en les maintenant jusqu'à l'achèvement de la transaction, au lieu de les relâcher dès que la table ou la page de données n'est plus utilisée, que la transaction soit achevée ou non. Effectue une recherche avec la même sémantique de verrouillage qu'une transaction à un niveau d'isolation SERIALIZABLE. Pour plus d’informations sur les niveaux d’isolement, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
- SNAPSHOT  
+SNAPSHOT  
 **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
- La table optimisée en mémoire est accédée selon l'isolement SNAPSHOT. SNAPSHOT peut être utilisé uniquement avec les tables optimisées en mémoire (et non avec les tables sur disque). Pour plus d’informations, consultez [Introduction aux tables à mémoire optimisée](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+La table optimisée en mémoire est accédée selon l'isolement SNAPSHOT. SNAPSHOT peut être utilisé uniquement avec les tables optimisées en mémoire (et non avec les tables sur disque). Pour plus d’informations, consultez [Introduction aux tables à mémoire optimisée](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 ```sql 
 SELECT * FROM dbo.Customers AS c   
@@ -356,46 +333,43 @@ LEFT JOIN dbo.[Order History] AS oh
     ON c.customer_id=oh.customer_id;  
 ```  
   
- SPATIAL_WINDOW_MAX_CELLS = *integer*  
+SPATIAL_WINDOW_MAX_CELLS = *integer*  
 **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+Spécifie le nombre maximal de cellules à utiliser pour le pavage d'un objet géométrique ou géographique. *number* est une valeur comprise entre 1 et 8192.  
   
- Spécifie le nombre maximal de cellules à utiliser pour le pavage d'un objet géométrique ou géographique. *number* est une valeur comprise entre 1 et 8192.  
-  
- Cette option permet de paramétrer précisément l'heure d'exécution de la requête en ajustant le compromis entre la durée d'exécution du filtre primaire et du filtre secondaire. Un nombre élevé réduit la durée d'exécution du filtre secondaire, mais augmente celle du filtre de l'exécution primaire, tandis qu'un nombre plus petit décroît la durée d'exécution du filtre primaire, mais augmente celle de l'exécution du filtre secondaire. Avec des données spatiales plus denses, un nombre élevé doit aboutir à une durée d'exécution plus rapide en donnant une meilleure approximation avec le filtre primaire et en réduisant la durée d'exécution du filtre secondaire. Avec des données éparses, un nombre inférieur décroît la durée d'exécution du filtre primaire.  
+Cette option permet de paramétrer précisément l'heure d'exécution de la requête en ajustant le compromis entre la durée d'exécution du filtre primaire et du filtre secondaire. Un nombre élevé réduit la durée d'exécution du filtre secondaire, mais augmente celle du filtre de l'exécution primaire, tandis qu'un nombre plus petit décroît la durée d'exécution du filtre primaire, mais augmente celle de l'exécution du filtre secondaire. Avec des données spatiales plus denses, un nombre élevé doit aboutir à une durée d'exécution plus rapide en donnant une meilleure approximation avec le filtre primaire et en réduisant la durée d'exécution du filtre secondaire. Avec des données éparses, un nombre inférieur décroît la durée d'exécution du filtre primaire.  
   
  Cette option fonctionne à la fois pour les pavages de grille manuels et automatiques.  
   
- TABLOCK  
- Spécifie que le verrou acquis est appliqué au niveau de la table. Le type de verrou acquis dépend de l'instruction en cours d'exécution. Par exemple, une instruction SELECT peut acquérir un verrou partagé. En spécifiant TABLOCK, le verrou partagé est appliqué à la table entière plutôt qu'au niveau de la ligne ou de la page. Si l'option HOLDLOCK est également spécifiée, le verrou de table est maintenu jusqu'à la fin de la transaction.  
+TABLOCK  
+Spécifie que le verrou acquis est appliqué au niveau de la table. Le type de verrou acquis dépend de l'instruction en cours d'exécution. Par exemple, une instruction SELECT peut acquérir un verrou partagé. En spécifiant TABLOCK, le verrou partagé est appliqué à la table entière plutôt qu'au niveau de la ligne ou de la page. Si l'option HOLDLOCK est également spécifiée, le verrou de table est maintenu jusqu'à la fin de la transaction.  
   
- Quand vous importez des données dans un segment à l’aide de l’instruction INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table>, vous pouvez activer l’optimisation de la journalisation et du verrouillage de l’instruction en spécifiant l’indicateur TABLOCK pour la table cible. En outre, le mode de récupération de la base de données doit correspondre au mode simple ou au mode de récupération utilisant les journaux de transactions. Pour plus d’informations, consultez [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+Quand vous importez des données dans un segment à l’aide de l’instruction INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table>, vous pouvez activer l’optimisation de la journalisation et du verrouillage de l’instruction en spécifiant l’indicateur TABLOCK pour la table cible. En outre, le mode de récupération de la base de données doit correspondre au mode simple ou au mode de récupération utilisant les journaux de transactions. Pour plus d’informations, consultez [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
- Quand l’indicateur TABLOCK est utilisé avec le fournisseur d’ensembles de lignes [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) pour importer des données dans une table, il permet à plusieurs clients de charger en même temps les données dans la table cible avec une optimisation de la journalisation et du verrouillage. Pour plus d’informations, consultez [Conditions requises pour une journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+Quand l’indicateur TABLOCK est utilisé avec le fournisseur d’ensembles de lignes [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) pour importer des données dans une table, il permet à plusieurs clients de charger en même temps les données dans la table cible avec une optimisation de la journalisation et du verrouillage. Pour plus d’informations, consultez [Conditions requises pour une journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
- TABLOCKX  
- Indique qu'un verrou exclusif est établi sur la table.  
+TABLOCKX  
+Indique qu'un verrou exclusif est établi sur la table.  
   
- UPDLOCK  
- Spécifie que les verrous de mise à jour doivent être établis et maintenus jusqu'à ce que la transaction s'achève. UPDLOCK prend les verrous de mise à jour pour les opérations de lecture uniquement au niveau de la ligne ou de la page. Si UPDLOCK est combiné avec TABLOCK, ou si un verrou de niveau table est pris pour une raison quelconque, un verrou exclusif (x) est pris à la place.  
+UPDLOCK  
+Spécifie que les verrous de mise à jour doivent être établis et maintenus jusqu'à ce que la transaction s'achève. UPDLOCK prend les verrous de mise à jour pour les opérations de lecture uniquement au niveau de la ligne ou de la page. Si UPDLOCK est combiné avec TABLOCK, ou si un verrou de niveau table est pris pour une raison quelconque, un verrou exclusif (x) est pris à la place.  
   
- Lorsque UPDLOCK est spécifié, les indicateurs de niveau d'isolation READCOMMITTED et READCOMMITTEDLOCK sont ignorés. Par exemple, si le niveau d'isolation de la session est SERIALIZABLE et qu'une requête spécifie (UPDLOCK, READCOMMITTED), l'indicateur READCOMMITTED est ignoré et la transaction est exécutée avec le niveau d'isolation SERIALIZABLE.  
+Lorsque UPDLOCK est spécifié, les indicateurs de niveau d'isolation READCOMMITTED et READCOMMITTEDLOCK sont ignorés. Par exemple, si le niveau d'isolation de la session est SERIALIZABLE et qu'une requête spécifie (UPDLOCK, READCOMMITTED), l'indicateur READCOMMITTED est ignoré et la transaction est exécutée avec le niveau d'isolation SERIALIZABLE.  
   
- XLOCK  
- Spécifie que les verrous exclusifs doivent être établis et maintenus jusqu'à ce que la transaction s'achève. Si l'option ROWLOCK, PAGLOCK ou TABLOCK est spécifiée, les verrous exclusifs s'appliquent au niveau de granularité approprié.  
+XLOCK  
+Spécifie que les verrous exclusifs doivent être établis et maintenus jusqu'à ce que la transaction s'achève. Si l'option ROWLOCK, PAGLOCK ou TABLOCK est spécifiée, les verrous exclusifs s'appliquent au niveau de granularité approprié.  
   
 ## <a name="remarks"></a>Notes   
- Les indicateurs de table sont ignorés si l'accès à la table ne s'effectue pas par un plan de requête. Ceci peut résulter du choix de l'optimiseur d'empêcher globalement l'accès à la table ou de l'accès à une vue indexée à la place. Dans ce dernier cas, l'accès à une vue indexée peut être proscrit à l'aide de l'indicateur de requête OPTION (EXPAND VIEWS).  
+Les indicateurs de table sont ignorés si l'accès à la table ne s'effectue pas par un plan de requête. Ceci peut résulter du choix de l'optimiseur d'empêcher globalement l'accès à la table ou de l'accès à une vue indexée à la place. Dans ce dernier cas, l'accès à une vue indexée peut être proscrit à l'aide de l'indicateur de requête OPTION (EXPAND VIEWS).  
   
- Tous les indicateurs de verrou sont diffusés à toutes les vues et tables accessibles par le plan de requête ainsi que les vues et tables référencées dans une vue. En outre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue les contrôles de cohérence de verrous correspondants.  
+Tous les indicateurs de verrou sont diffusés à toutes les vues et tables accessibles par le plan de requête ainsi que les vues et tables référencées dans une vue. En outre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue les contrôles de cohérence de verrous correspondants.  
   
- Les indicateurs de verrou ROWLOCK, UPDLOCK et XLOCK qui acquièrent des verrous de niveau ligne peuvent placer des verrous sur des clés d'index plutôt que sur les lignes de données elles-mêmes. Par exemple, si une table possède un index non cluster et qu'une instruction SELECT utilisant un indicateur de verrou est gérée par un index explicatif, un verrou est acquis sur la clé d'index dans l'index explicatif plutôt que sur la ligne de données dans la table de base.  
+Les indicateurs de verrou ROWLOCK, UPDLOCK et XLOCK qui acquièrent des verrous de niveau ligne peuvent placer des verrous sur des clés d'index plutôt que sur les lignes de données elles-mêmes. Par exemple, si une table possède un index non cluster et qu'une instruction SELECT utilisant un indicateur de verrou est gérée par un index explicatif, un verrou est acquis sur la clé d'index dans l'index explicatif plutôt que sur la ligne de données dans la table de base.  
   
- Si une table contient des colonnes calculées qui sont traitées par des expressions ou des fonctions ayant accès à des colonnes dans d'autres tables, les indicateurs de table ne sont pas utilisés sur ces dernières et ne sont pas propagés. Par exemple, l'indicateur de table NOLOCK est spécifié dans une table de la requête. Cette table possède des colonnes calculées par une combinaison d'expressions et de fonctions qui accèdent à des colonnes dans une autre table. Les tables référencées par les expressions et les fonctions n'utilisent pas l'indicateur de table NOLOCK lors de l'accès à ces dernières.  
+Si une table contient des colonnes calculées qui sont traitées par des expressions ou des fonctions ayant accès à des colonnes dans d'autres tables, les indicateurs de table ne sont pas utilisés sur ces dernières et ne sont pas propagés. Par exemple, l'indicateur de table NOLOCK est spécifié dans une table de la requête. Cette table possède des colonnes calculées par une combinaison d'expressions et de fonctions qui accèdent à des colonnes dans une autre table. Les tables référencées par les expressions et les fonctions n'utilisent pas l'indicateur de table NOLOCK lors de l'accès à ces dernières.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas plus d'un indicateur de table dans chacun des groupes suivants pour chaque table de la clause FROM :  
-  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas plus d'un indicateur de table dans chacun des groupes suivants pour chaque table de la clause FROM :  
 -   indicateurs de granularité : PAGLOCK, NOLOCK, READCOMMITTEDLOCK, ROWLOCK, TABLOCK ou TABLOCKX ;  
-  
 -   indicateurs de niveau d'isolation : HOLDLOCK, NOLOCK, READCOMMITTED, REPEATABLEREAD, SERIALIZABLE.  
   
 ## <a name="filtered-index-hints"></a>Indicateurs d'index filtré  
@@ -418,15 +392,15 @@ SELECT StartDate, ComponentID FROM Production.BillOfMaterials
 GO  
 ```  
   
- L'optimiseur de requête ne prendra pas en compte un indicateur d'index si les options SET n'ont pas les valeurs requises pour les index filtrés. Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
+L'optimiseur de requête ne prendra pas en compte un indicateur d'index si les options SET n'ont pas les valeurs requises pour les index filtrés. Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="using-noexpand"></a>Utilisation de NOEXPAND  
- NOEXPAND s’applique uniquement aux *vues indexées*. Une vue indexée comporte un index cluster unique, créé sur cette dernière. Si une requête contient des références à des colonnes présentes à la fois dans une vue indexée et dans des tables de base, et que l'optimiseur de requête préconise l'utilisation de la vue indexée comme méthode d'exécution de la requête, il utilise alors l'index sur la vue. Cette fonctionnalité est appelée *correspondance de vue indexée*. Dans les versions antérieures à [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, l’utilisation automatique d’une vue indexée par l’optimiseur de requête est prise en charge uniquement dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+NOEXPAND s’applique uniquement aux *vues indexées*. Une vue indexée comporte un index cluster unique, créé sur cette dernière. Si une requête contient des références à des colonnes présentes à la fois dans une vue indexée et dans des tables de base, et que l'optimiseur de requête préconise l'utilisation de la vue indexée comme méthode d'exécution de la requête, il utilise alors l'index sur la vue. Cette fonctionnalité est appelée *correspondance de vue indexée*. Dans les versions antérieures à [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, l’utilisation automatique d’une vue indexée par l’optimiseur de requête est prise en charge uniquement dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- Toutefois, pour que l'optimiseur prenne en considération les vues indexées pour la mise en correspondance ou utilise une vue indexée référencée avec l'indicateur NOEXPAND, les options SET suivantes doivent avoir pour valeur ON.  
+Toutefois, pour que l'optimiseur prenne en considération les vues indexées pour la mise en correspondance ou utilise une vue indexée référencée avec l'indicateur NOEXPAND, les options SET suivantes doivent avoir pour valeur ON.  
  
 > [!NOTE]  
->  Azure SQL Database prend en charge l’utilisation automatique de vues indexées sans spécifier l’indicateur NOEXPAND.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] prend en charge l’utilisation automatique de vues indexées sans spécifier l’indicateur NOEXPAND.
   
 ||||  
 |-|-|-|  

@@ -14,15 +14,15 @@ ms.service: sql-database
 ms.custom: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/19/2018
+ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e5031c7e0b17177bb09ee91845626c9c32bd1bcc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
+ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698330"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37107237"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption avec prise en charge de BYOK pour Azure SQL Database et Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ Quand TDE est d’abord configuré pour utiliser un protecteur TDE dans Key Vaul
 
 ### <a name="general-guidelines"></a>Règles générales
 - Vérifiez qu’Azure Key Vault et Azure SQL Database sont dans le même locataire.  Les interactions entre coffre de clés et serveur qui sont dans des locataires différents **ne sont pas prises en charge**.
-- Décidez des abonnements qui vont être utilisés pour les ressources requises. Si par la suite vous déplacez le serveur parmi les abonnements, vous devrez réinstaller TDE avec des clés BYOK.
+- Décidez des abonnements qui vont être utilisés pour les ressources requises. Si par la suite vous déplacez le serveur parmi les abonnements, vous devrez réinstaller TDE avec des clés BYOK. En savoir plus sur le [déplacement de ressources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources)
 - Lors de la configuration de TDE avec l’option BYOK, il est important de prendre en compte la charge placée sur le coffre de clés par les opérations répétées de type wrap/unwrap. Par exemple, étant donné que toutes les bases de données associées à un serveur logique utilisent le même protecteur TDE, un basculement de ce serveur déclenchera autant d’opérations de clé par rapport au coffre qu’il y a de bases de données sur le serveur. D’après notre expérience et les [limites du service de coffre de clés](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) documentées, nous vous recommandons d’associer au maximum 500 bases de données Standard / à usage général ou 200 bases de données Premium / Critiques pour l’entreprise avec un coffre de clés Azure Key Vault dans un même abonnement, afin de garantir une disponibilité toujours aussi élevée lors de l’accès au protecteur TDE dans le coffre. 
 - Recommandé : Conservez une copie du protecteur TDE en local.  Pour ce faire, vous devez avoir un appareil HSM pour créer un protecteur TDE en local et un système de dépôt de clés pour stocker une copie locale du protecteur TDE.
 
@@ -68,6 +68,7 @@ Quand TDE est d’abord configuré pour utiliser un protecteur TDE dans Key Vaul
 - Créez un coffre de clés avec [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) activé pour éviter de perdre des données en cas de suppression accidentelle d’une clé ou d’un coffre de clés.  Vous devez utiliser [PowerShell pour activer la propriété « soft-delete »](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) dans le coffre de clés (cette option n’est pas encore disponible dans le portail Azure Key Vault, mais elle est exigée par SQL) :  
   - Les ressources supprimées de manière réversible sont conservées pendant une durée définie, 90 jours, sauf si elles sont récupérées ou vidées.
   - Les actions de **récupération** et de **vidage** ont leurs propres autorisations associées dans une stratégie d’accès au coffre de clés. 
+- Définissez un verrou de ressource sur le coffre de clés pour contrôler les utilisateurs autorisés à supprimer cette ressource critique et ainsi empêcher toute suppression accidentelle ou non autorisée.  [En savoir plus sur les verrous de ressources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources)
 
 - Accordez l’accès au serveur logique au Key Vault avec son identité Azure AD (Azure Active Directory).  Quand vous utilisez l’interface utilisateur du portail, l’identité Azure AD est automatiquement créée et les autorisations d’accès au Key Vault sont accordées au serveur.  Si vous utilisez PowerShell pour configurer TDE avec BYOK, l’identité Azure AD doit être créée et vérifiée. Consultez [Configurer TDE avecBYOK](transparent-data-encryption-byok-azure-sql-configure.md) pour obtenir des instructions détaillées sur l’utilisation de PowerShell.
 

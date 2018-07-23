@@ -15,12 +15,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df45518dc367d3b2a2c980ba39cad09084c30ecf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d433843076a83c8a09319c118bbd44e7f89a24d1
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401261"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262303"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Leçon 1-2 : Ajout et configuration d’un gestionnaire de connexions de fichiers plats
 Dans cette tâche, vous ajoutez un gestionnaire de connexions de fichiers plats au package que vous venez de créer. Un gestionnaire de connexions de fichiers plats permet à un package d'extraire des données d'un fichier plat. Grâce à ce Gestionnaire, vous pouvez spécifier le nom et l'emplacement du fichier, les paramètres régionaux et la page de codes et enfin, le format du fichier, y compris les séparateurs de colonnes, à appliquer lorsque le package extrait les données du fichier plat. Par ailleurs, vous pouvez spécifier manuellement le type de données pour les colonnes individuelles ou utiliser la boîte de dialogue **Suggérer les types de colonnes** pour mapper automatiquement les colonnes de données extraites aux types de données [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -95,7 +95,7 @@ Le gestionnaire de connexions de fichiers plats fournit des informations de para
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-    Le type de données suggéré pour la colonne **CurrencyID** n’est pas compatible avec le type de données du champ de la table de destination. Étant donné que le type de données de `DimCurrency.CurrencyAlternateKey` est nchar (3), le type de la colonne **CurrencyID** , chaîne [DT_STR], doit être changé en chaîne [DT_WSTR]. De plus, le champ `DimDate.FullDateAlternateKey` est défini avec le type de données date ; par conséquent, **CurrencyDate** doit être changé de [DT_Date] en date de base de données [DT_DBDATE].  
+    Le type de données suggéré pour la colonne **CurrencyID** n’est pas compatible avec le type de données du champ de la table de destination. Étant donné que le type de données de `DimCurrency.CurrencyAlternateKey` est nchar (3), le type de la colonne **CurrencyID**, chaîne [DT_STR], doit être remplacé par chaîne Unicode [DT_WSTR]. De plus, le champ `DimDate.FullDateAlternateKey` est défini avec le type de données date ; par conséquent, **CurrencyDate** doit être changé de [DT_Date] en date de base de données [DT_DBDATE].  
   
 2.  Dans la liste, sélectionnez la colonne CurrencyID et, dans le volet des propriétés, changez le type de données de la colonne **CurrencyID** de chaîne [DT_STR] en chaîne Unicode [DT_WSTR].  
   
@@ -104,7 +104,7 @@ Le gestionnaire de connexions de fichiers plats fournit des informations de para
 4.  Cliquez sur **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 3 : ajout et configuration d'un gestionnaire de connexions OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+[Étape 3 : Ajout et configuration d’un gestionnaire de connexions OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a> Voir aussi  
 [Gestionnaire de connexions de fichiers plats](../integration-services/connection-manager/flat-file-connection-manager.md)  

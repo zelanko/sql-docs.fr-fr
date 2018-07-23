@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1751c6c9b6a05cd4337bd376108ef8d7e3d84ea4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054220"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432238"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,8 +105,9 @@ Les variables de **table** ne sont pas prises en charge dans le modèle de raiso
   
 Les requêtes qui modifient des variables de **table** ne génèrent pas de plans d’exécution parallèles. Les performances peuvent être affectées quand des variables de **table** de grande taille ou des variables de **table** figurant dans des requêtes complexes sont modifiées. Dans ces situations, envisagez d'utiliser des tables temporaires à la place. Pour plus d’informations, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Il est toujours possible d’effectuer une mise en parallèle des requêtes qui lisent des variables de **table** sans les modifier.
   
-Il est impossible de créer explicitement des index sur des variables de **table** et aucune statistique n’est conservée sur les variables de **table**. Dans ces situations, les performances peuvent s'améliorer en utilisant les tables temporaires à la place, car elles prennent en charge les index et les statistiques. Pour plus d’informations sur les tables temporaires, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
-  
+Il est impossible de créer explicitement des index sur des variables de **table** et aucune statistique n’est conservée sur les variables de **table**. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a introduit une nouvelle syntaxe, qui permet de créer certains types d’index inline avec la définition de la table.  Il est ainsi possible de créer des index sur des variables de **table** dans le cadre de la définition de la table. Dans certains cas, les performances peuvent s’améliorer en utilisant plutôt des tables temporaires, car elles assurent une prise en charge totale des index et fournissent des statistiques. Pour plus d’informations sur les tables temporaires et la création d’index inline, voir [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
+
+
 Les contraintes CHECK, les valeurs DEFAULT et les colonnes calculées dans la déclaration de type **table** ne peuvent pas appeler des fonctions définies par l’utilisateur.
   
 L’opération d’affectation entre les variables de **table** n’est pas prise en charge.

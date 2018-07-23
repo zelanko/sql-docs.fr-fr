@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -60,16 +59,16 @@ helpviewer_keywords:
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 caps.latest.revision: 281
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d6828307311790e4b6d0fc92a398a27fb3462add
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 5822dd89bbff8bb6982e65a310cce74324bd9fd7
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744128"
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909579"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -512,7 +511,7 @@ WITH CHECK | WITH NOCHECK
   
  Une colonne ne peut pas être supprimée lorsqu'elle est :  
   
--   utilisée dans un index ;  
+-   utilisée dans un index, sous la forme d’une colonne clé ou un INCLUDE ;
   
 -   utilisée dans une contrainte CHECK, FOREIGN KEY, UNIQUE ou PRIMARY KEY ;  
   
@@ -645,7 +644,7 @@ Pour plus d’informations sur les restrictions relatives à **SWITCH** lors de 
   
  Si *partition_scheme_name* est spécifié, les règles pour [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) s’appliquent. La table doit déjà être partitionnée pour les données de lignes, et son schéma de partition doit utiliser les mêmes fonction de partition et colonnes de partition que le schéma de partition de FILESTREAM.  
   
- *filestream_filegroup_name* spécifie le nom d’un groupe de fichiers FILESTREAM. Le groupe de fichiers doit avoir un fichier qui est défini pour le groupe de fichiers à l’aide d’une instruction [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) ou [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ; sinon, une erreur est générée.  
+ *filestream_filegroup_name* spécifie le nom d’un groupe de fichiers FILESTREAM. Le groupe de fichiers doit avoir un fichier qui est défini pour le groupe de fichiers à l’aide d’une instruction [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) ou [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ; sinon, une erreur est générée.  
   
  **"** default **"** spécifie le groupe de fichiers FILESTREAM avec l’ensemble de propriétés DEFAULT. S'il n'y a aucun groupe de fichiers FILESTREAM, une erreur est générée.  
   

@@ -16,12 +16,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6735e372f7c1a4b49cdf57e73ee5cd82b2930bba
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 57cadee90ac69a76942c6b3c763ffb9900c4f8d8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332733"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297405"
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>Leçon 1-6 : Ajout et configuration des transformations de recherche
 Une fois que vous avez configuré la source de fichier plat pour extraire les données du fichier source, la tâche suivante consiste à définir les transformations de recherche nécessaires pour obtenir les valeurs de **CurrencyKey** et **DateKey**. Une transformation de recherche effectue une recherche en joignant les données dans la colonne d'entrée spécifiée à une colonne dans un dataset de référence. Le dataset de référence peut être une table ou une vue existante, une nouvelle table ou le résultat d'une instruction SQL. Dans ce didacticiel, la transformation de recherche utilise un gestionnaire de connexions OLE DB pour se connecter à la base de données qui contient les données servant de source au jeu de données de référence.  
@@ -41,7 +41,7 @@ Dans les deux cas, la transformation de recherche utilise le Gestionnaire de con
   
 1.  Dans la **boîte à outils SSIS**, développez **Commun**, puis faites glisser **Recherche** sur l'aire de conception de l'onglet **Flux de données** . Placez la recherche directement sous la source **Extract Sample Currency Data** .  
   
-2.  Sélectionnez la source de fichier plat **Extract Sample Currency Data** et faites glisser la flèche verte vers la transformation de **recherche** que vous venez d'ajouter pour connecter les deux composants.  
+2.  Cliquez sur la source de fichier plat **Extract Sample Currency Data** et faites glisser la flèche bleue vers la transformation de **recherche** que vous venez d’ajouter pour connecter les deux composants.  
   
 3.  Dans l'aire de conception **Flux de données** , cliquez sur **Recherche** dans la transformation de **Recherche** , puis remplacez le nom par **Lookup Currency Key**.  
   
@@ -114,7 +114,7 @@ Dans les deux cas, la transformation de recherche utilise le Gestionnaire de con
 12. Dans la fenêtre Propriétés, vérifiez que la propriété **LocaleID** a la valeur **Anglais (États-Unis)** et la propriété **DefaultCodePage** la valeur **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 7 : ajout et configuration de la destination OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+[Étape 7 : Ajout et configuration de la destination OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a> Voir aussi  
 [Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  
