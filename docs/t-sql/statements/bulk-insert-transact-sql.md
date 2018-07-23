@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,15 +27,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 caps.latest.revision: 153
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6388c41cf93e79b215927fbec6a2e31a4ef6ed3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075236"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782670"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ BULK INSERT
       { 'char' | 'native'| 'widechar' | 'widenative' } ]   
    [ [ , ] DATASOURCE = 'data_source_name' ]
    [ [ , ] ERRORFILE = 'file_name' ]
-   [ [ , ] ERRORFILE_DATASOURCE = 'data_source_name' ]   
+   [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]   
    [ [ , ] FIRSTROW = first_row ]   
    [ [ , ] FIRE_TRIGGERS ]   
    [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
@@ -427,6 +426,18 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
+```
+
+### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importation de données à partir d’un fichier dans Stockage Blob Azure et spécification d’un fichier d’erreurs   
+L’exemple suivant montre comment charger des données à partir d’un fichier CSV dans un emplacement Stockage Blob Azure qui a été configuré comme source de données externe et spécifier un fichier d’erreurs. Cela nécessite des informations d’identification délimitées à la base de données avec une signature d’accès partagé. Notez qu’en cas d’exécution sur Azure SQL Database, l’option ERRORFILE doit être accompagnée d’ERRORFILE_DATA_SOURCE. Sinon, l’importation peut échouer avec une erreur d’autorisations. Le fichier spécifié dans ERRORFILE ne doit pas exister dans le conteneur.
+
+```sql
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-01-19.csv'
+WITH (DATA_SOURCE = 'MyAzureInvoices',
+     FORMAT = 'CSV',
+     ERRORFILE = 'MyErrorFile',
+     ERRORFILE_DATA_SOURCE = 'MyAzureInvoices'); 
 ```
 
 Pour obtenir des exemples `BULK INSERT` complets, illustrant notamment la configuration des informations d’identification et de la source de données externe, consultez [Exemples d’accès en bloc à des données dans Stockage Blob Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
