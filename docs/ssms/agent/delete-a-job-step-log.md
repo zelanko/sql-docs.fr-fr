@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9135ca3588c968a236e3928ebb9bde78149eec74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eeb7e8830abb3de97bad35de63b75a5c63914e0e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041566"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980811"
 ---
 # <a name="delete-a-job-step-log"></a>Supprimer un journal d’étapes de travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à mo
     GO  
     ```  
   
-Pour plus d’informations, consultez [sp_delete_jobsteplog (Transact-SQL)](http://msdn.microsoft.com/en-us/e9ef4c99-abde-4038-b6a3-a25dcbaf0958).  
+Pour plus d’informations, consultez [sp_delete_jobsteplog (Transact-SQL)](http://msdn.microsoft.com/e9ef4c99-abde-4038-b6a3-a25dcbaf0958).  
   
 ## <a name="SMO"></a>Utilisation de SQL Server Management Objects  
 Utilisez les méthodes **DeleteJobStepLogs** de la classe **Job** à l’aide du langage de programmation de votre choix, tel que Visual Basic, Visual C# ou PowerShell. Pour plus d’informations, consultez[SQL Server Management Objects (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ea9047286b25eaae4820d5b7726a657fa19a22a
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1709d7ca64eedf5e4f0dd170606082e7f99f3e31
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094278"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083861"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>Interprétation des résultats des tests unitaires SQL Server
 Lorsque vous exécutez un test unitaire SQL Server, le résultat du test est généré automatiquement, enregistré sur le disque et résumé dans la fenêtre **Résultats des tests**. Dès que vous démarrez une série de tests, la fenêtre **Résultats des tests** apparaît et affiche la progression de la série de tests. Cet affichage comprend les tests en cours d'exécution et les tests qui ont été finalisés.  
@@ -39,5 +39,5 @@ Si votre équipe utilise un projet d'équipe Visual Studio Team Foundation Serve
 Pour plus d'informations sur l'enregistrement des résultats des tests, leur réutilisation et leur partage avec votre équipe, consultez [Procédure : enregistrer et ouvrir les résultats des tests dans Visual Studio 2010](http://msdn.microsoft.com/library/ms404662(VS.100).aspx) ou [Procédure : enregistrer et ouvrir les résultats des tests dans Visual Studio 2012](http://msdn.microsoft.com/library/ms404662.aspx).  
   
 ## <a name="see-also"></a> Voir aussi  
-[Exécution de tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
+[Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
   

@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecc38b525f07804f74c430b6acea99bf1712507e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a17d6a3f39ce45c3669ef9820b8b73d4c77a1b08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094121"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087081"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Vue d'ensemble des chaînes de connexion et des autorisations
 Pour exécuter des tests unitaires SQL Server, vous devez vous connecter à un serveur de base de données en utilisant une ou deux chaînes de connexion spécifiques. Chaque chaîne de connexion représente un compte disposant des autorisations spécifiques nécessaires pour effectuer une tâche ou un ensemble de tâches dans un script particulier dans le cadre du test. Vous pouvez spécifier ces chaînes dans la boîte de dialogue **Configuration de test SQL Server** ou en modifiant manuellement le fichier app.config de votre projet de test.  
@@ -43,7 +43,7 @@ Les chaînes spécifiées dans la boîte de dialogue de configuration du projet 
 ## <a name="windows-authentication-versus-sql-server-authentication"></a>Comparaison entre l’authentification Windows et l’authentification SQL Server  
 Lorsque vous spécifiez des chaînes de connexion, vous devez choisir entre l'utilisation de l'authentification Windows et l'authentification SQL. Une des raisons qui amènent à choisir l’authentification Windows est qu’elle prend mieux en charge l’utilisation de tests par une équipe que l’authentification SQL Server. Si vous choisissez l’authentification SQL Server, les chaînes de connexion sont chiffrées à l’aide de l’API de protection des données (DPAPI), selon les informations d’identification de l’utilisateur. Cela signifie que les tests de ce projet de test seront exécutés uniquement pour vous, et non pour les membres de l'équipe qui obtiennent les tests via le système de contrôle de code source après que vous les avez archivés. Pour exécuter des tests dans ce projet de test, les autres membres de votre équipe devront reconfigurer le projet de test à l'aide de leurs propres informations d'identification. Pour cela, ils doivent modifier la copie du fichier app.config ou utiliser la boîte de dialogue de configuration du projet.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Le script de test s'exécute au niveau d'autorisation du contexte d'exécution, qui est identique à celui appliqué pour les commandes de l'utilisateur qui sont exécutées sur la base de données lors d'une utilisation standard. L'action d'avant test, d'après test et les scripts TestInitialize et TestCleanup s'exécutent au niveau d'autorisation du contexte de privilèges.  
   
 En raison de la connexion à niveau d'autorisation plus élevé utilisée pour le script d'action d'avant test, vous pouvez effectuer la validation dans celui-ci. Dans ce script, vous pouvez également exécuter des commandes de script qui testent les autorisations. Pour plus d’informations sur les autorisations, consultez la section des tests unitaires SQL Server de [Autorisations requises pour SQL Server Data Tools](../ssdt/required-permissions-for-sql-server-data-tools.md).  

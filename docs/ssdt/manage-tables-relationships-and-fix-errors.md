@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 729e5866-aa6f-4c7d-9c75-aa2ae5ab9269
 caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbba56a9a251a39e7f5504279a0d58c5a5637688
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 876d0668cccc034701f2df0f44005e19b8c6158d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094134"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087531"
 ---
 # <a name="manage-tables-relationships-and-fix-errors"></a>Gérer des tables et des relations, et résoudre les erreurs
 Les rubriques de cette section décrivent la procédure d'utilisation du Concepteur de tables pour concevoir des tables et gérer les relations entre tables. Des rubriques supplémentaires indiquent comment résoudre les erreurs courantes de syntaxe ou de sémantique.  
@@ -29,5 +29,5 @@ Les rubriques de cette section décrivent la procédure d'utilisation du Concept
 |Rubrique|Description|  
 |---------|---------------|  
 |[Guide pratique : Utiliser le Concepteur de tables pour gérer les tables et les relations](../ssdt/how-to-use-the-table-designer-to-manage-tables-and-relationships.md)|Utilisez le nouveau Concepteur de tables pour concevoir des tables et gérer les relations entre tables.|  
-|[Guide pratique : Résoudre les erreurs](../ssdt/how-to-fix-errors.md)|Suivez les erreurs syntaxiques ou sémantiques qui s’affichent dans le volet Liste d’erreurs pour les corriger.|  
+|[Procédure : résoudre les erreurs](../ssdt/how-to-fix-errors.md)|Suivez les erreurs syntaxiques ou sémantiques qui s’affichent dans le volet Liste d’erreurs pour les corriger.|  
   

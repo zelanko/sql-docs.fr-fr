@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fc026287cb292f3074afe4392d38088b3ba456d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094319"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087141"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procédure : exécuter des tests unitaires SQL Server en utilisant Team Foundation Build
 Utilisez Team Foundation Build pour exécuter vos tests unitaires SQL Server dans un test de vérification de la génération. Configurez les tests unitaires pour déployer la base de données, générer des données de test, puis exécuter les tests sélectionnés. Si vous n'êtes pas familiarisé avec Team Foundation Build, vous devez vérifier les informations suivantes avant de suivre les procédures de cette rubrique :  
@@ -286,7 +286,7 @@ Dans cette procédure, vous archivez tous les fichiers de la solution. Ces fichi
     L'onglet **En attente** de l'**Explorateur de builds** s'affiche. Pour plus d'informations, consultez [Gérer et afficher des builds terminées (Visual Studio 2010)](http://msdn.microsoft.com/library/ms181730(VS.100).aspx) ou [Gérer vos builds dans l'Explorateur de builds (Visual Studio 2012)](http://msdn.microsoft.com/library/ms181732.aspx).  
   
 ## <a name="see-also"></a> Voir aussi  
-[Exécution de tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
+[Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 [Créer une définition de build de base](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
 [Mettre une build en file d'attente](http://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
 [Surveiller la progression d'une build en cours d'exécution](http://msdn.microsoft.com/library/ms181724(VS.100).aspx)  

@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.DatabaseMethodNameDialog
 - sql.data.tools.unittesting.designer
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e197b3aa5a5383a40e20e366edb4d5b9c6f98c4b
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4b52fc60f3102e7b6a38d254fba682ab4321d804
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094193"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088331"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Création et définition de tests unitaires SQL Server
 Exécutez des tests unitaires SQL Server pour vérifier si les modifications apportées à un ou plusieurs objets de base de données d'un schéma empêchent le fonctionnement de certaines fonctionnalités existantes dans une application de base de données. Ces tests complètent les tests unitaires créés par les développeurs de logiciels. Vous devez exécuter les deux types de tests pour vérifier le comportement de votre application.  

@@ -18,12 +18,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee54d948bb5acebaf55a3b0137677bf72013570d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16ce8b8901e94ea995b1ac0c517d0df7f7304922
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048436"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979312"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Créer des requêtes qui utilisent autre chose qu'une table (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,5 +147,5 @@ FROM
      fn_GetWholeTeam ('VPA30890F')  
 ```  
   
-« VPA30890F » est l'ID d'employé du responsable de l'équipe à extraire. Pour plus d’informations sur l’ajout d’une fonction définie par l’utilisateur à une requête, consultez [Ajouter des tables à des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Pour obtenir une description complète des fonctions définies par l’utilisateur, consultez [Fonctions définies par l’utilisateur](http://msdn.microsoft.com/en-us/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
+« VPA30890F » est l'ID d'employé du responsable de l'équipe à extraire. Pour plus d’informations sur l’ajout d’une fonction définie par l’utilisateur à une requête, consultez [Ajouter des tables à des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Pour obtenir une description complète des fonctions définies par l’utilisateur, consultez [Fonctions définies par l’utilisateur](http://msdn.microsoft.com/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
   

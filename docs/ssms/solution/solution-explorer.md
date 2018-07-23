@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 02ac675f7dd209cb538e90142f6b9049068e2ad7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043616"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045957"
 ---
 # <a name="solution-explorer"></a>Explorateur de solutions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ Utilisez ces conteneurs pour effectuer les tâches suivantes :
   
 Les éléments contenus dans les projets dépendent du type de projet et de l'utilisation ou non de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
 Utilisez les rubriques ci-dessous pour commencer à utiliser les solutions SQL Server :  
   
 |||  

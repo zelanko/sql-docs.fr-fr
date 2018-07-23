@@ -17,12 +17,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f6991e63b876f3a9d31b318907941e46a55d4a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046646"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981312"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Environnement SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,6 +35,6 @@ Présente les fonctionnalités générales de l'interface utilisateur telles que
 [Explorateur de solutions](../ssms/solution/solution-explorer.md)  
 Présente l'Explorateur de solutions qui vous offre une vue organisée de vos projets et de leurs fichiers, ainsi qu'un accès aux commandes pour les gérer.  
   
-[Contrôle de code source de l'Explorateur de solutions](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
+[Contrôle de code source de l'Explorateur de solutions](https://msdn.microsoft.com/library/ms173879.aspx)  
 Décrit comment [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] s'intègre aux produits de contrôle de code source.  
   

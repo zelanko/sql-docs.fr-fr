@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b3d6d4c85a287dc000d761df1eafeb49e4261336
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 078e69c2df09253141aa55d66e387f7972ce8b2e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094158"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087881"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>Comment : installer et gérer des extensions de fonctionnalités
 Il est possible d’ajouter des règles d’analyse du code de la base de données, des conditions pour les tests unitaires de base de données et des contributeurs Build and Deployment pour améliorer les fonctionnalités offertes par les différentes éditions de Visual Studio, y compris SQL Server Data Tools. Cependant, vous devrez tout d’abord installer l’extension de fonctionnalité pour pouvoir l’utiliser, qu’elle ait été créée par vous ou par quelqu’un d’autre.  
@@ -60,5 +60,5 @@ Pour réduire le risque, n’installez l’extension que si elle provient d’un
 Copiez l'assembly signé (.dll) dans le dossier d'installation correct. Fermez et rouvrez Visual Studio. L'extension doit maintenant être disponible.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Étendre les fonctionnalités de la base de données](../ssdt/extending-the-database-features.md)  
+[Extension des fonctionnalités de base de données](../ssdt/extending-the-database-features.md)  
   

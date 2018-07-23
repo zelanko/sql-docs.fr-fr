@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06d284ea40dfb2650edbe78f8aa8090d00dde55d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049936"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052967"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] inclut des concepteurs visuels pour générer des requêtes [!INCLUDE[tsql](../../includes/tsql_md.md)] , des tables et des bases de données de diagramme.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
 Utilisez les tâches suivantes pour commencer à utiliser Visual Database Tools :  
   
 |**Description**|**Rubrique**|  

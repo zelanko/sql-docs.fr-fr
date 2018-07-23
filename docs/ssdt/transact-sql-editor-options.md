@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
 - sql.data.tools.SqlExecutionAdvancedSettingsOption
@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e626e50cebf0aba8acde865bfcfd78f1023f978
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094343"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085941"
 ---
 # <a name="transact-sql-editor-options"></a>Options de l'Éditeur Transact-SQL
 Cette rubrique contient des informations sur certaines options de l'Éditeur Transact-SQL. Pour définir ces options, accédez à la boîte de dialogue **Option** depuis le menu **Outils\Options**.  
@@ -66,10 +66,10 @@ Cette rubrique contient des informations sur certaines options de l'Éditeur Tra
 |**SET QUERY_GOVERNOR_COST_LIMIT**|Remplace la valeur actuellement définie pour la connexion active. Pour plus d'informations, consultez [SET QUERY_GOVERNOR_COST_LIMIT](http://go.microsoft.com/fwlink/?LinkId=238749).|  
 |**SET ANSI_DEFAULTS**|Contrôle un groupe de paramètres Microsoft® SQL Server™ qui spécifient de façon collective le comportement d'une norme SQL-92. Pour plus d'informations, consultez [SET ANSI_DEFAULTS](http://go.microsoft.com/fwlink/?LinkId=238750).|  
 |**SET QUOTED_IDENTIFIER**|Force Microsoft® SQL Server™ à suivre les règles SQL-92 concernant les guillemets délimitant les identificateurs et les chaînes littérales. Les identificateurs entre guillemets doubles peuvent être des mots clés Transact-SQL réservés ou contenir des caractères qui ne sont généralement pas autorisés dans les règles syntaxiques Transact-SQL se rapportant aux identificateurs. Pour plus d'informations, consultez [SET QUOTED_IDENTIFIER](http://go.microsoft.com/fwlink/?LinkId=238751).|  
-|**SET ANSI_NULL_DFLT_ON**|Modifie le comportement de la session de manière à supplanter l'acceptation par défaut des valeurs NULL dans les nouvelles colonnes lorsque l'option ANSI null default de la base de données a la valeur False. Pour plus d'informations, consultez [SET ANSI_NULL_DFLT_ON](http://go.microsoft.com/fwlink/?LinkID=238752).|  
+|**SET ANSI_NULL_DFLT_ON**|Modifie le comportement de la session de manière à supplanter l'acceptation par défaut des valeurs NULL dans les nouvelles colonnes lorsque l'option ANSI null default de la base de données a la valeur False. Pour plus d’informations, voir [SET ANSI_NULL_DFLT_ON](http://go.microsoft.com/fwlink/?LinkID=238752).|  
 |**SET IMPLICIT_TRANSACTIONS**|Lorsque la valeur est **ON**, définit la connexion en mode de transaction implicite. Si la valeur est **OFF**, la connexion est remise en mode de validation automatique. Pour plus d'informations, consultez [SET IMPLICIT_TRANSACTIONS](http://go.microsoft.com/fwlink/?LinkId=238753).|  
-|**SET CURSOR_CLOSE_ON_COMMIT**|Contrôle si un curseur est fermé ou non lorsqu'une transaction est validée. Pour plus d'informations, consultez [SET CURSOR_CLOSE_ON_COMMIT](http://go.microsoft.com/fwlink/?LinkId=238754).|  
-|**SET ANSI_PADDING**|Contrôle le mode de stockage dans la colonne des valeurs dont la longueur est inférieure à la taille définie pour la colonne et de celles contenant des espaces à droite pour les données de type **char**, **varchar**, **binary**et **varbinary** . Pour plus d'informations, consultez [SET ANSI_PADDING](http://go.microsoft.com/fwlink/?LinkId=238755).|  
+|**SET CURSOR_CLOSE_ON_COMMIT**|Contrôle si un curseur est fermé ou non lorsqu'une transaction est validée. Pour plus d’informations, voir [SET CURSOR_CLOSE_ON_COMMIT](http://go.microsoft.com/fwlink/?LinkId=238754).|  
+|**SET ANSI_PADDING**|Contrôle le mode de stockage dans la colonne des valeurs dont la longueur est inférieure à la taille définie pour la colonne et de celles contenant des espaces à droite pour les données de type **char**, **varchar**, **binary**et **varbinary** . Pour plus d’informations, voir [SET ANSI_PADDING](http://go.microsoft.com/fwlink/?LinkId=238755).|  
 |**SET ANSI_WARNINGS**|Spécifie le comportement de la norme SQL-92 pour plusieurs conditions d'erreur. Pour plus d'informations, consultez [SET ANSI_WARNINGS](http://go.microsoft.com/fwlink/?LinkId=238758).|  
 |**SET ANSI_NULLS**|Spécifie le comportement conforme à SQL-92 des opérateurs de comparaison Égal à (**=**) et Différent de (**<>**) lorsque vous les utilisez avec les valeurs Null. Pour plus d'informations, consultez [SET ANSI_NULLS](http://go.microsoft.com/fwlink/?LinkId=238759).|  
   

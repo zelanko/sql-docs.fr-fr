@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6bc03001c6bad49728134da6fd65f5fd0ee40873
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 7852d23e283c21f62856e4b3b9242c5e5115d0cd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094326"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085607"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Procédure pas à pas : Étendre le déploiement du projet de base de données pour analyser le plan de déploiement
 Vous pouvez créer des contributeurs de déploiement pour effectuer des actions personnalisées lorsque vous déployez un projet SQL. Vous pouvez créer soit un DeploymentPlanModifier soit un DeploymentPlanExecutor. Utilisez un DeploymentPlanModifier pour changer le plan avant son exécution et un DeploymentPlanExecutor pour effectuer des opérations alors que le plan est en cours d'exécution. Dans cette procédure pas à pas, vous allez créer un DeploymentPlanExecutor nommé DeploymentUpdateReportContributor qui crée un rapport sur les actions qui sont effectuées lorsque vous déployez un projet de base de données. Ce contributeur de génération acceptant un paramètre pour contrôler si le rapport est généré, vous devez effectuer une étape supplémentaire requise.  

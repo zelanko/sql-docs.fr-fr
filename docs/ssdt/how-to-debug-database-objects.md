@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7379c550b8bcf9ac18b1e7590bad8a10bdc83f3c
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 989dfe9b87f5fd95e0be4eda1e9090a4a6f04540
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094211"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088501"
 ---
 # <a name="how-to-debug-database-objects"></a>Procédure : déboguer des objets de base de données
 Un test unitaire SQL Server inclut les éléments suivants :  
@@ -100,6 +100,6 @@ Les procédures de cette rubrique décrivent comment déboguer des objets de bas
 3.  (Facultatif) Pour ouvrir une autre fenêtre, ouvrez le menu **Déboguer**, pointez sur **Fenêtres**, puis cliquez sur **Points d'arrêt**, **Sortie** ou **Immédiat**.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Exécution de tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
+[Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 [Débogage de Transact-SQL (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkId=163975)  
   

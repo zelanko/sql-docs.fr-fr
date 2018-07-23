@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1476ab23a36faee220445218470c25713a47ebac
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: dead1b79e36fbda2565eaf64cb26dc63db0a7af7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094260"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088441"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procédure : créer un test unitaire SQL Server vide
 Incluez des tests unitaires dans votre projet de base de données pour vérifier que les modifications que vous apportez aux objets de base de données n'empêchent pas les fonctionnalités existantes. Les procédures suivantes expliquent comment créer des tests unitaires SQL Server pour n'importe quel objet de base de données. SQL Server Data Tools offre une prise en charge supplémentaire pour des fonctions de base de données, des déclencheurs et des procédures stockées. Pour plus d’informations, consultez [Procédure : créer des tests unitaires SQL Server pour des fonctions, des déclencheurs ou des procédures stockées](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
@@ -32,7 +32,7 @@ Vous avez deux options pour créer un test unitaire SQL Server :
   
 -   Créer un test unitaire SQL Server dans une nouvelle classe de test.  
   
-    Tous les tests unitaires SQL Server dans une classe de test donnée utilisent les mêmes scripts TestInitialize et TestCleanup. Créez une classe de test si vous souhaitez que votre test unitaire utilise des scripts TestInitialize et TestCleanup différents de ceux des autres tests unitaires. Pour plus d’informations, consultez [Scripts des tests unitaires SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md).  
+    Tous les tests unitaires SQL Server dans une classe de test donnée utilisent les mêmes scripts TestInitialize et TestCleanup. Créez une classe de test si vous souhaitez que votre test unitaire utilise des scripts TestInitialize et TestCleanup différents de ceux des autres tests unitaires. Pour plus d'informations, consultez [Scripts des tests unitaires SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md).  
   
 -   Créer un test unitaire SQL Server dans une classe de test existante.  
   

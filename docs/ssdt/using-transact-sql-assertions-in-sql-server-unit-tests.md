@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe428b40676e90d7ed849e1d93c69c9797cf126e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1fb4f10489c1284625b8797381d914291bc2eb1d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094284"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088341"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Utilisation d'assertions Transact-SQL dans les tests unitaires SQL Server
 Dans un test unitaire SQL Server, un script de test Transact\-SQL s'exécute et retourne un résultat. Parfois, les résultats sont retournés sous la forme d'un jeu de résultats. Validez les résultats à l'aide de conditions de test. Par exemple, utilisez une condition de test pour vérifier le nombre de lignes qui ont été retournées dans un jeu de résultats spécifique ou pour vérifier le temps qui a été nécessaire à l'exécution d'un test spécifique. Pour plus d’informations sur les conditions de test, consultez [Utilisation de conditions de test dans les tests unitaires SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -60,7 +60,7 @@ Où :
   
 Tous les paramètres non spécifiés sont ignorés. Vous passez ces paramètres à l'instruction RAISERROR dans votre code de base de données. Si vous spécifiez MatchFirstError = true, l'attribut correspond à une des erreurs SqlErrors dans l'exception. Le comportement par défaut (MatchFirstError = truei) n'est utilisé que pour correspondre à la première erreur qui se produit.  
   
-Pour obtenir un exemple montrant comment utiliser les exceptions attendues et un test unitaire de SQL Server négatif, consultez [Procédure pas à pas : création et exécution d’un Test unitaire SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Pour obtenir un exemple montrant comment utiliser les exceptions attendues et un test unitaire de SQL Server négatif, consultez [Procédure pas à pas : création et exécution d’un test unitaire SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="the-raiserror-statement"></a>Instruction RAISERROR  
   

@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d6fadfa9b084a16f6464bbebf6d6a8e32b7cbbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046666"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015968"
 ---
 # <a name="template-explorer"></a>Explorateur de modèles
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ Créez des modèles personnalisés pour les tâches que vous effectuez fréquemm
   
 L'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde_md.md)] prend également en charge les extraits de code, que vous pouvez insérer à des emplacements spécifiques dans un script en cliquant avec le bouton droit à cet emplacement.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
 Utiliser les rubriques suivantes pour commencer à utiliser les modèles  
   
 |**Description**|**Rubrique**|  

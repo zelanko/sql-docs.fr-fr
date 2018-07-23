@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
 caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1104d58abf423ff5e6f8c0f88029933c8cb606f6
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: bf71ba73f3fba74764236fcd08782226cef937fc
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094289"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086081"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Procédure : mettre à niveau une condition de test personnalisée Visual Studio 2010 d'une version antérieure vers SQL Server Data Tools
 Pour utiliser une condition de test créée dans une version antérieure à SQL Server Data Tools, vous devez la mettre à niveau :  
@@ -49,7 +49,7 @@ Pour mettre à jour les références de projet :
   
 6.  Dans la liste **Nom du composant**, sélectionnez **System.ComponentModel.Composition** et cliquez sur **OK**.  
   
-7.  Ajoutez les références d'assembly nécessaires. Cliquez avec le bouton droit sur le nœud du projet, puis cliquez sur **Ajouter une référence**. Cliquez sur **Parcourir** et accédez au dossier C:\Program Files (x86)\\Microsoft SQL Server\110\DAC\bin. Choisissez Microsoft.Data.Tools.Schema.Sql.dll et cliquez sur Ajouter, puis sur OK.  
+7.  Ajoutez les références d'assembly nécessaires. Cliquez avec le bouton droit sur le nœud du projet, puis cliquez sur **Ajouter une référence**. Cliquez sur **Parcourir** et accédez au dossier C:\Program Files (x86)\\Microsoft SQL Server\110\DAC\Bin. Choisissez Microsoft.Data.Tools.Schema.Sql.dll et cliquez sur Ajouter, puis sur OK.  
   
 8.  Dans le menu **Projet**, cliquez sur **Décharger le projet**.  
   

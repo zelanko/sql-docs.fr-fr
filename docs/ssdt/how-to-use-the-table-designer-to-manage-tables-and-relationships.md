@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.columnspecification.index.dialog
 - sql.data.tools.design.table.columnsgrid.view
@@ -18,12 +18,12 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ffd1c415ab2ae463a539adc0dbbdb719764efb7
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 199f12a6318b9a283a62176289a2c6501444255e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094140"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085171"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procédure : utiliser le Concepteur de tables pour gérer les tables et les relations
 Le Concepteur de tables offre une expérience visuelle parallèle à l’Éditeur Transact\-SQL pour la création et la modification de la structure des tables, y compris des objets de programmation propres aux tables, pour les bases de données SQL Server.  Il s’exécute lorsque l’utilisateur crée une table pour une base de données connectée ou un projet, ou double-clique pour modifier une table dans l’Explorateur d’objets SQL Server ou l’Explorateur de solutions.  

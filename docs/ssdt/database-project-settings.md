@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DebugProperties
 - sql.data.tools.dacsettings.dialog
@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cdf95f469cd5a94514d0e91d13ef7b9125c1531f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094325"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087191"
 ---
 # <a name="database-project-settings"></a>Paramètres du projet de base de données
 Vous utilisez des paramètres de projet de base de données pour contrôler des aspects de vos configurations de build, de débogage et de bases de données. Ces paramètres peuvent être répartis dans les catégories suivantes :  
@@ -237,5 +237,5 @@ Vous pouvez utiliser cette page pour définir les variables de serveur et de bas
 ## <a name="bkmk_code_analysis"></a>Analyse du code  
 Vous pouvez utiliser l'analyse du code pour découvrir d'éventuels problèmes dans vos scripts, tels que les problèmes de conception, d'attribution de nom et de performances. Les règles pour les projets de base de données sont organisées en ensembles de règles prédéfinis qui ciblent des zones spécifiques, et vous pouvez activer ou désactiver une règle dans l'onglet **Analyse du code** de la page de propriétés **Propriétés du projet** . Dans le même onglet, vous pouvez spécifier que l'analyse du code soit exécutée automatiquement chaque fois qu'un projet est généré, ou si les avertissements doivent être traités comme des erreurs.  
   
-Pour utiliser l'analyse du code manuellement, dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur votre projet et sélectionnez **Exécuter l'analyse du code**. Les avertissements d'analyse du code s'affichent dans la fenêtre **Liste d'erreurs** . Vous pouvez double-cliquer sur un avertissement pour accéder au code source qui contient le problème, et vous pouvez afficher des informations supplémentaires et les corrections possibles pour un avertissement à l'aide du menu contextuel **Afficher l'aide sur l'erreur**. Pour plus d'informations sur l'analyse du code, consultez [Analyse du code de la base de données pour améliorer la qualité du code](http://msdn.microsoft.com/en-us/library/dd172133.aspx).  
+Pour utiliser l’analyse du code manuellement, cliquez avec le bouton droit sur votre projet dans **l’Explorateur de solutions** et sélectionnez **Exécuter l’analyse du code**. Les avertissements d'analyse du code s'affichent dans la fenêtre **Liste d'erreurs** . Vous pouvez double-cliquer sur un avertissement pour accéder au code source comportant le problème. Pour afficher des informations supplémentaires et les corrections possibles d’un avertissement, utilisez le menu contextuel **Afficher de l’aide sur l’erreur**. Pour plus d'informations sur l'analyse du code, consultez [Analyse du code de la base de données pour améliorer la qualité du code](http://msdn.microsoft.com/en-us/library/dd172133.aspx).  
   
