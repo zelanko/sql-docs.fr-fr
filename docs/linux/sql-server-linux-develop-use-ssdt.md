@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 6f5a4b479c9ca217d0bde9535c28b301ea7715bc
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: e9bd11aefb01b607e02f11ebecc5adae7acf70ea
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38978901"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086971"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Utiliser Visual Studio pour créer des bases de données pour SQL Server sur Linux
 
@@ -116,5 +116,5 @@ Pour plus d’informations sur le développement d’une base de données avec l
 [Téléchargez et installez Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [Documents MSDN SSDT]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Didacticiel : écriture d'instructions Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
+Transact-SQL Reference (Database Engine)[Didacticiel : écriture d'instructions Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
 [Référence Transact-SQL (moteur de base de données)]:https://msdn.microsoft.com/library/bb510741.aspx

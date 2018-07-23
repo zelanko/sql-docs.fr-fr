@@ -1,5 +1,5 @@
 ---
-title: MSmerge_altsyncpartners (Transact-SQL) | Documents Microsoft
+title: MSmerge_altsyncpartners (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSmerge_altsyncpartners system table
 ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29090e7cfa51e9b1ac1daf63485b5076d35838ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f642f11414d604836db895e520678567ef710265
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004636"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103750"
 ---
 # <a name="msmergealtsyncpartners-transact-sql"></a>MSmerge_altsyncpartners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSmerge_altsyncpartners** table effectue le suivi de l’association de qui sont par les partenaires de synchronisation en cours pour un serveur de publication. Cette table est stockée dans les bases de données de publication et d’abonnement.  
+  Le **MSmerge_altsyncpartners** table effectue le suivi de l’association de qui sont les partenaires de synchronisation en cours pour un serveur de publication. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|Identificateur du serveur de publication d'origine.|  
 |**alternate_subid**|**uniqueidentifier**|Identificateur de l'Abonné qui est le partenaire de synchronisation alternatif.|  
