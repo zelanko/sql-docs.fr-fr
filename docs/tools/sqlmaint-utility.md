@@ -1,5 +1,5 @@
 ---
-title: Utilitaire sqlmaint | Documents Microsoft
+title: sqlmaint (utilitaire) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077896"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997141"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -245,7 +245,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   En cas de panne générale.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L’utilitaire **sqlmaint** peut être exécuté par tout utilisateur Windows disposant de l’autorisation **Lecture et exécution** sur `sqlmaint.exe`, qui est stockée par défaut dans le dossier `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` . En outre, la connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée avec **-login_ID** doit disposer des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requises pour effectuer l’action spécifiée. Si la connexion à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise l'authentification Windows, le nom d'ouverture de session [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mappé à l'utilisateur Windows authentifié doit disposer des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requises pour effectuer l'action spécifiée.  
   
  Par exemple, l’utilisation de l’argument **-BkUpDB** nécessite l’autorisation d’exécution de l’instruction BACKUP. L’utilisation de l’argument **-UpdOptiStats** nécessite l’autorisation d’exécution de l’instruction UPDATE STATISTICS. Pour plus d'informations, consultez la section « Autorisations » des rubriques correspondantes de la documentation en ligne.  

@@ -1,5 +1,5 @@
 ---
-title: Propriétés de canaux nommés | Documents Microsoft
+title: Propriétés de canaux nommés | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6002657f6863f9ca5212516ab6f7afd37c2a348
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069366"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997151"
 ---
 # <a name="named-pipes-properties"></a>Propriétés de Canaux nommés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,6 +50,6 @@ ms.locfileid: "33069366"
 ## <a name="see-also"></a> Voir aussi  
  [Activer ou désactiver un protocole réseau de serveur](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Choix d'un protocole réseau](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
- [Création d'une chaîne de connexion valide à l'aide de canaux nommés](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+ [Création d’une chaîne de connexion valide avec des canaux nommés](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

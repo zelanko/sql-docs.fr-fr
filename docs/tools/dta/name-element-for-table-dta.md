@@ -1,5 +1,5 @@
 ---
-title: Nom d’élément pour la Table (DTA) | Documents Microsoft
+title: Nom d’élément pour la Table (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 525f18c180337358abd98d84b59276448729e0bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068356"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039641"
 ---
 # <a name="name-element-for-table-dta"></a>Name, élément pour les tables (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

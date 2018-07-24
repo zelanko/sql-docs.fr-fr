@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb9f67a25adf9192dbdf896766d9a98a4ce49074
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069560"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035568"
 ---
 # <a name="sql-server-browser-properties-advanced-tab"></a>Propriétés de SQL Server Browser (onglet Avancé)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

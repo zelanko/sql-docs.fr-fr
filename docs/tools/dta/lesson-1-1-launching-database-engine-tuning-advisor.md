@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f95e9b831b21ab71053c04d2ab2bc27238906c4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33072906"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048334"
 ---
 # <a name="lesson-1-1---launching-database-engine-tuning-advisor"></a>Leçon 1-1 : Lancement de l’Assistant Paramétrage du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

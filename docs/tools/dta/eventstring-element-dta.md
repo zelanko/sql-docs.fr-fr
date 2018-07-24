@@ -1,5 +1,5 @@
 ---
-title: Eventstring, élément (DTA) | Documents Microsoft
+title: EventString, élément (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c90feb22a7850c024b355816a693542a417d31c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069016"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987411"
 ---
 # <a name="eventstring-element-dta"></a>EventString, élément (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

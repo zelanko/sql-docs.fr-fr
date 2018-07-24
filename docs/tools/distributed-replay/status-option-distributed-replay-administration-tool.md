@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea43e0ba0039523786ee6d9850c7426828359c69
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33070356"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035809"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Option status (outil d'administration Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ dreplay status [-m controller] [-f status_interval]
 dreplay status –m localhost -f 60  
 ```  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Vous devez exécuter l'outil d'administration en tant qu'utilisateur interactif, comme un utilisateur local ou un compte d'utilisateur de domaine. Pour utiliser un compte d'utilisateur local, l'outil d'administration et le contrôleur doivent s'exécuter sur le même ordinateur.  
   
  Pour plus d’informations, voir [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38a7e0a75dc850b5f4ef883d44c6ceb4d426b651
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077006"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980961"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organiser les colonnes affichées dans une trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "33077006"
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|Audit Login|648|  
-| 1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
+|1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
 -   Choisissez une seule colonne de regroupement pour grouper et agréger les événements de trace. Lorsque vous ne choisissez qu'une colonne de données pour le regroupement, la fenêtre de trace affiche les événements en les groupant en fonction des valeurs de cette colonne de données et réduit tous les événements sous celle-ci. Un signe positif (**+**) apparaît à gauche de l’événement dans la colonne de données choisie pour le regroupement, tandis que le nombre d’événements réduits sous celle-ci apparaît entre parenthèses à droite de l’événement. L’exemple suivant indique comment la grille de la fenêtre de trace apparaît si vous choisissez uniquement la colonne de données **EventClass** pour le regroupement. Notez que tous les événements sont organisés sous la colonne de données **EventClass** . Pour afficher tous les événements, cliquez sur le signe plus pour développer et afficher toutes les classes d'événements correspondantes.  

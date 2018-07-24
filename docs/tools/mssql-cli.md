@@ -1,6 +1,6 @@
 ---
-title: MSSQL-cli | Documents Microsoft
-description: MSSQL-cli est un outil de requête de ligne de commande interactive pour SQL Server qui s’exécute sur Windows, Mac OS ou Linux.
+title: MSSQL-cli | Microsoft Docs
+description: MSSQL-cli est un outil de requête de ligne de commande interactive pour SQL Server qui s’exécute sur Windows, macOS ou Linux.
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
 ms.prod: sql
@@ -15,18 +15,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: bf49d6676b64386985a8af46676bab4e9c9c134d
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234694"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037473"
 ---
-# <a name="mssql-cli-command-line-query-tool-for-sql-server"></a>outil de ligne de commande de requête MSSQL-cli pour SQL Server
+# <a name="mssql-cli-command-line-query-tool-for-sql-server"></a>outil de ligne de commande de requête de MSSQL-cli pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-MSSQL-cli est un outil de ligne de commande interactif pour l’exécution de requêtes SQL Server, installez-le sur Windows, Mac OS ou Linux.
+MSSQL-cli est un outil de ligne de commande interactif pour l’interrogation de SQL Server, installez-le sur Windows, macOS ou Linux.
 
-## <a name="install-mssql-cli"></a>Installer mssql-cli
+## <a name="install-mssql-cli"></a>Installation de mssql-cli
 
 Pour obtenir des instructions d’installation détaillées, consultez le [Guide d’Installation](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md), ou si vous connaissez pip, installer en exécutant la commande suivante :
 
@@ -34,7 +34,7 @@ Pour obtenir des instructions d’installation détaillées, consultez le [Guide
 
 ## <a name="mssql-cli-documentation"></a>documentation de MSSQL-cli
 
-Documentation pour mssql-cli se trouve dans le [mssql-cli GitHub référentiel](https://github.com/dbcli/mssql-cli).
+Documentation pour mssql-cli se trouve dans le [mssql-cli référentiel](https://github.com/dbcli/mssql-cli).
 
 - [Page principale/Lisez-moi](https://github.com/dbcli/mssql-cli)
 - [Guide d’installation](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md)

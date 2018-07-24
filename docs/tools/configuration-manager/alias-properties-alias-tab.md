@@ -1,5 +1,5 @@
 ---
-title: '&lt;Alias&gt; propriétés (onglet Alias) | Documents Microsoft'
+title: '&lt;Alias&gt; propriétés (onglet Alias) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e2ed13706eb817c9603c354ee268ba188e7c3d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069706"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999911"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>Propriétés de &lt;Alias&gt; (onglet Alias)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,6 +43,6 @@ ms.locfileid: "33069706"
 ## <a name="see-also"></a> Voir aussi  
  [Création d'une chaîne de connexion valide à l'aide du protocole de mémoire partagée](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [Création d’une chaîne de connexion valide avec TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [Création d'une chaîne de connexion valide à l'aide de canaux nommés](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+ [Création d’une chaîne de connexion valide avec des canaux nommés](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

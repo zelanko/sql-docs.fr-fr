@@ -1,5 +1,5 @@
 ---
-title: Utilitaire ssbdiagnose (Service Broker) | Documents Microsoft
+title: Utilitaire (Service Broker) ssbdiagnose | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -32,11 +32,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebe736c1282342332a99a156dd95aadbe8cf32a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078206"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046827"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitaire ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -315,7 +315,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>Variables d'environnement sqlcmd  
  L’utilitaire **ssbdiagnose** prend en charge les variables d’environnement SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD et SQLCMDLOGINTIMOUT, qui sont également utilisées par l’utilitaire **sqlcmd** . Vous pouvez définir les variables d’environnement soit en utilisant l’invite de commandes SET, soit en utilisant la commande **setvar** dans des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutés à l’aide de **sqlcmd**. Pour plus d’informations sur la façon d’utiliser **setvar** dans **sqlcmd**, consultez [Utiliser sqlcmd avec des variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Dans chaque clause **connectionoptions** , la connexion spécifiée avec l’option **-E** ou **-U** doit être un membre du rôle serveur fixe **sysadmin** dans l’instance spécifiée dans **-S**.  
   
 ## <a name="examples"></a>Exemples  

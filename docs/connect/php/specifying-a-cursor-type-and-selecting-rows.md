@@ -1,5 +1,5 @@
 ---
-title: Spécification d’un Type de curseur et sélection de lignes | Documents Microsoft
+title: Spécification d’un Type de curseur et sélection de lignes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca3edbf7831789209b21a39b20d428cc5afe94d9
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309058"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983331"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>Spécification d’un type de curseur et sélection de lignes
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,6 +33,6 @@ Vous pouvez créer un jeu de résultats avec des lignes auxquelles vous pouvez a
   
 -   [Types de curseur &#40;pilote PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)  
   

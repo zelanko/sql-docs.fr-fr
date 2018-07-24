@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 313ddda23b53fc0a4458ee2f12926a47cf0b3830
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076136"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995051"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Autorisations nécessaires pour exécuter SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "33076136"
   
  Le schéma suivant illustre ce processus de vérification de l'autorisation lors de la relecture de traces :  
   
- ![Autorisations de trace de relecture de SQL Server Profiler](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "autorisations de trace de relecture de SQL Server Profiler")  
+ ![Autorisations de trace de relecture de SQL Server Profiler](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "permissions de trace de relecture de SQL Server Profiler")  
   
 ## <a name="see-also"></a> Voir aussi  
  [Procédures stockées de SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   

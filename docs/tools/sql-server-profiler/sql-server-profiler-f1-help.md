@@ -1,5 +1,5 @@
 ---
-title: Boîtes de dialogue SQL Server Profiler | Documents Microsoft
+title: Boîtes de dialogue SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql
@@ -46,11 +46,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5bd72cc0de57f33c69101ba2d5f387ed45bae4c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077552"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999871"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Boîtes de dialogue SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

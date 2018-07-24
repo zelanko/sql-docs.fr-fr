@@ -1,5 +1,5 @@
 ---
-title: Configurer Distributed Replay | Documents Microsoft
+title: Configurer Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f60d8849c32aa52ac2dba616a17d0e1e6fc4734b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074186"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038480"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

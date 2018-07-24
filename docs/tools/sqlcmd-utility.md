@@ -34,11 +34,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582131"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990411"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,9 +50,9 @@ ms.locfileid: "34582131"
   L’utilitaire **sqlcmd** vous permet d’entrer des procédures système, des fichiers de script et des instructions Transact-SQL à l’invite de commandes dans **l’Éditeur de requête** en mode SQLCMD, dans un fichier de script Windows ou dans une étape de travail du système d’exploitation (Cmd.exe) d’un travail SQL Server Agent. Cet utilitaire utilise ODBC pour exécuter des lots Transact-SQL. 
   
 > [!NOTE]
-> Les versions plus récentes de l’utilitaire sqlcmd sont disponibles en version web à partir du [Centre de téléchargement](http://go.microsoft.com/fwlink/?LinkID=825643). Vous avez besoin d’une version 13.1 ou une version ultérieure pour prendre en charge le chiffrement intégral (`-g`) et l’authentification Azure Active Directory (`-G`). (Plusieurs versions de sqlcmd.exe peuvent être installées sur votre ordinateur. Assurez-vous d’utiliser la version correcte. Pour déterminer la version, exécutez `sqlcmd -?`.)
+> Les versions plus récentes de l’utilitaire sqlcmd sont disponibles en version web à partir du [Centre de téléchargement](http://go.microsoft.com/fwlink/?LinkID=825643). Vous avez besoin d’une version 13.1 ou supérieure pour prendre en charge Always Encrypted (`-g`) et l’authentification Azure Active Directory (`-G`). (Plusieurs versions de sqlcmd.exe peuvent être installées sur votre ordinateur. Assurez-vous d’utiliser la version correcte. Pour déterminer la version, exécutez `sqlcmd -?`.)
 
-Vous pouvez essayer de l’utilitaire sqlcmd à partir de l’interpréteur de commandes Azure Cloud telle qu’elle est déjà installée par défaut : [ ![lancer un Shell Cloud](https://shell.azure.com/images/launchcloudshell.png "lancer un environnement Cloud")](https://shell.azure.com)
+Vous pouvez essayer de l’utilitaire sqlcmd à partir d’Azure Cloud Shell comme il est préinstallé par défaut : [ ![lancer Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "lancer Cloud Shell")](https://shell.azure.com)
 
   Pour exécuter des instructions sqlcmd dans SSMS, sélectionnez le Mode SQLCMD à partir de la liste déroulante du menu Requête.  
   
@@ -121,7 +121,7 @@ sqlcmd
 ## <a name="command-line-options"></a>Options de ligne de commande  
  **Options relatives à la connexion**  
   **-A**  
- Se connecte à SQL Server avec une connexion administrateur dédiée (DAC, Dedicated Administrator Connection). Ce type de connexion est utilisé pour dépanner un serveur. Elle ne fonctionne qu'avec les serveurs prenant en charge DAC. Si DAC n’est pas disponible, **sqlcmd** génère un message d’erreur et se termine. Pour plus d’informations sur DAC, consultez [Connexion de diagnostic pour les administrateurs de base de données](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). L’option-a n’est pas pris en charge avec l’option -G. Lors de la connexion à la base de données SQL à l’aide de - un, vous devez être un administrateur SQL server. La connexion DAC n’est pas disponible pour un administrateur d’Azure Active Directory.
+ Se connecte à SQL Server avec une connexion administrateur dédiée (DAC, Dedicated Administrator Connection). Ce type de connexion est utilisé pour dépanner un serveur. Elle ne fonctionne qu'avec les serveurs prenant en charge DAC. Si DAC n’est pas disponible, **sqlcmd** génère un message d’erreur et se termine. Pour plus d’informations sur DAC, consultez [Connexion de diagnostic pour les administrateurs de base de données](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). L’option-a n’est pas pris en charge avec l’option -G. Lors de la connexion à la base de données SQL à l’aide de - A, vous devez être un administrateur SQL server. La connexion DAC n’est pas disponible pour un administrateur Azure Active Directory.
   
  **-C**  
  Ce commutateur est utilisé par le client pour le configurer afin d'approuver implicitement le certificat de serveur sans validation. Cette option est équivalente à l'option ADO.NET `TRUSTSERVERCERTIFICATE = true`.  
@@ -186,7 +186,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si **-K** n’est pas spécifié, l’utilitaire sqlcmd ne prend pas en charge la connectivité sur un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [Secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité Always On)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **-M** *multisubnet_failover*  
- Spécifiez toujours **-M** en cas de connexion à l’écouteur de groupe de disponibilité d’un groupe de disponibilité SQL Server ou d’une instance de cluster de basculement SQL Server. **-M** accélère la détection et la connexion au serveur (actuellement) actif. Si vous ne spécifiez pas l’option **–M** , **-M** est désactivé. Pour plus d’informations sur [ ! INCLURE[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [la création et Configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [clustering avec basculement et groupes de disponibilité AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), et [secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité) Always On](https://msdn.microsoft.com/library/ff878253.aspx).  
+ Spécifiez toujours **-M** en cas de connexion à l’écouteur de groupe de disponibilité d’un groupe de disponibilité SQL Server ou d’une instance de cluster de basculement SQL Server. **-M** accélère la détection et la connexion au serveur (actuellement) actif. Si vous ne spécifiez pas l’option **–M** , **-M** est désactivé. Pour plus d’informations sur [ ! INCLURE[ssHADR](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [la création et Configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), et [secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité) Always On](https://msdn.microsoft.com/library/ff878253.aspx).  
   
  **-N**  
  Ce commutateur est utilisé par le client pour demander une connexion chiffrée.  
@@ -218,7 +218,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
  Si l’option **-P** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
   
- **-S** [*protocole*:]*server*[**\\***nom_instance*] [**, ***port*]  
+ **S -** [*protocole*:]*server*[**\\***nom_instance*] [**, ***port*]  
  Spécifie l’instance de SQL Server à laquelle se connecter. Cette option définit la variable de script **sqlcmd** SQLCMDSERVER.  
   
  Spécifiez *server_name* pour vous connecter à l’instance par défaut de SQL Server sur cet ordinateur serveur. Spécifiez *server_name* [ **\\***instance_name* ] pour vous connecter à une instance nommée de SQL Server sur cet ordinateur serveur. Si aucun ordinateur serveur n’est spécifié, **sqlcmd** se connecte à l’instance par défaut de SQL Server sur l’ordinateur local. Cette option est indispensable lorsque vous exécutez **sqlcmd** à partir d’un ordinateur distant connecté au réseau.  
@@ -266,7 +266,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
   
  Entrez **chcp** à l’invite de commandes pour vérifier la page de codes de Cmd.exe.  
   
- **-i** *input_file*[**, *** input_file2*...]  
+ **i -** *input_file*[**, *** input_file2*...]  
  Identifie le fichier contenant un traitement d'instructions SQL ou des procédures stockées. Plusieurs fichiers peuvent être spécifiés, ils sont lus et traités dans l'ordre. N'utilisez pas d'espace entre les noms de fichiers. **sqlcmd** vérifie d’abord que tous les fichiers spécifiés existent. Si un ou plusieurs fichiers n’existent pas, **sqlcmd** se termine. Les options -i et -Q/-q s'excluent mutuellement.  
   
  Exemples de chemins :  

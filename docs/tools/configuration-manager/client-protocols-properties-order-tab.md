@@ -1,5 +1,5 @@
 ---
-title: Propriétés (onglet ordre) de protocoles clients | Documents Microsoft
+title: Propriétés (onglet ordre) de protocoles clients | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 394e659a17fb4a27deac8fd62c342aa11bdac72f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069226"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987471"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Propriétés de protocoles clients (onglet Ordre)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "33069226"
   
 ## <a name="options"></a>Options  
  **Protocoles désactivés**  
- Répertorie les protocoles qui sont installés mais ne sont pas actuellement utilisés.  
+ Répertorie les protocoles qui sont installées mais ne sont pas actuellement utilisés.  
   
  **Protocoles activés**  
- Répertorie les protocoles disponibles pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clients sur cet ordinateur.  
+ Répertorie les protocoles qui sont disponibles pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installés sur cet ordinateur.  
   
  **>**  
  Active le protocole affiché en surbrillance dans la zone **Protocoles désactivés** , en le déplaçant vers la zone **Protocoles activés** .  

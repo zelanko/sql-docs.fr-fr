@@ -1,5 +1,5 @@
 ---
-title: Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse | Documents Microsoft
+title: Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse | Microsoft Docs
 ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: sql
@@ -18,46 +18,46 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: be35a6b708e2f8a5430a796b466705f222d9748d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34709027"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035217"
 ---
-# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et l’entrepôt de données SQL Azure
+# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Pour gérer (requête, analyse, etc.) votre base de données que vous avez besoin d’un outil. Il existe plusieurs outils de base de données. Alors que vos bases de données peuvent être exécutés dans le cloud, sur Windows ou sur [Linux](../linux/sql-server-linux-overview.md), l’outil n’a pas besoin pour s’exécuter sur la même plateforme en tant que la base de données. 
+Pour gérer (requête, analyse, etc.), votre base de données que vous avez besoin d’un outil. Il existe plusieurs outils de base de données. Alors que vos bases de données peuvent être exécutés dans le cloud, sur Windows, ou sur [Linux](../linux/sql-server-linux-overview.md), votre outil n’a pas besoin d’exécuter sur la même plateforme que la base de données. 
 
-Cet article fournit des informations sur les outils disponibles pour l’utilisation de vos bases de données SQL. 
+Cet article fournit des informations sur les outils disponibles pour travailler avec vos bases de données SQL. 
 
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>Outils pour exécuter des requêtes et de gérer des bases de données  
 
 | Outil | Description |
 |:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] est un outil gratuit et léger, pour la gestion des bases de données partout où ils s’exécutent. Cette version préliminaire fournit des fonctionnalités de gestion de base de données, y compris un éditeur Transact-SQL étendue et personnalisable connaître l’état de fonctionnement de vos bases de données. **[!INCLUDE[name-sos](../includes/name-sos-short.md)] s’exécute sur Windows et Linux macOS**.|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Utilisez SQL Server Management Studio (SSMS) pour les requêtes, concevoir et gérer votre SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. **SSMS est exécuté sur Windows**.|
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Activez Visual Studio dans un environnement de développement puissant pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. **SSDT s’exécute sur Windows**.|
-|[MSSQL-cli](mssql-cli.md)|MSSQL-cli est un outil de ligne de commande interactif pour l’exécution de requêtes SQL Server. **MSSQL-cli s’exécute sur Windows, Mac OS et Linux**|
-| [Visual Studio Code](https://code.visualstudio.com/)| Après avoir installé Visual Studio Code, vous devez installer le [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) pour le développement de Microsoft SQL Server, base de données SQL Azure et SQL Data Warehouse. **Code Visual Studio s’exécute sur Windows et Linux macOS**.|
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] est un outil gratuit, léger, pour la gestion des bases de données partout où ils s’exécutent. Cette version préliminaire fournit des fonctionnalités de gestion de base de données, y compris un éditeur Transact-SQL étendue et personnalisable connaître l’état de fonctionnement de vos bases de données. **[!INCLUDE[name-sos](../includes/name-sos-short.md)] s’exécute sur Windows, macOS et Linux**.|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Utilisez SQL Server Management Studio (SSMS) pour interroger, concevoir et gérer votre SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. **SSMS est exécuté sur Windows**.|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Transformez Visual Studio en un puissant environnement de développement pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. **SSDT s’exécute sur Windows**.|
+|[MSSQL-cli](mssql-cli.md)|MSSQL-cli est un outil de ligne de commande interactif pour l’interrogation de SQL Server. **MSSQL-cli s’exécute sur Windows, macOS et Linux**|
+| [Visual Studio Code](https://code.visualstudio.com/)| Après avoir installé Visual Studio Code, installer le [extension mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) pour le développement de Microsoft SQL Server, base de données SQL Azure et SQL Data Warehouse. **Visual Studio Code s’exécute sur Windows, macOS et Linux**.|
 
 ## <a name="which-tool-should-i-choose"></a>Quel outil dois-je choisir ?
 
-- Vous souhaitez gérer une instance de SQL Server ou de la base de données, dans un éditeur non activable sur Windows, Linux ou Mac ? Choisissez [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
+- Vous souhaitez gérer une instance de SQL Server ou de la base de données, dans un éditeur léger sur Windows, Linux ou Mac ? Choisissez [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md)
 - Vous souhaitez gérer une instance de SQL Server ou de la base de données sur Windows avec prise en charge complète de l’interface graphique utilisateur ? Choisissez [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - Vous souhaitez créer ou mettre à jour le code de base de données, y compris la validation au moment de compilation, la refactorisation et le concepteur prend en charge sur Windows ? Choisissez [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
-- Vous souhaitez interroger le serveur SQL Server avec un outil de ligne de commande qui fonctionnalités IntelliSense, syntaxe haute-éclairage, et bien plus encore ? Choisissez [mssql-cli](mssql-cli.md)
-- Vous souhaitez écrire des scripts T-SQL dans un éditeur non activable sur Windows, Linux ou Mac ? Choisissez [Visual Studio Code](https://code.visualstudio.com/) et [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+- Vous souhaitez interroger SQL Server avec un outil de ligne de commande qui propose IntelliSense, syntaxe haute-éclairage, et bien plus encore ? Choisissez [mssql-cli](mssql-cli.md)
+- Vous souhaitez écrire des scripts T-SQL dans un éditeur léger sur Windows, Linux ou Mac ? Choisissez [Visual Studio Code](https://code.visualstudio.com/) et le [extension mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="additional-tools"></a>Outils supplémentaires
 
 | Outil | Description |
 |:--|:--|
 | [Gestionnaire de configuration](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Utilisez le Gestionnaire de Configuration SQL Server pour configurer les services SQL Server et de configurer la connectivité réseau. Configuration Manager s’exécute sur Windows|
-|[MSSQL-conf](../linux/sql-server-linux-configure-mssql-conf.md)|Mssql-conf permet de configurer SQL Server en cours d’exécution sur Linux.|
+|[MSSQL-conf](../linux/sql-server-linux-configure-mssql-conf.md)|Mssql-conf permet de configurer SQL Server s’exécutant sur Linux.|
 | [Assistant de migration SQL Server](../ssma/sql-server-migration-assistant.md) | Utilisez l’Assistant Migration SQL Server pour automatiser la migration de bases de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et Sybase.|
-| [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Utilisez la fonctionnalité de Distributed Replay pour vous aider à évaluer l’impact de futures mises à niveau de SQL Server. Utilisez également Distributed Replay pour aider à évaluer l’impact de matériel et de mises à niveau du système d’exploitation et de réglage de SQL Server. |
+| [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Utilisez la fonctionnalité de Distributed Replay pour vous aider à évaluer l’impact de futures mises à niveau de SQL Server. Distributed Replay permet également de vous aider à évaluer l’impact du matériel et de mises à niveau du système d’exploitation et de réglage de SQL Server. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | L’utilitaire ssbdiagnose signale des problèmes dans les conversations Service Broker ou la configuration des services de Service Broker. |
 
 
@@ -72,7 +72,7 @@ Cet article fournit des informations sur les outils disponibles pour l’utilisa
 |[Utilitaire dtexec](../integration-services/packages/dtexec-utility.md)|Sert à configurer et à exécuter un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . La version interface utilisateur de cet utilitaire d’invite de commandes se nomme **DTExecUI**et ouvre l’utilitaire d’exécution de package.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[Utilitaire dtutil](../integration-services/dtutil-utility.md)|Utilisé pour gérer les packages SSIS.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[Déployer des solutions de modèle avec l'utilitaire de déploiement](../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|Sert à déployer les projets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans des instances d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|  
-|[MSSQL-Générateur de script (version préliminaire publique)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|Utilisé pour générer des scripts de création et de T-SQL INSERT pour les objets de base de données de SQL Server, base de données SQL Azure et Azure SQL Data Warehouse.|Consultez notre [référentiel GitHub](https://github.com/Microsoft/sql-xplat-cli) pour le téléchargement et l’utilisation des informations.| 
+|[MSSQL-Générateur de script (version préliminaire publique)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|Utilisé pour générer des scripts T-SQL INSERT et de créer des objets de base de données dans SQL Server, base de données SQL Azure et Azure SQL Data Warehouse.|Consultez notre [référentiel GitHub](https://github.com/Microsoft/sql-xplat-cli) pour téléchargement et l’utilisation d’informations.| 
 |[Utilitaire osql](../tools/osql-utility.md)|Vous permet d'entrer des instructions, des procédures système et des fichiers de script [!INCLUDE[tsql](../includes/tsql-md.md)] à l'invite de commandes.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Utilitaire profiler](../tools/profiler-utility.md)|Sert à démarrer [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] à partir d'une invite de commandes.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[Utilitaire RS.exe &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)|Sert à exécuter des scripts conçus pour gérer des serveurs de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  

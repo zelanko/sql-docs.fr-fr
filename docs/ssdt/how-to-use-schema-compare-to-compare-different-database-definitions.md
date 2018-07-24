@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
 - sql.data.tools.schemacompare.watermark.f1
@@ -20,12 +20,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b3b52f87fe2c144a71d5826cc66970c0f18e5d1
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b146c1dcd31cc6e45fbbd794392249aa9ffa0447
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37094205"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088581"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procédure : utiliser le schéma pour comparer différentes définitions de base de données
 SQL Server Data Tools (SSDT) inclut un utilitaire de comparaison de schémas que vous pouvez utiliser pour comparer deux définitions de base de données.  La source et la cible de la comparaison peuvent être n'importe quelle combinaison des éléments suivants : base de données connectée, projet de base de données SQL Server, instantané ou fichier .dacpac.  Les résultats de la comparaison s'affichent en tant qu'ensemble d'actions qui doivent être effectuées sur la cible de façon à ce qu'elle soit identique à la source.  Une fois la comparaison effectuée, vous pouvez mettre à jour la cible directement (s'il s'agit d'un projet ou d'une base de données) ou générer un script de mise à jour qui a le même effet.  

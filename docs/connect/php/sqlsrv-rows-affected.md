@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_rows_affected | Documents Microsoft
+title: sqlsrv_rows_affected | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f416bf1633909e548572f8f90c7fac7e188ecf75
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309348"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991381"
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,11 +42,11 @@ sqlsrv_rows_affected( resource $stmt)
 #### <a name="parameters"></a>Paramètres  
 *$stmt*: ressource d’instruction correspondant à une instruction exécutée.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 Entier indiquant le nombre de lignes modifiées par la dernière instruction exécutée. Si aucune ligne n’a été modifiée, la valeur zéro (0) est retournée. Si aucune information sur le nombre de lignes modifiées n’est disponible, la valeur moins un (-1) est retournée. Si une erreur s’est produite lors de la récupération du nombre de lignes modifiées, **false** est retourné.  
   
-## <a name="example"></a>Exemple  
-L’exemple suivant affiche le nombre de lignes modifiées par une instruction UPDATE. L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a> Exemple  
+L’exemple suivant affiche le nombre de lignes modifiées par une instruction UPDATE. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -94,7 +94,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
