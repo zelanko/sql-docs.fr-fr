@@ -20,15 +20,16 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a7509cdfe26c95bb9122fb776aeaf444e218568
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984501"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx).
 
 Microsoft SQL Server 2016 Express **LocalDB** est une fonctionnalité de [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) destinée aux développeurs. Elle est disponible dans Microsoft SQL Server 2016 Express with Advanced Services.  
 
@@ -39,7 +40,7 @@ Microsoft SQL Server 2016 Express **LocalDB** est une fonctionnalité de [SQL Se
   
 -   Pour télécharger et installer SQL Server 2016 Express, accédez à**[Téléchargements SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB est une fonctionnalité que vous sélectionnez lors de l’installation et qui est disponible quand vous téléchargez le média. Si vous téléchargez le média, choisissez le package **Express Advanced** ou **LocalDB** . 
   
--   Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** pour lancer une machine virtuelle déjà équipée de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
+-   Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/services/virtual-machines/sql-server/)** pour lancer une machine virtuelle déjà équipée de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
   
 ## <a name="install-localdb"></a>Installer LocalDB  
  Installez **LocalDB** par le biais de l’Assistant installation ou à l’aide du programme SqlLocalDB.msi. **LocalDB** est une option sélectionnable lors de l’installation de [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
@@ -57,7 +58,7 @@ Sélectionnez **LocalDB** dans la page **Sélection de fonctionnalités/Fonction
   
  L’utilitaire SqlLocalDb peut créer des instances de **LocalDB**, démarrer et arrêter une instance de **LocalDB**et inclut des options permettant de gérer **LocalDB**.  Pour plus d’informations sur l’utilitaire SqlLocalDb, consultez [Utilitaire SqlLocalDB](../../tools/sqllocaldb-utility.md).  
   
- Le classement d’instance pour **LocalDB** a la valeur SQL_Latin1_General_CP1_CI_AS et ne peut pas être modifié. Les classements au niveau des bases de données, des colonnes ou des expressions sont pris en charge normalement. Les bases de données à relation contenant-contenu suivent les règles de classement des métadonnées et de tempdb définies par [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md).  
+ Le classement d’instance pour **LocalDB** a la valeur SQL_Latin1_General_CP1_CI_AS et ne peut pas être modifié. Les classements au niveau des bases de données, des colonnes ou des expressions sont pris en charge normalement. Les bases de données autonomes suivent les règles de classement des métadonnées et de tempdb définies par [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md).  
   
 ### <a name="restrictions"></a>Restrictions  
  **LocalDB** ne peut pas être un abonné de réplication de fusion  
@@ -124,7 +125,7 @@ REM Gather information about the instance of LocalDB
 ## <a name="troubleshooting"></a>Dépannage  
  Pour plus d'informations sur la résolution des problèmes liés à **LocalDB**, consultez [Dépannage de SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Une instance de [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** est une instance créée par un utilisateur pour son propre usage. Tout utilisateur peut créer sur l'ordinateur une base de données à l'aide d'une instance de **LocalDB**, en stockant les fichiers sous son profil utilisateur et en exécutant le processus à l'aide de ses informations d'identification. Par défaut, l'accès à l'instance de **LocalDB** est limité à son propriétaire. Les données contenues dans **LocalDB** sont protégées via l'accès au système de fichiers de base de données. Si les fichiers de base de données utilisateur sont stockés dans un emplacement partagé, la base de données peut être ouverte par toute personne ayant accès au système de fichiers à cet emplacement en utilisant une instance de **LocalDB** dont elle est propriétaire. Si les fichiers de base de données sont dans un emplacement protégé, tel que le dossier des données d'utilisateurs, seul cet utilisateur, et tous les administrateurs ayant accès à ce dossier, peuvent ouvrir la base de données. Les fichiers **LocalDB** ne peuvent être ouverts que par une instance de **LocalDB** à la fois.  
   
 > [!NOTE]  

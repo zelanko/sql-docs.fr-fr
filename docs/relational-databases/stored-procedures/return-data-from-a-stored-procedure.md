@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 299f4837a54622370ff5c84e29e9a3db43db5510
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b3c95ce2b9d937a464fcc2ec3528084503b5025
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218159"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983851"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retour de données à partir d'une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Retour de données à partir d’une procédure stockée](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Retour de données à partir d’une procédure stockée](https://msdn.microsoft.com/library/ms188655(SQL.120).aspx).
 
   Il existe trois méthodes permettant de retourner des données depuis une procédure vers un programme appelant : les jeux de résultats, les paramètres de sortie et les codes de retour. Cette rubrique fournit des informations sur les trois approches.  
   
@@ -193,7 +193,7 @@ EXECUTE @result = my_proc;
 |Valeur du code de retour|Signification|  
 |-----------------------|-------------|  
 |0|Exécution réussie.|  
-| 1|La valeur du paramètre nécessaire n'est pas spécifiée.|  
+|1|La valeur du paramètre nécessaire n'est pas spécifiée.|  
 |2|Valeur du paramètre spécifiée non valide.|  
 |3|Erreur lors de l'obtention de la valeur des ventes.|  
 |4|Valeur des ventes NULL trouvée pour le vendeur.|  

@@ -23,15 +23,16 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c7dfed0144de73aa7bf84db9999e4b6a5aec6c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bed6a93030c854c89ec32658ed086d6b0092a8c9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984481"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Créer des serveurs liés (moteur de base de données SQL Server)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Créer des serveurs liés (moteur de base de données SQL Server)](https://msdn.microsoft.com/library/ff772782(SQL.120).aspx).
 
   Cette rubrique indique comment créer un serveur lié et accéder aux données provenant d'un autre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. En créant un serveur lié, vous pouvez utiliser des données provenant de plusieurs sources. Il n'est pas nécessaire que le serveur lié soit une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais il s'agit d'un scénario courant.  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="Security"></a> Sécurité  
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
  Quand vous utilisez des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , vous avez besoin de l’autorisation **ALTER ANY LINKED SERVER** sur le serveur ou de l’appartenance au rôle serveur fixe **setupadmin** . Quand vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , vous avez besoin de l’autorisation **CONTROL SERVER** ou de l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ##  <a name="Procedures"></a> Comment créer un serveur lié  

@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ea8eaee6227db90dcc6696cb60d09c7fa4261fb
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: cd599eb85988501d9d7919ecb40f7d080406d926
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239118"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985611"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -504,7 +504,7 @@ La tâche de nettoyage de l’index columnstore cluster supprime des groupes de 
 
 En raison de l’excellence de la compression des données et de l’efficacité du nettoyage de la rétention, l’index columnstore cluster est un choix idéal dans les scénarios où votre charge de travail génère rapidement une grande quantité de données d’historique. Ce modèle est généralement utilisé pour les charges de travail avec traitement transactionnel intensif, qui utilisent des tables temporelles pour l’audit et le suivi des changements, l’analyse des tendances ou l’ingestion des données IoT.
 
-Pour plus d’informations, consultez [Gérer les données d’historique dans les tables temporelles avec une stratégie de rétention](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy).
+Pour plus d’informations, consultez [Gérer les données d’historique dans les tables temporelles avec une stratégie de rétention](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
 ## <a name="see-also"></a> Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   

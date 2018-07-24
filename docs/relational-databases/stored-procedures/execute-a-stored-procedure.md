@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fd5f9f06a5a1cb1d0fc7a1db4c7539cfc58a40b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9b36b85afce7fa5484d1f0ef93f5c3d605f543d2
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326649"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983181"
 ---
 # <a name="execute-a-stored-procedure"></a>Exécuter une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Exécuter une procédure stockée](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Exécuter une procédure stockée](https://msdn.microsoft.com/library/ms189915(SQL.120).aspx).
 
   Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

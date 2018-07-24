@@ -17,15 +17,15 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fa1d89d7fa17fb09ffedd054524be178918796e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c12464c584e667e66dfdf3de3c13278ef1732e55
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423179"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108361"
 ---
 # <a name="logon-triggers"></a>Déclencheurs de connexion
-[!INCLUDE[tsql-appliesto-ss2008-xxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   Les déclencheurs de connexion lancent des procédures stockées en réponse à un événement LOGON. Cet événement est déclenché lorsqu'une session utilisateur est établie avec une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les déclencheurs de connexion sont activés au terme de la phase d'authentification de connexion mais avant l'établissement de la session utilisateur. Par conséquent, tous les messages provenant du corps du déclencheur et habituellement destinés à l'utilisateur, (les messages et les messages d'erreur de l'instruction PRINT, par exemple), sont dirigés vers le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les déclencheurs de connexion ne sont pas activés si l'authentification échoue.  
   
  Vous pouvez faire appel aux déclencheurs de connexion pour auditer et contrôler les sessions de serveur en effectuant, par exemple, le suivi de l'activité de connexion, en restreignant les connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou en limitant le nombre des sessions pour une connexion spécifique. Par exemple, dans le code suivant, le déclencheur de connexion refuse une tentative de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] initiée par la connexion *login_test* si trois sessions utilisateur ont déjà été créées par cette connexion.  
@@ -74,7 +74,7 @@ END;
 ## <a name="disabling-a-logon-trigger"></a>Désactivation d'un déclencheur de connexion  
  Un déclencheur de connexion peut empêcher les connexions au [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour tous les utilisateurs, notamment les membres du rôle serveur fixe **sysadmin** . Quand un déclencheur de connexion empêche les connexions, les membres du rôle serveur fixe **sysadmin** peuvent se connecter à l’aide de la connexion administrateur dédiée, ou en démarrant le [!INCLUDE[ssDE](../../includes/ssde-md.md)] en mode de configuration minimale (-f). Pour plus d’informations, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Tâche|Rubrique|  
 |----------|-----------|  

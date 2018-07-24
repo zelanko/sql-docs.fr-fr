@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 caps.latest.revision: 31
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f24ef4f66069b19174e36ba4799639da9ef5e6a4
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: cb730474b859254846e06013c61e99227ef091dc
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941465"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107331"
 ---
 # <a name="application-roles"></a>Rôles d'applications
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "36941465"
 > [!IMPORTANT]  
 >  L’option **encrypt** d’ODBC n’est pas prise en charge par **SqlClient**. Lorsque vous transmettez des informations confidentielles sur un réseau, utilisez le protocole SSL (Secure Sockets Layer) ou IPsec pour chiffrer le canal. Si vous devez conserver des informations d'identification dans l'application cliente, chiffrez-les à l'aide des fonctions API de chiffrement. Dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et les versions ultérieures, le paramètre *password* est stocké sous la forme d’un hachage unidirectionnel.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |||  
 |-|-|  

@@ -17,15 +17,16 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 721f9245ff8057c54cef5facdf4a4de423e53961
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e76820fc010a88e7bc276e028bd84bcddc981ba8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984681"
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>Leçon 1 : Créer une stratégie d’accès stockée et une signature d’accès partagé
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Dans cette leçon, vous allez utiliser un script [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) pour créer une signature d’accès partagé sur un conteneur d’objets blob Azure à l’aide d’une stratégie d’accès stockée.  
+Dans cette leçon, vous allez utiliser un script [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) pour créer une signature d’accès partagé sur un conteneur d’objets blob Azure à l’aide d’une stratégie d’accès stockée.  
   
 > [!NOTE]  
 > Ce script est écrit à l’aide d’Azure PowerShell 5.0.10586.  
@@ -138,7 +139,7 @@ Pour créer une stratégie sur le conteneur et générer une clé de signature d
 [Leçon 2 : Créer des informations d’identification SQL Server à l’aide d’une signature d’accès partagé](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="see-also"></a> Voir aussi  
-[Signatures d’accès partagé, partie 1 : présentation du modèle SAP](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Signatures d’accès partagé, partie 1 : présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)  

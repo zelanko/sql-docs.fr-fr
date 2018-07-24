@@ -1,5 +1,5 @@
 ---
-title: Application sqllogship | Documents Microsoft
+title: Application sqllogship | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ce23bc4217f4bc538de0ddc1dbbaf8284a3c177
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077743"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969085"
 ---
 # <a name="sqllogship-application"></a>Application sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   L’application **sqllogship** effectue une opération de sauvegarde, de copie ou de restauration, ainsi que les tâches de nettoyage associées pour une configuration d’envoi de journaux. L'opération a lieu sur une instance spécifique de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour une base de données spécifique.  
   
- ![Icône de lien de rubrique](../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") pour les conventions de syntaxe, consultez [référence utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Icône lien de rubrique](../database-engine/configure-windows/media/topic-link.gif "icône lien de rubrique") pour les conventions de syntaxe, consultez [référence utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,7 +63,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |level|Description|  
 |-----------|-----------------|  
 |0|N'envoie en sortie aucun message de traçage et de débogage.|  
-| 1|Envoie en sortie des messages de gestion des erreurs.|  
+|1|Envoie en sortie des messages de gestion des erreurs.|  
 |2|Envoie en sortie des messages de gestion des erreurs et d'avertissement.|  
 |**3**|Envoie en sortie des messages de gestion des erreurs, d'avertissement et d'information. Il s'agit de la valeur par défaut.|  
 |4|Envoie en sortie tous les messages de traçage et de débogage.|  
@@ -81,10 +81,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  L’application **sqllogship** , SqlLogShip.exe, est installée dans le répertoire x:\Program Files\Microsoft SQL Server\130\Tools\Binn.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  **sqllogship** utilise l'authentification Windows. Le compte d'authentification Windows où s'exécute la commande nécessite un accès au répertoire Windows et des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La configuration requise dépend de l’option spécifiée par la commande **sqllogship** : **-backup**, **-copy**ou **-restore** .  
   
-|Option|Accès au répertoire|Autorisations|  
+|Option|Accès au répertoire|Permissions|  
 |------------|----------------------|-----------------|  
 |**-backup**|Nécessite un accès en lecture/écriture au répertoire de sauvegarde.|Nécessite les mêmes autorisations que l'instruction BACKUP. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md).|  
 |**-copy**|Nécessite l'accès en lecture au répertoire de sauvegarde et l'accès en écriture au répertoire de copie.|Nécessite les mêmes autorisations que la procédure stockée [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) .|  

@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45246cc4a9a09c45ffb4762d6eda2464aeb82f3f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6218f0332b83b5952a2c09836b10b4665db9b409
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421448"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085591"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ Définit une date qui est associée à une heure de la journée qui prend en cha
 |Propriété|Valeur|  
 |---|---|
 |Syntaxe|**datetimeoffset** [ (*précision à la fraction de seconde*) ]|  
-|Utilisation|DECLARE @MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
+|Utilisation|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Formats de littéraux de chaîne par défaut (utilisés pour le client de bas niveau)|AAAA-MM-JJ hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> Pour plus d’informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » ci-dessous.|  
 |Plage de dates|0001-01-01 à 9999-12-31<br /><br /> Du 1er janvier de l’an 1 au 31 décembre 9999|  
 |Plage temporelle|00:00:00 à 23:59:59.9999999 (les fractions de seconde ne sont pas prises en charge dans Informatica)|  

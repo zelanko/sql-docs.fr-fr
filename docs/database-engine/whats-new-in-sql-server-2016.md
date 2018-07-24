@@ -19,12 +19,12 @@ caps.latest.revision: 431
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc31efe5f3e78a80061d47149c56bf942cd7e8b7
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: a25bfbe07720f190d5da0cc0b30e2104d77dc576
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33989375"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980598"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Nouveautés du moteur de base de données - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Pour découvrir les nouveautés des autres composants SQL Server, consultez [Nou
 
 - Pour télécharger [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], accédez au **[Centre d’évaluation](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**![télécharger](../analysis-services/media/download.png "télécharger").
 
-- Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** pour lancer une machine virtuelle déjà équipée de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+- Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/services/virtual-machines/sql-server/)** pour lancer une machine virtuelle déjà équipée de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
 
 > [!NOTE]
 > Pour obtenir les notes de publication actuelles, consultez [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md).
@@ -304,7 +304,7 @@ SQL Server 2016 offre une prise en charge intégrée de l’importation et l’e
 [bcp Utility](../tools/bcp-utility.md), [BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) et [OPENROWSET](../t-sql/functions/openrowset-transact-sql.md) prennent désormais en charge la page de codes UTF-8. Pour plus d’informations, consultez ces rubriques et [Créer un fichier de format &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).
 
 ## <a name="new-default-database-size-and-autogrow-values"></a>Nouvelles valeurs par défaut de taille et de croissance automatique de base de données
-Nouvelles valeurs pour la base de données model et valeurs par défaut pour les nouvelles bases de données (basées sur model). La taille initiale des fichiers journaux et de données est désormais de 8 Mo. La croissance automatique par défaut des fichiers journaux et de données est maintenant de 64 Mo.
+Nouvelles valeurs pour la base de données model et valeurs par défaut pour les nouvelles bases de données (basées sur model). La taille initiale des fichiers journaux et ds données est désormais de 8 Mo. La croissance automatique par défaut des fichiers journaux et de données est maintenant de 64 Mo.
 
 
 ## <a name="transact-sql-enhancements"></a>Améliorations de Transact-SQL

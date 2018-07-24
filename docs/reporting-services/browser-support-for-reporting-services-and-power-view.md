@@ -24,12 +24,12 @@ caps.latest.revision: 121
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8a1dfae6233ddf9c8c4a736d7d2fb4c640ce196a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4e5fbe77dc85496fd51100c496467a4672c254e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017186"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984151"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Prise en charge des navigateurs pour Reporting Services et Power View
 
@@ -155,7 +155,7 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
 [Recherche et affichage de rapports dans le portail Web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Outils de Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
-[Portail web (SSRS en mode natif)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[Portail web (SSRS en mode natif)](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Référence de paramètres d'accès URL](../reporting-services/url-access-parameter-reference.md)  
 

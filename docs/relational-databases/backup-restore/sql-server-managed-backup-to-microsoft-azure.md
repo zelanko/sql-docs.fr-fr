@@ -14,11 +14,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5a2099ad58020f03c3dc6deceea0fea9ba5230a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac4d76ceb3bcbd3042e4fb4d7f1fa42ceda44860
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983381"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Sauvegarde managée SQL Server sur Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +44,9 @@ ms.lasthandoff: 05/03/2018
 |Condition préalable|Description|  
 |------------------|-----------------|  
 |**Compte Microsoft Azure**|Vous pouvez commencer à utiliser Azure avec une [version d’évaluation gratuite](http://azure.microsoft.com/pricing/free-trial/) avant d’explorer les [options d’achat](http://azure.microsoft.com/pricing/purchase-options/).|  
-|**Compte de stockage Azure**|Les sauvegardes sont stockées dans le stockage d’objets blob Azure associé à un compte de stockage Azure. Pour obtenir des instructions détaillées sur la création d’un compte de stockage, consultez [À propos des comptes de stockage Azure](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/).|  
-|**Conteneur d’objets blob**|Les objets blob sont organisés dans des conteneurs. Vous spécifiez le conteneur cible pour les fichiers de sauvegarde. Vous pouvez créer un conteneur dans le [portail de gestion Azure](https://manage.windowsazure.com/)ou vous pouvez utiliser la commande **New-AzureStorageContainer**[Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) .|  
-|**Signature d’accès partagé (SAS)**|L’accès au conteneur cible est contrôlé par une signature d’accès partagé (SAS). Pour une vue d’ensemble de SAS, consultez [Signatures d’accès partagé, partie 1 : présentation du modèle SAS](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Vous pouvez créer un jeton SAS dans le code ou avec la commande PowerShell **New-AzureStorageContainerSASToken** . Pour obtenir un script PowerShell qui simplifie ce processus, consultez [Simplification de la création d’informations d’identification SQL avec des jetons de signature d’accès partagé (SAS) sur le stockage Azure avec Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx). Le jeton SAS peut être stocké dans des **informations d’identification SQL** pour une utilisation avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**Compte de stockage Azure**|Les sauvegardes sont stockées dans le stockage d’objets blob Azure associé à un compte de stockage Azure. Pour obtenir des instructions détaillées sur la création d’un compte de stockage, consultez [À propos des comptes de stockage Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
+|**Conteneur d’objets blob**|Les objets blob sont organisés dans des conteneurs. Vous spécifiez le conteneur cible pour les fichiers de sauvegarde. Vous pouvez créer un conteneur dans le [portail de gestion Azure](https://manage.windowsazure.com/)ou vous pouvez utiliser la commande **New-AzureStorageContainer**[Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/) .|  
+|**Signature d’accès partagé (SAS)**|L’accès au conteneur cible est contrôlé par une signature d’accès partagé (SAS). Pour une vue d’ensemble de SAS, consultez [Signatures d’accès partagé, partie 1 : présentation du modèle SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Vous pouvez créer un jeton SAS dans le code ou avec la commande PowerShell **New-AzureStorageContainerSASToken** . Pour obtenir un script PowerShell qui simplifie ce processus, consultez [Simplification de la création d’informations d’identification SQL avec des jetons de signature d’accès partagé (SAS) sur le stockage Azure avec Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx). Le jeton SAS peut être stocké dans des **informations d’identification SQL** pour une utilisation avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**Agent SQL Server**|L’Agent SQL Server doit être en cours d’exécution pour que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] fonctionne. Envisagez de définir l’option de démarrage sur automatique.|  
   
 ## <a name="components"></a>Components  

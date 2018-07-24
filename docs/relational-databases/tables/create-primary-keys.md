@@ -17,17 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd476ff279b30d79f4f096f3978ec96c9333dce3
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c25dc5d5d45b713f284cd6505db71320c0cf3234
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789290"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980202"
 ---
 # <a name="create-primary-keys"></a>Créer des clés primaires
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Créer des clés primaires](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Créer des clés primaires](https://msdn.microsoft.com/library/ms189039(SQL.120).aspx).
 
   Vous pouvez définir une clé primaire dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La création d’une clé primaire crée automatiquement un index cluster unique correspondant ou, si vous avez spécifié cette option, un index non-cluster.  
   

@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_has_rows | Documents Microsoft
+title: sqlsrv_has_rows | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ed2a6429e6ff95b8f3ae2d40bc6f703ae07c2a8
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309138"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019277"
 ---
 # <a name="sqlsrvhasrows"></a>sqlsrv_has_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,10 +39,10 @@ sqlsrv_has_rows( resource $stmt )
 #### <a name="parameters"></a>Paramètres  
 *$stmt*: instruction exécutée.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 S’il existe des lignes dans le jeu de résultats, la valeur de retour est **true**. En l’absence de lignes, ou si l’appel de fonction échoue, la valeur de retour est **false**.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php  
@@ -62,6 +62,6 @@ S’il existe des lignes dans le jeu de résultats, la valeur de retour est **tr
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

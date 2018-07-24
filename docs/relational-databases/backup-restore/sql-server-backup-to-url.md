@@ -14,12 +14,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d688171b49697b785f571f7e08fee0bfe339858
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 50a8d11c653e7b31dd27a8705d925f60d795a7a0
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33989093"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984091"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ ms.locfileid: "33989093"
 ###  <a name="intorkeyconcepts"></a> Présentation des principaux éléments et concepts  
  Les deux sections suivantes présentent le service de stockage d’objets blob Microsoft Azure, ainsi que les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés pour la sauvegarde et la restauration à l’aide de ce service. Il est important de comprendre les composants et leur interaction pour effectuer une sauvegarde ou une restauration à l’aide du service de stockage d’objets blob Microsoft Azure.  
   
- La création d’un compte de stockage Microsoft Azure dans votre abonnement Azure est la première étape de ce processus. Ce compte de stockage est un compte d’administrateur disposant des autorisations administratives complètes sur tous les conteneurs et objets créés avec le compte de stockage. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut soit utiliser le nom du compte de stockage Microsoft Azure et la valeur de sa clé d’accès pour s’authentifier, ainsi qu’écrire et lire des objets blob dans le service de stockage d’objets blob Microsoft Azure, soit utiliser un jeton de signature d’accès partagé généré sur des conteneurs spécifiques lui octroyant des droits de lecture et d’écriture. Pour plus d’informations sur les comptes Azure Storage, voir [À propos des comptes de stockage Azure](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/) et, pour plus d’informations sur les signatures d’accès partagé, voir [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Les informations d'identification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stockent ces informations et sont utilisées lors des opérations de sauvegarde ou de restauration.  
+ La création d’un compte de stockage Microsoft Azure dans votre abonnement Azure est la première étape de ce processus. Ce compte de stockage est un compte d’administrateur disposant des autorisations administratives complètes sur tous les conteneurs et objets créés avec le compte de stockage. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut soit utiliser le nom du compte de stockage Microsoft Azure et la valeur de sa clé d’accès pour s’authentifier, ainsi qu’écrire et lire des objets blob dans le service de stockage d’objets blob Microsoft Azure, soit utiliser un jeton de signature d’accès partagé généré sur des conteneurs spécifiques lui octroyant des droits de lecture et d’écriture. Pour plus d’informations sur les comptes Azure Storage, voir [À propos des comptes de stockage Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) et, pour plus d’informations sur les signatures d’accès partagé, voir [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Les informations d'identification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stockent ces informations et sont utilisées lors des opérations de sauvegarde ou de restauration.  
   
 ###  <a name="Blob"></a> Service de stockage d’objets blob Microsoft Azure  
- **Compte de stockage :** le compte de stockage constitue le point de départ de tous les services de stockage. Pour accéder au service de stockage d’objets blob Microsoft Azure, commencez par créer un compte de stockage Microsoft Azure. Pour plus d’informations, voir [Créez un compte de stockage](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/).  
+ **Compte de stockage :** le compte de stockage constitue le point de départ de tous les services de stockage. Pour accéder au service de stockage d’objets blob Microsoft Azure, commencez par créer un compte de stockage Microsoft Azure. Pour plus d’informations, voir [Créez un compte de stockage](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
  **Conteneur :** un conteneur permet de regrouper un ensemble d’objets blob, et peut stocker un nombre illimité d’objets blob. Pour pouvoir écrire une sauvegarde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le service de stockage d’objets blob Microsoft Azure, vous devez avoir créé au moins le conteneur racine. Vous pouvez générer un jeton de signature d’accès partagé sur un conteneur, et accorder l’accès aux objets uniquement sur un conteneur spécifique.  
   
@@ -276,7 +276,7 @@ La tâche Restaurer la base de données propose **URL** comme unité à partir d
 >  Pour obtenir un didacticiel sur l’utilisation de SQL Server 2016 avec le service de stockage d’objets blob Microsoft Azure, consultez [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)(Didacticiel : Utilisation du service de stockage d’objets blob Microsoft Azure avec des bases de données SQL Server 2016).  
   
 ###  <a name="SAS"></a> Créer une signature d’accès partagé  
- L’exemple suivant crée des signatures d’accès partagé utilisables pour créer des informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un conteneur nouvellement créé. Le script crée une signature d’accès partagé associée à une stratégie d’accès stockée. Pour plus d’informations, voir [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Le script écrit également la commande T-SQL requise pour créer les informations d’identification sur SQL Server. 
+ L’exemple suivant crée des signatures d’accès partagé utilisables pour créer des informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un conteneur nouvellement créé. Le script crée une signature d’accès partagé associée à une stratégie d’accès stockée. Pour plus d’informations, voir [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Le script écrit également la commande T-SQL requise pour créer les informations d’identification sur SQL Server. 
 
 > [!NOTE] 
 > L’exemple nécessite Microsoft Azure Powershell. Pour plus d’informations sur l’installation et l’utilisation d’Azure Powershell, consultez [Installation et configuration d’Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  

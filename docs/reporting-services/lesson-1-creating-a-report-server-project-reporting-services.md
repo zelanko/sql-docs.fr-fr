@@ -15,16 +15,16 @@ caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fea148cc4148b4beaf14c8b31d7bd23aad734a0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d898041ee9e03612227fcc29c43d42859c54ffda
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016526"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980861"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Leçon 1 : Création d'un projet Report Server (Reporting Services)
 
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server Reporting Services, consultez [Leçon 1 : Création d’un projet Report Server (Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server Reporting Services, consultez [Leçon 1 : Création d’un projet Report Server (Reporting Services)](https://msdn.microsoft.com/library/ms167559(SQL.120).aspx).
 
 Dans cette leçon, vous créez un *projet Report Server* et un fichier de *définition de rapport (.rdl)* dans [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] dans Visual Studio. 
 

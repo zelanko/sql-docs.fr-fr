@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aaad8cc4ad7f35c19ddc1f48332955401f742bcc
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: e6c9eaaeb59f2525a4887937e3716495cff7576d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942255"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107991"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ ms.locfileid: "36942255"
 |[sys.server_audit_specifications_details](../../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)|Contient des informations sur les détails (actions) d’une spécification de l’audit du serveur dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
 |[sys.server_file_audits](../../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)|Contient les informations détaillées des magasins à propos du type d'audit de fichier dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Chaque fonctionnalité et commande pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit a des spécifications d'autorisation individuelles.  
   
  Pour créer, modifier ou supprimer un audit du serveur ou une spécification de l'audit du serveur, les principaux du serveur requièrent l'autorisation ALTER ANY SERVER AUDIT ou CONTROL SERVER. Pour créer, modifier ou supprimer une spécification de l'audit de la base de données, les principaux de la base de données requièrent l'autorisation ALTER ANY DATABASE AUDIT, ou l'autorisation ALTER ou CONTROL sur la base de données. De plus, les principaux doivent soit avoir l'autorisation de se connecter à la base de données, soit disposer des autorisations ALTER ANY SERVER AUDIT ou CONTROL SERVER.  
@@ -188,7 +188,7 @@ ms.locfileid: "36942255"
 > [!CAUTION]  
 >  Les principaux dans le rôle sysadmin peuvent falsifier tout composant d'audit et ceux dans le rôle db_owner peuvent falsifier les spécifications d'audit dans une base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit s'assure qu'une ouverture de session qui crée ou modifie une spécification d'audit possède au moins l'autorisation ALTER ANY DATABASE AUDIT. Toutefois, aucune validation n'est effectuée lorsque vous attachez une base de données. Vous devez supposer que toutes les spécifications de l'audit de la base de données sont aussi dignes de confiance que les principaux dans le rôle sysadmin ou db_owner.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Créer un audit du serveur et une spécification d’audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [Créer une spécification de l’audit du serveur et de la base de données](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
