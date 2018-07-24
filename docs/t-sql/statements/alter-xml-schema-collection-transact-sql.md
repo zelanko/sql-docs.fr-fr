@@ -33,11 +33,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 896525b2986dce9c9a503e83ee8912006cda9f20
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260191"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987581"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  Si la collection de schémas contient déjà un caractère générique de validation lax ou un élément de type **xs:anyType**, l’ajout d’un nouvel élément global, d’un nouveau type ou d’une nouvelle déclaration d’attribut à la collection de schémas entraîne la revalidation de toutes les données stockées qui sont conditionnées par la collection de schémas.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  La modification d'une collection de schémas XML nécessite l'autorisation ALTER sur la collection.  
   
 ## <a name="examples"></a>Exemples  

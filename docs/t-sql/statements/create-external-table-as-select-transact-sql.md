@@ -24,11 +24,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 74dc570a61b33aa6b6a2718bde3c927e6eabb1a7
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36833342"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017509"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -122,7 +122,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  SELECT \<select_criteria> Remplit la nouvelle table avec les résultats d’une instruction SELECT. *select_criteria* correspond au corps de l’instruction SELECT qui détermine les données à copier vers la nouvelle table. Pour plus d’informations sur les instructions SELECT, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour exécuter cette commande, les **utilisateurs de la base de données** ont besoin des autorisations ou appartenances suivantes :  
   
 -   Autorisation **ALTER SCHEMA** pour le schéma local devant contenir la nouvelle table ou appartenance au rôle de base de données fixe **db_ddladmin**.  
@@ -179,7 +179,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  La base de données ne garantit pas la cohérence des données entre la base de données et les données externes. Vous seul êtes responsable de maintenir la cohérence entre les données externes et la base de données.  
   
- Les opérations DML ne sont pas prises en charge avec les tables externes. Par exemple, vous ne pouvez pas utiliser les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] update, insert ou delete pour modifier les données externes.  
+ Les opérations DML ne sont pas prises en charge avec les tables externes. Par exemple, vous ne pouvez pas utiliser les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] update, insert ou delete [!INCLUDE[tsql](../../includes/tsql-md.md)] pour modifier les données externes.  
   
  CREATE TABLE, DROP TABLE, CREATE STATISTICS, DROP STATISTICS, CREATE VIEW et DROP VIEW sont les seules opérations DDL qui sont autorisées avec les tables externes.  
   

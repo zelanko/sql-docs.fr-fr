@@ -29,11 +29,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b2afef78504eb1fda2994bf1aca64b964ca05fb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791067"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991671"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ END CONVERSATION conversation_handle
   
  END CONVERSATION n'est pas valide dans une fonction définie par l'utilisateur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour mettre fin à une conversation active, l'utilisateur actif doit en être le propriétaire, un membre du rôle serveur fixe sysadmin ou un membre du rôle de base de données fixe db_owner.  
   
  Un membre du rôle serveur fixe sysadmin ou du rôle de base de données fixe db_owner peut utiliser la clause WITH CLEANUP pour supprimer les métadonnées d'une conversation qui est déjà terminée.  
