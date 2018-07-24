@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 89ec24adc8c02bdf1458391c66233f640d5e0262
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335323"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054471"
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Vue d’ensemble : exportation de données vers Excel (Complément MDS pour Excel)
 
@@ -43,7 +43,7 @@ ms.locfileid: "35335323"
 ## <a name="refreshing-data"></a>Actualisation des données  
  Les données du référentiel MDS peuvent être mises à jour par d’autres utilisateurs après que vous les avez exportées. Vous pouvez extraire ces données sans perdre les modifications apportées aux données non managées MDS. Pour plus d’informations, consultez [Actualisation des données &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

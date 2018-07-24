@@ -30,11 +30,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: dec794a04d383d2727de58e0b70ab9e663fce8af
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789550"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063562"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -117,7 +117,7 @@ DROP DATABASE database_name [;]
   
  L'instruction DROP DATABASE doit être la seule instruction d'un traitement SQL et vous pouvez supprimer une seule base de données à la fois.
 
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Nécessite l’autorisation **CONTROL** sur la base de données, ou l’autorisation **ALTER ANY DATABASE**, ou l’appartenance au rôle de base de données fixe **db_owner**.  

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 7571742d0484065a90734ad9d9972e37076e20d3
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262863"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058668"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Nom de la colonne de base de données contenant la classification à supprimer. 
 
 - Plusieurs classifications d’objet peuvent être supprimées à l’aide d’une instruction « DROP SENSITIVITY CLASSIFICATION » unique.
 
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 
 Requiert une autorisation ALTER ANY SENSITIVITY CLASSIFICATION. La classification ALTER ANY SENSITIVITY CLASSIFICATION est impliquée par l’autorisation de base de données ALTER, ou par l’autorisation de serveur CONTROL SERVER.
 

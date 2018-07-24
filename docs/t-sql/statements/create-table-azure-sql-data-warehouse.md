@@ -18,11 +18,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3a8992b85126a899f3bb35fa2c34ab0eba4c36ad
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942175"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058747"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -180,7 +180,7 @@ Identique à `datetime`, sauf que vous pouvez spécifier le nombre de fractions 
 |Valeur *n*|Précision|Échelle|  
 |--:|--:|-:|  
 |`0`|19|0|  
-|`1`|21| 1|  
+|`1`|21|1|  
 |`2`|22|2|  
 |`3`|23|3|  
 |`4`|24|4|  
@@ -247,7 +247,7 @@ Identique à `datetime`, sauf que vous pouvez spécifier le nombre de fractions 
 | `bigint`|8|  
 | `int` |4|  
 | `smallint` |2|  
-| `tinyint` | 1|  
+| `tinyint` |1|  
   
  `bit`  
  Type de données entier qui peut prendre la valeur `1`, `0` ou NULL. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] optimise le stockage des colonnes de bits. Si une table contient 8 colonnes de bits ou moins, celles-ci sont stockées comme 1 octet. Si elle contient entre 9 et 16 colonnes de bits, celles-ci sont stockées comme 2 octets, etc.  
@@ -274,7 +274,7 @@ Identique à `datetime`, sauf que vous pouvez spécifier le nombre de fractions 
  GUID sur 16 octets.  
    
 <a name="Permissions"></a>  
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  La création d’une table nécessite une autorisation dans le rôle de base de données fixe `db_ddladmin` ou :
  - Une autorisation `CREATE TABLE` au niveau de la base de données
  - Une autorisation `ALTER SCHEMA` au niveau du schéma qui contient la table. 

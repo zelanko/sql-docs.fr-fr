@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5517458968f64bab9a64b0692deaa973022d9109
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974184"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062062"
 ---
 # <a name="sql-trace"></a>Trace SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "32974184"
 |**TargetLoginName**|42|Pour les actions qui ciblent une connexion, nom de la connexion ciblée, par exemple pour ajouter une nouvelle connexion.|  
 |**TargetLoginSid**|43|Pour les actions qui ciblent une connexion, SID de la connexion ciblée, par exemple pour ajouter une nouvelle connexion.|  
 |**TargetUserName**|39|Pour les actions qui ciblent un utilisateur de base de données, nom de cet utilisateur, par exemple pour accorder une autorisation à un utilisateur.|  
-|**TextData**| 1|Valeur de texte qui dépend de la classe d'événements capturée dans la trace. Néanmoins, si vous tracez une requête paramétrable, les variables ne sont pas affichées avec les valeurs de données dans la colonne **TextData** .|  
+|**TextData**|1|Valeur de texte qui dépend de la classe d'événements capturée dans la trace. Néanmoins, si vous tracez une requête paramétrable, les variables ne sont pas affichées avec les valeurs de données dans la colonne **TextData** .|  
 |**ID de transaction**|4|ID affecté à la transaction par le système.|  
 |**Type**|57|Valeur entière qui dépend de la classe d'événements capturée dans la trace.|  
 |**Writes**|17|Nombre d'opérations d'écriture sur le disque physique effectuées par le serveur pour l'événement.|  
