@@ -19,11 +19,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5464c11f7c9594e613bb4385731736a3204c08f9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707857"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015856"
 ---
 # <a name="full-text-search"></a>Recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
   
 |DocumentID|Titre|  
 |----------------|-----------|  
-| 1|Crank Arm and Tire Maintenance|  
+|1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
@@ -178,20 +178,20 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
   
 |Mot clé|ColId|DocId|Occurrence|  
 |-------------|-----------|-----------|----------------|  
-|Crank| 1| 1| 1|  
-|Arm| 1| 1|2|  
-|Tire| 1| 1|4|  
-|Maintenance| 1| 1|5|  
-|Front| 1|2| 1|  
-|Front| 1|3| 1|  
-|Reflector| 1|2|2|  
-|Reflector| 1|2|5|  
-|Reflector| 1|3|2|  
-|Bracket| 1|2|3|  
-|Bracket| 1|3|3|  
-|Assembly| 1|2|6|  
-|3| 1|2|7|  
-|Installation| 1|3|4|  
+|Crank|1|1|1|  
+|Arm|1|1|2|  
+|Tire|1|1|4|  
+|Maintenance|1|1|5|  
+|Front|1|2|1|  
+|Front|1|3|1|  
+|Reflector|1|2|2|  
+|Reflector|1|2|5|  
+|Reflector|1|3|2|  
+|Bracket|1|2|3|  
+|Bracket|1|3|3|  
+|Assembly|1|2|6|  
+|3|1|2|7|  
+|Installation|1|3|4|  
   
  La colonne **Keyword** contient la représentation d'un jeton unique extrait au moment de l'indexation. Les analyseurs lexicaux déterminent le contenu d'un jeton.  
   
@@ -214,8 +214,8 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
   
 |Mot clé|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Rear| 1|3| 1|  
-|Reflector| 1|3|2|  
+|Rear|1|3|1|  
+|Reflector|1|3|2|  
   
  Comme on peut le constater d'après Fragment 2, les requêtes de texte intégral doivent interroger chaque fragment en interne et ignorer les entrées plus anciennes. Par conséquent, trop de fragments d'index de recherche en texte intégral dans l'index de texte intégral peut conduire à une dégradation substantielle dans les performances des requêtes. Pour réduire le nombre de fragments, réorganisez le catalogue de texte intégral en utilisant l’option REORGANIZE de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md). Cette instruction effectue une *fusion principale*, c’est-à-dire une fusion de tous les fragments en un fragment unique plus grand, et supprime toutes les entrées obsolètes de l’index de recherche en texte intégral.  
   
@@ -223,18 +223,18 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
   
 |Mot clé|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Crank| 1| 1| 1|  
-|Arm| 1| 1|2|  
-|Tire| 1| 1|4|  
-|Maintenance| 1| 1|5|  
-|Front| 1|2| 1|  
-|Rear| 1|3| 1|  
-|Reflector| 1|2|2|  
-|Reflector| 1|2|5|  
-|Reflector| 1|3|2|  
-|Bracket| 1|2|3|  
-|Assembly| 1|2|6|  
-|3| 1|2|7|  
+|Crank|1|1|1|  
+|Arm|1|1|2|  
+|Tire|1|1|4|  
+|Maintenance|1|1|5|  
+|Front|1|2|1|  
+|Rear|1|3|1|  
+|Reflector|1|2|2|  
+|Reflector|1|2|5|  
+|Reflector|1|3|2|  
+|Bracket|1|2|3|  
+|Assembly|1|2|6|  
+|3|1|2|7|  
 
 ### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>Différences entre les index en recherche intégral et les index standard SQL Server :  
   

@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 33535268ba32a43d36a0278a5e6d90cb9dfd9906
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36258376"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981271"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
   
  Pour initialiser les colonnes **text** avec la valeur NULL, utilisez WRITETEXT. UPDATETEXT initialise les colonnes **text** avec une chaîne vide.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite une autorisation UPDATE sur la table spécifiée.  
   
 ## <a name="examples"></a>Exemples  

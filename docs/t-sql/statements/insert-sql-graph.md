@@ -22,11 +22,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 65f064f7893f9dde1f42d94daee1ec6207a0a868
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36254551"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995171"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ Une insertion en bloc (BULK) pour la table de nœuds reste identique à celle d�
 Avant de procéder à une insertion en bloc dans une table d’arêtes, les tables de nœuds doivent être importées. Les valeurs pour `$from_id` et `$to_id` peuvent ensuite être extraites de la colonne `$node_id` de la table de nœuds, puis insérées comme arêtes. 
 
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
  L'autorisation INSERT est obligatoire sur la table cible.  
   
  Les autorisations INSERT sont accordées par défaut aux membres du rôle serveur fixe **sysadmin**, aux rôles de base de données fixes **db_owner** et **db_datawriter**, ainsi qu’au propriétaire de la table. Les membres des rôles **sysadmin**, **db_owner** et **db_securityadmin** et le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  

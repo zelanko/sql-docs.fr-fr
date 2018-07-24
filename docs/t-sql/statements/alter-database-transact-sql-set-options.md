@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 04b95a4a2249f1b5eb80d28b43e082a75e8b9ffd
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fe4ddf28ab00fa8fd60eec6beb14a4cbcacd01ad
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792160"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946993"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL) 
 
@@ -1206,7 +1206,7 @@ Le jeu de résultats montre que l'infrastructure d'isolement d'instantané est a
   
 |NAME |snapshot_isolation_state |description|  
 |-------------------- |------------------------  |----------|  
-|AdventureWorks2012   | 1                        | ON |  
+|AdventureWorks2012   |1                        | ON |  
   
 ### <a name="d-enabling-modifying-and-disabling-change-tracking"></a>D. Activation, modification et désactivation du suivi des modifications  
 L'exemple ci-dessous illustre l'activation du suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et la définition d'une période de rétention de `2` jours.  
@@ -1926,7 +1926,7 @@ Le jeu de résultats montre que l'infrastructure d'isolement d'instantané est a
   
 |NAME |snapshot_isolation_state |description|  
 |-------------------- |------------------------  |----------|  
-|AdventureWorks2012   | 1                        | ON |  
+|AdventureWorks2012   |1                        | ON |  
   
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. Activation, modification et désactivation du suivi des modifications  
 L'exemple ci-dessous illustre l'activation du suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et la définition d'une période de rétention de `2` jours.  
@@ -1994,7 +1994,7 @@ Bien que les niveaux de compatibilité soient des options `SET`, ils sont décri
 ALTER DATABASE { database_name | Current }  
 SET   
 {  
-    <optionspec> [ ,...n ] [ WITH <termination> ]   
+    <optionspec> [ ,...n ] 
 }  
 ;  
 
@@ -2003,9 +2003,7 @@ SET
     <auto_option>   
   | <change_tracking_option>   
   | <cursor_option>   
-  | <db_encryption_option>  
-  | <db_update_option>   
-  | <db_user_access_option>   
+  | <db_encryption_option>    
   | <delayed_durability_option>  
   | <parameterization_option>  
   | <query_store_options>  
@@ -2047,12 +2045,6 @@ SET
   
 <db_encryption_option> ::=  
   ENCRYPTION { ON | OFF }  
-  
-<db_update_option> ::=  
-  { READ_ONLY | READ_WRITE }  
-  
-<db_user_access_option> ::=  
-  { RESTRICTED_USER | MULTI_USER }  
   
 <delayed_durability_option> ::=  DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
   
@@ -2100,14 +2092,7 @@ SET
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
   | RECURSIVE_TRIGGERS { ON | OFF }   
-}  
-  
-<termination>  ::=   
-{  
-    ROLLBACK AFTER integer [ SECONDS ]   
-  | ROLLBACK IMMEDIATE   
-  | NO_WAIT  
-}  
+}
 
 <temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```  
@@ -2615,7 +2600,7 @@ Le jeu de résultats montre que l'infrastructure d'isolement d'instantané est a
   
 |NAME |snapshot_isolation_state |description|  
 |-------------------- |------------------------  |----------|  
-|AdventureWorks2012   | 1                        | ON |  
+|AdventureWorks2012   |1                        | ON |  
   
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. Activation, modification et désactivation du suivi des modifications  
 L'exemple ci-dessous illustre l'activation du suivi des modifications pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et la définition d'une période de rétention de `2` jours.  

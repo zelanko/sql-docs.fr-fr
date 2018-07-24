@@ -33,11 +33,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 77e1fad23e16ca48573d460c1a876e4c6b548e90
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787250"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995213"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ AS PARTITION partition_function_name
   
  Seul PRIMARY est pris en charge pour [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Consultez l’exemple E ci-dessous. 
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les autorisations suivantes peuvent être utilisées pour exécuter la procédure CREATE PARTITION SCHEME :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
@@ -107,7 +107,7 @@ TO (test1fg, test2fg, test3fg, test4fg);
 ||||||  
 |-|-|-|-|-|  
 |**Groupe de fichiers**|`test1fg`|`test2fg`|`test3fg`|`test4fg`|  
-|**Partition**| 1|2|3|4|  
+|**Partition**|1|2|3|4|  
 |**Valeurs**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. Création d'un schéma de partition qui mappe plusieurs partitions à un même groupe de fichiers  
@@ -127,7 +127,7 @@ TO ( test1fg, test1fg, test1fg, test2fg );
 ||||||  
 |-|-|-|-|-|  
 |**Groupe de fichiers**|`test1fg`|`test1fg`|`test1fg`|`test2fg`|  
-|**Partition**| 1|2|3|4|  
+|**Partition**|1|2|3|4|  
 |**Valeurs**|**col1** <= `1`|**col1** > 1 AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>C. Création d'un schéma de partition qui mappe toutes les partitions à un même groupe de fichiers  

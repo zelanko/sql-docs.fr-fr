@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3e98fba7617c3b1a46b64d07f2b7efa0e51b9ad2
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36258381"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980557"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
   
  La valeur de la fonction @@TEXTSIZE remplace la taille indiquée dans READTEXT si elle est inférieure à cette dernière. La fonction @@TEXTSIZE spécifie la limite du nombre d’octets de données à retourner, défini à l’aide de l’instruction SET TEXTSIZE. Pour plus d’informations sur la définition du paramètre de session pour TEXTSIZE, consultez [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les autorisations READTEXT reviennent par défaut aux utilisateurs ayant des autorisations SELECT sur la table indiquée. Ces autorisations peuvent être transférées lorsque les autorisations SELECT sont transférées.  
   
 ## <a name="examples"></a>Exemples  

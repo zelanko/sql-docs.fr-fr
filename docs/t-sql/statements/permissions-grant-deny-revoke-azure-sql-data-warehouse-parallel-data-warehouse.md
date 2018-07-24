@@ -18,11 +18,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 801281b337586d298af8bd8b2dbe42b22be2d3d5
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941805"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969281"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorisations : GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -109,7 +109,7 @@ REVOKE
 > [!IMPORTANT]  
 >  Si le principal a l’autorisation spécifiée sans l’option **GRANT**, l’autorisation elle-même est révoquée.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour accorder une autorisation, le fournisseur d’autorisations doit avoir l’autorisation elle-même avec **WITH GRANT OPTION** ou une autorisation plus élevée qui implique l’autorisation accordée.  Les propriétaires d'objets peuvent accorder des autorisations sur les objets qu'ils possèdent. Les principaux avec l’autorisation **CONTROL** sur un élément sécurisable peuvent accorder une autorisation sur cet élément.  Les membres des rôles de base de données fixes **db_owner** et **db_securityadmin** peuvent accorder n’importe quelle autorisation dans la base de données.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  

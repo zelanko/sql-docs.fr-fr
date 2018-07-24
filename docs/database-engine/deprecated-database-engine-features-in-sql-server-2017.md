@@ -22,23 +22,23 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9b356e2405a42ba2f8e73feb81f110e58a3fbdad
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34052089"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995901"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique décrit les fonctionnalités [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] dépréciées qui sont toujours disponibles dans [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Les fonctions dépréciées ne doivent pas être utilisées dans de nouvelles applications.  
+  Cette rubrique décrit les fonctionnalités [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] déconseillées qui sont toujours disponibles dans [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
   
 Quand une fonctionnalité est marquée comme étant dépréciée, cela signifie que :
 -  La fonctionnalité est en mode de maintenance uniquement. Aucune nouvelle modification ne lui sera apportée, notamment celles liées à l’interopérabilité avec de nouvelles fonctionnalités.
 -  Nous nous efforçons de ne pas retirer une fonctionnalité dépréciée des futures versions pour faciliter les mises à niveau. Cependant, dans de rares cas, nous pouvons décider de retirer définitivement une fonctionnalité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si elle limite de futures innovations.
 -  Pour un nouveau travail de développement, nous vous recommandons de ne pas utiliser des fonctionnalités dépréciées.      
   
-Vous pouvez surveiller l'utilisation de fonctionnalités dépréciées à l'aide du compteur de performance Objet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Fonctionnalités dépréciées et des événements de suivi. Pour plus d’informations, consultez [Utiliser des objets SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
+Vous pouvez surveiller l'utilisation de fonctionnalités déconseillées à l'aide du compteur de performance Objet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Fonctionnalités déconseillées et des événements de suivi. Pour plus d’informations, consultez [Utiliser des objets SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
 La valeur de ces compteurs est également disponible en exécutant l’instruction suivante :  
   
@@ -53,12 +53,12 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>Fonctionnalités dépréciées dans la prochaine version de SQL Server  
 Les fonctionnalités suivantes du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] seront dépréciées dans la prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans vos nouveaux développements et modifiez dès que possible les applications qui y ont recours. La valeur **Nom de la fonctionnalité** apparaît dans les événements de trace comme ObjectName et dans les compteurs de performance et `sys.dm_os_performance_counters` comme nom d’instance. La valeur de l’ **ID de la fonctionnalité** apparaît dans les événements de suivi comme ObjectId.  
   
-|Catégorie|Fonctionnalité dépréciée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
+|Catégorie|Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Sauvegarde et restauration|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD est toujours déprécié. BACKUP { DATABASE &#124; LOG } WITH PASSWORD et BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD ont été retirés.|Aucun.|BACKUP DATABASE ou LOG WITH PASSWORD<br /><br /> BACKUP DATABASE ou LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
+|Sauvegarde et restauration|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD est toujours déconseillé. BACKUP { DATABASE &#124; LOG } WITH PASSWORD et BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD ont été retirés.|Aucun.|BACKUP DATABASE ou LOG WITH PASSWORD<br /><br /> BACKUP DATABASE ou LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |Niveaux de compatibilité|Mise à niveau à partir de version 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quand le [support](http://aka.ms/sqllifecycle) n’est plus assuré pour une version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le niveau de compatibilité de base de données associé est marqué comme étant déprécié. Cependant, nous continuons le plus longtemps possible d’assurer le support des applications certifiées sur n’importe quel niveau de compatibilité de base de données pris en charge de façon à faciliter la mise à niveau. Pour plus d’informations sur les niveaux de compatibilité, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Niveau de compatibilité 100 de la base de données|108|  
 |Objets de base de données|Possibilité de retourner les jeux de résultats à partir de déclencheurs|None|Le déclencheur retourne des résultats|12|  
-|Chiffrement|Le chiffrement à l'aide de RC4 ou RC4_128 est déprécié et est planifié pour être supprimé dans la prochaine version. Le déchiffrement de RC4 et RC4_128 n'est pas déprécié.|Utilisez un autre algorithme de chiffrement, par exemple AES.|Algorithme de chiffrement déprécié|253|  
+|Chiffrement|Le chiffrement à l'aide de RC4 ou RC4_128 est déconseillé et est planifié pour être supprimé dans la prochaine version. Le déchiffrement de RC4 et RC4_128 n'est pas déconseillé.|Utilisez un autre algorithme de chiffrement, par exemple AES.|Algorithme de chiffrement déconseillé|253|  
 |Serveurs distants|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Remplacez les serveurs distants à l'aide de serveurs liés. sp_addserver ne peut être utilisé qu’avec l’option « local ».|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |Serveurs distants|\@\@remserver|Remplacez les serveurs distants à l'aide de serveurs liés.|None|None|  
 |Serveurs distants|SET REMOTE_PROC_TRANSACTIONS|Remplacez les serveurs distants à l'aide de serveurs liés.|SET REMOTE_PROC_TRANSACTIONS|110|  
@@ -68,11 +68,11 @@ Les fonctionnalités suivantes du [!INCLUDE[ssDEnoversion](../includes/ssdenover
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>Fonctionnalités dépréciées dans une future version de SQL Server  
  Les fonctionnalités du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] ci-dessous sont prises en charge dans la prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais seront dépréciées dans une version ultérieure. La version spécifique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'a pas été déterminée.  
   
-|Catégorie|Fonctionnalité dépréciée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
+|Catégorie|Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Niveaux de compatibilité|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
 |Niveaux de compatibilité|Niveau de compatibilité 110 et 120 de la base de données|Projetez de mettre à niveau la base de données et l'application avant la prochaine version.|Niveau de compatibilité 110 de la base de données<br /><br /> Niveau de compatibilité 120 de la base de données||  
-|XML|Génération de schéma XDR en ligne|La directive XMLDATA de l'option FOR XML est dépréciée. Utilisez la génération XSD en mode RAW et AUTO. Il n'existe aucune solution de remplacement pour la directive XMLDATA en mode EXPLICIT.|XMLDATA|181|  
+|XML|Génération de schéma XDR en ligne|La directive XMLDATA de l'option FOR XML est déconseillée. Utilisez la génération XSD en mode RAW et AUTO. Il n'existe aucune solution de remplacement pour la directive XMLDATA en mode EXPLICIT.|XMLDATA|181|  
 |Sauvegarde et restauration|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE ou LOG TO TAPE|235|  
 |Sauvegarde et restauration|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
 |Sauvegarde et restauration|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
@@ -104,7 +104,7 @@ Les fonctionnalités suivantes du [!INCLUDE[ssDEnoversion](../includes/ssdenover
 |Programmation des procédures stockées étendues|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|Utilisez l'intégration CLR à la place.|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |Procédures stockées étendues|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|Utiliser CREATE_LOGIN<br /><br /> Utiliser l'argument DROP LOGIN IsIntegratedSecurityOnly de SERVERPROPERTY|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|44<br /><br /> 45<br /><br /> 59|  
 |Fonctions|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|Algorithmes de hachage|Algorithmes MD2, MD4, MD5, SHA et SHA1. Ils ne sont pas disponibles sous le niveau de compatibilité 130.|Utilisez SHA2_256 ou SHA2_512.|Algorithme de hachage déprécié||  
+|Algorithmes de hachage|Algorithmes MD2, MD4, MD5, SHA et SHA1. Ils ne sont pas disponibles sous le niveau de compatibilité 130.|Utilisez SHA2_256 ou SHA2_512.|Algorithme de hachage déconseillé||  
 |Haute disponibilité|mise en miroir de bases de données|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> Si votre édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge [!INCLUDE[ssHADR](../includes/sshadr-md.md)], utilisez la copie des journaux de transaction.|DATABASE_MIRRORING|267|  
 |Options d'index|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |Options d'index|Syntaxe CREATE TABLE, ALTER TABLE ou CREATE INDEX sans parenthèses autour des options.|Réécrivez l'instruction de manière à utiliser la syntaxe actuelle.|INDEX_OPTION|33|  
@@ -145,10 +145,10 @@ Les fonctionnalités suivantes du [!INCLUDE[ssDEnoversion](../includes/ssdenover
 |Tables système|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|None|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |Fonctions système|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |Vues système|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
-|Compression de table|Utilisation du format de stockage vardecimal.|Le format de stockage vardecimal est déprécié. La compression des données[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] compresse les valeurs décimales ainsi que d’autres types de données. Nous vous recommandons d'utiliser la compression de données au lieu du format de stockage vardecimal.|Format de stockage vardecimal|200|  
-|Compression de table|Utilisation de la procédure sp_db_vardecimal_storage_format.|Le format de stockage vardecimal est déprécié. La compression des données[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] compresse les valeurs décimales ainsi que d’autres types de données. Nous vous recommandons d'utiliser la compression de données au lieu du format de stockage vardecimal.|sp_db_vardecimal_storage_format|201|  
+|Compression de table|Utilisation du format de stockage vardecimal.|Le format de stockage vardecimal est déconseillé. La compression des données[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] compresse les valeurs décimales ainsi que d’autres types de données. Nous vous recommandons d'utiliser la compression de données au lieu du format de stockage vardecimal.|Format de stockage vardecimal|200|  
+|Compression de table|Utilisation de la procédure sp_db_vardecimal_storage_format.|Le format de stockage vardecimal est déconseillé. La compression des données[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] compresse les valeurs décimales ainsi que d’autres types de données. Nous vous recommandons d'utiliser la compression de données au lieu du format de stockage vardecimal.|sp_db_vardecimal_storage_format|201|  
 |Compression de table|Utilisation de la procédure sp_estimated_rowsize_reduction_for_vardecimal.|Utilisez à la place la compression de données et la procédure sp_estimate_data_compression_savings.|sp_estimated_rowsize_reduction_for_vardecimal|202|  
-|Indicateurs de table|Spécification de NOLOCK ou READUNCOMMITTED dans la clause FROM d'une instruction UPDATE ou DELETE.|Supprimez les indicateurs de table NOLOCK ou READUNCOMMITTED de la clause FROM.|NOLOCK ou READUNCOMMITTED dans UPDATE ou DELETE| 1|  
+|Indicateurs de table|Spécification de NOLOCK ou READUNCOMMITTED dans la clause FROM d'une instruction UPDATE ou DELETE.|Supprimez les indicateurs de table NOLOCK ou READUNCOMMITTED de la clause FROM.|NOLOCK ou READUNCOMMITTED dans UPDATE ou DELETE|1|  
 |Indicateurs de table|Spécification des indicateurs de table sans utilisation du mot clé WITH.|Utilisez WITH.|Indicateur de table sans WITH|8|  
 |Indicateurs de table|INSERT_HINTS||INSERT_HINTS|34|  
 |Pointeurs de texte|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|None|UPDATETEXT ou WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  

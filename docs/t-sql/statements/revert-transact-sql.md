@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c1f882cf07a504b63218862e79324c32b74b2628
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781800"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991691"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ EXECUTE dbo.usp_myproc;
   
  Ce mécanisme est utile dans un environnement utilisant le groupement de connexions. Le groupement de connexions est la maintenance d'un groupe de connexions de base de données en vue de leur réutilisation par plusieurs utilisateurs finaux. Comme la valeur passée à *@varbinary_variable* n’est connue que de l’appelant de l’instruction EXECUTE AS (en l’occurrence, l’application), celui-ci peut garantir que le contexte d’exécution qu’il établit ne sera pas modifié par l’utilisateur final qui appelle l’application. Après restauration du contexte d'exécution, l'application peut changer de contexte au profit d'un autre principal.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Aucune autorisation n'est requise.  
   
 ## <a name="examples"></a>Exemples  

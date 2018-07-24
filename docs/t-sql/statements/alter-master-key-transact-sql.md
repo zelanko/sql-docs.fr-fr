@@ -32,11 +32,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: eb393de5e17aa9b10cef656e83b7f76460eb991f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785970"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975214"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -110,7 +110,7 @@ ALTER MASTER KEY <alter_option>
   
  ADD ENCRYPTION BY SERVICE MASTER KEY entraîne le chiffrement d'une copie de la clé principale au moyen de la clé principale du service et le stockage de cette copie dans la base de données en cours et dans master.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation CONTROL sur la base de données. Si la clé principale de base de données a été chiffrée à l'aide d'un mot de passe, ce mot de passe doit également être connu.  
   
 ## <a name="examples"></a>Exemples  

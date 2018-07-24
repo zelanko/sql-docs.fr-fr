@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= sql-server-2017 || = azuresqldb-current || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ec9f538c7506375adc74b4a0b2779b40bafab2f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408058"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970999"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ Vous n’avez pas besoin d’installer R, Python ou un autre langage d’apprent
 
 Le modèle que vous utilisez doit avoir été créé à l’aide d’un des algorithmes pris en charge fournis dans le package RevoScaleR. Pour obtenir la liste des modèles pris en charge, consultez [Calcul des scores en temps réel](../../advanced-analytics/real-time-scoring.md).
 
-### <a name="permissions"></a>Autorisations
+### <a name="permissions"></a>Permissions
 
 Aucune autorisation n’est requise pour `PREDICT`. Cependant, l’utilisateur doit avoir l’autorisation `EXECUTE` sur la base de données, ainsi que l’autorisation d’effectuer des requêtes sur les données utilisées comme entrées. L’utilisateur doit également pouvoir lire le modèle à partir d’une table, si le modèle a été stocké dans une table.
 

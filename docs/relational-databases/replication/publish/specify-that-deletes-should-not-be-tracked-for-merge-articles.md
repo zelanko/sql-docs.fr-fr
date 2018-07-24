@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a81e51c99540d8cc174341610a2163bf2aaf428
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357681"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968631"
 ---
 # <a name="specify-that-deletes-should-not-be-tracked-for-merge-articles"></a>Indiquer que les suppressions ne doivent pas être suivies pour les articles de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

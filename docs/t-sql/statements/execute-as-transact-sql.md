@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2520b75495006760b5755ed57ab109d6ef99573a
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941955"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991721"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ Si l’utilisateur est orphelin (la connexion associée n’existant plus) et qu
 ## <a name="determining-the-original-login"></a>Identification de la connexion originale  
  Utilisez la fonction [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) pour retourner le nom de la connexion utilisée pour se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez utiliser cette fonction pour renvoyer l'identité de la connexion d'origine dans les sessions où il y a un grand nombre de changements de contexte implicites ou explicites.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour spécifier **EXECUTE AS** sur une connexion, l’appelant doit avoir l’autorisation **IMPERSONATE** sur le nom de connexion spécifié et l’autorisation **IMPERSONATE ANY LOGIN** ne doit pas lui être refusée. Pour spécifier **EXECUTE AS** sur un utilisateur de base de données, l’appelant doit avoir les autorisations **IMPERSONATE** sur le nom d’utilisateur spécifié. Quand **EXECUTE AS CALLER** est spécifié, les autorisations **IMPERSONATE** ne sont pas nécessaires.  
   
 ## <a name="examples"></a>Exemples  

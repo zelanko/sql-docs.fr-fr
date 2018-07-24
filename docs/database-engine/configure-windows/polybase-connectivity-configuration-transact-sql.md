@@ -18,11 +18,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: bb82ed8c4a4dc7c881ac2b94dee9ea88ce009858
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33698672"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974602"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuration de la connectivité PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -110,7 +110,7 @@ Dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], après exécution de RECONFI
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  RECONFIGURE n'est pas autorisée dans une transaction explicite ou implicite.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Tous les utilisateurs peuvent exécuter **sp_configure** sans paramètres ou avec le paramètre @configname .  
   
  Nécessite une autorisation **ALTER SETTINGS** au niveau du serveur ou l’appartenance rôle de serveur **sysadmin** pour modifier une valeur de configuration ou pour exécuter RECONFIGURE.  
