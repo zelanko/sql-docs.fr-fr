@@ -25,11 +25,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 93ac6dbb87046bcd10ffb010266d36f926de1257
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782608"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064617"
 ---
 # <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -58,7 +58,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 |Valeur retournée|Description|  
 |------------------|-----------------|  
 |0|*database_principal* n’est pas un membre de *role*.|  
-| 1|*database_principal* est un membre de *role*.|  
+|1|*database_principal* est un membre de *role*.|  
 |NULL|*database_principal* ou *role* n’est pas valide, ou vous ne disposez pas de l’autorisation nécessaire pour afficher l’appartenance au rôle.|  
   
 ## <a name="remarks"></a>Notes   
@@ -83,7 +83,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="related-functions"></a>Fonctions connexes  
  Pour déterminer si l’utilisateur actuel est membre du groupe Windows spécifié ou du rôle de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md). Pour déterminer si une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est membre d’un rôle de serveur, utilisez [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation VIEW DEFINITION sur le rôle de base de données.  
   
 ## <a name="examples"></a>Exemples  

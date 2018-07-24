@@ -17,12 +17,12 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a88a95ea4ad99373c5f8a1994599a2dbea961669
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0badf80ef7108ddcbeeafba703873ed97b5c2b14
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942424"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983162"
 ---
 # <a name="lesson-2-create-a-sql-server-credential-using-a-shared-access-signature"></a>Leçon 2 : Créer des informations d’identification SQL Server à l’aide d’une signature d’accès partagé
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Dans cette leçon, vous allez créer des informations d’identification pour st
 Les informations d'identification SQL Server sont des objets utilisés pour stocker les informations d'authentification requises pour la connexion à une ressource en dehors de SQL Server. Les informations d’identification contiennent le chemin de l’URI du conteneur de stockage et la signature d’accès partagé pour ce conteneur.  
   
 > [!NOTE]  
-> Si vous souhaitez effectuer une sauvegarde d’une base de données SQL Server 2012 SP1 CU2 ou version ultérieure ou d’une base de données SQL Server 2014 vers ce conteneur Azure, vous pouvez utiliser la [syntaxe déconseillée](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) décrite ici pour créer des informations d’identification SQL Server en fonction de votre clé de compte de stockage.  
+> Si vous souhaitez effectuer une sauvegarde d’une base de données SQL Server 2012 SP1 CU2 ou version ultérieure ou d’une base de données SQL Server 2014 vers ce conteneur Azure, vous pouvez utiliser la [syntaxe déconseillée](https://technet.microsoft.com/library/dn435916(v=sql.120).aspx) décrite ici pour créer des informations d’identification SQL Server en fonction de votre clé de compte de stockage.  
   
 ## <a name="create-sql-server-credential"></a>Créer des informations d’identification SQL Server  
 Pour créer des informations d’identification SQL Server, procédez comme suit :  

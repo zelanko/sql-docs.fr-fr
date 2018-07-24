@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 031bfb83581d84095826cb3ce2593170dd2eb8ef
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782930"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066427"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Notes   
  Les spécifications d'audit de base de données sont des objets non sécurisables qui résident dans une base de données spécifiée. Lorsqu'une spécification d'audit de base de données est créée, elle se trouve dans un état désactivé.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les utilisateurs dotés de l’autorisation `ALTER ANY DATABASE AUDIT` peuvent créer des spécifications d’audit de base de données et les lier à n’importe quel audit.  
   
  Une fois qu’une spécification d’audit de la base de données est créée, elle est consultable par les principaux disposant des autorisations `CONTROL SERVER` ou `ALTER ANY DATABASE AUDIT`, ou bien du compte `sysadmin`.  

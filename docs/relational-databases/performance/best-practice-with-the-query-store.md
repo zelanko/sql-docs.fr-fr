@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6b667bf8be87561461c1ceec2543dcce051b93e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 30a22bd9661ea6b5be5d33fad5a9ce03e4f3b1c1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332490"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981421"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bonnes pratiques relatives au magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "34332490"
   
 ##  <a name="SSMS"></a>Utiliser la dernière version de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose un ensemble d’interfaces utilisateur conçu pour configurer le magasin de requêtes et consommer les données collectées relatives à votre charge de travail.  
-Téléchargez la dernière version de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [ici](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
+Téléchargez la dernière version de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [ici](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).  
   
- Pour obtenir une description rapide de l’utilisation du Magasin des requêtes dans des scénarios de résolution des problèmes, consultez les informations relatives au [Magasin des requêtes @Azure Blogs](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/).  
+ Pour obtenir une description rapide de l’utilisation du Magasin des requêtes dans des scénarios de résolution des problèmes, consultez les informations relatives au [Magasin des requêtes @Azure Blogs](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
 ##  <a name="Insight"></a> Utiliser Query Performance Insight dans Azure SQL Database  
  Si vous exécutez le magasin de requêtes dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , vous pouvez utiliser **Query Performance Insight** pour analyser la consommation DTU dans le temps.  

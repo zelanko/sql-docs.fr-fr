@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 799f2b0df6a33d70006baf4b1389584cd7acf801
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34722319"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064193"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Compression de table|Utilisation du format de stockage vardecimal.|Le format de stockage vardecimal est déconseillé. La compression des données[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] compresse les valeurs décimales ainsi que d’autres types de données. Nous vous recommandons d'utiliser la compression de données au lieu du format de stockage vardecimal.|Format de stockage vardecimal|200|  
 |Compression de table|Utilisation de la procédure sp_db_vardecimal_storage_format.|Le format de stockage vardecimal est déconseillé. La compression des données[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] compresse les valeurs décimales ainsi que d’autres types de données. Nous vous recommandons d'utiliser la compression de données au lieu du format de stockage vardecimal.|sp_db_vardecimal_storage_format|201|  
 |Compression de table|Utilisation de la procédure sp_estimated_rowsize_reduction_for_vardecimal.|Utilisez à la place la compression de données et la procédure sp_estimate_data_compression_savings.|sp_estimated_rowsize_reduction_for_vardecimal|202|  
-|Indicateurs de table|Spécification de NOLOCK ou READUNCOMMITTED dans la clause FROM d'une instruction UPDATE ou DELETE.|Supprimez les indicateurs de table NOLOCK ou READUNCOMMITTED de la clause FROM.|NOLOCK ou READUNCOMMITTED dans UPDATE ou DELETE| 1|  
+|Indicateurs de table|Spécification de NOLOCK ou READUNCOMMITTED dans la clause FROM d'une instruction UPDATE ou DELETE.|Supprimez les indicateurs de table NOLOCK ou READUNCOMMITTED de la clause FROM.|NOLOCK ou READUNCOMMITTED dans UPDATE ou DELETE|1|  
 |Indicateurs de table|Spécification des indicateurs de table sans utilisation du mot clé WITH.|Utilisez WITH.|Indicateur de table sans WITH|8|  
 |Indicateurs de table|INSERT_HINTS||INSERT_HINTS|34|  
 |Pointeurs de texte|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|None|UPDATETEXT ou WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  

@@ -1,6 +1,6 @@
 ---
-title: Afficher une colonne et les métadonnées de catalogue pour les colonnes éparses (OLE DB) | Documents Microsoft
-description: Afficher les métadonnées de colonne et de catalogue pour les colonnes éparses (OLE DB)
+title: Afficher une colonne et des métadonnées de catalogue pour les colonnes éparses (OLE DB)
+description: Afficher une colonne et des métadonnées de catalogue pour les colonnes éparses (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,24 +14,24 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 64446574a70cab878c9c95b833f0065ad4a846ad
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7fff85eaf61d32f2e064a827e53349bd832e411c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665599"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108991"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Afficher une colonne et des métadonnées de catalogue pour les colonnes éparses (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Cet exemple crée une table à trois colonnes : une colonne éparse, une colonne non éparse et une colonne de jeu de colonnes. L'exemple affiche ensuite les indicateurs OLE DB indiquant la colonne et les métadonnées de catalogue de la colonne non éparse et de la colonne de jeu de colonnes.  
   
- Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure. Pour plus d’informations sur les colonnes éparses, consultez [prise en charge des colonnes éparses dans le pilote OLE DB pour SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
+ Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure. Pour plus d’informations sur les colonnes éparses, consultez [prise en charge des colonnes éparses dans OLE DB Driver pour SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
   
-## <a name="example"></a>Exemple  
- Assurez-vous que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
+## <a name="example"></a> Exemple  
+ Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
 ```  
 #include <stddef.h>  

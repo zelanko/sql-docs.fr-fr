@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5b6a5d6eafc76b80a169332f8c71309440c4ef0f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d9419443e554c225bd2ee6708c8448787160b6de
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093313"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979173"
 ---
 # <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell et CLI : Activer TDE à l’aide de votre propre clé Azure Key Vault
 
@@ -39,8 +39,8 @@ Ce guide pratique explique comment utiliser une clé Azure Key Vault avec la fon
    - [Instructions PowerShell à partir de Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)
    - [Instructions pour utiliser un module de sécurité matériel (HSM) et Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - Le coffre de clés doit avoir la propriété suivante pour être utilisé pour TDE :
-   - [soft-delete](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [Guide pratique pour utiliser la suppression réversible Key Vault avec Azure Power​Shell](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) 
+   - [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [Guide pratique pour utiliser la suppression réversible Key Vault avec Azure Power​Shell](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) 
 - La clé doit avoir les attributs suivants pour être utilisée pour TDE :
    - Pas de date d’expiration
    - Non désactivée
@@ -200,13 +200,13 @@ En cas de problème, vérifiez les points suivants :
 
 - Vous devez avoir un abonnement Azure et être administrateur de cet abonnement.
 - [Recommandé mais facultatif] Vous devez avoir un module de sécurité matériel (HSM) ou un magasin de clés local à utiliser pour la création d’une copie locale des éléments de clé du protecteur TDE.
-- Interface de ligne de commande CLI version 2.0 ou ultérieure. Pour installer la version la plus récente et vous connecter à votre abonnement Azure, consultez [Installer et configurer l’interface de ligne de commande multiplateforme Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). 
+- Interface de ligne de commande CLI version 2.0 ou ultérieure. Pour installer la version la plus récente et vous connecter à votre abonnement Azure, consultez [Installer et configurer l’interface de ligne de commande multiplateforme Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). 
 - Vous devez avoir créé un conteneur Azure Key Vault et une clé pour TDE.
-   - [Gérer Key Vault à l’aide de CLI 2.0](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
+   - [Gérer Key Vault à l’aide de CLI 2.0](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
    - [Instructions pour utiliser un module de sécurité matériel (HSM) et Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - Le coffre de clés doit avoir la propriété suivante pour être utilisé pour TDE :
-   - [soft-delete](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [Guide pratique pour utiliser la suppression réversible Key Vault avec l’interface CLI](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-cli) 
+   - [soft-delete](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [Guide pratique pour utiliser la suppression réversible Key Vault avec l’interface CLI](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli) 
 - La clé doit avoir les attributs suivants pour être utilisée pour TDE :
    - Pas de date d’expiration
    - Non désactivée
@@ -264,11 +264,11 @@ TDE est maintenant activé pour l’entrepôt de données ou la base de données
 
 ## <a name="sql-cli-references"></a>Informations de référence sur l’interface CLI SQL
 
-https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/tde-key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/db/tde?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/db/tde?view=azure-cli-latest 
 

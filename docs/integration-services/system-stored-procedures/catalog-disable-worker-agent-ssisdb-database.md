@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 86243f3f2cc79baf322ee628e9fc4b651217906f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407531"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063883"
 ---
 # <a name="catalogdisableworkeragent-ssisdb-database"></a>catalog.disable_worker_agent (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ GO
 ## <a name="result-sets"></a>Jeux de résultats  
  None  
 
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Appartenance au rôle de base de données **ssis_admin**  

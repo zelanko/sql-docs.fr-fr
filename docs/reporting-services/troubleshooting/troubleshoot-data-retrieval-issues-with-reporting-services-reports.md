@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3503952eb791c4423826626b98e8f8feb2bce0c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032326"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066667"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Dépanner des problèmes de récupération des données avec des rapports Reporting Services
 La première étape de traitement d'un rapport consiste à récupérer les données du rapport pour chaque dataset en exécutant la requête de dataset. Lorsque vous affichez l'aperçu d'un rapport localement, vos connexions à la source de données et vos informations d'identification doivent avoir des autorisations suffisantes pour récupérer les données sur votre ordinateur. Lorsque vous exécutez un rapport sur le serveur de rapports, les connexions à la source de données et les informations d'identification doivent avoir des autorisations suffisantes pour récupérer les données sur le serveur de rapports. Utilisez cette rubrique pour vous aider à résoudre des problèmes de récupération des données de rapport.   

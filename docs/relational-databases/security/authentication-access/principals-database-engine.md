@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 57
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a704a8dc913a0931c628634493ff7e1239bb5550
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 8ac54250c72f7f29ccc714b05eb795d43bd26847
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941285"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109311"
 ---
 # <a name="principals-database-engine"></a>Principaux (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +91,7 @@ Chaque connexion appartient au rôle serveur fixe `public` et chaque utilisateur
  Chaque base de données inclut un `guest`. Les autorisations accordées à l'utilisateur `guest` sont héritées par les utilisateurs qui ont accès à la base de données, mais n'ont pas de compte d'utilisateur dans la base de données. L’utilisateur `guest` ne peut pas être supprimé, mais vous pouvez le désactiver en révoquant son autorisation CONNECT. Vous pouvez révoquer l’autorisation CONNECT en exécutant l’instruction `REVOKE CONNECT FROM GUEST;` dans n’importe quelle base de données autre que `master` ou `tempdb`.  
   
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur la conception d’un système d’autorisations, consultez [Getting Started with Database Engine Permissions](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
  Les rubriques suivantes sont incluses dans cette section de la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  

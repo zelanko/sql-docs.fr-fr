@@ -1,5 +1,5 @@
 ---
-title: Comparabilité pour IRowsetFind | Documents Microsoft
+title: Comparabilité pour IRowsetFind | Microsoft Docs
 description: Comparabilité pour IRowsetFind
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 499f88680a44e16180f08fa87955612bee06896a
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: f399bb39db15f16169494d8b33b4f1b1c142efe3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665479"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109732"
 ---
 # <a name="comparability-for-irowsetfind"></a>Comparabilité pour IRowsetFind
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -46,7 +46,7 @@ ms.locfileid: "35665479"
   
  Si une autre comparaison est tentée, DB_E_BADCOMPAREOP est retourné. Ce comportement est conforme à la spécification OLE DB.  
   
-## <a name="see-also"></a>Voir aussi  
- [Date et heure améliorations &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Améliorations des types de données date et heure](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   
