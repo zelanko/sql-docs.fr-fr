@@ -50,11 +50,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 866e481123bc73db91a093cc79de0c2e7e277fa9
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262573"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040207"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -480,7 +480,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
  *max_degree_of_parallelism* peut avoir la valeur :  
   
-  1  
+ 1  
  Supprime la création de plans parallèles.  
   
  \>1  
@@ -772,7 +772,7 @@ Les restrictions suivantes s'appliquent aux index partitionnés :
 ## <a name="statistics"></a>Statistiques  
  Lorsque vous exécutez **ALTER INDEX ALL...** sur une table, seules les statistiques associées aux index sont mises à jour. Les statistiques automatiques ou manuelles créées sur la table (au lieu d'un index) ne sont pas mises à jour.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour pouvoir exécuter l'instruction ALTER INDEX, vous devez obligatoirement bénéficier au minimum d'autorisations nécessaires pour exécuter les instructions ALTER sur la table ou la vue.  
   
 ## <a name="version-notes"></a>Notes de version  

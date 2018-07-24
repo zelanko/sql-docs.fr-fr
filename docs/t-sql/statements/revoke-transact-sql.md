@@ -34,11 +34,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9630b7e56f2e741c96f370069ad00fc2f7721f5f
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942075"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031777"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -158,7 +158,7 @@ L’utilisation de AS dans cette instruction n’implique pas la possibilité d�
   
  L'instruction REVOKE échoue si l'argument CASCADE n'est pas spécifié lorsque vous révoquez une autorisation d'un principal auquel a été accordée cette autorisation avec GRANT OPTION spécifié.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les principaux avec l'autorisation CONTROL sur un élément sécurisable peuvent révoquer l'autorisation sur cet élément sécurisable. Les propriétaires d'objets peuvent révoquer des autorisations sur les objets qu'ils possèdent.  
   
  Les bénéficiaires de l'autorisation CONTROL SERVER, par exemple les membres du rôle serveur fixe sysadmin, peuvent révoquer n'importe quelle autorisation sur n'importe quel élément sécurisable du serveur. Les bénéficiaires de l'autorisation CONTROL sur une base de données, par exemple les membres du rôle de base de données fixe db_owner, peuvent révoquer n'importe quelle autorisation sur n'importe quel élément sécurisable de la base de données. Les bénéficiaires de l'autorisation CONTROL sur un schéma peuvent révoquer n'importe quelle autorisation sur n'importe quel objet du schéma.  

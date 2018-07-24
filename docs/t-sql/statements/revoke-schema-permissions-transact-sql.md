@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2e078ff6f5d983d4387ab86ffbda65ecda3ff4f6
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941705"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038727"
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE - Révoquer les autorisations sur un schéma (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW CHANGE TRACKING|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation CONTROL pour le schéma.  
   
 ## <a name="see-also"></a> Voir aussi  

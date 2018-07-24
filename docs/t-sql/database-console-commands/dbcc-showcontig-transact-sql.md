@@ -28,11 +28,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: d473c726aefc9f0f2975e975027bb8cfcd008d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263321"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040047"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -188,7 +188,7 @@ Le niveau de fragmentation d'un index peut être déterminé des manières suiva
     > [!NOTE]  
     >  La valeur **Fragmentation d’analyse d’extension** est élevée si l’index s’étend sur plusieurs fichiers. Pour réduire ces valeurs, vous devez réduire la fragmentation de l'index.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 L’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin**, du rôle de base de données fixe **db_owner** ou du rôle de base de données fixe **db_ddladmin**.
   
 ## <a name="examples"></a>Exemples  

@@ -36,11 +36,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 49a9a6bdbd2b952614dff3c1095847a434803c78
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251031"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052037"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -375,7 +375,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>Bonnes pratiques  
  Spécifiez une connexion ou un utilisateur qui possède les privilèges minimum requis pour effectuer les opérations définies dans l'instruction ou le module. Par exemple, ne spécifiez pas un nom de connexion qui a des autorisations au niveau serveur, si seules des autorisations au niveau base de données sont requises. Ne spécifiez pas non plus le compte d'un propriétaire de base de données, excepté si ces autorisations sont exigées.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Aucune autorisation n'est requise pour exécuter l'instruction EXECUTE. Cependant, des autorisations sont requises sur les éléments sécurisables référencés dans la chaîne EXECUTE. Par exemple, si la chaîne contient une instruction INSERT, l'appelant de l'instruction EXECUTE doit posséder l'autorisation INSERT sur la table cible. Les autorisations sont vérifiées au moment où l'instruction EXECUTE est rencontrée, même si celle-ci est incluse dans un module.  
   
  Les autorisations EXECUTE pour un module sont accordées par défaut au propriétaire du module, qui peut les transmettre à d'autres utilisateurs. Lorsqu'un module qui exécute une chaîne est lancé, les autorisations sont vérifiées dans le contexte non pas de l'utilisateur qui a créé le module, mais de celui qui exécute le module. Cependant, si le même utilisateur est propriétaire du module appelant et du module appelé, la vérification de l'autorisation EXECUTE n'a pas lieu pour le second module.  

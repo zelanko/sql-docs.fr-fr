@@ -30,11 +30,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6e8ab694f484fe0679c4e41c162b7c482560c663
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782640"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042637"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -278,7 +278,7 @@ Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le 
 |SQLNCHAR ou SQLNVARCHAR|Les données sont envoyées au format Unicode.|  
 |SQLBINARY ou SQLVARYBIN|Les données sont envoyées sans être converties.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les autorisations `OPENROWSET` sont conditionnées par les autorisations associées au nom d’utilisateur passé au fournisseur OLE DB. L’utilisation de l’option `BULK` nécessite l’autorisation `ADMINISTER BULK OPERATIONS`.  
   
 ## <a name="examples"></a>Exemples  

@@ -30,11 +30,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0dbee4b5b28b2dd72c4c6bdb7cc91eb07272cbf5
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36242251"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054018"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +144,7 @@ SELECT <select_criteria>
 >
 > Par exemple, supposons qu’un index cluster est appliqué à un affichage qui exclut certaines lignes de la table, et que la liste de colonnes SELECT dans l’affichage utilise une clause CONVERT qui convertit un type de données *varchar* en *integer*. Dans ce cas, la clause CONVERT peut s’exécuter avant la clause WHERE. Ce cas se produit rarement. Il y a souvent un moyen de modifier votre affichage pour éviter tout changement de la séquence, si cela est important dans votre cas. 
 
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  La sélection de données requiert l'autorisation **SELECT** sur la table ou la vue, qui pourrait être héritée d'une étendue supérieure telle que l'autorisation **SELECT** sur le schéma ou l'autorisation **CONTROL** sur la table. La sélection peut également nécessiter l’appartenance au rôle de base de données fixe **db_datareader** ou **db_owner**, ou au rôle de serveur fixe **sysadmin**. La création d’une table à l’aide de **SELECTINTO** nécessite également l’autorisation **CREATETABLE** et l’autorisation **ALTERSCHEMA** sur le schéma propriétaire de la nouvelle table.  
   
 ## <a name="examples"></a>Exemples :   

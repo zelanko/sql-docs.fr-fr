@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c60a307966a32ff5b175e888607b9065387e8ea
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784850"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036997"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ CERTENCODED ( cert_id )
 ## <a name="remarks"></a>Notes   
 Les fonctions **CERTENCODED** et **CERTPRIVATEKEY** sont utilisées ensemble pour retourner les différentes parties d’un certificat sous forme binaire.
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 **CERTENCODED** est disponible publiquement.
   
 ## <a name="examples"></a>Exemples  

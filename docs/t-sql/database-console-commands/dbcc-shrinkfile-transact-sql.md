@@ -34,11 +34,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: a771f30b82a81fa05ea65409bce9a132cbb42dad
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300337"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040037"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ Pour résoudre ce problème, vous pouvez effectuer l'une des opérations suivant
 -   Achevez l'opération de réduction. Si vous achevez l'opération de réduction, tout travail accompli est conservé.  
 -   Laissez simplement l'opération de réduction attendre que la transaction bloquante s'achève.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .
   
 ## <a name="examples"></a>Exemples  

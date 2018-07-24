@@ -1,5 +1,5 @@
 ---
-title: Création d’un ensemble de lignes avec IOpenRowset | Documents Microsoft
+title: Création d’un ensemble de lignes avec IOpenRowset | Microsoft Docs
 description: Création d’un ensemble de lignes avec IOpenRowset, interface de pilote OLE DB pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,31 +19,31 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: dd1b48ee3ba9439f5a1cddbfed07196480265b74
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 53a9b42461fd9c7ba194af62f86d8670b8539ddf
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689062"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105945"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Création d'un ensemble de lignes avec IOpenRowset
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Le pilote OLE DB pour SQL Server prend en charge la **IOpenRowset::OpenRowset** méthode avec les restrictions suivantes :  
   
--   Une table de base ou une vue doit être spécifié dans une base de données ID (DBID) de la structure qui le *pTableID* paramètre pointe vers.  
+-   Une table de base ou une vue doit être spécifiée dans une structure d'ID de base de données (DBID) vers laquelle pointe le paramètre pTableID *.  
   
--   Le DBID *eKind* membre doit indiquer DBKIND_NAME.  
+-   Le membre eKind* de la structure DBID doit indiquer DBKIND_NAME.  
   
--   Le DBID *uName* membre doit spécifier le nom d’une vue ou d’une table de base existante en tant que chaîne de caractères Unicode.  
+-   Le membre uName* de la structure DBID doit spécifier le nom d'une table de base ou d'une vue existante sous forme de chaîne de caractères Unicode.  
   
--   Le *pIndexID* paramètre de **OpenRowset** doit être NULL.  
+-   Le paramètre pIndexID *de OpenRowset* doit être NULL.  
   
- Le jeu de résultats de **IOpenRowset::OpenRowset** contient un ensemble de lignes unique. Les jeux de résultats qui contiennent un ensemble de lignes unique peuvent être pris en charge par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] curseurs. La prise en charge des curseurs permet au développeur d'utiliser les mécanismes d'accès concurrentiel de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Le jeu de résultats de IOpenRowset::OpenRowset** contient un ensemble de lignes unique. Les jeux de résultats qui contiennent un ensemble de lignes unique peuvent être pris en charge par les curseurs [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La prise en charge des curseurs permet au développeur d'utiliser les mécanismes d'accès concurrentiel de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Ensembles de lignes](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

@@ -17,11 +17,11 @@ ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 83826259d76cbe27cad4451baed07221e6afed2c
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36895882"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052925"
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
  *spid*  
  Identificateur de la session [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécute le plan de requête. Il s’agit d’un entier différent de Null.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’autorisation CONTROL sur [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 Nécessite l’autorisation VIEW-SERVER-STATE sur l’appliance.

@@ -18,11 +18,11 @@ ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24a2eb0a69a6fcbedf1d5323caa97cdccd180fd5
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36915030"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039774"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
  [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  Nom en une, deux ou trois parties de la table à afficher. Les noms de table en deux ou trois parties doivent être placés entre guillemets doubles (""). L’utilisation de guillemets autour d’un nom de table en une partie est facultative. Quand aucun nom de table n’est spécifié, les informations s’affichent pour la base de données actuelle.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Requiert l'autorisation VIEW SERVER STATE.
   
 ## <a name="result-sets"></a>Jeux de résultats  

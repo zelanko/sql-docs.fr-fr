@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2b21d850297315939cfa696c7076329d53375b79
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782020"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051877"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
  DROP FUNCTION échoue si des colonnes calculées qui ont été indexées font référence à cette fonction.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour exécuter DROP FUNCTION, un utilisateur doit avoir au minimum l'autorisation ALTER sur le schéma auquel appartient la fonction ou l'autorisation CONTROL sur la fonction.  
   
 ## <a name="examples"></a>Exemples  

@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7127db06d4d2e63304ab870ad3c2c9ee3fe91001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012416"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051147"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considérations et limitations liées aux tables temporelles
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "33012416"
   
     -   Configuration du partitionnement  
   
-    -   Autorisations  
+    -   Permissions  
   
     -   Prédicats de sécurité au niveau des lignes  
   

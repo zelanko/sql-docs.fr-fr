@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9af12b09b1bcfb74990fcfcd5471e4e9e0b74569
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328943"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051517"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>Vue d’ensemble : importation de données à partir d’Excel (complément MDS pour Excel)
 
@@ -54,7 +54,7 @@ ms.locfileid: "35328943"
 ## <a name="business-rule-and-other-validation"></a>Règle d'entreprise et autres validations  
  Lorsque vous publiez des données, une validation est exécutée pour garantir que les données sont exactes avant d'être ajoutées au référentiel MDS. Si les données ne répondent pas aux critères spécifiés, elles ne seront pas publiées dans le référentiel. Pour plus d’informations, consultez [Validation des données &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

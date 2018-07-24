@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e6b636d170432c1c5eb3b784b0f29e06f412c5ec
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781790"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031067"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ MOVE CONVERSATION conversation_handle
   
  MOVE CONVERSATION n'est pas valide dans une fonction définie par l'utilisateur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour déplacer une conversation, l'utilisateur actif doit être soit propriétaire de la conversation et du groupe de conversations, soit un membre du rôle serveur fixe sysadmin, soit un membre du rôle de base de données fixe db_owner.  
   
 ## <a name="examples"></a>Exemples  

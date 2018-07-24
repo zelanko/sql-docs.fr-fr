@@ -24,11 +24,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c86fbd061eef2b7b13887d3a6ae701f94a211aa8
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941045"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38027249"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -80,7 +80,7 @@ Vous pouvez consulter des rôles de serveur en interrogeant les affichages catal
   
 Pour modifier le propriétaire d’un rôle serveur défini par l’utilisateur, utilisez [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Nécessite l’autorisation `ALTER ANY SERVER ROLE` sur le serveur pour changer le nom d’un rôle serveur défini par l’utilisateur.  
   
 **Rôles serveur fixes**  

@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9d9116a6382c71ae988c5f79660a3b8c9ded914a
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942331"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38027042"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -151,7 +151,7 @@ Lors d’une tentative d’accès à l’assembly spécifié dans \<client_assem
   
  Pour plus d’informations, consultez [Conception d’assemblys](../../relational-databases/clr-integration/assemblies-designing.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation CREATE ASSEMBLY.  
   
  Si PERMISSION_SET = EXTERNAL_ACCESS est spécifié, nécessite l’autorisation **EXTERNAL ACCESS ASSEMBLY** sur le serveur. Si PERMISSION_SET = UNSAFE est spécifié, nécessite l’autorisation **UNSAFE ASSEMBLY** sur le serveur.  

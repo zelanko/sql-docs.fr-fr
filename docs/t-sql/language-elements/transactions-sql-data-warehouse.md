@@ -16,11 +16,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3f9985fe10338c593425be74115152f250e16891
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789790"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041107"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transactions (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
  Cette instruction active ou désactive les mêmes modes que l’instruction SET AUTOCOMMIT. Si sa valeur est ON, SET IMPLICIT_TRANSACTIONS met la connexion en mode de transaction implicite. Si la valeur est OFF, la connexion est remise en mode de validation automatique.  Pour plus d’informations, consultez [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Aucune autorisation spécifique n’est nécessaire pour exécuter les instructions relatives aux transactions. En revanche, des autorisations sont nécessaires pour exécuter les instructions au sein de la transaction.  
   
 ## <a name="error-handling"></a>Gestion des erreurs  

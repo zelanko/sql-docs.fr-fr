@@ -34,11 +34,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8e0ef2de168411dbd4662a7fabd88ec0b6ad141f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781710"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042487"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ AS condition_expression
   
  Si une valeur par défaut et une règle sont toutes deux liées à une colonne, la valeur par défaut doit être cohérente avec le domaine défini par la règle. Une valeur par défaut qui est en conflit avec une règle n'est jamais insérée. Le moteur de base de données SQL Server génère un message d'erreur à chaque tentative d'insertion d'une telle valeur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour exécuter CREATE RULE, un utilisateur doit au moins disposer de l'autorisation CREATE RULE sur la base de données actuelle et de l'autorisation ALTER sur le schéma dans lequel la règle est créée.  
   
 ## <a name="examples"></a>Exemples  

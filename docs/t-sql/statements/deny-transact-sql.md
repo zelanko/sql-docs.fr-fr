@@ -32,11 +32,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8fb4045343c17ffea8d132edc22cbd7898f4ec00
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941925"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038357"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,7 +151,7 @@ L’utilisation de AS dans cette instruction n’implique pas la possibilité d�
 > [!CAUTION]  
 >  Le refus de l'autorisation CONTROL SERVER entraîne implicitement le refus de l'autorisation CONNECT SQL sur le serveur. Un principal auquel l'autorisation CONTROL SERVER est refusée sur un serveur ne pourra pas se connecter à ce serveur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L'appelant (ou le principal spécifié avec l'option AS) doit avoir l'autorisation CONTROL sur l'élément sécurisable ou une autorisation plus élevée qui implique cette autorisation. Si vous utilisez l'option AS, le principal spécifié doit être propriétaire de l'élément sécurisable auquel l'autorisation est refusée.  
   
  Les détenteurs de l'autorisation CONTROL SERVER, tels que les membres du rôle de serveur fixe sysadmin, peuvent refuser une autorisation sur n'importe quel élément sécurisable du serveur. Les détenteurs de l'autorisation CONTROL sur la base de données, tels que les membres du rôle de base de données fixe db_owner, peuvent refuser une autorisation sur n'importe quel élément sécurisable de la base de données. Les détenteurs de l'autorisation CONTROL sur un schéma peuvent refuser une autorisation sur n'importe quel objet dans ce schéma. Si vous utilisez la clause AS, le principal spécifié doit être propriétaire de l'élément sécurisable auquel les autorisations sont refusées.  

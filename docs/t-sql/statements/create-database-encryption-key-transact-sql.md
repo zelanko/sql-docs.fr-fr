@@ -33,11 +33,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d381437c61993d51c585fd08bc4e0f64fbaf14cb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784110"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030418"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -93,7 +93,7 @@ La clé de chiffrement de base de données n'a pas besoin d'être régénérée 
   
 Une clé de chiffrement de base de données est automatiquement créée pour une base de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Vous n’avez pas besoin de créer une clé à l’aide de l’instruction CREATE DATABASE ENCRYPTION KEY.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Nécessite l'autorisation CONTROL sur la base de données et l'autorisation VIEW DEFINITION sur le certificat ou la clé asymétrique permettant de chiffrer la clé de chiffrement de base de données.  
   
 ## <a name="examples"></a>Exemples  

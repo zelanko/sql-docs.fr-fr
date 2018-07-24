@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1bd692754af853d1d2795ad89e2279293c4b31b1
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251721"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047077"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  Lors de la reconfiguration de Resource Governor, consultez l’option RECONFIGURE de [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md).    
     
-## <a name="permissions"></a>Autorisations    
+## <a name="permissions"></a>Permissions    
  Par défaut, les autorisations RECONFIGURE sont accordées aux personnes qui bénéficient de l'autorisation ALTER SETTINGS. Seuls les rôles serveur fixes **sysadmin** et **serveradmin** détiennent implicitement cette autorisation.    
     
 ## <a name="examples"></a>Exemples    
