@@ -4,22 +4,20 @@ description: Montre des extraits de contenus mis à jour récemment dans la docu
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: tools
 ms.date: 04/28/2018
-ms.openlocfilehash: 0547653c4fc2d8bd04f851b843e74fd9ec78d2ea
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 31df25173ad475c733bc7239366a6c2ce820289e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32739161"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088181"
 ---
-# <a name="new-and-recently-updated-tools-for-sql-server"></a>Nouveaux et mis à jour récemment : Tools pour SQL Server
+# <a name="new-and-recently-updated-tools-for-sql-server"></a>Nouveaux et mis à jour récemment : outils pour SQL Server
 
 
 
@@ -44,7 +42,7 @@ Les mises à jour récentes sont signalées pour la plage de dates et le sujet s
 Les liens suivants renvoient aux nouveaux articles ajoutés récemment.
 
 
-- [outil de ligne de commande de requête MSSQL-cli pour SQL Server](mssql-cli.md)
+- [outil de ligne de commande de requête de MSSQL-cli pour SQL Server](mssql-cli.md)
 
 
 
@@ -94,16 +92,16 @@ Cette liste compacte fournit des liens vers tous les articles mis à jour qui so
 
 
 
-**-G**<a name="G"></a> Ce commutateur est utilisé par le client lors de la connexion à Azure SQL Database ou à Azure SQL Data Warehouse, pour indiquer que l’utilisateur doit être authentifié avec l’authentification Azure Active Directory. Le commutateur -G nécessite [version 14.0.3008.27 ou une version ultérieure](http://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez bcp -v. Pour plus d’informations, consultez [utilisez authentification Azure Active Directory pour l’authentification de base de données SQL ou SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
+**-G**<a name="G"></a> Ce commutateur est utilisé par le client lors de la connexion à Azure SQL Database ou à Azure SQL Data Warehouse, pour indiquer que l’utilisateur doit être authentifié avec l’authentification Azure Active Directory. Le commutateur-G nécessite [version 14.0.3008.27 ou version ultérieure](http://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez bcp -v. Pour plus d’informations, consultez [utilisez authentification Azure Active Directory pour l’authentification avec SQL Database ou SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
 
 > [!TIP]
->  Pour vérifier si votre version de l’utilitaire bcp inclut la prise en charge pour le type d’authentification Azure Active Directory (AAD) **bcp--** (bcp\<espace >\<tiret >\<tiret >) et vérifiez que vous disposez - G dans la liste des arguments disponibles.
+>  Pour vérifier si votre version de l’utilitaire bcp inclut la prise en charge pour le type d’authentification Azure Active Directory (AAD) **bcp--** (bcp\<espace >\<dash >\<dash >) et vérifiez que vous voyez : Password-g dans la liste des arguments disponibles.
 
 - **Nom d’utilisateur et mot de passe Azure Active Directory :**
 
     Lorsque vous souhaitez utiliser un nom d’utilisateur Azure Active Directory et le mot de passe, vous pouvez fournir l’option **- G** et utiliser également le nom d’utilisateur et le mot de passe en fournissant les options **-U** et **-P** .
 
-    L’exemple suivant exporte les données à l’aide du nom d’utilisateur Active Directory de Azure et le mot de passe étant d’utilisateur et mot de passe des informations d’identification AAD. L’exemple exporte table `bcptest` à partir de la base de données `testdb` à partir du serveur Azure `aadserver.database.windows.net` et stocke les données dans le fichier `c:\last\data1.dat`:
+    L’exemple suivant exporte les données à l’aide du nom d’utilisateur de Azure AD et le mot de passe où utilisateur et mot de passe est une information d’identification AAD. L’exemple exporte la table `bcptest` à partir de la base de données `testdb` à partir du serveur Azure `aadserver.database.windows.net` et stocke les données dans le fichier `c:\last\data1.dat`:
 ```
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
 ```
@@ -117,7 +115,7 @@ Cette liste compacte fournit des liens vers tous les articles mis à jour qui so
 
 - **Intégrée à Azure Active Directory**
 
-    Pour l’authentification intégrée à Azure Active Directory, spécifiez l’option **-G** sans nom d’utilisateur ni mot de passe. Cette configuration suppose que le compte d’utilisateur Windows actuel (le compte qui exécute la commande bcp sous) est fédéré avec Azure AD :
+    Pour l’authentification intégrée à Azure Active Directory, spécifiez l’option **-G** sans nom d’utilisateur ni mot de passe. Cette configuration suppose que le compte d’utilisateur Windows actuel (le compte de la commande bcp est en cours d’exécution sous) est fédéré avec Azure AD :
 
 
 

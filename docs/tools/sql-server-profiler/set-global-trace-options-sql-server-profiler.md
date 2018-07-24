@@ -1,5 +1,5 @@
 ---
-title: Définir les Options de Trace Global (SQL Server Profiler) | Documents Microsoft
+title: Définir les Options globales de Trace (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea73582b99e4b76edeacbb8e6da1ef68dbe5fec8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076466"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057656"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Définir les options globales de trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
