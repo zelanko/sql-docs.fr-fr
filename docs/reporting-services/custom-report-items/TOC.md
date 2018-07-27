@@ -1,7 +1,0 @@
-# [Création d'un composant au moment de la conception d'éléments de rapport personnalisé](creating-a-custom-report-item-design-time-component.md)
-# [Création d'un composant d'exécution d'éléments de rapport personnalisé](creating-a-custom-report-item-run-time-component.md)
-# [Architecture des éléments de rapports personnalisés](custom-report-item-architecture.md)
-# [Bibliothèques de classes d'éléments de rapports personnalisés](custom-report-item-class-libraries.md)
-# [Conditions de mise en œuvre des éléments de rapports personnalisés](custom-report-item-implementation-requirements.md)
-# [Éléments de rapports personnalisés](custom-report-items.md)
-# [Procédure : déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)

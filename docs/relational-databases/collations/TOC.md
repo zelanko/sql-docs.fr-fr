@@ -1,7 +1,0 @@
-# [Vue d’ensemble](collation-and-unicode-support.md)  
-# [Définir ou modifier le classement du serveur](set-or-change-the-server-collation.md)  
-# [Définir ou modifier le classement de la base de données](set-or-change-the-database-collation.md)  
-# [Définir ou modifier le classement des colonnes](set-or-change-the-column-collation.md)  
-# [Afficher des informations de classement](view-collation-information.md)  
-# [Rédiger des instructions Transact-SQL internationales](write-international-transact-sql-statements.md)  
-# [Définir une langue de session](set-a-session-language.md)  

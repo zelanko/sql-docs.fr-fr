@@ -1,7 +1,0 @@
-# [Accès au contexte de requête dans les procédures stockées](accessing-query-context-in-stored-procedures.md)
-# [Appel de procédures stockées](calling-stored-procedures.md)
-# [Création de procédures stockées](creating-stored-procedures.md)
-# [Débogage de procédures stockées](debugging-stored-procedures.md)
-# [Définition de procédures stockées](defining-stored-procedures.md)
-# [Conception de procédures stockées](designing-stored-procedures.md)
-# [Définition de la sécurité des procédures stockées](setting-security-for-stored-procedures.md)

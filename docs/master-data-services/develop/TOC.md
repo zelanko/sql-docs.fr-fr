@@ -1,6 +1,0 @@
-# [Opérations de service Web par catégorie (Master Data Services)](categorized-web-service-operations-master-data-services.md)
-# [Créer un flux de travail personnalisé - Exemple](create-a-custom-workflow-example.md)
-# [Créer un flux de travail personnalisé - Description XML](create-a-custom-workflow-xml-description.md)
-# [Créer un flux de travail personnalisé (Master Data Services)](create-a-custom-workflow-master-data-services.md)
-# [Créer des classes proxy de service Web Master Data Manager](create-master-data-manager-web-service-proxy-classes.md)
-# [Documentation du développeur Master Data Services](master-data-services-developer-documentation.md)

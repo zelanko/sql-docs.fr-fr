@@ -1,5 +1,0 @@
-# [Mise en forme côté client et côté serveur (SQLXML 4.0)](client-side-and-server-side-formatting-sqlxml-4-0.md)
-# [Architecture de la mise en forme XML côté client et côté serveur (SQLXML 4.0)](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)
-# [Mise en forme XML côté client et côté serveur (SQLXML 4.0)](client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)
-# [Mise en forme XML côté client (SQLXML 4.0)](client-side-xml-formatting-sqlxml-4-0.md)
-# [Mise en forme XML côté serveur (SQLXML 4.0)](server-side-xml-formatting-sqlxml-4-0.md)

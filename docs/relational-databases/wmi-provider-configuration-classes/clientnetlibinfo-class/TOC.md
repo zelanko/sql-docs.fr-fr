@@ -1,7 +1,0 @@
-# [ClientNetLibInfo, classe](clientnetlibinfo-class.md)
-# [Date, propriété (classe ClientNetLibInfo)](date-property-clientnetlibinfo-class.md)
-# [FileName, propriété (classe ClientNetLibInfo)](filename-property-clientnetlibinfo-class.md)
-# [ProtocolDisplayName, propriété (classe ClientNetLibInfo)](protocoldisplayname-property-clientnetlibinfo-class.md)
-# [ProtocolName, propriété (classe ClientNetLibInfo)](protocolname-property-clientnetlibinfo-class.md)
-# [Size, propriété (classe ClientNetLibInfo)](size-property-clientnetlibinfo-class.md)
-# [Version, propriété (classe ClientNetLibInfo)](version-property-clientnetlibinfo-class.md)

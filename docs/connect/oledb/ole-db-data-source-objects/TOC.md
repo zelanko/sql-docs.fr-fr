@@ -1,7 +1,0 @@
-# [Objets source de données (OLE DB)](data-source-objects-ole-db.md)
-# [Propriétés des informations de la source de données](data-source-information-properties.md)
-# [Propriétés de la source de données (OLE DB)](data-source-properties-ole-db.md)
-# [Propriétés d’initialisation et d’autorisation](initialization-and-authorization-properties.md)
-# [Objets source de données persistants](persisted-data-source-objects.md)
-# [Propriétés de session - OLE DB Driver pour SQL Server](session-properties-oledb-driver-for-sql-server.md)
-# [Sessions](sessions.md)

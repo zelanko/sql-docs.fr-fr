@@ -1,8 +1,0 @@
-# [GeneralFlags, propriété (classe ServerSettings)](generalflags-property-serversettings-class.md)
-# [GetCurrentCertificate, méthode (classe ServerSettings)](getcurrentcertificate-method-serversettings-class.md)
-# [InstanceName, propriété (classe ServerSettings)](instancename-property-serversettings-class.md)
-# [NumberOfFlags, propriété (classe ServerSettings)](numberofflags-property-serversettings-class.md)
-# [RemoveCertificate, méthode (classe ServerSettings)](removecertificate-method-serversettings-class.md)
-# [ServerSettings, classe](serversettings-class.md)
-# [SetCurrentCertificate, méthode (classe ServerSettings)](setcurrentcertificate-method-serversettings-class.md)
-# [SetDefaults, méthode (classe ServerSettings)](setdefaults-method-serversettings-class.md)

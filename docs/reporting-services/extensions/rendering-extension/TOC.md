@@ -1,5 +1,0 @@
-# [Déploiement d'une extension de rendu](deploying-a-rendering-extension.md)
-# [Mise en œuvre d'une extension de rendu](implementing-a-rendering-extension.md)
-# [Mise en œuvre de l'interface IRenderingExtension ](implementing-the-irenderingextension-interface.md)
-# [Suppression d'une extension de rendu](removing-a-rendering-extension.md)
-# [Vue d'ensemble des extensions de rendu](rendering-extensions-overview.md)

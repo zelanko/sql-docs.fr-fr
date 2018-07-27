@@ -1,8 +1,0 @@
-# [Visionneuse du fichier journal](log-file-viewer.md)
-## [Ouvrir la Visionneuse du fichier journal](open-log-file-viewer.md)
-## [Afficher les fichiers journaux hors connexion](view-offline-log-files.md)
-## [Visionneuse du fichier journal - Aide (F1)](log-file-viewer-f1-help.md)
-# [Journal des transactions (SQL Server)](the-transaction-log-sql-server.md)
-## [Gérer la taille du fichier journal des transactions](manage-the-size-of-the-transaction-log-file.md)
-## [Résoudre les problèmes liés à un journal des transactions saturé (erreur SQL Server 9002)](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)
-## [Contrôler la durabilité d'une transaction](control-transaction-durability.md)
