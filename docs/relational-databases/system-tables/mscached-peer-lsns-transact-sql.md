@@ -1,5 +1,5 @@
 ---
-title: MScached_peer_lsns (Transact-SQL) | Documents Microsoft
+title: MScached_peer_lsns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MScached_peer_lsns system table
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c88be8f7ffd489fbc276b58f253819b2f1d9f7ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ee2580aa933108da5fce53ff74d67f6c4de2ea1
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004216"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103847"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "33004216"
   
 ## <a name="definition"></a>Définition  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**agent_id**|**int**|ID de l'Agent de distribution.|  
+|**agent_id**|**Int**|ID de l'Agent de distribution.|  
 |**donneur d’ordre**|**sysname**|Nom du serveur de publication d'origine.|  
 |**originator_db**|**sysname**|Nom de la base de données de publication d'origine.|  
-|**originator_publication_id**|**int**|Identifie la publication d'origine.|  
-|**originator_db_version**|**int**|Identifie le numéro de version de la base de données d'origine.|  
+|**originator_publication_id**|**Int**|Identifie la publication d'origine.|  
+|**originator_db_version**|**Int**|Identifie le numéro de version de la base de données d'origine.|  
 |**originator_lsn**|**varbinary(16)**|Numéro de séquence d'enregistrement (LSN)  de la transaction d'origine.|  
   
 ## <a name="remarks"></a>Notes  

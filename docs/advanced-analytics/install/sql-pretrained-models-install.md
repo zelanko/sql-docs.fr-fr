@@ -8,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 53bffd17ee225cf3e1d10ec4a0cd813ec7688989
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174996"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216830"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installer PRÉFORMÉE modèles machine learning sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article explique comment ajouter gratuit pour les modèles d’apprentissage préentraîné *analyse des sentiments* et *image caractérisation* à une instance du moteur de base de données SQL Server avec l’intégration de R ou Python. Les modèles préentraînés sont générés par Microsoft et prêt à l’emploi, facilement ajoutés à une instance existante à l’aide d’un script PowerShell. Pour plus d’informations sur ces modèles, consultez le [ressources](#bkmk_resources) section de cet article.
+Cet article explique comment utiliser Powershell pour ajouter gratuit pour les modèles d’apprentissage préformé *analyse des sentiments* et *image caractérisation* à une instance du moteur de base de données SQL Server avec R ou Python intégration. Les modèles préentraînés sont générés par Microsoft et prêt à l’emploi, ajouté à une instance du moteur de base de données comme une tâche de post-installation. Pour plus d’informations sur ces modèles, consultez le [ressources](#bkmk_resources) section de cet article.
 
 Une fois installé, les modèles préentraînés sont considérés comme un détail d’implémentation qui alimentent des fonctions spécifiques de MicrosoftML (R) et de bibliothèques de microsoftml (Python). Vous ne doivent pas (et ne peut pas) permet d’afficher, personnaliser ou reformer les modèles, ni pourrez vous les traiter comme une ressource indépendante dans du code personnalisé ou associés d’autres fonctions. 
 
-Fonctions d’appel des modèles préformés sont répertoriées dans le tableau suivant.
+Pour utiliser les modèles préformés, appelez les fonctions répertoriées dans le tableau suivant.
 
 | Fonction R (MicrosoftML) | Fonction Python (microsoftml) | Utilisation |
 |--------------------------|-------------------------------|-------|
@@ -31,15 +31,18 @@ Fonctions d’appel des modèles préformés sont répertoriées dans le tableau
 
 ## <a name="prerequisites"></a>Prérequis
 
-[SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) avec R, Python ou les deux. 
-
-[SQL Server 2016 R Services](sql-r-services-windows-install.md) les clients peuvent utiliser une approche différente. Pour SQL Server 2016, la mise à niveau des composants R est obligatoire pour ajouter le [package MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package), comme indiqué dans [mise à niveau des composants de machine learning (R et Python)](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Lorsque vous mettez à niveau des composants R, vous pouvez simultanément ajouter les modèles préentraînés, ce qui permet d’exécuter le script PowerShell redondant. Toutefois, si vous avez déjà mis à niveau mais que vous manqué Ajout les modèles préentraînés votre première tentative, vous pouvez exécuter le script PowerShell comme décrit dans cet article. Avant de procéder, vérifiez que la bibliothèque de MicrosoftML existe à C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library.
-  
-Scripts externes doivent être activées et le service SQL Server LaunchPad doit être en cours d’exécution. Instructions d’installation contiennent les étapes de vérification et une configuration supplémentaire.
+Algorithmes d’apprentissage automatique sont intensifs. Nous vous recommandons 16 Go de RAM pour les charges de travail de faible à modérée, y compris la saisie de procédures pas à pas du didacticiel à l’aide de tous les exemples de données.
 
 Vous devez disposer des droits d’administrateur sur l’ordinateur et SQL Server pour ajouter des modèles préentraînés.
 
-Algorithmes d’apprentissage automatique sont intensifs. Nous vous recommandons 16 Go de RAM pour les charges de travail de faible à modérée, y compris la saisie de procédures pas à pas du didacticiel à l’aide de tous les exemples de données.
+Scripts externes doivent être activées et le service SQL Server LaunchPad doit être en cours d’exécution. Instructions d’installation fournissent les étapes pour l’activation et la vérification de ces fonctionnalités. 
+
+[Package MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) ou [microsoftml le package Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) contiennent les modèles préformés.
+
++ [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) inclut les deux versions de langue de la bibliothèque d’apprentissage, donc cette condition préalable est remplie avec aucune action supplémentaire de votre part. Étant donné que les bibliothèques sont présents, vous pouvez utiliser le script PowerShell décrit dans cet article pour ajouter les modèles préformés à ces bibliothèques.
+
++ [SQL Server 2016 R Services](sql-r-services-windows-install.md), qui est R uniquement, n’inclut pas [package MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) prêts à l’emploi. Pour ajouter MicrosoftML, vous devez effectuer un [mise à niveau du composant](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). L’un des avantages de la mise à niveau du composant sont que vous pouvez ajouter simultanément les modèles préentraînés, ce qui permet d’exécuter le script PowerShell inutile. Toutefois, si vous avez déjà mis à niveau mais que vous manqué Ajout les modèles préentraînés votre première tentative, vous pouvez exécuter le script PowerShell comme décrit dans cet article. Il fonctionne pour les deux versions de SQL Server. Avant de procéder, vérifiez que la bibliothèque de MicrosoftML existe à C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library.
+
 
 <a name="file-location"></a>
 
@@ -47,9 +50,9 @@ Algorithmes d’apprentissage automatique sont intensifs. Nous vous recommandons
 
 Les chemins d’accès de l’installation pour les modèles R et Python sont les suivantes :
 
-+ Pour r : C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64
++ Pour r : `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ Pour Python : C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs 
++ Pour Python : `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs `
 
 Les noms de fichiers de modèle sont répertoriées ci-dessous :
 

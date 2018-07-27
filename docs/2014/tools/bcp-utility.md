@@ -31,12 +31,12 @@ caps.latest.revision: 198
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ed04d5f47515fd38657434c9e35056a79cff891
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 478537d3e4f74a83593147a7e790ab2d5806ba34
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170310"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310296"
 ---
 # <a name="bcp-utility"></a>Utilitaire bcp
   Le **bcp** utilitaire copie en bloc des données entre une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et un fichier de données dans un format spécifié par l’utilisateur. L’utilitaire **bcp** permet d’importer un grand nombre de nouvelles lignes dans des tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou d’exporter des données de tables dans des fichiers de données. Sauf lorsqu’il est utilisé avec l’option **queryout** , l’utilitaire ne nécessite aucune connaissance de [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour importer des données dans une table, vous devez utiliser un fichier de format créé pour cette table ou comprendre la structure de la table et les types de données valides pour ses colonnes.  
@@ -105,7 +105,7 @@ ms.locfileid: "37170310"
   
 -   **format** crée un fichier de format basé sur l’option spécifiée (**- n**, `-c`, `-w`, ou **-N**) et les délimiteurs de table ou vue. Lors d’une copie en bloc de données, la commande **bcp** peut se référer à un fichier de format, ce qui permet d’éviter de ressaisir les informations de format de manière interactive. L’option **format** nécessite l’option **-f** ; la création d’un fichier de format XML nécessite aussi l’option **-x**. Pour plus d’informations, consultez [Créer un fichier de format &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). Vous devez spécifier **nul** comme valeur (**format nul**).  
   
- *propriétaire*  
+ *Propriétaire*  
  Nom du propriétaire de la table ou de la vue. *owner* est facultatif si l'utilisateur qui effectue l'opération est le propriétaire de la table ou de la vue. Si la valeur de *owner* n’est pas spécifiée et si l’utilisateur effectuant l’opération ne possède pas la table ou la vue spécifiée, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] retourne un message d’erreur et l’opération est annulée.  
   
  **«** *query* **»**  
@@ -147,7 +147,7 @@ ms.locfileid: "37170310"
 |RAW|Aucune conversion d'une page de codes vers une autre n'a lieu. Il s'agit de l'option la plus rapide car aucune conversion n'a lieu.|  
 |*code_page*|Numéro spécifique de la page de codes, par exemple 850.<br /><br /> **\*\* Important \* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge la page de codes 65001 (encodage UTF-8).|  
   
- `-d` *nom_base_de_données*  
+ `-d` *Nom_base_de_données*  
  Spécifie la base de données à laquelle se connecter. Par défaut, bcp.exe se connecte à la base de données par défaut de l'utilisateur. Si `-d` *database_name* et un nom en trois parties (*database_name.schema.table*, passé comme premier paramètre à bcp.exe) est spécifié, une erreur se produit, car vous ne pouvez pas spécifier le nom de la base de données à deux reprises. Si *database_name* commence par un trait d’union (-) ou une barre oblique (/), n’ajoutez pas d’espace entre `-d` et le nom de la base de données.  
   
  **-e** *err_file*  
@@ -386,7 +386,7 @@ ms.locfileid: "37170310"
 |SQLNCHAR ou SQLNVARCHAR|Les données sont envoyées au format Unicode. L'effet est le même que si vous définissiez le commutateur `-w` sans spécifier de fichier de format.|  
 |SQLBINARY ou SQLVARYBIN|Les données sont envoyées sans être converties.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Une opération **bcpout** nécessite l’autorisation SELECT sur la table source.  
   
  Une opération **bcpin** nécessite au minimum des autorisations SELECT/INSERT sur la table cible. En outre, l'autorisation ALTER TABLE est requise si l'une des conditions suivantes est vraie :  
