@@ -22,19 +22,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4fc9be10a3197f645b824afe7f33f0235408439d
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 668c6cf81028417539d204fd1f28d9a7992311ea
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248311"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216910"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Mots clés réservés (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des mots clés réservés pour définir des bases de données, les manipuler et y accéder. Les mots clés réservés font partie de la grammaire du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour analyser et interpréter les lots et instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Bien que, d'un point de vue syntaxique, il soit possible d'employer dans les scripts [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] réservés comme identificateurs et noms d'objets, ceci est réalisable uniquement en utilisant des identificateurs délimités.  
   
- Le tableau suivant répertorie les mots clés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réservés.  
+ Le tableau suivant répertorie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les mots clés réservés de SQL Data Warehouse.  
   
 ||||  
 |-|-|-|  
@@ -99,7 +99,13 @@ ms.locfileid: "36248311"
 |EXEC|PRECISION|par|  
 |Exécutez|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
-|EXIT|PROC||  
+|EXIT|PROC||
+  
+Le tableau suivant répertorie les mots clés réservés qui sont exclusives à **SQL Data Warehouse**.
+
+|||
+|-|-|
+|**Étiquette**||
   
  De plus, la norme ISO définit une liste de mots clés réservés. Évitez d'utiliser des mots clés réservés ISO pour des identificateurs et des noms d'objets. La liste des mots clés réservés ODBC figurant dans le tableau ci-dessous est identique à celle des mots clés réservés ISO.  
   

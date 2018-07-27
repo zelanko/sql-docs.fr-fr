@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f7f20eda403c6f3fabea20e77a0c87b29a5f8dfb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e32dac3a1145695c33fc06c818f8c59361e025dd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415438"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083831"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ Définit une date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 |Propriété|Valeur|  
 |--------------|-----------|  
 |Syntaxe|**date**|  
-|Utilisation|DECLARE @MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
+|Utilisation|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Format de littéral de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|AAAA-MM-JJ<br /><br /> Pour plus d’informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » ci-dessous.|  
 |Plage|0001-01-01 à 9999-12-31 (1582-10-15 à 9999-12-31 pour Informatica)<br /><br /> Du 1er janvier de l’an 1 au 31 décembre 9999 (du 15 octobre 1582 au 31 décembre 9999 pour Informatica)|  
 |Plages d'éléments|AAAA comprend quatre chiffres, entre 0001 et 9999, qui représentent une année. Pour Informatica, AAAA se limite à la plage 1582 à 9999.<br /><br /> MM comprend deux chiffres, entre 01 et 12, qui représentent un mois de l'année spécifiée.<br /><br /> DD comprend deux chiffres, entre 01 et 31 selon le mois, qui représentent un jour du mois spécifié.|  

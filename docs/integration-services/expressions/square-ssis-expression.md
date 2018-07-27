@@ -17,12 +17,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfb9c44afb9cefa2bb689feb99e83a62cc57811e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f558775492c58faf17f2957b536e4cbfaef9b1e9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328603"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084611"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (expression SSIS)
   Renvoie le carré d'une expression numérique.  
@@ -66,7 +66,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 ```  
   
 > [!NOTE]  
->  Dans les expressions, les noms de variable comprennent toujours le préfixe @.  
+>  Dans les expressions, les noms de variables comportent toujours le préfixe \@.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  

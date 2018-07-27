@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7f0ca959918e298d40eca5c925ccbf57e6173a2
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d2d27efa67f446915de94ffd93edc0ed23db58e2
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329750"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038056"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modification des tables à mémoire optimisée
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,44 +32,11 @@ ms.locfileid: "34329750"
  
 La syntaxe ALTER TABLE permet d’apporter des modifications au schéma de la table, et d’ajouter, de supprimer et de régénérer des index. Les index sont considérés comme faisant partie intégrante de la définition de table :  
   
--   La syntaxe ALTER TABLE … ADD/DROP/ALTER INDEX est uniquement prise en charge pour les tables optimisées en mémoire.  
+-   La syntaxe ALTER TABLE… ADD/DROP/ALTER INDEX est uniquement prise en charge pour les tables optimisées en mémoire.  
   
 -   En l’absence d’instruction ALTER TABLE, les instructions CREATE INDEX, DROP INDEX et ALTER INDEX ne sont *pas* prises en charge pour les index sur les tables optimisées en mémoire.  
   
- Le code ci-après présente la syntaxe des clauses ADD, DROP et ALTER INDEX sur l’instruction ALTER TABLE.  
-  
-```
-| ADD   
-     {   
-        <column_definition>  
-      | <table_constraint>  
-      | <table_index>    
-     } [ ,...n ]  
-  
-| DROP   
-     {  
-         [ CONSTRAINT ]   
-         {   
-              constraint_name   
-         } [ ,...n ]  
-         | COLUMN   
-         {  
-              column_name   
-         } [ ,...n ]  
-         | INDEX   
-         {  
-              index_name   
-         } [ ,...n ]  
-     } [ ,...n ]  
-  
-| ALTER INDEX index_name  
-     {   
-         REBUILD WITH ( <rebuild_index_option> )     
-     }  
-}  
-```  
-  
- Les types de modifications pris en charge sont les suivants :  
+Les types de modifications pris en charge sont les suivants :  
   
 -   modification du nombre de compartiments ;  
   

@@ -24,12 +24,12 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35cfefdbc23ef269579476c098d31825b319a41e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ab20db9fedc4585e8d1011fa7cc29a60056fefe5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404751"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084481"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
   La tâche d'exécution SQL exécute des instructions ou des procédures stockées SQL à partir d'un package. La tâche peut contenir une seule ou plusieurs instructions SQL s'exécutant de façon séquentielle. Vous pouvez utiliser la tâche d'exécution SQL aux fins suivantes :  
@@ -218,7 +218,7 @@ Utilisez la page **Mappage de paramètre** de la boîte de dialogue **Éditeur d
  **Nom du paramètre**  
  Fournissez un nom de paramètre.  
   
- En fonction du type de gestionnaire de connexions que la tâche utilise, vous devez utiliser des nombres ou des noms de paramètres. Avec certaines types de gestionnaires de connexions, le premier caractère du nom de paramètre doit être le signe @, des noms spécifiques tels que @Param1 doivent être utilisés ou les noms de colonnes doivent être utilisés comme noms de paramètres.  
+ En fonction du type de gestionnaire de connexions que la tâche utilise, vous devez utiliser des nombres ou des noms de paramètres. Certains types de gestionnaires de connexions exigent que le premier caractère du nom de paramètre soit le signe \@, des noms spécifiques tels que \@Param1 ou des noms de colonnes comme noms de paramètres.  
   
  **Taille de paramètre**  
  Indiquez la taille des paramètres qui ont une longueur variable, par exemple les chaînes et champs binaires.  
@@ -273,16 +273,16 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
 -   [Obtenir les valeurs de codes de retour](#Return_codes)    
   
 ###  <a name="Parameter_names_and_markers"></a> Utiliser des marqueurs et des noms de paramètres  
- Selon le type de connexion que la tâche d'exécution SQL utilise, la syntaxe de la commande SQL utilise différents marqueurs de paramètres. Par exemple, le type de gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] exige que la commande SQL utilise un marqueur de paramètre au format **@varParameter**, tandis que le type de connexion OLE DB requiert le marqueur de paramètre point d’interrogation (?).  
+ Selon le type de connexion que la tâche d'exécution SQL utilise, la syntaxe de la commande SQL utilise différents marqueurs de paramètres. Par exemple, le type de gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] impose que la commande SQL utilise un marqueur de paramètre au format **\@varParameter**, tandis que le type de connexion OLE DB exige le marqueur de paramètre point d’interrogation (?).  
   
- Les noms que vous pouvez utiliser comme noms de paramètres dans les mappages entre variables et paramètres varient également selon le type de gestionnaire de connexions. Par exemple, le type de gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utilise un nom défini par l'utilisateur à préfixe @, tandis que le type de gestionnaire de connexions OLE DB impose l'utilisation de la valeur numérique d'un ordinal de base 0 comme nom de paramètre.  
+ Les noms que vous pouvez utiliser comme noms de paramètres dans les mappages entre variables et paramètres varient également selon le type de gestionnaire de connexions. Par exemple, le type de gestionnaire de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utilise un nom défini par l'utilisateur avec le préfixe \@, tandis que le type de gestionnaire de connexions OLE DB impose l'utilisation de la valeur numérique d'un ordinal de base 0 comme nom de paramètre.  
   
  Le tableau suivant indique les conditions requises des commandes SQL pour les types de gestionnaires de connexions que la tâche d'exécution SQL peut utiliser.  
   
 |Type de connexion|Marqueur de paramètre|Nom du paramètre|Exemple de commande SQL|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<nom du paramètre>|@\<nom du paramètre>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<nom du paramètre>|\@\<nom du paramètre>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL et OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -375,7 +375,7 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
   
 -   Le type de connexion ADO peut utiliser deux noms de paramètres (par exemple, Param1 et Param2), mais les paramètres doivent être mappés selon leur position ordinale dans la liste des paramètres.  
   
--   Le type de connexion [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utilise les noms de paramètres @parmMinProductID et @parmMaxProductID.  
+-   Le type de connexion [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utilise les noms de paramètres \@parmMinProductID et \@parmMaxProductID.  
   
 ###  <a name="Stored_procedures"></a> Utiliser des paramètres avec les procédures stockées  
  Les commandes SQL qui exécutent des procédures stockées peuvent également utiliser le mappage de paramètres. Les règles d'utilisation des marqueurs de paramètres et des noms de paramètres varient selon le type de gestionnaire de connexions que la tâche d'exécution SQL utilise, tout comme les règles des requêtes paramétrables.  
@@ -421,7 +421,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
     |Type de connexion|Marqueur de paramètre|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET et SQLMOBILE|@\<nom du paramètre>|  
+    |ADO.NET et SQLMOBILE|\@\<nom du paramètre>|  
     |ODBC|?|  
     |EXCEL et OLE DB|?|  
   
@@ -444,7 +444,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
     |Type de connexion|Nom du paramètre|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET et SQLMOBILE|@\<nom du paramètre>|  
+    |ADO.NET et SQLMOBILE|\@\<nom du paramètre>|  
     |ODBC|1, 2, 3, …|  
     |EXCEL et OLE DB|0, 1, 2, 3, …|  
   

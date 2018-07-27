@@ -17,11 +17,12 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf241911ce9befc7b42e8c84fd6fddb7dcd10374
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2ebaa1c922714413a29967d38aa8b60ebaa6c335
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086961"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressions de requête et noms URN
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,22 +77,22 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  Par exemple, spécifiez Server pour la classe **ServerCollection** et Database pour la classe **DatabaseCollection** .  
   
- @*PropertyName*  
- Spécifie le nom de l’une des propriétés de la classe associée à l’objet spécifié dans *Object*. Le nom de la propriété doit avoir pour préfixe le caractère @. Par exemple, spécifiez @IsAnsiNull pour la propriété de classe **Database** **IsAnsiNull**.  
+ \@*PropertyName*  
+ Spécifie le nom de l’une des propriétés de la classe associée à l’objet spécifié dans *Object*. Le nom de la propriété doit avoir pour préfixe le caractère \@. Par exemple, spécifiez \@IsAnsiNull pour la propriété de classe **Database** **IsAnsiNull**.  
   
- @*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*=true()  
  Énumère tous les objets où la propriété booléenne spécifiée a la valeur TRUE.  
   
- @*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*=false()  
  Énumère tous les objets où la propriété booléenne spécifiée a la valeur FALSE.  
   
- contains(@*StringPropertyName*, '*PatternString*')  
+ contains(\@*StringPropertyName*, '*PatternString*')  
  Énumère tous les objets où la propriété de chaîne spécifiée contient au moins une occurrence du jeu de caractères spécifié dans '*PatternString*'.  
   
- @*StringPropertyName*='*PatternString*'  
+ \@*StringPropertyName*='*PatternString*'  
  Énumère tous les objets où la valeur de la propriété de chaîne spécifiée est identique au modèle de caractère spécifié dans '*PatternString*'.  
   
- @*DatePropertyName*= datetime('*DateString*')  
+ \@*DatePropertyName*= datetime('*DateString*')  
  Énumère tous les objets où la valeur de la propriété de date spécifiée correspond à la date spécifiée dans '*DateString*'. *DateString* doit être au format aaaa-mm-jj hh:mi:ss.mmm.  
   
 |||  
@@ -106,11 +107,11 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  Les dates spécifiées dans ce format peuvent être évaluées par rapport à tout format de date stocké dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- is_null(@*PropertyName*)  
+ is_null(\@*PropertyName*)  
  Énumère tous les objets où la propriété spécifiée a la valeur NULL.  
   
  not(\<*PropertyExpression*>)  
- Inverse la valeur d’évaluation de *PropertyExpression*, énumérant tous les objets qui ne correspondent pas à la condition spécifiée dans *PropertyExpression*. Par exemple, not(contains(@Name, ’xyz’)) énumère tous les objets dont le nom ne contient pas la chaîne xyz.  
+ Inverse la valeur d’évaluation de *PropertyExpression*, énumérant tous les objets qui ne correspondent pas à la condition spécifiée dans *PropertyExpression*. Par exemple, not(contains(\@Name, 'xyz')) énumère tous les objets dont le nom ne contient pas la chaîne xyz.  
   
 ## <a name="remarks"></a>Notes   
  Les expressions de requête sont des chaînes qui énumèrent les nœuds dans une hiérarchie de modèle SMO. Chaque nœud possède une expression de filtre qui spécifie les critères pour déterminer les objets qui sont énumérés au niveau de ce nœud. Les expressions de requête sont modélisées sur le langage d'expression XPath. Les expressions de requête implémentent un petit sous-ensemble des expressions qui sont prises en charge par XPath, et possèdent également quelques extensions qui ne sont pas présentes dans XPath. Les expressions XPath sont des chaînes qui spécifient un jeu de critères utilisé pour énumérer une ou plusieurs balises dans un document XML. Pour plus d'informations sur XPath, consultez [W3C XPath Language](http://www.w3.org/TR/xpath20/)(en anglais).  

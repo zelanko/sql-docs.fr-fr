@@ -23,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255511"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086741"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|Utilise par défaut le mappage **attribute-centric**.|  
 |**1**|Utilise le mappage **attribute-centric**. Peut être combiné avec XML_ELEMENTS. Dans ce cas, le mappage **attribute-centric** est d’abord appliqué, puis le mappage **element-centric** est appliqué pour toutes les colonnes qui n’ont pas encore été traitées.|  
 |**2**|Utilisez le mappage **element-centric**. Peut être combiné avec XML_ATTRIBUTES. Dans ce cas, le mappage **attribute-centric** est d’abord appliqué, puis le mappage **element-centric** est appliqué pour toutes les colonnes qui n’ont pas encore été traitées.|  
-|**8**|Peut être combiné (à l'aide de l'opérateur logique OR) avec XML_ATTRIBUTES ou XML_ELEMENTS. Dans le contexte d’une extraction, cet indicateur indique que les données consommées ne doivent pas être copiées vers la propriété de dépassement **@mp:xmltext**.|  
+|**8**|Peut être combiné (à l'aide de l'opérateur logique OR) avec XML_ATTRIBUTES ou XML_ELEMENTS. Dans le contexte d'une extraction, cet indicateur indique que les données consommées ne doivent pas être copiées sur la propriété de dépassement **\@mp:xmltext**.|  
   
  *SchemaDeclaration*  
  Définition de schéma de la forme : *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...]  

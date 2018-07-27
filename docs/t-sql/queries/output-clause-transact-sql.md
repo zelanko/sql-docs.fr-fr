@@ -34,12 +34,12 @@ caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90b258ba3b34d46a48e4ae34953ea5392052b5f0
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36252401"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088361"
 ---
 # <a name="output-clause-transact-sql"></a>Clause OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ ms.locfileid: "36252401"
 ```  
   
 ## <a name="arguments"></a>Arguments  
- @*table_variable*  
- Spécifie une variable **table** dans laquelle les lignes retournées sont insérées au lieu d’être retournées à l’appelant. @*table_variable* doit être déclaré avant les instructions INSERT, UPDATE, DELETE et MERGE.  
+ \@*table_variable*  
+ Spécifie une variable **table** dans laquelle les lignes retournées sont insérées au lieu d’être retournées à l’appelant. \@*table_variable* doit être déclaré avant les instructions INSERT, UPDATE, DELETE et MERGE.  
   
  Si *column_list* n’est pas spécifié, la variable **table** doit contenir le même nombre de colonnes que le jeu de résultats OUTPUT. Les exceptions sont des colonnes calculées et des colonnes d'identité qui doivent être ignorées. Si *column_list* est spécifié, toutes les colonnes ignorées doivent autoriser des valeurs NULL ou avoir des valeurs par défaut.  
   
@@ -143,7 +143,7 @@ DELETE Sales.ShoppingCartItem
  Disponible uniquement pour l'instruction MERGE. Spécifie une colonne de type **nvarchar(10)** dans la clause OUTPUT d’une instruction MERGE qui retourne l’une des trois valeurs suivantes pour chaque ligne : INSERT, UPDATE ou DELETE, en fonction de l’action effectuée sur cette ligne.  
   
 ## <a name="remarks"></a>Notes   
- Les clauses OUTPUT \<dml_select_list> et OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } peuvent être définies dans une seule instruction INSERT, UPDATE, DELETE ou MERGE.  
+ Les clauses OUTPUT \<dml_select_list> et OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } peuvent être définies dans une seule instruction INSERT, UPDATE, DELETE ou MERGE.  
   
 > [!NOTE]  
 >  Sauf indication contraire, les références à la clause OUTPUT sont relatives aux clauses OUTPUT et OUTPUT INTO.  
@@ -207,9 +207,9 @@ DELETE Sales.ShoppingCartItem
   
 -   La clause OUTPUT INTO n’est pas prise en charge dans les instructions INSERT qui contiennent une clause \<dml_table_source>.  
   
--   @@ROWCOUNT retourne uniquement les lignes insérées par l’instruction INSERT externe.  
+-   \@\@ROWCOUNT retourne uniquement les lignes insérées par l'instruction INSERT externe.  
   
--   @@IDENTITY, SCOPE_IDENTITY et IDENT_CURRENT retournent les valeurs d’identité générées par l’instruction DML imbriquée, mais pas celles générées par l’instruction INSERT externe.  
+-   \@\@IDENTITY, SCOPE_IDENTITY et IDENT_CURRENT retournent les valeurs d'identité générées uniquement par l'instruction DML imbriquée, et non celles générées par l'instruction INSERT externe.  
   
 -   Les notifications de requête traitent l'instruction comme une entité unique, et le type de tout message créé sera le type de l'instruction DML imbriquée, même si la modification significative provient de l'instruction INSERT externe elle-même.  
   
@@ -310,7 +310,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  Utilisez l'indicateur de table READPAST dans les instructions UPDATE et DELETE si votre scénario permet à plusieurs applications d'exécuter une lecture destructive à partir d'une table. Ce cas de figure empêche les problèmes de verrouillage qui peuvent survenir si une autre application est déjà entrain de lire le premier enregistrement dans la table.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les autorisations SELECT sont obligatoires sur toutes les colonnes récupérées par le biais de \<dml_select_list> et celles utilisées dans \<scalar_expression>.  
   
  Les autorisations INSERT sont obligatoires sur toutes les tables spécifiées dans \<output_table>.  

@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8af424b2ba5f8e23a0907c37d8f7e259e9d4192
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 4b16a7d07358ff1c561bc840a958e24205688b86
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248451"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083371"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Instructions pour l'utilisation des méthodes de type de données XML
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
  Les étapes d'emplacement, les paramètres de fonction et les opérateurs qui réclament des singletons renverront une erreur lorsque le compilateur n'arrive pas à savoir si la présence d'un singleton est garantie lors de l'exécution. Ce problème se produit souvent avec des données non typées. Par exemple, la recherche d'un attribut exige un élément parent unique. Un nombre ordinal qui sélectionne un nœud parent unique suffit. L’évaluation d’une combinaison **node()**-**value()** pour extraire des valeurs d’attribut ne nécessite pas de spécification ordinale. comme le montre l'exemple suivant.  
   
 ### <a name="example-known-singleton"></a>Exemple : Singleton connu  
- Dans cet exemple, la méthode **nodes()** génère une ligne distincte pour chaque élément <`book`>. La méthode **value()** qui est évaluée sur un nœud <`book`> extrait la valeur de @genre qui, puisqu’il s’agit d’un attribut, est un singleton.  
+ Dans cet exemple, la méthode **nodes()** génère une ligne distincte pour chaque élément <`book`>. La méthode **value()**, évaluée sur un nœud <`book`>, extrait la valeur de \@genre qui, puisqu'il s'agit d'un attribut, est un singleton.  
   
 ```  
 SELECT nref.value('@genre', 'varchar(max)') LastName  

@@ -2,7 +2,7 @@
 title: Traitement de requêtes intelligent dans les bases de données Microsoft SQL | Microsoft Docs
 description: Fonctionnalités de traitement de requêtes intelligent pour améliorer les performances des requêtes dans SQL Server et Azure SQL Database.
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 07/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,25 +16,43 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7786fd048f1698c90f379450b31e0bac3457706e
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 2b3ca1aa0bf87fe08e65590ea506dad929455a90
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455765"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216820"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
-La famille des fonctionnalités de **traitement de requêtes intelligent** contient des fonctionnalités qui améliorent les performances des charges de travail existantes avec un minimum d’effort d’implémentation.   Il s’agit notamment d’améliorations des constructions préexistantes et de l’introduction de méthodes et de capacités adaptatives.  
+La famille des fonctionnalités de **traitement de requêtes intelligent** inclut des fonctionnalités qui améliorent les performances des charges de travail existantes avec un minimum d’effort d’implémentation.
+
+![Fonctionnalités de traitement de requêtes intelligent](./media/1_IQPFeatureFamily.png)
 
 ## <a name="adaptive-query-processing"></a>Traitement de requêtes adaptatif
-Dans la famille des fonctionnalités de traitement de requête intelligent, l’une d’entre elles a été introduite dans SQL Server 2017 et Azure SQL Database pour ajouter de nouvelles capacités générales de traitement des requêtes afin d’adapter les stratégies d’optimisation aux conditions d’exécution de votre charge de travail d’application :
-- **Jointures adaptatives en mode batch**. Cette fonctionnalité permet à votre plan de basculer dynamiquement sur une meilleure stratégie de jointure pendant l’exécution à l’aide d’un seul plan mis en cache.
-- **Retour d’allocation de mémoire en mode batch**. Cette fonctionnalité recalcule la mémoire réelle nécessaire pour une requête, puis met à jour la valeur d’allocation pour le plan mis en cache, ce qui réduit les allocations de mémoire excessives qui impactent la concurrence et corrige les allocations de mémoire sous-estimées qui entraînent des dépassements coûteux sur le disque.
-- **Exécution entrelacée pour les fonctions table à instructions multiples (MSTVF)**. Avec l’exécution entrelacée, nous utilisons le nombre réel de lignes de la fonction pour prendre des décisions de plan de requête en aval plus avisées. 
+La fonctionnalité de traitement de requêtes adaptatif inclut des améliorations du traitement des requêtes, qui adaptent les stratégies d’optimisation aux conditions d’exécution de la charge de travail de votre application. Ces améliorations sont incluses : jointures adaptatives en mode batch, retour d’allocation de mémoire et exécution entrelacée pour les fonctions table à instructions multiples.
 
-Pour plus d’informations sur le traitement de requêtes adaptatif, consultez [Traitement de requêtes adaptatif dans les bases de données SQL](../../relational-databases/performance/adaptive-query-processing.md).
+### <a name="batch-mode-adaptive-joins"></a>Jointures adaptatives en mode batch
+Cette fonctionnalité permet à votre plan de basculer dynamiquement sur une meilleure stratégie de jointure pendant l’exécution à l’aide d’un seul plan mis en cache.
+
+### <a name="row-and-batch-mode-memory-grant-feedback"></a>Retour d’allocation de mémoire en mode en ligne et en mode batch
+Cette fonctionnalité recalcule la mémoire réelle nécessaire pour une requête, puis met à jour la valeur d’allocation pour le plan mis en cache, ce qui réduit les allocations de mémoire excessives qui impactent la concurrence et corrige les allocations de mémoire sous-estimées qui entraînent des dépassements coûteux sur le disque.
+
+### <a name="interleaved-execution-for-multi-statement-table-valued-functions-mstvfs"></a>Exécution entrelacée pour les fonctions table à instructions multiples (MSTVF)
+Avec l’exécution entrelacée, le nombre réel de lignes de la fonction est utilisé pour prendre des décisions de plan de requête en aval plus avisées. 
+
+Pour plus d’informations, consultez [Traitement adaptatif des requêtes dans les bases de données SQL](../../relational-databases/performance/adaptive-query-processing.md).
+
+## <a name="table-variable-deferred-compilation"></a>Compilation différée de variable de table
+La compilation différée de variable de table améliore la qualité du plan et les performances globales pour les requêtes faisant référence à des variables de table. Pendant l’optimisation et la compilation initiale, cette fonctionnalité va propager les estimations de cardinalité basées sur le nombre réel de lignes de la variable de table.  Ces informations précises sur le nombre de lignes seront utilisées afin d’optimiser les opérations de plan en aval.
+
+Avec la compilation différée de la variable de table, la compilation d’une instruction qui fait référence à une variable de table est différée jusqu'à la première exécution réelle de l’instruction. Ce comportement de compilation différée est identique au comportement des tables temporaires, et ce changement entraîne l’utilisation de la cardinalité réelle au lieu de l’estimation d’origine d’une ligne. Pour activer la préversion publique de la compilation différée de variable de table dans Azure SQL Database, fixez le niveau de compatibilité à 150 pour la base de données à laquelle vous vous connectez lors de l’exécution de la requête.
+
+## <a name="approximate-query-processing"></a>Traitement des requêtes approximatif
+Le traitement des requêtes approximatif est une nouvelle famille de fonctionnalités conçues pour fournir des agrégations dans de vastes jeux de données où la réactivité est plus importante que la précision absolue.  Un exemple peut être le calcul d’un COUNT(DISTINCT()) dans 10 milliards de lignes pour l’affichage sur un tableau de bord.  Dans ce cas, la précision absolue n’est pas importante, mais la réactivité est essentielle. La nouvelle fonction d’agrégation APPROX_COUNT_DISTINCT retourne le nombre approximatif de valeurs non null uniques dans un groupe.
+
+Pour plus d’informations, consultez [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-sql/functions/approx-count-distinct-transact-sql.md).
 
 ## <a name="see-also"></a>Voir aussi
 [Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

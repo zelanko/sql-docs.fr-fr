@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6fe22eaec4105f8b849bc3a582a131ab59e46446
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e7f44a11de210090ba9afaf734ceeb3353dbbe4d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357821"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085131"
 ---
 # <a name="replication-to-sql-database"></a>Réplication vers une base de données SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,8 @@ ms.locfileid: "37357821"
  -  La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée localement ou une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée dans une machine virtuelle Azure dans le cloud. Pour plus d’informations, consultez [Vue d’ensemble de SQL Server sur les machines virtuelles Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/).  
  - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] doit être un abonné par émission de données d’un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
  -  La base de données de distribution et les agents de réplication ne peut pas être placés sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
- - Seules les réplications d’instantané et les réplications transactionnelles monodirectionnelles sont prises en charge. Les réplications transactionnelles d’égal à égal et les réplications de fusion ne sont pas prises en charge.  
+ - Seules les réplications d’instantané et les réplications transactionnelles monodirectionnelles sont prises en charge. Les réplications transactionnelles d’égal à égal et les réplications de fusion ne sont pas prises en charge.
+ - SQL Database Managed Instance (préversion) prend en charge les bases de données du serveur de distribution et du serveur de publication. Pour plus d’informations, voir [Réplication avec SQL Database Managed Instance](replication-with-sql-database-managed-instance.md).
  
  ## <a name="versions"></a>Versions  
  - Le serveur de publication et le serveur de distribution doivent exécuter l’une des versions suivantes ou une version ultérieure :  

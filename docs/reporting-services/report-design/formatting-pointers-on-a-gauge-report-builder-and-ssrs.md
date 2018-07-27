@@ -15,12 +15,12 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6b74271c98941233d712410a43b31959595119eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3056d8b109c120fd853b5cd27390665e0c09eee6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023586"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981481"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme des pointeurs sur une jauge (Générateur de rapports et SSRS)
  Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , le pointeur de jauge indique la valeur actuelle de la jauge.   
@@ -50,12 +50,12 @@ ms.locfileid: "33023586"
  Vous pouvez spécifier la base d'une aiguille qui peut être dessinée au-dessus ou au-dessous du pointeur sur une jauge radiale uniquement. Tous les styles de base d'aiguille sont dessinés à l'aide de dégradés intégrés qui ne peuvent pas être modifiés. La seule exception est le style **RoundedDark** , qui vous permet de spécifier une couleur et un style de dégradé.  
   
 ##  <a name="SettingSnappingInterval"></a> Définition d'un intervalle d'alignement  
- Un intervalle d'alignement définit le multiple auquel les valeurs sont arrondies. Par défaut, la jauge pointera sur la valeur exacte du champ que vous avez spécifiée dans le volet des données. Toutefois, vous pouvez arrondir la valeur exacte à la valeur supérieure ou inférieure afin que le pointeur s'aligne sur un intervalle prédéfini. Par exemple, si la valeur sur votre jauge est 34,2 et que vous spécifiez un intervalle d'alignement de 5, le pointeur de jauge pointera sur 35. Si la valeur sur votre jauge est 31,2 et que vous spécifiez un intervalle d'alignement de 5, le pointeur de jauge pointera sur 30. Pour plus d’informations, consultez [Définir un intervalle d’alignement sur une jauge (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/0ece7297-6e2f-47fb-835d-b9e9cce53fe2).  
+ Un intervalle d'alignement définit le multiple auquel les valeurs sont arrondies. Par défaut, la jauge pointera sur la valeur exacte du champ que vous avez spécifiée dans le volet des données. Toutefois, vous pouvez arrondir la valeur exacte à la valeur supérieure ou inférieure afin que le pointeur s'aligne sur un intervalle prédéfini. Par exemple, si la valeur sur votre jauge est 34,2 et que vous spécifiez un intervalle d'alignement de 5, le pointeur de jauge pointera sur 35. Si la valeur sur votre jauge est 31,2 et que vous spécifiez un intervalle d'alignement de 5, le pointeur de jauge pointera sur 30. Pour plus d’informations, consultez [Définir un intervalle d’alignement sur une jauge (Générateur de rapports et SSRS)](http://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2).  
   
 ##  <a name="SpecifyingImage"></a> Spécification d'une image en tant que pointeur sur une jauge radiale  
  En plus de la liste intégrée de styles de pointeur, vous pouvez choisir une image comme pointeur. Cela fonctionne très bien lorsque vous utilisez une image pour remplacer un style de pointeur de type aiguille existant. L'image est superposée au pointeur, mais toutes les fonctionnalités du pointeur sont conservées. Les options de couleur et de dégradé ne sont pas applicables lorsqu'une image est utilisée comme pointeur.  
   
- Si l'image du pointeur a une forme irrégulière, vous devez définir la couleur comme transparente afin de masquer les zones de votre image qui ne doivent pas apparaître sur la jauge. Lorsque vous définissez une couleur transparente, la jauge transpose l'image sur votre pointeur existant et rogne l'image afin que seule la forme du pointeur apparaisse. La jauge recadre l'image en fonction de la taille de votre pointeur. Lorsque vous spécifiez une image comme pointeur, tout pointeur ajouté ultérieurement sur la jauge est dessiné sous l'image. C'est pourquoi il est préférable de ne pas spécifier d'image pour le pointeur s'il y a plusieurs pointeurs sur la jauge. Pour plus d’informations, consultez [Spécifier une image en tant que pointeur dans une jauge (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
+ Si l'image du pointeur a une forme irrégulière, vous devez définir la couleur comme transparente afin de masquer les zones de votre image qui ne doivent pas apparaître sur la jauge. Lorsque vous définissez une couleur transparente, la jauge transpose l'image sur votre pointeur existant et rogne l'image afin que seule la forme du pointeur apparaisse. La jauge recadre l'image en fonction de la taille de votre pointeur. Lorsque vous spécifiez une image comme pointeur, tout pointeur ajouté ultérieurement sur la jauge est dessiné sous l'image. C'est pourquoi il est préférable de ne pas spécifier d'image pour le pointeur s'il y a plusieurs pointeurs sur la jauge. Pour plus d’informations, consultez [Spécifier une image en tant que pointeur dans une jauge (Générateur de rapports et SSRS)](http://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

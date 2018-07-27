@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 524356687337eb962c262ea1e503fd2b40856623
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8288e93ff860e79116815f5b5d5417d05786d262
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410551"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082371"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,19 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @folder_name = ] *folder_name*  
+ [ \@folder_name = ] *folder_name*  
  Nom du dossier qui contient le projet. *folder_name* est de type **nvarchar(128)**.  
   
- [ @project_name = ] *project_name*  
+ [ \@project_name = ] *project_name*  
  Nom de projet. *project_name* est de type **nvarchar(128)**.  
   
- [ @object_type = ] *object_type*  
+ [ \@object_type = ] *object_type*  
  Type de l'objet. Les valeurs valides incluent `20` pour un projet et `30` pour un package. *object_type* est de type **smallInt**.  
   
- [ @ object _name = ] *object _name*  
+ [ \@ object _name = ] *object _name*  
  Nom du package. *object _name* est de type **nvarchar(260)**.  
   
- [ @parameter_ name = ] *parameter_name*  
+ [ \@parameter_ name = ] *parameter_name*  
  Nom du paramètre. *parameter_ name* est de type **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
@@ -58,7 +58,7 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>Jeux de résultats  
  None  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et MODIFY sur le projet  

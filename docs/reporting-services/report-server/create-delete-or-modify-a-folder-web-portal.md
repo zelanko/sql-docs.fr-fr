@@ -15,11 +15,12 @@ caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e74001a999a6a401c6c221ce4839e32b344f3bba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0622d84da89af1f2cfda36500e5257168417ba14
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082451"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Créer, supprimer ou modifier un dossier (portail web)
   Vous pouvez créer des dossiers pour organiser et gérer les éléments à publier sur un serveur de rapports. La création de dossiers peut permettre aux utilisateurs de rechercher les rapports qui les intéressent. Pour les gestionnaires de contenu, les dossiers fournissent l'infrastructure nécessaire à l'application d'autorisations. Vous pouvez créer des attributions de rôles pour des dossiers spécifiques afin de restreindre l'accès aux rapports en cours de développement ou dont la diffusion doit être restreinte.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
      La boîte de dialogue **Créer un dossier dans** s’ouvre.  
   
-3.  Tapez le nom du dossier. Un nom de dossier peut contenir des espaces, mais aucun caractère réservé au codage d'URL, par exemple les caractères : ; ? : @ & = + , $ / * < > |. Vous ne pouvez pas taper une série de noms de dossiers pour créer plusieurs dossiers en même temps.  
+3.  Tapez le nom du dossier. Un nom de dossier peut contenir des espaces, mais aucun caractère réservé au codage d'URL, par exemple les caractères : ; ? : \@ & = + , $ / * < > |. Vous ne pouvez pas taper une série de noms de dossiers pour créer plusieurs dossiers en même temps.  
   
 4.  Sélectionnez **Créer**.  
   

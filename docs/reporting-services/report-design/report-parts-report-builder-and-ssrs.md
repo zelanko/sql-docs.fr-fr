@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c6685cf99cb3a46b4b90d5e0126c4df05dcb9575
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 968fa4c440e02c7a322b3a9c32af66267a38fa64
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027556"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984161"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Publication de parties de rapports (Générateur de rapports et SSRS)
   Les éléments de rapport tels que les tableaux, matrices, graphiques et images peuvent être publiés en tant que *parties de rapports*. Les parties de rapports sont des éléments de rapports paginés qui ont été publiés séparément sur un serveur de rapports et qui peuvent être réutilisés dans d’autres rapports paginés. Les parties de rapports ont l'extension de fichier .rsc.  
@@ -114,7 +114,7 @@ ms.locfileid: "33027556"
  Chaque fois que vous ouvrez un rapport, le Générateur de rapports vérifie si les instances de serveur des parties de rapport de ce rapport ont été mises à jour sur le serveur. Il recherche également des modifications dans les éléments dépendants des parties de rapport, tels que le dataset et les paramètres. Si des parties de rapport publiées ou leurs dépendances ont été mises à jour sur le serveur, une barre d'informations dans votre rapport affiche le nombre d'éléments mis à jour. Vous pouvez choisir d'afficher et d'accepter ou de rejeter les mises à jour ou de faire disparaître la barre d'informations. Si vous choisissez d'afficher les mises à jour, une miniature de la partie de rapport, de la personne qui l'a modifié en dernier et du moment de cette modification apparaît. Vous pouvez alors accepter certains ou l'ensemble des éléments mis à jour.  
   
 > [!NOTE]  
->  Vous pouvez désactiver la barre d'informations, auquel cas vous ne serez plus informé en cas de modification d'une partie de rapport. Vous définissez cette option lorsque vous ajoutez la partie de rapport à votre rapport. Même si vous avez désactivé la barre d'informations, vous pouvez toujours rechercher des mises à jour. Pour plus d’informations, consultez [Vérifier la présence de mises à jour ou désactiver les mises à jour (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
+>  Vous pouvez désactiver la barre d'informations, auquel cas vous ne serez plus informé en cas de modification d'une partie de rapport. Vous définissez cette option lorsque vous ajoutez la partie de rapport à votre rapport. Même si vous avez désactivé la barre d'informations, vous pouvez toujours rechercher des mises à jour. Pour plus d’informations, consultez [Vérifier la présence de mises à jour ou désactiver les mises à jour (Générateur de rapports et SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
   
  Le Générateur de rapports recherche des différences entre la date de la dernière mise à jour de la partie de rapport sur le serveur et la date de la dernière synchronisation de la partie de rapport avec le serveur. Il ne vérifie pas la date à laquelle vous avez modifié la partie de rapport dans votre rapport. Ainsi, la partie de rapport dans votre rapport et celle sur le serveur peuvent être assez différentes mais, lorsque le Générateur de rapports recherche des mises à jour, il n'en trouve pas.  
   
@@ -143,11 +143,11 @@ ms.locfileid: "33027556"
   
  [Rechercher des parties de rapports et définir un dossier par défaut &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Vérifier la présence de mises à jour ou désactiver les mises à jour (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
+ [Vérifier la présence de mises à jour ou désactiver les mises à jour (Générateur de rapports et SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
 ## <a name="see-also"></a> Voir aussi  
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](http://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Gestion de parties de rapport](../../reporting-services/report-design/managing-report-parts.md)  
   
   

@@ -17,12 +17,12 @@ caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6bc8a0745cb75ae2d6856bd950a6020513798970
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73455ea6ca6fdde23b61586abd9851712967e7a8
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016576"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038096"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Leçon 3 : définition d'un dataset destiné à un rapport de table (Reporting Services)
 Après avoir défini une source de données, vous devez spécifier un dataset. Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], les données utilisées par les rapports sont contenues dans des *datasets*. Les datasets contiennent un pointeur qui renvoient à la source des données, la requête que doit utiliser le rapport ainsi que des champs et variables calculées.  
@@ -37,7 +37,7 @@ Utilisez le Concepteur de requêtes du Concepteur de rapports pour définir le d
   
 3.  Cliquez sur **Utiliser un dataset incorporé dans mon rapport**.  
   
-4.  Sélectionnez la source de données que vous avez créée à la leçon précédente, [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
+4.  Sélectionnez la source de données que vous avez créée dans la leçon précédente, [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)].   
 5. Sélectionnez **Texte** comme **Type de requête**.  
   
 6.  Tapez ou copiez et collez la requête Transact-SQL ci-après dans la zone **Requête** .  

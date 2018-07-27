@@ -22,12 +22,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 199b1abd026efdf383cbd982ac3ce79d36e5b5cc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f1cf60d0f7b775e4950b159c237b96e82a1b333f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401351"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083351"
 ---
 # <a name="ole-db-source"></a>Source OLE DB
   La source OLE DB extrait des données d'une série de bases de données relationnelles compatibles OLE DB à l'aide d'une table de base de données, d'une vue ou d'une commande SQL. Par exemple, la source OLE DB peut extraire des données de tables de bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -87,7 +87,7 @@ ms.locfileid: "35401351"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- La procédure stockée attend les variables, `@StartProductID` et `@CheckDate`, pour fournir des valeurs de paramètres. L’ordre dans lequel les paramètres apparaissent dans la liste **Mappages** n’est pas pertinent. Le seul impératif est que les noms de paramètres correspondent aux noms de variables dans la procédure stockée, notamment le signe @.  
+ La procédure stockée attend les variables, `@StartProductID` et `@CheckDate`, pour fournir des valeurs de paramètres. L’ordre dans lequel les paramètres apparaissent dans la liste **Mappages** n’est pas pertinent. Le seul impératif est que les noms de paramètres correspondent aux noms de variables dans la procédure stockée, y compris le signe \@.  
   
 ### <a name="mapping-parameters-to-variables"></a>Mappage de paramètres à des variables  
  Les paramètres sont mappés à des variables qui fournissent les valeurs de paramètres au moment de l'exécution. Les variables sont généralement des variables définies par l’utilisateur, bien que vous puissiez utiliser les variables système fournies par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si vous utilisez des variables définies par l'utilisateur, assurez-vous que vous choisissez un type de données compatible avec celui de la colonne référencée par le paramètre mappé. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
@@ -104,7 +104,7 @@ ms.locfileid: "35401351"
   
 -   [Propriétés personnalisées OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 -   [Extraire des données à l'aide de la source OLE DB](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   

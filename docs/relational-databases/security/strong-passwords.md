@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 caps.latest.revision: 30
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3bd36744f5604729d782822296dd6568b90a847
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 5ce04c1ef924224036f28b8b5dd1b4eb15c9a4a4
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942625"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107961"
 ---
 # <a name="strong-passwords"></a>Mots de passe forts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "36942625"
   
 -   il contient ou commence par un espace ;  
   
--   il commence par le caractère $ ou @.  
+-   il commence par le caractère $ ou \@.  
   
- Un nom d’accès ou un mot de passe, s’il est utilisé dans une chaîne de connexion OLE DB ou ODBC, ne doit pas contenir les caractères suivants: [] {}() , ; ? * ! @. Ces caractères servent en effet à initialiser une connexion ou à séparer les valeurs de la chaîne de connexion.  
+ Un nom d’accès ou un mot de passe, s’il est utilisé dans une chaîne de connexion OLE DB ou ODBC, ne doit pas contenir les caractères suivants: [] {}() , ; ? * ! \@. Ces caractères servent en effet à initialiser une connexion ou à séparer les valeurs de la chaîne de connexion.  
   
 ## <a name="related-content"></a>Contenu associé  
  [Stratégie de mot de passe](../../relational-databases/security/password-policy.md)  

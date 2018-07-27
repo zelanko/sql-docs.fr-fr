@@ -31,12 +31,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33f794f164a1fbd63ce65289c36b30391a87587b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edd4106a1e58631112337d0dcae8da78907a519d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017422"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087481"
 ---
 # <a name="examples-using-openxml"></a>Exemples : Utilisation de OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ LILAS      Carlos Gonzlez
   
  Dans la mesure où les éléments <`Customer`> n’ont pas de sous-éléments, si la même instruction SELECT s’exécute avec une valeur *flags* de **2**, pour indiquer qu’il s’agit d’un mappage centré sur l’élément, les valeurs de **CustomerID** et de **ContactName** pour les deux clients sont renvoyées comme NULL.  
   
- @xmlDocument peut également être de type **xml** ou de type **(n)varchar(max)**.  
+ \@xmlDocument peut également être de type **xml** ou de type **(n)varchar(max)**.  
   
  Si, dans le document XML, les éléments <`CustomerID`> et <`ContactName`> sont des sous-éléments, le mappage centré sur l'élément extrait les valeurs.  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  L'instruction OPENXML contient les éléments suivants :  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) se termine par un attribut XML, **ProductID**. Dans l'ensemble de lignes obtenu, une ligne est créée pour chaque nœud d'attribut sélectionné dans le document XML.  
+-   *rowpattern* (/ROOT/Customer/Order/OrderDetail/\@ProductID) se termine par un attribut XML, **ProductID**. Dans l'ensemble de lignes obtenu, une ligne est créée pour chaque nœud d'attribut sélectionné dans le document XML.  
   
 -   Dans cet exemple, le paramètre *flags* n’est pas spécifié. En revanche, les mappages sont définis par le paramètre *ColPattern* .  
   
@@ -482,9 +482,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   Le modèle XPath (**.**) spécifié pour le paramètre *ColPattern* de la colonne **ProdID** de l’ensemble de lignes identifie le nœud de contexte (nœud actuel). Comme pour le paramètre *rowpattern* spécifié, il s’agit de l’attribut **ProductID** de l’élément <`OrderDetail`>.  
   
--   Le paramètre *ColPattern*, **../@Quantity**, spécifié pour la colonne **Qty** de l’ensemble de lignes, identifie l’attribut **Quantity** du parent <`OrderDetail`>, nœud du nœud de contexte \<ProductID>.  
+-   Le paramètre *ColPattern* **../\@Quantity**, spécifié pour la colonne **Qty** de l’ensemble de lignes, identifie l’attribut **Quantity** du parent <`OrderDetail`>, nœud du nœud de contexte\<ProductID>.  
   
--   De même, le paramètre *ColPattern*, **../../@OrderID**, spécifié pour la colonne **OID** de l’ensemble de lignes, identifie l’attribut **OrderID** du parent, <`Order`>, du nœud parent du nœud de contexte. Le nœud parent est <`OrderDetail`> et le nœud de contexte est <`ProductID`>.  
+-   De même, le paramètre *ColPattern* **../../\@OrderID**, spécifié pour la colonne **OID** de l’ensemble de lignes, identifie l’attribut **OrderID** du parent <`Order`> du nœud parent du nœud de contexte. Le nœud parent est <`OrderDetail`> et le nœud de contexte est <`ProductID`>.  
   
  Ensuite, l'instruction SELECT extrait toutes les colonnes dans l'ensemble de lignes fourni par OPENXML.  
   
@@ -582,7 +582,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Il s’agit plus précisément de transmettre une variable de type **xml** (@x) à la fonction **sp_xml_preparedocument()**.  
+ Il s’agit plus précisément de transmettre une variable de type **xml** (\@x) à la fonction **sp_xml_preparedocument()**.  
   
  Voici le résultat obtenu :  
   

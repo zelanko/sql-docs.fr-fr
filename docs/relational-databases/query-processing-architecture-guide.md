@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842902"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087561"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -569,7 +569,7 @@ En outre, les clauses de requête suivantes ne sont pas paramétrables. Notez qu
   * l’expression contient une clause `CASE` .  
 * Les arguments des clauses d'indicateur de requête. Notamment l’argument `number_of_rows` de l’indicateur de requête `FAST` , l’argument `number_of_processors` de l’indicateur de requête `MAXDOP` et l’argument number de l’indicateur de requête `MAXRECURSION` .
 
-Le paramétrage est effectué au niveau des instructions Transact-SQL individuelles. En d'autres termes, les instructions individuelles d'un traitement sont paramétrables. Une fois la compilation terminée, la requête paramétrable est exécutée dans le contexte du traitement pour lequel elle a été initialement soumise. Dans le cas d’un plan d’exécution mis en cache, vous pouvez déterminer si la requête a été paramétrée en référençant la colonne sql de la vue de gestion dynamique sys.syscacheobjects. Si la requête est paramétrable, les noms et les types de données des paramètres sont spécifiés avant le texte de chaque lot soumis dans cette colonne, par exemple (@1 tinyint).
+Le paramétrage est effectué au niveau des instructions Transact-SQL individuelles. En d'autres termes, les instructions individuelles d'un traitement sont paramétrables. Une fois la compilation terminée, la requête paramétrable est exécutée dans le contexte du traitement pour lequel elle a été initialement soumise. Dans le cas d’un plan d’exécution mis en cache, vous pouvez déterminer si la requête a été paramétrée en référençant la colonne sql de la vue de gestion dynamique sys.syscacheobjects. Si la requête est paramétrable, les noms et les types de données des paramètres sont spécifiés avant le texte du lot soumis dans cette colonne, par exemple, (\@1 tinyint).
 
 > [!NOTE]
 > Les noms des paramètres sont arbitraires. Les utilisateurs et les applications ne doivent par conséquent pas se fier à un ordre particulier d'affectation des noms. En outre, les éléments suivants peuvent varier dans les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les mises à niveau des Service Packs : les noms des paramètres, le choix des littéraux paramétrés et l’espacement dans le texte paramétré.

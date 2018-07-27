@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 704baf98a80b0fa17b10303e2ce18fec4463f39d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421568"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088121"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37421568"
 |Propriété|Valeur|  
 |--------------|-----------|  
 |Syntaxe|**time** [ (*échelle de fractions de seconde*) ]|  
-|Utilisation|DECLARE @MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|Utilisation|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*échelle de fractions de seconde*|Spécifie le nombre de chiffres pour la partie fractionnaire des secondes.<br /><br /> Il peut s'agir d'un entier compris entre 0 et 7. Pour Informatica, il peut s’agir d’un entier compris entre 0 et 3.<br /><br /> L’échelle de fractions par défaut est 7 (100 ns).|  
 |Format de littéral de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|hh:mm:ss[.nnnnnnn] pour Informatica)<br /><br /> Pour plus d'informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » qui suit.|  
 |Plage|00:00:00.0000000 à 23:59:59.9999999 (00:00:00.000 à 23:59:59.999 pour Informatica)|  

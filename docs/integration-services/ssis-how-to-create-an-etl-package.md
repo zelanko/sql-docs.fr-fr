@@ -1,7 +1,7 @@
 ---
 title: SSIS Guide pratique pour créer un package ETL | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -23,12 +23,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 234b5a72f611ab2ac85db862c04af7d749e089ab
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5d2af071661576fdcd63a46a424a457fb969aac9
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411731"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999279"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS : comment créer un package ETL
 
@@ -40,22 +40,24 @@ Quand vous installez les exemples de données utilisés par le didacticiel, vous
 
 ## <a name="what-is-sql-server-integration-services-ssis"></a>Qu’est-ce que SQL Server Integration Services (SSIS) ?
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) est une plateforme conçue pour créer des solutions d’intégration de données à hautes performances, notamment des packages d’extraction, de transformation et de chargement (ETL) pour l’entreposage de données. SSIS propose des outils graphiques et des assistants permettant de créer et de déboguer des packages ; des tâches permettant de réaliser des fonctions de flux de travail comme les opérations FTP, l'exécution d'instructions SQL et l'envoi de messages électroniques ; des sources de données et des destinations permettant d'extraire et de charger des données ; des transformations permettant de nettoyer, d'agréger, de fusionner et de copier des données ; un service de gestion, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , permettant d'administrer l'exécution et le stockage des packages, et des API (Application Programming Interface) permettant de programmer le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) est une plateforme conçue pour créer des solutions d’intégration de données à hautes performances, notamment des packages d’extraction, de transformation et de chargement (ETL) pour l’entreposage de données. SSIS propose des outils graphiques et des assistants permettant de créer et de déboguer des packages ; des tâches permettant de réaliser des fonctions de flux de travail comme les opérations FTP, l'exécution d'instructions SQL et l'envoi de messages électroniques ; des sources de données et des destinations permettant d'extraire et de charger des données ; des transformations permettant de nettoyer, d'agréger, de fusionner et de copier des données ; une base de données de gestion, `SSISDB`, permettant d'administrer l'exécution et le stockage des packages, et des API (Application Programming Interface) permettant de programmer le modèle objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
 ## <a name="what-you-learn"></a>Contenu du didacticiel  
 Le meilleur moyen de se familiariser avec les nouveaux outils et les nouvelles commandes et fonctionnalités de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est de les utiliser. Ce didacticiel vous guide dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour créer un package ETL simple qui inclut le bouclage, des configurations, la logique du flux des erreurs et la journalisation.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="prerequisites"></a>Conditions préalables requises  
 Ce didacticiel s'adresse aux utilisateurs qui ont une connaissance des notions fondamentales liées à l'utilisation des bases de données mais une maîtrise limitée des nouvelles fonctionnalités disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
-> [!IMPORTANT]
-> Récemment, les exemples de fichiers nécessaires pour suivre ce tutoriel n’étaient plus disponibles en ligne à leur emplacement précédent. Nous vous prions de nous excuser pour la gêne occasionnée. Nous avons mis les fichiers à disposition à un nouvel emplacement et nous avons mis à jour les liens de téléchargement dans cet article.
-
-Pour utiliser ce didacticiel, les composants suivants doivent être installés sur votre système :  
+Pour exécuter ce tutoriel, les composants suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec la base de données **AdventureWorksDW2012** . Pour télécharger la base de données **AdventureWorksDW2012**, téléchargez `AdventureWorksDW2012.bak` à partir des [exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) et restaurez la sauvegarde.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour installer SQL Server et SSIS, consultez [Installer Integration Services](install-windows/install-integration-services.md).
 
--   Exemples de données. Ces données exemple sont incluses dans les packages de leçons [!INCLUDE[ssIS](../includes/ssis-md.md)] . Pour télécharger les exemples de données et les packages de leçons dans un fichier Zip, consultez [SQL Server Integration Services Tutorial - Create a Simple ETL Package](https://www.microsoft.com/download/details.aspx?id=56827).  
+-   L’exemple de base de données **AdventureWorksDW2012**. Pour télécharger la base de données **AdventureWorksDW2012**, téléchargez `AdventureWorksDW2012.bak` à partir des [exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) et restaurez la sauvegarde.  
+
+-   Les fichiers d’**exemples de données**. Ces données exemple sont incluses dans les packages de leçons [!INCLUDE[ssIS](../includes/ssis-md.md)] . Pour télécharger les exemples de données et les packages de leçons dans un fichier Zip, consultez [SQL Server Integration Services Tutorial - Create a Simple ETL Package](https://www.microsoft.com/download/details.aspx?id=56827).
+
+    - La plupart des fichiers dans le fichier zip sont des fichiers en lecture seule afin d’empêcher des modifications par inadvertance. Pour écrire la sortie dans un fichier ou la modifier, vous devrez désactiver l’attribut en lecture seule dans les propriétés du fichier.
+    - Les exemples de packages supposent que les fichiers de données se trouvent dans le dossier `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`. Si vous le décompressez le fichier téléchargé vers un autre emplacement, vous devrez peut-être mettre à jour le chemin d’accès du fichier à plusieurs endroits dans les exemples de packages.
 
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel  
 [Leçon 1 : Créer un projet et un package de base avec SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  

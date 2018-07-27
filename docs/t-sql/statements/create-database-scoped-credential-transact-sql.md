@@ -25,13 +25,13 @@ caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b44199260af6886096e2ceabb071692e34b967f
-ms.sourcegitcommit: ad297e041f0b7c65aa0bf7f4be8073d204977d9b
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions || >= aps-pdw-2016
+ms.openlocfilehash: 0a7c0aa186874c068a82441dc8c4a3313e975964
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923611"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999299"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ WITH IDENTITY = 'identity_name'
  Spécifie le nom du compte à utiliser lors d'une connexion en dehors du serveur. Pour importer un fichier à partir du stockage Blob Azure avec une clé de partage, le nom de l’identité doit être `SHARED ACCESS SIGNATURE`. Pour charger des données dans SQL DW, n’importe quelle valeur valide peut être utilisée pour l’identité. Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
   
  SECRET **='***secret***'**  
- Spécifie le secret requis pour l'authentification sortante. `SECRET` est obligatoire pour importer un fichier à partir du stockage Blob Azure. Pour effectuer le chargement à partir du stockage Blob Azure dans SQL DW, le secret doit être la clé de stockage Azure.  
+ Spécifie le secret requis pour l'authentification sortante. `SECRET` est obligatoire pour importer un fichier à partir du stockage Blob Azure. Pour effectuer le chargement du Stockage Blob Azure vers SQL DW ou Parallel Data Warehouse, le secret doit être la clé de stockage Azure.  
 >  [!WARNING]
 >  La valeur de clé SAP peut commencer par un point d’interrogation (« ? »). Quand vous utilisez la clé SAP, vous devez supprimer le caractère « ? » initial. Sinon, vos efforts risquent d’être vains.  
   
@@ -86,7 +86,7 @@ WITH IDENTITY = 'identity_name'
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) utilisent les informations d’identification délimitées à la base de données pour accéder aux données à partir du stockage Blob Azure. Pour plus d’informations, consultez [Exemples d’accès en bloc à des données dans Stockage Blob Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Exige l’autorisation **CONTROL** sur la base de données.  
   
 ## <a name="examples"></a>Exemples  

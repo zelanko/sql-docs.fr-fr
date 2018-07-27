@@ -21,12 +21,12 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1f0406d711dfb04e553cb7ba8f8c27ede209a5f2
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8c2adad2eef1350897bcae24bfdde434ecfeecff
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550100"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084861"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>Charger un fichier ou un rapport dans le serveur de rapports
 Le portail web du serveur de rapports fournit une fonctionnalité de chargement qui vous permet d’ajouter des rapports et d’autres fichiers à un serveur de rapports sans devoir publier ces éléments à partir d’une application cliente. Les fichiers que vous téléchargez à partir du système de fichiers sont stockés en tant qu'éléments sur le serveur de rapports. Le type de fichier téléchargé détermine son mode de stockage :  
@@ -41,7 +41,7 @@ Le portail web du serveur de rapports fournit une fonctionnalité de chargement 
   
 4.  Accédez au fichier à charger. Vous pouvez télécharger un fichier de définition de rapport, une image, un document ou tout autre fichier que vous souhaitez rendre accessible sur le serveur de rapports.  
   
-5.  Tapez un nom pour le nouvel élément. Ce nom peut comporter des espaces, mais il ne peut pas contenir les caractères réservés suivants : ; ? : @ & = + , $ / * < > |.  
+5.  Tapez un nom pour le nouvel élément. Ce nom peut comporter des espaces, mais il ne peut pas contenir les caractères réservés suivants : ; ? : \@ & = + , $ / * < > |.  
   
 6.  Pour remplacer un élément existant par le nouveau, sélectionnez **Remplacer l’élément s’il existe**.  
   

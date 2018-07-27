@@ -23,12 +23,12 @@ caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa0546bd09cd108c4e9cccbd5909cad94558d92d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3831509441516a08cfa8d651ecd8ffa93c16107f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550760"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083541"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Créer, modifier, puis supprimer des sources de données partagées (SSRS)
   Une source de données partagée est un ensemble de propriétés de connexion à la source de données pouvant être référencées par plusieurs rapports, modèles et abonnements pilotés par les données qui s’exécutent sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Les sources de données partagées permettent de gérer facilement des propriétés de source de données qui changent souvent dans le temps. Si le compte ou le mot de passe d'un utilisateur change ou bien si vous déplacez la base de données sur un serveur différent, vous pouvez mettre à jour les informations de connexion à un seul endroit.  
@@ -79,7 +79,7 @@ ms.locfileid: "34550760"
   
 1.  Dans le portail web, sélectionnez **Nouveau** > **Source de données**. 
   
-4.  Tapez le nom de l'élément. Le nom doit contenir au moins un caractère et il doit commencer par une lettre. Il peut également comprendre des symboles, à l'exception des espaces ou des caractères ; ? : @ & = + , $ / * < > | " /.  
+4.  Tapez le nom de l'élément. Le nom doit contenir au moins un caractère et il doit commencer par une lettre. Il peut également comprendre des symboles, à l'exception des espaces ou des caractères ; ? : \@ & = + , $ / * < > | " /.  
   
 5.  Tapez éventuellement une description renseignant les utilisateurs sur la connexion.  
   

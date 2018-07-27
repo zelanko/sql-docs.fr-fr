@@ -32,12 +32,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56a65ce4dd6ccfb31e8c55dad26b16c7c1415aa
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d8fad120755b75f9d7e07f9e10c184de6f879810
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788290"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024265"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -90,9 +90,11 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
  Lorsque vous sauvegardez la clé privée dans un fichier, un chiffrement est nécessaire. Le mot de passe utilisé pour protéger le certificat sauvegardé est différent de celui utilisé pour chiffrer la clé privée du certificat.  
   
- Pour restaurer un certificat sauvegardé, utilisez l’instruction [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).  
+ Pour restaurer un certificat sauvegardé, utilisez l’instruction [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
+ 
+ Lors de l’exécution d’une sauvegarde, les fichiers seront mis sur une liste de contrôle d'accès du compte de service de l’instance SQL Server. Si vous devez restaurer le certificat sur un serveur en cours d’exécution sous un compte différent, vous devrez ajuster les autorisations sur les fichiers afin qu’ils puissent être lus par le nouveau compte. 
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation CONTROL sur le certificat et la connaissance du mot de passe utilisé pour chiffrer la clé privée. Si seule la partie publique du certificat est sauvegardée, l'opération requiert une autorisation sur le certificat et l'autorisation VIEW sur le certificat ne doit pas avoir été refusée à l'appelant.  
   
 ## <a name="examples"></a>Exemples  

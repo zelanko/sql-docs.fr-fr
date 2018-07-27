@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: a803f26e65a4bdda5264fc2cea53a5b360f0df89
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107237"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982391"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption avec prise en charge de BYOK pour Azure SQL Database et Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -73,9 +73,10 @@ Quand TDE est d’abord configuré pour utiliser un protecteur TDE dans Key Vaul
 - Accordez l’accès au serveur logique au Key Vault avec son identité Azure AD (Azure Active Directory).  Quand vous utilisez l’interface utilisateur du portail, l’identité Azure AD est automatiquement créée et les autorisations d’accès au Key Vault sont accordées au serveur.  Si vous utilisez PowerShell pour configurer TDE avec BYOK, l’identité Azure AD doit être créée et vérifiée. Consultez [Configurer TDE avecBYOK](transparent-data-encryption-byok-azure-sql-configure.md) pour obtenir des instructions détaillées sur l’utilisation de PowerShell.
 
   >[!NOTE]
-  >Si l’identité Azure AD **est accidentellement supprimée ou si les autorisations du serveur sont révoquées** avec la stratégie d’accès du Key Vault, le serveur perd l’accès au Key Vault.
+  >Si l’identité Azure AD **est accidentellement supprimée ou si les autorisations du serveur sont révoquées** avec la stratégie d’accès du Key Vault, le serveur perd l’accès au Key Vault et les bases de données chiffrées par TDE sont supprimées dans les 24 heures.
   >
-  
+
+- Configurer Azure Key Vault sans réseau virtuel ou sans pare-feu.  Si SQL perd l’accès au coffre de clés, les bases de données chiffrées par TDE sont supprimées dans les 24 heures.
 - Permettre l’audit et le reporting sur toutes les clés de chiffrement : Key Vault fournit des fichiers journaux que vous pouvez facilement injecter dans d’autres outils de gestion des événements et des informations de sécurité (SIEM). Le service [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) d’OMS (Operations Management Suite) est un exemple de service déjà intégré.
 - Pour assurer une haute disponibilité des bases de données chiffrées, configurez chaque serveur logique avec deux coffres de clé Azure de différentes régions.
 

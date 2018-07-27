@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ caps.latest.revision: 59
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7dff7eb34493f69ac3e62e889f8641c9a7ed368a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9ff101bbc0288a3a6ccb1671f3f3c125908cf567
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786140"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106725"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -170,7 +170,8 @@ ms.locfileid: "37786140"
  Spécifie la colonne associée à une définition DEFAULT au niveau de la table.  
   
  WITH VALUES  
- Spécifie que la valeur donnée dans DEFAULT *constant_expression* est stockée dans une nouvelle colonne ajoutée aux lignes existantes. WITH VALUES peut uniquement être spécifiée si l'option DEFAULT est spécifiée dans une clause ADD COLUMN. Si la colonne ajoutée accepte les valeurs NULL et que l'option WITH VALUES est spécifiée, la valeur par défaut est stockée dans la nouvelle colonne ajoutée aux lignes existantes. Si WITH VALUES n'est pas indiquée pour des colonnes acceptant les valeurs NULL, la valeur NULL est stockée dans la nouvelle colonne des lignes existantes. Si la nouvelle colonne n'accepte pas les valeurs NULL, la valeur par défaut est stockée dans les nouvelles lignes, que l'option WITH VALUES soit spécifiée ou pas.  
+ En cas d’ajout d’une colonne AND qui autorise les valeurs NULL avec WITH VALUES, ainsi que d’une contrainte DEFAULT, attribuez, pour les lignes existantes, la valeur donnée dans *constant_expression* DEFAULT à la nouvelle colonne. Si la colonne ajoutée n’autorise pas les valeurs NULL, sa valeur sera toujours celle qui est donnée dans *l’expression constante* DEFAULT pour les lignes existantes. À partir de SQL Server 2012, il peut s’agir d’une opération de métadonnées [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+Si elle est utilisée sans que la colonne associée soit elle aussi ajoutée, elle n’a aucun effet. 
   
  CHECK  
  Contrainte qui assure l'intégrité du domaine en limitant les valeurs possibles pouvant être entrées dans une ou plusieurs colonnes.  

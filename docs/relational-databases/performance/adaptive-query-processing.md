@@ -2,7 +2,7 @@
 title: Traitement de requêtes adaptatif dans les bases de données Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Fonctionnalités de traitement de requêtes adaptatif pour améliorer les performances des requêtes dans SQL Server (2017 et versions ultérieures) et Azure SQL Database.
 ms.custom: ''
-ms.date: 05/08/2018
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 092f623dff8bd240bdc5349a3e6973d5c139b23f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: c7a38b9765d15e3d62c2ba022b356f627ee9c6ce
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332440"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087501"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Traitement de requêtes adaptatif dans les bases de données SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,6 +107,29 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 ```
 
 Un indicateur de requête USE HINT est prioritaire par rapport à une configuration incluse dans l’étendue d’une base de données ou à un paramètre d’indicateur de trace.
+
+## <a name="row-mode-memory-grant-feedback"></a>Rétroaction d’allocation de mémoire en mode ligne
+**S’applique à** : SQL Database (fonctionnalité en préversion publique)
+
+La rétroaction d’allocation de mémoire en mode ligne étend la fonctionnalité de rétroaction d’allocation de mémoire en mode batch en ajustant les tailles d’allocation de mémoire pour les opérateurs du mode batch et du mode ligne.  
+
+Pour activer la préversion publique de la rétroaction d’allocation de mémoire en mode ligne dans Azure SQL Database, fixez le niveau de compatibilité à 150 pour la base de données à laquelle vous vous connectez lors de l’exécution de la requête.
+
+L’activité de la rétroaction d’allocation de mémoire en mode ligne sera visible par le biais du XEvent **memory_grant_updated_by_feedback**. 
+
+Avec la rétroaction d’allocation de mémoire en mode ligne, deux nouveaux attributs de plan de requête apparaissent pour les plans réels après exécution : **IsMemoryGrantFeedbackAdjusted** et **LastRequestedMemory**, qui sont ajoutés à l’élément XML du plan de requête MemoryGrantInfo. 
+
+LastRequestedMemory indique la mémoire allouée en kilo-octets (Ko) à partir de l’exécution de la requête précédente. L’attribut IsMemoryGrantFeedbackAdjusted permet de vérifier l’état de la rétroaction d’allocation de mémoire de l’instruction au sein d’un plan d’exécution de requête réel. Les valeurs affichées dans cet attribut sont les suivantes :
+
+| Valeur IsMemoryGrantFeedbackAdjusted | Description |
+|--- |--- |
+| Non : première exécution | La rétroaction d’allocation de mémoire n’ajuste pas la mémoire pour la première compilation et l’exécution associée.  |
+| Non : allocation précise | S’il n’y a pas de dépassement sur disque et que l’instruction utilise au moins 50 % de la mémoire allouée, la rétroaction d’allocation de mémoire n’est pas déclenchée. |
+| Non : rétroaction désactivée | Si la rétroaction d’allocation de mémoire est déclenchée en permanence et varie entre des opérations d’augmentation et de diminution de la mémoire, nous la désactivons pour l’instruction. |
+| Oui : ajustement | La rétroaction d’allocation de mémoire a été appliquée et peut encore être ajustée pour l’exécution suivante. |
+| Oui : stable | La rétroaction d’allocation de mémoire a été appliquée et la mémoire allouée est maintenant stable ; en d’autres termes, ce qui a été alloué pour l’exécution précédente est identique à ce qui a été alloué pour l’exécution actuelle. |
+
+Les attributs du plan de rétroaction d’allocation de mémoire ne sont pas encore visibles dans les plans d’exécution de requêtes graphiques SQL Server Management Studio. Cependant, il est possible de les afficher avec SET STATISTICS XML ON ou le XEvent query_post_execution_showplan à des fins de tests préalables.  
 
 ## <a name="batch-mode-adaptive-joins"></a>Jointures adaptatives en mode batch
 La fonctionnalité des jointures adaptatives en mode batch permet de choisir de différer une méthode de [jointure hachée ou de jointure de boucles imbriquées](../../relational-databases/performance/joins.md) **tant que** la première entrée n’a pas été analysée. L’opérateur de jointure adaptative définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquées. Votre plan peut, par conséquent, passer dynamiquement à une meilleure stratégie de jointure pendant l’exécution.

@@ -17,12 +17,12 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e80c79f6d6b56b912aadb8f0ba793d73e5be4934
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d0fd6f3ffe5a30688f24e562e4d536cd3ecd8353
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407631"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082381"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (expression SSIS)
   Renvoie la racine carrée d'une expression numérique.  
@@ -68,7 +68,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 ```  
   
 > [!NOTE]  
->  Dans les expressions, les noms de variable comprennent toujours le préfixe @.  
+>  Dans les expressions, les noms de variables comportent toujours le préfixe \@.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  

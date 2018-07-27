@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c1822b889c30f7a29282f3f0cd3636ee6b7c1ae3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 4bd78a8fea59983d68fa07db0fa552d402548d54
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322238"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980061"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>Installer Reporting Services 2016 à partir de l’invite de commandes
 
@@ -55,7 +55,7 @@ Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /
 ##  <a name="bkmk_sharepoint_mode"></a> Mode SharePoint [Reporting Services]  
   
 ### <a name="rsshpinstallmode-sharepoint-mode"></a>RSSHPINSTALLMODE (mode SharePoint)  
- Le paramètre d’entrée pour installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint est **/RSSHPINSTALLMODE**. Le paramètre d'entrée a une option : SharePointFilesOnlyMode. L'option installe tous les fichiers nécessaires pour le mode SharePoint mais une configuration est requise après l'installation. Les étapes de configuration supplémentaires sont complétées à l'aide de l'Administration centrale de SharePoint. Pour plus d’informations, consultez [Installer le premier serveur de rapports en mode SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+ Le paramètre d’entrée pour installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint est **/RSSHPINSTALLMODE**. Le paramètre d'entrée a une option : SharePointFilesOnlyMode. L'option installe tous les fichiers nécessaires pour le mode SharePoint mais une configuration est requise après l'installation. Les étapes de configuration supplémentaires sont complétées à l'aide de l'Administration centrale de SharePoint. Pour plus d’informations, consultez [Installer le premier serveur de rapports en mode SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 ### <a name="examples-of-sharepoint-mode-installation"></a>Exemples d'installation en mode SharePoint  
  L'exemple suivant installe SQL Server, le service moteur de base de données et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint ainsi que le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour SharePoint (RS_SHPWFE).  
@@ -92,6 +92,6 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 
 [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
 [Paramètres SysPrep](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
-[Installer Power Pivot à partir de l’invite de commandes](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
+[Installer Power Pivot à partir de l’invite de commandes](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

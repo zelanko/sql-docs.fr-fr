@@ -2,7 +2,7 @@
 title: tempdb, base de données | Microsoft Docs
 description: Cette rubrique fournit des détails sur la configuration et l’utilisation de la base de données tempdb dans SQL Server et Azure SQL Database
 ms.custom: P360
-ms.date: 12/19/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,15 +23,15 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98e93ce7e85d6c027e2b9b347ff54425440d2674
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d7a260337f00e6e37015855f9141fbd081e34e91
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582321"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108371"
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La base de données système **tempdb** est une ressource globale à la disposition de tous les utilisateurs connectés à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à SQL Database. La base de données tempdb peut stocker les éléments suivants :  
   
 - Les **objets utilisateurs** temporaires créés explicitement, tels que les tables et index temporaires locaux ou globaux, les procédures stockées temporaires, les variables de table, les tables retournées dans des fonctions table, ou les curseurs.  
@@ -44,7 +44,7 @@ ms.locfileid: "34582321"
   > Chaque objet interne utilise un minimum de neuf pages, une page IAM et une étendue de huit pages. Pour plus d’informations sur les pages et les extensions, consultez [Pages et étendues](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
 
   > [!IMPORTANT]
-  > Azure SQL Database prend en charge les tables temporaires globales et les procédures stockées temporaires globales qui sont stockées dans tempdb et dont l’étendue est limitée à la base de données. Les tables temporaires globales et les procédures stockées temporaires globales sont partagées pour toutes les sessions utilisateur exécutées dans la même instance Azure SQL Database. Les sessions utilisateur d’autres instances Azure SQL Database n’ont pas accès aux tables temporaires globales. Pour plus d’informations, consultez [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database).
+  > Les serveurs logiques Azure SQL Database prennent en charge les tables temporaires globales et les procédures stockées temporaires globales qui sont stockées dans tempdb et dont la portée est limitée à la base de données. Les tables temporaires globales et les procédures stockées temporaires globales sont partagées pour toutes les sessions utilisateur exécutées dans la même instance Azure SQL Database. Les sessions utilisateur d’autres instances Azure SQL Database n’ont pas accès aux tables temporaires globales. Pour plus d’informations, consultez [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) prend en charge les mêmes objets temporaires que SQL Server. Pour le serveur logique Azure SQL Database, seules les bases de données MASTER et tempdb s’appliquent. Pour le concept d’un serveur logique et d’une base de données master logique, consultez [Qu’est-ce qu’un serveur logique SQL Azure ?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). Pour plus d’informations sur tempdb dans le contexte du serveur logique Azure SQL Database, voir [Base de données tempdb dans le serveur logique Azure SQL Database](#tempdb-database-in-sql-database). Pour SQL Database Managed Instance, toutes les bases de données système s’appliquent. 
 
 - Des **banques de versions**, qui sont un ensemble de pages de données contenant les lignes de données requises pour prendre en charge les fonctionnalités qui utilisent le contrôle de version de ligne. Il existe deux banques de versions : une banque de versions commune et une banque de versions de construction d'index en ligne. Les banques de versions contiennent les éléments suivants :
   - Les versions de ligne générées par les transactions de modification de données dans une base de données qui utilise l'isolement basé sur le contrôle de version de ligne read committed ou les transactions d'isolement d'instantané.  
@@ -113,11 +113,11 @@ Les opérations effectuées dans **tempdb** font l’objet d’un enregistrement
 
 |SLO|Taille maximale du fichier de données tempdb (Mo)|Nombre de fichiers de données tempdb|Taille maximale des données tempdb (Mo)|
 |---|---:|---:|---:|
-|Simple|14,225| 1|14,225|
-|S0|14,225| 1|14,225| 
-|S1|14,225| 1|14,225| 
-|S2|14,225|  1|14,225| 
-|S3|32,768| 1|32,768| 
+|Simple|14,225|1|14,225|
+|S0|14,225|1|14,225| 
+|S1|14,225|1|14,225| 
+|S2|14,225| 1|14,225| 
+|S3|32,768|1|32,768| 
 |S4|32,768|2|65,536| 
 |S6|32,768|3|98,304| 
 |S7|32,768|6|196,608| 
@@ -157,7 +157,7 @@ Consultez les [limites des ressources basées sur vCore](https://docs.microsoft.
 - Affectation de la valeur OFFLINE à la base de données.  
 - Affectation de la valeur READ_ONLY à la base de données ou au groupe de fichiers primaire  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Tous les utilisateurs peuvent créer des objets temporaires dans tempdb. Les utilisateurs n'ont accès qu'aux objets qu'ils possèdent, sauf s'ils ont reçu des autorisations supplémentaires. Il est possible de révoquer l’autorisation de connexion à tempdb pour empêcher un utilisateur d’utiliser tempdb, mais cela n’est pas recommandé, car certaines opérations courantes nécessitent l’utilisation de tempdb.  
 
 ## <a name="optimizing-tempdb-performance-in-sql-server"></a>Optimisation des performances de tempdb dans SQL Server 

@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 312d082d3126bd3f0365b674177b59d32e9b613b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1aae0ce86304b3093e9151ed1741b615f423c1e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035206"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984961"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Créer et gérer des abonnements pour les serveurs de rapports en mode natif
   L'abonnement standard est un abonnement créé par des utilisateurs individuels qui souhaitent recevoir des rapports par messagerie électronique ou dans un dossier partagé. Cette rubrique fournit des informations sur les abonnements standard qui sont créés et gérés par des utilisateurs individuels. Les abonnements pilotés par les données ne fonctionnent pas de la même façon et sont décrits dans une rubrique distincte. Pour plus d’informations, consultez [Créer, modifier ou supprimer des abonnement pilotés par les données](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "33035206"
   
 -   Pour utiliser la remise par messagerie électronique, le serveur de rapports doit être configuré pour une connexion de passerelle ou de serveur SMTP avant la création de l'abonnement.  
   
--   Si vous souhaitez utiliser la remise par partage de fichiers, le dossier cible doit avoir été défini. Pour plus d’informations, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+-   Si vous souhaitez utiliser la remise par partage de fichiers, le dossier cible doit avoir été défini. Pour plus d’informations, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Pour que vous puissiez vous abonner à un rapport, la source de données du rapport doit être configurée pour utiliser des informations d'identification stockées ou aucune information d'identification. Pour plus d’informations, consultez [Stocker les informations d’identification dans une source de données Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md). Si aucune information d'identification n'est utilisée, le bouton **Nouvel abonnement** n'est pas disponible.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "33035206"
   
 4.  **Propriétaire**: la valeur par défaut du champ Propriétaire est l’utilisateur actuel et ne peut pas être modifiée lors de la création de l’abonnement. Toutefois, une fois l’abonnement enregistré, vous pouvez modifier les propriétés d’abonnement, notamment le propriétaire et la description.  
   
-5.  **Remis par**: sélectionnez **Messagerie électronique**. Si **Messagerie électronique** n’est pas disponible, votre serveur de rapports n’est pas configuré pour les abonnements par message électronique. Consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+5.  **Remis par**: sélectionnez **Messagerie électronique**. Si **Messagerie électronique** n’est pas disponible, votre serveur de rapports n’est pas configuré pour les abonnements par message électronique. Consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-6.  **À**: le nom de destinataire figurant dans le champ À : est renseigné automatiquement d’après votre compte d’utilisateur de domaine. Vérifiez que le format est [nom d’utilisateur]@[domaine.com]. Les paramètres de configuration du serveur de rapports déterminent si le champ **À** est renseigné automatiquement d’après votre compte d'utilisateur. Pour plus d’informations sur la modification des paramètres de configuration pour les adresses électroniques, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+6.  **À**: le nom de destinataire figurant dans le champ À : est renseigné automatiquement d’après votre compte d’utilisateur de domaine. Vérifiez que le format est [nom d’utilisateur]@[domaine.com]. Les paramètres de configuration du serveur de rapports déterminent si le champ **À** est renseigné automatiquement d’après votre compte d'utilisateur. Pour plus d’informations sur la modification des paramètres de configuration pour les adresses électroniques, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
     > [!NOTE]  
     >  En fonction de vos autorisations, vous pouvez taper l'adresse de messagerie à laquelle le rapport doit être remis. Si vous spécifiez plusieurs adresses, séparez-les par des points-virgules (;). Vous pouvez aussi taper des adresses e-mail supplémentaires dans les zones de texte **Cc**, **Cci**et **Répondre à** . Pour cela, vous devez disposer de l'autorisation de gestion de tous les abonnements.  

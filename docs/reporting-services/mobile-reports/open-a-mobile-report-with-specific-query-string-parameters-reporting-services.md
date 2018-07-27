@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f94a0f5bf75f3f3b1b3cdff067835006eaa6d063
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20c9f992fe9ccfa161a2c2154fbae9cf9c53eb4f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018426"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088561"
 ---
 # <a name="open-a-mobile-report-with-specific-query-string-parameters--reporting-services"></a>Ouvrir un rapport mobile avec des paramètres spécifiques de chaîne de requête | Reporting Services
 Si vous avez un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] avec des paramètres et une source de données [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] , vous pouvez inclure des paramètres de chaîne de requête dans l’URL du rapport afin qu’il s’ouvre automatiquement avec les valeurs que vous avez spécifiées. 
@@ -42,7 +42,7 @@ Si vous avez un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsno
     
     `http://sampleserver/reports/adventureworks-reports/adventureworks-load-on-demand?TimeChartLoD.category=Clothing` 
     
-     **Pour une source de données SQL Server**: le paramètre de chaîne de requête est presque identique, mais contient le symbole @ devant le nom du champ :
+     **Pour une source de données SQL Server** : le paramètre de chaîne de requête est presque identique, sauf qu’il comporte le symbole \@ devant le nom du champ :
 
     `http://<servername>/reports/<report-folder-name>/<report-name>?<dataset-name>.@<field-name>=<parameter-value>`
 

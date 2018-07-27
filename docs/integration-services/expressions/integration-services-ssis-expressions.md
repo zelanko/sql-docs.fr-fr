@@ -20,12 +20,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c592f50ab6f58af87089c28fdfb48e65bf885a11
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 0a9a404de670421850f985f5db7be2efc9d6d58d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408361"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084901"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressions Integration Services (SSIS)
   Une expression est une combinaison de symboles (identificateurs, littéraux, fonctions et opérateurs) qui génère une seule valeur de données. Les expressions simples peuvent être une constante unique, une variable ou une fonction. Généralement, les expressions sont complexes, car elles utilisent plusieurs opérateurs et fonctions, et référencent plusieurs colonnes et variables. Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez utiliser des expressions pour définir des conditions dans les instructions CASE, créer et mettre à jour des valeurs dans des colonnes de données, mettre à jour ou remplir des propriétés au moment de l’exécution, définir des contraintes dans des contraintes de précédence et fournir les expressions utilisées par le conteneur de boucles For.  
@@ -47,9 +47,9 @@ ms.locfileid: "35408361"
   
 -   Les variables utilisent une expression pour définir leur valeur. Par exemple, GETDATE() définit la valeur de la variable comme étant la date actuelle.  
   
--   Les contraintes de précédence peuvent utiliser des expressions pour spécifier les conditions déterminant si le conteneur ou le package contraint est exécuté. Les expressions utilisées dans une contrainte de priorité doivent retourner la valeur **true** ou **false**. Par exemple, l’expression @A > @B compare deux variables définies par l’utilisateur pour déterminer si la tâche contrainte est exécutée.  
+-   Les contraintes de précédence peuvent utiliser des expressions pour spécifier les conditions déterminant si le conteneur ou le package contraint est exécuté. Les expressions utilisées dans une contrainte de priorité doivent retourner la valeur **true** ou **false**. Par exemple, l'expression \@A > \@B compare deux variables définies par l'utilisateur pour déterminer si la tâche contrainte est exécutée.  
   
--   Le conteneur de boucles For peut utiliser des expressions pour créer les instructions d'initialisation, d'évaluation et d'incrémentation utilisées par la structure de bouclage. Par exemple, l’expression @Counter = 1 initialise le compteur de boucles.  
+-   Le conteneur de boucles For peut utiliser des expressions pour créer les instructions d'initialisation, d'évaluation et d'incrémentation utilisées par la structure de bouclage. Par exemple, l'expression \@Counter = 1 initialise le compteur de boucles.  
   
  Les expressions peuvent également être utilisées pour mettre à jour les valeurs des propriétés des packages, les conteneurs tels que les conteneurs de boucles For et Foreach, les tâches, les gestionnaires de connexions aux niveaux des packages et du projet, les modules fournisseurs d'informations et les énumérateurs Foreach. Par exemple, en utilisant une expression de propriété, la chaîne « Localhost.AdventureWorks » peut être affectée à la propriété ConnectionName de la tâche Exécuter SQL. Pour plus d’informations, consultez [Expressions de propriété dans des packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
@@ -59,14 +59,14 @@ ms.locfileid: "35408361"
 ## <a name="expression-builder"></a>Générateur d'expressions  
  Le générateur d'expressions est un outil graphique de génération d'expressions. Disponible dans les boîtes de dialogue **Éditeur de transformation de fractionnement conditionnel**, **Éditeur de transformation de colonne dérivée** et **Générateur d’expression** , il s’agit d’un outil graphique qui permet de créer des expressions.  
   
- Le générateur d'expression fournit des dossiers contenant des éléments spécifiques aux packages, et des dossiers contenant les fonctions, les conversions de type et les opérateurs fournis par le langage d'expressions. Les éléments spécifiques aux packages comprennent les variables système et les variables définies par l'utilisateur. Dans les boîtes de dialogue **Éditeur de transformation de fractionnement conditionnel** et **Éditeur de transformation de colonne dérivée** , vous pouvez également afficher des colonnes de données. Pour générer des expressions pour les transformations, vous pouvez faire glisser des éléments des dossiers vers la colonne **Condition** ou **Expression** , ou vous pouvez taper l’expression directement dans la colonne. Le générateur d'expressions ajoute automatiquement les éléments syntaxiques requis, tels que le préfixe « @ » des noms des variables.  
+ Le générateur d'expression fournit des dossiers contenant des éléments spécifiques aux packages, et des dossiers contenant les fonctions, les conversions de type et les opérateurs fournis par le langage d'expressions. Les éléments spécifiques aux packages comprennent les variables système et les variables définies par l'utilisateur. Dans les boîtes de dialogue **Éditeur de transformation de fractionnement conditionnel** et **Éditeur de transformation de colonne dérivée** , vous pouvez également afficher des colonnes de données. Pour générer des expressions pour les transformations, vous pouvez faire glisser des éléments des dossiers vers la colonne **Condition** ou **Expression** , ou vous pouvez taper l’expression directement dans la colonne. Le générateur d'expressions ajoute automatiquement les éléments syntaxiques requis, tels que le préfixe \@ des noms des variables.  
   
 > [!NOTE]  
 >  Les noms des variables définies par l'utilisateur et des variables système respectent la casse.  
   
  Les variables ont une étendue et le dossier **Variables** dans le générateur d’expressions répertorie uniquement les variables qui sont dans l’étendue et utilisables. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Utiliser une expression dans un composant de flux de données](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenu associé  

@@ -22,11 +22,12 @@ caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6437c3da94d7acd070a5091394c4cbe79f105b86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 900f88a6baab5f5c9e9e7c323cee3cdc85594788
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086681"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>création, suppression ou modification d'un dossier (Gestionnaire de rapports)
   Vous pouvez créer des dossiers pour organiser et gérer les éléments à publier sur un serveur de rapports. La création de dossiers peut permettre aux utilisateurs de rechercher les rapports qui les intéressent. Pour les gestionnaires de contenu, les dossiers fournissent l'infrastructure nécessaire à l'application d'autorisations. Vous pouvez créer des attributions de rôles pour des dossiers spécifiques afin de restreindre l'accès aux rapports en cours de développement ou dont la diffusion doit être restreinte.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
      La page **Nouveau dossier** s’affiche.  
   
-3.  Tapez le nom du dossier. Un nom de dossier peut contenir des espaces, mais aucun caractère réservé au codage d'URL, par exemple les caractères : ; ? : @ & = + , $ / * < > |. Vous ne pouvez pas taper une série de noms de dossiers pour créer plusieurs dossiers en même temps.  
+3.  Tapez le nom du dossier. Un nom de dossier peut contenir des espaces, mais aucun caractère réservé au codage d'URL, par exemple les caractères : ; ? : \@ & = + , $ / * < > |. Vous ne pouvez pas taper une série de noms de dossiers pour créer plusieurs dossiers en même temps.  
   
 4.  Tapez éventuellement une description.  
   
