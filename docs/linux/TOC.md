@@ -105,6 +105,7 @@
 
 # Ressources
 ## [Dépanner](sql-server-linux-troubleshooting-guide.md)
+## [Comment octroyer une licence](https://www.microsoft.com/sql-server/sql-server-2017-pricing)
 ## [Documentation SQL Server](../sql-server/sql-server-technical-documentation.md)
 ## Partenaires
 ### [Surveillance](../sql-server/partner-monitor-sql-server.md)
