@@ -1,7 +1,7 @@
 ---
-title: sp_refreshsqlmodule (Transact-SQL) | Documents Microsoft
+title: sp_refreshsqlmodule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-stored-procedures
@@ -31,17 +31,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b54f1410be78cc1be6095a1870fc5b6b9e5b694f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 80012f2172193a277053485ca763122d9ba1fe16
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261005"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278730"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Met à jour les métadonnées pour les procédure stockée non liée au schéma, fonction définie par l'utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur spécifiés dans la base de données actuelle. Les métadonnées persistantes pour ces objets, des types de données des paramètres par exemple, peuvent devenir obsolètes en raison des modifications apportées à leurs objets sous-jacents.  
+  Met à jour les métadonnées pour les procédure stockée non liée au schéma, fonction définie par l'utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur spécifiés dans la base de données actuelle. Les métadonnées persistantes pour ces objets, des types de données des paramètres par exemple, peuvent devenir obsolètes en raison des modifications apportées à leurs objets sous-jacents.
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
   
 ## <a name="arguments"></a>Arguments  
  [  **@name=** ] **'***nom_module***'**  
- Nom de la procédure stockée, fonction définie par l'utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur. *nom_module* ne peut pas être un common language runtime (CLR) procédure stockée ou une fonction CLR. *nom_module* ne peut pas être liée au schéma. *nom_module* est **nvarchar**, sans valeur par défaut. *nom_module* peut être un identificateur multipartie, mais ne peut faire référence à des objets dans la base de données actuelle.  
+ Nom de la procédure stockée, fonction définie par l'utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur. *nom_module* ne peut pas être un common language runtime (CLR) procédure stockée ou une fonction CLR. *nom_module* ne peut pas être liée au schéma. *nom_module* est **nvarchar**, sans valeur par défaut. *nom_module* peut être un identificateur multipartie, mais ne peut faire référence aux objets dans la base de données actuelle.  
   
  [ **,** @**espace de noms** =] **'** \<classe > **'**  
  Classe du module spécifié. Lorsque *nom_module* est un déclencheur DDL, \<classe > est requise. *\<classe >* est **nvarchar**(20). Les entrées valides sont :  
@@ -76,16 +76,16 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
  0 (réussite) ou un nombre différent de zéro (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_refreshsqlmodule** doit être exécuté lorsque des modifications sont apportées aux objets sous-jacents du module qui affectent sa définition. Sinon, le module risque de produire des résultats inattendus en cas d'interrogation ou d'appel. Pour actualiser une vue, vous pouvez utiliser **sp_refreshsqlmodule** ou **sp_refreshview** avec les mêmes résultats.  
+ **sp_refreshsqlmodule** doit être exécutée lorsque des modifications sont apportées aux objets sous-jacents du module qui affectent sa définition. Sinon, le module risque de produire des résultats inattendus en cas d'interrogation ou d'appel. Pour actualiser une vue, vous pouvez utiliser **sp_refreshsqlmodule** ou **sp_refreshview** avec les mêmes résultats.  
   
- **sp_refreshsqlmodule** n’affecte pas les autorisations, les propriétés étendues ou définir les options qui sont associées à l’objet.  
+ **sp_refreshsqlmodule** n’affecte pas les autorisations, les propriétés étendues ou les options SET qui sont associées à l’objet.  
   
  Pour actualiser un déclencheur DDL au niveau du serveur, exécutez cette procédure stockée à partir du contexte de toute base de données.  
   
 > [!NOTE]  
 >  Les signatures qui sont associés à l’objet sont supprimées lorsque vous exécutez **sp_refreshsqlmodule**.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation ALTER sur le module ainsi que l'autorisation REFERENCES sur les types CLR (Common Language Runtime) définis par l'utilisateur et sur les collections de schémas XML référencés par l'objet. Requiert l'autorisation ALTER ANY DATABASE DDL TRIGGER dans la base de données actuelle lorsque le module spécifié est un déclencheur DDL au niveau de la base de données. Requiert l'autorisation CONTROL SERVER lorsque le module spécifié est un déclencheur DDL au niveau du serveur.  
   
  De plus, pour les modules définis à l'aide de la clause EXECUTE AS, l'autorisation IMPERSONATE est nécessaire sur le principal spécifié. Généralement, l'actualisation d'un objet ne modifie pas son principal EXECUTE AS sauf si le module est défini avec EXECUTE AS USER et que le nom d'utilisateur du principal correspond désormais à un autre utilisateur que celui lors de la création du module.  

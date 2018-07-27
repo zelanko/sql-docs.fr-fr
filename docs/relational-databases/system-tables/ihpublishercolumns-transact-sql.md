@@ -1,5 +1,5 @@
 ---
-title: IHpublishercolumns (Transact-SQL) | Documents Microsoft
+title: IHpublishercolumns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IHpublishercolumns system table
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bd15161e658348ea68c2f87c1468ede00bac5e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1032578837699182d4c1ba73a118d03ece01b5f6
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003756"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103869"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,17 +39,17 @@ ms.locfileid: "33003756"
   
 ## <a name="definition"></a>Définition  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**publishercolumn_id**|**int**|Identifie une colonne publiée.|  
-|**table_id**|**int**|Identifie la table source à partir de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) à laquelle appartient la colonne.|  
+|**publishercolumn_id**|**Int**|Identifie une colonne publiée.|  
+|**table_id**|**Int**|Identifie la table source à partir de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) auquel appartient la colonne.|  
 |**publisher_id**|**smallint**|Identifie le serveur de publication non-SQL à partir de laquelle la colonne est publiée.|  
 |**nom**|**sysname**|Le nom de la colonne publiée.|  
-|**column_ordinal**|**int**|Identifie la colonne par ordre.|  
+|**column_ordinal**|**Int**|Identifie la colonne par ordre.|  
 |**type**|**varchar(255)**|Type de données de la colonne source sur le serveur de publication.|  
-|**length**|**bigint**|Longueur de la colonne source sur le serveur de publication.|  
-|**PREC**|**int**|Précision de la colonne source sur le serveur de publication.|  
-|**scale**|**int**|Échelle de la colonne source sur le serveur de publication.|  
+|**Longueur**|**bigint**|Longueur de la colonne source sur le serveur de publication.|  
+|**PREC**|**Int**|Précision de la colonne source sur le serveur de publication.|  
+|**Mise à l’échelle**|**Int**|Échelle de la colonne source sur le serveur de publication.|  
 |**IsNullable**|**bit**|Indique si la colonne accepte les valeurs NULL, où **1** signifie que les valeurs NULL sont acceptées.|  
 |**iscaptured**|**bit**|Indique si un déclencheur existe sur la colonne, ce qui peut être le cas même si celle-ci n'est pas publiée dans un article. La valeur **1** signifie que le déclencheur existe sur la colonne.|  
   

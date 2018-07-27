@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 018c02c2348e14028a5cbb84ef30b2428ac9e9e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cf12e737a798e671797880667b5fb75930a85847
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061447"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278950"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,10 @@ La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut
 |recovery_vlf_count |**bigint** |   Nombre total de [les fichiers journaux virtuels (fichiers journaux virtuels)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) à restaurer, s’il y avait le redémarrage du serveur ou de basculement. |  
 
 
-## <a name="permissions"></a>Autorisations  
+## <a name="remarks"></a>Notes
+Lors de l’exécution `sys.dm_db_log_stats` par rapport à une base de données qui fait partie d’un groupe de disponibilité comme réplica secondaire, uniquement un sous-ensemble des champs décrits ci-dessus s’affichera.  Actuellement, seuls `database_id`, `recovery_model`, et `log_backup_time` s’affichera lors de l’exécuter sur une base de données secondaire.   
+
+## <a name="permissions"></a>Permissions  
 Nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
   
 ## <a name="examples"></a>Exemples  

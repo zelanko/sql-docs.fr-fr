@@ -16,15 +16,15 @@ caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbdc7b555a4517fb59fea23c33ac8835d8578aa4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91d0310663c738f524101f0bb4862c2db2d89cf3
+ms.sourcegitcommit: d457bb828eb46ee83f8ff5bdecfff09b26d7b154
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291705"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39259784"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Leçon 5 : Automatisation du nettoyage et de la mise en correspondance avec SSIS
-  Dans la leçon 1, vous créé la base de connaissances fournisseurs et il permet de nettoyer les données dans la leçon 2 et de faire correspondre les données dans la leçon 3 à l’aide de l’outil **Client DQS**. Dans un scénario réel, vous devrez peut-être extraire des données à partir d’une source que DQS ne prend pas en charge ou que vous souhaitez automatiser le nettoyage et le processus de correspondance sans avoir à utiliser le **Client DQS** outil. SQL Server Integration Services (SSIS) a des composants que vous pouvez utiliser pour intégrer des données provenant de sources hétérogènes et un **[HYPERLINK "http://msdn.microsoft.com/library/ee677619.aspx" \t « _blank » transformation de nettoyage DQS](http://msdn.microsoft.com/library/ee677619.aspx)** composant à appeler la fonctionnalité de nettoyage exposée par DQS. Actuellement, DQS n’expose pas de fonctionnalité de correspondance pour SSIS à utiliser, mais vous pouvez utiliser la **[transformation de regroupement probable](http://msdn.microsoft.com/library/ms141764.aspx)** pour identifier des doublons dans les données.  
+  Dans la leçon 1, vous créé la base de connaissances fournisseurs et il permet de nettoyer les données dans la leçon 2 et de faire correspondre les données dans la leçon 3 à l’aide de l’outil **Client DQS**. Dans un scénario réel, vous devrez peut-être extraire des données à partir d’une source que DQS ne prend pas en charge ou que vous souhaitez automatiser le nettoyage et le processus de correspondance sans avoir à utiliser le **Client DQS** outil. SQL Server Integration Services (SSIS) a des composants que vous pouvez utiliser pour intégrer des données provenant de sources hétérogènes et un **[transformation de nettoyage DQS](http://msdn.microsoft.com/library/ee677619.aspx)** composant à appeler les opérations de nettoyage fonctionnalités exposées par DQS. Actuellement, DQS n’expose pas de fonctionnalité de correspondance pour SSIS à utiliser, mais vous pouvez utiliser la **[transformation de regroupement probable](http://msdn.microsoft.com/library/ms141764.aspx)** pour identifier des doublons dans les données.  
   
  Vous pouvez charger des données dans MDS à l’aide de la **fonctionnalité de mise en lots basée sur l’entité**. Lorsque vous créez une entité dans MDS, les tables intermédiaires et les procédures stockées correspondantes sont automatiquement créées. Par exemple, lorsque vous avez créé l’entité fournisseur, le **stg.supplier_Leaf** table et le **stg.udp_Supplier_Leaf** procédure stockée ont été créées automatiquement. Vous utilisez les tables intermédiaires et les procédures pour créer, mettre à jour et supprimer des membres d'entité. Dans cette leçon, vous allez créer de nouveaux membres d'entité pour l'entité Fournisseur. Pour charger des données dans le serveur MDS, le package SSIS charge d'abord les données dans la table intermédiaire stg.supplier_Leaf puis exécute la procédure stockée associée stg.udp_Supplier_Leaf. Consultez [l’importation de données](http://msdn.microsoft.com/library/ee633726.aspx) pour plus d’informations.  
   

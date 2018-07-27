@@ -1,5 +1,5 @@
 ---
-title: IHpublisherindexes (Transact-SQL) | Documents Microsoft
+title: IHpublisherindexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,25 +22,25 @@ helpviewer_keywords:
 - IHpublisherindexes system table
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 427df96d3f6808cbaa00d079546ad766d42fb701
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 657d8d364d0691ec2c0150b4ca933fcd46ce8f9f
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004046"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103837"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **IHpublisherindexes** (table système) contient une ligne pour chaque index répliqué à partir de non - éditeurs SQL Server à l’aide du serveur de distribution en cours. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**publisherindex_id**|**int**|Identifie un index publié.|  
-|**table_id**|**int**|Identifie la table de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) à laquelle appartient l’index.|  
+|**publisherindex_id**|**Int**|Identifie un index publié.|  
+|**table_id**|**Int**|Identifie la table de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) auquel appartient l’index.|  
 |**publisher_id**|**smallint**|Identifie le serveur de publication non-SQL à partir de laquelle l’index est publié.|  
 |**nom**|**sysname**|Nom de l'index publié.|  
 |**type**|**nvarchar(255)**|Un type d’index pris en charge à partir de la [IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md) (table système).|  

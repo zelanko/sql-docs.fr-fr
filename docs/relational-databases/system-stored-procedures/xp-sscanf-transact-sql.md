@@ -1,5 +1,5 @@
 ---
-title: xp_sscanf (Transact-SQL) | Documents Microsoft
+title: xp_sscanf (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_sscanf
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b989dfa254330034cab4ab5278e2e4a9cca4da3d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8f4cc1369f4de19b025f5fc5d78285cf10d55fcb
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257633"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103857"
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
  Place la valeur de *argument* dans le paramètre de sortie.  
   
  *format*  
- Est une chaîne de caractères de mise en forme semblable à ce qui est pris en charge par le langage C **sscanf** (fonction). Pour l'instant, seul l'argument de format %s est pris en charge.  
+ Est une chaîne de caractères de mise en forme similaire à ce qui est pris en charge par le langage C **sscanf** (fonction). Pour l'instant, seul l'argument de format %s est pris en charge.  
   
  *argument*  
- Est un **varchar** variable définie sur la valeur correspondantes *format* argument.  
+ Est un **varchar** variable définie à la valeur correspondante *format* argument.  
   
  *n*  
  Emplacement réservé signalant qu'un nombre maximum de 50 arguments peut être spécifié.  
@@ -67,7 +66,7 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
   
  `Command(s) completed successfully.`  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

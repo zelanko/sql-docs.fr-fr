@@ -4,19 +4,19 @@ description: Cet article fournit des réponses aux questions fréquemment posée
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/17/2018
+ms.date: 07/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: b1003ddbda32ef1570f172e36d506ed58bc2f07b
+ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102227"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268807"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server sur Linux Forum aux Questions (FAQ)
 
@@ -34,9 +34,13 @@ Les sections suivantes fournissent des questions et réponses pour SQL Server s�
 
    SQL Server est testé et pris en charge sur Linux pour les distributions répertoriées précédemment. Autres distributions de Linux sont étroitement liées et peut être en mesure d’exécuter SQL Server (par exemple, CentOS est étroitement liée à Red Hat Enterprise Server). Mais si vous choisissez d’installer SQL Server sur un système d’exploitation non pris en charge, passez en revue la **politique de Support** section de la [politique de support technique pour Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) pour comprendre la prise en charge implications. Notez également que certains-gérées par la communautéent distributions Linux n’ont pas de moyen formel pour recevoir un support si le système d’exploitation sous-jacent est le problème.
 
-1. **Les fonctionnalités de SQL Server sont prises en charge sur Linux ?**
+1. **Comment fonctionnent les licences sur Linux ?**
 
-   Pour obtenir une liste complète des fonctionnalités prises en charge et les problèmes connus, consultez le [notes de version](sql-server-linux-release-notes.md).
+   SQL Server est concédé sous licence de la même façon pour Windows et Linux. En fait, la licence de SQL Server et puis vous pouvez choisir d’utiliser cette licence sur la plateforme de votre choix. Pour plus d’informations, consultez [comment la licence SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+
+1. **Est SQL Server sur Linux dans le même que sur Windows ?**
+
+   Le moteur de base de données pour SQL Server core est le même sur Linux, car il est sur Windows. Toutefois, certaines fonctionnalités sont actuellement pas pris en charge sur Linux. Pour obtenir la liste des fonctionnalités qui ne sont pas pris en charge sur Linux, consultez le [non pris en charge des fonctionnalités et services](sql-server-linux-release-notes.md#Unsupported). Examinez également le [problèmes connus](sql-server-linux-release-notes.md#known-issues). Sauf indication contraire dans ces listes, autres fonctionnalités SQL Server et les services sont pris en charge sur Linux.
 
 1. **Qu’est la stratégie de prise en charge pour SQL Server ?**
 
