@@ -1,0 +1,16 @@
+- name: Propriété GeneralFlags (classe ServerSettings)
+  href: generalflags-property-serversettings-class.md
+- name: Méthode GetCurrentCertificate (classe ServerSettings)
+  href: getcurrentcertificate-method-serversettings-class.md
+- name: Propriété InstanceName (classe ServerSettings)
+  href: instancename-property-serversettings-class.md
+- name: Propriété NumberOfFlags (classe ServerSettings)
+  href: numberofflags-property-serversettings-class.md
+- name: Méthode RemoveCertificate (classe ServerSettings)
+  href: removecertificate-method-serversettings-class.md
+- name: Classe ServerSettings
+  href: serversettings-class.md
+- name: Méthode SetCurrentCertificate (classe ServerSettings)
+  href: setcurrentcertificate-method-serversettings-class.md
+- name: Méthode SetDefaults (classe ServerSettings)
+  href: setdefaults-method-serversettings-class.md

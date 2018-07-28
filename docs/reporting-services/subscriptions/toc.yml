@@ -1,0 +1,42 @@
+- name: Vue d'ensemble
+  href: schedules.md
+- name: 'Create, Modify, and Delete Schedules'
+  href: create-modify-and-delete-schedules.md
+- name: Pause and Resume Shared Schedules
+  href: pause-and-resume-shared-schedules.md
+- name: Modifier les fuseaux horaires et les paramètres d'horloge sur un serveur de rapports
+  href: change-time-zones-and-clock-settings-on-a-report-server.md
+- name: Gérer un processus en cours d'exécution
+  href: manage-a-running-process.md
+- name: Abonnements et remises
+  href: subscriptions-and-delivery-reporting-services.md
+  items:
+    - name: Remise par courrier électronique dans Reporting Services
+      href: e-mail-delivery-in-reporting-services.md
+    - name: Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint
+      href: create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md
+      items:
+        - name: Remise à une bibliothèque SharePoint dans Reporting Services
+          href: sharepoint-library-delivery-in-reporting-services.md
+    - name: Créer et gérer des abonnements pour les serveurs de rapports en mode natif
+      href: create-and-manage-subscriptions-for-native-mode-report-servers.md
+      items:
+        - name: Utiliser mes abonnements (serveur de rapports en mode natif)
+          href: use-my-subscriptions-native-mode-report-server.md
+    - name: Remise par partage de fichiers dans Reporting Services
+      href: file-share-delivery-in-reporting-services.md
+    - name: Désactiver ou suspendre le traitement des rapports et des abonnements
+      href: disable-or-pause-report-and-subscription-processing.md
+    - name: abonnements pilotés par les données
+      href: data-driven-subscriptions.md
+      items:
+        - name: 'Créer, modifier ou supprimer des abonnements pilotés par les données'
+          href: create-modify-and-delete-data-driven-subscriptions.md
+        - name: Utiliser une source de données externe pour les données des abonnés
+          href: use-an-external-data-source-for-subscriber-data-data-driven-subscription.md
+    - name: Analyser les abonnements Reportions Services
+      href: monitor-reporting-services-subscriptions.md
+    - name: Modification de l’extension de remise par défaut de Reporting Services
+      href: change-the-default-reporting-services-delivery-extension.md
+    - name: 'Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement'
+      href: manage-subscription-owners-and-run-subscription-powershell.md
