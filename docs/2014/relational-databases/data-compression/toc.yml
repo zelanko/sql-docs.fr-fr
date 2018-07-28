@@ -1,0 +1,13 @@
+- name: Data Compression
+  href: data-compression.md
+  items:
+    - name: Implémentation de la compression de ligne
+      href: row-compression-implementation.md
+    - name: Implémentation de la compression de page
+      href: page-compression-implementation.md
+    - name: Implémentation de la compression Unicode
+      href: unicode-compression-implementation.md
+    - name: Activer la compression sur une table ou un index
+      href: enable-compression-on-a-table-or-index.md
+    - name: Désactiver la compression sur une table ou un index
+      href: disable-compression-on-a-table-or-index.md

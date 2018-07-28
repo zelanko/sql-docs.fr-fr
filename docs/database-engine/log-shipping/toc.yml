@@ -1,0 +1,24 @@
+- name: Vue d'ensemble
+  href: about-log-shipping-sql-server.md
+- name: Configurer la copie des journaux de transaction
+  href: configure-log-shipping-sql-server.md
+- name: Ajouter une base de données secondaire dans une configuration de copie des journaux de transaction
+  href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+- name: Supprimer une base de données secondaire dans une configuration de copie des journaux de transaction
+  href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+- name: Supprimer la copie des journaux de transaction
+  href: remove-log-shipping-sql-server.md
+- name: Afficher le rapport de la copie des journaux de transaction (SQL Server Management Studio)
+  href: view-the-log-shipping-report-sql-server-management-studio.md
+- name: Surveiller la copie des journaux de transaction (Transact-SQL)
+  href: monitor-log-shipping-transact-sql.md
+- name: Basculer vers une base de données secondaire de copie des journaux de transaction
+  href: fail-over-to-a-log-shipping-secondary-sql-server.md
+- name: Changer des rôles entre les serveurs primaire et secondaire de copie des journaux de transaction
+  href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+- name: Copie des journaux de transaction et réplication
+  href: log-shipping-and-replication-sql-server.md
+- name: Log Shipping Tables and Stored Procedures
+  href: log-shipping-tables-and-stored-procedures.md
+- name: Mise à niveau de la copie des journaux de transaction vers SQL Server 2016 (Transact-SQL)
+  href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md

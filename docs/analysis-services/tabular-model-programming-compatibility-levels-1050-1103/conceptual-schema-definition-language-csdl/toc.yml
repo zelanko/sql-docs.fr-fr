@@ -1,0 +1,38 @@
+- name: Élément AssociationSet (CSDLBI)
+  href: associationset-element-csdlbi.md
+- name: Élément BaseProperty (CSDLBI)
+  href: baseproperty-element-csdlbi.md
+- name: Élément DefaultDetails (CSDLBI)
+  href: defaultdetails-element-csdlbi.md
+- name: Élément DisplayKey (CSDLBI)
+  href: displaykey-element-csdlbi.md
+- name: Élément EntityContainer (CSDLBI)
+  href: entitycontainer-element-csdlbi.md
+- name: Élément EntitySet (CSDLBI)
+  href: entityset-element-csdlbi.md
+- name: Élément EntityType (CSDLBI)
+  href: entitytype-element-csdlbi.md
+- name: Élément Hierarchy (CSDLBI)
+  href: hierarchy-element-csdlbi.md
+- name: Élément KPI (CSDLBI)
+  href: kpi-element-csdlbi.md
+- name: Élément KpiGoal (CSDLBI)
+  href: kpigoal-element-csdlbi.md
+- name: Élément KpiStatus (CSDLBI)
+  href: kpistatus-element-csdlbi.md
+- name: Élément Level (CSDLBI)
+  href: level-element-csdlbi.md
+- name: Élément Measure (CSDLBI)
+  href: measure-element-csdlbi.md
+- name: Élément Member (CSDLBI)
+  href: member-element-csdlbi.md
+- name: Élément MemberRef (CSDLBI)
+  href: memberref-element-csdlbi.md
+- name: Élément NavigationProperty (CSDLBI)
+  href: navigationproperty-element-csdlbi.md
+- name: Élément Property (CSDLBI)
+  href: property-element-csdlbi.md
+- name: Élément PropertyRef (CSDLBI)
+  href: propertyref-element-csdlbi.md
+- name: Guide de référence technique pour les annotations BI du langage CSDL
+  href: technical-reference-for-bi-annotations-to-csdl.md

@@ -1,0 +1,14 @@
+- name: Traitement des résultats (ODBC)
+  href: processing-results-odbc.md
+- name: Assignation du stockage
+  href: assigning-storage.md
+- name: Traduction automatique de données caractères
+  href: autotranslation-of-character-data.md
+- name: Utilisation des types de données
+  href: data-type-usage.md
+- name: Détermination des caractéristiques d'un jeu de résultats (ODBC)
+  href: determining-the-characteristics-of-a-result-set-odbc.md
+- name: Extraction des données de résultat
+  href: fetching-result-data.md
+- name: Mappage de types de données (ODBC)
+  href: mapping-data-types-odbc.md

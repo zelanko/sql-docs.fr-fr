@@ -1,0 +1,47 @@
+- name: Fonctionnalités et tâches de l'utilitaire SQL Server
+  href: sql-server-utility-features-and-tasks.md
+- name: Considérations sur l'exécution de jeux d'éléments de collecte de l'utilitaire et non-utilitaire sur la même instance de SQL Server
+  href: run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
+- name: "Créer un point de contrôle de l'utilitaire SQL\_Server (utilitaire SQL\_Server)"
+  href: create-a-sql-server-utility-control-point-sql-server-utility.md
+- name: Se connecter à un utilitaire SQL Server
+  href: connect-to-a-sql-server-utility.md
+- name: Inscrire une instance de SQL Server (utilitaire SQL Server)
+  href: enroll-an-instance-of-sql-server-sql-server-utility.md
+- name: Utiliser l'Explorateur de l'utilitaire pour gérer l'Utilitaire SQL Server
+  href: use-utility-explorer-to-manage-the-sql-server-utility.md
+- name: Surveiller des instances de SQL Server dans l'utilitaire SQL Server
+  href: monitor-instances-of-sql-server-in-the-sql-server-utility.md
+- name: "Consulter les résultats d'une stratégie de contrôle d'intégrité des ressources (Utilitaire SQL\_Server)"
+  href: view-resource-health-policy-results-sql-server-utility.md
+- name: Modifier une définition de la stratégie de contrôle d'intégrité des ressources (utilitaire SQL Server)
+  href: modify-a-resource-health-policy-definition-sql-server-utility.md
+- name: Configurer votre entrepôt de données de point de contrôle de l'utilitaire (utilitaire SQL Server)
+  href: configure-your-utility-control-point-data-warehouse-sql-server-utility.md
+- name: Configurer des stratégies de contrôle d'intégrité (utilitaire SQL Server)
+  href: configure-health-policies-sql-server-utility.md
+- name: Réduire le bruit dans les stratégies d'utilisation du processeur (Utilitaire SQL Server)
+  href: reduce-noise-in-cpu-utilization-policies-sql-server-utility.md
+- name: Supprimer une instance de SQL Server de l'utilitaire SQL Server
+  href: remove-an-instance-of-sql-server-from-the-sql-server-utility.md
+- name: "Modifier le compte proxy pour le jeu d'éléments de collecte de l'utilitaire sur une instance gérée de SQL\_Server (utilitaire SQL\_Server)"
+  href: change-proxy-account-for-utility-collection-on-managed-sql-server.md
+- name: Déplacer un UCP d'une instance de SQL Server vers une autre (utilitaire SQL Server)
+  href: move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md
+- name: Supprimer un point de contrôle de l'utilitaire (utilitaire SQL Server)
+  href: remove-a-utility-control-point-sql-server-utility.md
+- name: Résolution des problèmes liés à l’utilitaire SQL Server
+  href: ../../database-engine/troubleshoot-the-sql-server-utility.md
+- name: Résoudre les problèmes de contrôle d'intégrité de SQL Server (Utilitaire SQL Server)
+  href: troubleshoot-sql-server-resource-health-sql-server-utility.md
+- name: Aide sur l'Explorateur d'objets accessible via la touche F1
+  href: utility-explorer-f1-help.md
+  items:
+    - name: Tableau de bord de l'utilitaire (utilitaire SQL Server)
+      href: ../../database-engine/utility-dashboard-sql-server-utility.md
+    - name: Détails des applications de la couche Données déployées (utilitaire SQL Server)
+      href: ../../database-engine/deployed-data-tier-application-details-sql-server-utility.md
+    - name: Détails de l'instance gérée (utilitaire SQL Server)
+      href: ../../database-engine/managed-instance-details-sql-server-utility.md
+    - name: Administration de l'utilitaire (utilitaire SQL Server)
+      href: ../../database-engine/utility-administration-sql-server-utility.md

@@ -1,0 +1,64 @@
+- name: Vue d'ensemble
+  href: analysis-services-trace-events.md
+- name: Codes des objets utilisés dans les traces
+  href: analysis-services-object-type-codes-used-in-traces.md
+- name: 'Événements de commande, catégorie d''événement'
+  href: command-events-event-category.md
+  items:
+    - name: Colonnes de données des événements de commande
+      href: command-events-data-columns.md
+- name: 'Événements de découverte, catégorie d''événement'
+  href: discover-events-event-category.md
+  items:
+    - name: Colonnes de données des événements de découverte
+      href: discover-events-data-columns.md
+- name: 'Événements de découverte d''état du serveur, catégorie d''événement'
+  href: discover-server-state-event-category.md
+  items:
+    - name: Colonnes de données des événements de découverte d'état du serveur
+      href: discover-server-state-events-data-columns.md
+- name: Catégorie d'événement Erreurs et avertissements
+  href: errors-and-warnings-event-category.md
+  items:
+    - name: Colonnes de données des événements d'erreur et d'avertissement
+      href: errors-and-warnings-events-data-columns.md
+- name: Chargement de fichier et enregistrement de catégorie d'événement
+  href: file-load-and-save-event-category.md
+  items:
+    - name: Colonnes de données File Load and Save
+      href: file-load-and-save-data-columns.md
+- name: Catégorie d'événements de verrou
+  href: lock-events-category.md
+  items:
+    - name: Colonnes de données des événements de verrou
+      href: lock-events-data-columns.md
+- name: 'Notifications d''événement, catégorie d''événement'
+  href: notification-events-event-category.md
+  items:
+    - name: Colonnes de données d'événements de notification
+      href: notification-events-data-columns.md
+- name: 'Rapports de progression, catégorie d''événement'
+  href: progress-reports-event-category.md
+  items:
+    - name: Colonnes de données des rapports de progression
+      href: progress-reports-data-columns.md
+- name: Catégorie d'événements de requêtes
+  href: queries-events-category.md
+  items:
+    - name: Colonnes de données des événements de requêtes
+      href: queries-events-data-columns.md
+- name: Catégorie d'événements de traitement de requête
+  href: query-processing-events-category.md
+  items:
+    - name: Colonnes de données des événements de traitement des requêtes
+      href: query-processing-events-data-columns.md
+- name: Catégorie d'événement Audit de sécurité
+  href: security-audit-event-category.md
+  items:
+    - name: Colonnes de données Audit de sécurité
+      href: security-audit-data-columns.md
+- name: 'Événements de session, catégorie d''événement'
+  href: session-events-event-category.md
+  items:
+    - name: Colonnes de données des événements de session
+      href: session-events-data-columns.md

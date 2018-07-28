@@ -1,0 +1,12 @@
+- name: Gestion des erreurs et des messages
+  href: handling-errors-and-messages.md
+- name: Enregistrements et champs de diagnostic
+  href: diagnostic-records-and-fields.md
+- name: Messages d'erreur
+  href: error-messages.md
+- name: Numéros des erreurs natives
+  href: native-error-numbers.md
+- name: Traitement des instructions qui génèrent des messages
+  href: processing-statements-that-generate-messages.md
+- name: SQLSTATE (codes d'erreur ODBC)
+  href: sqlstate-odbc-error-codes.md

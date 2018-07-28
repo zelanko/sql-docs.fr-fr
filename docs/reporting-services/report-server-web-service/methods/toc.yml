@@ -1,0 +1,24 @@
+- name: Méthodes des services Web Report Server
+  href: report-server-web-service-methods.md
+- name: Méthodes d'autorisation
+  href: authorization-methods.md
+- name: Sources de données et méthodes de connexion
+  href: data-sources-and-connection-methods.md
+- name: Méthodes relatives aux rapports liés
+  href: linked-reports-methods.md
+- name: Méthodes de modèles - Service web des serveurs de rapports
+  href: model-methods-report-server-web-service.md
+- name: Méthodes de rendu et d'exécution
+  href: rendering-and-execution-methods.md
+- name: Méthodes d'historique de rapport
+  href: report-history-methods.md
+- name: Méthodes des paramètres du rapport
+  href: report-parameters-methods.md
+- name: Méthodes de gestion des espaces de noms du serveur de rapports
+  href: report-server-namespace-management-methods.md
+- name: Points de terminaison du service Web Report Server
+  href: report-server-web-service-endpoints.md
+- name: Méthodes de planification
+  href: scheduling-methods.md
+- name: Méthodes d'abonnement et de remise
+  href: subscription-and-delivery-methods.md

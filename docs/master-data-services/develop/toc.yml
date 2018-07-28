@@ -1,0 +1,12 @@
+- name: Opérations de service Web par catégorie (Master Data Services)
+  href: categorized-web-service-operations-master-data-services.md
+- name: Créer un flux de travail personnalisé - Exemple
+  href: create-a-custom-workflow-example.md
+- name: Créer un flux de travail personnalisé - Description du code XML
+  href: create-a-custom-workflow-xml-description.md
+- name: Créer un flux de travail personnalisé (Master Data Services)
+  href: create-a-custom-workflow-master-data-services.md
+- name: Créer des classes proxy de service Web Master Data Manager
+  href: create-master-data-manager-web-service-proxy-classes.md
+- name: Documentation du développeur Master Data Services
+  href: master-data-services-developer-documentation.md

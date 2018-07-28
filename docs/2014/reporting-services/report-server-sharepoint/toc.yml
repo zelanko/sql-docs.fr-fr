@@ -1,0 +1,42 @@
+- name: Ajouter le composant WebPart Visionneuse de rapports à une page Web
+  href: add-reporting-services-content-types-to-a-sharepoint-library.md
+  items:
+    - name: Composant WebPart Visionneuse de rapports sur un site SharePoint
+      href: ../report-viewer-web-part-on-a-sharepoint-site.md
+    - name: Connecter un composant WebPart de filtre ou de documents
+      href: ../connect-filter-or-documents-web-part-reporting-services-sharepoint-integrated-mode.md
+    - name: Personnaliser le composant WebPart Visionneuse de rapports
+      href: ../customize-the-report-viewer-web-part.md
+- name: Serveur de rapports (mode SharePoint)
+  href: ../reporting-services-report-server-sharepoint-mode.md
+  items:
+    - name: Service SharePoint et applications de service
+      href: ../reporting-services-sharepoint-service-and-service-applications.md
+      items:
+        - name: Gérer une application de service SharePoint Reporting Services
+          href: ../manage-a-reporting-services-sharepoint-service-application.md
+        - name: Applications de service SharePoint de sauvegarde et de restauration Reporting Services
+          href: ../backup-and-restore-reporting-services-sharepoint-service-applications.md
+- name: Applets de commande PowerShell pour le mode SharePoint de Reporting Services
+  href: ../powershell-cmdlets-for-reporting-services-sharepoint-mode.md
+- name: Configuration et administration (mode SharePoint)
+  href: ../configure-administer-report-server-reporting-services-sharepoint-mode.md
+  items:
+    - name: Fonctionnalités de collection de sites de Reporting Services
+      href: ../reporting-services-site-collection-features.md
+    - name: Activer les fonctionnalités d'intégration Report Server et Power View dans SharePoint
+      href: ../activate-the-report-server-and-power-view-integration-features-in-sharepoint.md
+    - name: Paramètres et fonctions du site Reporting Services (mode SharePoint)
+      href: ../reporting-services-site-settings-and-site-features-sharepoint-mode.md
+    - name: Activer la fonctionnalité de synchronisation des fichiers de serveur de rapports
+      href: ../activate-report-server-file-sync-feature-sharepoint-central-administration.md
+    - name: Ajouter des types de contenu de serveur de rapports à une bibliothèque (Reporting Services en mode intégré SharePoint)
+      href: ../add-reporting-services-content-types-to-a-sharepoint-library.md
+    - name: Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports
+      href: ../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md
+    - name: Télécharger des documents vers une bibliothèque SharePoint
+      href: ../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
+    - name: Set Processing Options
+      href: ../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
+- name: "Intégration de SharePoint aux serveurs de rapports\_2008 et\_2008\_R2"
+  href: ../sharepoint-integration-with-2008-and-2008-r2-report-servers.md

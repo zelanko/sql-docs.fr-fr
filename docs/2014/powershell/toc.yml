@@ -1,0 +1,36 @@
+- name: SQL Server PowerShell
+  href: sql-server-powershell.md
+- name: Charger les assemblys SMO dans Windows PowerShell
+  href: load-the-smo-assemblies-in-windows-powershell.md
+- name: Exécuter Windows PowerShell à partir de SQL Server Management Studio
+  href: run-windows-powershell-from-sql-server-management-studio.md
+- name: Utiliser Windows PowerShell dans les étapes de travail de l'Agent SQL Server
+  href: run-windows-powershell-steps-in-sql-server-agent.md
+- name: SQL Server PowerShell Provider
+  href: sql-server-powershell-provider.md
+  items:
+    - name: Parcourir les chemins PowerShell SQL Server
+      href: navigate-sql-server-powershell-paths.md
+    - name: Utiliser des chemins d'accès PowerShell SQL Server
+      href: work-with-sql-server-powershell-paths.md
+- name: Identificateurs SQL Server dans PowerShell
+  href: sql-server-identifiers-in-powershell.md
+  items:
+    - name: Spécifier des instances dans le fournisseur SQL Server PowerShell
+      href: specify-instances-in-the-sql-server-powershell-provider.md
+    - name: Encoder et décoder des identificateurs SQL Server
+      href: encode-and-decode-sql-server-identifiers.md
+    - name: Placer des identificateurs SQL Server dans une séquence d'échappement
+      href: escape-sql-server-identifiers.md
+- name: Gérer l'authentification dans le moteur de base de données PowerShell
+  href: manage-authentication-in-database-engine-powershell.md
+- name: Gérer la saisie semi-automatique par tabulation (SQL Server PowerShell)
+  href: manage-tab-completion-sql-server-powershell.md
+- name: Importer le module SQLPS
+  href: ../database-engine/import-the-sqlps-module.md
+- name: "Convertir des URN en chemins de fournisseur SQL\_Server"
+  href: ../database-engine/convert-urns-to-sql-server-provider-paths.md
+- name: Utiliser les applets de commande du Moteur de base de données
+  href: ../database-engine/use-the-database-engine-cmdlets.md
+- name: Obtenir de l'aide sur SQL Server PowerShell
+  href: ../database-engine/get-help-sql-server-powershell.md

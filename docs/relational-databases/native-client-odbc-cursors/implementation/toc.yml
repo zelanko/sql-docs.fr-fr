@@ -1,0 +1,8 @@
+- name: Comment les curseurs sont implémentés
+  href: how-cursors-are-implemented.md
+- name: Bibliothèque de curseurs ODBC
+  href: odbc-cursor-library.md
+- name: Utilisation des curseurs côté serveur
+  href: using-server-cursors.md
+- name: Utilisation de jeux de résultats SQL Server par défaut
+  href: using-sql-server-default-result-sets.md

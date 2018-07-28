@@ -1,0 +1,15 @@
+- name: Outils de dépannage pour le développement des packages
+  href: troubleshooting-tools-for-package-development.md
+  items:
+    - name: Débogage du flux de contrôle
+      href: debugging-control-flow.md
+    - name: Script de débogage
+      href: debugging-script.md
+    - name: Débogage d'un flux de données
+      href: debugging-data-flow.md
+    - name: Déboguer un package en définissant des points d'arrêt sur une tâche ou un conteneur
+      href: ../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md
+    - name: Ajouter une visionneuse de données à un flux de données
+      href: ../add-a-data-viewer-to-a-data-flow.md
+    - name: Configurer une sortie d'erreur dans un composant de flux de données
+      href: ../configure-an-error-output-in-a-data-flow-component.md

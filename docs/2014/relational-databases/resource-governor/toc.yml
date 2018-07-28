@@ -1,0 +1,36 @@
+- name: gouverneur de ressources
+  href: resource-governor.md
+  items:
+    - name: Activer Resource Governor
+      href: enable-resource-governor.md
+    - name: Désactiver Resource Governor
+      href: disable-resource-governor.md
+- name: Pool de ressources du gouverneur de ressources
+  href: resource-governor-resource-pool.md
+  items:
+    - name: Créer un pool de ressources
+      href: create-a-resource-pool.md
+    - name: Modifier les paramètres de pool de ressources
+      href: change-resource-pool-settings.md
+    - name: Supprimer un pool de ressources
+      href: delete-a-resource-pool.md
+- name: Groupe de charge de travail de Resource Governor
+  href: resource-governor-workload-group.md
+  items:
+    - name: Créer un groupe de charge de travail
+      href: create-a-workload-group.md
+    - name: Modifier les paramètres de groupe de charge de travail
+      href: change-workload-group-settings.md
+    - name: Déplacer un groupe de charge de travail
+      href: move-a-workload-group.md
+    - name: Supprimer un groupe de charge de travail
+      href: delete-a-workload-group.md
+- name: Fonction classifieur du gouverneur de ressources
+  href: resource-governor-classifier-function.md
+  items:
+    - name: Créer et tester une fonction classifieur définie par l'utilisateur
+      href: create-and-test-a-classifier-user-defined-function.md
+- name: Configurer Resource Governor à l'aide d'un modèle
+  href: configure-resource-governor-using-a-template.md
+- name: Afficher les propriétés du gouverneur de ressources
+  href: view-resource-governor-properties.md

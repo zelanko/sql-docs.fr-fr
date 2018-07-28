@@ -1,0 +1,29 @@
+- name: Applications de la couche Données
+  href: data-tier-applications.md
+  items:
+    - name: "Prise en charge DAC pour les objets et versions SQL\_Server"
+      href: dac-support-for-sql-server-objects-and-versions.md
+    - name: Supprimer une application de la couche Données
+      href: delete-a-data-tier-application.md
+    - name: Déployer une application de la couche Données
+      href: deploy-a-data-tier-application.md
+    - name: Exporter une application de la couche Données
+      href: export-a-data-tier-application.md
+    - name: Extraire une DAC d'une base de données
+      href: extract-a-dac-from-a-database.md
+    - name: Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur
+      href: import-a-bacpac-file-to-create-a-new-user-database.md
+    - name: Analyser les applications de la couche Données
+      href: monitor-data-tier-applications.md
+    - name: Inscrire une base de données en tant que DAC
+      href: register-a-database-as-a-dac.md
+    - name: Décompresser un package DAC
+      href: unpack-a-dac-package.md
+    - name: Upgrade a Data-tier Application
+      href: upgrade-a-data-tier-application.md
+    - name: Valider un package DAC
+      href: validate-a-dac-package.md
+    - name: Règles de validation pour les assistants Application de couche Données
+      href: dbengine-validation-rules.md
+    - name: Déployer une base de données à l'aide d'une DAC
+      href: deploy-a-database-by-using-a-dac.md

@@ -1,0 +1,240 @@
+- name: Transformations Integration Services
+  href: integration-services-transformations.md
+- name: Transformation d'agrégation
+  href: aggregate-transformation.md
+  items:
+    - name: Éditeur de transformation d'agrégation (onglet Agrégations)
+      href: ../../aggregate-transformation-editor-aggregations-tab.md
+    - name: Éditeur de transformation d'agrégation (onglet Avancé)
+      href: ../../aggregate-transformation-editor-advanced-tab.md
+    - name: Agréger les valeurs dans un dataset à l'aide de la transformation d'agrégation
+      href: aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
+- name: transformation d'audit
+  href: audit-transformation.md
+  items:
+    - name: Éditeur de transformation d'audit
+      href: ../../audit-transformation-editor.md
+- name: Transformation du distributeur de données équilibrées (BDD)
+  href: balanced-data-distributor-transformation.md
+- name: Transformation de la table de caractères
+  href: character-map-transformation.md
+  items:
+    - name: Éditeur de transformation de la table des caractères
+      href: ../../character-map-transformation-editor.md
+- name: transformation de fractionnement conditionnel
+  href: conditional-split-transformation.md
+  items:
+    - name: Éditeur de transformation de fractionnement conditionnel
+      href: ../../conditional-split-transformation-editor.md
+    - name: Fractionner un dataset à l'aide de la transformation de fractionnement conditionnel
+      href: split-a-dataset-by-using-the-conditional-split-transformation.md
+- name: copie de colonnes (transformation)
+  href: copy-column-transformation.md
+  items:
+    - name: Éditeur de transformation de copie de colonne
+      href: ../../copy-column-transformation-editor.md
+- name: transformation de conversion de données
+  href: data-conversion-transformation.md
+  items:
+    - name: Éditeur de transformation de conversion de données
+      href: ../../data-conversion-transformation-editor.md
+    - name: Convertir des données en un type différent à l'aide de la transformation de conversion de données
+      href: convert-data-type-by-using-data-conversion-transformation.md
+- name: transformation de requête d'exploration de données
+  href: data-mining-query-transformation.md
+  items:
+    - name: Éditeur de transformation de requête d'exploration de données (onglet Modèle d'exploration de données)
+      href: ../../data-mining-query-transformation-editor-mining-model-tab.md
+    - name: Éditeur de transformation de requête d'exploration de données (onglet Requête)
+      href: ../../data-mining-query-transformation-editor-query-tab.md
+- name: Transformation de nettoyage DQS
+  href: dqs-cleansing-transformation.md
+  items:
+    - name: Éditeur de transformation de nettoyage DQS (boîte de dialogue)
+      href: ../../dqs-cleansing-transformation-editor-dialog-box.md
+    - name: Gestionnaire de connexions de nettoyage DQS
+      href: ../../connection-manager/dqs-cleansing-connection-manager.md
+    - name: Appliquer des règles de qualité des données à la source de données
+      href: apply-data-quality-rules-to-data-source.md
+    - name: Mapper des colonnes à des domaines composites
+      href: map-columns-to-composite-domains.md
+- name: Transformation de colonne dérivée
+  href: derived-column-transformation.md
+  items:
+    - name: Éditeur de transformation de colonne dérivée
+      href: ../../derived-column-transformation-editor.md
+    - name: Dériver les valeurs de colonnes à l'aide de la transformation de colonne dérivée
+      href: derive-column-values-by-using-the-derived-column-transformation.md
+- name: Transformation d'exportation de colonne
+  href: export-column-transformation.md
+  items:
+    - name: Éditeur de transformation d'exportation de colonne (page Colonnes)
+      href: ../../export-column-transformation-editor-columns-page.md
+    - name: Éditeur de transformation d'exportation de colonne (page Sortie d'erreur)
+      href: ../../export-column-transformation-editor-error-output-page.md
+- name: Transformation de regroupement approximatif
+  href: fuzzy-grouping-transformation.md
+  items:
+    - name: Éditeur de transformation de regroupement probable (onglet Gestionnaire de connexions)
+      href: ../../fuzzy-grouping-transformation-editor-connection-manager-tab.md
+    - name: Éditeur de transformation de regroupement approximatif (onglet Colonnes)
+      href: ../../fuzzy-grouping-transformation-editor-columns-tab.md
+    - name: Éditeur de transformation de regroupement probable (onglet Avancé).
+      href: ../../fuzzy-grouping-transformation-editor-advanced-tab.md
+    - name: Identifier des lignes de données semblables à l'aide de la transformation de regroupement probable
+      href: identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
+- name: transformation de recherche floue
+  href: fuzzy-lookup-transformation.md
+  items:
+    - name: Éditeur de transformation de recherche floue (onglet Table de référence)
+      href: ../../fuzzy-lookup-transformation-editor-reference-table-tab.md
+    - name: Éditeur de transformation de recherche floue (onglet Colonnes)
+      href: ../../fuzzy-lookup-transformation-editor-columns-tab.md
+    - name: Éditeur de transformation de recherche floue (onglet Avancé)
+      href: ../../fuzzy-lookup-transformation-editor-advanced-tab.md
+- name: Transformation d'importation de colonne
+  href: import-column-transformation.md
+- name: Transformation de recherche
+  href: lookup-transformation.md
+  items:
+    - name: Éditeur de transformation de recherche (page Connexion)
+      href: ../../lookup-transformation-editor-connection-page.md
+    - name: Éditeur de transformation de recherche (page Avancé)
+      href: ../../lookup-transformation-editor-advanced-page.md
+    - name: Éditeur de transformation de recherche (page Colonnes)
+      href: ../../lookup-transformation-editor-columns-page.md
+    - name: Éditeur de transformation de recherche (page Général)
+      href: ../../lookup-transformation-editor-general-page.md
+    - name: Éditeur de transformation de recherche (page Sortie d'erreur)
+      href: ../../lookup-transformation-editor-error-output-page.md
+    - name: Implémenter une recherche en mode Aucun cache ou Cache partiel
+      href: implement-a-lookup-in-no-cache-or-partial-cache-mode.md
+    - name: Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions du cache
+      href: ../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
+    - name: Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions OLE DB
+      href: ../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+    - name: Créer et déployer un cache pour la transformation de recherche
+      href: create-and-deploy-a-cache-for-the-lookup-transformation.md
+    - name: Créer des relations
+      href: create-relationships.md
+    - name: Transformation du cache
+      href: cache-transform.md
+    - name: Gestionnaire de connexions du cache
+      href: ../../connection-manager/cache-connection-manager.md
+    - name: Éditeur du gestionnaire de connexions du cache
+      href: ../../cache-connection-manager-editor.md
+    - name: Éditeur de transformation du cache (Page Gestionnaire de connexions)
+      href: ../../cache-transformation-editor-connection-manager-page.md
+    - name: Éditeur de transformation du cache (page Mappages)
+      href: ../../cache-transformation-editor-mappings-page.md
+- name: transformation de fusion
+  href: merge-transformation.md
+  items:
+    - name: Éditeur de transformation de fusion
+      href: ../../merge-transformation-editor.md
+- name: transformation de jointure de fusion
+  href: merge-join-transformation.md
+  items:
+    - name: Éditeur de transformation de jointure de fusion
+      href: ../../merge-join-transformation-editor.md
+    - name: Étendre un dataset à l'aide de la transformation de jointure de fusion
+      href: extend-a-dataset-by-using-the-merge-join-transformation.md
+    - name: Trier des données pour les transformations de fusion et de jointure de fusion
+      href: sort-data-for-the-merge-and-merge-join-transformations.md
+- name: transformation de multidiffusion
+  href: multicast-transformation.md
+  items:
+    - name: Éditeur de transformation de multidiffusion
+      href: ../../multicast-transformation-editor.md
+- name: transformation de commande OLE DB
+  href: ole-db-command-transformation.md
+  items:
+    - name: Configurer la transformation de commande OLE DB
+      href: ../../configure-the-ole-db-command-transformation.md
+- name: transformation de l'échantillonnage du pourcentage
+  href: percentage-sampling-transformation.md
+  items:
+    - name: Éditeur de transformation de l'échantillonnage du pourcentage
+      href: ../../percentage-sampling-transformation-editor.md
+- name: transformation de tableau croisé dynamique
+  href: pivot-transformation.md
+- name: transformation de calcul du nombre de lignes
+  href: row-count-transformation.md
+- name: transformation d'échantillonnage de lignes
+  href: row-sampling-transformation.md
+  items:
+    - name: Éditeur de transformation d'échantillonnage de ligne (page Échantillonnage)
+      href: ../../row-sampling-transformation-editor-sampling-page.md
+- name: Composant Script
+  href: script-component.md
+  items:
+    - name: Éditeur de transformation de script (page Colonnes d'entrée)
+      href: ../../script-transformation-editor-input-columns-page.md
+    - name: Éditeur de transformation de script (page Entrées et sorties)
+      href: ../../script-transformation-editor-inputs-and-outputs-page.md
+    - name: Éditeur de transformation de script (page Script)
+      href: ../../script-transformation-editor-script-page.md
+    - name: Éditeur de transformation de script (Page Gestionnaire de connexions)
+      href: ../../script-transformation-editor-connection-managers-page.md
+    - name: Sélectionner le type de composant de script
+      href: ../../select-script-component-type.md
+- name: Transformation de dimension à variation lente
+  href: slowly-changing-dimension-transformation.md
+  items:
+    - name: Configurer les sorties à l'aide de l'Assistant Dimension à variation lente
+      href: configure-outputs-using-the-slowly-changing-dimension-wizard.md
+    - name: Aide (F1) de l'Assistant Dimension à variation lente
+      href: slowly-changing-dimension-wizard-f1-help.md
+    - name: Assistant Dimension à variation lente
+      href: welcome-to-the-slowly-changing-dimension-wizard.md
+    - name: Sélectionner une table et des clés de dimension (Assistant Dimension à variation lente)
+      href: select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
+    - name: Colonnes de dimensions à variation lente (Assistant Dimension à variation lente)
+      href: slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
+    - name: Options des attributs fixes et variables (Assistant Dimension à variation lente)
+      href: fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
+    - name: Options des attributs d'historique (Assistant Dimension à variation lente)
+      href: historical-attribute-options-slowly-changing-dimension-wizard.md
+    - name: Membres de la dimension inférés (Assistant Dimension à variation lente)
+      href: inferred-dimension-members-slowly-changing-dimension-wizard.md
+    - name: Fin de l'Assistant Dimension à variation lente
+      href: finish-the-slowly-changing-dimension-wizard.md
+- name: transformation de tri
+  href: sort-transformation.md
+  items:
+    - name: Éditeur de transformation de tri
+      href: ../../sort-transformation-editor.md
+- name: Transformation d'extraction de terme
+  href: term-extraction-transformation.md
+  items:
+    - name: Éditeur de transformation d'extraction de terme (onglet Extraction de terme)
+      href: ../../term-extraction-transformation-editor-term-extraction-tab.md
+    - name: Éditeur de transformation d'extraction de terme (onglet Exclusion)
+      href: ../../term-extraction-transformation-editor-exclusion-tab.md
+    - name: Éditeur de transformation d'extraction de terme (onglet Avancé)
+      href: ../../term-extraction-transformation-editor-advanced-tab.md
+- name: transformation de recherche de terme
+  href: term-lookup-transformation.md
+  items:
+    - name: Éditeur de transformation de recherche de terme (onglet Table de référence)
+      href: ../../term-lookup-transformation-editor-reference-table-tab.md
+    - name: Éditeur de transformation de recherche de terme (onglet Recherche de terme)
+      href: ../../term-lookup-transformation-editor-term-lookup-tab.md
+    - name: Éditeur de transformation de recherche de terme (onglet Avancé).
+      href: ../../term-lookup-transformation-editor-advanced-tab.md
+- name: transformation d'union totale
+  href: union-all-transformation.md
+  items:
+    - name: Éditeur de transformation d'union totale
+      href: ../../union-all-transformation-editor.md
+    - name: Fusionner des données à l'aide de la transformation d'union totale
+      href: merge-data-by-using-the-union-all-transformation.md
+- name: Transformation Unpivot
+  href: unpivot-transformation.md
+  items:
+    - name: Éditeur de transformation UnPivot
+      href: ../../unpivot-transformation-editor.md
+- name: Transformer des données avec des transformations
+  href: transform-data-with-transformations.md
+- name: Propriétés personnalisées des transformations
+  href: transformation-custom-properties.md

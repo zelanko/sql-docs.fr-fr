@@ -1,0 +1,8 @@
+- name: Développement d'un module fournisseur d'informations personnalisé
+  href: developing-a-custom-log-provider.md
+- name: Création d'un module fournisseur d'informations personnalisé
+  href: creating-a-custom-log-provider.md
+- name: Codage d'un module fournisseur d'informations personnalisé
+  href: coding-a-custom-log-provider.md
+- name: Développement d'une interface utilisateur pour un module fournisseur d'informations personnalisé
+  href: developing-a-user-interface-for-a-custom-log-provider.md

@@ -1,0 +1,58 @@
+- name: Données Blob (Binary Large Object)
+  href: binary-large-object-blob-data-sql-server.md
+- name: Comparer les options pour le stockage des objets blob
+  href: compare-options-for-storing-blobs-sql-server.md
+- name: FILESTREAM
+  href: filestream-sql-server.md
+  items:
+    - name: Activer et configurer FILESTREAM
+      href: enable-and-configure-filestream.md
+    - name: Créer une base de données compatible FILESTREAM
+      href: create-a-filestream-enabled-database.md
+    - name: Créer une table pour le stockage de données FILESTREAM
+      href: create-a-table-for-storing-filestream-data.md
+    - name: Accéder aux données FILESTREAM avec Transact-SQL
+      href: access-filestream-data-with-transact-sql.md
+    - name: Créer des applications clientes pour les données FILESTREAM
+      href: create-client-applications-for-filestream-data.md
+    - name: Accéder à des données FILESTREAM avec OpenSqlFilestream
+      href: access-filestream-data-with-opensqlfilestream.md
+    - name: Effectuer des mises à jour partielles de données FILESTREAM
+      href: make-partial-updates-to-filestream-data.md
+    - name: Éviter les conflits avec les opérations de base de données dans les applications FILESTREAM
+      href: avoid-conflicts-with-database-operations-in-filestream-applications.md
+    - name: Déplacer une base de données compatible FILESTREAM
+      href: move-a-filestream-enabled-database.md
+    - name: Configurer FILESTREAM sur un cluster de basculement
+      href: set-up-filestream-on-a-failover-cluster.md
+    - name: Configurer un pare-feu pour l'accès FILESTREAM
+      href: configure-a-firewall-for-filestream-access.md
+    - name: Compatibilité de FILESTREAM avec d'autres fonctionnalités SQL Server
+      href: filestream-compatibility-with-other-sql-server-features.md
+    - name: 'DDL, fonctions, procédures stockées et vues FILESTREAM'
+      href: filestream-ddl-functions-stored-procedures-and-views.md
+- name: FileTables
+  href: filetables-sql-server.md
+  items:
+    - name: Activer les conditions préalables pour les FileTables
+      href: enable-the-prerequisites-for-filetable.md
+    - name: 'Créer, modifier et supprimer des FileTables'
+      href: create-alter-and-drop-filetables.md
+    - name: Charger des fichiers dans FileTables
+      href: load-files-into-filetables.md
+    - name: Travailler avec des répertoires et des chemins d'accès dans FileTables
+      href: work-with-directories-and-paths-in-filetables.md
+    - name: Accéder aux FileTables avec Transact-SQL
+      href: access-filetables-with-transact-sql.md
+    - name: Accéder aux FileTables avec des API d’entrée-sortie de fichier
+      href: access-filetables-with-file-input-output-apis.md
+    - name: Gérer des FileTables
+      href: manage-filetables.md
+    - name: Schéma de FileTable
+      href: filetable-schema.md
+    - name: Compatibilité de FileTable avec d'autres fonctionnalités SQL Server
+      href: filetable-compatibility-with-other-sql-server-features.md
+    - name: 'DDL, fonctions, procédures stockées et vues FileTable'
+      href: filetable-ddl-functions-stored-procedures-and-views.md
+- name: Magasin d'objets blob distants (RBS)
+  href: remote-blob-store-rbs-sql-server.md

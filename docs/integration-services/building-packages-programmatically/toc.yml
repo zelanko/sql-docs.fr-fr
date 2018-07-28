@@ -1,0 +1,28 @@
+- name: Ajout de connexions par programme
+  href: adding-connections-programmatically.md
+- name: Génération de packages par programme
+  href: building-packages-programmatically.md
+- name: Création d'un package par programme
+  href: creating-a-package-programmatically.md
+- name: Ajout de tâches par programme
+  href: adding-tasks-programmatically.md
+- name: Connexion de tâches par programme
+  href: connecting-tasks-programmatically.md
+- name: Utilisation de variables par programmation
+  href: working-with-variables-programmatically.md
+- name: Gestion d'événements par programme
+  href: handling-events-programmatically.md
+- name: Activation de la journalisation par programme
+  href: enabling-logging-programmatically.md
+- name: Ajout de la tâche de flux de données par programmation
+  href: adding-the-data-flow-task-programmatically.md
+- name: Découverte des composants de flux de données par programme
+  href: discovering-data-flow-components-programmatically.md
+- name: Ajout de composants de flux de données par programme
+  href: adding-data-flow-components-programmatically.md
+- name: Connexion de composants de flux de données par programme
+  href: connecting-data-flow-components-programmatically.md
+- name: Sélection de colonnes d'entrée par programme
+  href: selecting-input-columns-programmatically.md
+- name: Enregistrement d'un package par programme
+  href: saving-a-package-programmatically.md

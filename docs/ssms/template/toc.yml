@@ -1,0 +1,6 @@
+- name: Explorateur de modèles
+  href: template-explorer.md
+- name: Ouvrir un modèle
+  href: open-a-template.md
+- name: Remplacer les paramètres de modèle
+  href: replace-template-parameters.md

@@ -1,0 +1,12 @@
+- name: Exécution d'opérations de copie en bloc (ODBC)
+  href: performing-bulk-copy-operations-odbc.md
+- name: Copie en bloc à partir de variables de programme
+  href: bulk-copying-from-program-variables.md
+- name: Copie en bloc de données Text et Image
+  href: bulk-copying-text-and-image-data.md
+- name: Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC
+  href: converting-from-db-library-to-odbc-bulk-copy.md
+- name: Gestion des tailles de lot de copie en bloc
+  href: managing-bulk-copy-batch-sizes.md
+- name: Utilisation de fichiers de données et de format
+  href: using-data-files-and-format-files.md

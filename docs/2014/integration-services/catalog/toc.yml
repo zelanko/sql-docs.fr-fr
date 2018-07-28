@@ -1,0 +1,29 @@
+- name: Serveur Integration Services (SSIS)
+  href: integration-services-ssis-server-and-catalog.md
+- name: 'Propriétés du projet, boîte de dialogue'
+  href: project-properties-dialog-box.md
+- name: Boîte de dialogue Valider
+  href: validate-dialog-box.md
+- name: 'Propriétés du package, boîte de dialogue'
+  href: package-properties-dialog-box.md
+- name: Boîte de dialogue Configurer
+  href: configure-dialog-box.md
+- name: 'Parcourir tous les principaux, boîte de dialogue'
+  href: browse-all-principals-dialog-box.md
+- name: 'Propriétés du dossier, boîte de dialogue'
+  href: folder-properties-dialog-box.md
+- name: Boîte de dialogue de versions du projet
+  href: project-versions-dialog-box.md
+- name: Catalogue SSIS
+  href: ssis-catalog.md
+  items:
+    - name: Créer le catalogue SSIS
+      href: ../create-the-ssis-catalog.md
+    - name: Boîte de dialogue Propriétés du catalogue
+      href: ../catalog-properties-dialog-box.md
+    - name: 'Sauvegarder, restaurer et déplacer le catalogue SSIS'
+      href: ../backup-restore-and-move-the-ssis-catalog.md
+- name: Afficher la liste des packages sur le serveur Integration Services
+  href: view-the-list-of-packages-on-the-integration-services-server.md
+- name: Boîte de dialogue Définir la valeur du paramètre
+  href: set-parameter-value-dialog-box.md

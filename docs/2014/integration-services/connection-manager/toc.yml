@@ -1,0 +1,64 @@
+- name: Connexions Integration Services (SSIS)
+  href: integration-services-ssis-connections.md
+- name: Gestionnaire de connexions Analysis Services
+  href: analysis-services-connection-manager.md
+  items:
+    - name: Référence de l'interface utilisateur de la boîte de dialogue Ajout d'un gestionnaire de connexions Analysis Services
+      href: add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: Gestionnaires de connexion FTP
+  href: ftp-connection-manager.md
+  items:
+    - name: Éditeur du gestionnaire de connexions FTP
+      href: ../ftp-connection-manager-editor.md
+- name: Gestionnaire de connexions HTTP
+  href: http-connection-manager.md
+  items:
+    - name: Éditeur du gestionnaire de connexions HTTP (page Serveur)
+      href: ../http-connection-manager-editor-server-page.md
+    - name: Éditeur du gestionnaire de connexions HTTP (page Proxy)
+      href: ../http-connection-manager-editor-proxy-page.md
+- name: Gestionnaire de connexions MSMQ
+  href: msmq-connection-manager.md
+  items:
+    - name: Éditeur du gestionnaire de connexions MSMQ
+      href: ../msmq-connection-manager-editor.md
+- name: Gestionnaire de connexions SMTP
+  href: smtp-connection-manager.md
+  items:
+    - name: Éditeur du gestionnaire de connexions SMTP
+      href: ../smtp-connection-manager-editor.md
+- name: Gestionnaire de connexions SMO
+  href: smo-connection-manager.md
+  items:
+    - name: Éditeur du gestionnaire de connexions SMO
+      href: ../smo-connection-manager-editor.md
+- name: Gestionnaire de connexions WMI
+  href: wmi-connection-manager.md
+  items:
+    - name: Éditeur du gestionnaire de connexions WMI
+      href: ../wmi-connection-manager-editor.md
+- name: Créer des gestionnaires de connexions
+  href: ../create-connection-managers.md
+- name: Gestionnaire de connexions de fichiers multiples
+  href: multiple-files-connection-manager.md
+- name: Zone Gestionnaires de connexion
+  href: ../connection-managers-area.md
+- name: Outils de dépannage de la connectivité des packages
+  href: ../troubleshooting/troubleshooting-tools-for-package-connectivity.md
+- name: 'Ajouter, supprimer ou partager un gestionnaire de connexions dans un package'
+  href: ../add-delete-or-share-a-connection-manager-in-a-package.md
+  items:
+    - name: Ajout d'un gestionnaire de connexions SSIS
+      href: ../add-ssis-connection-manager.md
+- name: Définir les propriétés d’un gestionnaire de connexions
+  href: ../set-the-properties-of-a-connection-manager.md
+- name: Gestionnaire de connexions Azure Data Lake Store
+  href: ../azure-data-lake-store-connection-manager.md
+- name: Gestionnaire de connexions Azure HDInsight
+  href: ../azure-hdinsight-connection-manager.md
+- name: Gestionnaire de connexions Azure Resource Manager
+  href: ../azure-resource-manager-connection-manager.md
+- name: Gestionnaire de connexions Azure Storage
+  href: azure-storage-connection-manager.md
+- name: Gestionnaire de connexions d’abonnement Azure
+  href: azure-subscription-connection-manager.md

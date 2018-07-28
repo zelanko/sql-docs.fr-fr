@@ -1,0 +1,222 @@
+- name: Vue d'ensemble
+  href: data-flow.md
+- name: Données dans des flux de données
+  href: data-in-data-flows.md
+  items:
+    - name: Types de données d'Integration Services
+      href: integration-services-data-types.md
+    - name: Analyse de données
+      href: parsing-data.md
+    - name: comparaison de données de chaînes
+      href: comparing-string-data.md
+- name: Ajouter ou supprimer un composant dans un flux de données
+  href: add-or-delete-a-component-in-a-data-flow.md
+- name: Définir les propriétés d’un composant de flux de données
+  href: set-the-properties-of-a-data-flow-component.md
+- name: Connecter des composants dans un flux de données
+  href: connect-components-in-a-data-flow.md
+- name: Chemins d'accès d'Integration Services
+  href: integration-services-paths.md
+- name: Éditeur de restauration de références de colonnes
+  href: resolve-column-reference-editor.md
+- name: Visionneuse de données
+  href: data-viewer.md
+- name: Gestion des erreurs dans les données
+  href: error-handling-in-data.md
+- name: Fonctionnalités de performances de flux de données
+  href: data-flow-performance-features.md
+- name: Assistant source
+  href: source-assistant.md
+- name: Assistant de destination
+  href: destination-assistant.md
+- name: Source ADO NET
+  href: ado-net-source.md
+- name: Destination ADO NET
+  href: ado-net-destination.md
+- name: Propriétés personnalisées ADO NET
+  href: ado-net-custom-properties.md
+- name: Azure Blob Source
+  href: azure-blob-source.md
+- name: Destination d’objet blob Azure
+  href: azure-blob-destination.md
+- name: Source Azure Data Lake Store
+  href: azure-data-lake-store-source.md
+- name: Destination Azure Data Lake Store
+  href: azure-data-lake-store-destination.md
+- name: Composants de flux CDC
+  href: cdc-flow-components.md
+  items:
+    - name: Source CDC
+      href: cdc-source.md
+      items:
+        - name: Propriétés personnalisées des sources CDC
+          href: cdc-source-custom-properties.md
+        - name: Extraire des données modifiées à l'aide de la source de capture de données modifiées
+          href: extract-change-data-using-the-cdc-source.md
+    - name: Séparateur de capture de données modifiées
+      href: cdc-splitter.md
+    - name: Diriger le flux de capture de données modifiées en fonction du type de modification
+      href: direct-the-cdc-stream-according-to-the-type-of-change.md
+    - name: Définir une variable d’état
+      href: define-a-state-variable.md
+- name: Destination d’apprentissage du modèle d’exploration de données
+  href: data-mining-model-training-destination.md
+  items:
+    - name: Propriétés personnalisées de la destination d'apprentissage du modèle d'exploration de données
+      href: data-mining-model-training-destination-custom-properties.md
+- name: Data Streaming Destination
+  href: data-streaming-destination.md
+  items:
+    - name: 'Procédure pas à pas : publier un package SSIS en tant que vue SQL'
+      href: walkthrough-publish-an-ssis-package-as-a-sql-view.md
+- name: destination DataReader
+  href: datareader-destination.md
+  items:
+    - name: Propriétés personnalisées de la destination DataReader
+      href: datareader-destination-custom-properties.md
+- name: Destination de traitement de dimension
+  href: dimension-processing-destination.md
+  items:
+    - name: Propriétés personnalisées de la destination de traitement de dimension
+      href: dimension-processing-destination-custom-properies.md
+- name: Source Excel
+  href: excel-source.md
+- name: Destination Excel
+  href: excel-destination.md
+- name: Propriétés personnalisées d'Excel
+  href: excel-custom-properties.md
+- name: Source de fichier plat
+  href: flat-file-source.md
+- name: Destination de fichier plat
+  href: flat-file-destination.md
+- name: HDFS File Source
+  href: hdfs-file-source.md
+- name: HDFS File Destination
+  href: hdfs-file-destination.md
+- name: Propriétés personnalisées des fichiers plats
+  href: flat-file-custom-properties.md
+- name: Source OData
+  href: odata-source.md
+  items:
+    - name: 'Didacticiel : Utiliser la source OData'
+      href: tutorial-using-the-odata-source.md
+    - name: Fournir une requête de source OData au moment de l’exécution
+      href: modify-odata-source-query-at-runtime.md
+    - name: Propriétés de la source OData
+      href: odata-source-properties.md
+- name: Composants de flux ODBC
+  href: odbc-flow-components.md
+  items:
+    - name: Destination ODBC
+      href: odbc-destination.md
+      items:
+        - name: Charger des données à l'aide de la destination ODBC
+          href: load-data-by-using-the-odbc-destination.md
+        - name: Propriétés personnalisées des destinations ODBC
+          href: odbc-destination-custom-properties.md
+    - name: Source ODBC
+      href: odbc-source.md
+      items:
+        - name: Extraire des données à l'aide de la source ODBC
+          href: extract-data-by-using-the-odbc-source.md
+        - name: Propriétés personnalisées des sources ODBC
+          href: odbc-source-custom-properties.md
+- name: Source OLE DB
+  href: ole-db-source.md
+  items:
+    - name: Mapper des paramètres de requête à des variables dans un composant de flux de données
+      href: map-query-parameters-to-variables-in-a-data-flow-component.md
+    - name: Extraire des données à l'aide de la source OLE DB
+      href: extract-data-by-using-the-ole-db-source.md
+- name: Destination OLE DB
+  href: ole-db-destination.md
+  items:
+    - name: Charger des données à l'aide de la destination OLE DB
+      href: load-data-by-using-the-ole-db-destination.md
+- name: Propriétés personnalisées OLE DB
+  href: ole-db-custom-properties.md
+- name: Destination de traitement de partition
+  href: partition-processing-destination.md
+  items:
+    - name: Propriétés personnalisées de la destination de traitement de partition
+      href: partition-processing-destination-custom-properties.md
+- name: source de fichier brut
+  href: raw-file-source.md
+- name: Destination de fichier brut
+  href: raw-file-destination.md
+- name: Propriétés personnalisées des fichiers bruts
+  href: raw-file-custom-properties.md
+- name: Destination de l'ensemble d'enregistrements
+  href: recordset-destination.md
+  items:
+    - name: Utiliser une destination de jeu d'enregistrements
+      href: use-a-recordset-destination.md
+    - name: Propriétés personnalisées de la destination du jeu d'enregistrements
+      href: recordset-destination-custom-properties.md
+- name: Source SAP BW
+  href: sap-bw-source.md
+  items:
+    - name: Éditeur de source SAP BW (page Gestionnaire de connexions)
+      href: sap-bw-source-editor-connection-manager-page.md
+    - name: Éditeur de source SAP BW (page Colonnes)
+      href: sap-bw-source-editor-columns-page.md
+    - name: Éditeur de source SAP BW (page Sortie d'erreur)
+      href: sap-bw-source-editor-error-output-page.md
+    - name: Éditeur de source SAP BW (page Avancé)
+      href: sap-bw-source-editor-advanced-page.md
+    - name: Rechercher la destination RFC
+      href: look-up-rfc-destination.md
+    - name: Rechercher la chaîne de processus
+      href: look-up-process-chain.md
+    - name: Journal des requêtes
+      href: request-log.md
+    - name: Aperçu
+      href: preview.md
+- name: Destination SAP BW
+  href: sap-bw-destination.md
+  items:
+    - name: Éditeur de destination SAP BW (page Gestionnaire de connexions)
+      href: sap-bw-destination-editor-connection-manager-page.md
+    - name: Éditeur de destination SAP BW (page Mappages)
+      href: sap-bw-destination-editor-mappings-page.md
+    - name: Éditeur de destination SAP BW (page Sortie d'erreur)
+      href: sap-bw-destination-editor-error-output-page.md
+    - name: Éditeur de destination SAP BW (page Avancé)
+      href: sap-bw-destination-editor-advanced-page.md
+    - name: Rechercher un InfoPackage
+      href: look-up-infopackage.md
+    - name: Créer un nouvel InfoObject
+      href: create-new-infoobject.md
+    - name: Créer un InfoCube pour les données de transaction
+      href: create-infocube-for-transaction-data.md
+    - name: Rechercher un InfoObject
+      href: look-up-infoobject.md
+    - name: Créer un InfoSource
+      href: create-infosource.md
+    - name: Créer un InfoSource pour les données de transaction
+      href: create-infosource-for-transaction-data.md
+    - name: Créer un InfoSource pour les données maîtres
+      href: create-infosource-for-master-data.md
+    - name: Créer un InfoPackage
+      href: create-infopackage.md
+- name: Destination SQL Server Compact Edition
+  href: sql-server-compact-edition-destination.md
+  items:
+    - name: Propriétés personnalisées de la destination SQL Server Compact Edition
+      href: sql-server-compact-edition-destination-custom-properties.md
+- name: Destination SQL Server
+  href: sql-server-destination.md
+  items:
+    - name: "Charger des données en masse à l'aide de la destination SQL\_Server"
+      href: bulk-load-data-by-using-the-sql-server-destination.md
+    - name: Propriétés personnalisées de la destination SQL Server
+      href: sql-server-destination-custom-properties.md
+- name: Transformations
+  href: ../../integration-services/data-flow/transformations/integration-services-transformations.md
+- name: Source XML
+  href: xml-source.md
+  items:
+    - name: Extraire des données à l'aide de la source XML
+      href: extract-data-by-using-the-xml-source.md
+    - name: Propriétés personnalisées des sources XML
+      href: xml-source-custom-properties.md

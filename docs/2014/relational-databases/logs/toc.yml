@@ -1,0 +1,18 @@
+- name: Visionneuse du fichier journal
+  href: log-file-viewer.md
+  items:
+    - name: Ouvrir la Visionneuse du fichier journal
+      href: open-log-file-viewer.md
+    - name: Afficher les fichiers journaux hors connexion
+      href: view-offline-log-files.md
+    - name: Aide sur la visionneuse du fichier journal via la touche F1
+      href: log-file-viewer-f1-help.md
+- name: Journal des transactions (SQL Server)
+  href: the-transaction-log-sql-server.md
+  items:
+    - name: Gérer la taille du fichier journal des transactions
+      href: manage-the-size-of-the-transaction-log-file.md
+    - name: "Résoudre les problèmes liés à un journal des transactions saturé (erreur SQL\_Server\_9002)"
+      href: troubleshoot-a-full-transaction-log-sql-server-error-9002.md
+    - name: Contrôler la durabilité d'une transaction
+      href: control-transaction-durability.md

@@ -1,0 +1,24 @@
+- name: Messagerie de base de données
+  href: database-mail.md
+- name: Objets de configuration de la messagerie de base de données
+  href: database-mail-configuration-objects.md
+  items:
+    - name: Créer un profil de messagerie de base de données
+      href: create-a-database-mail-profile.md
+    - name: Créer un compte de messagerie de base de données
+      href: create-a-database-mail-account.md
+    - name: Configuration de la Messagerie de base de données
+      href: configure-database-mail.md
+- name: Objets de messagerie de base de données
+  href: database-mail-messaging-objects.md
+- name: Programme externe de la messagerie de base de données
+  href: database-mail-external-program.md
+- name: Journal et audits de la messagerie de base de données
+  href: database-mail-log-and-audits.md
+  items:
+    - name: Créer un travail d'Agent SQL Server pour archiver les messages et les journaux d'événements de la messagerie de base de données
+      href: create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
+    - name: Vérifier l'état des messages électroniques envoyés avec la messagerie de base de données
+      href: check-the-status-of-e-mail-messages-sent-with-database-mail.md
+- name: Configurer la messagerie de l'Agent SQL Server en vue de l'utilisation de la messagerie de base de données
+  href: configure-sql-server-agent-mail-to-use-database-mail.md

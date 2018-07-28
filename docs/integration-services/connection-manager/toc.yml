@@ -1,0 +1,64 @@
+- name: Vue d'ensemble
+  href: integration-services-ssis-connections.md
+- name: Sources de données
+  href: data-sources.md
+- name: Gestionnaire de connexions ADO
+  href: ado-connection-manager.md
+- name: Gestionnaire de connexions ADO.NET
+  href: ado-net-connection-manager.md
+- name: Gestionnaire de connexions Analysis Services
+  href: analysis-services-connection-manager.md
+  items:
+    - name: Référence de l'interface utilisateur de la boîte de dialogue Ajout d'un gestionnaire de connexions Analysis Services
+      href: add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: Gestionnaire de connexions Azure Data Lake Analytics
+  href: azure-data-lake-analytics-connection-manager.md
+- name: Gestionnaire de connexions Azure Data Lake Store
+  href: azure-data-lake-store-connection-manager.md
+- name: Gestionnaire de connexions Azure HDInsight
+  href: azure-hdinsight-connection-manager.md
+- name: Gestionnaire de connexions Azure Resource Manager
+  href: azure-resource-manager-connection-manager.md
+- name: Gestionnaire de connexions Azure Storage
+  href: azure-storage-connection-manager.md
+- name: Gestionnaire de connexions d’abonnement Azure
+  href: azure-subscription-connection-manager.md
+- name: Gestionnaire de connexions Excel
+  href: excel-connection-manager.md
+- name: Gestionnaire de connexions de fichiers
+  href: file-connection-manager.md
+  items:
+    - name: Référence de l'interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers
+      href: add-file-connection-manager-dialog-box-ui-reference.md
+    - name: Référence de l'interface utilisateur de la boîte de dialogue Suggérer les types de colonnes
+      href: suggest-column-types-dialog-box-ui-reference.md
+- name: Gestionnaire de connexions de fichiers plats
+  href: flat-file-connection-manager.md
+- name: Gestionnaires de connexion FTP
+  href: ftp-connection-manager.md
+- name: Gestionnaire de connexions Hadoop
+  href: hadoop-connection-manager.md
+- name: Gestionnaire de connexions HTTP
+  href: http-connection-manager.md
+- name: Gestionnaire de connexions MSMQ
+  href: msmq-connection-manager.md
+- name: Gestionnaire de connexions de fichiers multiples
+  href: multiple-files-connection-manager.md
+- name: Gestionnaire de connexions de fichiers plats multiples
+  href: multiple-flat-files-connection-manager.md
+- name: Gestionnaire de connexions OData
+  href: odata-connection-manager.md
+- name: Gestionnaire de connexions ODBC
+  href: odbc-connection-manager.md
+- name: Gestionnaire de connexions OLE DB
+  href: ole-db-connection-manager.md
+- name: Gestionnaire de connexions SAP BW
+  href: sap-bw-connection-manager.md
+- name: Gestionnaire de connexions SMTP
+  href: smtp-connection-manager.md
+- name: Gestionnaire de connexions SMO
+  href: smo-connection-manager.md
+- name: Gestionnaire de connexions de SQL Server Compact Edition
+  href: sql-server-compact-edition-connection-manager.md
+- name: Gestionnaire de connexions WMI
+  href: wmi-connection-manager.md

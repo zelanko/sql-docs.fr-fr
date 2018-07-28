@@ -1,0 +1,152 @@
+- name: Bases de données (moteur de base de données)
+  href: databases.md
+- name: Bases de données système
+  href: system-databases.md
+  items:
+    - name: Base de données master
+      href: master-database.md
+    - name: 'model, base de données'
+      href: model-database.md
+    - name: Base de données msdb
+      href: msdb-database.md
+    - name: Base de données Resource
+      href: resource-database.md
+    - name: Base de données tempdb
+      href: tempdb-database.md
+    - name: Reconstruire des bases de données système
+      href: rebuild-system-databases.md
+- name: Bases de données autonomes
+  href: contained-databases.md
+  items:
+    - name: Fonctionnalités modifiées (base de données autonome)
+      href: modified-features-contained-database.md
+    - name: Classements de base de données autonome
+      href: contained-database-collations.md
+    - name: Meilleures pratiques de sécurité recommandées avec les bases de données autonomes
+      href: security-best-practices-with-contained-databases.md
+    - name: Migrer vers une base de données partiellement autonome
+      href: migrate-to-a-partially-contained-database.md
+- name: Fichiers de données SQL Server dans Windows Azure
+  href: sql-server-data-files-in-microsoft-azure.md
+- name: Groupes de fichiers et fichiers de base de données
+  href: database-files-and-filegroups.md
+- name: États d'une base de données
+  href: database-states.md
+- name: États des fichiers
+  href: file-states.md
+- name: Identificateur de la base de données
+  href: database-identifiers.md
+- name: Estimer la taille d'une base de données
+  href: estimate-the-size-of-a-database.md
+  items:
+    - name: Estimer la taille d'une table
+      href: estimate-the-size-of-a-table.md
+    - name: Estimer la taille d’un index cluster
+      href: estimate-the-size-of-a-clustered-index.md
+    - name: Estimer la taille d'un index non-cluster
+      href: estimate-the-size-of-a-nonclustered-index.md
+    - name: Estimer la taille d’un segment de mémoire
+      href: estimate-the-size-of-a-heap.md
+- name: Copier des bases de données sur d'autres serveurs
+  href: copy-databases-to-other-servers.md
+  items:
+    - name: Utiliser l'Assistant Copie de base de données
+      href: use-the-copy-database-wizard.md
+    - name: Copier des bases de données avec la sauvegarde et la restauration
+      href: copy-databases-with-backup-and-restore.md
+    - name: Publier une base de données (SQL Server Management Studio)
+      href: publish-a-database-sql-server-management-studio.md
+    - name: Déployer une base de données SQL Server sur une machine virtuelle Microsoft Azure
+      href: deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md
+- name: Attacher et détacher une base de données
+  href: database-detach-and-attach-sql-server.md
+  items:
+    - name: Déplacer une base de données à l'aide de la méthode de détachement et d'attachement (Transact-SQL)
+      href: move-a-database-using-detach-and-attach-transact-sql.md
+    - name: Mettre à niveau une base de données avec Detach et Attach (Transact-SQL)
+      href: upgrade-a-database-using-detach-and-attach-transact-sql.md
+    - name: Détacher une base de données
+      href: detach-a-database.md
+    - name: Attacher une base de données
+      href: attach-a-database.md
+- name: Ajouter des fichiers de données ou journaux à une base de données
+  href: add-data-or-log-files-to-a-database.md
+- name: Modifier les paramètres de configuration d'une base de données
+  href: change-the-configuration-settings-for-a-database.md
+- name: Créer une base de données
+  href: create-a-database.md
+- name: Supprimer une base de données
+  href: delete-a-database.md
+- name: Supprimer des fichiers de données ou des fichiers journaux d'une base de données
+  href: delete-data-or-log-files-from-a-database.md
+- name: Afficher les informations sur l'espace occupé par les données et par le journal d'une base de données
+  href: display-data-and-log-space-information-for-a-database.md
+- name: Augmenter la taille d'une base de données
+  href: increase-the-size-of-a-database.md
+- name: Gérer les métadonnées lors de la mise à disposition d'une base de données sur une autre instance de serveur
+  href: manage-metadata-when-making-a-database-available-on-another-server.md
+- name: Déplacer des fichiers de bases de données
+  href: move-database-files.md
+  items:
+    - name: Déplacer des bases de données utilisateur
+      href: move-user-databases.md
+    - name: Déplacer des bases de données système
+      href: move-system-databases.md
+- name: Modifier le nom d'une base de données
+  href: rename-a-database.md
+- name: Définir une base de données en mode mono-utilisateur
+  href: set-a-database-to-single-user-mode.md
+- name: Réduire une base de données
+  href: shrink-a-database.md
+- name: Réduire un fichier
+  href: shrink-a-file.md
+- name: Afficher ou modifier les propriétés d'une base de données
+  href: view-or-change-the-properties-of-a-database.md
+  items:
+    - name: Valeur de la propriété étendue (boîte de dialogue)
+      href: value-for-extended-property-dialog-box.md
+    - name: Objet de base de données (page Propriétés étendues)
+      href: database-object-extended-properties-page.md
+    - name: Propriétés de base de données (page Général)
+      href: database-properties-general-page.md
+    - name: Propriétés de la base de données (page Fichiers)
+      href: database-properties-files-page.md
+    - name: Propriétés de la base de données (page Groupes de fichiers)
+      href: database-properties-filegroups-page.md
+    - name: Propriétés de la base de données (page Options)
+      href: database-properties-options-page.md
+    - name: Propriétés de la base de données (page Suivi des modifications)
+      href: database-properties-changetracking-page.md
+    - name: Propriétés de la base de données (page Envoi des journaux de transactions)
+      href: database-properties-transaction-log-shipping-page.md
+    - name: Paramètres de sauvegarde des journaux de transactions
+      href: log-shipping-transaction-log-backup-settings.md
+    - name: Paramètres de base de données secondaire
+      href: secondary-database-settings.md
+    - name: Paramètres du moniteur d'envoi des journaux
+      href: log-shipping-monitor-settings.md
+    - name: Propriétés de la base de données (page Mise en miroir)
+      href: database-properties-mirroring-page.md
+    - name: Propriétés de la base de données (page Magasin de requêtes)
+      href: database-properties-query-store-page.md
+- name: Afficher une liste des bases de données sur une instance de SQL Server
+  href: view-a-list-of-databases-on-an-instance-of-sql-server.md
+- name: Afficher ou modifier le niveau de compatibilité d'une base de données
+  href: view-or-change-the-compatibility-level-of-a-database.md
+- name: Créer un type de données d'alias défini par l'utilisateur
+  href: create-a-user-defined-data-type-alias.md
+- name: Instantanés de base de données
+  href: database-snapshots-sql-server.md
+  items:
+    - name: Afficher la taille du fichier partiellement alloué d'un instantané de base de données (Transact-SQL)
+      href: view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
+    - name: Créer un instantané de base de données (Transact-SQL)
+      href: create-a-database-snapshot-transact-sql.md
+    - name: Afficher un instantané de base de données (SQL Server)
+      href: view-a-database-snapshot-sql-server.md
+    - name: Rétablir une base de données dans l'état d'un instantané de base de données
+      href: revert-a-database-to-a-database-snapshot.md
+    - name: supprimer un instantané de base de données (Transact-SQL)
+      href: drop-a-database-snapshot-transact-sql.md
+- name: Initialisation instantanée des fichiers de base de données
+  href: database-instant-file-initialization.md

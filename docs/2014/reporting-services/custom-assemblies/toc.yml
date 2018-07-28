@@ -1,0 +1,17 @@
+- name: Utilisation d'assemblys personnalisés avec des rapports
+  href: using-custom-assemblies-with-reports.md
+  items:
+    - name: Référencement d'assemblys dans un Fichier RDL
+      href: referencing-assemblies-in-an-rdl-file.md
+    - name: Déploiement d'un assembly personnalisé
+      href: deploying-a-custom-assembly.md
+    - name: Utilisation d'assemblys personnalisés avec noms forts
+      href: using-strong-named-custom-assemblies.md
+    - name: Déclaration d'autorisations dans les assemblys personnalisés
+      href: asserting-permissions-in-custom-assemblies.md
+    - name: Accès aux assemblys personnalisés par le biais d'expressions
+      href: accessing-custom-assemblies-through-expressions.md
+    - name: Initialisation d'objets Assembly personnalisés
+      href: initializing-custom-assembly-objects.md
+    - name: "Procédure\_: déboguer des assemblys personnalisés"
+      href: how-to-debug-custom-assemblies.md

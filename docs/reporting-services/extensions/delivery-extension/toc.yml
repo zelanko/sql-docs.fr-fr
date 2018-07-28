@@ -1,0 +1,28 @@
+- name: Création d'une bibliothèque d'extensions de remise
+  href: creating-a-delivery-extension-library.md
+- name: Débogage du code d'extension de remise
+  href: debugging-delivery-extension-code.md
+- name: Vue d'ensemble des extensions de remise
+  href: delivery-extensions-overview.md
+- name: Déploiement d'une extension de remise
+  href: deploying-a-delivery-extension.md
+- name: Implémentation d'une extension de remise
+  href: implementing-a-delivery-extension.md
+- name: Implémentation de l'interface IDeliveryExtension pour une extension de remise
+  href: implementing-the-ideliveryextension-interface-for-a-delivery-extension.md
+- name: Mise en œuvre de l’interface ISubscriptionBaseUIUserControl Interface
+  href: implementing-the-isubscriptionbaseuiusercontrol-interface.md
+- name: Préparation à l'implémentation d'une extension de remise
+  href: preparing-to-implement-a-delivery-extension.md
+- name: Suppression d'une extension de remise
+  href: removing-a-delivery-extension.md
+- name: Utilisation d'une classe Notification pour une extension de remise
+  href: using-a-notification-class-for-a-delivery-extension.md
+- name: Utilisation de l'interface IDeliveryReportServerInformation pour une extension de remise
+  href: using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md
+- name: Utilisation de la classe RenderedOutputFile pour une extension de remise
+  href: using-the-renderedoutputfile-class-for-a-delivery-extension.md
+- name: Utilisation de la classe Report pour une extension de remise
+  href: using-the-report-class-for-a-delivery-extension.md
+- name: Utilisation de la classe Setting pour une extension de remise
+  href: using-the-setting-class-for-a-delivery-extension.md

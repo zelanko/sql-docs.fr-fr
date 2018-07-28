@@ -1,0 +1,32 @@
+- name: Analyse des exécutions de packages et d'autres opérations
+  href: monitor-running-packages-and-other-operations.md
+- name: Boîte de dialogue Opérations actives
+  href: ../active-operations-dialog-box.md
+- name: Rapports du serveur Integration Services
+  href: ../reports-for-the-integration-services-server.md
+- name: Afficher les rapports du serveur Integration Services
+  href: ../view-reports-for-the-integration-services-server.md
+- name: Affichage et arrêt des packages exécutés sur le serveur Integration Services
+  href: ../viewing-and-stopping-packages-running-on-the-integration-services-server.md
+- name: Journalisation d'Integration Services (SSIS)
+  href: integration-services-ssis-logging.md
+  items:
+    - name: Messages personnalisés pour la journalisation
+      href: ../custom-messages-for-logging.md
+    - name: Configurer les journaux SSIS (boîte de dialogue)
+      href: ../configure-ssis-logs-dialog-box.md
+    - name: Configurer la journalisation à l'aide d'un fichier de configuration enregistré
+      href: ../configure-logging-by-using-a-saved-configuration-file.md
+    - name: Activer la journalisation des packages dans les outils de données SQL Server
+      href: ../enable-package-logging-in-sql-server-data-tools.md
+    - name: Activer la journalisation des exécutions de package sur le serveur SSIS
+      href: ../enable-logging-for-package-execution-on-the-ssis-server.md
+- name: Compteurs de performances
+  href: performance-counters.md
+  items:
+    - name: Ajouter un journal pour les compteurs de performances de flux de données
+      href: ../add-a-log-for-data-flow-performance-counters.md
+- name: Analyse des flux de données
+  href: ../analysis-of-data-flow.md
+- name: Drainage des flux de données
+  href: ../data-flow-taps.md

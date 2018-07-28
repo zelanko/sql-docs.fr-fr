@@ -1,0 +1,68 @@
+- name: Déploiement de projets et de packages
+  href: deploy-integration-services-ssis-projects-and-packages.md
+  items:
+    - name: Déployer des projets sur le serveur Integration Services
+      href: ../deploy-projects-to-integration-services-server.md
+    - name: Créer et mapper un environnement serveur
+      href: ../create-and-map-a-server-environment.md
+    - name: Assistant Conversion de projet Integration Services
+      href: ../integration-services-project-conversion-wizard.md
+    - name: Assistant Déploiement d’Integration Services
+      href: ../integration-services-deployment-wizard.md
+    - name: 'Convertir en modèle de déploiement de package, boîte de dialogue'
+      href: ../convert-to-package-deployment-model-dialog-box.md
+    - name: Déploiement de packages (SSIS)
+      href: legacy-package-deployment-ssis.md
+      items:
+        - name: Configurations du package
+          href: ../package-configurations.md
+        - name: Créer des configurations de package
+          href: ../create-package-configurations.md
+    - name: Bibliothèque des configurations du package
+      href: ../package-configurations-organizer.md
+    - name: Référence de l'interface utilisateur de l'Assistant Configuration de package
+      href: ../package-configuration-wizard-ui-reference.md
+      items:
+        - name: Créer un utilitaire de déploiement
+          href: ../create-a-deployment-utility.md
+        - name: Déployer des packages à l’aide de l’utilitaire de déploiement
+          href: ../deploy-packages-by-using-the-deployment-utility.md
+        - name: Redéploiement de packages
+          href: ../redeployment-of-packages.md
+        - name: Référence de l'interface utilisateur de l'Assistant Installation de package
+          href: ../package-installation-wizard-ui-reference.md
+- name: Exécution de projets et de packages
+  href: run-integration-services-ssis-packages.md
+  items:
+    - name: Execute Package Dialog Box
+      href: ../execute-package-dialog-box.md
+    - name: Exécuter un package dans les outils de données SQL Server
+      href: ../run-a-package-in-sql-server-data-tools.md
+    - name: Exécuter un package sur le serveur SSIS à l’aide de SQL Server Management Studio
+      href: ../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md
+    - name: Équilibrage de charge de packages sur des serveurs distants à l'aide de l'Agent SQL Server
+      href: load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
+      items:
+        - name: Implémentation de packages enfants
+          href: ../implementation-of-child-packages.md
+        - name: Implémentation du package parent
+          href: ../implementation-of-the-parent-package.md
+        - name: Journalisation des packages à charge équilibrée sur les serveurs distants
+          href: ../logging-for-load-balanced-packages-on-remote-servers.md
+        - name: Utiliser les valeurs des variables et des paramètres dans un package enfant
+          href: ../use-the-values-of-variables-and-parameters-in-a-child-package.md
+    - name: Outils de dépannage pour l'exécution des packages
+      href: ../troubleshooting/troubleshooting-tools-for-package-execution.md
+    - name: Dépannage des rapports pour l'exécution des packages
+      href: ../troubleshooting/troubleshooting-reports-for-package-execution.md
+    - name: Générer de fichiers de vidage pour l'exécution des packages
+      href: ../troubleshooting/generating-dump-files-for-package-execution.md
+    - name: Travaux de l'Agent SQL Server pour les packages
+      href: sql-server-agent-jobs-for-packages.md
+      items:
+        - name: Planifier un package à l'aide de SQL Server Agent
+          href: ../schedule-a-package-by-using-sql-server-agent.md
+        - name: Tâche Exécuter le travail de l'Agent SQL Server
+          href: ../control-flow/execute-sql-server-agent-job-task.md
+- name: Déployer et exécuter des packages SSIS à l'aide de procédures stockées
+  href: ../deploy-and-execute-ssis-packages-using-stored-procedures.md
