@@ -18,12 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1589f037fd8c44e3daba9116dbc576353a0fed59
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.openlocfilehash: b7bc3002e305201d86dc529381af207e08a6908a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872819"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085771"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
   Le catalogue **SSISDB** est l’élément central pour l’utilisation des projets [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -91,7 +91,7 @@ ms.locfileid: "37872819"
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
--   @ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite.  
+-   \@ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite \@.  
   
 -   La longueur du nom doit être supérieure à 0 et inférieure ou égale à 128.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "37872819"
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
--   @ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite.  
+-   \@ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite \@.  
   
 -   La longueur du nom doit être supérieure à 0 et inférieure ou égale à 128.  
   

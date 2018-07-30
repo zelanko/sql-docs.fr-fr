@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a807550f86205d3f1f6c341599188cea08b6ee97
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: e2c2625c036a1f8d6a66660760c383ad4b676eb7
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36240971"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999319"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -74,12 +74,12 @@ ROLLBACK { TRAN | TRANSACTION }
   
  ROLLBACK TRANSACTION ne peut pas faire référence à un *savepoint_name* dans les transactions distribuées lancées soit explicitement avec BEGIN DISTRIBUTED TRANSACTION, soit découlant d’une transaction locale.  
   
- Une transaction ne peut pas être annulée après l'exécution d'une instruction COMMIT TRANSACTION, sauf lorsque l'instruction COMMIT TRANSACTION est associée à une transaction imbriquée qui est contenue dans la transaction restaurée. Dans ce cas, la transaction imbriquée est restaurée, même si vous avez émis une instruction COMMIT TRANSACTION.  
+ Une transaction ne peut pas être annulée après l'exécution d'une instruction COMMIT TRANSACTION, sauf lorsque l'instruction COMMIT TRANSACTION est associée à une transaction imbriquée qui est contenue dans la transaction restaurée. Dans cette instance, la transaction imbriquée est restaurée, même si vous avez émis une instruction COMMIT TRANSACTION.  
   
  Dans une transaction, les noms de point d'enregistrement dupliqués sont autorisés. Toutefois, une instruction ROLLBACK TRANSACTION contenant un nom de point d'enregistrement en double n'effectue l'annulation que jusqu'à l'instruction SAVE TRANSACTION la plus récente utilisant ce nom de point d'enregistrement.  
   
 ## <a name="interoperability"></a>Interopérabilité  
- Dans les procédures stockées, les instructions ROLLBACK TRANSACTION sans *savepoint_name* ni *transaction_name* annulent toutes les instructions jusqu’à l’instruction BEGIN TRANSACTION la plus extérieure. Une instruction ROLLBACK TRANSACTION dans une procédure stockée qui modifie la valeur de @@TRANCOUNT entre le moment où la procédure stockée se termine et celui où la procédure a été appelée, génère un message d’information. Ce message n'affecte pas la suite du traitement.  
+ Dans les procédures stockées, les instructions ROLLBACK TRANSACTION sans *savepoint_name* ni *transaction_name* annulent toutes les instructions jusqu’à l’instruction BEGIN TRANSACTION la plus extérieure. Une instruction ROLLBACK TRANSACTION dans une procédure stockée qui modifie la @@TRANCOUNT valeur de @@TRANCOUNT entre le moment où la procédure stockée se termine et celui où la procédure a été appelée, génère un message d’information. Ce message n'affecte pas la suite du traitement.  
   
  L'exécution d'une instruction ROLLBACK TRANSACTION dans un déclencheur a les conséquences suivantes :  
   
@@ -104,7 +104,7 @@ Les effets d'une instruction ROLLBACK sur les curseurs sont définis par les tro
 ## <a name="locking-behavior"></a>Comportement de verrouillage  
  Une instruction ROLLBACK TRANSACTION spécifiant un *savepoint_name* libère tous les verrous acquis au-delà du point de sauvegarde, à l’exception des promotions et des conversions. Ces verrous ne sont pas libérés et ne sont pas reconvertis dans leur ancien mode de verrouillage.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

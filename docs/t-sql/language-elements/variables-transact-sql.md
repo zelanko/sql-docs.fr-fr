@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ad62b912dbe788aa6fffb016440a597c0a27cce
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 1d411c73e322e4043645a161e059d5cd6f1a300f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36249701"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088391"
 ---
 # <a name="variables-transact-sql"></a>Variables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ Une variable locale Transact-SQL est un objet pouvant posséder une valeur de do
 * pour enregistrer une valeur de données que doit retourner le code de retour d'une procédure stockée ou la valeur de retour d'une fonction.
 
 > [!NOTE]
-> Le nom de certaines fonctions système Transact-SQL commence par deux *arobases* (@@). Bien que dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les fonctions de type @@functions soient considérées comme des variables globales, ce n’en sont pas et elles n’en ont pas le comportement. Elles sont en réalité des fonctions système, et leur syntaxe suit les mêmes règles que celle des fonctions normales.
+> Le nom de certaines fonctions système Transact-SQL commence par deux *arobases* (\@\@). Bien que, dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les fonctions de type \@\@fonction soient considérées comme des variables globales, il ne s’agit pas de variables et elles n'en ont pas le comportement. Ce sont en réalité des \@\@ fonctions système, dont la syntaxe suit les règles des fonctions.
 
 Le script suivant crée une petite table test et lui attribue 26 lignes. Il utilise une variable pour effectuer trois actions : 
 
@@ -85,17 +85,17 @@ GO
 
 ## <a name="declaring-a-transact-sql-variable"></a>Déclaration d'une variable Transact-SQL
 L’instruction DECLARE initialise une variable Transact-SQL de la manière suivante : 
-* Affectation d'un nom. Celui-ci doit avoir comme premier caractère un @ unique.
+* Affectation d'un nom. Celui-ci doit avoir comme premier caractère un \@ unique.
 * Affectation d'un type de données système ou défini par l'utilisateur, ainsi que d'une taille. Pour les variables numériques, la précision et l'échelle doivent également être affectées. Pour les variables de type XML, une collection de schéma facultative peut être affectée.
 * Affectation de la valeur NULL à la variable.
 
-Par exemple, l’instruction **DECLARE** ci-dessous crée une variable locale appelée **@mycounter** avec un type de données int.  
+Par exemple, l'instruction **DECLARE** suivante crée une variable locale appelée **\@mycounter** avec pour type de données int.  
 ```sql
 DECLARE @MyCounter int;
 ```
 Pour déclarer plusieurs variables locales, utilisez une virgule après la première variable locale définie, puis indiquez le nom et le type de données de la variable locale suivante.
 
-Par exemple, l’instruction **DECLARE** suivante crée trois variables locales nommées **@LastName**, **@FirstName** et **@StateProvince**, puis initialise chacune sur la valeur NULL :  
+Par exemple, l’instruction **DECLARE** suivante crée trois variables locales appelées **\@LastName**, **\@FirstName** et **\@StateProvince**, et les initialise toutes à la valeur NULL :  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -165,7 +165,7 @@ GO
 > [!WARNING]
 > S'il y a plusieurs clauses d'affectation dans une seule instruction SELECT, SQL Server ne garantit pas l'ordre d'évaluation des expressions. Notez que les effets ne sont visibles que s'il existe des références parmi les affectations.
 
-Si une instruction SELECT retourne plusieurs lignes et si la variable fait référence à une expression non scalaire, la variable prend la valeur retournée par l’expression figurant à la dernière ligne de l’ensemble de résultats. Dans le lot suivant, par exemple, **@EmpIDVariable** prend la valeur **BusinessEntityID** de la dernière ligne retournée, c’est-à-dire 1 :  
+Si une instruction SELECT retourne plusieurs lignes et si la variable fait référence à une expression non scalaire, la variable prend la valeur retournée par l’expression figurant à la dernière ligne de l’ensemble de résultats. Dans le lot suivant, par exemple, **\@EmpIDVariable** prend la valeur **BusinessEntityID** de la dernière ligne retournée, c’est-à-dire 1 :  
 
 ```sql
 USE AdventureWorks2014;

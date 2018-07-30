@@ -21,12 +21,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7e3e738ef82486f80b9f81ae8e1d1218397980d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: caf018aab189a27901effcdc95204881b5b903b9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022896"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980321"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Épingler des éléments Reporting Services aux tableaux de bord Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] permet aux utilisateurs d’épingler des éléments de rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à partir de la barre d’outils de la visionneuse de rapports à un tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] en tant que nouvelle vignette.   Pour que vous puissiez épingler des éléments, il faut que votre administrateur intègre au préalable votre serveur de rapports à Azure Active Directory et [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -68,7 +68,7 @@ ms.locfileid: "33022896"
   
 ##  <a name="bkmk_to_pin"></a> Pour épingler un élément de rapport  
   
-1. Vérifiez que vous êtes connecté à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Dans le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], sélectionnez l’élément de menu **Mes paramètres** et connectez-vous. Pour plus d’informations, consultez  [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5) .
+1. Vérifiez que vous êtes connecté à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Dans le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], sélectionnez l’élément de menu **Mes paramètres** et connectez-vous. Pour plus d'informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -114,13 +114,13 @@ Dans le tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , l�
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **Les éléments épinglés affichent des données caduques** dans un tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] n’ont pas été mises à jour depuis un certain temps.  Le jeton d’informations d’identification de l’utilisateur a expiré et vous devez vous reconnecter.  L’inscription des informations d’identification de l’utilisateur auprès d’Azure et de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] est valable pendant 90 jours. Dans le[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], cliquez sur **Mes paramètres**. Pour plus d’informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
+-   **Les éléments épinglés affichent des données caduques** dans un tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] n’ont pas été mises à jour depuis un certain temps.  Le jeton d’informations d’identification de l’utilisateur a expiré et vous devez vous reconnecter.  L’inscription des informations d’identification de l’utilisateur auprès d’Azure et de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] est valable pendant 90 jours. Dans le[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], cliquez sur **Mes paramètres**. Pour plus d’informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
   
 -   **Les éléments épinglés affichent des données caduques** dans un tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] et elle n’ont jamais été actualisées.  Le problème est que le rapport n’est pas configuré pour utiliser des informations d’identification stockées. Un rapport doit utiliser des informations d’identification, car l’action d’épinglage d’un élément de rapport crée un abonnement [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour gérer la planification de l’actualisation des vignettes. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nécessitent des informations d’identification stockées. La page **Mes abonnements** affiche une message d’erreur similaire au suivant :  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **Informations d’identification Power BI expirées :**  vous tentez d’épingler un élément et voyez le message d’erreur suivant s’afficher. Dans le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], cliquez sur **Mes paramètres** , puis, dans la page Mes paramètres, cliquez sur **Se connecter**. Pour plus d’informations, consultez  [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5) .  
+-   **Informations d’identification Power BI expirées :**  vous tentez d’épingler un élément et voyez le message d’erreur suivant s’afficher. Dans le [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], cliquez sur **Mes paramètres** , puis, dans la page Mes paramètres, cliquez sur **Se connecter**. Pour plus d'informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).  
   
         Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
@@ -147,7 +147,7 @@ Dans le tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , l�
 
 ## <a name="see-also"></a> Voir aussi  
  [Intégration du serveur de rapports Power BI &#40;Gestionnaire de configuration&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
- [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+ [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
  [Tableaux de bord dans Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   
