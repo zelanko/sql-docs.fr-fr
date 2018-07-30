@@ -42,7 +42,7 @@ ms.locfileid: "35333923"
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** dans l'environnement [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] cible.  
   
--   Un package de déploiement de modèle doit exister. Pour plus d’informations, consultez  [Create a Model Deployment Package by Using MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
+-   Un package de déploiement de modèle doit exister. Pour plus d’informations, consultez  [Créer un package de déploiement de modèle à l'aide de MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 -   Vous devez être administrateur dans l'environnement où vous déployez le modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
