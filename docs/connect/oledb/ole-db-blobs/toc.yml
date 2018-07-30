@@ -1,0 +1,8 @@
+- name: Objets BLOB et OLE
+  href: blobs-and-ole-objects.md
+- name: Obtention de données volumineuses
+  href: getting-large-data.md
+- name: Définition de données volumineuses
+  href: setting-large-data.md
+- name: "Prise en charge de la diffusion en continu pour les paramètres de sortie\_BLOB"
+  href: streaming-support-for-blob-output-parameters.md

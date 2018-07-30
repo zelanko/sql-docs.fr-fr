@@ -1,0 +1,46 @@
+- name: Vue d'ensemble
+  href: administration-replication.md
+- name: Administrer une topologie d'égal à égal (programmation Transact-SQL de la réplication)
+  href: administer-a-peer-to-peer-topology-replication-transact-sql-programming.md
+- name: Sauvegarder et restaurer des bases de données répliquées
+  href: back-up-and-restore-replicated-databases.md
+  items:
+    - name: Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d'instantané
+      href: strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md
+    - name: Stratégies de sauvegarde et de restauration de la réplication de fusion
+      href: strategies-for-backing-up-and-restoring-merge-replication.md
+    - name: Actions courantes nécessitant une sauvegarde mise à jour
+      href: common-actions-requiring-an-updated-backup.md
+- name: Méthodes conseillées pour l'administration de la réplication
+  href: best-practices-for-replication-administration.md
+- name: Nettoyer les métadonnées de fusion (programmation Transact-SQL de la réplication)
+  href: clean-up-merge-metadata-replication-transact-sql-programming.md
+- name: Comparer des tables répliquées pour identifier les différences (programmation de réplication)
+  href: compare-replicated-tables-for-differences-replication-programming.md
+- name: configurer des alertes de réplication prédéfinies (SQL Server Management Studio)
+  href: configure-predefined-replication-alerts-sql-server-management-studio.md
+- name: Configurer le travail d'un jeu de transactions pour un serveur de publication Oracle (programmation Transact-SQL de la réplication)
+  href: configure-the-transaction-set-job-for-an-oracle-publisher.md
+- name: Activer les sauvegardes coordonnées pour la réplication transactionnelle (programmation Transact-SQL de la réplication)
+  href: enable-coordinated-backups-for-transactional-replication.md
+- name: Améliorer les performances générales de la réplication
+  href: enhance-general-replication-performance.md
+- name: Améliorer les performances de réplication de fusion
+  href: enhance-merge-replication-performance.md
+- name: Améliorer les performances de la réplication transactionnelle
+  href: enhance-transactional-replication-performance.md
+- name: Questions fréquentes (FAQ) pour les administrateurs de la réplication
+  href: frequently-asked-questions-for-replication-administrators.md
+  items:
+    - name: Script d'information du serveur de distribution et du serveur de publication
+      href: distributor-and-publisher-information-script.md
+- name: Exécuter une mise à jour factice pour un article de fusion (programmation Transact-SQL de la réplication)
+  href: perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md
+- name: Suspendre une topologie de réplication (programmation Transact-SQL de la réplication)
+  href: quiesce-a-replication-topology-replication-transact-sql-programming.md
+- name: Exécuter des travaux de maintenance de réplication (SQL Server Management Studio)
+  href: run-replication-maintenance-jobs-sql-server-management-studio.md
+- name: Basculer entre les modes de mise à jour d'un abonnement transactionnel pouvant être mis à jour
+  href: switch-between-update-modes-for-an-updatable-transactional-subscription.md
+- name: Mettre à niveau les scripts de réplication (programmation Transact-SQL de la réplication)
+  href: upgrade-replication-scripts-replication-transact-sql-programming.md

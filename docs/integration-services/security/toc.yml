@@ -1,0 +1,8 @@
+- name: Vue d'ensemble
+  href: security-overview-integration-services.md
+- name: Contrôle d'accès pour les données sensibles présentes dans les packages
+  href: access-control-for-sensitive-data-in-packages.md
+- name: Identifier la source de packages à l'aide de signatures numériques
+  href: identify-the-source-of-packages-with-digital-signatures.md
+- name: Rôles Integration Services (Service SSIS)
+  href: integration-services-roles-ssis-service.md

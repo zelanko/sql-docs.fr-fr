@@ -1,0 +1,125 @@
+- name: Collections
+  href: collections-assl.md
+  items:
+    - name: Élément Accounts
+      href: accounts-element-assl.md
+    - name: Élément Actions
+      href: actions-element-assl.md
+    - name: Élément AggregationDesigns
+      href: aggregationdesigns-element-assl.md
+    - name: Élément AggregationInstances
+      href: aggregationinstances-element-assl.md
+    - name: Élément Aggregations
+      href: aggregations-element-assl.md
+    - name: Élément AlgorithmParameters
+      href: algorithmparameters-element-assl.md
+    - name: Élément Aliases
+      href: aliases-element-assl.md
+    - name: Élément AllMemberTranslations
+      href: allmembertranslations-element-assl.md
+    - name: Élément Annotations
+      href: annotations-element-assl.md
+    - name: Élément Assemblies
+      href: assemblies-element-assl.md
+    - name: Élément AttributeAllMemberTranslations
+      href: attributeallmembertranslations-element-assl.md
+    - name: Élément AttributePermissions
+      href: attributepermissions-element-assl.md
+    - name: Élément AttributeRelationships
+      href: attributerelationships-element-assl.md
+    - name: Élément Attributes
+      href: attributes-element-assl.md
+    - name: Élément Blocks
+      href: blocks-element-assl.md
+    - name: Élément CalculationProperties
+      href: calculationproperties-element-assl.md
+    - name: Élément Calculations
+      href: calculations-element-assl.md
+    - name: Élément CellPermissions
+      href: cellpermissions-element-assl.md
+    - name: Élément ClassifiedColumns
+      href: classifiedcolumns-element-assl.md
+    - name: Élément Columns
+      href: columns-element-assl.md
+    - name: Élément Commands
+      href: commands-element-assl.md
+    - name: Élément CubePermissions
+      href: cubepermissions-element-assl.md
+    - name: Élément Cubes
+      href: cubes-element-assl.md
+    - name: Élément DatabasePermissions
+      href: databasepermissions-element-assl.md
+    - name: Élément Databases
+      href: databases-element-assl.md
+    - name: Élément DataSources
+      href: datasources-element-assl.md
+    - name: Élément DataSourcePermissions
+      href: datasourcepermissions-element-assl.md
+    - name: Élément DataSourceViews
+      href: datasourceviews-element-assl.md
+    - name: Élément DimensionPermissions
+      href: dimensionpermissions-element-assl.md
+    - name: Élément Dimensions
+      href: dimensions-element-assl.md
+    - name: Élément Events
+      href: events-element-assl.md
+    - name: Élément Files
+      href: files-element-assl.md
+    - name: Élément ForeignKeyColumns
+      href: foreignkeycolumns-element-assl.md
+    - name: Élément Groups
+      href: groups-element-assl.md
+    - name: Élément Hierarchies
+      href: hierarchies-element-assl.md
+    - name: Élément IncrementalProcessingNotifications
+      href: incrementalprocessingnotifications-element-assl.md
+    - name: Élément KeyColumns
+      href: keycolumns-element-assl.md
+    - name: Élément Kpis
+      href: kpis-element-assl.md
+    - name: Élément Levels
+      href: levels-element-assl.md
+    - name: Élément MdxScripts
+      href: mdxscripts-element-assl.md
+    - name: Élément MeasureGroups
+      href: measuregroups-element-assl.md
+    - name: Élément Measures
+      href: measures-element-assl.md
+    - name: Élément Members
+      href: members-element-assl.md
+    - name: Élément MiningModelPermissions
+      href: miningmodelpermissions-element-assl.md
+    - name: Élément MiningModels
+      href: miningmodels-element-assl.md
+    - name: Élément MiningStructurePermissions
+      href: miningstructurepermissions-element-assl.md
+    - name: Élément MiningStructures
+      href: miningstructures-element-assl.md
+    - name: Élément ModelingFlags
+      href: modelingflags-element-assl.md
+    - name: Élément NamingTemplateTranslations
+      href: namingtemplatetranslations-element-assl.md
+    - name: Élément Partitions
+      href: partitions-element-assl.md
+    - name: Élément Perspectives
+      href: perspectives-element-assl.md
+    - name: Élément QueryNotifications
+      href: querynotifications-element-assl.md
+    - name: Élément Relationships
+      href: relationships-element-assl.md
+    - name: Élément ReportFormatParameters
+      href: reportformatparameters-element-assl.md
+    - name: Élément ReportParameters
+      href: reportparameters-element-assl.md
+    - name: Élément Roles
+      href: roles-element-assl.md
+    - name: Élément ServerProperties
+      href: serverproperties-element-assl.md
+    - name: Élément TableNotifications
+      href: tablenotifications-element-assl.md
+    - name: Élément Traces
+      href: traces-element-assl.md
+    - name: Élément Translations
+      href: translations-element-assl.md
+    - name: Élément UnknownMemberTranslations
+      href: unknownmembertranslations-element-assl.md

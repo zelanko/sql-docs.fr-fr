@@ -1,0 +1,8 @@
+- name: "Gestion des assemblys d'intégration du\_CLR"
+  href: managing-clr-integration-assemblies.md
+- name: Modification d'un assembly
+  href: altering-an-assembly.md
+- name: Création d'un assembly
+  href: creating-an-assembly.md
+- name: Suppression d'un assembly
+  href: dropping-an-assembly.md

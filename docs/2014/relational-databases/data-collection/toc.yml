@@ -1,0 +1,33 @@
+- name: Collecte de données
+  href: data-collection.md
+- name: Gérer la collecte de données
+  href: manage-data-collection.md
+  items:
+    - name: Configurer l'entrepôt de données de gestion (SQL Server Management Studio)
+      href: configure-the-management-data-warehouse-sql-server-management-studio.md
+    - name: Configurer les propriétés d'un collecteur de données
+      href: configure-properties-of-a-data-collector.md
+    - name: Activer ou désactiver la collecte de données
+      href: enable-or-disable-data-collection.md
+    - name: Démarrer ou arrêter un jeu d'éléments de collecte
+      href: start-or-stop-a-collection-set.md
+    - name: Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL (SQL Server Management Studio)
+      href: use-sql-server-profiler-to-create-a-sql-trace-collection-set.md
+    - name: Afficher les journaux de jeu d'éléments de collecte (SQL Server Management Studio)
+      href: view-collection-set-logs-sql-server-management-studio.md
+    - name: Afficher ou modifier des planifications de jeu d'éléments de collecte (SQL Server Management Studio)
+      href: view-or-change-collection-set-schedules-sql-server-management-studio.md
+    - name: Afficher un rapport de jeu d'éléments de collecte (SQL Server Management Studio)
+      href: view-a-collection-set-report-sql-server-management-studio.md
+    - name: Configurer des paramètres de collecte de données (Transact-SQL)
+      href: configure-data-collection-parameters-transact-sql.md
+    - name: Créer un jeu d'éléments de collecte personnalisé qui utilise le type de collecteur Requête T-SQL générique (Transact-SQL)
+      href: create-custom-collection-set-generic-t-sql-query-collector-type.md
+    - name: Ajouter un élément de collecte à un jeu d'éléments de collecte (Transact-SQL)
+      href: add-a-collection-item-to-a-collection-set-transact-sql.md
+- name: Rapports de jeux d'éléments de collecte de données système
+  href: system-data-collection-set-reports.md
+- name: entrepôt de données de gestion
+  href: management-data-warehouse.md
+- name: Sécurité du collecteur de données
+  href: data-collector-security.md

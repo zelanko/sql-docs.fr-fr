@@ -1,0 +1,8 @@
+- name: "Mise en cache des modèles, XSL et schémas (SQLXML\_4.0)"
+  href: caching-templates-xsl-and-schemas-sqlxml-4-0.md
+- name: "Mise en cache des schémas (SQLXML\_4.0)"
+  href: schema-caching-sqlxml-4-0.md
+- name: "Mise en cache de modèle (SQLXML\_4.0)"
+  href: template-caching-sqlxml-4-0.md
+- name: Mise en cache XSL (SQLXML 4.0)
+  href: xsl-caching-sqlxml-4-0.md

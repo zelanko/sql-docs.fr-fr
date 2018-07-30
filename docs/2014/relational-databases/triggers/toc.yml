@@ -1,0 +1,36 @@
+- name: Déclencheurs DDL
+  href: ddl-triggers.md
+  items:
+    - name: Implémenter des déclencheurs DDL
+      href: implement-ddl-triggers.md
+    - name: Obtenir des informations sur les déclencheurs DDL
+      href: get-information-about-ddl-triggers.md
+    - name: Utiliser la fonction EVENTDATA
+      href: use-the-eventdata-function.md
+    - name: Événements DDL
+      href: ddl-events.md
+    - name: groupes d'événements DDL
+      href: ddl-event-groups.md
+- name: Déclencheurs DML
+  href: dml-triggers.md
+  items:
+    - name: Créer des déclencheurs DML
+      href: create-dml-triggers.md
+    - name: Créer des déclencheurs CLR
+      href: create-clr-triggers.md
+    - name: Créer de déclencheurs DML pour gérer plusieurs lignes de données
+      href: create-dml-triggers-to-handle-multiple-rows-of-data.md
+    - name: Créer des déclencheurs imbriqués
+      href: create-nested-triggers.md
+    - name: Spécifier les premier et dernier déclencheurs
+      href: specify-first-and-last-triggers.md
+    - name: Utiliser les tables inserted et deleted
+      href: use-the-inserted-and-deleted-tables.md
+    - name: Modifier ou renommer les déclencheurs DML
+      href: modify-or-rename-dml-triggers.md
+    - name: Obtenir des informations sur les déclencheurs DML
+      href: get-information-about-dml-triggers.md
+    - name: Supprimer ou désactiver les déclencheurs DML
+      href: delete-or-disable-dml-triggers.md
+    - name: Gérer la sécurité des déclencheurs
+      href: manage-trigger-security.md

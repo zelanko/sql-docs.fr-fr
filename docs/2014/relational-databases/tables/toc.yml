@@ -1,0 +1,84 @@
+- name: Tables
+  href: tables.md
+  items:
+    - name: Créer des tables (moteur de base de données)
+      href: create-tables-database-engine.md
+    - name: Supprimer des tables (moteur de base de données)
+      href: delete-tables-database-engine.md
+    - name: Dupliquer des tables
+      href: duplicate-tables.md
+    - name: Renommer des tables (moteur de base de données)
+      href: rename-tables-database-engine.md
+    - name: Afficher la définition de table
+      href: view-the-table-definition.md
+      items:
+        - name: Propriétés de la table
+          href: table-properties-ssms.md
+        - name: Propriétés de la colonne (page Général)
+          href: column-properties-general-page.md
+    - name: Afficher les dépendances d'une table
+      href: view-the-dependencies-of-a-table.md
+    - name: Ajouter des colonnes à une table (moteur de base de données)
+      href: add-columns-to-a-table-database-engine.md
+    - name: Supprimer des colonnes d'une table
+      href: delete-columns-from-a-table.md
+    - name: Renommer des colonnes (moteur de base de données)
+      href: rename-columns-database-engine.md
+    - name: Copier des colonnes d'une table vers une autre (Moteur de base de données)
+      href: copy-columns-from-one-table-to-another-database-engine.md
+    - name: Modifier des colonnes (moteur de base de données)
+      href: modify-columns-database-engine.md
+    - name: Modifier l'ordre des colonnes dans une table
+      href: change-column-order-in-a-table.md
+    - name: Spécifier les colonnes calculées dans une table
+      href: specify-computed-columns-in-a-table.md
+    - name: Spécifier des valeurs par défaut pour les colonnes
+      href: specify-default-values-for-columns.md
+    - name: Utiliser des colonnes éparses
+      href: use-sparse-columns.md
+    - name: Utiliser des jeux de colonnes
+      href: use-column-sets.md
+    - name: Utiliser les paramètres table (Moteur de base de données)
+      href: use-table-valued-parameters-database-engine.md
+- name: Contraintes de clé primaire et de clé étrangère
+  href: primary-and-foreign-key-constraints.md
+  items:
+    - name: Créer des clés primaires
+      href: create-primary-keys.md
+    - name: Modifier des clés primaires
+      href: modify-primary-keys.md
+    - name: Supprimer des clés primaires
+      href: delete-primary-keys.md
+    - name: Créer des relations de clé étrangère
+      href: create-foreign-key-relationships.md
+    - name: Modifier des relations de clé étrangère
+      href: modify-foreign-key-relationships.md
+    - name: Supprimer les relations entre les clés étrangères
+      href: delete-foreign-key-relationships.md
+    - name: Afficher les propriétés de clés étrangères
+      href: view-foreign-key-properties.md
+    - name: Désactiver des contraintes de clé étrangère pour la réplication
+      href: disable-foreign-key-constraints-for-replication.md
+    - name: Désactiver les contraintes de clé étrangère avec des instructions INSERT et UPDATE
+      href: disable-foreign-key-constraints-with-insert-and-update-statements.md
+- name: Contraintes uniques et contraintes de validation
+  href: unique-constraints-and-check-constraints.md
+  items:
+    - name: Créer des contraintes uniques
+      href: create-unique-constraints.md
+    - name: Modifier des contraintes uniques
+      href: modify-unique-constraints.md
+    - name: Supprimer des contraintes UNIQUE
+      href: delete-unique-constraints.md
+    - name: Créer des contraintes de validation
+      href: create-check-constraints.md
+    - name: Modifier des contraintes de validation
+      href: modify-check-constraints.md
+    - name: Supprimer des contraintes de validation
+      href: delete-check-constraints.md
+    - name: Désactiver des contraintes de validation lors de la réplication
+      href: disable-check-constraints-for-replication.md
+    - name: Désactiver des contraintes de validation avec des instructions INSERT et UPDATE
+      href: disable-check-constraints-with-insert-and-update-statements.md
+- name: Propriétés des colonnes de table (SQL Server Management Studio)
+  href: table-column-properties-sql-server-management-studio.md

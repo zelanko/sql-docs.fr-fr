@@ -1,0 +1,10 @@
+- name: Ensemble de lignes DBSCHEMA_CATALOGS
+  href: dbschema-catalogs-rowset.md
+- name: Ensemble de lignes DBSCHEMA_COLUMNS
+  href: dbschema-columns-rowset.md
+- name: Ensemble de lignes de schéma DBSCHEMA_PROVIDER_TYPES
+  href: dbschema-provider-types-rowset.md
+- name: Ensemble de lignes DBSCHEMA_TABLES
+  href: dbschema-tables-rowset.md
+- name: "Ensembles de lignes des schémas OLE\_DB"
+  href: ole-db-schema-rowsets.md

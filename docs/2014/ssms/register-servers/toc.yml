@@ -1,0 +1,35 @@
+- name: Inscrire des serveurs
+  href: register-servers.md
+  items:
+    - name: Inscrire un serveur connecté (SQL Server Management Studio)
+      href: register-a-connected-server-sql-server-management-studio.md
+    - name: Créer un nouveau serveur inscrit (SQL Server Management Studio)
+      href: create-a-new-registered-server-sql-server-management-studio.md
+    - name: Afficher des serveurs inscrits dans SQL Server Management Studio
+      href: view-registered-servers-in-sql-server-management-studio.md
+    - name: Supprimer un serveur inscrit (SQL Server Management Studio)
+      href: remove-a-registered-server-sql-server-management-studio.md
+    - name: "Modifier l'inscription d'un serveur (SQL\_Server Management\_Studio)"
+      href: change-a-server-s-registration-sql-server-management-studio.md
+    - name: Se connecter à un serveur inscrit (SQL Server Management Studio)
+      href: connect-to-a-registered-server-sql-server-management-studio.md
+    - name: Se déconnecter d'un serveur inscrit (SQL Server Management Studio)
+      href: disconnect-from-a-registered-server-sql-server-management-studio.md
+    - name: Déplacer un serveur inscrit ou un groupe de serveurs inscrits (SQL Server Management Studio)
+      href: move-a-registered-server-or-registered-server-group.md
+    - name: Modifier le nom d'un serveur ou d'un groupe de serveurs inscrits (SQL Server Management Studio)
+      href: change-the-name-of-registered-server-or-registered-server-group.md
+    - name: Créer ou modifier un groupe de serveurs (SQL Server Management Studio)
+      href: create-or-edit-a-server-group-sql-server-management-studio.md
+    - name: Supprimer un groupe de serveurs (SQL Server Management Studio)
+      href: remove-a-server-group-sql-server-management-studio.md
+    - name: Exporter les informations des serveurs inscrits (SQL Server Management Studio)
+      href: export-registered-server-information-sql-server-management-studio.md
+    - name: Importer des informations de serveur inscrit (SQL Server Management Studio)
+      href: import-registered-server-information-sql-server-management-studio.md
+    - name: Créer un serveur d'administration centralisée et un groupe de serveurs (SQL Server Management Studio)
+      href: create-a-central-management-server-and-server-group.md
+    - name: Exécuter des instructions simultanément sur plusieurs serveurs (SQL Server Management Studio)
+      href: execute-statements-against-multiple-servers-simultaneously.md
+    - name: Serveurs inscrits – Aide (F1)
+      href: registered-servers-f1-help.md

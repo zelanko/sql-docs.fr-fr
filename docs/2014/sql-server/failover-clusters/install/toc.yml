@@ -1,0 +1,14 @@
+- name: Installation d'un cluster de basculement SQL Server
+  href: sql-server-failover-cluster-installation.md
+- name: Avant l'installation du clustering de basculement
+  href: before-installing-failover-clustering.md
+- name: Créer un cluster de basculement SQL Server (programme d'installation)
+  href: create-a-new-sql-server-failover-cluster-setup.md
+- name: Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server (programme d'installation)
+  href: add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+- name: Installer les outils clients sur un cluster de basculement SQL Server
+  href: install-client-tools-on-a-sql-server-failover-cluster.md
+- name: Supprimer une instance de cluster de basculement SQL Server (programme d'installation)
+  href: remove-a-sql-server-failover-cluster-instance-setup.md
+- name: Renommer une instance de cluster de basculement SQL Server
+  href: rename-a-sql-server-failover-cluster-instance.md

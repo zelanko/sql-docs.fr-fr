@@ -1,0 +1,255 @@
+- name: Configurer des instances du moteur de base de données
+  href: configure-database-engine-instances-sql-server.md
+  items:
+    - name: Options de configuration du serveur (SQL Server)
+      href: server-configuration-options-sql-server.md
+    - name: access check cache (option de configuration de serveur)
+      href: access-check-cache-server-configuration-options.md
+    - name: ad hoc distributed queries (option de configuration de serveur)
+      href: ad-hoc-distributed-queries-server-configuration-option.md
+    - name: affinity Input-Output mask (option de configuration de serveur)
+      href: affinity-input-output-mask-server-configuration-option.md
+    - name: affinity64 Input-Output mask (option de configuration de serveur)
+      href: affinity64-input-output-mask-server-configuration-option.md
+    - name: affinity mask (option de configuration de serveur)
+      href: affinity-mask-server-configuration-option.md
+    - name: affinity64 mask (option de configuration de serveur)
+      href: affinity64-mask-server-configuration-option.md
+    - name: Agent XPs (option de configuration de serveur)
+      href: agent-xps-server-configuration-option.md
+    - name: allow updates (option de configuration de serveur)
+      href: allow-updates-server-configuration-option.md
+    - name: paramètre par défaut de la somme de contrôle de sauvegarde
+      href: ../backup-checksum-default.md
+    - name: Afficher ou configurer l'option de configuration de serveur backup compression default
+      href: view-or-configure-the-backup-compression-default-server-configuration-option.md
+    - name: blocked process threshold (option de configuration de serveur)
+      href: blocked-process-threshold-server-configuration-option.md
+    - name: C2 audit mode (option de configuration de serveur)
+      href: c2-audit-mode-server-configuration-option.md
+    - name: clr enabled (option de configuration de serveur)
+      href: clr-enabled-server-configuration-option.md
+    - name: common criteria compliance enabled (option de configuration de serveur)
+      href: common-criteria-compliance-enabled-server-configuration-option.md
+    - name: Authentification de la base de données autonome (option de configuration de serveur)
+      href: contained-database-authentication-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur cost threshold for parallelism
+      href: configure-the-cost-threshold-for-parallelism-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur cursor threshold
+      href: configure-the-cursor-threshold-server-configuration-option.md
+    - name: cross db ownership chaining (option de configuration de serveur)
+      href: cross-db-ownership-chaining-server-configuration-option.md
+    - name: Database Mail XPs (option de configuration de serveur)
+      href: database-mail-xps-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur default full-text
+      href: configure-the-default-full-text-language-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur default language
+      href: configure-the-default-language-server-configuration-option.md
+    - name: default trace enabled (option de configuration de serveur)
+      href: default-trace-enabled-server-configuration-option.md
+    - name: disallow results from triggers (option de configuration de serveur)
+      href: disallow-results-from-triggers-server-configuration-option.md
+    - name: EKM provider enabled (option de configuration de serveur)
+      href: ekm-provider-enabled-server-configuration-option.md
+    - name: filestream access level (option de configuration de serveur)
+      href: filestream-access-level-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur fill factor
+      href: configure-the-fill-factor-server-configuration-option.md
+    - name: ft crawl bandwidth (option de configuration de serveur)
+      href: ft-crawl-bandwidth-server-configuration-option.md
+    - name: ft notify bandwidth (option de configuration de serveur)
+      href: ft-notify-bandwidth-server-configuration-option.md
+    - name: in-doubt xact resolution (option de configuration de serveur)
+      href: in-doubt-xact-resolution-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur index create memory
+      href: configure-the-index-create-memory-server-configuration-option.md
+    - name: lightweight pooling (option de configuration de serveur)
+      href: lightweight-pooling-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur locks
+      href: configure-the-locks-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur max degree of parallelism
+      href: configure-the-max-degree-of-parallelism-server-configuration-option.md
+    - name: max full-text crawl range (option de configuration de serveur)
+      href: max-full-text-crawl-range-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur max text repl size
+      href: configure-the-max-text-repl-size-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur max worker threads
+      href: configure-the-max-worker-threads-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur media retention
+      href: configure-the-media-retention-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur min memory per query
+      href: configure-the-min-memory-per-query-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur nested triggers
+      href: configure-the-nested-triggers-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur network packet size
+      href: configure-the-network-packet-size-server-configuration-option.md
+    - name: OLE Automation Procedures (option de configuration de serveur)
+      href: ole-automation-procedures-server-configuration-option.md
+    - name: open objects (option de configuration de serveur)
+      href: open-objects-server-configuration-option.md
+    - name: optimize for ad hoc workloads (option de configuration de serveur)
+      href: optimize-for-ad-hoc-workloads-server-configuration-option.md
+    - name: PH timeout (option de configuration de serveur)
+      href: ph-timeout-server-configuration-option.md
+    - name: precompute rank (option de configuration de serveur)
+      href: precompute-rank-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur priority boost
+      href: configure-the-priority-boost-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur query governor cost limit
+      href: configure-the-query-governor-cost-limit-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur query wait
+      href: configure-the-query-wait-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur recovery interval
+      href: configure-the-recovery-interval-server-configuration-option.md
+    - name: Configurer l'option de configuration du serveur remote access
+      href: configure-the-remote-access-server-configuration-option.md
+    - name: remote admin connections (option de configuration de serveur)
+      href: remote-admin-connections-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur remote login timeout
+      href: configure-the-remote-login-timeout-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur remote proc trans
+      href: configure-the-remote-proc-trans-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur remote query timeout
+      href: configure-the-remote-query-timeout-server-configuration-option.md
+    - name: Replication XPs (option de configuration de serveur)
+      href: replication-xps-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur scan for startup procs
+      href: configure-the-scan-for-startup-procs-server-configuration-option.md
+    - name: server memory (options de configuration du serveur)
+      href: server-memory-server-configuration-options.md
+    - name: server trigger recursion (Option de configuration de serveur)
+      href: server-trigger-recursion-server-configuration-option.md
+    - name: set working set size (option de configuration de serveur)
+      href: set-working-set-size-server-configuration-option.md
+    - name: show advanced options (option de configuration de serveur)
+      href: show-advanced-options-server-configuration-option.md
+    - name: SMO and DMO XPs (option de configuration de serveur)
+      href: smo-and-dmo-xps-server-configuration-option.md
+    - name: transform noise words (option de configuration de serveur)
+      href: transform-noise-words-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur two digit year cutoff
+      href: configure-the-two-digit-year-cutoff-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur user connections
+      href: configure-the-user-connections-server-configuration-option.md
+    - name: Configurer l'option de configuration de serveur user options
+      href: configure-the-user-options-server-configuration-option.md
+    - name: xp_cmdshell (option de configuration de serveur)
+      href: xp-cmdshell-server-configuration-option.md
+    - name: Afficher ou modifier les emplacements par défaut des fichiers de données et des fichiers journaux (SQL Server Management Studio)
+      href: view-or-change-the-default-locations-for-data-and-log-files.md
+    - name: Afficher ou configurer des options de connexion au serveur distant (SQL Server)
+      href: view-or-configure-remote-server-connection-options-sql-server.md
+    - name: Afficher ou modifier des propriétés de serveur
+      href: view-or-change-server-properties-sql-server.md
+    - name: Aide F1 des Propriétés du serveur
+      href: ../server-properties-f1-help.md
+      items:
+        - name: Propriétés du serveur (page Général) - SQL Server Management Studio
+          href: server-properties-general-page.md
+        - name: Propriétés du serveur (page Mémoire)
+          href: server-properties-memory-page.md
+        - name: Propriétés du serveur (page Processeurs)
+          href: server-properties-processors-page.md
+        - name: Propriétés du serveur (page Sécurité)
+          href: server-properties-security-page.md
+        - name: Propriétés du serveur (page Connexions)
+          href: server-properties-connections-page.md
+        - name: Propriétés du serveur (page Paramètres de base de données)
+          href: server-properties-database-settings-page.md
+        - name: Propriétés du serveur (page Paramètres divers du serveur)
+          href: server-properties-misc-server-settings-page.md
+        - name: Propriétés de SQL Server (page FILESTREAM)
+          href: server-properties-filestream-page.md
+        - name: Propriétés du serveur (page Avancé)
+          href: server-properties-advanced-page.md
+    - name: Configurer SQL Server pour utiliser soft-NUMA (SQL Server)
+      href: soft-numa-sql-server.md
+    - name: "Mapper les ports\_TCP/IP aux nœuds\_NUMA (SQL Server)"
+      href: map-tcp-ip-ports-to-numa-nodes-sql-server.md
+    - name: Activer l'option Verrouiller les pages en mémoire (Windows)
+      href: enable-the-lock-pages-in-memory-option-windows.md
+- name: Gérer les services du moteur de base de données
+  href: manage-the-database-engine-services.md
+  items:
+    - name: Spécifications de sécurité pour la gestion des services
+      href: security-requirements-for-managing-services.md
+    - name: Configurer les comptes de service Windows et les autorisations
+      href: configure-windows-service-accounts-and-permissions.md
+    - name: Configurer les autorisations du système de fichiers pour l'accès au moteur de base de données
+      href: configure-file-system-permissions-for-database-engine-access.md
+    - name: Exécuter SQL Server avec ou sans réseau
+      href: run-sql-server-with-or-without-a-network.md
+    - name: Service SQL Server Browser (moteur de base de données et SSAS)
+      href: sql-server-browser-service-database-engine-and-ssas.md
+    - name: Options de démarrage du service moteur de base de données
+      href: database-engine-service-startup-options.md
+    - name: 'Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser'
+      href: start-stop-pause-resume-restart-sql-server-services.md
+    - name: Démarrer SQL Server en mode mono-utilisateur
+      href: start-sql-server-in-single-user-mode.md
+    - name: "Démarrage de SQL\_Server avec une configuration minimale"
+      href: start-sql-server-with-minimal-configuration.md
+    - name: Rubriques de procédures concernant la gestion des services (Gestionnaire de configuration SQL Server)
+      href: ../managing-services-how-to-topics-sql-server-configuration-manager.md
+    - name: "Se connecter à un autre ordinateur (Gestionnaire de configuration SQL\_Server)"
+      href: scm-services-connect-to-another-computer.md
+    - name: "Définir le démarrage automatique d'une instance de SQL\_Server (Gestionnaire de configuration SQL\_Server)"
+      href: scm-services-set-an-instance-to-start-automatically.md
+    - name: Empêcher le démarrage automatique d'une instance de SQL Server (Gestionnaire de configuration SQL Server)
+      href: scm-services-prevent-automatic-startup-of-an-instance.md
+    - name: Modifier le compte de démarrage du service pour SQL Server (Gestionnaire de configuration SQL Server)
+      href: scm-services-change-the-service-startup-account.md
+    - name: "Configurer les options de démarrage du serveur (Gestionnaire de configuration SQL\_Server)"
+      href: scm-services-configure-server-startup-options.md
+    - name: Modifier le mot de passe des comptes utilisés par SQL Server (Gestionnaire de configuration SQL Server)
+      href: scm-services-change-the-password-of-the-accounts-used.md
+    - name: Configurer des journaux d'erreurs SQL Server
+      href: scm-services-configure-sql-server-error-logs.md
+    - name: Changer le mode d'authentification du serveur
+      href: change-server-authentication-mode.md
+    - name: Service SQL Writer
+      href: sql-writer-service.md
+    - name: Diffuser un message d'arrêt (invite de commandes)
+      href: broadcast-a-shutdown-message-command-prompt.md
+    - name: Se connecter à une instance de SQL Server (via l'invite de commandes)
+      href: log-in-to-an-instance-of-sql-server-command-prompt.md
+- name: Configuration réseau du serveur
+  href: server-network-configuration.md
+  items:
+    - name: Se connecter à SQL Server lorsque les administrateurs système n'y ont plus accès
+      href: connect-to-sql-server-when-system-administrators-are-locked-out.md
+    - name: Activer ou désactiver un protocole réseau de serveur
+      href: enable-or-disable-a-server-network-protocol.md
+    - name: "Configurer un serveur pour écouter un port\_TCP spécifique (Gestionnaire de configuration SQL Server)"
+      href: configure-a-server-to-listen-on-a-specific-tcp-port.md
+    - name: "Configurer un serveur pour l'écoute d'un canal de remplacement (Gestionnaire de configuration SQL\_Server)"
+      href: configure-a-server-to-listen-on-an-alternate-pipe.md
+    - name: Activer les connexions chiffrées dans le moteur de base de données (Gestionnaire de configuration SQL Server)
+      href: enable-encrypted-connections-to-the-database-engine.md
+    - name: "Se connecter à SQL\_Server par le biais d'un serveur proxy (Gestionnaire de configuration SQL\_Server)"
+      href: connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md
+    - name: Configurer un pare-feu Windows pour accéder au moteur de base de données
+      href: configure-a-windows-firewall-for-database-engine-access.md
+    - name: Masquer une instance du moteur de base de données SQL Server
+      href: hide-an-instance-of-sql-server-database-engine.md
+    - name: Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP
+      href: configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
+    - name: Déterminer si le moteur de base de données est installé et démarré
+      href: determine-whether-the-database-engine-is-installed-and-started.md
+    - name: Se connecter au moteur de base de données à l'aide de la protection étendue
+      href: connect-to-the-database-engine-using-extended-protection.md
+    - name: Inscrire un nom de principal du service pour les connexions Kerberos
+      href: register-a-service-principal-name-for-kerberos-connections.md
+- name: Configuration du réseau client
+  href: client-network-configuration.md
+  items:
+    - name: configurer des protocoles clients
+      href: configure-client-protocols.md
+    - name: Créer ou modifier un alias de serveur devant être utilisé par un client (Gestionnaire de configuration SQL Server)
+      href: create-or-delete-a-server-alias-for-use-by-a-client.md
+    - name: Connexion à SQL Server
+      href: logging-in-to-sql-server.md
+    - name: Ouvrir l'Administrateur de la source de données ODBC
+      href: open-the-odbc-data-source-administrator.md
+    - name: "Vérifier la version des pilotes ODBC de SQL\_Server (Windows)"
+      href: check-the-odbc-sql-server-driver-version-windows.md

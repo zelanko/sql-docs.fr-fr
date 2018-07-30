@@ -1,0 +1,8 @@
+- name: "Types de données\_(OLE DB)"
+  href: data-types-ole-db.md
+- name: Mappage de type de données dans ITableDefinition
+  href: data-type-mapping-in-itabledefinition.md
+- name: Mappage de type de données dans les ensembles de lignes et les paramètres
+  href: data-type-mapping-in-rowsets-and-parameters.md
+- name: Structure SSVARIANT
+  href: ssvariant-structure.md

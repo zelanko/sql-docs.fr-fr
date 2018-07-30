@@ -1,0 +1,15 @@
+- name: Prise en charge d’Unicode et du classement
+  href: collation-and-unicode-support.md
+  items:
+    - name: Définir ou changer le classement du serveur
+      href: set-or-change-the-server-collation.md
+    - name: Définir ou changer le classement de la base de données
+      href: set-or-change-the-database-collation.md
+    - name: Définir ou changer le classement des colonnes
+      href: set-or-change-the-column-collation.md
+    - name: Afficher des informations de classement
+      href: view-collation-information.md
+    - name: Rédiger des instructions Transact-SQL internationales
+      href: write-international-transact-sql-statements.md
+    - name: Définir une langue de session
+      href: set-a-session-language.md

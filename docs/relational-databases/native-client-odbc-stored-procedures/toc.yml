@@ -1,0 +1,8 @@
+- name: Exécution des procédures stockées
+  href: running-stored-procedures.md
+- name: Traitement par lot des appels aux procédures stockées
+  href: batching-stored-procedure-calls.md
+- name: Appel d'une procédure stockée
+  href: calling-a-stored-procedure.md
+- name: Traitement des résultats des procédures stockées
+  href: processing-stored-procedure-results.md

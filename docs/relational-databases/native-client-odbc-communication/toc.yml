@@ -1,0 +1,12 @@
+- name: Communication avec SQL Server (ODBC)
+  href: communicating-with-sql-server-odbc.md
+- name: Allocation d'un handle de connexion
+  href: allocating-a-connection-handle.md
+- name: Allocation d'un handle d'environnement
+  href: allocating-an-environment-handle.md
+- name: Connexion à une source de données (ODBC)
+  href: connecting-to-a-data-source-odbc.md
+- name: Déconnexion d'une source de données
+  href: disconnecting-from-a-data-source.md
+- name: "Sources de données\_ODBC SQL\_Server Native Client"
+  href: sql-server-native-client-odbc-data-sources.md

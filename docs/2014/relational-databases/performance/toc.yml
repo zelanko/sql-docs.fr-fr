@@ -1,0 +1,78 @@
+- name: Surveiller et régler les performances
+  href: monitor-and-tune-for-performance.md
+- name: Surveiller les composants SQL Server
+  href: monitor-sql-server-components.md
+- name: Outils d'analyse et de paramétrage des performances
+  href: performance-monitoring-and-tuning-tools.md
+- name: estimation de la cardinalité
+  href: cardinality-estimation-sql-server.md
+- name: Établir un niveau de référence des performances
+  href: establish-a-performance-baseline.md
+- name: Isoler les problèmes de performance
+  href: isolate-performance-problems.md
+- name: Identifier les goulots d'étranglement
+  href: identify-bottlenecks.md
+- name: Analyse des performances à l'aide du magasin de requêtes
+  href: monitoring-performance-by-using-the-query-store.md
+- name: Analyse des performances et surveillance de l'activité du serveur
+  href: server-performance-and-activity-monitoring.md
+  items:
+    - name: Démarrer le Moniteur système (Windows)
+      href: start-system-monitor-windows.md
+    - name: Configurer une alerte de base de données SQL Server (Windows)
+      href: set-up-a-sql-server-database-alert-windows.md
+    - name: Afficher le journal des applications Windows (Windows)
+      href: view-the-windows-application-log-windows-10.md
+    - name: "Afficher le journal des erreurs SQL\_Server (SQL\_Server Management Studio)"
+      href: view-the-sql-server-error-log-sql-server-management-studio.md
+    - name: Enregistrer les événements Deadlock Graph (Générateur de profils SQL Server)
+      href: save-deadlock-graphs-sql-server-profiler.md
+    - name: 'Ouvrir, afficher et imprimer un fichier d''interblocage (SQL Server Management Studio)'
+      href: open-view-and-print-a-deadlock-file-sql-server-management-studio.md
+    - name: Enregistrer séparément des événements Showplan XML (Générateur de profils SQL Server)
+      href: save-showplan-xml-events-separately-sql-server-profiler.md
+    - name: Enregistrer les événements Showplan XML Statistics Profile séparément (SQL Server Profiler)
+      href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
+- name: Afficher et enregistrer des plans d'exécution
+  href: display-and-save-execution-plans.md
+  items:
+    - name: Affichage du plan d'exécution estimé
+      href: display-the-estimated-execution-plan.md
+    - name: Afficher un plan d'exécution réel
+      href: display-an-actual-execution-plan.md
+    - name: Enregistrer un plan d'exécution au format XML
+      href: save-an-execution-plan-in-xml-format.md
+- name: Repères de plan
+  href: plan-guides.md
+  items:
+    - name: Créer un repère de plan
+      href: create-a-new-plan-guide.md
+    - name: Créer un repère de plan pour les requêtes paramétrables
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: Spécifier le comportement du paramétrage de requêtes grâce aux repères de plan
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: Appliquer un plan de requête fixe à un repère de plan
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: Attacher des indicateurs de requête à un repère de plan
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: Afficher les propriétés du repère de plan
+      href: view-plan-guide-properties.md
+    - name: Utiliser le Générateur de profils SQL Server pour créer et tester des repères de plan
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: Valider des repères de plan après la mise à niveau
+      href: validate-plan-guides-after-upgrade.md
+    - name: Supprimer un repère de plan
+      href: delete-a-plan-guide.md
+    - name: Activer ou désactiver un repère de plan
+      href: enable-or-disable-a-plan-guide.md
+- name: Database Engine Tuning Advisor
+  href: database-engine-tuning-advisor.md
+  items:
+    - name: Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
+      href: start-and-use-the-database-engine-tuning-advisor.md
+    - name: Réduire la charge de paramétrage du serveur de production
+      href: reduce-the-production-server-tuning-load.md
+    - name: Observations relatives à l'utilisation de serveurs de test
+      href: considerations-for-using-test-servers.md
+    - name: Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données
+      href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md

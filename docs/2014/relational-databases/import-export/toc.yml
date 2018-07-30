@@ -1,0 +1,65 @@
+- name: Importation et exportation en bloc de données
+  href: bulk-import-and-export-of-data-sql-server.md
+  items:
+    - name: importer et exporter des données en bloc à l'aide de l'utilitaire bcp
+      href: import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md
+    - name: Importer des données en bloc à l'aide de BULK INSERT ou OPENROWSET(BULK...)
+      href: import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md
+    - name: Prérequis pour une journalisation minimale dans l’importation en bloc
+      href: prerequisites-for-minimal-logging-in-bulk-import.md
+- name: Préparer l'importation de données en bloc
+  href: prepare-to-bulk-import-data-sql-server.md
+  items:
+    - name: Préparer des données en vue d'une exportation ou d'une importation en bloc
+      href: prepare-data-for-bulk-export-or-import-sql-server.md
+- name: Exemple de table HumanResources.myTeam
+  href: humanresources-myteam-sample-table-sql-server.md
+- name: Formats de données pour l'importation ou l'exportation en bloc
+  href: data-formats-for-bulk-import-or-bulk-export-sql-server.md
+  items:
+    - name: Utiliser le format natif pour importer ou exporter des données
+      href: use-native-format-to-import-or-export-data-sql-server.md
+    - name: Utiliser le format caractère pour importer ou exporter des données
+      href: use-character-format-to-import-or-export-data-sql-server.md
+    - name: Utiliser le format natif Unicode pour importer ou exporter des données
+      href: use-unicode-native-format-to-import-or-export-data-sql-server.md
+    - name: utiliser le format caractère Unicode pour importer ou exporter des données
+      href: use-unicode-character-format-to-import-or-export-data-sql-server.md
+    - name: "Importer des données au format natif et caractère à partir de versions antérieures de SQL\_Server"
+      href: import-native-and-character-format-data-from-earlier-versions-of-sql-server.md
+- name: Spécifier des formats de données pour la compatibilité lors de l'utilisation de bcp
+  href: specify-data-formats-for-compatibility-when-using-bcp-sql-server.md
+  items:
+    - name: Spécifier le type de stockage de fichiers à l'aide de bcp
+      href: specify-file-storage-type-by-using-bcp-sql-server.md
+    - name: Spécifier une longueur de préfixe dans des fichiers de données à l'aide de bcp
+      href: specify-prefix-length-in-data-files-by-using-bcp-sql-server.md
+    - name: Spécifier la longueur des champs au moyen de bcp
+      href: specify-field-length-by-using-bcp-sql-server.md
+    - name: Spécifier des indicateurs de fin de champ et de fin de ligne
+      href: specify-field-and-row-terminators-sql-server.md
+- name: Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l'importation en bloc
+  href: keep-nulls-or-use-default-values-during-bulk-import-sql-server.md
+- name: Conserver des valeurs d'identité lors de l'importation de données en bloc
+  href: keep-identity-values-when-bulk-importing-data-sql-server.md
+- name: Importer en bloc des données LOB au moyen du fournisseur d'ensembles de lignes OPENROWSET
+  href: bulk-import-large-object-data-with-openrowset-bulk-rowset-provider.md
+- name: Fichiers de format pour l'importation ou l'exportation de données
+  href: format-files-for-importing-or-exporting-data-sql-server.md
+  items:
+    - name: Fichiers de format non-XML
+      href: non-xml-format-files-sql-server.md
+    - name: fichiers de format XML
+      href: xml-format-files-sql-server.md
+    - name: Créer un fichier de format
+      href: create-a-format-file-sql-server.md
+    - name: Utiliser un fichier de format pour importer des données en bloc
+      href: use-a-format-file-to-bulk-import-data-sql-server.md
+    - name: Utiliser un fichier de format pour ignorer une colonne de table
+      href: use-a-format-file-to-skip-a-table-column-sql-server.md
+    - name: Utiliser un fichier de format pour ignorer un champ de données
+      href: use-a-format-file-to-skip-a-data-field-sql-server.md
+    - name: Utiliser un fichier de format pour mapper les colonnes d'une table aux champs d'un fichier de données
+      href: use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md
+- name: Exemples d'importation et d'exportation en bloc de documents XML
+  href: examples-of-bulk-import-and-export-of-xml-documents-sql-server.md

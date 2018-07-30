@@ -1,0 +1,16 @@
+- name: Vue d'ensemble
+  href: views.md
+- name: Créer des vues
+  href: create-views.md
+- name: Créer des vues indexées
+  href: create-indexed-views.md
+- name: Modifier des vues
+  href: modify-views.md
+- name: Modifier les données par l'intermédiaire d'une vue
+  href: modify-data-through-a-view.md
+- name: Obtenir des informations au sujet d'une vue
+  href: get-information-about-a-view.md
+- name: Renommer des vues
+  href: rename-views.md
+- name: Supprimer des vues
+  href: delete-views.md

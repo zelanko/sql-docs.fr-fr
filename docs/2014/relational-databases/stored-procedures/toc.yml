@@ -1,0 +1,37 @@
+- name: Procédures stockées
+  href: stored-procedures-database-engine.md
+  items:
+    - name: Créer une procédure stockée
+      href: create-a-stored-procedure.md
+    - name: Modifier une procédure stockée
+      href: modify-a-stored-procedure.md
+    - name: Supprimer une procédure stockée
+      href: delete-a-stored-procedure.md
+    - name: Exécuter une procédure stockée
+      href: execute-a-stored-procedure.md
+      items:
+        - name: Spécifier les paramètres
+          href: specify-parameters.md
+    - name: Accorder des autorisations sur une procédure stockée
+      href: grant-permissions-on-a-stored-procedure.md
+    - name: Retour de données à partir d'une procédure stockée
+      href: return-data-from-a-stored-procedure.md
+    - name: Recompiler une procédure stockée
+      href: recompile-a-stored-procedure.md
+    - name: Renommer une procédure stockée
+      href: rename-a-stored-procedure.md
+    - name: Afficher la définition d'une procédure stockée
+      href: view-the-definition-of-a-stored-procedure.md
+    - name: Afficher les dépendances d'une procédure stockée
+      href: view-the-dependencies-of-a-stored-procedure.md
+    - name: Propriétés de la procédure stockée (page Général)
+      href: stored-procedure-properties-general-page.md
+- name: Objets OLE Automation dans Transact-SQL
+  href: ole-automation-objects-in-transact-sql.md
+  items:
+    - name: Codes de retour OLE Automation et informations sur les erreurs
+      href: ole-automation-return-codes-and-error-information.md
+    - name: Jeux de résultats OLE Automation
+      href: ole-automation-result-sets.md
+    - name: Exemple de script OLE Automation
+      href: ole-automation-sample-script.md

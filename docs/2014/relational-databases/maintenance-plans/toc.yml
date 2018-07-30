@@ -1,0 +1,50 @@
+- name: Plans de maintenance
+  href: maintenance-plans.md
+- name: Créer un plan de maintenance
+  href: create-a-maintenance-plan.md
+  items:
+    - name: Utiliser l'Assistant Plan de maintenance
+      href: use-the-maintenance-plan-wizard.md
+    - name: Créer un plan de maintenance (aire de conception de plan de maintenance)
+      href: create-a-maintenance-plan-maintenance-plan-design-surface.md
+    - name: Nœud Plans de maintenance (Explorateur d'objets)
+      href: maintenance-plans-node-object-explorer.md
+- name: Aide (F1) des composants de la boîte à outils
+  href: toolbox-component-f1-help.md
+  items:
+    - name: 'Plan de maintenance, onglet Conception'
+      href: maintenance-plan-design-tab.md
+    - name: 'Plan de maintenance, (Page Création de rapports et enregistrement)'
+      href: maintenance-plan-reporting-and-logging-page.md
+    - name: Plan de maintenance (Gérer les connexions)
+      href: maintenance-plan-manage-connections.md
+    - name: Tâche Sauvegarder la base de données (Plan de maintenance)
+      href: options-in-the-back-up-database-task-for-maintenance-plan.md
+    - name: Tâche Mettre à jour les statistiques (Plan de maintenance)
+      href: update-statistics-task-maintenance-plan.md
+    - name: Tâche Reconstruire l'index (Plan de maintenance)
+      href: rebuild-index-task-maintenance-plan.md
+    - name: Tâche Réduire la base de données (Plan de maintenance)
+      href: shrink-database-task-maintenance-plan.md
+    - name: Tâche Vérifier l'intégrité de la base de données (Plan de maintenance)
+      href: check-database-integrity-task-maintenance-plan.md
+    - name: Exécuter la tâche de l’instruction T-SQL (Plan de maintenance)
+      href: execute-t-sql-statement-task-maintenance-plan.md
+    - name: Tâche Réorganiser l'index (Plan de maintenance)
+      href: reorganize-index-task-maintenance-plan.md
+    - name: Tâche Notifier l'opérateur (Plan de maintenance)
+      href: notify-operator-task-maintenance-plan.md
+    - name: Tâche de nettoyage d'historique (Plan de maintenance)
+      href: history-cleanup-task-maintenance-plan.md
+    - name: Tâche Exécuter le travail de SQL Server Agent (Plan de maintenance)
+      href: execute-sql-server-agent-job-task-maintenance-plan.md
+    - name: Tâche de nettoyage de maintenance (Plan de maintenance)
+      href: maintenance-cleanup-task-maintenance-plan.md
+    - name: Moniteur d'activité des travaux (Paramètres du filtre)
+      href: job-activity-monitor-filter-settings.md
+    - name: Actualisation du moniteur d'activité des travaux
+      href: job-activity-monitor-refresh.md
+    - name: Plan de maintenance (Propriétés du sous-plan)
+      href: maintenance-plan-subplan-properties.md
+    - name: Plan de maintenance (Serveurs)
+      href: maintenance-plan-servers.md

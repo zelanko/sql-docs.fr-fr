@@ -1,0 +1,18 @@
+- name: Exécution et gestion de packages par programme
+  href: running-and-managing-packages-programmatically.md
+- name: Présentation des différences entre l'exécution locale et l'exécution distante
+  href: understanding-the-differences-between-local-and-remote-execution.md
+- name: Chargement et exécution d'un package local par programme
+  href: loading-and-running-a-local-package-programmatically.md
+- name: Chargement et exécution d'un package distant par programme
+  href: loading-and-running-a-remote-package-programmatically.md
+- name: Chargement de la sortie d'un package local
+  href: loading-the-output-of-a-local-package.md
+- name: Énumération des packages disponibles par programme
+  href: enumerating-available-packages-programmatically.md
+- name: Gestion des packages et des dossiers par programme
+  href: managing-packages-and-folders-programmatically.md
+- name: Gestion des packages en cours d'exécution par programme
+  href: managing-running-packages-programmatically.md
+- name: Gestion par programmation des rôles de package (service SSIS)
+  href: managing-package-roles-programmatically-ssis-service.md

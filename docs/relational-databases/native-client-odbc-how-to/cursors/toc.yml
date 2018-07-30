@@ -1,0 +1,8 @@
+- name: Utilisation des rubriques de procédures relatives aux curseurs (ODBC)
+  href: using-cursors-how-to-topics-odbc.md
+- name: Extraire et mettre à jour des ensembles de lignes (ODBC)
+  href: fetch-and-update-rowsets-odbc.md
+- name: Utiliser des curseurs (ODBC)
+  href: use-cursors-odbc.md
+- name: Utiliser une liaison d'ensembles de lignes (ODBC)
+  href: use-rowset-binding-odbc.md

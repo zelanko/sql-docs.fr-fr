@@ -1,0 +1,34 @@
+- name: Ensemble de lignes DISCOVER_INSTANCES
+  href: discover-instances-rowset.md
+- name: Ensembles de lignes DISCOVER_KEYWORDS (OLE DB pour OLAP)
+  href: discover-keywords-rowset-ole-db-for-olap.md
+- name: Ensemble de lignes MDSCHEMA_ACTIONS
+  href: mdschema-actions-rowset.md
+- name: Ensemble de lignes MDSCHEMA_CUBES
+  href: mdschema-cubes-rowset.md
+- name: Ensemble de lignes MDSCHEMA_DIMENSIONS
+  href: mdschema-dimensions-rowset.md
+- name: Ensemble de lignes MDSCHEMA_FUNCTIONS
+  href: mdschema-functions-rowset.md
+- name: Ensemble de lignes MDSCHEMA_HIERARCHIES
+  href: mdschema-hierarchies-rowset.md
+- name: Ensemble de lignes MDSCHEMA_INPUT_DATASOURCES
+  href: mdschema-input-datasources-rowset.md
+- name: Ensemble de lignes MDSCHEMA_KPIS
+  href: mdschema-kpis-rowset.md
+- name: Ensemble de lignes MDSCHEMA_LEVELS
+  href: mdschema-levels-rowset.md
+- name: Ensemble de lignes MDSCHEMA_MEASUREGROUP_DIMENSIONS
+  href: mdschema-measuregroup-dimensions-rowset.md
+- name: Ensemble de lignes MDSCHEMA_MEASUREGROUPS
+  href: mdschema-measuregroups-rowset.md
+- name: Ensemble de lignes MDSCHEMA_MEASURES
+  href: mdschema-measures-rowset.md
+- name: Ensemble de lignes MDSCHEMA_MEMBERS
+  href: mdschema-members-rowset.md
+- name: Ensemble de lignes MDSCHEMA_PROPERTIES
+  href: mdschema-properties-rowset.md
+- name: Ensemble de lignes MDSCHEMA_SETS
+  href: mdschema-sets-rowset.md
+- name: Ensembles de lignes de schéma OLE DB pour OLAP
+  href: ole-db-for-olap-schema-rowsets.md

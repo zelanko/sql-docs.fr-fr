@@ -1,0 +1,11 @@
+- name: Installer Integration Services
+  href: install-integration-services.md
+- name: Installation de plusieurs versions Integration Services côte à côte
+  href: installing-integration-services-versions-side-by-side.md
+- name: Mettre à niveau Integration Services
+  href: upgrade-integration-services.md
+  items:
+    - name: Mettre à niveau des packages Integration Services
+      href: upgrade-integration-services-packages.md
+    - name: Mettre à niveau des packages Integration Services à l'aide de l'Assistant Mise à niveau de packages SSIS
+      href: upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md

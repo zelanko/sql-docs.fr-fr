@@ -1,0 +1,10 @@
+- name: Intégration et transactions du CLR
+  href: clr-integration-and-transactions.md
+- name: Accès à la transaction actuelle
+  href: accessing-the-current-transaction.md
+- name: Durées de vie des transactions
+  href: transaction-lifetimes.md
+- name: Promotion des transactions
+  href: transaction-promotion.md
+- name: Utilisation de System.Transactions
+  href: using-system-transactions.md

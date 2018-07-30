@@ -1,0 +1,8 @@
+- name: Développement d'un énumérateur ForEach personnalisé
+  href: developing-a-custom-foreach-enumerator.md
+- name: Création d'un énumérateur Foreach personnalisé
+  href: creating-a-custom-foreach-enumerator.md
+- name: Codage d'un énumérateur Foreach personnalisé
+  href: coding-a-custom-foreach-enumerator.md
+- name: Développement d'une interface utilisateur pour un énumérateur ForEach personnalisé
+  href: developing-a-user-interface-for-a-custom-foreach-enumerator.md

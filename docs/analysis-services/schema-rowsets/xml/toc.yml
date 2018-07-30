@@ -1,0 +1,68 @@
+- name: Ensemble de lignes DISCOVER_CALC_DEPENDENCY
+  href: discover-calc-dependency-rowset.md
+- name: Ensemble de lignes DISCOVER_COMMAND_OBJECTS
+  href: discover-command-objects-rowset.md
+- name: Ensemble de lignes DISCOVER_COMMANDS
+  href: discover-commands-rowset.md
+- name: Ensemble de lignes DISCOVER_CONNECTIONS
+  href: discover-connections-rowset.md
+- name: Ensemble de lignes DISCOVER_CSDL_METADATA
+  href: discover-csdl-metadata-rowset.md
+- name: Ensemble de lignes DISCOVER_DATASOURCES
+  href: discover-datasources-rowset.md
+- name: Ensemble de lignes DISCOVER_DB_CONNECTIONS
+  href: discover-db-connections-rowset.md
+- name: 'DISCOVER_DIMENSION_STAT, ensemble de lignes'
+  href: discover-dimension-stat-rowset.md
+- name: Ensemble de lignes DISCOVER_ENUMERATORS
+  href: discover-enumerators-rowset.md
+- name: Ensemble de lignes DISCOVER_JOBS
+  href: discover-jobs-rowset.md
+- name: Ensemble de lignes DISCOVER_KEYWORDS (XMLA)
+  href: discover-keywords-rowset-xmla.md
+- name: Ensemble de lignes DISCOVER_LITERALS
+  href: discover-literals-rowset.md
+- name: Ensemble de lignes DISCOVER_LOCATIONS
+  href: discover-locations-rowset.md
+- name: Ensemble de lignes DISCOVER_LOCKS
+  href: discover-locks-rowset.md
+- name: 'DISCOVER_MEMORYGRANT, ensemble de lignes'
+  href: discover-memorygrant-rowset.md
+- name: 'DISCOVER_MEMORYUSAGE, ensemble de lignes'
+  href: discover-memoryusage-rowset.md
+- name: Ensemble de lignes DISCOVER_OBJECT_ACTIVITY
+  href: discover-object-activity-rowset.md
+- name: Ensemble de lignes DISCOVER_OBJECT_MEMORY_USAGE
+  href: discover-object-memory-usage-rowset.md
+- name: 'DISCOVER_PARTITION_DIMENSION_STAT, ensemble de lignes'
+  href: discover-partition-dimension-stat-rowset.md
+- name: 'DISCOVER_PARTITION_STAT, ensemble de lignes'
+  href: discover-partition-stat-rowset.md
+- name: 'DISCOVER_PERFORMANCE_COUNTERS, ensemble de lignes'
+  href: discover-performance-counters-rowset.md
+- name: Ensemble de lignes DISCOVER_PROPERTIES
+  href: discover-properties-rowset.md
+- name: Ensemble de lignes DISCOVER_SCHEMA_ROWSETS
+  href: discover-schema-rowsets-rowset.md
+- name: Ensemble de lignes DISCOVER_SESSIONS
+  href: discover-sessions-rowset.md
+- name: Ensemble de lignes DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS
+  href: discover-storage-table-column-segments-rowset.md
+- name: Ensemble de lignes DISCOVER_STORAGE_TABLE_COLUMNS
+  href: discover-storage-table-columns-rowset.md
+- name: Ensemble de lignes DISCOVER_STORAGE_TABLES
+  href: discover-storage-tables-rowset.md
+- name: 'DISCOVER_TRACE_COLUMNS, ensemble de lignes'
+  href: discover-trace-columns-rowset.md
+- name: 'DISCOVER_TRACE_DEFINITION_PROVIDERINFO, ensemble de lignes'
+  href: discover-trace-definition-providerinfo-rowset.md
+- name: 'DISCOVER_TRACE_EVENT_CATEGORIES, ensemble de lignes'
+  href: discover-trace-event-categories-rowset.md
+- name: 'DISCOVER_TRACES, ensemble de lignes'
+  href: discover-traces-rowset.md
+- name: 'DISCOVER_TRANSACTIONS, ensemble de lignes'
+  href: discover-transactions-rowset.md
+- name: Ensemble de lignes DISCOVER_XML_METADATA
+  href: discover-xml-metadata-rowset.md
+- name: XML for Analysis Schema Rowsets
+  href: xml-for-analysis-schema-rowsets.md

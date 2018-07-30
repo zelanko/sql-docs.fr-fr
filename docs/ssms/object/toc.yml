@@ -1,0 +1,42 @@
+- name: Explorateur d’objets
+  href: object-explorer.md
+- name: Add Steps to a SQL Server Agent Master Job
+  href: add-steps-to-a-sql-server-agent-master-job.md
+- name: Gérer les objets à l'aide de l'Explorateur d'objets
+  href: manage-objects-by-using-object-explorer.md
+- name: Utiliser des rapports personnalisés avec les propriétés des nœuds de l'Explorateur d'objets
+  href: use-custom-reports-with-object-explorer-node-properties.md
+- name: Dépendances d'objet
+  href: object-dependencies.md
+- name: Masquer les objets système dans l’Explorateur d’objets
+  href: hide-system-objects-in-object-explorer.md
+- name: Volet Détails de l'Explorateur d'objets
+  href: object-explorer-details-pane.md
+- name: Ouvrir et configurer l'Explorateur d'objets
+  href: open-and-configure-object-explorer.md
+- name: Se connecter à une instance de l'Explorateur d'objets
+  href: connect-to-an-instance-from-object-explorer.md
+- name: Nom introuvable (boîte de dialogue)
+  href: name-not-found-dialog-box.md
+- name: Rechercher des objets (Explorateur d'objets)
+  href: browse-for-objects-object-explorer.md
+- name: Sélectionner les types d'objets (Explorateur d'objets)
+  href: select-object-types-object-explorer.md
+- name: Sélectionner des objets (Explorateur d'objets)
+  href: select-objects-object-explorer.md
+- name: Options (Explorateur d’objets SQL Server - Page Script)
+  href: options-sql-server-object-explorer-scripting-page.md
+- name: Paramètres de filtre (Explorateur d'objets et Explorateur de l'utilitaire)
+  href: filter-settings-object-explorer-and-utility-explorer.md
+- name: Supprimer les objets
+  href: delete-objects.md
+- name: Ajouter un rapport personnalisé à Management Studio
+  href: add-a-custom-report-to-management-studio.md
+- name: "Rapports personnalisés dans Management\_Studio"
+  href: custom-reports-in-management-studio.md
+- name: Ajouter des objets
+  href: add-objects.md
+- name: Options (Explorateur d’objets SQL Server - Commandes)
+  href: options-sql-server-object-explorer-commands.md
+- name: Annuler la suppression des avertissements d'exécution de rapports personnalisés
+  href: unsuppress-run-custom-report-warnings.md
