@@ -279,7 +279,7 @@ GO
   
  Si le type de document que vous souhaitez indexer ne figure pas dans la liste des types pris en charge, vous devrez peut-être rechercher, télécharger et installer des filtres supplémentaires. Pour plus d’informations, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Best practice: Consider creating a separate filegroup for the full-text and semantic indexes  
+##  <a name="BestPracticeFilegroup"></a>Meilleure pratique : créer un groupe de fichiers distinct pour les index sémantiques et de recherche en texte intégral  
  Créez un groupe de fichiers séparé pour les index sémantiques et de recherche en texte intégral si l'allocation d'espace disque pose problème. Les index sémantiques sont créés dans le même groupe de fichiers que l'index de recherche en texte intégral. Un index sémantique entièrement rempli peut contenir un grand nombre de données.  
  
 ##  <a name="IssueNoResults"></a> Problème : La recherche sur une colonne spécifique ne retourne aucun résultat  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34332620"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -230,7 +231,7 @@ Les instructions DML suivantes sont prises en charge.
 ##  <a name="auditing"></a> Audit  
  L'audit au niveau de la procédure est pris en charge dans les procédures stockées compilées en mode natif.  
 
- Pour plus d'informations sur l'audit, consultez [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Pour plus d'informations sur l'audit, consultez [Créer une spécification de l'audit du serveur et de la base de données](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
 
 ##  <a name="tqh"></a> Indicateurs de requête et de table  
  Les constructions suivantes sont admises :  
