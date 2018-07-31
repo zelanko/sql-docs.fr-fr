@@ -39,12 +39,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b8b221c752e670d9894a1108e2dea8e01f564221
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 8965bcc4935e21d0f9c397630e9b5578646ce7d8
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788790"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228335"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST et CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -488,7 +488,7 @@ SELECT CAST('<Name><FName>Carol</FName><LName>Elliot</LName></Name>'  AS XML)
 Pour obtenir plus d’exemples, consultez [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md).
   
 ### <a name="g-using-cast-and-convert-with-datetime-data"></a>G. Utilisation de CAST et de CONVERT avec des données de type datetime  
-À compter des valeurs GETDATE(), cet exemple affiche la date et l’heure actuelles, utilise `CAST` pour convertir la date et l’heure actuelles en type de données caractères, puis utilise `CONVERT` pour afficher la date et l’heure au format `ISO 8901`.
+À compter des valeurs GETDATE(), cet exemple affiche la date et l’heure actuelles, utilise `CAST` pour convertir la date et l’heure actuelles en type de données caractères, puis utilise `CONVERT` pour afficher la date et l’heure au format `ISO 8601`.
   
 ```sql
 SELECT   
