@@ -1,5 +1,5 @@
 ---
-title: Utilisation d’instructions avec SQL | Documents Microsoft
+title: Utilisation d’instructions avec SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,34 +15,34 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac74ec1c202341d6de099d97e2b7c719c2f72d27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851864"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978621"
 ---
 # <a name="using-statements-with-sql"></a>Utilisation des instructions avec SQL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Lorsque vous travaillez avec des données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données à l’aide de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] et les instructions SQL incluses, il existe différentes classes que vous pouvez utiliser. La classe que vous utilisez dépend du type d'instruction SQL que vous souhaitez exécuter.  
+  Quand vous utilisez les données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en utilisant le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] et les instructions SQL incluses, vous pouvez utiliser différentes classes. La classe que vous utilisez dépend du type d'instruction SQL que vous souhaitez exécuter.  
   
- Si votre instruction SQL ne contient aucun paramètre IN, utilisez la [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) de classe, mais s’il ne contient pas de paramètres, utilisez le [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) classe.  
+ Si votre instruction SQL ne contient pas de paramètres IN, utilisez la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Dans le cas contraire, utilisez la classe [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).  
   
 > [!NOTE]  
->  Si vous devez utiliser des instructions SQL contenant à la fois dans et les paramètres OUT, vous devez les implémenter tant que procédures stockées et les appeler à l’aide de la [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) classe. Pour plus d’informations sur l’utilisation des procédures stockées, consultez [à l’aide d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+>  Si vous devez utiliser des instructions SQL contenant à la fois des paramètres IN et OUT, vous devez les implémenter en tant que procédures stockées et les appeler à l’aide de la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Pour plus d’informations sur l’utilisation de procédures stockées, consultez [à l’aide d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md).  
   
- Les sections suivantes décrivent les différents scénarios d’utilisation des données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données à l’aide d’instructions SQL.  
+ Les sections suivantes décrivent les différents scénarios relatifs à l’utilisation des données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à l’aide d’instructions SQL.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Utilisation d’une instruction SQL sans paramètres](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)|Décrit la méthode d'utilisation des instructions SQL ne contenant pas de paramètres.|  
 |[Utilisation d’une instruction SQL avec des paramètres](../../connect/jdbc/using-an-sql-statement-with-parameters.md)|Décrit la méthode d'utilisation des instructions SQL contenant des paramètres.|  
 |[Utilisation d’une instruction SQL pour modifier des objets de base de données](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md)|Décrit la méthode d'utilisation des instructions SQL pour modifier les objets de base de données.|  
 |[Utilisation d’une instruction SQL pour modifier des données](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)|Décrit la méthode d'utilisation des instructions SQL pour modifier des données dans une base de données.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilisation d’instructions avec le pilote JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetch | Documents Microsoft
+title: PDOStatement::fetch | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308418"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019997"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,17 +34,17 @@ mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-$*fetch_style*: symbole (entier) facultatif indiquant le format des données de ligne. Consultez la section Notes pour obtenir la liste des valeurs possibles pour $*fetch_style*. La valeur par défaut est PDO::FETCH_BOTH. $*fetch_style* lors de l’extraction méthode remplace le $*fetch_style* spécifié dans la méthode PDO::query.  
+$*fetch_style* : symbole (entier) facultatif spécifiant le format des données de la ligne. Consultez la section Notes pour obtenir la liste des valeurs possibles pour $*fetch_style*. La valeur par défaut est PDO::FETCH_BOTH. $*fetch_style* dans la méthode fetch remplace le $*fetch_style* spécifié dans la méthode PDO::query.  
   
-$*cursor_orientation*: symbole (entier) facultatif indiquant la ligne à récupérer quand l’instruction prepare spécifie `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`. Consultez la section Notes pour obtenir la liste des valeurs possibles pour $*cursor_orientation*. Consultez [PDO::prepare](../../connect/php/pdo-prepare.md) pour obtenir un exemple d’utilisation d’un curseur de défilement.  
+$*cursor_orientation* : symbole (entier) facultatif indiquant la ligne à récupérer quand l’instruction prepare spécifie `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`. Consultez la section Notes pour obtenir la liste des valeurs possibles pour $*cursor_orientation*. Consultez [PDO::prepare](../../connect/php/pdo-prepare.md) pour obtenir un exemple d’utilisation d’un curseur de défilement.  
   
-$*cursor_offset*: symbole (entier) facultatif spécifiant la ligne à récupérer quand $*cursor_orientation* est la valeur PDO::FETCH_ORI_ABS ou PDO::FETCH_ORI_REL et PDO::ATTR_CURSOR a la valeur PDO::CURSOR_SCROLL.  
+$*cursor_offset* : symbole (entier) facultatif qui spécifie la ligne à récupérer quand $*cursor_orientation* a la valeur PDO::FETCH_ORI_ABS ou PDO::FETCH_ORI_REL et PDO::ATTR_CURSOR a la valeur PDO::CURSOR_SCROLL.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 Valeur mixte qui retourne une ligne ou la valeur false.  
   
-## <a name="remarks"></a>Notes  
-Le curseur s’avance automatiquement à l’appel de fetch. Le tableau suivant contient la liste des $ possible*fetch_style* valeurs.  
+## <a name="remarks"></a>Notes   
+Le curseur s’avance automatiquement à l’appel de fetch. Le tableau suivant contient la liste des valeurs $*fetch_style* possibles.  
   
 |$*fetch_style*|Description|  
 |-------------------|---------------|  
@@ -59,7 +59,7 @@ Le curseur s’avance automatiquement à l’appel de fetch. Le tableau suivant 
   
 Si le curseur est à la fin du jeu de résultats (la dernière ligne a été récupérée et le curseur a franchi les limites du jeu de résultats) et si le curseur est avant uniquement (PDO::ATTR_CURSOR = PDO::CURSOR_FWDONLY), les appels à fetch ultérieurs échouent.  
   
-Si le curseur peut défiler (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), fetch le replace dans les limites du jeu de résultats. Le tableau suivant contient la liste des $ possible*cursor_orientation* valeurs.  
+Si le curseur peut défiler (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), fetch le replace dans les limites du jeu de résultats. Le tableau suivant contient la liste des valeurs $*cursor_orientation* possibles.  
   
 |$*cursor_orientation*|Description|  
 |--------------------------|---------------|  
@@ -68,13 +68,13 @@ Si le curseur peut défiler (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), fetch le re
 |PDO::FETCH_ORI_FIRST|Récupère la première ligne.|  
 |PDO::FETCH_ORI_LAST|Récupère la dernière ligne.|  
 |PDO::FETCH_ORI_ABS, *num*|Récupère la ligne demandée dans $*cursor_offset* par numéro de ligne.|  
-|PDO::FETCH_ORI_REL, *num*|Récupère la ligne demandée dans $*cursor_offset* par position relative à la position actuelle.|  
+|PDO::FETCH_ORI_REL, *num*|Récupère la ligne demandée dans $*cursor_offset* par position relative, à partir de la position actuelle.|  
   
-Si la valeur spécifiée pour $*cursor_offset* ou $*cursor_orientation* les résultats dans une position en dehors des limites du jeu de résultats, fetch échoue.  
+Si la valeur spécifiée pour $*cursor_offset* ou $*cursor_orientation* donne une position en dehors des limites du jeu de résultats, l’utilisation de fetch aboutit à un échec.  
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php  
@@ -144,7 +144,7 @@ La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDr
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_fetch_object | Documents Microsoft
+title: sqlsrv_fetch_object | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309148"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991241"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,11 +43,11 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 #### <a name="parameters"></a>Paramètres  
 *$stmt*: ressource d’instruction correspondant à une instruction exécutée.  
   
-*$className* [facultatif] : chaîne spécifiant le nom de la classe à instancier. Si aucune valeur n’est spécifiée pour le paramètre *$className* , une instance de **stdClass** PHP est instanciée.  
+*$className* [FACULTATIF]: chaîne spécifiant le nom de la classe à instancier. Si aucune valeur n’est spécifiée pour le paramètre *$className* , une instance de **stdClass** PHP est instanciée.  
   
-*$ctorParams* [facultatif] : tableau qui contienne des valeurs passées au constructeur de la classe spécifiée avec la *$className* paramètre. Si le constructeur de la classe spécifiée accepte des valeurs de paramètre, le paramètre *$ctorParams* doit être utilisé durant l’appel de **sqlsrv_fetch_object**.  
+*$ctorParams* [FACULTATIF] : tableau qui contient les valeurs passées au constructeur de la classe spécifiée avec le paramètre *$className*. Si le constructeur de la classe spécifiée accepte des valeurs de paramètre, le paramètre *$ctorParams* doit être utilisé durant l’appel de **sqlsrv_fetch_object**.  
   
-*ligne* [facultatif] : une des valeurs suivantes, spécifiant la ligne à laquelle accéder dans un jeu de résultats qui utilise un curseur de défilement. (Si *ligne* est spécifié, *$className* et *$ctorParams* doit être explicitement spécifié, même si vous devez spécifier null pour *$className*et *$ctorParams*.)  
+*row* [FACULTATIF] : l’une des valeurs suivantes, spécifiant la ligne à laquelle accéder dans un jeu de résultats qui utilise un curseur de défilement. (Si *row* est spécifié, *$className* et *$ctorParams* doivent être explicitement spécifiés, même si vous devez spécifier une valeur Null pour *$className* et *$ctorParams*.)  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -63,14 +63,14 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 Pour plus d’informations sur ces valeurs, consultez [Spécification d’un type de curseur et sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*décalage* [facultatif] : utilisé avec SQLSRV_SCROLL_ABSOLUTE et SQLSRV_SCROLL_RELATIVE pour spécifier la ligne à récupérer. Le premier enregistrement dans le jeu de résultats est 0.  
+*offset* [FACULTATIF] : utilisé avec SQLSRV_SCROLL_ABSOLUTE et SQLSRV_SCROLL_RELATIVE pour spécifier la ligne à récupérer. Le premier enregistrement dans le jeu de résultats est 0.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 Objet PHP avec des propriétés qui correspondent à des noms de champ du jeu de résultats. Les valeurs de propriété sont renseignées avec les valeurs de champ de jeu de résultats correspondantes. Si la classe spécifiée avec le paramètre *$className* facultatif n’existe pas ou s’il n’existe aucun jeu de résultats actif associé à l’instruction spécifiée, **false** est retourné. S’il n’y a plus aucune ligne à récupérer, la valeur **Null** est retournée.  
   
 Le type de données d’une valeur dans l’objet retourné correspond au type de données PHP par défaut. Pour plus d’informations sur les types de données PHP par défaut, consultez [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Si un nom de classe est spécifié avec le paramètre *$className* facultatif, un objet de ce type de classe est instancié. Si la classe a des propriétés dont les noms correspondent aux noms de champ du jeu de résultats, les valeurs du jeu de résultats correspondantes sont appliquées aux propriétés. Si un nom de champ du jeu de résultats ne correspond pas à une propriété de classe, une propriété avec le nom de champ du jeu de résultats est ajoutée à l’objet et la valeur de jeu de résultats est appliquée à la propriété.  
   
 Les règles suivantes s’appliquent lors de la spécification d’une classe avec le paramètre *$className* :  
@@ -92,8 +92,8 @@ Si les résultats retournés par cette requête sont récupérés avec **sqlsrv_
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="example"></a>Exemple  
-L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’un objet PHP. L’exemple suppose que le serveur SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a> Exemple  
+L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’un objet PHP. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -131,8 +131,8 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Exemple  
-L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’une instance de la classe *Product* définie dans le script. L’exemple récupère les informations de produit à partir de la *Purchasing.PurchaseOrderDetail* et *Production.Product* tables de la base de données AdventureWorks pour les produits qui ont une date d’échéance ( *DueDate*) et la quantité en stock (*StockQty*) inférieur à une valeur spécifiée. L’exemple met en évidence certaines des règles qui s’appliquent durant la spécification d’une classe dans un appel à **sqlsrv_fetch_object**:  
+## <a name="example"></a> Exemple  
+L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’une instance de la classe *Product* définie dans le script. L’exemple récupère, à partir des tables *Purchasing.PurchaseOrderDetail* et *Production.Product* de la base de données AdventureWorks, les informations sur les produits qui ont une date d’échéance spécifique (*DueDate*), et dont la quantité en stock (*StockQty*) est inférieure à la valeur spécifiée. L’exemple met en évidence certaines des règles qui s’appliquent durant la spécification d’une classe dans un appel à **sqlsrv_fetch_object**:  
   
 -   La variable *$product* est une instance de la classe *Product* , car Product a été spécifié avec le paramètre *$className* et la classe *Product* existe.  
   
@@ -142,7 +142,7 @@ L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la for
   
 -   La propriété privée *UnitPrice* est renseignée avec la valeur du champ *UnitPrice* .  
   
-L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -245,7 +245,7 @@ Si les résultats retournés par cette requête sont récupérés avec **sqlsrv_
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)  
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  

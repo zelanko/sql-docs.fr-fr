@@ -1,5 +1,5 @@
 ---
-title: Méthode updateSQLXML (java.lang.String, java.sql.SQLXML) | Documents Microsoft
+title: updateSQLXML, méthode (java.lang.String, java.sql.SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4678a6611e2f13624cb2cfefda15c37a8195e3aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849684"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039220"
 ---
 # <a name="updatesqlxml-method-javalangstring-javasqlsqlxml"></a>Méthode updateSQLXML (java.lang.String, java.sql.SQLXML)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateSQLXML(java.lang.String columnLabel,
 #### <a name="parameters"></a>Paramètres  
  *columnLabel*  
   
- A **chaîne** qui indique l’étiquette de colonne.  
+ Un **chaîne** qui indique l’étiquette de colonne.  
   
  *xmlObject*  
   
@@ -46,12 +46,12 @@ public void updateSQLXML(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode updateSQLXML est spécifiée par la méthode updateSQLXML dans l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthode updateSQLXML &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [updateSQLXML, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

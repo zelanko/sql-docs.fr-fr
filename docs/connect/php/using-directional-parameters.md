@@ -1,5 +1,5 @@
 ---
-title: Utilisation des paramètres directionnels | Documents Microsoft
+title: Utilisation de paramètres directionnels | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8dc5a423b432d272565f8b8db6afdd2c22cbd16
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310188"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991261"
 ---
 # <a name="using-directional-parameters"></a>Utilisation de paramètres directionnels
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Lorsque vous utilisez le pilote PDO_SQLSRV, vous pouvez utiliser [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) pour spécifier les paramètres d’entrée et de sortie.  
+Quand vous utilisez le pilote PDO_SQLSRV, vous pouvez utiliser [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) pour spécifier des paramètres d’entrée et de sortie.  
   
 Les rubriques de cette section décrivent comment utiliser des paramètres directionnels lors de l’appel de procédures stockées à l’aide du pilote SQLSRV.  
   
@@ -36,7 +36,7 @@ Les rubriques de cette section décrivent comment utiliser des paramètres direc
 |[Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)|Montre comment appeler une procédure stockée avec un paramètre de sortie et comment récupérer sa valeur.|  
 |[Guide pratique pour récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)|Montre comment appeler une procédure stockée avec un paramètre d’entrée/de sortie et comment récupérer sa valeur.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)  
 
 [Mise à jour des données &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

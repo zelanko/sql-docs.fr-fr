@@ -1,5 +1,5 @@
 ---
-title: La récupération de données | Documents Microsoft
+title: Récupération des données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309188"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983035"
 ---
 # <a name="retrieving-data"></a>Récupération de données
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,10 +52,10 @@ Le pilote SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] fo
   
 Si votre requête récupère plusieurs jeux de résultats, vous pouvez passer au prochain jeu de résultats avec [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md).  
   
-À compter de la version 1.1 de la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], vous pouvez utiliser [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) pour voir si un jeu de résultats comporte des lignes.  
+À compter de la version 1.1 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], vous pouvez utiliser [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) pour voir si un jeu de résultats comporte des lignes.  
   
 ## <a name="pdosqlsrv-driver"></a>Pilote PDO_SQLSRV  
-Le pilote PDO_SQLSRV de la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] fournit les options suivantes pour récupérer des données à partir d’un jeu de résultats :  
+Le pilote PDO_SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] fournit les options suivantes pour récupérer des données à partir d’un jeu de résultats :  
   
 -   [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md)  
   
@@ -83,7 +83,7 @@ Vous pouvez voir le nombre de lignes dans un jeu de résultats si vous spécifie
 ## <a name="related-sections"></a>Sections connexes  
 [Procédure : spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Récupération de données](../../connect/php/retrieving-data.md)  

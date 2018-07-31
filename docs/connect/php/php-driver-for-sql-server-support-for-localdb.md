@@ -1,5 +1,5 @@
 ---
-title: Prise en charge de la base de données locale | Documents Microsoft
+title: Prise en charge de la base de données locale | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308748"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992911"
 ---
 # <a name="support-for-localdb"></a>Prise en charge de la base de données locale
 
@@ -26,17 +26,17 @@ ms.locfileid: "35308748"
 
 LocalDB est une version légère de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] qui est disponible depuis [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Cette rubrique explique comment se connecter à une base de données dans une instance LocalDB.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Pour plus d’informations sur la base de données locale, y compris comment installer LocalDB et configurer votre instance de base de données locale, consultez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] rubrique de la documentation en ligne sur [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
 
-En bref, LocalDB vous permet de :
+En bref, base de données locale vous permet de :
 
 -   Utiliser **sqllocaldb.exe i** pour déterminer le nom de l'instance par défaut.
 
 -   Utiliser le mot clé de chaîne de connexion **AttachDBFilename** pour spécifier le fichier de base de données auquel le serveur doit se rattacher. Lorsque vous utilisez **AttachDBFilename**, si vous ne spécifiez pas le nom de la base de données avec le mot clé de chaîne de connexion **Database** , la base de données est supprimée de l'instance LocalDB lorsque l'application se ferme.
 
--   Spécifiez une instance de la base de données locale dans votre chaîne de connexion. Par exemple, Voici un exemple de chaîne de connexion SQLSRV :
+-   Spécifiez une instance LocalDB dans votre chaîne de connexion. Par exemple, Voici un exemple de chaîne de connexion SQLSRV :
 
     ```php
     $conn = sqlsrv_connect( '(localdb)\\v11.0',
@@ -49,7 +49,7 @@ En bref, LocalDB vous permet de :
         array('AttachDBFileName'=>'c:\\myData.MDF'));
     ```
 
-    L’élément suivant est un exemple de chaîne de connexion PDO_SQLSRV :  
+    Voici un exemple de chaîne de connexion PDO_SQLSRV :  
 
     ```php
     $conn = new PDO( 'sqlsrv:server=(localdb)\\v11.0;'
@@ -63,24 +63,24 @@ En bref, LocalDB vous permet de :
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-Si nécessaire, vous pouvez créer une instance LocalDB avec sqllocaldb.exe. Vous pouvez également utiliser sqlcmd.exe pour ajouter et modifier des bases de données dans une instance LocalDB. Par exemple, `sqlcmd -S (localdb)\v11.0`. (Lors de l’exécution dans IIS, vous devez exécuter sous le compte approprié pour obtenir les mêmes résultats que lorsque vous exécutez à la ligne de commande, consultez [à l’aide de LocalDB avec IIS complet, partie 2 : la propriété d’Instance](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) pour plus d’informations.)
+Si nécessaire, vous pouvez créer une instance LocalDB avec sqllocaldb.exe. Vous pouvez également utiliser sqlcmd.exe pour ajouter et modifier des bases de données dans une instance LocalDB. Par exemple, `sqlcmd -S (localdb)\v11.0`. (Lors de l’exécution dans IIS, vous avez besoin pour s’exécuter sous le compte approprié pour obtenir les mêmes résultats que lorsque vous exécutez en ligne de commande ; consultez [à l’aide de LocalDB avec IIS complet, partie 2 : la propriété d’Instance](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) pour plus d’informations.)
 
-Chaînes de connexion exemple à l’aide du pilote SQLSRV qui se connectent à une base de données dans une base de données locale d’une instance appelée myInstance nommée sont les suivants :
+Chaînes de connexion exemple à l’aide du pilote SQLSRV qui se connectent à une base de données dans une base de données locale d’une instance appelée myInstance nommée sont les suivantes :
 
 ```php
 $conn = sqlsrv_connect( '(localdb)\\myInstance',
     array( 'Database'=>'myData'));
 ```
 
-Chaînes de connexion exemple à l’aide du pilote PDO_SQLSRV qui se connectent à une base de données dans une base de données locale d’une instance appelée myInstance nommée sont les suivants :  
+Chaînes de connexion exemple l’utilisation du pilote PDO_SQLSRV qui se connectent à une base de données dans une base de données locale d’une instance appelée myInstance nommée sont les suivantes :  
   
 ```php
 $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-Pour obtenir des instructions sur l’installation de base de données locale, consultez le [LocalDB documentation](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Si vous utilisez sqlcmd.exe pour modifier les données dans votre instance de base de données locale, vous devez le [utilitaire sqlcmd](../../tools/sqlcmd-utility.md).
+Pour obtenir des instructions sur l’installation de base de données locale, consultez le [LocalDB documentation](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Si vous utilisez sqlcmd.exe pour modifier des données dans votre instance de base de données locale, vous devez le [utilitaire sqlcmd](../../tools/sqlcmd-utility.md).
 
-## <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a> Voir aussi
 
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)

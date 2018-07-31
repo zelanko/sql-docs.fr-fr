@@ -1,5 +1,5 @@
 ---
-title: PDO::Query | Documents Microsoft
+title: PDO::Query | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308268"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979743"
 ---
 # <a name="pdoquery"></a>PDO::Query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,26 +36,26 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>Paramètres  
 *$statement*: instruction SQL à exécuter.  
   
-*$fetch_style*: instructions facultatives sur l’exécution de la requête. Pour plus d’informations, consultez la section Notes. $*fetch_style* dans PDO::query peut être remplacé par $*fetch_style* dans PDO::fetch.  
+*$fetch_style* : instructions facultatives sur l’exécution de la requête. Pour plus d’informations, consultez la section Notes. $*fetch_style* dans PDO::query peut être remplacé par $*fetch_style* dans PDO::fetch.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 Si l’appel réussit, PDO::query retourne un objet PDOStatement. Si l’appel échoue, PDO::query génère un objet PDOException ou retourne la valeur false, selon le paramètre de PDO::ATTR_ERRMODE.  
   
 ## <a name="exceptions"></a>Exceptions  
 PDOException.  
   
-## <a name="remarks"></a>Notes  
-Une requête exécutée avec PDO::query peut s’exécuter soit une instruction préparée ou directement, selon le paramètre de PDO::SQLSRV_ATTR_DIRECT_QUERY. Pour plus d’informations, consultez [Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
+## <a name="remarks"></a>Notes   
+Une requête exécutée avec PDO::query peut soit exécuter une instruction préparée, soit s’exécuter directement, selon le paramètre de PDO::SQLSRV_ATTR_DIRECT_QUERY. Pour plus d’informations, consultez [Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
-PDO::SQLSRV_ATTR_QUERY_TIMEOUT affecte également le comportement de PDO::exec ; Pour plus d’informations, consultez [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
+PDO::SQLSRV_ATTR_QUERY_TIMEOUT affecte également le comportement de PDO::exec. Pour plus d’informations, consultez [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 Vous pouvez spécifier les options suivantes pour $*fetch_style*.  
   
 |style|Description|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Recherche les données dans la colonne spécifiée. La première colonne de la table est la colonne 0.|  
-|À PDO::FETCH_CLASS, '*classname*', tableau ( *arglist* )|Crée une instance d’une classe et attribue des noms de colonne aux propriétés de la classe. Si le constructeur de classe accepte un ou plusieurs paramètres, vous pouvez également passer un *arglist*.|  
-|À PDO::FETCH_CLASS, '*classname*'|Assigne des noms de colonne aux propriétés dans une classe existante.|  
+|PDO::FETCH_CLASS, ’*nom_classe*’, array( *arglist* )|Crée une instance d’une classe et attribue des noms de colonne aux propriétés de la classe. Si le constructeur de classe accepte un ou plusieurs paramètres, vous pouvez également passer un *arglist*.|  
+|À PDO::FETCH_CLASS, «*classname*'|Assigne des noms de colonne aux propriétés dans une classe existante.|  
   
 Appelez PDOStatement::closeCursor pour libérer les ressources de base de données associées à l’objet PDOStatement avant de rappeler PDO::query.  
   
@@ -65,7 +65,7 @@ Si toutes les données d’un jeu de résultats ne sont pas récupérées, l’a
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Cet exemple illustre plusieurs requêtes.  
   
 ```  
@@ -121,7 +121,7 @@ $stmt = null;
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

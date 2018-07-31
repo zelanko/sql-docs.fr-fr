@@ -1,5 +1,5 @@
 ---
-title: 'Étape 3 : Preuve de concept pour la connexion à SQL via PHP | Documents Microsoft'
+title: 'Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de PHP | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6fe5c82561e32924c1a1792eda552caec522881
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309448"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006451"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Étape 3 : preuve de concept pour la connexion à SQL via PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "35309448"
 ## <a name="step-1--connect"></a>Étape 1 : se connecter  
   
   
-Cela **OpenConnection** fonction est appelée au début de toutes les fonctions qui suivent.  
+Cela **OpenConnection** fonction est appelée au début dans toutes les fonctions qui suivent.  
   
   
 ```php 
@@ -49,9 +49,9 @@ Cela **OpenConnection** fonction est appelée au début de toutes les fonctions 
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>Étape 2 : Exécuter la requête  
+## <a name="step-2--execute-query"></a>Étape 2 : Exécution de requête  
   
-Le [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) fonction peut être utilisée pour récupérer un jeu de résultats d’une requête par rapport à la base de données SQL. Cette fonction est essentiellement accepte toute requête et l’objet de connexion et retourne un jeu de résultats qui peut être répétée sur l’utilisation de [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+Le [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) fonction peut être utilisée pour récupérer un jeu de résultats d’une requête par rapport à la base de données SQL. Essentiellement, cette fonction accepte n’importe quelle requête et l’objet de connexion et retourne un jeu de résultats qui peut être itéré à l’utilisation de [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -83,7 +83,7 @@ Le [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) fonction
   
 ## <a name="step-3--insert-a-row"></a>Étape 3 : Insérer une ligne  
   
-Dans cet exemple, vous allez apprendre à passer en toute sécurité une commande [INSERT](../../t-sql/statements/insert-transact-sql.md), en passant des valeurs en paramètres qui protègeront votre application à partir des tentatives [d'injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+Dans cet exemple, vous verrez comment exécuter un [insérer](../../t-sql/statements/insert-transact-sql.md) instruction en toute sécurité, passer des paramètres pour protéger votre application à partir de [injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valeur.    
   
   
 ```php 
@@ -116,13 +116,13 @@ Dans cet exemple, vous allez apprendre à passer en toute sécurité une command
 ## <a name="step-4--rollback-a-transaction"></a>Étape 4 : Restaurer une transaction  
   
   
-Cet exemple de code illustre l’utilisation de transactions dans lequel vous :  
+Cet exemple de code illustre l’utilisation de transactions dans lesquelles vous :  
   
--Commencer une transaction  
+-Commencez une transaction  
   
--Insérer une ligne de données, mettre à jour d’une autre ligne de données  
+-Insérez une ligne de données, mettre à jour d’une autre ligne de données  
   
--Valider votre transaction si l’insertion et la mise à jour a réussi et restaurer la transaction si un d’eux n’était pas  
+-Validez votre transaction si l’insertion et la mise à jour ont réussi et la restauration de la transaction si un d’eux n’était pas  
   
   
 ```php 

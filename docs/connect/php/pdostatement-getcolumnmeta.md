@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::getColumnMeta | Documents Microsoft
+title: PDOStatement::getColumnMeta | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8211a6a4cda4a5efa29b7379c24ba3fbbfa5458e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308528"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983007"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,12 +34,12 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$conn*: (entier) numéro de base zéro de la colonne dont vous souhaitez récupérer les métadonnées.  
+*$conn* : (entier) numéro en base zéro de la colonne dont vous voulez récupérer les métadonnées.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 Tableau associatif (clé et valeur) contenant les métadonnées pour la colonne. Consultez la section Notes pour obtenir une description des champs du tableau.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Le tableau suivant décrit les champs du tableau retourné par getColumnMeta.  
   
 |NAME|VALUES|  
@@ -55,7 +55,7 @@ Le tableau suivant décrit les champs du tableau retourné par getColumnMeta.
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php  
@@ -73,7 +73,7 @@ print $metadata['name'];
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

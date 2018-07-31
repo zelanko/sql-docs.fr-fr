@@ -1,5 +1,5 @@
 ---
-title: Configurer l’avertissement gestion des erreurs et l’utilisation du pilote SQLSRV | Documents Microsoft
+title: Configurer la gestion des erreurs et des avertissements à l’aide du pilote SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,40 +17,40 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50018e401c67bd0c1fe2cefef71659aeb560a132
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307408"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999243"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Procédure : configurer la gestion des erreurs et avertissements à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette rubrique décrit comment configurer le pilote SQLSRV pour gérer les erreurs et avertissements.  
   
-Par défaut, le pilote SQLSRV traite les avertissements comme des erreurs ; un appel à une **sqlsrv** fonction qui génère une erreur ou un avertissement retourne **false**. Pour désactiver ce comportement, utilisez le [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) (fonction). Lorsque la ligne de code suivante est placée au début d’un script, un **sqlsrv** fonction qui génère uniquement des avertissements (aucune erreur) ne retourne pas **false**:  
+Par défaut, le pilote SQLSRV traite les avertissements comme des erreurs ; un appel à une fonction **sqlsrv** qui génère une erreur ou un avertissement retourne **false**. Pour désactiver ce comportement, utilisez la fonction [sqlsrv_configure](../../connect/php/sqlsrv-configure.md). Quand la ligne de code suivante est placée au début d’un script, une fonction **sqlsrv** qui génère uniquement des avertissements (sans aucune erreur) ne retourne pas **false** :  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 0);`  
   
-La ligne de code suivante rétablit le comportement par défaut (les avertissements sont traités comme des erreurs) :  
+La ligne de code suivante réinitialise le comportement par défaut (les avertissements sont traités comme des erreurs) :  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 1);`  
   
 > [!NOTE]  
 > Les avertissements qui correspondent aux valeurs SQLSTATE 01000, 01001, 01003 et 01S02 ne sont jamais traités comme des erreurs. Quelle que soit la configuration, une fonction **sqlsrv** qui génère uniquement des avertissements qui correspondent à l’un de ces états ne retourne pas **false**.  
   
-La valeur de **WarningsReturnAsErrors** peut également être définie dans le fichier php.ini. Par exemple, cette entrée dans la `[sqlsrv]` section du fichier php.ini désactive le comportement par défaut.  
+La valeur de **WarningsReturnAsErrors** peut également être définie dans le fichier php.ini. Par exemple, cette entrée dans la section `[sqlsrv]` du fichier php.ini désactive le comportement par défaut.  
   
 `sqlsrv.WarningsReturnAsErrors = 0`  
   
 Pour plus d’informations sur la récupération d’informations d’erreur et d’avertissement, consultez [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) et [Procédure : gérer les erreurs et avertissements](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple de code suivant montre comment désactiver le comportement de gestion des erreurs par défaut. L’exemple utilise la commande Transact-SQL PRINT pour générer un avertissement. Pour plus d’informations sur la commande PRINT, consultez [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md).  
   
 L’exemple montre d’abord le comportement de gestion des erreurs par défaut en exécutant une requête qui génère un avertissement. Cet avertissement est traité comme une erreur. Après avoir modifié la configuration de la gestion des erreurs, la même requête est exécutée. Cet avertissement n’est pas traité comme une erreur.  
   
-L’exemple part du principe que SQL Server est installé sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server est installé sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -101,7 +101,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Journalisation de l’activité](../../connect/php/logging-activity.md)
 
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

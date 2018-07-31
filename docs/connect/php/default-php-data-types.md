@@ -1,5 +1,5 @@
 ---
-title: Types de données PHP par défaut | Documents Microsoft
+title: Types de données PHP par défaut | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307698"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981358"
 ---
 # <a name="default-php-data-types"></a>Types de données PHP par défaut
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,47 +37,47 @@ Le tableau suivant répertorie le type de données SQL Server (type des données
   
 |Type SQL Server|Type PHP par défaut|Encodage par défaut|  
 |-------------------|--------------------|--------------------|  
-|BIGINT|String|caractère 8 bits<sup>1</sup>|  
+|BIGINT|String|Caractère 8 bits<sup>1</sup>|  
 |binary|Flux<sup>2</sup>|Binaire<sup>3</sup>|  
-|bit|Entier|caractère 8 bits<sup>1</sup>|  
-|char|String|caractère 8 bits<sup>1</sup>|  
+|bit|Entier|Caractère 8 bits<sup>1</sup>|  
+|char|String|Caractère 8 bits<sup>1</sup>|  
 |date<sup>4</sup>|DATETIME|Non applicable|  
-|datetime<sup>4</sup>|DATETIME|Non applicable|  
+|date/heure<sup>4</sup>|DATETIME|Non applicable|  
 |datetime2<sup>4</sup>|DATETIME|Non applicable|  
 |datetimeoffset<sup>4</sup>|DATETIME|Non applicable|  
-|Décimal|String|caractère 8 bits<sup>1</sup>|  
-|FLOAT|float|caractère 8 bits<sup>1</sup>|  
+|Décimal|String|Caractère 8 bits<sup>1</sup>|  
+|FLOAT|float|Caractère 8 bits<sup>1</sup>|  
 |geography|Flux|Binaire<sup>3</sup>|  
 |geometry|Flux|Binaire<sup>3</sup>|  
 |image<sup>5</sup>|Flux<sup>2</sup>|Binaire<sup>3</sup>|  
-|INT|Entier|caractère 8 bits<sup>1</sup>|  
-|money|String|caractère 8 bits<sup>1</sup>|  
-|NCHAR|String|caractère 8 bits<sup>1</sup>|  
-|NUMERIC|String|caractère 8 bits<sup>1</sup>|  
-|NVARCHAR|String|caractère 8 bits<sup>1</sup>|  
-|nvarchar(MAX)|Flux<sup>2</sup>|caractère 8 bits<sup>1</sup>|  
-|ntext<sup>6</sup>|Flux<sup>2</sup>|caractère 8 bits<sup>1</sup>|  
-|REAL|float|caractère 8 bits<sup>1</sup>|  
-|smalldatetime|DATETIME|caractère 8 bits<sup>1</sup>|  
-|SMALLINT|Entier|caractère 8 bits<sup>1</sup>|  
-|SMALLMONEY|String|caractère 8 bits<sup>1</sup>|  
-|sql_variant<sup>7</sup>|String|caractère 8 bits<sup>1</sup>|  
-|text<sup>8</sup>|Flux<sup>2</sup>|caractère 8 bits<sup>1</sup>|  
+|INT|Entier|Caractère 8 bits<sup>1</sup>|  
+|money|String|Caractère 8 bits<sup>1</sup>|  
+|NCHAR|String|Caractère 8 bits<sup>1</sup>|  
+|NUMERIC|String|Caractère 8 bits<sup>1</sup>|  
+|NVARCHAR|String|Caractère 8 bits<sup>1</sup>|  
+|nvarchar(MAX)|Flux<sup>2</sup>|Caractère 8 bits<sup>1</sup>|  
+|ntext<sup>6</sup>|Flux<sup>2</sup>|Caractère 8 bits<sup>1</sup>|  
+|REAL|float|Caractère 8 bits<sup>1</sup>|  
+|smalldatetime|DATETIME|Caractère 8 bits<sup>1</sup>|  
+|SMALLINT|Entier|Caractère 8 bits<sup>1</sup>|  
+|SMALLMONEY|String|Caractère 8 bits<sup>1</sup>|  
+|sql_variant<sup>7</sup>|String|Caractère 8 bits<sup>1</sup>|  
+|texte<sup>8</sup>|Flux<sup>2</sup>|Caractère 8 bits<sup>1</sup>|  
 |time<sup>4</sup>|DATETIME|Non applicable|  
-|TIMESTAMP|String|caractère 8 bits<sup>1</sup>|  
-|TINYINT|Entier|caractère 8 bits<sup>1</sup>|  
+|TIMESTAMP|String|Caractère 8 bits<sup>1</sup>|  
+|TINYINT|Entier|Caractère 8 bits<sup>1</sup>|  
 |UDT|Flux<sup>2</sup>|Binaire<sup>3</sup>|  
-|UNIQUEIDENTIFIER|Chaîne<sup>9</sup>|caractère 8 bits<sup>1</sup>|  
+|UNIQUEIDENTIFIER|Chaîne<sup>9</sup>|Caractère 8 bits<sup>1</sup>|  
 |varbinary|Flux<sup>2</sup>|Binaire<sup>3</sup>|  
 |varbinary(MAX)|Flux<sup>2</sup>|Binaire<sup>3</sup>|  
-|varchar|String|caractère 8 bits<sup>1</sup>|  
-|varchar(MAX)|Flux<sup>2</sup>|caractère 8 bits<sup>1</sup>|
-|xml|Flux<sup>2</sup>|caractère 8 bits<sup>1</sup>|  
+|varchar|String|Caractère 8 bits<sup>1</sup>|  
+|varchar(MAX)|Flux<sup>2</sup>|Caractère 8 bits<sup>1</sup>|
+|xml|Flux<sup>2</sup>|Caractère 8 bits<sup>1</sup>|  
   
 
-1.  Les données sont retournées sous forme de caractères 8 bits comme spécifié dans la page de codes des paramètres régionaux Windows définis sur le système. Les caractères multioctets ou les caractères qui ne sont pas mappent à cette page de codes sont remplacés par un caractère codés sur un point d’interrogation ( ?).  
+1.  Les données sont retournées sous forme de caractères 8 bits comme spécifié dans la page de codes des paramètres régionaux Windows définis sur le système. Les caractères multioctets ou les caractères non mappés dans cette page de codes sont remplacés par un point d’interrogation (?) à un octet.  
   
-2.  Si [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) ou [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) est utilisée pour récupérer des données dont le type de flux de données PHP par défaut, les données sont retournées sous forme de chaîne avec le même encodage que le flux. Par exemple, si un serveur SQL Server en binaire type est récupéré à l’aide de **sqlsrv_fetch_array**, la valeur par défaut type de retour est une chaîne binaire.  
+2.  Si [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) ou [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) est utilisé pour récupérer des données dont le type PHP par défaut est Flux, les données sont retournées sous la forme d’une chaîne avec le même encodage que le flux. Par exemple, si un type binaire SQL Server est récupéré à l’aide de **sqlsrv_fetch_array**, le type de retour par défaut est une chaîne binaire.  
   
 3.  Les données sont retournées à partir du serveur sous la forme d’un flux d’octets bruts sans encodage ni traduction.  
 
@@ -97,7 +97,7 @@ Le tableau suivant répertorie le type de données SQL Server (type des données
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>Autres nouveaux types et fonctionnalités SQL Server 2008  
-Types de données qui sont nouveaux dans SQL Server 2008 et qui existent en dehors des colonnes (tels que les paramètres table) ne sont pas pris en charge dans le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Le tableau suivant récapitule la prise en charge PHP pour les nouvelles fonctionnalités de SQL Server 2008.  
+Les types de données qui sont nouveaux dans SQL Server 2008 et qui existent en dehors des colonnes (par exemple, les paramètres table) ne sont pas pris en charge dans [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Le tableau suivant résume la prise en charge PHP pour les nouvelles fonctionnalités SQL Server 2008.  
   
 |Fonctionnalité|Prise en charge PHP|  
 |-----------|---------------|  
@@ -111,7 +111,7 @@ Types de données qui sont nouveaux dans SQL Server 2008 et qui existent en deho
   
 Une prise en charge partielle des types signifie que vous ne pouvez pas interroger par programme le type de la colonne.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Converting Data Types](../../connect/php/converting-data-types.md)

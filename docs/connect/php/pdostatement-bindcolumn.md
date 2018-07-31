@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::bindColumn | Documents Microsoft
+title: PDOStatement::bindColumn | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b01f19dcb7b55da9c547d07d07784fe1730cdd66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308448"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006891"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,23 +34,23 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-$*colonne*: le numéro (mixte) de la colonne (index de base 1) ou le nom de la colonne du jeu de résultats.  
+$*column* : numéro (mixte) de la colonne (index de base 1) ou nom de la colonne dans le jeu de résultats.  
   
-&$*Param*: le nom (mixte) de la variable PHP à laquelle la colonne va être liée.  
+&$*param* : nom (mixte) de la variable PHP à laquelle la colonne va être liée.  
   
-$*type*: le type de données facultatif du paramètre, représenté par une constante PDO::PARAM_ *.  
+$*type* : type de données facultatif du paramètre, représenté par une constante PDO::PARAM_* constant.  
   
 $*maxLen*: entier facultatif, non utilisé par les pilotes Microsoft SQL Server pour PHP.  
   
-$*driverdata*: mixtes facultatifs ou des paramètres pour le pilote. Par exemple, vous pouvez spécifier PDO::SQLSRV_ENCODING_UTF8 pour lier la colonne à une variable en tant que chaîne encodée au format UTF-8.  
+$*driverdata* : paramètres mixte(s) facultatif(s) du pilote. Par exemple, vous pouvez spécifier PDO::SQLSRV_ENCODING_UTF8 pour lier la colonne à une variable en tant que chaîne encodée au format UTF-8.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 TRUE en cas de réussite ; sinon, FALSE.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Cet exemple montre comment une variable peut être liée à une colonne dans un jeu de résultats.  
   
 ```  
@@ -70,7 +70,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_BOUND ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

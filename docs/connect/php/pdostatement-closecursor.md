@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::closeCursor | Documents Microsoft
+title: PDOStatement::closeCursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7795d237ab932ddb2cb7b1e45700f023ca939327
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308698"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019617"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,17 +33,17 @@ Ferme le curseur, ce qui permet de réexécuter l’instruction.
 bool PDOStatement::closeCursor();  
 ```  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 true en cas de réussite ; sinon, false.  
   
-## <a name="remarks"></a>Notes  
-closeCursor a un effet quand l’option de connexion MultipleActiveResultSets a la valeur False.  Pour plus d’informations sur l’option de connexion MultipleActiveResultSets, consultez [Comment : désactiver les jeux de résultats MARS (Multiple Active)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
+## <a name="remarks"></a>Notes   
+closeCursor a un effet quand l’option de connexion MultipleActiveResultSets a la valeur False.  Pour plus d’informations sur l’option de connexion MultipleActiveResultSets, consultez [Guide pratique pour désactiver MARS (Multiple Active Result Set)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
   
 Au lieu d’appeler closeCursor, vous pouvez simplement affecter la valeur null au handle d’instruction.  
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php  
@@ -68,7 +68,7 @@ print_r($result);
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

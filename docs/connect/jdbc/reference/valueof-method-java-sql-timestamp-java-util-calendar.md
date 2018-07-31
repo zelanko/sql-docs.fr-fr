@@ -1,5 +1,5 @@
 ---
-title: Méthode valueOf (java.sql.Timestamp, java.util.Calendar) | Documents Microsoft
+title: valueOf, méthode (java.sql.Timestamp, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2b742e3ccdf297aaa6ede4feb5bb93b04224823
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850084"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039237"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>Méthode valueOf (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Crée un **DateTimeOffset** objet représentant un point dans le temps d’un décalage particulier à partir de l’heure GMT selon une valeur java.sql.Timestamp et une valeur java.util.Calendar indiquant le décalage.  
+  Crée un objet **DateTimeOffset** représentant un point précis dans le temps d’un décalage particulier par rapport à l’heure GMT selon une valeur java.sql.Timestamp et une valeur indiquant le décalage en minutes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,18 +38,18 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
   
  Valeurjava.sql.Timestamp.  
   
- *Calendrier*  
+ *calendar*  
   
  Valeur de décalage.  Les composants de date et heure de *calendrier* définira conformément à la *timestamp* valeur.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Retourne un objet DateTimeOffset qui représente le point dans le temps spécifié par l’objet java.sql.Timestamp sur fuseau horaire de l’objet java.util.Calendar donné.  
+ Retourne un objet DateTimeOffset qui représente le point dans le temps indiqué par l’objet java.sql.Timestamp au fuseau horaire de l’objet java.util.Calendar donné.  
   
-## <a name="remarks"></a>Notes  
- Cette méthode définit également l’objet java.util.Calendar au point dans le temps spécifié par l’objet java.sql.Timestamp.  
+## <a name="remarks"></a>Notes   
+ Cette méthode définit également l’objet java.util.Calendar au point dans le temps indiqué par l’objet java.sql.Timestamp.  
   
-## <a name="see-also"></a>Voir aussi  
- [Classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   
+## <a name="see-also"></a> Voir aussi  
+ [DateTimeOffset, classe](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset, membres](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   
   

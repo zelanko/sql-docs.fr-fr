@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’une procédure stockée avec un nombre de mises à jour | Documents Microsoft
+title: Utilisation d’une procédure stockée avec un compteur de mises à jour | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d858b255d5bdd6ce74509d36f4d0497220350694
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851704"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040817"
 ---
-# <a name="using-a-stored-procedure-with-an-update-count"></a>Utilisation d'une procédure stockée avec un nombre de mises à jour
+# <a name="using-a-stored-procedure-with-an-update-count"></a>Utilisation d’une procédure stockée avec un compteur de mises à jour
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Pour modifier les données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données à l’aide d’une procédure stockée, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit le [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) classe. À l’aide de la classe SQLServerCallableStatement, vous pouvez appeler des procédures stockées qui modifient les données contenues dans la base de données et retourner le nombre de lignes affectées, également appelé le nombre de mises à jour.  
+  Pour modifier les données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à l’aide d’une procédure stockée, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). La classe SQLServerCallableStatement permet d’appeler des procédures stockées qui modifient les données contenues dans la base de données et retournent le nombre de lignes affectées, également appelé nombre de mises à jour.  
   
- Une fois que vous avez configuré l’appel à la procédure stockée à l’aide de la classe SQLServerCallableStatement, vous pouvez ensuite appeler la procédure stockée à l’aide la [exécuter](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) ou [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) (méthode). La méthode executeUpdate retourne un **int** n’est pas le cas de valeur qui contient le nombre de lignes affectées par la procédure stockée, mais la méthode execute. Si vous utilisez la méthode d’exécution et que vous voulez obtenir le nombre de lignes affectées, vous pouvez appeler la [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) méthode après avoir exécuté la procédure stockée.  
+ Une fois l’appel à la procédure stockée configuré à l’aide de la classe SQLServerCallableStatement, vous pouvez appeler la procédure stockée à l’aide de la méthode [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) ou de la méthode [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md). La méthode executeUpdate retourne une valeur **int** contenant le nombre de lignes affectées par la procédure stockée, mais la méthode execute ne le fait pas. Si vous utilisez la méthode execute et souhaitez obtenir le nombre de lignes affectées, vous pouvez appeler la méthode [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) après l’exécution de la procédure stockée.  
   
 > [!NOTE]  
 >  Si vous souhaitez que le pilote JDBC retourne tous les nombres de mises à jour, y compris les nombres de mises à jour retournées par des déclencheurs qui ont pu se déclencher, définissez la propriété de chaîne de connexion lastUpdateCount sur « false ». Pour plus d’informations sur la propriété lastUpdateCount, consultez [définissant les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
   
- Par exemple, créez la table suivante et une procédure stockée et également insérer des données d’exemple dans le [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de données exemple :  
+ Par exemple, créez la table et la procédure stockée suivantes, et insérez également des exemples de données dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] :  
   
 ```  
 CREATE TABLE TestTable   
@@ -50,11 +50,11 @@ END;
 INSERT INTO dbo.TestTable (Col2, Col3) VALUES ('b', 10);  
 ```  
   
- Dans l’exemple suivant, une connexion ouverte à la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de données est transmise à la fonction, la méthode execute est utilisée pour appeler la procédure stockée UpdateTestTable, puis la méthode getUpdateCount est utilisée pour retourner un nombre de lignes qui sont affecté par la procédure stockée.  
+ Dans l’exemple suivant, une connexion ouverte à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] est transmise à la fonction, la méthode execute permet d’appeler la procédure stockée UpdateTestTable, puis la méthode getUpdateCount permet de retourner le nombre de lignes affectées par la procédure stockée.  
   
  [!code[JDBC#UsingSprocWithUpdateCount1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_0_1.java)]  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilisation d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   

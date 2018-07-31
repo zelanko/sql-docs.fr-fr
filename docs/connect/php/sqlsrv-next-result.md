@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_next_result | Documents Microsoft
+title: sqlsrv_next_result | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0e793dd1a1726d32e44c892ee14326acb30ff48
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309438"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019607"
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35309438"
 Active le résultat suivant (jeu de résultats, nombre de lignes ou paramètre de sortie) de l’instruction spécifiée.  
   
 > [!NOTE]  
-> Le résultat du premier (ou unique) retourné par une requête par lot ou une procédure stockée est actif sans appel à **sqlsrv_next_result**.  
+> Le premier (ou unique) résultat retourné par une requête par lot ou une procédure stockée est actif sans appel à **sqlsrv_next_result**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,16 +47,16 @@ sqlsrv_next_result( resource $stmt )
 #### <a name="parameters"></a>Paramètres  
 *$stmt*: instruction exécutée sur laquelle le résultat suivant devient actif.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 Si le résultat suivant est correctement devenu actif, la valeur booléenne **true** est retournée. Si une erreur s’est produite pour rendre le résultat suivant actif, **false** est retourné. Si aucun autre résultat n’est disponible, **Null** est retourné.  
   
-## <a name="example"></a>Exemple  
-L’exemple suivant crée et exécute une procédure stockée qui insère une évaluation de produit dans la table *Production.ProductReview* , puis sélectionne toutes les évaluations concernant le produit spécifié. Après l’exécution de la procédure stockée, le premier résultat (le nombre de lignes affectées par la requête INSERT dans la procédure stockée) est consommé sans appeler **sqlsrv_next_result**. Le résultat suivant (les lignes retournées par la requête SELECT dans la procédure stockée) est rendu disponible en appelant **sqlsrv_next_result** et consommé en utilisant [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
+## <a name="example"></a> Exemple  
+L’exemple suivant crée et exécute une procédure stockée qui insère une évaluation de produit dans la table *Production.ProductReview* , puis sélectionne toutes les évaluations concernant le produit spécifié. Après l’exécution de la procédure stockée, le premier résultat (le nombre de lignes affectées par la requête INSERT dans la procédure stockée) est consommé sans appeler **sqlsrv_next_result**. Le résultat suivant (lignes retournées par la requête SELECT dans la procédure stockée) est rendu disponible en appelant **sqlsrv_next_result** et consommé en utilisant [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 > [!NOTE]  
-> Appeler les procédures stockées à l’aide de la syntaxe canonique est la pratique recommandée. Pour plus d’informations sur la syntaxe canonique, consultez [appel d’une procédure stockée](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+> Appeler les procédures stockées à l’aide de la syntaxe canonique est la pratique recommandée. Pour plus d’informations sur la syntaxe canonique, consultez [Appel d’une procédure stockée](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -183,13 +183,13 @@ sqlsrv_close( $conn );
   
 Quand vous exécutez une procédure stockée qui possède des paramètres de sortie, il est préférable que tous les autres résultats soient consommés avant d’accéder aux valeurs des paramètres de sortie. Pour plus d’informations, consultez [Procédure : spécifier la direction du paramètre à l’aide du pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant exécute une requête par lot qui récupère des informations d’évaluation de produit relatives à un ID de produit spécifique, insère une évaluation du produit, puis récupère à nouveau les informations d’évaluation de produit relatives à l’ID de produit spécifié. La nouvelle évaluation de produit insérée est incluse dans le jeu de résultats final de la requête par lot. L’exemple utilise [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) pour passer d’un résultat de la requête par lot au suivant.  
   
 > [!NOTE]  
-> Le résultat du premier (ou unique) retourné par une requête par lot ou une procédure stockée est actif sans appel à **sqlsrv_next_result**.  
+> Le premier (ou unique) résultat retourné par une requête par lot ou une procédure stockée est actif sans appel à **sqlsrv_next_result**.  
   
-L’exemple utilise le *Purchasing.ProductReview* table de la [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) de base de données et suppose que cette base de données est installé sur le serveur. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple utilise la table *Purchasing.ProductReview* de la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works). Il part du principe que cette base de données est installée sur le serveur.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -268,7 +268,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)

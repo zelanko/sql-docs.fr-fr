@@ -1,5 +1,5 @@
 ---
-title: 'Comment : effectuer des Transactions | Documents Microsoft'
+title: 'Comment : effectuer des Transactions | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307658"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015786"
 ---
 # <a name="how-to-perform-transactions"></a>Procédure : effectuer des transactions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ Consultez [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) pou
   
 Le reste de cette rubrique explique et montre comment utiliser le pilote SQLSRV pour effectuer des transactions.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Les étapes d’exécution d’une transaction peuvent se résumer comme suit :  
   
 1.  Commencez la transaction avec **sqlsrv_begin_transaction**.  
@@ -55,15 +55,15 @@ Les étapes d’exécution d’une transaction peuvent se résumer comme suit :
   
 3.  Si nécessaire, validez la transaction avec **sqlsrv_commit**. Sinon, restaurez la transaction avec **sqlsrv_rollback**. Après avoir appelé **sqlsrv_commit** ou **sqlsrv_rollback**, le pilote repasse en mode de validation automatique.  
   
-    Par défaut, le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] est en mode de validation automatique. Cela signifie que toutes les requêtes sont validées automatiquement en cas de réussite, sauf si elles ont été désignées comme faisant partie d’une transaction explicite à l’aide de **sqlsrv_begin_transaction**.  
+    Par défaut, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] est en mode de validation automatique. Cela signifie que toutes les requêtes sont validées automatiquement en cas de réussite, sauf si elles ont été désignées comme faisant partie d’une transaction explicite à l’aide de **sqlsrv_begin_transaction**.  
   
-    Si une transaction explicite n’est pas validée avec **sqlsrv_commit**, elle est restaurée à la fermeture de la connexion ou l’arrêt du script.  
+    Si une transaction explicite n’est pas validée avec **sqlsrv_commit**, elle est restaurée à la fermeture de la connexion ou à l’arrêt du script.  
   
     N’utilisez pas Transact-SQL incorporé pour effectuer des transactions. Par exemple, n’exécutez pas une instruction avec « BEGIN TRANSACTION » en tant que requête Transact-SQL pour commencer une transaction. Le comportement transactionnel attendu ne peut pas être garanti quand vous utilisez Transact-SQL incorporé pour effectuer des transactions.  
   
     Les fonctions **sqlsrv** répertoriées précédemment doivent être utilisées pour effectuer des transactions.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ### <a name="description"></a>Description  
 L’exemple suivant exécute plusieurs requêtes dans le cadre d’une transaction. Si toutes les requêtes réussissent, la transaction est validée. Si l’une des requêtes échoue, la transaction est restaurée.  
@@ -74,7 +74,7 @@ La première requête de l’exemple récupère les ID de produit et les quantit
   
 Les requêtes ultérieures (suppression de la commande client et mise à jour des quantités de stock des produits) font partie de la transaction.  
   
-L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ### <a name="code"></a>Code  
   
@@ -154,9 +154,9 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Commentaires  
-Pour mieux mettre l’accent sur le comportement de la transaction, aucune recommandation en matière de gestion des erreurs n’est donnée dans l’exemple précédent. Pour une application de production, nous recommandons de vérifier tout appel à une **sqlsrv** la fonction pour les erreurs et les gérer en conséquence.
+Pour mieux mettre l’accent sur le comportement de la transaction, aucune recommandation en matière de gestion des erreurs n’est donnée dans l’exemple précédent. Pour une application de production, nous recommandons de vérifier tout appel à une **sqlsrv** fonctionner pour les erreurs et les gérer en conséquence.
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Mise à jour des données &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
 [Transactions (moteur de base de données)](https://msdn.microsoft.com/library/ms190612.aspx)

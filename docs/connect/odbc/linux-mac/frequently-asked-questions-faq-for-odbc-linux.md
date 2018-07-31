@@ -1,5 +1,5 @@
 ---
-title: Forum aux Questions (FAQ) pour ODBC Linux et macOS | Documents Microsoft
+title: Questions fréquentes (FAQ) pour ODBC Linux et macOS | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,33 +15,33 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17d25f6084e136736dbc4c8a8ff3cb019ce4692e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851504"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991371"
 ---
-# <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>Forum aux Questions (FAQ) pour ODBC Linux et Mac OS
+# <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>Questions fréquentes (FAQ) pour ODBC Linux et macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Voici les réponses aux questions sur le pilote ODBC pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Linux et macOS.
+Voici les réponses aux questions sur ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Linux et macOS.
   
 ## <a name="frequently-asked-questions"></a>Forum Aux Questions (FAQ)
 
-**Comment les applications ODBC existantes sur Linux ou macOS ne fonctionnent pas avec le pilote ?**  
-Vous devez être en mesure de compiler et exécuter les applications ODBC que vous avez la compilation et en cours d’exécution sur Linux ou macOS à l’aide d’autres pilotes. 
+**Comment les applications ODBC existantes sur Linux ou macOS fonctionnent-elles avec le pilote ?**  
+Vous devriez pouvoir compiler et exécuter les applications ODBC que vous avez compilées et exécutées sur Linux ou macOS à l’aide d’autres pilotes. 
   
-**Les fonctionnalités de [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] par cette version de la prise en charge du pilote ?**
+**Quelles sont les fonctionnalités de [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] prises en charge par cette version du pilote ?**
 
-Le pilote ODBC sur Linux et macOS prend en charge toutes les fonctionnalités de serveur dans [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] à l’exception de la base de données locale. Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] les fonctionnalités prises en charge, consultez [les instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+Le pilote ODBC sur Linux et macOS prend en charge toutes les fonctionnalités de serveur dans [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] à l’exception de la base de données locale. Pour plus d’informations sur les fonctionnalités de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] prises en charge, consultez [Instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md).  
   
-**Le pilote prend en charge l’authentification Kerberos ?**  
-Oui. Si vous avez une installation existante de l’environnement Kerberos, vous devez être en mesure de se connecter aux serveurs à l’aide de la `Trusted_Connection=Yes` option de chaîne de connexion ou de la source de données. Pour plus d’informations, consultez [à l’aide de l’authentification intégrée](../../../connect/odbc/linux-mac/using-integrated-authentication.md).  
+**Le pilote prend-il en charge l’authentification Kerberos ?**  
+Oui. Si vous avez une installation existante de l’environnement Kerberos, vous pourrez vous connecter aux serveurs à l’aide de la `Trusted_Connection=Yes` option de chaîne de connexion ou de la source de données. Pour plus d’informations, consultez [Utilisation de l’authentification intégrée](../../../connect/odbc/linux-mac/using-integrated-authentication.md).  
   
-**Quel encodage Unicode une application doit-elle utiliser ?**  
+**Quel encodage Unicode une application doit-elle utiliser ?**  
 UTF-8 pour les données SQL_CHAR et UTF-16 pour les données SQL_WCHAR.  
 
-**Existe-t-il des exemples ODBC que je peux télécharger et exécuter avec le pilote pour tester ou l’évaluer ?**
+**Existe-t-il des exemples ODBC que je peux télécharger et exécuter avec le pilote pour le tester ou l’évaluer ?**
 
 Pour obtenir un exemple, consultez la page [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) . Cela concerne également le pilote ODBC de macOS. 
 
@@ -49,5 +49,5 @@ Pour obtenir un exemple, consultez la page [Use Existing MSDN C++ ODBC Samples f
 
 Non, les pilotes ODBC sur Linux et macOS ne sont pas un produit open source.  
 
-## <a name="see-also"></a>Voir aussi
-[L’installation de Microsoft ODBC Driver for SQL Server sur Linux et Mac OS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+## <a name="see-also"></a> Voir aussi
+[Installation de Microsoft ODBC Driver for SQL Server sur Linux et macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)

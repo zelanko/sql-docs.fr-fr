@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_fetch_array | Documents Microsoft
+title: sqlsrv_fetch_array | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aab41821d2f4eb1eb3f92ce998fe440593567d0a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308968"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979712"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 #### <a name="parameters"></a>Paramètres  
 *$stmt*: ressource d’instruction correspondant à une instruction exécutée.  
   
-*$fetchType* [facultatif] : constante prédéfinie. Ce paramètre peut prendre l’une des valeurs répertoriées dans le tableau suivant :  
+*$fetchType* [FACULTATIF] : constante prédéfinie. Ce paramètre peut prendre l’une des valeurs répertoriées dans le tableau suivant :  
   
 |Valeur|Description|  
 |---------|---------------|  
@@ -51,7 +51,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
 |SQLSRV_FETCH_ASSOC|La ligne de données suivante est retournée sous forme de tableau associatif. Les clés de tableau sont les noms des colonnes dans le jeu de résultats.|  
 |SQLSRV_FETCH_BOTH|La ligne de données suivante est retournée à la fois comme tableau numérique et comme tableau associatif. Il s'agit de la valeur par défaut.|  
   
-*ligne* [facultatif] : ajouté dans la version 1.1. L’une des valeurs suivantes, spécifiant la ligne à laquelle accéder dans un jeu de résultats qui utilise un curseur permettant le défilement. (Lorsque *ligne* est spécifié, *fetchtype* doit être explicitement spécifié, même si vous spécifiez la valeur par défaut.)  
+*row* [FACULTATIF] : ajouté dans la version 1.1. L’une des valeurs suivantes, spécifiant la ligne à laquelle accéder dans un jeu de résultats qui utilise un curseur permettant le défilement (quand vous spécifiez *row*, vous devez spécifier *fetchtype* de manière explicite, même si vous spécifiez la valeur par défaut).  
   
 -   SQLSRV_SCROLL_NEXT  
 -   SQLSRV_SCROLL_PRIOR  
@@ -62,14 +62,14 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 Pour plus d’informations sur ces valeurs, consultez [Spécification d’un type de curseur et sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md). La prise en charge du curseur permettant le défilement a été ajoutée dans la version 1.1 du [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-*décalage* [facultatif] : utilisé avec SQLSRV_SCROLL_ABSOLUTE et SQLSRV_SCROLL_RELATIVE pour spécifier la ligne à récupérer. Le premier enregistrement dans le jeu de résultats est 0.  
+*offset* [FACULTATIF] : utilisé avec SQLSRV_SCROLL_ABSOLUTE et SQLSRV_SCROLL_RELATIVE pour spécifier la ligne à récupérer. Le premier enregistrement dans le jeu de résultats est 0.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 Si une ligne de données est récupérée, un **tableau** est retourné. S’il n’y a plus aucune ligne à récupérer, la valeur **null** est retournée. Si une erreur se produit, la valeur **false** est retournée.  
   
 En fonction de la valeur du paramètre *$fetchType* , le **tableau** retourné peut être un **tableau**indexé numériquement, un **tableau**associatif, ou les deux. Par défaut, un **tableau** avec des clés numériques et associatives est retourné. Le type de données d’une valeur dans le tableau retourné sera le type de données PHP par défaut. Pour plus d’informations sur les types de données PHP par défaut, consultez [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 Si une colonne sans nom est retournée, la clé associative de l’élément de tableau est une chaîne vide (""). Par exemple, considérez cette instruction Transact-SQL qui insère une valeur dans une table de base de données et récupère la clé primaire générée par le serveur :  
   
 ```
@@ -77,7 +77,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-Si le jeu de résultats retourné par la `SELECT SCOPE_IDENTITY()` partie de cette instruction est récupérée sous forme de tableau associatif, la clé de la valeur retournée est une chaîne vide (« »), car la colonne retournée n’a pas de nom. Pour éviter ce problème, vous pouvez récupérer le résultat sous forme de tableau numérique, ou spécifier un nom pour la colonne retournée dans l’instruction Transact-SQL. Voici un moyen de spécifier un nom de colonne dans Transact-SQL :  
+Si le jeu de résultats retourné par la partie `SELECT SCOPE_IDENTITY()` de cette instruction est récupéré sous forme de tableau associatif, la clé de la valeur retournée est une chaîne vide (""), car la colonne retournée n’a pas de nom. Pour éviter ce problème, vous pouvez récupérer le résultat sous forme de tableau numérique, ou spécifier un nom pour la colonne retournée dans l’instruction Transact-SQL. Voici un moyen de spécifier un nom de colonne dans Transact-SQL :  
   
 ```
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -85,8 +85,8 @@ SELECT SCOPE_IDENTITY() AS PictureID
   
 Si un jeu de résultats contient plusieurs colonnes sans nom, la valeur de la dernière colonne sans nom est affectée à la clé de chaîne vide ("").  
   
-## <a name="example"></a>Exemple  
-L’exemple suivant récupère chaque ligne d’un jeu de résultats sous forme d’objet **array**associatif. L’exemple suppose que le serveur SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a> Exemple  
+L’exemple suivant récupère chaque ligne d’un jeu de résultats sous forme d’objet **array**associatif. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -124,12 +124,12 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant récupère chaque ligne d’un jeu de résultats sous forme de tableau indexé numériquement.  
   
-L’exemple récupère les informations de produit à partir de la *Purchasing.PurchaseOrderDetail* table de la base de données AdventureWorks pour les produits qui ont une date donnée et la quantité en stock (*StockQty*) inférieur à une valeur spécifiée.  
+L’exemple récupère, à partir de la table *Purchasing.PurchaseOrderDetail* de la base de données AdventureWorks, les informations sur les produits qui ont une date spécifique, et dont la quantité en stock (*StockQty*) est inférieure à la valeur spécifiée.  
   
-L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -184,7 +184,7 @@ La fonction **sqlsrv_fetch_array** retourne toujours des données en fonction de
   
 Si un champ sans nom est récupéré, la clé associative de l’élément de tableau est une chaîne vide (""). Pour plus d’informations, consultez [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Récupération de données](../../connect/php/retrieving-data.md)

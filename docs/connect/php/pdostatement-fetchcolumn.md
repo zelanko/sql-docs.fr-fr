@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchColumn | Documents Microsoft
+title: PDOStatement::fetchColumn | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20e79158a2b38dac6799e9affe7ac4bd656ff4f3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308882"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983243"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,15 +34,15 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-$*numéro_colonne*: entier facultatif indiquant le numéro de colonne de base zéro. La valeur par défaut est 0 (la première colonne de la ligne).  
+$*column_number* : entier facultatif indiquant le numéro de colonne de base zéro. La valeur par défaut est 0 (la première colonne de la ligne).  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 Une colonne ou la valeur false s’il n’y a plus de ligne.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php  
@@ -57,7 +57,7 @@ La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDr
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

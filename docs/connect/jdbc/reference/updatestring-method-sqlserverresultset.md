@@ -1,5 +1,5 @@
 ---
-title: updateString (méthode) (SQLServerResultSet) | Documents Microsoft
+title: updatestring, méthode (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,26 +20,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bbfea2e2daec9b71f54a8c3c1a1a901579d14fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851054"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979221"
 ---
-# <a name="updatestring-method-sqlserverresultset"></a>updateString (méthode) (SQLServerResultSet)
+# <a name="updatestring-method-sqlserverresultset"></a>updateString, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Met à jour la colonne désignée avec une **chaîne** valeur.  
+  Met à jour la colonne désignée avec une valeur **String**.  
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Nom| Description|  
+|Nom   |Description|  
 |----------|-----------------|  
-|[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|Met à jour la colonne désignée avec une **chaîne** valeur en fonction de l’index de colonne.|  
-|[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|Met à jour la colonne désignée avec une **chaîne** valeur en fonction du nom de colonne.|  
+|[updateString (int, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-int-java-lang-string.md)|Met à jour la colonne désignée avec une valeur **String** en fonction de l’index de colonne.|  
+|[updateString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatestring-method-java-lang-string-java-lang-string.md)|Met à jour la colonne désignée avec une valeur **String** en fonction du nom de colonne.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

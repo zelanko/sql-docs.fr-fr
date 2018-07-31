@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchAll | Documents Microsoft
+title: PDOStatement::fetchAll | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639ff09c2c739e99b974c1b4df7d4963b7959e94
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308988"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983019"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,19 +34,19 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-$*fetch_style*: un symbole (entier) spécifiant le format de données de la ligne. Consultez [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) pour obtenir la liste des valeurs. PDO::FETCH_COLUMN est également autorisé. PDO::FETCH_BOTH est la valeur par défaut.  
+$*fetch_style* : symbole (entier) spécifiant le format des données de la ligne. Consultez [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) pour obtenir la liste des valeurs. PDO::FETCH_COLUMN est également autorisé. PDO::FETCH_BOTH est la valeur par défaut.  
   
-$*column_index*: une valeur entière représentant la colonne à retourner si $*fetch_style* correspond à PDO::FETCH_COLUMN. La valeur par défaut est 0.  
+$*column_index* : valeur entière représentant la colonne à retourner si $*fetch_style* correspond à PDO::FETCH_COLUMN. La valeur par défaut est 0.  
   
-$*ctor_args*: un tableau des paramètres d’un constructeur de classe, quand $*fetch_style* correspond à PDO::FETCH_CLASS ou PDO::FETCH_OBJ.  
+$*ctor_args* : tableau des paramètres d’un constructeur de classe, quand $*fetch_style* correspond à PDO::FETCH_CLASS ou PDO::FETCH_OBJ.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 Tableau des lignes restantes dans le jeu de résultats, ou false si l’appel de méthode échoue.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php  
@@ -87,7 +87,7 @@ La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDr
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

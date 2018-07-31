@@ -1,5 +1,5 @@
 ---
-title: Les colonnes éparses | Documents Microsoft
+title: Colonnes éparses | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2aa31ce2f41c8308025fd2648f18caf7ad8e04c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851684"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020975"
 ---
 # <a name="sparse-columns"></a>Colonnes éparses
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Les colonnes éparses sont des colonnes ordinaires qui ont un stockage optimisé pour les valeurs NULL. Les colonnes fragmentées réduisent l'espace nécessaire pour les valeurs Null, en échange d'une augmentation du coût de récupération des valeurs non Null. Envisagez d'utiliser des colonnes éparses lorsque l'espace économisé est d'au moins 20 à 40 pour cent.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] version 3.0 du pilote JDBC prend en charge les colonnes éparses lorsque vous vous connectez à un [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (ou version ultérieure) server. Vous pouvez utiliser [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md), ou [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) pour déterminer quelle colonne est fragmentée et laquelle est la colonne de jeu de colonnes.  
+ La version 3.0 du pilote JDBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] prend en charge les colonnes éparses quand vous vous connectez à un serveur [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (ou version ultérieure). Vous pouvez utiliser [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) ou [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) pour déterminer quelle colonne est éparse et laquelle est la colonne du jeu de colonnes.  
   
  Les jeux de colonnes sont des colonnes calculées qui retournent toutes les colonnes fragmentées sous la forme XML non typée. Vous devez envisager d'utiliser des jeux de colonnes lorsque le nombre de colonnes dans une table est élevé ou supérieur à 1 024 et qu'il serait trop long d'opérer individuellement sur des colonnes fragmentées. Un jeu de colonnes peut contenir jusqu'à 30 000 colonnes.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
-### <a name="description"></a> Description  
+### <a name="description"></a>Description  
  Cet exemple montre comment détecter les jeux de colonnes. Il explique également comment analyser la sortie XML d'un jeu de colonnes pour obtenir les données pour les colonnes fragmentées.  
   
  La première liste de code correspond au code Transact-SQL que vous devez exécuter sur le serveur.  
@@ -189,7 +189,7 @@ public class SparseColumns {
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Amélioration des performances et de la fiabilité avec le pilote JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_field_metadata | Documents Microsoft
+title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309388"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991271"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Récupère les métadonnées des champs d’une instruction préparée. Pour plus d’informations sur la préparation d’une instruction, consultez [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). Notez que **sqlsrv_field_metadata** peut être appelée sur une instruction préparée, avant ou après l’exécution.  
+Récupère les métadonnées des champs d’une instruction préparée. Pour plus d’informations sur la préparation d’une instruction, consultez [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). Notez que **sqlsrv_field_metadata** peut être appelé sur toute instruction préparée, avant ou après l’exécution.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +42,7 @@ sqlsrv_field_metadata( resource $stmt)
 #### <a name="parameters"></a>Paramètres  
 *$stmt*: ressource d’instruction pour laquelle des métadonnées de champ sont recherchées.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 **Tableau** de tableaux ou **false**. Le tableau se compose d’un tableau pour chaque champ dans le jeu de résultats. Chaque sous-tableau possède des clés décrites dans le tableau ci-dessous. En cas d’erreur lors de l’extraction des métadonnées de champ, **false** est retourné.  
   
 |Key|Description|  
@@ -52,7 +52,7 @@ sqlsrv_field_metadata( resource $stmt)
 |Taille|Nombre de caractères des champs de type caractère (char(n), varchar(n), nchar(n), nvarchar(n), XML). Nombre d’octets des champs de type binaire (binary(n), varbinary(n), UDT). **NULL** pour les autres types de données SQL Server.|  
 |Précision|Précision des types dont la précision varie (réel, numérique, décimal, DateHeure2, datetimeoffset et Heure). **NULL** pour les autres types de données SQL Server.|  
 |Échelle|Échelle des types dont l’échelle varie (numérique, décimal, DateHeure2, datetimeoffset et Heure). **NULL** pour les autres types de données SQL Server.|  
-|Nullable|Valeur énumérée indiquant si la colonne est nullable (**SQLSRV_NULLABLE_YES**), la colonne n’est pas nullable (**SQLSRV_NULLABLE_NO**), ou il n’est pas connu si la colonne est nullable ( **SQLSRV_NULLABLE_UNKNOWN**).|  
+|Nullable|Valeur énumérée indiquant si la colonne est Nullable (**SQLSRV_NULLABLE_YES**), si la colonne n’est pas Nullable (**SQLSRV_NULLABLE_NO**) ou si l’indication que la colonne est Nullable est inconnu (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
 Le tableau suivant fournit plus d’informations sur les clés pour chaque sous-tableau (consultez la documentation de SQL Server pour plus d’informations sur ces types) :  
   
@@ -93,8 +93,8 @@ Le tableau suivant fournit plus d’informations sur les clés pour chaque sous-
   
 La clé Nullable peut avoir la valeur oui ou non.  
   
-## <a name="example"></a>Exemple  
-L’exemple suivant crée une ressource d’instruction, puis récupère et affiche les métadonnées de champ. L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a> Exemple  
+L’exemple suivant crée une ressource d’instruction, puis récupère et affiche les métadonnées de champ. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Constantes &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

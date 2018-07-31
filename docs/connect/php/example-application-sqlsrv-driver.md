@@ -1,5 +1,5 @@
 ---
-title: Exemple d’Application (pilote SQLSRV) | Documents Microsoft
+title: Exemple d’Application (pilote SQLSRV) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d47fe33801ca8a4932b6295a5052e9948bc5ef0f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307768"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007190"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Exemple d’application (pilote SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ L’exemple d’application Évaluations de produits AdventureWorks est une appl
   
 ### <a name="running-the-example-application"></a>Exécution de l’exemple d’application  
   
-1.  Installez [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations, consultez [prise en main de la Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
+1.  Installez [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations, consultez [mise en route avec le Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md).
 2.  Copiez le code répertorié plus loin dans ce document dans deux fichiers : adventureworks_demo.php et photo.php.  
 3.  Placez les fichiers adventureworks_demo.php et photo.php dans le répertoire racine de votre serveur web.  
 4.  Exécutez l’application en démarrant http://localhost/adventureworks_demo.php depuis votre navigateur.  
@@ -40,7 +40,7 @@ Pour exécuter l’exemple d’application Évaluations de produits AdventureWor
   
 -   Votre système répond à la configuration requise pour [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations, consultez [configuration système requise pour le Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
 -   Les fichiers adventureworks_demo.php et photo.php sont dans le répertoire racine de votre serveur web. Les fichiers doivent contenir le code répertorié plus loin dans ce document.  
--   SQL Server 2005 ou SQL Server 2008, avec la [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données attachée, est installé sur l’ordinateur local.  
+-   SQL Server 2005 ou SQL Server 2008, avec la base de données [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) attachée, est installé sur l’ordinateur local.  
 -   Un navigateur web est installé.  
   
 ## <a name="demonstrates"></a>Montre  
@@ -55,7 +55,7 @@ L’exemple d’application Évaluations de produits AdventureWorks illustre ce 
 -   Comment envoyer des données sous la forme d’un flux.  
 -   Comment rechercher les erreurs.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple d’application Évaluations de produits AdventureWorks retourne les informations sur les produits à partir de la base de données pour les produits dont les noms contiennent une chaîne entrée par l’utilisateur. Dans la liste des produits retournés, l’utilisateur peut voir les évaluations, voir une image, télécharger une image et rédiger une évaluation pour un produit sélectionné.  
   
 Placez le code suivant dans un fichier nommé adventureworks_demo.php :  
@@ -495,7 +495,7 @@ function FormatErrors( $errors )
 </html>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Le script photo.php retourne la photo du produit correspondant au **ProductID**spécifié. Ce script est appelé depuis le script adventureworks_demo.php.  
   
 Placez le code suivant dans un fichier nommé photo.php :  
@@ -559,7 +559,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)
 
 [Comparaison des fonctions d’exécution](../../connect/php/comparing-execution-functions.md)

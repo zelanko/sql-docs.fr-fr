@@ -1,5 +1,5 @@
 ---
-title: wasNull (méthode) (SQLServerResultSet) | Documents Microsoft
+title: wasNull, méthode (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 257cc1e1889e0866bcbf0e26b2315593074545fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848494"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979191"
 ---
-# <a name="wasnull-method-sqlserverresultset"></a>wasNull (méthode) (SQLServerResultSet)
+# <a name="wasnull-method-sqlserverresultset"></a>wasNull, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Vérifie si la dernière valeur lue était une valeur Null.  
@@ -39,16 +39,16 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- **true** si la dernière valeur lue était null. Dans le cas contraire, la valeur est **false**.  
+ **true** si la dernière valeur de lecture avait la valeur null. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode wasNull est spécifiée par la méthode wasNull dans l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

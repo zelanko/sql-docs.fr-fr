@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_errors | Documents Microsoft
+title: sqlsrv_errors | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e097a5b89d708b3a91296c49c0c615f8955b96cb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309048"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979790"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Retourne étendus erreur et/ou d’avertissement d’informations sur la dernière **sqlsrv** opération effectuée.  
+Retourne des informations étendues sur les erreurs et/ou les avertissements concernant la dernière opération **sqlsrv** effectuée.  
   
-Le **sqlsrv_errors** fonction peut retourner une erreur et/ou d’avertissement en appelant avec l’une des valeurs de paramètre spécifiés dans la section Paramètres ci-dessous.  
+La fonction **sqlsrv_errors** peut retourner des informations d’erreur et/ou d’avertissement en les appelant avec l’une des valeurs de paramètre spécifiées dans la section Paramètres ci-dessous.  
   
 Par défaut, les avertissements générés sur un appel à une fonction **sqlsrv** sont traités comme des erreurs ; si un avertissement se produit sur un appel à une fonction **sqlsrv** , la fonction retourne false. Toutefois, les avertissements qui correspondent aux valeurs SQLSTATE 01000, 01001, 01003 et 01S02 ne sont jamais traités comme des erreurs.  
   
@@ -49,7 +49,7 @@ La ligne de code suivante rétablit le comportement par défaut ; les avertisse
 sqlsrv_configure("WarningsReturnAsErrors", 1);  
 ```  
   
-Quel que soit le paramètre, des avertissements peuvent uniquement être récupérés en appelant **sqlsrv_errors** avec l’option le **SQLSRV_ERR_ALL** ou **SQLSRV_ERR_WARNINGS** (voir la valeur du paramètre Section Paramètres ci-dessous pour plus d’informations).  
+Quel que soit le paramètre, les avertissements peuvent uniquement être récupérés en appelant **sqlsrv_errors** avec la valeur de paramètre **SQLSRV_ERR_ALL** ou **SQLSRV_ERR_WARNINGS** (consultez la section Paramètres ci-dessous pour plus d’informations).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,7 +59,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$errorsAndOrWarnings*[facultatif] : constante prédéfinie. Ce paramètre peut prendre l’une des valeurs répertoriées dans le tableau suivant :  
+*$errorsAndOrWarnings*[FACULTATIF] : constante prédéfinie. Ce paramètre peut prendre l’une des valeurs répertoriées dans le tableau suivant :  
   
 |Valeur|Description|  
 |---------|---------------|  
@@ -69,8 +69,8 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
   
 Si aucune valeur de paramètre n’est fournie, les erreurs et avertissements générés par le dernier appel de fonction **sqlsrv** sont retournés.  
   
-## <a name="return-value"></a>Valeur de retour  
-**Tableau** de tableaux ou **Null**. Chaque **tableau** retourné **tableau** contient trois paires clé-valeur. Le tableau suivant répertorie chaque clé et sa description :  
+## <a name="return-value"></a>Valeur retournée  
+**Tableau** de tableaux ou **Null**. Chaque **tableau** inclus dans le **tableau** retourné contient trois paires clé-valeur. Le tableau suivant répertorie chaque clé et sa description :  
   
 |Key|Description|  
 |-------|---------------|  
@@ -80,8 +80,8 @@ Si aucune valeur de paramètre n’est fournie, les erreurs et avertissements g�
   
 Les valeurs de tableau sont également accessibles avec des clés numériques 0, 1 et 2. Si aucune erreur ou aucun avertissement ne se produisent, **Null** est retourné.  
   
-## <a name="example"></a>Exemple  
-L’exemple suivant affiche les erreurs qui se produisent pendant une exécution d’instruction qui a échoué. (L’instruction échoue, car **InvalidColumName** n’est pas un nom de colonne valide dans la table spécifiée.) L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a> Exemple  
+L’exemple suivant affiche les erreurs qui se produisent pendant une exécution d’instruction qui a échoué (l’instruction échoue, car **InvalidColumName** n’est pas un nom de colonne valide dans la table spécifiée). L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -120,7 +120,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  

@@ -1,5 +1,5 @@
 ---
-title: Méthode updatesAreDetected (SQLServerDatabaseMetaData) | Documents Microsoft
+title: Méthode updatesAreDetected (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a91c3c3366a2f158b9ecf2f6e4b0d9341a60b2a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852124"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016040"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>Méthode updatesAreDetected (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère ou non une mise à jour de ligne visible peut être détectée en appelant le [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) méthode de la [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) classe.  
+  Récupère les informations déterminant si une mise à jour de ligne visible peut être détectée ou non en appelant la méthode [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) de la classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +41,7 @@ public boolean updatesAreDetected(int type)
 #### <a name="parameters"></a>Paramètres  
  *type*  
   
- Un **int** qui indique le jeu de résultats type, qui peut prendre l’une des valeurs suivantes comme défini dans java.sql.ResultSet ou SQLServerResultSet :  
+ **Entier** qui indique le type de jeu de résultats, qui peut avoir l’une des valeurs suivantes comme défini dans java.sql.ResultSet ou SQLServerResultSet :  
   
 ## <a name="javasqlresultset-types"></a>Types java.sql.ResultSet  
  TYPE_FORWARD_ONLY  
@@ -62,17 +62,17 @@ public boolean updatesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Valeur retournée  
- **true** si la mise à jour de ligne peut être détectée. Dans le cas contraire, la valeur est **false**.  
+ **true** si la mise à jour de la ligne peut être détectée. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode updatesAreDetected est spécifiée par la méthode updatesAreDetected dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Membres de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
+ [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

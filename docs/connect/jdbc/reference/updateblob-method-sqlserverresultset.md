@@ -1,5 +1,5 @@
 ---
-title: Méthode updateBlob (SQLServerResultSet) | Documents Microsoft
+title: updateblob, méthode (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b6178a7da337197d2fe6b979bcd7e64c3d60245
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850914"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019917"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>Méthode updateBlob (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32850914"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Nom| Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |[updateBlob (int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|Met à jour la colonne désignée avec une valeur java.sql.Blob.|  
 |[updateBlob (int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|Met à jour la colonne désignée à l'aide du flux d'entrée spécifié.|  
@@ -42,8 +42,8 @@ ms.locfileid: "32850914"
 |[updateBlob (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream.md)|Met à jour la colonne désignée à l’aide du flux d’entrée spécifié.|  
 |[updateBlob (java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream-long.md)|Met à jour la colonne désignée à l'aide du flux d'entrée spécifié, qui dispose du nombre spécifié d'octets.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   
