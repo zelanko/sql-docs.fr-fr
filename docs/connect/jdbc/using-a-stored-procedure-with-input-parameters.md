@@ -1,7 +1,7 @@
 ---
 title: Utilisation d’une procédure stockée avec des paramètres d’entrée | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f736e2e901d17d4a6b8d114964a315afd389ab9e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 1c408fc703a3f6d9831cae226ce858b1a20a80c7
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978591"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278770"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>Utilisation d'une procédure stockée avec des paramètres d'entrée
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,28 +39,22 @@ ms.locfileid: "37978591"
   
  Pour obtenir un exemple de la manière d’appeler une procédure stockée contenant un paramètre IN, utilisez la procédure stockée uspGetEmployeeManagers figurant dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Cette procédure stockée n'accepte qu'un seul paramètre d'entrée nommé EmployeeID, qui est une valeur entière, et retourne une liste récursive d'employés et de leurs directeurs basée sur la valeur EmployeeID spécifiée. Le code Java pour l'appel de cette procédure stockée est le suivant :  
   
-```  
-public static void executeSprocInParams(Connection con) {  
-   try {  
-      PreparedStatement pstmt = con.prepareStatement("{call dbo.uspGetEmployeeManagers(?)}");  
-      pstmt.setInt(1, 50);  
-      ResultSet rs = pstmt.executeQuery();  
-  
-      while (rs.next()) {  
-         System.out.println("EMPLOYEE:");  
-         System.out.println(rs.getString("LastName") + ", " + rs.getString("FirstName"));  
-         System.out.println("MANAGER:");  
-         System.out.println(rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));  
-         System.out.println();  
-      }  
-      rs.close();  
-      pstmt.close();  
-   }  
-  
-   catch (Exception e) {  
-      e.printStackTrace();  
-    }  
-}  
+```java
+public static void executeSprocInParams(Connection con) throws SQLException {  
+    try(PreparedStatement pstmt = con.prepareStatement("{call dbo.uspGetEmployeeManagers(?)}"); ) {  
+
+        pstmt.setInt(1, 50);  
+        ResultSet rs = pstmt.executeQuery();  
+
+        while (rs.next()) {  
+            System.out.println("EMPLOYEE:");  
+            System.out.println(rs.getString("LastName") + ", " + rs.getString("FirstName"));  
+            System.out.println("MANAGER:");  
+            System.out.println(rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));  
+            System.out.println();  
+        }  
+    }
+}
 ```  
   
 ## <a name="see-also"></a> Voir aussi  

@@ -1,7 +1,7 @@
 ---
 title: À l’aide de séquences d’échappement SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60af5198eb78ad23bf8ad55a1dc24690b91130ab
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: c9a4e7854098fcc0e2cc161658cc772cbd40c80c
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978669"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278590"
 ---
 # <a name="using-sql-escape-sequences"></a>Utilisation de séquences d'échappement SQL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "37978669"
 ## <a name="like-wildcard-literals"></a>Littéraux génériques LIKE  
  Le pilote JDBC prend en charge la syntaxe `{escape 'escape character'}` pour l’utilisation de caractères génériques de clause LIKE comme littéraux. Par exemple, le code suivant retournera des valeurs pour col3, où la valeur de col2 commence littéralement par un trait de soulignement (et pas son utilisation générique).  
   
-```  
+```java
 ResultSet rst = stmt.executeQuery("SELECT col3 FROM test1 WHERE col2   
 LIKE '\\_%' {escape '\\'}");  
 ```  
@@ -63,13 +63,13 @@ LIKE '\\_%' {escape '\\'}");
 ## <a name="function-handling"></a>Gestion de fonction  
  Le pilote JDBC prend en charge les séquences d'échappement de fonction dans les instructions SQL avec la syntaxe suivante :  
   
-```  
+```java
 {fn functionName}  
 ```  
   
  où `functionName` est une fonction prise en charge par le pilote JDBC. Exemple :  
   
-```  
+```sql
 SELECT {fn UCASE(Name)} FROM Employee  
 ```  
   
@@ -85,7 +85,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 ## <a name="date-and-time-literals"></a>Littéraux de date et heure  
  La syntaxe d'échappement pour les littéraux de date, heure et horodatage est la suivante :  
   
-```  
+```
 {literal-type 'value'}  
 ```  
   
@@ -99,7 +99,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
  Exemple :  
   
-```  
+```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}   
 WHERE OrderID=1025  
 ```  
@@ -109,7 +109,7 @@ WHERE OrderID=1025
   
  Une procédure est un objet exécutable stocké dans la base de données. Généralement, il s'agit d'une ou plusieurs instructions SQL qui ont été précompilées. La syntaxe de séquence d'échappement pour appeler une procédure stockée est la suivante :  
   
-```  
+```sql
 {[?=]call procedure-name[([parameter][,[parameter]]...)]}  
 ```  
   
@@ -120,13 +120,13 @@ WHERE OrderID=1025
 ## <a name="outer-joins"></a>Jointures externes  
  Le pilote JDBC prend en charge la syntaxe de jointure externe SQL92 gauche, droite et entière. La séquence d'échappement pour les jointures externes est la suivante :  
   
-```  
+```sql
 {oj outer-join}  
 ```  
   
  où outer-join est :  
   
-```  
+```sql
 table-reference {LEFT | RIGHT | FULL} OUTER JOIN    
 {table-reference | outer-join} ON search-condition  
 ```  
@@ -135,7 +135,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
   
  Exemple :  
   
-```  
+```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   
    FROM {oj Customers LEFT OUTER JOIN   
       Orders ON Customers.CustID=Orders.CustID}   
@@ -159,7 +159,7 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
   
  La syntaxe d'échappement pour LIMIT est la suivante :  
   
-```  
+```sql
 LIMIT <rows> [OFFSET <row offset>]  
 ```  
   

@@ -1,7 +1,7 @@
 ---
 title: Utilisation d’une connexion | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbcd46cd9da1ab189aeafe77c7275aa103ea51f6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f758dfbed0a33885a1cc24cef6d39ab522fa5809
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060270"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279110"
 ---
 # <a name="working-with-a-connection"></a>Utilisation d'une connexion
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38060270"
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>Création d'une connexion via la classe DriverManager  
  La façon la plus simple de créer une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] consiste à charger le pilote JDBC et à appeler la méthode getConnection de la classe DriverManager, comme suit :  
   
-```  
+```java
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
 String connectionUrl = "jdbc:sqlserver://localhost;database=AdventureWorks;integratedSecurity=true;"  
 Connection con = DriverManager.getConnection(connectionUrl);  
@@ -41,12 +41,12 @@ Connection con = DriverManager.getConnection(connectionUrl);
  Cette technique crée une connexion de base de données via le premier pilote disponible dans la liste des pilotes capables de se connecter avec succès à l'URL donnée.  
   
 > [!NOTE]  
->  Lors de l’utilisation de la bibliothèque de classes sqljdbc4.jar, les applications n’ont pas besoin d’inscrire ni de charger explicitement le pilote à l’aide de la méthode Class.forName. Lorsque la méthode  de la classe  est appelée, un pilote approprié est localisé parmi l'ensemble des pilotes JDBC inscrits. Pour plus d'informations, consultez Utilisation du pilote JDBC.  
+>  Lors de l’utilisation de la bibliothèque de classes sqljdbc4.jar, les applications n’ont pas besoin d’inscrire ni de charger explicitement le pilote à l’aide de la méthode Class.forName. Lorsque la méthode getConnection de la classe DriverManager est appelée, un pilote approprié est localisé parmi l’ensemble des pilotes JDBC inscrits. Pour plus d'informations, consultez Utilisation du pilote JDBC.  
   
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Création d'une connexion via la classe SQLServerDriver  
  Si vous devez spécifier un pilote en particulier dans la liste des pilotes pour DriverManager, vous pouvez créer une connexion de base de données à l’aide de la méthode [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) de la classe [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md), comme suit :  
   
-```  
+```java
 Driver d = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();  
 String connectionUrl = "jdbc:sqlserver://localhost;database=AdventureWorks;integratedSecurity=true;"  
 Connection con = d.connect(connectionUrl, new Properties());  
@@ -55,7 +55,7 @@ Connection con = d.connect(connectionUrl, new Properties());
 ## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>Création d'une connexion via la classe SQLServerDataSource  
  Si vous devez établir une connexion à l’aide de la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), vous pouvez utiliser les différentes méthodes setter de la classe avant d’appeler la méthode [getConnection](../../connect/jdbc/reference/getconnection-method.md), comme suit :  
   
-```  
+```java 
 SQLServerDataSource ds = new SQLServerDataSource();  
 ds.setUser("MyUserName");  
 ds.setPassword("*****");  

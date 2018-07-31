@@ -1,7 +1,7 @@
 ---
 title: À l’aide des paramètres table | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 356e81dc6faf25e12c4edd51d1927ac53c5b3a38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4852b9d6546375246c9236ccdfb8522c00ec548a
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978761"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279210"
 ---
 # <a name="using-table-valued-parameters"></a>Utilisation de paramètres table
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -56,14 +56,14 @@ ms.locfileid: "37978761"
 ## <a name="creating-table-valued-parameter-types"></a>Création de Types de paramètre table  
  Paramètres table sont basés sur les structures de table fortement typées qui sont définies en utilisant des instructions Transact-SQL CREATE TYPE. Vous devez créer un type de table et de définir la structure dans SQL Server avant de pouvoir utiliser des paramètres table dans vos applications clientes. Pour plus d’informations sur la création des types de tables, consultez [les Types de tables définis par l’utilisateur](http://go.microsoft.com/fwlink/?LinkID=98364) dans la documentation en ligne de SQL Server.  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  Après avoir créé un type de table, vous pouvez déclarer des paramètres table en fonction de ce type. Le fragment de Transact-SQL suivant montre comment déclarer un paramètre table dans une définition de procédure stockée. Notez que le mot clé READONLY est obligatoire pour déclarer un paramètre table.  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -73,7 +73,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  L’instruction Transact-SQL UPDATE suivante montre comment utiliser un paramètre table en le joignant à la table Categories. Lorsque vous utilisez un paramètre table avec une jointure dans une clause FROM, vous devez également créer des alias, comme indiqué ici, où le paramètre table est un alias « EC » :  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -82,7 +82,7 @@ UPDATE dbo.Categories
   
  Cet exemple Transact-SQL montre comment sélectionner les lignes à partir d’un paramètre table pour effectuer une insertion dans une seule opération basée sur un jeu.  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
@@ -104,7 +104,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
  Les fragments de deux fichiers de code suivants montrent comment configurer un paramètre table avec un SQLServerPreparedStatement et un SQLServerCallableStatement pour insérer des données. Ici, sourceTVPObject peut être un SQLServerDataTable, ou un jeu de résultats ou un objet ISQLServerDataRecord. Les exemples supposent que la connexion est un objet de connexion actif.  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
 SQLServerPreparedStatement pStmt =   
     (SQLServerPreparedStatement) connection.prepareStatement(“INSERT INTO dbo.Categories SELECT * FROM ?”);  
@@ -112,7 +112,7 @@ pStmt.setStructured(1, "dbo.CategoryTableType", sourceTVPObject);
 pStmt.execute();  
 ```  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerCallableStatement.  
 SQLServerCallableStatement pStmt =   
     (SQLServerCallableStatement) connection.prepareCall("exec usp_InsertCategories ?");       
@@ -126,7 +126,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>En passant un paramètre table en tant qu’objet SQLServerDataTable  
  À compter du pilote Microsoft JDBC 6.0 pour SQL Server, la classe SQLServerDataTable représente une table en mémoire de données relationnelles. Cet exemple montre comment construire un paramètre table à partir des données en mémoire à l’aide de l’objet SQLServerDataTable. Le code tout d’abord crée un objet SQLServerDataTable, définit son schéma et remplit la table avec des données. Le code configure ensuite un SQLServerPreparedStatement qui passe de cette table de données comme un paramètre table à SQL Server.  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create an in-memory data table.  
@@ -154,7 +154,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>En passant un paramètre table en tant qu’objet ResultSet  
  Cet exemple montre comment diffuser des lignes de données à partir d’un jeu de résultats à un paramètre table. Le code récupère tout d’abord les données d’une table source dans un crée un objet SQLServerDataTable, définit son schéma et remplit la table avec des données. Le code configure ensuite un SQLServerPreparedStatement qui passe de cette table de données comme un paramètre table à SQL Server.  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create the source ResultSet object. Here SourceCategories is a table defined with the same schema as Categories table.   
@@ -174,7 +174,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-an-isqlserverdatarecord-object"></a>En passant un paramètre table comme un objet ISQLServerDataRecord  
  À compter du pilote Microsoft JDBC 6.0 pour SQL Server, une nouvelle interface ISQLServerDataRecord est disponible pour la diffusion en continu de données (selon la façon dont l’utilisateur fournit l’implémentation pour celle-ci) à l’aide d’un paramètre table. L’exemple suivant montre comment implémenter l’interface ISQLServerDataRecord et transmettre sous la forme d’un paramètre table. Par souci de simplicité, l’exemple suivant passe une seule ligne avec des valeurs codées en dur pour le paramètre table. Dans l’idéal, l’utilisateur serait implémentent cette interface pour les lignes de flux de données à partir de n’importe quelle source, par exemple des fichiers texte.  
   
-```  
+```java
 class MyRecords implements ISQLServerDataRecord  
 {  
     int currentRow = 0;  

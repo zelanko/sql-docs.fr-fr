@@ -1,7 +1,7 @@
 ---
 title: Wrappers et Interfaces | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a7316e5daa6fa27209a31a07ddf0ace84c191b0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 9a96d9b11473171cabd40e485342e1846017b307
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37994810"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279230"
 ---
 # <a name="wrappers-and-interfaces"></a>Wrappers et interfaces
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "37994810"
   
 -   [isWrapperFor, méthode &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)  
   
--   [unwrap, méthode (SQLServerDataSource)](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)  
+-   [Méthode Unwrap &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)  
   
 -   [isWrapperFor, méthode &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)  
   
@@ -51,11 +51,11 @@ ms.locfileid: "37994810"
   
 -   [isWrapperFor, méthode &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)  
   
--   [unwrap, méthode (SQLServerStatement)](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)  
+-   [Méthode Unwrap &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)  
   
 -   [isWrapperFor, méthode &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)  
   
--   [unwrap, méthode (SQLServerXADataSource)](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
+-   [Méthode Unwrap &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
   
 ## <a name="interfaces"></a>Interfaces  
  À compter de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0, des interfaces sont disponibles pour qu’un serveur d’applications accède à une méthode propre au pilote à partir de la classe associée. Le serveur d’applications peut encapsuler la classe en créant un proxy, exposant la fonctionnalité propre au [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] à partir d’une interface. Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge les interfaces disposant des méthodes et constantes propres au [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], de sorte qu’un serveur d’applications puisse créer un proxy de la classe.  
@@ -83,7 +83,7 @@ ms.locfileid: "37994810"
   
 ### <a name="code"></a>Code  
   
-```  
+```java
 import javax.sql.*;  
 import java.sql.*;  
 import com.microsoft.sqlserver.jdbc.*;  
