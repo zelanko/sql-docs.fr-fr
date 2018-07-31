@@ -1,5 +1,5 @@
 ---
-title: À l’aide de jeux de résultats actifs multiples (MARS) | Documents Microsoft
+title: À l’aide de jeux de résultats actifs multiples (MARS) | Microsoft Docs
 description: Utilisation de MARS (Multiple Active Result Sets)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -21,19 +21,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: bd0254bfd632c9ae0d3145e745c932757fd6d808
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: e51a3663504ae7910d53b493a54749a0a670503d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612084"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109419"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilisation de MARS (Multiple Active Result Sets)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduction du support pour les ensembles de résultats actifs multiples (MARS) dans les applications qui accèdent à la [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les applications de base de données ne pouvaient pas gérer plusieurs instructions actives sur une connexion. Lors de l'utilisation de jeux de résultats [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut, l'application devait traiter ou annuler tous les jeux de résultats d'un lot avant de pouvoir exécuter tout autre lot sur cette connexion. Un nouvel attribut de connexion a été introduit dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] de manière à ce que les applications puissent gérer plus d'une demande en attente par connexion et, plus spécifiquement, pour qu'elles puissent avoir plus d'un jeu de résultats par défaut actif par connexion.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit la prise en charge de MARS (Multiple Active Result Sets) dans les applications accédant au [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les applications de base de données ne pouvaient pas gérer plusieurs instructions actives sur une connexion. Lors de l'utilisation de jeux de résultats [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut, l'application devait traiter ou annuler tous les jeux de résultats d'un lot avant de pouvoir exécuter tout autre lot sur cette connexion. Un nouvel attribut de connexion a été introduit dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] de manière à ce que les applications puissent gérer plus d'une demande en attente par connexion et, plus spécifiquement, pour qu'elles puissent avoir plus d'un jeu de résultats par défaut actif par connexion.  
   
  MARS simplifie la conception d'applications grâce aux nouvelles fonctionnalités suivantes :  
   
@@ -54,15 +54,15 @@ ms.locfileid: "35612084"
 -   Dans MARS, l'emprunt d'identité à l'échelle de la session est interdit lorsque des traitements simultanés sont en cours d'exécution.  
   
 > [!NOTE]  
->  Par défaut, la fonctionnalités MARS n'est pas activée. Pour utiliser MARS lors de la connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le pilote OLE DB pour SQL Server, vous devez l’activer spécifiquement dans une chaîne de connexion. Pour plus d’informations, consultez le pilote OLE DB pour SQL Server sections, plus loin dans cette rubrique.  
+>  Par défaut, la fonctionnalités MARS n'est pas activée. Pour utiliser MARS lors de la connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec OLE DB Driver pour SQL Server, vous devez l’activer au sein d’une chaîne de connexion. Pour plus d’informations, consultez le pilote OLE DB pour les sections de SQL Server, plus loin dans cette rubrique.  
   
- Pilote OLE DB pour SQL Server ne limite pas le nombre d’instructions actives sur une connexion.  
+ OLE DB Driver pour SQL Server ne limite pas le nombre d’instructions actives sur une connexion.  
   
- Applications classiques que vous n’avez pas besoin d’avoir plus qu’un seul lot à instructions multiples ou une procédure stockée s’exécute en même temps bénéficieront de MARS sans avoir à comprendre la façon dont ce dernier est implémenté. Toutefois, les applications ayant des exigences plus complexes doivent prendre ceci compte.  
+ Les applications conventionnelles n’ayant pas besoin d’avoir plusieurs traitements à instructions multiples ni plusieurs procédures stockées en cours d’exécution en même temps peuvent tirer parti de MARS sans avoir à comprendre comment ce dernier est implémenté. Toutefois, les applications ayant des exigences plus complexes doivent prendre ceci compte.  
   
  MARS permet l'exécution entrelacée de plusieurs demandes au sein d'une connexion unique. Autrement dit, il permet à un traitement de s'exécuter, et au sein de cette exécution, il permet à d'autres demandes de s'exécuter. Notez toutefois que MARS est défini en terme d'entrelacement et non en terme d'exécution parallèle.  
   
- L’infrastructure de MARS permet plusieurs lots à exécuter de façon entrelacée, bien que l’exécution peut être uniquement à des points bien définis. Par ailleurs, la plupart des instructions doivent s'exécuter atomiquement au sein d'un lot. Les instructions qui retournent des lignes au client, qui sont parfois appelés *points d’interruption*, sont autorisées à entrelacer l’exécution avant la fin, tandis que les lignes sont envoyées au client, par exemple :  
+ L’infrastructure MARS permet l’exécution en mode entrelacé de plusieurs traitements, mais l’exécution ne peut être basculée qu’à des points bien définis. Par ailleurs, la plupart des instructions doivent s'exécuter atomiquement au sein d'un lot. Les instructions qui retournent des lignes au client, parfois appelées *points d’interruption*, sont autorisées à entrelacer l’exécution avant l’achèvement pendant que des lignes sont envoyées au client, par exemple :  
   
 -   SELECT  
   
@@ -77,54 +77,54 @@ ms.locfileid: "35612084"
  Évitez des problèmes en utilisant des appels d'API plutôt que des instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour gérer l'état de la connexion (SET, USE) et les transactions (BEGIN TRAN, COMMIT, ROLLBACK) en n'incluant pas ces instructions dans des traitements à instructions multiples qui contiennent également des points d'interruption, et en sérialisant l'exécution de tels traitements par la consommation ou l'annulation de tous les résultats.  
   
 > [!NOTE]  
->  Un traitement ou une procédure stockée qui démarre une transaction manuelle ou implicite lorsque MARS est activé doit terminer la transaction avant que le traitement ne quitte. S'il ne le fait pas, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restaure toutes les modifications apportées par la transaction lorsque le traitement se termine. Une telle transaction est gérée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en tant que transaction dont l'étendue est définie par traitement. Il s'agit d'un nouveau type de transaction introduit dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] pour permettre aux procédures stockées valides existantes d'être utilisées lorsque MARS est activé. Pour plus d’informations sur les transactions de lot de portée, consultez [instructions Transaction &#40;Transact-SQL&#41;](../../../t-sql/statements/statements.md).  
+>  Un traitement ou une procédure stockée qui démarre une transaction manuelle ou implicite lorsque MARS est activé doit terminer la transaction avant que le traitement ne quitte. S'il ne le fait pas, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restaure toutes les modifications apportées par la transaction lorsque le traitement se termine. Une telle transaction est gérée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en tant que transaction dont l'étendue est définie par traitement. Il s'agit d'un nouveau type de transaction introduit dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] pour permettre aux procédures stockées valides existantes d'être utilisées lorsque MARS est activé. Pour plus d’informations sur les transactions délimitées au traitement, consultez [instructions Transaction &#40;Transact-SQL&#41;](../../../t-sql/statements/statements.md).  
   
- Pour obtenir un exemple d’utilisation de MARS à partir d’ADO, consultez [à l’aide d’ADO avec le pilote OLE DB pour SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
+ Pour obtenir un exemple d’utilisation de MARS à partir d’ADO, consultez [à l’aide d’ADO avec OLE DB Driver pour SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md).  
   
 ## <a name="in-memory-oltp"></a>OLTP en mémoire  
- OLTP en mémoire prend en charge de MARS, à l’aide de requêtes et les procédures stockées compilées en mode natif. MARS permet de demander des données à partir de plusieurs requêtes sans devoir complètement récupérer chaque jeu de résultats avant envoi d’une demande pour extraire les lignes à partir d’un jeu de résultats. Pour pouvoir lire à partir de plusieurs jeux de résultats ouverts, vous devez utiliser une connexion MARS est activé.  
+ OLTP en mémoire prend en charge de MARS, à l’aide de requêtes et des procédures stockées compilées en mode natif. MARS permet demandant les données à partir de plusieurs requêtes sans avoir besoin de récupérer complètement chaque jeu de résultats avant envoi d’une demande pour extraire les lignes à partir d’un nouveau jeu de résultats. Pour pouvoir lire à partir de plusieurs jeux de résultats ouverts, vous devez utiliser une connexion MARS est activé.  
   
- MARS est désactivée par défaut, ainsi, vous devez l’activer explicitement en ajoutant `MultipleActiveResultSets=True` à une chaîne de connexion. L’exemple suivant montre comment se connecter à une instance de SQL Server et spécifier que MARS est activé :  
+ MARS est désactivée par défaut, vous devez l’activer explicitement en ajoutant `MultipleActiveResultSets=True` à une chaîne de connexion. L’exemple suivant montre comment se connecter à une instance de SQL Server et spécifier que MARS est activé :  
   
 ```  
 Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; MultipleActiveResultSets=True  
 ```  
   
- MARS avec OLTP en mémoire est essentiellement le même que MARS dans le reste du moteur SQL. La liste suivante décrit les différences lors de l’utilisation de MARS dans des tables optimisées en mémoire et en mode natif des procédures stockées compilées.  
+ MARS avec OLTP en mémoire est essentiellement identique à MARS dans le reste du moteur SQL. La liste suivante décrit les différences lors de l’utilisation de MARS dans des tables optimisées en mémoire et en mode natif des procédures stockées compilées.  
   
  **Tables optimisées en mémoire et MARS**  
   
- Voici les différences entre les tables sur disque et optimisées en mémoire à l’aide d’un MARS activé connexion :  
+ Voici les différences entre les tables sur disque et optimisées en mémoire quand à l’aide d’un MARS activé connexion :  
   
--   Deux instructions peuvent modifier des données dans le même objet cible, mais si elles essaient de modifier le même enregistrement un conflit d’écriture-écriture entraîne l’échec de la nouvelle opération. Toutefois, si les deux opérations modifient des enregistrements différents, les opérations réussissent.  
+-   Deux instructions peuvent modifier des données dans le même objet cible, mais si les deux essaient de modifier le même enregistrement un conflit d’écriture-écriture entraîne la nouvelle opération échoue. Toutefois, si les deux opérations modifient des enregistrements différents, les opérations réussissent.  
   
--   Chaque instruction s’exécute sous l’isolement d’instantané afin de nouvelles opérations ne peuvent pas voir les modifications apportées par les instructions existantes. Même si les instructions simultanées sont exécutées sous la même transaction le moteur SQL crée des transactions par lots de portée pour chaque instruction qui sont isolées les uns des autres. Toutefois, de portée d’un lot de transactions sont toujours liées afin de la restauration d’une transaction de portée du traitement par lots affecte les autres dans le même lot.  
+-   Chaque instruction s’exécute en isolement d’instantané afin de nouvelles opérations ne peuvent pas voir les modifications apportées par les instructions existantes. Même si les instructions simultanées sont exécutées sous la même transaction le moteur SQL crée les transactions délimitées au traitement pour chaque instruction qui sont isolées les uns des autres. Toutefois, délimitées au traitement des transactions sont toujours liées afin de la restauration d’une seule transaction délimitées au traitement affecte les autres dans le même lot.  
   
--   Opérations DDL ne sont pas autorisées dans les transactions utilisateur ne pourront pas immédiatement.  
+-   Opérations DDL ne sont pas autorisées dans les transactions utilisateur afin qu’ils échouent immédiatement.  
   
- **Les procédures stockées compilées en mode natif et MARS**  
+ **MARS et procédures stockées compilées en mode natif**  
   
- Les procédures stockées compilées en mode natif peuvent s’exécuter dans les connexions MARS est activé et peuvent produire une autre instruction de l’exécution uniquement lorsqu’un point est rencontré. Un point requiert une instruction SELECT, qui est la seule instruction dans une procédure stockée compilée en mode natif qui peut produire une autre instruction de l’exécution. Si une instruction SELECT n’est pas présente dans la procédure que ne génèrera pas, elle s’exécute jusqu'à la fin avant de lancer d’autres instructions.  
+ Les procédures stockées compilées en mode natif peuvent s’exécuter dans les connexions MARS est activé et peuvent générer une autre instruction de l’exécution uniquement lorsqu’un point est rencontré. Un point de rendement nécessite une instruction SELECT, est la seule instruction dans une procédure stockée compilée en mode natif qui peut produire une autre instruction de l’exécution. Si une instruction SELECT n’est pas présente dans la procédure que ne génèrera pas, il sera exécutée entièrement avant que les autres instructions commencent.  
   
  **Transactions MARS et OLTP en mémoire**  
   
- Modifications apportées par les instructions et les blocs atomic sont entrelacées sont isolées les uns des autres. Par exemple, si une instruction ou un bloc atomic apporte des modifications, puis génère une autre instruction de l’exécution, la nouvelle instruction ne verrez pas les modifications apportées par la première instruction. En outre, lors de la première instruction reprend l’exécution, elle ne voit pas les modifications apportées par d’autres instructions. Les instructions ne voient que les modifications qui sont terminées et validées avant le démarrage de l’instruction.  
+ Modifications apportées par les instructions et les blocs atomic sont entrelacés sont isolées les uns des autres. Par exemple, si une instruction ou bloc atomic apporte des modifications et génère ensuite une autre instruction de l’exécution, la nouvelle instruction ne verrez pas les modifications apportées par la première instruction. En outre, lors de la première instruction reprend l’exécution, il ne verrez pas toutes les modifications apportées par d’autres instructions. Instructions ne voient que les modifications qui sont terminées et validées avant le démarrage de l’instruction.  
   
- Une nouvelle transaction utilisateur peut être démarrée dans la transaction utilisateur actuel à l’aide de l’instruction BEGIN TRANSACTION : cela est pris en charge uniquement en mode interop BEGIN TRANSACTION ne peut être appelée à partir d’une instruction T-SQL et pas de dans compilées en mode natif stockée procédure. Vous pouvez créer un enregistrement point dans une transaction à l’aide de SAVE TRANSACTION ou un appel API à la transaction. Save(save_point_name) restauration au point de sauvegarde. Cette fonctionnalité est activée uniquement à partir d’instructions T-SQL et non à partir de procédures stockées compilées.  
+ Une nouvelle transaction de l’utilisateur peut être démarrée dans la transaction utilisateur actuel à l’aide de l’instruction BEGIN TRANSACTION : cela est pris en charge uniquement en mode interop BEGIN TRANSACTION ne peut être appelée à partir d’une instruction T-SQL et non à partir d’un compilées en mode natif stocké dans procédure. Vous pouvez créer un enregistrement point dans une transaction à l’aide de SAVE TRANSACTION ou un appel API à la transaction. Save(save_point_name) restauration au point de sauvegarde. Cette fonctionnalité est également activée uniquement à partir d’instructions T-SQL et non à partir d’en mode natif des procédures stockées compilées.  
   
- **Index columnstore et MARS**  
+ **MARS et les index columnstore**  
   
- SQL Server (à partir de 2016) prend en charge MARS avec des index columnstore. SQL Server 2014 utilise MARS pour les connexions en lecture seule à des tables avec un index columnstore.    Toutefois, SQL Server 2014 ne prend pas en charge MARS pour les opérations de langage de manipulation de données (DML) simultanées sur une table avec un index columnstore. Lorsque cela se produit, SQL Server terminer les connexions et abandonner les transactions.   SQL Server 2012 comporte des index columnstore en lecture seule et MARS ne s’applique pas à ceux-ci.  
+ SQL Server (à partir de 2016) prend en charge MARS avec des index columnstore. SQL Server 2014 utilise MARS pour les connexions en lecture seule à des tables avec un index columnstore.    Toutefois, SQL Server 2014 ne prend pas en charge MARS pour les opérations de langage de manipulation de données (DML) simultanées sur une table avec un index columnstore. Quand ce cas se produit, SQL Server met fin aux connexions et annule les transactions.   SQL Server 2012 a des index columnstore en lecture seule et MARS ne s’applique pas à eux.  
   
-## <a name="ole-db-driver-for-sql-server"></a>Pilote d’OLE DB pour SQL Server  
- Le pilote OLE DB pour SQL Server prend en charge MARS via l’ajout de la propriété de l’initialisation SSPROP_INIT_MARSCONNECTION données source qui est implémentée dans le jeu de propriétés DBPROPSET_SQLSERVERDBINIT. En outre, une nouvelle chaîne de connexion mot clé, **MarsConn**, été ajouté. Il accepte **true** ou **false** valeurs ; **false** est la valeur par défaut.  
+## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver pour SQL Server  
+ OLE DB Driver pour SQL Server prend en charge MARS via l’ajout de la propriété d’initialisation de la source de données SSPROP_INIT_MARSCONNECTION, implémentée dans le jeu de propriétés DBPROPSET_SQLSERVERDBINIT. De plus, un nouveau mot clé de chaîne de connexion, **MarsConn**, a été ajouté. Il accepte **true** ou **false** valeurs ; **false** est la valeur par défaut.  
   
- Le propriété de source de données DBPROP_MULTIPLECONNECTIONS a la valeur par défaut VARIANT_TRUE. Cela signifie que le fournisseur générera dynamiquement plusieurs connexions pour prendre en charge plusieurs objets command et rowset simultanés. Lorsque MARS est activé, pilote OLE DB pour SQL Server peut prendre en charge plusieurs objets command et rowset sur une seule connexion, donc MULTIPLE_CONNECTIONS est définie à VARIANT_FALSE par défaut.  
+ Le propriété de source de données DBPROP_MULTIPLECONNECTIONS a la valeur par défaut VARIANT_TRUE. Cela signifie que le fournisseur générera dynamiquement plusieurs connexions pour prendre en charge plusieurs objets command et rowset simultanés. Quand MARS est activé, OLE DB Driver pour SQL Server peut prendre en charge plusieurs objets command et rowset sur une connexion unique. MULTIPLE_CONNECTIONS est par conséquent défini par défaut sur VARIANT_FALSE.  
   
  Pour plus d’informations sur les améliorations apportées au jeu de propriétés DBPROPSET_SQLSERVERDBINIT, consultez [propriétés d’initialisation et d’autorisation](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
-### <a name="ole-db-driver-for-sql-server-example"></a>Pilote OLE DB exemple SQL Server  
- Dans cet exemple, un objet de source de données est créé à l’aide du pilote OLE DB pour SQL Server, et MARS est activé à l’aide de propriétés DBPROPSET_SQLSERVERDBINIT avant la création de l’objet de session.  
+### <a name="ole-db-driver-for-sql-server-example"></a>Exemple OLE DB Driver pour SQL Server  
+ Dans cet exemple, un objet source de données est créé à l’aide d’OLE DB Driver pour SQL Server et MARS est activé à l’aide du jeu de propriétés DBPROPSET_SQLSERVERDBINIT avant que l’objet session ne soit créé.  
   
 ```  
 #include <msoledbsql.h>  
@@ -210,7 +210,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  
   

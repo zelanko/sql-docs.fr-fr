@@ -1,6 +1,6 @@
 ---
-title: Ensembles de lignes | Documents Microsoft
-description: Ensembles de lignes dans le pilote OLE DB pour SQL Server
+title: Ensembles de lignes | Microsoft Docs
+description: Ensemble de lignes dans le pilote OLE DB pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,37 +20,37 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8ffead535df47ea3f6937e11fa16f5e32318ecf3
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: d4d7889775a66e3afd03103abf7503686ffd43fe
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690172"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106925"
 ---
 # <a name="rowsets"></a>Ensembles de lignes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Un ensemble de lignes est un jeu de lignes contenant des colonnes de données. Les ensembles de lignes sont des objets centraux qui permettent à tous les fournisseurs de données OLE DB d'exposer les données des jeux de résultats sous forme tabulaire.  
   
- Après un consommateur crée une session à l’aide de la **IDBCreateSession::CreateSession** (méthode), le consommateur peut utiliser soit le **IOpenRowset** ou **IDBCreateCommand** interface sur la session pour créer un ensemble de lignes. Le pilote OLE DB pour SQL Server prend en charge ces deux interfaces. Ces deux méthodes sont décrites ici.  
+ Après avoir créé une session en utilisant la méthode **IDBCreateSession::CreateSession**, le consommateur peut utiliser l’interface **IOpenRowset** ou **IDBCreateCommand** dans la session pour créer un ensemble de lignes. Le pilote OLE DB pour SQL Server prend en charge ces deux interfaces. Ces deux méthodes sont décrites ici.  
   
--   Créer un ensemble de lignes en appelant le **IOpenRowset::OpenRowset** (méthode).  
+-   Créer un ensemble de lignes en appelant la méthode **IOpenRowset::OpenRowset**.  
   
-     Cette solution est équivalente à la création d'un ensemble de lignes sur une même table. Cette méthode ouvre et retourne un ensemble de lignes qui inclut toutes les lignes d'une même table de base. Un des arguments de **OpenRowset** est un ID qui identifie la table à partir duquel créer l’ensemble de lignes.  
+     Cette solution est équivalente à la création d'un ensemble de lignes sur une même table. Cette méthode ouvre et retourne un ensemble de lignes qui inclut toutes les lignes d'une même table de base. L’un des arguments transmis à **OpenRowset** est un ID qui identifie la table à partir de laquelle créer l’ensemble de lignes.  
   
--   Créer un objet de commande en appelant le **IDBCreateCommand::CreateCommand** (méthode).  
+-   Créer un objet de commande en appelant la méthode **IDBCreateCommand::CreateCommand**.  
   
-     L'objet de commande exécute les commandes que le fournisseur prend en charge. Avec le pilote OLE DB pour SQL Server, le consommateur peut spécifier toute [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction, comme une instruction SELECT ou un appel à une procédure stockée. Les étapes de la création d'un ensemble de lignes en utilisant un objet de commande sont les suivantes :  
+     L'objet de commande exécute les commandes que le fournisseur prend en charge. Avec le pilote OLE DB pour SQL Server, le consommateur peut spécifier une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)], telle qu’une instruction SELECT ou l’appel d’une procédure stockée. Les étapes de la création d'un ensemble de lignes en utilisant un objet de commande sont les suivantes :  
   
-    1.  Le consommateur appelle la **IDBCreateCommand::CreateCommand** méthode sur la session pour obtenir un objet de commande demande la **ICommandText** interface sur l’objet de commande. Cela **ICommandText** interface définit et extrait le texte de commande. Le consommateur remplit la commande de texte en appelant le **ICommandText::SetCommandText** (méthode).  
+    1.  Le consommateur appelle la méthode **IDBCreateCommand::CreateCommand** dans la session pour obtenir un objet de commande qui demande l’interface **ICommandText** dans l’objet de commande. Cette interface **ICommandText** définit et récupère le texte de la commande. Le consommateur remplit la commande de texte en appelant la méthode **ICommandText::SetCommandText**.  
   
-    2.  L’utilisateur appelle le **ICommand::Execute** méthode sur la commande. L'objet de l'ensemble de lignes créé lors de l'exécution de la commande contient le jeu de résultats de la commande.  
+    2.  L’utilisateur appelle la méthode **ICommand::Execute** dans la commande. L'objet de l'ensemble de lignes créé lors de l'exécution de la commande contient le jeu de résultats de la commande.  
   
- Le consommateur peut utiliser le **ICommandProperties** interface à obtenir ou définir les propriétés de l’ensemble de lignes retourné par la commande exécutée par le **ICommand::Execute** interfaces. Les propriétés les plus communément demandées sont les interfaces que l'ensemble de lignes doit prendre en charge. En plus des interfaces, le consommateur peut demander les propriétés qui modifient le comportement de l'ensemble de lignes ou de l'interface.  
+ Le consommateur peut utiliser l’interface **ICommandProperties** pour obtenir ou définir les propriétés de l’ensemble de lignes retourné par la commande exécutée par les interfaces **ICommand::Execute**. Les propriétés les plus communément demandées sont les interfaces que l'ensemble de lignes doit prendre en charge. En plus des interfaces, le consommateur peut demander les propriétés qui modifient le comportement de l'ensemble de lignes ou de l'interface.  
   
- Les consommateurs libèrent les ensembles de lignes avec le **IRowset::Release** (méthode). La libération d'un ensemble de lignes entraîne celle des handles de ligne détenus par le consommateur sur cet ensemble de lignes. La libération d'un ensemble de lignes ne libère pas les accesseurs. Si vous avez un **IAccessor** interface, il toujours doit être libérée.  
+ Les consommateurs libèrent les ensembles de lignes avec la méthode **IRowset::Release**. La libération d'un ensemble de lignes entraîne celle des handles de ligne détenus par le consommateur sur cet ensemble de lignes. La libération d'un ensemble de lignes ne libère pas les accesseurs. Si vous avez une interface **IAccessor**, il lui reste à être libérée.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -70,7 +70,7 @@ ms.locfileid: "35690172"
   
 -   [Mise à jour des données dans les ensembles de lignes](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Programmation OLE DB Driver pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

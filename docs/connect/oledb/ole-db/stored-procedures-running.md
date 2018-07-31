@@ -1,5 +1,5 @@
 ---
-title: Exécution de procédures stockées (OLE DB) | Documents Microsoft
+title: Exécution de procédures stockées (OLE DB) | Microsoft Docs
 description: Exécution de procédures stockées (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9919fedbb999600e17c767a3206a587b99aec4da
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b4abfa519b9f083ee90df466ec7db3bd5c7341a9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611884"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108961"
 ---
-# <a name="stored-procedures---running"></a>Procédures stockées - en cours d’exécution
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="stored-procedures---running"></a>Procédures stockées - Exécution
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -42,7 +42,7 @@ ms.locfileid: "35611884"
   
 -   des fonctionnalités supplémentaires.  
   
- Le pilote OLE DB pour SQL Server prend en charge trois des mécanismes qui [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les procédures stockées utilisent pour retourner des données :  
+ Le pilote OLE DB pour SQL Server prend en charge trois des mécanismes qui [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisent des procédures stockées pour retourner des données :  
   
 -   Chaque instruction SELECT dans la procédure génère un jeu de résultats.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "35611884"
   
  L'application doit être en mesure de gérer toutes ces sorties provenant de procédures stockées.  
   
- Des fournisseurs OLE DB différents retournent des paramètres de sortie et des valeurs de retour à des moments différents pendant le traitement des résultats. Dans le cas le pilote OLE DB pour SQL Server, les codes de retour et les paramètres de sortie ne sont pas fournis jusqu'à une fois que le consommateur a récupéré ou annulé les jeux de résultats retournés par la procédure stockée. Les codes de retour et les paramètres de sortie sont retournés dans le dernier paquet TDS provenant du serveur.  
+ Des fournisseurs OLE DB différents retournent des paramètres de sortie et des valeurs de retour à des moments différents pendant le traitement des résultats. Dans le cas du pilote OLE DB pour SQL Server, les paramètres de sortie et les codes de retour ne sont pas fournis tant que le consommateur n’a pas extrait ou annulé les jeux de résultats retournés par la procédure stockée. Les codes de retour et les paramètres de sortie sont retournés dans le dernier paquet TDS provenant du serveur.  
   
  Les fournisseurs utilisent la propriété DBPROP_OUTPUTPARAMETERAVAILABILITY pour signaler quand les paramètres de sortie et les valeurs de retour sont retournés. Cette propriété figure dans le jeu de propriétés DBPROPSET_DATASOURCEINFO.  
   
- Le pilote OLE DB pour SQL Server définit la propriété DBPROP_OUTPUTPARAMETERAVAILABILITY sur DBPROPVAL_OA_ATROWRELEASE pour indiquer que les codes de retournés et les paramètres de sortie ne sont pas retournés jusqu'à ce que le jeu de résultats est traité ou libéré.  
+ Le pilote OLE DB pour SQL Server définit la propriété DBPROP_OUTPUTPARAMETERAVAILABILITY sur DBPROPVAL_OA_ATROWRELEASE pour indiquer que les codes de retour et les paramètres de sortie ne sont pas retournés tant que le jeu de résultats n’est pas traité ou libéré.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Procédures stockées](../../oledb/ole-db/stored-procedures.md)  
   
   

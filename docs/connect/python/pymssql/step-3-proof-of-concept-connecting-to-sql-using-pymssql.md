@@ -1,5 +1,5 @@
 ---
-title: 'Étape 3 : Preuve de concept pour la connexion à SQL via pymssql | Documents Microsoft'
+title: 'Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de pymssql | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e744d2e472e082cacb48a3e4f8c3a07a1f87bb03
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 8ea4fa2527fa39700647832bdd1a194389cb36e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309928"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982231"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de pymssql
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-Cet exemple doit être considéré comme une preuve de concept uniquement.  L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft.  
+Cet exemple doit être considérée comme une preuve de concept uniquement.  L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft.  
   
 ## <a name="step-1--connect"></a>Étape 1 : se connecter  
   
@@ -36,9 +36,9 @@ Le [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) fonction est
 ```  
   
   
-## <a name="step-2--execute-query"></a>Étape 2 : Exécuter la requête  
+## <a name="step-2--execute-query"></a>Étape 2 : Exécution de requête  
   
-Le [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) fonction peut être utilisée pour récupérer un jeu de résultats d’une requête par rapport à la base de données SQL. Cette fonction accepte toute requête essentiellement et retourne un jeu de résultats qui peut être répétée sur l’utilisation de [cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+Le [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) fonction peut être utilisée pour récupérer un jeu de résultats d’une requête par rapport à la base de données SQL. Essentiellement, cette fonction accepte n’importe quelle requête et retourne un jeu de résultats qui peut être itéré à l’utilisation de [Cursor.fetchone ()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
   
   
 ```python
@@ -54,7 +54,7 @@ Le [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor
   
 ## <a name="step-3--insert-a-row"></a>Étape 3 : Insérer une ligne  
   
-Dans cet exemple, vous allez apprendre à passer en toute sécurité une commande [INSERT](../../../t-sql/statements/insert-transact-sql.md), en passant des valeurs en paramètres qui protègeront votre application à partir des tentatives [d'injection SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+Dans cet exemple, vous verrez comment exécuter un [insérer](../../../t-sql/statements/insert-transact-sql.md) instruction en toute sécurité, passer des paramètres pour protéger votre application à partir de [injection SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) valeur.    
   
   
 ```python
@@ -72,11 +72,11 @@ Dans cet exemple, vous allez apprendre à passer en toute sécurité une command
   
 ## <a name="step-4--rollback-a-transaction"></a>Étape 4 : Restaurer une transaction  
   
-Cet exemple de code illustre l’utilisation de transactions dans lequel vous :  
+Cet exemple de code illustre l’utilisation de transactions dans lesquelles vous :  
   
 * Commencer une transaction  
 * Insérer une ligne de données  
-* Restaurer la transaction pour annuler l’insertion  
+* Restaurer votre transaction pour annuler l’insertion  
   
 ```python
     import pymssql  
@@ -90,4 +90,4 @@ Cet exemple de code illustre l’utilisation de transactions dans lequel vous :
     
   ## <a name="next-steps"></a>Étapes suivantes  
   
-Pour plus d’informations, consultez la [centre de développement Python](https://azure.microsoft.com/en-us/develop/python/).
+Pour plus d’informations, consultez le [centre de développement Python](https://azure.microsoft.com/develop/python/).

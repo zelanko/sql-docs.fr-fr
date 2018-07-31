@@ -1,5 +1,5 @@
 ---
-title: Codes de retour | Documents Microsoft
+title: Codes de retour | Microsoft Docs
 description: Codes de retour
 ms.custom: ''
 ms.date: 06/14/2018
@@ -26,15 +26,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 84927b3d26233e9d21f175850a5b11c2c2bea56b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ec559040fceb5116ca83cc4eb295580479224b04
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665959"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107045"
 ---
 # <a name="return-codes"></a>Codes de retour
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -44,15 +44,15 @@ ms.locfileid: "35665959"
   
  Lorsqu’un pilote OLE DB pour la fonction membre de SQL Server retourne S_OK, la fonction a réussi.  
   
- Lorsqu’un pilote OLE DB pour la fonction membre de SQL Server ne retourne pas S_OK, les macros de IS_ERROR de décompactage de HRESULT OLE/COM n’a pas pu peuvent déterminer la réussite ou l’échec d’une fonction globale.  
+ Quand une fonction membre du pilote OLE DB pour SQL Server ne retourne pas S_OK, les macros OLE/COM FAILED et IS_ERROR de décompactage de HRESULT peuvent déterminer le succès ou l’échec global d’une fonction.  
   
- Si FAILED ou IS_ERROR retourne la valeur TRUE, le pilote OLE DB pour le consommateur de SQL Server est assuré que l’exécution d’une fonction membre a échoué. Lorsque FAILED ou IS_ERROR retourne FALSE et que HRESULT n’est pas égal S_OK, le pilote OLE DB pour SQL Server consommateur est assuré de la fonction a réussi dans un sens. Le consommateur peut récupérer des informations détaillées sur ce retour « réussi avec informations » dans le pilote OLE DB pour les interfaces d’erreur SQL Server. Dans le cas où une fonction échoue clairement (la macro FAILED retourne TRUE), informations d’erreur étendues sont également disponibles dans le pilote OLE DB pour les interfaces d’erreur SQL Server.  
+ Si FAILED ou IS_ERROR retourne la valeur TRUE, le consommateur du pilote OLE DB pour SQL Server a l’information selon laquelle l’exécution de la fonction membre a échoué. Lorsque FAILED ou IS_ERROR retourne FALSE et que HRESULT n’est pas égal S_OK, le pilote OLE DB pour SQL Server consommateur est assuré de la fonction a réussi d’une certaine façon. Le consommateur peut extraire des informations détaillées sur ce retour « réussite avec informations » à partir des interfaces d’erreur du pilote OLE DB pour SQL Server. De même, dans le cas où une fonction échoue clairement (la macro FAILED retourne TRUE), les informations d’erreur étendues sont disponibles via les interfaces d’erreur du pilote OLE DB pour SQL Server.  
   
- Pilote OLE DB pour les consommateurs de SQL Server rencontrent généralement le retour HRESULT de DB_S_ERRORSOCCURRED « réussi avec informations ». En général, les fonctions membres qui retournent DB_S_ERRORSOCCURRED définissent un ou plusieurs paramètres qui remettent les valeurs d'état au consommateur. Aucune information d’erreur ne peut-être être disponible au consommateur autre que celle retournée dans les paramètres de la valeur d’état, les consommateurs doivent implémenter la logique d’application pour récupérer les valeurs d’état lorsqu’elles sont disponibles.  
+ Pilote OLE DB pour les consommateurs de SQL Server rencontrent généralement le retour HRESULT de DB_S_ERRORSOCCURRED « réussi avec informations ». En général, les fonctions membres qui retournent DB_S_ERRORSOCCURRED définissent un ou plusieurs paramètres qui remettent les valeurs d'état au consommateur. Il est possible que le consommateur ne dispose d’aucune information d’erreur autre que celle retournée dans les paramètres état-valeur : les consommateurs doivent donc implémenter la logique d’application nécessaire pour extraire les valeurs d’état quand elles sont disponibles.  
   
- Le pilote OLE DB pour les fonctions de membre SQL Server ne renvoient pas le code de réussite S_FALSE. Tous les pilote OLE DB pour les fonctions de membre SQL Server retournent toujours S_OK pour indiquer une réussite.  
+ Le pilote OLE DB pour les fonctions de membre de SQL Server ne renvoient pas le code de réussite S_FALSE. Tous les pilote OLE DB pour les fonctions de membre SQL Server retournent toujours S_OK pour indiquer la réussite.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Erreurs](../../oledb/ole-db-errors/errors.md)  
   
   

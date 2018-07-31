@@ -1,6 +1,6 @@
 ---
-title: Envoyer des données à une colonne FILESTREAM à l’aide d’IRowsetFastUpload (OLE DB) | Documents Microsoft
-description: Envoyer des données à une colonne FILESTREAM à l’aide d’IRowsetFastUpload (OLE DB)
+title: Envoyer des données à une colonne FILESTREAM avec IRowsetFastUpload (OLE DB) | Microsoft Docs
+description: Envoyer des données à une colonne FILESTREAM avec IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 070e8022ffc0840f88f7b8e5b0b03abcd2f13dc3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a708966a35ef6311cf6912a988bcf4822f53b6f3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666189"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106555"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Envoyer des données à une colonne FILESTREAM à l'aide d'IRowsetFastUpload (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
@@ -30,10 +30,10 @@ ms.locfileid: "35666189"
   
  Pour plus d’informations sur la fonctionnalité filestream, consultez [prise en charge FILESTREAM](../../../oledb/features/filestream-support.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Avant de compiler et exécuter cet exemple, activer la prise en charge FILESTREAM ([activer et configurer FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Assurez-vous que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
+ Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
   
  Le serveur doit disposer d’un répertoire appelé C:\DBFsa ; c'est à cet emplacement que l'exemple va créer la base de données. Votre instance de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] doit disposer d'un accès en écriture à cet emplacement (par exemple, ouvrez une session en tant que compte système local).  
   

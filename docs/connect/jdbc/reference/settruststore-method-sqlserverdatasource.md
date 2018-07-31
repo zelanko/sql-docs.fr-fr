@@ -1,5 +1,5 @@
 ---
-title: Méthode setTrustStore (SQLServerDataSource) | Documents Microsoft
+title: Méthode setTrustStore (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf5d6034fbf2e9ce9d1c1b58909146dbcf56f0c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846734"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042279"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>Méthode setTrustStore (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public void setTrustStore(java.lang.String trustStore)
 #### <a name="parameters"></a>Paramètres  
  *trustStore*  
   
- A **chaîne** qui contient le chemin d’accès (y compris le nom de fichier) au fichier trustStore de certificat.  
+ Valeur **String** qui contient le chemin (notamment le nom de fichier) du fichier trustStore de certificat.  
   
-## <a name="remarks"></a>Notes  
- Si la propriété trustStore n’est pas spécifié ou défini comme null, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] s’appuient sur des règles pour déterminer le magasin de certificats à utiliser de recherche de la fabrique de gestionnaire de confiance. Le TrustManagerFactory SunX509 par défaut essaie de trouver les informations d’approbation dans les emplacements suivants dans cet ordre :  
+## <a name="remarks"></a>Notes   
+ Quand la propriété trustStore n’est pas spécifiée ou a la valeur Null, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se fie aux règles de recherche de la fabrication du gestionnaire d’approbation pour déterminer le magasin de certificats à utiliser. Le TrustManagerFactory SunX509 par défaut essaie de rechercher les informations approuvées aux emplacements suivants dans cet ordre :  
   
 -   1. Un fichier spécifié par la propriété système de machine virtuelle Java (JVM) « javax.net.ssl.trustStore ».  
   
@@ -58,7 +58,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  La propriété trustStorePassword peut être spécifiée avec la propriété trustStore et sa valeur est utilisée pour ouvrir le fichier trustStore. Pour plus d’informations, consultez [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

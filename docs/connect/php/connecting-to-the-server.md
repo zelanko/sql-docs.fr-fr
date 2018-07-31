@@ -1,5 +1,5 @@
 ---
-title: Connexion au serveur | Documents Microsoft
+title: Connexion au serveur | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03f3e44683ab329e67360be3992fb942c3799165
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307808"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062472"
 ---
 # <a name="connecting-to-the-server"></a>Connexion au serveur
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,11 +40,11 @@ Les rubriques de cette section décrivent les options et les procédures de conn
 |[Guide pratique pour désactiver MARS (Multiple Active Result Set)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|Décrit comment désactiver la fonctionnalité MARS pendant une connexion.|  
 |[Options de connexion](../../connect/php/connection-options.md)|Répertorie les options autorisées dans le tableau associatif qui contient les attributs de connexion.|  
 |[Prise en charge de la base de données locale](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|Décrit la prise en charge de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] pour la fonctionnalité LocalDB, ajoutée dans [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
-|[Prise en charge des fonctionnalités de récupération d’urgence/haute disponibilité](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Explique comment votre application peut être configurée pour tirer parti de la récupération d’urgence haute disponibilité, des fonctionnalités ajoutées dans [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
-|[Connexion à Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|Explique comment se connecter à une base de données SQL Azure.|  
+|[Prise en charge des fonctionnalités de récupération d’urgence/haute disponibilité](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Explique comment votre application peut être configurée pour tirer parti des fonctionnalités de récupération d'urgence haute disponibilité, ajoutées dans [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
+|[Connexion à Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|Traite de la connexion à une base de données Azure SQL Database.|  
 |[Résilience des connexions](../../connect/php/connection-resiliency.md)|Décrit la fonctionnalité de résilience de connexion qui rétablit les connexions interrompues.|  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Exemple d’application &#40;pilote SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

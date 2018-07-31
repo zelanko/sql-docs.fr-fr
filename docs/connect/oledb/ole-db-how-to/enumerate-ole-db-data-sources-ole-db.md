@@ -1,6 +1,6 @@
 ---
-title: Énumérer des Sources de données OLE DB (OLE DB) | Documents Microsoft
-description: Énumérer des sources de données OLE DB à l’aide MSOLEDBSQL énumérateur
+title: Énumérer des Sources de données OLE DB (OLE DB) | Microsoft Docs
+description: Énumérer des sources de données OLE DB à l’aide d’énumérateur MSOLEDBSQL
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9b4911e94ec5cb21e2950a09b0a0e18d5f842bd7
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 2466ebc1b701cc5f2102a895afa475a107c8af4c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665879"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107982"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Énumérer des sources de données OLE DB (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Cet exemple montre comment utiliser l'objet énumérateur pour répertorier les sources de données disponibles.  
   
- Pour répertorier les sources de données visibles par l’énumérateur MSOLEDBSQL, le consommateur appelle la [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) (méthode). Cette méthode retourne un ensemble de lignes dotées d'informations sur les sources de données actuellement visibles.  
+ Pour répertorier les sources de données visibles pour l’énumérateur MSOLEDBSQL, le consommateur appelle la méthode [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312). Cette méthode retourne un ensemble de lignes dotées d'informations sur les sources de données actuellement visibles.  
   
  Selon la bibliothèque réseau utilisée, le système recherche les sources de données dans le domaine approprié. Pour les canaux nommés, il s'agit du domaine auquel le client est connecté. Pour AppleTalk, il s'agit de la zone par défaut. Pour SPX/IPX, il s'agit de la liste des installations [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disponibles dans la base de données Bindery. Pour BANYAN VINES, il s'agit des installations [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disponibles dans le réseau local. Les sockets Multiprotocol et TCP/IP ne sont pas pris en charge.  
   
@@ -55,8 +55,8 @@ ms.locfileid: "35665879"
   
 6.  Appelez **IRowset::GetData**pour récupérer les données de la copie de l'ensemble de lignes de la ligne et traiter ces données.  
   
-## <a name="example"></a>Exemple  
- Compilez avec ole32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où le nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
+## <a name="example"></a> Exemple  
+ Compilez avec ole32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
   
 ```  
 // compile with: ole32.lib  

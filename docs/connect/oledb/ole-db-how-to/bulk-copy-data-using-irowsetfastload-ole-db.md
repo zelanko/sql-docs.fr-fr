@@ -1,6 +1,6 @@
 ---
-title: Copie de données avec IRowsetFastLoad (OLE DB) | Documents Microsoft
-description: Données de copie en bloc dans une interface de bloc avec IRowsetFastLoad de table SQL Server de pilote OLE DB pour SQL Server
+title: Copie de données avec IRowsetFastLoad (OLE DB) | Microsoft Docs
+description: Copier en bloc des données dans une interface de bloc avec IRowsetFastLoad de table SQL Server de OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,23 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 915a9ba3bf4a9f9937d79cbb9449671ca09b3cb9
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 60141327793c4839110dfed05165102060de2d00
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665659"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107721"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copier des données en bloc avec IRowsetFastLoad (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Cet exemple illustre l'utilisation d IRowsetFastLoad pour effectuer une copie en bloc des enregistrements dans une table.  
   
- Le consommateur notifie le pilote OLE DB pour SQL Server de son besoin de copie en bloc en définissant le pilote OLE DB pour la propriété de spécifiques au pilote SQL Server SSPROP_ENABLEFASTLOAD avec la valeur VARIANT_TRUE. Avec la propriété définie sur la source de données, le consommateur crée un pilote OLE DB pour la session SQL Server. La nouvelle session permet au client d’accéder à **IRowsetFastLoad**.  
+ Le consommateur notifie le pilote OLE DB pour SQL Server de son besoin de copie en bloc en définissant le pilote OLE DB pour la propriété de spécifiques au pilote SQL Server SSPROP_ENABLEFASTLOAD avec la valeur VARIANT_TRUE. Avec la propriété définie sur la source de données, le consommateur crée un pilote OLE DB pour la session de SQL Server. La nouvelle session permet au client d’accéder à **IRowsetFastLoad**.  
   
- Vous trouverez un exemple complet qui illustre l’utilisation de **IRowsetFastLoad** pour copier en bloc des enregistrements dans une table. Dans cet exemple, 10 enregistrements sont ajoutés à la table **IRFLTable**. Vous devez créer la table **IRFLTable** dans la base de données.  
+ Un exemple complet illustrant l’utilisation de **IRowsetFastLoad** pour copier en bloc les enregistrements dans une table est disponible. Dans cet exemple, 10 enregistrements sont ajoutés à la table **IRFLTable**. Vous devez créer la table **IRFLTable** dans la base de données.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) .  
   
@@ -46,24 +46,24 @@ ms.locfileid: "35665659"
   
 1.  Établissez une connexion à la source de données.  
   
-2.  Le pilote OLE DB pour la propriété de source de données spécifique au pilote SQL Server SSPROP_ENABLEFASTLOAD la valeur VARIANT_TRUE. Avec cette propriété la valeur VARIANT_TRUE, la session nouvellement créée autorise l’accès client aux **IRowsetFastLoad**.  
+2.  Le pilote OLE DB pour la propriété de source de données spécifique au pilote SQL Server SSPROP_ENABLEFASTLOAD la valeur VARIANT_TRUE. Avec cette propriété définie sur VARIANT_TRUE, la session nouvellement créée accorde au consommateur l’accès à **IRowsetFastLoad**.  
   
 3.  Créer une session qui demande le **IOpenRowset** interface.  
   
-4.  Appelez **IOpenRowset::OpenRowset** pour ouvrir un ensemble de lignes qui inclut toutes les lignes de la table (dans lequel les données sont à copier à l’aide de la copie en bloc).  
+4.  Appelez **IOpenRowset::OpenRowset** pour ouvrir un ensemble de lignes qui inclut toutes les lignes de la table (dans laquelle les données doivent être copiées avec l’opération de copie en bloc).  
   
 5.  Effectuez les liaisons nécessaires et créez un accesseur à l’aide de **IAccessor::CreateAccessor**.  
   
 6.  Configurez la mémoire tampon à partir de laquelle les données seront copiées vers la table.  
   
-7.  Appelez **IRowsetFastLoad::InsertRow** pour le copier en bloc les données dans la table.  
+7.  Appelez **IRowsetFastLoad::InsertRow** pour copier en bloc les données dans la table.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Dans cet exemple, 10 enregistrements sont ajoutés à la table IRFLTable. Vous devez créer la table IRFLTable dans la base de données. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
  Exécutez la première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  pour créer la table utilisée par l'application.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où le nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
   
  Exécutez la troisième liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour supprimer la table utilisée par l'application.  
   

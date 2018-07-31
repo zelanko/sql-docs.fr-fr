@@ -1,5 +1,5 @@
 ---
-title: Classe SQLServerDriver | Documents Microsoft
+title: Classe SQLServerDriver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 976893003e65ea226e5df03a3d636b20d38018ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845474"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052721"
 ---
 # <a name="sqlserverdriver-class"></a>Classe SQLServerDriver
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Représente le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Cette classe inclut des méthodes pour la connexion à un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données et pour obtenir des informations sur le pilote JDBC.  
+  Représente le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Cette classe inclut des méthodes de connexion à une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] et d’obtention d’informations sur le pilote JDBC.  
   
  **Package :** com.microsoft.sqlserver.jdbc  
   
@@ -39,8 +39,8 @@ ms.locfileid: "32845474"
 public final class SQLServerDriver  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
- [Référence d’API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerDriver, membres](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
+ [Informations de référence sur l'API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

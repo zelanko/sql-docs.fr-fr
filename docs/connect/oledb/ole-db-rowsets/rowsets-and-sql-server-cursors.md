@@ -1,6 +1,6 @@
 ---
-title: Ensembles de lignes et curseurs SQL Server | Documents Microsoft
-description: Curseurs de jeux de lignes et de SQL Server
+title: Ensembles de lignes et curseurs SQL Server | Microsoft Docs
+description: Ensembles de lignes et curseurs SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0860e164edcff6f4f89f1ac5ece5624d11d4568e
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: de602cbb2452c0d9d4201de89d7573a23c2704bc
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689602"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107185"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Ensembles de lignes et curseurs SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -64,7 +64,7 @@ ms.locfileid: "35689602"
   
     -   ne prennent en charge aucune instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui retourne plus d'un seul jeu de résultats.  
   
- Les consommateurs peuvent demander différents comportements de curseur dans un ensemble de lignes en définissant certaines propriétés d'ensemble de lignes. Si le consommateur ne définit pas l’une de ces propriétés de l’ensemble de lignes ou leur affecte leurs valeurs par défaut, le pilote OLE DB pour SQL Server implémente l’ensemble de lignes à l’aide d’un jeu de résultats par défaut. Si l’une de ces propriétés est définie à une valeur autre que la valeur par défaut, le pilote OLE DB pour SQL Server implémente l’ensemble de lignes à l’aide d’un curseur côté serveur.  
+ Les consommateurs peuvent demander différents comportements de curseur dans un ensemble de lignes en définissant certaines propriétés d'ensemble de lignes. Si le consommateur ne définit aucune de ces propriétés d’ensemble de lignes ou leur affecte à toutes leur valeur par défaut, le pilote OLE DB pour SQL Server implémente l’ensemble de lignes à l’aide d’un jeu de résultats par défaut. Si une valeur autre que la valeur par défaut est affectée à l’une de ces propriétés, le pilote OLE DB pour SQL Server implémente l’ensemble de lignes à l’aide d’un curseur côté serveur.  
   
  Les propriétés d’ensemble de lignes suivantes diriger le pilote OLE DB pour SQL Server à utiliser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les curseurs. Certaines propriétés peuvent être combinées avec d'autres sans risque. Par exemple, un ensemble de lignes qui expose les propriétés DBPROP_IRowsetScroll et DBPROP_IRowsetChange sera un ensemble de lignes signet présentant un comportement de mise à jour immédiat. Les autres propriétés s'excluent mutuellement. Par exemple, un ensemble de lignes exposant DBPROP_OTHERINSERT ne peut pas contenir de signets.  
   
@@ -75,13 +75,13 @@ ms.locfileid: "35689602"
 |DBPROP_BOOKMARKS ou DBPROP_LITERALBOOKMARKS|VARIANT_TRUE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes est séquentiel et prend en charge l'extraction et le défilement vers l'avant uniquement. Le positionnement de ligne relatif est pris en charge. Le texte de la commande peut contenir une clause ORDER BY.|  
 |DBPROP_OWNUPDATEDELETE ou DBPROP_OWNINSERT ou DBPROP_OTHERUPDATEDELETE|VARIANT_TRUE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes prend en charge le défilement et l'extraction dans l'une ou l'autre direction. Le positionnement de ligne relatif est pris en charge. Le texte de la commande peut contenir une clause ORDER BY.|  
 |DBPROP_OTHERINSERT|VARIANT_TRUE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes prend en charge le défilement et l'extraction dans l'une ou l'autre direction. Le positionnement de ligne relatif est pris en charge. Le texte de la commande peut inclure une clause ORDER BY s'il existe un index sur les colonnes référencées.<br /><br /> DBPROP_OTHERINSERT ne peut pas être VARIANT_TRUE si l'ensemble de lignes contient des signets. Toute tentative de création d'un ensemble de lignes avec cette propriété de visibilité et des signets provoque une erreur.|  
-|DBPROP_IRowsetLocate ou DBPROP_IRowsetScroll|VARIANT_TRUE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes prend en charge le défilement et l'extraction dans l'une ou l'autre direction. Les signets et le positionnement absolu par le biais du **IRowsetLocate** interface sont pris en charge dans l’ensemble de lignes. Le texte de la commande peut contenir une clause ORDER BY.<br /><br /> DBPROP_IRowsetLocate et DBPROP_IRowsetScroll requièrent des signets dans l'ensemble de lignes. Toute tentative de création d'un ensemble de lignes avec des signets et DBPROP_OTHERINSERT défini à VARIANT_TRUE provoque une erreur.|  
+|DBPROP_IRowsetLocate ou DBPROP_IRowsetScroll|VARIANT_TRUE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes prend en charge le défilement et l'extraction dans l'une ou l'autre direction. Les signets et le positionnement absolu par le biais de l’interface **IRowsetLocate** sont pris en charge dans l’ensemble de lignes. Le texte de la commande peut contenir une clause ORDER BY.<br /><br /> DBPROP_IRowsetLocate et DBPROP_IRowsetScroll requièrent des signets dans l'ensemble de lignes. Toute tentative de création d'un ensemble de lignes avec des signets et DBPROP_OTHERINSERT défini à VARIANT_TRUE provoque une erreur.|  
 |DBPROP_IRowsetChange ou DBPROP_IRowsetUpdate|VARIANT_TRUE|Possibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes est séquentiel et prend en charge l'extraction et le défilement vers l'avant uniquement. Le positionnement de ligne relatif est pris en charge. Toutes les commandes qui prennent en charge les curseurs pouvant être mis à jour peuvent prendre en charge ces interfaces.|  
-|DBPROP_IRowsetLocate ou DBPROP_IRowsetScroll et DBPROP_IRowsetChange ou DBPROP_IRowsetUpdate|VARIANT_TRUE|Possibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes prend en charge le défilement et l'extraction dans l'une ou l'autre direction. Les signets et le positionnement absolu par le biais **IRowsetLocate** sont pris en charge dans l’ensemble de lignes. Le texte de la commande peut contenir une clause ORDER BY.|  
+|DBPROP_IRowsetLocate ou DBPROP_IRowsetScroll et DBPROP_IRowsetChange ou DBPROP_IRowsetUpdate|VARIANT_TRUE|Possibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes prend en charge le défilement et l'extraction dans l'une ou l'autre direction. Les signets et le positionnement absolu par le biais de **IRowsetLocate** sont pris en charge dans l’ensemble de lignes. Le texte de la commande peut contenir une clause ORDER BY.|  
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes prend en charge le défilement vers l'avant uniquement. Le positionnement de ligne relatif est pris en charge. Le texte de la commande peut inclure une clause ORDER BY s'il existe un index sur les colonnes référencées.<br /><br /> DBPROP_IMMOBILEROWS est disponible uniquement dans les ensembles de lignes qui peuvent afficher des lignes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] insérées par des commandes sur d'autres sessions ou par d'autres utilisateurs. Toute tentative d'ouverture d'un ensemble de lignes avec la propriété définie à VARIANT_FALSE sur tout ensemble de lignes pour lequel DBPROP_OTHERINSERT ne peut pas être VARIANT_TRUE provoque une erreur.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|Impossibilité de mettre à jour des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le biais de l'ensemble de lignes. L'ensemble de lignes prend en charge le défilement vers l'avant uniquement. Le positionnement de ligne relatif est pris en charge. Le texte de la commande peut contenir une clause ORDER BY, sauf en cas de contrainte par une autre propriété.|  
   
- Un pilote OLE DB pour l’ensemble de lignes de SQL Server prises en charge par un curseur côté serveur peuvent facilement être créé sur un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table de base ou une vue à l’aide de la **IOpenRowset::OpenRowset** (méthode). Spécifier la table ou la vue par nom, en passant l’ensemble de lignes requis des jeux de propriétés dans le *rgPropertySets* paramètre.  
+ Un ensemble de lignes du pilote OLE DB pour SQL Server pris en charge par un curseur côté serveur peut être créé facilement sur une vue ou une table de base [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de la méthode **IOpenRowset::OpenRowset**. Spécifiez la table ou la vue par nom, et passez les jeux de propriétés d’ensemble de lignes nécessaires dans le paramètre *rgPropertySets*.  
   
  Le texte de la commande qui crée un ensemble de lignes est restreint lorsque le consommateur requiert que l'ensemble de lignes soit pris en charge par un curseur côté serveur. Plus spécifiquement, le texte de la commande est restreint à une instruction SELECT unique qui retourne un résultat d'ensemble de lignes unique ou à une procédure stockée qui implémente une instruction SELECT unique qui retourne un résultat d'ensemble de lignes unique.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "35689602"
   
  T = VARIANT_TRUE  
   
- \- = VARIANT_TRUE ou VARIANT_FALSE  
+ \- = VARIANT_TRUE or VARIANT_FALSE  
   
  Pour utiliser un certain type de modèle de curseur, recherchez la colonne correspondant au modèle de curseur et recherchez toutes les propriétés d'ensemble de lignes avec la valeur « T » dans la colonne. Affectez la valeur VARIANT_TRUE à ces propriétés d'ensemble de lignes pour utiliser le modèle de curseur spécifique. Les propriétés d'ensemble de lignes avec '-' comme valeur peuvent être définies à VARIANT_TRUE ou VARIANT_FALSE.  
   
-|Ensemble de lignes propriétés/modèles de curseur|Valeur par défaut<br /><br /> result<br /><br /> jeu<br /><br /> (RO)|Rapide<br /><br /> rapide<br /><br /> uniquement<br /><br /> (RO)|Statique<br /><br /> (RO)|Keyset<br /><br /> clés<br /><br /> (RO)|  
+|Propriétés d’ensemble de lignes/modèles de curseur|Valeur par défaut<br /><br /> result<br /><br /> jeu<br /><br /> (RO)|Rapide<br /><br /> rapide<br /><br /> uniquement<br /><br /> (RO)|Statique<br /><br /> (RO)|Keyset<br /><br /> clés<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -152,13 +152,13 @@ ms.locfileid: "35689602"
  À partir de la collection spécifiée de propriétés d'ensemble de lignes, obtenez un sous-ensemble de propriétés répertoriées dans les tableaux précédents. Divisez ces propriétés en deux sous-groupes selon la valeur de l'indicateur, requis (T, F) ou facultatif (-), de chaque propriété d'ensemble de lignes. Pour chaque modèle de curseur, commencez par la première table et déplacez-vous de gauche à droite. Comparez les valeurs des propriétés dans les deux sous-groupes avec les valeurs des propriétés correspondantes dans cette colonne. Le modèle de curseur qui n'a aucune incompatibilité avec les propriétés requises et le plus petit nombre d'incompatibilités avec les propriétés facultatives est sélectionné. S'il y a plusieurs modèles de curseur, celui situé le plus à gauche est choisi.  
   
 ## <a name="sql-server-cursor-block-size"></a>Taille de bloc des curseurs SQL Server  
- Lorsqu’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] curseur prend en charge un pilote OLE DB pour SQL Server ensemble de lignes, le nombre d’éléments dans la ligne de gérer le paramètre de tableau de la **IRowset::GetNextRows** ou le **IRowsetLocate::GetRowsAt** méthodes définit la taille de bloc de curseur. Les lignes indiquées par les descripteurs dans le tableau sont les membres du bloc de curseur.  
+ Lorsqu’un curseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge un ensemble de lignes du pilote OLE DB pour SQL Server, le nombre d’éléments dans le paramètre de tableau de descripteur de ligne des méthodes **IRowset::GetNextRows** ou **IRowsetLocate::GetRowsAt** définit la taille des blocs de curseur. Les lignes indiquées par les descripteurs dans le tableau sont les membres du bloc de curseur.  
   
- Pour les ensembles de lignes prenant en charge les signets, les descripteurs de ligne récupérées à l’aide de la **IRowsetLocate::GetRowsByBookmark** méthode définir les membres du bloc de curseur.  
+ Pour les ensembles de lignes qui prennent en charge les signets, les descripteurs de ligne récupérés à l’aide de la méthode **IRowsetLocate::GetRowsByBookmark** définissent les membres du bloc de curseur.  
   
  Quelle que soit la méthode utilisée pour remplir l'ensemble de lignes et former le bloc de curseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], celui-ci est actif jusqu'à ce que la méthode d'extraction de ligne suivante soit exécutée sur l'ensemble de lignes.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Ensembles de lignes](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

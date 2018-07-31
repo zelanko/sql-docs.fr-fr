@@ -1,6 +1,6 @@
 ---
-title: Persistante des objets Source de données | Documents Microsoft
-description: Persistante des objets source de données
+title: Les objets de Source de données persistants | Microsoft Docs
+description: Objets de source de données persistants
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 174bd7985cacf33a1cb62988204d8b0cec99b89b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665609"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106945"
 ---
 # <a name="persisted-data-source-objects"></a>Objets source de données persistants
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Le pilote OLE DB pour SQL Server prend en charge les objets de source de données persistantes avec la **IPersistFile** interface.  
   
 ## <a name="examples"></a>Exemples  
- **A. Conserver l’initialisation de source de données :**  
+ **A. Rendre persistante l’initialisation d’une source de données :**  
   
- Cet exemple illustre une fonction qui rend persistantes les propriétés d'initialisation de la source de données définissant un serveur, une base de données et l'utilisation du mode d'authentification Windows pour la connexion. Le nom du serveur et le nom de la base de données sont reçus dans le *pLocation* et *pDatasource* paramètres de la fonction.  
+ Cet exemple illustre une fonction qui rend persistantes les propriétés d'initialisation de la source de données définissant un serveur, une base de données et l'utilisation du mode d'authentification Windows pour la connexion. Le nom du serveur et de la base de données sont reçus dans les paramètres *pLocation* et *pDatasource* de la fonction.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -145,7 +145,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Utilisez l’initialisation de source de données persistantes :**  
+ **B. Utiliser l’initialisation persistante de la source de données :**  
   
  Cet exemple utilise un objet source de données persistant avec des propriétés d'initialisation supplémentaires qui fournissent un nom de connexion et un mot de passe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -233,9 +233,9 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- Le **IPersistFile::Save** méthode peut être appelée avant ou après l’appel **IDBInitialize::Initialize**. Appel de la méthode après un retour réussi de **IDBInitialize::Initialize** garantit une spécification de source de données valide est rendue persistante.  
+ La méthode **IPersistFile::Save** peut être appelée avant ou après l’appel de **IDBInitialize::Initialize**. Le fait d’appeler cette méthode après un retour réussi de **IDBInitialize::Initialize** garantit qu’une spécification de source de données valide est rendue persistante.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Objets Source de données &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

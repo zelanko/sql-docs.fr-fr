@@ -1,5 +1,5 @@
 ---
-title: Résilience des connexions dans le pilote ODBC de Windows | Documents Microsoft
+title: Résilience des connexions du pilote ODBC Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2b27a848773b09d651d748bd321ace69ab2a6b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852864"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060330"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Résilience de connexion du pilote ODBC Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  Pour vous assurer que les applications restent connectées à un [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)], le pilote ODBC sur Windows peut restaurer les connexions inactives.  
+  Pour garantir que les applications restent connectées à [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)], le pilote ODBC sur Windows peut restaurer les connexions inactives.  
   
 > [!IMPORTANT]  
 >  La fonctionnalité de résilience de connexion est prise en charge sur les versions de serveur SQL Server 2014 (et versions ultérieures) et les bases de données Microsoft Azure SQL Database.  
   
- Pour plus d’informations sur la résilience des connexions inactives, consultez [Article technique – résilience des connexions inactives](http://go.microsoft.com/fwlink/?LinkId=393996).  
+ Pour plus d’informations sur la résilience des connexions inactives, consultez [Article technique, Résilience des connexions inactives](http://go.microsoft.com/fwlink/?LinkId=393996).  
   
  Pour contrôler le comportement de reconnexion, ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Windows propose deux options :  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32852864"
   
     -   utilisez le mot clé de chaîne de connexion **ConnectRetryCount** .  
   
-     Pour récupérer le nombre de nouvelles tentatives de connexion, utilisez la **SQL_COPT_SS_CONNECT_RETRY_COUNT** (lecture seule) attribut de connexion. Si une application se connecte à un serveur qui ne prend pas en charge la résilience des connexions, **SQL_COPT_SS_CONNECT_RETRY_COUNT** retourne 0.  
+     Pour récupérer le nombre de nouvelles tentatives de connexion, utilisez l’attribut de connexion **SQL_COPT_SS_CONNECT_RETRY_COUNT** (lecture seule). Si une application se connecte à un serveur qui ne prend pas en charge la résilience des connexions, **SQL_COPT_SS_CONNECT_RETRY_COUNT** retourne 0.  
   
 -   Intervalle avant nouvelle tentative de connexion.  
   
@@ -55,17 +55,17 @@ ms.locfileid: "32852864"
   
     -   utilisez le mot clé de chaîne de connexion **ConnectRetryInterval** .  
   
-     Pour récupérer la longueur de l’intervalle de nouvelle tentative de connexion, utilisez la **sql_copt_ss_connect_retry_count** (lecture seule) attribut de connexion.  
+     Pour récupérer la longueur de l’intervalle de nouvelle tentative de connexion, utilisez l’attribut de connexion **SQL_COPT_SS_CONNECT_RETRY_INTERVAL** (lecture seule).  
   
  Si une application établit une connexion avec SQL_DRIVER_COMPLETE_REQUIRED et essaie ultérieurement d’exécuter une instruction sur une connexion interrompue, le pilote ODBC ne réaffiche pas la boîte de dialogue. De plus, quand la récupération est en cours :  
   
--   Lors de la récupération, tout appel à **SQLGetConnectAttr (sql_copt_ss_connection_dead)**, doit retourner **SQL_CD_FALSE**.  
+-   Pendant la récupération, tout appel à **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** doit retourner **SQL_CD_FALSE**.  
   
--   Si la récupération échoue, un appel à **SQLGetConnectAttr (sql_copt_ss_connection_dead)**, doit retourner **SQL_CD_TRUE**.  
+-   Si la récupération échoue, tout appel à **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** doit retourner **SQL_CD_TRUE**.  
   
  Les codes d’état suivants sont retournés par toute fonction qui exécute une commande sur le serveur :  
   
-|État|Boîte de|  
+|État|Message|  
 |-----------|-------------|  
 |IMC01|La connexion est interrompue et la récupération n’est pas possible. Le pilote du client a tenté de rétablir la connexion une fois ou plus et toutes les tentatives ont échoué. Augmentez la valeur de ConnectRetryCount pour augmenter le nombre de tentatives de récupération.|  
 |IMC02|Le serveur n’a pas reconnu une tentative de récupération. La récupération de la connexion est impossible.|  
@@ -74,8 +74,8 @@ ms.locfileid: "32852864"
 |IMC05|La connexion est interrompue et la récupération n’est pas possible. La connexion est marquée par le serveur comme irrécupérable. Aucune tentative n’a été faite pour rétablir la connexion.|  
 |IMC06|La connexion est interrompue et la récupération n’est pas possible. La connexion est marquée par le pilote du client comme irrécupérable. Aucune tentative n’a été faite pour rétablir la connexion.|  
   
-## <a name="example"></a>Exemple  
- L’exemple suivant contient deux fonctions. **func1** montre comment vous pouvez vous connecter avec un nom de source de données (DSN) qui utilise le pilote ODBC pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Windows. La source de données utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] et spécifie l’ID utilisateur. **func1** récupère ensuite le nombre de tentatives de connexion avec **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+## <a name="example"></a> Exemple  
+ L’exemple suivant contient deux fonctions. **func1** montre comment se connecter avec un nom de source de données (DSN) qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Windows. La source de données utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] et spécifie l’ID utilisateur. **func1** récupère ensuite le nombre de tentatives de connexion avec **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** utilise **SQLDriverConnect**, le mot clé de chaîne de connexion **ConnectRetryCount** et les attributs de connexion pour récupérer le paramètre pour les tentatives de connexion et l’intervalle avant nouvelle tentative.  
   
@@ -176,7 +176,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Pilote Microsoft ODBC pour SQL Server sur Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Composants du pilote OLE DB SQL Server | Documents Microsoft
-description: Composants du pilote OLE DB SQL Server
+title: Composants OLE DB Driver pour SQL Server | Microsoft Docs
+description: Composants OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -18,26 +18,26 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 78b72796de5aa4ac2fb9bc0793f98365b7d8281e
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b1b46e57b3be42fa93f8a246db528a5f85709d9e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611684"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109831"
 ---
-# <a name="components-of-ole-db-driver-for-sql-server"></a>Composants du pilote OLE DB SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="components-of-ole-db-driver-for-sql-server"></a>Composants OLE DB Driver pour SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Pilote OLE DB pour SQL Server contient les composants suivants :  
+  OLE DB Driver pour SQL Server contient les composants suivants :  
 
 |Composant|Description|  
 |---------------|-----------------|  
 |msoledbsql.dll|Le fichier de bibliothèque de liens dynamiques (DLL) qui contient l’ensemble du pilote OLE DB pour les fonctionnalités de SQL Server.|  
-|msoledbsqlr.rll|Le fichier de ressources qui accompagne pour le pilote OLE DB pour la bibliothèque de SQL Server.|   
+|msoledbsqlr.rll|Le fichier de ressources qui accompagne cet article pour le pilote OLE DB pour la bibliothèque de SQL Server.|   
 |msoledbsql.h|Le pilote OLE DB pour le fichier d’en-tête SQL Server qui contient toutes les nouvelles définitions nécessaires pour pouvoir utiliser le pilote OLE DB pour SQL Server. Ce fichier d’en-tête remplace le fichier d’en-tête sqloledb.h.<br /><br /> Remarque : Vous pouvez référencer msoledbsql.h et sqloledb.h dans même programme tant que sqloledb.h soit défini en premier.|  
-|msoledbsql.lib|Le fichier bibliothèque nécessaire pour appeler directement la [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) fonction qui fait partie du pilote OLE DB pour SQL Server.<br /><br /> Remarque : Si vous référencez le fichier msoledbsql.lib dans votre code de programmation, vous devez vous assurer que le fichier msoledbsql.dll est dans votre chemin système et dans le chemin d’accès système des utilisateurs qui emploient votre application.|  
+|msoledbsql.lib|Le fichier bibliothèque nécessaire pour appeler directement la [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) (fonction) qui fait partie du pilote OLE DB pour SQL Server.<br /><br /> Remarque : Si vous référencez le fichier msoledbsql.lib dans votre code de programmation, vous devez vérifier que le fichier msoledbsql.dll se trouve dans votre chemin système et dans le chemin système des utilisateurs qui emploient votre application.|  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Génération d’applications avec OLE DB Driver pour SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

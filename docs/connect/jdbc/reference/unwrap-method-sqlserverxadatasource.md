@@ -1,5 +1,5 @@
 ---
-title: Méthode Unwrap (SQLServerXADataSource) | Documents Microsoft
+title: unwrap, méthode (SQLServerXADataSource)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51b1b1c5582f87b8f8449f80c48d1a1b24e9cd4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850614"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052616"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>Méthode unwrap (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retourne un objet qui implémente l’interface spécifiée pour autoriser l’accès à la [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-des méthodes spécifiques.  
+  Retourne un objet qui implémente l’interface spécifiée, afin d’autoriser l’accès aux méthodes propres au [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +36,7 @@ public <T> T unwrap(Class<T> iface)
 #### <a name="parameters"></a>Paramètres  
  *iface*  
   
- Une classe de type **T** définissant une interface.  
+ Classe de type **T** définissant une interface.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Objet qui implémente l'interface spécifiée.  
@@ -44,18 +44,18 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Le [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md) méthode est définie par l’interface java.sql.Wrapper, introduite dans les spécifications de JDBC 4.0.  
+## <a name="remarks"></a>Notes   
+ La méthode [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md) est définie par l’interface java.sql.Wrapper, introduite dans les spécifications de JDBC 4.0.  
   
- Les applications devront peut-être accéder à des extensions de l’API JDBC qui sont spécifiques à la [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. La méthode unwrap prend en charge la Désencapsulation dans les classes publiques par cet objet, si les classes exposent des extensions de fournisseur.  
+ Les applications devront peut-être accéder à des extensions de l’API JDBC propres au [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. La méthode unwrap prend en charge la désencapsulation dans les classes publiques étendues par cet objet, si les classes exposent des extensions de fournisseur.  
   
- Le [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) classe étend la [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) (classe), qui est étendu à partir de la [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) classe. Lorsque cette méthode est appelée, l’objet se désencapsule dans les classes suivantes : [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), et [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
+ La classe [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) étend la classe [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), qui est elle-même étendue à partir de la classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md). Quand cette méthode est appelée, l’objet se désencapsule dans les classes suivantes : [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) et [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
  Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
- [Membres de SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerXADataSource, méthodes](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
+ [SQLServerXADataSource, membres](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [SQLServerXADataSource, classe](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Types de données (OLE DB) | Documents Microsoft
+title: Types de données (OLE DB) | Microsoft Docs
 description: Types de données (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 717e9da58a28daccb6fdfab18f1c3423d9d310df
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: f04b6729f97efdacdc79b035eda9f43c6458d61d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665159"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109341"
 ---
 # <a name="data-types-ole-db"></a>Types de données (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Afin d’exécuter [!INCLUDE[tsql](../../../includes/tsql-md.md)] instructions et des processus les résultats à l’aide du pilote OLE DB pour SQL Server, vous devez savoir comment le pilote OLE DB pour SQL Server mappe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] types de données aux types de données OLE DB lors de la liaison des paramètres ou colonnes dans un ensemble de lignes et lorsqu’il u ses le **ITableDefinition** interface pour créer une table dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Pour exécuter des instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] et traiter les résultats avec le pilote OLE DB pour SQL Server, vous devez savoir comment le pilote OLE DB pour SQL Server mappe les types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aux types de données OLE DB lors de la liaison des paramètres ou des colonnes dans un ensemble de lignes et quand il utilise l’interface **ITableDefinition** pour créer une table dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -41,7 +41,7 @@ ms.locfileid: "35665159"
   
 -   [Structure SSVARIANT](../../oledb/ole-db-data-types/ssvariant-structure.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Programmation OLE DB Driver pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: L’authentification Kerberos (OLE DB) intégrée | Documents Microsoft
-description: Authentification kerberos intégrée (OLE DB)
+title: L’authentification Kerberos (OLE DB) intégrée | Microsoft Docs
+description: Authentification Kerberos intégrée (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 49aac384ef7f330a445aca4c69ea0478edc85481
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 0bbfbf6d3f497143de12ff8c44e160d5eca8578d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665629"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109131"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Authentification Kerberos intégrée (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cet exemple montre comment obtenir une authentification mutuelle Kerberos en utilisant OLE DB dans le pilote OLE DB pour SQL Server. Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure.  
+  Cet exemple montre comment obtenir une authentification mutuelle Kerberos en utilisant OLE DB dans OLE DB Driver pour SQL Server. Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure.  
   
- Pour plus d’informations sur les SPN et l’authentification Kerberos, consultez [nom Principal de Service &#40;SPN&#41; prise en charge dans les connexions clientes](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
+ Pour plus d’informations sur les noms de principaux du service et l’authentification Kerberos, consultez [Prise en charge du nom de principaux du service dans les connexions clientes](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Vous devez spécifier un serveur. Dans le fichier .cpp, remplacez « MyServer » par un nom d'ordinateur qui possède une instance de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou version ultérieure).  
   
  Vous devez également spécifier un SPN fourni par le client. Dans le fichier .cpp, modifiez « CPSPN » par un SPN fourni par client.  
   
- Assurez-vous que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h. Compilez avec ole32.lib oleaut32.lib.  
+ Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h. Compilez avec ole32.lib oleaut32.lib.  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

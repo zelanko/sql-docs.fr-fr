@@ -1,6 +1,6 @@
 ---
-title: Obtention de données volumineuses | Documents Microsoft
-description: Obtention de données volumineuses à l’aide du pilote OLE DB pour SQL Server
+title: Obtention de données volumineuses | Microsoft Docs
+description: Obtention de données volumineuses à l’aide de OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7da19bac472558efadd3671e5dbfe09b5962f30f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 816d999978ff692e034bb65012cd8da46508ca8e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666199"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106177"
 ---
 # <a name="getting-large-data"></a>Obtention de données volumineuses
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  En règle générale, les consommateurs doivent isoler le code qui crée un pilote OLE DB pour l’objet de stockage de SQL Server à partir de tout autre code qui gère les données qui ne sont pas référencées via un **ISequentialStream** pointeur d’interface.  
+  D’une façon générale, les consommateurs doivent isoler le code qui crée un objet de stockage du pilote OLE DB pour SQL Server du code qui gère des données non référencées via un pointeur d’interface **ISequentialStream**.  
   
- Cet article fait référence aux fonctionnalités disponibles avec les fonctions suivantes :  
+ Cet article aborde les fonctionnalités disponibles avec les fonctions suivantes :  
   
 -   IRowset:GetData  
   
@@ -41,11 +41,11 @@ ms.locfileid: "35666199"
   
 -   ICommand::Execute  
   
- Le consommateur doit extraire une seule ligne de données dans un appel à la **GetNextRows** lorsque la valeur de la propriété DBPROP_ACCESSORDER, dans le groupe de propriétés d’ensemble de lignes, à la valeur DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_ (méthode) SEQUENTIALSTORAGEOBJECTS. Il s’agit, car les données BLOB ne sont pas mis en mémoire tampon. Si la valeur de DBPROP_ACCESSORDER a DBPROPVAL_AO_RANDOM, le consommateur peut extraire plusieurs lignes de données dans **GetNextRows**.  
+ Le consommateur doit extraire une seule ligne de données dans un appel à la méthode **GetNextRows** quand la propriété DBPROP_ACCESSORDER est définie sur DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS dans le groupe de propriétés de l’ensemble de lignes. Il s’agit, car les données BLOB ne sont pas mis en mémoire tampon. Si la valeur de DBPROP_ACCESSORDER est définie sur DBPROPVAL_AO_RANDOM, le consommateur peut extraire plusieurs lignes de données dans **GetNextRows**.  
   
- Le pilote OLE DB pour SQL Server ne récupère pas de données volumineuses de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] jusqu'à ce que la demande par le consommateur. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
+ Le pilote OLE DB pour SQL Server ne récupère pas de données volumineuses depuis [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] jusqu'à ce que la demande par le consommateur. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Cet exemple extrait une valeur de données volumineuses d'une colonne unique :  
   
 ```  
@@ -153,7 +153,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [Utilisation de types de valeur élevée](../../oledb/features/using-large-value-types.md)  
   

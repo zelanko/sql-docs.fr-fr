@@ -1,6 +1,6 @@
 ---
-title: Envoyer des données FILESTREAM - interface ISequentialStream liée au ICommandText | Documents Microsoft
-description: Envoyer des données FILESTREAM - ISequentialStream liée à ICommandText
+title: Envoyer des données à FILESTREAM - ISequentialStream lié à ICommandText | Microsoft Docs
+description: Envoyer des données à FILESTREAM - ISequentialStream lié à ICommandText
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4bfc03b8cdf3047ddfd46338be4796dd9f39d2d3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 36461107cf11c9119bd9e11b73cb7b96383483e7
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665569"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108771"
 ---
-# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Envoyer des données FILESTREAM - interface ISequentialStream liée au ICommandText
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Envoyer des données à FILESTREAM - ISequentialStream lié à ICommandText
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
@@ -30,10 +30,10 @@ ms.locfileid: "35665569"
   
  Pour plus d’informations sur la fonctionnalité filestream, consultez [prise en charge FILESTREAM](../../../oledb/features/filestream-support.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Avant de compiler et exécuter cet exemple, activer la prise en charge FILESTREAM ([activer et configurer FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Assurez-vous que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
+ Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
   
  Le serveur doit disposer d’un répertoire appelé C:\DBFsa ; c'est à cet emplacement que l'exemple va créer la base de données. Votre instance de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] doit disposer d'un accès en écriture à cet emplacement (par exemple, ouvrez une session en tant que compte système local).  
   

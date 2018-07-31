@@ -1,5 +1,5 @@
 ---
-title: Méthode updateBinaryStream (SQLServerResultSet) | Documents Microsoft
+title: updatebinarystream, méthode (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 729dce9ba56aa7592dfb98f585ad07165dde5fd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851164"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046667"
 ---
 # <a name="updatebinarystream-method-sqlserverresultset"></a>Méthode updateBinaryStream (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32851164"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Nom| Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |[updateBinaryStream (int, java.io.InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream.md)|Met à jour la colonne désignée avec la valeur de flux binaire.|  
 |[updateBinaryStream (int, java.io.InputStream, int)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-int.md)|Met à jour la colonne désignée avec une valeur de flux binaire, qui disposera du nombre spécifique d'octets.|  
@@ -42,8 +42,8 @@ ms.locfileid: "32851164"
 |[updateBinaryStream (java.lang.String, java.io.InputStream, int)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-int.md)|Met à jour la colonne désignée avec une valeur de flux binaire, qui disposera du nombre spécifique d'octets.|  
 |[updateBinaryStream (java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-long.md)|Met à jour la colonne désignée avec une valeur de flux binaire, qui disposera du nombre spécifique d'octets.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

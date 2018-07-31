@@ -1,5 +1,5 @@
 ---
-title: Constructeur SQLServerBlob (SQLServerConnection, byte) | Documents Microsoft
+title: SQLServerBlob, constructeur (SQLServerConnection, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d93e5bee03976c5ae9c55247f98ba180e237a4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847034"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064412"
 ---
-# <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>Constructeur SQLServerBlob (SQLServerConnection, byte)
+# <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>SQLServerBlob, constructeur (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Initialise une nouvelle instance de la [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) classe en fonction d’un [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objet et un **octets** tableau.  
+  Initialise une nouvelle instance de la classe [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) lors de la spécification d’un objet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) et d’un tableau d’**octets**.  
   
 > [!NOTE]  
->  Cette méthode a été déconseillée dans la version 2.0 du pilote JDBC. Au lieu de cela, utilisez le [createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) méthode de la [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) classe.  
+>  Cette méthode a été déconseillée dans la version 2.0 du pilote JDBC. Utilisez plutôt la méthode [createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,17 +43,17 @@ public SQLServerBlob(SQLServerConnection connection,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *connexion*  
+ *connection*  
   
- Un objet SQLServerConnection.  
+ Objet SQLServerConnection.  
   
  *data*  
   
- A **octets** tableau.  
+ Tableau d’**octets**.  
   
-## <a name="see-also"></a>Voir aussi  
- [Constructeurs SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructors.md)   
- [Membres de SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerBlob, constructeurs](../../../connect/jdbc/reference/sqlserverblob-constructors.md)   
+ [SQLServerBlob, membres](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob, classe](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   

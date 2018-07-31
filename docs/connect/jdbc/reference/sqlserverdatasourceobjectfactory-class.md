@@ -1,5 +1,5 @@
 ---
-title: Classe SQLServerDataSourceObjectFactory | Documents Microsoft
+title: Classe SQLServerDataSourceObjectFactory | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ecec8f58587d6a57468f8078e1f680675bede77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845814"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046847"
 ---
 # <a name="sqlserverdatasourceobjectfactory-class"></a>Classe SQLServerDataSourceObjectFactory
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "32845814"
 public class SQLServerDataSourceObjectFactory  
 ```  
   
-## <a name="remarks"></a>Notes  
- Cette méthode est héritée par toutes les classes de source de données. Dans le cadre de sa prise en charge de l’interface Referenceable, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] expose cette classe qui implémente un ObjectFactory. Serveurs d’applications Java appellera getReference sur une classe de source de données, et cela crée un objet de référence qui utilise en interne le nom de classe en tant que fabrique de classe.  
+## <a name="remarks"></a>Notes   
+ Cette méthode est héritée par toutes les classes de source de données. Dans le cadre de sa prise en charge de l’interface Referenceable, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] expose cette classe qui implémente un ObjectFactory. Les serveurs d’applications Java appelleront getReference sur une classe de source de données, entraînant ainsi la création d’un objet Reference qui utilise de façon interne le nom de classe en tant que fabrique de classe.  
   
- Lorsque le serveur d’applications Java doit déréférencer l’objet de référence, elle crée une instance de l’objet de SQLServerDataSourceObjectFactory et appelle le [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md) méthode, en passant à l’objet de référence récupérer l’instance de source de données.  
+ Lorsque le serveur d'applications Java doit déréférencer l'objet [, il crée une instance de l'objet ](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md) et appelle la méthode getObjectInstance, passant l'objet , pour récupérer l'instance de source de données.  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   
- [Référence d’API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerDataSourceObjectFactory, membres](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   
+ [Informations de référence sur l'API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

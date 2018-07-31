@@ -1,6 +1,6 @@
 ---
-title: Paramètres de sortie de diffusion en continu la prise en charge pour l’objet BLOB | Documents Microsoft
-description: Diffusion en continu de la prise en charge pour les paramètres de sortie BLOB
+title: Paramètres de sortie de diffusion en continu la prise en charge pour l’objet BLOB | Microsoft Docs
+description: Prise en charge du streaming pour les paramètres de sortie BLOB
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,23 +16,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7f53688497cba5fb5397a25b04a94731262ed1d5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 92a9e7501d709b5509d5226a06cf1e08db05d555
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665169"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106865"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Prise en charge de la diffusion en continu pour les paramètres de sortie BLOB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cet article contient un exemple qui montre de diffusion en continu de la prise en charge pour les paramètres de sortie BLOB, qui lie l’objet BLOB de sortie paramètres qu’interfaces ISequentialStreams.  
+  Cet article contient un exemple qui décrit la prise en charge du streaming pour les paramètres de sortie BLOB, ce qui lie les paramètres de sortie BLOB en tant que ISequentialStreams.  
   
- Vos paramètres de sortie peuvent apparaître bloqués dans IMultipleResults::GetResult en recevant la valeur de retour DB_E_OBJECTOPEN. L’appelant doit rechercher en attente de l’objet blob de paramètres et vous les lire en entier, soit les libérer.  
+ Vos paramètres de sortie peuvent apparaître bloqués dans IMultipleResults::GetResult en recevant la valeur de retour DB_E_OBJECTOPEN. L’appelant doit rechercher les paramètres d’objet BLOB en attente, puis les lire entièrement ou les libérer.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ### <a name="code"></a>Code  
   
@@ -516,7 +516,7 @@ _Exit:
 }
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
   
   

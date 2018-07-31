@@ -1,5 +1,5 @@
 ---
-title: Diriger préparés par instruction - pilote PDO_SQLSRV de l’exécution instruction | Documents Microsoft
+title: Diriger l’instruction - préparée pilote PDO_SQLSRV de l’exécution instruction | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,29 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a054717a1d8249e842611b2e07f49631f376049
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307478"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042218"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Cette rubrique traite de l’utilisation de l’attribut PDO::SQLSRV_ATTR_DIRECT_QUERY pour spécifier l’exécution d’instruction directe au lieu de la valeur par défaut, ce qui est préparée à l’exécution des instructions. À l’aide d’une instruction préparée peut entraîner de meilleures performances si l’instruction est exécutée plusieurs fois à l’aide de la liaison de paramètre.  
+Cette rubrique décrit l’utilisation de l’attribut PDO::SQLSRV_ATTR_DIRECT_QUERY pour spécifier l’exécution d’une instruction directe plutôt que le comportement par défaut, qui est l’exécution d’une instruction préparée. À l’aide d’une instruction préparée peut entraîner de meilleures performances si l’instruction est exécutée plusieurs fois à l’aide de la liaison de paramètre.  
   
-## <a name="remarks"></a>Notes  
-Si vous souhaitez envoyer un [!INCLUDE[tsql](../../includes/tsql_md.md)] instruction directement sur le serveur sans préparation de l’instruction par le pilote, vous pouvez définir l’attribut PDO::SQLSRV_ATTR_DIRECT_QUERY avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md) (ou en tant qu’option d’un pilote passées à [PDO::__construct](../../connect/php/pdo-construct.md)) ou lorsque vous appelez [PDO::prepare](../../connect/php/pdo-prepare.md). Par défaut, la valeur de PDO::SQLSRV_ATTR_DIRECT_QUERY est False (utilisez l’exécution d’instruction préparée).  
+## <a name="remarks"></a>Notes   
+Si vous souhaitez envoyer un [!INCLUDE[tsql](../../includes/tsql_md.md)] instruction directement sur le serveur sans préparation de l’instruction par le pilote, vous pouvez définir l’attribut PDO::SQLSRV_ATTR_DIRECT_QUERY avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md) (ou comme une option de pilote passée à [PDO::__construct](../../connect/php/pdo-construct.md)) ou lorsque vous appelez [PDO::prepare](../../connect/php/pdo-prepare.md). Par défaut, la valeur de PDO::SQLSRV_ATTR_DIRECT_QUERY est False (utilisez l’exécution d’instruction préparée).  
   
-Si vous utilisez [PDO::query](../../connect/php/pdo-query.md), vous souhaiterez peut-être l’exécution directe. Avant d’appeler [PDO::query](../../connect/php/pdo-query.md), appelez [PDO::setAttribute](../../connect/php/pdo-setattribute.md) et PDO::SQLSRV_ATTR_DIRECT_QUERY la valeur True.  Chaque appel à [PDO::query](../../connect/php/pdo-query.md) peuvent être exécutées avec un autre paramètre de PDO::SQLSRV_ATTR_DIRECT_QUERY.  
+Si vous utilisez [PDO::query](../../connect/php/pdo-query.md), vous souhaiterez peut-être l’exécution directe. Avant d’appeler [PDO::query](../../connect/php/pdo-query.md), appelez [PDO::setAttribute](../../connect/php/pdo-setattribute.md) et PDO::SQLSRV_ATTR_DIRECT_QUERY la valeur True.  Chaque appel à [PDO::query](../../connect/php/pdo-query.md) peut être exécutée avec un autre paramètre de PDO::SQLSRV_ATTR_DIRECT_QUERY.  
   
-Si vous utilisez [PDO::prepare](../../connect/php/pdo-prepare.md) et [PDOStatement::execute](../../connect/php/pdostatement-execute.md) pour exécuter une requête à plusieurs reprises à l’aide de paramètres liés, l’exécution d’instruction préparée optimise l’exécution de la requête répétée.  Dans ce cas, appelez [PDO::prepare](../../connect/php/pdo-prepare.md) avec PDO::SQLSRV_ATTR_DIRECT_QUERY la valeur False dans le paramètre de tableau des options de pilote. Lorsque cela est nécessaire, vous pouvez exécuter des instructions préparées avec PDO::SQLSRV_ATTR_DIRECT_QUERY dont la valeur est False.  
+Si vous utilisez [PDO::prepare](../../connect/php/pdo-prepare.md) et [PDOStatement::execute](../../connect/php/pdostatement-execute.md) pour exécuter une requête à plusieurs reprises à l’aide de paramètres liés, l’exécution d’instruction préparée permet d’optimiser l’exécution de la requête répétée.  Dans ce cas, appelez [PDO::prepare](../../connect/php/pdo-prepare.md) avec PDO::SQLSRV_ATTR_DIRECT_QUERY défini sur False dans le paramètre de tableau des options de pilote. Lorsque cela est nécessaire, vous pouvez exécuter des instructions préparées avec PDO::SQLSRV_ATTR_DIRECT_QUERY dont la valeur est False.  
   
 Après avoir appelé [PDO::prepare](../../connect/php/pdo-prepare.md), la valeur de PDO::SQLSRV_ATTR_DIRECT_QUERY ne peut pas changer lors de l’exécution de la requête préparée.  
   
-Si une requête requiert le contexte qui a été défini dans une requête précédente, puis exécutez vos requêtes avec PDO::SQLSRV_ATTR_DIRECT_QUERY la valeur True. Par exemple, si vous utilisez des tables temporaires dans vos requêtes, PDO::SQLSRV_ATTR_DIRECT_QUERY doit être définie sur True.  
+Si une requête requiert le contexte qui a été défini dans une requête précédente, exécutez vos requêtes avec PDO::SQLSRV_ATTR_DIRECT_QUERY dont la valeur est True. Par exemple, si vous utilisez des tables temporaires dans vos requêtes, PDO::SQLSRV_ATTR_DIRECT_QUERY doit être défini sur True.  
   
-L’exemple suivant montre que lorsque le contexte d’une instruction précédente est nécessaire, vous devez définir PDO::SQLSRV_ATTR_DIRECT_QUERY sur True.  Cet exemple utilise des tables temporaires, qui sont disponibles uniquement pour les instructions suivantes dans votre programme lorsque les requêtes sont exécutées directement.  
+L’exemple suivant montre que lorsque le contexte à partir d’une instruction précédente est nécessaire, vous devez définir PDO::SQLSRV_ATTR_DIRECT_QUERY sur True.  Cet exemple utilise des tables temporaires, qui sont disponibles uniquement pour les instructions suivantes dans votre programme lorsque des requêtes sont exécutées directement.  
   
 ```  
 <?php  
@@ -69,6 +69,6 @@ L’exemple suivant montre que lorsque le contexte d’une instruction précéde
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

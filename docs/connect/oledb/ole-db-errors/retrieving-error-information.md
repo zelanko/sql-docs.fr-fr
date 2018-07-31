@@ -1,6 +1,6 @@
 ---
-title: La récupération des informations d’erreur | Documents Microsoft
-description: La récupération des informations d’erreur à l’aide du pilote OLE DB pour SQL Server
+title: Récupération des informations d’erreur | Microsoft Docs
+description: Récupération des informations d’erreur à l’aide de OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,19 +21,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 514ff67f699b8dc0f3fb70881d24880e84aed390
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 24bb40aa1f6fcaf26f82a27a0601946c2c200cf5
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665909"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108071"
 ---
 # <a name="retrieving-error-information"></a>Extraction des informations sur les erreurs
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cet exemple obtient des informations à partir de différentes interfaces d’erreur exposées par le pilote OLE DB pour SQL Server.  
+  Cet exemple obtient les informations des différentes interfaces d’erreur exposées par le pilote OLE DB pour SQL Server.  
   
 ```  
 // DumpErrorInfo queries MSOLEDBSQL error interfaces, retrieving available  
@@ -224,7 +224,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Erreurs](../../oledb/ole-db-errors/errors.md)  
   
   

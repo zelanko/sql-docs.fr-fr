@@ -1,5 +1,5 @@
 ---
-title: Gestion des erreurs et avertissements | Documents Microsoft
+title: Gestion des erreurs et avertissements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cba0246f57157488b4e62ab2cdcbc80b2aea71e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307538"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054597"
 ---
 # <a name="handling-errors-and-warnings"></a>Gestion des erreurs et des avertissements
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Si vous utilisez le pilote PDO_SQLSRV, vous trouverez plus d’informations sur les erreurs et de gestion d’erreurs sur le [PDO](http://php.net/manual/book.pdo.php) site Web.  
+Si vous utilisez le pilote PDO_SQLSRV, vous trouverez plus d’informations sur les erreurs et leur gestion sur le site web [PDO](http://php.net/manual/book.pdo.php).  
   
 Les rubriques de cette section fournissent des informations sur la gestion des erreurs et des avertissements avec le pilote SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -42,6 +42,6 @@ Les rubriques de cette section fournissent des informations sur la gestion des e
   
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

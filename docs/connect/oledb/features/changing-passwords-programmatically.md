@@ -1,6 +1,6 @@
 ---
-title: Modification des mots de passe par programmation | Documents Microsoft
-description: La modification des mots de passe par programmation à l’aide de pilote OLE DB pour SQL Server
+title: Modification des mots de passe par programmation | Microsoft Docs
+description: Modification des mots de passe par programmation à l’aide de OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -24,22 +24,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e09154c595f2e008f29ef6bd690968388cbe062b
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 0bdb0c998c10b0b33b6640877c918f7a40971043
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611995"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108011"
 ---
 # <a name="changing-passwords-programmatically"></a>Modification des mots de passe par programme
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], pilote OLE DB pour SQL Server prend en charge l’expiration du mot de passe par programmation via le pilote OLE DB et via les modifications de la gestion de la **connexion SQL Server** boîtes de dialogue.  
+  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], OLE DB Driver pour SQL Server prend en charge la gestion d’expiration de mot de passe par programmation via le pilote OLE DB et via les modifications du **connexion à SQL Server** boîtes de dialogue.  
   
 > [!NOTE]  
->  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver leurs informations d’identification, chiffrez-les à l’aide de la [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Pour plus d’informations sur l’utilisation de mots de passe, consultez [mots de passe forts](../../../relational-databases/security/strong-passwords.md).  
+>  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver les informations d’identification, chiffrez-les avec [l’API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Pour plus d’informations sur l’utilisation des mots de passe, consultez [Mots de passe forts](../../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Codes d'erreur des connexions SQL Server  
  Lorsqu'une connexion ne peut pas être établie en raison de problèmes d'authentification, l'un des codes d'erreur SQL Server suivants est disponible pour aider l'application à établir le diagnostic et la récupération.  
@@ -56,18 +56,18 @@ ms.locfileid: "35611995"
 |18487|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : le mot de passe associé à ce compte a expiré.|  
 |18488|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : le mot de passe du compte doit être changé.|  
   
-## <a name="ole-db-driver-for-sql-server"></a>Pilote d’OLE DB pour SQL Server  
- Le pilote OLE DB pour SQL Server prend en charge l’expiration du mot de passe via une interface utilisateur et par programmation.  
+## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver pour SQL Server  
+ Le pilote OLE DB pour SQL Server prend en charge l’expiration du mot de passe via une interface utilisateur et par programme.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>Expiration du mot de passe de l'interface utilisateur OLE DB  
- Le pilote OLE DB pour SQL Server prend en charge l’expiration de mot de passe à travers les modifications apportées à la **connexion SQL Server** boîtes de dialogue. Si la valeur de DBPROP_INIT_PROMPT est définie sur DBPROMPT_NOPROMPT, la tentative de connexion initiale échoue si le mot de passe a expiré.  
+ OLE DB Driver pour SQL Server prend en charge l’expiration de mot de passe par les modifications effectuées dans les boîtes de dialogue de **compte de connexion SQL Server**. Si la valeur de DBPROP_INIT_PROMPT est définie sur DBPROMPT_NOPROMPT, la tentative de connexion initiale échoue si le mot de passe a expiré.  
   
- Si DBPROP_INIT_PROMPT a été défini sur une autre valeur, l’utilisateur voit le **connexion SQL Server** boîte de dialogue, quel que soit le mot de passe a expiré ou pas. L’utilisateur peut cliquer sur le **Options** bouton et vérifiez **modifier le mot de passe** pour modifier le mot de passe.  
+ Si DBPROP_INIT_PROMPT a été défini sur une autre valeur, l’utilisateur voit la boîte de dialogue de **compte de connexion SQL Server**, que le mot de passe ait expiré ou non. L’utilisateur peut cliquer sur le bouton **Options** et cocher **Changer le mot de passe** pour modifier le mot de passe.  
   
- Si l’utilisateur clique sur OK et le mot de passe a expiré, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] invite l’utilisateur à entrer et à confirmer un nouveau mot de passe à l’aide du **mot de passe de modification SQL Server** boîte de dialogue.  
+ Si l’utilisateur clique sur OK et que le mot de passe a expiré, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] invite l’utilisateur à entrer et à confirmer un nouveau mot de passe à l’aide de la boîte de dialogue **Changement de mot de passe SQL Server**.  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>Comportement d'invite OLE DB et comptes verrouillés  
- Les tentatives de connexion peuvent échouer en raison du compte verrouillé. Si cela se produit après l’affichage de la **connexion SQL Server** boîte de dialogue, le message d’erreur de serveur s’affiche à l’utilisateur et la tentative de connexion est abandonnée. Il peut également se produire après l’affichage de la **mot de passe de modification SQL Server** boîte de dialogue si l’utilisateur entre une valeur incorrecte pour l’ancien mot de passe. Dans ce cas le même message d'erreur s'affiche et la tentative de connexion est abandonnée.  
+ Les tentatives de connexion peuvent échouer en raison du compte verrouillé. Si cela se produit après l’affichage de la boîte de dialogue de **compte de connexion SQL Server**, le message d’erreur du serveur s’affiche pour l’utilisateur et la tentative de connexion est abandonnée. Cette situation peut aussi avoir lieu après l’affichage de la boîte de dialogue **Changement de mot de passe SQL Server** si l’utilisateur entre une valeur incorrecte pour l’ancien mot de passe. Dans ce cas le même message d'erreur s'affiche et la tentative de connexion est abandonnée.  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>Regroupement de connexions OLE DB, expiration de mot de passe et comptes verrouillés  
  Un compte peut être verrouillé ou son mot de passe peut expirer pendant que la connexion est toujours active dans un pool de connexions. Le serveur contrôle les mots de passe périmés et les comptes verrouillés en deux occasions. La première occasion correspond au moment de la création de la connexion. La seconde occasion se produit lors de la réinitialisation de la connexion, quand la connexion est extraite du pool.  
@@ -75,7 +75,7 @@ ms.locfileid: "35611995"
  Quand la tentative de réinitialisation échoue, la connexion est supprimée du pool et une erreur est retournée.  
   
 ### <a name="ole-db-programmatic-password-expiration"></a>Expiration de mot de passe par programmation OLE DB  
- Le pilote OLE DB pour SQL Server prend en charge l’expiration du mot de passe via l’ajout de la propriété SSPROP_AUTH_OLD_PASSWORD (type VT_BSTR) qui a été ajoutée au jeu de propriétés DBPROPSET_SQLSERVERDBINIT.  
+ OLE DB Driver pour SQL Server prend en charge l’expiration de mot de passe par l’ajout de la propriété SSPROP_AUTH_OLD_PASSWORD (type VT_BSTR) au jeu de propriétés DBPROPSET_SQLSERVERDBINIT.  
   
  La propriété « Mot de passe » existante se rapporte à DBPROP_AUTH_PASSWORD et est utilisée pour stocker le nouveau mot de passe.  
   
@@ -89,14 +89,14 @@ ms.locfileid: "35611995"
   
  Notez que chaque fois que la propriété « Ancien Mot de passe » propriété est définie, le fournisseur suppose qu'une tentative de modification du mot de passe a lieu, à moins que l'authentification Windows ne soit également spécifiée, dans quel cas elle est toujours prioritaire.  
   
- Si l’authentification Windows est utilisée, en spécifiant les résultats d’un mot de passe ancien DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED, selon si l’ancien mot de passe a été spécifié comme REQUIRED ou OPTIONAL, respectivement, et la valeur d’état de DBPROPSTATUS_CONFLICTINGBADVALUE est retournée dans *dwStatus*. Cette exception est détectée lorsque **IDBInitialize::Initialize** est appelée.  
+ Si l’authentification Windows est utilisée, la spécification de l’ancien mot de passe se traduit par DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED, selon que l’ancien mot de passe a respectivement été spécifié comme REQUIRED ou OPTIONAL, et que la valeur d’état de DBPROPSTATUS_CONFLICTINGBADVALUE est retournée dans *dwStatus*. Cela est détecté quand **IDBInitialize::Initialize** est appelée.  
   
  Si une tentative de modifier le mot de passe échoue de façon inattendue, le serveur retourne le code d'erreur 18468. Une erreur OLEDB standard est retournée à partir de la tentative de connexion.  
   
  Pour plus d’informations sur le jeu de propriétés DBPROPSET_SQLSERVERDBINIT, consultez [propriétés d’initialisation et d’autorisation](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

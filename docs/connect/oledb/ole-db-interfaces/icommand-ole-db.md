@@ -1,5 +1,5 @@
 ---
-title: ICommand (OLE DB) | Documents Microsoft
+title: ICommand (OLE DB) | Microsoft Docs
 description: Interface ICommand (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,24 +16,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1fb757655c6369964822cd473a50f9633feb2ab8
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 2627398879f7525ab8cd9182f2f1102500cfb5a5
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689842"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106205"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cet article décrit le comportement OLE DB qui est spécifique au pilote OLE DB pour SQL Server.  
+  Cet article décrit le comportement OLE DB qui est spécifique à OLE DB Driver pour SQL Server.  
   
 ## <a name="icommandexecute"></a>ICommand::Execute  
- L'insertion de données dont la taille est supérieure à celle d'une colonne provoque généralement une erreur. Toutefois, il existe des cas où S_OK sera retourné, mais *dwStatus* aura la valeur DBSTATUS_S_TRUNCATED. Il se produit généralement lors de l’insertion de données avec des paramètres, où la colonne n’est pas suffisamment grande pour contenir les données, et **ICommandWithParameters::SetParameterInfo** n’a pas été appelée.  
+ L'insertion de données dont la taille est supérieure à celle d'une colonne provoque généralement une erreur. Toutefois, il existe des cas où S_OK sera retourné, mais *dwStatus* aura la valeur DBSTATUS_S_TRUNCATED. Ceci se produit généralement lors de l’insertion de données avec des paramètres, quand la colonne n’est pas assez large pour contenir les données et que **ICommandWithParameters::SetParameterInfo** n’a pas été appelé.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
   
   

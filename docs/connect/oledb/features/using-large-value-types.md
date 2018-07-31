@@ -1,6 +1,6 @@
 ---
-title: À l’aide des Types de valeur volumineux | Documents Microsoft
-description: À l’aide des types de valeur volumineux avec le pilote OLE DB pour SQL Server
+title: À l’aide des Types de valeur volumineux | Microsoft Docs
+description: À l’aide des types de valeur volumineux avec OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,47 +20,47 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e41b35c8ea552708aa53f3cb8810bbaae06ca680
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b8b0e413eabbcf52e98d778ba309e9a2ca45f68f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612094"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107951"
 ---
 # <a name="using-large-value-types"></a>Utilisation de types de valeur élevée
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilisation de types de données de valeur élevée nécessitait une gestion particulière. Types de données de valeur élevée sont les types qui dépassent la taille de ligne maximale de 8 Ko. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduit un **max** spécificateur pour **varchar**, **nvarchar**, et **varbinary** des types de données pour permettre le stockage de valeurs aussi grand que 2 ^ 31 -1 octets. Colonnes de la table et [!INCLUDE[tsql](../../../includes/tsql-md.md)] variables peuvent spécifier **varchar (max)**, **nvarchar (max)**, ou **varbinary (max)** des types de données.  
+  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilisation de types de données de valeur élevée nécessitait une gestion particulière. Les types de données de valeur élevée sont ceux qui dépassent la taille de ligne maximale de 8 Ko. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un spécificateur **max** pour les types de données **varchar**, **nvarchar** et **varbinary** pour permettre le stockage de valeurs pouvant atteindre 2^31 -1 octets. Les colonnes de table et les variables [!INCLUDE[tsql](../../../includes/tsql-md.md)] peuvent spécifier des types de données **varchar(max)**, **nvarchar(max)** ou **varbinary(max)**.  
   
 > [!NOTE]  
->  Types de données de valeur élevée peuvent avoir une taille maximale entre 1 et 8 Ko, ou elles peuvent être spécifiées comme un nombre illimité.  
+>  La taille maximale des types de données de valeur élevée peut être comprise entre 1 et 8 Ko. Il est aussi possible de spécifier une taille illimitée.  
   
- Auparavant, seuls [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tels que des types de données **texte**, **ntext** et **image** pouvaient atteindre de telles longueurs. Le **max** spécificateur pour **varchar**, **nvarchar**, et **varbinary** licenciés ces types de données. Toutefois, étant donné que les types de données long sont toujours disponibles, la plupart des interfaces pour les composants d’accès aux données OLE DB reste le même. Pour la compatibilité descendante avec les versions antérieures, l’indicateur DBCOLUMNFLAGS_ISLONG dans le pilote OLE DB pour SQL Server est en cours d’utilisation. Les fournisseurs et les pilotes écrits pour [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures continuent d'utiliser ces termes pour les nouveaux types lorsque la longueur maximale illimitée est spécifiée.  
-  
-> [!NOTE]  
->  Vous pouvez également spécifier **varchar (max)**, **nvarchar (max)**, et **varbinary (max)** des types de données en tant que types de paramètre d’entrée et de sortie des procédures stockées, types de retour de fonction, ou dans [CAST et CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) fonctions.  
+ Auparavant, seuls les types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comme **text**, **ntext** et **image** pouvaient atteindre de telles longueurs. Le spécificateur **max** pour **varchar**, **nvarchar** et **varbinary** a rendu ces types de données redondants. Toutefois, du fait que les types de données Long sont toujours disponibles, la plupart des interfaces pour les composants d’accès aux données OLE DB restent identiques. Pour la compatibilité descendante avec les versions antérieures, l’indicateur DBCOLUMNFLAGS_ISLONG dans le pilote OLE DB pour SQL Server reste en cours d’utilisation. Les fournisseurs et les pilotes écrits pour [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures continuent d'utiliser ces termes pour les nouveaux types lorsque la longueur maximale illimitée est spécifiée.  
   
 > [!NOTE]  
->  Si vous répliquez des données, vous devrez peut-être configurer le [max d’option de configuration serveur text repl size](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) -1.  
+>  Vous pouvez également spécifier les types de données **varchar(max)**, **nvarchar(max)** et **varbinary(max)** comme types de paramètre d’entrée et de sortie de procédures stockées, de types de retour de fonction ou dans des fonctions [CAST et CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-## <a name="ole-db-driver-for-sql-server"></a>Pilote d’OLE DB pour SQL Server 
- Le pilote OLE DB pour SQL Server expose la **varchar (max)**, **varbinary (max)**, et **nvarchar (max)** respectivement les types en tant que DBTYPE_STR, DBTYPE_BYTES et DBTYPE_WSTR, .  
+> [!NOTE]  
+>  Si vous répliquez des données, vous devrez peut-être configurer [l’option de configuration du serveur max text repl size](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) sur -1.  
   
- Les types de données **varchar (max)**, **varbinary (max)**, et **nvarchar (max)** dans des colonnes ayant le **max** taille définie illimitée sont représentés en tant que ISLONG via les ensembles de lignes du schéma OLE DB principaux et les interfaces qui retournent des types de données de colonne.  
+## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver pour SQL Server 
+ OLE DB Driver pour SQL Server expose les types **varchar(max)**, **varbinary(max)** et **nvarchar(max)** respectivement comme DBTYPE_STR, DBTYPE_BYTES et DBTYPE_WSTR.  
   
- L’objet de commande **IAccessor** implémentation a été modifiée pour autoriser la liaison en tant que DBTYPE_IUNKNOWN. Si le consommateur spécifie DBTYPE_IUNKNOWN et définit *pObject* à null, le fournisseur retournera le **ISequentialStream** d’interface au consommateur afin que le consommateur peut diffuser en continu **varchar (max)**, **nvarchar (max)**, ou **varbinary (max)** données de variables de sortie.  
+ Les types de données **varchar(max)**, **varbinary(max)** et **nvarchar(max)** dans les colonnes avec une taille **max** illimitée sont représentés comme ISLONG via les ensembles de lignes de schéma OLE DB principaux et les interfaces qui retournent des types de données de colonne.  
   
- Les valeurs de paramètres de sortie diffusées en continu sont retournées après les lignes de résultat (le cas échéant). Si l’application tente de passer au résultat suivant défini en appelant **IMultipleResults::GetResult** sans consommer toutes les valeurs de paramètre de sortie retournées, DB_E_OBJECTOPEN sera retourné.  
+ L’implémentation **IAccessor** de l’objet de commande a été modifiée pour autoriser la liaison en tant que DBTYPE_IUNKNOWN. Si le consommateur spécifie DBTYPE_IUNKNOWN et affecte la valeur Null à *pObject*, le fournisseur retourne l’interface **ISequentialStream** au consommateur afin que celui-ci puisse extraire les données **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** des variables de sortie.  
   
- Pour prendre en charge la diffusion en continu, le pilote OLE DB pour SQL Server requiert des paramètres de longueur variable accessibles dans un ordre séquentiel. Cela signifie que DBPROP_ACCESSORDER doit être la valeur DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS ou DBPROPVAL_AO_SEQUENTIAL chaque fois que **varchar (max)**, **nvarchchar (max)**, ou **varbinary (max)** colonnes ou des paramètres de sortie sont liés à DBTYPE_IUNKNOWN. Les appels à **IRowset::GetData** échoue avec DBSTATUS_E_UNAVAILABLE si cette restriction de commande d’accès n’est pas respectée. Cette restriction ne s'applique pas lorsqu'aucune liaison de sortie n'utilise DBTYPE_IUNKNOWN.  
+ Les valeurs de paramètres de sortie diffusées en continu sont retournées après les lignes de résultat (le cas échéant). Si l’application tente de passer au jeu de résultats suivant en appelant **IMultipleResults::GetResult** sans consommer toutes les valeurs de paramètres de sortie retournées, DB_E_OBJECTOPEN est retourné.  
   
- Le pilote OLE DB pour SQL Server prend également en charge la liaison des paramètres de sortie en tant que DBTYPE_IUNKNOWN pour les types de données de valeur élevée simplifier les scénarios où une procédure stockée retourne des types de valeur élevée comme valeurs de retour qui sont exposées en tant que DBTYPE_IUNKNOWN au client.  
+ Pour prendre en charge le streaming, OLE DB Driver pour SQL Server requiert que les paramètres de longueur variable soient accessibles dans un ordre séquentiel. Cela signifie que DBPROP_ACCESSORDER doit avoir la valeur DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS ou DBPROPVAL_AO_SEQUENTIAL chaque fois que des colonnes ou des paramètres de sortie **varchar(max)**, **nvarchchar(max)** ou **varbinary(max)** sont liés à DBTYPE_IUNKNOWN. Les appels à **IRowset::GetData** échouent avec le message DBSTATUS_E_UNAVAILABLE si cette restriction en matière d’ordre d’accès n’est pas respectée. Cette restriction ne s'applique pas lorsqu'aucune liaison de sortie n'utilise DBTYPE_IUNKNOWN.  
+  
+ OLE DB Driver pour SQL Server prend également en charge la liaison des paramètres de sortie en tant que DBTYPE_IUNKNOWN pour les types de données de valeur élevée afin de simplifier les scénarios où une procédure stockée retourne des types de valeur élevée comme valeurs de retour exposées au client comme DBTYPE_IUNKNOWN.  
   
  Pour utiliser ces types, une application dispose des options suivantes :  
   
--   Lier en tant que type qui a pris en charge les liaisons avec le type de base de la colonne (par exemple, pour nvarchar (max), lier en tant que type pouvant être lié à nvarchar). Si la mémoire tampon n’est pas importante suffisamment troncation se produit, exactement comme pour le type de base, quoique des valeurs supérieures sont désormais disponibles.  
+-   Lier en tant que type ayant des liaisons prises en charge avec le type de base de la colonne (par exemple pour nvarchar(max), lier en tant que type pouvant être lié à nvarchar). Si la mémoire tampon est insuffisante, une troncation aura lieu, exactement comme pour le type de base, quoique des valeurs plus élevées soient maintenant disponibles.  
   
 -   Lier en tant que type ayant des conversions prises en charge avec le type de base de la colonne et spécifier également DBTYPE_BYREF.  
   
@@ -68,11 +68,11 @@ ms.locfileid: "35612094"
   
  Lors du signalement de la taille maximale d’une colonne, le pilote OLE DB pour SQL Server signalera :  
   
--   La taille maximale définie qui, par exemple, est 2000 pour une **varchar (** 2000 **)** colonne, ou  
+-   soit la taille maximale définie qui, par exemple, est égale à 2 000 pour une colonne **varchar(** 2000 **)** ;  
   
--   La valeur « illimitée » qui dans le cas d’un **varchar (max)** colonne est égale à ~ 0. Cette valeur est définie pour la propriété de métadonnées DBCOLUMN_COLUMNSIZE.  
+-   soit la valeur « illimitée » qui, dans le cas d’une colonne **varchar(max)** est égale à ~0. Cette valeur est définie pour la propriété de métadonnées DBCOLUMN_COLUMNSIZE.  
   
- Les règles de conversion standard s’appliquent à un **varchar (max)** colonne, ce qui signifie que toute conversion valide pour un **varchar (** 2000 **)** colonne sera également valide pour un **varchar (max)** colonne. Est de même pour **nvarchar (max)** et **varbinary (max)** colonnes.  
+ Les règles de conversion standard s’appliqueront à une colonne **varchar(max)**, ce qui signifie que toute conversion valide pour une colonne **varchar(** 2000 **)** sera également valide pour une colonne **varchar(max)**. Il en va de même pour les colonnes **nvarchar(max)** et **varbinary(max)**.  
   
  Lors de la récupération de types de valeur élevée, l'approche la plus efficace consiste à lier en tant que DBTYPE_IUNKNOWN et à attribuer à la propriété d'ensemble de lignes DBPROP_ACCESSORDER la valeur DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. La valeur sera alors diffusée en continu directement à partir du réseau sans mise en mémoire tampon intermédiaire, comme dans l'exemple suivant :  
   
@@ -694,10 +694,10 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Pour plus d’informations sur la façon dont le pilote OLE DB pour SQL Server expose les types de données de valeur élevée, consultez [BLOB et les objets OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Pour plus d’informations sur la façon dont le pilote OLE DB pour SQL Server expose les types de données de valeur élevée, consultez [objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
 
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
   
   

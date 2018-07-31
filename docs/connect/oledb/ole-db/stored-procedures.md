@@ -1,5 +1,5 @@
 ---
-title: Procédures stockées | Documents Microsoft
+title: Procédures stockées | Microsoft Docs
 description: Procédures stockées
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 248132d4afca731bb3715da83286a85dc6edc8ee
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 0c944c0e64fadf8f51af10f0e297b8d3654decd4
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611544"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109761"
 ---
 # <a name="stored-procedures"></a>Procédures stockées
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Une procédure stockée ([de procédures stockées &#40;moteur de base de données&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) est un objet exécutable stocké dans une base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge :  
+  Une procédure stockée ([Stored Procedures &#40;moteur de base de données&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) est un objet exécutable stocké dans une base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge :  
   
 -   Procédures stockées  
   
@@ -47,7 +47,7 @@ ms.locfileid: "35611544"
   
 -   [Appel d’une procédure stockée &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Programmation OLE DB Driver pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

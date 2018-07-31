@@ -1,5 +1,5 @@
 ---
-title: IBCPSession (OLE DB) | Documents Microsoft
+title: IBCPSession (OLE DB) | Microsoft Docs
 description: Interface IBCPSession (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,28 +17,28 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9a252ab45aa8f20bac2c8b73606ebdc07b8a332e
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 05cbf4799c1f8ae75fcc8a091a48c5c9cccc80c6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689482"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106115"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le **IBCPSession** interface expose la prise en charge de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les opérations de copie en bloc basées sur le fichier. Le **IBCPSession** interface est exposée dans le pilote OLE DB pour SQL Server sous le même niveau que Sessions. Dans le pilote OLE DB pour SQL Server, les objets de source de données sont des fabriques pour les objets de Session et les opérations de copie en bloc sont spécifiées dans la propriété de connexion SSPROP_ENABLEBULKCOPY. De plus, la propriété SSPROP_ENABLEFASTLOAD doit avoir la valeur vrai.  
+  L’interface **IBCPSession** expose la prise en charge des opérations de copie en bloc basées sur des fichiers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le **IBCPSession** interface est exposée dans le pilote OLE DB pour SQL Server sous le même niveau que Sessions. Dans le pilote OLE DB pour SQL Server, les objets sources de données sont des fabriques pour les objets Session et les opérations de copie en bloc sont spécifiées dans la propriété de connexion SSPROP_ENABLEBULKCOPY. De plus, la propriété SSPROP_ENABLEFASTLOAD doit avoir la valeur vrai.  
   
  L'appel de la méthode **IDBCreateSession::CreateSession** provoquera alors la création d'un objet **BulkCopySession** . Toutes les méthodes de copie en bloc basées sur des fichiers exposées par le biais de l'objet **IBCPSession** peuvent ensuite être appelées avec des signatures presque semblables sur l'interface **IBCPSession** de cet objet **IBCPSession** .  
   
 > [!NOTE]  
->  Le pilote OLE DB pour SQL Server prend en charge les opérations de copie en bloc basées sur mémoire par le biais du [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) interface.  
+>  Le pilote OLE DB pour SQL Server prend en charge les opérations de copie en bloc en mémoire via l’interface [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md).  
   
- Pour plus d’informations sur l’utilisation du pilote OLE DB pour SQL Server pour les opérations de copie en bloc, consultez [effectuant des opérations de copie en bloc](../../oledb/features/performing-bulk-copy-operations.md).  
+ Pour plus d’informations sur l’utilisation d’OLE DB Driver pour SQL Server pour les opérations de copie en bloc, consultez [effectuant des opérations de copie en bloc](../../oledb/features/performing-bulk-copy-operations.md).  
   
- Pour obtenir un exemple montrant comment utiliser les **IBCPSession** l’interface, consultez [IBCPSession::BCPDone &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md).  
+ Pour obtenir un exemple montrant comment utiliser le **IBCPSession** l’interface, consultez [IBCPSession::BCPDone &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -53,7 +53,7 @@ ms.locfileid: "35689482"
 |[IBCPSession::BCPReadFmt &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md)|Lit les informations de format pour chaque colonne à partir du fichier de format.|  
 |[IBCPSession::BCPWriteFmt &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md)|Écrit les informations de format pour chaque colonne dans le fichier de format.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Azure Active Directory | Documents Microsoft
+title: Azure Active Directory | Microsoft Docs
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,35 +10,35 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 224fa4f0746c45f9651b4714593e28f719b4d1ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 71e6b3b4556621b6bc8a8a4c7996cfdb47a12849
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306998"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979441"
 ---
-# <a name="connect-using-azure-active-directory-authentication"></a>Connectez-vous à l’aide de l’authentification Azure Active Directory
+# <a name="connect-using-azure-active-directory-authentication"></a>Se connecter à l’aide de l’authentification Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) est une technologie de gestion d’ID utilisateur central qui fonctionne comme une alternative à [l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD autorise les connexions à la base de données SQL Microsoft Azure et SQL Data Warehouse avec des identités fédérées dans Azure AD à l’aide d’un nom d’utilisateur et mot de passe, l’authentification intégrée Windows ou un jeton d’accès Azure AD ; les pilotes PHP pour SQL Server offrent une prise en charge partielle de ces fonctionnalités.
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) est une technologie de gestion d’ID utilisateur central qui fonctionne comme une alternative à [l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD autorise les connexions à Microsoft Azure SQL Database et SQL Data Warehouse avec des identités fédérées dans Azure AD à l’aide d’un nom d’utilisateur et mot de passe, l’authentification intégrée Windows ou un jeton d’accès Azure AD ; les pilotes PHP pour SQL Server offrent une prise en charge partielle de ces fonctionnalités.
 
-Pour utiliser Azure AD, utilisez le **authentification** (mot clé). Les valeurs qui **authentification** peut prendre sur sont expliquées dans le tableau suivant.
+Pour utiliser Azure AD, utilisez le **authentification** mot clé. Les valeurs qui **authentification** peut prendre en sont expliquées dans le tableau suivant.
 
 |Mot clé|Valeurs|Description|
 |-|-|-|
 |**Authentification**|Pas définie (valeur par défaut)|Mode d’authentification déterminé par les autres mots clés. Pour plus d’informations, consultez [Connection Options](../../connect/php/connection-options.md). |
-||`SqlPassword`|S’authentifier directement à une instance de SQL Server (qui peut être une instance Azure) à l’aide d’un nom d’utilisateur et un mot de passe. Le nom d’utilisateur et un mot de passe doivent être passés dans la chaîne de connexion à l’aide de la **UID** et **PWD** mots clés. |
-||`ActiveDirectoryPassword`|Authentifier avec une identité Azure Active Directory à l’aide d’un nom d’utilisateur et un mot de passe. Le nom d’utilisateur et un mot de passe doivent être passés dans la chaîne de connexion à l’aide de la **UID** et **PWD** mots clés. |
+||`SqlPassword`|S’authentifier directement à une instance de SQL Server (qui peut être une instance Azure) à l’aide d’un nom d’utilisateur et le mot de passe. Le nom d’utilisateur et le mot de passe doivent être passés dans la chaîne de connexion en utilisant le **UID** et **PWD** mots clés. |
+||`ActiveDirectoryPassword`|S’authentifier avec une identité Azure Active Directory à l’aide d’un nom d’utilisateur et le mot de passe. Le nom d’utilisateur et le mot de passe doivent être passés dans la chaîne de connexion en utilisant le **UID** et **PWD** mots clés. |
 
-Le **authentification** mot clé affecte les paramètres de sécurité de connexion. S’il est défini dans la chaîne de connexion, puis par défaut le **Encrypt** (mot clé) est défini sur true, le client demande le chiffrement. En outre, le certificat de serveur sera validé quel que soit le paramètre de chiffrement, sauf si **TrustServerCertificate** est définie sur true. Elle se distingue de l’ancien et moins sécurisée, méthode de connexion, dans lequel le certificat de serveur n’est pas validé, sauf si le chiffrement est demandé spécifiquement dans la chaîne de connexion.
+Le **authentification** mot clé affecte les paramètres de sécurité de connexion. Si elle est définie dans la chaîne de connexion, puis par défaut le **Encrypt** mot clé est défini sur true, le client demande le chiffrement. En outre, le certificat de serveur sera validé, quel que soit le paramètre de chiffrement, sauf si **TrustServerCertificate** est définie sur true. Elle se distingue de l’ancien et moins sécurisée, méthode de connexion, dans lequel le certificat de serveur n’est pas validé, sauf si le chiffrement est spécifiquement demandé dans la chaîne de connexion.
 
-Avant d’utiliser Azure AD avec les pilotes PHP pour SQL Server sur Windows, vérifiez que vous avez installé le [Assistant Microsoft Online Services Sign-In](https://www.microsoft.com/download/details.aspx?id=41950) (non requis pour Linux et Mac OS).
+Avant d’utiliser Azure AD avec les pilotes PHP pour SQL Server sur Windows, assurez-vous que vous avez installé le [Assistant Microsoft Online Services Sign-In](https://www.microsoft.com/download/details.aspx?id=41950) (non requis pour Linux et MacOS).
 
 #### <a name="limitations"></a>Limitations
 
-Sous Windows, le pilote ODBC sous-jacent prend en charge plus de valeur pour le **authentification** (mot clé), **ActiveDirectoryIntegrated**, mais les pilotes PHP ne prennent pas en charge cette valeur sur n’importe quelle plateforme et donc également ne prennent pas en charge basée sur les jetons d’authentification Azure AD.
+Sur Windows, le pilote ODBC sous-jacent prend en charge davantage de valeur pour le **authentification** mot clé, **ActiveDirectoryIntegrated**, mais les pilotes PHP ne prennent pas en charge cette valeur sur n’importe quelle plateforme et donc également ne prennent pas en charge l’authentification par jeton Azure AD.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 L’exemple suivant montre comment se connecter à l’aide de **SqlPassword** et **ActiveDirectoryPassword**.
 
@@ -84,7 +84,7 @@ L’exemple suivant montre comment se connecter à l’aide de **SqlPassword** e
     ?>
 ```
 
-L’exemple suivant donne le même résultat que ci-dessus avec le pilote PDO_SQLSRV.
+L’exemple suivant fait la même chose que ci-dessus avec le pilote PDO_SQLSRV.
 
 ```php
     <?php
@@ -128,5 +128,5 @@ L’exemple suivant donne le même résultat que ci-dessus avec le pilote PDO_SQ
 
     ?>
 ```
-## <a name="see-also"></a>Voir aussi  
-[Utilisation d’Azure Active Directory avec ODBC Driver](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)
+## <a name="see-also"></a> Voir aussi  
+[Utilisation d’Azure Active Directory avec ODBC Driver](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)

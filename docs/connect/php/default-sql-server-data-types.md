@@ -1,5 +1,5 @@
 ---
-title: Par défaut des Types de données SQL Server | Documents Microsoft
+title: Par défaut des Types de données SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 21dab579da73cc8d5290d0b08d3448d76b5337cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307224"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979571"
 ---
 # <a name="default-sql-server-data-types"></a>Types de données SQL Server par défaut
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ Lors de l’envoi de données au serveur, le [!INCLUDE[ssDriverPHP](../../includ
 |Booléen|bit|bit|  
 |Entier|INT|INT|  
 |float|float(24)|Non pris en charge|  
-|String (longueur inférieure à 8000 octets)|varchar (<string length>)|varchar (<string length>)|  
+|String (longueur inférieure à 8000 octets)|varchar(<string length>)|varchar(<string length>)|  
 |String (longueur supérieure à 8000 octets)|varchar(max)|varchar(max)|  
 |Ressource|Non pris en charge.|Non pris en charge.|  
 |Flux (encodage : non binaire)|varchar(max)|varchar(max)|  
@@ -44,7 +44,7 @@ Lors de l’envoi de données au serveur, le [!INCLUDE[ssDriverPHP](../../includ
 |Object|Non pris en charge.|Non pris en charge.|  
 |DateTime (1)|DATETIME|Non pris en charge.|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Conversion de types de données](../../connect/php/converting-data-types.md)
@@ -53,5 +53,5 @@ Lors de l’envoi de données au serveur, le [!INCLUDE[ssDriverPHP](../../includ
 
 [Types PHP](http://php.net/manual/language.types.php)
 
-[Types de données (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
+[Types de données (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

@@ -1,6 +1,6 @@
 ---
-title: Prise en charge de Type de données pour OLE DB Date et heure améliorations | Documents Microsoft
-description: Prise en charge du type de données pour les améliorations de date et d’heure OLE DB
+title: Prise en charge des types de données pour les améliorations de date et d’heure OLE DB | Microsoft Docs
+description: Prise en charge des types de données pour les améliorations de date et d’heure OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ce5d32efa04e3402e9e454f2ab4c89cb6e1e5b69
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 79ecd277d962cc9e592d4b91eea985e55fb5c325
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666389"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109101"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge du Type de données pour OLE DB Date et heure améliorations
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge des types de données pour les améliorations de date et d’heure OLE DB
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cet article fournit des informations à propos d’OLE DB (pilote OLE DB pour SQL Server) qui prennent en charge les types [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des types de données date/heure.  
+  Cet article fournit des informations sur OLE DB (OLE DB Driver pour SQL Server) qui prennent en charge les types [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des types de données date/heure.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mappage de type de données dans les ensembles de lignes et les paramètres  
  OLE DB fournit deux nouveaux types de données pour prendre en charge les nouveaux types de serveurs : DBTYPE_DBTIME2 et DBTYPE_DBTIMESTAMPOFFSET. Le tableau ci-dessous illustre le mappage complet des types de serveurs :  
@@ -48,7 +48,7 @@ ms.locfileid: "35666389"
 |Type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Type de données OLE DB|Format de chaîne pour les conversions clientes|  
 |-----------------------------------------|----------------------|------------------------------------------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge jusqu'à trois chiffres de fractions de seconde pour le type Datetime.|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss'<br /><br /> Ce type de données a la précision d’une minute. Le composant des secondes sera égal à zéro en sortie et arrondi par le serveur en entrée.|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss'<br /><br /> Ce type de données a une précision d’une minute. Le composant des secondes sera égal à zéro en sortie et arrondi par le serveur en entrée.|  
 |Date|DBTYPE_DBDATE|'aaaa-mm-jj'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
 |datetime2|DBTYPE_DBTIMESTAMP|'aaaa-mm-jj hh:mm:ss[.fffffff]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
@@ -75,11 +75,11 @@ ms.locfileid: "35666389"
   
 -   La plage des minutes s'étend de 0 à 59.  
   
--   La plage des secondes s'étend de 0 à 59. Cela permet à deux secondes intercalaires maintenir la synchronisation avec le temps sidereal.  
+-   La plage des secondes s'étend de 0 à 59. Ceci permet d’ajouter jusqu’à deux secondes intercalaires pour conserver la synchronisation avec l’heure sidérale.  
   
  Les implémentations pour les structs OLE DB existants suivants ont été modifiées afin de prendre en charge les nouveaux types de données de date et d'heure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toutefois, les définitions n'ont pas changé.  
   
--   DBTYPE_DATE (Ceci est un type DATE Automation. Il est représenté en interne comme un **double**... La partie entière correspond au nombre de jours depuis le 30 décembre 1899 et la partie fractionnaire correspond à la fraction d'un jour. Ce type a une précision de 1 seconde et a donc une échelle effective de 0.)  
+-   DBTYPE_DATE (Ceci est un type DATE Automation. Il est représenté en interne sous la forme d’un **double**. La partie entière correspond au nombre de jours depuis le 30 décembre 1899 et la partie fractionnaire correspond à la fraction d'un jour. Ce type a une précision de 1 seconde et a donc une échelle effective de 0.)  
   
 -   DBTYPE_DBDATE  
   
@@ -117,7 +117,7 @@ typedef struct tagDBTIMESTAMPOFFSET {
     } DBTIMESTAMPOFFSET;  
 ```  
   
- Si `timezone_hour` est négatif, `timezone_minute` doit être négatif ou égal à zéro. Si `timezone_hour` est un nombre positif, `timezone minute` doit être positif ou égal à zéro. Si `timezone_hour` est nul, `timezone minute` peut contenir une valeur comprise entre -59 et +59.  
+ Si `timezone_hour` est négatif, `timezone_minute` doit être négatif ou égal à zéro. Si `timezone_hour` est un nombre positif, `timezone minute` doit être positif ou zéro. Si `timezone_hour` est nul, `timezone minute` peut contenir une valeur comprise entre -59 et +59.  
   
 ### <a name="ssvariant"></a>SSVARIANT  
  Ce struct inclut désormais les nouvelles structures, DBTYPE_DBTIME2 et DBTYPE_DBTIMESTAMPOFFSET, et ajoute une échelle de fractions de seconde pour les types appropriés.  
@@ -164,7 +164,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Migration vers le pilote OLE DB pour SQL Server les applications qui utilisent **sql_variant** et s’appuient sur la précision limitée de **datetime** devront être mis à jour si le schéma sous-jacent est mis à jour pour utiliser **datetime2** plutôt que **datetime**.  
+ Les applications migrant vers OLE DB Driver pour SQL Server et qui utilisent **sql_variant** et s’appuient sur la précision limitée de **datetime** devront être mis à jour si le schéma sous-jacent est mis à jour pour utiliser **datetime2** plutôt que **datetime**.  
   
  Les macros d'accès pour SSVARIANT ont également été étendues avec l'addition des éléments suivants :  
   
@@ -182,12 +182,12 @@ enum SQLVARENUM {
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|Date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|Le pilote OLE DB pour SQL Server inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  
-|DBTYPE_DBTIME2|**temps**(p)|Le pilote OLE DB pour SQL Server inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  
+|DBTYPE_DBTIME2|**time**(p)|Le pilote OLE DB pour SQL Server inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Le pilote OLE DB pour SQL Server inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  
   
- Lorsqu’une application spécifie DBTYPE_DBTIMESTAMP dans *wType*, il peut remplacer le mappage à **datetime2** , vous devez fournir un nom de type dans *pwszTypeName*. Si **datetime** est spécifié, *bScale* doit être 3. Si **smalldatetime** est spécifié, *bScale* doit être 0. Si *bScale* n’est pas cohérent avec *wType* et *pwszTypeName*, DB_E_BADSCALE est retourné.  
+ Lorsqu’une application spécifie DBTYPE_DBTIMESTAMP dans *wType*, il peut remplacer le mappage à **datetime2** en fournissant un nom de type dans *pwszTypeName*. Si **datetime** est spécifié, *bScale* doit être 3. Si **smalldatetime** est spécifié, *bScale* doit être 0. Si *bScale* n’est pas cohérente avec *wType* et *pwszTypeName*, DB_E_BADSCALE est retourné.  
   
-## <a name="see-also"></a>Voir aussi  
- [Date et heure améliorations &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

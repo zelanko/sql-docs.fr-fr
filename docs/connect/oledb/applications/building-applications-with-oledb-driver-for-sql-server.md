@@ -1,6 +1,6 @@
 ---
-title: Création d’Applications avec le pilote OLE DB pour SQL Server | Documents Microsoft
-description: Génération d’applications avec le pilote OLE DB pour SQL Server
+title: Génération d’applications avec OLE DB Driver pour SQL Server | Microsoft Docs
+description: Génération d’applications avec OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -19,45 +19,45 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b768ec6810767e920650bc83e10f9ddece464a56
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 19166f1c665ac2b4c90e636adcffdd9d20fcfc47
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612114"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106245"
 ---
-# <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Génération d’Applications avec le pilote OLE DB pour SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Génération d’applications avec OLE DB Driver pour SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Lorsque vous développez une application qui utilise le pilote OLE DB pour la bibliothèque de SQL Server, il existe plusieurs problèmes qui entrent en jeu. Les rubriques de cette section présentent la plupart de ces problèmes, y compris la mise à niveau à partir de MDAC vers pilote OLE DB pour SQL Server, en utilisant le pilote OLE DB pour l’en-tête de SQL Server et les fichiers de bibliothèque, une vue d’ensemble des différentes chaînes de connexion qui peut être utilisé avec le pilote OLE DB pour S QL Server.  
+  Lorsque vous développez une application qui utilise le pilote OLE DB pour la bibliothèque de SQL Server, il existe plusieurs problèmes qui entrent en jeu. Les rubriques de cette section décrivent certaines de ces facteurs, notamment la mise à niveau à partir de MDAC vers OLE DB Driver pour SQL Server, en utilisant le pilote OLE DB pour SQL Server en-tête et fichiers de bibliothèque et une vue d’ensemble de différentes chaînes de connexion qui peut être utilisé avec OLE DB Driver pour S QL Server.  
 
 ## <a name="in-this-section"></a>Dans cette section  
  [Installation d’OLE DB Driver pour SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
- Explique comment le pilote OLE DB pour SQL Server est installé, les emplacements de différents composants sont installés à et comment désinstaller le pilote OLE DB pour SQL Server.  
+ Explique comment le pilote OLE DB pour SQL Server est installé, les emplacements différents composants sont installés à et comment désinstaller le pilote OLE DB pour SQL Server.  
 
  [Composants OLE DB Driver pour SQL Server](../../oledb/applications/components-of-oledb-driver-for-sql-server.md)  
- Décrit les composants qui composent pilote OLE DB pour SQL Server, y compris les fichiers d’en-tête, de ressources, d’aide et de bibliothèque.  
+ Décrit les composants qui composent OLE DB Driver pour SQL Server, y compris les fichiers, ressources, aide, en-tête et de bibliothèque.  
 
  [Utilisation de mots clés de chaîne de connexion avec OLE DB Driver pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
- Présente les différents types de chaînes de connexion qui peuvent être utilisés lors de la connexion à une base de données via le pilote OLE DB pour SQL Server.  
+ Aborde les différents types de chaînes de connexion qui peuvent être utilisés lors de la connexion à une base de données via OLE DB Driver pour SQL Server.  
 
  [Utilisation des fichiers d’en-tête et de bibliothèque d’OLE DB Driver pour SQL Server](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
  Explique comment utiliser le pilote OLE DB pour l’en-tête de SQL Server et les fichiers de bibliothèque au sein d’une application.  
 
  [Mise à jour d’une application vers OLE DB Driver pour SQL Server à partir de MDAC](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
- Discute les différences entre le pilote OLE DB pour SQL Server et MDAC et les problèmes à prendre en compte lors de la mise à niveau à partir de MDAC vers pilote OLE DB pour SQL Server.  
+ Décrit les différences entre le pilote OLE DB pour SQL Server et MDAC et les problèmes qui doivent être considérés lors de la mise à niveau à partir de MDAC vers OLE DB Driver pour SQL Server.  
 
  [Mise à jour d’une application à partir de SQL Server 2005 Native Client](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
- Décrit les problèmes à prendre en compte lors de la mise à niveau à partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] pilote OLE DB pour SQL Server Native Client.  
+ Traite des problèmes qui doivent être considérés lors de la mise à niveau à partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client OLE DB Driver pour SQL Server.  
 
  [Utilisation d’ADO avec OLE DB Driver pour SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)  
- Explique comment ADO peut utiliser le pilote OLE DB pour SQL Server pour accéder et utiliser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fonctionnalité.  
+ Explique comment ADO peut utiliser OLE DB Driver pour SQL Server pour accéder à et utiliser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fonctionnalité.  
 
  [Politiques de support d’OLE DB Driver pour SQL Server](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
  Décrit les divers composants d’accès aux données peuvent être utilisés avec différentes versions de pilote OLE DB pour SQL Server.  
 
-## <a name="see-also"></a>Voir aussi  
- [Pilote d’OLE DB pour SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
+## <a name="see-also"></a> Voir aussi  
+ [OLE DB Driver pour SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [Rubriques de procédures liées à OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

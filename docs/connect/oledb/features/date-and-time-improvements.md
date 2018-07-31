@@ -1,6 +1,6 @@
 ---
-title: Date et heure améliorations | Documents Microsoft
-description: Améliorations de date et d’heure dans le pilote OLE DB pour SQL Server
+title: Améliorations date / heure | Microsoft Docs
+description: Améliorations de date et d’heure dans OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 622df9211c29c60cfdb42034f6284164f8d9af3b
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b2ef9597f1791f722cb388b496e27400790baa9f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611604"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106180"
 ---
-# <a name="date-and-time-improvements"></a>Date et heure améliorations
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="date-and-time-improvements"></a>Améliorations des types de données date et heure
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Cette rubrique décrit le pilote OLE DB pour la prise en charge de SQL Server pour les types de données de date et d’heure qui ont été ajoutés dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
- Pour plus d’informations sur les améliorations de date/heure, consultez [Date et heure améliorations &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md).  
+ Pour plus d’informations sur les améliorations de date/heure, consultez [améliorations Date / heure &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md).  
   
- Pour plus d’informations sur les exemples d’applications qui illustrent cette fonctionnalité, consultez [exemples de programmation de données SQL Server](http://msftdpprodsamples.codeplex.com/).  
+ Pour plus d’informations sur les exemples d’applications qui illustrent cette fonctionnalité, consultez [Exemples de programmation de données SQL Server](http://msftdpprodsamples.codeplex.com/).  
   
 ## <a name="usage"></a>Utilisation  
  Les sections suivantes décrivent les différentes façons d'utiliser les nouveaux types de date et d'heure.  
@@ -41,21 +41,21 @@ ms.locfileid: "35611604"
 ### <a name="use-time-as-a-distinct-data-type"></a>Utiliser le type Time comme type de données distinct  
  OLE DB a déjà un type de données qui contient juste l'heure, DBTYPE_DBTIME, avec une précision de 1 seconde.
   
- La nouvelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données a la fraction de temps en secondes précision de 100 nanosecondes. Cela nécessite un nouveau type dans le pilote OLE DB pour SQL Server : DBTYPE_DBTIME2. Les applications existantes écrites pour utiliser des heures sans fractions de seconde peuvent recourir à des colonnes time(0). Le type OLE DB DBTYPE_TIME existant et ses structures correspondantes doivent fonctionner correctement, sauf si les applications qui s’appuient sur le type retourné dans les métadonnées.  
+ Le nouveau type de données d’heure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a une précision en fractions de seconde de 100 nanosecondes. Cela nécessite un nouveau type dans OLE DB Driver pour SQL Server : DBTYPE_DBTIME2. Les applications existantes écrites pour utiliser des heures sans fractions de seconde peuvent recourir à des colonnes time(0). Le type OLE DB DBTYPE_TIME et ses structs correspondants doivent fonctionner correctement, à moins que les applications ne reposent sur le type retourné dans les métadonnées.  
   
 ### <a name="use-time-as-a-distinct-data-type-with-extended-fractional-seconds-precision"></a>Utiliser le type Time comme type de données distinct avec l'extension de la précision en fractions de seconde  
  Certaines applications, telles que les applications de contrôle de processus et de fabrication, requièrent la possibilité de gérer les données d'heure avec une précision allant jusqu'à 100 nanosecondes. Nouveau type à cet effet dans OLE DB est DBTYPE_DBTIME2.  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision"></a>Utiliser le type Datetime avec l'extension de la précision en fractions de seconde  
- OLE DB définit déjà un type avec une précision allant jusqu'à 1 nanoseconde. Toutefois, ce type est déjà utilisé par les applications [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existantes, lesquelles attendent une précision de 1/300 de seconde uniquement. La nouvelle **datetime2(3)** type n’est pas directement compatible avec le type datetime existant. S'il existe un risque que cela affecte le comportement des applications, celles-ci doivent utiliser un nouvel indicateur DBCOLUMN pour déterminer le type réel sur le serveur.    
+ OLE DB définit déjà un type avec une précision allant jusqu'à 1 nanoseconde. Toutefois, ce type est déjà utilisé par les applications [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existantes, lesquelles attendent une précision de 1/300 de seconde uniquement. Le nouveau type **datetime2(3)** n’est pas directement compatible avec le type datetime existant. S'il existe un risque que cela affecte le comportement des applications, celles-ci doivent utiliser un nouvel indicateur DBCOLUMN pour déterminer le type réel sur le serveur.    
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision-and-timezone"></a>Utiliser le type Datetime avec l'extension de la précision en fractions de seconde et le fuseau horaire  
  Certaines applications requièrent des valeurs datetime avec les informations de fuseau horaire. Cela est pris en charge par le nouveau type DBTYPE_DBTIMESTAMPOFFSET.
   
 ### <a name="use-datetimedatetimedatetimeoffset-data-with-client-side-conversions-consistent-with-existing-conversions"></a>Utiliser les données de type Date/Time/Datetime/Datetimeoffset avec des conversions côté client cohérentes avec les conversions existantes  
- Les conversions sont étendues de manière cohérente pour inclure des conversions entre tous les types de date et d’heure introduits dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
+ Les conversions sont étendues de manière cohérente afin d’inclure celles entre tous les types relatifs à la date et à l’heure introduits dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

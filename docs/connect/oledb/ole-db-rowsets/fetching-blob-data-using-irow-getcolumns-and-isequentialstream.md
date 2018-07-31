@@ -1,6 +1,6 @@
 ---
-title: Extraction de données BLOB à l’aide d’IRow::GetColumns et ISequentialStream | Documents Microsoft
-description: Extraction de données BLOB à l’aide d’IRow::GetColumns et ISequentialStream
+title: Récupération (fetch) de données BLOB avec IRow::GetColumns et ISequentialStream | Microsoft Docs
+description: Récupération (fetch) de données BLOB avec IRow::GetColumns et ISequentialStream
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4856cd6694aed63dfb11c1adc048c70c571cf3e4
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 76c909ed28744576c24fadb4ec841a2049f2f0da
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689372"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106085"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Extraction de données BLOB à l'aide d'IRow::GetColumns et ISequentialStream
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  La fonction suivante utilise **IRow::GetColumns** et **ISequentialStream** pour extraire des données volumineuses :  
+  La fonction suivante utilise les interfaces **IRow::GetColumns** et **ISequentialStream** pour récupérer (fetch) les données volumineuses :  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -92,7 +92,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Extraction de données BLOB à l’aide d’IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Extraction de données Blob à l’aide d’IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

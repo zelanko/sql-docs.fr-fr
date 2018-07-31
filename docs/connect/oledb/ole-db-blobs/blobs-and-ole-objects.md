@@ -1,5 +1,5 @@
 ---
-title: Objets BLOB et OLE | Documents Microsoft
+title: Objets BLOB et OLE | Microsoft Docs
 description: Objets BLOB et OLE
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,31 +20,31 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: cacbe007e9bf0187648ad1fd95c8b6616fb8a300
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 3582b5566adc03ed8d4e7e35a71b32d18a1f4c41
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666079"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106095"
 ---
 # <a name="blobs-and-ole-objects"></a>Objets BLOB et OLE
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server expose la **ISequentialStream** interface pour prendre en charge d’accès client aux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **texte**, **image** , **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, et les types de données xml sous forme binaire des objets volumineux (BLOB). Le **en lecture** méthode sur **ISequentialStream** permet au consommateur de récupérer le volume de données en segments maniables.  
+  Le pilote OLE DB pour SQL Server expose l’interface **ISequentialStream** pour prendre en charge l’accès des consommateurs aux types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et XML comme objets BLOB. La méthode **Read** sur **ISequentialStream** permet au consommateur de récupérer un grand nombre de données en blocs maniables.  
   
- Pour obtenir un exemple illustrant cette fonctionnalité, consultez [de définition de données volumineux &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Pour obtenir un exemple illustrant cette fonctionnalité, consultez [définir les données volumineuses &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
- Le pilote OLE DB pour SQL Server peut utiliser implémentée par un consommateur **IStorage** interface lorsque le consommateur fournit le pointeur d’interface dans un accesseur lié pour la modification des données.  
+ Le pilote OLE DB pour SQL Server peut utiliser une interface **IStorage** implémentée par le consommateur quand celui-ci fournit le pointeur d’interface dans un accesseur lié pour la modification des données.  
   
- Pour les types de données de valeur élevée, le pilote OLE DB pour SQL Server vérifie les hypothèses de taille de type dans **IRowset** et les interfaces DDL. Les colonnes qui ont **varchar**, **nvarchar**, et **varbinary** types de données et la taille maximale illimitée sont représentées comme ISLONG via les ensembles de lignes de schéma et via interfaces qui retournent des types de données de colonne.  
+ Pour les types de données avec des valeurs volumineuses, le pilote OLE DB pour SQL Server vérifie les hypothèses sur la taille du type dans les interfaces **IRowset** et DDL. Les colonnes avec les types de données **varchar**, **nvarchar** et **varbinary**, et définies avec une taille maximale illimitée, sont représentées en tant que ISLONG dans les ensembles de lignes du schéma et les interfaces qui retournent les types de données des colonnes.  
   
- Le pilote OLE DB pour SQL Server expose la **varchar (max)**, **varbinary (max)** et **nvarchar (max)** respectivement les types en tant que DBTYPE_STR, DBTYPE_BYTES et DBTYPE_WSTR.  
+ Le pilote OLE DB pour SQL Server expose les types **varchar(max)**, **varbinary(max)** et **nvarchar(max)** respectivement comme DBTYPE_STR, DBTYPE_BYTES et DBTYPE_WSTR.  
   
  Pour utiliser ces types, une application dispose des options suivantes :  
   
--   Lier comme type (DBTYPE_STR, DBTYPE_BYTES, DBTYPE_WSTR). Si le tampon n’est pas insuffisante, une troncation se produit, exactement comme pour ces types dans les versions précédentes (bien que les valeurs plus élevées soient maintenant disponibles).  
+-   Lier comme type (DBTYPE_STR, DBTYPE_BYTES, DBTYPE_WSTR). Si la mémoire tampon n’est pas assez grande, une troncation est effectuée, exactement comme pour ces types dans les précédentes versions (bien que de plus grandes valeurs soient maintenant disponibles).  
   
 -   Lier comme type et spécifier également DBTYPE_BYREF.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "35666079"
   
 ## <a name="storage-object-limitations"></a>Limitations des objets de stockage  
   
--   Le pilote OLE DB pour SQL Server peut prendre en charge qu’un objet de stockage ouvert unique. Toute tentative d’ouverture de plusieurs objets de stockage (pour obtenir une référence sur plusieurs **ISequentialStream** pointeur d’interface) retournent DBSTATUS_E_CANTCREATE.  
+-   Le pilote OLE DB pour SQL Server peut prendre en charge uniquement un objet de stockage ouvert unique. Les tentatives d’ouverture de plusieurs objets de stockage (pour obtenir une référence sur plusieurs pointeurs d’interface **ISequentialStream**) retournent DBSTATUS_E_CANTCREATE.  
   
--   Dans le pilote OLE DB pour SQL Server, la valeur par défaut de la propriété en lecture seule de DBPROP_BLOCKINGSTORAGEOBJECTS est VARIANT_TRUE. Par conséquent, si un objet de stockage est actif, certaines méthodes (autres que les méthodes sur les objets de stockage) échouent avec E_UNEXPECTED.  
+-   Dans le pilote OLE DB pour SQL Server, la valeur par défaut de la propriété en lecture seule de DBPROP_BLOCKINGSTORAGEOBJECTS est VARIANT_TRUE. Cela signifie que si un objet de stockage est actif, certaines méthodes (autres que celles sur les objets de stockage) échouent avec E_UNEXPECTED.  
   
--   La longueur des données fournies par un objet de stockage implémenté consommateur doit avoir connaissance pour le pilote OLE DB pour SQL Server lors de la création de l’accesseur de ligne qui fait référence à l’objet de stockage. Le consommateur doit lier un indicateur de longueur dans la structure DBBINDING utilisée pour la création de l'accesseur.  
+-   Le pilote OLE DB pour SQL Server doit avoir connaissance de la longueur des données présentées par un objet de stockage implémenté par le consommateur quand l’accesseur de ligne qui référence l’objet de stockage est créé. Le consommateur doit lier un indicateur de longueur dans la structure DBBINDING utilisée pour la création de l'accesseur.  
   
--   Si une ligne contient plus une valeur de données élevées et le DBPROP_ACCESSORDER n’est pas DBPROPVAL_AO_RANDOM, le consommateur doit utiliser un pilote OLE DB pour l’ensemble de lignes de curseur pris en charge de SQL Server pour récupérer des données de ligne ou traiter toutes les valeurs de données de grande taille avant les autres valeurs de ligne. Si DBPROP_ACCESSORDER a pour valeur DBPROPVAL_AO_RANDOM, le pilote OLE DB pour SQL Server met en cache tous les types de données xml en tant qu’objets binaires volumineux (BLOB) pour qu’il peut être accessible dans n’importe quel ordre.  
+-   Si une ligne contient plusieurs valeurs de données volumineuses et que DBPROP_ACCESSORDER n’est pas DBPROPVAL_AO_RANDOM, le consommateur doit utiliser un ensemble de lignes pris en charge par le curseur du pilote OLE DB pour SQL Server pour extraire les données de ligne ou traiter toutes les valeurs de données volumineuses avant d’extraire d’autres valeurs de ligne. Si DBPROP_ACCESSORDER a pour valeur DBPROPVAL_AO_RANDOM, le pilote OLE DB pour SQL Server met en cache tous les types de données XML comme objets BLOB pour en permettre l’accès dans n’importe quel ordre.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -70,8 +70,8 @@ ms.locfileid: "35666079"
   
 -   [Prise en charge de la diffusion en continu pour les paramètres de sortie BLOB](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
-## <a name="see-also"></a>Voir aussi  
- [Programmation de SQL Server OLE DB pilote](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
+## <a name="see-also"></a> Voir aussi  
+ [Programmation du pilote OLE DB pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
  [Utilisation de types de valeur élevée](../../oledb/features/using-large-value-types.md)  
   
   

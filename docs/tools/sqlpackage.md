@@ -1,24 +1,23 @@
 ---
 title: SqlPackage.exe | Microsoft Docs
-ms.custom:
-- SSDT
+ms.prod: sql
+ms.technology: ssdt
 ms.date: 2018-06-27
-ms.prod: sql-non-specified
 ms.reviewer: alayu; sstein
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 caps.latest.revision: 53
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 4c206a60e0b494d4e060864eefcb50424d316938
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
-ms.translationtype: HT
+ms.openlocfilehash: 15a34b5cc746368edb4f4dbe3e16720da77f9128
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080077"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085411"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -115,7 +114,7 @@ Une opération de publication SqlPackage.exe procède à une mise à jour incré
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|Spécifie si le chiffrement SQL doit être utilisé pour la connexion à la base de données source. |
 |**/ SourceFile :**|**/sf**|{string}|Spécifie un fichier source à utiliser comme source d'action plutôt qu’une base de données. Si ce paramètre est utilisé, aucun autre paramètre source ne doit être valide. |
 |**/SourcePassword:**|**/sp**|{string}|Pour les scénarios d’authentification SQL Server, définit le mot de passe à utiliser pour accéder à la base de données source. |
-|**/ Nom_serveur_source :**|**/ssn**|{string}|Définit le nom du serveur hébergeant la base de données source. |
+|**/SourceServerName:**|**/ssn**|{string}|Définit le nom du serveur hébergeant la base de données source. |
 |**/ SourceTimeout :**|**/st**|{int}|Spécifie le délai d'attente (en secondes) pour l'établissement d'une connexion à la base de données source. |
 |**/ SourceTrustServerCertificate :**|**/stsc**|{True&#124;False}|Spécifie s'il faut utiliser SSL pour chiffrer la connexion de la base de données source et ignorer la vérification de la chaîne de certificats pour valider la chaîne d'approbation. |
 |**/SourceUser:**|**/su**|{string}|Pour les scénarios d’authentification SQL Server, définit l’utilisateur SQL Server à utiliser pour accéder à la base de données source. |
@@ -137,14 +136,14 @@ Une opération de publication SqlPackage.exe procède à une mise à jour incré
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Spécifie des arguments de collaborateur du déploiement supplémentaires pour les collaborateurs du déploiement. Il doit s'agir d'une liste de valeurs délimitée par des points-virgules.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Spécifie des collaborateurs de déploiement supplémentaires qui doivent être en cours d’exécution quand le fichier dacpac est déployé. Il doit s'agir d'une liste d'ID ou de noms de collaborateurs de build complets délimitée par des points-virgules.|
-|**/p:**|AllowDropBlocking Assemblies=(BOOLEAN)|Cette propriété est utilisée par le déploiement SqlClr afin de supprimer les assemblys bloquants dans le cadre du plan de déploiement. Par défaut, les assemblys bloquants/de référence bloquent la mise à jour d'assembly si l'assembly de référence doit être supprimé.|
+|**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|Cette propriété est utilisée par le déploiement SqlClr afin de supprimer les assemblys bloquants dans le cadre du plan de déploiement. Par défaut, les assemblys bloquants/de référence bloquent la mise à jour d'assembly si l'assembly de référence doit être supprimé.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Spécifie s'il faut tenter l'action, en dépit de la possibilité d'une incompatibilité avec les plateformes SQL Server.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Ne pas bloquer le déplacement des données sur une table qui a une sécurité au niveau des lignes si cette propriété a la valeur true. La valeur par défaut est False.|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Sauvegarde la base de données avant le déploiement des modifications.|
 |**/p:**|BlockOnPossibleDataLoss = (BOOLÉENNE ' True')|Spécifie que l'épisode de publication doit prendre fin s'il y a une possibilité de perte de données suite à l'opération de publication.|
 |**/p:**|BlockWhenDriftDetected = (BOOLÉENNE ' True')|Spécifie s'il faut bloquer la mise à jour d'une base de données dont le schéma ne correspond plus à son inscription ou qui est désinscrite.|
 |**/p:**|CommandTimeout = (INT32 « 60 »)|Spécifie le délai d'expiration de la commande (en secondes) lors de l'exécution de requêtes SQL Server.|
-|**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Spécifie si la déclaration des variables SETVAR doit être commentée dans le script de publication généré. Cela peut vous être utile si vous prévoyez de spécifier les valeurs de la ligne de commande au moment de la publication à l’aide d’un outil tel que SQLCMD.EXE.|
+|**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Spécifie si la déclaration des variables SETVAR doivent être commentées dans le script de publication généré. Cela peut vous être utile si vous prévoyez d espécifier les valeurs de la ligne de commande au moment de la publication à l’aide d’un outil tel que SQLCMD.EXE.|
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|Ce paramètre détermine la façon dont le classement de la base de données est géré durant le déploiement ; par défaut, le classement de la base de données cible sera mis à jour s'il ne correspond pas à celui spécifié par la source. Lorsque cette option est définie, le classement de la base de données (ou du serveur) cible doit être utilisé.|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|Spécifie si la base de données cible doit être mise à jour ou bien supprimée, puis recréée lors de la publication vers une base de données.|
 |**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;par défaut} 'Default')|Définit l’édition d’une base de données SQL Azure.|
@@ -249,7 +248,7 @@ Une action d’exportation de SqlPackage.exe exporte une base de données en dir
 |**/SourceDatabaseName:**|**/Sdn**|{string}|Définit le nom la base de données source. |
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|Spécifie si le chiffrement SQL doit être utilisé pour la connexion à la base de données source. |
 |**/SourcePassword:**|**/sp**|{string}|Pour les scénarios d’authentification SQL Server, définit le mot de passe à utiliser pour accéder à la base de données source. |
-|**/ Nom_serveur_source :**|**/ssn**|{string}|Définit le nom du serveur hébergeant la base de données source. |
+|**/SourceServerName:**|**/ssn**|{string}|Définit le nom du serveur hébergeant la base de données source. |
 |**/ SourceTimeout :**|**/st**|{int}|Spécifie le délai d'attente (en secondes) pour l'établissement d'une connexion à la base de données source. |
 |**/ SourceTrustServerCertificate :**|**/stsc**|{True&#124;False}|Spécifie s'il faut utiliser SSL pour chiffrer la connexion de la base de données source et ignorer la vérification de la chaîne de certificats pour valider la chaîne d'approbation. |
 |**/SourceUser:**|**/su**|{string}|Pour les scénarios d’authentification SQL Server, définit l’utilisateur SQL Server à utiliser pour accéder à la base de données source. |
@@ -324,7 +323,7 @@ Une action de rapport **SqlPackage.exe** crée un rapport XML sur les modificat
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|Spécifie si le chiffrement SQL doit être utilisé pour la connexion à la base de données source. |
 |**/ SourceFile :**|**/sf**|{string}|Spécifie un fichier source à utiliser comme source d'action plutôt qu’une base de données. Si ce paramètre est utilisé, aucun autre paramètre source ne doit être valide. |
 |**/SourcePassword:**|**/sp**|{string}|Pour les scénarios d’authentification SQL Server, définit le mot de passe à utiliser pour accéder à la base de données source. |
-|**/ Nom_serveur_source :**|**/ssn**|{string}|Définit le nom du serveur hébergeant la base de données source. |
+|**/SourceServerName:**|**/ssn**|{string}|Définit le nom du serveur hébergeant la base de données source. |
 |**/ SourceTimeout :**|**/st**|{int}|Spécifie le délai d'attente (en secondes) pour l'établissement d'une connexion à la base de données source. |
 |**/ SourceTrustServerCertificate :**|**/stsc**|{True&#124;False}|Spécifie s'il faut utiliser SSL pour chiffrer la connexion de la base de données source et ignorer la vérification de la chaîne de certificats pour valider la chaîne d'approbation. |
 |**/SourceUser:**|**/su**|{string}|Pour les scénarios d’authentification SQL Server, définit l’utilisateur SQL Server à utiliser pour accéder à la base de données source. |
@@ -354,7 +353,7 @@ Une action de rapport **SqlPackage.exe** crée un rapport XML sur les modificat
 |**/p:**|BlockOnPossibleDataLoss = (BOOLÉENNE ' True')|Spécifie que l'épisode de publication doit prendre fin s'il y a une possibilité de perte de données suite à l'opération de publication.|
 |**/p:**|BlockWhenDriftDetected = (BOOLÉENNE ' True')|Spécifie s'il faut bloquer la mise à jour d'une base de données dont le schéma ne correspond plus à son inscription ou qui est désinscrite. |
 |**/p:**|CommandTimeout = (INT32 « 60 »)|Spécifie le délai d'expiration de la commande (en secondes) lors de l'exécution de requêtes SQL Server. |
-|**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Spécifie si la déclaration des variables SETVAR doit être commentée dans le script de publication généré. Cela peut vous être utile si vous prévoyez de spécifier les valeurs de la ligne de commande au moment de la publication à l’aide d’un outil tel que SQLCMD.EXE. |
+|**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Spécifie si la déclaration des variables SETVAR doivent être commentées dans le script de publication généré. Cela peut vous être utile si vous prévoyez d espécifier les valeurs de la ligne de commande au moment de la publication à l’aide d’un outil tel que SQLCMD.EXE. |
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|Ce paramètre détermine la façon dont le classement de la base de données est géré durant le déploiement ; par défaut, le classement de la base de données cible sera mis à jour s'il ne correspond pas à celui spécifié par la source. Lorsque cette option est définie, le classement de la base de données (ou du serveur) cible doit être utilisé. |
 |**/p:**|CreateNewDatabase=(BOOLEAN)|Spécifie si la base de données cible doit être mise à jour ou bien supprimée, puis recréée lors de la publication vers une base de données. |
 |**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;par défaut} 'Default')|Définit l’édition d’une base de données SQL Azure. |
@@ -479,7 +478,7 @@ Une action de script **SqlPackage.exe** crée un script de mise à jour incréme
 |**/SourceEncryptConnection:**|**/sec**|{True&#124;False}|Spécifie si le chiffrement SQL doit être utilisé pour la connexion à la base de données source. |
 |**/ SourceFile :**|**/sf**|{string}|Spécifie un fichier source à utiliser comme source d’action. Si ce paramètre est utilisé, aucun autre paramètre source ne doit être valide. |
 |**/SourcePassword:**|**/sp**|{string}|Pour les scénarios d’authentification SQL Server, définit le mot de passe à utiliser pour accéder à la base de données source. |
-|**/ Nom_serveur_source :**|**/ssn**|{string}|Définit le nom du serveur hébergeant la base de données source. |
+|**/SourceServerName:**|**/ssn**|{string}|Définit le nom du serveur hébergeant la base de données source. |
 |**/ SourceTimeout :**|**/st**|{int}|Spécifie le délai d'attente (en secondes) pour l'établissement d'une connexion à la base de données source. |
 |**/ SourceTrustServerCertificate :**|**/stsc**|{True&#124;False}|Spécifie s'il faut utiliser SSL pour chiffrer la connexion de la base de données source et ignorer la vérification de la chaîne de certificats pour valider la chaîne d'approbation. |
 |**/SourceUser:**|**/su**|{string}|Pour les scénarios d’authentification SQL Server, définit l’utilisateur SQL Server à utiliser pour accéder à la base de données source. |
@@ -509,7 +508,7 @@ Une action de script **SqlPackage.exe** crée un script de mise à jour incréme
 |**/p:**|BlockOnPossibleDataLoss = (BOOLÉENNE ' True')|Spécifie que l'épisode de publication doit prendre fin s'il y a une possibilité de perte de données suite à l'opération de publication.
 |**/p:**|BlockWhenDriftDetected = (BOOLÉENNE ' True')|Spécifie s'il faut bloquer la mise à jour d'une base de données dont le schéma ne correspond plus à son inscription ou qui est désinscrite.
 |**/p:**|CommandTimeout = (INT32 « 60 »)|Spécifie le délai d'expiration de la commande (en secondes) lors de l'exécution de requêtes SQL Server.
-|**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Spécifie si la déclaration des variables SETVAR doit être commentée dans le script de publication généré. Cela peut vous être utile si vous prévoyez de spécifier les valeurs de la ligne de commande au moment de la publication à l’aide d’un outil tel que SQLCMD.EXE.
+|**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Spécifie si la déclaration des variables SETVAR doivent être commentées dans le script de publication généré. Cela peut vous être utile si vous prévoyez d espécifier les valeurs de la ligne de commande au moment de la publication à l’aide d’un outil tel que SQLCMD.EXE.
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|Ce paramètre détermine la façon dont le classement de la base de données est géré durant le déploiement ; par défaut, le classement de la base de données cible sera mis à jour s'il ne correspond pas à celui spécifié par la source. Lorsque cette option est définie, le classement de la base de données (ou du serveur) cible doit être utilisé.|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|Spécifie si la base de données cible doit être mise à jour ou bien supprimée, puis recréée lors de la publication vers une base de données.
 |**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;par défaut} 'Default')|Définit l’édition d’une base de données SQL Azure.
@@ -528,7 +527,7 @@ Une action de script **SqlPackage.exe** crée un script de mise à jour incréme
 |**/p:**|DropObjectsNotInSource=(BOOLEAN)|Spécifie si les objets qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) sont supprimés de la base de données cible quand vous publiez dans une base de données. Cette valeur est prioritaire sur DropExtendedProperties.|
 |**/p:**|DropPermissionsNotInSource=(BOOLEAN)|Spécifie si les autorisations qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) seront supprimés de la base de données cible au moment de la publication de mises à jour vers une base de données.|
 |**/p:**|DropRoleMembersNotInSource=(BOOLEAN)|Spécifie si les membres de rôle qui ne sont pas définis dans le fichier d'instantané de base de données (.dacpac) seront supprimés de la base de données cible au moment de la publication de mises à jour vers une base de données.|
-|**/p:**|DropStatisticsNotInSource = (BOOLÉENNE ' True')|Spécifie si les statistiques qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) sont supprimées de la base de données cible quand vous publiez dans une base de données.|
+|**/p:**|DropStatisticsNotInSource = (BOOLÉENNE ' True')|Spécifie si les statistiques qui n’existent pas dans le fichier d’instantané de base de données (.dacpac) sont supprimées de la base de données cible quand vous publiez dans une base de données.|
 |**/p:**|ExcludeObjectType=(STRING)|Type d'objet qui doit être ignoré durant le déploiement. Les noms de types d’objets valides sont Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|ExcludeObjectTypes=(STRING)|Liste de types d’objets séparés par des points-virgules qui doivent être ignorés pendant le déploiement. Les noms de types d'objets valides sont Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|GenerateSmartDefaults=(BOOLEAN)|Fournit automatiquement une valeur par défaut lors de la mise à jour d'une table contenant des données et une colonne n'acceptant pas les valeurs Null.

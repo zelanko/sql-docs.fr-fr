@@ -1,6 +1,6 @@
 ---
-title: Préparation des commandes | Documents Microsoft
-description: Préparation des commandes à l’aide du pilote OLE DB pour SQL Server
+title: Préparation des commandes | Microsoft Docs
+description: Préparation des commandes à l’aide de OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ca162d2fffd23b55d53d34d32ad92a5cdbce7545
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: b5cefe4cea0c0d156c13239f24c4a97f7c90eeb0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666059"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106015"
 ---
 # <a name="preparing-commands"></a>Préparation des commandes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server prend en charge la préparation de commande pour l’exécution multiple d’une commande unique ; optimisée Toutefois, préparation de commande génère une charge mémoire et un consommateur n’a pas besoin de préparer une commande pour l’exécuter plusieurs fois. En général, la préparation de commande est nécessaire si celle-ci doit être exécutée plus de trois fois.  
+  Le pilote OLE DB pour SQL Server prend en charge la préparation des commandes pour l’exécution multiple optimisée d’une même commande ; cependant, la préparation des commandes génère une charge mémoire et un consommateur n’a pas besoin de préparer une commande pour l’exécuter plusieurs fois. En général, la préparation de commande est nécessaire si celle-ci doit être exécutée plus de trois fois.  
   
  Pour des raisons de performance, la préparation de commande est différée jusqu'à ce que la commande soit exécutée. Il s'agit du comportement par défaut. Toute erreur dans la commande en cours de préparation est inconnue tant que la commande n'a pas été exécutée ou qu'une opération de métapropriété n'a pas été effectuée. L'affectation de la valeur FALSE à la propriété [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSPROP_DEFERPREPARE peut désactiver ce comportement par défaut.  
   
@@ -39,27 +39,27 @@ ms.locfileid: "35666059"
   
  Pour les commandes préparées, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit la prise en charge native de la préparation et de l'exécution des instructions de commande. Lorsque vous préparez une instruction, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crée un plan d'exécution, le met en cache et retourne un handle de ce plan d'exécution au fournisseur. Le fournisseur utilise ensuite ce handle pour exécuter l'instruction à plusieurs reprises. Aucune procédure stockée n'est créée. Étant donné que le handle identifie directement le plan d'exécution pour une instruction SQL au lieu de faire correspondre l'instruction au plan d'exécution dans le cache (comme c'est le cas pour l'exécution directe), il est plus efficace de préparer une instruction que de l'exécuter directement, si vous savez que l'instruction sera exécutée plusieurs fois.  
   
- Dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], les instructions préparées ne peuvent pas être utilisées pour créer des objets temporaires et ne peut pas faire référence à des procédures stockées système qui créent des objets temporaires, tels que des tables temporaires. Ces procédures doivent être exécutées directement.  
+ Dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], les instructions préparées ne peuvent pas être utilisées pour créer des objets temporaires et elles ne peuvent pas référencer des procédures stockées système qui créent des objets temporaires, comme des tables temporaires. Ces procédures doivent être exécutées directement.  
   
  Certaines commandes ne doivent jamais être préparées. Par exemple, les commandes qui spécifient l'exécution de procédure stockée ou incluent du texte non valide pour la création de procédure stockée [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne doivent pas être préparées.  
   
- Si une procédure stockée temporaire est créée, le pilote OLE DB pour SQL Server exécute la procédure stockée temporaire, pour retourner des résultats comme si l’instruction elle-même a été exécutée.  
+ Si une procédure stockée temporaire est créée, le pilote OLE DB pour SQL Server exécute la procédure stockée temporaire et retourne des résultats comme si l’instruction elle-même avait été exécutée.  
   
- La création de la procédure stockée temporaire est contrôlée par le pilote OLE DB pour SQL Server-propriété d’initialisation spécifique SSPROP_INIT_USEPROCFORPREP. Si la valeur de propriété est SSPROPVAL_USEPROCFORPREP_ON ou SSPROPVAL_USEPROCFORPREP_ON_DROP, le pilote OLE DB pour SQL Server tente de créer une procédure stockée lorsqu’une commande est préparée. La création de procédure stockée réussit si l'utilisateur d'application a des autorisations [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suffisantes.  
+ La création d’une procédure stockée temporaire est contrôlée par la propriété d’initialisation spécifique au pilote OLE DB pour SQL Server SSPROP_INIT_USEPROCFORPREP. Si la valeur de la propriété est SSPROPVAL_USEPROCFORPREP_ON ou SSPROPVAL_USEPROCFORPREP_ON_DROP, le pilote OLE DB pour SQL Server tente de créer une procédure stockée quand une commande est préparée. La création de procédure stockée réussit si l'utilisateur d'application a des autorisations [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suffisantes.  
   
- Pour les consommateurs qui se déconnectent rarement, la création de procédures stockées temporaires peut nécessiter d’importantes ressources de **tempdb**, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données système dans lequel les objets temporaires sont créés. Lorsque la valeur de SSPROP_INIT_USEPROCFORPREP est SSPROPVAL_USEPROCFORPREP_ ON, les procédures stockées temporaires créées par le pilote OLE DB pour SQL Server sont supprimées uniquement lorsque la session qui a créé la commande perd sa connexion à l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si cette connexion est la connexion par défaut créée lors de l'initialisation de la source de données, la procédure stockée temporaire est supprimée uniquement lorsque la source de données devient non initialisée.  
+ Pour les consommateurs qui se déconnectent rarement, la création de procédures stockées temporaires peut nécessiter des ressources significatives de **tempdb**, la base de données système de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] où les objets temporaires sont créés. Quand la valeur de SSPROP_INIT_USEPROCFORPREP est SSPROPVAL_USEPROCFORPREP_ ON, les procédures stockées temporaires créées par le pilote OLE DB pour SQL Server sont supprimées seulement quand la session qui a créé la commande perd sa connexion à l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si cette connexion est la connexion par défaut créée lors de l'initialisation de la source de données, la procédure stockée temporaire est supprimée uniquement lorsque la source de données devient non initialisée.  
   
- Lorsque la valeur de SSPROP_INIT_USEPROCFORPREP est SSPROPVAL_USEPROCFORPREP_ON_DROP, les procédures de pilote OLE DB pour SQL Server temporaires stockés sont supprimés lorsqu’une des actions suivantes se produit :  
+ Quand la valeur de SSPROP_INIT_USEPROCFORPREP est SSPROPVAL_USEPROCFORPREP_ON_DROP, les procédures stockées temporaires du pilote OLE DB pour SQL Server sont supprimées quand une des conditions suivantes est réalisée :  
   
 -   Le consommateur utilise **ICommandText::SetCommandText** pour indiquer une nouvelle commande.  
   
--   Le consommateur utilise **ICommandPrepare::Unprepare** pour indiquer qu’il ne requiert plus le texte de commande.  
+-   Le consommateur utilise **ICommandPrepare::Unprepare** pour indiquer qu’il n’a plus besoin du texte de la commande.  
   
 -   Le consommateur libère toutes les références à l'objet de commande à l'aide de la procédure stockée temporaire.  
   
- Un objet de commande a au plus une procédure stockée temporaire **tempdb**. Toute procédure stockée temporaire existante représente le texte de commande actuel d'un objet de commande spécifique.  
+ Un objet de commande a au plus une procédure stockée temporaire dans **tempdb**. Toute procédure stockée temporaire existante représente le texte de commande actuel d'un objet de commande spécifique.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Commandes](../../oledb/ole-db-commands/commands.md)  
   
   

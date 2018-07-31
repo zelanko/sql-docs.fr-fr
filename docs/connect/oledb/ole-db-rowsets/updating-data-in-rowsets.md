@@ -1,6 +1,6 @@
 ---
-title: Mise à jour des données dans les ensembles de lignes | Documents Microsoft
-description: Mise à jour des données dans les ensembles de lignes à l’aide du pilote OLE DB pour SQL Server
+title: La mise à jour des données dans les ensembles de lignes | Microsoft Docs
+description: La mise à jour des données dans les ensembles de lignes à l’aide de OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,19 +21,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 009c6023dc1905ac724287790c1b26a4bfcf87d3
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 20484bce71d0e776b4090f743c65e3a78d655a70
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689902"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108811"
 ---
 # <a name="updating-data-in-rowsets"></a>Mise à jour des données dans les ensembles de lignes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour les mises à jour de SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] données lorsqu’un consommateur met à jour un ensemble de lignes modifiable qui contient les données. Un ensemble de lignes modifiable est créé lorsque le consommateur demande pris en charge la **IRowsetChange** ou **IRowsetUpdate** interface.  
+  Le pilote OLE DB pour SQL Server met à jour les données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lorsqu’un consommateur met à jour un ensemble de lignes modifiable contenant ces données. Un ensemble de lignes modifiable est créé lorsque le consommateur demande la prise en charge de l’interface **IRowsetChange** ou **IRowsetUpdate**.  
   
  Tous les pilote OLE DB pour une utilisation d’ensembles de lignes modifiable SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les curseurs pour prendre en charge l’ensemble de lignes. La propriété d'ensemble de lignes DBPROP_LOCKMODE modifie le comportement du contrôle concurrentiel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des curseurs et détermine le comportement de l'extraction de lignes d'un ensemble de lignes et la génération d'erreurs d'intégrité des données dans les ensembles de lignes pouvant être mis à jour.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "35689902"
   
 -   [Resynchronisation des lignes](../../oledb/ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Ensembles de lignes](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

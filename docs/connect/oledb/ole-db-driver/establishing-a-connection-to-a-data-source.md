@@ -1,6 +1,6 @@
 ---
-title: L’établissement d’une connexion à une Source de données | Documents Microsoft
-description: L’établissement d’une connexion à une source de données à l’aide du pilote OLE DB pour SQL Server
+title: Établir une connexion à une Source de données | Microsoft Docs
+description: Établir une connexion à une source de données à l’aide de OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,25 +20,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7b4a864d10b109f32e552ed82d9d89868011496d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8c198bad7fbe50aff0493d25c438268efb1deeb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666099"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107035"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Établissement d'une connexion à une source de données
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Pour accéder au pilote OLE DB pour SQL Server, le consommateur doit d’abord créer une instance d’un objet de source de données en appelant le **CoCreateInstance** (méthode). Un identificateur de classe unique (CLSID) identifie chaque fournisseur OLE DB. Pour le pilote OLE DB pour SQL Server, l’identificateur de classe est CLSID_MSOLEDBSQL. Vous pouvez également utiliser le symbole MSOLEDBSQL_CLSID qui sera résolu en le pilote OLE DB pour SQL Server qui est utilisé dans le msoledbsql.h que vous référencez.  
+  Pour accéder au pilote OLE DB pour SQL Server, le consommateur doit d’abord créer une instance d’un objet de source de données en appelant la méthode **CoCreateInstance**. Un identificateur de classe unique (CLSID) identifie chaque fournisseur OLE DB. Pour le pilote OLE DB pour SQL Server, l’identificateur de classe est CLSID_MSOLEDBSQL. Vous pouvez également utiliser le symbole MSOLEDBSQL_CLSID qui sera converti en pilote OLE DB pour SQL Server qui est utilisé dans le msoledbsql.h que vous référencez.  
   
- La source de données objet expose le **IDBProperties** interface, le consommateur utilise pour fournir des informations d’authentification de base telles que le nom du serveur, nom de la base de données, ID d’utilisateur et mot de passe. Le **IDBProperties::SetProperties** méthode est appelée pour définir ces propriétés.  
+ L’objet de source de données expose l’interface **IDBProperties**, que le consommateur utilise pour fournir les informations d’authentification de base, comme le nom du serveur, le nom de la base de données, l’ID d’utilisateur et le mot de passe. La méthode **IDBProperties::SetProperties** est appelée pour définir ces propriétés.  
   
  S'il existe plusieurs instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui s'exécutent sur l'ordinateur, le nom du serveur est spécifié sous la forme NomServeur\NomInstance.  
   
- L’objet de source de données expose également le **IDBInitialize** interface. Une fois que les propriétés sont définies, la connexion à la source de données est établie en appelant le **IDBInitialize::Initialize** (méthode). Exemple :  
+ L’objet de source de données expose également l’interface **IDBInitialize**. Une fois les propriétés définies, la connexion à la source de données est établie en appelant la méthode **IDBInitialize::Initialize**. Exemple :  
   
 ```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL,   
@@ -48,7 +48,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
                  (void **) &pIDBInitialize)  
 ```
   
- Cet appel à **CoCreateInstance** crée un objet unique de la classe associée CLSID_MSOLEDBSQL (CSLID associé avec les données et le code permettant de créer l’objet). IID_IDBInitialize est une référence à l’identificateur de l’interface (**IDBInitialize**) à utiliser pour communiquer avec l’objet.  
+ Cet appel à **CoCreateInstance** crée un objet unique de la classe associée à CLSID_MSOLEDBSQL (CSLID associé aux données et au code qui seront utilisés pour créer l’objet). IID_IDBInitialize est une référence à l’identificateur de l’interface (**IDBInitialize**) à utiliser pour communiquer avec l’objet.  
   
  L’exemple suivant montre comment initialiser et établir une connexion à la source de données.
   
@@ -176,7 +176,7 @@ _ExitInitialize:
 }
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Création d’une application OLE DB Driver pour SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
   

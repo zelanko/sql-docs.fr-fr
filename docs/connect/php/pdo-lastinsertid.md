@@ -1,5 +1,5 @@
 ---
-title: PDO::lastInsertId | Documents Microsoft
+title: PDO::lastInsertId | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 69792c6f6383cb75ae66fa279d343ede6977f99b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308548"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983371"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Retourne l’identificateur de la dernière ligne insérée dans une table de la base de données. La table doit comporter une colonne IDENTITY NOT NULL. Si un nom de la séquence est fourni, `lastInsertId` retourne inséré le dernier numéro de séquence pour le nom de la séquence fournie (pour plus d’informations sur les numéros de séquence, consultez [ici](https://docs.microsoft.com/en-us/sql/relational-databases/sequence-numbers/sequence-numbers)).
+Retourne l’identificateur de la dernière ligne insérée dans une table de la base de données. La table doit comporter une colonne IDENTITY NOT NULL. Si un nom de la séquence est fourni, `lastInsertId` retourne inséré le dernier numéro de séquence pour le nom de la séquence fournie (pour plus d’informations sur les numéros de séquence, consultez [ici](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,21 +34,21 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-$*nom*: chaîne facultative qui vous permet de spécifier un nom de la séquence. 
+$*name* : chaîne facultative qui vous permet de spécifier un nom de séquence. 
   
-## <a name="return-value"></a>Valeur de retour  
-Si aucun nom de la séquence n’est fourni, une chaîne de l’identificateur de la ligne la plus récemment ajoutée.
-Si un nom de la séquence est fourni, une chaîne de l’identificateur de la séquence la plus récemment ajoutée.
+## <a name="return-value"></a>Valeur retournée  
+Si aucun nom de la séquence n’est fourni, une chaîne de l’identificateur de la ligne récemment ajoutées.
+Si un nom de la séquence est fourni, une chaîne de l’identificateur de la séquence récemment ajoutées.
 Si l’appel de méthode échoue, une chaîne vide est retournée.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
-Entre les versions 2.0 et 4.3, le paramètre facultatif est un nom de table, et la valeur de retour est l’ID de la dernière ligne ajoutée à la table fournie.
-À partir de 5.0, le paramètre facultatif est considéré comme un nom de la séquence, et la valeur de retour est la séquence la plus récemment ajoutée pour le nom de la séquence fournie.
+Entre la version 2.0 et 4.3, le paramètre facultatif est un nom de table, et la valeur de retour est l’ID de la ligne récemment ajoutée à la table fournie.
+À compter de 5.0, le paramètre facultatif est considéré comme un nom de la séquence et la valeur de retour est la séquence récemment ajoutée pour le nom de la séquence fournie.
 Si un nom de table est fourni pour les versions après 4.3, `lastInsertId` retourne une chaîne vide.
-Les séquences sont pris en charge uniquement dans SQL Server 2012 et versions ultérieures.
+Séquences sont prises en charge uniquement dans SQL Server 2012 et versions ultérieures.
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php
@@ -143,7 +143,7 @@ try{
 ?>
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

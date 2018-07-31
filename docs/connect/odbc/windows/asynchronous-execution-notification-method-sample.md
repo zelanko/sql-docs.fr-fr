@@ -1,5 +1,5 @@
 ---
-title: Exemple d’exécution asynchrone (méthode de Notification) | Documents Microsoft
+title: Exemple d’exécution asynchrone (méthode de notification) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c0fb14245c5e3365389bb127ba735c4829f03e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852184"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047492"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>Exemple d’exécution asynchrone (méthode de notification)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  Les exemples de code dans cette rubrique montrent comment utiliser le [exécution asynchrone (méthode de Notification)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
+  Les exemples de code inclus dans cette rubrique montrent comment utiliser [l’exécution asynchrone (méthode de notification)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx).  
   
- Cette fonction utilise la notification asynchrone pour ouvrir cinq connexions et exécute une requête sur une instruction de chaque connexion.  
+ Cette fonction utilise la notification asynchrone pour ouvrir cinq connexions et exécute une seule requête sur une instruction de chaque connexion.  
   
 ```  
   
@@ -354,7 +354,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Pilote Microsoft ODBC pour SQL Server sur Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

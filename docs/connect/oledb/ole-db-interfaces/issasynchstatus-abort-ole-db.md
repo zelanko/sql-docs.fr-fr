@@ -1,5 +1,5 @@
 ---
-title: ISSAsynchStatus::Abort (OLE DB) | Documents Microsoft
+title: ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: db1804728aea9f0362aad24c114eb1a1570c2a67
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 20ad1b1f1a33bd198f0915847d99bfa8adf86f9b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689332"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106045"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -45,7 +45,7 @@ HRESULT Abort(
   
 ## <a name="arguments"></a>Arguments  
  *hChapter*[in]  
- Handle du chapitre pour lequel vous souhaitez abandonner l'opération. Si l’objet appelé n’est pas un objet d’ensemble de lignes ou l’opération ne s’applique pas à un chapitre, l’appelant doit attribuer *hChapter* DB_NULL_HCHAPTER.  
+ Handle du chapitre pour lequel vous souhaitez abandonner l'opération. Si l’objet appelé n’est pas un objet d’ensemble de lignes ou que l’opération ne s’applique pas à un chapitre, l’appelant doit attribuer la valeur DB_NULL_HCHAPTER à *hChapter*.  
   
  *eOperation*[in]  
  L'opération à abandonner. La valeur suivante doit être utilisée :  
@@ -54,7 +54,7 @@ HRESULT Abort(
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
- La demande d'annulation de l'opération asynchrone a été traitée. Il ne garantit pas que l’opération a été annulée. Pour déterminer si l'opération a bien été annulée, le consommateur doit appeler [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) et vérifier la présence de DB_E_CANCELED ; toutefois, il est possible qu'il ne soit pas retourné dans l'appel suivant.  
+ La demande d'annulation de l'opération asynchrone a été traitée. Cela ne garantit pas que l’opération ait été annulée. Pour déterminer si l'opération a bien été annulée, le consommateur doit appeler [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) et vérifier la présence de DB_E_CANCELED ; toutefois, il est possible qu'il ne soit pas retourné dans l'appel suivant.  
   
  DB_E_CANTCANCEL  
  L'opération asynchrone ne peut pas être annulée.  
@@ -66,23 +66,23 @@ HRESULT Abort(
  Une erreur spécifique au fournisseur s'est produite.  
   
  E_INVALIDARG  
- Le *hChapter* paramètre n’est pas DB_NULL_HCHAPTER ou *eOperation* n’est pas DBASYNCH_OPEN.  
+ Le paramètre *hChapter* n’est pas DB_NULL_HCHAPTER, ou *eOperation* n’est pas DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus::Abort** a été appelé sur un objet de source de données sur lequel **IDBInitialize::Initialize** n’a pas été appelé ou n’a pas encore terminée.  
+ **ISSAsynchStatus::Abort** a été appelé sur un objet source de données sur lequel **IDBInitialize::Initialize** n’a pas été appelé ou ne s’est pas terminé.  
   
  **ISSAsynchStatus::Abort** a été appelé sur un objet source de données sur lequel **IDBInitialize::Initialize** a été appelé mais a été par la suite annulé avant l'initialisation ou a dépassé le délai d'attente. L'objet source de données n'est pas encore initialisé.  
   
- **ISSAsynchStatus::Abort** a été appelé sur un ensemble de lignes sur lequel **ITransaction::Commit** ou **ITransaction::Abort** a été appelé précédemment, et l’ensemble de lignes n’a pas survécu à la validation ou d’abandonner et est à l’état zombie.  
+ **ISSAsynchStatus::Abort** a été appelé sur un ensemble de lignes sur lequel **ITransaction::Commit** ou **ITransaction::Abort** a été appelé précédemment, et l’ensemble de lignes n’a pas survécu à la validation ou à l’abandon, et se trouve à l’état zombie.  
   
  **ISSAsynchStatus::Abort** a été appelé sur un ensemble de lignes qui a été annulé de manière asynchrone dans sa phase d'initialisation. L'ensemble de lignes se trouve dans un état zombie.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'abandon de l'initialisation d'un ensemble de lignes ou d'un objet source de données peut laisser l'ensemble de lignes ou l'objet source de données dans un état zombie, de telle sorte que toutes les méthodes autres que **IUnknown** retournent E_UNEXPECTED. Lorsque cela se produit, la seule action possible pour le consommateur est de libérer l'ensemble de lignes ou l'objet source de données.  
   
- Le fait d'appeler **ISSAsynchStatus::Abort** et de passer une valeur pour *eOperation* autre que DBASYNCHOP_OPEN retourne S_OK. Cela ne signifie pas que l’opération est terminée ou annulée.  
+ Le fait d'appeler **ISSAsynchStatus::Abort** et de passer une valeur pour *eOperation* autre que DBASYNCHOP_OPEN retourne S_OK. Cela ne signifie pas pour autant que l’opération soit terminée ou annulée.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Exécution d’opérations asynchrones](../../oledb/features/performing-asynchronous-operations.md)  
   
   
