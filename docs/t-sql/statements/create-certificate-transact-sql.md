@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0f9fd16f4104e6e6d15aa4a5617f092a4c7e424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 400b5f3a35546b84b3d1c7a3006e77c27bf447ff
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036177"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359596"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -158,7 +158,7 @@ CREATE CERTIFICATE certificate_name
  Date à laquelle le certificat devient valide. Si cette date n’est pas spécifiée, la date actuelle est attribuée à START_DATE. START_DATE utilise l'heure UTC et peut être spécifié selon tout format convertible en date et heure.  
   
  EXPIRY_DATE ='*datetime*'  
- Date à laquelle le certificat expire. Si cette date n’est pas spécifiée, EXPIRY_DATE a une valeur égale à un an après START_DATE. EXPIRY_DATE utilise l'heure UTC et peut être spécifié selon tout format convertible en date et heure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker vérifie la date d’expiration. Toutefois, l’expiration n’est pas appliquée quand le certificat est utilisé pour le chiffrement.  
+ Date à laquelle le certificat expire. Si cette date n’est pas spécifiée, EXPIRY_DATE a une valeur égale à un an après START_DATE. EXPIRY_DATE utilise l'heure UTC et peut être spécifié selon tout format convertible en date et heure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker vérifie la date d’expiration. La sauvegarde avec chiffrement à l’aide de certificats vérifie également la date d’expiration et n’autorisera pas la création d’une sauvegarde avec un certificat expiré, mais permettra les restaurations avec un certificat expiré. Toutefois, l’expiration n’est pas appliquée quand le certificat est utilisé pour le chiffrement de la base de données ou le chiffrement intégral (Always Encrypted).  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  Met le certificat à disposition de l'initiateur d'une conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)]. La valeur par défaut est ON.  

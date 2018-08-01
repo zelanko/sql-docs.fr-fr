@@ -1,7 +1,7 @@
 ---
 title: Utilisation de l’authentification intégrée Kerberos pour se connecter à SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9967b31d9b021147d02c981af54474f8967fe406
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
-ms.translationtype: HT
+ms.openlocfilehash: 5c36df2b7cc6feda976a3edfdadbac68e9b96dd3
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085451"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279041"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Utilisation de l’authentification intégrée Kerberos pour se connecter à SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "39085451"
   
  Un fichier de configuration de connexion est composé d'une ou plusieurs entrées, chacune spécifiant la technologie d'authentification sous-jacente qui doit être utilisée pour une application en particulier. Par exemple,  
   
-```  
+```java
 SQLJDBCDriver {  
    com.sun.security.auth.module.Krb5LoginModule required useTicketCache=true;  
 };  
@@ -172,7 +172,7 @@ Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.kr
 ## <a name="constrained-delegation"></a>Délégation contrainte
 À compter de Microsoft JDBC Driver 6.2, le pilote prend en charge la délégation contrainte Kerberos. Les informations d’identification déléguées peuvent être passées dans en tant qu’objet de org.ietf.jgss.GSSCredential, ces informations d’identification sont utilisées par le pilote pour établir la connexion. 
 
-```
+```java
 Properties driverProperties = new Properties();
 GSSCredential impersonatedUserCredential = [userCredential]
 driverProperties.setProperty("integratedSecurity", "true");
@@ -183,7 +183,7 @@ Connection conn = DriverManager.getConnection(CONNECTION_URI, driverProperties);
 
 ## <a name="kerberos-connection-using-principal-names-and-password"></a>Connexion de Kerberos à l’aide des noms de Principal et le mot de passe
 À compter de Microsoft JDBC Driver 6.2, le pilote peut établir Kerberos à l’aide du nom de Principal et le mot de passe de connexion transmise dans la chaîne de connexion. 
-```
+```java
 jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos;userName=user@REALM;password=****
 ```
 La propriété de nom d’utilisateur ne nécessite pas de domaine si l’utilisateur appartient à la default_realm définie dans le fichier krb5.conf. Lorsque `userName` et `password` est défini avec `integratedSecurity=true;` et `authenticationScheme=JavaKerberos;` propriété, la connexion est établie avec la valeur du nom d’utilisateur en tant que le Principal Kerberos le long avec le mot de passe fourni.

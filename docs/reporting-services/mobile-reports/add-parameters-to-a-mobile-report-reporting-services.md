@@ -1,7 +1,7 @@
 ---
 title: Ajouter des paramètres à un rapport mobile | Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 11/01/2016
+ms.date: 07/30/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: mobile-reports
@@ -15,19 +15,19 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6b0f444dbae81f05a28ff9cea6102d63aef317f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a854a49884c6a2f1bd93794a7854d30dc1e2d3d
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018380"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359606"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>Ajouter des paramètres à un rapport mobile | Reporting Services
 Vous pouvez créer un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] avec des paramètres, afin que vous et les lecteurs de vos rapports puissiez filtrer vos rapports. Un rapport avec des paramètres peut également être la cible d’une [extraction dans un rapport source](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md). 
 
-Pour créer un rapport mobile avec des paramètres, vous commencez avec un dataset partagé comportant au moins un paramètre. Découvrez comment [créer des paramètres dans un dataset partagé](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+Pour créer un rapport mobile avec des paramètres, vous commencez avec un dataset partagé comportant au moins un paramètre. Découvrez comment [créer des paramètres dans un dataset partagé](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md). Les rapports mobiles ne prennent pas en charge les valeurs de type Null pour les paramètres par défaut, alors assurez-vous que vos paramètres ont des valeurs par défaut différentes de Null.
 
-Une fois que vous avez ajouté les paramètres à un rapport mobile, vous créez une URL afin d’ [ouvrir le rapport avec des paramètres de chaîne de requête](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md).
+Une fois que vous avez ajouté les paramètres à un rapport mobile, vous créez une URL afin d’ [ouvrir le rapport avec des paramètres de chaîne de requête](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md). 
 
 1. Dans la barre située en haut du portail web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , sélectionnez **Nouveau** > **Rapport mobile**.  
   
