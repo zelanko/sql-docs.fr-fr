@@ -1,0 +1,20 @@
+- name: Utilisation de curseurs (ODBC)
+  href: using-cursors-odbc.md
+- name: Domaines spécifiques
+  items:
+    - name: "Implémentation\_+"
+      href: ../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md
+    - name: Propriétés +
+      href: ../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md
+    - name: Programmation +
+      href: ../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md
+- name: Comportements des curseurs
+  href: cursor-behaviors.md
+- name: Types de curseurs
+  href: cursor-types.md
+- name: Mises à jour positionnées (ODBC)
+  href: positioned-updates-odbc.md
+- name: "Défilement et récupération (fetch) de lignes\_- Ajout de signets aux lignes dans ODBC"
+  href: scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md
+- name: Défilement et extraction de lignes
+  href: scrolling-and-fetching-rows.md

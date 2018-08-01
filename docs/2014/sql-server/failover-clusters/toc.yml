@@ -1,0 +1,13 @@
+- name: "Solutions haute disponibilité avec SQL Server\_2014"
+  href: high-availability-solutions-sql-server.md
+  items:
+    - name: Réparation de page automatique (pour les groupes de disponibilité et la mise en miroir de bases de données)
+      href: automatic-page-repair-availability-groups-database-mirroring.md
+    - name: Gestion des connexions et des travaux après un basculement de rôle
+      href: management-of-logins-and-jobs-after-role-switching-sql-server.md
+    - name: Dépanner des utilisateurs orphelins
+      href: troubleshoot-orphaned-users-sql-server.md
+- name: Installation d’un cluster de basculement SQL Server +
+  href: install/sql-server-failover-cluster-installation.md
+- name: Clustering de basculement Windows Server (WSFC) +
+  href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md

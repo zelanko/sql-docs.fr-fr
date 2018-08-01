@@ -1,0 +1,14 @@
+- name: Fournisseur WMI pour les concepts des événements de serveur
+  href: wmi-provider-for-server-events-concepts.md
+- name: "Exemple\_: création d’une alerte SQL Server Agent avec le fournisseur WMI"
+  href: sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
+- name: "Exemple\_: utilisation du fournisseur d’événements WMI avec .NET\_Framework"
+  href: sample-using-the-wmi-event-provider-with-the-net-framework.md
+- name: Présentation du fournisseur WMI pour les événements serveur
+  href: understanding-the-wmi-provider-for-server-events.md
+- name: Utilisation de WQL avec le fournisseur WMI pour les événements de serveur
+  href: using-wql-with-the-wmi-provider-for-server-events.md
+- name: Fournisseur WMI pour les classes et propriétés d'événements serveur
+  href: wmi-provider-for-server-events-classes-and-properties.md
+- name: Utilisation du fournisseur WMI pour les événements de serveur
+  href: working-with-the-wmi-provider-for-server-events.md

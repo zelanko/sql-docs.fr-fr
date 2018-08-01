@@ -1,0 +1,114 @@
+- name: Power Pivot pour SharePoint
+  href: power-pivot-for-sharepoint-ssas.md
+- name: Administration et configuration d’un serveur Power Pivot dans l’Administration centrale
+  href: power-pivot-server-administration-and-configuration-in-central-administration.md
+  items:
+    - name: Déployer des solutions Power Pivot sur SharePoint
+      href: deploy-power-pivot-solutions-to-sharepoint.md
+    - name: Création et configuration d’une application de service Power Pivot
+      href: create-and-configure-power-pivot-service-application-in-ca.md
+    - name: Connecter une application de service Power Pivot à une application web SharePoint
+      href: connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md
+    - name: Activer l’intégration des fonctionnalités Power Pivot pour des collections de sites
+      href: activate-power-pivot-integration-for-site-collections-in-ca.md
+    - name: Ajouter MSOLAP.5 en tant que fournisseur de données approuvé dans Excel Services
+      href: add-msolap-5-as-a-trusted-data-provider-in-excel-services.md
+    - name: Créer un emplacement approuvé pour les sites Power Pivot
+      href: create-a-trusted-location-for-power-pivot-sites-in-central-administration.md
+    - name: Configuration des comptes de service Power Pivot
+      href: configure-power-pivot-service-accounts.md
+    - name: Configurer et afficher les fichiers journaux SharePoint
+      href: configure-and-view-sharepoint-and-diagnostic-logging.md
+    - name: Configurer l'utilisation de l'espace disque
+      href: configure-disk-space-usage-power-pivot-for-sharepoint.md
+    - name: Configurer la taille maximale de téléchargement de fichiers
+      href: configure-maximum-file-upload-size-power-pivot-for-sharepoint.md
+    - name: Référence de paramètre de configuration
+      href: configuration-setting-reference-power-pivot-for-sharepoint.md
+    - name: Démarrer ou arrêter un serveur PowerPivot pour SharePoint
+      href: start-or-stop-a-power-pivot-for-sharepoint-server.md
+- name: Configuration de Power Pivot à l’aide de Windows PowerShell
+  href: power-pivot-configuration-using-windows-powershell.md
+- name: Power Pivot Configuration Tools
+  href: power-pivot-configuration-tools.md
+  items:
+    - name: Configurer ou réparer Power Pivot pour SharePoint 2013 (outil de configuration de Power Pivot)
+      href: configure-or-repair-power-pivot-for-sharepoint-2013.md
+- name: Récupération d’urgence et disponibilité PowerPivot
+  href: power-pivot-availability-and-disaster-recovery.md
+- name: Authentification et autorisation PowerPivot
+  href: power-pivot-authentication-and-authorization.md
+- name: Configurer des règles d’intégrité PowerPivot
+  href: configure-power-pivot-health-rules.md
+  items:
+    - name: Référence de règles d'intégrité
+      href: health-rules-reference-power-pivot-for-sharepoint.md
+- name: Tableau de bord de gestion Power Pivot et données d’utilisation
+  href: power-pivot-management-dashboard-and-usage-data.md
+  items:
+    - name: Collecte des données d’utilisation Power Pivot
+      href: power-pivot-usage-data-collection.md
+    - name: Configurer la collecte des données d’utilisation (PowerPivot pour SharePoint)
+      href: configure-usage-data-collection-for-power-pivot-for-sharepoint.md
+- name: Create and Customize Power Pivot Gallery
+  href: create-and-customize-power-pivot-gallery.md
+  items:
+    - name: Utiliser la galerie PowerPivot
+      href: use-power-pivot-gallery.md
+    - name: Supprimer la galerie PowerPivot
+      href: delete-power-pivot-gallery.md
+- name: Accès aux données Power Pivot
+  href: power-pivot-data-access.md
+- name: Actualisation des données Power Pivot
+  href: power-pivot-data-refresh.md
+  items:
+    - name: Afficher l’historique d’actualisation des données Power Pivot
+      href: view-data-refresh-history-power-pivot-for-sharepoint.md
+    - name: Actualisation des données Power Pivot avec SharePoint 2013
+      href: power-pivot-data-refresh-with-sharepoint-2013.md
+      items:
+        - name: Actualisation planifiée des données et sources de données qui ne prennent pas en charge l’authentification Windows (Power Pivot pour SharePoint)
+          href: schedule-data-refresh-and-data-sources-no-windows-authentication.md
+- name: Flux de données Power Pivot
+  href: power-pivot-data-feeds.md
+  items:
+    - name: Créer ou personnaliser une bibliothèque de flux de données
+      href: create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md
+    - name: Utiliser des flux de données Power Pivot
+      href: use-data-feeds-power-pivot-for-sharepoint.md
+    - name: Supprimer une bibliothèque de flux de données PowerPivot
+      href: delete-a-power-pivot-data-feed-library.md
+    - name: Partager des flux de données Power Pivot dans une bibliothèque de flux de données
+      href: share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md
+- name: Connexion de modèle sémantique BI Power Pivot (.bism)
+  href: power-pivot-bi-semantic-model-connection-bism.md
+  items:
+    - name: Ajouter un type de contenu de connexion de modèle sémantique BI à une bibliothèque
+      href: add-bi-semantic-model-connection-content-type-to-library.md
+    - name: Créer une connexion du modèle sémantique BI à un classeur PowerPivot
+      href: create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
+    - name: Créer une connexion de modèle sémantique BI à une base de données model tabulaire
+      href: create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
+    - name: Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services
+      href: use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
+- name: Références relatives aux erreurs et aux événements (PowerPivot pour SharePoint)
+  href: errors-and-events-reference-power-pivot-for-sharepoint.md
+  items:
+    - name: 'Une erreur s''est produite lors de la tentative de connexion à la source de données externe. Échec de l’actualisation des connexions suivantes : données PowerPivot'
+      href: an-error-occurred-during-an-attempt-to-establish-a-connection.md
+    - name: Impossible de charger le fichier ou l’assembly Microsoft.Data.Services
+      href: could-not-load-file-or-assembly-microsoft-data-services.md
+    - name: Impossible de charger le fichier ou l'assembly 'Microsoft.AnalysisServices.SharePoint.Integration'
+      href: could-not-load-microsoft-analysisservices-sharepoint-integration.md
+    - name: 'Le chemin d''accès à la connexion de données dans le classeur pointe vers un fichier sur le lecteur local, ou est un URI non valide'
+      href: the-data-connection-path-is-invalid.md
+    - name: 'La connexion de données utilise l''authentification Windows, et les informations d''identification utilisateur n''ont pas pu être déléguées. Échec de l’actualisation des connexions suivantes : données PowerPivot'
+      href: the-data-connection-user-could-not-be-delegated.md
+    - name: 'Les fonctionnalités suivantes ne sont pas prises en charge par Excel Services et risquent de ne pas s''afficher ou de ne s''afficher que partiellement : les commentaires, les formes ou d''autres objets'
+      href: comments-shapes-other-objects-not-supported-by-excel-services.md
+    - name: L'emplacement approuvé dans lequel le classeur est stocké n'autorise pas les connexions de données externes
+      href: trusted-location-does-not-allow-external-data-connections.md
+    - name: Ce classeur contient une ou plusieurs requêtes qui actualisent des données externes
+      href: this-workbook-contains-one-or-more-queries-that-refresh-external-data.md
+    - name: Impossible d'actualiser les données pour une connexion de données dans le classeur
+      href: unable-to-refresh-data-for-a-data-connection-in-the-workbook.md

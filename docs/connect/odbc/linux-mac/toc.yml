@@ -1,0 +1,30 @@
+- name: Configuration système requise
+  href: system-requirements.md
+- name: Installation du Gestionnaire de pilotes
+  href: installing-the-driver-manager.md
+- name: Installation de Microsoft ODBC Driver for SQL Server
+  href: installing-the-microsoft-odbc-driver-for-sql-server.md
+- name: Guides des fonctionnalités
+  items:
+    - name: Mots clés de chaîne de connexion et noms de source de données
+      href: connection-string-keywords-and-data-source-names-dsns.md
+    - name: Traçage de l’accès aux données avec le pilote ODBC sur Linux et macOS
+      href: data-access-tracing-with-the-odbc-driver-on-linux.md
+    - name: "Pilote ODBC sur Linux et macOS\_- Haute disponibilité et récupération d’urgence"
+      href: odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md
+    - name: Instructions de programmation
+      href: programming-guidelines.md
+    - name: Outils
+      items:
+        - name: Connexion avec bcp.exe
+          href: connecting-with-bcp.md
+        - name: Connexion avec sqlcmd.exe
+          href: connecting-with-sqlcmd.md
+    - name: Utilisation de l’authentification intégrée
+      href: using-integrated-authentication.md
+- name: Notes de publication
+  href: release-notes.md
+- name: Problèmes connus
+  href: known-issues-in-this-version-of-the-driver.md
+- name: Questions fréquentes (FAQ) pour ODBC Linux et macOS
+  href: frequently-asked-questions-faq-for-odbc-linux.md

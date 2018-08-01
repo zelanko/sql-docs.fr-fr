@@ -1,0 +1,43 @@
+- name: Surveiller la réplication
+  href: monitoring-replication-overview.md
+  items:
+    - name: Surveillance
+      href: ../monitoring-replication.md
+    - name: Présentation de l'interface du moniteur de réplication
+      href: overview-of-the-replication-monitor-interface.md
+    - name: Démarrer le Moniteur de réplication
+      href: start-the-replication-monitor.md
+    - name: Autoriser des non-administrateurs à utiliser le Moniteur de réplication
+      href: allow-non-administrators-to-use-replication-monitor.md
+    - name: Ajouter et supprimer des serveurs de publication à partir du Moniteur de réplication
+      href: add-and-remove-publishers-from-replication-monitor.md
+    - name: Actualiser des données dans le Moniteur de réplication
+      href: refresh-data-in-replication-monitor.md
+    - name: Analyser les performances avec le Moniteur de réplication
+      href: monitor-performance-with-replication-monitor.md
+    - name: Mesurer la latence et valider les connexions pour la réplication transactionnelle
+      href: measure-latency-and-validate-connections-for-transactional-replication.md
+    - name: Surveiller des Agents de réplication
+      href: monitor-replication-agents.md
+    - name: Surveiller la réplication par programme
+      href: programmatically-monitor-replication.md
+    - name: Définir des seuils et des avertissements dans le Moniteur de réplication
+      href: set-thresholds-and-warnings-in-replication-monitor.md
+    - name: 'Mise en cache, actualisation et performances du moniteur de réplication'
+      href: caching-refresh-and-replication-monitor-performance.md
+    - name: Afficher l'état des publications et des abonnements dans le Moniteur de réplication
+      href: view-publication-and-subscription-status-in-replication-monitor.md
+    - name: Afficher des informations et exécuter des tâches pour un serveur de publication (moniteur de réplication)
+      href: view-information-and-perform-tasks-for-a-publisher-replication-monitor.md
+    - name: Afficher des informations et effectuer des tâches relatives à une publication (moniteur de réplication)
+      href: view-information-and-perform-tasks-for-a-publication-replication-monitor.md
+    - name: Afficher des informations et effectuer des tâches pour les agents associés à une publication (moniteur de réplication)
+      href: view-information-and-perform-tasks-for-publication-agents.md
+    - name: Afficher des informations et effectuer des tâches relatives à un abonnement (moniteur de réplication)
+      href: view-information-and-perform-tasks-for-a-subscription-replication-monitor.md
+    - name: Afficher des informations et effectuer des tâches pour les agents associés à un abonnement (Moniteur de réplication)
+      href: view-information-and-perform-tasks-for-subscription-agents.md
+    - name: Afficher les commandes répliquées et autres informations dans la base de données de distribution (programmation Transact-SQL de la réplication)
+      href: view-replicated-commands-and-information-in-distribution-database.md
+    - name: Contrôle de la réplication avec le Moniteur système
+      href: monitoring-replication-with-system-monitor.md

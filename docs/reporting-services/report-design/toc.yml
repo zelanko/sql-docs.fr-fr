@@ -1,0 +1,490 @@
+- name: Planification d'un rapport
+  href: planning-a-report-report-builder.md
+- name: Conseils de création de rapport
+  href: report-design-tips-report-builder-and-ssrs.md
+- name: Concepts sur la création de rapports
+  href: report-authoring-concepts-report-builder-and-ssrs.md
+  items:
+    - name: 'Rapports, parties de rapports et définitions de rapports'
+      href: reports-report-parts-and-report-definitions-report-builder-and-ssrs.md
+    - name: Régions de données et cartes
+      href: data-regions-and-maps-report-builder-and-ssrs.md
+    - name: Concepts de paramètres de rapport
+      href: report-parameters-concepts-report-builder-and-ssrs.md
+- name: 'Tables, matrices et listes'
+  href: tables-matrices-and-lists-report-builder-and-ssrs.md
+  items:
+    - name: Tables
+      href: tables-report-builder-and-ssrs.md
+    - name: Créer une matrice
+      href: create-a-matrix-report-builder-and-ssrs.md
+    - name: Créer des factures et des formulaires avec des listes
+      href: create-invoices-and-forms-with-lists-report-builder-and-ssrs.md
+    - name: Région de données de tableau matriciel
+      href: tablix-data-region-report-builder-and-ssrs.md
+      items:
+        - name: Zones de région de données de tableau matriciel
+          href: tablix-data-region-areas-report-builder-and-ssrs.md
+        - name: 'Cellules, lignes et colonnes de région de données de tableau matriciel'
+          href: tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md
+    - name: Préparation des données à afficher dans une région de données de tableau matriciel
+      href: preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md
+    - name: Ajout de données à une région de données de tableau matriciel
+      href: adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md
+    - name: Exploration de la souplesse d'une région de données de tableau matriciel
+      href: exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md
+    - name: Contrôle de l'affichage de la région de données de tableau matriciel sur une page de rapport
+      href: controlling-the-tablix-data-region-display-on-a-report-page.md
+    - name: Contrôle des en-têtes de ligne et de colonne
+      href: controlling-row-and-column-headings-report-builder-and-ssrs.md
+    - name: Fonctionnement des groupes
+      href: understanding-groups-report-builder-and-ssrs.md
+    - name: Création de groupes de hiérarchies récursives
+      href: creating-recursive-hierarchy-groups-report-builder-and-ssrs.md
+    - name: Ajouter un groupe de détails
+      href: add-a-details-group-report-builder-and-ssrs.md
+    - name: Ajouter un total à un groupe ou à une région de données de tableau matriciel
+      href: add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md
+    - name: Modifier un élément dans une cellule
+      href: change-an-item-within-a-cell-report-builder-and-ssrs.md
+    - name: Modifier la hauteur de ligne ou la largeur de colonne
+      href: change-row-height-or-column-width-report-builder-and-ssrs.md
+    - name: Insérer ou supprimer une colonne
+      href: insert-or-delete-a-column-report-builder-and-ssrs.md
+    - name: Insérer ou supprimer une ligne
+      href: insert-or-delete-a-row-report-builder-and-ssrs.md
+    - name: Fusionner des cellules dans une région de données
+      href: merge-cells-in-a-data-region-report-builder-and-ssrs.md
+    - name: Créer un groupe de hiérarchies récursives
+      href: create-a-recursive-hierarchy-group-report-builder-and-ssrs.md
+    - name: Ajouter ou supprimer un groupe dans une région de données
+      href: add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md
+    - name: Afficher des en-têtes et des pieds de page de groupe
+      href: display-headers-and-footers-with-a-group-report-builder-and-ssrs.md
+    - name: Créer un rapport en escalier
+      href: create-a-stepped-report-report-builder-and-ssrs.md
+    - name: 'Ajouter, déplacer ou supprimer une table, une matrice ou une liste'
+      href: add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md
+- name: Parties de rapports
+  href: report-parts-report-builder-and-ssrs.md
+  items:
+    - name: Publier et republier des parties de rapports (Générateur de rapports et SSRS)
+      href: publish-and-republish-report-parts-report-builder-and-ssrs.md
+    - name: Rechercher des parties de rapports et définir un dossier par défaut (Générateur de rapports et SSRS)
+      href: browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md
+- name: Graphiques
+  href: charts-report-builder-and-ssrs.md
+  items:
+    - name: Ajouter un graphique à un rapport (Générateur de rapports et SSRS)
+      href: add-a-chart-to-a-report-report-builder-and-ssrs.md
+    - name: Types de graphiques (Générateur de rapports et SSRS)
+      href: chart-types-report-builder-and-ssrs.md
+      items:
+        - name: Modifier un type de graphique (Générateur de rapports version et SSRS)
+          href: change-a-chart-type-report-builder-and-ssrs.md
+        - name: Graphiques en aires (Générateur de rapports et SSRS)
+          href: area-charts-report-builder-and-ssrs.md
+        - name: Graphiques à barres (Générateur de rapports et SSRS)
+          href: bar-charts-report-builder-and-ssrs.md
+        - name: Column Charts (Report Builder and SSRS)
+          href: column-charts-report-builder-and-ssrs.md
+        - name: Graphiques en courbes (Générateur de rapports et SSRS)
+          href: line-charts-report-builder-and-ssrs.md
+        - name: Graphiques à secteurs (Générateur de rapports et SSRS)
+          href: pie-charts-report-builder-and-ssrs.md
+        - name: Graphiques polaires (Générateur de rapports et SSRS)
+          href: polar-charts-report-builder-and-ssrs.md
+        - name: Graphiques d'étendue (Générateur de rapports et SSRS)
+          href: range-charts-report-builder-and-ssrs.md
+        - name: Graphiques à nuages de points (Générateur de rapports et SSRS)
+          href: scatter-charts-report-builder-and-ssrs.md
+        - name: Graphiques à base de formes (Générateur de rapports et SSRS)
+          href: shape-charts-report-builder-and-ssrs.md
+        - name: Graphiques boursiers (Générateur de rapports et SSRS)
+          href: stock-charts-report-builder-and-ssrs.md
+        - name: Graphiques de compartimentage et en rayons de soleil dans Reporting Services
+          href: tree-map-and-sunburst-charts-in-reporting-services.md
+    - name: Mise en forme d'un graphique (Générateur de rapports et SSRS)
+      href: formatting-a-chart-report-builder-and-ssrs.md
+      items:
+        - name: Mise en forme des couleurs des séries sur un graphique (Générateur de rapports et SSRS)
+          href: formatting-series-colors-on-a-chart-report-builder-and-ssrs.md
+          items:
+            - name: Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes (Générateur de rapports et SSRS)
+              href: specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md
+            - name: Définir les couleurs d'un graphique à l'aide d'une palette (Générateur de rapports et SSRS)
+              href: define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md
+            - name: Mettre en surbrillance des données de graphique en ajoutant des bandes (Générateur de rapports et SSRS)
+              href: highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md
+        - name: Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
+          href: formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md
+          items:
+            - name: Mettre en forme les étiquettes des axes en tant que dates ou devises (Générateur de rapports et SSRS)
+              href: format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md
+            - name: Placer des étiquettes dans un graphique (Générateur de rapports et SSRS)
+              href: position-labels-in-a-chart-report-builder-and-ssrs.md
+            - name: Spécifier un intervalle d'axe (Générateur de rapports et SSRS)
+              href: specify-an-axis-interval-report-builder-and-ssrs.md
+            - name: Ajouter ou supprimer des marges dans un graphique (Générateur de rapports et SSRS)
+              href: add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md
+            - name: Spécifier une échelle logarithmique (Générateur de rapports et SSRS)
+              href: specify-a-logarithmic-scale-report-builder-and-ssrs.md
+        - name: Légende de graphique - Mise en forme
+          href: chart-legend-formatting-report-builder.md
+        - name: Légende de graphique - Masquer des éléments
+          href: chart-legend-hide-items-report-builder.md
+        - name: Légende de graphique - Modifier le texte des éléments
+          href: chart-legend-change-item-text-report-builder.md
+        - name: Mise en forme des points de données sur un graphique (Générateur de rapports et SSRS)
+          href: formatting-data-points-on-a-chart-report-builder-and-ssrs.md
+          items:
+            - name: Afficher des info-bulles dans une série (Générateur de rapports et SSRS)
+              href: show-tooltips-on-a-series-report-builder-and-ssrs.md
+            - name: Afficher des étiquettes de points de données à l'extérieur d'un graphique à secteurs (Générateur de rapports et SSRS)
+              href: display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md
+            - name: Afficher des valeurs en pourcentage dans un graphique à secteurs (Générateur de rapports et SSRS)
+              href: display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md
+        - name: 'Effets de graphique - 3D, biseau et autres'
+          href: chart-effects-3d-bevel-and-other-report-builder.md
+        - name: Effets de graphique - Ajouter des effets 3D
+          href: chart-effects-add-3d-effects-report-builder.md
+        - name: 'Effets de graphique - Ajouter un biseau, un relief ou une texture'
+          href: chart-effects-add-bevel-emboss-or-texture-report-builder.md
+        - name: Ajouter un cadre de bordure à un graphique (Générateur de rapports et SSRS)
+          href: add-a-border-frame-to-a-chart-report-builder-and-ssrs.md
+        - name: Démarrer des valeurs de graphique à secteurs en haut du graphique à secteurs (Générateur de rapports et SSRS)
+          href: start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs.md
+    - name: Points de données vides et Null dans les graphiques (Générateur de rapports et SSRS)
+      href: empty-and-null-data-points-in-charts-report-builder-and-ssrs.md
+      items:
+        - name: Ajouter des points vides au graphique (Générateur de rapports et SSRS)
+          href: add-empty-points-to-a-chart-report-builder-and-ssrs.md
+    - name: Affichage d'une série avec plusieurs plages de données sur un graphique (Générateur de rapports et SSRS)
+      href: displaying-a-series-with-multiple-data-ranges-on-a-chart.md
+      items:
+        - name: Ajouter des séparations d'échelle à un graphique (Générateur de rapports et SSRS)
+          href: add-scale-breaks-to-a-chart-report-builder-and-ssrs.md
+    - name: Plusieurs séries sur un graphique (Générateur de rapports et SSRS)
+      href: multiple-series-on-a-chart-report-builder-and-ssrs.md
+      items:
+        - name: Spécifier une zone de graphique pour une série (Générateur de rapports et SSRS)
+          href: specify-a-chart-area-for-a-series-report-builder-and-ssrs.md
+        - name: Tracer des données sur un axe secondaire (Générateur de rapports et SSRS)
+          href: plot-data-on-a-secondary-axis-report-builder-and-ssrs.md
+    - name: Liaison de plusieurs régions de données à un même dataset (Générateur de rapports et SSRS)
+      href: linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md
+      items:
+        - name: Afficher les mêmes données dans une matrice et sur un graphique
+          href: display-the-same-data-on-a-matrix-and-a-chart-report-builder.md
+    - name: Ajouter ou supprimer un groupe dans un graphique (Générateur de rapports et SSRS)
+      href: add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md
+    - name: Ajouter une moyenne mobile à un graphique (Générateur de rapports et SSRS)
+      href: add-a-moving-average-to-a-chart-report-builder-and-ssrs.md
+    - name: Regrouper des petits secteurs sur un graphique à secteurs (Générateur de rapports et SSRS)
+      href: collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md
+    - name: Résoudre les problèmes liés aux graphiques (Générateur de rapports et SSRS)
+      href: troubleshoot-charts-report-builder-and-ssrs.md
+- name: Graphiques sparkline et barres de données
+  href: sparklines-and-data-bars-report-builder-and-ssrs.md
+  items:
+    - name: Ajouter des graphiques sparkline et des barres de données (Générateur de rapports et SSRS)
+      href: add-sparklines-and-data-bars-report-builder-and-ssrs.md
+    - name: Aligner les données d'un graphique dans une table ou une matrice (Générateur de rapports et SSRS)
+      href: align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md
+- name: Jauges
+  href: gauges-report-builder-and-ssrs.md
+  items:
+    - name: Mise en forme des échelles sur une jauge
+      href: formatting-scales-on-a-gauge-report-builder-and-ssrs.md
+    - name: Mise en forme de pointeurs sur une jauge
+      href: formatting-pointers-on-a-gauge-report-builder-and-ssrs.md
+    - name: Mise en forme de plages sur une jauge
+      href: formatting-ranges-on-a-gauge-report-builder-and-ssrs.md
+    - name: Ajouter un jauge à un rapport
+      href: add-a-gauge-to-a-report-report-builder-and-ssrs.md
+    - name: Définir un minimum ou un maximum sur une jauge
+      href: set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md
+- name: Indicateurs
+  href: indicators-report-builder-and-ssrs.md
+  items:
+    - name: Ajouter ou supprimer un indicateur
+      href: add-or-delete-an-indicator-report-builder-and-ssrs.md
+    - name: Modifier les icônes d'indicateur et jeux d'indicateurs
+      href: change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md
+    - name: Définir et configurer des unités de mesure
+      href: set-and-configure-measurement-units-report-builder-and-ssrs.md
+    - name: Définir l'étendue de synchronisation
+      href: set-synchronization-scope-report-builder-and-ssrs.md
+    - name: Spécifier la taille d'un indicateur à l'aide d'une expression
+      href: specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md
+    - name: Inclure des indicateurs et des jauges dans un panneau de jauge
+      href: include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md
+- name: Cartes
+  href: maps-report-builder-and-ssrs.md
+  items:
+    - name: Planifier un rapport cartographique
+      href: plan-a-map-report-report-builder-and-ssrs.md
+    - name: Assistant Carte et Assistant Couche
+      href: map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md
+    - name: Personnaliser des données et l'affichage d'une carte ou d'une couche
+      href: customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md
+    - name: 'Vary Polygon, Line, and Point Display by Rules and Analytical Data'
+      href: vary-polygon-line-and-point-display-by-rules-and-analytical-data.md
+    - name: 'Ajouter, modifier ou supprimer une carte ou une couche'
+      href: add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md
+    - name: 'Modifier les légendes de carte, l''échelle de couleurs et les règles associées'
+      href: change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
+    - name: Ajouter des emplacements personnalisés à une carte
+      href: add-custom-locations-to-a-map-report-builder-and-ssrs.md
+    - name: 'Résoudre les problèmes liés aux rapports : rapports cartographiques'
+      href: troubleshoot-reports-map-reports-report-builder-and-ssrs.md
+- name: 'Images, zones de texte, rectangles et lignes'
+  href: images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
+  items:
+    - name: Zones de texte (Générateur de rapport et SSRS)
+      href: text-boxes-report-builder-and-ssrs.md
+      items:
+        - name: 'Ajouter, déplacer ou supprimer une zone de texte (Générateur de rapports et SSRS)'
+          href: add-move-or-delete-a-text-box-report-builder-and-ssrs.md
+        - name: Définir l'orientation d'une zone de texte (Générateur de rapports et SSRS)
+          href: set-text-box-orientation-report-builder-and-ssrs.md
+        - name: Autoriser l'agrandissement ou la réduction d'une zone de texte (Générateur de rapports et SSRS)
+          href: allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md
+    - name: Rectangles et lignes (Générateur de rapports et SSRS)
+      href: rectangles-and-lines-report-builder-and-ssrs.md
+      items:
+        - name: Ajouter un rectangle ou un conteneur (Générateur de rapports et SSRS)
+          href: add-a-rectangle-or-container-report-builder-and-ssrs.md
+        - name: Ajouter et modifier une ligne (Générateur de rapports et SSRS)
+          href: add-and-modify-a-line-report-builder-and-ssrs.md
+        - name: Ajouter une bordure à un rapport (Générateur de rapports et SSRS)
+          href: add-a-border-to-a-report-report-builder-and-ssrs.md
+    - name: 'Images [Générateur de rapports et SSRS]'
+      href: images-report-builder-and-ssrs.md
+      items:
+        - name: Ajouter une image externe (Générateur de rapports et SSRS)
+          href: add-an-external-image-report-builder-and-ssrs.md
+        - name: Incorporer une image dans un rapport (Générateur de rapports et SSRS)
+          href: embed-an-image-in-a-report-report-builder-and-ssrs.md
+        - name: Ajouter une image d'arrière-plan (Générateur de rapports et SSRS)
+          href: add-a-background-image-report-builder-and-ssrs.md
+        - name: Ajouter une image liée à des données (Générateur de rapports et SSRS)
+          href: add-a-data-bound-image-report-builder-and-ssrs.md
+- name: Mise en forme des éléments de rapport
+  href: formatting-report-items-report-builder-and-ssrs.md
+  items:
+    - name: Mise en forme du texte et des espaces réservés (Générateur de rapports et SSRS)
+      href: formatting-text-and-placeholders-report-builder-and-ssrs.md
+      items:
+        - name: Mettre en forme du texte dans une zone de texte (Générateur de rapports et SSRS)
+          href: format-text-in-a-text-box-report-builder-and-ssrs.md
+    - name: Importation de données HTML dans un rapport (Générateur de rapports et SSRS)
+      href: importing-html-into-a-report-report-builder-and-ssrs.md
+      items:
+        - name: Ajouter du code HTML à un rapport (Générateur de rapports et SSRS)
+          href: add-html-into-a-report-report-builder-and-ssrs.md
+    - name: Mise en forme des nombres et des dates (Générateur de rapports et SSRS)
+      href: formatting-numbers-and-dates-report-builder-and-ssrs.md
+    - name: 'Mise en forme des lignes, couleurs et images (Générateur de rapports et SSRS)'
+      href: formatting-lines-colors-and-images-report-builder-and-ssrs.md
+    - name: Définir les paramètres régionaux d'un rapport ou d'une zone de texte
+      href: set-the-locale-for-a-report-or-text-box-reporting-services.md
+- name: Paramètres de rapport
+  href: report-parameters-report-builder-and-report-designer.md
+  items:
+    - name: 'Ajouter, modifier ou supprimer un paramètre de rapport'
+      href: add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md
+    - name: 'Ajouter, modifier ou supprimer les valeurs disponibles d''un paramètre de rapport'
+      href: add-change-or-delete-available-values-for-a-report-parameter.md
+    - name: 'Ajouter, modifier ou supprimer les valeurs par défaut d''un paramètre de rapport'
+      href: add-change-or-delete-default-values-for-a-report-parameter.md
+    - name: Modifier l'ordre d'un paramètre de rapport
+      href: change-the-order-of-a-report-parameter-report-builder-and-ssrs.md
+    - name: Ajouter des paramètres en cascade à un rapport
+      href: add-cascading-parameters-to-a-report-report-builder-and-ssrs.md
+    - name: Ajouter un paramètre à valeurs multiples sur un rapport
+      href: add-a-multi-value-parameter-to-a-report.md
+    - name: Définir les paramètres sur un rapport publié
+      href: set-parameters-on-a-published-report-sharepoint-integrated-mode.md
+    - name: Personnaliser le volet des paramètres dans un rapport
+      href: customize-the-parameters-pane-in-a-report-report-builder.md
+- name: 'Filtrer, regrouper et trier des données'
+  href: filter-group-and-sort-data-report-builder-and-ssrs.md
+  items:
+    - name: Exemples d’expressions de groupe
+      href: group-expression-examples-report-builder-and-ssrs.md
+    - name: Exemples d'équations de filtre
+      href: filter-equation-examples-report-builder-and-ssrs.md
+    - name: 'Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes'
+      href: add-dataset-filters-data-region-filters-and-group-filters.md
+    - name: Ajouter un filtre
+      href: add-a-filter-report-builder-and-ssrs.md
+    - name: Trier des données dans une région de données
+      href: sort-data-in-a-data-region-report-builder-and-ssrs.md
+    - name: Filtres couramment utilisés
+      href: commonly-used-filters-report-builder-and-ssrs.md
+    - name: Volet de regroupement
+      href: grouping-pane-report-builder.md
+- name: 'Extraction, exploration, sous-rapports et régions de données imbriquées'
+  href: drillthrough-drilldown-subreports-and-nested-data-regions.md
+  items:
+    - name: Rapports d'extraction (Générateur de rapports et SSRS)
+      href: drillthrough-reports-report-builder-and-ssrs.md
+      items:
+        - name: Ajouter une action d'extraction à un rapport (Générateur de rapports et SSRS)
+          href: add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md
+    - name: Sous-rapports (Générateur de rapports et SSRS)
+      href: subreports-report-builder-and-ssrs.md
+      items:
+        - name: Ajouter un sous-rapport et des paramètres (Générateur de rapports et SSRS)
+          href: add-a-subreport-and-parameters-report-builder-and-ssrs.md
+    - name: Action d'exploration (Générateur de rapports et SSRS)
+      href: drilldown-action-report-builder-and-ssrs.md
+      items:
+        - name: Ajouter une action Développer ou Réduire à un élément (Générateur de rapports et SSRS)
+          href: add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md
+    - name: Régions de données imbriquées (Générateur de rapports et SSRS)
+      href: nested-data-regions-report-builder-and-ssrs.md
+    - name: Spécification de chemins d'accès à des éléments externes (Générateur de rapports et SSRS)
+      href: specifying-paths-to-external-items-report-builder-and-ssrs.md
+- name: Expressions
+  href: expressions-report-builder-and-ssrs.md
+  items:
+    - name: Ajouter une expression
+      href: add-an-expression-report-builder-and-ssrs.md
+    - name: Exemples d'expressions
+      href: expression-examples-report-builder-and-ssrs.md
+    - name: Utilisation d'expressions dans les rapports
+      href: expression-uses-in-reports-report-builder-and-ssrs.md
+    - name: 'Étendue des expressions pour les totaux, les agrégats et les collections intégrées'
+      href: expression-scope-for-totals-aggregates-and-built-in-collections.md
+    - name: Code personnalisé et références d'assembly dans les expressions du Concepteur de rapports
+      href: custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md
+      items:
+        - name: Ajouter une référence d'assembly à un rapport
+          href: add-an-assembly-reference-to-a-report-ssrs.md
+        - name: Ajouter du code à un rapport
+          href: add-code-to-a-report-ssrs.md
+    - name: Référence d'expression
+      href: expression-reference-report-builder-and-ssrs.md
+      items:
+        - name: Fonctions du Générateur de rapports - Référence aux fonctions d’agrégation
+          href: report-builder-functions-aggregate-functions-reference.md
+          items:
+            - name: Fonctions du Générateur de rapports - Aggregate
+              href: report-builder-functions-aggregate-function.md
+            - name: Fonctions du Générateur de rapports - Avg
+              href: report-builder-functions-avg-function.md
+            - name: Fonctions du Générateur de rapports - Count
+              href: report-builder-functions-count-function.md
+            - name: Fonctions du Générateur de rapports - CountDistinct
+              href: report-builder-functions-countdistinct-function.md
+            - name: Fonctions du Générateur de rapports - CountRows
+              href: report-builder-functions-countrows-function.md
+            - name: Fonctions du Générateur de rapports - First
+              href: report-builder-functions-first-function.md
+            - name: Fonctions du Générateur de rapports - InScope
+              href: report-builder-functions-inscope-function.md
+            - name: Fonctions du Générateur de rapports - Last
+              href: report-builder-functions-last-function.md
+            - name: Fonctions du Générateur de rapports - Level
+              href: report-builder-functions-level-function.md
+            - name: Fonctions du Générateur de rapports - Lookup
+              href: report-builder-functions-lookup-function.md
+            - name: Fonctions du Générateur de rapports - LookupSet
+              href: report-builder-functions-lookupset-function.md
+            - name: Fonctions du Générateur de rapports - Max
+              href: report-builder-functions-max-function.md
+            - name: Fonctions du Générateur de rapports - Min
+              href: report-builder-functions-min-function.md
+            - name: Fonctions du Générateur de rapports - Multilookup
+              href: report-builder-functions-multilookup-function.md
+            - name: Fonctions du Générateur de rapports - Previous
+              href: report-builder-functions-previous-function.md
+            - name: Fonctions du Générateur de rapports - RowNumber
+              href: report-builder-functions-rownumber-function.md
+            - name: Fonctions du Générateur de rapports - RunningValue
+              href: report-builder-functions-runningvalue-function.md
+            - name: Fonctions du Générateur de rapports - StDev
+              href: report-builder-functions-stdev-function.md
+            - name: Fonctions du Générateur de rapports - StDevP
+              href: report-builder-functions-stdevp-function.md
+            - name: Fonctions du Générateur de rapports - Sum
+              href: report-builder-functions-sum-function.md
+            - name: Fonctions du Générateur de rapports - Union
+              href: report-builder-functions-union-function.md
+            - name: Fonctions du Générateur de rapports - Var
+              href: report-builder-functions-var-function.md
+            - name: Fonctions du Générateur de rapports - VarP
+              href: report-builder-functions-varp-function.md
+        - name: Types de données dans les expressions
+          href: data-types-in-expressions-report-builder-and-ssrs.md
+        - name: Constantes dans les expressions
+          href: constants-in-expressions-report-builder-and-ssrs.md
+        - name: Opérateurs dans les expressions
+          href: operators-in-expressions-report-builder-and-ssrs.md
+        - name: Collections intégrées dans les expressions
+          href: built-in-collections-in-expressions-report-builder.md
+          items:
+            - name: Collections intégrées - Références des utilisateurs et des variables globales
+              href: built-in-collections-built-in-globals-and-users-references-report-builder.md
+            - name: Collections intégrées - Références des collections de paramètres
+              href: built-in-collections-parameters-collection-references-report-builder.md
+            - name: Collections intégrées - Références des collections de champs de jeux de données
+              href: built-in-collections-dataset-fields-collection-references-report-builder.md
+            - name: Collections intégrées - Références des sources de données et des jeux de données
+              href: built-in-collections-datasources-and-datasets-references-report-builder.md
+            - name: Collections intégrées - Références des variables de rapports et de groupes
+              href: built-in-collections-report-and-group-variables-references-report-builder.md
+            - name: Collections intégrées - Références des collections de ReportItems
+              href: built-in-collections-reportitems-collection-references-report-builder.md
+        - name: Formules dans les requêtes de modèle de rapport
+          href: formulas-in-report-model-queries-report-builder-and-ssrs.md
+- name: 'Tri interactif, Explorateurs de documents et liens'
+  href: interactive-sort-document-maps-and-links-report-builder-and-ssrs.md
+  items:
+    - name: Tri interactif (Générateur de rapports et SSRS)
+      href: interactive-sort-report-builder-and-ssrs.md
+      items:
+        - name: Ajouter un tri interactif à un tableau ou une matrice (Générateur de rapports et SSRS)
+          href: add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md
+    - name: Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS)
+      href: add-a-hyperlink-to-a-url-report-builder-and-ssrs.md
+    - name: Ajouter un signet à un rapport (Générateur de rapports et SSRS)
+      href: add-a-bookmark-to-a-report-report-builder-and-ssrs.md
+    - name: Créer un explorateur de documents (Générateur de rapports et SSRS)
+      href: create-a-document-map-report-builder-and-ssrs.md
+- name: Mise en page et rendu
+  href: page-layout-and-rendering-report-builder-and-ssrs.md
+  items:
+    - name: Comportements de rendu
+      href: rendering-behaviors-report-builder-and-ssrs.md
+      items:
+        - name: Rendu de régions de données
+          href: rendering-data-regions-report-builder-and-ssrs.md
+        - name: Rendu des éléments de rapport
+          href: rendering-report-items-report-builder-and-ssrs.md
+        - name: Rendu de données
+          href: rendering-data-report-builder-and-ssrs.md
+    - name: 'Pagination dans [Reporting Services]'
+      href: pagination-in-reporting-services-report-builder-and-ssrs.md
+    - name: En-têtes et pieds de page
+      href: page-headers-and-footers-report-builder-and-ssrs.md
+    - name: 'Contrôle des sauts de page, des en-têtes, des colonnes et des lignes'
+      href: controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md
+    - name: Ajouter un saut de page
+      href: add-a-page-break-report-builder-and-ssrs.md
+    - name: Afficher des en-têtes de ligne et de colonne sur plusieurs pages
+      href: display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md
+    - name: Ajouter ou supprimer un en-tête ou un pied de page
+      href: add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md
+    - name: Laisser les en-têtes visibles lors du défilement d'un rapport
+      href: keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md
+    - name: Afficher les numéros de page ou d'autres propriétés de rapport
+      href: display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md
+    - name: Masquer un en-tête ou un pied de page sur la première ou la dernière page
+      href: hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md
+- name: Parties de rapport dans le Concepteur de rapports
+  href: report-parts-in-report-designer-ssrs.md
+- name: Gestion de parties de rapport
+  href: managing-report-parts.md

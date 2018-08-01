@@ -1,0 +1,431 @@
+- name: Master Data Services
+  href: master-data-services.md
+- name: Compatibilité descendante (Master Data Services)
+  href: backward-compatibility-master-data-services.md
+  items:
+    - name: "Fonctionnalités Master Data Services déconseillées dans SQL Server\_2014"
+      href: deprecated-master-data-services-features.md
+    - name: "Fonctionnalités Master Data Services supprimées dans SQL Server\_2014"
+      href: discontinued-master-data-services-features.md
+- name: Fonctionnalités et tâches Master Data Services
+  href: master-data-services-features-and-tasks.md
+- name: Vue d'ensemble de Master Data Services
+  href: master-data-services-overview-mds.md
+- name: Complément pour Microsoft Excel
+  href: microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
+  items:
+    - name: Définition des propriétés pour le complément Master Data Services pour Excel
+      href: microsoft-excel-add-in/setting-properties-for-master-data-services-add-in-for-excel.md
+- name: Connexions
+  href: microsoft-excel-add-in/connections-mds-add-in-for-excel.md
+  items:
+    - name: Se connecter à un référentiel MDS
+      href: microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md
+- name: Chargement des données
+  href: microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md
+  items:
+    - name: Filtrer les données avant le chargement
+      href: microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md
+    - name: Charger des données MDS dans Excel
+      href: microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md
+    - name: 'Filtrer, boîte de dialogue'
+      href: microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md
+    - name: Réorganiser des colonnes
+      href: microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md
+- name: Fichiers de requête de raccourci
+  href: microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md
+  items:
+    - name: Enregistrer un fichier de requête de raccourci
+      href: microsoft-excel-add-in/save-a-shortcut-query-file-mds-add-in-for-excel.md
+    - name: Envoyer par courrier électronique un fichier de requête de raccourci
+      href: microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md
+- name: Actualisation des données
+  href: microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md
+- name: Publication de données
+  href: microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md
+  items:
+    - name: Publier des données d'Excel dans MDS
+      href: microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md
+    - name: Supprimer une ligne
+      href: microsoft-excel-add-in/delete-a-row-mds-add-in-for-excel.md
+    - name: Afficher toutes les annotations ou transactions pour un membre
+      href: microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md
+    - name: Combiner des données
+      href: microsoft-excel-add-in/combine-data-mds-add-in-for-excel.md
+- name: Validation des données
+  href: microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md
+  items:
+    - name: Appliquer les règles d’entreprise
+      href: microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md
+- name: Mise en correspondance de la qualité des données
+  href: microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md
+  items:
+    - name: Mettre en correspondance les données similaires
+      href: microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md
+    - name: Colonnes de mise en correspondance de la qualité des données
+      href: microsoft-excel-add-in/data-quality-matching-columns-mds-add-in-for-excel.md
+- name: Génération d'un modèle
+  href: microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md
+  items:
+    - name: Créer une entité
+      href: microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md
+    - name: Créer un attribut basé sur un domaine
+      href: microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md
+    - name: Modifier le type d'attribut
+      href: microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md
+- name: Modèles
+  href: models-master-data-services.md
+  items:
+    - name: Créer un modèle
+      href: create-a-model-master-data-services.md
+    - name: Modifier un nom de modèle
+      href: change-a-model-name-master-data-services.md
+    - name: Supprimer un modèle
+      href: delete-a-model-master-data-services.md
+- name: Entités
+  href: entities-master-data-services.md
+  items:
+    - name: Créer une entité
+      href: create-an-entity-master-data-services.md
+    - name: Activer une entité pour les hiérarchies explicites et les collections
+      href: enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md
+    - name: Modifier le nom d'une entité
+      href: edit-an-entity-master-data-services.md
+    - name: Supprimer une entité
+      href: delete-an-entity-master-data-services.md
+- name: Attributs
+  href: attributes-master-data-services.md
+  items:
+    - name: Créer un attribut de texte
+      href: create-a-text-attribute-master-data-services.md
+    - name: Créer un attribut numérique
+      href: create-a-numeric-attribute-master-data-services.md
+    - name: Créer un attribut de date
+      href: create-a-date-attribute-master-data-services.md
+    - name: Créer un attribut de lien
+      href: create-a-link-attribute-master-data-services.md
+    - name: Créer un attribut de fichier
+      href: create-a-file-attribute-master-data-services.md
+    - name: Modifier le nom d'un attribut
+      href: change-an-attribute-name-and-data-type-master-data-services.md
+    - name: Supprimer un attribut
+      href: delete-an-attribute-master-data-services.md
+    - name: Changer l'ordre des attributs
+      href: change-the-order-of-attributes.md
+    - name: Attributs basés sur un domaine
+      href: domain-based-attributes-master-data-services.md
+    - name: Créer un attribut basé sur un domaine
+      href: create-a-domain-based-attribute-master-data-services.md
+- name: Groupes d'attributs
+  href: attribute-groups-master-data-services.md
+  items:
+    - name: Créer un groupe d'attributs
+      href: create-an-attribute-group-master-data-services.md
+    - name: Rendre un groupe d'attributs visible pour les utilisateurs
+      href: make-an-attribute-group-visible-to-users-master-data-services.md
+    - name: Modifier le nom d'un groupe d'attributs
+      href: change-an-attribute-group-name-master-data-services.md
+    - name: Supprimer un groupe d'attributs
+      href: delete-an-attribute-group-master-data-services.md
+- name: Importation de données
+  href: overview-importing-data-from-tables-master-data-services.md
+  items:
+    - name: 'Ajouter, mettre à jour et supprimer des données'
+      href: add-update-and-delete-data-master-data-services.md
+    - name: Afficher les erreurs qui se produisent pendant le processus de site
+      href: view-errors-that-occur-during-staging-master-data-services.md
+    - name: Leaf Member Staging Table
+      href: leaf-member-staging-table-master-data-services.md
+    - name: Table de mise en lots des membres consolidés
+      href: consolidated-member-staging-table-master-data-services.md
+    - name: Table de mise en lots des relations
+      href: relationship-staging-table-master-data-services.md
+    - name: Procédure stockée de mise en lots
+      href: staging-stored-procedure-master-data-services.md
+    - name: Erreurs du processus de site
+      href: staging-process-errors-master-data-services.md
+    - name: États d'importation
+      href: import-statuses-master-data-services.md
+- name: Membres
+  href: members-master-data-services.md
+  items:
+    - name: Créer un membre feuille
+      href: create-a-leaf-member-master-data-services.md
+    - name: Créer un membre consolidé
+      href: create-a-consolidated-member-master-data-services.md
+    - name: Supprimer un membre ou une collection
+      href: delete-a-member-or-collection-master-data-services.md
+    - name: Réactiver un membre ou une collection
+      href: reactivate-a-member-or-collection-master-data-services.md
+    - name: Déplacer des membres au sein d'une hiérarchie
+      href: move-members-within-a-hierarchy-master-data-services.md
+- name: Opérateurs de filtre
+  href: filter-operators-master-data-services.md
+  items:
+    - name: Mots réservés
+      href: reserved-words-master-data-services.md
+- name: Création automatique de code
+  href: automatic-code-creation-master-data-services.md
+  items:
+    - name: Générer automatiquement les valeurs de l'attribut Code
+      href: automatically-generate-code-attribute-values-master-data-services.md
+    - name: Générer automatiquement les valeurs des attributs autres que Code
+      href: automatically-generate-attribute-values-other-than-code-master-data-services.md
+- name: Règles d'entreprise
+  href: business-rules-master-data-services.md
+  items:
+    - name: Créer et publier une règle d'entreprise
+      href: create-and-publish-a-business-rule-master-data-services.md
+    - name: Ajouter plusieurs conditions à une règle d'entreprise
+      href: add-multiple-conditions-to-a-business-rule-master-data-services.md
+    - name: Requérir des valeurs d'attribut
+      href: require-attribute-values-master-data-services.md
+    - name: Modifier le nom d'une règle d'entreprise
+      href: change-a-business-rule-name-master-data-services.md
+    - name: Configurer des règles d'entreprise pour envoyer des notifications
+      href: configure-business-rules-to-send-notifications-master-data-services.md
+    - name: Valider des membres spécifiques par rapport aux règles d'entreprise
+      href: validate-specific-members-against-business-rules-master-data-services.md
+    - name: Exclure une règle d'entreprise
+      href: exclude-a-business-rule-master-data-services.md
+    - name: Supprimer une règle d'entreprise
+      href: delete-a-business-rule-master-data-services.md
+    - name: Conditions de règle d'entreprise
+      href: business-rule-conditions-master-data-services.md
+    - name: Actions de règle d'entreprise
+      href: business-rule-actions-master-data-services.md
+- name: Suivi des modifications
+  href: change-tracking-master-data-services.md
+  items:
+    - name: Ajouter des attributs à un groupe de suivi des modifications
+      href: add-attributes-to-a-change-tracking-group-master-data-services.md
+    - name: Initier des actions en fonction de modifications de valeurs d'attribut
+      href: initiate-actions-based-on-attribute-value-changes-master-data-services.md
+- name: Notifications
+  href: notifications-master-data-services.md
+  items:
+    - name: Configurer des notifications par courrier électronique
+      href: configure-email-notifications-master-data-services.md
+- name: Transactions
+  href: transactions-master-data-services.md
+  items:
+    - name: Inverser une transaction
+      href: reverse-a-transaction-master-data-services.md
+- name: Annotations
+  href: annotations-master-data-services.md
+  items:
+    - name: Annoter une transaction
+      href: annotate-a-transaction-master-data-services.md
+- name: Hierarchies
+  href: hierarchies-master-data-services.md
+  items:
+    - name: Hiérarchies explicites
+      href: explicit-hierarchies-master-data-services.md
+      items:
+        - name: Créer une hiérarchie explicite
+          href: create-an-explicit-hierarchy-master-data-services.md
+        - name: Modifier le nom d'une hiérarchie explicite
+          href: change-an-explicit-hierarchy-name-master-data-services.md
+        - name: Supprimer une hiérarchie explicite
+          href: delete-an-explicit-hierarchy-master-data-services.md
+    - name: Hiérarchies dérivées
+      href: derived-hierarchies-master-data-services.md
+      items:
+        - name: Hiérarchies récursives
+          href: recursive-hierarchies-master-data-services.md
+        - name: Hiérarchies dérivées avec un niveau supérieur composé d'une hiérarchie explicite
+          href: derived-hierarchies-with-explicit-caps-master-data-services.md
+        - name: Créer une hiérarchie dérivée
+          href: create-a-derived-hierarchy-master-data-services.md
+        - name: Masquer ou supprimer des niveaux dans une hiérarchie dérivée
+          href: hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md
+        - name: Modifier le nom d'une hiérarchie dérivée
+          href: change-a-derived-hierarchy-name-master-data-services.md
+        - name: Supprimer une hiérarchie dérivée
+          href: delete-a-derived-hierarchy-master-data-services.md
+- name: Collections
+  href: collections-master-data-services.md
+  items:
+    - name: Créer une collection
+      href: create-a-collection-master-data-services.md
+    - name: Ajouter des membres à une collection
+      href: add-members-to-a-collection-master-data-services.md
+- name: Exporting Data
+  href: overview-exporting-data-master-data-services.md
+- name: Créer une vue d'abonnement
+  href: create-a-subscription-view-to-export-data-master-data-services.md
+- name: Supprimer une vue d'abonnement
+  href: delete-a-subscription-view-master-data-services.md
+- name: Formats de vue d'abonnement
+  href: subscription-view-formats-master-data-services.md
+- name: Versions
+  href: versions-master-data-services.md
+  items:
+    - name: Modifier le nom d'une version
+      href: change-a-version-name-master-data-services.md
+    - name: Verrouiller une version
+      href: lock-a-version-master-data-services.md
+    - name: Déverrouiller une version
+      href: unlock-a-version-master-data-services.md
+    - name: Activer une version
+      href: commit-a-version-master-data-services.md
+    - name: Créer un indicateur de version
+      href: create-a-version-flag-master-data-services.md
+    - name: Modifier le nom d'un indicateur de version
+      href: change-a-version-flag-name-master-data-services.md
+    - name: Affecter un indicateur à une version
+      href: assign-a-flag-to-a-version-master-data-services.md
+    - name: Copier une version
+      href: copy-a-version-master-data-services.md
+    - name: Supprimer une version
+      href: delete-a-version-master-data-services.md
+- name: Validation
+  href: validation-master-data-services.md
+  items:
+    - name: Valider une version par rapport aux règles d'entreprise
+      href: validate-a-version-against-business-rules-master-data-services.md
+    - name: États de validation
+      href: validation-statuses-master-data-services.md
+    - name: Procédure stockée de validation
+      href: validation-stored-procedure-master-data-services.md
+- name: Métadonnées
+  href: metadata-master-data-services.md
+  items:
+    - name: Ajouter des métadonnées (Master Data Services)
+      href: add-metadata-master-data-services.md
+- name: Déploiement de modèles
+  href: deploying-models-master-data-services.md
+  items:
+    - name: Créer un package de déploiement de modèle à l'aide de l'Assistant
+      href: create-a-model-deployment-package-by-using-the-wizard.md
+    - name: Créer un package de déploiement de modèle à l'aide de MDSModelDeploy
+      href: create-a-model-deployment-package-by-using-mdsmodeldeploy.md
+    - name: Options de déploiement de modèle
+      href: model-deployment-options-master-data-services.md
+    - name: Déployer un package de déploiement de modèle à l'aide de l'Assistant
+      href: deploy-a-model-deployment-package-by-using-the-wizard.md
+    - name: Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy
+      href: deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md
+    - name: Modifier un package de déploiement de modèle
+      href: edit-a-model-deployment-package.md
+- name: Sécurité
+  href: security-master-data-services.md
+- name: Administrateurs
+  href: administrators-master-data-services.md
+  items:
+    - name: Créer un administrateur de modèle
+      href: create-a-model-administrator-master-data-services.md
+    - name: Modifier le compte de l’administrateur système
+      href: change-the-system-administrator-account-master-data-services.md
+- name: Utilisateurs et groupes
+  href: users-and-groups-master-data-services.md
+  items:
+    - name: Ajouter un utilisateur
+      href: add-a-user-master-data-services.md
+    - name: Ajouter un groupe
+      href: add-a-group-master-data-services.md
+    - name: Modifier l'adresse de messagerie d'un utilisateur
+      href: change-a-user-s-email-address-master-data-services.md
+    - name: Supprimer des utilisateurs ou des groupes
+      href: delete-users-or-groups-master-data-services.md
+- name: Autorisations de zone fonctionnelle
+  href: functional-area-permissions-master-data-services.md
+  items:
+    - name: Affecter des autorisations de zone fonctionnelle
+      href: assign-functional-area-permissions-master-data-services.md
+- name: Autorisations d'objet de modèle
+  href: model-object-permissions-master-data-services.md
+  items:
+    - name: Affecter des autorisations d'objet de modèle
+      href: assign-model-object-permissions-master-data-services.md
+    - name: Supprimer des autorisations d'objet de modèle
+      href: delete-model-object-permissions-master-data-services.md
+- name: Autorisations de modèle
+  href: model-permissions-master-data-services.md
+- name: Autorisations d'entité
+  href: entity-permissions-master-data-services.md
+- name: Autorisations feuille
+  href: leaf-permissions-master-data-services.md
+- name: Autorisations consolidées
+  href: consolidated-permissions-master-data-services.md
+- name: Autorisations de collection
+  href: collection-permissions-master-data-services.md
+- name: Accès de navigation
+  href: navigational-access-master-data-services.md
+- name: Autorisations des membres de la hiérarchie
+  href: hierarchy-member-permissions-master-data-services.md
+  items:
+    - name: Affecter des autorisations de membre de hiérarchie
+      href: assign-hierarchy-member-permissions-master-data-services.md
+    - name: Appliquer immédiatement des autorisations de membre
+      href: immediately-apply-member-permissions-master-data-services.md
+    - name: Supprimer des autorisations de membre de hiérarchie
+      href: delete-hierarchy-member-permissions-master-data-services.md
+- name: Mode de détermination des autorisations
+  href: how-permissions-are-determined-master-data-services.md
+- name: Chevauchement des autorisations de modèle et de membre
+  href: overlapping-model-and-member-permissions-master-data-services.md
+- name: Chevauchement des autorisations d'accès
+  href: overlapping-user-and-group-permissions-master-data-services.md
+- name: Tester les autorisations d'un utilisateur
+  href: test-a-user-s-permissions-master-data-services.md
+- name: Référence technique (Master Data Services)
+  href: technical-reference-master-data-services.md
+  items:
+    - name: Configurer la base de données et le site web de Master Data Services
+      href: set-up-the-database-and-website-for-master-data-services.md
+    - name: Page Configuration du serveur Master Data Services
+      href: server-configuration-mds-configuration-manager.md
+    - name: Page de configuration de base de données
+      href: database-configuration-page-master-data-services-configuration-manager.md
+    - name: Se connecter à la boîte de dialogue Base de données Master Data Services
+      href: connect-to-a-master-data-services-database-dialog-box.md
+    - name: Assistant Création d'une base de données
+      href: create-database-wizard-master-data-services-configuration-manager.md
+    - name: Assistant Mise à niveau de base de données
+      href: upgrade-database-wizard-master-data-services-configuration-manager.md
+    - name: Boîte de dialogue Créer un compte et un profil de messagerie de base de données
+      href: create-database-mail-profile-and-account-dialog-box.md
+    - name: Page Configuration Web
+      href: web-configuration-page-master-data-services-configuration-manager.md
+    - name: Boîte de dialogue Créer une application Web
+      href: create-web-application-dialog-box-master-data-services-configuration-manager.md
+    - name: Boîte de dialogue Créer un site Web
+      href: create-website-dialog-box-master-data-services-configuration-manager.md
+    - name: Référence de configuration Web
+      href: web-configuration-reference-master-data-services.md
+    - name: Base de données Master Data Services
+      href: master-data-services-database.md
+    - name: Paramètres système
+      href: system-settings-master-data-services.md
+    - name: Sécurité de l'objet de base de données
+      href: database-object-security-master-data-services.md
+    - name: 'Connexions, utilisateurs et rôles de base de données'
+      href: database-logins-users-and-roles-master-data-services.md
+    - name: Application Web Master Data Manager
+      href: master-data-manager-web-application.md
+    - name: Zone fonctionnelle Explorateur
+      href: explorer-functional-area-master-data-manager.md
+    - name: Zone fonctionnelle Gestion des versions
+      href: version-management-functional-area-master-data-manager.md
+    - name: Zone fonctionnelle Gestion de l'intégration
+      href: integration-management-functional-area-master-data-manager.md
+    - name: Zone fonctionnelle Administration de système
+      href: system-administration-functional-area-master-data-manager.md
+    - name: Zone fonctionnelle Autorisations d'accès
+      href: user-and-group-permissions-functional-area-master-data-manager.md
+    - name: Autorisations d’accès aux dossiers et aux fichiers
+      href: folder-and-file-permissions-master-data-services.md
+- name: Guide du développeur (Master Data Services)
+  href: develop/master-data-services-developer-documentation.md
+  items:
+    - name: Créer des classes proxy de service Web Master Data Manager
+      href: develop/create-master-data-manager-web-service-proxy-classes.md
+    - name: Opérations de service Web par catégorie
+      href: develop/categorized-web-service-operations-master-data-services.md
+    - name: Créer un flux de travail personnalisé
+      href: develop/create-a-custom-workflow-master-data-services.md
+    - name: Exemple de flux de travail personnalisé
+      href: develop/create-a-custom-workflow-example.md
+    - name: Description personnalisée XML de flux de travail
+      href: develop/create-a-custom-workflow-xml-description.md

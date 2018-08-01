@@ -1,0 +1,52 @@
+- name: Rubriques de procédures ODBC
+  href: odbc-how-to-topics.md
+- name: Sous-domaines
+  items:
+    - name: "Exécuter des requêtes\_+"
+      href: ../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md
+    - name: "Curseurs\_+"
+      href: ../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md
+    - name: "Copie en bloc\_+"
+      href: ../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md
+- name: Allouer des handles et se connecter à SQL Server (ODBC)
+  href: allocate-handles-and-connect-to-sql-server-odbc.md
+- name: Appeler SQLColumns sur une table avec des colonnes éparses
+  href: call-sqlcolumns-on-a-table-with-sparse-columns.md
+- name: "Configuration du pilote ODBC SQL Server\_- Ajouter une source de données"
+  href: configuring-the-sql-server-odbc-driver-add-a-data-source.md
+- name: "Configuration du pilote ODBC SQL Server\_- Supprimer une source de données"
+  href: configuring-the-sql-server-odbc-driver-delete-a-data-source.md
+- name: Obtenir une authentification Kerberos mutuelle
+  href: get-mutual-kerberos-authentication.md
+- name: "Procédure\_: insérer des lignes dans la colonne de géographie (ODBC)"
+  href: how-to-insert-rows-into-geography-column-odbc.md
+- name: "Gestion des colonnes texte et image\_- Utiliser des colonnes de données à l’exécution"
+  href: managing-text-and-image-columns-use-data-at-execution-columns.md
+- name: "Gestion des colonnes texte et image\_- Utiliser des paramètres de données à l’exécution"
+  href: managing-text-and-image-columns-use-data-at-execution-parameters.md
+- name: Traiter les erreurs ODBC (ODBC)
+  href: process-odbc-errors-odbc.md
+- name: "Traitement des résultats\_- Traiter les résultats"
+  href: processing-results-process-results.md
+- name: "Traitement des résultats\_- Récupérer les informations du jeu de résultats"
+  href: processing-results-retrieve-result-set-information.md
+- name: Profilage des données de performances du pilote ODBC (ODBC)
+  href: profiling-odbc-driver-performance-odbc.md
+- name: "Profilage des données de performances du pilote ODBC\_- Enregistrer les requêtes longues"
+  href: profiling-odbc-driver-performance-data-log-long-running-queries.md
+- name: Profilage des données de performances du pilote ODBC
+  href: profiling-odbc-driver-performance-data.md
+- name: "Exécution de procédures stockées\_- Appeler des procédures stockées"
+  href: running-stored-procedures-call-stored-procedures.md
+- name: "Exécution de procédures stockées\_- Traiter les codes de retour et les paramètres de sortie"
+  href: running-stored-procedures-process-return-codes-and-output-parameters.md
+- name: Envoyer et recevoir des données de façon incrémentielle avec FILESTREAM (ODBC)
+  href: send-and-receive-data-incrementally-with-filestream-odbc.md
+- name: Prise en charge de tables UDT volumineuses
+  href: support-for-large-udts.md
+- name: Utiliser des types de date et d'heure
+  href: use-date-and-time-types.md
+- name: Utiliser Microsoft Distributed Transaction Coordinator (ODBC)
+  href: use-microsoft-distributed-transaction-coordinator-odbc.md
+- name: Utiliser des paramètres table (ODBC)
+  href: use-table-valued-parameters-odbc.md

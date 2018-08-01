@@ -1,0 +1,54 @@
+- name: 'XMLA, éléments - Commandes'
+  href: xml-elements-commands.md
+- name: Élément Alter (XMLA)
+  href: alter-element-xmla.md
+- name: Élément Attach
+  href: attach-element.md
+- name: Élément Backup (XMLA)
+  href: backup-element-xmla.md
+- name: Élément Batch (XMLA)
+  href: batch-element-xmla.md
+- name: Élément BeginTransaction (XMLA)
+  href: begintransaction-element-xmla.md
+- name: Élément Cancel (XMLA)
+  href: cancel-element-xmla.md
+- name: Élément ClearCache (XMLA)
+  href: clearcache-element-xmla.md
+- name: Élément CommitTransaction (XMLA)
+  href: committransaction-element-xmla.md
+- name: Élément Create (XMLA)
+  href: create-element-xmla.md
+- name: Élément Delete (XMLA)
+  href: delete-element-xmla.md
+- name: Élément DesignAggregations (XMLA)
+  href: designaggregations-element-xmla.md
+- name: Élément Detach
+  href: detach-element.md
+- name: Élément Drop (XMLA)
+  href: drop-element-xmla.md
+- name: Élément Insert (XMLA)
+  href: insert-element-xmla.md
+- name: Élément Lock (XMLA)
+  href: lock-element-xmla.md
+- name: Élément MergePartitions (XMLA)
+  href: mergepartitions-element-xmla.md
+- name: Élément NotifyTableChange (XMLA)
+  href: notifytablechange-element-xmla.md
+- name: Élément Process (XMLA)
+  href: process-element-xmla.md
+- name: Élément Restore (XMLA)
+  href: restore-element-xmla.md
+- name: Élément RollbackTransaction (XMLA)
+  href: rollbacktransaction-element-xmla.md
+- name: Élément Statement (XMLA)
+  href: statement-element-xmla.md
+- name: Élément Subscribe (XMLA)
+  href: subscribe-element-xmla.md
+- name: Élément Synchronize (XMLA)
+  href: synchronize-element-xmla.md
+- name: Élément Unlock (XMLA)
+  href: unlock-element-xmla.md
+- name: Élément Update (XMLA)
+  href: update-element-xmla.md
+- name: Élément UpdateCells (XMLA)
+  href: updatecells-element-xmla.md

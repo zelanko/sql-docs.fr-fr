@@ -1,0 +1,6 @@
+- name: Extensions ADO pour le langage de définition de données et la sécurité (ADOX)
+  href: ado-extensions-for-data-definition-language-and-security-adox.md
+- name: Concepts de base d’ADOX
+  href: adox-fundamentals.md
+- name: Prise en charge de fournisseur pour ADOX (ADO)
+  href: provider-support-for-adox-ado.md

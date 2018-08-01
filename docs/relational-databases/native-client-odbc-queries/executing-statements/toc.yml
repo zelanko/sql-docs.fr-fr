@@ -1,0 +1,12 @@
+- name: Exécution d'instructions (ODBC)
+  href: executing-statements-odbc.md
+- name: Lots d'instructions
+  href: batches-of-statements.md
+- name: Exécution directe
+  href: direct-execution.md
+- name: Conséquences des options ISO
+  href: effects-of-iso-options.md
+- name: Exécution préparée
+  href: prepared-execution.md
+- name: Procédures
+  href: procedures.md

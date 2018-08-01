@@ -1,0 +1,70 @@
+- name: Sauvegarde et restauration de bases de données et de journaux de transactions
+  href: backing-up-and-restoring-databases-and-transaction-logs.md
+- name: Configuration de SQL Server dans SMO
+  href: configuring-sql-server-in-smo.md
+- name: Création et mise à jour des statistiques
+  href: creating-and-updating-statistics.md
+- name: 'Création, modification et suppression d’objets de base de données'
+  href: creating-altering-and-removing-database-objects.md
+- name: 'Création, modification et suppression de bases de données'
+  href: creating-altering-and-removing-databases.md
+- name: 'Création, modification et suppression des valeurs par défaut'
+  href: creating-altering-and-removing-defaults.md
+- name: 'Création, modification et suppression de clés étrangères'
+  href: creating-altering-and-removing-foreign-keys.md
+- name: 'Création, modification et suppression d''index'
+  href: creating-altering-and-removing-indexes.md
+- name: 'Création, modification et suppression de règles'
+  href: creating-altering-and-removing-rules.md
+- name: 'Création, modification et suppression de schémas'
+  href: creating-altering-and-removing-schemas.md
+- name: 'Création, modification et suppression des procédures stockées'
+  href: creating-altering-and-removing-stored-procedures.md
+- name: 'Création, modification et suppression de tables'
+  href: creating-altering-and-removing-tables.md
+- name: 'Création, modification et suppression de déclencheurs'
+  href: creating-altering-and-removing-triggers.md
+- name: 'Création, modification et suppression de fonctions définies par l''utilisateur'
+  href: creating-altering-and-removing-user-defined-functions.md
+- name: 'Création, modification et suppression de vues'
+  href: creating-altering-and-removing-views.md
+- name: 'Octroi, révocation et refus d''autorisations'
+  href: granting-revoking-and-denying-permissions.md
+- name: Implémentation de points de terminaison
+  href: implementing-endpoints.md
+- name: Implémentation de la recherche en texte intégral
+  href: implementing-full-text-search.md
+- name: Gestion de Service Broker
+  href: managing-service-broker.md
+- name: Gestion des services et des paramètres réseau à l'aide du fournisseur WMI
+  href: managing-services-and-network-settings-by-using-wmi-provider.md
+- name: 'Gestion des utilisateurs, rôles et connexions'
+  href: managing-users-roles-and-logins.md
+- name: Programmation de tâches spécifiques
+  href: programming-specific-tasks.md
+- name: "Planification des tâches administratives automatiques dans l'Agent SQL\_Server"
+  href: scheduling-automatic-administrative-tasks-in-sql-server-agent.md
+- name: Création de scripts
+  href: scripting.md
+- name: Événements de traçage et de relecture
+  href: tracing-and-replaying-events.md
+- name: Transfert de données
+  href: transferring-data.md
+- name: Utilisation de la messagerie de base de données
+  href: using-database-mail.md
+- name: Utilisation du chiffrement
+  href: using-encryption.md
+- name: Utilisation de fichiers ou de groupes de fichiers pour stocker des données
+  href: using-filegroups-and-files-to-store-data.md
+- name: Utilisation de serveurs liés dans SMO
+  href: using-linked-servers-in-smo.md
+- name: Utilisation de messages
+  href: using-messages.md
+- name: Utilisation de synonymes
+  href: using-synonyms.md
+- name: Utilisation du partitionnement des tables et des index
+  href: using-table-and-index-partitioning.md
+- name: Utilisation de tables définies par l'utilisateur
+  href: using-user-defined-tables.md
+- name: Utilisation de schémas XML
+  href: using-xml-schemas.md

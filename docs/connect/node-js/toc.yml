@@ -1,0 +1,8 @@
+- name: Pilote Node.js pour SQL Server
+  href: node-js-driver-for-sql-server.md
+- name: "Étape\_1\_: Configurer l’environnement de développement pour le développement Node.js"
+  href: step-1-configure-development-environment-for-node-js-development.md
+- name: "Étape\_2\_: Créer une base de données SQL pour le développement Node.js"
+  href: step-2-create-a-sql-database-for-node-js-development.md
+- name: "Étape\_3\_: Preuve de concept pour la connexion à SQL à l’aide de Node.js"
+  href: step-3-proof-of-concept-connecting-to-sql-using-node-js.md

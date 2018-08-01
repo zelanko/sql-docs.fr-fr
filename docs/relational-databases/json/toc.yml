@@ -1,0 +1,42 @@
+- name: Vue d'ensemble
+  href: json-data-sql-server.md
+- name: Stocker des documents JSON dans SQL Server
+  href: store-json-documents-in-sql-tables.md
+- name: Importer des documents JSON dans SQL Server
+  href: import-json-documents-into-sql-server.md
+- name: Indexer des données JSON
+  href: index-json-data.md
+- name: Optimiser le traitement JSON avec OLTP en mémoire
+  href: optimize-json-processing-with-in-memory-oltp.md
+- name: 'Valider, interroger et modifier les données JSON avec des fonctions intégrées'
+  href: validate-query-and-change-json-data-with-built-in-functions-sql-server.md
+- name: Expressions de chemin JSON
+  href: json-path-expressions-sql-server.md
+- name: Analyser et transformer des données JSON avec OPENJSON
+  href: convert-json-data-to-rows-and-columns-with-openjson-sql-server.md
+  items:
+    - name: Utiliser OPENJSON avec le schéma par défaut
+      href: use-openjson-with-the-default-schema-sql-server.md
+    - name: Utilisation d’OPENJSON avec un schéma explicite
+      href: use-openjson-with-an-explicit-schema-sql-server.md
+- name: Mettre les résultats de requête au format JSON avec FOR JSON (SQL Server)
+  href: format-query-results-as-json-with-for-json-sql-server.md
+  items:
+    - name: "Formater la sortie\_JSON imbriquée avec le mode\_PATH"
+      href: format-nested-json-output-with-path-mode-sql-server.md
+    - name: Mettre en forme la sortie JSON automatiquement avec le mode AUTO
+      href: format-json-output-automatically-with-auto-mode-sql-server.md
+    - name: Ajouter un nœud racine à la sortie JSON avec l’option ROOT
+      href: add-a-root-node-to-json-output-with-the-root-option-sql-server.md
+    - name: "Inclure des valeurs\_Null dans une sortie\_JSON avec l’option INCLUDE_NULL_VALUES"
+      href: include-null-values-in-json-include-null-values-option.md
+    - name: Supprimer les crochets de la sortie JSON avec l’option WITHOUT_ARRAY_WRAPPER (SQL Server)
+      href: remove-square-brackets-from-json-without-array-wrapper-option.md
+    - name: "Conversion par FOR JSON des types de données SQL\_Server en types de données JSON"
+      href: how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md
+    - name: Comment FOR JSON place dans une séquence d’échappement les caractères spéciaux et les caractères de contrôle
+      href: how-for-json-escapes-special-characters-and-control-characters-sql-server.md
+    - name: "Utilisez la sortie de FOR JSON dans SQL\_Server et les applications clientes"
+      href: use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md
+- name: Résoudre des problèmes courants JSON dans SQL Server
+  href: solve-common-issues-with-json-in-sql-server.md

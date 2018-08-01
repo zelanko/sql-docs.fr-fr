@@ -1,0 +1,14 @@
+- name: "Programmation de modèles tabulaires pour les niveaux de compatibilité\_1050 à\_1103"
+  href: tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+- name: Représentation +
+  href: ../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/connection-representation-tabular.md
+- name: CSDL (Conceptual Schema Definition Language) +
+  href: ../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md
+- name: Annotations CSDL pour Business Intelligence (CSDLBI)
+  href: csdl-annotations-for-business-intelligence-csdlbi.md
+- name: Attributs CSDLBI pour la conception de rapport
+  href: csdlbi-attributes-for-report-design.md
+- name: Concepts CSDLBI
+  href: csdlbi-concepts.md
+- name: 'IMDEmbeddedData, interface'
+  href: imdembeddeddata-interface.md

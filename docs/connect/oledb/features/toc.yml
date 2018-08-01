@@ -1,0 +1,46 @@
+- name: Fonctionnalités OLE DB Driver pour SQL Server
+  href: oledb-driver-for-sql-server-features.md
+- name: Accès aux informations de diagnostic dans le journal des événements étendus
+  href: accessing-diagnostic-information-in-the-extended-events-log.md
+- name: Modification des mots de passe par programme
+  href: changing-passwords-programmatically.md
+- name: Améliorations des types de données date et heure
+  href: date-and-time-improvements.md
+- name: Prise en charge de FILESTREAM
+  href: filestream-support.md
+- name: Types CLR volumineux définis par l'utilisateur
+  href: large-clr-user-defined-types.md
+- name: Découverte des métadonnées
+  href: metadata-discovery.md
+- name: Exécution d'opérations asynchrones
+  href: performing-asynchronous-operations.md
+- name: Exécution d'opérations de copie en bloc
+  href: performing-bulk-copy-operations.md
+- name: Prise en charge des noms de principaux du service (SPN) dans les connexions clientes
+  href: service-principal-name-spn-support-in-client-connections.md
+- name: Prise en charge des colonnes éparses dans OLE DB Driver pour SQL Server
+  href: sparse-columns-support-in-oledb-driver-for-sql-server.md
+- name: Prise en charge de la récupération d’urgence et de la haute disponibilité par OLE DB Driver pour SQL Server
+  href: oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md
+- name: Prise en charge de la base de données locale par OLE DB Driver pour SQL Server
+  href: oledb-driver-for-sql-server-support-for-localdb.md
+- name: Paramètres table (OLE DB Driver pour SQL Server)
+  href: table-valued-parameters-oledb-driver-for-sql-server.md
+- name: Utilisation de la mise en miroir de bases de données
+  href: using-database-mirroring.md
+- name: Utilisation du chiffrement sans validation
+  href: using-encryption-without-validation.md
+- name: Utilisation de types de valeur élevée
+  href: using-large-value-types.md
+- name: Utilisation de MARS (Multiple Active Result Sets)
+  href: using-multiple-active-result-sets-mars.md
+- name: Utilisation des types définis par l'utilisateur
+  href: using-user-defined-types.md
+- name: "Utilisation de types de données\_XML"
+  href: using-xml-data-types.md
+- name: Prise en charge d’UTF-16 dans OLE DB Driver pour SQL Server
+  href: utf-16-support-in-oledb-driver-for-sql-server.md
+- name: Utilisation de notifications de requêtes
+  href: working-with-query-notifications.md
+- name: Utilisation du niveau d’isolement de capture instantanée
+  href: working-with-snapshot-isolation.md

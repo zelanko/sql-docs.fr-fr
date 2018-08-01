@@ -1,0 +1,22 @@
+- name: Vue d’ensemble de Data Migration Assistant
+  href: dma-overview.md
+- name: Nouveautés de Data Migration Assistant
+  href: dma-whatsnew.md
+- name: Évaluer votre migration vers SQL Server
+  href: dma-assesssqlonprem.md
+- name: Mise à niveau SQL Server vers une version ultérieure
+  href: dma-migrateonpremsql.md
+- name: Migrer SQL Server vers Azure SQL Database
+  href: dma-migrateonpremsqltosqldb.md
+- name: Migrer des connexions SQL Server
+  href: dma-migrateserverlogins.md
+- name: Bonnes pratiques pour Data Migration Assistant
+  href: dma-bestpractices.md
+- name: Consolider les rapports d’évaluation
+  href: dma-consolidatereports.md
+- name: "Rapports Power\_BI pour les évaluations"
+  href: dma-powerbiassesreport.md
+- name: Exécuter à partir de la ligne de commande
+  href: dma-commandline.md
+- name: Configurer les paramètres
+  href: dma-configurationsettings.md

@@ -1,0 +1,46 @@
+- name: Vue d'ensemble
+  href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: "Sécurisation de SQL\_Server"
+  href: securing-sql-server.md
+- name: Audit
+  href: ../../relational-databases/security/auditing/sql-server-audit-database-engine.md
+- name: Authentification-accès
+  href: ../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
+- name: Chiffrement
+  href: ../../relational-databases/security/encryption/sql-server-encryption.md
+- name: Protection de votre propriété intellectuelle SQL Server
+  href: protecting-your-sql-server-intellectual-property.md
+- name: Éléments sécurisables
+  href: securables.md
+- name: Utilisateurs de base de données autonome - Rendre votre base de données portable
+  href: contained-database-users-making-your-database-portable.md
+- name: Choisir un mode d'authentification
+  href: choose-an-authentication-mode.md
+- name: Configuration de la visibilité des métadonnées
+  href: metadata-visibility-configuration.md
+- name: Configuration de la surface d'exposition
+  href: surface-area-configuration.md
+- name: Injection SQL
+  href: sql-injection.md
+- name: Évaluation des vulnérabilités SQL
+  href: sql-vulnerability-assessment.md
+- name: Découverte et classification des données SQL
+  href: sql-data-discovery-and-classification.md
+- name: 'TRUSTWORTHY, propriété de base de données'
+  href: trustworthy-database-property.md
+- name: Permissions
+  href: permissions-database-engine.md
+- name: Hiérarchie des autorisations
+  href: permissions-hierarchy-database-engine.md
+- name: Page Autorisations ou Éléments sécurisables
+  href: permissions-or-securables-page.md
+- name: Stratégie de mot de passe
+  href: password-policy.md
+- name: Mots de passe forts
+  href: strong-passwords.md
+- name: Sécurité au niveau des lignes
+  href: row-level-security.md
+- name: Masquage dynamique des données
+  href: dynamic-data-masking.md
+- name: "Certificats et clés asymétriques SQL\_Server"
+  href: sql-server-certificates-and-asymmetric-keys.md

@@ -1,0 +1,16 @@
+- name: Microsoft ODBC (Open Database Connectivity)
+  href: microsoft-open-database-connectivity-odbc.md
+- name: Articles nouveaux et mis à jour
+  href: new-updated-odbc.md
+- name: Pilotes Microsoft ODBC +
+  href: ../odbc/microsoft/microsoft-supplied-odbc-drivers.md
+- name: Administration d’ODBC +
+  href: ../odbc/admin/odbc-data-source-administrator.md
+- name: Informations de référence sur ODBC +
+  href: ../odbc/reference/introduction-to-odbc.md
+- name: Test d’ODBC
+  href: odbc-test.md
+- name: ODBCconf.exe
+  href: odbcconf-exe.md
+- name: Glossaire ODBC
+  href: odbc-glossary.md

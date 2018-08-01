@@ -1,0 +1,14 @@
+- name: Objets de bases de données (Analysis Services - Données multidimensionnelles)
+  href: database-objects-analysis-services-multidimensional-data.md
+- name: Objets de dimension +
+  href: ../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
+- name: Objets de cube +
+  href: ../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
+- name: Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
+  href: logical-architecture-overview-analysis-services-multidimensional-data.md
+- name: Rôles de sécurité (Analysis Services - Données multidimensionnelles)
+  href: security-roles-analysis-services-multidimensional-data.md
+- name: Objets serveur (Analysis Services - Données multidimensionnelles)
+  href: server-objects-analysis-services-multidimensional-data.md
+- name: Présentation de l’architecture logique Microsoft OLAP
+  href: understanding-microsoft-olap-logical-architecture.md

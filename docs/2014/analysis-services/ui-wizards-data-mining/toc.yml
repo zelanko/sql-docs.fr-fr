@@ -1,0 +1,45 @@
+- name: Assistants Interface utilisateur pour l’analyse de l’exploration de données
+  href: ui-wizards-data-mining.md
+- name: Assistants Exploration de données
+  href: ../data-mining-wizards.md
+- name: Aide accessible par la touche F1 de l'Assistant Exploration de données
+  href: ../data-mining-wizard-f1-help-analysis-services-data-mining.md
+  items:
+    - name: Sélectionner la méthode de définition (Assistant Exploration de données)
+      href: ../select-the-definition-method-data-mining-wizard.md
+    - name: Créer la structure d'exploration de données (Assistant Exploration de données)
+      href: ../create-the-data-mining-structure-data-mining-wizard.md
+    - name: Sélectionner une vue de source de données (Assistant Exploration de données)
+      href: ../select-data-source-view-data-mining-wizard.md
+    - name: Parcourir Vue des sources de données (Assistant Exploration de données)
+      href: ../browse-data-source-view-data-mining-wizard.md
+    - name: Spécifier les types des tables (Assistant Exploration de données)
+      href: ../specify-table-types-data-mining-wizard.md
+    - name: Spécifier les données d'apprentissage (Assistant Exploration de données)
+      href: ../specify-the-training-data-data-mining-wizard.md
+    - name: Spécifier type de contenu et de données des colonnes (Assistant Exploration de données)
+      href: ../specify-column-content-and-data-type-data-mining-wizard.md
+    - name: Créer un jeu de test
+      href: ../create-testing-set-data-mining-wizard.md
+    - name: Suggérer les colonnes associées (Assistant Exploration de données)
+      href: ../suggest-related-columns-data-mining-wizard.md
+    - name: Sélectionner la dimension de cube source (Assistant Exploration de données)
+      href: ../select-the-source-cube-dimension-data-mining-wizard.md
+    - name: Sélectionner la clé de cas (Assistant Exploration de données)
+      href: ../select-the-case-key-data-mining-wizard.md
+    - name: Sélectionner les colonnes de niveau de cas (Assistant Exploration de données)
+      href: ../select-case-level-columns-data-mining-wizard.md
+    - name: Spécifier l'utilisation des colonnes du modèle d'exploration de données (Assistant Exploration de données)
+      href: ../specify-mining-model-column-usage-data-mining-wizard.md
+    - name: Sélectionner une dimension de groupe de mesures (Assistant Ajouter une nouvelle table imbriquée)
+      href: ../select-a-measure-group-dimension-add-new-nested-table-wizard.md
+    - name: Sélectionner la clé de la table imbriquée (Assistant Ajouter une nouvelle table imbriquée)
+      href: ../select-nested-table-key-add-new-nested-table-wizard.md
+    - name: Sélectionner les colonnes de la table imbriquée (Assistant Ajouter une nouvelle table imbriquée)
+      href: ../select-nested-table-columns-add-new-nested-table-wizard.md
+    - name: Spécifier le type de contenu et de données de la colonne (Assistant Exploration de données)
+      href: ../specify-the-column-s-content-and-data-type-data-mining-wizard.md
+    - name: Découper le cube source (Assistant Exploration de données)
+      href: ../slice-source-cube-data-mining-wizard.md
+    - name: Fin de l'Assistant (Assistant Exploration de données)
+      href: ../completing-the-wizard-data-mining-wizard.md

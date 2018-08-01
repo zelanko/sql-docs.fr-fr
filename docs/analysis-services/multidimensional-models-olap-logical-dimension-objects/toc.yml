@@ -1,0 +1,28 @@
+- name: Relations d’attributs
+  href: attribute-relationships.md
+- name: Attributs et hiérarchies d'attributs
+  href: attributes-and-attribute-hierarchies.md
+- name: "Propriétés de dimension d’une base de données\_- Types"
+  href: database-dimension-properties-types.md
+- name: Propriétés de dimension d'une base de données
+  href: database-dimension-properties.md
+- name: Objets de dimension (Analysis Services - Données multidimensionnelles)
+  href: dimension-objects-analysis-services-multidimensional-data.md
+- name: Traductions de dimension
+  href: dimension-translations.md
+- name: "Dimensions\_- Introduction"
+  href: dimensions-introduction.md
+- name: "Dimensions\_- Stockage"
+  href: dimensions-storage.md
+- name: Dimensions (Analysis Services - Données multidimensionnelles)
+  href: dimensions-analysis-services-multidimensional-data.md
+- name: Mise en cache proactive (dimensions)
+  href: proactive-caching-dimensions.md
+- name: "Hiérarchies utilisateur\_- Propriétés de niveau"
+  href: user-hierarchies-level-properties.md
+- name: "Hiérarchies utilisateur\_- Propriétés"
+  href: user-hierarchies-properties.md
+- name: Hiérarchies utilisateur
+  href: user-hierarchies.md
+- name: Dimensions activées en écriture
+  href: write-enabled-dimensions.md

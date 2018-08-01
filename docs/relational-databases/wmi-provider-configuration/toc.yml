@@ -1,0 +1,12 @@
+- name: fournisseur WMI pour Gestion de l'ordinateur
+  href: wmi-provider-for-configuration-management.md
+- name: Accéder au fournisseur WMI pour la gestion de la configuration à l’aide de VBScript
+  href: access-wmi-provider-for-configuration-management-using-vbscript.md
+- name: Accéder au fournisseur WMI pour Gestion de l'ordinateur à l'aide de WQL
+  href: access-wmi-provider-for-configuration-management-using-wql.md
+- name: Présentation du fournisseur WMI pour la gestion de la configuration
+  href: understanding-the-wmi-provider-for-configuration-management.md
+- name: Utilisation des langages WQL et de script avec le fournisseur WMI
+  href: using-wql-and-scripting-languages-with-the-wmi-provider.md
+- name: Utilisation du fournisseur WMI pour la gestion de la configuration
+  href: working-with-the-wmi-provider-for-configuration-management.md

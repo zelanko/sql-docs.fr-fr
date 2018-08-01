@@ -1,0 +1,315 @@
+- name: SQL Server Native Client (ODBC)
+  href: sql-server-native-client-odbc.md
+- name: Noms des sources de données et systèmes d'exploitation 64 bits
+  href: data-source-names-and-64-bit-operating-systems.md
+- name: Création d'une application de pilote ODBC SQL Server Native Client
+  href: creating-a-driver-application.md
+  items:
+    - name: Mode asynchrone et SQLCancel
+      href: creating-a-driver-application-asynchronous-mode-and-sqlcancel.md
+    - name: Applications multithread
+      href: creating-a-driver-application-multithreaded-applications.md
+- name: Communication avec SQL Server (ODBC)
+  href: ../../native-client-odbc-communication/communicating-with-sql-server-odbc.md
+  items:
+    - name: Allocation d'un handle d'environnement
+      href: ../../native-client-odbc-communication/allocating-an-environment-handle.md
+    - name: Allocation d'un handle de connexion
+      href: ../../native-client-odbc-communication/allocating-a-connection-handle.md
+    - name: "Sources de données\_ODBC SQL\_Server Native Client"
+      href: ../../native-client-odbc-communication/sql-server-native-client-odbc-data-sources.md
+    - name: Connexion à une source de données (ODBC)
+      href: ../../native-client-odbc-communication/connecting-to-a-data-source-odbc.md
+    - name: Déconnexion d'une source de données
+      href: ../../native-client-odbc-communication/disconnecting-from-a-data-source.md
+- name: Exécution de requêtes (ODBC)
+  href: ../../native-client-odbc-queries/executing-queries-odbc.md
+  items:
+    - name: Allocation d'un descripteur d'instruction
+      href: ../../native-client-odbc-queries/allocating-a-statement-handle.md
+    - name: Construction d'une instruction SQL (ODBC)
+      href: ../../native-client-odbc-queries/constructing-an-sql-statement-odbc.md
+    - name: Construction d'instructions SQL pour les curseurs
+      href: ../../native-client-odbc-queries/constructing-sql-statements-for-cursors.md
+    - name: Utilisation de paramètres d'instruction
+      href: ../../native-client-odbc-queries/using-statement-parameters.md
+    - name: Liaison de paramètres
+      href: ../../native-client-odbc-queries/using-statement-parameters-binding-parameters.md
+    - name: Exécution d'instructions (ODBC)
+      href: ../../native-client-odbc-queries/executing-statements/executing-statements-odbc.md
+    - name: Exécution directe
+      href: ../../native-client-odbc-queries/executing-statements/direct-execution.md
+    - name: Exécution préparée
+      href: ../../native-client-odbc-queries/executing-statements/prepared-execution.md
+    - name: Procédures
+      href: ../../native-client-odbc-queries/executing-statements/procedures.md
+    - name: Lots d'instructions
+      href: ../../native-client-odbc-queries/executing-statements/batches-of-statements.md
+    - name: Conséquences des options ISO
+      href: ../../native-client-odbc-queries/executing-statements/effects-of-iso-options.md
+    - name: Libération d'un descripteur d'instruction
+      href: ../../native-client-odbc-queries/freeing-a-statement-handle.md
+- name: Traitement des résultats (ODBC)
+  href: ../../native-client-odbc-results/processing-results-odbc.md
+  items:
+    - name: Détermination des caractéristiques d'un jeu de résultats (ODBC)
+      href: ../../native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md
+    - name: Assignation du stockage
+      href: ../../native-client-odbc-results/assigning-storage.md
+    - name: Extraction des données de résultat
+      href: ../../native-client-odbc-results/fetching-result-data.md
+    - name: Mappage de types de données (ODBC)
+      href: ../../native-client-odbc-results/mapping-data-types-odbc.md
+    - name: Utilisation des types de données
+      href: ../../native-client-odbc-results/data-type-usage.md
+    - name: Traduction automatique de données caractères
+      href: ../../native-client-odbc-results/autotranslation-of-character-data.md
+- name: Utilisation de curseurs (ODBC)
+  href: ../../native-client-odbc-cursors/using-cursors-odbc.md
+  items:
+    - name: Comment les curseurs sont implémentés
+      href: ../../native-client-odbc-cursors/implementation/how-cursors-are-implemented.md
+    - name: Utilisation de jeux de résultats SQL Server par défaut
+      href: ../../native-client-odbc-cursors/implementation/using-sql-server-default-result-sets.md
+    - name: Utilisation des curseurs côté serveur
+      href: ../../native-client-odbc-cursors/implementation/using-server-cursors.md
+    - name: Bibliothèque de curseurs ODBC
+      href: ../../native-client-odbc-cursors/implementation/odbc-cursor-library.md
+    - name: Types de curseurs
+      href: ../../native-client-odbc-cursors/cursor-types.md
+    - name: Comportements des curseurs
+      href: ../../native-client-odbc-cursors/cursor-behaviors.md
+    - name: Propriétés de curseur
+      href: ../../native-client-odbc-cursors/properties/cursor-properties.md
+    - name: Taille de l'ensemble de lignes d'un curseur
+      href: ../../native-client-odbc-cursors/properties/cursor-rowset-size.md
+    - name: Accès concurrentiel au curseur (ODBC)
+      href: ../../native-client-odbc-cursors/properties/cursor-concurrency-odbc.md
+    - name: Niveau d'isolation des transactions de curseur
+      href: ../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md
+    - name: Détails de programmation de curseurs (ODBC)
+      href: ../../native-client-odbc-cursors/programming/cursor-programming-details-odbc.md
+    - name: Conversions de curseurs implicites (ODBC)
+      href: ../../native-client-odbc-cursors/programming/implicit-cursor-conversions-odbc.md
+    - name: Utilisation de l'auto-extraction avec les curseurs ODBC
+      href: ../../native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md
+    - name: Curseurs avant uniquement rapides (ODBC)
+      href: ../../native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md
+    - name: Défilement et extraction de lignes
+      href: ../../native-client-odbc-cursors/scrolling-and-fetching-rows.md
+    - name: Création de signets pour des lignes dans ODBC
+      href: ../../native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md
+    - name: Mises à jour positionnées (ODBC)
+      href: ../../native-client-odbc-cursors/positioned-updates-odbc.md
+- name: Exécution de transactions (ODBC)
+  href: ../../../database-engine/dev-guide/performing-transactions-odbc.md
+  items:
+    - name: Transactions dans ODBC
+      href: performing-transactions-in-odbc.md
+    - name: Exécution de transactions distribuées
+      href: performing-transactions-distributed-transactions.md
+- name: Gestion des erreurs et des messages
+  href: ../../native-client-odbc-error-messages/handling-errors-and-messages.md
+  items:
+    - name: Traitement des instructions qui génèrent des messages
+      href: ../../native-client-odbc-error-messages/processing-statements-that-generate-messages.md
+    - name: Enregistrements et champs de diagnostic
+      href: ../../native-client-odbc-error-messages/diagnostic-records-and-fields.md
+    - name: Numéros des erreurs natives
+      href: ../../native-client-odbc-error-messages/native-error-numbers.md
+    - name: SQLSTATE (codes d'erreur ODBC)
+      href: ../../native-client-odbc-error-messages/sqlstate-odbc-error-codes.md
+    - name: Messages d'erreur
+      href: ../../native-client-odbc-error-messages/error-messages.md
+- name: Exécution des procédures stockées
+  href: ../../native-client-odbc-stored-procedures/running-stored-procedures.md
+  items:
+    - name: Appel d'une procédure stockée
+      href: ../../native-client-odbc-stored-procedures/calling-a-stored-procedure.md
+    - name: Traitement par lot des appels aux procédures stockées
+      href: ../../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md
+    - name: Traitement des résultats des procédures stockées
+      href: ../../native-client-odbc-stored-procedures/processing-stored-procedure-results.md
+- name: Utilisation des fonctions de catalogue
+  href: using-catalog-functions.md
+- name: Exécution d'opérations de copie en bloc (ODBC)
+  href: ../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md
+  items:
+    - name: Utilisation de fichiers de données et de format
+      href: ../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md
+    - name: Copie en bloc à partir de variables de programme
+      href: ../../native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md
+    - name: Gestion des tailles de lot de copie en bloc
+      href: ../../native-client-odbc-bulk-copy-operations/managing-bulk-copy-batch-sizes.md
+    - name: Copie en bloc de données Text et Image
+      href: ../../native-client-odbc-bulk-copy-operations/bulk-copying-text-and-image-data.md
+    - name: Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC
+      href: ../../native-client-odbc-bulk-copy-operations/converting-from-db-library-to-odbc-bulk-copy.md
+- name: Gestion des colonnes text et image
+  href: ../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md
+  items:
+    - name: Colonnes texte et image liées et non liées
+      href: ../../native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
+    - name: Modifications enregistrées ou non enregistrées
+      href: ../../native-client-odbc-text-image-columns/logged-vs-unlogged-modifications.md
+    - name: 'Données en cours d''exécution et colonnes text, ntext ou image'
+      href: ../../native-client-odbc-text-image-columns/data-at-execution-and-text-ntext-or-image-columns.md
+- name: Profilage des performances du pilote ODBC
+  href: profiling-odbc-driver-performance.md
+- name: Paramètres table (ODBC)
+  href: ../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md
+  items:
+    - name: Scénarios d'utilisation des paramètres table ODBC
+      href: ../../native-client-odbc-table-valued-parameters/uses-of-odbc-table-valued-parameters.md
+    - name: type ODBC SQL pour les paramètres table
+      href: ../../native-client-odbc-table-valued-parameters/odbc-sql-type-for-table-valued-parameters.md
+    - name: Champs de descripteur de paramètre table
+      href: ../../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md
+    - name: Champs de descripteur pour les colonnes constituantes des paramètres table
+      href: ../../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md
+    - name: champs d'enregistrement de diagnostic de paramètre table
+      href: ../../native-client-odbc-table-valued-parameters/table-valued-parameter-diagnostic-record-fields.md
+    - name: Attributs d'instruction qui affectent des paramètres table
+      href: ../../native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md
+    - name: Liaison et transfert de données de paramètres table et de valeurs de colonnes
+      href: ../../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md
+    - name: Métadonnées de paramètre table pour les instructions préparées
+      href: ../../native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md
+    - name: Métadonnées de paramètres table supplémentaires
+      href: ../../native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md
+    - name: Conversion des données des paramètres table et autres erreurs et avertissements
+      href: ../../native-client-odbc-table-valued-parameters/table-valued-parameter-data-conversion-and-other-errors-and-warnings.md
+    - name: Compatibilité des versions
+      href: ../../native-client-odbc-table-valued-parameters/cross-version-compatibility.md
+    - name: "Résumé des API de paramètre table\_ODBC"
+      href: ../../native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md
+    - name: Exemples de programmation de paramètres table ODBC
+      href: ../../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md
+    - name: Envoi de données comme paramètre table avec toutes les valeurs en mémoire
+      href: ../../native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md
+    - name: Envoi de données en tant que paramètre table à l'aide de données en cours d'exécution
+      href: ../../native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc.md
+- name: Améliorations de la date et de l’heure (ODBC)
+  href: ../../native-client-odbc-date-time/date-and-time-improvements-odbc.md
+  items:
+    - name: Prise en charge du type de données pour les améliorations Date/Heure (ODBC)
+      href: ../../native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md
+    - name: Métadonnées (ODBC)
+      href: ../../../database-engine/dev-guide/metadata-odbc.md
+    - name: Métadonnées de paramètres et de résultats
+      href: ../../native-client-odbc-date-time/metadata-parameter-and-result.md
+    - name: Métadonnées de catalogue
+      href: ../../native-client-odbc-date-time/metadata-catalog.md
+    - name: Conversions du type de données datetime (ODBC)
+      href: ../../native-client-odbc-date-time/datetime-data-type-conversions-odbc.md
+    - name: Conversions de C en SQL
+      href: ../../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md
+    - name: Conversions de SQL à C
+      href: ../../native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md
+    - name: Prise en charge sql_variant pour les types Date/Time
+      href: ../../native-client-odbc-date-time/sql-variant-support-for-date-and-time-types.md
+    - name: "Modifications de la copie en bloc pour les types date/heure améliorés (OLE\_DB et ODBC)"
+      href: ../../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md
+    - name: Comportement des types de date/d'heure améliorés avec les versions SQL Server antérieures (ODBC)
+      href: ../../native-client-odbc-date-time/enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md
+    - name: Prise en charge des fonctionnalités de date/heure améliorées par l'API ODBC
+      href: ../../native-client-odbc-date-time/odbc-api-support-for-enhanced-date-and-time-features.md
+- name: Types CLR volumineux définis par l’utilisateur (ODBC)
+  href: large-clr-user-defined-types-odbc.md
+- name: Prise en charge de FILESTREAM (ODBC)
+  href: filestream-support-odbc.md
+- name: Noms de principaux du service (SPN) dans les connexions clientes (ODBC)
+  href: service-principal-names-spns-in-client-connections-odbc.md
+- name: Prise en charge des colonnes éparses (ODBC)
+  href: sparse-columns-support-odbc.md
+- name: Référence SQL Server Native Client (ODBC)
+  href: ../../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md
+- name: Extensions de pilote SQL Server
+  href: ../../../database-engine/dev-guide/sql-server-driver-extensions.md
+- name: Fonctions de copie en bloc +
+  href: ../../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md
+- name: Détails d’implémentation de l’API ODBC +
+  href: ../../native-client-odbc-api/odbc-api-implementation-details.md
+- name: Rubriques de procédures ODBC
+  href: ../../native-client-odbc-how-to/odbc-how-to-topics.md
+  items:
+    - name: Rubriques des procédures relatives à la configuration du pilote ODBC SQL Server
+      href: ../../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md
+    - name: Ajouter une source de données (ODBC)
+      href: ../../native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md
+    - name: Supprimer une source de données (ODBC)
+      href: ../../native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md
+    - name: Allouer des handles et se connecter à SQL Server (ODBC)
+      href: ../../native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc.md
+    - name: Rubriques de procédures relatives à l'exécution de requêtes (ODBC)
+      href: ../../native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md
+    - name: Utiliser une instruction (ODBC)
+      href: ../../native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md
+    - name: Définir des options de curseur (ODBC)
+      href: ../../native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md
+    - name: Exécuter directement une instruction (ODBC)
+      href: ../../native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md
+    - name: Préparer et exécuter une instruction (ODBC)
+      href: ../../native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md
+    - name: Traitement des rubriques Comment relatives aux résultats (ODBC)
+      href: ../../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md
+    - name: Récupérer des informations du jeu de résultats (ODBC)
+      href: ../../native-client-odbc-how-to/processing-results-retrieve-result-set-information.md
+    - name: Traiter des résultats (ODBC)
+      href: ../../native-client-odbc-how-to/processing-results-process-results.md
+    - name: Utilisation des rubriques de procédures relatives aux curseurs (ODBC)
+      href: ../../native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md
+    - name: Utiliser des curseurs (ODBC)
+      href: ../../native-client-odbc-how-to/cursors/use-cursors-odbc.md
+    - name: Utiliser une liaison d'ensembles de lignes (ODBC)
+      href: ../../native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md
+    - name: Extraire et mettre à jour des ensembles de lignes (ODBC)
+      href: ../../native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md
+    - name: Utiliser Microsoft Distributed Transaction Coordinator (ODBC)
+      href: ../../native-client-odbc-how-to/use-microsoft-distributed-transaction-coordinator-odbc.md
+    - name: Rubriques de procédures relatives à l'exécution des procédures stockées (ODBC)
+      href: ../../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md
+    - name: Appeler des procédures stockées (ODBC)
+      href: ../../native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md
+    - name: Traiter les codes de retour et les paramètres de sortie (ODBC)
+      href: ../../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md
+    - name: Rubriques des procédures relatives à la gestion des colonnes de type text et image (ODBC)
+      href: ../../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md
+    - name: Utiliser des paramètres de données en cours d'exécution (ODBC)
+      href: ../../native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-parameters.md
+    - name: Utiliser des colonnes de données en cours d'exécution (ODBC)
+      href: ../../native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md
+    - name: Rubriques de procédures relatives au profilage de performances du pilote ODBC (ODBC)
+      href: ../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md
+    - name: Définir le profil des données de performances du pilote (ODBC)
+      href: ../../native-client-odbc-how-to/profiling-odbc-driver-performance-data.md
+    - name: Enregistrer des requêtes longues (ODBC)
+      href: ../../native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md
+    - name: Traiter les erreurs ODBC (ODBC)
+      href: ../../native-client-odbc-how-to/process-odbc-errors-odbc.md
+    - name: Rubriques Comment relatives à la copie en bloc avec le pilote ODBC SQL Server (ODBC)
+      href: ../../native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md
+    - name: Effectuer une copie en bloc sans fichier de format (ODBC)
+      href: ../../native-client-odbc-how-to/bulk-copy/bulk-copy-without-a-format-file-odbc.md
+    - name: Copier en bloc un jeu de résultats SELECT (ODBC)
+      href: ../../native-client-odbc-how-to/bulk-copy/bulk-copy-a-select-result-set-odbc.md
+    - name: Créer un fichier de format de copie en bloc (ODBC)
+      href: ../../native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md
+    - name: Effectuer une copie en bloc à l'aide d'un fichier de format (ODBC)
+      href: ../../native-client-odbc-how-to/bulk-copy/bulk-copy-by-using-a-format-file-odbc.md
+    - name: Copier en bloc des données à partir de variables de programme (ODBC)
+      href: ../../native-client-odbc-how-to/bulk-copy/bulk-copy-data-from-program-variables-odbc.md
+    - name: Utiliser des types de date et d'heure
+      href: ../../native-client-odbc-how-to/use-date-and-time-types.md
+    - name: Utiliser des paramètres table (ODBC)
+      href: ../../native-client-odbc-how-to/use-table-valued-parameters-odbc.md
+    - name: Envoyer et recevoir des données de façon incrémentielle avec FILESTREAM (ODBC)
+      href: ../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md
+    - name: Prise en charge de tables UDT volumineuses
+      href: ../../native-client-odbc-how-to/support-for-large-udts.md
+    - name: Appeler SQLColumns sur une table avec des colonnes éparses
+      href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
+    - name: "Procédure\_: insérer des lignes dans la colonne de géographie (ODBC)"
+      href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
+    - name: Obtenir une authentification Kerberos mutuelle
+      href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

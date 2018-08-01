@@ -1,0 +1,35 @@
+- name: Vue d'ensemble
+  href: sql-server-database-engine-overview.md
+- name: "Nouveautés - SQL Server\_2017"
+  href: whats-new-in-sql-server-2017.md
+- name: "Nouveautés - SQL Server\_2016"
+  href: whats-new-in-sql-server-2016.md
+- name: Notes de publication
+  items:
+    - name: "compatibilité descendante\_;"
+      href: sql-server-database-engine-backward-compatibility.md
+    - name: "Déprécié dans SQL Server\_2017"
+      href: deprecated-database-engine-features-in-sql-server-2017.md
+    - name: "Déprécié dans SQL Server\_2016"
+      href: deprecated-database-engine-features-in-sql-server-2016.md
+    - name: "Fonctionnalités supprimées dans SQL Server\_2016"
+      href: discontinued-database-engine-functionality-in-sql-server-2016.md
+    - name: "Changements cassants dans SQL Server\_2017"
+      href: breaking-changes-to-database-engine-features-in-sql-server-2017.md
+    - name: "Changements cassants dans SQL Server\_2016"
+      href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
+    - name: Articles nouveaux et mis à jour
+      href: new-updated-database-engine.md
+- name: Install
+  href: ../database-engine/install-windows/installation-for-sql-server-2016.md
+- name: Configurer
+  href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
+- name: Haute disponibilité
+  href: sql-server-business-continuity-dr.md
+  items:
+    - name: Groupes de disponibilité
+      href: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
+    - name: Mise en miroir de bases de données
+      href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
+    - name: Copie des journaux de transaction
+      href: ../database-engine/log-shipping/about-log-shipping-sql-server.md

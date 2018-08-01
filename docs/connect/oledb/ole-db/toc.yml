@@ -1,0 +1,48 @@
+- name: "Programmation OLE\_DB Driver pour SQL Server"
+  href: oledb-driver-for-sql-server-programming.md
+- name: Domaines spécifiques
+  items:
+    - name: Créer des applications OLE DB Driver pour SQL Server +
+      href: ../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md
+    - name: "Objets source de données (OLE\_DB) +"
+      href: ../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md
+    - name: Commandes +
+      href: ../../oledb/ole-db-commands/commands.md
+    - name: Ensembles de lignes +
+      href: ../../oledb/ole-db-rowsets/rowsets.md
+    - name: Objets blob +
+      href: ../../oledb/ole-db-blobs/blobs-and-ole-objects.md
+    - name: Index de tables +
+      href: ../../oledb/ole-db-tables-indexes/tables-and-indexes.md
+    - name: Types de données +
+      href: ../../oledb/ole-db-data-types/data-types-ole-db.md
+    - name: Paramètres table +
+      href: ../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
+    - name: Date et heure +
+      href: ../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md
+    - name: Transactions +
+      href: ../../oledb/ole-db-transactions/transactions.md
+    - name: Erreurs +
+      href: ../../oledb/ole-db-errors/errors.md
+    - name: Interfaces +
+      href: ../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md
+    - name: Procédure +
+      href: ../../oledb/ole-db-how-to/ole-db-how-to-topics.md
+- name: Types CLR volumineux définis par l'utilisateur
+  href: large-clr-user-defined-types-ole-db.md
+- name: Prise en charge des ensembles de lignes de schéma
+  href: schema-rowset-support-ole-db.md
+- name: Ensembles de lignes de schéma - Prise en charge des requêtes distribuées
+  href: schema-rowsets-distributed-query-support.md
+- name: Ensembles de lignes de schéma - Ensemble de lignes LINKEDSERVERS
+  href: schema-rowsets-linkedservers-rowset.md
+- name: Noms de principaux du service (SPN) dans les connexions clientes
+  href: service-principal-names-spns-in-client-connections-ole-db.md
+- name: Prise en charge des colonnes éparses
+  href: sparse-columns-support-ole-db.md
+- name: Procédures stockées - Appel
+  href: stored-procedures-calling.md
+- name: Procédures stockées - Exécution
+  href: stored-procedures-running.md
+- name: Procédures stockées
+  href: stored-procedures.md

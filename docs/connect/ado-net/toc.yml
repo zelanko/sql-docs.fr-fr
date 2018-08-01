@@ -1,0 +1,10 @@
+- name: Microsoft ADO.NET pour SQL Server
+  href: microsoft-ado-net-for-sql-server.md
+- name: "Étape\_1\_: Configurer l’environnement de développement pour le développement ADO.NET"
+  href: step-1-configure-development-environment-for-ado-net-development.md
+- name: "Étape\_2\_: Créer une base de données SQL pour le développement ADO.NET"
+  href: step-2-create-a-sql-database-for-ado-net-development.md
+- name: "Étape\_3\_: Preuve de concept pour la connexion à SQL à l’aide d’ADO.NET"
+  href: step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
+- name: "Étape\_4\_: Connexion résiliente à SQL avec ADO.NET"
+  href: step-4-connect-resiliently-to-sql-with-ado-net.md

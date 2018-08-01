@@ -1,0 +1,328 @@
+- name: Concepts de base d’ADO
+  href: ado-fundamentals.md
+- name: Objets et collections ADO
+  href: ado-objects-and-collections.md
+- name: "HelloData\_: une application ADO simple"
+  href: hellodata-a-simple-ado-application.md
+  items:
+    - name: Commentaires sur HelloData
+      href: comments-on-hellodata.md
+    - name: Code de HelloData
+      href: hellodata-code.md
+- name: Fournisseurs OLE DB (ADO)
+  href: ole-db-providers-ado.md
+  items:
+    - name: Fournisseurs de données
+      href: data-providers.md
+    - name: Fournisseurs et composants de services
+      href: service-providers-and-components.md
+- name: Erreurs (ADO)
+  href: errors-ado.md
+- name: Obtention de données
+  href: getting-data.md
+  items:
+    - name: Connexion à des sources de données
+      href: connecting-to-data-sources.md
+      items:
+        - name: Utilisation d’un objet Connection
+          href: using-a-connection-object.md
+        - name: Utilisation d’un objet Recordset
+          href: using-a-recordset-object.md
+        - name: Création d’une chaîne de connexion
+          href: creating-a-connection-string.md
+        - name: Spécification des propriétés d’une connexion
+          href: specifying-connection-properties.md
+        - name: Contrôle des transactions (ADO)
+          href: controlling-transactions-ado.md
+    - name: Préparation et l’exécution de commandes
+      href: preparing-and-executing-commands.md
+      items:
+        - name: Vue d’ensemble de l’objet Command
+          href: command-object-overview.md
+        - name: Création et exécution d’une commande simple
+          href: creating-and-executing-a-simple-command.md
+        - name: Paramètres de l’objet Command
+          href: command-object-parameters.md
+        - name: Appel d’une procédure stockée avec une commande
+          href: calling-a-stored-procedure-with-a-command.md
+        - name: Appel d’une procédure stockée en tant que méthode sur un objet Connection
+          href: calling-a-stored-procedure-as-a-method-on-a-connection-object.md
+        - name: Commandes nommées
+          href: named-commands.md
+        - name: Passage de paramètres à une commande nommée
+          href: passing-parameters-to-a-named-command.md
+    - name: Réception de résultats
+      href: receiving-results.md
+      items:
+        - name: Réception de plusieurs recordsets
+          href: receiving-multiple-recordsets.md
+- name: Examen des données
+  href: examining-data.md
+  items:
+    - name: Enregistrement actif et taille du recordset
+      href: current-record-and-size-of-recordset.md
+    - name: Limites d’un recordset
+      href: boundaries-of-a-recordset.md
+    - name: Navigation dans les données
+      href: navigating-through-data.md
+      items:
+        - name: Accès à un enregistrement
+          href: jumping-to-a-record.md
+        - name: Autres méthodes de déplacement dans un recordset
+          href: more-ways-to-move-in-a-recordset.md
+        - name: Utilisation de signets
+          href: using-bookmarks.md
+        - name: Utilisation de pages
+          href: using-pages.md
+        - name: Positionnement dans un recordset
+          href: recordset-positioning.md
+    - name: Exemple de recordset pour l’examen des données
+      href: sample-recordset-for-examining-data.md
+      items:
+        - name: Exemple de code JScript pour retourner un recordset
+          href: jscript-code-example-to-return-a-recordset.md
+    - name: Présentation de la structure d’un recordset
+      href: understanding-recordset-structure.md
+      items:
+        - name: 'Fields, collection'
+          href: the-fields-collection.md
+        - name: 'Field, objet'
+          href: the-field-object.md
+        - name: Utilisation des recordsets
+          href: working-with-recordsets.md
+- name: Modification des données
+  href: editing-data.md
+  items:
+    - name: Modification d’enregistrements existants
+      href: editing-existing-records.md
+    - name: Ajout d’enregistrements
+      href: adding-records.md
+      items:
+        - name: Ajout d’enregistrements avec AddNew
+          href: adding-records-using-addnew.md
+        - name: Ajout de plusieurs champs
+          href: adding-multiple-fields.md
+        - name: Détermination du mode d’édition
+          href: determining-edit-mode.md
+        - name: Utilisation d’AddNew dans les modes immédiat et batch
+          href: using-addnew-in-immediate-and-batch-modes.md
+    - name: Détermination de ce qui est pris en charge
+      href: determining-what-is-supported.md
+    - name: Suppression d’enregistrements avec la méthode Delete
+      href: deleting-records-using-the-delete-method.md
+    - name: "Alternatives\_: utilisation d’instructions SQL"
+      href: alternatives-using-sql-statements.md
+- name: Mise à jour et enregistrement des données
+  href: updating-and-persisting-data.md
+  items:
+    - name: Mise à jour des données
+      href: updating-data.md
+      items:
+        - name: Mode immédiat
+          href: immediate-mode.md
+        - name: Mode Lot
+          href: batch-mode.md
+          items:
+            - name: "Envoi des mises à jour\_: méthode UpdateBatch"
+              href: sending-the-updates-updatebatch-method.md
+            - name: Filtrage des enregistrements mis à jour
+              href: filtering-for-updated-records.md
+            - name: Traitement des mises à jour ayant échoué
+              href: dealing-with-failed-updates.md
+            - name: Détection et résolution des conflits
+              href: detecting-and-resolving-conflicts.md
+            - name: Déconnexion et reconnexion du recordset
+              href: disconnecting-and-reconnecting-the-recordset.md
+            - name: "Mise à jour des résultats d’une jointure\_: table unique"
+              href: updating-joined-results-unique-table.md
+        - name: Traitement des transactions
+          href: transaction-processing.md
+    - name: Persistance des données
+      href: persisting-data.md
+      items:
+        - name: En savoir plus sur la persistance des recordsets
+          href: more-about-recordset-persistence.md
+        - name: Persistance des recordsets filtrés et hiérarchiques
+          href: persisting-filtered-and-hierarchical-recordsets.md
+        - name: Persistance des enregistrements au format XML
+          href: persisting-records-in-xml-format.md
+          items:
+            - name: Format de persistance XML
+              href: xml-persistence-format.md
+            - name: Espaces de noms
+              href: namespaces.md
+            - name: Section de schéma
+              href: schema-section.md
+            - name: Section de données
+              href: data-section.md
+            - name: Recordsets hiérarchiques dans XML
+              href: hierarchical-recordsets-in-xml.md
+            - name: Propriétés dynamiques du recordset dans XML
+              href: recordset-dynamic-properties-in-xml.md
+            - name: Transformations XSLT
+              href: xslt-transformations.md
+            - name: Enregistrement dans l’objet DOM XML
+              href: saving-to-the-xml-dom-object.md
+            - name: Considérations relatives à la sécurité de XML
+              href: xml-security-considerations.md
+            - name: Scénario de persistance des recordsets XML
+              href: xml-recordset-persistence-scenario.md
+- name: Gestion des erreurs
+  href: error-handling.md
+  items:
+    - name: Erreurs ADO
+      href: ado-errors.md
+      items:
+        - name: Informations de référence sur les erreurs ADO
+          href: ado-error-reference.md
+    - name: Erreurs du fournisseur
+      href: provider-errors.md
+    - name: Informations sur les erreurs liées aux champs
+      href: field-related-error-information.md
+    - name: Informations sur les erreurs liées aux recordsets
+      href: recordset-related-error-information.md
+    - name: Gestion des erreurs dans d’autres langages
+      href: handling-errors-in-other-languages.md
+      items:
+        - name: Gestion des erreurs dans VBScript
+          href: handling-errors-in-vbscript.md
+        - name: Gestion des erreurs dans Visual C++
+          href: handling-errors-in-visual-c.md
+        - name: Gestion des erreurs dans Visual J++
+          href: handline-errors-in-visual-j.md
+        - name: Gestion des erreurs dans JScript
+          href: handling-errors-in-jscript.md
+    - name: Anticipation des erreurs
+      href: anticipating-errors.md
+- name: Gestion des événements ADO
+  href: handling-ado-events.md
+  items:
+    - name: Présentation rapide du gestionnaire d’événements ADO
+      href: ado-event-handler-summary.md
+    - name: Types d’événements
+      href: types-of-events.md
+    - name: Paramètres des événements
+      href: event-parameters.md
+    - name: Fonctionnement conjoint des gestionnaires d’événements
+      href: how-event-handlers-work-together.md
+    - name: Instanciation des événements ADO par langage
+      href: ado-event-instantiation-by-language.md
+      items:
+        - name: "Instanciation des événements ADO\_: Visual Basic"
+          href: ado-event-instantiation-visual-basic.md
+        - name: "Instanciation des événements ADO\_: Visual C++"
+          href: ado-event-instantiation-visual-c.md
+        - name: "Instanciation des événements ADO\_: Visual J++"
+          href: ado-event-instantiation-visual-j.md
+        - name: "Instanciation des événements ADO\_: VBScript"
+          href: ado-event-instantiation-vbscript.md
+        - name: "Instanciation des événements ADO\_: JScript"
+          href: ado-event-instantiation-jscript.md
+        - name: "Instanciation des événements ADO\_: ADO et WFC"
+          href: ado-event-instantiation-ado-and-wfc.md
+- name: Présentation des curseurs et des verrous
+  href: understanding-cursors-and-locks.md
+  items:
+    - name: "Qu’est qu’un curseur\_?"
+      href: what-is-a-cursor.md
+    - name: Types de curseurs (ADO)
+      href: types-of-cursors-ado.md
+      items:
+        - name: Curseurs avant uniquement
+          href: forward-only-cursors.md
+        - name: Curseurs statiques
+          href: static-cursors.md
+        - name: Curseurs de jeu de clés
+          href: keyset-cursors.md
+        - name: Curseurs dynamiques
+          href: dynamic-cursors.md
+    - name: Signification de l’emplacement du curseur
+      href: the-significance-of-cursor-location.md
+    - name: Service de curseur Microsoft pour OLE DB
+      href: the-microsoft-cursor-service-for-ole-db.md
+    - name: "Qu’est qu’un verrou\_?"
+      href: what-is-a-lock.md
+      items:
+        - name: Types de verrous
+          href: types-of-locks.md
+    - name: Utilisation de CacheSize
+      href: using-cachesize.md
+    - name: Caractéristiques des curseurs et des verrous
+      href: cursor-and-lock-characteristics.md
+- name: Mise en forme des données
+  href: data-shaping.md
+  items:
+    - name: Vue d’ensemble de la mise en forme des données
+      href: data-shaping-overview.md
+    - name: Exemple de mise en forme des données
+      href: data-shaping-example.md
+      items:
+        - name: Exemple Visual Basic de mise en forme des données
+          href: visual-basic-example-of-data-shaping.md
+    - name: Remise en forme
+      href: reshaping.md
+    - name: Agrégats de petits-enfants
+      href: grandchild-aggregates.md
+    - name: Commandes paramétrées avec des commandes COMPUTE intermédiaires
+      href: parameterized-commands-with-intervening-compute-commands.md
+    - name: Persistance des recordsets hiérarchiques
+      href: persisting-hierarchical-recordsets.md
+    - name: Fournisseurs nécessaires pour la mise en forme des données
+      href: required-providers-for-data-shaping.md
+    - name: Généralités sur les commandes SHAPE
+      href: shape-commands-in-general.md
+      items:
+        - name: 'Fonctions d’agrégation, fonction CALC et mot clé NEW'
+          href: aggregate-functions-the-calc-function-and-the-new-keyword.md
+        - name: Émission de commandes vers le fournisseur de données sous-jacent
+          href: issuing-commands-to-the-underlying-data-provider.md
+    - name: Clause APPEND de la commande SHAPE
+      href: shape-append-clause.md
+      items:
+        - name: Fonctionnement des commandes non paramétrées
+          href: operation-of-non-parameterized-commands.md
+        - name: Fonctionnement des commandes paramétrées
+          href: operation-of-parameterized-commands.md
+        - name: Commandes hybrides
+          href: hybrid-commands.md
+        - name: Clauses COMPUTE intermédiaires de la commande SHAPE
+          href: intervening-shape-compute-clauses.md
+    - name: Clause COMPUTE de la commande SHAPE
+      href: shape-compute-clause.md
+    - name: Fabrication de recordsets hiérarchiques
+      href: fabricating-hierarchical-recordsets.md
+    - name: Accès aux lignes dans un recordset hiérarchique
+      href: accessing-rows-in-a-hierarchical-recordset.md
+    - name: Grammaire formelle de la commande SHAPE
+      href: formal-shape-grammar.md
+    - name: Fonctions Visual Basic pour Applications
+      href: visual-basic-for-applications-functions.md
+- name: Enregistrements et flux
+  href: records-and-streams.md
+  items:
+    - name: Flux et persistance
+      href: streams-and-persistence.md
+    - name: Flux de commandes
+      href: command-streams.md
+    - name: Récupération de jeux de résultats dans les flux
+      href: retrieving-resultsets-into-streams.md
+    - name: Utilisation d’ADO pour la publication Internet
+      href: using-ado-for-internet-publishing.md
+      items:
+        - name: Fournisseur OLE DB pour la publication Internet
+          href: the-ole-db-provider-for-internet-publishing.md
+        - name: Scénario de publication Internet
+          href: internet-publishing-scenario.md
+          items:
+            - name: "Étape 1\_: Configurer le projet Visual Basic"
+              href: step-1-set-up-the-visual-basic-project.md
+            - name: "Étape 2\_: Initialiser la zone de liste principale"
+              href: step-2-initialize-the-main-list-box.md
+            - name: "Étape 3\_: Remplir la zone de liste des champs"
+              href: step-3-populate-the-fields-list-box.md
+            - name: "Étape 4\_: Remplir la zone de texte Détails"
+              href: step-4-populate-the-details-text-box.md
+        - name: URL absolues et relatives
+          href: absolute-and-relative-urls.md
+        - name: Enregistrements et champs fournis par le fournisseur
+          href: records-and-provider-supplied-fields.md

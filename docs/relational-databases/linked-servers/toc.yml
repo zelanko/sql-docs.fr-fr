@@ -1,0 +1,4 @@
+- name: Vue d'ensemble
+  href: linked-servers-database-engine.md
+- name: Créer des serveurs liés
+  href: create-linked-servers-sql-server-database-engine.md

@@ -1,0 +1,40 @@
+- name: Aide (F1) pour les connexions serveur (SSMS)
+  href: f1-help-for-server-connections-sql-server-management-studio.md
+- name: Se connecter au service Stockage Microsoft Azure
+  href: connect-to-microsoft-azure-storage.md
+- name: Se connecter à n'importe quel composant de SQL Server à partir de SQL Server Management Studio
+  href: connect-to-any-sql-server-component-from-sql-server-management-studio.md
+- name: Propriétés de connexion (boîte de dialogue)
+  href: connection-properties-dialog-box.md
+- name: Se connecter au serveur (Moteur de base de données)
+  href: connect-to-server-database-engine.md
+- name: Se connecter au serveur - Page Propriétés - Moteur de base de données
+  href: connect-to-server-connection-properties-page-database-engine.md
+- name: Se connecter au serveur - Connexion - Moteur de base de données
+  href: connect-to-server-login-page-database-engine.md
+- name: Connexion - Se connecter au serveur SSAS
+  href: connect-to-server-login-page-analysis-services.md
+- name: Se connecter à SSAS
+  href: connect-to-server-analysis-services.md
+- name: Se connecter au serveur SSAS (page Propriétés de connexion)
+  href: connect-to-server-connection-properties-page-analysis-services.md
+- name: Connexion - Se connecter au serveur SSRS
+  href: connect-to-server-login-page-reporting-services.md
+- name: Se connecter au serveur SSRS
+  href: connect-to-server-reporting-services.md
+- name: Se connecter au serveur SSRS (page Propriétés de connexion)
+  href: connect-to-server-connection-properties-page-reporting-services.md
+- name: Parcourir les serveurs (Serveurs locaux)
+  href: browse-for-servers-local-servers.md
+- name: Se connecter au serveur (page Paramètres de connexion supplémentaires)
+  href: connect-to-server-additional-connection-parameters-page.md
+- name: Parcourir les serveurs (Serveurs réseau)
+  href: browse-for-servers-network-servers.md
+- name: Mot de passe expiré
+  href: password-expired.md
+- name: Se connecter au serveur SSIS
+  href: connect-to-server-integration-services.md
+- name: Se connecter au serveur SSIS (page Connexion)
+  href: connect-to-server-login-page-integration-services.md
+- name: Se connecter au serveur SSIS (page Propriétés de connexion)
+  href: connect-to-server-connection-properties-page-integration-services.md

@@ -1,0 +1,14 @@
+- name: Accès aux données à partir d'objets de base de données CLR
+  href: data-access-from-clr-database-objects.md
+- name: "ADO.NET in-process\_+"
+  href: ../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md
+- name: "Transactions d’accès aux données\_+"
+  href: ../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md
+- name: Connexion contextuelle
+  href: context-connection.md
+- name: "Connexions contextuelles et connexions standard\_- Restrictions"
+  href: context-connections-and-regular-connections-restrictions.md
+- name: Connexions contextuelles et connexions standard
+  href: context-connections-vs-regular-connections.md
+- name: Emprunt d'identité et informations d'identification pour les connexions
+  href: impersonation-and-credentials-for-connections.md

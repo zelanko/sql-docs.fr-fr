@@ -1,0 +1,10 @@
+- name: "Nouveautés de SQL Server\_2014"
+  href: what-s-new-in-sql-server-2016.md
+- name: Solutions haute disponibilité +
+  href: failover-clusters/high-availability-solutions-sql-server.md
+- name: Limites de capacité de calcul des éditions de SQL Server 2014
+  href: compute-capacity-limits-by-edition-of-sql-server.md
+- name: Éditions et composants
+  href: editions-and-components-of-sql-server-2016.md
+- name: Spécifications de capacité maximale
+  href: maximum-capacity-specifications-for-sql-server.md

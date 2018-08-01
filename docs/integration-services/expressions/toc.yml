@@ -1,0 +1,162 @@
+- name: Vue d'ensemble
+  href: integration-services-ssis-expressions.md
+- name: Exemples d'expressions Integration Services avancées
+  href: examples-of-advanced-integration-services-expressions.md
+- name: Expressions de propriété dans des packages
+  href: use-property-expressions-in-packages.md
+  items:
+    - name: Constantes énumérées dans des expressions de propriété
+      href: enumerated-constants-in-property-expressions.md
+    - name: Ajouter ou modifier une expression de propriété
+      href: add-or-change-a-property-expression.md
+      items:
+        - name: Page Expressions
+          href: expressions-page.md
+        - name: Éditeur d'expressions de la propriété
+          href: property-expressions-editor.md
+        - name: Générateur d'expressions
+          href: expression-builder.md
+- name: Types de données Integration Services dans les expressions
+  href: integration-services-data-types-in-expressions.md
+- name: Troncation de données (SSIS)
+  href: data-truncation-ssis.md
+- name: Remplissage des chaînes (SSIS)
+  href: string-padding-ssis.md
+- name: Syntaxe (SSIS)
+  href: syntax-ssis.md
+- name: Identificateurs (SSIS)
+  href: identifiers-ssis.md
+- name: Littéraux (SSIS)
+  href: numeric-string-and-boolean-literals.md
+- name: Opérateurs (expression SSIS)
+  href: operators-ssis-expression.md
+  items:
+    - name: Priorités et associativité des opérateurs
+      href: operator-precedence-and-associativity.md
+    - name: Cast (expression SSIS)
+      href: cast-ssis-expression.md
+    - name: () (Parenthèses) (expression SSIS)
+      href: parentheses-ssis-expression.md
+    - name: + (Addition) (SSIS)
+      href: add-ssis.md
+    - name: + (Concaténation) (expression SSIS)
+      href: concatenate-ssis-expression.md
+    - name: '- (Soustraction) (expression SSIS)'
+      href: subtract-ssis-expression.md
+    - name: '- (Négation) (expression SSIS)'
+      href: negate-ssis-expression.md
+    - name: '* (Multiplication) (expression SSIS)'
+      href: multiply-ssis-expression.md
+    - name: Diviser (expression SSIS)
+      href: divide-ssis-expression.md
+    - name: (Modulo) (expression SSIS)
+      href: modulo-ssis-expression.md
+    - name: '|| (OU logique) (expression SSIS)'
+      href: logical-or-ssis-expression.md
+    - name: '&& (ET logique) (expression SSIS)'
+      href: logical-and-ssis-expression.md
+    - name: '! (Non logique) (expression SSIS)'
+      href: logical-not-ssis-expression.md
+    - name: '| (OR inclusive au niveau du bit) (expression SSIS)'
+      href: bitwise-inclusive-or-ssis-expression.md
+    - name: ^ (OR exclusif au niveau du bit) (expression SSIS)
+      href: bitwise-exclusive-or-ssis-expression.md
+    - name: '& (AND au niveau du bit) (expression SSIS)'
+      href: bitwise-and-ssis-expression.md
+    - name: ~ (NOT au niveau du bit) (expression SSIS)
+      href: bitwise-not-ssis-expression.md
+    - name: == (Égal à) (expression SSIS)
+      href: equal-ssis-expression.md
+    - name: '!= (Différent de) (expression SSIS)'
+      href: unequal-ssis-expression.md
+    - name: '> (Supérieur à) (expression SSIS)'
+      href: greater-than-ssis-expression.md
+    - name: < (Inférieur à) (expression SSIS)
+      href: less-than-ssis-expression.md
+    - name: '>= (Supérieur ou égal à) (expression SSIS)'
+      href: greater-than-or-equal-to-ssis-expression.md
+    - name: <= (Inférieur ou égal à) (expression SSIS)
+      href: less-than-or-equal-to-ssis-expression.md
+    - name: '? : (Conditionnel) (expression SSIS)'
+      href: conditional-ssis-expression.md
+- name: Fonctions (expression SSIS)
+  href: functions-ssis-expression.md
+  items:
+    - name: ABS (expression SSIS)
+      href: abs-ssis-expression.md
+    - name: CEILING (expression SSIS)
+      href: ceiling-ssis-expression.md
+    - name: CODEPOINT (expression SSIS)
+      href: codepoint-ssis-expression.md
+    - name: DATEADD (expression SSIS)
+      href: dateadd-ssis-expression.md
+    - name: DATEDIFF (expression SSIS)
+      href: datediff-ssis-expression.md
+    - name: DATEPART (expression SSIS)
+      href: datepart-ssis-expression.md
+    - name: DAY (expression SSIS)
+      href: day-ssis-expression.md
+    - name: EXP (expression SSIS)
+      href: exp-ssis-expression.md
+    - name: FINDSTRING (expression SSIS)
+      href: findstring-ssis-expression.md
+    - name: FLOOR (expression SSIS)
+      href: floor-ssis-expression.md
+    - name: GETDATE (expression SSIS)
+      href: getdate-ssis-expression.md
+    - name: GETUTCDATE (expression SSIS)
+      href: getutcdate-ssis-expression.md
+    - name: HEX (expression SSIS)
+      href: hex-ssis-expression.md
+    - name: ISNULL (expression SSIS)
+      href: isnull-ssis-expression.md
+    - name: LEFT (expression SSIS)
+      href: left-ssis-expression.md
+    - name: LEN (expression SSIS)
+      href: len-ssis-expression.md
+    - name: LN (expression SSIS)
+      href: ln-ssis-expression.md
+    - name: LOG (expression SSIS)
+      href: log-ssis-expression.md
+    - name: LOWER (expression SSIS)
+      href: lower-ssis-expression.md
+    - name: LTRIM (expression SSIS)
+      href: ltrim-ssis-expression.md
+    - name: MONTH (expression SSIS)
+      href: month-ssis-expression.md
+    - name: NULL (expression SSIS)
+      href: null-ssis-expression.md
+    - name: POWER (expression SSIS)
+      href: power-ssis-expression.md
+    - name: REPLACE (expression SSIS)
+      href: replace-ssis-expression.md
+    - name: REPLACENULL (expression SSIS)
+      href: replacenull-ssis-expression.md
+    - name: REPLICATE (expression SSIS)
+      href: replicate-ssis-expression.md
+    - name: REVERSE (expression SSIS)
+      href: reverse-ssis-expression.md
+    - name: RIGHT (expression SSIS)
+      href: right-ssis-expression.md
+    - name: ROUND (expression SSIS)
+      href: round-ssis-expression.md
+    - name: RTRIM (expression SSIS)
+      href: rtrim-ssis-expression.md
+    - name: SIGN (expression SSIS)
+      href: sign-ssis-expression.md
+    - name: SQRT (expression SSIS)
+      href: sqrt-ssis-expression.md
+    - name: SQUARE (expression SSIS)
+      href: square-ssis-expression.md
+    - name: SUBSTRING (expression SSIS)
+      href: substring-ssis-expression.md
+    - name: TOKEN  (expression SSIS)
+      href: token-ssis-expression.md
+    - name: TOKENCOUNT (expression SSIS)
+      href: tokencount-ssis-expression.md
+    - name: TRIM (expression SSIS)
+      href: trim-ssis-expression.md
+    - name: UPPER (expression SSIS)
+      href: upper-ssis-expression.md
+    - name: YEAR (expression SSIS)
+      href: year-ssis-expression.md

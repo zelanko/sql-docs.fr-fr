@@ -1,0 +1,20 @@
+- name: Procédures stockées étendues de moteur de base de données - Programmation
+  href: database-engine-extended-stored-procedures-programming.md
+- name: Ajout d'une procédure stockée étendue à SQL Server
+  href: adding-an-extended-stored-procedure-to-sql-server.md
+- name: Création de procédures stockées étendues
+  href: creating-extended-stored-procedures.md
+- name: Caractéristiques d'exécution des procédures stockées étendues
+  href: execution-characteristics-of-extended-stored-procedures.md
+- name: Fonctionnement des procédures stockées étendues
+  href: how-extended-stored-procedures-work.md
+- name: Interrogation des procédures stockées étendues installées dans SQL Server
+  href: querying-extended-stored-procedures-installed-in-sql-server.md
+- name: Suppression d'une procédure stockée étendue de SQL Server
+  href: removing-an-extended-stored-procedure-from-sql-server.md
+- name: Envoi de jeux de résultats au serveur (API de procédure stockée étendue)
+  href: sending-result-sets-to-the-server-extended-stored-procedure-api.md
+- name: Données Unicode et pages de codes du serveur
+  href: unicode-data-and-server-code-pages.md
+- name: Déchargement d'une DLL de procédure stockée étendue
+  href: unloading-an-extended-stored-procedure-dll.md

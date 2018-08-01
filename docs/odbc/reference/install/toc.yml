@@ -1,0 +1,50 @@
+- name: Sous-clé ODBC
+  href: odbc-subkey.md
+- name: Configuration de sources de données
+  href: configuring-data-sources.md
+- name: DLL d’installation
+  href: installer-dll.md
+- name: Installation et configuration du logiciel ODBC
+  href: installing-and-configuring-the-odbc-software.md
+- name: Sous-clés de spécification de source de données
+  href: data-source-specification-subkeys.md
+- name: Entrées de Registre pour les composants ODBC
+  href: registry-entries-for-odbc-components.md
+- name: Informations de référence sur les composants d’installation et de configuration
+  href: installation-and-configuration-components-reference.md
+- name: Installation des composants ODBC
+  href: installing-odbc-components.md
+- name: Sous-clés de spécification de pilote
+  href: driver-specification-subkeys.md
+- name: DLL de configuration de convertisseur
+  href: translator-setup-dlls.md
+- name: Programme d’administration
+  href: administration-program.md
+- name: Sous-clé par défaut
+  href: default-subkey.md
+- name: Sous-clé du pilote par défaut
+  href: default-driver-subkey.md
+- name: Composants d’installation
+  href: installation-components.md
+- name: Programme d’installation
+  href: setup-program.md
+- name: Fichiers d’en-tête ODBC
+  href: odbc-header-files.md
+- name: Sous-clé des pilotes ODBC
+  href: odbc-drivers-subkey.md
+- name: Entrées de Registre pour les sources de données
+  href: registry-entries-for-data-sources.md
+- name: Sous-clé de convertisseurs ODBC
+  href: odbc-translators-subkey.md
+- name: DLL de configuration de pilote
+  href: driver-setup-dll.md
+- name: Sous-clés de spécification de convertisseur
+  href: translator-specification-subkeys.md
+- name: Composants de configuration
+  href: configuration-components.md
+- name: Sous-clé des sources de données ODBC
+  href: odbc-data-sources-subkey.md
+- name: Nombre d’utilisations
+  href: usage-counting.md
+- name: Sous-clé des composants principaux ODBC
+  href: odbc-core-subkey.md

@@ -1,0 +1,30 @@
+- name: Fonctionnalités clientes ADOMD.NET
+  href: adomd-net-client-functionality.md
+- name: Programmation du client ADOMD.NET
+  href: adomd-net-client-programming.md
+- name: Connexions dans ADOMD.NET - Établissement de connexions sécurisées
+  href: connections-in-adomd-net-establishing-secure-connections.md
+- name: Connexions dans ADOMD.NET - Exécution de transactions
+  href: connections-in-adomd-net-performing-transactions.md
+- name: Connexions dans ADOMD.NET - Utilisation de connexions et de sessions
+  href: connections-in-adomd-net-working-with-connections-and-sessions.md
+- name: Connexions dans ADOMD.NET
+  href: connections-in-adomd-net.md
+- name: Exécution de commandes sur une source de données analytiques
+  href: executing-commands-against-an-analytical-data-source.md
+- name: Migration d'ADO MD vers ADOMD.NET
+  href: migrating-from-ado-md-to-adomd-net.md
+- name: Récupération de données à partir d'une source de données analytiques
+  href: retrieving-data-from-an-analytical-data-source.md
+- name: Récupération de données à l'aide d'AdomdDataReader
+  href: retrieving-data-using-the-adomddatareader.md
+- name: Récupération de données à l'aide d'un ensemble de cellules
+  href: retrieving-data-using-the-cellset.md
+- name: Récupération de données à l'aide de XmlReader
+  href: retrieving-data-using-the-xmlreader.md
+- name: Récupération des métadonnées - Utilisation du modèle objet ADOMD.NET
+  href: retrieving-metadata-working-with-adomd-net-object-model.md
+- name: Récupération des métadonnées - Utilisation des ensembles de lignes de schéma
+  href: retrieving-metadata-working-with-schema-rowsets.md
+- name: Récupération de métadonnées à partir d'une source de données analytiques
+  href: retrieving-metadata-from-an-analytical-data-source.md

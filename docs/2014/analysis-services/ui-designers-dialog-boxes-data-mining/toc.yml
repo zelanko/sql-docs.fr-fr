@@ -1,0 +1,122 @@
+- name: Concepteurs et boîtes de dialogue d’interface utilisateur pour l’exploration de données
+  href: ui-designers-dialog-boxes-data-mining.md
+- name: Concepteurs et boîtes de dialogue d'exploration de données
+  href: ../data-mining-designers-and-dialog-boxes.md
+  items:
+    - name: Concepteur de modèle d'exploration de données
+      href: ../data-mining-model-designer-analysis-services-data-mining.md
+    - name: Vue Structure d'exploration de données (Concepteur de modèle d'exploration de données)
+      href: ../mining-structure-view-data-mining-model-designer.md
+    - name: Boîte de dialogue Nouveau modèle d'exploration de données (vue Structure d'exploration de données)
+      href: ../new-mining-model-dialog-box-mining-structure-view.md
+    - name: Boîte de dialogue Sélectionner une colonne (vue Structure d'exploration de données)
+      href: ../select-a-column-dialog-box-mining-structure-view.md
+    - name: Boîte de dialogue Sélectionner la colonne clé de table imbriquée (vue Structure d'exploration de données)
+      href: ../select-a-nested-table-key-column-dialog-box-mining-structure-view.md
+    - name: Boîte de dialogue Créer une dimension d'exploration de données
+      href: ../create-data-mining-dimension-dialog.md
+    - name: Vue Modèles d'exploration de données (Concepteur de modèle d'exploration de données)
+      href: ../mining-models-view-data-mining-model-designer.md
+    - name: Boîte de dialogue Paramètres d'algorithme (Vue Modèles d'exploration de données)
+      href: ../algorithm-parameters-dialog-box-mining-models-view.md
+    - name: Boîte de dialogue Filtre de jeu de données/Filtre de modèle
+      href: ../data-set-filter-or-model-filter-dialog-box.md
+      items:
+        - name: 'Filtrer, boîte de dialogue (Graphique d''analyse de précision de l''exploration de données)'
+          href: ../filter-dialog-box-mining-accuracy-chart.md
+- name: Visionneuses de modèle d'exploration de données
+  href: ../mining-model-viewers-data-mining-model-designer.md
+  items:
+    - name: Onglet Caractéristiques d'attribut
+      href: ../attribute-characteristics-tab-mining-model-viewer.md
+    - name: Onglet Discrimination d'attribut
+      href: ../attribute-discrimination-tab-mining-model-viewer.md
+    - name: Onglet Profils d'attribut
+      href: ../attribute-profiles-tab-mining-model-viewer.md
+    - name: Onglet Graphique (visionneuse de l'algorithme MTS)
+      href: ../chart-tab-mining-model-viewers.md
+    - name: Onglet Caractéristiques du cluster
+      href: ../cluster-characteristics-tab-mining-model-viewer.md
+    - name: Onglet Diagramme de cluster
+      href: ../cluster-diagram-tab-mining-model-viewer.md
+    - name: Onglet Discrimination de cluster
+      href: ../cluster-discrimination-tab-mining-model-viewer.md
+    - name: Onglet Profils du cluster
+      href: ../cluster-profiles-tab-mining-model-viewer.md
+    - name: Onglet Arbre de décision
+      href: ../decision-tree-tab-mining-model-viewer.md
+    - name: Onglet Réseau de dépendances
+      href: ../dependency-network-tab-mining-model-viewer.md
+    - name: Extraire (boîte de dialogue)
+      href: ../drill-through-dialog-box-mining-model-viewer.md
+    - name: Boîte de dialogue Rechercher un nœud
+      href: ../find-node-dialog-box-mining-model-viewer.md
+    - name: Visionneuse de l'arborescence de contenu générique
+      href: ../microsoft-generic-content-tree-viewer-data-mining.md
+    - name: Onglet Jeux d'éléments
+      href: ../itemsets-tab-mining-model-viewer.md
+    - name: Boîte de dialogue Légende d'exploration de données
+      href: ../mining-legend-dialog-box-mining-model-viewer.md
+    - name: Onglet Neural Network
+      href: ../neural-network-mining-model-viewer.md
+    - name: Onglet Règles
+      href: ../rules-tab-mining-model-viewer.md
+    - name: Onglet Diagramme de cluster du modèle Sequence Clustering
+      href: ../sequence-clustering-cluster-diagram-tab-mining-model-viewer.md
+    - name: Onglet Profils du cluster du modèle Sequence Clustering
+      href: ../sequence-clustering-cluster-profiles-tab-mining-model-viewer.md
+    - name: Onglet Caractéristiques du cluster du modèle Sequence Clustering
+      href: ../sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md
+    - name: Onglet Discrimination de cluster du modèle Sequence Clustering
+      href: ../sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md
+    - name: Onglet Transition d'état du modèle Sequence Clustering
+      href: ../sequence-clustering-cluster-transition-tab-mining-model-viewer.md
+    - name: Onglet Modèle (visionneuse de l'algorithme MTS)
+      href: ../model-tab-mining-model-viewers.md
+- name: Concepteur graphique d'analyse de précision (exploration de données)
+  href: ../mining-accuracy-chart-designer-data-mining.md
+  items:
+    - name: Onglet Sélection d'entrée
+      href: ../input-selection-tab-mining-accuracy-chart-view.md
+    - name: Onglet Graphique de courbes d'élévation
+      href: ../lift-chart-tab-mining-accuracy-chart-view.md
+    - name: Onglet Matrice de classification
+      href: ../classification-matrix-tab-mining-accuracy-chart-view.md
+    - name: Onglet Validation croisée
+      href: ../cross-validation-tab-mining-accuracy-chart-view.md
+    - name: Boîte de dialogue Paramètres du graphique des bénéfices (vue Graphique d'analyse de précision de l'exploration de données)
+      href: ../profit-chart-settings-dialog-box-mining-accuracy-chart-view.md
+    - name: Boîte de dialogue Spécifier le mappage des colonnes (Graphique d'analyse de précision de l'exploration de données)
+      href: ../specify-column-mapping-dialog-box-mining-accuracy-chart.md
+    - name: Boîte de dialogue Sélectionnez une structure d'exploration de données (vue Graphique d'analyse de précision de l'exploration de données)
+      href: ../select-mining-structure-dialog-box-mining-accuracy-chart-view.md
+    - name: Boîte de dialogue Sélectionner une table (vue Graphique d'analyse de précision de l'exploration de données)
+      href: ../select-table-dialog-box-mining-accuracy-chart-view.md
+    - name: Boîte de dialogue Modifier le mappage (Graphique d'analyse de précision de l'exploration de données)
+      href: ../modify-mapping-dialog-box-mining-accuracy-chart.md
+    - name: Boîte de dialogue Spécifier la jointure imbriquée (vue Graphique d'analyse de précision de l'exploration de données)
+      href: ../specify-nested-join-dialog-box-mining-accuracy-chart-view.md
+- name: Générateur de requêtes de prédiction
+  href: ../prediction-query-builder-data-mining.md
+  items:
+    - name: Volet Conception
+      href: ../design-pane-mining-model-prediction-view.md
+    - name: Volet Requête
+      href: ../query-pane-mining-model-prediction-view.md
+    - name: Volet Résultats
+      href: ../result-pane-mining-model-prediction-view.md
+    - name: 'Sélectionnez un modèle d''exploration de données, boîte de dialogue'
+      href: ../select-mining-model-dialog-box-mining-model-prediction-view.md
+    - name: 'Enregistrer le résultat de la requête d''exploration de données, boîte de dialogue'
+      href: ../save-data-mining-query-result-dialog-box-mining-model-prediction-view.md
+- name: Boîte de dialogue Propriétés de structure d'exploration de données
+  href: ../mining-structure-properties-dialog-analysis-services-data-mining.md
+  items:
+    - name: Général (Boîte de dialogue Structure d'exploration de données)
+      href: ../general-mining-structure-dialog-box-analysis-services-data-mining.md
+    - name: Configuration d'erreur (boîte de dialogue Structure d'exploration de données)
+      href: ../error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md
+- name: Boîte de dialogue Propriétés du modèle d'exploration de données
+  href: ../mining-model-properties-dialog-box-analysis-services-data-mining.md
+- name: Éditeur de requête DMX
+  href: ../dmx-query-editor-analysis-services-data-mining.md

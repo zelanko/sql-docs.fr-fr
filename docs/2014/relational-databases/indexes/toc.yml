@@ -1,0 +1,60 @@
+- name: Index (moteur de base de données)
+  href: indexes.md
+- name: Segments (tables sans index cluster)
+  href: heaps-tables-without-clustered-indexes.md
+- name: Description des index cluster et non-cluster
+  href: clustered-and-nonclustered-indexes-described.md
+- name: Columnstore Indexes Described
+  href: columnstore-indexes-described.md
+- name: Utilisation des index columnstore
+  href: dbengine-columnstore-indexes.md
+- name: Créer des index cluster
+  href: create-clustered-indexes.md
+- name: "Créer des index non\_cluster"
+  href: create-nonclustered-indexes.md
+- name: Créer des index uniques
+  href: create-unique-indexes.md
+- name: Créer des index filtrés
+  href: create-filtered-indexes.md
+- name: Créer des index avec colonnes incluses
+  href: create-indexes-with-included-columns.md
+- name: Supprimer un index
+  href: delete-an-index.md
+- name: Modifier un index
+  href: modify-an-index.md
+- name: Déplacer un index existant dans un autre groupe de fichiers
+  href: move-an-existing-index-to-a-different-filegroup.md
+- name: Index sur les colonnes calculées
+  href: indexes-on-computed-columns.md
+- name: Option SORT_IN_TEMPDB pour les index
+  href: sort-in-tempdb-option-for-indexes.md
+- name: Désactiver les index et contraintes
+  href: disable-indexes-and-constraints.md
+- name: Activer les index et contraintes
+  href: enable-indexes-and-constraints.md
+- name: Renommer des index
+  href: rename-indexes.md
+- name: Définir les options d'index
+  href: set-index-options.md
+- name: Espace disque nécessaire pour les opérations DDL d'index
+  href: disk-space-requirements-for-index-ddl-operations.md
+  items:
+    - name: Espace disque du journal des transactions pour les opérations d'index
+      href: transaction-log-disk-space-for-index-operations.md
+    - name: Exemple d'espace disque d'un index
+      href: index-disk-space-example.md
+- name: Réorganiser et reconstruire des index
+  href: reorganize-and-rebuild-indexes.md
+- name: Spécifier un facteur de remplissage pour un index
+  href: specify-fill-factor-for-an-index.md
+- name: Exécuter des opérations en ligne sur les index
+  href: perform-index-operations-online.md
+  items:
+    - name: Fonctionnement des opérations d'index en ligne
+      href: how-online-index-operations-work.md
+    - name: Instructions pour les opérations d'index en ligne
+      href: guidelines-for-online-index-operations.md
+- name: Configurer des opérations d'index parallèles
+  href: configure-parallel-index-operations.md
+- name: Propriétés de l'index – Aide (F1)
+  href: index-properties-f1-help.md

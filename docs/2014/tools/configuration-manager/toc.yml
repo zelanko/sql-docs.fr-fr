@@ -1,0 +1,146 @@
+- name: Aide sur le Gestionnaire de configuration SQL Server
+  href: sql-server-configuration-manager-help.md
+- name: Services SQL Server
+  href: sql-server-services.md
+- name: Analysis Server <server> (Gestionnaire de configuration SQL Server)
+  href: analysis-server-server-sql-server-configuration-manager.md
+  items:
+    - name: Propriétés de Analysis Server (onglet Ouvrir une session)
+      href: analysis-server-properties-log-on-tab.md
+    - name: Propriétés de Analysis Server (onglet Service)
+      href: analysis-server-properties-service-tab.md
+    - name: Propriétés de Analysis Server (onglet Avancé)
+      href: analysis-server-properties-advanced-tab.md
+- name: Notification Services (Gestionnaire de configuration SQL Server)
+  href: notification-services-sql-server-configuration-manager.md
+  items:
+    - name: 'NS$<service name>, propriétés (onglet Ouvrir une session)'
+      href: ns-service-name-properties-log-on-tab.md
+    - name: 'NS$<service name>, propriétés (onglet Service)'
+      href: ns-service-name-properties-service-tab.md
+    - name: 'NS$<service name>, propriétés (onglet Avancé)'
+      href: ns-service-name-properties-advanced-tab.md
+- name: Report Server <server> (Gestionnaire de configuration SQL Server)
+  href: report-server-server-sql-server-configuration-manager.md
+  items:
+    - name: Propriétés de SQL Server Reporting Services (onglet Ouvrir une session)
+      href: report-server-properties-log-on-tab.md
+    - name: Propriétés de Report Server (onglet Service)
+      href: report-server-properties-service-tab.md
+    - name: Propriétés de Report Server (onglet Avancé)
+      href: report-server-properties-advanced-tab.md
+- name: SQL Server Agent <server> (Gestionnaire de configuration SQL Server)
+  href: sql-server-agent-server-sql-server-configuration-manager.md
+  items:
+    - name: Propriétés de l'Agent SQL Server (onglet Ouvrir une session)
+      href: sql-server-agent-properties-log-on-tab.md
+    - name: Propriétés de l'Agent SQL Server (onglet Avancé)
+      href: sql-server-agent-properties-advanced-tab.md
+    - name: Propriétés de l'Agent SQL Server (onglet Service)
+      href: sql-server-agent-properties-service-tab.md
+- name: SQL Server Browser (Gestionnaire de configuration SQL Server)
+  href: sql-server-browser-sql-server-configuration-manager.md
+  items:
+    - name: Propriétés de SQL Server Browser (onglet Ouvrir une session)
+      href: sql-server-browser-properties-log-on-tab.md
+    - name: Propriétés de SQL Server Browser (onglet Service)
+      href: sql-server-browser-properties-service-tab.md
+    - name: Propriétés de SQL Server Browser (onglet Avancé)
+      href: sql-server-browser-properties-advanced-tab.md
+- name: SQL Server <server> (Gestionnaire de configuration SQL Server)
+  href: sql-server-server-sql-server-configuration-manager.md
+  items:
+    - name: Propriétés de SQL Server (onglet Ouvrir une session)
+      href: sql-server-properties-log-on-tab.md
+    - name: Propriétés de SQL Server (onglet Service)
+      href: sql-server-properties-service-tab.md
+    - name: Propriétés de SQL Server (onglet FILESTREAM)
+      href: sql-server-properties-filestream-tab.md
+    - name: Propriétés de SQL Server (onglet Haute disponibilité AlwaysOn)
+      href: sql-server-properties-alwayson-high-availability-tab.md
+    - name: Propriétés SQL Server (onglet Paramètres de démarrage)
+      href: sql-server-properties-startup-parameters-tab.md
+    - name: Propriétés de SQL Server (onglet Avancé)
+      href: sql-server-properties-advanced-tab.md
+- name: SQL Server Integration Services 10.0 (Gestionnaire de configuration SQL Server)
+  href: sql-server-integration-services-10-0-sql-server-configuration-manager.md
+  items:
+    - name: Propriétés de SQL Server Integration Services (onglet Ouvrir une session)
+      href: sql-server-integration-services-properties-log-on-tab.md
+    - name: Propriétés de SQL Server Integration Services (onglet Service)
+      href: sql-server-integration-services-properties-service-tab.md
+    - name: Propriétés de SQL Server Integration Services (onglet Avancé)
+      href: sql-server-integration-services-properties-advanced-tab.md
+- name: Lanceur de démon de filtre de texte intégral SQL (Gestionnaire de configuration SQL Server)
+  href: sql-full-text-filter-daemon-launcher-sql-server-configuration-manager.md
+  items:
+    - name: Lanceur de démon de filtre de texte intégral SQL (onglet Ouvrir une session)
+      href: sql-full-text-filter-daemon-launcher-log-on-tab.md
+    - name: Lanceur de démon de filtre de texte intégral SQL (onglet Service)
+      href: sql-full-text-filter-daemon-launcher-service-tab.md
+    - name: Lanceur de démon de filtre de texte intégral SQL (Avancé)
+      href: sql-full-text-filter-daemon-launcher-advanced.md
+- name: Service inconnu (onglet Ouvrir une session)
+  href: unknown-service-log-on-tab.md
+- name: Configuration du réseau SQL Server
+  href: sql-server-network-configuration.md
+  items:
+    - name: Protocoles pour <server> (Gestionnaire de configuration SQL Server)
+      href: protocols-for-server-sql-server-configuration-manager.md
+    - name: Propriétés de Protocoles pour MSSQLSERVER (onglet Indicateurs)
+      href: protocols-for-mssqlserver-properties-flags-tab.md
+    - name: Propriétés de Protocoles pour MSSQLSERVER (onglet Certificat)
+      href: protocols-for-mssqlserver-properties-certificate-tab.md
+    - name: Propriétés de Protocoles pour MSSQLSERVER (onglet Avancé)
+      href: protocols-for-mssqlserver-properties-advanced-tab.md
+- name: Propriétés de Mémoire partagée
+  href: shared-memory-properties.md
+- name: Propriétés de Canaux nommés
+  href: named-pipes-properties.md
+- name: Propriétés de TCP/IP (onglet Protocoles)
+  href: tcp-ip-properties-protocols-tab.md
+- name: Propriétés TCP/IP (onglet Adresses IP)
+  href: tcp-ip-properties-ip-addresses-tab.md
+- name: Configuration de SQL Server Native Client 11.0
+  href: sql-native-client-11-0-configuration.md
+  items:
+    - name: Propriétés de la configuration de SQL Server Native Client (onglet Indicateurs)
+      href: sql-server-native-client-configuration-properties-flags-tab.md
+    - name: Protocoles clients (Gestionnaire de configuration SQL Server)
+      href: client-protocols-sql-server-configuration-manager.md
+    - name: Propriétés de protocoles clients (onglet Ordre)
+      href: client-protocols-properties-order-tab.md
+    - name: Protocoles clients - Propriétés de Mémoire partagée (onglet Protocole)
+      href: client-protocols-shared-memory-properties-protocol-tab.md
+    - name: Protocoles clients - Propriétés TCP/IP (onglet Protocole)
+      href: client-protocols-tcp-and-ip-properties-protocol-tab.md
+    - name: Protocoles clients - Propriétés de Canaux nommés (onglet Protocole)
+      href: client-protocols-named-pipes-properties-protocol-tab.md
+- name: Alias (Gestionnaire de configuration SQL Server)
+  href: aliases-sql-server-configuration-manager.md
+  items:
+    - name: Nouvel alias (onglet Alias)
+      href: new-alias-alias-tab.md
+    - name: '<Alias>, propriétés (onglet Alias)'
+      href: alias-properties-alias-tab.md
+    - name: Création d'une chaîne de connexion valide à l'aide du protocole de mémoire partagée
+      href: creating-a-valid-connection-string-using-shared-memory-protocol.md
+    - name: Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP
+      href: creating-a-valid-connection-string-using-tcp-ip.md
+    - name: Création d'une chaîne de connexion valide à l'aide de canaux nommés
+      href: creating-a-valid-connection-string-using-named-pipes.md
+- name: SQL Server Browser Service
+  href: sql-server-browser-service.md
+- name: Connexion avec IPv6
+  href: connecting-using-ipv6.md
+- name: Choix d'un protocole réseau
+  href: choosing-a-network-protocol.md
+- name: Surveillance des journaux d'erreurs
+  href: monitoring-the-error-logs.md
+  items:
+    - name: Consultation du journal des erreurs de SQL Server
+      href: viewing-the-sql-server-error-log.md
+    - name: Affichage du journal des applications Windows
+      href: viewing-the-windows-application-log.md
+- name: À propos des termes du contrat de licence SQL Server (SSCM)
+  href: about-the-sql-server-license-terms-sscm.md

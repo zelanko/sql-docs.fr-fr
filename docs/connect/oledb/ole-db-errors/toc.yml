@@ -1,0 +1,12 @@
+- name: Erreurs dans OLE DB Driver pour SQL Server
+  href: errors.md
+- name: Informations dans les interfaces d'erreur
+  href: information-in-error-interfaces.md
+- name: Extraction des informations sur les erreurs
+  href: retrieving-error-information.md
+- name: Codes de retour
+  href: return-codes.md
+- name: "Détail des erreurs SQL\_Server"
+  href: sql-server-error-detail.md
+- name: Résultats des messages SQL Server
+  href: sql-server-message-results.md

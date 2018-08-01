@@ -1,0 +1,325 @@
+- name: Annexes ODBC
+  href: odbc-appendixes.md
+- name: Annexes ADO
+  items:
+    - name: "Annexe\_A\_: codes d'erreur ODBC"
+      href: appendix-a-odbc-error-codes.md
+    - name: "Annexe B\_: Tableaux des transitions d’état ODBC"
+      href: appendix-b-odbc-state-transition-tables.md
+    - name: "Annexe C\_: Grammaire SQL"
+      href: appendix-c-sql-grammar.md
+    - name: "Annexe D\_: Types de données"
+      href: appendix-d-data-types.md
+    - name: "Annexe\_E\_: Fonctions scalaires"
+      href: appendix-e-scalar-functions.md
+    - name: "Annexe\_F\_: Bibliothèque de curseurs ODBC"
+      href: appendix-f-odbc-cursor-library.md
+    - name: "Annexe G\_: Conseils sur les pilotes pour la compatibilité descendante"
+      href: appendix-g-driver-guidelines-for-backward-compatibility.md
+- name: Compatibilité descendante des types de données C
+  href: backward-compatibility-of-c-data-types.md
+- name: "Changements de comportement et pilotes ODBC\_3.x"
+  href: behavioral-changes-and-odbc-3-x-drivers.md
+- name: 'Curseurs de bloc, curseurs avec défilement et compatibilité descendante'
+  href: block-cursors-scrollable-cursors-and-backward-compatibility.md
+- name: Type de données C pour les signets
+  href: bookmark-c-data-type.md
+- name: Type de données C
+  href: c-data-types.md
+  items:
+    - name: Récupérer des données numériques avec SQL_NUMERIC_STRUCT en C
+      href: retrieve-numeric-data-sql-numeric-struct-kb222831.md
+- name: Structure d’intervalle C
+  href: c-interval-structure.md
+- name: Conversion de données de C en types de données SQL
+  href: converting-data-from-c-to-sql-data-types.md
+  items:
+    - name: Exemples de conversion de données C en SQL
+      href: c-to-sql-data-conversion-examples.md
+    - name: "C en SQL\_: binaire"
+      href: c-to-sql-binary.md
+    - name: "C en SQL\_: bit"
+      href: c-to-sql-bit.md
+    - name: "C en SQL\_: caractère"
+      href: c-to-sql-character.md
+    - name: "C en SQL\_: date"
+      href: c-to-sql-date.md
+    - name: "C en SQL\_: intervalles de jours-heures"
+      href: c-to-sql-day-time-intervals.md
+    - name: "C en SQL\_: GUID"
+      href: c-to-sql-guid.md
+    - name: "C en SQL\_: numérique"
+      href: c-to-sql-numeric.md
+    - name: "C en SQL\_: horodatage"
+      href: c-to-sql-timestamp.md
+    - name: "C en SQL\_: heure"
+      href: c-to-sql-time.md
+    - name: "C en SQL\_: intervalles d’années-mois"
+      href: c-to-sql-year-month-intervals.md
+- name: Appel de SQLSetPos pour insérer des données
+  href: calling-sqlsetpos-to-insert-data.md
+- name: Données de la colonne
+  href: column-data.md
+- name: 'Taille de colonne, nombres décimaux, longueur en octets du transfert et taille d’affichage'
+  href: column-size-decimal-digits-transfer-octet-length-and-display-size.md
+- name: Taille de colonne
+  href: column-size.md
+- name: Transitions de connexion
+  href: connection-transitions.md
+- name: Contraintes du calendrier grégorien
+  href: constraints-of-the-gregorian-calendar.md
+- name: Construction d’instructions de recherche
+  href: constructing-searched-statements.md
+- name: Cache de la bibliothèque de curseurs
+  href: cursor-library-cache.md
+- name: Exemple de code de la bibliothèque de curseurs
+  href: cursor-library-code-example.md
+- name: Identificateurs et descripteurs des types de données
+  href: data-type-identifiers-and-descriptors.md
+- name: Prise en charge du type de données
+  href: data-type-support.md
+- name: 'Date, heure et horodatage, séquences d’échappement'
+  href: date-time-and-timestamp-escape-sequences.md
+- name: Type de données datetime
+  href: datetime-data-types.md
+- name: Nombres décimaux
+  href: decimal-digits.md
+- name: Types de données C par défaut
+  href: default-c-data-types.md
+- name: Transitions de descripteur
+  href: descriptor-transitions.md
+- name: Taille d’affichage
+  href: display-size.md
+- name: Éléments utilisés dans les instructions SQL
+  href: elements-used-in-sql-statements.md
+- name: Transitions d’environnement
+  href: environment-transitions.md
+- name: Exemple de jeu de résultats de SQLGetTypeInfo
+  href: example-sqlgettypeinfo-result-set.md
+- name: Exécution d’instructions de mise à jour et de suppression positionnées
+  href: executing-positioned-update-and-delete-statements.md
+- name: Fonctions de conversion de types de données explicites
+  href: explicit-data-type-conversion-function.md
+- name: Signets de longueur fixe
+  href: fixed-length-bookmarks.md
+- name: Séquences d’échappement de GUID
+  href: guid-escape-sequences.md
+- name: Conseils pour les types de données d’intervalle et numériques
+  href: guidelines-for-interval-and-numeric-data-types.md
+- name: Remarques sur l’implémentation
+  href: implementation-notes.md
+- name: Longueur des types de données d’intervalle
+  href: interval-data-type-length.md
+- name: Précision des types de données d’intervalle
+  href: interval-data-type-precision.md
+- name: Types de données d’intervalle
+  href: interval-data-types.md
+- name: Séquences d’échappement des intervalles
+  href: interval-escape-sequences.md
+- name: Syntaxe des littéraux d’intervalle
+  href: interval-literal-syntax.md
+- name: Littéraux d’intervalle
+  href: interval-literals.md
+- name: Longueur des données de colonne
+  href: length-of-column-data.md
+- name: Séquence d’échappement pour l’opérateur LIKE
+  href: like-escape-sequence.md
+- name: Littéraux dans ODBC
+  href: literals-in-odbc.md
+- name: Chargement par ordinal
+  href: loading-by-ordinal.md
+- name: Emplacement du cache
+  href: location-of-cache.md
+- name: Mappage des fonctions dépréciées
+  href: mapping-deprecated-functions.md
+  items:
+    - name: 'SQLAllocConnect, mappage'
+      href: sqlallocconnect-mapping.md
+    - name: 'SQLAllocEnv, mappage'
+      href: sqlallocenv-mapping.md
+    - name: 'SQLAllocStmt, mappage'
+      href: sqlallocstmt-mapping.md
+    - name: 'SQLBindParam, mappage'
+      href: sqlbindparam-mapping.md
+    - name: 'SQLColAttributes, mappage'
+      href: sqlcolattributes-mapping.md
+    - name: 'SQLError, mappage'
+      href: sqlerror-mapping.md
+    - name: 'SQLFreeConnect, mappage'
+      href: sqlfreeconnect-mapping.md
+    - name: 'SQLFreeEnv, mappage'
+      href: sqlfreeenv-mapping.md
+    - name: 'SQLFreeStmt, mappage'
+      href: sqlfreestmt-mapping.md
+    - name: 'SQLGetConnectOption, mappage'
+      href: sqlgetconnectoption-mapping.md
+    - name: 'SQLGetStmtOption, mappage'
+      href: sqlgetstmtoption-mapping.md
+    - name: 'SQLInstallTranslator, mappage'
+      href: sqlinstalltranslator-mapping.md
+    - name: 'SQLParamOptions, mappage'
+      href: sqlparamoptions-mapping.md
+    - name: 'SQLSetConnectOption, mappage'
+      href: sqlsetconnectoption-mapping.md
+    - name: 'SQLSetParam, mappage'
+      href: sqlsetparam-mapping.md
+    - name: 'SQLSetScrollOptions, mappage'
+      href: sqlsetscrolloptions-mapping.md
+    - name: 'SQLSetStmtOption, mappage'
+      href: sqlsetstmtoption-mapping.md
+    - name: 'SQLTransact, mappage'
+      href: sqltransact-mapping.md
+- name: Fonctions numériques
+  href: numeric-functions.md
+- name: Syntaxe des littéraux numériques
+  href: numeric-literal-syntax.md
+- name: Littéraux numériques
+  href: numeric-literals.md
+- name: Séquences d’échappement ODBC
+  href: odbc-escape-sequences.md
+- name: Fonctions ODBC et la bibliothèque de curseurs
+  href: odbc-functions-and-the-cursor-library.md
+  items:
+    - name: Fonctions ODBC exécutées par la bibliothèque de curseurs
+      href: odbc-functions-executed-by-the-cursor-library.md
+    - name: Fonctions ODBC non exécutées par la bibliothèque de curseurs
+      href: odbc-functions-not-executed-by-the-cursor-library.md
+    - name: SQLBindCol (bibliothèque de curseurs)
+      href: sqlbindcol-cursor-library.md
+    - name: SQLBindParameter (bibliothèque de curseurs)
+      href: sqlbindparameter-cursor-library.md
+    - name: SQLBulkOperations et la bibliothèque de curseurs
+      href: sqlbulkoperations-and-the-cursor-library.md
+    - name: SQLCloseCursor_ODBC
+      href: sqlclosecursor-odbc.md
+    - name: SQLEndTran (bibliothèque de curseurs)
+      href: sqlendtran-cursor-library.md
+    - name: SQLExtendedFetch (bibliothèque de curseurs)
+      href: sqlextendedfetch-cursor-library.md
+    - name: SQLFetch (bibliothèque de curseurs)
+      href: sqlfetch-cursor-library.md
+    - name: SQLFetchScroll (bibliothèque de curseurs)
+      href: sqlfetchscroll-cursor-library.md
+    - name: SQLFreeStmt (bibliothèque de curseurs)
+      href: sqlfreestmt-cursor-library.md
+    - name: SQLGetData (bibliothèque de curseurs)
+      href: sqlgetdata-cursor-library.md
+    - name: SQLGetDescField et SQLGetDescRec (bibliothèque de curseurs)
+      href: sqlgetdescfield-and-sqlgetdescrec-cursor-library.md
+    - name: SQLGetFunctions (bibliothèque de curseurs)
+      href: sqlgetfunctions-cursor-library.md
+    - name: SQLGetInfo (bibliothèque de curseurs)
+      href: sqlgetinfo-cursor-library.md
+    - name: 'SQLGetInfo, prise en charge'
+      href: sqlgetinfo-support.md
+    - name: SQLGetStmtAttr (bibliothèque de curseurs)
+      href: sqlgetstmtattr-cursor-library.md
+    - name: SQLGetStmtOption (bibliothèque de curseurs)
+      href: sqlgetstmtoption-cursor-library.md
+    - name: SQLNativeSql (bibliothèque de curseurs)
+      href: sqlnativesql-cursor-library.md
+    - name: SQLRowCount (bibliothèque de curseurs)
+      href: sqlrowcount-cursor-library.md
+    - name: SQLSetConnectAttr (bibliothèque de curseurs)
+      href: sqlsetconnectattr-cursor-library.md
+    - name: SQLSetDescField et SQLSetDescRec (bibliothèque de curseurs)
+      href: sqlsetdescfield-and-sqlsetdescrec-cursor-library.md
+    - name: SQLSetEnvAttr et la bibliothèque de curseurs
+      href: sqlsetenvattr-and-the-cursor-library.md
+    - name: SQLSetPos (bibliothèque de curseurs)
+      href: sqlsetpos-cursor-library.md
+    - name: SQLSetScrollOptions (bibliothèque de curseurs)
+      href: sqlsetscrolloptions-cursor-library.md
+    - name: SQLSetStmtAttr (bibliothèque de curseurs)
+      href: sqlsetstmtattr-cursor-library.md
+- name: Codes d’erreur de la bibliothèque de curseurs ODBC
+  href: odbc-cursor-library-error-codes.md
+- name: Séquence d’échappement pour les jointures externes
+  href: outer-join-escape-sequence.md
+- name: Remplacement de la précision du début et de la fin par défaut pour les types de données d’intervalle
+  href: overriding-default-leading-and-seconds-precision-for-interval-data-types.md
+- name: Remplacement de la précision et de l’échelle par défaut pour les types de données numériques
+  href: overriding-default-precision-and-scale-for-numeric-data-types.md
+- name: Types de données de paramètre
+  href: parameter-data-types.md
+- name: Marqueurs de paramètres
+  href: parameter-markers.md
+- name: Séquence d’échappement d’appel de procédure
+  href: procedure-call-escape-sequence.md
+- name: Traitement des lots d’instructions SQL
+  href: processing-batches-of-sql-statements.md
+- name: Traitement des instructions de mise à jour et de suppression positionnées
+  href: processing-positioned-update-and-delete-statements.md
+- name: Traitement des instructions SELECT FOR UPDATE
+  href: processing-select-for-update-statements.md
+- name: Traitement des instructions SQL
+  href: processing-sql-statements.md
+- name: Identificateurs des pseudo-types
+  href: pseudo-type-identifiers.md
+- name: Mots clés réservés
+  href: reserved-keywords.md
+- name: Retour de SQL_NO_DATA
+  href: returning-sql-no-data.md
+- name: État des lignes
+  href: row-status.md
+- name: Règles pour les conversions
+  href: rules-for-conversions.md
+- name: Séquence d’échappement de fonction scalaire
+  href: scalar-function-escape-sequence.md
+- name: Types de données SQL
+  href: sql-data-types.md
+- name: Grammaire minimale de SQL
+  href: sql-minimum-grammar.md
+- name: Conversion de données de SQL en types de données C
+  href: converting-data-from-sql-to-c-data-types.md
+  items:
+    - name: Exemples de conversion de données SQL en C
+      href: sql-to-c-data-conversion-examples.md
+    - name: "SQL en C\_: binaire"
+      href: sql-to-c-binary.md
+    - name: "SQL en C\_: bit"
+      href: sql-to-c-bit.md
+    - name: "SQL en C\_: caractère"
+      href: sql-to-c-character.md
+    - name: "SQL en C\_: date"
+      href: sql-to-c-date.md
+    - name: "SQL en C\_: intervalles de jours-heures"
+      href: sql-to-c-day-time-intervals.md
+    - name: "SQL en C\_: GUID"
+      href: sql-to-c-guid.md
+    - name: "SQL en C\_: numérique"
+      href: sql-to-c-numeric.md
+    - name: "SQL en C\_: horodatage"
+      href: sql-to-c-timestamp.md
+    - name: "SQL en C\_: heure"
+      href: sql-to-c-time.md
+    - name: "SQL en C\_: intervalles d’années-mois"
+      href: sql-to-c-year-month-intervals.md
+- name: 'CAST (SQL-92), fonction'
+  href: sql-92-cast-function.md
+- name: SQL_ARD_TYPE
+  href: sql-ard-type.md
+- name: SQL_C_TCHAR
+  href: sql-c-tchar.md
+- name: Transitions d’instruction
+  href: statement-transitions.md
+- name: Fonctions de chaîne
+  href: string-functions.md
+- name: Fonctions système
+  href: system-functions.md
+- name: 'Fonctions d''heure, de date et d''intervalle'
+  href: time-date-and-interval-functions.md
+- name: Longueur en octets du transfert
+  href: transfer-octet-length.md
+- name: Transfert de données dans leur forme binaire
+  href: transferring-data-in-its-binary-form.md
+- name: Utilisation d’identificateurs de types de données
+  href: using-data-type-identifiers.md
+- name: Utilisation de la bibliothèque de curseurs ODBC
+  href: using-the-odbc-cursor-library.md
+- name: Ce que fait le pilote
+  href: what-the-driver-does.md
+- name: Ce que fait le gestionnaire de pilotes
+  href: what-the-driver-manager-does.md
+- name: "Structures d’entiers 64\_bits"
+  href: 64-bit-integer-structures.md

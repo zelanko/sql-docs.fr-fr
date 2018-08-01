@@ -1,0 +1,194 @@
+- name: Outils de données SQL Server (SSDT)
+  href: sql-server-data-tools.md
+- name: Télécharger SSDT
+  href: download-sql-server-data-tools-ssdt.md
+- name: Nouveaux articles et articles mis à jour
+  href: new-updated-ssdt.md
+- name: ChangeLog pour SSDT
+  href: changelog-for-sql-server-data-tools-ssdt.md
+- name: Data-Tier Application Framework - Termes du contrat de licence
+  href: data-tier-application-framework-license-terms.md
+- name: Versions précédentes de SSDT et SSDT-BI
+  href: previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+- name: Support Azure Active Directory
+  href: azure-active-directory.md
+- name: Outils SQL Server
+  href: sql-server-tools.md
+- name: Termes du contrat de licence - SSDT
+  href: sql-server-data-tools-license-terms.md
+- name: Termes du contrat de licence - SSDT (VS 2017)
+  href: sql-server-data-tools-license-terms-vs2017.md
+- name: Développement de base de données hors connexion orienté projet
+  href: project-oriented-offline-database-development.md
+  items:
+    - name: Importer dans un projet de base de données
+      href: import-into-a-database-project.md
+    - name: "Boîte de dialogue Ajouter une référence de base de données\_(boîte de dialogue )"
+      href: add-database-reference-dialog-box.md
+    - name: Rechercher des mises à jour (boîte de dialogue )
+      href: check-for-updates-dialog-box.md
+    - name: Paramètres du projet de base de données
+      href: database-project-settings.md
+    - name: "Procédure\_: parcourir les objets d'un projet Base de données SQL Server"
+      href: how-to-browse-objects-in-a-sql-server-database-project.md
+    - name: Fenêtre Opérations des outils de données
+      href: data-tools-operations-window.md
+    - name: Options de l'Éditeur Transact-SQL
+      href: transact-sql-editor-options.md
+    - name: "Procédure\_: créer un nouveau projet de base de données"
+      href: how-to-create-a-new-database-project.md
+    - name: "Procédure\_: utiliser le schéma pour comparer différentes définitions de base de données"
+      href: how-to-use-schema-compare-to-compare-different-database-definitions.md
+    - name: "Procédure\_: générer et déployer dans une base de données locale"
+      href: how-to-build-and-deploy-to-a-local-database.md
+    - name: "Procédure\_: utiliser des objets Microsoft SQL\_Server\_2012 dans votre projet"
+      href: how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
+    - name: "Procédure\_: utilisation des objets de base de données CLR"
+      href: how-to-work-with-clr-database-objects.md
+    - name: "Procédure\_: créer une capture instantanée d'un projet"
+      href: how-to-create-a-snapshot-of-a-project.md
+    - name: "Procédure\_: modifier la plateforme cible et publier un projet de base de données"
+      href: how-to-change-target-platform-and-publish-a-database-project.md
+    - name: "Procédure\_: convertir des projets de base de données Visual Studio\_2010 en projets de base de données SQL\_Server et recibler vers une autre plateforme"
+      href: how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
+    - name: "Guide pratique\_: Spécifier des scripts de prédéploiement et de post-déploiement"
+      href: how-to-specify-predeployment-or-postdeployment-scripts.md
+- name: Développement de base de données orienté projet à l'aide des outils en ligne de commande
+  href: project-oriented-database-development-using-command-line-tools.md
+  items:
+    - name: SqlPackage.exe
+      href: ../tools/sqlpackage.md
+    - name: Utilisation de MSDeploy avec le fournisseur dbSqlPackage
+      href: using-msdeploy-with-dbsqlpackage-provider.md
+- name: Développement de base de données connectée
+  href: connected-database-development.md
+  items:
+    - name: 'Procédure : se connecter à une base de données et parcourir les objets existants'
+      href: how-to-connect-to-a-database-and-browse-existing-objects.md
+    - name: "Procédure\_: créer des objets de base de données à l'aide du Concepteur de tables"
+      href: how-to-create-database-objects-using-table-designer.md
+    - name: "Procédure\_: mettre à jour une base de données connectée avec Power Buffer"
+      href: how-to-update-a-connected-database-with-power-buffer.md
+    - name: Boîte de dialogue Filtrer et trier
+      href: filter-and-sort-dialog-box.md
+    - name: "Procédure\_: créer de nouveaux objets de base de données à l'aide de requêtes"
+      href: how-to-create-new-database-objects-using-queries.md
+    - name: "Procédure\_: modifier une table existante à l'aide de requêtes"
+      href: how-to-edit-an-existing-table-using-queries.md
+    - name: "Procédure\_: afficher et modifier des données dans une table"
+      href: how-to-view-and-edit-data-in-a-table.md
+    - name: "Procédure\_: supprimer des objets et résoudre des dépendances"
+      href: how-to-delete-objects-and-resolve-dependencies.md
+    - name: "Procédure\_: cloner une base de données existante"
+      href: how-to-clone-an-existing-database.md
+    - name: 'Extraire, publier et enregistrer des fichiers .dacpac.'
+      href: extract-publish-and-register-dacpac-files.md
+- name: Comparer et synchroniser des données d'une ou plusieurs tables avec des données d'une base de données de référence
+  href: compare-and-synchronize-data-in-tables-with-data-in-reference-database.md
+  items:
+    - name: "Procédure\_: Comparer et synchroniser les données de deux bases de données"
+      href: how-to-compare-and-synchronize-the-data-of-two-databases.md
+    - name: 'Guide pratique : Voir les différences entre les données'
+      href: how-to-view-data-differences.md
+    - name: Utiliser l'Éditeur Transact-SQL pour modifier et exécuter des scripts
+      href: use-transact-sql-editor-to-edit-and-execute-scripts.md
+    - name: "Procédure\_: structurer et ajouter des extraits de code à un script Transact-SQL"
+      href: how-to-outline-and-add-snippets-to-transact-sql-script.md
+    - name: "Procédure\_: naviguer entre des scripts"
+      href: how-to-navigate-between-scripts.md
+    - name: "Procédure\_: utiliser Renommer et Refactorisation pour apporter des modifications à vos objets de base de données"
+      href: how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
+    - name: "Procédure\_: exécuter une requête partielle"
+      href: how-to-execute-a-partial-query.md
+    - name: "Procédure\_: déboguer des procédures stockées"
+      href: how-to-debug-stored-procedures.md
+    - name: Analyser les performances de script
+      href: analyze-script-performance.md
+- name: 'Gérer des tables et des relations, et résoudre les erreurs'
+  href: manage-tables-relationships-and-fix-errors.md
+  items:
+    - name: "Procédure\_: utiliser le Concepteur de tables pour gérer les tables et les relations"
+      href: how-to-use-the-table-designer-to-manage-tables-and-relationships.md
+    - name: "Procédure\_: résoudre les erreurs"
+      href: how-to-fix-errors.md
+- name: Vérification du code de la base de données à l'aide de tests unitaires SQL Server
+  href: verifying-database-code-by-using-sql-server-unit-tests.md
+  items:
+    - name: 'Procédure pas à pas : création et exécution d''un test unitaire SQL Server'
+      href: walkthrough-creating-and-running-a-sql-server-unit-test.md
+    - name: Création et définition de tests unitaires SQL Server
+      href: creating-and-defining-sql-server-unit-tests.md
+      items:
+        - name: Scripts des tests unitaires SQL Server
+          href: scripts-in-sql-server-unit-tests.md
+        - name: Fichiers de tests unitaires SQL Server
+          href: sql-server-unit-test-files.md
+        - name: Utilisation de conditions de test dans les tests unitaires SQL Server
+          href: using-test-conditions-in-sql-server-unit-tests.md
+        - name: Utilisation d'assertions Transact-SQL dans les tests unitaires SQL Server
+          href: using-transact-sql-assertions-in-sql-server-unit-tests.md
+        - name: "Procédure\_: créer un projet de test pour un test unitaire de base de données SQL Server"
+          href: how-to-create-a-test-project-for-sql-server-database-unit-testing.md
+        - name: "Procédure\_: créer un test unitaire SQL Server vide"
+          href: how-to-create-an-empty-sql-server-unit-test.md
+        - name: "Procédure\_: créer des tests unitaires SQL Server pour des fonctions, des déclencheurs ou des procédures stockées"
+          href: how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
+        - name: "Procédure\_: ajouter des conditions de test à des tests unitaires SQL Server"
+          href: how-to-add-test-conditions-to-sql-server-unit-tests.md
+        - name: "Procédure\_: ouvrir un test unitaire SQL Server à modifier"
+          href: how-to-open-a-sql-server-unit-test-to-edit.md
+        - name: "Procédure\_: écrire un test unitaire SQL Server qui s'exécute dans l'étendue d'une seule transaction"
+          href: how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
+        - name: "Procédure\_: configurer l'exécution de test unitaire SQL Server"
+          href: how-to-configure-sql-server-unit-test-execution.md
+        - name: Vue d'ensemble des chaînes de connexion et des autorisations
+          href: overview-of-connection-strings-and-permissions.md
+        - name: Raccourcis clavier du Concepteur de test unitaire SQL Server
+          href: keyboard-shortcuts-for-sql-server-unit-test-designer.md
+    - name: Exécution de tests unitaires SQL Server
+      href: running-sql-server-unit-tests.md
+      items:
+        - name: "Procédure\_: déboguer des objets de base de données"
+          href: how-to-debug-database-objects.md
+        - name: "Procédure\_: exécuter des tests unitaires SQL Server en utilisant Team Foundation Build"
+          href: how-to-run-sql-server-unit-tests-from-team-foundation-build.md
+        - name: "Procédure\_: exécuter des tests unitaires SQL Server"
+          href: how-to-run-sql-server-unit-tests.md
+        - name: Interprétation des résultats des tests unitaires SQL Server
+          href: interpreting-sql-server-unit-test-results.md
+    - name: Mettre à niveau un projet de test antérieur contenant des tests unitaires de base de données
+      href: upgrade-an-older-test-project-containing-database-unit-tests.md
+    - name: Conditions de test personnalisées pour les tests unitaires SQL Server
+      href: custom-test-conditions-for-sql-server-unit-tests.md
+      items:
+        - name: "Procédure\_: créer des conditions de test pour le Concepteur de test unitaire SQL Server"
+          href: how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
+        - name: "Procédure pas à pas\_: utilisation d'une condition de test personnalisée pour vérifier le résultat d'une procédure stockée"
+          href: walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
+        - name: "Procédure\_: mettre à niveau une condition de test personnalisée Visual Studio\_2010 d'une version antérieure vers SQL Server Data Tools"
+          href: how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
+    - name: "Dépannage des problèmes liés aux tests unitaires de base de données SQL\_Server"
+      href: troubleshooting-sql-server-database-unit-testing-issues.md
+- name: Extension des fonctionnalités de base de données
+  href: extending-the-database-features.md
+  items:
+    - name: Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement
+      href: use-deployment-contributors-to-customize-database-build-and-deployment.md
+      items:
+        - name: 'Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle'
+          href: walkthrough-extend-database-project-build-to-generate-model-statistics.md
+        - name: "Procédure pas à pas\_: Étendre le déploiement du projet de base de données pour analyser le plan de déploiement"
+          href: walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
+        - name: "Procédure pas à pas\_: Étendre le déploiement du projet de base de données pour modifier le plan de déploiement"
+          href: walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md
+    - name: Vue d'ensemble de l'extensibilité pour les règles d'analyse du code de base de données
+      href: overview-of-extensibility-for-database-code-analysis-rules.md
+      items:
+        - name: "Procédure pas à pas\_: création d'un assembly de règle d'analyse statique du code personnalisée pour SQL Server"
+          href: walkthrough-author-custom-static-code-analysis-rule-assembly.md
+    - name: "Comment\_: installer et gérer des extensions de fonctionnalités"
+      href: how-to-install-and-manage-feature-extensions.md
+- name: Autorisations nécessaires pour SQL Server Data Tools
+  href: required-permissions-for-sql-server-data-tools.md
+- name: Compatibilité avec DAC Framework
+  href: dac-framework-compatibility.md

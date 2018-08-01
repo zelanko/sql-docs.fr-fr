@@ -1,0 +1,59 @@
+- name: Vue d’ensemble des outils et des utilitaires SQL Server
+  href: ../tools/overview-sql-tools.md
+- name: Nouveaux articles et articles mis à jour
+  href: new-updated-tools.md
+- name: SQL Operations Studio (préversion)
+  href: ../sql-operations-studio/what-is.md
+- name: SQL Server Management Studio (SSMS)
+  href: ../ssms/download-sql-server-management-studio-ssms.md
+- name: Outils de données SQL Server (SSDT)
+  href: ../ssdt/download-sql-server-data-tools-ssdt.md
+- name: mssql-cli (outil de requête en ligne de commande)
+  href: mssql-cli.md
+- name: Gestionnaire de configuration
+  href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
+- name: mssql-conf (Linux)
+  href: ../linux/sql-server-linux-configure-mssql-conf.md
+- name: Distributed Replay
+  href: ../tools/distributed-replay/install-distributed-replay-overview.md
+- name: Assistant Paramétrage du moteur de base de données (dta)
+  href: ../tools/dta/dta-utility.md
+- name: SQL Server Profiler
+  href: ../tools/sql-server-profiler/sql-server-profiler.md
+- name: Service Broker (ssbdiagnose)
+  href: ../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md
+- name: Utilitaires de ligne de commande
+  href: command-prompt-utility-reference-database-engine.md
+  items:
+    - name: Utilitaire de copie en bloc (bcp)
+      href: bcp-utility.md
+    - name: Utilitaire SqlLocalDB
+      href: sqllocaldb-utility.md
+    - name: Utilitaire osql
+      href: osql-utility.md
+    - name: Utilitaire profiler
+      href: profiler-utility.md
+    - name: application sqlagent90
+      href: sqlagent90-application.md
+    - name: sqlcmd Utility
+      href: sqlcmd-utility.md
+    - name: SQLdiag (utilitaire)
+      href: sqldiag-utility.md
+    - name: sqlmaint (utilitaire)
+      href: sqlmaint-utility.md
+    - name: Application sqllogship
+      href: sqllogship-application.md
+    - name: sqlps (utilitaire)
+      href: sqlps-utility.md
+    - name: Application sqlservr
+      href: sqlservr-application.md
+    - name: tablediff (utilitaire)
+      href: tablediff-utility.md
+- name: Sqlpackage
+  items:
+    - name: Installer sqlpackage
+      href: sqlpackage-download.md
+    - name: Notes de publication
+      href: sqlpackage-release-notes.md
+    - name: Informations de référence sur sqlpackage
+      href: sqlpackage.md

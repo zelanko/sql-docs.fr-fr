@@ -1,0 +1,28 @@
+- name: Intégration de Reporting Services dans les applications
+  href: integrating-reporting-services-into-applications.md
+- name: Intégrer avec...
+  items:
+    - name: Intégration de Reporting Services à l’aide de contrôles ReportViewer - collecte des données
+      href: integrating-reporting-services-using-reportviewer-controls-data-collection.md
+    - name: Intégration de Reporting Services à l’aide de contrôles ReportViewer - Bien démarrer
+      href: integrating-reporting-services-using-reportviewer-controls-get-started.md
+    - name: Intégration de Reporting Services à l’aide de contrôles ReportViewer - WebForms ReportViewer
+      href: using-the-webforms-reportviewer-control.md
+    - name: Intégration de Reporting Services à l’aide de contrôles ReportViewer - WinForms ReportViewer
+      href: using-the-winforms-reportviewer-control.md
+    - name: Intégration de Reporting Services à l’aide des contrôles ReportViewer
+      href: integrating-reporting-services-using-reportviewer-controls.md
+    - name: Intégration de Reporting Services à l’aide de SOAP - Application web
+      href: integrating-reporting-services-using-soap-web-application.md
+    - name: Intégration de Reporting Services à l’aide de SOAP - Application Windows
+      href: integrating-reporting-services-using-soap-windows-application.md
+    - name: Intégration de Reporting Services à l'aide de SOAP
+      href: integrating-reporting-services-using-soap.md
+    - name: Intégration de Reporting Services à l’aide de l’accès URL - Application web
+      href: integrating-reporting-services-using-url-access-web-application.md
+    - name: Intégration de Reporting Services à l’aide de l’accès URL - Application Windows
+      href: integrating-reporting-services-using-url-access-windows-application.md
+    - name: Intégration de Reporting Services à l'aide de l'accès URL
+      href: integrating-reporting-services-using-url-access.md
+- name: Choix entre l'accès URL et SOAP
+  href: choosing-between-url-access-and-soap.md

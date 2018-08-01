@@ -1,0 +1,399 @@
+- name: Didacticiels pour SQL Server 2014
+  href: tutorials-for-sql-server-2014.md
+- name: "Tutoriel\_: Écriture d’instructions Transact-SQL +"
+  href: ../t-sql/tutorial-writing-transact-sql-statements.md
+- name: Didacticiels sur l'exploration de données
+  href: ../analysis-services/data-mining-tutorials-analysis-services.md
+  items:
+    - name: Didacticiel d’exploration de données de base
+      href: basic-data-mining-tutorial.md
+      items:
+        - name: "Leçon\_1\_: préparation de la base de données Analysis\_Services"
+          href: lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md
+          items:
+            - name: Création d'un projet Analysis Services
+              href: creating-an-analysis-services-project-basic-data-mining-tutorial.md
+            - name: Création d'une source de données
+              href: creating-a-data-source-basic-data-mining-tutorial.md
+            - name: Création d'une vue de source de données
+              href: creating-a-data-source-view-basic-data-mining-tutorial.md
+        - name: "Leçon\_2\_: création d'une structure de publipostage ciblé"
+          href: lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md
+          items:
+            - name: Création d'une structure de modèle d'exploration de données pour le publipostage ciblé
+              href: creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md
+            - name: Spécification du type de données et du type de contenu
+              href: specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md
+            - name: Spécification d'un jeu de données de test pour la structure
+              href: specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md
+        - name: "Leçon\_3\_: ajout et traitement des modèles"
+          href: lesson-3-adding-and-processing-models.md
+          items:
+            - name: Ajout de nouveaux modèles à la structure de publipostage ciblé
+              href: adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md
+            - name: Traitement de modèles dans la structure de publipostage ciblé
+              href: processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md
+        - name: "Leçon 4\_: Exploration des modèles de publipostage ciblé"
+          href: lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md
+          items:
+            - name: Exploration du modèle Decision Tree
+              href: exploring-the-decision-tree-model-basic-data-mining-tutorial.md
+            - name: Exploration du modèle de clustering
+              href: exploring-the-clustering-model-basic-data-mining-tutorial.md
+            - name: Exploration du modèle Naive Bayes
+              href: exploring-the-naive-bayes-model-basic-data-mining-tutorial.md
+        - name: "Leçon\_5\_: test de modèles"
+          href: lesson-5-testing-models-basic-data-mining-tutorial.md
+          items:
+            - name: Test de la précision à l'aide de graphiques de courbes d'élévation
+              href: testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md
+            - name: Test d'un modèle filtré
+              href: testing-a-filtered-model-basic-data-mining-tutorial.md
+        - name: "Leçon\_6\_: création et utilisation de prédictions"
+          href: lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md
+          items:
+            - name: Création de prédictions
+              href: creating-predictions-basic-data-mining-tutorial.md
+            - name: Utilisation de l'extraction sur les données de structure
+              href: using-drillthrough-on-structure-data-basic-data-mining-tutorial.md
+    - name: Didacticiel sur l'exploration de données intermédiaire
+      href: intermediate-data-mining-tutorial-analysis-services-data-mining.md
+      items:
+        - name: 'Leçon 1 : création de la solution intermédiaire d''exploration de données'
+          href: lesson-1-create-solution-intermediate-data-mining-tutorial.md
+          items:
+            - name: Création d'une solution et d'une source de données
+              href: creating-a-solution-and-data-source-intermediate-data-mining-tutorial.md
+        - name: "Leçon\_2\_: génération d'un scénario de prévision"
+          href: lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md
+          items:
+            - name: Ajout d'une vue de source de données à des fins de prévision
+              href: adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md
+            - name: Spécifications pour un modèle de série chronologique
+              href: time-series-model-requirements-intermediate-data-mining-tutorial.md
+            - name: Création d'une structure et d'un modèle de prévision
+              href: creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md
+            - name: Modification de la structure de prévision
+              href: modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md
+            - name: Personnalisation et traitement du modèle de prévision
+              href: customize-process-forecasting-model-intermediate-data-mining-tutorial.md
+            - name: Exploration du modèle de prévision
+              href: exploring-the-forecasting-model-intermediate-data-mining-tutorial.md
+            - name: Création de prédictions de séries chronologiques
+              href: creating-time-series-predictions-intermediate-data-mining-tutorial.md
+            - name: Advanced Time Series Predictions
+              href: advanced-time-series-predictions-intermediate-data-mining-tutorial.md
+              items:
+                - name: Prédictions de série chronologique à l'aide de données mises à jour
+                  href: time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md
+                - name: Prédictions de série chronologique à l'aide de données de remplacement
+                  href: time-series-predictions-replacement-data-intermediate-data-mining.md
+            - name: Comparaison de prédictions pour les modèles de prévision
+              href: comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md
+        - name: "Leçon\_3\_: Génération d'un scénario de panier d'achat"
+          href: lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md
+          items:
+            - name: Ajout d'une vue de source de données avec les tables imbriquées
+              href: adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md
+            - name: Création d'une structure et d'un modèle de panier d'achat
+              href: creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial.md
+            - name: Modification et traitement du modèle de panier d'achat
+              href: modify-process-market-basket-model-intermediate-data-mining-tutorial.md
+            - name: Exploration des modèles d'analyse de panier
+              href: exploring-the-market-basket-models-intermediate-data-mining-tutorial.md
+            - name: Filtrage d'une table imbriquée dans un modèle d'exploration de données
+              href: filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md
+            - name: Prédiction d'associations
+              href: predicting-associations-intermediate-data-mining-tutorial.md
+        - name: "Leçon 4\_: Génération d'un scénario Sequence Clustering"
+          href: lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md
+          items:
+            - name: Création d'une structure de modèle d'exploration de données Sequence Clustering
+              href: create-sequence-clustering-mining-model-intermediate-data-mining.md
+            - name: Traitement du modèle Sequence Clustering
+              href: processing-the-sequence-clustering-model.md
+            - name: Exploration du modèle Sequence Clustering
+              href: exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md
+            - name: Création d'un modèle Sequence Clustering associé
+              href: creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md
+            - name: Création de prédictions sur un modèle Sequence Clustering
+              href: create-predictions-on-model-intermediate-data-mining-tutorial.md
+        - name: "Leçon\_5\_: Génération de modèles de réseau neuronal et de régression logistique"
+          href: lesson-5-build-models-intermediate-data-mining-tutorial.md
+          items:
+            - name: Ajout d'une vue de source de données pour les données de centre d'appels
+              href: add-data-source-view-call-center-data-intermediate-data-mining.md
+            - name: Création d'une structure et d'un modèle de réseau neuronal
+              href: creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md
+            - name: Exploration du modèle de centre d'appels
+              href: exploring-the-call-center-model-intermediate-data-mining-tutorial.md
+            - name: Ajout d'un modèle de régression logistique à la structure de centre d'appels
+              href: add-logistic-regression-model-to-call-center-intermediate-data-mining.md
+            - name: Création de prédictions pour les modèles de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
+              href: create-predictions-call-center-models-intermediate-data-mining-tutorial.md
+    - name: "Création et interrogation de modèles d'exploration de données à l'aide du langage DMX\_: didacticiels"
+      href: create-query-data-mining-models-dmx-tutorials.md
+      items:
+        - name: Didacticiel DMX Bike Buyer
+          href: bike-buyer-dmx-tutorial.md
+          items:
+            - name: "Leçon\_1\_: Création de la structure d'exploration de données Bike\_Buyer"
+              href: lesson-1-creating-the-bike-buyer-mining-structure.md
+            - name: "Leçon\_2\_: Ajout de modèles d'exploration de données à la structure d'exploration de données Bike\_Buyer"
+              href: lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md
+            - name: "Leçon\_3\_: traitement de la structure d'exploration de données Bike\_Buyer"
+              href: lesson-3-processing-the-bike-buyer-mining-structure.md
+            - name: "Leçon\_4\_: Exploration des modèles d'exploration de données Bike\_Buyer"
+              href: lesson-4-browsing-the-bike-buyer-mining-models.md
+            - name: "Leçon\_5\_: exécution des requêtes de prédiction"
+              href: lesson-5-executing-prediction-queries.md
+        - name: "Didacticiel\_DMX Market\_Basket"
+          href: market-basket-dmx-tutorial.md
+          items:
+            - name: "Leçon 1\_: Création de la structure d'exploration de données Market\_Basket"
+              href: lesson-1-creating-the-market-basket-mining-structure.md
+            - name: "Leçon\_2\_: Ajout de modèles d'exploration de données à la structure d'exploration de données Market\_Basket"
+              href: lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md
+            - name: "Leçon 3\_: traitement de la structure d'exploration de données Market\_Basket"
+              href: lesson-3-processing-the-market-basket-mining-structure.md
+            - name: "Leçon\_4\_: Exécution de prédictions Market\_Basket"
+              href: lesson-4-executing-market-basket-predictions.md
+        - name: Didacticiel DMX sur la prédiction de série chronologique
+          href: time-series-prediction-dmx-tutorial.md
+          items:
+            - name: "Leçon\_1\_: création d'une structure d'exploration de données et de modèle d'exploration de données de série chronologique"
+              href: lesson-1-creating-a-time-series-mining-model-and-mining-structure.md
+            - name: "Leçon\_2\_: Ajout de modèles d'exploration de données à la structure d'exploration de données de série chronologique"
+              href: lesson-2-adding-mining-models-to-the-time-series-mining-structure.md
+            - name: "Leçon 3\_: Traitement de la structure et des modèles de série chronologique"
+              href: lesson-3-processing-the-time-series-structure-and-models.md
+            - name: "Leçon 4\_: Création de prédictions de série chronologique à l'aide d'extensions DMX"
+              href: lesson-4-creating-time-series-predictions-using-dmx.md
+            - name: "Leçon 5\_: Extension du modèle de série chronologique"
+              href: lesson-5-extending-the-time-series-model.md
+- name: "Didacticiels sur Reporting\_Services"
+  href: ../reporting-services/reporting-services-tutorials-ssrs.md
+  items:
+    - name: Créer un rapport de tableau de base (didacticiel SSRS)
+      href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
+      items:
+        - name: "Leçon 1\_: Création d'un projet Report Server"
+          href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
+        - name: "Leçon 2\_: Spécification des informations de connexion"
+          href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
+        - name: "Leçon 3\_: définition d'un dataset destiné à un rapport de table"
+          href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
+        - name: "Leçon 4\_: Ajout d'une table au rapport"
+          href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
+        - name: 'Lesson 5: Formatting a Report'
+          href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
+        - name: 'Lesson 6: Adding Grouping and Totals'
+          href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
+    - name: Créer un abonnement piloté par les données (didacticiel SSRS)
+      href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
+      items:
+        - name: 'Leçon 1 : Création d''un exemple de base de données de l''abonné'
+          href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
+        - name: 'Lesson 2: Modifying the Report Data Source Properties'
+          href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
+        - name: 'Leçon 3 : Définition d''un abonnement piloté par les données'
+          href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
+    - name: Créer un rapport d'extraction (RDLC) avec des paramètres à l'aide de ReportViewer (didacticiel SSRS)
+      href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
+      items:
+        - name: 'Leçon 1 : créer un nouveau site Web'
+          href: ../reporting-services/lesson-1-create-a-new-web-site.md
+        - name: 'Leçon 2 : définir une connexion de données et une table de données pour le rapport parent'
+          href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
+        - name: 'Leçon 3 : concevoir le rapport parent à l''aide de l''Assistant Rapport'
+          href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
+        - name: 'Leçon 4 : définir une connexion de données et une table de données pour le rapport enfant'
+          href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
+        - name: 'Leçon 5 : concevoir le rapport enfant à l''aide de l''Assistant Rapport'
+          href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
+        - name: 'Leçon 6 : Ajouter un contrôle ReportViewer à l''application'
+          href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
+        - name: 'Leçon 7 : ajouter l''action d''extraction dans le rapport parent'
+          href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
+        - name: 'Leçon 8 : créer un filtre de données'
+          href: ../reporting-services/lesson-8-create-a-data-filter.md
+        - name: 'Lesson 9: Build and Run the Application'
+          href: ../reporting-services/lesson-9-build-and-run-the-application.md
+    - name: "Accès au service Web Report Server avec Visual\_Basic ou Visual\_C# (didacticiel SSRS)"
+      href: access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md
+      items:
+        - name: "Leçon\_1\_: création du projet client du service Web"
+          href: lesson-1-creating-the-web-service-client-project.md
+        - name: "Leçon 2\_: ajout d'une référence Web"
+          href: lesson-2-adding-a-web-reference.md
+        - name: "Leçon 3\_: accès au service Web"
+          href: lesson-3-accessing-the-web-service.md
+        - name: "Leçon\_4\_: Exécution de l'application (VB/VC#)"
+          href: lesson-4-running-the-application-vb-vcsharp.md
+    - name: Mise à jour des rapports à l'aide des classes générées à partir du schéma RDL (didacticiel SSRS)
+      href: updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md
+      items:
+        - name: 'Leçon 1 : Création du projet Visual Studio du schéma RDL'
+          href: lesson-1-create-the-rdl-schema-visual-studio-project.md
+        - name: "Leçon\_2\_: génération de classes à partir du schéma RDL à l'aide de l'outil xsd"
+          href: lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md
+        - name: "Leçon\_3\_: chargement d'une définition de rapport à partir du serveur de rapports"
+          href: lesson-3-load-a-report-definition-from-the-report-server.md
+        - name: 'Leçon 4 : Mise à jour par programme de la définition du rapport'
+          href: lesson-4-update-the-report-definition-programmatically.md
+        - name: "Leçon\_5\_: publication de la définition du rapport sur le serveur de rapports"
+          href: lesson-5-publish-the-report-definition-to-the-report-server.md
+        - name: 'Leçon 6 : Exécution de l''application de schéma RDL (VB/C#)'
+          href: lesson-6-run-the-rdl-schema-application-vb-csharp.md
+    - name: Didacticiels (Générateur de rapports)
+      href: ../reporting-services/report-builder-tutorials.md
+      items:
+        - name: Éléments requis pour les didacticiels
+          href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
+        - name: Autres manières d'obtenir une connexion de données (Générateur de rapports)
+          href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
+        - name: "Didacticiel\_: création d'un rapport de tableau de base"
+          href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
+        - name: "Didacticiel\_: création d'un rapport de matrice"
+          href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
+        - name: 'Didacticiel : création d''un rapport de forme libre'
+          href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
+        - name: 'Didacticiel : mettre en forme du texte (Générateur de rapports)'
+          href: ../reporting-services/tutorial-format-text-report-builder.md
+        - name: 'Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports)'
+          href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
+        - name: 'Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports)'
+          href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
+        - name: 'Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports)'
+          href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
+        - name: 'Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports)'
+          href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
+        - name: "Didacticiel\_: ajout d'un indicateur de performance clé à un rapport"
+          href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
+        - name: 'Didacticiel : Rapport cartographique'
+          href: ../reporting-services/tutorial-map-report-report-builder.md
+        - name: 'Didacticiel : ajouter un paramètre à un rapport (Générateur de rapports)'
+          href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
+        - name: "Didacticiel\_: création d'un rapport principal et d'un rapport d'extraction"
+          href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
+        - name: "Didacticiel\_: introduction aux expressions"
+          href: ../reporting-services/tutorial-introducing-expressions.md
+- name: Didacticiels sur la Gestion des informations d'entreprise
+  href: enterprise-information-management-tutorials.md
+  items:
+    - name: 'Gestion des informations d''entreprise en associant SSIS, MDS et DQS [Didacticiel]'
+      href: 'enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md'
+      items:
+        - name: "Leçon\_1\_: Création d'une base de connaissances DQS nommée Fournisseurs"
+          href: lesson-1-creating-the-suppliers-dqs-knowledge-base.md
+          items:
+            - name: "Tâche 1\_: Création d'une base de connaissances et de domaines"
+              href: task-1-creating-a-knowledge-base-and-domains.md
+            - name: "Tâche 2\_: Ajout de valeurs de domaine manuellement"
+              href: task-2-adding-domain-values-manually.md
+            - name: 'Tâche 3 : Importer des valeurs de domaine d''un fichier Excel'
+              href: task-3-importing-domain-values-from-an-excel-file.md
+            - name: "Tâche 4\_: Définition de règles de domaine"
+              href: task-4-setting-domain-rules.md
+            - name: "Tâche 5\_: Définition des relations basées sur des termes"
+              href: task-5-setting-term-based-relationships.md
+            - name: 'Tâche 6 : Définition des synonymes'
+              href: task-6-setting-synonyms.md
+            - name: "Tâche 7\_: Création d'une règle de domaine composite"
+              href: task-7-creating-a-composite-domain.md
+            - name: "Tâche 8\_: Création d'une règle de domaine composite"
+              href: task-8-creating-a-composite-domain-rule.md
+            - name: 'Tâche 9 : Configuration d''un service de données de référence'
+              href: task-9-configuring-a-reference-data-service.md
+            - name: "Tâche 10\_: Configuration d'un domaine pour utiliser un service de données de référence"
+              href: task-10-configuring-composite-domain-to-use-reference-data-service.md
+            - name: "Tâche 11\_: Publication de la base de connaissances"
+              href: task-11-publishing-the-knowledge-base.md
+            - name: "Tâche 12\_: Découverte des connaissances"
+              href: task-12-discovering-knowledge-knowledge-discovery.md
+        - name: "Leçon\_2\_: Nettoyage des données des fournisseurs avec la base de connaissances Fournisseurs"
+          href: lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md
+          items:
+            - name: "Tâche 1\_: Création d'un projet de qualité des données"
+              href: task-1-creating-a-data-quality-project.md
+            - name: "Tâche 2\_: Mappage de colonnes d'Excel aux domaines DQS"
+              href: task-2-mapping-excel-columns-to-dqs-domains.md
+            - name: "Tâche 3\_: Nettoyage des données dans la base de connaissances Fournisseurs"
+              href: task-3-cleansing-data-against-the-suppliers-knowledge-base.md
+            - name: "Tâche 4\_: Gestion et affichage des résultats"
+              href: task-4-manaing-and-viewing-results.md
+            - name: "Tâche 5\_: Exportation des résultats du nettoyage vers un fichier Excel"
+              href: task-5-exporting-cleansing-results-to-an-excel-file.md
+            - name: "Tâche 6\_: Importation de valeurs depuis le projet de nettoyage de la liste des fournisseurs"
+              href: task-6-importing-values-from-the-cleanse-supplier-list-project.md
+        - name: "Leçon\_3\_: Faire correspondre les données pour supprimer les doublons de la liste des fournisseurs"
+          href: lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md
+          items:
+            - name: "Tâche 1\_: Définition d'une stratégie de correspondance"
+              href: task-1-defining-a-matching-policy.md
+            - name: "Tâche 2\_: Test et publication de la stratégie de correspondance"
+              href: task-2-testing-and-publishing-the-matching-policy.md
+            - name: "Tâche 3\_: Création et exécution d'un projet de qualité des données pour la mise en correspondance"
+              href: task-3-creating-and-running-a-data-quality-project-for-matching.md
+            - name: "Tâche 4 (Facultatif)\_: Exportation des résultats de l'activité de mise en correspondance dans un fichier Excel"
+              href: task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md
+        - name: 'Leçon 4 : Stockage des données sur les fournisseurs dans MDS'
+          href: lesson-4-storing-supplier-data-in-mds.md
+          items:
+            - name: "Tâche 1\_: Créer un modèle Fournisseurs à l'aide de Master Data Manager"
+              href: task-1-creating-suppliers-model-using-master-data-manager.md
+            - name: "Tâche 2\_: Téléchargement des données des fournisseurs vers MDS à l'aide du complément MDS pour Excel"
+              href: task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md
+            - name: 'Tâche 3 : Vérification des données dans Master Data Manager'
+              href: task-3-verifying-the-data-in-master-data-manager.md
+            - name: "Tâche 4 (Facultatif)\_: Combiner, mettre en correspondance et publier un nouvel ensemble de données"
+              href: task-4-optional-combining-matching-and-publishing-new-set-of-data.md
+            - name: "Tâche 5\_: Créer un attribut basé sur un domaine à partir d'Excel"
+              href: task-5-creating-a-domain-based-attribute-from-excel.md
+            - name: "Tâche 6\_: Vérifier que l'attribut basé sur un domaine est créé à l'aide de Master Data Manager"
+              href: task-6-verify-domain-based-attribute-master-data-manager.md
+            - name: "Tâche 7\_: Affichage des mises à jour effectuées à l'aide de Master Data Manager dans Excel"
+              href: task-7-viewing-updates-made-using-master-data-manager-in-excel.md
+            - name: "Tâche 8\_: Ajout d'une nouvelle valeur pour l'entité État dans Excel"
+              href: task-8-adding-a-new-value-for-state-entity-in-excel.md
+            - name: "Tâche 9\_: Création d'une hiérarchie dérivée à l'aide de Master Data Manager"
+              href: task-9-creating-a-derived-hierarchy-using-master-data-manager.md
+        - name: "Leçon\_5\_: Automatisation du nettoyage et de la mise en correspondance avec SSIS"
+          href: lesson-5-automating-the-cleansing-and-matching-using-ssis.md
+          items:
+            - name: "Tâche 1 (Condition préalable)\_: Supprimer des données de fournisseur dans MDS"
+              href: task-1-prerequisite-removing-supplier-data-in-mds.md
+            - name: "Tâche 2 (Facultatif)\_: Création d'une vue d'abonnement MDS à l'aide de Master Data Manager"
+              href: task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md
+            - name: "Tâche 3 (Facultatif)\_: Examiner les vues d'abonnement"
+              href: task-3-optional-reviewing-the-subscription-views.md
+            - name: "Tâche 4 (Facultatif)\_: Création d'un projet SSIS à l'aide de SQL Server Data Tools"
+              href: task-4-creating-an-ssis-project-using-sql-server-data-tools.md
+            - name: "Tâche 5\_: Ajout d'une tâche de flux de données"
+              href: task-5-adding-data-flow-task.md
+            - name: 'Tâche 6 : Ajout d''une source Excel au flux de données'
+              href: task-6-adding-excel-source-to-the-data-flow.md
+            - name: "Tâche 7\_: Ajout d'une transformation de nettoyage DQS au flux de données"
+              href: task-7-adding-dqs-cleansing-transform-to-the-data-flow.md
+            - name: "Tâche 8\_: Ajout de la transformation de fractionnement conditionnel pour fractionner la sortie du nettoyage"
+              href: task-8-adding-conditional-split-transform-to-split-cleansing-output.md
+            - name: "Tâche 9\_: Ajout d'une transformation d'union totale pour combiner des enregistrements corrects et corrigés"
+              href: task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md
+            - name: "Tâche 10\_: Ajouter la transformation de regroupement probable pour identifier des doublons"
+              href: task-10-adding-fuzzy-group-transform-to-identify-duplicates.md
+            - name: "Tâche 11\_: Ajouter la transformation de fractionnement conditionnel pour filtrer les doublons"
+              href: task-11-adding-conditional-split-transform-to-filter-duplicates.md
+            - name: "Tâche 12\_: Ajout d'une transformation de colonne dérivée pour ajouter les colonnes requises par MDS"
+              href: task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md
+            - name: "Tâche 13\_: Ajout d'une destination OLE DB pour écrire des données dans une table intermédiaire MDS"
+              href: task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md
+            - name: "Tâche 14\_: Ajout d'une tâche d'exécution SQL au flux de contrôle pour exécuter la procédure stockée pour MDS"
+              href: task-14-add-execute-to-control-flow-run-mds-stored-procedure.md
+            - name: "Tâche 15\_: Générer et exécuter le projet SSIS"
+              href: task-15-building-and-running-the-ssis-project.md
+            - name: "Tâche 16\_: Vérification à l'aide de Master Data Manage"
+              href: task-16-verifying-with-master-data-manager.md
+            - name: "Tâche 17\_: Examiner le projet de nettoyage DQS créé par le package SSIS"
+              href: task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md
+        - name: Conclusion
+          href: conclusion.md

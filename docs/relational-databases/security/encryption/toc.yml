@@ -1,0 +1,84 @@
+- name: Vue d'ensemble
+  href: sql-server-encryption.md
+- name: Hiérarchie de chiffrement
+  href: encryption-hierarchy.md
+- name: Choisir un algorithme de chiffrement
+  href: choose-an-encryption-algorithm.md
+- name: Chiffrement transparent des données (TDE)
+  href: transparent-data-encryption.md
+  items:
+    - name: Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
+      href: move-a-tde-protected-database-to-another-sql-server.md
+    - name: Activer le chiffrement transparent des données à l’aide de la gestion de clés extensible (EKM)
+      href: enable-tde-on-sql-server-using-ekm.md
+- name: TDE avec Azure SQL
+  href: transparent-data-encryption-azure-sql.md
+  items:
+    - name: TDE avec BYOK (Bring Your Own Key)
+      href: transparent-data-encryption-byok-azure-sql.md
+    - name: Configurer TDE avec BYOK
+      href: transparent-data-encryption-byok-azure-sql-configure.md
+    - name: Effectuer la rotation des clés BYOK TDE
+      href: transparent-data-encryption-byok-azure-sql-key-rotation.md
+    - name: Supprimer le protecteur TDE
+      href: transparent-data-encryption-byok-azure-sql-remove-tde-protector.md
+- name: SQL Server et clés de chiffrement de base de données
+  href: sql-server-and-database-encryption-keys-database-engine.md
+  items:
+    - name: clé principale de service
+      href: service-master-key.md
+    - name: Gestion de clés extensible (EKM)
+      href: extensible-key-management-ekm.md
+    - name: Gestion de clés extensible à l'aide d'Azure Key Vault
+      href: extensible-key-management-using-azure-key-vault-sql-server.md
+      items:
+        - name: Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault
+          href: setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+        - name: "Utiliser le connecteur SQL\_Server avec les fonctionnalités de chiffrement SQL"
+          href: use-sql-server-connector-with-sql-encryption-features.md
+        - name: Résolution des problèmes et maintenance du connecteur SQL Server
+          href: sql-server-connector-maintenance-troubleshooting.md
+    - name: Sauvegarder la clé principale du service
+      href: back-up-the-service-master-key.md
+    - name: Restaurer la clé principale du service
+      href: restore-the-service-master-key.md
+    - name: Créer une clé principale de base de données
+      href: create-a-database-master-key.md
+    - name: Sauvegarder une clé primaire de base de données
+      href: back-up-a-database-master-key.md
+    - name: Restaurer une clé principale de base de données
+      href: restore-a-database-master-key.md
+    - name: Créer des clés symétriques identiques sur deux serveurs
+      href: create-identical-symmetric-keys-on-two-servers.md
+    - name: Chiffrer une colonne de données
+      href: encrypt-a-column-of-data.md
+- name: Always Encrypted
+  href: always-encrypted-database-engine.md
+  items:
+    - name: Assistant Always Encrypted
+      href: always-encrypted-wizard.md
+    - name: Vue d’ensemble de la gestion des clés pour Always Encrypted
+      href: overview-of-key-management-for-always-encrypted.md
+      items:
+        - name: Créer et stocker des clés principales de colonne (Always Encrypted)
+          href: create-and-store-column-master-keys-always-encrypted.md
+    - name: Configurer Always Encrypted à l’aide de SQL Server Management Studio
+      href: configure-always-encrypted-using-sql-server-management-studio.md
+    - name: Configurer Always Encrypted à l’aide de PowerShell
+      href: configure-always-encrypted-using-powershell.md
+      items:
+        - name: Configurer des clés Always Encrypted à l’aide de PowerShell
+          href: configure-always-encrypted-keys-using-powershell.md
+        - name: Permuter des clés Always Encrypted à l’aide de PowerShell
+          href: rotate-always-encrypted-keys-using-powershell.md
+        - name: Configurer le chiffrement de colonne à l’aide de PowerShell
+          href: configure-column-encryption-using-powershell.md
+    - name: Always Encrypted (développement client)
+      href: always-encrypted-client-development.md
+      items:
+        - name: Développer des applications à l’aide d’Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server
+          href: develop-using-always-encrypted-with-net-framework-data-provider.md
+    - name: Chiffrement Always Encrypted
+      href: always-encrypted-cryptography.md
+    - name: Migrer des données sensibles protégées par Always Encrypted
+      href: migrate-sensitive-data-protected-by-always-encrypted.md

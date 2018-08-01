@@ -1,0 +1,67 @@
+- name: SQL Operations Studio (préversion)
+  href: what-is.md
+- name: Install
+  href: download.md
+- name: Notes de publication
+  href: release-notes.md
+- name: Démarrages rapides
+  items:
+    - name: "Connexion & interrogation de SQL\_Server"
+      href: quickstart-sql-server.md
+    - name: Connexion & interrogation d’Azure SQL Database
+      href: quickstart-sql-database.md
+    - name: Connexion & interrogation d’Azure SQL Warehouse
+      href: quickstart-sql-dw.md
+- name: Didacticiels
+  items:
+    - name: Éditeur T-SQL
+      href: tutorial-sql-editor.md
+    - name: "Exemple d’insight\_: requêtes lentes"
+      href: tutorial-qds-sql-server.md
+    - name: "Exemple d’insight\_: utilisation de l’espace de table"
+      href: tutorial-table-space-sql-server.md
+    - name: Créer un insight personnalisé
+      href: tutorial-build-custom-insight-sql-server.md
+    - name: Sauvegarde et restauration
+      href: tutorial-backup-restore-sql-server.md
+- name: Guides pratiques
+  items:
+    - name: Tableaux de bord et widgets d’insight
+      href: insight-widgets.md
+    - name: Extensions
+      href: extensions.md
+      items:
+        - name: SQL Server Agent
+          href: sql-server-agent-extension.md
+        - name: SQL Server Profiler
+          href: sql-server-profiler-extension.md
+    - name: Extraits de code
+      href: code-snippets.md
+    - name: 'Terminal intégré (PowerShell, Bash)'
+      href: integrated-terminal.md
+    - name: Raccourcis clavier
+      href: keyboard-shortcuts.md
+    - name: Groupes de serveurs
+      href: server-groups.md
+    - name: Contrôle de code source
+      href: source-control.md
+    - name: Espace de travail & paramètres utilisateur
+      href: settings.md
+    - name: Authentification Windows (Kerberos)
+      href: enable-kerberos.md
+    - name: Collecte des données d’utilisation
+      href: usage-data-collection.md
+- name: Ressources
+  items:
+    - name: Guide de référence Transact-SQL
+      href: ../t-sql/language-reference.md
+    - name: SQL Operations Studio (préversion) - Dépôt GitHub
+      href: 'https://www.github.com/Microsoft/SqlOpsStudio'
+    - name: Blog SQL Server
+      href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
+    - name: Nouveaux articles et articles mis à jour
+      href: new-updated-sql-operations-studio.md
+- name: Questions fréquentes (FAQ)
+  href: faq.md
+- name: Signaler des problèmes & faire des suggestions
+  href: 'https://github.com/microsoft/sqlopsstudio/issues'

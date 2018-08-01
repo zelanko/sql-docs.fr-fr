@@ -1,0 +1,10 @@
+- name: Microsoft ActiveX Data Objects (ADO)
+  href: microsoft-activex-data-objects-ado.md
+- name: Articles nouveaux et mis à jour
+  href: new-updated-ado.md
+- name: Guide de développement ADO +
+  href: ./guide/ado-programmer-s-guide.md
+- name: Informations de référence sur ADO +
+  href: ./reference/ado-glossary.md
+- name: Glossaire ADO
+  href: ado-glossary.md

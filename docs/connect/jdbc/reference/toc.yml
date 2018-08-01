@@ -1,0 +1,2336 @@
+- name: Référence de l'API du pilote JDBC
+  href: jdbc-driver-api-reference.md
+- name: Interface ISQLServerCallableStatement
+  href: isqlservercallablestatement-interface.md
+- name: Interface ISQLServerConnection
+  href: isqlserverconnection-interface.md
+- name: Interface ISQLServerDataSource
+  href: isqlserverdatasource-interface.md
+- name: Interface ISQLServerPreparedStatement
+  href: isqlserverpreparedstatement-interface.md
+- name: Interface ISQLServerResultSet
+  href: isqlserverresultset-interface.md
+- name: Interface ISQLServerStatement
+  href: isqlserverstatement-interface.md
+- name: Classe DateTimeOffset
+  href: datetimeoffset-class.md?toc=%2fsql%2fconnect%2fjdbc%2freference%2ftoc.json
+  items:
+    - name: Membres de DateTimeOffset
+      href: datetimeoffset-members.md
+    - name: Méthodes DateTimeOffset
+      href: datetimeoffset-methods.md
+      items:
+        - name: Méthode compareTo (DateTimeOffset)
+          href: compareto-method-datetimeoffset.md
+        - name: Méthode equals (DateTimeOffset)
+          href: equals-method-datetimeoffset.md
+        - name: Méthode getMinutesOffset (DateTimeOffset)
+          href: getminutesoffset-method-datetimeoffset.md
+        - name: Méthode getTimestamp (DateTimeOffset)
+          href: gettimestamp-method-datetimeoffset.md
+        - name: Méthode hashCode (DateTimeOffset)
+          href: hashcode-method-datetimeoffset.md
+        - name: Méthode toString (DateTimeOffset)
+          href: tostring-method-datetimeoffset.md
+        - name: Méthode valueOf (DateTimeOffset)
+          href: valueof-method-datetimeoffset.md
+          items:
+            - name: 'Méthode valueOf (java.sql.Timestamp, int)'
+              href: valueof-method-java-sql-timestamp-int.md
+            - name: 'Méthode valueOf (java.sql.Timestamp, java.util.Calendar)'
+              href: valueof-method-java-sql-timestamp-java-util-calendar.md
+- name: 'SQLServerBlob, classe'
+  href: sqlserverblob-class.md
+  items:
+    - name: Membres de SQLServerBlob
+      href: sqlserverblob-members.md
+    - name: Constructeurs SQLServerBlob
+      href: sqlserverblob-constructors.md
+      items:
+        - name: 'SQLServerBlob, constructeur (SQLServerConnection, byte)'
+          href: sqlserverblob-constructor-sqlserverconnection-byte.md
+    - name: Méthodes SQLServerBlob
+      href: sqlserverblob-methods.md
+      items:
+        - name: Méthode free (SQLServerBlob)
+          href: free-method-sqlserverblob.md
+        - name: Méthode getBinaryStream (SQLServerBlob)
+          href: getbinarystream-method-sqlserverblob.md
+          items:
+            - name: Méthode getBinaryStream ()
+              href: getbinarystream-method.md
+        - name: Méthode getBytes (SQLServerBlob)
+          href: getbytes-method-sqlserverblob.md
+        - name: Méthode length (SQLServerBlob)
+          href: length-method-sqlserverblob.md
+        - name: Méthode position (SQLServerBlob)
+          href: position-method-sqlserverblob.md
+          items:
+            - name: 'Méthode position (java.sql.Blob, long)'
+              href: position-method-java-sql-blob-long.md
+            - name: 'position, méthode (byte, long)'
+              href: position-method-byte-long.md
+        - name: Méthode setBinaryStream (SQLServerBlob)
+          href: setbinarystream-method-sqlserverblob.md
+        - name: Méthode setBytes (SQLServerBlob)
+          href: setbytes-method-sqlserverblob.md
+          items:
+            - name: 'setBytes, méthode (long, byte)'
+              href: setbytes-method-long-byte.md
+            - name: 'setBytes, méthode (long, byte, int, int)'
+              href: setbytes-method-long-byte-int-int.md
+        - name: Méthode truncate (SQLServerBlob)
+          href: truncate-method-sqlserverblob.md
+- name: Classe SQLServerCallableStatement
+  href: sqlservercallablestatement-class.md
+  items:
+    - name: Membres de SQLServerCallableStatement
+      href: sqlservercallablestatement-members.md
+    - name: Méthodes SQLServerCallableStatement
+      href: sqlservercallablestatement-methods.md
+      items:
+        - name: Méthode getArray (SQLServerCallableStatement)
+          href: getarray-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getArray (int)
+              href: getarray-method-int.md
+            - name: Méthode getArray (java.lang.String)
+              href: getarray-method-java-lang-string.md
+        - name: Méthode getAsciiStream (SQLServerCallableStatement)
+          href: getasciistream-method-sqlservercallablestatement.md
+          items:
+            - name: getAsciiStream (int)
+              href: getasciistream-int.md
+            - name: getAsciiStream (java.lang.String)
+              href: getasciistream-java-lang-string.md
+        - name: Méthode getBigDecimal (SQLServerCallableStatement)
+          href: getbigdecimal-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getBigDecimal (int)
+              href: getbigdecimal-method-int.md
+            - name: 'Méthode getBigDecimal (int, int)'
+              href: getbigdecimal-method-int-int.md
+            - name: Méthode getBigDecimal (java.lang.String)
+              href: getbigdecimal-method-java-lang-string.md
+            - name: 'Méthode getBigDecimal (java.lang.String, int)'
+              href: getbigdecimal-method-java-lang-string-int.md
+        - name: Méthode getBinaryStream (SQLServerCallableStatement)
+          href: getbinarystream-method-sqlservercallablestatement.md
+          items:
+            - name: getBinaryStream (int)
+              href: getbinarystream-int.md
+            - name: getBinaryStream (java.lang.String)
+              href: getbinarystream-java-lang-string.md
+        - name: Méthode getBlob (SQLServerCallableStatement)
+          href: getblob-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getBlob (int)
+              href: getblob-method-int.md
+            - name: Méthode getBlob (java.lang.String)
+              href: getblob-method-java-lang-string.md
+        - name: Méthode getBoolean (SQLServerCallableStatement)
+          href: getboolean-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getBoolean (int)
+              href: getboolean-method-int.md
+            - name: Méthode getBoolean (java.lang.String)
+              href: getboolean-method-java-lang-string.md
+        - name: Méthode getByte (SQLServerCallableStatement)
+          href: getbyte-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getByte (int)
+              href: getbyte-method-int.md
+            - name: Méthode getByte (java.lang.String)
+              href: getbyte-method-java-lang-string.md
+        - name: Méthode getBytes (SQLServerCallableStatement)
+          href: getbytes-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getBytes (int)
+              href: getbytes-method-int.md
+            - name: Méthode getBytes (java.lang.String)
+              href: getbytes-method-java-lang-string.md
+        - name: Méthode getCharacterStream (SQLServerCallableStatement)
+          href: getcharacterstream-method-sqlservercallablestatement.md
+          items:
+            - name: getCharacterStream (int)
+              href: getcharacterstream-int.md
+            - name: getCharacterStream (java.lang.String)
+              href: getcharacterstream-java-lang-string.md
+        - name: Méthode getClob (SQLServerCallableStatement)
+          href: getclob-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getClob (int)
+              href: getclob-method-int.md
+            - name: Méthode getClob (java.lang.String)
+              href: getclob-method-java-lang-string.md
+        - name: Méthode getDate (SQLServerCallableStatement)
+          href: getdate-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getDate (int)
+              href: getdate-method-int.md
+            - name: 'Méthode getDate (int, java.util.Calendar)'
+              href: getdate-method-int-java-util-calendar.md
+            - name: Méthode getDate (java.lang.String)
+              href: getdate-method-java-lang-string.md
+            - name: 'Méthode getDate (java.lang.String, java.util.Calendar)'
+              href: getdate-method-java-lang-string-java-util-calendar.md
+        - name: Méthode getDateTimeOffset (SQLServerCallableStatement)
+          href: getdatetimeoffset-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getDateTimeOffset (int)
+              href: getdatetimeoffset-method-int.md
+            - name: Méthode getDateTimeOffset (String)
+              href: getdatetimeoffset-method-string.md
+        - name: Méthode getDouble (SQLServerCallableStatement)
+          href: getdouble-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getDouble (int)
+              href: getdouble-method-int.md
+            - name: Méthode getDouble (java.lang.String)
+              href: getdouble-method-java-lang-string.md
+        - name: Méthode getFloat (SQLServerCallableStatement)
+          href: getfloat-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getFloat (int)
+              href: getfloat-method-int.md
+            - name: Méthode getFloat (java.lang.String)
+              href: getfloat-method-java-lang-string.md
+        - name: Méthode getInt (SQLServerCallableStatement)
+          href: getint-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getInt (int)
+              href: getint-method-int.md
+            - name: Méthode getInt (java.lang.String)
+              href: getint-method-java-lang-string.md
+        - name: Méthode getLong (SQLServerCallableStatement)
+          href: getlong-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getLong (int)
+              href: getlong-method-int.md
+            - name: Méthode getLong (java.lang.String)
+              href: getlong-method-java-lang-string.md
+        - name: Méthode getNCharacterStream (SQLServerCallableStatement)
+          href: getncharacterstream-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getNCharacterStream (int)
+              href: getncharacterstream-method-int.md
+            - name: Méthode getNCharacterStream (java.lang.String)
+              href: getncharacterstream-method-java-lang-string.md
+        - name: Méthode getNClob (SQLServerCallableStatement)
+          href: getnclob-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getNClob (int)
+              href: getnclob-method-int.md
+            - name: Méthode getNClob (java.lang.String)
+              href: getnclob-method-java-lang-string.md
+        - name: Méthode getNString (SQLServerCallableStatement)
+          href: getnstring-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getNString (int)
+              href: getnstring-method-int.md
+            - name: Méthode getNString (java.lang.String)
+              href: getnstring-method-java-lang-string.md
+        - name: Méthode getObject (SQLServerCallableStatement)
+          href: getobject-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getObject (int)
+              href: getobject-method-int.md
+            - name: 'Méthode getObject (int, java.util.Map)'
+              href: getobject-method-int-java-util-map.md
+            - name: Méthode getObject (java.lang.String)
+              href: getobject-method-java-lang-string.md
+            - name: 'Méthode getObject (java.lang.String, java.util.Map)'
+              href: getobject-method-java-lang-string-java-util-map.md
+        - name: Méthode getRef (SQLServerCallableStatement)
+          href: getref-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getRef (int)
+              href: getref-method-int.md
+            - name: Méthode getRef (java.lang.String)
+              href: getref-method-java-lang-string.md
+        - name: Méthode getShort (SQLServerCallableStatement)
+          href: getshort-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getShort (int)
+              href: getshort-method-int.md
+            - name: Méthode getShort (java.lang.String)
+              href: getshort-method-java-lang-string.md
+        - name: Méthode getSQLXML (SQLServerCallableStatement)
+          href: getsqlxml-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getSQLXML (int)
+              href: getsqlxml-method-int.md
+            - name: Méthode getSQLXML (java.lang.String)
+              href: getsqlxml-method-java-lang-string.md
+        - name: Méthode getString (SQLServerCallableStatement)
+          href: getstring-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getString (int)
+              href: getstring-method-int.md
+            - name: Méthode getString (java.lang.String)
+              href: getstring-method-java-lang-string.md
+        - name: Méthode getTime (SQLServerCallableStatement)
+          href: gettime-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getTime (int)
+              href: gettime-method-int.md
+            - name: 'Méthode getTime (int, java.util.Calendar)'
+              href: gettime-method-int-java-util-calendar.md
+            - name: Méthode getTime (java.lang.String)
+              href: gettime-method-java-lang-string.md
+            - name: 'Méthode getTime (java.lang.String, java.util.Calendar)'
+              href: gettime-method-java-lang-string-java-util-calendar.md
+        - name: Méthode getTimestamp (SQLServerCallableStatement)
+          href: gettimestamp-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getTimestamp (int)
+              href: gettimestamp-method-int.md
+            - name: 'Méthode getTimestamp (int, java.util.Calendar)'
+              href: gettimestamp-method-int-java-util-calendar.md
+            - name: Méthode getTimestamp (java.lang.String)
+              href: gettimestamp-method-java-lang-string.md
+            - name: 'Méthode getTimestamp (java.lang.String, java.util.Calendar)'
+              href: gettimestamp-method-java-lang-string-java-util-calendar.md
+        - name: Méthode getURL (SQLServerCallableStatement)
+          href: geturl-method-sqlservercallablestatement.md
+          items:
+            - name: Méthode getURL (int)
+              href: geturl-method-int.md
+            - name: Méthode getURL (java.lang.String)
+              href: geturl-method-java-lang-string.md
+        - name: Méthode isWrapperFor (SQLServerCallableStatement)
+          href: iswrapperfor-method-sqlservercallablestatement.md
+        - name: Méthode registerOutParameter (SQLServerCallableStatement)
+          href: registeroutparameter-method-sqlservercallablestatement.md
+          items:
+            - name: 'Méthode registerOutParameter (int, int)'
+              href: registeroutparameter-method-int-int.md
+            - name: 'Méthode registerOutParameter (int, int, int)'
+              href: registeroutparameter-method-int-int-int.md
+            - name: 'Méthode registerOutParameter (int, int, java.lang.String)'
+              href: registeroutparameter-method-int-int-java-lang-string.md
+            - name: 'Méthode registerOutParameter (java.lang.String, int)'
+              href: registeroutparameter-method-java-lang-string-int.md
+            - name: 'Méthode registerOutParameter (java.lang.String, int, int)'
+              href: registeroutparameter-method-java-lang-string-int-int.md
+            - name: 'Méthode registerOutParameter (java.lang.String, int, java.lang.String)'
+              href: registeroutparameter-method-java-lang-string-int-java-lang-string.md
+        - name: setAsciiStream (SQLServerCallableStatement)
+          href: setasciistream-sqlservercallablestatement.md
+          items:
+            - name: 'Méthode setAsciiStream (java.lang.String, java.io.InputStream)'
+              href: setasciistream-method-java-lang-string-java-io-inputstream.md
+            - name: 'Méthode setAsciiStream (java.lang.String, java.io.InputStream, int)'
+              href: setasciistream-method-java-lang-string-java-io-inputstream-int.md
+            - name: 'Méthode setAsciiStream (java.lang.String, java.io.InputStream, long)'
+              href: setasciistream-method-java-lang-string-java-io-inputstream-long.md
+        - name: Méthode setBigDecimal (SQLServerCallableStatement)
+          href: setbigdecimal-method-sqlservercallablestatement.md
+        - name: setBinaryStream (SQLServerCallableStatement)
+          href: setbinarystream-sqlservercallablestatement.md
+          items:
+            - name: 'Méthode setBinaryStream (java.lang.String, java.io.InputStream)'
+              href: setbinarystream-method-java-lang-string-java-io-inputstream.md
+            - name: 'Méthode setBinaryStream (java.lang.String, java.io.InputStream, int)'
+              href: setbinarystream-method-java-lang-string-java-io-inputstream-int.md
+            - name: 'Méthode setBinaryStream (java.lang.String, java.io.InputStream, long)'
+              href: setbinarystream-method-java-lang-string-java-io-inputstream-long.md
+        - name: Méthode setBoolean (SQLServerCallableStatement)
+          href: setboolean-method-sqlservercallablestatement.md
+        - name: Méthode setByte (SQLServerCallableStatement)
+          href: setbyte-method-sqlservercallablestatement.md
+        - name: Méthode setBytes (SQLServerCallableStatement)
+          href: setbytes-method-sqlservercallablestatement.md
+        - name: Méthode setCharacterStream (SQLServerCallableStatement)
+          href: setcharacterstream-method-sqlservercallablestatement.md
+          items:
+            - name: 'Méthode setCharacterStream (java.lang.String, java.io.Reader)'
+              href: setcharacterstream-method-java-lang-string-java-io-reader.md
+            - name: 'Méthode setCharacterStream (java.lang.String, java.io.Reader, int)'
+              href: setcharacterstream-method-java-lang-string-java-io-reader-int.md
+            - name: 'Méthode setCharacterStream (java.lang.String, java.io.Reader, long)'
+              href: setcharacterstream-method-java-lang-string-java-io-reader-long.md
+        - name: Méthode setClob (SQLServerCallableStatement)
+          href: setclob-method-sqlservercallablestatement.md
+          items:
+            - name: 'Méthode setClob (java.lang.String, java.sql.Clob)'
+              href: setclob-method-java-lang-string-java-sql-clob.md
+            - name: 'Méthode setClob (java.lang.String, java.io.Reader)'
+              href: setclob-method-java-lang-string-java-io-reader.md
+            - name: 'Méthode setClob (java.lang.String, java.io.Reader, long)'
+              href: setclob-method-java-lang-string-java-io-reader-long.md
+        - name: Méthode setDate (SQLServerCallableStatement)
+          href: setdate-method-sqlservercallablestatement.md
+          items:
+            - name: 'Méthode setDate (java.lang.String, java.sql.Date)'
+              href: setdate-method-java-lang-string-java-sql-date.md
+            - name: 'Méthode setDate (java.lang.String, java.sql.Date, java.util.Calendar)'
+              href: setdate-method-java-lang-string-java-sql-date-java-util-calendar.md
+        - name: Méthode setDateTimeOffset (SQLServerCallableStatement)
+          href: setdatetimeoffset-method-sqlservercallablestatement.md
+        - name: Méthode setDouble (SQLServerCallableStatement)
+          href: setdouble-method-sqlservercallablestatement.md
+        - name: Méthode setFloat (SQLServerCallableStatement)
+          href: setfloat-method-sqlservercallablestatement.md
+        - name: Méthode setInt (SQLServerCallableStatement)
+          href: setint-method-sqlservercallablestatement.md
+        - name: Méthode setLong (SQLServerCallableStatement)
+          href: setlong-method-sqlservercallablestatement.md
+        - name: Méthode setNCharacterStream (SQLServerCallableStatement)
+          href: setncharacterstream-method-sqlservercallablestatement.md
+          items:
+            - name: 'Méthode setNCharacterStream (java.lang.String, java.io.Reader)'
+              href: setncharacterstream-method-java-lang-string-java-io-reader.md
+            - name: 'Méthode setNCharacterStream (java.lang.String, java.io.Reader, long)'
+              href: setncharacterstream-method-java-lang-string-java-io-reader-long.md
+        - name: Méthode setNClob (SQLServerCallableStatement)
+          href: setnclob-method-sqlservercallablestatement.md
+          items:
+            - name: 'Méthode setNClob (java.lang.String, java.sql.NClob)'
+              href: setnclob-method-java-lang-string-java-sql-nclob.md
+            - name: 'Méthode setNClob (java.lang.String, java.io.Reader)'
+              href: setnclob-method-java-lang-string-java-io-reader.md
+            - name: 'Méthode setNClob (java.lang.String, java.io.Reader, long)'
+              href: setnclob-method-java-lang-string-java-io-reader-long.md
+        - name: Méthode setNull (SQLServerCallableStatement)
+          href: setnull-method-sqlservercallablestatement.md
+          items:
+            - name: 'Méthode setNull (java.lang.String, int)'
+              href: setnull-method-java-lang-string-int.md
+            - name: 'Méthode setNull (java.lang.String, int, java.lang.String)'
+              href: setnull-method-java-lang-string-int-java-lang-string.md
+        - name: Méthode setNString (SQLServerCallableStatement)
+          href: setnstring-method-sqlservercallablestatement.md
+        - name: Méthode setObject (SQLServerCallableStatement)
+          href: setobject-method-sqlservercallablestatement.md
+          items:
+            - name: 'Méthode setObject (java.lang.String, java.lang.Object)'
+              href: setobject-method-java-lang-string-java-lang-object.md
+            - name: 'Méthode setObject (java.lang.String, java.lang.Object, int)'
+              href: setobject-method-java-lang-string-java-lang-object-int.md
+            - name: 'Méthode setObject (java.lang.String, java.lang.Object, int, int)'
+              href: setobject-method-java-lang-string-java-lang-object-int-int.md
+        - name: Méthode setShort (SQLServerCallableStatement)
+          href: setshort-method-sqlservercallablestatement.md
+        - name: Méthode setSQLXML (SQLServerCallableStatement)
+          href: setsqlxml-method-sqlservercallablestatement.md
+        - name: Méthode setString (SQLServerCallableStatement)
+          href: setstring-method-sqlservercallablestatement.md
+        - name: Méthode setTime (SQLServerCallableStatement)
+          href: settime-method-sqlservercallablestatement.md
+          items:
+            - name: 'Méthode setTime (java.lang.String, java.sql.Time)'
+              href: settime-method-java-lang-string-java-sql-time.md
+            - name: 'Méthode setTime (java.lang.String, java.sql.Time, java.util.Calendar)'
+              href: settime-method-java-lang-string-java-sql-time-java-util-calendar.md
+        - name: Méthode setTimestamp (SQLServerCallableStatement)
+          href: settimestamp-method-sqlservercallablestatement.md
+          items:
+            - name: 'Méthode setTimestamp (java.lang.String, java.sql.Timestamp)'
+              href: settimestamp-method-java-lang-string-java-sql-timestamp.md
+            - name: 'Méthode setTimestamp (java.lang.String, java.sql.Timestamp, java.util.Calendar)'
+              href: settimestamp-method-java-lang-string-java-sql-timestamp-java-util-calendar.md
+        - name: Méthode setURL (SQLServerCallableStatement)
+          href: seturl-method-sqlservercallablestatement.md
+        - name: Méthode wasNull (SQLServerCallableStatement)
+          href: wasnull-method-sqlservercallablestatement.md
+        - name: Méthode unwrap (SQLServerCallableStatement)
+          href: unwrap-method-sqlservercallablestatement.md
+- name: Classe SQLServerClob
+  href: sqlserverclob-class.md
+  items:
+    - name: Membres de SQLServerClob
+      href: sqlserverclob-members.md
+    - name: Constructeurs de SQLServerClob
+      href: sqlserverclob-constructors.md
+      items:
+        - name: 'Constructeur SQLServerClob (SQLServerConnection, java.lang.String)'
+          href: sqlserverclob-constructor-sqlserverconnection-java-lang-string.md
+    - name: Méthodes SQLServerClob
+      href: sqlserverclob-methods.md
+      items:
+        - name: Méthode free (SQLServerClob)
+          href: free-method-sqlserverclob.md
+        - name: Méthode getAsciiStream (SQLServerClob)
+          href: getasciistream-method-sqlserverclob.md
+        - name: Méthode getCharacterStream (SQLServerClob)
+          href: getcharacterstream-method-sqlserverclob.md
+          items:
+            - name: Méthode getCharacterStream ()
+              href: getcharacterstream-method.md
+            - name: 'Méthode getCharacterStream (long, long)'
+              href: getcharacterstream-method-long-long.md
+        - name: Méthode getSubString (SQLServerClob)
+          href: getsubstring-method-sqlserverclob.md
+        - name: Méthode length (SQLServerClob)
+          href: length-method-sqlserverclob.md
+        - name: Méthode position (SQLServerClob)
+          href: position-method-sqlserverclob.md
+          items:
+            - name: 'Méthode position (java.sql.Clob, long)'
+              href: position-method-java-sql-clob-long.md
+            - name: 'Méthode position (java.lang.String, long)'
+              href: position-method-java-lang-string-long.md
+        - name: Méthode setAsciiStream (SQLServerClob)
+          href: setasciistream-method-sqlserverclob.md
+        - name: Méthode setCharacterStream (SQLServerClob)
+          href: setcharacterstream-method-sqlserverclob.md
+        - name: Méthode setString (SQLServerClob)
+          href: setstring-method-sqlserverclob.md
+          items:
+            - name: 'Méthode setString (long, java.lang.String)'
+              href: setstring-method-long-java-lang-string.md
+            - name: 'Méthode setString (long, java.lang.String, int, int)'
+              href: setstring-method-long-java-lang-string-int-int.md
+        - name: Méthode truncate (SQLServerClob)
+          href: truncate-method-sqlserverclob.md
+- name: Classe SQLServerConnection
+  href: sqlserverconnection-class.md
+  items:
+    - name: Membres de SQLServerConnection
+      href: sqlserverconnection-members.md
+    - name: Méthodes SQLServerConnection
+      href: sqlserverconnection-methods.md
+      items:
+        - name: 'clearWarnings, méthode (SQLServerConnection)'
+          href: clearwarnings-method-sqlserverconnection.md
+        - name: 'close, méthode (SQLServerConnection)'
+          href: close-method-sqlserverconnection.md
+        - name: 'closeUnreferencedPreparedStatementHandles, méthode (SQLServerConnection)'
+          href: closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md
+        - name: 'commit, méthode (SQLServerConnection)'
+          href: commit-method-sqlserverconnection.md
+        - name: Méthode createBlob (SQLServerConnection)
+          href: createblob-method-sqlserverconnection.md
+        - name: Méthode createClob (SQLServerConnection)
+          href: createclob-method-sqlserverconnection.md
+        - name: Méthode createNClob (SQLServerConnection)
+          href: createnclob-method-sqlserverconnection.md
+        - name: 'createStatement, méthode (SQLServerConnection)'
+          href: createstatement-method-sqlserverconnection.md
+          items:
+            - name: Méthode createStatement ()
+              href: createstatement-method.md
+            - name: 'Méthode createStatement (int, int)'
+              href: createstatement-method-int-int.md
+            - name: 'Méthode createStatement (int, int, int)'
+              href: createstatement-method-int-int-int.md
+        - name: Méthode createSQLXML (SQLServerConnection)
+          href: createsqlxml-method-sqlserverconnection.md
+        - name: 'getAutoCommit, méthode (SQLServerConnection)'
+          href: getautocommit-method-sqlserverconnection.md
+        - name: 'getCatalog, méthode (SQLServerConnection)'
+          href: getcatalog-method-sqlserverconnection.md
+        - name: 'getClientConnectionID, méthode (SQLServerConnection)'
+          href: getclientconnectionid-method-sqlserverconnection.md
+        - name: Méthode getClientInfo (SQLServerConnection)
+          href: getclientinfo-method-sqlserverconnection.md
+          items:
+            - name: Méthode getClientInfo ()
+              href: getclientinfo-method.md
+            - name: Méthode getClientInfo (java.lang.String)
+              href: getclientinfo-method-java-lang-string.md
+        - name: 'getDisableStatementPooling, méthode (SQLServerConnection)'
+          href: getdisablestatementpooling-method-sqlserverconnection.md
+        - name: 'getDiscardedServerPreparedStatementCount, méthode (SQLServerConnection)'
+          href: getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md
+        - name: 'getEnablePrepareOnFirstPreparedStatementCall, méthode (SQLServerConnection)'
+          href: getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md
+        - name: 'getHoldability, méthode (SQLServerConnection)'
+          href: getholdability-method-sqlserverconnection.md
+        - name: 'getMetaData, méthode (SQLServerConnection)'
+          href: getmetadata-method-sqlserverconnection.md
+        - name: 'getServerPreparedStatementDiscardThreshold, méthode (SQLServerConnection)'
+          href: getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md
+        - name: 'getStatementHandleCacheEntryCount, méthode (SQLServerConnection)'
+          href: getstatementhandlecacheentrycount-method-sqlserverconnection.md
+        - name: 'getStatementPoolingCacheSize, méthode (SQLServerConnection)'
+          href: getstatementpoolingcachesize-method-sqlserverconnection.md
+        - name: 'getTransactionIsolation, méthode (SQLServerConnection)'
+          href: gettransactionisolation-method-sqlserverconnection.md
+        - name: Méthode getTypeMap (SQLServerConnection)
+          href: gettypemap-method-sqlserverconnection.md
+        - name: 'getWarnings, méthode (SQLServerConnection)'
+          href: getwarnings-method-sqlserverconnection.md
+        - name: 'isClosed, méthode (SQLServerConnection)'
+          href: isclosed-method-sqlserverconnection.md
+        - name: Méthode isReadOnly (SQLServerConnection)
+          href: isreadonly-method-sqlserverconnection.md
+        - name: 'isStatementPoolingEnabled, méthode (SQLServerConnection)'
+          href: isstatementpoolingenabled-method-sqlserverconnection.md
+        - name: Méthode isValid (SQLServerConnection)
+          href: isvalid-method-sqlserverconnection.md
+        - name: Méthode nativeSQL (SQLServerConnection)
+          href: nativesql-method-sqlserverconnection.md
+        - name: 'prepareCall, méthode (SQLServerConnection)'
+          href: preparecall-method-sqlserverconnection.md
+          items:
+            - name: Méthode prepareCall (java.lang.String)
+              href: preparecall-method-java-lang-string.md
+            - name: 'Méthode prepareCall (java.lang.String, int, int)'
+              href: preparecall-method-java-lang-string-int-int.md
+            - name: 'Méthode prepareCall (java.lang.String, int, int, int)'
+              href: preparecall-method-java-lang-string-int-int-int.md
+        - name: 'prepareStatement, méthode (SQLServerConnection)'
+          href: preparestatement-method-sqlserverconnection.md
+          items:
+            - name: Méthode prepareStatement (java.lang.String)
+              href: preparestatement-method-java-lang-string.md
+            - name: 'Méthode prepareStatement (java.lang.String, int)'
+              href: preparestatement-method-java-lang-string-int.md
+            - name: 'Méthode prepareStatement (java.lang.String, int[])'
+              href: preparestatement-method-java-lang-string-int.md
+            - name: 'Méthode prepareStatement (java.lang.String, int, int)'
+              href: preparestatement-method-java-lang-string-int-int.md
+            - name: 'Méthode prepareStatement (java.lang.String, int, int, int)'
+              href: preparestatement-method-java-lang-string-int-int-int.md
+            - name: 'prepareStatement, méthode (java.lang.String, java.lang.String)'
+              href: preparestatement-method-java-lang-string-java-lang-string.md
+        - name: Méthode releaseSavepoint (SQLServerConnection)
+          href: releasesavepoint-method-sqlserverconnection.md
+        - name: 'rollback, méthode (SQLServerConnection)'
+          href: rollback-method-sqlserverconnection.md
+          items:
+            - name: Méthode rollback ()
+              href: rollback-method.md
+            - name: Méthode rollback (java.sql.Savepoint)
+              href: rollback-method-java-sql-savepoint.md
+        - name: 'setAutoCommit, méthode (SQLServerConnection)'
+          href: setautocommit-method-sqlserverconnection.md
+        - name: Méthode setCatalog (SQLServerConnection)
+          href: setcatalog-method-sqlserverconnection.md
+        - name: Méthode setClientInfo (SQLServerConnection)
+          href: setclientinfo-method-sqlserverconnection.md
+          items:
+            - name: Méthode setClientInfo (java.util.Properties)
+              href: setclientinfo-method-java-util-properties.md
+            - name: 'Méthode setClientInfo (java.lang.String, java.lang.String)'
+              href: setclientinfo-method-java-lang-string-java-lang-string.md
+        - name: 'setDisableStatementPooling, méthode (SQLServerConnection)'
+          href: setdisablestatementpooling-method-sqlserverconnection.md
+        - name: 'setEnablePrepareOnFirstPreparedStatementCall, méthode (SQLServerConnection)'
+          href: setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md
+        - name: 'setHoldability, méthode (SQLServerConnection)'
+          href: setholdability-method-sqlserverconnection.md
+        - name: Méthode setReadOnly (SQLServerConnection)
+          href: setreadonly-method-sqlserverconnection.md
+        - name: 'setSavepoint, méthode (SQLServerConnection)'
+          href: setsavepoint-method-sqlserverconnection.md
+          items:
+            - name: Méthode setSavepoint ()
+              href: setsavepoint-method.md
+            - name: Méthode setSavepoint (java.lang.String)
+              href: setsavepoint-method-java-lang-string.md
+        - name: 'setServerPreparedStatementDiscardThreshold, méthode (SQLServerConnection)'
+          href: setserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md
+        - name: 'setStatementPoolingCacheSize, méthode (SQLServerConnection)'
+          href: setstatementpoolingcachesize-method-sqlserverconnection.md
+        - name: 'setTransactionIsolation, méthode (SQLServerConnection)'
+          href: settransactionisolation-method-sqlserverconnection.md
+        - name: Méthode setTypeMap (SQLServerConnection)
+          href: settypemap-method-sqlserverconnection.md
+    - name: Champs ISQLServerConnection
+      href: isqlserverconnection-fields.md
+      items:
+        - name: 'TRANSACTION_SNAPSHOT, champ (SQLServerConnection)'
+          href: transaction-snapshot-field-sqlserverconnection.md
+- name: Classe SQLServerConnectionPoolDataSource
+  href: sqlserverconnectionpooldatasource-class.md
+  items:
+    - name: Membres de SQLServerConnectionPoolDataSource
+      href: sqlserverconnectionpooldatasource-members.md
+    - name: Constructeurs de SQLServerConnectionPoolDataSource
+      href: sqlserverconnectionpooldatasource-constructors.md
+      items:
+        - name: Constructeur SQLServerConnectionPoolDataSource ()
+          href: sqlserverconnectionpooldatasource-constructor.md
+    - name: Méthodes SQLServerConnectionPoolDataSource
+      href: sqlserverconnectionpooldatasource-methods.md
+      items:
+        - name: Méthode getPooledConnection (SQLServerConnectionPoolDataSource)
+          href: getpooledconnection-method-sqlserverconnectionpooldatasource.md
+          items:
+            - name: Méthode getPooledConnection ()
+              href: getpooledconnection-method.md
+            - name: 'Méthode getPooledConnection (java.lang.String, java.lang.String)'
+              href: getpooledconnection-method-java-lang-string-java-lang-string.md
+        - name: Méthode getReference (SQLServerConnectionPoolDataSource)
+          href: getreference-method-sqlserverconnectionpooldatasource.md
+        - name: Méthode isWrapperFor (SQLServerConnectionPoolDataSource)
+          href: iswrapperfor-method-sqlserverconnectionpooldatasource.md
+        - name: Méthode unwrap (SQLServerConnectionPoolDataSource)
+          href: unwrap-method-sqlserverconnectionpooldatasource.md
+- name: Classe SQLServerDatabaseMetaData
+  href: sqlserverdatabasemetadata-class.md
+  items:
+    - name: Membres de SQLServerDatabaseMetaData
+      href: sqlserverdatabasemetadata-members.md
+    - name: Méthodes SQLServerDatabaseMetaData
+      href: sqlserverdatabasemetadata-methods.md
+      items:
+        - name: Méthode allProceduresAreCallable (SQLServerDatabaseMetaData)
+          href: allproceduresarecallable-method-sqlserverdatabasemetadata.md
+        - name: Méthode allTablesAreSelectable (SQLServerDatabaseMetaData)
+          href: alltablesareselectable-method-sqlserverdatabasemetadata.md
+        - name: Méthode autoCommitFailureClosesAllResultSets (SQLServerDatabaseMetaData)
+          href: autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata.md
+        - name: Méthode dataDefinitionCausesTransactionCommit (SQLServerDatabaseMetaData)
+          href: datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata.md
+        - name: Méthode dataDefinitionIgnoredInTransactions (SQLServerDatabaseMetaData)
+          href: datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md
+        - name: Méthode deletesAreDetected (SQLServerDatabaseMetaData)
+          href: deletesaredetected-method-sqlserverdatabasemetadata.md
+        - name: Méthode doesMaxRowSizeIncludeBlobs (SQLServerDatabaseMetaData)
+          href: doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md
+        - name: Méthode getAttributes (SQLServerDatabaseMetaData)
+          href: getattributes-method-sqlserverdatabasemetadata.md
+        - name: Méthode getBestRowIdentifier (SQLServerDatabaseMetaData)
+          href: getbestrowidentifier-method-sqlserverdatabasemetadata.md
+        - name: Méthode getCatalogs (SQLServerDatabaseMetaData)
+          href: getcatalogs-method-sqlserverdatabasemetadata.md
+        - name: Méthode getCatalogSeparator (SQLServerDatabaseMetaData)
+          href: getcatalogseparator-method-sqlserverdatabasemetadata.md
+        - name: méthode getCatalogTerm (SQLServerDatabaseMetaData)
+          href: getcatalogterm-method-sqlserverdatabasemetadata.md
+        - name: Méthode getClientInfoProperties (SQLServerDatabaseMetaData)
+          href: getclientinfoproperties-method-sqlserverdatabasemetadata.md
+        - name: Méthode getColumnPrivileges (SQLServerDatabaseMetaData)
+          href: getcolumnprivileges-method-sqlserverdatabasemetadata.md
+        - name: Méthode getColumns (SQLServerDatabaseMetaData)
+          href: getcolumns-method-sqlserverdatabasemetadata.md
+        - name: Méthode getConnection (SQLServerDatabaseMetaData)
+          href: getconnection-method-sqlserverdatabasemetadata.md
+        - name: Méthode getCrossReference (SQLServerDatabaseMetaData)
+          href: getcrossreference-method-sqlserverdatabasemetadata.md
+        - name: Méthode getDatabaseMajorVersion (SQLServerDatabaseMetaData)
+          href: getdatabasemajorversion-method-sqlserverdatabasemetadata.md
+        - name: Méthode getDatabaseMinorVersion (SQLServerDatabaseMetaData)
+          href: getdatabaseminorversion-method-sqlserverdatabasemetadata.md
+        - name: Méthode getDatabaseProductName (SQLServerDatabaseMetaData)
+          href: getdatabaseproductname-method-sqlserverdatabasemetadata.md
+        - name: Méthode getDatabaseProductVersion (SQLServerDatabaseMetaData)
+          href: getdatabaseproductversion-method-sqlserverdatabasemetadata.md
+        - name: Méthode getDefaultTransactionIsolation (SQLServerDatabaseMetaData)
+          href: getdefaulttransactionisolation-method-sqlserverdatabasemetadata.md
+        - name: Méthode getDriverMajorVersion (SQLServerDatabaseMetaData)
+          href: getdrivermajorversion-method-sqlserverdatabasemetadata.md
+        - name: Méthode getDriverMinorVersion (SQLServerDatabaseMetaData)
+          href: getdriverminorversion-method-sqlserverdatabasemetadata.md
+        - name: Méthode getDriverName (SQLServerDatabaseMetaData)
+          href: getdrivername-method-sqlserverdatabasemetadata.md
+        - name: Méthode getDriverVersion (SQLServerDatabaseMetaData)
+          href: getdriverversion-method-sqlserverdatabasemetadata.md
+        - name: Méthode getExportedKeys (SQLServerDatabaseMetaData)
+          href: getexportedkeys-method-sqlserverdatabasemetadata.md
+        - name: Méthode getExtraNameCharacters (SQLServerDatabaseMetaData)
+          href: getextranamecharacters-method-sqlserverdatabasemetadata.md
+        - name: Méthode getFunctions (SQLServerDatabaseMetaData)
+          href: getfunctions-method-sqlserverdatabasemetadata.md
+        - name: Méthode getFunctionColumns (SQLServerDatabaseMetaData)
+          href: getfunctioncolumns-method-sqlserverdatabasemetadata.md
+        - name: Méthode getIdentifierQuoteString (SQLServerDatabaseMetaData)
+          href: getidentifierquotestring-method-sqlserverdatabasemetadata.md
+        - name: Méthode getImportedKeys (SQLServerDatabaseMetaData)
+          href: getimportedkeys-method-sqlserverdatabasemetadata.md
+        - name: Méthode getIndexInfo (SQLServerDatabaseMetaData)
+          href: getindexinfo-method-sqlserverdatabasemetadata.md
+        - name: Méthode getJDBCMajorVersion (SQLServerDatabaseMetaData)
+          href: getjdbcmajorversion-method-sqlserverdatabasemetadata.md
+        - name: Méthode getJDBCMinorVersion (SQLServerDatabaseMetaData)
+          href: getjdbcminorversion-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxBinaryLiteralLength (SQLServerDatabaseMetaData)
+          href: getmaxbinaryliterallength-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxCatalogNameLength (SQLServerDatabaseMetaData)
+          href: getmaxcatalognamelength-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxCharLiteralLength (SQLServerDatabaseMetaData)
+          href: getmaxcharliterallength-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxColumnNameLength (SQLServerDatabaseMetaData)
+          href: getmaxcolumnnamelength-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxColumnsInGroupBy (SQLServerDatabaseMetaData)
+          href: getmaxcolumnsingroupby-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxColumnsInIndex (SQLServerDatabaseMetaData)
+          href: getmaxcolumnsinindex-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxColumnsInOrderBy (SQLServerDatabaseMetaData)
+          href: getmaxcolumnsinorderby-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxColumnsInSelect (SQLServerDatabaseMetaData)
+          href: getmaxcolumnsinselect-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxColumnsInTable (SQLServerDatabaseMetaData)
+          href: getmaxcolumnsintable-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxConnections (SQLServerDatabaseMetaData)
+          href: getmaxconnections-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxCursorNameLength (SQLServerDatabaseMetaData)
+          href: getmaxcursornamelength-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxIndexLength (SQLServerDatabaseMetaData)
+          href: getmaxindexlength-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxProcedureNameLength (SQLServerDatabaseMetaData)
+          href: getmaxprocedurenamelength-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxRowSize (SQLServerDatabaseMetaData)
+          href: getmaxrowsize-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxSchemaNameLength (SQLServerDatabaseMetaData)
+          href: getmaxschemanamelength-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxStatementLength (SQLServerDatabaseMetaData)
+          href: getmaxstatementlength-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxStatements (SQLServerDatabaseMetaData)
+          href: getmaxstatements-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxTableNameLength (SQLServerDatabaseMetaData)
+          href: getmaxtablenamelength-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxTablesInSelect (SQLServerDatabaseMetaData)
+          href: getmaxtablesinselect-method-sqlserverdatabasemetadata.md
+        - name: Méthode getMaxUserNameLength (SQLServerDatabaseMetaData)
+          href: getmaxusernamelength-method-sqlserverdatabasemetadata.md
+        - name: Méthode getNumericFunctions (SQLServerDatabaseMetaData)
+          href: getnumericfunctions-method-sqlserverdatabasemetadata.md
+        - name: Méthode getPrimaryKeys (SQLServerDatabaseMetaData)
+          href: getprimarykeys-method-sqlserverdatabasemetadata.md
+        - name: Méthode getProcedureColumns (SQLServerDatabaseMetaData)
+          href: getprocedurecolumns-method-sqlserverdatabasemetadata.md
+        - name: Méthode getProcedures (SQLServerDatabaseMetaData)
+          href: getprocedures-method-sqlserverdatabasemetadata.md
+        - name: Méthode getProcedureTerm (SQLServerDatabaseMetaData)
+          href: getprocedureterm-method-sqlserverdatabasemetadata.md
+        - name: Méthode getResultSetHoldability (SQLServerDatabaseMetaData)
+          href: getresultsetholdability-method-sqlserverdatabasemetadata.md
+        - name: Méthode getRowIdLifetime (SQLServerDatabaseMetaData)
+          href: getrowidlifetime-method-sqlserverdatabasemetadata.md
+        - name: Méthode getSchemas (SQLServerDatabaseMetaData)
+          href: getschemas-method-sqlserverdatabasemetadata.md
+          items:
+            - name: Méthode getSchemas ()
+              href: getschemas-method.md
+            - name: 'Méthode getSchemas (String, String)'
+              href: getschemas-method-string-string.md
+        - name: Méthode getSchemaTerm (SQLServerDatabaseMetaData)
+          href: getschematerm-method-sqlserverdatabasemetadata.md
+        - name: Méthode getSearchStringEscape (SQLServerDatabaseMetaData)
+          href: getsearchstringescape-method-sqlserverdatabasemetadata.md
+        - name: Méthode getSQLKeywords (SQLServerDatabaseMetaData)
+          href: getsqlkeywords-method-sqlserverdatabasemetadata.md
+        - name: Méthode getSQLStateType (SQLServerDatabaseMetaData)
+          href: getsqlstatetype-method-sqlserverdatabasemetadata.md
+        - name: Méthode getStringFunctions (SQLServerDatabaseMetaData)
+          href: getstringfunctions-method-sqlserverdatabasemetadata.md
+        - name: Méthode getSuperTables (SQLServerDatabaseMetaData)
+          href: getsupertables-method-sqlserverdatabasemetadata.md
+        - name: Méthode getSuperTypes (SQLServerDatabaseMetaData)
+          href: getsupertypes-method-sqlserverdatabasemetadata.md
+        - name: Méthode getSystemFunctions (SQLServerDatabaseMetaData)
+          href: getsystemfunctions-method-sqlserverdatabasemetadata.md
+        - name: Méthode getTablePrivileges (SQLServerDatabaseMetaData)
+          href: gettableprivileges-method-sqlserverdatabasemetadata.md
+        - name: Méthode getTables (SQLServerDatabaseMetaData)
+          href: gettables-method-sqlserverdatabasemetadata.md
+        - name: Méthode getTableTypes (SQLServerDatabaseMetaData)
+          href: gettabletypes-method-sqlserverdatabasemetadata.md
+        - name: Méthode getTimeDateFunctions (SQLServerDatabaseMetaData)
+          href: gettimedatefunctions-method-sqlserverdatabasemetadata.md
+        - name: Méthode getTypeInfo (SQLServerDatabaseMetaData)
+          href: gettypeinfo-method-sqlserverdatabasemetadata.md
+        - name: Méthode getUDTs (SQLServerDatabaseMetaData)
+          href: getudts-method-sqlserverdatabasemetadata.md
+        - name: Méthode getURL (SQLServerDatabaseMetaData)
+          href: geturl-method-sqlserverdatabasemetadata.md
+        - name: Méthode getUserName (SQLServerDatabaseMetaData)
+          href: getusername-method-sqlserverdatabasemetadata.md
+        - name: Méthode getVersionColumns (SQLServerDatabaseMetaData)
+          href: getversioncolumns-method-sqlserverdatabasemetadata.md
+        - name: Méthode insertsAreDetected (SQLServerDatabaseMetaData)
+          href: insertsaredetected-method-sqlserverdatabasemetadata.md
+        - name: Méthode isCatalogAtStart (SQLServerDatabaseMetaData)
+          href: iscatalogatstart-method-sqlserverdatabasemetadata.md
+        - name: Méthode isReadOnly (SQLServerDatabaseMetaData)
+          href: isreadonly-method-sqlserverdatabasemetadata.md
+        - name: Méthode locatorsUpdateCopy (SQLServerDatabaseMetaData)
+          href: locatorsupdatecopy-method-sqlserverdatabasemetadata.md
+        - name: Méthode nullPlusNonNullIsNull (SQLServerDatabaseMetaData)
+          href: nullplusnonnullisnull-method-sqlserverdatabasemetadata.md
+        - name: Méthode nullsAreSortedAtEnd (SQLServerDatabaseMetaData)
+          href: nullsaresortedatend-method-sqlserverdatabasemetadata.md
+        - name: Méthode nullsAreSortedAtStart (SQLServerDatabaseMetaData)
+          href: nullsaresortedatstart-method-sqlserverdatabasemetadata.md
+        - name: Méthode nullsAreSortedHigh (SQLServerDatabaseMetaData)
+          href: nullsaresortedhigh-method-sqlserverdatabasemetadata.md
+        - name: Méthode nullsAreSortedLow (SQLServerDatabaseMetaData)
+          href: nullsaresortedlow-method-sqlserverdatabasemetadata.md
+        - name: Méthode othersDeletesAreVisible (SQLServerDatabaseMetaData)
+          href: othersdeletesarevisible-method-sqlserverdatabasemetadata.md
+        - name: Méthode othersInsertsAreVisible (SQLServerDatabaseMetaData)
+          href: othersinsertsarevisible-method-sqlserverdatabasemetadata.md
+        - name: Méthode othersUpdatesAreVisible (SQLServerDatabaseMetaData)
+          href: othersupdatesarevisible-method-sqlserverdatabasemetadata.md
+        - name: Méthode ownDeletesAreVisible (SQLServerDatabaseMetaData)
+          href: owndeletesarevisible-method-sqlserverdatabasemetadata.md
+        - name: Méthode ownInsertsAreVisible (SQLServerDatabaseMetaData)
+          href: owninsertsarevisible-method-sqlserverdatabasemetadata.md
+        - name: Méthode ownUpdatesAreVisible (SQLServerDatabaseMetaData)
+          href: ownupdatesarevisible-method-sqlserverdatabasemetadata.md
+        - name: Méthode storesLowerCaseIdentifiers (SQLServerDatabaseMetaData)
+          href: storeslowercaseidentifiers-method-sqlserverdatabasemetadata.md
+        - name: Méthode storesLowerCaseQuotedIdentifiers (SQLServerDatabaseMetaData)
+          href: storeslowercasequotedidentifiers-method-sqlserverdatabasemetadata.md
+        - name: Méthode storesMixedCaseIdentifiers (SQLServerDatabaseMetaData)
+          href: storesmixedcaseidentifiers-method-sqlserverdatabasemetadata.md
+        - name: Méthode storesMixedCaseQuotedIdentifiers (SQLServerDatabaseMetaData)
+          href: storesmixedcasequotedidentifiers-method-sqlserverdatabasemetadata.md
+        - name: Méthode storesUpperCaseIdentifiers (SQLServerDatabaseMetaData)
+          href: storesuppercaseidentifiers-method-sqlserverdatabasemetadata.md
+        - name: Méthode storesUpperCaseQuotedIdentifiers (SQLServerDatabaseMetaData)
+          href: storesuppercasequotedidentifiers-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsAlterTableWithAddColumn (SQLServerDatabaseMetaData)
+          href: supportsaltertablewithaddcolumn-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsAlterTableWithDropColumn (SQLServerDatabaseMetaData)
+          href: supportsaltertablewithdropcolumn-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsANSI92EntryLevelSQL (SQLServerDatabaseMetaData)
+          href: supportsansi92entrylevelsql-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsANSI92FullSQL (SQLServerDatabaseMetaData)
+          href: supportsansi92fullsql-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsANSI92IntermediateSQL (SQLServerDatabaseMetaData)
+          href: supportsansi92intermediatesql-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsBatchUpdates (SQLServerDatabaseMetaData)
+          href: supportsbatchupdates-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsCatalogsInDataManipulation (SQLServerDatabaseMetaData)
+          href: supportscatalogsindatamanipulation-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsCatalogsInIndexDefinitions (SQLServerDatabaseMetaData)
+          href: supportscatalogsinindexdefinitions-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsCatalogsInPrivilegeDefinitions (SQLServerDatabaseMetaData)
+          href: supportscatalogsinprivilegedefinitions-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsCatalogsInProcedureCalls (SQLServerDatabaseMetaData)
+          href: supportscatalogsinprocedurecalls-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsCatalogsInTableDefinitions (SQLServerDatabaseMetaData)
+          href: supportscatalogsintabledefinitions-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsColumnAliasing (SQLServerDatabaseMetaData)
+          href: supportscolumnaliasing-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsConvert (SQLServerDatabaseMetaData)
+          href: supportsconvert-method-sqlserverdatabasemetadata.md
+          items:
+            - name: Méthode supportsConvert ()
+              href: supportsconvert-method.md
+            - name: 'Méthode supportsConvert (int, int)'
+              href: supportsconvert-method-int-int.md
+        - name: Méthode supportsCoreSQLGrammar (SQLServerDatabaseMetaData)
+          href: supportscoresqlgrammar-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsCorrelatedSubqueries (SQLServerDatabaseMetaData)
+          href: supportscorrelatedsubqueries-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsDataDefinitionAndDataManipulationTransactions (SQLServerDatabaseMetaData)
+          href: supportsdatadefinitionanddatamanipulationtransactions-method.md
+        - name: Méthode supportsDataManipulationTransactionsOnly (SQLServerDatabaseMetaData)
+          href: supportsdatamanipulationtransactionsonly-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsDifferentTableCorrelationNames (SQLServerDatabaseMetaData)
+          href: supportsdifferenttablecorrelationnames-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsExpressionsInOrderBy (SQLServerDatabaseMetaData)
+          href: supportsexpressionsinorderby-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsExtendedSQLGrammar (SQLServerDatabaseMetaData)
+          href: supportsextendedsqlgrammar-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsFullOuterJoins (SQLServerDatabaseMetaData)
+          href: supportsfullouterjoins-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsGetGeneratedKeys (SQLServerDatabaseMetaData)
+          href: supportsgetgeneratedkeys-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsGroupBy (SQLServerDatabaseMetaData)
+          href: supportsgroupby-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsGroupByBeyondSelect (SQLServerDatabaseMetaData)
+          href: supportsgroupbybeyondselect-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsGroupByUnrelated (SQLServerDatabaseMetaData)
+          href: supportsgroupbyunrelated-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsIntegrityEnhancementFacility (SQLServerDatabaseMetaData)
+          href: supportsintegrityenhancementfacility-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsLikeEscapeClause (SQLServerDatabaseMetaData)
+          href: supportslikeescapeclause-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsLimitedOuterJoins (SQLServerDatabaseMetaData)
+          href: supportslimitedouterjoins-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsMinimumSQLGrammar (SQLServerDatabaseMetaData)
+          href: supportsminimumsqlgrammar-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsMixedCaseIdentifiers (SQLServerDatabaseMetaData)
+          href: supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsMixedCaseQuotedIdentifiers (SQLServerDatabaseMetaData)
+          href: supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsMultipleOpenResults (SQLServerDatabaseMetaData)
+          href: supportsmultipleopenresults-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsMultipleResultSets (SQLServerDatabaseMetaData)
+          href: supportsmultipleresultsets-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsMultipleTransactions (SQLServerDatabaseMetaData)
+          href: supportsmultipletransactions-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsNamedParameters (SQLServerDatabaseMetaData)
+          href: supportsnamedparameters-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsNonNullableColumns (SQLServerDatabaseMetaData)
+          href: supportsnonnullablecolumns-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsOpenCursorsAcrossCommit (SQLServerDatabaseMetaData)
+          href: supportsopencursorsacrosscommit-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsOpenCursorsAcrossRollback (SQLServerDatabaseMetaData)
+          href: supportsopencursorsacrossrollback-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsOpenStatementsAcrossCommit (SQLServerDatabaseMetaData)
+          href: supportsopenstatementsacrosscommit-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsOpenStatementsAcrossRollback (SQLServerDatabaseMetaData)
+          href: supportsopenstatementsacrossrollback-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsOrderByUnrelated (SQLServerDatabaseMetaData)
+          href: supportsorderbyunrelated-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsOuterJoins (SQLServerDatabaseMetaData)
+          href: supportsouterjoins-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsPositionedDelete (SQLServerDatabaseMetaData)
+          href: supportspositioneddelete-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsPositionedUpdate (SQLServerDatabaseMetaData)
+          href: supportspositionedupdate-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsResultSetConcurrency (SQLServerDatabaseMetaData)
+          href: supportsresultsetconcurrency-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsResultSetHoldability (SQLServerDatabaseMetaData)
+          href: supportsresultsetholdability-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsResultSetType (SQLServerDatabaseMetaData)
+          href: supportsresultsettype-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsSavepoints (SQLServerDatabaseMetaData)
+          href: supportssavepoints-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsSchemasInDataManipulation (SQLServerDatabaseMetaData)
+          href: supportsschemasindatamanipulation-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsSchemasInIndexDefinitions (SQLServerDatabaseMetaData)
+          href: supportsschemasinindexdefinitions-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsSchemasInPrivilegeDefinitions (SQLServerDatabaseMetaData)
+          href: supportsschemasinprivilegedefinitions-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsSchemasInProcedureCalls (SQLServerDatabaseMetaData)
+          href: supportsschemasinprocedurecalls-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsSchemasInTableDefinitions (SQLServerDatabaseMetaData)
+          href: supportsschemasintabledefinitions-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsSelectForUpdate (SQLServerDatabaseMetaData)
+          href: supportsselectforupdate-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsStatementPooling (SQLServerDatabaseMetaData)
+          href: supportsstatementpooling-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsStoredProcedures (SQLServerDatabaseMetaData)
+          href: supportsstoredprocedures-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsStoredFunctionsUsingCallSyntax (SQLServerDatabaseMetaData)
+          href: supportsstoredfunctionsusingcallsyntax-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsSubqueriesInComparisons (SQLServerDatabaseMetaData)
+          href: supportssubqueriesincomparisons-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsSubqueriesInExists (SQLServerDatabaseMetaData)
+          href: supportssubqueriesinexists-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsSubqueriesInIns (SQLServerDatabaseMetaData)
+          href: supportssubqueriesinins-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsSubqueriesInQuantifieds (SQLServerDatabaseMetaData)
+          href: supportssubqueriesinquantifieds-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsTableCorrelationNames (SQLServerDatabaseMetaData)
+          href: supportstablecorrelationnames-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsTransactionIsolationLevel (SQLServerDatabaseMetaData)
+          href: supportstransactionisolationlevel-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsTransactions (SQLServerDatabaseMetaData)
+          href: supportstransactions-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsUnion (SQLServerDatabaseMetaData)
+          href: supportsunion-method-sqlserverdatabasemetadata.md
+        - name: Méthode supportsUnionAll (SQLServerDatabaseMetaData)
+          href: supportsunionall-method-sqlserverdatabasemetadata.md
+        - name: Méthode updatesAreDetected (SQLServerDatabaseMetaData)
+          href: updatesaredetected-method-sqlserverdatabasemetadata.md
+        - name: Méthode usesLocalFilePerTable (SQLServerDatabaseMetaData)
+          href: useslocalfilepertable-method-sqlserverdatabasemetadata.md
+        - name: Méthode usesLocalFiles (SQLServerDatabaseMetaData)
+          href: useslocalfiles-method-sqlserverdatabasemetadata.md
+- name: 'SQLServerDataSource, classe'
+  href: sqlserverdatasource-class.md
+  items:
+    - name: Membres de SQLServerDataSource
+      href: sqlserverdatasource-members.md
+    - name: Constructeurs SQLServerDataSource
+      href: sqlserverdatasource-constructors.md
+      items:
+        - name: Constructeur SQLServerDataSource ()
+          href: sqlserverdatasource-constructor.md
+    - name: Méthodes SQLServerDataSource
+      href: sqlserverdatasource-methods.md
+      items:
+        - name: 'getApplicationIntent, méthode (SQLServerDataSource)'
+          href: getapplicationintent-method-sqlserverdatasource.md
+        - name: Méthode getApplicationName (SQLServerDataSource)
+          href: getapplicationname-method-sqlserverdatasource.md
+        - name: Méthode getConnection (SQLServerDataSource)
+          href: getconnection-method-sqlserverdatasource.md
+          items:
+            - name: Méthode getConnection ()
+              href: getconnection-method.md
+            - name: 'Méthode getConnection (java.lang.String, java.lang.String)'
+              href: getconnection-method-java-lang-string-java-lang-string.md
+        - name: Méthode getDatabaseName (SQLServerDataSource)
+          href: getdatabasename-method-sqlserverdatasource.md
+        - name: Méthode getDescription (SQLServerDataSource)
+          href: getdescription-method-sqlserverdatasource.md
+        - name: 'getDisableStatementPooling, méthode (SQLServerDataSource)'
+          href: getdisablestatementpooling-method-sqlserverdatasource.md
+        - name: 'getEnablePrepareOnFirstPreparedStatementCall, méthode (SQLServerDataSource)'
+          href: getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md
+        - name: Méthode getEncrypt (SQLServerDataSource)
+          href: getencrypt-method-sqlserverdatasource.md
+        - name: Méthode getFailoverPartner (SQLServerDataSource)
+          href: getfailoverpartner-method-sqlserverdatasource.md
+        - name: Méthode getHostNameInCertificate (SQLServerDataSource)
+          href: gethostnameincertificate-method-sqlserverdatasource.md
+        - name: Méthode getInstanceName (SQLServerDataSource)
+          href: getinstancename-method-sqlserverdatasource.md
+        - name: Méthode getLastUpdateCount (SQLServerDataSource)
+          href: getlastupdatecount-method-sqlserverdatasource.md
+        - name: Méthode getLockTimeout (SQLServerDataSource)
+          href: getlocktimeout-method-sqlserverdatasource.md
+        - name: Méthode getLoginTimeout (SQLServerDataSource)
+          href: getlogintimeout-method-sqlserverdatasource.md
+        - name: Méthode getLogWriter (SQLServerDataSource)
+          href: getlogwriter-method-sqlserverdatasource.md
+        - name: Méthode getMultiSubnetFailover (SQLServerDataSource)
+          href: getmultisubnetfailover-method-sqlserverdatasource.md
+        - name: Méthode getPacketSize (SQLServerDataSource)
+          href: getpacketsize-method-sqlserverdatasource.md
+        - name: Méthode getPortNumber (SQLServerDataSource)
+          href: getportnumber-method-sqlserverdatasource.md
+        - name: Méthode getReference (SQLServerDataSource)
+          href: getreference-method-sqlserverdatasource.md
+        - name: Méthode getResponseBuffering (SQLServerDataSource)
+          href: getresponsebuffering-method-sqlserverdatasource.md
+        - name: Méthode getSelectMethod (SQLServerDataSource)
+          href: getselectmethod-method-sqlserverdatasource.md
+        - name: Méthode getSendStringParametersAsUnicode (SQLServerDataSource)
+          href: getsendstringparametersasunicode-method-sqlserverdatasource.md
+        - name: Méthode getServerName (SQLServerDataSource)
+          href: getservername-method-sqlserverdatasource.md
+        - name: 'getServerPreparedStatementDiscardThreshold, méthode (SQLServerDataSource)'
+          href: getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md
+        - name: 'getStatementPoolingCacheSize, méthode (SQLServerDataSource)'
+          href: getstatementpoolingcachesize-method-sqlserverdatasource.md
+        - name: 'getTrustManagerClass, méthode (SQLServerDataSource)'
+          href: gettrustmanagerclass-method-sqlserverdatasource.md
+        - name: 'getTrustManagerConstructorArg, méthode (SQLServerDataSource)'
+          href: gettrustmanagerconstructorarg-method-sqlserverdatasource.md
+        - name: Méthode getTrustServerCertificate (SQLServerDataSource)
+          href: gettrustservercertificate-method-sqlserverdatasource.md
+        - name: Méthode getTrustStore (SQLServerDataSource)
+          href: gettruststore-method-sqlserverdatasource.md
+        - name: Méthode getURL (SQLServerDataSource)
+          href: geturl-method-sqlserverdatasource.md
+        - name: Méthode getSendTimeAsDatetime (SQLServerDataSource)
+          href: getsendtimeasdatetime-method-sqlserverdatasource.md
+        - name: Méthode getUser (SQLServerDataSource)
+          href: getuser-method-sqlserverdatasource.md
+        - name: Méthode getWorkstationID (SQLServerDataSource)
+          href: getworkstationid-method-sqlserverdatasource.md
+        - name: Méthode getXopenStates (SQLServerDataSource)
+          href: getxopenstates-method-sqlserverdatasource.md
+        - name: Méthode isWrapperFor (SQLServerDataSource)
+          href: iswrapperfor-method-sqlserverdatasource.md
+        - name: 'setApplicationIntent, méthode (SQLServerDataSource)'
+          href: setapplicationintent-method-sqlserverdatasource.md
+        - name: Méthode setApplicationName (SQLServerDataSource)
+          href: setapplicationname-method-sqlserverdatasource.md
+        - name: setAuthenticationScheme (SQLServerDataSource)
+          href: setauthenticationscheme-sqlserverdatasource.md
+        - name: Méthode setDatabaseName (SQLServerDataSource)
+          href: setdatabasename-method-sqlserverdatasource.md
+        - name: Méthode setDescription (SQLServerDataSource)
+          href: setdescription-method-sqlserverdatasource.md
+        - name: 'setDisableStatementPooling, méthode (SQLServerDataSource)'
+          href: setdisablestatementpooling-method-sqlserverdatasource.md
+        - name: 'setEnablePrepareOnFirstPreparedStatementCall, méthode (SQLServerDataSource)'
+          href: setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md
+        - name: Méthode setEncrypt (SQLServerDataSource)
+          href: setencrypt-method-sqlserverdatasource.md
+        - name: Méthode setFailoverPartner (SQLServerDataSource)
+          href: setfailoverpartner-method-sqlserverdatasource.md
+        - name: Méthode setHostNameInCertificate (SQLServerDataSource)
+          href: sethostnameincertificate-method-sqlserverdatasource.md
+        - name: Méthode setInstanceName (SQLServerDataSource)
+          href: setinstancename-method-sqlserverdatasource.md
+        - name: Méthode setIntegratedSecurity (SQLServerDataSource)
+          href: setintegratedsecurity-method-sqlserverdatasource.md
+        - name: Méthode setLastUpdateCount (SQLServerDataSource)
+          href: setlastupdatecount-method-sqlserverdatasource.md
+        - name: Méthode setLockTimeout (SQLServerDataSource)
+          href: setlocktimeout-method-sqlserverdatasource.md
+        - name: Méthode setLoginTimeout (SQLServerDataSource)
+          href: setlogintimeout-method-sqlserverdatasource.md
+        - name: Méthode setLogWriter (SQLServerDataSource)
+          href: setlogwriter-method-sqlserverdatasource.md
+        - name: Méthode setMultiSubnetFailover (SQLServerDataSource)
+          href: setmultisubnetfailover-method-sqlserverdatasource.md
+        - name: Méthode setPacketSize (SQLServerDataSource)
+          href: setpacketsize-method-sqlserverdatasource.md
+        - name: Méthode setPassword (SQLServerDataSource)
+          href: setpassword-method-sqlserverdatasource.md
+        - name: Méthode setPortNumber (SQLServerDataSource)
+          href: setportnumber-method-sqlserverdatasource.md
+        - name: Méthode setResponseBuffering (SQLServerDataSource)
+          href: setresponsebuffering-method-sqlserverdatasource.md
+        - name: Méthode setSelectMethod (SQLServerDataSource)
+          href: setselectmethod-method-sqlserverdatasource.md
+        - name: Méthode setSendStringParametersAsUnicode (SQLServerDataSource)
+          href: setsendstringparametersasunicode-method-sqlserverdatasource.md
+        - name: Méthode setSendTimeAsDatetime (SQLServerDataSource)
+          href: setsendtimeasdatetime-method-sqlserverdatasource.md
+        - name: Méthode setServerName (SQLServerDataSource)
+          href: setservername-method-sqlserverdatasource.md
+        - name: 'setServerPreparedStatementDiscardThreshold, méthode (SQLServerDataSource)'
+          href: setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md
+        - name: 'setStatementPoolingCacheSize, méthode (SQLServerDataSource)'
+          href: setstatementpoolingcachesize-method-sqlserverdatasource.md
+        - name: 'setTrustManagerClass, méthode (SQLServerDataSource)'
+          href: settrustmanagerclass-method-sqlserverdatasource.md
+        - name: 'setTrustManagerConstructorArg, méthode (SQLServerDataSource)'
+          href: settrustmanagerconstructorarg-method-sqlserverdatasource.md
+        - name: Méthode setTrustServerCertificate (SQLServerDataSource)
+          href: settrustservercertificate-method-sqlserverdatasource.md
+        - name: Méthode setTrustStore (SQLServerDataSource)
+          href: settruststore-method-sqlserverdatasource.md
+        - name: Méthode setTrustStorePassword (SQLServerDataSource)
+          href: settruststorepassword-method-sqlserverdatasource.md
+        - name: Méthode setURL (SQLServerDataSource)
+          href: seturl-method-sqlserverdatasource.md
+        - name: Méthode setUser (SQLServerDataSource)
+          href: setuser-method-sqlserverdatasource.md
+        - name: Méthode setWorkstationID (SQLServerDataSource)
+          href: setworkstationid-method-sqlserverdatasource.md
+        - name: Méthode setXopenStates (SQLServerDataSource)
+          href: setxopenstates-method-sqlserverdatasource.md
+        - name: Méthode unwrap (SQLServerDataSource)
+          href: unwrap-method-sqlserverdatasource.md
+- name: Classe SQLServerDataSourceObjectFactory
+  href: sqlserverdatasourceobjectfactory-class.md
+  items:
+    - name: Membres de SQLServerDataSourceObjectFactory
+      href: sqlserverdatasourceobjectfactory-members.md
+    - name: Constructeurs de SQLServerDataSourceObjectFactory
+      href: sqlserverdatasourceobjectfactory-constructors.md
+      items:
+        - name: Constructeur SQLServerDataSourceObjectFactory ()
+          href: sqlserverdatasourceobjectfactory-constructor.md
+    - name: Méthodes SQLServerDataSourceObjectFactory
+      href: sqlserverdatasourceobjectfactory-methods.md
+      items:
+        - name: Méthode getObjectInstance (SQLServerDataSourceObjectFactory)
+          href: getobjectinstance-method-sqlserverdatasourceobjectfactory.md
+- name: Classe SQLServerDriver
+  href: sqlserverdriver-class.md
+  items:
+    - name: Membres de SQLServerDriver
+      href: sqlserverdriver-members.md
+    - name: Constructeurs SQLServerDriver
+      href: sqlserverdriver-constructors.md
+      items:
+        - name: Constructeur SQLServerDriver ()
+          href: sqlserverdriver-constructor.md
+    - name: Méthodes SQLServerDriver
+      href: sqlserverdriver-methods.md
+      items:
+        - name: Méthode acceptsURL (SQLServerDriver)
+          href: acceptsurl-method-sqlserverdriver.md
+        - name: Méthode connect (SQLServerDriver)
+          href: connect-method-sqlserverdriver.md
+        - name: Méthode getMajorVersion (SQLServerDriver)
+          href: getmajorversion-method-sqlserverdriver.md
+        - name: Méthode getMinorVersion (SQLServerDriver)
+          href: getminorversion-method-sqlserverdriver.md
+        - name: Méthode getPropertyInfo (SQLServerDriver)
+          href: getpropertyinfo-method-sqlserverdriver.md
+        - name: Méthode jdbcCompliant (SQLServerDriver)
+          href: jdbccompliant-method-sqlserverdriver.md
+- name: Classe SQLServerException
+  href: sqlserverexception-class.md
+  items:
+    - name: Membres de SQLServerException
+      href: sqlserverexception-members.md
+    - name: 'SQLServerException, constructeurs'
+      href: sqlserverexception-constructors.md
+      items:
+        - name: 'SQLServerException, méthode (java.lang.Object, java.lang.String, java.lang.String, int, boolean) (SQLServerDriver)'
+          href: sqlserverexception-constructor-object-string-string-int-boolean.md
+        - name: 'SQLServerException, méthode (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean) (SQLServerDriver)'
+          href: sqlserverexception-constructor-object-string-string-streamerror-boolean.md
+        - name: 'SQLServerException, méthode (java.lang.String, SQLState, DriverError, java.lang.Throwable) (SQLServerDriver)'
+          href: sqlserverexception-constructor-string-sqlstate-drivererror-throwable.md
+        - name: 'SQLServerException, méthode (java.lang.String, java.lang.String, int, java.lang.Throwable) (SQLServerDriver)'
+          href: sqlserverexception-constructor-string-string-int-throwable.md
+        - name: 'SQLServerException, méthode (java.lang.String, java.lang.Throwable) (SQLServerDriver)'
+          href: sqlserverexception-constructor-string-throwable.md
+    - name: Méthodes SQLServerException
+      href: sqlserverexception-methods.md
+- name: Classe SQLServerNClob
+  href: sqlservernclob-class.md
+  items:
+    - name: Membres de SQLServerNClob
+      href: sqlservernclob-members.md
+    - name: Méthodes SQLServerNClob
+      href: sqlservernclob-methods.md
+      items:
+        - name: Méthode free (SQLServerNClob)
+          href: free-method-sqlservernclob.md
+        - name: Méthode getAsciiStream (SQLServerNClob)
+          href: getasciistream-method-sqlservernclob.md
+        - name: Méthode getCharacterStream (SQLServerNClob)
+          href: getcharacterstream-method-sqlservernclob.md
+          items:
+            - name: Méthode getCharacterStream () (SQLServerNClob)
+              href: getcharacterstream-method-sqlservernclob.md
+            - name: 'Méthode getCharacterStream (long, long) (SQLServerNClob)'
+              href: getcharacterstream-method-long-long-sqlservernclob.md
+        - name: Méthode getSubString (SQLServerNClob)
+          href: getsubstring-method-sqlservernclob.md
+        - name: Méthode length (SQLServerNClob)
+          href: length-method-sqlservernclob.md
+        - name: Méthode position (SQLServerNClob)
+          href: position-method-sqlservernclob.md
+          items:
+            - name: 'Méthode position (java.sql.NClob, long)'
+              href: position-method-java-sql-nclob-long.md
+            - name: 'Méthode position (java.lang.String, long) (SQLServerNClob)'
+              href: position-method-java-lang-string-long-sqlservernclob.md
+        - name: Méthode setAsciiStream (SQLServerNClob)
+          href: setasciistream-method-sqlservernclob.md
+        - name: Méthode setCharacterStream (SQLServerNClob)
+          href: setcharacterstream-method-sqlservernclob.md
+        - name: Méthode setString (SQLServerNClob)
+          href: setstring-method-sqlservernclob.md
+          items:
+            - name: 'Méthode setString (long, java.lang.String) (SQLServerNClob)'
+              href: setstring-method-long-java-lang-string-sqlservernclob.md
+            - name: 'Méthode setString (long, java.lang.String, int, int) (SQLServerNClob)'
+              href: setstring-method-long-java-lang-string-int-int-sqlservernclob.md
+        - name: Méthode truncate (SQLServerNClob)
+          href: truncate-method-sqlservernclob.md
+- name: Classe SQLServerParameterMetaData
+  href: sqlserverparametermetadata-class.md
+  items:
+    - name: Membres de SQLServerParameterMetaData
+      href: sqlserverparametermetadata-members.md
+    - name: Méthodes SQLServerParameterMetaData
+      href: sqlserverparametermetadata-methods.md
+      items:
+        - name: Méthode getParameterClassName (SQLServerParameterMetaData)
+          href: getparameterclassname-method-sqlserverparametermetadata.md
+        - name: Méthode getParameterCount (SQLServerParameterMetaData)
+          href: getparametercount-method-sqlserverparametermetadata.md
+        - name: Méthode getParameterMode (SQLServerParameterMetaData)
+          href: getparametermode-method-sqlserverparametermetadata.md
+        - name: Méthode getParameterType (SQLServerParameterMetaData)
+          href: getparametertype-method-sqlserverparametermetadata.md
+        - name: Méthode getParameterTypeName (SQLServerParameterMetaData)
+          href: getparametertypename-method-sqlserverparametermetadata.md
+        - name: Méthode getPrecision (SQLServerParameterMetaData)
+          href: getprecision-method-sqlserverparametermetadata.md
+        - name: Méthode getScale (SQLServerParameterMetaData)
+          href: getscale-method-sqlserverparametermetadata.md
+        - name: Méthode isNullable (SQLServerParameterMetaData)
+          href: isnullable-method-sqlserverparametermetadata.md
+        - name: Méthode isSigned (SQLServerParameterMetaData)
+          href: issigned-method-sqlserverparametermetadata.md
+- name: Classe SQLServerPooledConnection
+  href: sqlserverpooledconnection-class.md
+  items:
+    - name: Membres de SQLServerPooledConnection
+      href: sqlserverpooledconnection-members.md
+    - name: Méthodes SQLServerPooledConnection
+      href: sqlserverpooledconnection-methods.md
+      items:
+        - name: Méthode addConnectionEventListener (SQLServerPooledConnection)
+          href: addconnectioneventlistener-method-sqlserverpooledconnection.md
+        - name: Méthode close (SQLServerPooledConnection)
+          href: close-method-sqlserverpooledconnection.md
+        - name: Méthode getConnection (SQLServerPooledConnection)
+          href: getconnection-method-sqlserverpooledconnection.md
+        - name: Méthode removeConnectionEventListener (SQLServerPooledConnection)
+          href: removeconnectioneventlistener-method-sqlserverpooledconnection.md
+- name: Classe SQLServerPreparedStatement
+  href: sqlserverpreparedstatement-class.md
+  items:
+    - name: Membres de SQLServerPreparedStatement
+      href: sqlserverpreparedstatement-members.md
+    - name: Méthodes SQLServerPreparedStatement
+      href: sqlserverpreparedstatement-methods.md
+      items:
+        - name: 'addBatch, méthode (SQLServerPreparedStatement)'
+          href: addbatch-method-sqlserverpreparedstatement.md
+          items:
+            - name: Méthode addBatch ()
+              href: addbatch-method.md
+            - name: Méthode addBatch (java.lang.String)
+              href: addbatch-method-java-lang-string.md
+        - name: 'clearBatch, méthode (SQLServerPreparedStatement)'
+          href: clearbatch-method-sqlserverpreparedstatement.md
+        - name: 'clearParameters, méthode (SQLServerPreparedStatement)'
+          href: clearparameters-method-sqlserverpreparedstatement.md
+        - name: 'close, méthode (SQLServerPreparedStatement)'
+          href: close-method-sqlserverpreparedstatement.md
+        - name: 'execute, méthode (SQLServerPreparedStatement)'
+          href: execute-method-sqlserverpreparedstatement.md
+          items:
+            - name: Méthode execute ()
+              href: execute-method.md
+            - name: Méthode execute (java.lang.String)
+              href: execute-method-java-lang-string.md
+        - name: Méthode executeBatch (SQLServerPreparedStatement)
+          href: executebatch-method-sqlserverpreparedstatement.md
+        - name: 'executeQuery, méthode (SQLServerPreparedStatement)'
+          href: executequery-method-sqlserverpreparedstatement.md
+          items:
+            - name: Méthode executeQuery ()
+              href: executequery-method.md
+            - name: Méthode executeQuery (java.lang.String)
+              href: executequery-method-java-lang-string.md
+        - name: 'executeUpdate, méthode (SQLServerPreparedStatement)'
+          href: executeupdate-method-sqlserverpreparedstatement.md
+          items:
+            - name: Méthode executeUpdate ()
+              href: executeupdate-method.md
+            - name: Méthode executeUpdate (java.lang.String)
+              href: executeupdate-method-java-lang-string.md
+        - name: 'getMetaData, méthode (SQLServerPreparedStatement)'
+          href: getmetadata-method-sqlserverpreparedstatement.md
+        - name: 'getParameterMetaData, méthode (SQLServerPreparedStatement)'
+          href: getparametermetadata-method-sqlserverpreparedstatement.md
+        - name: Méthode isWrapperFor (SQLServerPreparedStatement)
+          href: iswrapperfor-method-sqlserverpreparedstatement.md
+        - name: 'setArray, méthode (SQLServerPreparedStatement)'
+          href: setarray-method-sqlserverpreparedstatement.md
+        - name: Méthode setAsciiStream (SQLServerPreparedStatement)
+          href: setasciistream-method-sqlserverpreparedstatement.md
+          items:
+            - name: 'Méthode setAsciiStream (int, java.io.InputStream)'
+              href: setasciistream-method-int-java-io-inputstream.md
+            - name: 'Méthode setAsciiStream (int, java.io.InputStream, int)'
+              href: setasciistream-method-int-java-io-inputstream-int.md
+            - name: 'Méthode setAsciiStream (int, java.io.InputStream, long)'
+              href: setasciistream-method-int-java-io-inputstream-long.md
+        - name: 'setBigDecimal, méthode (SQLServerPreparedStatement)'
+          href: setbigdecimal-method-sqlserverpreparedstatement.md
+        - name: Méthode setBinaryStream (SQLServerPreparedStatement)
+          href: setbinarystream-method-sqlserverpreparedstatement.md
+          items:
+            - name: 'Méthode setBinaryStream (int, java.io.InputStream)'
+              href: setbinarystream-method-int-java-io-inputstream.md
+            - name: 'Méthode setBinaryStream (int, java.io.InputStream, int)'
+              href: setbinarystream-method-int-java-io-inputstream-int.md
+            - name: 'Méthode setBinaryStream (int, java.io.InputStream, long)'
+              href: setbinarystream-method-int-java-io-inputstream-long.md
+        - name: 'setBlob, méthode (SQLServerPreparedStatement)'
+          href: setblob-method-sqlserverpreparedstatement.md
+        - name: 'setBoolean, méthode (SQLServerPreparedStatement)'
+          href: setboolean-method-sqlserverpreparedstatement.md
+        - name: 'setByte, méthode (SQLServerPreparedStatement)'
+          href: setbyte-method-sqlserverpreparedstatement.md
+        - name: 'setBytes, méthode (SQLServerPreparedStatement)'
+          href: setbytes-method-sqlserverpreparedstatement.md
+        - name: Méthode setCharacterStream (SQLServerPreparedStatement)
+          href: setcharacterstream-method-sqlserverpreparedstatement.md
+          items:
+            - name: 'Méthode setCharacterStream (int, java.io.Reader)'
+              href: setcharacterstream-method-int-java-io-reader.md
+            - name: 'Méthode setCharacterStream (int, java.io.Reader, int)'
+              href: setcharacterstream-method-int-java-io-reader-int.md
+            - name: 'Méthode setCharacterStream (int, java.io.Reader, long)'
+              href: setcharacterstream-method-int-java-io-reader-long.md
+        - name: Méthode setClob (SQLServerPreparedStatement)
+          href: setclob-method-sqlserverpreparedstatement.md
+          items:
+            - name: 'Méthode setClob (int, java.io.Reader)'
+              href: setclob-method-int-java-io-reader.md
+            - name: 'Méthode setClob (int, java.sql.Clob)'
+              href: setclob-method-int-java-sql-clob.md
+            - name: 'Méthode setClob (int, java.io.Reader, long)'
+              href: setclob-method-int-java-io-reader-long.md
+        - name: 'setDate, méthode (SQLServerPreparedStatement)'
+          href: setdate-method-sqlserverpreparedstatement.md
+          items:
+            - name: 'Méthode setDate (int, java.sql.Date)'
+              href: setdate-method-int-java-sql-date.md
+            - name: 'Méthode setDate (int, java.sql.Date, java.util.Calendar)'
+              href: setdate-method-int-java-sql-date-java-util-calendar.md
+        - name: 'setDouble, méthode (SQLServerPreparedStatement)'
+          href: setdouble-method-sqlserverpreparedstatement.md
+        - name: Méthode setDateTimeOffset (SQLServerPreparedStatement)
+          href: setdatetimeoffset-method-sqlserverpreparedstatement.md
+        - name: 'setFloat, méthode (SQLServerPreparedStatement)'
+          href: setfloat-method-sqlserverpreparedstatement.md
+        - name: 'setInt, méthode (SQLServerPreparedStatement)'
+          href: setint-method-sqlserverpreparedstatement.md
+        - name: 'setLong, méthode (SQLServerPreparedStatement)'
+          href: setlong-method-sqlserverpreparedstatement.md
+        - name: Méthode setNCharacterStream (SQLServerPreparedStatement)
+          href: setncharacterstream-method-sqlserverpreparedstatement.md
+          items:
+            - name: 'Méthode setNCharacterStream (int, java.io.Reader)'
+              href: setncharacterstream-method-int-java-io-reader.md
+            - name: 'Méthode setNCharacterStream (int, java.io.Reader, long)'
+              href: setncharacterstream-method-int-java-io-reader-long.md
+        - name: Méthode setNClob (SQLServerPreparedStatement)
+          href: setnclob-method-sqlserverpreparedstatement.md
+          items:
+            - name: 'Méthode setNClob (int, java.sql.NClob)'
+              href: setnclob-method-int-java-sql-nclob.md
+            - name: 'Méthode setNClob (int, java.io.Reader)'
+              href: setnclob-method-int-java-io-reader.md
+            - name: 'Méthode setNClob (int, java.io.Reader, long)'
+              href: setnclob-method-int-java-io-reader-long.md
+        - name: 'Méthode setNString (int, java.lang.String)'
+          href: setnstring-method-int-java-lang-string.md
+        - name: 'setNull, méthode (SQLServerPreparedStatement)'
+          href: setnull-method-sqlserverpreparedstatement.md
+          items:
+            - name: 'Méthode setNull (int, int)'
+              href: setnull-method-int-int.md
+            - name: 'Méthode setNull (int, int, java.lang.String)'
+              href: setnull-method-int-int-java-lang-string.md
+        - name: 'setObject, méthode (SQLServerPreparedStatement)'
+          href: setobject-method-sqlserverpreparedstatement.md
+          items:
+            - name: 'Méthode setObject (int, java.lang.Object)'
+              href: setobject-method-int-java-lang-object.md
+            - name: 'Méthode setObject (int, java.lang.Object, int)'
+              href: setobject-method-int-java-lang-object-int.md
+            - name: 'Méthode setObject (int, java.lang.Object, int, int)'
+              href: setobject-method-int-java-lang-object-int-int.md
+        - name: 'setRef, méthode (SQLServerPreparedStatement)'
+          href: setref-method-sqlserverpreparedstatement.md
+        - name: 'setShort, méthode (SQLServerPreparedStatement)'
+          href: setshort-method-sqlserverpreparedstatement.md
+        - name: Méthode setSQLXML (SQLServerPreparedStatement)
+          href: setsqlxml-method-sqlserverpreparedstatement.md
+        - name: 'setString, méthode (SQLServerPreparedStatement)'
+          href: setstring-method-sqlserverpreparedstatement.md
+        - name: 'setTime, méthode (SQLServerPreparedStatement)'
+          href: settime-method-sqlserverpreparedstatement.md
+          items:
+            - name: 'Méthode setTime (int, java.sql.Time)'
+              href: settime-method-int-java-sql-time.md
+            - name: 'Méthode setTime (int, java.sql.Time, java.util.Calendar)'
+              href: settime-method-int-java-sql-time-java-util-calendar.md
+        - name: 'setTimestamp, méthode (SQLServerPreparedStatement)'
+          href: settimestamp-method-sqlserverpreparedstatement.md
+          items:
+            - name: 'Méthode setTimestamp (int, java.sql.Timestamp)'
+              href: settimestamp-method-int-java-sql-timestamp.md
+            - name: 'Méthode setTimestamp (int, java.sql.Timestamp, java.util.Calendar)'
+              href: settimestamp-method-int-java-sql-timestamp-java-util-calendar.md
+        - name: 'setUnicodeStream, méthode (SQLServerPreparedStatement)'
+          href: setunicodestream-method-sqlserverpreparedstatement.md
+        - name: 'setURL, méthode (SQLServerPreparedStatement)'
+          href: seturl-method-sqlserverpreparedstatement.md
+        - name: Méthode unwrap (SQLServerPreparedStatement)
+          href: unwrap-method-sqlserverpreparedstatement.md
+- name: Classe SQLServerResource
+  href: sqlserverresource-class.md
+  items:
+    - name: Membres de SQLServerResource
+      href: sqlserverresource-members.md
+    - name: Constructeurs SQLServerResource
+      href: sqlserverresource-constructors.md
+      items:
+        - name: Constructeur SQLServerResource ()
+          href: sqlserverresource-constructor.md
+    - name: Méthodes SQLServerResource
+      href: sqlserverresource-methods.md
+      items:
+        - name: Méthode getContents (SQLServerResource)
+          href: getcontents-method-sqlserverresource.md
+- name: Classe SQLServerResultSet
+  href: sqlserverresultset-class.md
+  items:
+    - name: Membres de SQLServerResultSet
+      href: sqlserverresultset-members.md
+    - name: Méthodes SQLServerResultSet
+      href: sqlserverresultset-methods.md
+      items:
+        - name: 'absolute, méthode (SQLServerResultSet)'
+          href: absolute-method-sqlserverresultset.md
+        - name: 'afterLast, méthode (SQLServerResultSet)'
+          href: afterlast-method-sqlserverresultset.md
+        - name: 'beforeFirst, méthode (SQLServerResultSet)'
+          href: beforefirst-method-sqlserverresultset.md
+        - name: 'cancelRowUpdates, méthode (SQLServerResultSet)'
+          href: cancelrowupdates-method-sqlserverresultset.md
+        - name: Méthode clearWarnings (SQLServerResultSet)
+          href: clearwarnings-method-sqlserverresultset.md
+        - name: Méthode close (SQLServerResultSet)
+          href: close-method-sqlserverresultset.md
+        - name: 'deleteRow, méthode (SQLServerResultSet)'
+          href: deleterow-method-sqlserverresultset.md
+        - name: 'finalize, méthode (SQLServerResultSet)'
+          href: finalize-method-sqlserverresultset.md
+        - name: 'findColumn, méthode (SQLServerResultSet)'
+          href: findcolumn-method-sqlserverresultset.md
+        - name: 'first, méthode (SQLServerResultSet)'
+          href: first-method-sqlserverresultset.md
+        - name: 'getArray, méthode (SQLServerResultSet)'
+          href: getarray-method-sqlserverresultset.md
+          items:
+            - name: 'getArray, méthode (int) (SQLServerResultSet)'
+              href: getarray-method-int-sqlserverresultset.md
+            - name: 'getArray, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getarray-method-java-lang-string-sqlserverresultset.md
+        - name: 'getAsciiStream, méthode (SQLServerResultSet)'
+          href: getasciistream-method-sqlserverresultset.md
+          items:
+            - name: Méthode getAsciiStream (int)
+              href: getasciistream-method-int.md
+            - name: Méthode getAsciiStream (java.lang.String)
+              href: getasciistream-method-java-lang-string.md
+        - name: 'getBigDecimal, méthode (SQLServerResultSet)'
+          href: getbigdecimal-method-sqlserverresultset.md
+          items:
+            - name: 'getBigDecimal, méthode (int) (SQLServerResultSet)'
+              href: getbigdecimal-method-int-sqlserverresultset.md
+            - name: 'getBigDecimal, méthode (int, int) (SQLServerResultSet)'
+              href: getbigdecimal-method-int-int-sqlserverresultset.md
+            - name: 'getBigDecimal, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getbigdecimal-method-java-lang-string-sqlserverresultset.md
+            - name: 'getBigDecimal, méthode (java.lang.String, int) (SQLServerResultSet)'
+              href: getbigdecimal-method-java-lang-string-int-sqlserverresultset.md
+        - name: 'getBinaryStream, méthode (SQLServerResultSet)'
+          href: getbinarystream-method-sqlserverresultset.md
+          items:
+            - name: Méthode getBinaryStream (int)
+              href: getbinarystream-method-int.md
+            - name: Méthode getBinaryStream (java.lang.String)
+              href: getbinarystream-method-java-lang-string.md
+        - name: 'getBlob, méthode (SQLServerResultSet)'
+          href: getblob-method-sqlserverresultset.md
+          items:
+            - name: 'getBlob, méthode (int) (SQLServerResultSet)'
+              href: getblob-method-int-sqlserverresultset.md
+            - name: 'getBlob, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getblob-method-java-lang-string-sqlserverresultset.md
+        - name: 'getBoolean, méthode (SQLServerResultSet)'
+          href: getboolean-method-sqlserverresultset.md
+          items:
+            - name: 'getBoolean, méthode (int) (SQLServerResultSet)'
+              href: getboolean-method-int-sqlserverresultset.md
+            - name: 'getBoolean, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getboolean-method-java-lang-string-sqlserverresultset.md
+        - name: 'getByte, méthode (SQLServerResultSet)'
+          href: getbyte-method-sqlserverresultset.md
+          items:
+            - name: 'getByte, méthode (int) (SQLServerResultSet)'
+              href: getbyte-method-int-sqlserverresultset.md
+            - name: 'getByte, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getbyte-method-java-lang-string-sqlserverresultset.md
+        - name: Méthode getBytes (SQLServerResultSet)
+          href: getbytes-method-sqlserverresultset.md
+          items:
+            - name: Méthode getBytes (int) (SQLServerResultSet)
+              href: getbytes-method-int-sqlserverresultset.md
+            - name: Méthode getBytes (java.lang.String) (SQLServerResultSet)
+              href: getbytes-method-java-lang-string-sqlserverresultset.md
+        - name: 'getCharacterStream, méthode (SQLServerResultSet)'
+          href: getcharacterstream-method-sqlserverresultset.md
+          items:
+            - name: Méthode getCharacterStream (int)
+              href: getcharacterstream-method-int.md
+            - name: Méthode getCharacterStream (java.lang.String)
+              href: getcharacterstream-method-java-lang-string.md
+        - name: 'getClob, méthode (SQLServerResultSet)'
+          href: getclob-method-sqlserverresultset.md
+          items:
+            - name: 'getClob, méthode (int) (SQLServerResultSet)'
+              href: getclob-method-int-sqlserverresultset.md
+            - name: 'getClob, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getclob-method-java-lang-string-sqlserverresultset.md
+        - name: 'getConcurrency, méthode (SQLServerResultSet)'
+          href: getconcurrency-method-sqlserverresultset.md
+        - name: Méthode getCursorName (SQLServerResultSet)
+          href: getcursorname-method-sqlserverresultset.md
+        - name: 'getDate, méthode (SQLServerResultSet)'
+          href: getdate-method-sqlserverresultset.md
+          items:
+            - name: 'getDate, méthode (int) (SQLServerResultSet)'
+              href: getdate-method-int-sqlserverresultset.md
+            - name: 'getDate, méthode (int, java.util.Calendar) (SQLServerResultSet)'
+              href: getdate-method-int-java-util-calendar-sqlserverresultset.md
+            - name: 'getDate, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getdate-method-java-lang-string-sqlserverresultset.md
+            - name: 'getDate, méthode (java.lang.String, java.util.Calendar) (SQLServerResultSet)'
+              href: getdate-method-java-lang-string-java-util-calendar-sqlserverresultset.md
+        - name: getDateTimeOffset (SQLServerResultSet)
+          href: getdatetimeoffset-sqlserverresultset.md
+          items:
+            - name: getDateTimeOffset(int)
+              href: getdatetimeoffset-int-sqlserverresultset.md
+            - name: getDateTimeOffset(java.lang.string)
+              href: getdatetimeoffset-java-lang-string-sqlserverresultset.md
+        - name: 'getDouble, méthode (SQLServerResultSet)'
+          href: getdouble-method-sqlserverresultset.md
+          items:
+            - name: 'getDouble, méthode (int) (SQLServerResultSet)'
+              href: getdouble-method-int-sqlserverresultset.md
+            - name: 'getDouble, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getdouble-method-java-lang-string-sqlserverresultset.md
+        - name: 'getFetchDirection, méthode (SQLServerResultSet)'
+          href: getfetchdirection-method-sqlserverresultset.md
+        - name: 'getFetchSize, méthode (SQLServerResultSet)'
+          href: getfetchsize-method-sqlserverresultset.md
+        - name: 'getFloat, méthode (SQLServerResultSet)'
+          href: getfloat-method-sqlserverresultset.md
+          items:
+            - name: 'getFloat, méthode (int) (SQLServerResultSet)'
+              href: getfloat-method-int-sqlserverresultset.md
+            - name: 'getFloat, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getfloat-method-java-lang-string-sqlserverresultset.md
+        - name: Méthode getHoldability (SQLServerResultSet)
+          href: getholdability-method-sqlserverresultset.md
+        - name: 'getInt, méthode (SQLServerResultSet)'
+          href: getint-method-sqlserverresultset.md
+          items:
+            - name: 'getInt, méthode (int) (SQLServerResultSet)'
+              href: getint-method-int-sqlserverresultset.md
+            - name: 'getInt, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getint-method-java-lang-string-sqlserverresultset.md
+        - name: 'getLong, méthode (SQLServerResultSet)'
+          href: getlong-method-sqlserverresultset.md
+          items:
+            - name: 'getLong, méthode (int) (SQLServerResultSet)'
+              href: getlong-method-int-sqlserverresultset.md
+            - name: 'getLong, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getlong-method-java-lang-string-sqlserverresultset.md
+        - name: 'getMetaData, méthode (SQLServerResultSet)'
+          href: getmetadata-method-sqlserverresultset.md
+        - name: Méthode getNCharacterStream (SQLServerResultSet)
+          href: getncharacterstream-method-sqlserverresultset.md
+          items:
+            - name: Méthode getNCharacterStream (int) (SQLServerResultSet)
+              href: getncharacterstream-method-int-sqlserverresultset.md
+            - name: Méthode getNCharacterStream (java.lang.String) (SQLServerResultSet)
+              href: getncharacterstream-method-java-lang-string-sqlserverresultset.md
+        - name: Méthode getNClob (SQLServerResultSet)
+          href: getnclob-method-sqlserverresultset.md
+          items:
+            - name: Méthode getNClob (int) (SQLServerResultSet)
+              href: getnclob-method-int-sqlserverresultset.md
+            - name: Méthode getNClob (java.lang.String) (SQLServerResultSet)
+              href: getnclob-method-java-lang-string-sqlserverresultset.md
+        - name: Méthode getNString (SQLServerResultSet)
+          href: getnstring-method-sqlserverresultset.md
+          items:
+            - name: Méthode getNString (int) (SQLServerResultSet)
+              href: getnstring-method-int-sqlserverresultset.md
+            - name: Méthode getNString (java.lang.String) (SQLServerResultSet)
+              href: getnstring-method-java-lang-string-sqlserverresultset.md
+        - name: 'getObject, méthode (SQLServerResultSet)'
+          href: getobject-method-sqlserverresultset.md
+          items:
+            - name: 'getObject, méthode (int) (SQLServerResultSet)'
+              href: getobject-method-int-sqlserverresultset.md
+            - name: 'Méthode getObject (int, java.util.Map) (SQLServerResultSet)'
+              href: getobject-method-int-java-util-map-sqlserverresultset.md
+            - name: 'getObject, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getobject-method-java-lang-string-sqlserverresultset.md
+            - name: 'Méthode getObject (java.lang.String, java.util.Map) (SQLServerResultSet)'
+              href: getobject-method-java-lang-string-java-util-map-sqlserverresultset.md
+        - name: 'getRef, méthode (SQLServerResultSet)'
+          href: getref-method-sqlserverresultset.md
+          items:
+            - name: 'getRef, méthode (int) (SQLServerResultSet)'
+              href: getref-method-int-sqlserverresultset.md
+            - name: 'getRef, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getref-method-java-lang-string-sqlserverresultset.md
+        - name: 'getRow, méthode (SQLServerResultSet)'
+          href: getrow-method-sqlserverresultset.md
+        - name: 'getShort, méthode (SQLServerResultSet)'
+          href: getshort-method-sqlserverresultset.md
+          items:
+            - name: 'getShort, méthode (int) (SQLServerResultSet)'
+              href: getshort-method-int-sqlserverresultset.md
+            - name: 'getShort, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getshort-method-java-lang-string-sqlserverresultset.md
+        - name: Méthode getSQLXML (SQLServerResultSet)
+          href: getsqlxml-method-sqlserverresultset.md
+          items:
+            - name: Méthode getSQLXML (int) (SQLServerResultSet)
+              href: getsqlxml-method-int-sqlserverresultset.md
+            - name: Méthode getSQLXML (java.lang.String) (SQLServerResultSet)
+              href: getsqlxml-method-java-lang-string-sqlserverresultset.md
+        - name: 'getStatement, méthode (SQLServerResultSet)'
+          href: getstatement-method-sqlserverresultset.md
+        - name: 'getString, méthode (SQLServerResultSet)'
+          href: getstring-method-sqlserverresultset.md
+          items:
+            - name: 'getString, méthode (int) (SQLServerResultSet)'
+              href: getstring-method-int-sqlserverresultset.md
+            - name: 'getString, méthode (java.lang.String) (SQLServerResultSet)'
+              href: getstring-method-java-lang-string-sqlserverresultset.md
+        - name: 'getTime, méthode (SQLServerResultSet)'
+          href: gettime-method-sqlserverresultset.md
+          items:
+            - name: Méthode getTime (int) (SQLServerResultSet)
+              href: gettime-method-int-sqlserverresultset.md
+            - name: 'getTime, méthode (int, java.util.Calendar) (SQLServerResultSet)'
+              href: gettime-method-int-java-util-calendar-sqlserverresultset.md
+            - name: 'getTime, méthode (java.lang.String) (SQLServerResultSet)'
+              href: gettime-method-java-lang-string-sqlserverresultset.md
+            - name: 'getTime, méthode (java.lang.String, java.util.Calendar) (SQLServerResultSet)'
+              href: gettime-method-java-lang-string-java-util-calendar-sqlserverresultset.md
+        - name: 'getTimestamp, méthode (SQLServerResultSet)'
+          href: gettimestamp-method-sqlserverresultset.md
+          items:
+            - name: 'getTimestamp, méthode (int) (SQLServerResultSet)'
+              href: gettimestamp-method-int-sqlserverresultset.md
+            - name: 'getTimestamp, méthode (int, java.util.Calendar) (SQLServerResultSet)'
+              href: gettimestamp-method-int-java-util-calendar-sqlserverresultset.md
+            - name: 'getTimestamp, méthode (java.lang.String) (SQLServerResultSet)'
+              href: gettimestamp-method-java-lang-string-sqlserverresultset.md
+            - name: 'getTimestamp, méthode (java.lang.String, java.util.Calendar) (SQLServerResultSet)'
+              href: gettimestamp-method-java-lang-string-java-util-calendar-sqlserverresultset.md
+        - name: 'getType, méthode (SQLServerResultSet)'
+          href: gettype-method-sqlserverresultset.md
+        - name: 'getUnicodeStream, méthode (SQLServerResultSet)'
+          href: getunicodestream-method-sqlserverresultset.md
+          items:
+            - name: Méthode getUnicodeStream (int)
+              href: getunicodestream-method-int.md
+            - name: Méthode getUnicodeStream (java.lang.String)
+              href: getunicodestream-method-java-lang-string.md
+        - name: 'getURL, méthode (SQLServerResultSet)'
+          href: geturl-method-sqlserverresultset.md
+          items:
+            - name: 'getURL, méthode (int) (SQLServerResultSet)'
+              href: geturl-method-int-sqlserverresultset.md
+            - name: 'getURL, méthode (java.lang.String) (SQLServerResultSet)'
+              href: geturl-method-java-lang-string-sqlserverresultset.md
+        - name: Méthode getWarnings (SQLServerResultSet)
+          href: getwarnings-method-sqlserverresultset.md
+        - name: 'insertRow, méthode (SQLServerResultSet)'
+          href: insertrow-method-sqlserverresultset.md
+        - name: 'isAfterLast, méthode (SQLServerResultSet)'
+          href: isafterlast-method-sqlserverresultset.md
+        - name: 'isBeforeFirst, méthode (SQLServerResultSet)'
+          href: isbeforefirst-method-sqlserverresultset.md
+        - name: Méthode isClosed (SQLServerResultSet)
+          href: isclosed-method-sqlserverresultset.md
+        - name: 'isFirst, méthode (SQLServerResultSet)'
+          href: isfirst-method-sqlserverresultset.md
+        - name: 'isLast, méthode (SQLServerResultSet)'
+          href: islast-method-sqlserverresultset.md
+        - name: 'last, méthode (SQLServerResultSet)'
+          href: last-method-sqlserverresultset.md
+        - name: 'moveToCurrentRow, méthode (SQLServerResultSet)'
+          href: movetocurrentrow-method-sqlserverresultset.md
+        - name: 'moveToInsertRow, méthode (SQLServerResultSet)'
+          href: movetoinsertrow-method-sqlserverresultset.md
+        - name: 'next, méthode (SQLServerResultSet)'
+          href: next-method-sqlserverresultset.md
+        - name: 'previous, méthode (SQLServerResultSet)'
+          href: previous-method-sqlserverresultset.md
+        - name: Méthode refreshRow (SQLServerResultSet)
+          href: refreshrow-method-sqlserverresultset.md
+        - name: 'relative, méthode (SQLServerResultSet)'
+          href: relative-method-sqlserverresultset.md
+        - name: 'rowDeleted, méthode (SQLServerResultSet)'
+          href: rowdeleted-method-sqlserverresultset.md
+        - name: 'rowInserted, méthode (SQLServerResultSet)'
+          href: rowinserted-method-sqlserverresultset.md
+        - name: 'rowUpdated, méthode (SQLServerResultSet)'
+          href: rowupdated-method-sqlserverresultset.md
+        - name: Méthode setFetchDirection (SQLServerResultSet)
+          href: setfetchdirection-method-sqlserverresultset.md
+        - name: 'setFetchSize, méthode (SQLServerResultSet)'
+          href: setfetchsize-method-sqlserverresultset.md
+        - name: 'updateArray, méthode (SQLServerResultSet)'
+          href: updatearray-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateArray (int, java.sql.Array)'
+              href: updatearray-method-int-java-sql-array.md
+            - name: 'Méthode updateArray (java.lang.String, java.sql.Array)'
+              href: updatearray-method-java-lang-string-java-sql-array.md
+        - name: Méthode updateAsciiStream (SQLServerResultSet)
+          href: updateasciistream-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateAsciiStream (int, java.io.InputStream)'
+              href: updateasciistream-method-int-java-io-inputstream.md
+            - name: 'Méthode updateAsciiStream (int, java.io.InputStream, int)'
+              href: updateasciistream-method-int-java-io-inputstream-int.md
+            - name: 'Méthode updateAsciiStream (int, java.io.InputStream, long)'
+              href: updateasciistream-method-int-java-io-inputstream-long.md
+            - name: 'Méthode updateAsciiStream (java.lang.String, java.io.InputStream)'
+              href: updateasciistream-method-java-lang-string-java-io-inputstream.md
+            - name: 'Méthode updateAsciiStream (java.lang.String, java.io.InputStream, int)'
+              href: updateasciistream-method-java-lang-string-java-io-inputstream-int.md
+            - name: 'Méthode updateAsciiStream (java.lang.String, java.io.InputStream, long)'
+              href: updateasciistream-method-java-lang-string-java-io-inputstream-long.md
+        - name: 'updateBigDecimal, méthode (SQLServerResultSet)'
+          href: updatebigdecimal-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateBigDecimal (int, java.math.BigDecimal)'
+              href: updatebigdecimal-method-int-java-math-bigdecimal.md
+            - name: 'Méthode updateBigDecimal (java.lang.String, java.math.BigDecimal)'
+              href: updatebigdecimal-method-java-lang-string-java-math-bigdecimal.md
+        - name: Méthode updateBinaryStream (SQLServerResultSet)
+          href: updatebinarystream-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateBinaryStream (int, java.io.InputStream)'
+              href: updatebinarystream-method-int-java-io-inputstream.md
+            - name: 'Méthode updateBinaryStream (int, java.io.InputStream, int)'
+              href: updatebinarystream-method-int-java-io-inputstream-int.md
+            - name: 'Méthode updateBinaryStream (int, java.io.InputStream, long)'
+              href: updatebinarystream-method-int-java-io-inputstream-long.md
+            - name: 'Méthode updateBinaryStream (java.lang.String, java.io.InputStream)'
+              href: updatebinarystream-method-java-lang-string-java-io-inputstream.md
+            - name: 'Méthode updateBinaryStream (java.lang.String, java.io.InputStream, int)'
+              href: updatebinarystream-method-java-lang-string-java-io-inputstream-int.md
+            - name: 'Méthode updateBinaryStream (java.lang.String, java.io.InputStream, long)'
+              href: updatebinarystream-method-java-lang-string-java-io-inputstream-long.md
+        - name: Méthode updateBlob (SQLServerResultSet)
+          href: updateblob-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateBlob (int, java.sql.Blob)'
+              href: updateblob-method-int-java-sql-blob.md
+            - name: 'Méthode updateBlob (int, java.io.InputStream)'
+              href: updateblob-method-int-java-io-inputstream.md
+            - name: 'Méthode updateBlob (int, java.io.InputStream, long)'
+              href: updateblob-method-int-java-io-inputstream-long.md
+            - name: 'Méthode updateBlob (java.lang.String, java.sql.Blob)'
+              href: updateblob-method-java-lang-string-java-sql-blob.md
+            - name: 'Méthode updateBlob (java.lang.String, java.io.InputStream)'
+              href: updateblob-method-java-lang-string-java-io-inputstream.md
+            - name: 'Méthode updateBlob (java.lang.String, java.io.InputStream, long)'
+              href: updateblob-method-java-lang-string-java-io-inputstream-long.md
+        - name: 'updateBoolean, méthode (SQLServerResultSet)'
+          href: updateboolean-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateBoolean (int, boolean)'
+              href: updateboolean-method-int-boolean.md
+            - name: 'Méthode updateBoolean (java.lang.String, boolean)'
+              href: updateboolean-method-java-lang-string-boolean.md
+        - name: 'updateByte, méthode (SQLServerResultSet)'
+          href: updatebyte-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateByte (int, byte)'
+              href: updatebyte-method-int-byte.md
+            - name: 'Méthode updateByte (java.lang.String, byte)'
+              href: updatebyte-method-java-lang-string-byte.md
+        - name: Méthode updateBytes (SQLServerResultSet)
+          href: updatebytes-method-sqlserverresultset.md
+          items:
+            - name: 'updateBytes, méthode (int, byte)'
+              href: updatebytes-method-int-byte.md
+            - name: 'updateBytes, méthode (java.lang.String, byte)'
+              href: updatebytes-method-java-lang-string-byte.md
+        - name: Méthode updateCharacterStream (SQLServerResultSet)
+          href: updatecharacterstream-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateCharacterStream (int, java.io.Reader)'
+              href: updatecharacterstream-method-int-java-io-reader.md
+            - name: 'Méthode updateCharacterStream (int, java.io.Reader, int)'
+              href: updatecharacterstream-method-int-java-io-reader-int.md
+            - name: 'Méthode updateCharacterStream (int, java.io.Reader, long)'
+              href: updatecharacterstream-method-int-java-io-reader-long.md
+            - name: 'Méthode updateCharacterStream (java.lang.String, java.io.Reader)'
+              href: updatecharacterstream-method-java-lang-string-java-io-reader.md
+            - name: 'Méthode updateCharacterStream (java.lang.String, java.io.Reader, int)'
+              href: updatecharacterstream-method-java-lang-string-java-io-reader-int.md
+            - name: 'Méthode updateCharacterStream (java.lang.String, java.io.Reader, long)'
+              href: updatecharacterstream-method-java-lang-string-java-io-reader-long.md
+        - name: Méthode updateClob (SQLServerResultSet)
+          href: updateclob-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateClob (int, java.sql.Clob)'
+              href: updateclob-method-int-java-sql-clob.md
+            - name: 'Méthode updateClob (int, java.io.Reader)'
+              href: updateclob-method-int-java-io-reader.md
+            - name: 'Méthode updateClob (int, java.io.Reader, long)'
+              href: updateclob-method-int-java-io-reader-long.md
+            - name: 'Méthode updateClob (java.lang.String, java.sql.Clob)'
+              href: updateclob-method-java-lang-string-java-sql-clob.md
+            - name: 'Méthode updateClob (java.lang.String, java.io.Reader)'
+              href: updateclob-method-java-lang-string-java-io-reader.md
+            - name: 'Méthode updateClob (java.lang.String, java.io.Reader, long)'
+              href: updateclob-method-java-lang-string-java-io-reader-long.md
+        - name: 'updateDate, méthode (SQLServerResultSet)'
+          href: updatedate-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateDate (int, java.sql.Date)'
+              href: updatedate-method-int-java-sql-date.md
+            - name: 'Méthode updateDate (java.lang.String, java.sql.Date)'
+              href: updatedate-method-java-lang-string-java-sql-date.md
+        - name: updateDateTimeOffset (SQLServerResultSet)
+          href: updatedatetimeoffset-sqlserverresultset.md
+          items:
+            - name: 'updateDateTimeOffset(int, microsoft.sql.DateTimeOffset) (SQLServerResultSet)'
+              href: updatedatetimeoffset-int-microsoft-sql-datetimeoffset-sqlserverresultset.md
+            - name: 'updateDateTimeOffset(string, microsoft.sql.DateTimeOffset) (SQLServerResultSet)'
+              href: updatedatetimeoffset-string-microsoft-sql-datetimeoffset-sqlserverresultset.md
+        - name: 'updateDouble, méthode (SQLServerResultSet)'
+          href: updatedouble-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateDouble (int, double)'
+              href: updatedouble-method-int-double.md
+            - name: 'Méthode updateDouble (java.lang.String, double)'
+              href: updatedouble-method-java-lang-string-double.md
+        - name: 'updateFloat, méthode (SQLServerResultSet)'
+          href: updatefloat-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateFloat (int, float)'
+              href: updatefloat-method-int-float.md
+            - name: 'Méthode updateFloat (java.lang.String, float)'
+              href: updatefloat-method-java-lang-string-float.md
+        - name: 'updateInt, méthode (SQLServerResultSet)'
+          href: updateint-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateInt (int, int)'
+              href: updateint-method-int-int.md
+            - name: 'Méthode updateInt (java.lang.String, int)'
+              href: updateint-method-java-lang-string-int.md
+        - name: 'updateLong, méthode (SQLServerResultSet)'
+          href: updatelong-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateLong (int, long)'
+              href: updatelong-method-int-long.md
+            - name: 'Méthode updateLong (java.lang.String, long)'
+              href: updatelong-method-java-lang-string-long.md
+        - name: Méthode updateNCharacterStream (SQLServerResultSet)
+          href: updatencharacterstream-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateNCharacterStream (int, java.io.Reader)'
+              href: updatencharacterstream-method-int-java-io-reader.md
+            - name: 'Méthode updateNCharacterStream (int, java.io.Reader, long)'
+              href: updatencharacterstream-method-int-java-io-reader-long.md
+            - name: 'Méthode updateNCharacterStream (java.lang.String, java.io.Reader)'
+              href: updatencharacterstream-method-java-lang-string-java-io-reader.md
+            - name: 'Méthode updateNCharacterStream (java.lang.String, java.io.Reader, long)'
+              href: updatencharacterstream-method-java-lang-string-java-io-reader-long.md
+        - name: Méthode updateNClob (SQLServerResultSet)
+          href: updatenclob-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateNClob (int, java.sql.NClob)'
+              href: updatenclob-method-int-java-sql-nclob.md
+            - name: 'Méthode updateNClob (int, java.io.Reader)'
+              href: updatenclob-method-int-java-io-reader.md
+            - name: 'Méthode updateNClob (int, java.io.Reader, long)'
+              href: updatenclob-method-int-java-io-reader-long.md
+            - name: 'Méthode updateNClob (java.lang.String, java.sql.NClob)'
+              href: updatenclob-method-java-lang-string-java-sql-nclob.md
+            - name: 'Méthode updateNClob (java.lang.String, java.io.Reader)'
+              href: updatenclob-method-java-lang-string-java-io-reader.md
+            - name: 'Méthode updateNClob (java.lang.String, java.io.Reader, long)'
+              href: updatenclob-method-java-lang-string-java-io-reader-long.md
+        - name: Méthode updateNString (SQLServerResultSet)
+          href: updatenstring-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateNString (int, java.lang.String)'
+              href: updatenstring-method-int-java-lang-string.md
+            - name: 'Méthode updateNString (java.lang.String, java.lang.String)'
+              href: updatenstring-method-java-lang-string-java-lang-string.md
+        - name: 'updateNull, méthode (SQLServerResultSet)'
+          href: updatenull-method-sqlserverresultset.md
+          items:
+            - name: Méthode updateNull (int)
+              href: updatenull-method-int.md
+            - name: Méthode updateNull (java.lang.String)
+              href: updatenull-method-java-lang-string.md
+        - name: Méthode updateObject (SQLServerResultSet)
+          href: updateobject-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateObject (int, java.lang.Object)'
+              href: updateobject-method-int-java-lang-object.md
+            - name: 'Méthode updateObject (int, java.lang.Object, int)'
+              href: updateobject-method-int-java-lang-object-int.md
+            - name: 'Méthode updateObject (java.lang.String, java.lang.Object)'
+              href: updateobject-method-java-lang-string-java-lang-object.md
+            - name: 'Méthode updateObject (java.lang.String, java.lang.Object, int)'
+              href: updateobject-method-java-lang-string-java-lang-object-int.md
+        - name: 'updateRef, méthode (SQLServerResultSet)'
+          href: updateref-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateRef (int, java.sql.Ref)'
+              href: updateref-method-int-java-sql-ref.md
+            - name: 'Méthode updateRef (java.lang.String, java.sql.Ref)'
+              href: updateref-method-java-lang-string-java-sql-ref.md
+        - name: 'updateRow, méthode (SQLServerResultSet)'
+          href: updaterow-method-sqlserverresultset.md
+        - name: 'updateShort, méthode (SQLServerResultSet)'
+          href: updateshort-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateShort (int, short)'
+              href: updateshort-method-int-short.md
+            - name: 'Méthode updateShort (java.lang.String, short)'
+              href: updateshort-method-java-lang-string-short.md
+        - name: Méthode updateSQLXML (SQLServerResultSet)
+          href: updatesqlxml-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateSQLXML (int, java.sql.SQLXML)'
+              href: updatesqlxml-method-int-java-sql-sqlxml.md
+            - name: 'Méthode updateSQLXML (java.lang.String, java.sql.SQLXML)'
+              href: updatesqlxml-method-java-lang-string-java-sql-sqlxml.md
+        - name: 'updateString, méthode (SQLServerResultSet)'
+          href: updatestring-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateString (int, java.lang.String)'
+              href: updatestring-method-int-java-lang-string.md
+            - name: 'Méthode updateString (java.lang.String, java.lang.String)'
+              href: updatestring-method-java-lang-string-java-lang-string.md
+        - name: Méthode updateTime (SQLServerResultSet)
+          href: updatetime-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateTime (int, java.sql.Time)'
+              href: updatetime-method-int-java-sql-time.md
+            - name: 'Méthode updateTime (java.lang.String, java.sql.Time)'
+              href: updatetime-method-java-lang-string-java-sql-time.md
+        - name: 'updateTimestamp, méthode (SQLServerResultSet)'
+          href: updatetimestamp-method-sqlserverresultset.md
+          items:
+            - name: 'Méthode updateTimestamp (int, java.sql.Timestamp)'
+              href: updatetimestamp-method-int-java-sql-timestamp.md
+            - name: 'Méthode updateTimestamp (java.lang.String, java.sql.Timestamp)'
+              href: updatetimestamp-method-java-lang-string-java-sql-timestamp.md
+        - name: 'wasNull, méthode (SQLServerResultSet)'
+          href: wasnull-method-sqlserverresultset.md
+    - name: Champs SQLServerResultSet
+      href: sqlserverresultset-fields.md
+      items:
+        - name: 'CONCUR_SS_OPTIMISTIC_CC, champ (SQLServerResultSet)'
+          href: concur-ss-optimistic-cc-field-sqlserverresultset.md
+        - name: 'CONCUR_SS_OPTIMISTIC_CCVAL, champ (SQLServerResultSet)'
+          href: concur-ss-optimistic-ccval-field-sqlserverresultset.md
+        - name: 'CONCUR_SS_SCROLL_LOCKS, champ (SQLServerResultSet)'
+          href: concur-ss-scroll-locks-field-sqlserverresultset.md
+        - name: 'TYPE_SS_DIRECT_FORWARD_ONLY, champ (SQLServerResultSet)'
+          href: type-ss-direct-forward-only-field-sqlserverresultset.md
+        - name: 'TYPE_SS_SCROLL_DYNAMIC, champ (SQLServerResultSet)'
+          href: type-ss-scroll-dynamic-field-sqlserverresultset.md
+        - name: 'TYPE_SS_SCROLL_KEYSET, champ (SQLServerResultSet)'
+          href: type-ss-scroll-keyset-field-sqlserverresultset.md
+        - name: 'TYPE_SS_SCROLL_STATIC, champ (SQLServerResultSet)'
+          href: type-ss-scroll-static-field-sqlserverresultset.md
+        - name: 'TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, champ (SQLServerResultSet)'
+          href: type-ss-server-cursor-forward-only-field-sqlserverresultset.md
+- name: 'SQLServerResultSetMetaData, classe'
+  href: sqlserverresultsetmetadata-class.md
+  items:
+    - name: Membres de SQLServerResultSetMetaData
+      href: sqlserverresultsetmetadata-members.md
+    - name: Méthodes SQLServerResultSetMetaData
+      href: sqlserverresultsetmetadata-methods.md
+      items:
+        - name: Méthode getCatalogName (SQLServerResultSetMetaData)
+          href: getcatalogname-method-sqlserverresultsetmetadata.md
+        - name: Méthode getColumnClassName (SQLServerResultSetMetaData)
+          href: getcolumnclassname-method-sqlserverresultsetmetadata.md
+        - name: Méthode getColumnCount (SQLServerResultSetMetaData)
+          href: getcolumncount-method-sqlserverresultsetmetadata.md
+        - name: Méthode getColumnDisplaySize (SQLServerResultSetMetaData)
+          href: getcolumndisplaysize-method-sqlserverresultsetmetadata.md
+        - name: Méthode getColumnLabel (SQLServerResultSetMetaData)
+          href: getcolumnlabel-method-sqlserverresultsetmetadata.md
+        - name: Méthode getColumnName (SQLServerResultSetMetaData)
+          href: getcolumnname-method-sqlserverresultsetmetadata.md
+        - name: Méthode getColumnType (SQLServerResultSetMetaData)
+          href: getcolumntype-method-sqlserverresultsetmetadata.md
+        - name: Méthode getColumnTypeName (SQLServerResultSetMetaData)
+          href: getcolumntypename-method-sqlserverresultsetmetadata.md
+        - name: Méthode getPrecision (SQLServerResultSetMetaData)
+          href: getprecision-method-sqlserverresultsetmetadata.md
+        - name: Méthode getScale (SQLServerResultSetMetaData)
+          href: getscale-method-sqlserverresultsetmetadata.md
+        - name: Méthode getSchemaName (SQLServerResultSetMetaData)
+          href: getschemaname-method-sqlserverresultsetmetadata.md
+        - name: Méthode getTableName (SQLServerResultSetMetaData)
+          href: gettablename-method-sqlserverresultsetmetadata.md
+        - name: Méthode isAutoIncrement (SQLServerResultSetMetaData)
+          href: isautoincrement-method-sqlserverresultsetmetadata.md
+        - name: Méthode isCaseSensitive (SQLServerResultSetMetaData)
+          href: iscasesensitive-method-sqlserverresultsetmetadata.md
+        - name: Méthode isCurrency (SQLServerResultSetMetaData)
+          href: iscurrency-method-sqlserverresultsetmetadata.md
+        - name: Méthode isDefinitelyWritable (SQLServerResultSetMetaData)
+          href: isdefinitelywritable-method-sqlserverresultsetmetadata.md
+        - name: Méthode isNullable (SQLServerResultSetMetaData)
+          href: isnullable-method-sqlserverresultsetmetadata.md
+        - name: Méthode isReadOnly (SQLServerResultSetMetaData)
+          href: isreadonly-method-sqlserverresultsetmetadata.md
+        - name: Méthode isSearchable (SQLServerResultSetMetaData)
+          href: issearchable-method-sqlserverresultsetmetadata.md
+        - name: Méthode isSigned (SQLServerResultSetMetaData)
+          href: issigned-method-sqlserverresultsetmetadata.md
+        - name: 'isSparseColumnSet, méthode (SQLServerResultSetMetaData)'
+          href: issparsecolumnset-method-sqlserverresultsetmetadata.md
+        - name: Méthode isWritable (SQLServerResultSetMetaData)
+          href: iswritable-method-sqlserverresultsetmetadata.md
+- name: Classe SQLServerSavepoint
+  href: sqlserversavepoint-class.md
+  items:
+    - name: Membres de SQLServerSavepoint
+      href: sqlserversavepoint-members.md
+    - name: Constructeurs de SQLServerSavepoint
+      href: sqlserversavepoint-constructors.md
+      items:
+        - name: 'Constructeur SQLServerSavepoint (SQLServerConnection, java.lang.StringName)'
+          href: sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md
+    - name: Méthodes SQLServerSavepoint
+      href: sqlserversavepoint-methods.md
+      items:
+        - name: Méthode getLabel (SQLServerSavepoint)
+          href: getlabel-method-sqlserversavepoint.md
+        - name: Méthode getSavepointId (SQLServerSavepoint)
+          href: getsavepointid-method-sqlserversavepoint.md
+        - name: Méthode getSavepointName (SQLServerSavepoint)
+          href: getsavepointname-method-sqlserversavepoint.md
+        - name: Méthode isNamed (SQLServerSavepoint)
+          href: isnamed-method-sqlserversavepoint.md
+- name: 'SQLServerStatement, classe'
+  href: sqlserverstatement-class.md
+  items:
+    - name: Membres de SQLServerStatement
+      href: sqlserverstatement-members.md
+    - name: Méthodes SQLServerStatement
+      href: sqlserverstatement-methods.md
+      items:
+        - name: 'addBatch, méthode (SQLServerStatement)'
+          href: addbatch-method-sqlserverstatement.md
+        - name: Méthode cancel (SQLServerStatement)
+          href: cancel-method-sqlserverstatement.md
+        - name: 'clearBatch, méthode (SQLServerStatement)'
+          href: clearbatch-method-sqlserverstatement.md
+        - name: 'clearWarnings, méthode (SQLServerStatement)'
+          href: clearwarnings-method-sqlserverstatement.md
+        - name: 'close, méthode (SQLServerStatement)'
+          href: close-method-sqlserverstatement.md
+        - name: Méthode execute (SQLServerStatement)
+          href: execute-method-sqlserverstatement.md
+          items:
+            - name: 'execute, méthode (java.lang.String) (SQLServerStatement)'
+              href: execute-method-java-lang-string-sqlserverstatement.md
+            - name: 'Méthode execute (java.lang.String, int)'
+              href: execute-method-java-lang-string-int.md
+            - name: 'Méthode execute (java.lang.String, int[])'
+              href: execute-method-java-lang-string-int.md
+            - name: 'execute, méthode (java.lang.String, java.lang.String)'
+              href: execute-method-java-lang-string-java-lang-string.md
+        - name: 'executeBatch, méthode (SQLServerStatement)'
+          href: executebatch-method-sqlserverstatement.md
+        - name: Méthode executeQuery (SQLServerStatement)
+          href: executequery-method-sqlserverstatement.md
+        - name: Méthode executeUpdate (SQLServerStatement)
+          href: executeupdate-method-sqlserverstatement.md
+          items:
+            - name: Méthode executeUpdate (java.lang.String) (SQLServerStatement)
+              href: executeupdate-method-java-lang-string-sqlserverstatement.md
+            - name: 'Méthode executeUpdate (java.lang.String, int)'
+              href: executeupdate-method-java-lang-string-int.md
+            - name: 'Méthode executeUpdate (java.lang.String, int[])'
+              href: executeupdate-method-java-lang-string-int.md
+            - name: 'executeUpdate, méthode (java.lang.String, java.lang.String)'
+              href: executeupdate-method-java-lang-string-java-lang-string.md
+        - name: 'getConnection, méthode (SQLServerStatement)'
+          href: getconnection-method-sqlserverstatement.md
+        - name: Méthode getFetchDirection (SQLServerStatement)
+          href: getfetchdirection-method-sqlserverstatement.md
+        - name: 'getFetchSize, méthode (SQLServerStatement)'
+          href: getfetchsize-method-sqlserverstatement.md
+        - name: Méthode getGeneratedKeys (SQLServerStatement)
+          href: getgeneratedkeys-method-sqlserverstatement.md
+        - name: 'getMaxFieldSize, méthode (SQLServerStatement)'
+          href: getmaxfieldsize-method-sqlserverstatement.md
+        - name: 'getMaxRows, méthode (SQLServerStatement)'
+          href: getmaxrows-method-sqlserverstatement.md
+        - name: 'getMoreResults, méthode (SQLServerStatement)'
+          href: getmoreresults-method-sqlserverstatement.md
+          items:
+            - name: Méthode getMoreResults ()
+              href: getmoreresults-method.md
+            - name: Méthode getMoreResults (int)
+              href: getmoreresults-method-int.md
+        - name: Méthode getQueryTimeout (SQLServerStatement)
+          href: getquerytimeout-method-sqlserverstatement.md
+        - name: Méthode getResponseBuffering (SQLServerStatement)
+          href: getresponsebuffering-method-sqlserverstatement.md
+        - name: 'getResultSet, méthode (SQLServerStatement)'
+          href: getresultset-method-sqlserverstatement.md
+        - name: 'getResultSetConcurrency, méthode (SQLServerStatement)'
+          href: getresultsetconcurrency-method-sqlserverstatement.md
+        - name: 'getResultSetHoldability, méthode (SQLServerStatement)'
+          href: getresultsetholdability-method-sqlserverstatement.md
+        - name: 'getResultSetType, méthode (SQLServerStatement)'
+          href: getresultsettype-method-sqlserverstatement.md
+        - name: 'getUpdateCount, méthode (SQLServerStatement)'
+          href: getupdatecount-method-sqlserverstatement.md
+        - name: 'getWarnings, méthode (SQLServerStatement)'
+          href: getwarnings-method-sqlserverstatement.md
+        - name: Méthode isClosed (SQLServerStatement)
+          href: isclosed-method-sqlserverstatement.md
+        - name: 'isPoolable, méthode (SQLServerStatement)'
+          href: ispoolable-method-sqlserverstatement.md
+        - name: Méthode isWrapperFor (SQLServerStatement)
+          href: iswrapperfor-method-sqlserverstatement.md
+        - name: Méthode setCursorName (SQLServerStatement)
+          href: setcursorname-method-sqlserverstatement.md
+        - name: 'setDateTimeOffset(int, java.sql.DateTimeOffset)'
+          href: setdatetimeoffset-int-java-sql-datetimeoffset-sqlserverstatement.md
+        - name: Méthode setEscapeProcessing (SQLServerStatement)
+          href: setescapeprocessing-method-sqlserverstatement.md
+        - name: Méthode setFetchDirection (SQLServerStatement)
+          href: setfetchdirection-method-sqlserverstatement.md
+        - name: Méthode setFetchSize (SQLServerStatement)
+          href: setfetchsize-method-sqlserverstatement.md
+        - name: 'setMaxFieldSize, méthode (SQLServerStatement)'
+          href: setmaxfieldsize-method-sqlserverstatement.md
+        - name: Méthode setMaxRows (SQLServerStatement)
+          href: setmaxrows-method-sqlserverstatement.md
+        - name: 'setPoolable, méthode (SQLServerStatement)'
+          href: setpoolable-method-sqlserverstatement.md
+        - name: Méthode setResponseBuffering (SQLServerStatement)
+          href: setresponsebuffering-method-sqlserverstatement.md
+        - name: 'setQueryTimeout, méthode (SQLServerStatement)'
+          href: setquerytimeout-method-sqlserverstatement.md
+        - name: Méthode unwrap (SQLServerStatement)
+          href: unwrap-method-sqlserverstatement.md
+- name: 'SQLServerXAConnection, classe'
+  href: sqlserverxaconnection-class.md
+  items:
+    - name: Membres de SQLServerXAConnection
+      href: sqlserverxaconnection-members.md
+    - name: Méthodes SQLServerXAConnection
+      href: sqlserverxaconnection-methods.md
+      items:
+        - name: Méthode getXAResource (SQLServerXAConnection)
+          href: getxaresource-method-sqlserverxaconnection.md
+- name: 'SQLServerXADataSource, classe'
+  href: sqlserverxadatasource-class.md
+  items:
+    - name: Membres de SQLServerXADataSource
+      href: sqlserverxadatasource-members.md
+    - name: Constructeurs SQLServerXADataSource
+      href: sqlserverxadatasource-constructors.md
+      items:
+        - name: Constructeur SQLServerXADataSource ()
+          href: sqlserverxadatasource-constructor.md
+    - name: Méthodes SQLServerXADataSource
+      href: sqlserverxadatasource-methods.md
+      items:
+        - name: Méthode getReference (SQLServerXADataSource)
+          href: getreference-method-sqlserverxadatasource.md
+        - name: Méthode getXAConnection (SQLServerXADataSource)
+          href: getxaconnection-method-sqlserverxadatasource.md
+          items:
+            - name: Méthode getXAConnection ()
+              href: getxaconnection-method.md
+            - name: 'Méthode getXAConnection (java.lang.String, java.lang.String)'
+              href: getxaconnection-method-java-lang-string-java-lang-string.md
+        - name: Méthode isWrapperFor (SQLServerXADataSource)
+          href: iswrapperfor-method-sqlserverxadatasource.md
+        - name: Méthode unwrap (SQLServerXADataSource)
+          href: unwrap-method-sqlserverxadatasource.md
+- name: Classe SQLServerXAResource
+  href: sqlserverxaresource-class.md
+  items:
+    - name: Membres de SQLServerXAResource
+      href: sqlserverxaresource-members.md
+    - name: Méthodes SQLServerXAResource
+      href: sqlserverxaresource-methods.md
+      items:
+        - name: Méthode commit (SQLServerXAResource)
+          href: commit-method-sqlserverxaresource.md
+        - name: Méthode end (SQLServerXAResource)
+          href: end-method-sqlserverxaresource.md
+        - name: Méthode forget (SQLServerXAResource)
+          href: forget-method-sqlserverxaresource.md
+        - name: Méthode getTransactionTimeout (SQLServerXAResource)
+          href: gettransactiontimeout-method-sqlserverxaresource.md
+        - name: Méthode isSameRM (SQLServerXAResource)
+          href: issamerm-method-sqlserverxaresource.md
+        - name: Méthode prepare (SQLServerXAResource)
+          href: prepare-method-sqlserverxaresource.md
+        - name: Méthode recover (SQLServerXAResource)
+          href: recover-method-sqlserverxaresource.md
+        - name: Méthode rollback (SQLServerXAResource)
+          href: rollback-method-sqlserverxaresource.md
+        - name: Méthode setTransactionTimeout (SQLServerXAResource)
+          href: settransactiontimeout-method-sqlserverxaresource.md
+        - name: Méthode start (SQLServerXAResource)
+          href: start-method-sqlserverxaresource.md
+    - name: Champs SQLServerXAResource
+      href: sqlserverxaresource-fields.md
+      items:
+        - name: Champ SSTRANSTIGHTLYCPLD (SQLServerXAResource)
+          href: sstranstightlycpld-field-sqlserverxaresource.md

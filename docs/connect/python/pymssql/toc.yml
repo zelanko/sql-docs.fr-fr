@@ -1,0 +1,8 @@
+- name: Pilote Python SQL (pymssql)
+  href: python-sql-driver-pymssql.md
+- name: "Étape\_1\_: Configurer l’environnement de développement pour le développement Python pymssql"
+  href: step-1-configure-development-environment-for-pymssql-python-development.md
+- name: "Étape\_2\_: Créer une base de données SQL pour le développement Python pymssql"
+  href: step-2-create-a-sql-database-for-pymssql-python-development.md
+- name: "Étape\_3\_: Preuve de concept pour la connexion à SQL à l’aide de pymssql"
+  href: step-3-proof-of-concept-connecting-to-sql-using-pymssql.md

@@ -1,0 +1,17 @@
+- name: Référence ASSL
+  href: analysis-services-scripting-language-assl-for-xmla.md
+- name: Hiérarchie des éléments XML ASSL (Analysis Services Scripting Language)
+  href: analysis-services-scripting-language-xml-element-hierarchy-assl.md
+- name: Hiérarchie des types de données XML ASSL (Analysis Services Scripting Language)
+  href: analysis-services-scripting-language-xml-data-type-hierarchy-assl.md
+- name: Éléments XML dans ASSL (Analysis Services Scripting Language)
+  href: analysis-services-scripting-language-xml-elements-assl.md
+  items:
+    - name: Objets +
+      href: objects/objects-assl.md
+    - name: Collections +
+      href: collections/collections-assl.md
+    - name: Propriétés +
+      href: properties/properties-assl.md
+- name: Types de données XML dans Analysis Services Scripting Language (ASSL) +
+  href: data-type/analysis-services-scripting-language-xml-data-types-assl.md

@@ -1,0 +1,382 @@
+- name: Modèles multidimensionnels
+  href: multidimensional-models-ssas.md
+- name: solutions multidimensionnelles
+  href: multidimensional-model-solutions-ssas.md
+  items:
+    - name: Création de modèles MDX à l'aide des Outils de données SQL Server (SSDT)
+      href: creating-multidimensional-models-using-sql-server-data-tools-ssdt.md
+      items:
+        - name: Créer un projet Analysis Services (SSDT)
+          href: create-an-analysis-services-project-ssdt.md
+        - name: Configurer les propriétés d'un projet Analysis Services (SSDT)
+          href: configure-analysis-services-project-properties-ssdt.md
+        - name: Générer des projets Analysis Services (SSDT)
+          href: build-analysis-services-projects-ssdt.md
+        - name: Déployer des projets Analysis Services (SSDT)
+          href: deploy-analysis-services-projects-ssdt.md
+        - name: Créer et exécuter un script MDX (SSDT)
+          href: create-and-run-an-mdx-script-in-sql-server-data-tools.md
+        - name: Afficher le code XML d'un projet Analysis Services (SSDT)
+          href: view-the-xml-for-an-analysis-services-project-ssdt.md
+        - name: Connexion en mode en ligne à une base de données Analysis Services
+          href: connect-in-online-mode-to-an-analysis-services-database.md
+        - name: Utilisation de projets et de bases de données Analysis Services en phase de développement
+          href: work-with-analysis-services-projects-and-databases-in-development.md
+        - name: Utilisation de projets et de bases de données Analysis Services dans un environnement de production
+          href: work-with-analysis-services-projects-and-databases-in-production.md
+    - name: Sources de données
+      href: data-sources-in-multidimensional-models.md
+      items:
+        - name: Sources de données prises en charge
+          href: supported-data-sources-ssas-multidimensional.md
+        - name: Créer une source de données
+          href: create-a-data-source-ssas-multidimensional.md
+        - name: Supprimer une source de données
+          href: delete-a-data-source-in-solution-explorer-ssas-multidimensional.md
+        - name: Définir les propriétés de la source de données
+          href: set-data-source-properties-ssas-multidimensional.md
+        - name: Définir les options d'emprunt d'identité pour une connexion à la source de données
+          href: set-impersonation-options-ssas-multidimensional.md
+    - name: Vues de source de données
+      href: data-source-views-in-multidimensional-models.md
+      items:
+        - name: Sources de données et liaisons
+          href: data-sources-and-bindings-ssas-multidimensional.md
+        - name: Définir une vue de source de données
+          href: defining-a-data-source-view-analysis-services.md
+        - name: Ajouter ou supprimer des tables ou des vues dans une vue de source de données
+          href: adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md
+        - name: Explorer des données dans une vue de source de données
+          href: explore-data-in-a-data-source-view-analysis-services.md
+        - name: Utiliser des diagrammes dans un concepteur de vues de sources de données
+          href: work-with-diagrams-in-data-source-view-designer-analysis-services.md
+        - name: Actualiser le schéma dans une vue de source de données
+          href: refresh-the-schema-in-a-data-source-view-analysis-services.md
+        - name: Remplacer une table ou une requête nommée dans une vue de source de données
+          href: replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md
+        - name: Définir des relations logiques dans une vue de source de données
+          href: define-logical-relationships-in-a-data-source-view-analysis-services.md
+        - name: Définir des clés primaires logiques dans une vue de source de données
+          href: define-logical-primary-keys-in-a-data-source-view-analysis-services.md
+        - name: Définir des calculs nommés dans une vue de source de données
+          href: define-named-calculations-in-a-data-source-view-analysis-services.md
+        - name: Définir des requêtes nommées dans une vue de source de données
+          href: define-named-queries-in-a-data-source-view-analysis-services.md
+        - name: Supprimer une vue de source de données
+          href: delete-a-data-source-view-analysis-services.md
+        - name: Modifier les propriétés d'une vue de source de données
+          href: change-properties-in-a-data-source-view-analysis-services.md
+        - name: Assistant Génération de schéma
+          href: schema-generation-wizard-analysis-services.md
+          items:
+            - name: Utiliser l'Assistant Génération de schéma
+              href: use-the-schema-generation-wizard-analysis-services.md
+            - name: Présentation des schémas de base de données
+              href: understanding-the-database-schemas.md
+            - name: Présentation de la génération incrémentielle
+              href: understanding-incremental-generation.md
+            - name: Gérer des modifications dans les vues de source de données et les sources de données
+              href: manage-changes-to-data-source-views-and-data-sources.md
+    - name: Dimensions
+      href: dimensions-in-multidimensional-models.md
+      items:
+        - name: Créer une dimension à l'aide de l'Assistant Dimension
+          href: create-a-dimension-using-the-dimension-wizard.md
+        - name: Créer une dimension à l'aide d'une table existante
+          href: create-a-dimension-by-using-an-existing-table.md
+        - name: Create a Time Dimension by Generating a Time Table
+          href: create-a-time-dimension-by-generating-a-time-table.md
+        - name: Créer une dimension en générant une table non temporelle dans la source de données
+          href: create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md
+        - name: Dimensions de base de données
+          href: define-database-dimensions.md
+        - name: "Dimensions de base de données\_- Configurer le niveau (Tous) des hiérarchies d’attributs"
+          href: database-dimensions-configure-the-all-level-for-attribute-hierarchies.md
+        - name: "Dimensions de base de données\_- Modifier ou supprimer une dimension de base de données dans l’Explorateur de solutions"
+          href: database-dimensions-modify-or-delete-a-database-dimension-in-solution-explorer.md
+        - name: "Dimensions de base de données\_- Parcourir les données dans le Concepteur"
+          href: database-dimensions-browse-dimension-data-in-dimension-designer.md
+        - name: "Dimensions de base de données\_- Assistant BI dans le Concepteur"
+          href: database-dimensions-bi-wizard-in-dimension-designer.md
+        - name: "Dimensions de base de données\_- Créer un type date"
+          href: database-dimensions-create-a-date-type-dimension.md
+        - name: "Dimensions de base de données\_- Compte Finance de type parent-enfant"
+          href: database-dimensions-finance-account-of-parent-child-type.md
+        - name: "Dimensions de base de données\_- Type currency"
+          href: database-dimensions-create-a-currency-type-dimension.md
+        - name: Référence des propriétés d’attribut de dimension
+          href: dimension-attribute-properties-reference.md
+          items:
+            - name: "Propriétés d’attribut\_- Renommer un attribut"
+              href: attribute-properties-rename-an-attribute.md
+            - name: "Propriétés d’attribut\_- Ajouter un attribut à une dimension"
+              href: attribute-properties-add-an-attribute-to-a-dimension.md
+            - name: "Propriétés d’attribut\_- Supprimer un attribut d’une dimension"
+              href: attribute-properties-remove-an-attribute-from-a-dimension.md
+            - name: "Propriétés d’attribut\_- Configurer des types d’attributs"
+              href: attribute-properties-configure-attribute-types.md
+            - name: "Propriétés d’attribut\_- Grouper des membres d’attributs"
+              href: attribute-properties-group-attribute-members.md
+            - name: "Propriétés d’attribut\_- Définir des formules de membre personnalisées"
+              href: attribute-properties-define-custom-member-formulas.md
+            - name: "Propriétés d’attribut\_- Définir un membre par défaut"
+              href: attribute-properties-define-a-default-member.md
+            - name: "Propriétés d’attribut\_- Afficher les attributs dans le Concepteur de dimensions"
+              href: attribute-properties-view-attributes-in-dimension-designer.md
+            - name: "Propriétés d’attribut\_- Définir un nouvel attribut automatiquement"
+              href: attribute-properties-define-a-new-attribute-automatically.md
+            - name: "Propriétés d’attribut\_- Afficher les attributs dans le Concepteur de dimensions"
+              href: view-attributes-in-dimension-designer.md
+            - name: "Propriétés d’attribut\_- Modifier la propriété KeyColumn"
+              href: attribute-properties-modify-the-keycolumn-property.md
+            - name: "Propriétés d’attribut\_- Lier un attribut à une colonne clé"
+              href: attribute-properties-bind-an-attribute-to-a-key-column.md
+            - name: "Propriétés d’attribut\_- Lier un attribut à une colonne nom"
+              href: attribute-properties-bind-an-attribute-to-a-name-column.md
+            - name: "Propriétés d’attribut\_- Définir la propriété d’utilisation"
+              href: attribute-properties-set-usage-property.md
+            - name: "Propriétés d’attribut\_- Définir des groupes de membres"
+              href: attribute-properties-define-member-groups.md
+        - name: Dimension parent-enfant
+          href: parent-child-dimension.md
+        - name: Attributs de dimension parent-enfant
+          href: parent-child-dimension-attributes.md
+        - name: "Attributs de dimension parent-enfant\_- Opérateurs de cumul personnalisés"
+          href: parent-child-dimension-attributes-custom-rollup-operators.md
+        - name: "Attributs de dimension parent-enfant\_- Opérateurs unaires"
+          href: parent-child-dimension-attributes-unary-operators.md
+        - name: "Hiérarchies définies par l’utilisateur\_- Créer"
+          href: user-defined-hierarchies-create.md
+        - name: "Hiérarchies définies par l’utilisateur\_- Hiérarchies déséquilibrées"
+          href: user-defined-hierarchies-ragged-hierarchies.md
+        - name: "Hiérarchies définies par l’utilisateur\_-Ajouter ou supprimer"
+          href: user-defined-hierarchies-add-or-delete-a-user-defined-hierarchy.md
+        - name: "Relations d’attributs\_- Définir"
+          href: attribute-relationships-define.md
+        - name: "Relations d’attributs\_- Configurer les propriétés d’attributs"
+          href: attribute-relationships-configure-attribute-properties.md
+        - name: "Relations d’attributs\_- Créer, modifier ou supprimer une relation d’attribut"
+          href: attribute-relationships-create-modify-or-delete-relationship.md
+        - name: "Relations d’attributs\_- Définir le type d’une relation"
+          href: attribute-relationships-define-the-relationship-type.md
+        - name: "Relations d’attributs\_- Organiser des formes dans le diagramme"
+          href: attribute-relationships-arrange-shapes-in-the-diagram.md
+        - name: "Assistant BI\_- Ajouter l’intelligence comptable à une dimension"
+          href: bi-wizard-add-account-intelligence-to-a-dimension.md
+        - name: "Assistant BI\_- Ajouter l’intelligence des dimensions à une dimension"
+          href: bi-wizard-add-dimension-intelligence-to-a-dimension.md
+        - name: "Assistant BI\_- Ajouter une agrégation personnalisée à une dimension"
+          href: bi-wizard-add-a-custom-aggregation-to-a-dimension.md
+        - name: "Assistant BI\_- Personnaliser des formules de membre pour les attributs d’une dimension"
+          href: bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md
+        - name: "Assistant BI\_- Définir l’ordre des attributs d’une dimension"
+          href: bi-wizard-define-the-ordering-for-a-dimension.md
+        - name: "Assistant BI\_- Activer la réécriture de la dimension"
+          href: bi-wizard-enable-dimension-writeback.md
+        - name: Configurer le stockage de chaînes pour des dimensions et des partitions
+          href: configure-string-storage-for-dimensions-and-partitions.md
+        - name: Définir des dimensions liées
+          href: define-linked-dimensions.md
+    - name: Cubes
+      href: cubes-in-multidimensional-models.md
+      items:
+        - name: Créer un cube à l'aide de l'Assistant Cube
+          href: create-a-cube-using-the-cube-wizard.md
+        - name: Créer un cube a partir d'un modèle sans utiliser de vue de source de données
+          href: create-a-cube-from-a-template-without-using-a-data-source-view.md
+        - name: Créer un cube à l'aide d'une vue de source de données
+          href: create-a-cube-using-a-data-source-view.md
+        - name: Parcourir les données et métadonnées de cube
+          href: browse-data-and-metadata-in-cube.md
+        - name: Afficher le schéma de cube
+          href: view-the-cube-schema.md
+        - name: Définir des propriétés d'une dimension de cube
+          href: define-cube-dimension-properties.md
+        - name: Définir les propriétés des hiérarchies de cube
+          href: define-cube-hierarchy-properties.md
+        - name: Définir des propriétés d'attributs de cube
+          href: define-cube-attribute-properties.md
+        - name: Définir une relation régulière et des propriétés de relation régulière
+          href: define-a-regular-relationship-and-regular-relationship-properties.md
+        - name: Définir une relation référencée et des propriétés de relation référencée
+          href: define-a-referenced-relationship-and-referenced-relationship-properties.md
+        - name: Définir une relation de fait et des propriétés de relation de fait
+          href: define-a-fact-relationship-and-fact-relationship-properties.md
+        - name: Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs
+          href: define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md
+    - name: Mesures et groupes de mesures
+      href: measures-and-measure-groups.md
+      items:
+        - name: Créer des mesures et des groupes de mesures
+          href: create-measures-and-measure-groups-in-multidimensional-models.md
+        - name: Configurer les propriétés d'un groupe de mesures
+          href: configure-measure-group-properties.md
+        - name: Configurer des propriétés de mesure
+          href: configure-measure-properties.md
+        - name: Utiliser des fonctions d'agrégation
+          href: use-aggregate-functions.md
+        - name: Définir le comportement semi-additif
+          href: define-semiadditive-behavior.md
+        - name: Groupes de mesures liés définis
+          href: linked-measure-groups.md
+    - name: Partitions
+      href: partitions-in-multidimensional-models.md
+      items:
+        - name: Créer des partitions locales
+          href: create-and-manage-a-local-partition-analysis-services.md
+        - name: Créer des partitions distantes
+          href: create-and-manage-a-remote-partition-analysis-services.md
+        - name: Modifier une source de partition
+          href: change-a-partition-source-to-use-a-different-fact-table.md
+        - name: Conception d'agrégations
+          href: designing-aggregations-analysis-services-multidimensional.md
+        - name: Modifier ou supprimer des partitions
+          href: edit-or-delete-partitions-analyisis-services-multidimensional.md
+        - name: fusionner des partitions
+          href: merge-partitions-in-analysis-services-ssas-multidimensional.md
+        - name: Définir un stockage de partitions
+          href: set-partition-storage-analysis-services-multidimensional.md
+        - name: Définir le secteur de partition
+          href: set-the-partition-slice-property-analysis-services.md
+        - name: Définir l'écriture différée de partition
+          href: set-partition-writeback.md
+    - name: Calculs
+      href: calculations-in-multidimensional-models.md
+      items:
+        - name: Créer des membres calculés
+          href: create-calculated-members.md
+        - name: Créer des jeux nommés
+          href: create-named-sets.md
+        - name: Définir des attributions et d'autres commandes de script
+          href: define-assignments-and-other-script-commands.md
+        - name: Définir des calculs Time Intelligence à l'aide de l'Assistant Business Intelligence
+          href: define-time-intelligence-calculations-using-the-business-intelligence-wizard.md
+    - name: Indicateurs de performance clés
+      href: key-performance-indicators-kpis-in-multidimensional-models.md
+    - name: Actions
+      href: actions-in-multidimensional-models.md
+      items:
+        - name: Actions
+          href: actions-analysis-services-multidimensional-data.md
+        - name: Ajouter une action standard
+          href: add-a-standard-action.md
+        - name: Tester une action
+          href: test-an-action.md
+        - name: Utiliser un modèle pour créer une action
+          href: use-a-template-to-create-an-action.md
+    - name: perspectives
+      href: perspectives-in-multidimensional-models.md
+    - name: Translations
+      href: translations-in-multidimensional-models-analysis-services.md
+    - name: Déploiement de solutions
+      href: multidimensional-model-solution-deployment.md
+      items:
+        - name: Configuration requise et considérations relatives au déploiement d'Analysis Services
+          href: requirements-and-considerations-for-analysis-services-deployment.md
+        - name: Déployer des solutions de modèle à l'aide de XMLA
+          href: deploy-model-solutions-using-xmla.md
+        - name: Deploy Model Solutions Using the Deployment Wizard
+          href: deploy-model-solutions-using-the-deployment-wizard.md
+          items:
+            - name: Exécution de l'Assistant Déploiement d'Analysis Services
+              href: running-the-analysis-services-deployment-wizard.md
+            - name: "Fichiers de script de déploiement\_- Données d’entrée pour créer un script"
+              href: deployment-script-files-input-used-to-create-deployment-script.md
+            - name: "Fichiers de script de déploiement\_- Spécifier la cible d’installation"
+              href: deployment-script-files-specifying-the-installation-target.md
+            - name: "Fichiers de script de déploiement\_- Options de déploiement de partitions et de rôles"
+              href: deployment-script-files-partition-and-role-deployment-options.md
+            - name: "Fichiers de script de déploiement\_- Paramètres de configuration du déploiement de solutions"
+              href: deployment-script-files-solution-deployment-config-settings.md
+            - name: "Fichiers de script de déploiement\_- Spécifier les options de traitement"
+              href: deployment-script-files-specifying-processing-options.md
+            - name: Description du script de déploiement Analysis Services
+              href: understanding-the-analysis-services-deployment-script.md
+        - name: Déployer des solutions de modèle avec l'utilitaire de déploiement
+          href: deploy-model-solutions-with-the-deployment-utility.md
+- name: Multidimensional Databases
+  href: multidimensional-model-databases-ssas.md
+  items:
+    - name: Attacher et détacher des bases de données Analysis Services
+      href: attach-and-detach-analysis-services-databases.md
+    - name: Sauvegarde et restauration de bases de données Analysis Services
+      href: backup-and-restore-of-analysis-services-databases.md
+      items:
+        - name: Options de sauvegarde
+          href: backup-options.md
+        - name: Options de restauration
+          href: restore-options.md
+    - name: Documenter et générer des scripts pour une base de données Analysis Services
+      href: document-and-script-an-analysis-services-database.md
+    - name: Modifier ou supprimer une base de données Analysis Services
+      href: modify-or-delete-an-analysis-services-database.md
+    - name: Déplacer une base de données Analysis Services
+      href: move-an-analysis-services-database.md
+    - name: Renommer une base de données multidimensionnelle
+      href: rename-a-multidimensional-database-analysis-services.md
+    - name: Niveau de compatibilité
+      href: compatibility-level-of-a-multidimensional-database-analysis-services.md
+    - name: Définir les propriétés de base de données multidimensionnelle
+      href: set-multidimensional-database-properties-analysis-services.md
+      items:
+        - name: Emplacement de stockage de la base de données
+          href: database-storage-location.md
+        - name: Base de données ReadWriteModes
+          href: database-readwritemodes.md
+    - name: Synchroniser des base de données Analysis Services
+      href: synchronize-analysis-services-databases.md
+    - name: Basculer entre les modes ReadOnly et ReadWrite
+      href: switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md
+- name: Traitement d’un modèle multidimensionnel
+  href: processing-a-multidimensional-model-analysis-services.md
+  items:
+    - name: Options et paramètres de traitement
+      href: processing-options-and-settings-analysis-services.md
+    - name: 'Traitement de bases de données, de dimensions et de partitions'
+      href: processing-analysis-services-objects.md
+    - name: Outils et approches de traitement
+      href: tools-and-approaches-for-processing-analysis-services.md
+    - name: Traitement par lots
+      href: batch-processing-analysis-services.md
+    - name: Traitement à distance
+      href: remote-processing-analysis-services.md
+    - name: Configuration d'erreur
+      href: error-configuration-for-cube-partition-and-dimension-processing.md
+- name: Rôles et autorisations
+  href: roles-and-permissions-analysis-services.md
+  items:
+    - name: Autorisation de l'accès à des objets et des opérations
+      href: authorizing-access-to-objects-and-operations-analysis-services.md
+    - name: Autorisations de base de données
+      href: grant-database-permissions-analysis-services.md
+    - name: Autorisations de cube ou de modèle
+      href: grant-cube-or-model-permissions-analysis-services.md
+    - name: Autorisations de traitement
+      href: grant-process-permissions-analysis-services.md
+    - name: Autorisations Lire la définition
+      href: grant-read-definition-permissions-on-object-metadata-analysis-services.md
+    - name: Autorisations de dimension
+      href: grant-permissions-on-a-dimension-analysis-services.md
+    - name: Accès personnalisé à des données de dimension
+      href: grant-custom-access-to-dimension-data-analysis-services.md
+    - name: Accès personnalisé à des données de cellule
+      href: grant-custom-access-to-cell-data-analysis-services.md
+    - name: Autorisations d'objet de source de données
+      href: grant-permissions-on-a-data-source-object-analysis-services.md
+    - name: Autorisations d'exploration de données
+      href: grant-permissions-on-data-mining-structures-and-models-analysis-services.md
+- name: Power View pour les modèles multidimensionnels
+  href: power-view-for-multidimensional-models.md
+  items:
+    - name: Présentation de Power View pour les modèles multidimensionnels
+      href: understanding-power-view-for-multidimensional-models.md
+    - name: Créer une source de données de rapport
+      href: create-a-report-data-source.md
+    - name: Créer un rapport Power View
+      href: create-a-power-view-report-with-a-multidimensional-data-source.md
+- name: Gestion d'assemblys
+  href: multidimensional-model-assemblies-management.md
+- name: Référence
+  items:
+    - name: Accès aux données avec MDX
+      href: mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md

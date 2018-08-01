@@ -1,0 +1,15 @@
+- name: Vue d'ensemble
+  href: statistics.md
+  items:
+    - name: Créer
+      href: create-statistics.md
+    - name: Modifier
+      href: modify-statistics.md
+    - name: DELETE
+      href: delete-statistics.md
+    - name: Afficher les propriétés
+      href: view-statistics-properties.md
+    - name: Renommer
+      href: rename-statistics.md
+    - name: Update
+      href: update-statistics.md

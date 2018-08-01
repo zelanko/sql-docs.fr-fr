@@ -1,0 +1,10 @@
+- name: 'XMLA, éléments - En-têtes'
+  href: xml-elements-headers.md
+- name: Élément BeginSession (XMLA)
+  href: beginsession-element-xmla.md
+- name: Élément EndSession (XMLA)
+  href: endsession-element-xmla.md
+- name: Élément ProtocolCapabilities (XMLA)
+  href: protocolcapabilities-element-xmla.md
+- name: Élément Session (XMLA)
+  href: session-element-xmla.md

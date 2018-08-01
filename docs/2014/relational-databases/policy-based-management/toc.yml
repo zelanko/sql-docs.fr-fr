@@ -1,0 +1,154 @@
+- name: Administrer des serveurs à l'aide de la Gestion basée sur des stratégies
+  href: administer-servers-by-using-policy-based-management.md
+  items:
+    - name: Stockage de Gestion basée sur des stratégies
+      href: policy-based-management-storage.md
+    - name: Configurer les propriétés générales de la gestion basée sur des stratégies
+      href: configure-the-general-properties-of-policy-based-management.md
+    - name: Configurer des alertes afin d'informer les administrateurs de stratégie en cas d'échec de stratégie
+      href: configure-alerts-to-notify-policy-administrators-of-policy-failures.md
+    - name: Créer une stratégie de gestion basée sur des stratégies
+      href: create-a-policy-based-management-policy.md
+    - name: Créer une condition de gestion basée sur des stratégies.
+      href: create-a-new-policy-based-management-condition.md
+    - name: Afficher ou modifier les propriétés d'une stratégie de gestion basée sur des stratégies
+      href: view-or-modify-the-properties-of-a-policy-based-management-policy.md
+    - name: Afficher ou modifier les propriétés d'une condition de gestion basée sur des stratégies
+      href: view-or-modify-the-properties-of-a-policy-based-management-condition.md
+    - name: Supprimer une stratégie de gestion basée sur des stratégies
+      href: delete-a-policy-based-management-policy.md
+    - name: Supprimer une condition de gestion basée sur des stratégies.
+      href: delete-a-policy-based-management-condition.md
+    - name: Évaluer une stratégie de gestion basée sur des stratégies à partir d'un objet
+      href: evaluate-a-policy-based-management-policy-from-an-object.md
+    - name: Évaluer une stratégie de gestion basée sur des stratégies pour cette stratégie
+      href: evaluate-a-policy-based-management-policy-from-that-policy.md
+    - name: Évaluer une stratégie de gestion basée sur des stratégies sur une planification
+      href: evaluate-a-policy-based-management-policy-on-a-schedule.md
+    - name: Exporter une stratégie de gestion basée sur des stratégies
+      href: export-a-policy-based-management-policy.md
+    - name: Importer une stratégie de gestion basée sur des stratégies
+      href: import-a-policy-based-management-policy.md
+    - name: Abonner une base de données ou annuler son abonnement à une catégorie de stratégie
+      href: subscribe-or-unsubscribe-a-database-to-a-policy-category.md
+    - name: Gérer les catégories de stratégie
+      href: manage-policy-categories.md
+- name: Utiliser les facettes de la gestion basée sur des stratégies
+  href: working-with-policy-based-management-facets.md
+  items:
+    - name: Afficher les facettes de gestion basée sur des stratégies sur un objet SQL Server
+      href: view-the-policy-based-management-facets-on-a-sql-server-object.md
+    - name: Afficher les propriétés d'une facette de gestion basée sur des stratégies
+      href: view-the-properties-of-a-policy-based-management-facet.md
+    - name: Copier un état de facette de gestion basée sur des stratégies dans un fichier XML
+      href: copy-a-policy-based-management-facet-state-to-an-xml-file.md
+- name: Surveiller et appliquer les bonnes pratiques à l'aide de la Gestion basée sur des stratégies
+  href: monitor-and-enforce-best-practices-by-using-policy-based-management.md
+  items:
+    - name: Force de chiffrement des clés asymétriques
+      href: asymmetric-keys-encryption-strength.md
+    - name: Les fichiers de sauvegarde doivent être placés sur des périphériques distincts des fichiers de base de données
+      href: dbengine-backup-files-must-be-on-separate-devices-from-the-database-files.md
+    - name: Rechercher des problèmes de délai d'E/S dans le sous-système d'E/S disque
+      href: check-disk-input-and-output-subsystem-for-io-delay-problems.md
+    - name: Rechercher des problèmes de nouvelle tentative de lecture dans le sous-système d’E/S disque
+      href: check-disk-input-output-subsystem-for-read-retry-problems.md
+    - name: Vérifier l'intégrité d'une base de données contenant des pages suspectes
+      href: check-integrity-of-database-with-suspect-pages.md
+    - name: Chevauchement correct des options affinity mask et affinity I/O mask
+      href: correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+    - name: Fichiers journaux des traces par défaut désactivés
+      href: default-trace-log-files-disabled.md
+    - name: Détecter une demande d'E/S ayant échoué
+      href: detect-failed-input-and-output-requests.md
+    - name: Détecter des problèmes de carte hôte SCSI
+      href: detect-scsi-host-adapter-issues.md
+    - name: Erreur de contrôle du pilote de périphérique
+      href: device-driver-control-error.md
+    - name: Erreur de périphérique non prêt
+      href: device-not-ready-error.md
+    - name: Désactiver le regroupement léger
+      href: disable-lightweight-pooling.md
+    - name: Autorisations Invité sur les bases de données utilisateur
+      href: guest-permissions-on-user-databases.md
+    - name: Erreur d’E/S lors du contrôle des erreurs de défaut de page matérielle
+      href: input-and-output-error-during-hard-page-fault.md
+    - name: Augmenter la valeur de l'option blocked process threshold ou la désactiver
+      href: increase-or-disable-blocked-process-threshold.md
+    - name: Conserver la valeur par défaut du masque d'affinité
+      href: keep-the-affinity-mask-default-value.md
+    - name: Conserver la valeur par défaut de l'option de configuration locks
+      href: keep-the-locks-configuration-option-default-value.md
+    - name: La taille du paquet réseau ne doit pas dépasser 8060 octets
+      href: network-packet-size-should-not-exceed-8060-bytes.md
+    - name: Sauvegarde obsolète
+      href: outdated-backup.md
+    - name: Placer les fichiers de données et les fichiers journaux sur des lecteurs distincts
+      href: place-data-and-log-files-on-separate-drives.md
+    - name: Autorisations du serveur public
+      href: server-public-permissions.md
+    - name: Définir l'option de base de données AUTO_CLOSE sur OFF
+      href: set-the-auto-close-database-option-to-off.md
+    - name: Définir l'option de base de données AUTO_SHRINK sur OFF
+      href: set-the-auto-shrink-database-option-to-off.md
+    - name: Définir le même classement pour les bases de données définies par l'utilisateur que pour les bases de données MASTER ou model
+      href: dbengine-set-collation-user-defined-databases.md
+    - name: Définir l'option max degree of parallelism pour des performances optimales
+      href: set-the-max-degree-of-parallelism-option-for-optimal-performance.md
+    - name: Définir l'option de base de données PAGE_VERIFY sur CHECKSUM
+      href: set-the-page-verify-database-option-to-checksum.md
+    - name: Expiration du mot de passe de connexion SQL Server
+      href: sql-server-login-password-expiration.md
+    - name: Force du mot de passe de connexion SQL Server
+      href: sql-server-login-password-strength.md
+    - name: Délai d’attente d’entrée-sortie du système de stockage
+      href: storage-system-input-output-time-out.md
+    - name: Clés symétriques sur les bases de données système
+      href: symmetric-keys-on-system-databases.md
+    - name: Clés symétriques sur les bases de données utilisateur
+      href: symmetric-keys-on-user-databases.md
+    - name: Bit de confiance
+      href: trustworthy-bit.md
+    - name: Défaillances inattendues du système
+      href: unexpected-system-failures.md
+    - name: Utiliser la messagerie de base de données plutôt que SQL Mail
+      href: use-database-mail-instead-of-sql-mail.md
+    - name: Vérifier le paramètre de l'option Max Worker Threads
+      href: verify-max-worker-threads-setting.md
+- name: Nœud Gestion de la stratégie (Explorateur d'objets)
+  href: policy-management-node-object-explorer.md
+  items:
+    - name: 'Boîte de dialogue Créer une nouvelle condition ou Ouvrir une condition, page Général'
+      href: create-new-condition-or-open-condition-dialog-box-general-page.md
+    - name: 'Boîte de dialogue Créer une nouvelle condition ou Ouvrir une condition, page Description'
+      href: create-new-condition-or-open-condition-dialog-box-description-page.md
+    - name: 'Boîte de dialogue Ouvrir une condition, page Stratégies dépendantes'
+      href: open-condition-dialog-box-dependent-policies-page.md
+    - name: Boîte de dialogue Modification avancée (Condition)
+      href: advanced-edit-condition-dialog-box.md
+    - name: 'Boîte de dialogue Créer une nouvelle stratégie ou Ouvrir une stratégie, page Général'
+      href: create-new-policy-or-open-policy-dialog-box-general-page.md
+    - name: 'Boîte de dialogue Créer une nouvelle stratégie ou Ouvrir une stratégie, page Description'
+      href: create-new-policy-or-open-policy-dialog-box-description-page.md
+    - name: Boîte de dialogue Afficher les stratégies
+      href: view-policies-dialog-box.md
+    - name: 'Boîte de dialogue Évaluer les stratégies, page Sélectionner la stratégie'
+      href: evaluate-policies-dialog-box-policy-selection-page.md
+    - name: 'Boîte de dialogue Évaluer les stratégies, page Résultats d''évaluation'
+      href: evaluate-policies-dialog-box-evaluation-results-page.md
+    - name: 'Boîte de dialogue Propriétés de la facette, page Général'
+      href: facet-properties-dialog-box-general-page.md
+    - name: 'Boîte de dialogue Propriétés de la facette, page Stratégies dépendantes'
+      href: facet-properties-dialog-box-dependent-policies-page.md
+    - name: 'Boîte de dialogue Propriétés de la facette, page Conditions dépendantes'
+      href: facet-properties-dialog-box-dependent-conditions-page.md
+    - name: Boîte de dialogue Vue détaillée des résultats
+      href: results-detailed-view-dialog-box.md
+    - name: Boîte de dialogue Afficher les facettes
+      href: view-facets-dialog-box.md
+    - name: Boîte de dialogue Sélectionner une source
+      href: select-source-dialog-box.md
+    - name: 'Exporter en tant que stratégie, boîte de dialogue'
+      href: export-as-policy-dialog-box.md
+    - name: Boîte de dialogue Importer des stratégies
+      href: import-policies-dialog-box.md

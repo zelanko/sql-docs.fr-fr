@@ -1,0 +1,337 @@
+- name: SQL Server Agent
+  href: sql-server-agent.md
+- name: Configurer SQL Server Agent
+  href: configure-sql-server-agent.md
+- name: Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
+  href: set-sql-server-connection-for-sql-server-agent-service-ssms.md
+- name: Sélectionner un compte pour le service SQL Server Agent
+  href: select-an-account-for-the-sql-server-agent-service.md
+- name: Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
+  href: set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md
+- name: Démarrer automatiquement SQL Server Agent (SQL Server Management Studio)
+  href: autostart-sql-server-agent-sql-server-management-studio.md
+- name: Définir un alias SQL Server pour le service SQL Server Agent (SQL Server Management Studio)
+  href: set-sql-server-alias-for-sql-server-agent-service-ssms.md
+- name: 'Start, Stop, or Pause the SQL Server Agent Service'
+  href: start-stop-or-pause-the-sql-server-agent-service.md
+- name: Journal des erreurs de SQL Server Agent
+  href: sql-server-agent-error-log.md
+  items:
+    - name: View SQL Server Agent Error Log (SQL Server Management Studio)
+      href: view-sql-server-agent-error-log-sql-server-management-studio.md
+    - name: Rename a SQL Server Agent Error Log (SQL Server Management Studio)
+      href: rename-a-sql-server-agent-error-log-sql-server-management-studio.md
+    - name: Écrire des messages de trace d'exécution dans le journal des erreurs de SQL Server Agent (SQL Server Management Studio)
+      href: write-execution-trace-messages-to-sql-server-agent-log-ssms.md
+- name: Utiliser des objets de performance
+  href: use-performance-objects.md
+- name: Tâches d'administration automatisée (Agent SQL Server)
+  href: automated-administration-tasks-sql-server-agent.md
+  items:
+    - name: Implémenter la sécurité de l'Agent SQL Server
+      href: implement-sql-server-agent-security.md
+      items:
+        - name: Rôles de base de données fixes de SQL Server Agent
+          href: sql-server-agent-fixed-database-roles.md
+        - name: Configure a User to Create and Manage SQL Server Agent Jobs
+          href: configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
+        - name: Create a SQL Server Agent Proxy
+          href: create-a-sql-server-agent-proxy.md
+        - name: Modify a SQL Server Agent Proxy
+          href: modify-a-sql-server-agent-proxy.md
+        - name: Delete a SQL Server Agent Proxy
+          href: delete-a-sql-server-agent-proxy.md
+    - name: Implémenter des travaux
+      href: implement-jobs.md
+      items:
+        - name: Créer des travaux
+          href: create-jobs.md
+          items:
+            - name: Créer un travail
+              href: create-a-job.md
+            - name: Attribuer la propriété d'un travail à d'autres utilisateurs
+              href: give-others-ownership-of-a-job.md
+            - name: Configurer le journal d'historique des travaux
+              href: set-up-the-job-history-log.md
+        - name: organiser les travaux
+          href: organize-jobs.md
+          items:
+            - name: Créer une catégorie de travaux
+              href: create-a-job-category.md
+            - name: Supprimer une catégorie de travaux
+              href: delete-a-job-category.md
+            - name: Affecter un travail à une catégorie de travaux
+              href: assign-a-job-to-a-job-category.md
+            - name: Modifier l'appartenance d'une catégorie de travaux
+              href: change-the-membership-of-a-job-category.md
+            - name: Répertorier les informations de catégorie de travaux
+              href: list-job-category-information.md
+        - name: Gérer les étapes de travail
+          href: manage-job-steps.md
+          items:
+            - name: Utiliser des jetons dans les étapes d'un travail
+              href: use-tokens-in-job-steps.md
+            - name: Gérer plusieurs étapes de travail
+              href: handle-multiple-job-steps.md
+            - name: Créer une étape de travail CmdExec
+              href: create-a-cmdexec-job-step.md
+            - name: Create a Transact-SQL Job Step
+              href: create-a-transact-sql-job-step.md
+            - name: Définir les options d'une étape de travail Transact-SQL
+              href: define-transact-sql-job-step-options.md
+            - name: Create a PowerShell Script Job Step
+              href: create-a-powershell-script-job-step.md
+            - name: Créer une étape de travail de script ActiveX
+              href: create-an-activex-script-job-step.md
+            - name: Créer une étape de travail Analysis Services
+              href: create-an-analysis-services-job-step.md
+            - name: Set Job Step Success or Failure Flow
+              href: set-job-step-success-or-failure-flow.md
+            - name: View Job Step Information
+              href: view-job-step-information.md
+            - name: Supprimer un journal d’étapes de travail
+              href: delete-a-job-step-log.md
+        - name: Créer des planifications et les attacher à des travaux
+          href: create-and-attach-schedules-to-jobs.md
+          items:
+            - name: Créer une planification
+              href: create-a-schedule.md
+            - name: Schedule a Job
+              href: schedule-a-job.md
+            - name: "Définir le seuil et la durée d'inactivité de l'UC (SQL\_Server Management Studio)"
+              href: set-cpu-idle-time-and-duration-sql-server-management-studio.md
+        - name: Exécuter des travaux
+          href: run-jobs.md
+          items:
+            - name: Démarrer un travail
+              href: start-a-job.md
+            - name: Arrêter un travail
+              href: stop-a-job.md
+            - name: Activer ou désactiver un travail
+              href: disable-or-enable-a-job.md
+        - name: Spécifier des réponses à un travail
+          href: specify-job-responses.md
+          items:
+            - name: Notify an Operator of Job Status
+              href: notify-an-operator-of-job-status.md
+            - name: Write the Job Status to the Windows Application Log
+              href: write-the-job-status-to-the-windows-application-log.md
+        - name: Afficher ou modifier les travaux
+          href: view-or-modify-jobs.md
+          items:
+            - name: View a Job
+              href: view-a-job.md
+            - name: Afficher l'historique des travaux
+              href: view-the-job-history.md
+            - name: Effacer le journal d'historique des travaux
+              href: clear-the-job-history-log.md
+            - name: Resize the Job History Log
+              href: resize-the-job-history-log.md
+            - name: Modifier un travail
+              href: modify-a-job.md
+        - name: 'travaux, supprimer'
+          href: delete-jobs.md
+          items:
+            - name: Supprimer un ou plusieurs travaux
+              href: delete-one-or-more-jobs.md
+            - name: Automatically Delete a Job
+              href: automatically-delete-a-job.md
+        - name: Surveiller l'activité des travaux
+          href: monitor-job-activity.md
+          items:
+            - name: Afficher l’activité du travail
+              href: view-job-activity.md
+        - name: "Définir l'arrêt de l'exécution d'un travail (SQL\_Server Management Studio)"
+          href: set-job-execution-shutdown-sql-server-management-studio.md
+    - name: Surveiller et répondre aux événements
+      href: monitor-and-respond-to-events.md
+      items:
+        - name: Alertes
+          href: alerts.md
+          items:
+            - name: Create a WMI Event Alert
+              href: create-a-wmi-event-alert.md
+            - name: Format Pager Addresses for Alerts
+              href: format-pager-addresses-for-alerts.md
+            - name: Modifier une alerte
+              href: edit-an-alert.md
+            - name: Supprimer une alerte
+              href: delete-an-alert.md
+            - name: Afficher les informations relatives à une alerte
+              href: view-information-about-an-alert.md
+        - name: Créer un événement défini par l'utilisateur
+          href: create-a-user-defined-event.md
+          items:
+            - name: Créer une alerte avec un numéro d’erreur
+              href: create-an-alert-using-an-error-number.md
+            - name: Créer une alerte à l'aide d'un niveau de gravité
+              href: create-an-alert-using-severity-level.md
+            - name: Send SQL Server Agent Error Messages
+              href: send-sql-server-agent-error-messages.md
+            - name: Disable or Reactivate an Alert
+              href: disable-or-reactivate-an-alert.md
+        - name: Opérateurs
+          href: operators.md
+          items:
+            - name: Créer un opérateur
+              href: create-an-operator.md
+            - name: Assign Alerts to an Operator
+              href: assign-alerts-to-an-operator.md
+            - name: Delete an Operator
+              href: delete-an-operator.md
+            - name: Changer la disponibilité d’un opérateur
+              href: change-an-operator-s-availability.md
+            - name: Modifier un opérateur
+              href: edit-an-operator.md
+            - name: Afficher des informations relatives à un opérateur
+              href: view-information-about-an-operator.md
+            - name: Désigner un opérateur de prévention de défaillance
+              href: designate-a-fail-safe-operator.md
+    - name: Administration automatisée à l'échelle d'une entreprise
+      href: automated-administration-across-an-enterprise.md
+      items:
+        - name: Créer un environnement multiserveur
+          href: create-a-multiserver-environment.md
+          items:
+            - name: Créer un serveur maître
+              href: make-a-master-server.md
+            - name: Créer un serveur cible
+              href: make-a-target-server.md
+            - name: Inscrire un serveur cible dans un serveur maître
+              href: enlist-a-target-server-to-a-master-server.md
+            - name: Annuler l'inscription d'un serveur cible dans un serveur maître
+              href: defect-a-target-server-from-a-master-server.md
+            - name: Annuler l'inscription de plusieurs serveurs cibles dans un serveur maître
+              href: defect-multiple-target-servers-from-a-master-server.md
+            - name: Créer un travail principal SQL Server Agent
+              href: create-a-sql-server-agent-master-job.md
+            - name: Modifier un travail maître de l'Agent SQL Server
+              href: modify-a-sql-server-agent-master-job.md
+        - name: Change the Scheduling Details for a SQL Server Agent Master Job
+          href: change-the-scheduling-details-for-a-sql-server-agent-master-job.md
+        - name: Add Steps to a SQL Server Agent Master Job
+          href: ../object/add-steps-to-a-sql-server-agent-master-job.md
+        - name: Modifier les étapes d'un travail maître SQL Server Agent
+          href: change-steps-of-a-sql-server-agent-master-job.md
+        - name: Remove Steps from a SQL Server Agent Master Job
+          href: remove-steps-from-a-sql-server-agent-master-job.md
+        - name: Modify the Target Server(s) Associated with a SQL Server Agent Master Job
+          href: modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
+        - name: Choisir le compte de service SQL Server Agent correct pour les environnements multiserveurs
+          href: choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
+        - name: Définir des options de chiffrement sur des serveurs cibles
+          href: set-encryption-options-on-target-servers.md
+        - name: Gérer des travaux à l'échelle d'une entreprise
+          href: manage-jobs-across-an-enterprise.md
+          items:
+            - name: Modify the Target Servers for a Job
+              href: modify-the-target-servers-for-a-job.md
+            - name: Synchroniser les horloges des serveurs cibles (SQL Server Management Studio)
+              href: synchronize-target-server-clocks-sql-server-management-studio.md
+            - name: Spécifier l'emplacement d'un serveur cible (SQL Server Management Studio)
+              href: specify-a-target-server-s-location-sql-server-management-studio.md
+        - name: Résoudre les problèmes liés aux travaux multiserveurs qui utilisent des proxys
+          href: troubleshoot-multiserver-jobs-that-use-proxies.md
+        - name: Interroger des serveurs
+          href: poll-servers.md
+          items:
+            - name: Set the Polling Interval for Target Servers
+              href: set-the-polling-interval-for-target-servers.md
+            - name: Forcer un serveur cible à interroger le serveur maître
+              href: force-a-target-server-to-poll-the-master-server.md
+        - name: Gérer les événements
+          href: manage-events.md
+          items:
+            - name: Designate an Events Forwarding Server (SQL Server Management Studio)
+              href: designate-an-events-forwarding-server-sql-server-management-studio.md
+            - name: Définir la réponse à une alerte (SQL Server Management Studio)
+              href: define-the-response-to-an-alert-sql-server-management-studio.md
+        - name: Paramétrer l'administration automatisée dans une entreprise
+          href: tune-automated-administration-across-an-enterprise.md
+- name: Agent SQL Server – Aide (F1)
+  href: sql-server-agent-f1-help.md
+  items:
+    - name: Nœud Travaux (Aide F1 de l'Agent SQL Server)
+      href: jobs-node-sql-server-agent-f1-help.md
+    - name: Propriétés du travail et Nouveau travail (page Général)
+      href: job-properties-new-job-general-page.md
+    - name: "Propriétés du travail\_: Nouveau travail (page Étapes)"
+      href: job-properties-new-job-steps-page.md
+    - name: "Propriétés du travail\_: Nouveau travail (page Planifications)"
+      href: job-properties-new-job-schedules-page.md
+    - name: "Propriétés du travail\_: Nouveau travail (page Alertes)"
+      href: job-properties-new-job-alerts-page.md
+    - name: "Propriétés du travail\_: Nouveau travail (page Notifications)"
+      href: job-properties-new-job-notifications-page.md
+    - name: "Propriétés du travail\_: Nouveau travail (page Cibles)"
+      href: job-properties-new-job-targets-page.md
+    - name: Propriétés des catégories de travaux et Nouvelle catégorie de travaux
+      href: job-categories-properties-new-job-category.md
+    - name: "Catégories de travaux\_: Gérer les catégories de travaux"
+      href: job-categories-manage-job-categories.md
+    - name: "Propriétés de l’étape du travail\_: Nouvelle étape du travail (page Général)"
+      href: job-step-properties-new-job-step-general-page.md
+    - name: "Propriétés de l’étape du travail\_: Nouvelle étape du travail (page Avancé)"
+      href: job-step-properties-new-job-step-advanced-page.md
+    - name: Choisir une planification pour le travail
+      href: pick-schedule-for-job.md
+    - name: "Nouvelle planification du travail\_: Propriétés de la planification du travail"
+      href: new-job-schedule-job-schedule-properties.md
+    - name: Gérer les planifications
+      href: manage-schedules.md
+    - name: Travaux faisant référence à une planification
+      href: jobs-that-reference-a-schedule.md
+    - name: Moniteur d'activité des travaux
+      href: job-activity-monitor.md
+    - name: Nœud Alertes — Aide (F1) de l'Agent SQL Server
+      href: alerts-node-sql-server-agent-f1-help.md
+    - name: Propriétés de l'alerte/Nouvelle alerte (page Général)
+      href: alert-properties-new-alert-general-page.md
+    - name: Propriétés de l'alerte/Nouvelle alerte (page Réponse)
+      href: alert-properties-new-alert-response-page.md
+    - name: "Propriétés de l’alerte\_: Nouvelle alerte (page Options)"
+      href: alert-properties-new-alert-options-page.md
+    - name: Propriétés de l'alerte (page Historique)
+      href: alert-properties-history-page.md
+    - name: Nœud Proxies (Aide de l'Agent SQL Server)
+      href: proxies-node-sql-server-agent-f1-help.md
+    - name: Propriétés du compte proxy et Nouveau compte proxy (page Général)
+      href: proxy-account-properties-new-proxy-account-general-page.md
+    - name: Propriétés du compte de proxy et Nouveau compte de proxy (onglet Principaux)
+      href: proxy-account-properties-new-proxy-account-principals-tab.md
+    - name: Éditeur de proxy et Ajouter un principal
+      href: proxy-editor-add-principal.md
+    - name: Propriétés du compte de proxy (onglet Références)
+      href: proxy-account-properties-references-tab.md
+    - name: Nœud Opérateurs — Aide (F1) de l'Agent SQL Server
+      href: operators-node-sql-server-agent-f1-help.md
+    - name: Propriétés de l’opérateur et Nouvel opérateur (page Général)
+      href: operator-properties-new-operator-general-page.md
+    - name: "Propriétés de l’opérateur\_: Nouvel opérateur (page Notifications)"
+      href: operator-properties-new-operator-notifications-page.md
+    - name: Propriétés Opérateur (page Historique)
+      href: operator-properties-history-page.md
+    - name: Supprimer l'opérateur
+      href: delete-operator.md
+    - name: Configurer les journaux d'erreurs de l'Agent SQL Server (page Général)
+      href: configure-sql-server-agent-error-logs-general-page.md
+    - name: Recycler les journaux d'erreurs de l'Agent SQL Server
+      href: recycle-sql-server-agent-error-logs.md
+    - name: Propriétés de SQL Server Agent (page Général)
+      href: sql-server-agent-properties-general-page.md
+    - name: Propriétés de l'Agent SQL Server (page Avancé)
+      href: sql-server-agent-properties-advanced-page.md
+    - name: Propriétés de SQL Server Agent (page Système d'alerte)
+      href: sql-server-agent-properties-alert-system-page.md
+    - name: Propriétés de l'Agent SQL Server (page Système de travaux)
+      href: sql-server-agent-properties-job-system-page.md
+    - name: Propriétés de l'Agent SQL Server (page Connexion)
+      href: sql-server-agent-properties-connection-page.md
+    - name: Propriétés de l'Agent SQL Server (page Historique)
+      href: sql-server-agent-properties-history-page.md
+    - name: Serveurs cibles (onglet État du serveur cible)
+      href: target-servers-target-server-status-tab.md
+    - name: Serveurs cibles (onglet Instructions de téléchargement)
+      href: target-servers-download-instructions-tab.md
+    - name: Publier les instructions de téléchargement
+      href: post-download-instructions.md

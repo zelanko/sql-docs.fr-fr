@@ -1,0 +1,151 @@
+- name: Moteur de base de données
+  href: sql-server-database-engine-overview.md
+  items:
+    - name: Nouveautés (moteur de base de données)
+      href: whats-new-in-sql-server-2016.md
+    - name: Compatibilité descendante du moteur de base de données SQL Server
+      href: sql-server-database-engine-backward-compatibility.md
+      items:
+        - name: Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2014
+          href: deprecated-database-engine-features-in-sql-server-2016.md
+        - name: Fonctionnalités du moteur de base de données supprimées dans SQL Server 2014
+          href: discontinued-database-engine-functionality-in-sql-server-2016.md
+        - name: "Changements essentiels dans les fonctionnalités du moteur de base de données de SQL Server\_2014"
+          href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
+        - name: Changements de comportement des fonctionnalités du moteur de base de données de SQL Server 2014
+          href: behavior-changes-to-database-engine-features-in-sql-server-2014.md
+        - name: Compatibilité descendante de la recherche en texte intégral
+          href: full-text-search-backward-compatibility.md
+          items:
+            - name: Fonctionnalités de la recherche en texte intégral abandonnées dans SQL Server 2014
+              href: discontinued-full-text-search-features-in-sql-server-2014.md
+            - name: Modifications importantes apportées à la recherche en texte intégral
+              href: breaking-changes-to-full-text-search.md
+            - name: Changements de comportement pour la recherche en texte intégral
+              href: behavior-changes-to-full-text-search.md
+    - name: Compatibilité descendante avec les outils d'administration SQL Server
+      href: sql-server-management-tools-backward-compatibility.md
+      items:
+        - name: Fonctionnalités des outils d'administration déconseillées dans SQL Server 2014
+          href: deprecated-management-tools-features-in-sql-server-2014.md
+        - name: Fonctionnalités des outils d'administration supprimées dans SQL Server 2014
+          href: discontinued-management-tools-features-in-sql-server-2014.md
+        - name: "Dernières modifications apportées aux fonctionnalités des outils d'administration dans SQL Server\_2014"
+          href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
+        - name: Modifications de comportement des fonctionnalités des outils d'administration dans SQL Server 2014
+          href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
+- name: Fonctionnalités et tâches du moteur de base de données
+  href: database-engine-features-and-tasks.md
+- name: Instances du moteur de base de données (SQL Server)
+  href: configure-windows/database-engine-instances-sql-server.md
+  items:
+    - name: Configurer des instances du moteur de base de données +
+      href: configure-windows/configure-database-engine-instances-sql-server.md
+    - name: Prise en charge d’Unicode et du classement +
+      href: ../relational-databases/collations/collation-and-unicode-support.md
+    - name: Serveurs liés (Moteur de base de données)
+      href: ../relational-databases/linked-servers/linked-servers-database-engine.md
+      items:
+        - name: Créer des serveurs liés (moteur de base de données SQL Server)
+          href: ../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+    - name: Déclencheurs de connexion
+      href: ../relational-databases/triggers/logon-triggers.md
+      items:
+        - name: Capturer des données d'événements de déclencheurs de connexion
+          href: ../relational-databases/triggers/capture-logon-trigger-event-data.md
+    - name: Gérer les services Moteur de base de données +
+      href: configure-windows/manage-the-database-engine-services.md
+    - name: Configuration réseau du serveur +
+      href: configure-windows/server-network-configuration.md
+    - name: Configuration réseau du client +
+      href: configure-windows/client-network-configuration.md
+    - name: Scripts du moteur de base de données +
+      href: ../relational-databases/scripting/database-engine-scripting.md
+    - name: Plans de maintenance +
+      href: ../relational-databases/maintenance-plans/maintenance-plans.md
+    - name: Resource Governor +
+      href: ../relational-databases/resource-governor/resource-governor.md
+    - name: Messagerie de base de données +
+      href: ../relational-databases/database-mail/database-mail.md
+    - name: Événements étendus +
+      href: ../relational-databases/extended-events/extended-events.md
+    - name: Trace SQL +
+      href: ../relational-databases/sql-trace/sql-trace.md
+    - name: SQL Server Profiler +
+      href: ../tools/sql-server-profiler/sql-server-profiler.md
+    - name: Suivre les modifications de données +
+      href: ../relational-databases/track-changes/track-data-changes-sql-server.md
+    - name: Visionneuse du fichier journal +
+      href: ../relational-databases/logs/log-file-viewer.md
+    - name: Assistant Paramétrage du moteur de base de données +
+      href: ../relational-databases/performance/database-engine-tuning-advisor.md
+    - name: Connexion de diagnostic pour les administrateurs de base de données
+      href: configure-windows/diagnostic-connection-for-database-administrators.md
+    - name: Adaptateur de cloud pour SQL Server
+      href: cloud-adapter-for-sql-server.md
+    - name: "SQL Server\_2014 Express LocalDB"
+      href: configure-windows/sql-server-2016-express-localdb.md
+    - name: Serveurs distants
+      href: configure-windows/remote-servers.md
+    - name: "Vue d'ensemble du moniteur SQL\_Server"
+      href: configure-windows/sql-server-monitor-overview.md
+    - name: Service Broker
+      href: configure-windows/sql-server-service-broker.md
+    - name: Buffer Pool Extension
+      href: configure-windows/buffer-pool-extension.md
+- name: Fonctionnalités de base de données +
+  href: ../relational-databases/database-features.md
+- name: Fonctionnalités entre les instances du moteur de base de données
+  href: database-engine-cross-instance-features.md
+  items:
+    - name: SQL Server Management Studio +
+      href: ../ssms/sql-server-management-studio-ssms.md
+    - name: Gestion du cycle de vie de base de données
+      href: ../relational-databases/database-lifecycle-management.md
+    - name: Fonctionnalités et tâches de l’utilitaire SQL Server +
+      href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
+    - name: Administrer des serveurs à l’aide de la gestion basée sur des stratégies +
+      href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+    - name: Inscrire des serveurs +
+      href: ../ssms/register-servers/register-servers.md
+    - name: SQL Server Distributed Replay +
+      href: ../tools/distributed-replay/sql-server-distributed-replay.md
+    - name: Collecte de données +
+      href: ../relational-databases/data-collection/data-collection.md
+    - name: Surveiller l’utilisation des ressources (Moniteur système) +
+      href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
+    - name: Administrer plusieurs serveurs à l'aide de serveurs de gestion centralisée
+      href: ../relational-databases/administer-multiple-servers-using-central-management-servers.md
+    - name: Gestionnaire de configuration SQL Server
+      href: ../relational-databases/sql-server-configuration-manager.md
+    - name: Moniteur d'activité
+      href: ../relational-databases/performance-monitor/activity-monitor.md
+      items:
+        - name: Ouvrir le Moniteur d'activité (SQL Server Management Studio)
+          href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
+- name: Groupes de disponibilité AlwaysOn +
+  href: availability-groups/windows/always-on-availability-groups-sql-server.md
+- name: Point de terminaison de mise en miroir de bases de données +
+  href: database-mirroring/the-database-mirroring-endpoint-sql-server.md
+- name: À propos de la copie des journaux de transaction +
+  href: log-shipping/about-log-shipping-sql-server.md
+- name: Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database +
+  href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: Références techniques
+  href: technical-reference-database-engine.md
+  items:
+    - name: Références relatives aux fonctions
+      href: feature-reference-database-engine.md
+    - name: Informations de référence sur l’utilitaire d’invite de commandes (Moteur de base de données) +
+      href: ../tools/command-prompt-utility-reference-database-engine.md
+    - name: Référence de PowerShell (Moteur de base de données)
+      href: database-engine-powershell-reference.md
+      items:
+        - name: Invoke-PolicyEvaluation (applet de commande)
+          href: invoke-policyevaluation-cmdlet.md
+        - name: Invoke-Sqlcmd (applet de commande)
+          href: invoke-sqlcmd-cmdlet.md
+        - name: Expressions de requête et noms URN
+          href: ../powershell/query-expressions-and-uniform-resource-names.md
+- name: Informations de référence sur les erreurs et les événements +
+  href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md

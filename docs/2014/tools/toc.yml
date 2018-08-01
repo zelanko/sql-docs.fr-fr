@@ -1,0 +1,36 @@
+- name: Référence de l'utilitaire d'invite de commandes (moteur de base de données)
+  href: command-prompt-utility-reference-database-engine.md
+  items:
+    - name: Utilitaire bcp
+      href: bcp-utility.md
+    - name: Utilitaire dta +
+      href: dta/dta-utility.md
+    - name: Utilitaire SqlLocalDB
+      href: sqllocaldb-utility.md
+    - name: Utilitaire osql
+      href: osql-utility.md
+    - name: Utilitaire profiler
+      href: profiler-utility.md
+    - name: application sqlagent90
+      href: sqlagent90-application.md
+    - name: sqlcmd Utility
+      href: sqlcmd-utility.md
+    - name: SQLdiag (utilitaire)
+      href: sqldiag-utility.md
+    - name: sqlmaint (utilitaire)
+      href: sqlmaint-utility.md
+    - name: Application sqllogship
+      href: sqllogship-application.md
+    - name: sqlps (utilitaire)
+      href: sqlps-utility.md
+    - name: Application sqlservr
+      href: sqlservr-application.md
+    - name: Utilitaire ssbdiagnose (Service Broker) +
+      href: ssbdiagnose/ssbdiagnose-utility-service-broker.md
+    - name: Utilitaire Ssms
+      href: ../ssms/ssms-utility.md
+      items:
+        - name: Raccourcis clavier dans SQL Server Management Studio
+          href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
+    - name: tablediff (utilitaire)
+      href: tablediff-utility.md
