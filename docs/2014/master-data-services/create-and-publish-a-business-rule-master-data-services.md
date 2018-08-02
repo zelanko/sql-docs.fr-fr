@@ -75,7 +75,7 @@ ms.locfileid: "37322379"
   
 18. Dans le volet **Modifier l’action** , cliquez sur **Enregistrer l’élément**.  
   
-19. Éventuellement, ajoutez plusieurs conditions à la règle. Pour plus d’informations, consultez [Add Multiple Conditions to a Business Rule &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
+19. Éventuellement, ajoutez plusieurs conditions à la règle. Pour plus d’informations, consultez [Ajouter plusieurs conditions à une règle d’entreprise &#40;Master Data Services&#41;](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md).  
   
 20. Cliquez sur **Précédent**.  
   

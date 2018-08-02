@@ -58,7 +58,7 @@ ms.locfileid: "37299919"
   
 1.  Configurez la publication et la distribution, créez une publication et créez un abonnement par extraction à la publication. La publication doit prendre en charge la synchronisation Web ou les Abonnés [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
-2.  Créez et inscrivez un gestionnaire de logique métier. Pour plus d’informations, voir [Implement a Business Logic Handler for a Merge Article](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Créez et inscrivez un gestionnaire de logique métier. Pour plus d’informations, voir [Implémenter un gestionnaire de logique métier pour un article de fusion](implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Définissez un point d'arrêt dans le code du gestionnaire de logique métier, soit dans la méthode en cours de débogage, soit dans le constructeur de classe. Pour plus d'informations sur les méthodes qui peuvent être implémentées dans un gestionnaire de logique métier, consultez la rubrique sur les méthodes <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
