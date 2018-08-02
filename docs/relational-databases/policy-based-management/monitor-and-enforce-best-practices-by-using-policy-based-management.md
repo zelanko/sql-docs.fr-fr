@@ -45,7 +45,7 @@ ms.locfileid: "32956689"
 |Autorisations Invité|[Autorisations Invité sur les bases de données utilisateur](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
 |Date de la dernière sauvegarde réussie|[Sauvegarde obsolète](../../relational-databases/policy-based-management/outdated-backup.md)|  
 |Autorisations du serveur public non accordées|[Autorisations du serveur public](../../relational-databases/policy-based-management/server-public-permissions.md)|  
-|Chevauchement de masque d'affinité SQL Server 64 bits|[Correct Affinity Mask and Affinity Input and Output Mask Overlap](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Chevauchement de masque d'affinité SQL Server 64 bits|[Corriger le chevauchement des options Masque d’affinité et Masque d’affinité d’E/S](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |Masque d'affinité SQL Server|[Conserver la valeur par défaut du masque d'affinité](../../relational-databases/policy-based-management/keep-the-affinity-mask-default-value.md)|  
 |Seuil de processus bloqué SQL Server|[Augmenter la valeur de l'option blocked process threshold ou la désactiver](../../relational-databases/policy-based-management/increase-or-disable-blocked-process-threshold.md)|  
 |Trace par défaut SQL Server|[Fichiers journaux de trace par défaut désactivés](../../relational-databases/policy-based-management/default-trace-log-files-disabled.md)|  

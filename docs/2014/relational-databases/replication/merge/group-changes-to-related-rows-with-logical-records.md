@@ -45,7 +45,7 @@ ms.locfileid: "37194989"
   
  ![Enregistrement logique impliquant trois tables avec valeurs](../media/logical-records-02.gif "Enregistrement logique impliquant trois tables avec valeurs")  
   
- Pour définir une relation d'enregistrement logique entre articles, consultez [Define a Logical Record Relationship Between Merge Table Articles](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
+ Pour définir une relation d'enregistrement logique entre articles, consultez [Définir une relation d'enregistrement logique entre des articles de table de fusion](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
 ## <a name="benefits-of-logical-records"></a>Avantages des enregistrements logiques  
  La fonctionnalité des enregistrements logiques possède essentiellement deux avantages :  

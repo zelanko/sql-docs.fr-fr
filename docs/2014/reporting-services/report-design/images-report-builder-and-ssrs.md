@@ -48,7 +48,7 @@ ms.locfileid: "37278282"
 ##  <a name="EmbedImages"></a> Incorporation d'images  
  Vous pouvez incorporer des images dans un rapport de sorte que toutes les données de l'image soient stockées dans la définition de rapport. Lorsque vous incorporez une image, un encodage MIME lui est appliqué et elle est stockée sous la forme de texte dans la définition de rapport. L'incorporation garantit que l'image est toujours disponible pour le rapport, mais elle accroît la taille de la définition de rapport.  
   
- Pour plus d’informations sur l’incorporation d’une image, consultez [Embed an Image in a Report &#40;Report Builder and SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur l’incorporation d’une image, consultez [Incorporer une image dans un rapport &#40;Générateur de rapports et SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
 
   
@@ -59,7 +59,7 @@ ms.locfileid: "37278282"
   
  Lorsque le rapport est exécuté dans le Générateur de rapports ou dans le Concepteur de rapports, l'aperçu utilise les informations d'identification de l'utilisateur pour afficher l'image. Lorsque le rapport est exécuté sur le serveur de rapports, l'image dans le rapport peut ne pas s'afficher si les informations d'identification du serveur ne sont pas suffisantes pour accéder à l'image. Dans ce cas, contactez votre administrateur système.  
   
- Pour plus d’informations sur l’ajout d’une image externe à un rapport, consultez [Add an External Image &#40;Report Builder and SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur l’ajout d’une image externe à un rapport, consultez [Ajouter une image externe &#40;Générateur de rapports et SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md).  
   
  
   
@@ -69,12 +69,12 @@ ms.locfileid: "37278282"
 > [!NOTE]  
 >  Certaines extensions de rendu, par exemple l'extension de rendu HTML, effectuent le rendu de l'image d'arrière-plan destinée au corps du rapport dans le corps, et dans l'en-tête et le pied de page. Vous pouvez définir une image d'arrière-plan différente pour l'en-tête et le pied de page, mais si aucune image n'est spécifiée, le rapport utilise celle du corps. D'autres extensions de rendu, comme Image, n'effectuent pas le rendu de l'image d'arrière-plan du corps dans l'en-tête et le pied de page.  
   
- Pour plus d’informations sur l’ajout d’une image d’arrière-plan, consultez [Add a Background Image &#40;Report Builder and SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md).  
+ Pour plus d’informations sur l’ajout d’une image d’arrière-plan, consultez [Ajouter une image d’arrière-plan &#40;Générateur de rapports et SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md).  
   
  
   
 ##  <a name="DataboundImages"></a> Images liées aux données  
- Vous pouvez ajouter à votre rapport des images stockées dans une base de données. Pour cela, vous utilisez le même élément de rapport de type image que celui des images statiques, mais avec un ensemble de propriétés indiquant que l'image se trouve dans une base de données. Pour obtenir des instructions sur l’utilisation d’images liées à des données, consultez [Add a Data-Bound Image &#40;Report Builder and SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
+ Vous pouvez ajouter à votre rapport des images stockées dans une base de données. Pour cela, vous utilisez le même élément de rapport de type image que celui des images statiques, mais avec un ensemble de propriétés indiquant que l'image se trouve dans une base de données. Pour obtenir des instructions sur l’utilisation d’images liées à des données, consultez [Ajouter une image liée à des données &#40;Générateur de rapports et SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
   
 
   

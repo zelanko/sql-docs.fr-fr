@@ -158,7 +158,7 @@ ms.locfileid: "37240850"
 ##  <a name="auditing"></a> Audit  
  L'audit au niveau de la procédure est pris en charge dans les procédures stockées compilées en mode natif. L'audit au niveau de l'instruction n'est pas pris en charge.  
   
- Pour plus d'informations sur l'audit, consultez [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Pour plus d'informations sur l'audit, consultez [Créer une spécification de l'audit du serveur et de la base de données](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ##  <a name="tqh"></a> Table, requête et les indicateurs de jointure  
  Les constructions suivantes sont admises :  
