@@ -45,7 +45,7 @@ ms.locfileid: "37306959"
 
   
 ##  <a name="ReportBorder"></a> Ajout d'une bordure de rapport  
- Vous pouvez entourer un rapport d'une bordure en plaçant celle-ci dans les en-têtes, les pieds de page et le corps du rapport, sans ajouter de lignes ou de rectangles. Pour plus d’informations, consultez [Add a Border to a Report &#40;Report Builder and SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
+ Vous pouvez entourer un rapport d'une bordure en plaçant celle-ci dans les en-têtes, les pieds de page et le corps du rapport, sans ajouter de lignes ou de rectangles. Pour plus d’informations, consultez [Ajouter une bordure à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
 
   

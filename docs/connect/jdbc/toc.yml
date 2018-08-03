@@ -103,6 +103,8 @@
           href: basic-data-types-sample.md
         - name: Exemple de type de données SQLXML
           href: sqlxml-data-type-sample.md
+        - name: Exemple de types de données spatiales
+          href: spatial-data-types-sample.md
     - name: Travail sur des jeux de résultats
       href: working-with-result-sets.md
       items:
@@ -121,6 +123,8 @@
           href: reading-large-data-with-stored-procedures-sample.md
         - name: Exemple de mise à jour de données volumineuses
           href: updating-large-data-sample.md
+    - name: Exemple de découverte et de classification des données
+      href: data-discovery-classification-sample.md
 - name: Conformité et aspects juridiques pour le pilote JDBC SQL
   href: compliance-and-legal-for-the-jdbc-sql-driver.md
   items:
@@ -163,6 +167,8 @@
           href: using-parameter-metadata.md
         - name: Utilisation des types de données de base
           href: using-basic-data-types.md
+        - name: Utilisation des types de données spatiales
+          href: use-spatial-datatypes.md
         - name: Présentation des transactions
           href: understanding-transactions.md
         - name: Utilisation d'une connexion
@@ -241,6 +247,8 @@
           href: wrappers-and-interfaces.md
         - name: Utilisation de la copie en bloc avec le pilote JDBC
           href: using-bulk-copy-with-the-jdbc-driver.md
+        - name: Utilisation de l’API de copie en bloc pour l’opération d’insertion par lot
+          href: use-bulk-copy-api-batch-insert-operation.md
         - name: Utilisation d'une procédure stockée avec des paramètres de sortie
           href: using-a-stored-procedure-with-output-parameters.md
         - name: Exécution d'opérations de traitement par lot
@@ -257,3 +265,5 @@
           href: azure-key-vault-sample-version-6.0.0.md
         - name: "Exemple de version Azure Key Vault\_6.2.2"
           href: azure-key-vault-sample-version-6.2.2.md
+        - name: "Exemple de version Azure Key Vault\_7.0.0"
+          href: azure-key-vault-sample-version-7-0-0.md

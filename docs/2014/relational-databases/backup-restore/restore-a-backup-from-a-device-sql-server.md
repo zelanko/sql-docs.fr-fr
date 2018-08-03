@@ -29,7 +29,7 @@ ms.locfileid: "37285315"
   Cette rubrique explique comment restaurer une sauvegarde à partir d'une unité dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Pour plus d'informations sur la sauvegarde SQL Server dans le service de stockage d'objets blob Windows Azure, consultez [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Pour plus d'informations sur la sauvegarde SQL Server dans le service de stockage d'objets blob Windows Azure, consultez [Sauvegarde et restauration SQL Server avec le service de stockage d'objets blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **Dans cette rubrique**  
   
