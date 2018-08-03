@@ -1,5 +1,5 @@
 ---
-title: Azure Key Vault exemple Version 6.0.0 | Documents Microsoft
+title: Exemple de Version 6.0.0 le coffre de clés Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530d952126de09c46fffe7537e91be443f1bd4da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e7526276da62ea6f251944eca7b7ce4b1a03c2f6
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828594"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278930"
 ---
-# <a name="azure-key-vault-sample-version-600"></a>Version d’essai Azure Key Vault 6.0.0
+# <a name="azure-key-vault-sample-version-600"></a>Exemple de version Azure Key Vault 6.0.0
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-##  <a name="sample-application-using-azure-key-vault-feature"></a>Exemple d’application à l’aide de la fonctionnalité d’Azure Key Vault
-Cette application est exécutable à l’aide de JDBC Driver 6.0.0 et Azure Keyvault (version 0.9.7), Adal4j (version version 1.3.0) et leurs dépendances.  Les dépendances sous-jacentes peuvent être résolus en ajoutant ces bibliothèques dans le fichier pom du projet, comme décrit [ici](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
+##  <a name="sample-application-using-azure-key-vault-feature"></a>Exemple d’application à l’aide de la fonctionnalité Azure Key Vault
+Cette application est exécutable à l’aide du pilote JDBC 6.0.0 et Azure-Keyvault (version 0.9.7), Adal4j (version 1.3.0) et leurs dépendances.  Les dépendances sous-jacent peuvent être résolus en ajoutant ces bibliothèques dans le fichier pom du projet comme décrit [ici](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
 
-```xml
+```java
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -285,5 +285,5 @@ public class AE_AKV_Maven {
 
 ```
 
-## <a name="see-also"></a>Voir aussi  
- [Version d’essai Azure Key Vault 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Exemple de version Azure Key Vault 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  

@@ -1,7 +1,7 @@
 ---
-title: Connexion à une base de données SQL Azure | Documents Microsoft
+title: Connexion à une base de données SQL Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,21 +14,21 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 183cd9c749cac8b1af3d97a9830d4d4288fd464f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e716ec94db3f37dc51136f55884ac0c9eb33d236
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832474"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278740"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connexion à une base de données SQL Azure
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Cette rubrique traite des problèmes lors de l’utilisation du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] pour se connecter à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. Pour plus d’informations sur la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], consultez :  
+  Cet article aborde les problèmes rencontrés lors de l’utilisation de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] pour la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. Pour plus d’informations sur la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], consultez :  
   
--   [SQL Azure Database](http://go.microsoft.com/fwlink/?LinkID=202490)  
+-   [Base de données SQL Azure](http://go.microsoft.com/fwlink/?LinkID=202490)  
   
--   [Comment : se connecter à SQL Azure à l’aide de JDBC](http://msdn.microsoft.com/library/gg715284.aspx)  
+-   [Guide pratique pour se connecter à SQL Azure avec JDBC](http://msdn.microsoft.com/library/gg715284.aspx)  
   
 -   [Utilisation de SQL Azure dans Java](http://msdn.microsoft.com/library/windowsazure/hh749029(VS.103).aspx)
 
@@ -36,24 +36,24 @@ ms.locfileid: "32832474"
   
 ## <a name="details"></a>Détails  
  Lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez vous connecter à la base de données master pour appeler **SQLServerDatabaseMetaData.getCatalogs**.  
- [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ne prend pas en charge le retour de l’ensemble des catalogues à partir d’une base de données utilisateur. **SQLServerDatabaseMetaData.getCatalogs** utilise la vue sys.databases pour récupérer les catalogues. Reportez-vous à la discussion des autorisations de [sys.databases (base de données SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) pour comprendre **SQLServerDatabaseMetaData.getCatalogs** comportement sur un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+ [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ne prend pas en charge le retour de l’ensemble complet de catalogues d’une base de données utilisateur. **SQLServerDatabaseMetaData.getCatalogs utiliser la vue sys.databases pour obtenir les catalogues. Reportez-vous à la section autorisations dans [sys.databases (base de données SQL Azure)](http://go.microsoft.com/fwlink/?LinkId=217396) pour comprendre **SQLServerDatabaseMetaData.getCatalogs** comportement sur un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
  Connexions supprimées  
- Lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], connexions inactives peuvent être arrêtées par un composant réseau (tel qu’un pare-feu) après une période d’inactivité. Il existe deux types de connexions inactives dans ce contexte :  
+ Lors de la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], les connexions inactives peuvent être arrêtées par un composant réseau (comme un pare-feu) après une période d’inactivité. Il existe deux types de connexions inactives dans ce contexte :  
   
 -   Les connexions inactives sur la couche TCP, lorsque les connexions peuvent être supprimées par n'importe quel dispositif réseau.  
   
--   Inactives via la passerelle SQL Azure, où TCP **keepalive** rendent peuvent se produire (établissement de la connexion non inactive du point de vue TCP), mais sans requête active dans les 30 minutes. Dans ce scenario, la passerelle détermine que la connexion TDS est inactive à 30 minutes et l'arrête.  
+-   Les connexions inactives via la passerelle SQL Azure, en cas de messages TCP **keepalive** (qui rendent la connexion non inactive du point de vue de TCP), mais sans requête active pendant 30 minutes. Dans ce scenario, la passerelle détermine que la connexion TDS est inactive à 30 minutes et l'arrête.  
   
  Pour éviter la suppression des connexions inactives par un composant réseau, les paramètres de Registre suivants (ou leurs équivalents non Windows) doivent être définis sur le système d'exploitation dans lequel le pilote est chargé&nbsp;:  
   
 |Paramètre de Registre|Valeur recommandée|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ système \ CurrentControlSet \ Services \ Tcpip \ paramètres \ KeepAliveTime|30 000|  
-|HKEY_LOCAL_MACHINE \ système \ CurrentControlSet \ Services \ Tcpip \ paramètres \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ système \ CurrentControlSet \ Services \ Tcpip \ paramètres \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ paramètres \ KeepAliveTime|30 000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ paramètres \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ paramètres \ TcpMaxDataRetransmissions|10|  
   
- Vous devez redémarrer l'ordinateur pour appliquer les paramètres de clé de Registre.  
+ Redémarrez l’ordinateur pour appliquer les paramètres du Registre.  
   
  Pour effectuer cela lorsque vous exécutez le système dans Windows Azuren, créez une tâche de démarrage pour ajouter les clés de Registre.  Par exemple, ajoutez la tâche de démarrage suivante au fichier de définition du service :  
   
@@ -66,7 +66,7 @@ ms.locfileid: "32832474"
   
  Puis ajoutez un fichier AddKeepAlive.cmd à votre projet. Définissez le paramètre « Copier dans le répertoire de sortie » sur « Toujours copier ». Voici un exemple de fichier AddKeepAlive.cmd :  
   
-```  
+```bat
 if exist keepalive.txt goto done  
 time /t > keepalive.txt  
 REM Workaround for JDBC keep alive on SQL Azure  
@@ -78,18 +78,18 @@ shutdown /r /t 1
 ```  
   
  Ajout du nom de serveur à l'ID d'utilisateur dans la chaîne de connexion  
- Avant la version 4.0 de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], lors de la connexion à une [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous deviez ajouter le nom du serveur à l’ID d’utilisateur dans la chaîne de connexion. Par exemple, user@servername. À compter de la version 4.0 de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], il n’est plus nécessaire d’ajouter @servername à l’ID d’utilisateur dans la chaîne de connexion.  
+ Avant la version 4.0 du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], lors de la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous deviez ajouter le nom du serveur à l’ID d’utilisateur dans la chaîne de connexion. Par exemple, user@servername. À compter de la version 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], il n’est plus nécessaire d’ajouter @servername à l’ID d’utilisateur dans la chaîne de connexion.  
   
  Utilisation du chiffrement, nécessitant la définition d'un hostNameInCertificate  
- Lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez spécifier **hostNameInCertificate** si vous spécifiez **chiffrer = true**. (Si le nom du serveur dans la chaîne de connexion est *shortName*. *nom_domaine*, définissez le **hostNameInCertificate** propriété \*. *nom_domaine*.)  
+ Lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez spécifier **hostNameInCertificate** si vous spécifiez **chiffrer = true**. (Si le nom du serveur dans la chaîne de connexion est *shortName*. *domainName*, définissez le **hostNameInCertificate** propriété \*. *domainName*.)  
   
- Par exemple :  
+ Exemple :  
   
-```  
+```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Connexion à SQL Server avec le pilote JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

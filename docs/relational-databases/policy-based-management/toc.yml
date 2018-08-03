@@ -54,7 +54,7 @@
           href: check-disk-input-output-subsystem-for-read-retry-problems.md
         - name: Vérifier l'intégrité d'une base de données contenant des pages suspectes
           href: check-integrity-of-database-with-suspect-pages.md
-        - name: Correct Affinity Mask and Affinity Input and Output Mask Overlap
+        - name: Corriger le chevauchement des options Masque d’affinité et Masque d’affinité d’E/S
           href: correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
         - name: Fichiers journaux des traces par défaut désactivés
           href: default-trace-log-files-disabled.md
