@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 7/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2e95b9e38ab4716ce244c8a1328a2f4d2437d769
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432238"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240681"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ Les requêtes qui modifient des variables de **table** ne génèrent pas de plan
   
 Il est impossible de créer explicitement des index sur des variables de **table** et aucune statistique n’est conservée sur les variables de **table**. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a introduit une nouvelle syntaxe, qui permet de créer certains types d’index inline avec la définition de la table.  Il est ainsi possible de créer des index sur des variables de **table** dans le cadre de la définition de la table. Dans certains cas, les performances peuvent s’améliorer en utilisant plutôt des tables temporaires, car elles assurent une prise en charge totale des index et fournissent des statistiques. Pour plus d’informations sur les tables temporaires et la création d’index inline, voir [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
 
-
 Les contraintes CHECK, les valeurs DEFAULT et les colonnes calculées dans la déclaration de type **table** ne peuvent pas appeler des fonctions définies par l’utilisateur.
   
 L’opération d’affectation entre les variables de **table** n’est pas prise en charge.
@@ -115,6 +114,23 @@ L’opération d’affectation entre les variables de **table** n’est pas pris
 Étant donné que les variables de **table** ont une étendue limitée et qu’elles ne font pas partie de la base de données persistante, elles ne sont pas affectées par les restaurations de transactions.
   
 Les variables de table ne peuvent pas être modifiées après la création.
+
+## <a name="table-variable-deferred-compilation"></a>Compilation différée de variable de table
+La **compilation différée de variable de table** améliore la qualité du plan et les performances globales pour les requêtes faisant référence à des variables de table. Pendant l’optimisation et la compilation de plans initiale, cette fonctionnalité va propager les estimations de cardinalité basées sur le nombre réel de lignes de la variable de table. Ces informations précises sur le nombre de lignes seront alors utilisées afin d’optimiser les opérations de plan en aval.
+
+> [!NOTE]
+> Compilation différée de variable de table est une fonctionnalité en préversion publique dans Azure SQL Database.  
+
+Avec la compilation différée de la variable de table, la compilation d’une instruction qui fait référence à une variable de table est différée jusqu'à la première exécution réelle de l’instruction. Ce comportement de compilation différée est identique au comportement des tables temporaires, et ce changement entraîne l’utilisation de la cardinalité réelle au lieu de l’estimation d’origine d’une ligne. 
+
+Pour activer la préversion publique de la compilation différée de variable de table, fixez le niveau de compatibilité à 150 pour la base de données à laquelle vous vous connectez lors de l’exécution de la requête.
+
+La compilation différée de variable de table **ne** modifie aucune autre caractéristique des variables de table. Par exemple, cette fonctionnalité n’ajoute pas de statistiques de colonnes à des variables de table.
+
+La compilation différée de variable de table **n’augmente pas la fréquence de recompilation**.  Au lieu de cela, elle se positionne là où la compilation initiale se produit. Le plan mis en cache qui en résulte est généré en fonction du nombre de ligne de la compilation différée de variable de table initiale. Le plan mis en cache est réutilisé par des requêtes consécutives jusqu’à ce que le plan soit supprimé ou recompilé. 
+
+Si le nombre de lignes de la variable de table utilisé pour la compilation initiale du plan représente une valeur courante qui est très différente par rapport à une estimation fixe du nombre de lignes, les opérations en aval en bénéficieront.  Si le nombre de lignes de la variable de table varie considérablement pendant les exécutions, il est possible que cette fonctionnalité n’améliore pas les performances.
+
   
 ## <a name="examples"></a>Exemples  
   
@@ -187,5 +203,3 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [Utiliser les paramètres table &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)
-  
-  

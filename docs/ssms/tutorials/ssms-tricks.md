@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
+ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080097"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228455"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutoriel : Conseils et astuces supplémentaires pour utiliser SSMS
 Ce tutoriel vous propose des astuces supplémentaires pour utiliser SQL Server Management Studio (SSMS). Cet article vous montre comment : 
@@ -189,6 +189,8 @@ Le journal des erreurs est un fichier qui contient les détails de ce qui se pro
     ![Rechercher le journal des erreurs par requête](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Rechercher l’emplacement du journal des erreurs si vous ne pouvez pas vous connecter à SQL Server
+Le chemin d’accès à votre journal des erreurs SQL Server peut varier en fonction de vos paramètres de configuration. Vous trouverez le chemin d’accès à l’emplacement du journal des erreurs dans les paramètres de démarrage au sein du Gestionnaire de configuration SQL Server. Suivez les étapes ci-dessous pour trouver le paramètre de démarrage pertinent identifiant l’emplacement de votre journal des erreurs SQL Server. *Votre chemin d'accès peut varier en fonction du chemin d’accès indiqué ci-dessous*. 
+
 1. Ouvrez le Gestionnaire de configuration SQL Server. 
 2. Développez **Services**.
 3. Cliquez avec le bouton droit sur votre instance SQL Server, puis sélectionnez **Propriétés** :

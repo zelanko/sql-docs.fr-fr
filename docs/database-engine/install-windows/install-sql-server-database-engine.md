@@ -15,12 +15,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12802d45792ea9d0fad4ba31a694c2ca0413a86f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7e29c2ec0c6063483268ddd95c39bfcc85e8a744
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771465"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278800"
 ---
 # <a name="install-sql-server-database-engine"></a>Installer le moteur de base de données SQL Server
 
@@ -40,7 +40,9 @@ Les fonctionnalités suivantes sont installées quand vous sélectionnez **Moteu
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   Réplication (composant facultatif)  
-  
+
+-   [Machine Learning Services (en base de données) avec R et Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) est un composant optionnel
+
 -   Recherche en texte intégral (composant facultatif)  
   
 -   Data Quality Services. est un composant facultatif  

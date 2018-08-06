@@ -17,17 +17,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 30a22bd9661ea6b5be5d33fad5a9ce03e4f3b1c1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981421"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279180"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bonnes pratiques relatives au magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Cette rubrique décrit les bonnes pratiques concernant l’utilisation du magasin de requêtes avec votre charge de travail.  
+  Cet article décrit les bonnes pratiques concernant l’utilisation du Magasin de requêtes avec votre charge de travail.  
   
 ##  <a name="SSMS"></a>Utiliser la dernière version de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose un ensemble d’interfaces utilisateur conçu pour configurer le magasin de requêtes et consommer les données collectées relatives à votre charge de travail.  
@@ -45,7 +45,7 @@ Vous pouvez utiliser le magasin de requêtes dans toutes les bases de données s
 
 ##  <a name="Configure"></a> Veiller à l’adéquation entre le magasin de requêtes et votre charge de travail  
  Configurez le magasin de requêtes en fonction de votre charge de travail et selon vos besoins en matière de résolution des problèmes de performances.   
-Si les paramètres par défaut sont adaptés pour un démarrage rapide, vous devez cependant surveiller le comportement du magasin de requêtes dans le temps et ajuster sa configuration en conséquence :  
+Les paramètres par défaut sont assez bons pour démarrer, mais vous devez surveiller le comportement du Magasin de requêtes dans le temps et ajuster sa configuration en conséquence :  
   
  ![propriétés du magasin de requêtes](../../relational-databases/performance/media/query-store-properties.png "propriétés du magasin de requêtes")  
   
@@ -146,7 +146,7 @@ Les vues du magasin de requêtes de[!INCLUDE[ssManStudio](../../includes/ssmanst
 |Principales requêtes consommatrices de ressources|Choisissez une mesure d’exécution présentant un intérêt et identifiez les requêtes qui ont enregistré les valeurs les plus extrêmes sur un intervalle de temps donné. <br />Utilisez cette vue pour concentrer votre attention sur les requêtes les plus pertinentes, qui ont le plus fort impact sur la consommation en ressources de base de données.|  
 |Requêtes avec des plans forcés|Liste les plans forcés à l’aide du Magasin des requêtes. <br />Utilisez cette vue pour accéder rapidement à tous les plans forcés.|  
 |Requêtes avec variation forte|Analysez les requêtes ayant une forte variation d’exécution en lien avec les dimensions disponibles, notamment la durée, le temps processeur, les E/S et l’utilisation de la mémoire dans l’intervalle de temps souhaité.<br />Utilisez cette vue pour identifier les requêtes avec des performances extrêmement variables qui peuvent impacter l’expérience utilisateur dans vos applications.|  
-|Requêtes suivies|Suit l’exécution des requêtes les plus importantes en temps réel. En règle générale, vous utilisez cette vue quand certaines de vos requêtes sont soumises à des plans forcés et que vous voulez vérifier que les performances des requêtes sont stables.|
+|Requêtes suivies|Suivez l’exécution des requêtes les plus importantes en temps réel. En règle générale, vous utilisez cette vue quand certaines de vos requêtes sont soumises à des plans forcés et que vous voulez vérifier que les performances des requêtes sont stables.|
   
 > [!TIP]  
 >  Pour savoir comment identifier les principales requêtes consommatrices de ressources et corriger celles qui ont régressé en raison d’un changement de plan à l’aide de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], consultez les blogs @Azure sur le [magasin de requêtes](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
@@ -276,13 +276,13 @@ Le tableau suivant décrit les bonnes pratiques :
 |Supprimer les requêtes les moins pertinentes dès que la taille maximale est atteinte.|Activez la stratégie de nettoyage basée sur la taille.|  
   
 ##  <a name="Parameterize"></a> Éviter l’utilisation de requêtes non paramétrées  
- Il est déconseillé d’utiliser des requêtes non paramétrées quand cela n’est pas indispensable (par exemple, dans le cas d’une analyse ad hoc).  Les plans mis en cache ne peuvent pas être réutilisés, ce qui force l’optimiseur de requête à compiler les requêtes pour chaque texte de requête unique. Pour plus d’informations à ce sujet, consultez [Principes d’utilisation du paramétrage forcé](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
-  De plus, le magasin de requêtes peut rapidement dépasser le quota de taille du fait du nombre potentiellement élevé de textes de requête différents et, partant, du nombre élevé de plans d’exécution différents de forme similaire.  
+Il est déconseillé d’utiliser des requêtes non paramétrées quand cela n’est pas indispensable (par exemple, dans le cas d’une analyse ad hoc).  Les plans mis en cache ne peuvent pas être réutilisés, ce qui force l’optimiseur de requête à compiler les requêtes pour chaque texte de requête unique. Pour plus d’informations, consultez [Principes d’utilisation du paramétrage forcé](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
+De plus, le magasin de requêtes peut rapidement dépasser le quota de taille du fait du nombre potentiellement élevé de textes de requête différents et, partant, du nombre élevé de plans d’exécution différents de forme similaire.  
 Par conséquent, votre charge de travail ne fonctionnera pas de façon optimale et le magasin de requêtes risque de basculer en mode lecture seule ou de supprimer constamment les données, essayant de suivre le rythme des requêtes entrantes.  
   
- Envisagez les possibilités suivantes :  
+Envisagez les possibilités suivantes :  
 
-  -   Paramétrez des requêtes, le cas échéant, par exemple en les incluant dans un wrapper (procédure stockée ou sp_executesql). Pour plus d’informations à ce sujet, consultez [Réutilisation des paramètres et des plans d’exécution](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
+-   Paramétrez des requêtes, le cas échéant, par exemple en les incluant dans un wrapper (procédure stockée ou sp_executesql). Pour plus d’informations, consultez [Réutilisation des paramètres et des plans d’exécution](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
   
 -   Utilisez l’option [**Optimiser pour les charges de travail ad hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) si votre charge de travail contient de nombreux lots ad hoc à usage unique avec des plans de requête différents.  
   
@@ -297,11 +297,11 @@ Par conséquent, votre charge de travail ne fonctionnera pas de façon optimale 
 -   Affectez la valeur AUTO au **Mode de capture de requête** pour éliminer automatiquement les requêtes ad hoc qui consomment peu de ressources.  
   
 ##  <a name="Drop"></a> Éviter un modèle DROP et CREATE en cas de conservation d’objets conteneurs pour les requêtes  
- Le magasin de requêtes associe une entrée de requête à un objet conteneur (procédure stockée, fonction et déclencheur).  Quand vous recréez un objet conteneur, une nouvelle entrée de requête est générée pour le même texte de requête. Cela vous empêche de suivre les statistiques de performances de cette requête dans le temps et d’utiliser le mécanisme de forçage de plan. Pour éviter cela, utilisez le processus `ALTER <object>` pour modifier la définition d’un objet conteneur quand cela est possible.  
+Le magasin de requêtes associe une entrée de requête à un objet conteneur (procédure stockée, fonction et déclencheur).  Quand vous recréez un objet conteneur, une nouvelle entrée de requête est générée pour le même texte de requête. Cela vous empêche de suivre les statistiques de performances de cette requête dans le temps et d’utiliser le mécanisme de forçage de plan. Pour éviter cela, utilisez le processus `ALTER <object>` pour modifier la définition d’un objet conteneur quand cela est possible.  
   
 ##  <a name="CheckForced"></a> Vérifier régulièrement l’état des plans forcés  
 
- Le forçage de plan est un mécanisme pratique qui permet de corriger les problèmes de performances des requêtes importantes et de les rendre plus prévisibles. Or, comme pour les indicateurs de plan et les repères de plan, forcer un plan n’est pas la garantie qu’il sera utilisé dans les exécutions futures. En règle générale, quand le schéma de base de données change au point que les objets référencés par le plan d’exécution sont modifiés ou supprimés, le forçage de plan échoue. Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a recours à la recompilation des requêtes et la raison réelle de l’échec du forçage apparaît dans [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La requête suivante retourne des informations sur les plans forcés :  
+Le forçage de plan est un mécanisme pratique qui permet de corriger les problèmes de performances des requêtes importantes et de les rendre plus prévisibles. Or, comme pour les indicateurs de plan et les repères de plan, forcer un plan n’est pas la garantie qu’il sera utilisé dans les exécutions futures. En règle générale, quand le schéma de base de données change au point que les objets référencés par le plan d’exécution sont modifiés ou supprimés, le forçage de plan échoue. Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a recours à la recompilation des requêtes et la raison réelle de l’échec du forçage apparaît dans [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La requête suivante retourne des informations sur les plans forcés :  
   
 ```sql  
 USE [QueryStoreDB];  
@@ -314,7 +314,7 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- Pour obtenir une liste complète des raisons, consultez [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Vous pouvez aussi utiliser le XEvent **query_store_plan_forcing_failed** pour suivre et résoudre les échecs de forçage de plan.  
+ Pour obtenir une liste complète des raisons, consultez [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Vous pouvez aussi utiliser le XEvent **query_store_plan_forcing_failed** pour suivre les échecs de l’utilisation forcée d’un plan et y remédier.  
   
 ##  <a name="Renaming"></a> Éviter de renommer les bases de données en présence de requêtes associées à des plans forcés  
 
@@ -322,13 +322,16 @@ WHERE is_forced_plan = 1;
 
 Si vous renommez une base de données, le forçage de plan échoue, ce qui entraîne une recompilation dans toutes les exécutions de requête suivantes.  
 
-##  <a name="Recovery"></a>Utiliser des indicateurs de trace sur les serveurs critiques pour améliorer la récupération d’urgence
+##  <a name="Recovery"></a> Utiliser des indicateurs de trace sur des serveurs critiques pour améliorer la récupération d’urgence
  
-  Vous pouvez utiliser les indicateurs de trace globaux 7745 et 7752 pour améliorer les performances du Magasin des requêtes dans les scénarios de haute disponibilité et de récupération d’urgence. Pour plus d'informations, consultez [Indicateurs de trace](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+Vous pouvez utiliser les indicateurs de trace globaux 7745 et 7752 pour améliorer les performances du Magasin des requêtes dans les scénarios de haute disponibilité et de récupération d’urgence. Pour plus d'informations, consultez [Indicateurs de trace](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
-  L’indicateur de trace 7745 empêche le comportement par défaut où le Magasin des requêtes écrit des données sur le disque avant que SQL Server ne puisse être arrêté.
+L’indicateur de trace 7745 empêche le comportement par défaut où le Magasin des requêtes écrit des données sur le disque avant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne puisse être arrêté.
   
-  L’indicateur de trace 7752 permet le chargement asynchrone du Magasin des requêtes et permet également à SQL Server d’exécuter des requêtes avant le chargement complet du Magasin des requêtes. Le comportement du Magasin des requêtes par défaut empêche les requêtes de s’exécuter avant la récupération du Magasin des requêtes.
+L’indicateur de trace 7752 permet le chargement asynchrone du Magasin des requêtes et permet également à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’exécuter des requêtes avant le chargement complet du Magasin des requêtes. Le comportement du Magasin des requêtes par défaut empêche les requêtes de s’exécuter avant la récupération du Magasin des requêtes.
+
+> [!IMPORTANT]
+> Si vous utilisez le Magasin des requêtes pour avoir un aperçu juste-à-temps de la charge de travail dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prévoyez d’installer les correctifs d’évolutivité des performances dans [KB 4340759](http://support.microsoft.com/help/4340759) dès que possible. 
 
 ## <a name="see-also"></a> Voir aussi  
  [Vues de catalogue du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

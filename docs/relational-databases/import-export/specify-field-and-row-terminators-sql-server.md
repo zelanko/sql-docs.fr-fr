@@ -1,7 +1,7 @@
 ---
 title: Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2016
+ms.date: 07/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: import-export
@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d0890d79f2277b5f1ea1676bed9f4c9b20e6590
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42e23160b367d9e977de757acc3bd6883af43479
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940254"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278677"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +98,15 @@ ms.locfileid: "32940254"
 -   pour une longue colonne de longueur fixe dont l'espace n'est utilisé que partiellement par de nombreuses lignes.  
   
      Dans cette situation, la spécification d'un indicateur de fin réduit l'espace de stockage et permet au champ d'être traité comme un champ de longueur variable.  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>Spécification de `\n` comme indicateur de fin de ligne pour l’exportation en bloc
+
+Lorsque vous spécifiez `\n` comme indicateur de fin de ligne pour l’exportation en bloc ou utilisez implicitement l’indicateur de fin de ligne, le programme de copie en bloc sort une combinaison de renvoi de saut de ligne (CRLF) comme indicateur de fin de ligne. Si vous souhaitez générer un seul caractère de saut de ligne (LF) en tant qu’indicateur de fin de ligne, courante sur les ordinateurs Unix et Linux : utilisez la notation hexadécimale pour spécifier l’indicateur de fin de ligne LF. Exemple :
+
+```cmd
+bcp -r '0x0A'
+```
+
 ### <a name="examples"></a>Exemples  
  Cette commande d’exportation en bloc exporte les données de la table `AdventureWorks.HumanResources.Department` vers le fichier de données `Department-c-t.txt` au format de caractères, utilisant la virgule comme indicateur de fin de champ et le saut de ligne (\n) comme indicateur de fin de ligne.  
   
@@ -144,7 +152,14 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
      Dans le cas du fournisseur de l'ensemble de lignes en bloc OPENROWSET, les indicateurs de fin ne peuvent être précisés que dans le fichier de format (requis sauf dans le cas de types de données incluses dans un objet volumineux). Si un fichier de données de type caractère utilise un indicateur de fin qui ne soit pas un indicateur par défaut, ce dernier doit alors être défini dans le fichier de format. Pour plus d’informations, consultez [Créer un fichier de format &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md) et [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
   
      Pour plus d’informations sur la clause OPENROWSET BULK, consultez [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-import"></a>Spécification de `\n` comme indicateur de fin de ligne pour l’importation en bloc
+Lorsque vous spécifiez `\n` comme indicateur de fin de ligne pour l’importation en bloc ou utilisez implicitement l’indicateur de fin de ligne, le programme de copie en bloc et l’instruction BULK INSERT attendent une combinaison de renvoi de saut de ligne (CRLF) comme indicateur de fin de ligne. Si votre fichier source utilise un seul caractère de saut de ligne (LF) en tant qu’indicateur de fin de ligne, ce qui est courant dans les fichiers générés sur Unix et Linux : utilisez la notation hexadécimale pour spécifier l’indicateur de fin de ligne LF. Par exemple, dans une instruction BULK INSERT :
+
+```sql
+    ROWTERMINATOR = '0x0A'
+```
+ 
 ### <a name="examples"></a>Exemples  
  Les exemples de cette section importent en bloc des données de type caractère du fichier de données `Department-c-t.txt` créé dans l'exemple précédent dans la table `myDepartment` se trouvant dans l'exemple de base de données [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] . Avant de commencer, vous devez créer cette base de données. Pour créer cette table, sous le schéma **dbo** , dans l'Éditeur de requêtes [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
   

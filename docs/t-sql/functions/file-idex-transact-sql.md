@@ -26,17 +26,17 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54224c2b6f977f21764553ceddfb7e7be5fd10c7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 05bb6bb4ec9a34abf7669514f2ed1c18fe83817e
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788360"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228425"
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Retourne le numéro d'identification (ID) du nom du fichier logique spécifié (journal, de données ou de texte intégral) dans la base de données active.  
+Cette fonction retourne le numéro d'identification (ID) du nom du fichier pour le nom logique spécifié d’un fichier journal, de données ou de texte intégral de la base de données active. 
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,22 +48,22 @@ FILE_IDEX ( file_name )
   
 ## <a name="arguments"></a>Arguments  
  *file_name*  
- Expression de type **sysname** qui représente le nom du fichier dont l’ID doit être retourné.  
+Une expression de type **sysname** qui retourne la valeur d’ID de fichier 'FILE_IDEX' pour le nom du fichier. 
   
 ## <a name="return-types"></a>Types de retour  
- **Int**  
+**Int**  
   
- **NULL** en cas d’erreur  
+**NULL** en cas d’erreur  
   
 ## <a name="remarks"></a>Notes   
- *file_name* correspond au nom de fichier logique affiché dans la colonne **name** de la vue de catalogue [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) ou [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
+*file_name* correspond au nom de fichier logique affiché dans la colonne **name** des affichages catalogue [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) ou [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
- FILE_IDEX peut être utilisé dans une liste de sélection, une clause WHERE ou partout où une expression est autorisée. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+Utilisez `FILE_IDEX` dans une liste SELECT, une clause WHERE, ou à n’importe quel emplacement prenant en charge une expression. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. Extraction de l'ID d'un fichier spécifié  
-L'exemple suivant retourne l'ID du fichier `AdventureWorks_Data`.  
+Cet exemple retourne l'ID du fichier `AdventureWorks_Data`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -82,7 +82,7 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. Extraction de l'ID d'un fichier dont le nom est inconnu  
-L’exemple suivant renvoie l’ID du fichier journal `AdventureWorks` en sélectionnant le nom de fichier logique dans la vue de catalogue `sys.database_files` où le type de fichier a pour valeur `1` (journal).  
+Cet exemple retourne l'ID du fichier journal `AdventureWorks`. L’extrait de code Transact-SQL (T-SQL) sélectionne le nom du fichier logique à partir de l’affichage catalogue `sys.database_files`, où le type de fichier est égal à `1` (journal).  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -100,7 +100,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. Extraction de l'ID d'un fichier de catalogue de texte intégral  
-L’exemple suivant renvoie l’ID d’un fichier de texte intégral en sélectionnant le nom de fichier logique dans la vue de catalogue `sys.database_files` où le type de fichier a pour valeur `4` (texte intégral). Cet exemple retourne NULL s'il n'existe pas de catalogue de texte intégral.  
+Cet exemple retourne l’ID de fichier pour un fichier de texte intégral. L’extrait de code T-SQL sélectionne le nom du fichier logique à partir de l’affichage catalogue `sys.database_files`, où le type de fichier est égal à `4` (texte intégral). Ce code retourne 'NULL' s'il n'existe pas de catalogue de texte intégral.
   
 ```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  
