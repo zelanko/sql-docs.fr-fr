@@ -15,13 +15,13 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d53ded4ba749f5e0bed6b0c4908472ee9241130e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9e5bc879e8cd2ae1bd3b94b0771802673fd953cf
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330450"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564343"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34330450"
 |**ObjectID**|**Int**|ID affecté par le système à l'objet sur lequel a été acquis le verrou (si disponible et le cas échéant).|22|Oui|  
 |**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26||  
 |**SessionLoginName**|**nvarchar**|Nom d'accès de l'utilisateur qui a créé la session. Par exemple, si vous vous connectez à SQL Server avec le nom Accès1 et que vous exécutez une instruction avec Accès2, **SessionLoginName** affiche Accès1 et **LoginName** affiche Accès2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
-|**TextData**|**ntext**|Valeur texte qui dépend de la classe d'événements capturée dans la trace.| 1|Oui|  
+|**TextData**|**ntext**|Valeur texte qui dépend de la classe d'événements capturée dans la trace.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
   
 ## <a name="see-also"></a> Voir aussi  

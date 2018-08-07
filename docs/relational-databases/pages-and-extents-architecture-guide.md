@@ -19,13 +19,13 @@ caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f42360e4a0b3a23a7e39d390b711870e855129b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c099319c79b8bb31fcacdab20b6c590726cf3877
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956074"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561579"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guide d’architecture des pages et des étendues
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -107,9 +107,9 @@ Chaque extension possède les schémas de bits suivants dans les tables GAM et S
 
 |Utilisation actuelle de l'extension | Valeur du bit GAM | Valeur du bit SGAM |
 |---------|----------|------| 
-|Libre, inutilisée | 1 |0 |
+|Libre, inutilisée |1 |0 |
 |Extension uniforme ou extension mixte complète |0 |0 |
-|Extension mixte avec pages libres |0 | 1 |
+|Extension mixte avec pages libres |0 |1 |
  
 Ceci se traduit par des algorithmes simples de gestion des extensions. 
 -   Pour allouer une extension uniforme, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] recherche un bit 1 dans la table GAM et lui affecte la valeur 0. 

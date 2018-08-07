@@ -1,7 +1,7 @@
 ---
-title: Connexion et l’extraction de données | Documents Microsoft
+title: Connexion et l’extraction de données | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,33 +14,34 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86b7dce984408c7d49e302b9b450e07a32fdacc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 051593c5d3a37217a5ab4380fd947cb585532e3d
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828104"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456633"
 ---
 # <a name="connecting-and-retrieving-data"></a>Connexion et extraction de données
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Lorsque vous travaillez avec le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], il existe deux méthodes principales pour établir une connexion à un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données. Consiste à définir les propriétés de connexion dans l’URL de connexion, puis appelez la méthode getConnection de la classe DriverManager pour retourner un [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objet.  
+Lorsque vous travaillez avec le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], il existe deux méthodes principales pour établir une connexion à une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. La première méthode consiste à définir les propriétés de connexion de l'URL de connexion, puis à appeler la méthode getConnection de la classe DriverManager pour retourner un objet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 > [!NOTE]  
->  Pour obtenir la liste des propriétés de connexion pris en charge par le pilote JDBC, consultez [définissant les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md).  
+> Pour obtenir la liste des propriétés de connexion pris en charge par le pilote JDBC, consultez [définissant les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md).  
   
- La seconde méthode implique la définition des propriétés de connexion à l’aide de méthodes setter de la [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) classe, puis en appelant le [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) méthode pour retourner une SQLServerConnection objet.  
+La seconde méthode implique de définir les propriétés de connexion grâce aux méthodes setter de la classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md), puis d'appeler la méthode [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) pour retourner un objet SQLServerConnection.  
   
- Les rubriques de cette section décrivent les différentes façons dans laquelle vous pouvez vous connecter à un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données et elles présentent également différentes techniques pour récupérer des données.  
+Les rubriques de cette section décrivent les différentes façons de se connecter à une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ; elles présentent également différentes techniques d'extraction de données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
-|[Exemple d’URL de connexion](../../../connect/jdbc/connection-url-sample.md)|Décrit comment utiliser une URL de connexion pour se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] , puis utilisez une instruction SQL pour récupérer des données.|  
-|[Exemple de source de données](../../../connect/jdbc/data-source-sample.md)|Décrit l'utilisation d'une source de données pour se connecter à SQL Server et l'utilisation d'une procédure stockée pour extraire des données.|  
+|[Exemple d’URL de connexion](../../../connect/jdbc/code-samples/connection-url-sample.md)|Décrit l'utilisation d'une URL de connexion pour se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] et l'utilisation d'une instruction SQL pour extraire des données.|  
+|[Exemple de source de données](../../../connect/jdbc/code-samples/data-source-sample.md)|Décrit l'utilisation d'une source de données pour se connecter à SQL Server et l'utilisation d'une procédure stockée pour extraire des données.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples d’applications JDBC Driver](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
+## <a name="see-also"></a> Voir aussi
+
+[Exemples d’applications JDBC Driver](../../jdbc/code-samples/sample-jdbc-driver-applications.md)
   

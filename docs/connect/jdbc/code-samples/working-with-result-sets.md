@@ -1,7 +1,7 @@
 ---
-title: Utilisation des jeux de résultats | Documents Microsoft
+title: Utilisation des jeux de résultats | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,34 +14,35 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1802a6a51773ce552bcd4fcc45745a29e2405db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9b5c2df6c7c932e16394b91e76719756d9b959ff
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828234"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39458463"
 ---
 # <a name="working-with-result-sets"></a>Travail sur des jeux de résultats
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Lorsque vous travaillez avec les données contenues dans un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données, une méthode de manipulation des données consiste à utiliser un jeu de résultats. Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] prend en charge l’utilisation du résultat de jeux via la [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objet. À l’aide de l’objet SQLServerResultSet, vous pouvez extraire les données retournées à partir d’une instruction SQL ou une procédure stockée, mettre à jour les données en fonction des besoins, puis remettre ces données dans la base de données.  
+Quand vous travaillez sur les données contenues dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], une méthode de manipulation des données consiste à utiliser un jeu de résultats. Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] prend en charge l’utilisation des jeux de résultats par le biais de l’objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). Grâce à l’objet SQLServerResultSet, vous pouvez extraire les données retournées à partir d’une instruction SQL ou d’une procédure stockée, mettre à jour les données si nécessaire, puis remettre ces données dans la base de données.  
   
- En outre, l’objet SQLServerResultSet fournit des méthodes de navigation dans ses lignes de données, d’obtention ou de définition des données qu’il contient et pour l’établissement de plusieurs niveaux de sensibilité aux modifications dans la base de données sous-jacente.  
+En outre, l’objet SQLServerResultSet fournit des méthodes de navigation dans ses lignes de données, d’obtention ou de définition des données qu’il contient et d’établissement de plusieurs niveaux de sensibilité aux modifications apportées à la base de données sous-jacente.  
   
 > [!NOTE]  
->  Pour plus d’informations sur la gestion des jeux de résultats, y compris leur sensibilité aux modifications, consultez [la gestion des jeux de résultats avec le pilote JDBC](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
+> Pour plus d’informations sur la gestion des jeux de résultats, y compris leur sensibilité aux modifications, consultez [la gestion des jeux de résultats avec le pilote JDBC](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
   
- Les rubriques de cette section décrivent les différentes méthodes que vous pouvez utiliser un jeu de résultats pour manipuler les données contenues dans un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données.  
+Les rubriques de cette section décrivent différentes façons d’utiliser un jeu de résultats pour manipuler les données contenues dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
-|-----------|-----------------|  
-|[Exemple de récupération de données du jeu de résultats](../../../connect/jdbc/retrieving-result-set-data-sample.md)|Décrit comment utiliser un jeu de résultats pour récupérer des données d’une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] de base de données et les afficher.|  
-|[Exemple de modification des données du jeu de résultats](../../../connect/jdbc/modifying-result-set-data-sample.md)|Décrit comment utiliser un jeu de résultats pour insérer, extraire et modifier des données dans un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données.|  
-|[Exemple de mise en cache de données du jeu de résultats](../../../connect/jdbc/caching-result-set-data-sample.md)|Décrit comment utiliser un jeu de résultats à extraire de grandes quantités de données d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données et pour contrôler la façon dont ces données sont mis en cache sur le client.|  
+| Rubrique                                                                                           | Description                                                                                                                                                                                             |
+| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Exemple de récupération de données du jeu de résultats](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Décrit l’utilisation d’un jeu de résultats pour extraire des données à partir d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] et les afficher.                                                         |
+| [Exemple de modification des données du jeu de résultats](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Décrit l’utilisation d’un jeu de résultats pour insérer, extraire et modifier des données dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].                                                      |
+| [Exemple de mise en cache de données du jeu de résultats](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Décrit l’utilisation d’un jeu de résultats pour extraire de grandes quantités de données à partir d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] et pour contrôler la manière dont ces données sont mises en cache sur le client. |
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples d’applications JDBC Driver](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
+## <a name="see-also"></a> Voir aussi  
+
+[Exemples d’applications JDBC Driver](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

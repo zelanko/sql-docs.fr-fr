@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d8f83d0f838304f6f541d1d88e56ce316b07d25
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: c86fc615bcf3dec2a87581bbb09f482c8befc943
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278840"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452643"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connexion avec l’authentification Azure Active Directory
 
@@ -211,10 +211,12 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > Une base de données de relation contenant-contenu utilisateur doit exister et un utilisateur de base de données de relation contenant-contenu représentant spécifié utilisateur Azure AD ou l’un des groupes, Azure spécifié utilisateur AD appartient, doit exister dans la base de données et doit avoir l’autorisation de se connecter (à l’exception d’Azure Active Directory administrateur du serveur ou groupe)
 
-
 ## <a name="connecting-using-access-token"></a>Connexion à l’aide du jeton d’accès
-Applications/services peut récupérer un jeton d’accès à partir d’Azure Active Directory et l’utiliser pour se connecter à la base de données SQL Azure. Notez qu’accessToken ne peut être définie à l’aide du paramètre des propriétés de la méthode getConnection() dans la classe DriverManager. Il ne peut pas être utilisé dans la chaîne de connexion.
- 
+Applications/services peut récupérer un jeton d’accès à partir d’Azure Active Directory et l’utiliser pour se connecter à la base de données SQL Azure.
+
+> [!NOTE] 
+> **accessToken** peut uniquement être définie à l’aide du paramètre des propriétés de la méthode getConnection() dans la classe DriverManager. Il ne peut pas être utilisé dans la chaîne de connexion.
+
 L’exemple ci-dessous contient une simple application Java qui se connecte à la base de données SQL Azure à l’aide de l’authentification basée sur les jetons d’accès. Avant de générer et exécuter l’exemple, procédez comme suit :
 1.  Créer un compte d’application dans Azure Active Directory pour votre service.
     1. Connectez-vous au portail Azure.

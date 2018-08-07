@@ -1,7 +1,7 @@
 ---
 title: Configuration système requise pour le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 306c7bcd764ed70f23c51667580fb9f8e79f0e65
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e7d43fbc0488886915689565475dd5e69967c348
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978721"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454053"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Configuration requise pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,6 +30,8 @@ ms.locfileid: "37978721"
 - Environnement d'exécution Java
 
 ## <a name="java-runtime-environment-requirements"></a>Configuration requise pour l'environnement d'exécution Java  
+ À compter du Pilote JDBC 7.0 Microsoft pour SQL Server, le Kit JDK (Sun Java SE Development Kit) version 10.0 et l’environnement d’exécution Java (JRE, Java Runtime Environment) version 10.0 sont pris en charge.
+
  À compter du Pilote JDBC 6.4 Microsoft pour SQL Server, le Kit JDK (Sun Java SE Development Kit) version 9.0 et l’environnement d’exécution Java (JRE, Java Runtime Environment) version 9.0 sont pris en charge.
 
  À compter du pilote Microsoft JDBC 4.2 pour SQL Server, Sun Java SE Development Kit (JDK) 8.0 et Java Runtime Environment (JRE) 8.0 sont pris en charge. La prise en charge de l’API de spécification Java Database Connectivity (JDBC) a été étendue pour inclure l’API JDBC 4.1 et 4.2.  
@@ -39,6 +41,30 @@ ms.locfileid: "37978721"
  À partir de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], la prise en charge de l’API Spec JDBC (Java Database Connectivity) par le pilote JDBC a été étendue pour inclure l’API JDBC 4.0. L'API JDBC 4.0 a été introduit dans le cadre du kit de développement logiciel JDK (Sun Java SE Development Kit) 6.0 et de l'environnement JRE (Java Runtime Environment) 6.0. JDBC 4.0 est un surensemble de l'API JDBC 3.0.  
   
  Quand vous déployez le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sur les systèmes d’exploitation Windows et UNIX, vous devez utiliser les packages d’installation, respectivement *sqljdbc_\<version>_enu.exe*, et *sqljdbc_\<version>_enu.tar.gz*. Pour plus d’informations sur la façon de déployer le pilote JDBC, consultez [déploiement du pilote JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md) rubrique.  
+  
+**Microsoft JDBC Driver 7.0 pour SQL Server :**  
+
+  Le 7.0 du pilote JDBC comprend deux bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-7.0.0.jre8.jar**, et **mssql-jdbc-7.0.0.jre10.jar**.
+
+  JDBC Driver 7.0 a été conçu pour être pris en charge par toutes les principales machines virtuelles Java équivalentes à Sun, mais il a été testé uniquement sur Sun JRE 8.0 et 10.0.
+  
+  Le tableau suivant récapitule les versions prises en charge par les deux fichiers JAR fournis avec Microsoft JDBC Drivers 7.0 pour SQL Server :  
+  
+  |JAR|Compatibilité avec la version de JDBC|Java Version recommandée|Description|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-7.0.0.jre8.jar|4.2|8|Nécessite Java Runtime Environment (JRE) 8.0. À l’aide de JRE 7.0 ou inférieure lève une exception.<br /><br /> Les nouvelles fonctionnalités dans 7.0 incluent : prise en charge JDK 10, le niveau de conformité de mise à jour par défaut pour les spécifications de JDBC 4.2, prise en charge des types de données spatiales, propriété de connexion cancelQueryTimeout, méthodes de demande de limite, propriété de connexion useBulkCopyForBatchInsert, données Les informations de découverte et Classification, extension de la fonctionnalité UTF-8 et prise en charge CityHash. |    
+|mssql-jdbc-7.0.0.jre10.jar|4.3|10|Nécessite Java Runtime Environment (JRE) 10.0. À l’aide de JRE 9.0 ou inférieur lève une exception.<br /><br /> Les nouvelles fonctionnalités dans 7.0 incluent : prise en charge JDK 10, le niveau de conformité de mise à jour par défaut pour les spécifications de JDBC 4.2, prise en charge des types de données spatiales, propriété de connexion cancelQueryTimeout, méthodes de demande de limite, propriété de connexion useBulkCopyForBatchInsert, données Les informations de découverte et Classification, extension de la fonctionnalité UTF-8 et prise en charge CityHash. |    
+
+
+  Le 7.0 du pilote JDBC est également disponible sur le référentiel Central Maven et peuvent être ajoutés à un projet Maven en ajoutant le code suivant dans le fichier POM. XML :  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.0.0.jre10</version>
+</dependency>
+```      
   
 **Microsoft JDBC Driver 6.4 pour SQL Server :**  
 
@@ -64,6 +90,7 @@ ms.locfileid: "37978721"
     <version>6.4.0.jre9</version>
 </dependency>
 ```    
+
 **Microsoft JDBC Driver 6.2 pour SQL Server :**  
   
   JDBC Driver 6.2 comprend deux bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-6.2.1.jre7.jar**, et **mssql-jdbc-6.2.1.jre8.jar**. 

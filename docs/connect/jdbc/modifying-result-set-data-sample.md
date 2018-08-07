@@ -14,37 +14,42 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dae1363b6715c9d3c9082897bf00cf3eb3e183b
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: 0d5714d97f6c7762fa1cfebf0480cb7e669255d9
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279170"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453983"
 ---
 # <a name="modifying-result-set-data-sample"></a>Modification de l'exemple de données du jeu de résultats
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] montre comment récupérer un jeu de données pouvant être mis à jour auprès d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Ensuite, en utilisant des méthodes de l’objet [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), il insère, puis modifie et enfin supprime une ligne de données dans l’ensemble de données.  
-  
- Le fichier de code de cet exemple est nommé UpdateRS.java et se trouve à l’emplacement suivant :  
-  
- \<*répertoire d’installation*> \sqljdbc_\<*version*>\\<*langage*> \samples\resultsets  
-  
-## <a name="requirements"></a>Spécifications  
- Pour exécuter cet exemple d’application, vous devez définir le classpath de façon à inclure le fichier jar mssql-jdbc. Vous devez également avoir accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
-  
+Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] montre comment récupérer un jeu de données pouvant être mis à jour auprès d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Ensuite, en utilisant des méthodes de l’objet [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), il insère, puis modifie et enfin supprime une ligne de données dans l’ensemble de données.
+
+Le fichier de code de cet exemple est nommé UpdateResultSet.java et se trouve à l’emplacement suivant :
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets
+```
+
+## <a name="requirements"></a>Spécifications
+
+Pour exécuter cet exemple d’application, vous devez définir le classpath de façon à inclure le fichier jar mssql-jdbc. Vous devez également avoir accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
+
 > [!NOTE]  
->  Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers de bibliothèques de classes mssql-jdbc à utiliser en fonction de vos paramètres JRE (Java Runtime Environment). Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
-## <a name="example"></a> Exemple  
- Dans l’exemple suivant, l’exemple de code établit une connexion à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Ensuite, en utilisant une instruction SQL avec l’objet [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), il exécute l’instruction SQL et place les données retournées dans un objet SQLServerResultSet pouvant être mis à jour.  
-  
- Ensuite, l’exemple de code utilise la méthode [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) pour déplacer le curseur du jeu de résultats jusqu’à la ligne insérée, utilise une série de méthodes [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) pour insérer des données dans la nouvelle ligne, puis appelle la méthode [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) pour réenregistrer la nouvelle ligne de données dans la base de données.  
-  
- Après avoir inséré la nouvelle ligne de données, l’exemple de code utilise une instruction SQL pour extraire la ligne précédemment insérée, puis utilise la combinaison des méthodes updateString et [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) pour mettre à jour la ligne de données et la réenregistrer dans la base de données.  
-  
- Enfin, l’exemple de code extrait la ligne de données précédemment mise à jour, puis la supprime de la base de données avec la méthode [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md).  
-  
+> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers de bibliothèques de classes mssql-jdbc à utiliser en fonction de vos paramètres JRE (Java Runtime Environment). Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+
+## <a name="example"></a> Exemple
+
+Dans l’exemple suivant, l’exemple de code établit une connexion à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Ensuite, en utilisant une instruction SQL avec l’objet [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), il exécute l’instruction SQL et place les données retournées dans un objet SQLServerResultSet pouvant être mis à jour.
+
+Ensuite, l’exemple de code utilise la méthode [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) pour déplacer le curseur du jeu de résultats jusqu’à la ligne insérée, utilise une série de méthodes [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) pour insérer des données dans la nouvelle ligne, puis appelle la méthode [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) pour réenregistrer la nouvelle ligne de données dans la base de données.
+
+Après avoir inséré la nouvelle ligne de données, l’exemple de code utilise une instruction SQL pour extraire la ligne précédemment insérée, puis utilise la combinaison des méthodes updateString et [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) pour mettre à jour la ligne de données et la réenregistrer dans la base de données.
+
+Enfin, l’exemple de code extrait la ligne de données précédemment mise à jour, puis la supprime de la base de données avec la méthode [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md).
+
 ```java
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -52,7 +57,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UpdateRS {
+public class UpdateResultSet {
 
     public static void main(String[] args) {
 
@@ -107,9 +112,8 @@ public class UpdateRS {
         }
     }
 }
-```  
-  
-## <a name="see-also"></a> Voir aussi  
- [Utilisation de jeux de résultats](../../connect/jdbc/working-with-result-sets.md)  
-  
-  
+```
+
+## <a name="see-also"></a> Voir aussi
+
+[Utilisation de jeux de résultats](../../connect/jdbc/working-with-result-sets.md)

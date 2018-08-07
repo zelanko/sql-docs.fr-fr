@@ -1,7 +1,7 @@
 ---
 title: Exemple d’URL de connexion | Microsoft Docs
 ms.custom: ''
-ms.date: 01/11/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,36 +14,41 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00a82318e9fc77b21e9e634e612d5d65a7ed5137
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: f8150ae02c014d7460be10845e38d3e13be133d3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278661"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452553"
 ---
 # <a name="connection-url-sample"></a>Exemple d'URL de connexion
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] montre comment se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] via une URL de connexion. Il montre également comment extraire des données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] avec une instruction SQL.  
-  
- Le fichier de code de cet exemple est nommé ConnectURL.java et se trouve à l’emplacement suivant :  
-  
- \<*répertoire d’installation*> \sqljdbc_\<*version*>\\<*langage*> \samples\connections  
-  
-## <a name="requirements"></a>Spécifications  
- Pour exécuter cet exemple d’application, vous devez définir le classpath de façon à inclure le fichier jar mssql-jdbc. Vous devez également avoir accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
-  
+Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] montre comment se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] via une URL de connexion. Il montre également comment extraire des données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] avec une instruction SQL.
+
+Le fichier de code de cet exemple est nommé ConnectURL.java et se trouve à l’emplacement suivant :
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\connections
+```
+
+## <a name="requirements"></a>Spécifications
+
+Pour exécuter cet exemple d’application, définissez le classpath de façon à inclure le fichier jar mssql-jdbc. L’accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] est également nécessaire. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
+
 > [!NOTE]  
->  Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers de bibliothèques de classes mssql-jdbc à utiliser en fonction de vos paramètres JRE (Java Runtime Environment). Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
-## <a name="example"></a> Exemple  
- Dans l’exemple suivant, le code définit différentes propriétés de connexion de l’URL de connexion, puis appelle la méthode getConnection de la classe DriverManager pour retourner un objet [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).  
-  
- Ensuite, l’exemple de code utilise la méthode [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) de l’objet SQLServerConnection pour créer un objet [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), puis la méthode [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) est appelée pour exécuter l’instruction SQL.  
-  
- Enfin, l’exemple utilise l’objet [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) retourné par la méthode executeQuery pour boucler dans les résultats retournés par l’instruction SQL.  
-  
-```java  
+> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+
+## <a name="example"></a> Exemple
+
+Dans l’exemple suivant, le code définit différentes propriétés de connexion de l’URL de connexion, puis appelle la méthode getConnection de la classe DriverManager pour retourner un objet [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
+
+Ensuite, l’exemple de code utilise la méthode [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) de l’objet SQLServerConnection pour créer un objet [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), puis la méthode [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) est appelée pour exécuter l’instruction SQL.
+
+Enfin, l’exemple utilise l’objet [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) retourné par la méthode executeQuery pour boucler dans les résultats retournés par l’instruction SQL.
+
+```java
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -71,7 +76,8 @@ public class ConnectURL {
         }
     }
 }
-```  
-  
-## <a name="see-also"></a> Voir aussi  
- [Connexion et récupération de données](../../connect/jdbc/connecting-and-retrieving-data.md)
+```
+
+## <a name="see-also"></a> Voir aussi
+
+[Connexion et récupération de données](../../connect/jdbc/connecting-and-retrieving-data.md)
