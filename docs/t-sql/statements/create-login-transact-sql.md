@@ -30,13 +30,13 @@ caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2b8859b2cc7aed93f941756400caa387061034b6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6d788da4f619feebd27919d8a34ec81de4a923f4
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784270"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452703"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -139,7 +139,7 @@ Spécifie le nom d'une clé asymétrique à associer à cette connexion. Cette c
 - Le [mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md) du serveur doit correspondre au type de connexion pour autoriser l’accès.
 - Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 - Seuls les utilisateurs ayant l’autorisation **ALTER ANY LOGIN** sur le serveur ou appartenant au rôle serveur fixe **securityadmin** peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
 - Si l'option **CREDENTIAL** est utilisée, l'autorisation **ALTER ANY CREDENTIAL** est également exigée sur le serveur. 
   
@@ -297,7 +297,7 @@ Dans SQL Database, les données de connexion exigées pour authentifier une conn
   
  Pour plus d’informations sur les connexions SQL Database, consultez [Gestion des bases de données et des connexions dans Microsoft Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins). 
  
-## <a name="permissions"></a>Autorisations
+## <a name="permissions"></a>Permissions
 
 Seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `loginmanager` dans la base de données master peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
 
@@ -402,7 +402,7 @@ Dans SQL Database Warehouse, les données de connexion exigées pour authentifie
   
  Pour plus d’informations sur les connexions SQL Database Warehouse, consultez [Gestion des bases de données et des connexions dans Microsoft Azure SQL Database](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins). 
  
-## <a name="permissions"></a>Autorisations
+## <a name="permissions"></a>Permissions
 
 Seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `loginmanager` dans la base de données master peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
 
@@ -513,7 +513,7 @@ Spécifie que la connexion doit être mappée sur une connexion Windows.
 - La création d'une connexion active automatiquement la nouvelle connexion et accorde à la connexion l'autorisation **CONNECT SQL** au niveau du serveur. 
 - Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Seuls les utilisateurs ayant l’autorisation **ALTER ANY LOGIN** sur le serveur ou appartenant au rôle serveur fixe **securityadmin** peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
   
 ## <a name="after-creating-a-login"></a>Après la création d’une connexion  
