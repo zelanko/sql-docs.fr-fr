@@ -20,12 +20,13 @@ caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f2d1a1463b751bcd820419db24c978ed08d7e463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c674869b9c478bd5accf85f74106aba6a33dcaa9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534779"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurer des opérations d'index parallèles
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
     |Valeur|Description|  
     |-----------|-----------------|  
     |0|Spécifie que le serveur détermine le nombre de processeurs utilisés, selon la charge système actuelle. Il s'agit de la valeur par défaut et recommandée.|  
-    | 1|Supprime la création de plans parallèles. L'opération est exécutée en série.|  
+    |1|Supprime la création de plans parallèles. L'opération est exécutée en série.|  
     |2-64|Limite le nombre de processeurs à la valeur spécifiée. Un nombre moins élevé de processeurs peuvent être utilisés en fonction de la charge de travail actuelle. Si une valeur supérieure au nombre d'UC disponibles est spécifiée, c'est le nombre d'UC disponibles qui est utilisé.|  
   
 -   L'exécution parallèle d'index et l'option d'index MAXDOP s'appliquent aux instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes :  

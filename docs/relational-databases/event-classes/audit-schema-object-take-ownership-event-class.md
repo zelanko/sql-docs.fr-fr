@@ -15,13 +15,13 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7cc1d7cd776845262be5f15d84b921f9260a30f5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f99755922cf5e9a4a4286befe81e18a6960be66b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332020"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534339"
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "34332020"
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |**Réussi**|**Int**|1 = réussite. 0 = échec. Exemple : 1 indique la réussite de la vérification d'autorisations, 0 l'échec de cette vérification.|23|Oui|  
 |**TargetUserName**|**nvarchar**|Pour les actions qui ciblent un utilisateur de base de données (par exemple, accorder une autorisation à un utilisateur), le nom de cet utilisateur.|39|Oui|  
-|**TextData**|**ntext**|Valeur texte qui dépend de la classe d'événements capturée dans la trace.| 1|Oui|  
+|**TextData**|**ntext**|Valeur texte qui dépend de la classe d'événements capturée dans la trace.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |**XactSequence**|**bigint**|Jeton utilisé pour décrire la transaction en cours.|50|Oui|  
   

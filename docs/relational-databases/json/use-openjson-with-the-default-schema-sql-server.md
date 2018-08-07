@@ -14,13 +14,13 @@ ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 34257d3757d7153020ea61bb04b9d85174246442
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 33817a87f7fe4836cae7f9c5f4aabac9e2e0c218
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413808"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535039"
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>Utiliser OPENJSON avec le schéma par défaut (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
 |Key|Valeur|  
 |---------|-----------|  
 |0|en-GB|  
-| 1|en-UK|  
+|1|en-UK|  
 |2|de-AT|  
 |3|es-AR|  
 |4|sr-Cyrl|  
@@ -90,7 +90,7 @@ FROM OPENJSON(@json,N'lax $.info')
   
 |Key|Valeur|Type|  
 |---------|-----------|----------|  
-|Type| 1|0|  
+|Type|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
 |tags|[ "Sport", "Water polo" ]|4|  
   
