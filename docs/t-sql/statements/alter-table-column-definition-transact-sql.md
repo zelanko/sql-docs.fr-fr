@@ -24,13 +24,13 @@ caps.latest.revision: 78
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d727179427421ff0d7c06f8336f098f222d43eb3
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e90bcd1841e0c8c657585733b25963be8ed08b83
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109241"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457933"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -158,8 +158,8 @@ DEFAULT
  Valeur littérale, valeur NULL ou fonction système utilisée comme valeur de colonne par défaut. Si cet argument est utilisé avec une colonne définie pour être d’un type défini par l’utilisateur [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], l’implémentation du type doit prendre en charge une conversion implicite de *constant_expression* vers le type défini par l’utilisateur.  
   
 WITH VALUES   
- Lors de l’ajout d’une colonne AND et d’une contrainte DEFAULT, si la colonne autorise les valeurs NULL à l’aide de WITH VALUES, pour les lignes existantes la nouvelle valeur de la colonne sera définie sur la valeur donnée dans DEFAULT*constant_expression*. Si la colonne ajoutée n’autorise pas les valeurs NULL pour les lignes existantes, la valeur de la colonne sera toujours définie sur la valeur donnée dans l’*expression constante* DEFAULT. À partir de SQL Server 2012, il peut s’agir d’une opération de métadonnées [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
-Si elle est utilisée quand la colonne associée n’est pas également ajoutée, ceci n’a aucun effet.
+ En cas d’ajout d’une colonne AND qui autorise les valeurs NULL avec WITH VALUES, ainsi que d’une contrainte DEFAULT, attribuez, pour les lignes existantes, la valeur donnée dans *constant_expression* DEFAULT à la nouvelle colonne. Si la colonne ajoutée n’autorise pas les valeurs NULL, sa valeur sera toujours celle qui est donnée dans *l’expression constante* DEFAULT pour les lignes existantes. À partir de SQL Server 2012, il peut s’agir d’une opération de métadonnées [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+Si elle est utilisée sans que la colonne associée soit elle aussi ajoutée, elle n’a aucun effet.
  
  Spécifie que la valeur donnée dans DEFAULT *constant_expression* est stockée dans une nouvelle colonne ajoutée aux lignes existantes. Si la colonne ajoutée accepte les valeurs NULL et que l'option WITH VALUES est spécifiée, la valeur par défaut est stockée dans la nouvelle colonne ajoutée aux lignes existantes. Si WITH VALUES n'est pas spécifiée pour les colonnes acceptant les valeurs NULL, la valeur NULL est stockée dans la nouvelle colonne, dans des lignes existantes. Si la nouvelle colonne n'accepte pas les valeurs NULL, la valeur par défaut est stockée dans les nouvelles lignes, que l'option WITH VALUES soit spécifiée ou pas.  
   

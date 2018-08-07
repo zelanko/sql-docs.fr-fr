@@ -21,13 +21,13 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9961be2758ba85deefa53b1d376ce688317f1f55
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 25b0d6501dc1327b1f7cb20e9b1d2cfa15162ef5
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36257661"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457513"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -191,7 +191,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  N'utilisez pas de variable dans une instruction INSERT pour concaténer les valeurs (c'est-à-dire, pour calculer des valeurs agrégées). Ceci peut engendrer des résultats de requête inattendus. Le motif en est que certaines expressions dans la liste SELECT (y compris les attributions) peuvent être exécutées plusieurs fois pour chaque ligne de sortie. Pour plus d’informations, consultez [cet article de la Base de connaissances](http://support.microsoft.com/kb/287515).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle public. Tous les utilisateurs peuvent utiliser SET **@***local_variable*.  
   
 ## <a name="examples"></a>Exemples  

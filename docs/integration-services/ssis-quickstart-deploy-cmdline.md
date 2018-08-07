@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1179443d8b86e23a51fdf2250f007914e27cf0b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b0327a7fb471299785d7899befabcbd9f228aa2e
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335863"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482700"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Déployer un projet SSIS à partir de l’invite de commandes avec ISDeploymentWizard.exe
 Ce guide de démarrage rapide montre comment déployer un projet SSIS à partir de l’invite de commandes en exécutant l’Assistant Déploiement d’Integration Services, `ISDeploymentWizard.exe`.
@@ -47,7 +47,7 @@ Pour déployer le projet sur Azure SQL Database, obtenez les informations de con
 3. Dans la page **Vue d’ensemble** de votre base de données, notez le nom complet du serveur. Pour voir l’option **Cliquer pour copier**, pointez sur le nom du serveur. 
 4. Si vous oubliez vos informations de connexion de serveur Azure SQL Database, accédez à la page du serveur SQL Database pour afficher le nom d’administrateur de serveur. Vous pouvez réinitialiser le mot de passe si nécessaire.
 
-## <a name="authentication-methods-in-the-deployment-wizard"></a>Méthodes d’authentification dans l’Assistant Déploiement
+## <a name="wizard_auth"></a> Méthodes d’authentification dans l’Assistant Déploiement
 
 Si vous déployez sur un serveur SQL Server avec l’Assistant Déploiement, vous devez utiliser l’authentification Windows. Vous ne pouvez pas utiliser l’authentification SQL Server.
 

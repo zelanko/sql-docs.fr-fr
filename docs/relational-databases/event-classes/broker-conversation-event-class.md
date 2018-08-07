@@ -15,13 +15,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73a61baa09c40042ad027f784531ce7989280419
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 028695e89f6958eef454e57723a3f1832d6aec2f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332560"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533799"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation, classe d'événements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34332560"
 |**Severity**|**Int**|Gravité de l'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] éventuellement indiquée par cet événement.|29|non|  
 |**SPID**|**Int**|ID de processus serveur qui est affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
 |**StartTime**|**datetime**|Heure de début de l'événement, si disponible.|14|Oui|  
-|**TextData**|**ntext**|État actuel de la conversation. Peut avoir l'une des valeurs suivantes :| 1|Oui|  
+|**TextData**|**ntext**|État actuel de la conversation. Peut avoir l'une des valeurs suivantes :|1|Oui|  
 |||**SO**. Démarrée en sortie. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a traité une instruction BEGIN CONVERSATION pour cette conversation, mais aucun message n'a été envoyé.|||  
 |||**SI**. Démarré en entrée. Une autre instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] a démarré une nouvelle conversation avec l’instance actuelle, mais cette dernière n’a pas fini de recevoir le premier message. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer la conversation dans cet état si le premier message est fragmenté ou si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reçoit les messages dans le désordre. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer la conversation dans l'état CO si la première transmission reçue pour cette conversation contient la totalité du premier message.|||  
 |||**CO**. Conversation en cours. La conversation est établie et ses deux parties peuvent envoyer des messages. L'essentiel de la communication pour un service classique a lieu lorsque la conversation se trouve dans cet état.|||  
@@ -65,7 +65,7 @@ ms.locfileid: "34332560"
   
 |ID|Sous-classe|Description|  
 |--------|--------------|-----------------|  
-| 1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **SEND Message** lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] exécute une instruction SEND.|  
+|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **SEND Message** lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] exécute une instruction SEND.|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **END CONVERSATION** lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] exécute une instruction END CONVERSATION qui ne comporte pas la clause WITH ERROR.|  
 |3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **END CONVERSATION WITH ERROR** lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] exécute une instruction END CONVERSATION qui comporte la clause WITH ERROR.|  
 |4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **Broker Initiated Error** chaque fois que [!INCLUDE[ssSB](../../includes/sssb-md.md)] crée un message d'erreur. Par exemple, lorsque [!INCLUDE[ssSB](../../includes/sssb-md.md)] ne parvient pas à acheminer un message pour un dialogue, il crée un message d'erreur pour celui-ci et génère cet événement. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne génère pas cet événement lorsqu'une application termine une conversation par une erreur.|  

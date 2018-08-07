@@ -30,13 +30,13 @@ caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5460e080b23470fd13f9c1e83f20b7ed58f01ac5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 71669ee3070b4282fa95cd08451929ca54c5e66a
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785133"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457573"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +70,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 |Valeur retournée|Description|  
 |------------------|-----------------|  
 |0|L’utilisateur actuel n’est membre ni de *group* ni de *role*.|  
-| 1|L’utilisateur actuel est membre de *group* ou de *role*.|  
+|1|L’utilisateur actuel est membre de *group* ou de *role*.|  
 |NULL|*group* ou *role* n’est pas valide. En cas d'interrogation par une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une connexion utilisant un rôle d'application, retourne NULL pour un groupe Windows.|  
   
  IS_MEMBER détermine l'appartenance au groupe Windows en examinant un jeton d'accès créé par Windows. Le jeton d'accès ne reflète pas les modifications apportées à l'appartenance au groupe après la connexion d'un utilisateur à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’appartenance au groupe Windows ne peut pas faire l’objet d’une requête par une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un rôle d’application [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
