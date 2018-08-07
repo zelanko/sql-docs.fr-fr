@@ -14,13 +14,13 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0af297906433fb8689b44812ae7936defe46b59d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2915f4b86069420c2d5ff89a322fa87d9adcff43
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940184"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565473"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Index columnstore - Conseils en matière de chargement de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ Les scénarios suivants décrivent à quel moment les lignes chargées sont dire
 |-----------------------|-------------------------------------------|--------------------------------------|  
 |102 000|0|102 000|  
 |145 000|145 000<br /><br /> Taille de rowgroup : 145 000|0|  
-|1 048 577|1,048,576<br /><br /> Taille de rowgroup : 1 048 576| 1|  
+|1 048 577|1,048,576<br /><br /> Taille de rowgroup : 1 048 576|1|  
 |2 252 152|2 252 152<br /><br /> Tailles de rowgroup : 1 048 576, 1 048 576, 155 000.|0|  
   
  L’exemple suivant montre les résultats du chargement de 1 048 577 lignes dans une table. Les résultats indiquent un rowgroup COMPRESSÉ dans le columnstore (comme segments de colonne compressés), et 1 ligne dans le deltastore.  

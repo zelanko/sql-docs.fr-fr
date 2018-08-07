@@ -15,12 +15,13 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: febca989688c0336e89bfa6f23518fa08a992f93
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8d7d1eb253c86c1d286b034360714d0be936d701
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564823"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Classe d’événements Broker:Message Undeliverable
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/19/2018
 |**SPID**|**Int**|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
 |**StartTime**|**datetime**|Heure de début de l'événement, le cas échéant.|14|Oui|  
 |**État**|**Int**|Indique l'emplacement dans le code source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a produit l'événement. Chaque emplacement susceptible de générer cet événement possède un code d'état spécifique. Un spécialiste de l'assistance technique Microsoft peut se servir de ce code d'état afin de déterminer où l'événement s'est produit.|30|non|  
-|**TextData**|**ntext**|Raison pour laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu remettre le message.| 1|Oui|  
+|**TextData**|**ntext**|Raison pour laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu remettre le message.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté à la transaction par le système.|4|non|  
   
 ## <a name="see-also"></a> Voir aussi  

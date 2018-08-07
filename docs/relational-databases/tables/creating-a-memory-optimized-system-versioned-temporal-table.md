@@ -14,13 +14,13 @@ caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6bbbe1d31fcc910d32a155281abe1065a01ecc11
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4222bbaa721dbae32445b33a060ec604e69301bd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989151"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566043"
 ---
 # <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>Création d’une table temporelle à mémoire optimisée avec version gérée par le système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
