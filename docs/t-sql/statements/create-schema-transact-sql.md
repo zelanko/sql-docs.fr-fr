@@ -27,13 +27,13 @@ caps.latest.revision: 60
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f81a0363ef180ed781ee7c325640985e8d20bc2
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3e23c8eff134160d7c55035738cad9a091bc460c
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789720"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454363"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -133,7 +133,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ## <a name="deprecation-notice"></a>Note relative à la suppression de fonctionnalités  
  Les instructions CREATE SCHEMA qui ne spécifient pas de nom de schéma continuent à être prises en charge pour des raisons de compatibilité descendante. De telles instructions ne créent pas réellement un schéma dans la base de données, mais créent plutôt des tables et des vues, et accordent des autorisations. Les principaux n'ont pas besoin de l'autorisation CREATE SCHEMA pour exécuter cette version antérieure de CREATE SCHEMA, car aucun schéma n'est créé. Cette fonctionnalité sera retirée dans une version future de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation CREATE SCHEMA sur la base de données.  
   
  Pour créer un objet spécifié dans l'instruction CREATE SCHEMA, l'utilisateur doit disposer de l'autorisation CREATE correspondante.  

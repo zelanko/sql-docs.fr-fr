@@ -24,13 +24,13 @@ caps.latest.revision: 74
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13d85a3eb7bcea27cb5b2d1a3c5c98ba83735639
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a45935234e8deb92b51f8577b01fc474273fd386
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782560"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453603"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,7 +173,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  *max_degree_of_parallelism* peut avoir la valeur :  
   
-  1  
+ 1  
  Supprime la création de plans parallèles.  
   
  \>1  
@@ -192,7 +192,7 @@ MAXDOP = *max_degree_of_parallelism*
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
 * La mise à jour des statistiques n’est pas prise en charge sur les tables externes. Pour mettre à jour des statistiques sur une table externe, supprimez et recréez les statistiques.  
 * L’option MAXDOP n’est pas compatible avec les options STATS_STREAM, ROWCOUNT et PAGECOUNT.
-* L’option MAXDOP est limitée par le paramètre du groupe de charge de travail de Resource Governor, le cas échéant.
+* L’option MAXDOP est limitée par le paramètre MAX_DOP du groupe de charge de travail de Resource Governor, le cas échéant.
 
 ## <a name="updating-all-statistics-with-spupdatestats"></a>Mise à jour de toutes les statistiques avec sp_updatestats  
  Pour plus d’informations sur la mise à jour des statistiques pour toutes les tables définies par l’utilisateur et les tables internes de la base de données, consultez la procédure stockée [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Par exemple, la commande suivante appelle sp_updatestats pour mettre à jour toutes les statistiques de la base de données.  
@@ -227,7 +227,7 @@ update statistics t1 (a) with INCREMENTAL=ON;
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite une autorisation ALTER sur la table ou la vue.  
   
 ## <a name="examples"></a>Exemples  

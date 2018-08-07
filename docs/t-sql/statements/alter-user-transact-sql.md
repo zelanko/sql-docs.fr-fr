@@ -28,13 +28,13 @@ caps.latest.revision: 75
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c818f027da13852b57d87eec057e2d535086f760
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4247fe42571152c3d05434d5e910500c65cd7d10
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942875"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454563"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -193,7 +193,7 @@ Le nom d’un utilisateur mappé à un compte de connexion [!INCLUDE[ssNoVersion
 > [!NOTE]  
 >  Un utilisateur bénéficiant de l’autorisation **ALTER ANY USER** peut changer le schéma par défaut de n’importe quel utilisateur. Un utilisateur dont le schéma a été modifié peut, sans le savoir, sélectionner des données dans la mauvaise table ou exécuter du code à partir du mauvais schéma.  
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
  Pour changer le nom d’un utilisateur, vous devez disposer de l’autorisation **ALTER ANY USER**.  
   
  Pour changer la connexion cible d’un utilisateur, vous devez disposer de l’autorisation **CONTROL** sur la base de données.  

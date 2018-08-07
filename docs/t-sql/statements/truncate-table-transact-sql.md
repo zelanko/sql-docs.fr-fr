@@ -28,13 +28,13 @@ caps.latest.revision: 41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: df0f8d8aaf0302d6d854a5fa1a5b0c1eee9e9aef
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e72eb9b870a0525739f657432a3cddbf17ac438f
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790890"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451293"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +134,7 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ## <a name="truncating-large-tables"></a>Troncation de grandes tables  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet de supprimer ou de tronquer des tables dotées de plus de 128 extensions, sans maintenir de verrous simultanés sur toutes les extensions exigées pour la suppression.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L’autorisation minimale exigée est ALTER sur *table_name*. Les autorisations TRUNCATE TABLE sont octroyées par défaut au propriétaire de la table, aux membres du rôle serveur fixe sysadmin et des rôles de base de données fixes db_owner et db_ddladmin. Elles ne sont pas transférables. Toutefois, vous pouvez incorporer l’instruction TRUNCATE TABLE dans un module, par exemple une procédure stockée, et accorder les autorisations appropriées au module à l’aide de la clause EXECUTE AS.  
   
 ## <a name="examples"></a>Exemples  

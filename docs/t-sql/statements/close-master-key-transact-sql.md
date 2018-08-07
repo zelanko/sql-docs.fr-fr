@@ -25,13 +25,13 @@ caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6996881c2b41e41a5442ad88888f08e6f7bef498
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ae2e2d80e499b65b116a46a572f2cfe1c47fdf33
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791850"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454803"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ CLOSE MASTER KEY
 ## <a name="remarks"></a>Notes   
  Cette instruction inverse l'opération effectuée par OPEN MASTER KEY. L'opération CLOSE MASTER KEY réussit uniquement lorsque la clé principale de la base de données a été ouverte dans la session active au moyen de l'instruction OPEN MASTER KEY.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Aucune autorisation n'est requise.  
   
 ## <a name="examples"></a>Exemples  

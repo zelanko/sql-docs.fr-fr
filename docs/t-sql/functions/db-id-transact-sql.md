@@ -26,13 +26,13 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b445816ec9d088138d17c103f39f1471ce16c57c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 725dcf0f543b61c9b143ad6c4cc56ae5289ef800
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786810"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451083"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ Nom de la base de données dont le numéro d’ID `DB_ID` est retourné. Si l’
 ## <a name="remarks"></a>Notes 
 `DB_ID` ne peut être utilisé que pour retourner l’identificateur de la base de données active dans Azure SQL Database. La valeur NULL est retournée si le nom spécifié n’est pas celui de la base de données active.
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Si l’appelant de `DB_ID` ne possède pas une base de données non **MASTER** ou non **tempdb** spécifique, au minimum les autorisations au niveau serveur `ALTER ANY DATABASE` ou `VIEW ANY DATABASE` sont nécessaires pour consulter la ligne `DB_ID` correspondante. Pour la base de données **MASTER**, `DB_ID` a besoin au minimum de l’autorisation `CREATE DATABASE`. La base de données à laquelle l’appelant se connecte apparaît toujours dans **sys.databases**.
   
 > [!IMPORTANT]  

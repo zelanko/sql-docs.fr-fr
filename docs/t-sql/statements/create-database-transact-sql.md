@@ -40,13 +40,13 @@ caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fb69ad94c2759a4f3bc55409212d9aedad2096f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4fc133c37f95ecbe09ce7bda56163f1adce549a3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792263"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456193"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -501,7 +501,7 @@ Certaines fonctionnalités de base de données dépendent de fonctionnalités ou
 ## <a name="viewing-database-information"></a>Affichage des informations de bases de données  
  Vous pouvez utiliser les affichages catalogue, les fonctions système et les procédures stockées du système pour retourner des informations sur les bases de données, les fichiers et les groupes de fichiers. Pour plus d’informations, consultez [Vues système &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L'autorisation CREATE DATABASE, CREATE ANY DATABASE ou ALTER ANY DATABASE est obligatoire.  
   
  Pour garder le contrôle de l'utilisation du disque sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'autorisation de création de bases de données est généralement limitée à quelques comptes de connexion.  
@@ -1079,7 +1079,7 @@ La syntaxe et les règles sémantiques suivante s'appliquent à votre utilisatio
   
  Pour plus d’informations, consultez [Créer une copie de base de données Azure SQL à l’aide de Transact-SQL](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Pour créer une base de données, une connexion doit correspondre à l’un des éléments suivants : 
   
 - La connexion du principal au niveau du serveur  
@@ -1210,7 +1210,7 @@ Les bases de données dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
    > [!TIP]
    > Pour contourner le problème, utilisez [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbmi) après `CREATE DATABASE` afin de définir les options de base de données et d’ajouter des fichiers.  
 
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Pour créer une base de données, une connexion doit correspondre à l’un des éléments suivants : 
   
 - La connexion du principal au niveau du serveur  
@@ -1291,7 +1291,7 @@ Utilisez [ALTER DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/stateme
 
 SQL Data Warehouse est défini sur COMPATIBILITY_LEVEL 130 et ne peut pas être modifié. Pour plus d’informations, consultez [Meilleures performances des requêtes avec le niveau de compatibilité 130 dans Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Autorisations nécessaires :  
   
 -   Connexion au principal de niveau serveur, créé par le processus de déploiement ou  
@@ -1385,7 +1385,7 @@ WITH (
   
  Si AUTOGROW est OFF, une erreur est retournée pour toute action qui augmenterait la taille du journal sur un nœud de calcul au-delà de *log_size*.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’autorisation **CREATE ANY DATABASE** dans la base de données master ou l’appartenance au rôle serveur fixe **sysadmin**.  
   
  L'exemple suivant fournit l'autorisation de créer une base de données à l'utilisateur de base de données Fay.  
