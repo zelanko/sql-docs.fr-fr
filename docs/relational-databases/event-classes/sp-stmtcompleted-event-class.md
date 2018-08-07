@@ -15,12 +15,13 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1cdc913d524963bb3c6b971bb6b7995fed081ee1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 51dde99452bb6a1cd4409f29727ce9d3a541d272
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558529"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted, classe d'événements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/19/2018
 |SourceDatabaseID|**Int**|ID de la base de données dans laquelle l'objet existe.|62|Oui|  
 |SPID|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|**ntext**|Valeur texte qui dépend de la classe d'événements capturée dans la trace.| 1|Oui|  
+|TextData|**ntext**|Valeur texte qui dépend de la classe d'événements capturée dans la trace.|1|Oui|  
 |TransactionID|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |Writes|**bigint**|Nombre d'écritures physiques effectuées par le serveur pour l'événement.|17|Oui|  
 |XactSequence|**bigint**|Jeton qui décrit la transaction en cours.|50|Oui|  

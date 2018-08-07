@@ -13,12 +13,13 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 104a65c26f8ad9eef9715ea39f7d670091d1bca4
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bbfdd968d85f55fd3eb3597d982ec0312b2e1886
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539329"
 ---
 # <a name="audit-fulltext-event-class"></a>Audit Fulltext, classe d'événements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/19/2018
 |**Réussi**|**Int**|1 = réussite. 0 = échec. Exemple : 1 indique la réussite de la vérification d'autorisations, 0 l'échec de cette vérification.|23|Oui|  
 |**TargetLoginName**|**Int**|Pour les actions qui ciblent une connexion (l'ajout d'une nouvelle connexion, par exemple), le nom de la connexion ciblée.|42|Oui|  
 |**TargetLoginSid**|**Int**|Pour les actions qui ciblent une connexion (l'ajout d'une nouvelle connexion, par exemple), numéro d'identification de sécurité (SID) de la connexion ciblée.|43|Oui|  
-|**TextData**|**ntext**|Informations de texte sur l'événement en texte intégral. Généralement ce champ fournit des informations sur la connexion entre le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le processus de démon de filtre de texte intégral| 1|Oui|  
+|**TextData**|**ntext**|Informations de texte sur l'événement en texte intégral. Généralement ce champ fournit des informations sur la connexion entre le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le processus de démon de filtre de texte intégral|1|Oui|  
   
 ## <a name="see-also"></a> Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)   

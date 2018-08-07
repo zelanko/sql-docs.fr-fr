@@ -20,13 +20,13 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e4382d10ca8fcae916d82726ae4932b3518df362
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d284ab5bafcccff4f73b6b5a479f8b0eca5a0f84
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708277"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537109"
 ---
 # <a name="databases"></a>Bases de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34708277"
   
  Les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont stockées dans des fichiers du système de fichiers. Les fichiers peuvent être regroupés en groupes de fichiers. Pour plus d’informations sur les fichiers et groupes de fichiers, consultez [Groupes de fichiers et fichiers de base de données](../../relational-databases/databases/database-files-and-filegroups.md).  
   
- Lorsque les utilisateurs accèdent à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ils sont identifiés comme connexion. Lorsque les utilisateurs accèdent à une base de données, ils sont identifiés comme utilisateur de base de données. Un utilisateur de base de données peut être basé sur une connexion. Si les bases de données à relation contenant-contenu sont activées, il est possible de créer un utilisateur de base de données qui n'est pas basé sur une connexion. Pour plus d’informations sur les utilisateurs, consultez [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
+ Lorsque les utilisateurs accèdent à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ils sont identifiés comme connexion. Lorsque les utilisateurs accèdent à une base de données, ils sont identifiés comme utilisateur de base de données. Un utilisateur de base de données peut être basé sur une connexion. Si les bases de données autonomes sont activées, il est possible de créer un utilisateur de base de données qui n'est pas basé sur une connexion. Pour plus d’informations sur les utilisateurs, consultez [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
   
  Un utilisateur qui a accès à une base de données peut recevoir l'autorisation d'accéder aux objets de la base de données. Même si les autorisations peuvent être accordées aux utilisateurs de façon individuelle, nous vous recommandons de créer des rôles de base de données, d'ajouter les utilisateurs de la base de données aux rôles, puis d'accorder l'autorisation d'accès aux rôles. L'octroi d'autorisations à des rôles plutôt qu'aux utilisateurs contribue à garantir que les autorisations restent cohérentes et compréhensibles à mesure que le nombre d'utilisateurs augmente et évolue. Pour plus d’informations sur les autorisations des rôles, consultez [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md) et [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34708277"
 |||  
 |-|-|  
 |[Bases de données système](../../relational-databases/databases/system-databases.md)|[Supprimer des fichiers de données ou des fichiers journaux d’une base de données](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)|  
-|[Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)|[Afficher les informations sur l’espace occupé par les données et par le journal d’une base de données](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)|  
+|[Bases de données autonomes](../../relational-databases/databases/contained-databases.md)|[Afficher les informations sur l’espace occupé par les données et par le journal d’une base de données](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)|  
 |[Fichiers de données SQL Server dans Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)|[Augmenter la taille d’une base de données](../../relational-databases/databases/increase-the-size-of-a-database.md)|  
 |[Groupes de fichiers et fichiers de base de données](../../relational-databases/databases/database-files-and-filegroups.md)|[Renommer une base de données](../../relational-databases/databases/rename-a-database.md)|  
 |[États d'une base de données](../../relational-databases/databases/database-states.md)|[Définir une base de données en mode mono-utilisateur](../../relational-databases/databases/set-a-database-to-single-user-mode.md)|  

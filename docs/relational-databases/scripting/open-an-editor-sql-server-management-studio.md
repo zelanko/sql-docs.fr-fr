@@ -13,13 +13,13 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3462eb53657d873d1c2e2ce57a09dad99ff4b253
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c6733d4b668e607a2b975b5861110df0c196d9ef
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334740"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553899"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Ouvrir un éditeur (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34334740"
 ### <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Si vous partagez des fichiers avec des utilisateurs d'autres sites qui utilisent des pages de codes distinctes, vous devez enregistrer votre fichier avec le code Unicode approprié afin d'éviter les erreurs de lecture du fichier. De même, lorsque vous enregistrez des fichiers pour UNIX ou Macintosh, assurez-vous de les enregistrer au format de document approprié. Dans le menu **Fichier** , cliquez sur **Enregistrer sous**, puis sur **Enregistrer avec encodage** en cliquant sur la flèche en regard du bouton **Enregistrer** , puis choisissez **Unix** ou **Macintosh** sous **Fins de ligne**.  
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
  Les opérations que vous réalisez dans un éditeur de codes sont soumises aux autorisations accordées au compte d'authentification que vous avez utilisé pour vous connecter. Par exemple, si vous ouvrez une fenêtre de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de l'authentification Windows, vous ne pouvez pas exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui font référence à des objets pour lesquels votre compte de connexion Windows ne dispose pas d'autorisation d'accès.  
   
 ## <a name="how-to-open-editors"></a>Procédure : ouvrir les éditeurs  

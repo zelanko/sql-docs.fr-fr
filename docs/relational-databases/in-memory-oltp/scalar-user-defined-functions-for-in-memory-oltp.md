@@ -15,13 +15,13 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 34b5c0e77ec4caa54fcbd21f15bb518a758e193e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 50e4249226273fc7c5f51363597f1d4099ad6865
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330760"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539989"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ END
   
  STATISTICS XML n’est pas pris en charge pour les fonctions scalaires définies par l’utilisateur compilées en mode natif. Lorsque vous exécutez une requête faisant référence à la fonction définie par l’utilisateur avec STATISTICS XML activé, le contenu XML est retourné sans la partie de la fonction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Comme avec les procédures stockées compilées en mode natif, les autorisations pour les objets référencés à partir d’une fonction scalaire définie par l’utilisateur compilée en mode natif sont vérifiées à la création de la fonction. La fonction CREATE échoue si l’utilisateur représenté ne dispose pas des autorisations appropriées. Si l’utilisateur représenté ne dispose plus des autorisations appropriées en raison d’une modification des autorisations, les exécutions ultérieures de la fonction définie par l’utilisateur échouent.  
   
  Lorsque vous utilisez une fonction scalaire définie par l’utilisateur compilée en mode natif dans une procédure stockée compilée en mode natif, les autorisations d’exécution de la fonction définie par l’utilisateur sont vérifiées à la création de la procédure externe. Si l’utilisateur représenté par la procédure externe ne dispose pas d’autorisations d’exécution de la fonction définie par l’utilisateur, la création de la procédure stockée échoue. Si l’utilisateur ne dispose plus des autorisations d’exécution en raison d’une modification des autorisations, l’exécution de la procédure externe échoue.  

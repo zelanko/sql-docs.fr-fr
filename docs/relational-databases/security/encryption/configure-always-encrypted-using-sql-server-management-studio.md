@@ -18,13 +18,13 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b72dca20aaa566f8bb6630931fc656ee6231182
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180446"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543069"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurer Always Encrypted à l’aide de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,7 +207,7 @@ WHERE [SSN] = @SSN;
 >   [!NOTE]
 >   Sans paramétrage, la requête entière, y compris les conversions de type, est traitée à l’intérieur de SQL Server/Azure SQL Database. Avec un paramétrage activé, certaines conversions de type sont effectuées par .NET Framework au sein de SQL Server Management Studio. En raison des différences entre le système .NET Framework et le système SQL Server (par exemple, précision différente de certains types, comme float), une requête exécutée avec paramétrage activé peut produire des résultats différents de ceux d’une requête exécutée sans paramétrage activé. 
 
-#### <a name="permissions"></a>Autorisations      
+#### <a name="permissions"></a>Permissions      
 
 Pour exécuter des requêtes sur des colonnes chiffrées, y compris des requêtes qui extraient des données en texte chiffré, vous avez besoin des autorisations `VIEW ANY COLUMN MASTER KEY DEFINITION` et `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` dans la base de données.   
 Outre les autorisations ci-dessus, pour déchiffrer des résultats de requête ou pour chiffrer les paramètres de requête (générés par le paramétrage de variables Transact-SQL), vous devez également accéder à la clé principale de colonne protégeant les colonnes cibles :   
@@ -259,7 +259,7 @@ La boîte de dialogue **Nouvelle clé de chiffrement de colonne** vous permet de
 
 SQL Server Management Studio génère une clé de chiffrement de colonne, puis récupère les métadonnées pour la clé principale de colonne sélectionnée à partir de la base de données. SQL Server Management Studio utilise ensuite les métadonnées de clé principale de colonne pour contacter le magasin de clés qui contient votre clé principale de colonne et chiffrer la clé de chiffrement de colonne. Enfin, les métadonnées de la nouvelle clé de chiffrement de colonne sont créées dans la base de données. La boîte de dialogue effectue cette opération en générant et en émettant une instruction [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) .
 
-### <a name="permissions"></a>Autorisations
+### <a name="permissions"></a>Permissions
 
 Vous avez besoin des autorisations relatives à la base de données *ALTER ANY ENCRYPTION MASTER KEY* et *VIEW ANY COLUMN MASTER KEY DEFINITION* dans la base de données pour que la boîte de dialogue crée les métadonnées de clé de chiffrement de colonne et accède aux métadonnées de clé principale de colonne.
 Pour accéder à un magasin de clés et utiliser la clé principale de colonne, vous pouvez avoir besoin d’autorisations sur le magasin de clés et/ou la clé :
@@ -334,7 +334,7 @@ Si vous choisissez de supprimer la définition de l’ancienne clé principale d
 > [!NOTE]
 > Nous vous recommandons vivement de ne pas supprimer définitivement l’ancienne clé principale de colonne après la permutation. Au lieu de cela, laissez l’ancienne clé principale de colonne dans son magasin de clés actuel ou archivez-la dans un autre emplacement sécurisé. Si vous restaurez votre base de données à partir d’un fichier de sauvegarde à un point dans le temps avant la configuration de la nouvelle clé principale de colonne, vous aurez besoin de l’ancienne clé pour accéder aux données.
 
-### <a name="permissions"></a>Autorisations
+### <a name="permissions"></a>Permissions
 
 La permutation d’une clé principale de colonne nécessite les autorisations relatives à la base de données suivantes :
 
@@ -369,7 +369,7 @@ Pour permuter une clé de chiffrement de colonne, utilisez l’Assistant Always 
 7.  Dans la page **Résumé** , passez en revue les options que vous avez sélectionnées, puis cliquez sur **Terminer** et fermez l’Assistant à la fin.
 8.  Dans **l’Explorateur d’objets**, accédez au dossier **Sécurité/Clés Always Encrypted/Clés de chiffrement de colonne** , puis recherchez l’ancienne clé de chiffrement de colonne à supprimer de la base de données. Cliquez avec le bouton droit sur la clé et sélectionnez **Supprimer**.
 
-### <a name="permissions"></a>Autorisations
+### <a name="permissions"></a>Permissions
 
 La permutation d’une clé de chiffrement de colonne nécessite les autorisations relatives à la base de données suivantes : **ALTER ANY COLUMN MASTER KEY** : obligatoire si vous utilisez une nouvelle clé de chiffrement de colonne générée automatiquement (une clé principale de colonne et ses métadonnées sont également générées).
 **ALTER ANY COLUMN ENCRYPTION KEY** : obligatoire pour ajouter des métadonnées pour la nouvelle clé de chiffrement de colonne.
@@ -402,7 +402,7 @@ Quand vous mettez à niveau une base de données à l’aide d’un fichier DACP
 > [!NOTE]
 > Si la clé principale de colonne configurée pour la colonne dans la base de données ou le fichier DACPAC est stockée dans Azure Key Vault, vous êtes invité à vous connecter à Azure (si ce n’est pas déjà fait).
 
-### <a name="permissions"></a>Autorisations
+### <a name="permissions"></a>Permissions
 
 Pour effectuer une opération de mise à niveau de la DAC si Always Encrypted est configuré dans le fichier DACPAC ou dans la base de données cible, vous pouvez avoir besoin de certaines ou de l’ensemble des autorisations ci-dessous, en fonction des différences entre le schéma dans le fichier DACPAC et le schéma de la base de données cible.
 
@@ -425,7 +425,7 @@ Quand vous importez le fichier BACPAC dans une base de données, les données ch
 Si vous avez une application qui est configurée pour modifier ou récupérer les données chiffrées stockées dans la base de données source (la base de données exportée), vous n’avez rien à faire de spécial pour que l’application puisse interroger les données chiffrées dans la base de données cible, comme les clés dans les deux bases de données sont identiques.
 
 
-### <a name="permissions"></a>Autorisations
+### <a name="permissions"></a>Permissions
 
 Vous avez besoin des autorisations *ALTER ANY COLUMN MASTER KEY* et *ALTER ANY COLUMN ENCRYPTION KEY* sur la base de données source. Vous avez besoin des autorisations *ALTER ANY COLUMN MASTER KEY*, *ALTER ANY COLUMN ENCRYPTION KEY*, *VIEW ANY COLUMN MASTER KEY DEFINITION*et *VIEW ANY COLUMN ENCRYPTION* sur la base de données cible.
 
@@ -448,7 +448,7 @@ Le tableau ci-dessous répertorie les scénarios de migration possibles et comme
 |Déplacer les données chiffrées sans les déchiffrer.<br><br>**Remarque :** Les tables cibles avec les colonnes chiffrées doivent exister avant la migration.| Fournisseur de données/pilote : *tout*<br>Paramètre de chiffrement de colonne = Désactivé<br><br>(si le fournisseur de données .NET Framework pour SQL Server et .NET Framework 4.6 ou version ultérieure sont utilisés.)| Fournisseur de données/pilote : *tout*<br>Paramètre de chiffrement de colonne = Désactivé<br><br>(si le fournisseur de données .NET Framework pour SQL Server et .NET Framework 4.6 ou version ultérieure sont utilisés.)<br><br>L’option ALLOW_ENCRYPTED_VALUE_MODIFICATIONS doit être activée pour l’utilisateur.<br><br>Pour plus d’informations, consultez [Migrer des données sensibles protégées par Always Encrypted](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).
 
 
-### <a name="permissions"></a>Autorisations
+### <a name="permissions"></a>Permissions
 
 Pour **chiffrer** ou **déchiffrer** des données stockées dans la source de données, vous avez besoin des autorisations *VIEW ANY COLUMN MASTER KEY DEFINITION* et *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* dans la base de données source.
 

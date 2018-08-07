@@ -17,13 +17,13 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ac0ba1d2748dbb6d4e30c62af36ce2dd823a63c3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b0120e9fecbb81250a8a506f9b262038a5c96309
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34331660"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549469"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, classe d'événements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "34331660"
   
 |ID|Sous-classe|Description|  
 |--------|--------------|-----------------|  
-| 1|Login Success|Un événement Login Success indique que le processus de connexion de la mise en miroir de bases de données adjacentes s'est terminé avec succès.|  
+|1|Login Success|Un événement Login Success indique que le processus de connexion de la mise en miroir de bases de données adjacentes s'est terminé avec succès.|  
 |2|Login Protocol Error|Un événement Login Protocol Error indique que la connexion de mise en miroir des bases de données reçoit un message qui a un format correct mais n'est pas valide pour l'état du processus de connexion en cours. Le message a peut-être été perdu ou envoyé hors séquence.|  
 |3|Message Format Error|Un événement Message Format Error indique qu'une connexion de mise en miroir de bases de données a reçu un message qui ne correspond pas au format attendu. Le message a peut-être été corrompu ou un programme autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envoie peut-être des messages au port que la mise en miroir des bases de données utilise.|  
 |4|Negotiate Failure|Un événement Negotiate Failure indique que le point de terminaison de la mise en miroir de bases de données locales et le point de terminaison de la mise en miroir de bases de données distantes prennent mutuellement en charge des niveaux d'authentification exclusifs.|  

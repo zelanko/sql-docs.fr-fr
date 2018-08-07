@@ -14,13 +14,13 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da86c799085983f5d2bc73ba970893e9fbcc7385
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4fc7d5df1d8e7d11e97512a31cda94fbf2687e6b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432388"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539029"
 ---
 # <a name="ddl-triggers"></a>Déclencheurs DDL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "37432388"
 >  Testez vos déclencheurs DDL afin de déterminer leurs réponses aux procédures stockées système qui sont exécutées. Par exemple, l’instruction CREATE TYPE et la procédure stockée **sp_addtype** activeront toutes deux un déclencheur DDL créé sur un événement CREATE_TYPE.  
   
 ## <a name="types-of-ddl-triggers"></a>Types de déclencheurs DDL  
- Déclencheur Transact-SQL DDL  
+ ### <a name="transact-sql-ddl-trigger"></a>Déclencheur Transact-SQL DDL  
  Type spécial de procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] qui exécute une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] en réponse à un événement d'étendue de serveur ou de base de données. Par exemple, un déclencheur DDL peut être activé si une instruction comme ALTER SERVER CONFIGURATION est exécutée ou si une table est supprimée à l'aide de DROP TABLE.  
   
- Déclencheur DDL CLR  
+ ### <a name="clr-ddl-trigger"></a>Déclencheur DDL CLR  
  Au lieu d'exécuter une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] , un déclencheur CLR exécute une ou plusieurs méthodes écrites en code managé que les membres d'un assembly ont créées dans .NET Framework et téléchargées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Les déclencheurs DDL ne s'activent qu'après l'exécution des instructions DDL de déclenchement. Les déclencheurs DDL ne peuvent pas être utilisés comme déclencheurs INSTEAD OF. Les déclencheurs DDL ne sont pas activés en réponse à des événements qui concernent les tables et les procédures stockées temporaires locales ou globales.  
@@ -112,7 +112,7 @@ GO
   
  Pour obtenir la liste des groupes d’instructions DDL prédéfinis disponibles pour les déclencheurs DDL, connaître les instructions particulières qu’ils couvrent et les étendues selon lesquelles ces groupes d’événements peuvent être programmés, consultez [Groupes d’événements DDL](../../relational-databases/triggers/ddl-event-groups.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Tâche|Rubrique|  
 |----------|-----------|  

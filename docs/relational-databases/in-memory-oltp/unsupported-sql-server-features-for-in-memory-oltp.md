@@ -15,12 +15,13 @@ caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a7393dfd780eb62aa6dff5ca70d89f297dc6952
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: acf0e826c624d1b9c85095ff6ac2eabe0397a847
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541869"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,8 +84,8 @@ Les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s
 - Gestion basée sur des stratégies (PBM).
     - Les modes Prévention et Journal uniquement de PBM ne sont pas pris en charge. L'existence de ces stratégies sur le serveur peut empêcher l'exécution des déclencheurs DDL de l'OLTP en mémoire. Les modes À la demande et Selon la planification sont pris en charge.  
 
-- Le type de relation contenant-contenu de la base de donnée([bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)) n’est pas pris en charge avec l’OLTP en mémoire.
-    - L'authentification de la base de données à relation contenant-contenu est prise en charge. Toutefois, tous les objets OLTP en mémoire sont marqués comme étant des « relations contenant-contenu essentielles » dans la vue de gestion dynamique **dm_db_uncontained_entities**.
+- L’autonomie de la base de donnée ([bases de données autonomes](../../relational-databases/databases/contained-databases.md)) n’est pas prise en charge avec l’OLTP en mémoire.
+    - L'authentification de la base de données autonome est prise en charge. Toutefois, tous les objets OLTP en mémoire sont marqués comme étant des « relations contenant-contenu essentielles » dans la vue de gestion dynamique **dm_db_uncontained_entities**.
 
   
 ## <a name="see-also"></a> Voir aussi  

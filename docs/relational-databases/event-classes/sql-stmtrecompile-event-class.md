@@ -15,13 +15,13 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 63343f500b2c0e3d330a0fb84cb4ece4ff193c10
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 531161ab7ce88510d87b1735b522b72a46138841
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332360"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539089"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, classe d'événements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34332360"
 |SPID|**Int**|ID du processus serveur de la connexion.|12|Oui|  
 |SqlHandle|**varbinary**|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être passée à sys.dm_exec_sql_text pour récupérer le texte SQL associé.|63|non|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|**ntext**|Texte de l'instruction Transact-SQL qui a été recompilée.| 1|Oui|  
+|TextData|**ntext**|Texte de l'instruction Transact-SQL qui a été recompilée.|1|Oui|  
 |TransactionID|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|**bigint**|Jeton qui décrit la transaction en cours.|50|Oui|  
   

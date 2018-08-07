@@ -15,13 +15,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1064f0902369f81cff96f94ee68520ded419d39
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b532bf4cdc9f65fea1b988b13f865c1437e94c8a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330620"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546819"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login, classe d'événements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "34330620"
   
 |ID|Sous-classe|Description|  
 |--------|--------------|-----------------|  
-| 1|Login Success|Un événement Login Success indique que le processus de connexion du Broker adjacent s'est correctement terminé.|  
+|1|Login Success|Un événement Login Success indique que le processus de connexion du Broker adjacent s'est correctement terminé.|  
 |2|Login Protocol Error|Un événement Login Protocol Error indique que le Broker reçoit un message correct mais non valide pour l'état actuel du processus de connexion. Le message a peut-être été perdu ou envoyé hors séquence.|  
 |3|Message Format Error|Un événement Message Format Error indique que le Broker a reçu un message qui ne correspond pas au format attendu. Il est possible que le message ait été endommagé ou qu'un programme autre que SQL Server envoie les messages au port utilisé par Service Broker.|  
 |4|Negotiate Failure|Un événement Negotiate Failure indique que le Broker local et le Broker distant prennent en charge des niveaux d'authentification qui s'excluent mutuellement.|  

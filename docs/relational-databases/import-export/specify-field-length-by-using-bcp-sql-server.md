@@ -21,13 +21,13 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5bda4afe1b3c6b64ea1609412be66de03fa6329e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3014dc84d9d5d54a79536ffa010529dc373e00f9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940144"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535549"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Spécifier la longueur des champs au moyen de bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "32940144"
 |**nvarchar**|Le double de la longueur définie pour la colonne|  
 |**Texte**|0|  
 |**ntext**|0|  
-|**bit**| 1|  
+|**bit**|1|  
 |**binaire**|Le double de la longueur définie pour la colonne + 1|  
 |**varbinary**|Le double de la longueur définie pour la colonne + 1|  
 |**image**|0|  
@@ -104,7 +104,7 @@ ms.locfileid: "32940144"
   
 |Type de données|Longueur par défaut (en caractères)|  
 |---------------|-----------------------------------|  
-|**bit**| 1|  
+|**bit**|1|  
 |**binaire**|Longueur définie pour la colonne|  
 |**varbinary**|Longueur définie pour la colonne|  
 |**image**|0|  
@@ -115,7 +115,7 @@ ms.locfileid: "32940144"
 |**Int**|4|  
 |**bigint**|8|  
 |**smallint**|2|  
-|**tinyint**| 1|  
+|**tinyint**|1|  
 |**money**|8|  
 |**smallmoney**|4|  
 |**decimal**|*|  

@@ -15,12 +15,13 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 54ba7634152d355f16d73a48f0a430e83b861fc5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3a7c23b83d0ddd5c923dec9c39e582103f538d7c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558659"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/19/2018
 |SPID|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|**image**|Handle SQL permettant d'obtenir le texte SQL du lot à l'aide de la vue de gestion dynamique sys.dm_exec_sql_text.|63|Oui|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|**ntext**|Texte SQL du traitement.| 1|Oui|  
+|TextData|**ntext**|Texte SQL du traitement.|1|Oui|  
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/19/2018
 |SPID|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|**image**|Handle SQL permettant d'obtenir le texte SQL de la procédure stockée à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|**ntext**|NULL| 1|Oui|  
+|TextData|**ntext**|NULL|1|Oui|  
 |PlanHandle|**image**|Handle de plan du plan compilé pour la procédure stockée. Il peut servir à obtenir le plan XML à l'aide de la vue de gestion dynamique sys.dm_exec_query_plan.|65|Oui|  
 |ObjectType|**Int**|Valeur représentant le type de l'objet qui intervient dans l'événement.<br /><br /> 8272 = procédure stockée|28|Oui|  
 |BigintData2|**bigint**|Mémoire totale, en kilo-octets, utilisée au cours de la compilation.|53|Oui|  
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/19/2018
 |SPID|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|**image**|Handle SQL. Peut être utilisé pour obtenir le texte SQL du lot à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|**ntext**|NULL| 1|Oui|  
+|TextData|**ntext**|NULL|1|Oui|  
 |PlanHandle|**image**|Descripteur de plan du plan compilé pour le traitement. Il peut servir à obtenir le plan XML du lot à l'aide de la vue de gestion dynamique dm_exec_query_plan.|65|Oui|  
 |BigintData2|**bigint**|Mémoire totale, en kilo-octets, utilisée au cours de la compilation.|53|Oui|  
 |Unité centrale|**Int**|Durée UC totale, en microsecondes, passée au cours de la compilation.|18|Oui|  
@@ -111,7 +112,7 @@ ms.lasthandoff: 05/19/2018
 |SPID|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|**image**|Handle SQL permettant d'obtenir le texte SQL de la procédure stockée ou du lot à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|**ntext**|QueryExecutionStats| 1|Oui|  
+|TextData|**ntext**|QueryExecutionStats|1|Oui|  
 |PlanHandle|**image**|Descripteur de plan du plan compilé pour la procédure stockée ou du traitement. Il peut servir à obtenir le plan XML à l'aide de la vue de gestion dynamique dm_exec_query_plan.|65|Oui|  
 |GroupID|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 05/19/2018
 |SPID|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|**image**|Handle SQL permettant d'obtenir le texte SQL de la procédure stockée qui a été exécutée à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|**ntext**|ProcedureExecutionStats| 1|Oui|  
+|TextData|**ntext**|ProcedureExecutionStats|1|Oui|  
 |PlanHandle|**image**|Handle de plan du plan compilé pour la procédure stockée. Il peut servir à obtenir le plan XML à l'aide de la vue de gestion dynamique dm_exec_query_plan.|65|Oui|  
 |GroupID|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
   
@@ -151,7 +152,7 @@ ms.lasthandoff: 05/19/2018
 |SPID|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|**image**|Handle SQL permettant d'obtenir le texte SQL du déclencheur à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|**ntext**|TriggerExecutionStats| 1|Oui|  
+|TextData|**ntext**|TriggerExecutionStats|1|Oui|  
 |PlanHandle|**image**|Handle de plan du plan compilé pour le déclencheur. Il peut servir à obtenir le plan XML à l'aide de la vue de gestion dynamique dm_exec_query_plan.|65|Oui|  
 |GroupID|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
   
