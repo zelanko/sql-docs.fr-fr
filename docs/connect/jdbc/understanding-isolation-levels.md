@@ -1,7 +1,7 @@
 ---
-title: Niveaux d’isolement | Microsoft Docs
+title: Présentation des niveaux d’isolement | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7c09de18ede2c5230179f4ac4df68686d9d256c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 270ccbea5a7c12e8f7188cc4ad125e346a3eddd1
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039159"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278651"
 ---
 # <a name="understanding-isolation-levels"></a>Fonctionnement des niveaux d'isolement
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "38039159"
   
     -   Lecture de la modification des données non validées  
   
- Le choix d'un niveau d'isolement n'a aucune influence sur les verrous acquis pour protéger les modifications de données. Une transaction acquiert toujours un verrou exclusif sur les données qu'elle modifie et garde celui-ci jusqu'à ce qu'elle ait terminé son travail, indépendamment du niveau d'isolement défini pour elle. Dans le cas des opérations de lecture, le niveau d'isolation d'une transaction définit principalement son niveau de protection contre les effets des modifications apportées par les autres transactions.  
+ Le choix du niveau d’isolation de la transaction n’affecte pas les verrous acquis pour protéger les modifications de données. Une transaction acquiert toujours un verrou exclusif sur les données qu'elle modifie et garde celui-ci jusqu'à ce qu'elle ait terminé son travail, indépendamment du niveau d'isolement défini pour elle. Dans le cas des opérations de lecture, le niveau d'isolation d'une transaction définit principalement son niveau de protection contre les effets des modifications apportées par les autres transactions.  
   
- Plus le niveau d'isolement est faible, plus le nombre de personnes susceptibles d'accéder aux données en même temps est élevé, et plus les effets secondaires de la concurrence (lectures erronées, mises à jour perdues) sont nombreux. Inversement, plus le niveau d'isolement est élevé, plus le nombre de types d'effets secondaires de la concurrence qu'un utilisateur est susceptible de rencontrer est réduit. Cependant, la quantité de ressources système nécessaires et la probabilité d'un blocage mutuel de transactions sont plus élevées. Le choix du niveau d'isolation adéquat dépend d'une mise en équilibre de l'espace réservé et des exigences en matière d'intégrité des données de l'application. Le niveau le plus élevé, sérialisable, garantit qu'une transaction récupère exactement les mêmes données à chaque fois qu'elle répète une opération de lecture, mais en utilisant un niveau de verrouillage susceptible de gêner les autres utilisateurs dans les systèmes multi-utilisateurs. Le niveau le plus bas, lecture non validée, permet la récupération de données qui ont été modifiées mais non validées par d'autres transactions. Ce niveau permet l'apparition de tous les effets secondaires de la concurrence, mais la charge du système est réduite puisqu'il n'y a ni verrouillage de lecture, ni versioning de ligne.  
+ Plus le niveau d'isolement est faible, plus le nombre de personnes susceptibles d'accéder aux données en même temps est élevé, et plus les effets secondaires de la concurrence (lectures erronées, mises à jour perdues) sont nombreux. Inversement, plus le niveau d'isolement est élevé, plus le nombre de types d'effets secondaires de la concurrence qu'un utilisateur est susceptible de rencontrer est réduit. Cependant, la quantité de ressources système nécessaires et la probabilité d'un blocage mutuel de transactions sont plus élevées. Le choix du niveau d'isolation adéquat dépend d'une mise en équilibre de l'espace réservé et des exigences en matière d'intégrité des données de l'application. Le niveau le plus élevé, sérialisable, garantit qu'une transaction récupère exactement les mêmes données à chaque fois qu'elle répète une opération de lecture, mais en utilisant un niveau de verrouillage susceptible de gêner les autres utilisateurs dans les systèmes multi-utilisateurs. Le niveau le plus bas, lecture non validée, permet la récupération de données qui ont été modifiées mais non validées par d'autres transactions. Tous les effets secondaires de concurrence peuvent se produire en lecture de données non validées, mais il n’a pas de verrouillage ou de contrôle de version de lecture, ce qui réduit le traitement.  
   
 ## <a name="remarks"></a>Notes   
  Le tableau suivant répertorie les effets secondaires de la concurrence provoqués par les différents niveaux d'isolement.  
@@ -55,23 +55,23 @@ ms.locfileid: "38039159"
 |Snapshot|non|non|non|  
 |Sérialisable|non|non|non|  
   
- Les transactions doivent être exécutées à un niveau d'isolement au moins égal à lecture renouvelée afin d'empêcher les pertes de mises à jour qui peuvent se produire lorsque deux transactions extraient la même ligne, puis mettent ultérieurement à jour la ligne en fonction des valeurs extraites initialement. Si les deux transactions mettent à jour des lignes à l'aide d'une instruction UPDATE unique et qu'elles ne basent pas la mise à jour sur les valeurs extraites précédemment, aucune perte de mise à jour ne peut se produire au niveau d'isolement par défaut de lecture validée.  
+ Les transactions doivent être exécutées à un niveau d'isolement au moins égal à lecture renouvelée afin d'empêcher les pertes de mises à jour qui peuvent se produire lorsque deux transactions extraient la même ligne, puis mettent ultérieurement à jour la ligne en fonction des valeurs extraites initialement. Si les deux transactions mettent à jour des lignes avec une seule instruction UPDATE sans se baser sur les valeurs récupérées auparavant, les mises à jour perdues ne peuvent pas se produire au niveau d’isolation par défaut de la lecture de données validées.  
   
  Pour définir le niveau d’isolement pour une transaction, vous pouvez utiliser la méthode [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Cette méthode accepte une valeur **int** comme argument, qui est basée sur l’une des constantes de connexion comme dans l’exemple suivant :  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```  
   
- Pour utiliser le nouveau niveau d’isolement d’instantané de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous pouvez utiliser l’une des constantes SQLServerConnection comme dans l’exemple suivant :  
+ Pour appliquer le nouveau niveau d’isolement de capture instantanée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous pouvez utiliser l’une des constantes SQLServerConnection :  
   
-```  
+```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
 ```  
   
  ou vous pouvez utiliser :  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```  
   

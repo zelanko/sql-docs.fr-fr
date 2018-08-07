@@ -1,7 +1,7 @@
 ---
 title: Utilisation automatique de clés générées | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,23 +14,23 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be2799c9d1b4eae52dc2ede364b88099175f1adf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 61235c24ceac9182895e5c31c62b8d06f0462e72
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982143"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278790"
 ---
 # <a name="using-auto-generated-keys"></a>Utilisation de clés générées automatiquement
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge les API JDBC 3.0 facultatives afin de récupérer automatiquement les identificateurs de lignes générés. La principale utilité de cette fonctionnalité consiste à offrir un moyen de rendre des valeurs IDENTITY disponibles pour une application mettant à jour une table de base de données, sans nécessiter de requête ni de seconde boucle avec le serveur.  
   
- Comme [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ne prend pas en charge les pseudo colonnes pour les identificateurs, les mises à jour qui ont besoin d’utiliser la fonctionnalité de clé générée automatiquement doivent être appliquées à une table contenant une colonne IDENTITY. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] autorise une seule colonne IDENTITY par table. Le jeu de résultats retourné par la méthode [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) de la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) ne comprend qu’une seule colonne dont le nom retourné est GENERATED_KEYS. Si des clés générées sont demandées pour une table ne contenant pas de colonne IDENTITY, le pilote JDBC retourne un jeu de résultats de valeur « null ».  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ne prenant pas en charge les pseudo-colonnes pour les identificateurs, il est nécessaire que les mises à jour qui doivent utiliser la fonctionnalité de clé générée automatiquement soient appliquées à une table comportant une colonne IDENTITY. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] autorise une seule colonne IDENTITY par table. Le jeu de résultats retourné par la méthode [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) de la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) ne comprend qu’une seule colonne dont le nom retourné est GENERATED_KEYS. Si des clés générées sont demandées pour une table ne contenant pas de colonne IDENTITY, le pilote JDBC retourne un jeu de résultats de valeur « null ».  
   
  Par exemple, créez la table suivante dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] :  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   

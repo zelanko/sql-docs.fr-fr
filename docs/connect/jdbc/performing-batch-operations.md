@@ -1,7 +1,7 @@
 ---
-title: Exécution d’opérations de traitement par lots | Documents Microsoft
+title: Exécution d’opérations de traitement par lots | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,37 +14,37 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55470e4246256f2dfce11464ab8aafb9c9e7873c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c668dabd9b9a1957ffb69d034a59cc8df1cc4025
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831864"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279013"
 ---
 # <a name="performing-batch-operations"></a>Exécution d'opérations de traitement par lot
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Pour améliorer les performances lorsque plusieurs mises à jour à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données se produisent, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] offre la possibilité d’envoyer plusieurs mises à jour comme une seule unité de travail, également appelé un lot.  
+  Pour améliorer les performances d'exécution de plusieurs mises à jour d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] permet de les effectuer sous forme d'une seule unité de travail, également appelée lot.  
   
- Le [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), et [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) classes peuvent tous être utilisées pour envoyer des mises à jour par lots. Le [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) méthode est utilisée pour ajouter une commande. Le [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) méthode est utilisée pour effacer la liste des commandes. Le [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) méthode est utilisée pour envoyer toutes les commandes de traitement. Seules des instructions DDL (Data Definition Language, langage de définition de données) et DML (Data Manipulation Language, langage de manipulation de données) qui retournent un seul nombre de mises à jour peuvent être exécutées dans un lot.  
+ Les classes [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) et [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) sont toutes utilisables pour soumettre des mises à jour par lot. La méthode [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) permet d'ajouter une commande, la méthode [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) d'effacer la liste des commandes et la méthode [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) de soumettre toutes les commandes pour traitement. Seules des instructions DDL (Data Definition Language, langage de définition de données) et DML (Data Manipulation Language, langage de manipulation de données) qui retournent un seul nombre de mises à jour peuvent être exécutées dans un lot.  
   
- La méthode executeBatch retourne un tableau de **int** valeurs qui correspondent au nombre de mises à jour de chaque commande. Si une des commandes échoue, une BatchUpdateException est levée, et vous devez utiliser la méthode getUpdateCounts de la classe BatchUpdateException pour récupérer le tableau de nombres de mise à jour. En cas d'échec d'une commande, le pilote continue à traiter les commandes restantes. Toutefois, si une commande contient une erreur de syntaxe, les instructions contenues dans le lot échouent.  
+ La méthode executeBatch retourne un tableau de valeurs **int** correspondant au nombre de mises à jour de chaque commande. Si une des commandes échoue, une BatchUpdateException est levée, et vous devez utiliser la méthode getUpdateCounts de la classe BatchUpdateException pour récupérer le tableau de nombres de mise à jour. En cas d'échec d'une commande, le pilote continue à traiter les commandes restantes. Toutefois, si une commande contient une erreur de syntaxe, les instructions contenues dans le lot échouent.  
   
 > [!NOTE]  
->  Si vous n’avez pas à utiliser les mises à jour multiples, vous pouvez d’abord émettre une instruction SET NOCOUNT ON vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Ceci réduira le trafic réseau et améliorera les performances de votre application.  
+>  Si vous n’avez pas besoin d’utiliser les nombres de mises à jour, vous pouvez commencer par émettre une instruction SET NOCOUNT ON auprès de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Ceci réduira le trafic réseau et améliorera les performances de votre application.  
   
- Par exemple, créez la table suivante dans le [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de données exemple :  
+ Par exemple, créez la table suivante dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] :  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   
     Col3 int);  
 ```  
   
- Dans l’exemple suivant, une connexion ouverte à la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de données exemple est transmise à la fonction, la méthode addBatch permet de créer les instructions à exécuter, et la méthode executeBatch est appelée pour soumettre le lot à la base de données.  
+ Dans l'exemple suivant, une connexion ouverte à l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] est transmise à la fonction, la méthode addBatch est utilisée pour créer les instructions à exécuter et la méthode executeBatch est appelée pour soumettre le lot à la base de données.  
   
-```  
+```java
 public static void executeBatchUpdate(Connection con) {  
    try {  
       Statement stmt = con.createStatement();  
@@ -60,7 +60,7 @@ public static void executeBatchUpdate(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Utilisation d’instructions avec le pilote JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
