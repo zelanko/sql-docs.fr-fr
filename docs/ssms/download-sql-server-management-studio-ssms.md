@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 567833724450a0240d68c8195bddd2d68d5c11e6
-ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
+ms.openlocfilehash: cee1d100be0597bc5483d6df9666062d1046bb48
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39188935"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452523"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -146,7 +146,7 @@ Voici les problèmes et les limitations de cette version 17.8.1 :
 
 - Si l’utilisateur clique sur le bouton *Script* après avoir modifié une propriété du groupe de fichiers dans la fenêtre *Propriétés*, deux scripts sont générés : l’un avec une instruction *USE<database>* et l’autre avec une instruction *USE master*.  Le script avec *USE master* est généré par erreur et doit être ignoré. Exécutez le script qui contient l’instruction *USE<database>*.
 - Certaines boîtes de dialogue affichent une erreur d’édition non valide quand les nouvelles éditions *Usage général* ou *Critique pour l’entreprise* d’Azure SQL Database sont utilisées.
-- Il peut se produire une latence dans l’observateur XEvents. Il s’agit d’un [problème connu de .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Veuillez passer à la version NetFx 4.7.2.
+- Il peut se produire une latence dans l’observateur XEvents. Il s’agit d’un [problème connu du .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Veuillez passer à la version NetFx 4.7.2.
 - Le moniteur de réplication se bloque avec une erreur *Impossible de charger le fichier ou l’assembly...* . Pour contourner ce problème :
   1. Fermez *SqlMonitor.exe* (autrement dit, le moniteur de réplication) et SSMS.
   2. Téléchargez la mise à jour de *sqlmonitor.exe.config* à partir de [https://1drv.ms/u/s! AizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw).

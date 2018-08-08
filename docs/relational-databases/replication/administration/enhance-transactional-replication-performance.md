@@ -26,12 +26,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9314c7ffa3a25aa9feb0e8632c68667a4662f86e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a29b8d92aecddb64020bd12dfd4be4559f8c4399
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356051"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482680"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Améliorer les performances de la réplication transactionnelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,6 +124,36 @@ Il est possible d’indiquer une valeur pour le paramètre de cet agent à l’a
 
 Pour plus d’informations sur l’implémentation des flux d’abonnements, voir [Parcourir le paramètre subscriptionStream de réplication SQL](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting).
   
+### <a name="blocking-monitor-thread"></a>Thread de surveillance de blocage
+
+L’Agent de distribution gère un thread de surveillance de blocage qui détecte les blocages entre les sessions. Si le thread de surveillance de blocage détecte des blocages entre les sessions, l’Agent de distribution bascule pour utiliser une session permettant de réappliquer le lot actuel des commandes qui n’a pas pu être appliqué avant.
+
+Le thread de surveillance de blocage peut détecter des blocages entre les sessions de l’Agent de distribution. Toutefois, le thread de surveillance de blocage ne peut pas détecter les blocages dans les situations suivantes :
+- L’une des sessions où le blocage se produit n’est pas une session de l’Agent de distribution.
+- Un interblocage de session bloque les activités de l’Agent de distribution.
+
+Dans ce cas, l’Agent de distribution coordonne toutes les sessions à valider ensemble dès que leurs commandes sont exécutées. Un interblocage entre les sessions se produit si les conditions suivantes sont réunies :
+
+- Le blocage se produit entre les sessions de l’Agent de distribution et une session qui n’est pas une session de l’Agent de distribution.
+- L’Agent de distribution attend que toutes les sessions terminent l’exécution de leurs commandes avant de coordonner toutes les sessions à valider ensemble.
+
+Par exemple, vous configurez le paramètre *SubscriptionStreams* avec la valeur 8. La session 10 à la session 17 sont des sessions de l’Agent de distribution. La session 18 n’est pas une session de l’Agent de distribution. La session 10 est bloquée par la session 18 et la session 18 est bloquée par la session 11. De plus, la session 10 et la session 11 doivent être validées ensemble. Toutefois, l’Agent de distribution ne peut pas valider la session 10 et la session 11 ensemble en raison du blocage. Par conséquent, l’Agent de distribution ne peut pas coordonner ces huit sessions à valider ensemble tant que la session 10 et la session 11 n’ont pas terminé l’exécution de leurs commandes.
+
+Cet exemple aboutit à un état dans lequel aucune session n’exécute leurs commandes. Lorsque l’heure spécifiée dans la propriété **QueryTimeout** est atteinte, l’Agent de distribution annule toutes les sessions.
+
+> [!Note]
+> Par défaut, la valeur de la propriété **QueryTimeout** est de 5 minutes.
+
+Vous remarquerez peut-être les tendances suivantes dans les compteurs de performances de l’Agent de distribution pendant ce délai d’expiration de la requête : 
+
+- La valeur du compteur de performances **Serveur de distribution : commandes livrées/s** est toujours 0.
+- La valeur du compteur de performances **Serveur de distribution : transactions livrées/s** est toujours 0.
+- Le compteur de performances **Serveur de distribution : latence de livraison** indique une augmentation de la valeur jusqu’à ce que l’interblocage de thread soit résolu.
+
+La rubrique « Agent de distribution de réplication » dans la documentation en ligne de SQL Server contient la description suivante du paramètre *SubscriptionStreams* : « Si l’une des connexions ne parvient pas à s’exécuter ou à valider, toutes les connexions abandonnent le lot actuel et l’agent utilise un seul flux pour retenter les lots ayant échoué ».
+
+L’Agent de distribution utilise une session pour retenter le lot qui n’a pas pu être appliqué. Une fois que l’Agent de distribution applique correctement le lot, il reprend l’utilisation de plusieurs sessions sans avoir à redémarrer.
+
 #### <a name="commitbatchsize"></a>CommitBatchSize
 - Augmentez la valeur du paramètre **-CommitBatchSize** pour l’Agent de distribution.  
   

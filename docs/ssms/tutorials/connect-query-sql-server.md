@@ -12,12 +12,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: e487537bd5051d396e5f24243a33ded4aa38daf7
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988753"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367661"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutoriel : Se connecter à une instance SQL Server et l’interroger en utilisant SQL Server Management Studio
 Ce tutoriel vous apprend à utiliser SSMS (SQL Server Management Studio) pour vous connecter à votre instance SQL Server et exécuter des commandes T-SQL (Transact-SQL) de base. L’article explique comment effectuer les opérations suivantes :
@@ -70,7 +70,7 @@ Pour vérifier que votre connexion au serveur SQL Server a réussi, développez 
   >[!NOTE]
   > Dans ce tutoriel, vous avez utilisé précédemment l’*authentification Windows* pour vous connecter à votre serveur SQL Server local, mais cette méthode n’est pas prise en charge par SQL Azure DB. De ce fait, c’est l’authentification SQL qui est utilisée dans cette image pour établir une connexion à la base de données SQL Azure DB. Pour plus d’informations, consultez [Authentification locale SQL](../../relational-databases/security/choose-an-authentication-mode.md) et [Authentification SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access). 
 
-## <a name="create-a-database"></a>Créer une base de données
+## <a name="create-a-database"></a>création d'une base de données ;
 Créez une base de données appelée TutorialDB en procédant comme suit : 
 
 1. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur votre instance de serveur et sélectionnez **Nouvelle requête** :
@@ -184,5 +184,11 @@ Vous pouvez changer le serveur auquel votre fenêtre de requête actuelle est co
     > [!NOTE]
     > Cette action change uniquement le serveur auquel la fenêtre de requête est connectée, pas le serveur auquel l’Explorateur d’objets est connecté. 
 
+## <a name="next-steps"></a>Étapes suivantes
+L’article suivant vous apprend à scripter différents objets dans SQL Server Management Studio. 
+
+Passez à l’article suivant pour en savoir plus :
+> [!div class="nextstepaction"]
+> [Étapes suivantes](scripting-ssms.md)
 
 

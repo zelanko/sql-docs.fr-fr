@@ -54,6 +54,8 @@
       href: install/sql-ml-component-commandline-install.md
     - name: Configuration en mode hors connexion (sans Internet)
       href: install/sql-ml-component-install-without-internet-access.md
+    - name: Téléchargements de CAB (installation hors connexion)
+      href: install/sql-ml-cab-downloads.md
     - name: Mise à niveau de R et Python
       href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
     - name: Configurer les outils R
