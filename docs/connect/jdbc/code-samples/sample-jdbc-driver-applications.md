@@ -1,7 +1,7 @@
 ---
-title: Exemples d’Applications du pilote JDBC | Documents Microsoft
+title: Exemples d’Applications de pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,34 +14,37 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee89352cca231307b2f55402fb04b0c709786bd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c62942580b403bbacd62c6fc65e0a19b0960f1e6
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830234"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457813"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Exemples d'applications du pilote JDBC
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Les [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] exemples d’applications illustrent diverses fonctionnalités du pilote JDBC. En outre, ils présentent les bonnes pratiques de programmation que vous pouvez suivre lors de l’utilisation du pilote JDBC avec une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données.  
+Les exemples d’applications de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] illustrent diverses fonctionnalités du pilote JDBC. En outre, ils présentent les bonnes pratiques de programmation que vous pouvez suivre lors de l’utilisation du pilote JDBC avec une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
- Tous les exemples d'applications sont contenus dans les fichiers de code *.java qui peuvent être compilés et exécutés sur votre ordinateur local ; ils se trouvent dans plusieurs sous-dossiers à l'emplacement suivant :  
-  
- \<*répertoire d’installation*> \sqljdbc_\<*version*>\\<*langage*> \samples  
-  
+Tous les exemples d'applications sont contenus dans les fichiers de code *.java qui peuvent être compilés et exécutés sur votre ordinateur local ; ils se trouvent dans plusieurs sous-dossiers à l'emplacement suivant :  
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples  
+```
+
  Les rubriques de cette section décrivent la configuration et l'exécution des exemples d'applications et incluent une présentation de ce que montrent les exemples d'applications.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
-|-----------|-----------------|  
-|[Connexion et récupération de données](../../../connect/jdbc/connecting-and-retrieving-data.md)|Ces exemples d’applications montrent comment se connecter à un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données. Ils présentent également différentes façons récupérer des données à partir d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données.|  
-|[Utilisation des Types de données &#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)|Ces exemples d’applications montrent comment utiliser les méthodes de type de données de pilote JDBC pour travailler avec des données dans un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données.|  
-|[Utilisation de jeux de résultats](../../../connect/jdbc/working-with-result-sets.md)|Ces exemples d’applications montrent comment utiliser des jeux de résultats pour traiter les données contenues dans un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données.|  
-|[Utilisation de données volumineuses](../../../connect/jdbc/working-with-large-data.md)|Ces exemples d’applications montrent comment utiliser la mise en mémoire tampon adaptative pour récupérer des données de grande valeur d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données sans la surcharge des curseurs côté serveur.|  
+| Rubrique                                                                                                                  | Description                                                                                                                                                                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Connexion et récupération de données](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)                              | Ces exemples d’applications présentent la connexion à une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Ils présentent également différentes façons de récupérer des données à partir d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. |
+| [Utiliser des types de données &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)                        | Ces exemples d’applications présentent l’utilisation des méthodes des types de données du pilote JDBC pour travailler avec des données dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].                                                                                              |
+| [Utilisation de jeux de résultats](../../../connect/jdbc/code-samples/working-with-result-sets.md)                                          | Ces exemples d’applications présentent l’utilisation de jeux de résultats pour traiter des données contenues dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].                                                                                                            |
+| [Utilisation de données volumineuses](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | Ces exemples d’applications montrent comment utiliser la mise en mémoire tampon adaptative pour récupérer des données de valeur élevée d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sans la charge mémoire associée aux curseurs côté serveur.                                                         |
+| [Découverte et classification des données SQL](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | Cet exemple d’application montre comment récupérer les informations de Classification et de découverte de données contenues dans un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] base de données à partir d’un objet de jeu de résultats à l’aide du pilote JDBC.                                            |
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du pilote JDBC](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
-  
+## <a name="see-also"></a> Voir aussi
+
+[Vue d’ensemble du pilote JDBC](../../../connect/jdbc/overview-of-the-jdbc-driver.md)

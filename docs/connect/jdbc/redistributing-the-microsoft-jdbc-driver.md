@@ -1,7 +1,7 @@
 ---
-title: Redistribution du pilote Microsoft JDBC | Documents Microsoft
+title: Redistribution du pilote JDBC de Microsoft | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,18 +14,18 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4879fa6bf41179d78ddf73d4f5847ebf9514220e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3d872a8d5027820c389dbd139e80403ac268496e
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828454"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39458223"
 ---
 # <a name="redistributing-the-microsoft-jdbc-driver"></a>Redistribution du pilote Microsoft JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-and-64-driver"></a>Redistribuer le pilote Microsoft JDBC 4.1, 4.2, 6.0, 6.2 et 6.4
-Les pilotes JDBC 4.1, 4.2, 6.0, 6.2 et 6.4 peuvent être redistribués. Passez en revue la clause « Code distribuable » dans les contrats de licence pour le 4.1, 4.2, 6.0, 6.2 et 6.4 versions du pilote.
+## <a name="redistribute-the-microsoft-jdbc-41-42-60-62-64-and-70-driver"></a>Redistribuer le pilote Microsoft JDBC 4.1, 4.2, 6.0, 6.2, 6.4 et 7.0
+Les pilotes JDBC 4.1, 4.2, 6.0, 6.2, 6.4 et 7.0 peuvent être redistribués. Passez en revue la clause « Code distribuable » dans les contrats de licence pour le 4.1, 4.2, 6.0, 6.2, 6.4 et 7.0 versions du pilote.
     
 ## <a name="register-to-redistribute-the-microsoft-jdbc-40-driver"></a>S’inscrire pour redistribuer le pilote Microsoft JDBC 4.0.  
  Le pilote Microsoft JDBC 4.0 nécessite l’inscription avant que vous le redistribuer. Cliquez sur le lien suivant pour passer en revue le contrat de licence pour la version 4.0 du pilote.  Si vous le souhaitez, vous pouvez imprimer et conserver une copie du contrat de licence pour vos archives.  
@@ -34,8 +34,8 @@ Les pilotes JDBC 4.1, 4.2, 6.0, 6.2 et 6.4 peuvent être redistribués. Passez e
   
  [Licence de redistribution pour Microsoft JDBC Driver 4.0 pour SQL Server](https://msdn.microsoft.com/sqlserver/jj589698)  
   
- Remarque : Microsoft utilise compte Microsoft pour l’inscription et l’authentification sécurisée. Lorsque vous inscrivez pour les droits de redistribution pour SQL Server JDBC Driver Redistribution via un compte Microsoft, vous devrez fournir des informations qui fait partie de votre profil sécurisé.  
+ Remarque : Microsoft utilise compte Microsoft pour l’inscription et l’authentification sécurisée. Quand vous vous inscrivez pour les droits de redistribution du pilote JDBC pour SQL Server via un compte Microsoft, vous devez fournir des informations qui feront partie de votre profil sécurisé.  
   
- Si vous n’avez pas une déjà, vous pouvez obtenir un [compte Microsoft](https://signup.live.com/)  
+ Si vous n’avez pas un déjà, vous pouvez obtenir un [compte Microsoft](https://signup.live.com/)  
   
   

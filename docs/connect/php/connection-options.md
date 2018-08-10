@@ -1,7 +1,7 @@
 ---
 title: Options de connexion | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,19 +14,19 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7408af86aee324d63998ab8d0bce1f5dc0e616
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 81dc9e66bee9411841a3ee421adb73840bb2b783
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174936"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367641"
 ---
 # <a name="connection-options"></a>Options de connexion
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette rubrique répertorie les options autorisées dans le tableau associatif (durant l’utilisation de [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) dans le pilote SQLSRV), ou les mots clés autorisés dans le nom de source de données (dsn) (durant l’utilisation de [PDO::__construct](../../connect/php/pdo-construct.md) dans le pilote PDO_SQLSRV).  
 
-## <a name="table-of-connection-options"></a>Tableau des Options de connexion
+## <a name="table-of-connection-options"></a>Tableau des options de connexion
 |Key|Valeur|Description|Valeur par défaut|  
 |-------|---------|---------------|-----------|  
 |APP|String|Spécifie le nom de l’application utilisé dans le suivi.|Aucune valeur n’est définie.|  
@@ -56,7 +56,7 @@ Cette rubrique répertorie les options autorisées dans le tableau associatif (d
 |TraceFile|String|Spécifie le chemin du fichier utilisé pour les données de trace.|Aucune valeur n’est définie.|  
 |TraceOn|1 ou **true** pour activer le traçage.<br /><br />0 ou **false** pour désactiver le traçage.|Spécifie si le traçage ODBC est activé (1 ou **true**) ou désactivé (0 or **false**) pour la connexion établie.|**false** (0)|  
 |TransactionIsolation|Le pilote SQLSRV utilise les valeurs suivantes :<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />Le pilote PDO_SQLSRV utilise les valeurs suivantes :<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Spécifie le niveau d’isolation de la transaction.<br /><br />Pour plus d’informations sur l’isolation des transactions, consultez [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) dans la documentation SQL Server.|SQLSRV_TXN_READ_COMMITTED<br /><br />ou Gestionnaire de configuration<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|transparentNetworkIPResolution|**Activé** ou **Désactivé**|Affecte la séquence de connexion lors de la première résolu l’adresse IP du nom d’hôte ne répond pas et il y a plusieurs adresses IP associé avec le nom d’hôte.<br /><br />Il interagit avec MultiSubnetFailover pour fournir des séquences de connexion différents. Pour plus d’informations, consultez [résolution d’adresses IP de réseau Transparent à l’aide de](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Activé|
+|transparentNetworkIPResolution|**Activé** ou **Désactivé**|Affecte la séquence de connexion lors de la première résolu l’adresse IP du nom d’hôte ne répond pas et il y a plusieurs adresses IP associé avec le nom d’hôte.<br /><br />Il interagit avec MultiSubnetFailover pour fournir des séquences de connexion différents. Pour plus d’informations, consultez [résolution d’adresses IP réseau transparente](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) ou [résolution d’adresses IP de réseau Transparent à l’aide de](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Activé|
 |TrustServerCertificate|1 ou **true** pour approuver le certificat.<br /><br />0 ou **false** pour ne pas approuver le certificat.|Spécifie si le client doit approuver (1 ou **true**) ou rejeter (0 ou **false**) un certificat de serveur auto-signé.|**false** (0)|  
 |UID<br /><br />(non pris en charge dans le pilote PDO_SQLSRV)|String|Spécifie l’ID utilisateur à utiliser lors de la connexion avec l’authentification SQL Server<sup>4</sup>.|Aucune valeur n’est définie.|  
 |WSID|String|Spécifie le nom de l’ordinateur pour le traçage.|Aucune valeur n’est définie.|  
@@ -69,7 +69,7 @@ Cette rubrique répertorie les options autorisées dans le tableau associatif (d
 
 4. Instance de *UID* et *PWD* doivent tous deux être définis lors de la connexion avec l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
 
-Une grande partie des clés prises en charge sont des attributs de chaîne de connexion ODBC. Pour plus d’informations sur les chaînes de connexion ODBC, consultez [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+Une grande partie des clés prises en charge sont des attributs de chaîne de connexion ODBC. Pour plus d’informations sur les chaînes de connexion ODBC, consultez [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
 ## <a name="see-also"></a> Voir aussi  
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)  

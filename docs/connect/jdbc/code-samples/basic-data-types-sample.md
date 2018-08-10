@@ -1,7 +1,7 @@
 ---
 title: Exemple de Types de données de base | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,61 +14,45 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1807de415a5e9641ab431ca7fed123fb097eb90e
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 98c351eef36810032e55941683996c007a8c39d3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279160"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452072"
 ---
 # <a name="basic-data-types-sample"></a>Exemple de types de données de base
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] montre comment utiliser les méthodes getter du jeu de résultats pour récupérer les valeurs des types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] de base ; il montre également comment utiliser les méthodes update du jeu de résultats pour mettre à jour ces valeurs.  
+Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] montre comment utiliser les méthodes getter du jeu de résultats pour récupérer des valeurs de types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] de base ; il explique également comment se servir des méthodes update du jeu de résultats pour mettre à jour ces valeurs.  
   
- Le fichier de code de cet exemple est nommé BasicDT.java et se trouve à l’emplacement suivant :  
-  
- \<*répertoire d’installation*> \sqljdbc_\<*version*>\\<*langage*> \samples\datatypes  
-  
+Le fichier de code de cet exemple, BasicDataTypes.java, se trouve à l’emplacement suivant :  
+
+```
+\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
+```
+
 ## <a name="requirements"></a>Spécifications  
- Pour exécuter cet exemple d’application, vous devez définir le classpath de façon à inclure le fichier jar mssql-jdbc. Vous devez également avoir accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
-  
- Créez la table suivante et l’exemple de données dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] :  
-  
-```sql
-use AdventureWorks  
-CREATE TABLE DataTypesTable   
-   (Col1 int IDENTITY,   
-    Col2 char,  
-    Col3 varchar(50),   
-    Col4 bit,  
-    Col5 decimal(18, 2),  
-    Col6 money,  
-    Col7 datetime,  
-    Col8 date,  
-    Col9 time,  
-    Col10 datetime2,  
-    Col11 datetimeoffset  
-    );  
-  
-INSERT INTO DataTypesTable   
-VALUES ('A', 'Some text.', 0, 15.25, 10.00, '01/01/2006 23:59:59.991', '01/01/2006', '23:59:59', '01/01/2006 23:59:59.12345', '01/01/2006 23:59:59.12345 -1:00')  
-```  
+
+Pour exécuter cet exemple d’application, définissez le classpath de façon à inclure le fichier jar mssql-jdbc. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fournit les fichiers de bibliothèques de classes mssql-jdbc à utiliser en fonction de vos paramètres JRE (Java Runtime Environment). Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+> Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
-## <a name="example"></a> Exemple  
- Dans l’exemple suivant, l’exemple de code établit une connexion à la base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)], puis extrait une seule ligne de données de la table de test DataTypesTable. La méthode personnalisée displayRow est alors appelée pour afficher toutes les données du jeu de résultats avec différentes méthodes get\<Type> de la classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
+## <a name="example"></a> Exemple
+
+Dans l’exemple suivant, le code établit une connexion à la base de données, puis récupère une seule ligne de données de la table de test DataTypesTable. La méthode personnalisée displayRow est alors appelée pour afficher toutes les données du jeu de résultats avec différentes méthodes get\<Type> de la classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
- Ensuite, l’exemple utilise plusieurs méthodes update\<Type> de la classe SQLServerResultSet pour mettre à jour les données du jeu de résultats, puis il appelle la méthode [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) pour réenregistrer ces données dans la base de données.  
+Ensuite, l’exemple utilise plusieurs méthodes update\<Type> de la classe SQLServerResultSet pour mettre à jour les données du jeu de résultats, puis appelle la méthode [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) pour réenregistrer ces données dans la base de données.  
   
- Enfin, l’exemple actualise les données dans le jeu de résultats et appelle ensuite la méthode displayRow personnalisée pour l’afficher.  
-  
+Enfin, l’exemple actualise les données dans le jeu de résultats et appelle ensuite la méthode displayRow personnalisée pour l’afficher.  
+
 ```java
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -79,16 +63,21 @@ import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
 
 import microsoft.sql.DateTimeOffset;
 
-public class BasicDT {
+public class BasicDataTypes {
+    private static final String tableName = "DataTypesTable";
+
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);) {
 
-            String SQL = "SELECT * FROM DataTypesTable";
+            dropAndCreateTable(stmt);
+            insertOriginalData(con);
+
+            String SQL = "SELECT * FROM " + tableName;
             ResultSet rs = stmt.executeQuery(SQL);
             rs.next();
             displayRow("ORIGINAL DATA", rs);
@@ -138,10 +127,38 @@ public class BasicDT {
                 ((SQLServerResultSet) rs).getDateTimeOffset(11)); // SQL datetimeoffset type.
         System.out.println();
     }
+
+    private static void dropAndCreateTable(Statement stmt) throws SQLException {
+        stmt.executeUpdate("if object_id('" + tableName + "','U') is not null" + " drop table " + tableName);
+
+        String sql = "create table " + tableName + " (" + "c1 int, " + "c2 char(20), " + "c3 varchar(20), " + "c4 bit, "
+                + "c5 decimal(10,5), " + "c6 money, " + "c7 datetime, " + "c8 date, " + "c9 time(7), "
+                + "c10 datetime2(7), " + "c11 datetimeoffset(7), " + ");";
+
+        stmt.execute(sql);
+    }
+
+    private static void insertOriginalData(Connection con) throws SQLException {
+        String sql = "insert into " + tableName + " values( " + "?,?,?,?,?,?,?,?,?,?,?" + ")";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            pstmt.setObject(1, 100);
+            pstmt.setObject(2, "original text");
+            pstmt.setObject(3, "original text");
+            pstmt.setObject(4, false);
+            pstmt.setObject(5, 12.34);
+            pstmt.setObject(6, 56.78);
+            pstmt.setObject(7, new java.util.Date(1453500034839L));
+            pstmt.setObject(8, new java.util.Date(1453500034839L));
+            pstmt.setObject(9, new java.util.Date(1453500034839L));
+            pstmt.setObject(10, new java.util.Date(1453500034839L));
+            pstmt.setObject(11, new java.util.Date(1453500034839L));
+            pstmt.execute();
+        }
+    }
 }
-```  
-  
+```
+
 ## <a name="see-also"></a> Voir aussi  
- [Utilisation des types de données &#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
-  
+
+[Utiliser des types de données &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)  
   
