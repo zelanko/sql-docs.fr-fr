@@ -1,22 +1,26 @@
 - name: Types CLR définis par l'utilisateur
   href: clr-user-defined-types.md
-- name: "Accès aux types définis par l’utilisateur\_- Extraction de données UDT"
-  href: accessing-user-defined-types-retrieving-udt-data.md
-- name: "Accès aux types définis par l’utilisateur\_- Mise à jour de colonnes UDT avec DataAdapters"
-  href: accessing-user-defined-types-updating-udt-columns-with-dataadapters.md
-- name: Accès aux types définis par l'utilisateur dans ADO.NET
-  href: accessing-user-defined-types-in-ado-net.md
-- name: "Création de types définis par l’utilisateur\_- Codage"
-  href: creating-user-defined-types-coding.md
-- name: "Création de types définis par l’utilisateur\_- Exigences"
-  href: creating-user-defined-types-requirements.md
-- name: Création de types définis par l’utilisateur
-  href: creating-user-defined-types.md
-- name: Inscription des types définis par l'utilisateur dans SQL Server
-  href: registering-user-defined-types-in-sql-server.md
-- name: "Utilisation de types définis par l’utilisateur\_- Définition de tables et de colonnes UDT"
-  href: working-with-user-defined-types-defining-udt-tables-and-columns.md
-- name: "Utilisation de types définis par l’utilisateur\_- Manipulation de données UDT"
-  href: working-with-user-defined-types-manipulating-udt-data.md
-- name: Utilisation de types définis par l'utilisateur dans SQL Server
-  href: working-with-user-defined-types-in-sql-server.md
+  items:
+    - name: Création de types définis par l’utilisateur
+      href: creating-user-defined-types.md
+      items:
+        - name: "Création de types définis par l’utilisateur\_- Exigences"
+          href: creating-user-defined-types-requirements.md
+        - name: "Création de types définis par l’utilisateur\_- Codage"
+          href: creating-user-defined-types-coding.md
+    - name: Inscription des types définis par l'utilisateur dans SQL Server
+      href: registering-user-defined-types-in-sql-server.md
+    - name: Utilisation de types définis par l'utilisateur dans SQL Server
+      href: working-with-user-defined-types-in-sql-server.md
+      items:
+        - name: "Utilisation de types définis par l’utilisateur\_- Définition de tables et de colonnes UDT"
+          href: working-with-user-defined-types-defining-udt-tables-and-columns.md
+        - name: "Utilisation de types définis par l’utilisateur\_- Manipulation de données UDT"
+          href: working-with-user-defined-types-manipulating-udt-data.md
+    - name: Accès aux types définis par l'utilisateur dans ADO.NET
+      href: accessing-user-defined-types-in-ado-net.md
+      items:
+        - name: "Accès aux types définis par l’utilisateur\_- Extraction de données UDT"
+          href: accessing-user-defined-types-retrieving-udt-data.md
+        - name: "Accès aux types définis par l’utilisateur\_- Mise à jour de colonnes UDT avec DataAdapters"
+          href: accessing-user-defined-types-updating-udt-columns-with-dataadapters.md
