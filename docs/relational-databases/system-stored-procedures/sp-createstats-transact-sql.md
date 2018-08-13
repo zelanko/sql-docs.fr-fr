@@ -1,5 +1,5 @@
 ---
-title: sp_createstats (Transact-SQL) | Documents Microsoft
+title: sp_createstats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c37e65276e14bc8687f9ffceb1f5a2a5f3ca655
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 75e05e36dfea3a36fa01d08ca79b22c3abb7e2c4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239849"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555159"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Appelle le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction pour créer des statistiques de colonne unique sur les colonnes qui ne sont pas déjà la première colonne dans un objet de statistiques. Création des statistiques de colonne unique augmente le nombre d’histogrammes, ce qui peut améliorer les estimations de cardinalité, les plans de requête et les performances des requêtes. La première colonne d'un objet de statistiques comporte un histogramme ; les autres colonnes n'ont pas d'histogramme.  
+  Appelle le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction pour créer des statistiques de colonnes uniques sur les colonnes qui ne sont pas déjà la première colonne dans un objet de statistiques. Création de statistiques de colonne unique augmente le nombre d’histogrammes, ce qui peut améliorer les estimations de cardinalité, les plans de requête et les performances des requêtes. La première colonne d'un objet de statistiques comporte un histogramme ; les autres colonnes n'ont pas d'histogramme.  
   
- sp_createstats est utile aux applications de tests des performances, par exemple, pour lesquelles les délais d'exécution des requêtes sont critiques, car il n'est pas possible d'attendre que l'optimiseur de requête génère des statistiques de colonnes uniques. Dans la plupart des cas, il n’est pas nécessaire d’utiliser sp_createstats ; l’optimiseur de requête génère des statistiques de colonnes uniques selon les besoins pour améliorer les plans lorsque le **AUTO_CREATE_STATISTICS** option est activée.  
+ sp_createstats est utile aux applications de tests des performances, par exemple, pour lesquelles les délais d'exécution des requêtes sont critiques, car il n'est pas possible d'attendre que l'optimiseur de requête génère des statistiques de colonnes uniques. Dans la plupart des cas, il n’est pas nécessaire d’utiliser sp_createstats ; l’optimiseur de requête génère des statistiques de colonne unique en fonction des besoins pour améliorer les plans lorsque le **AUTO_CREATE_STATISTICS** option est activée.  
   
- Pour plus d’informations sur les statistiques, consultez [statistiques](../../relational-databases/statistics/statistics.md). Pour plus d’informations sur la génération de statistiques de colonne unique, consultez le **AUTO_CREATE_STATISTICS** option [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Pour plus d’informations sur les statistiques, consultez [Statistiques](../../relational-databases/statistics/statistics.md). Pour plus d’informations sur la génération de statistiques de colonnes uniques, consultez le **AUTO_CREATE_STATISTICS** option [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +59,7 @@ sp_createstats
  [  **@fullscan=** ] **« fullscan »**  
  Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **FULLSCAN** option. **FULLSCAN** est **char (9)**.  La valeur par défaut est NO.  
   
- [  **@norecompute=** ] **'norecompute'**  
+ [  **@norecompute=** ] **« norecompute »**  
  Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **NORECOMPUTE** option. **NORECOMPUTE** est **char(12)**.  La valeur par défaut est NO.  
   
  [  **@incremental=** ] **'incremental'**  
@@ -72,11 +72,11 @@ sp_createstats
  Chaque nouvel objet de statistiques porte le même nom que la colonne sur laquelle il est créé.  
   
 ## <a name="remarks"></a>Notes  
- sp_createstats ne pas créer ou mettre à jour les statistiques sur les colonnes qui constituent la première colonne dans un objet de statistiques existant ;  Cela inclut la première colonne de statistiques créées pour les index, les colonnes ayant des statistiques de colonne unique générés avec l’option AUTO_CREATE_STATISTICS et la première colonne de statistiques créées avec l’instruction CREATE STATISTICS. sp_createstats ne crée pas de statistiques sur les premières colonnes d’index désactivés, sauf si cette colonne est utilisée dans un autre index activé. sp_createstats ne crée pas de statistiques sur les tables avec un index cluster désactivé.  
+ sp_createstats ne pas créer ou mettre à jour des statistiques sur les colonnes qui constituent la première colonne dans un objet de statistiques existant ;  Cela inclut la première colonne de statistiques créées pour les index, les colonnes avec des statistiques de colonnes uniques générées avec l’option AUTO_CREATE_STATISTICS et la première colonne de statistiques créées avec l’instruction CREATE STATISTICS. sp_createstats ne crée pas de statistiques sur les premières colonnes des index désactivés, sauf si cette colonne est utilisée dans un autre index activé. sp_createstats ne crée pas de statistiques sur des tables avec un index cluster désactivé.  
   
  Lorsque la table contient un jeu de colonnes, sp_createstats ne crée pas de statistiques sur les colonnes éparses. Pour plus d’informations sur les jeux de colonnes et les colonnes éparses, consultez [utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md) et [utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ## <a name="examples"></a>Exemples  

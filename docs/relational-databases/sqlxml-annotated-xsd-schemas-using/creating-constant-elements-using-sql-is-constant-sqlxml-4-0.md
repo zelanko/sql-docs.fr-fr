@@ -1,5 +1,5 @@
 ---
-title: 'Création d’éléments constants à l’aide de sql : est-constant (SQLXML 4.0) | Documents Microsoft'
+title: 'Création d’éléments constants à l’aide de sql : est-constant (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,23 +23,23 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81ee34607d198e88eee397b9c9f254f2133d1b22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8bf343e639eb17b370729f22e45385ebfd53d7b0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969384"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538429"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Création d'éléments constants à l'aide de sql:is-constant (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Pour spécifier un élément constant : autrement dit, un élément dans le schéma XSD qui n’est pas mappée à aucune table de base de données ou d’une colonne, vous pouvez utiliser la **sql : constante est** annotation. Cette annotation accepte une valeur booléenne (0 = false, 1 = true). Les valeurs acceptables sont 0, 1, true et false. Le **sql : constante est** annotation peut être spécifiée sur un élément qui n’a pas d’attributs. Si elle est spécifiée sur un élément qui a la valeur true (ou 1), cet élément n'est pas mappé à la base de données mais apparaît néanmoins dans le document XML.  
+  Pour spécifier un élément constant, autrement dit, un élément dans le schéma XSD qui n’est pas mappé à aucune table de base de données ou d’une colonne, vous pouvez utiliser la **sql : constante est** annotation. Cette annotation accepte une valeur booléenne (0 = false, 1 = true). Les valeurs acceptables sont 0, 1, true et false. Le **sql : constante est** annotation peut être spécifiée sur un élément qui n’a pas d’attributs. Si elle est spécifiée sur un élément qui a la valeur true (ou 1), cet élément n'est pas mappé à la base de données mais apparaît néanmoins dans le document XML.  
   
  Le **sql : constante est** annotation peut être utilisée pour :  
   
 -   ajouter un élément de niveau supérieur au document XML. Le code XML requiert un seul élément de niveau supérieur (élément racine) pour le document ;  
   
--   Création d’éléments de conteneur, comme un  **\<commandes >** élément qui encapsule toutes les commandes.  
+-   Créer des éléments de conteneur, comme un  **\<Orders >** élément qui encapsule toutes les commandes.  
   
  Le **sql : constante est** annotation peut être ajoutée à un  **\<complexType >** élément.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "32969384"
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Spécification de sql:is-constant pour ajouter un élément conteneur  
- Ce schéma XSD, annotés  **\<CustomerOrders >** est défini comme un élément constant en spécifiant le **sql : constante est** attribut avec une valeur de 1. Par conséquent,  **\<CustomerOrders >** n’est pas mappé à aucune table de base de données ou de la colonne. Cet élément constant se compose de la  **\<ordre >** des éléments enfants.  
+ Ce schéma XSD, annotés  **\<CustomerOrders >** est défini comme un élément constant en spécifiant le **sql : constante est** attribut avec une valeur de 1. Par conséquent,  **\<CustomerOrders >** n’est pas mappé à aucune table de base de données ou de la colonne. Cet élément constant se compose de la  **\<ordre >** éléments enfants.  
   
- Bien que  **\<CustomerOrders >** ne correspond pas à une table de base de données ou une colonne, il apparaît toujours dans le XML résultant comme un élément conteneur qui contient le  **\<ordre >** des éléments enfants.  
+ Bien que  **\<CustomerOrders >** ne mappe pas à aucune table de base de données ou d’une colonne, il apparaît toujours dans le XML résultant comme un élément conteneur qui contient le  **\<ordre >** éléments enfants.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

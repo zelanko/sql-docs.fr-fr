@@ -22,13 +22,13 @@ caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b9e5b528afe048052b3709886a85d7ab6b853777
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 78504222e9dbe50b29868eb935f4948772d8e204
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005826"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533699"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -81,7 +81,7 @@ Si *objname* n’est pas spécifié, les résultats sont retournés pour la base
 |Valeur|Description|  
 |-----------|-----------------|  
 |0|Lorsque *@objname* a la valeur null ou n’est ne pas spécifié, les deux jeux de résultats est retournés. Deux jeux de résultats est le comportement par défaut.|  
-| 1|Lorsque *@objname* = null ou n’est ne pas spécifié, un seul jeu de résultats est retourné.|  
+|1|Lorsque *@objname* = null ou n’est ne pas spécifié, un seul jeu de résultats est retourné.|  
   
  *oneresultset* est **bits**, avec une valeur par défaut **0**.  
 
@@ -184,7 +184,7 @@ Si *objname* est omis, la valeur d’oneresultset est 1, et *include_total_xtp_s
 > [!NOTE]  
 >  Lorsque vous supprimez ou reconstruisez des index volumineux ou lorsque vous supprimez ou tronquez des tables volumineuses, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] diffère les désallocations des pages actives et de leurs blocs associés jusqu'à ce que la transaction soit validée. Les opérations de suppression différées ne libèrent pas immédiatement l'espace alloué. Par conséquent, les valeurs retournées par **sp_spaceused** immédiatement après la suppression ou la troncature d’un objet volumineux peuvent ne pas refléter l’espace disque réellement disponible.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L’autorisation d’exécuter **sp_spaceused** est accordée au rôle **public** . Seuls les membres du rôle de base de données fixe **db_owner** peuvent spécifier le paramètre **@updateusage** .  
   
 ## <a name="examples"></a>Exemples  

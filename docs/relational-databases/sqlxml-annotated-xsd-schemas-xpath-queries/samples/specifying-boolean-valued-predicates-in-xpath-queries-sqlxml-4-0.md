@@ -1,5 +1,5 @@
 ---
-title: Spécification de prédicats à valeurs booléennes dans des requêtes XPath (SQLXML 4.0) | Documents Microsoft
+title: Spécification de prédicats à valeurs booléennes dans des requêtes XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,17 +23,17 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aad334864e5b0aa26fa4d7e1a8e9a0e3ae4aff0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 44bb23ca6b42dbeb016c91baff519833d1180e74
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972864"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555499"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Spécification de prédicats booléens dans les requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Les exemples suivants montrent comment les prédicats booléens sont spécifiés dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath & #40 ; SQLXML 4.0 & #41 ; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  Les exemples suivants montrent comment les prédicats booléens sont spécifiés dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -96,7 +96,7 @@ ms.locfileid: "32972864"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. Spécifier les prédicats consécutifs et imbriqués  
- La requête suivante affiche l'utilisation de prédicats consécutifs. La requête retourne tous les le  **\<client >** des éléments enfants du nœud de contexte qui ont à la fois un **SalesPersonID** attribut avec une valeur 277 et un **TerritoryID** attribut avec une valeur de 3 :  
+ La requête suivante affiche l'utilisation de prédicats consécutifs. La requête retourne tous les  **\<client >** les éléments enfants du nœud de contexte qui ont les deux un **SalesPersonID** attribut avec la valeur 277 et un **TerritoryID**attribut avec une valeur de 3 :  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
@@ -104,13 +104,13 @@ ms.locfileid: "32972864"
   
  La requête retourne les  **\<client >** les éléments qui satisfont les conditions spécifiées dans les prédicats.  
   
- Un raccourci vers le **attribut** axe (@) peut être spécifié et parce que le **enfant** axe est la valeur par défaut, il peut être omis dans la requête :  
+ Un raccourci vers le **attribut** axe (@) peut être spécifié et parce que le **enfant** axe est la valeur par défaut, il peut être omis de la requête :  
   
 ```  
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- La requête XPath suivante illustre l'utilisation de prédicats imbriqués. La requête retourne tous les le  **\<client >** des éléments enfants du nœud de contexte qui incluent  **\<ordre >** avec au moins un des éléments enfants  **\<ordre >** élément ayant une **SalesPersonID** attribut la valeur 2.  
+ La requête XPath suivante illustre l'utilisation de prédicats imbriqués. La requête retourne tous les  **\<client >** les éléments enfants du nœud de contexte qui incluent  **\<ordre >** éléments enfants avec au moins un  **\<Ordre >** élément qui possède un **SalesPersonID** attribut la valeur 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  

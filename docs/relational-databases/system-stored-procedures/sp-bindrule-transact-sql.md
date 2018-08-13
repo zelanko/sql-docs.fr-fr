@@ -1,5 +1,5 @@
 ---
-title: sp_bindrule (Transact-SQL) | Documents Microsoft
+title: sp_bindrule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff3dda4304d1dae1fc8183a667507867893f1bdc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 15576737e238ebd81d36e1ab2ff3090f6aa30791
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239949"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560719"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33239949"
   Lie une règle à une colonne ou un type de données d'alias.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez[Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md) à la place. Les contraintes CHECK sont créées à l’aide du mot clé de vérification de la [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) instructions.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez[Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md) à la place. Les contraintes CHECK sont créées à l’aide du mot clé CHECK de la [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) instructions.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,13 +53,13 @@ sp_bindrule [ @rulename = ] 'rule' ,
  [  **@rulename=**] **'***règle***'**  
  Nom d'une règle créée par l'instruction CREATE RULE. *règle* est **nvarchar(776)**, sans valeur par défaut.  
   
- [  **@objname=**] **'***nom_objet***'**  
+ [  **@objname=**] **'***object_name***'**  
  Table ou colonne, ou bien type de données d'alias auquel la règle doit être liée. Une règle ne peut pas être liée à un type **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, à un type CLR défini par l’utilisateur, ou à une colonne **timestamp**. Enfin, une règle ne peut pas être liée à une colonne calculée.  
   
- *nom_objet* est **nvarchar(776)** sans valeur par défaut. Si *nom_objet* est un nom d’une seule partie, il est résolu en tant que type de données alias. S'il s'agit d'un nom en deux ou trois parties, il est d'abord résolu en tant que table et colonne. Si la résolution échoue, il est résolu en tant que type de données d'alias. Par défaut, les colonnes existantes du type de données alias héritent *règle* , sauf si une règle a été liée directement à la colonne.  
+ *object_name* est **nvarchar(776)** sans valeur par défaut. Si *object_name* est un nom d’une seule partie, il est résolu comme un type de données alias. S'il s'agit d'un nom en deux ou trois parties, il est d'abord résolu en tant que table et colonne. Si la résolution échoue, il est résolu en tant que type de données d'alias. Par défaut, les colonnes existantes du type de données alias héritent *règle* , sauf si une règle a été liée directement à la colonne.  
   
 > [!NOTE]  
->  *nom_objet* peut contenir le crochet **[** et **]** caractères identificateur délimité. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+>  *object_name* peut contenir le crochet **[** et **]** caractères comme des caractères d’identificateur délimité. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
 >  Les règles créées sur des expressions utilisant des types de données d'alias peuvent être liées à des colonnes ou des types de données d'alias, mais ne peuvent pas être compilées lorsqu'elles sont référencées. Évitez d'utiliser des règles créées sur des types de données d'alias.  
@@ -79,7 +79,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
   
  Lorsque vous liez une règle à une colonne, l’information correspondante est ajoutée à la **sys.columns** table. Lorsque vous liez une règle à un type de données alias, l’information correspondante est ajoutée à la **sys.types** table.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour lier une règle à une colonne de table, une autorisation ALTER est nécessaire sur la table. Pour lier une règle à un type de données d'alias, il est nécessaire de disposer d'une autorisation CONTROL sur le type de données d'alias ou d'une autorisation ALTER sur le schéma auquel le type appartient.  
   
 ## <a name="examples"></a>Exemples  
@@ -94,7 +94,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. Liaison d'une règle à un type de données d'alias  
- En supposant l'existence d'une règle nommée `rule_ssn` et d'un type de données d'alias nommé `ssn`, cet exemple lie `rule_ssn` à `ssn`. Toutes les colonnes créées par une instruction CREATE TABLE avec le type de données `ssn` héritent de la règle `rule_ssn`. Les colonnes existantes de type `ssn` héritent également la `rule_ssn` règle, sauf si **futureonly** est spécifiée pour *futureonly_flag*, ou `ssn` est une règle liée directement à. Les règles liées à des colonnes ont toujours priorité sur les règles liées à des types de données.  
+ En supposant l'existence d'une règle nommée `rule_ssn` et d'un type de données d'alias nommé `ssn`, cet exemple lie `rule_ssn` à `ssn`. Toutes les colonnes créées par une instruction CREATE TABLE avec le type de données `ssn` héritent de la règle `rule_ssn`. Les colonnes existantes de type `ssn` héritent également la `rule_ssn` règle, sauf si **futureonly** est spécifiée pour *futureonly_flag*, ou `ssn` dispose d’une règle directement liée. Les règles liées à des colonnes ont toujours priorité sur les règles liées à des types de données.  
   
 ```  
 USE master;  
@@ -112,7 +112,7 @@ EXEC sp_bindrule rule_ssn, 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. À l’aide d’identificateurs délimités  
- L’exemple suivant illustre l’utilisation des identificateurs délimités dans *nom_objet* paramètre.  
+ L’exemple suivant illustre l’utilisation d’identificateurs délimités dans *object_name* paramètre.  
   
 ```  
 USE master;  

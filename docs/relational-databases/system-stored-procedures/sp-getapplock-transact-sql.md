@@ -1,5 +1,5 @@
 ---
-title: sp_getapplock (Transact-SQL) | Documents Microsoft
+title: sp_getapplock (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 16d750e07e8c61959e43fe15e1e3cfb47c8bf1c0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ce5a2f5350a16024dcefbdd3e162212a60d98059
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261668"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555679"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,30 +51,30 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @Resource=] '*nom_ressource*'  
+ [ @Resource=] '*resource_name*'  
  Chaîne de caractères qui indique le nom qui identifie la ressource de verrou. L'application doit vérifier que le nom de ressource est unique. Le nom spécifié est haché en interne en une valeur qui peut être stockée dans le gestionnaire de verrous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* est **nvarchar (255)** sans valeur par défaut. Si une chaîne de ressource est supérieure à **nvarchar (255)**, il est tronqué à **nvarchar (255)**.  
   
- *resource_name* est binaire et est donc la casse, indépendamment des paramètres de classement de la base de données en cours.  
+ *resource_name* est binaire par rapport et par conséquent respecte la casse, quel que soit les paramètres de classement de la base de données actuelle.  
   
 > [!NOTE]  
 >  Une fois qu'un verrou d'application a été acquis, seuls les 32 premiers caractères peuvent être récupérés sous forme de texte brut ; les autres caractères sont hachés.  
   
  [ @LockMode=] '*argument lock_mode*'  
- Mode de verrouillage à obtenir pour une ressource spécifique. L’argument *lock_mode* est de type **nvarchar(32)** et n’a pas de valeur par défaut. La valeur peut être une des opérations suivantes : **Shared**, **mise à jour**, **IntentShared**, **IntentExclusive**, ou **exclusif**.  
+ Mode de verrouillage à obtenir pour une ressource spécifique. L’argument *lock_mode* est de type **nvarchar(32)** et n’a pas de valeur par défaut. La valeur peut être une des opérations suivantes : **partagé**, **mise à jour**, **IntentShared**, **IntentExclusive**, ou **exclusif** .  
   
  [ @LockOwner=] '*lock_owner*'  
- Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est de type **nvarchar(32)**. La valeur peut être **Transaction** (valeur par défaut) ou **Session**. Lorsque le *lock_owner* valeur est **Transaction**, par défaut ou spécifiée explicitement, sp_getapplock doit être exécutée à partir d’une transaction.  
+ Propriétaire du verrou, qui est la valeur de *lock_owner* lorsque le verrou a été demandé. *lock_owner* est de type **nvarchar(32)**. La valeur peut être **Transaction** (valeur par défaut) ou **Session**. Lorsque le *lock_owner* valeur est **Transaction**, par défaut ou spécifié explicitement, sp_getapplock doit être exécutée à partir d’une transaction.  
   
  [ @LockTimeout=] '*valeur*'  
- Valeur de délai d'attente de verrou, en millisecondes. La valeur par défaut est la même que la valeur renvoyée par@LOCK_TIMEOUT. Pour indiquer qu'une demande de verrou doit retourner une erreur plutôt que d'attendre le verrou quand elle ne peut pas être accordée immédiatement, spécifiez 0.  
+ Valeur de délai d'attente de verrou, en millisecondes. La valeur par défaut est identique à la valeur retournée par@LOCK_TIMEOUT. Pour indiquer qu'une demande de verrou doit retourner une erreur plutôt que d'attendre le verrou quand elle ne peut pas être accordée immédiatement, spécifiez 0.  
   
- [ @DbPrincipal=] '*principal_base_de_données*'  
- Utilisateur, rôle ou rôle d'application qui dispose d'autorisations sur un objet d'une base de données. L’appelant de la fonction doit être un membre du *principal_base_de_données*, dbo ou db_owner fixe le rôle de base de données pour pouvoir appeler la fonction. La valeur par défaut est public.  
+ [ @DbPrincipal=] '*database_principal*'  
+ Utilisateur, rôle ou rôle d'application qui dispose d'autorisations sur un objet d'une base de données. L’appelant de la fonction doit être un membre du *database_principal*, dbo ou db_owner de rôle de base de données pour pouvoir appeler la fonction fixe. La valeur par défaut est public.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  \>= 0 (succès) ou < 0 (échec)  
   
-|Valeur|Résultat|  
+|Valeur|Résultats|  
 |-----------|------------|  
 |0|Le verrou a été accordé de manière synchrone.|  
 |1|Le verrou a été accordé après attente de la libération des autres verrous incompatibles.|  
@@ -141,7 +141,7 @@ GO
   
  Utilisez la vue de gestion dynamique sys.dm_tran_locks ou la procédure stockée système sp_lock pour examiner les informations de verrou. Vous pouvez également utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour surveiller les verrous.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,5 +1,5 @@
 ---
-title: sp_helptrigger (Transact-SQL) | Documents Microsoft
+title: sp_helptrigger (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c6c78c302266ce3a9e29c432e1a913c263d704
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6435e1b79907debc159b3ba39eb35980b783c791
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255087"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566233"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne le ou les types de déclencheurs DML définis sur la table spécifiée de la base de données actuelle. sp_helptrigger ne peut pas être utilisé avec des déclencheurs DDL. Requête le [procédures stockées système](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) affichage du catalogue à la place.  
+  Retourne le ou les types de déclencheurs DML définis sur la table spécifiée de la base de données actuelle. Impossible d’utiliser sp_helptrigger avec des déclencheurs DDL. Requête la [procédures stockées système](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) vue de catalogue à la place.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ sp_helptrigger [ @tabname = ] 'table'
  [  **@triggertype=** ] **'***type***'**  
  Type du déclencheur DML pour lequel des informations doivent être renvoyées. *type* est **char (6)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**DELETE**|Renvoie des informations sur le déclencheur DELETE.|  
 |**INSERT**|Renvoie des informations sur le déclencheur INSERT.|  
@@ -64,18 +64,18 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="result-sets"></a>Jeux de résultats  
  La table ci-dessous décrit les informations figurant dans le jeu de résultats.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|Nom du déclencheur.|  
 |**trigger_owner**|**sysname**|Nom du propriétaire de la table pour laquelle le déclencheur est défini.|  
-|**isupdate**|**int**|1 = déclencheur UPDATE<br /><br /> 0 = n'est pas un déclencheur UPDATE|  
-|**isdelete**|**int**|1 = déclencheur DELETE<br /><br /> 0 = n'est pas un déclencheur DELETE|  
-|**propriété EstInsertion**|**int**|1 = déclencheur INSERT<br /><br /> 0 = n'est pas un déclencheur INSERT|  
-|**isafter**|**int**|1 = déclencheur AFTER<br /><br /> 0 = n'est pas un déclencheur AFTER|  
-|**isinsteadof**|**int**|1 = déclencheur INSTEAD OF<br /><br /> 0 = n'est pas un déclencheur INSTEAD OF|  
+|**isupdate**|**Int**|1 = déclencheur UPDATE<br /><br /> 0 = n'est pas un déclencheur UPDATE|  
+|**isdelete**|**Int**|1 = déclencheur DELETE<br /><br /> 0 = n'est pas un déclencheur DELETE|  
+|**propriété EstInsertion**|**Int**|1 = déclencheur INSERT<br /><br /> 0 = n'est pas un déclencheur INSERT|  
+|**isafter**|**Int**|1 = déclencheur AFTER<br /><br /> 0 = n'est pas un déclencheur AFTER|  
+|**isinsteadof**|**Int**|1 = déclencheur INSTEAD OF<br /><br /> 0 = n'est pas un déclencheur INSTEAD OF|  
 |**trigger_schema**|**sysname**|Nom du schéma auquel le déclencheur appartient.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) autorisation sur la table.  
   
 ## <a name="examples"></a>Exemples  

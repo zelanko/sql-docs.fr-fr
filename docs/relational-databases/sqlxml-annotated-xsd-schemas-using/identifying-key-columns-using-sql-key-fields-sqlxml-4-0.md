@@ -1,5 +1,5 @@
 ---
-title: 'Identification des colonnes de clés à l’aide de SQL : Key-champs (SQLXML 4.0) | Documents Microsoft'
+title: 'Identification des colonnes de clé à l’aide de SQL : key-fields (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a96060e6efaf0623cbc4c9fb738af3863f1010fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3e75779626c8769c609fa27f97b44562d3e9a8aa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971324"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535559"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identification de colonnes clés à l'aide de sql:key-fields (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "32971324"
 > [!NOTE]  
 >  Pour garantir l’imbrication correcte, il est recommandé de spécifier **SQL : Key-champs** pour les éléments qui mappent aux tables. Le XML produit est sensible au classement du jeu de résultats sous-jacent. Si **SQL : Key-champs** n’est pas spécifié, le code XML généré ne peut pas être formé correctement.  
   
- La valeur de **SQL : Key-champs** identifie les colonnes qui identifient de manière unique les lignes de la relation. Si plusieurs colonnes sont requises pour identifier une ligne de manière unique, les valeurs de colonnes sont délimitées par des espaces.  
+ La valeur de **SQL : Key-champs** identifie les ou les colonnes qui identifient de manière unique les lignes de la relation. Si plusieurs colonnes sont requises pour identifier une ligne de manière unique, les valeurs de colonnes sont délimitées par des espaces.  
   
  Vous devez utiliser le **SQL : Key-champs** annotation lorsqu’un élément contient un  **\<SQL : Relationship >** qui est défini entre l’élément et un élément enfant, mais ne fournit pas la clé primaire de la table qui est spécifiée dans l’élément parent.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "32971324"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Spécification de sql:key-fields afin de produire l'imbrication correcte dans le résultat  
- Dans le schéma suivant, il n’existe aucune hiérarchie spécifiée à l’aide de  **\<SQL : Relationship >**. Le schéma requiert encore la spécification du **SQL : Key-champs** annotation pour identifier de façon unique les employés dans la table HumanResources.Employee.  
+ Dans le schéma suivant, il n’existe aucune hiérarchie spécifiée à l’aide de  **\<SQL : Relationship >**. Le schéma requiert encore la spécification du **SQL : Key-champs** annotation pour identifier les employés dans la table HumanResources.Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -179,7 +179,7 @@ ms.locfileid: "32971324"
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

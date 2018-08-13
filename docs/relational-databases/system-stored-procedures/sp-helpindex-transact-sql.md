@@ -1,5 +1,5 @@
 ---
-title: sp_helpindex (Transact-SQL) | Documents Microsoft
+title: sp_helpindex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e6e64715eeb893e1a93df1c1c7c52b62e0d18d4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6560726bb583d823ad0cf0b36310eb68691705f2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255378"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547619"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helpindex [ @objname = ] 'name'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|Nom de l’index.|  
 |**index_description**|**varchar(210)**|Description d'index incluant le groupe de fichiers sur lequel il est situé.|  
@@ -62,11 +62,11 @@ sp_helpindex [ @objname = ] 'name'
  Le nom d'une colonne indexée décroissante apparaît dans l'ensemble de résultats, suivi du signe moins (-) ; une colonne indexée croissante (l'ordre de tri par défaut) apparaît sous son seul nom.  
   
 ## <a name="remarks"></a>Notes  
- Si l’index ont été définis à l’aide de l’option NORECOMPUTE de UPDATE STATISTICS, cette information est incluse dans le **index_description** colonne.  
+ Si l’index ont été définis à l’aide de l’option NORECOMPUTE de UPDATE STATISTICS, ces informations sont incluses dans le **index_description** colonne.  
   
- **sp_helpindex** expose uniquement les colonnes d’index pouvant être ordonnées ; par conséquent, il n’expose pas d’informations sur les index XML ou spatiaux.  
+ **sp_helpindex** expose uniquement les colonnes d’index pouvant être ordonnées ; par conséquent, elle n’expose pas d’informations sur les index XML ou spatiaux.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

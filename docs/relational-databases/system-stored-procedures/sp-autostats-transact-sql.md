@@ -1,5 +1,5 @@
 ---
-title: sp_autostats (Transact-SQL) | Documents Microsoft
+title: sp_autostats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ab8716d2a4580edf9d9cdb34a849210d60f31d17
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5e1b26b708db7fc435ea6f37ce81e6ff734e5f7d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239859"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553439"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,21 +74,21 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Si *indicateur_stats* n’est pas spécifié, **sp_autostats** retourne le jeu de résultats suivant.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Nom de l'index**|**varchar(60)**|Nom de l'index ou des statistiques.|  
 |**STATISTIQUES AUTOMATIQUES**|**varchar(3)**|Valeur actuelle de l'option AUTO_UPDATE_STATISTICS.|  
 |**Dernière mise à jour**|**datetime**|Date de la mise à jour des statistiques la plus récente.|  
   
- Le jeu de résultats pour une table ou vue indexée comprend les statistiques créées pour les index, les statistiques de colonne unique générés avec l’option AUTO_CREATE_STATISTICS et aux statistiques créées avec la [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction.  
+ Le jeu de résultats pour une table ou vue indexée comprend les statistiques créées pour les index, statistiques de colonnes uniques générées avec l’option AUTO_CREATE_STATISTICS et aux statistiques créées avec le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction.  
   
 ## <a name="remarks"></a>Notes  
  Si l'index spécifié est désactivé ou si la table spécifiée a un index cluster désactivé, un message d'erreur s'affiche.  
   
  AUTO_UPDATE_STATISTICS est toujours désactivé (OFF) pour les tables optimisées en mémoire.  
   
-## <a name="permissions"></a>Autorisations  
- Pour modifier l’option AUTO_UPDATE_STATISTICS option requiert l’appartenance au **db_owner** fixe du rôle de base de données ou l’autorisation ALTER sur *table_name*. Pour afficher l’option AUTO_UPDATE_STATISTICS option nécessite l’appartenance dans le **public** rôle.  
+## <a name="permissions"></a>Permissions  
+ Pour modifier l’option AUTO_UPDATE_STATISTICS option requiert l’appartenance au **db_owner** fixe de rôle de base de données, ou l’autorisation ALTER *table_name*. Pour afficher l’option AUTO_UPDATE_STATISTICS, option nécessite l’appartenance au **public** rôle.  
   
 ## <a name="examples"></a>Exemples  
   

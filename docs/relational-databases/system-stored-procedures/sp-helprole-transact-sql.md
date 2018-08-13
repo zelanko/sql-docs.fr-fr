@@ -1,5 +1,5 @@
 ---
-title: sp_helprole (Transact-SQL) | Documents Microsoft
+title: sp_helprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cd4ea621669688065075a3ff3894bbce369a54a1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 10d457eaf25531790df63d4128a3d77d4ed30fb9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250268"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538399"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,23 +46,23 @@ sp_helprole [ [ @rolename = ] 'role' ]
   
 ## <a name="arguments"></a>Arguments  
  [  **@rolename =** ] **'***rôle***'**  
- Nom d'un rôle dans la base de données active. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* doit exister dans la base de données actuelle. Si *rôle* est ne pas spécifié, informations sur tous les rôles de base de données active sont renvoyées.  
+ Nom d'un rôle dans la base de données active. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* doit exister dans la base de données actuelle. Si *rôle* est ne pas spécifié, les informations sur tous les rôles de base de données active sont renvoyées.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|Nom du rôle dans la base de données en cours.|  
 |**RoleId**|**smallint**|ID de **RoleName**.|  
-|**IsAppRole**|**int**|0 = **RoleName** n’est pas un rôle d’application.<br /><br /> 1 = **RoleName** est un rôle d’application.|  
+|**IsAppRole**|**Int**|0 = **RoleName** n’est pas un rôle d’application.<br /><br /> 1 = **RoleName** est un rôle d’application.|  
   
 ## <a name="remarks"></a>Notes  
  Pour afficher les autorisations associées au rôle, utilisez **sp_helprotect**. Pour afficher les membres d’un rôle de base de données, utilisez **sp_helprolemember**.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

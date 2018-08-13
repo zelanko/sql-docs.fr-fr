@@ -1,5 +1,5 @@
 ---
-title: Spécification d’un axe (SQLXML 4.0) | Documents Microsoft
+title: Spécification d’un axe (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -25,12 +25,13 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8659d8187042b0c40d2890e5a4feaf367efc7203
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 09c2ddbbe478672c610ed33c4c5efd55ddf0ad57
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551219"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Spécification d'un axe (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
      Contient l'enfant du nœud du contexte.  
   
-     L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne dans le nœud de contexte actuel tous les  **\<client >** enfants :  
+     L’expression XPath suivante (chemin d’accès d’emplacement) sélectionne à partir du nœud de contexte actuel tous les  **\<client >** enfants :  
   
     ```  
     child::Customer  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
      Contient l'attribut du nœud du contexte.  
   
-     L’expression XPath suivante sélectionne la **CustomerID** attribut du nœud de contexte :  
+     L’expression XPath suivante sélectionne le **CustomerID** attribut du nœud de contexte :  
   
     ```  
     attribute::CustomerID  

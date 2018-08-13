@@ -1,5 +1,5 @@
 ---
-title: Visual Studio connecté. Enregistrées ou non les Modifications | Microsoft Docs
+title: Modifications Enregistrées ou non les Modifications | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,15 +26,15 @@ ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 65bdc58fa1693fbb08fdff4b348eb5fe7e181637
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b84160c6f054c5ff24230df3bb84a213f2d31919
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419608"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536759"
 ---
-# <a name="logged-vs-unlogged-modifications"></a>Visual Studio connecté. Modifications non enregistrées
+# <a name="logged-vs-unlogged-modifications"></a>Modifications enregistrées ou non enregistrées
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

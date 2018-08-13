@@ -1,5 +1,5 @@
 ---
-title: sp_helplanguage (Transact-SQL) | Documents Microsoft
+title: sp_helplanguage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fdea1704b8942191bf79cb9074715f61eb9a9e81
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 29f366517986620444e018a5348e623aa541b00a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260432"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560629"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,28 +47,28 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="arguments"></a>Arguments  
  [  **@language=** ] **'***langage***'**  
- Nom de la langue de remplacement au sujet de laquelle fournir des informations. *langage* est **sysname**, avec NULL comme valeur par défaut. Si *langage* est spécifié, les informations sur le langage spécifié sont retournées. Si la langue n’est pas spécifié, les informations sur toutes les langues dans le **sys.syslanguages** vue de compatibilité est retournée.  
+ Nom de la langue de remplacement au sujet de laquelle fournir des informations. *langage* est **sysname**, avec NULL comme valeur par défaut. Si *langage* est spécifié, les informations sur le langage spécifié sont retournées. Si la langue n’est pas spécifiée, des informations sur toutes les langues dans le **sys.syslanguages** affichage de compatibilité est retournée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**ID de langue**|**smallint**|Numéro d'identification de la langue.|  
 |**dateformat**|**nchar(3)**|Format de la date.|  
 |**DATEFIRST**|**tinyint**|Premier jour de la semaine : 1 pour lundi, 2 pour mardi, etc., jusqu'à 7 pour dimanche.|  
-|**Mise à niveau**|**int**|Version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la dernière mise à niveau pour cette langue.|  
+|**Mise à niveau**|**Int**|Version [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la dernière mise à niveau pour cette langue.|  
 |**nom**|**sysname**|Nom de la langue.|  
 |**alias**|**sysname**|Nom de remplacement de la langue.|  
-|**Mois**|**nvarchar(372)**|Noms des mois.|  
+|**mois**|**nvarchar(372)**|Noms des mois.|  
 |**ShortMonths**|**nvarchar(132)**|Abréviations des noms des mois.|  
-|**Jours d’utilisation**|**nvarchar(217)**|Noms des jours.|  
-|**lcid**|**int**|ID de paramètres régionaux Windows pour la langue.|  
+|**Jours**|**nvarchar(217)**|Noms des jours.|  
+|**LCID**|**Int**|ID de paramètres régionaux Windows pour la langue.|  
 |**msglangid**|**smallint**|ID du groupe de messages du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

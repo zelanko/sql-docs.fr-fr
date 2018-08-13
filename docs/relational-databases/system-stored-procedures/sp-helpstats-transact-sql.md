@@ -1,5 +1,5 @@
 ---
-title: sp_helpstats (Transact-SQL) | Documents Microsoft
+title: sp_helpstats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eda430dedf39538c27f85d0ea11ca59bbfdc5e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 42d35f6890a5bfc686274510ee7ed4328e2860c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251635"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547559"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,11 +49,11 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@objname=**] **'***nom_objet***'**  
- Spécifie la table au sujet de laquelle les informations statistiques doivent être fournies. *nom_objet* est **nvarchar(520)** et ne peut pas être null. Vous pouvez spécifier un nom en une ou deux parties.  
+ [  **@objname=**] **'***object_name***'**  
+ Spécifie la table au sujet de laquelle les informations statistiques doivent être fournies. *object_name* est **nvarchar(520)** et ne peut pas être null. Vous pouvez spécifier un nom en une ou deux parties.  
   
  [  **@results=**] **'***valeur***'**  
- Désigne l'étendue des informations à fournir. Les entrées valides sont **tous les** et **statistiques**. **Tous les** répertorie les statistiques de tous les index et également les colonnes ayant des statistiques créées sur ces derniers ; **Statistiques** répertorie uniquement les statistiques non associées à un index. *valeur* est **nvarchar (5)** avec STATS comme valeur par défaut.  
+ Désigne l'étendue des informations à fournir. Les entrées valides sont **tous les** et **statistiques**. **Tous les** répertorie les statistiques de tous les index et également les colonnes qui possèdent des statistiques créées sur ces derniers ; **Statistiques** répertorie uniquement les statistiques non associées à un index. *valeur* est **nvarchar (5)** avec STATS comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -61,7 +61,7 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>Jeux de résultats  
  Le tableau suivant décrit les colonnes du jeu de résultats.  
   
-|Nom de colonne| Description|  
+|Nom de colonne|Description|  
 |-----------------|-----------------|  
 |**statistics_name**|Nom des statistiques. Retourne **sysname** et ne peut pas être null.|  
 |**statistics_keys**|Clés sur lesquelles sont basées les statistiques. Retourne **nvarchar (2078)** et ne peut pas être null.|  
@@ -69,7 +69,7 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="remarks"></a>Notes  
  Utilisez DBCC SHOW_STATISTICS pour afficher des informations statistiques détaillées sur l'index ou les statistiques de votre choix. Pour plus d’informations, consultez [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) et [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

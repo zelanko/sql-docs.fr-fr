@@ -25,13 +25,13 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab6fb39894c7cbe10be6d00d5fc74e782ca5650e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ed20abe081acad3ef1c653f3041006c6453e4607
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061948"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540639"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "38061948"
 |**réservé**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**Int**|Identificateur de la valeur par défaut pour cette colonne|  
-|**fichier journal**|**Int**|Identificateur de la règle ou de la contrainte CHECK pour cette colonne|  
+|**Domaine**|**Int**|Identificateur de la règle ou de la contrainte CHECK pour cette colonne|  
 |**Nombre**|**smallint**|Numéro de sous-procédure pour les procédures groupées.<br /><br /> 0 = entrées qui ne décrivent pas une procédure|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -68,7 +68,7 @@ ms.locfileid: "38061948"
 |**usertype**|**smallint**|ID de type de données défini par l’utilisateur à partir de **sys.types**. Déborde ou retourne la valeur NULL si le nombre de types de données dépasse 32 767.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**PREC**|**smallint**|Niveau de précision de cette colonne<br /><br /> -1 = **xml** ou type de valeur élevée.|  
-|**mise à l’échelle**|**Int**|Échelle de cette colonne<br /><br /> NULL = le type de données est non numérique.|  
+|**Mise à l’échelle**|**Int**|Échelle de cette colonne<br /><br /> NULL = le type de données est non numérique.|  
 |**IsComputed**|**Int**|Indicateur signalant si la colonne est calculée :<br /><br /> 0 = Non calculée<br /><br /> 1 = Calculée|  
 |**isoutparam**|**Int**|Indique si le paramètre de la procédure est un paramètre de sortie ou non :<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**IsNullable**|**Int**|Indique si les colonnes autorisent les valeurs NULL :<br /><br /> 1 = True<br /><br /> 0 = False|  
