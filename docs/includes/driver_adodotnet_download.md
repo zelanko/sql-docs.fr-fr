@@ -1,1 +1,0 @@
-![Télécharger](../ssdt/media/download.png)[Télécharger le pilote .Net](http://www.microsoft.com/net/download/)

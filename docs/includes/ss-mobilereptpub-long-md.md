@@ -1,1 +1,0 @@
-Éditeur de rapports mobiles SQL Server 

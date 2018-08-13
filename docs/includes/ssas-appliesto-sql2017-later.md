@@ -1,1 +1,0 @@
-**S’APPLIQUE À :**![oui](media/yes.png)SQL Server Analysis Services (à partir de la version 2017)![non](media/no.png)Azure Analysis Services
