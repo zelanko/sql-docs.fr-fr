@@ -14,27 +14,27 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72b354c805a3d46dd31f6f9df308e33493c2db2c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 125c15caac95f152c6f5009b1a794bd0fb625a2c
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992931"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661861"
 ---
-# <a name="using-savepoints"></a>Utilisation de points de sauvegarde
+# <a name="using-savepoints"></a>Utilisation de points d'enregistrement
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Les points de sauvegarde constituent un mécanisme permettant d'annuler certaines parties de transactions. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous pouvez créer un point de sauvegarde à l’aide de l’instruction SAVE TRANSACTION savepoint_name. Par la suite, vous pourrez exécuter une instruction ROLLBACK TRANSACTION nom_point_enregistrement pour revenir au point de sauvegarde au lieu de revenir au début de la transaction.  
-  
- Les points de sauvegarde sont particulièrement utiles lorsque des erreurs sont peu susceptibles de se produire. L'utilisation d'un point de sauvegarde pour annuler une partie d'une transaction en cas d'erreur non fréquente peut s'avérer plus efficace que de tester chaque transaction afin de voir si une mise à jour est valide avant de l'implémenter. Les mises à jour et les restaurations étant des opérations coûteuses, les points de sauvegarde ne sont efficaces que si la probabilité de rencontrer l'erreur est faible et si le coût de vérification préalable de la validité d'une mise à jour est relativement élevé.  
-  
- Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge l’utilisation de points de sauvegarde à l’aide de la méthode [setSavepoint](../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La méthode setSavepoint permet de créer un point de sauvegarde nommé ou non à l’intérieur de la transaction en cours et retourne un objet [SQLServerSavepoint](../../connect/jdbc/reference/sqlserversavepoint-class.md). Il est possible de créer plusieurs points de sauvegarde à l'intérieur d'une transaction. Pour annuler une transaction jusqu’à un point de sauvegarde donné, vous pouvez transmettre l’objet SQLServerSavepoint à la méthode [rollback (java.sql.Savepoint)](../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md).  
-  
- Dans l’exemple suivant, un point de sauvegarde est utilisé lors de l’exécution d’une transaction locale composée de deux instructions distinctes dans le bloc `try`. Les instructions sont exécutées sur la table Production.ScrapReason de l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], et un point de sauvegarde est utilisé pour restaurer la deuxième instruction. Cela a pour effet que seule la première instruction est validée dans la base de données.  
-  
- [!code[JDBC#UsingSavepoints1](../../connect/jdbc/codesnippet/Java/using-savepoints_1.java)]  
-  
-## <a name="see-also"></a> Voir aussi  
- [Réalisation de transactions avec le pilote JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
-  
-  
+Les points d'enregistrement constituent un mécanisme permettant d'annuler certaines parties de transactions. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous pouvez créer un point de sauvegarde à l’aide de l’instruction SAVE TRANSACTION savepoint_name. Par la suite, vous pourrez exécuter une instruction ROLLBACK TRANSACTION nom_point_enregistrement pour revenir au point d'enregistrement au lieu de revenir au début de la transaction.
+
+Les points d'enregistrement sont particulièrement utiles lorsque des erreurs sont peu susceptibles de se produire. L'utilisation d'un point d'enregistrement pour annuler une partie d'une transaction en cas d'erreur non fréquente peut s'avérer plus efficace que de tester chaque transaction afin de voir si une mise à jour est valide avant de l'implémenter. Les mises à jour et les restaurations étant des opérations coûteuses, les points d'enregistrement ne sont efficaces que si la probabilité de rencontrer l'erreur est faible et si le coût de vérification préalable de la validité d'une mise à jour est relativement élevé.
+
+Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge l’utilisation de points de sauvegarde à l’aide de la méthode [setSavepoint](../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La méthode setSavepoint permet de créer un point de sauvegarde nommé ou non à l’intérieur de la transaction en cours et retourne un objet [SQLServerSavepoint](../../connect/jdbc/reference/sqlserversavepoint-class.md). Il est possible de créer plusieurs points d'enregistrement à l'intérieur d'une transaction. Pour annuler une transaction jusqu’à un point de sauvegarde donné, vous pouvez transmettre l’objet SQLServerSavepoint à la méthode [rollback (java.sql.Savepoint)](../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md).
+
+Dans l’exemple suivant, un point de sauvegarde est utilisé lors de l’exécution d’une transaction locale composée de deux instructions distinctes dans le bloc `try`. Les instructions sont exécutées sur la table Production.ScrapReason de l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], et un point de sauvegarde est utilisé pour restaurer la deuxième instruction. Cela a pour effet que seule la première instruction est validée dans la base de données.
+
+[!code[JDBC#UsingSavepoints1](../../connect/jdbc/codesnippet/Java/using-savepoints_1.java)]
+
+## <a name="see-also"></a> Voir aussi
+
+[Réalisation de transactions avec le pilote JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)

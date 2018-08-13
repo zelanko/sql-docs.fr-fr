@@ -1,7 +1,7 @@
 ---
 title: Arguments RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -19,17 +19,17 @@ caps.latest.revision: 154
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d76099a9ac6cac338a176836ef483dbb37938736
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a9dc5fcb6f7cb550d890d621f36fc79714c34edf
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037207"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008881"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instructions RESTORE – Arguments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique documente les arguments qui sont décrits dans la section « Syntaxe » de l'instruction RESTORE {DATABASE|LOG} et des instructions auxiliaires associées : RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY et RESTORE VERIFYONLY. La plupart des arguments sont pris en charge seulement par un sous-ensemble de ces six instructions. Cette prise en charge est précisée dans la description de chacun des arguments.  
+Cette rubrique documente les arguments qui sont décrits dans la section « Syntaxe » de l'instruction RESTORE {DATABASE|LOG} et des instructions auxiliaires associées : RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY et RESTORE VERIFYONLY. La plupart des arguments sont pris en charge seulement par un sous-ensemble de ces six instructions. Cette prise en charge est précisée dans la description de chacun des arguments.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

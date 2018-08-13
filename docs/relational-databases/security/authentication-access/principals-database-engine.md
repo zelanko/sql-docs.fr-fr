@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8195661f681d3f0e694e040e2319efdfcd3803bc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4860d2b38d6a2da7c6204e4fa6224b5ef08619c7
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553099"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008961"
 ---
 # <a name="principals-database-engine"></a>Principaux (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,18 +47,18 @@ ms.locfileid: "39553099"
   
 ## <a name="sql-server-level-principals"></a>Principaux au niveau de SQL Server  
   
--  Connexion d’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]   
--  Connexion d’authentification Windows pour un utilisateur Windows  
--  Connexion d’authentification Windows pour un groupe Windows   
--  Connexion d’authentification Azure Active Directory pour un utilisateur AD
--  Connexion d’authentification Azure Active Directory pour un groupe AD
--  Rôle serveur  
+- Connexion d’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]   
+- Connexion d’authentification Windows pour un utilisateur Windows  
+- Connexion d’authentification Windows pour un groupe Windows   
+- Connexion d’authentification Azure Active Directory pour un utilisateur AD
+- Connexion d’authentification Azure Active Directory pour un groupe AD
+- Rôle serveur  
   
- ## <a name="database-level-principals"></a>Principaux au niveau des bases de données  
+## <a name="database-level-principals"></a>Principaux au niveau des bases de données
   
--   Utilisateur de base de données (il existe 11 types d’utilisateurs. Pour plus d’informations, consultez [CREATE USER ](../../../t-sql/statements/create-user-transact-sql.md).) 
--   Rôle de base de données  
--   Rôle d'application  
+- Utilisateur de base de données (il existe 11 types d’utilisateurs. Pour plus d’informations, consultez [CREATE USER ](../../../t-sql/statements/create-user-transact-sql.md).)
+- Rôle de base de données
+- Rôle d'application
   
 ## <a name="sa-login"></a>Connexion sa  
  La connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` est un principal au niveau du serveur. Par défaut, elle est créée lorsqu'une instance est installée. À compter de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la base de données par défaut de sa est MASTER. Il s'agit là d'une différence par rapport aux versions antérieures de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La connexion `sa` est un membre du rôle de base de données fixe `sysadmin`. La connexion `sa` a toutes les autorisations sur le serveur et ne peut pas être limitée. La connexion `sa` ne peut pas être supprimée, mais elle peut être désactivée afin que personne ne puisse l’utiliser.

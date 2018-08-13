@@ -14,41 +14,42 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 157d6f1b3948dbe697afc5af018b197ede9fec9b
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 6bd763d709238c6bd25fbe7a90acb7b617004925
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279130"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661831"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Utilisation d'une procédure stockée sans paramètres
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Le type le plus simple de procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que vous pouvez appeler ne contient pas de paramètres et retourne un seul jeu de résultats. Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] intègre la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), que vous pouvez utiliser pour appeler ce type de procédure stockée et traiter les données qu’elle retourne.  
-  
- Quand vous utilisez le pilote JDBC pour appeler une procédure stockée sans paramètres, vous devez utiliser la séquence d’échappement SQL `call`. La syntaxe de la séquence d’échappement `call` sans paramètres est la suivante :  
-  
- `{call procedure-name}`  
-  
+Le type le plus simple de procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que vous pouvez appeler ne contient pas de paramètres et retourne un seul jeu de résultats. Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] intègre la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), que vous pouvez utiliser pour appeler ce type de procédure stockée et traiter les données qu’elle retourne.
+
+Quand vous utilisez le pilote JDBC pour appeler une procédure stockée sans paramètres, vous devez utiliser la séquence d’échappement SQL `call`. La syntaxe de la séquence d’échappement `call` sans paramètres est la suivante :
+
+`{call procedure-name}`
+
 > [!NOTE]  
->  Pour plus d’informations sur les séquences d’échappement SQL, consultez [à l’aide les séquences d’échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
-  
- Par exemple, créez la procédure stockée suivante dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] :  
-  
+> Pour plus d’informations sur les séquences d’échappement SQL, consultez [à l’aide les séquences d’échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+
+Par exemple, créez la procédure stockée suivante dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] :
+
 ```sql
-CREATE PROCEDURE GetContactFormalNames   
+CREATE PROCEDURE GetContactFormalNames
 AS  
 BEGIN  
-   SELECT TOP 10 Title + ' ' + FirstName + ' ' + LastName AS FormalName   
+   SELECT TOP 10 Title + ' ' + FirstName + ' ' + LastName AS FormalName
    FROM Person.Contact  
 END  
-```  
-  
- Cette procédure stockée retourne un seul jeu de résultats contenant une colonne de données qui combine le poste, le prénom et le nom des dix premiers contacts de la table Person.Contact.  
-  
- Dans l’exemple suivant, une connexion ouverte à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] est transmise à la fonction, et la méthode [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) est utilisée pour appeler la procédure stockée GetContactFormalNames.  
-  
-```java  
+```
+
+Cette procédure stockée retourne un seul jeu de résultats contenant une colonne de données qui combine le poste, le prénom et le nom des dix premiers contacts de la table Person.Contact.
+
+Dans l’exemple suivant, une connexion ouverte à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] est transmise à la fonction, et la méthode [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) est utilisée pour appeler la procédure stockée GetContactFormalNames.
+
+```java
 public static void executeSprocNoParams(Connection con) throws SQLException {  
     try(Statement stmt = con.createStatement();) {  
 
@@ -58,9 +59,8 @@ public static void executeSprocNoParams(Connection con) throws SQLException {
         }  
     }  
 }
-```  
-  
-## <a name="see-also"></a> Voir aussi  
- [Utilisation d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md)  
-  
-  
+```
+
+## <a name="see-also"></a> Voir aussi
+
+[Utilisation d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md)

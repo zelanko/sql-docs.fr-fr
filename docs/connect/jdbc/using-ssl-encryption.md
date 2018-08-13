@@ -14,38 +14,38 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5444946843576f87b6887d2bc9446d0a93d5106d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 105d7f88608af40cd9b223995948a0ce1fde6150
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023947"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662341"
 ---
 # <a name="using-ssl-encryption"></a>Utilisation du chiffrement SSL
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Le chiffrement SSL (Secure Sockets Layer) permet la transmission de données chiffrées sur le réseau entre une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et une application cliente.  
+Le chiffrement SSL (Secure Sockets Layer) permet la transmission de données chiffrées sur le réseau entre une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et une application cliente.  
   
- Le protocole SSL (Secure Sockets Layer) est un protocole d'établissement de canal de communication sécurisé ayant pour but d'empêcher l'interception d'informations critiques ou sensibles sur les communications réseau et Internet. Il permet au client et au serveur d'effectuer une authentification mutuelle de leur identité. Une fois les participants authentifiés, le protocole SSL fournit des connexions chiffrées entre eux afin de pouvoir transmettre des messages de manière sécurisée.  
+Le protocole SSL (Secure Sockets Layer) est un protocole d'établissement de canal de communication sécurisé ayant pour but d'empêcher l'interception d'informations critiques ou sensibles sur les communications réseau et Internet. Il permet au client et au serveur d'effectuer une authentification mutuelle de leur identité. Une fois les participants authentifiés, le protocole SSL fournit des connexions chiffrées entre eux afin de pouvoir transmettre des messages de manière sécurisée.  
   
- Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit une infrastructure permettant d’activer et de désactiver le chiffrement sur une connexion particulière en fonction des propriétés de connexion spécifiées par l’utilisateur et des paramètres serveur et client. L'utilisateur peut spécifier l'emplacement du magasin de certificats, le mot de passe, un nom d'hôte à utiliser pour valider le certificat et quand chiffrer le canal de communication.  
+Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit une infrastructure permettant d’activer et de désactiver le chiffrement sur une connexion particulière en fonction des propriétés de connexion spécifiées par l’utilisateur et des paramètres serveur et client. L'utilisateur peut spécifier l'emplacement du magasin de certificats, le mot de passe, un nom d'hôte à utiliser pour valider le certificat et quand chiffrer le canal de communication.  
   
- L'activation du chiffrement SSL améliore la sécurité des données transmises sur des réseaux entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et des applications. Cependant, l'activation du chiffrement ralentit les performances.  
+L'activation du chiffrement SSL améliore la sécurité des données transmises sur des réseaux entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et des applications. Cependant, l'activation du chiffrement ralentit les performances.  
   
- Les rubriques de cette section expliquent comment le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge le chiffrement SSL, notamment les nouvelles propriétés de connexion, et comment vous pouvez configurer le magasin d’approbations côté client.  
+Les rubriques de cette section expliquent comment le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge le chiffrement SSL, notamment les nouvelles propriétés de connexion, et comment vous pouvez configurer le magasin d’approbations côté client.  
   
 > [!NOTE]  
->  Le **hostNameInCertificate** propriété de connexion est recommandée pour valider un certificat SSL.  
-  
+> Le **hostNameInCertificate** propriété de connexion est recommandée pour valider un certificat SSL.  
+
 ## <a name="in-this-section"></a>Dans cette section  
+
+| Rubrique                                                                                                        | Description                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Présentation de la prise en charge de SSL](../../connect/jdbc/understanding-ssl-support.md)                                 | Explique comment le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge le chiffrement SSL.                                              |
+| [Connexion avec chiffrement SSL](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Explique comment se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à l’aide des nouvelles propriétés de connexion propres au protocole SSL. |
+| [Configuration du client pour le chiffrement SSL](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | Décrit comment configurer le magasin d'approbations par défaut du côté client et comment importer un certificat privé vers le magasin d'approbations de l'ordinateur client.   |
   
-|Rubrique|Description|  
-|-----------|-----------------|  
-|[Présentation de la prise en charge de SSL](../../connect/jdbc/understanding-ssl-support.md)|Explique comment le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge le chiffrement SSL.|  
-|[Connexion avec chiffrement SSL](../../connect/jdbc/connecting-with-ssl-encryption.md)|Explique comment se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à l’aide des nouvelles propriétés de connexion propres au protocole SSL.|  
-|[Configuration du client pour le chiffrement SSL](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)|Décrit comment configurer le magasin d'approbations par défaut du côté client et comment importer un certificat privé vers le magasin d'approbations de l'ordinateur client.|  
-  
-## <a name="see-also"></a> Voir aussi  
- [Sécurisation des applications de pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
-  
-  
+## <a name="see-also"></a> Voir aussi
+
+[Sécurisation des applications de pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
