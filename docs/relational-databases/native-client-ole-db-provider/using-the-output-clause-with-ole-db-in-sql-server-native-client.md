@@ -13,19 +13,19 @@ ms.assetid: 53deeb99-c088-4fde-844b-b2d91d6de1eb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f631875ee4b6283fe07f229e77a950ff10c2dfa5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3decdc6727fd23d8e219b4edee5cc9290f8c5c9d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37406934"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563123"
 ---
 # <a name="using-the-output-clause-with-ole-db-in-sql-server-native-client"></a>Utilisation de la clause OUTPUT avec OLE DB dans SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Si vous utilisez une clause OUTPUT dans un INSERT, UPDATE, DELETE ou commande de fusion, le nombre de lignes affectées n’est pas disponible. L’application doit compter le nombre de lignes dans l’ensemble de lignes retourné par la clause OUTPUT.  
+  Si vous utilisez une clause OUTPUT dans une commande INSERT, UPDATE, DELETE ou MERGE, le nombre de lignes affectées n’est pas disponible. L’application doit compter le nombre de lignes de l’ensemble de lignes retourné par la clause OUTPUT.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une application de fournisseur OLE DB de SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  

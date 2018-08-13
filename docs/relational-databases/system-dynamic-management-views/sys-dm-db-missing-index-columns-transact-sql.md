@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_missing_index_columns (Transact-SQL) | Documents Microsoft
+title: Sys.dm_db_missing_index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c457cd76f0c1090147d2df41a47c4c6f3c2ef5ad
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 65f48f853fca55961a69e4e6905e5fa148cf739f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463815"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560189"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,19 +54,19 @@ sys.dm_db_missing_index_columns(index_handle)
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**column_id**|**int**|ID de la colonne.|  
+|**column_id**|**Int**|ID de la colonne.|  
 |**column_name**|**sysname**|Nom de la colonne de la table.|  
-|**column_usage**|**varchar(20)**|Indique la manière dont la colonne est utilisée par la requête. Les valeurs possibles et leurs descriptions sont :<br /><br /> ÉGALITÉ : La colonne contribue à un prédicat qui exprime l’égalité, sous la forme : <br />                        *table.column* = *constant_value*<br /><br /> INÉGALITÉ : La colonne contribue à un prédicat qui exprime l’inégalité, par exemple, un prédicat de la forme : *table.column* > *valeur_constante*. Tout opérateur de comparaison autre que "=" exprime l'inégalité.<br /><br /> INCLUDE : Colonne n’est pas utilisée pour évaluer un prédicat, mais il est utilisé pour une autre raison, par exemple, pour couvrir une requête.|  
+|**column_usage**|**varchar(20)**|Indique la manière dont la colonne est utilisée par la requête. Les valeurs possibles et leurs descriptions sont :<br /><br /> L’égalité : La colonne contribue à un prédicat qui exprime l’égalité, le formulaire : <br />                        *table.column* = *constant_value*<br /><br /> INÉGALITÉ : La colonne contribue à un prédicat qui exprime l’inégalité, par exemple, un prédicat de la forme : *table.column* > *constant_value*. Tout opérateur de comparaison autre que "=" exprime l'inégalité.<br /><br /> INCLUDE : Colonne n’est pas utilisé pour évaluer un prédicat, mais il est utilisé pour une autre raison, par exemple, pour couvrir une requête.|  
   
 ## <a name="remarks"></a>Notes  
- Les informations retournées par **sys.dm_db_missing_index_columns** est mis à jour lorsqu’une requête est optimisée par l’optimiseur de requête et n’est pas persistant. Les informations sur les index manquants sont simplement conservées jusqu'au redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les administrateurs de base de données doivent effectuer régulièrement des copies de sauvegarde des informations sur les index manquants s'ils souhaitent les conserver après le recyclage du serveur.  
+ Informations retournées par **sys.dm_db_missing_index_columns** est mis à jour lorsqu’une requête est optimisée par l’optimiseur de requête et n’est pas persistant. Les informations sur les index manquants sont simplement conservées jusqu'au redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les administrateurs de base de données doivent effectuer régulièrement des copies de sauvegarde des informations sur les index manquants s'ils souhaitent les conserver après le recyclage du serveur.  
   
 ## <a name="transaction-consistency"></a>Cohérence transactionnelle  
  Si une transaction crée ou supprime une table, les lignes qui contiennent les informations d'index manquants concernant les objets supprimés sont retirées de cet objet de gestion dynamique, ce qui permet de préserver la cohérence des transactions.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les utilisateurs doivent bénéficier de l'autorisation VIEW SERVER STATE ou de toute autorisation qui implique l'autorisation VIEW SERVER STATE pour interroger cette fonction de gestion dynamique.  
   
 ## <a name="examples"></a>Exemples  

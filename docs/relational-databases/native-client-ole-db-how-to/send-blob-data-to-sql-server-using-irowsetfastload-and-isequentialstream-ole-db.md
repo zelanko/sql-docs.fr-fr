@@ -14,13 +14,13 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79c3c2b21c16d1a761ad184ca01cb06b6e1680cb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f61611c52ee952f2c2559136ce845c355ff01d66
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413988"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555349"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Envoyer des données BLOB vers SQL SERVER en utilisant IROWSETFASTLOAD et ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "37413988"
   
  Par défaut, cet exemple indique comment utiliser IRowsetFastLoad pour envoyer des données BLOB de longueur variable par ligne à l'aide de liaisons incluses. Les données BLOB incluses doivent s'ajuster dans la mémoire disponible. Cette méthode est optimale lorsque les données BLOB représentent moins de quelques mégaoctets, car il n'y a pas de temps de traitement de flux supplémentaire. Pour les données dont la taille est supérieure à quelques mégaoctets, en particulier les données qui ne sont pas disponibles dans un bloc, la diffusion en continu fournit de meilleures performances.  
   
- Dans le code source, lorsque vous annulez les marques de commentaire #define USE_ISEQSTREAM, l'exemple utilise ISequentialStream. L’implémentation du flux est définie dans l’exemple et peut envoyer des données d’objet BLOB de toute taille simplement en modifiant MAX_BLOB. Il n'est pas nécessaire que les données de flux soient ajustées dans la mémoire ou disponibles dans un bloc. Vous appelez ce fournisseur en utilisant IRowsetFastLoad::InsertRow. Passez un pointeur à l'aide d'IRowsetFastLoad::InsertRow vers l'implémentation du flux dans le tampon de données (décalage rgBinding.obValue) avec la quantité de données disponibles à lire dans le flux. Certains fournisseurs peuvent ne pas connaître la longueur des données lorsque la liaison a lieu. Dans ce cas, la longueur peut être omise de la liaison.  
+ Dans le code source, lorsque vous annulez les marques de commentaire #define USE_ISEQSTREAM, l'exemple utilise ISequentialStream. L’implémentation du flux est définie dans l’exemple et peut envoyer des données BLOB de n’importe quelle taille simplement en modifiant MAX_BLOB. Il n'est pas nécessaire que les données de flux soient ajustées dans la mémoire ou disponibles dans un bloc. Vous appelez ce fournisseur en utilisant IRowsetFastLoad::InsertRow. Passez un pointeur à l'aide d'IRowsetFastLoad::InsertRow vers l'implémentation du flux dans le tampon de données (décalage rgBinding.obValue) avec la quantité de données disponibles à lire dans le flux. Certains fournisseurs peuvent ne pas connaître la longueur des données lorsque la liaison a lieu. Dans ce cas, la longueur peut être omise de la liaison.  
   
  L'exemple n'utilise pas l'interface de flux du fournisseur pour écrire des données dans le fournisseur. À la place, l'exemple passe un pointeur vers l'objet de flux que le fournisseur utilise pour lire les données. En général, les fournisseurs Microsoft (SQLOLEDB et SQLNCLI) lisent les données dans les segments de l'objet de 1024 octets jusqu'à ce que toutes les données aient été traitées. Ni SQLOLEDB ni SQLNCLI n'ont des implémentations complètes pour permettre à l'utilisateur d'écrire des données dans l'objet de flux du fournisseur. Seules les données de longueur nulle peuvent être envoyées par le biais de l'objet de flux du fournisseur.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "37413988"
 ## <a name="example"></a>Exemple  
  Exécutez la première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)])  pour créer la table utilisée par l'application.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  Exécutez la troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour supprimer la table utilisée par l'application.  
   

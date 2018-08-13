@@ -1,5 +1,5 @@
 ---
-title: ROUTINES (Transact-SQL) | Documents Microsoft
+title: ROUTINES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,31 +22,31 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 00ec03e10cd41e964c9687f04478e05871de5b68
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240599"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548885"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie une ligne pour chaque procédure stockée et chaque fonction accessibles à l'utilisateur actuel dans la base de données actuelle. Les colonnes qui décrivent la valeur de retour s'appliquent uniquement aux fonctions. Pour les procédures stockées, ces colonnes comportent la valeur NULL.  
   
- Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de INFORMATION_SCHEMA. *view_name*.  
+ Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de INFORMATION_SCHEMA. *nom_vue*.  
   
 > [!NOTE]  
 >  La colonne ROUTINE_DEFINITION contient les instructions sources qui ont servi à créer la fonction ou la procédure stockée. Ces instructions sources sont susceptibles de contenir des retours-chariot imbriqués. Si vous renvoyez cette colonne à une application qui affiche les résultats au format texte, les retours-chariot imbriqués dans les résultats ROUTINE_DEFINITION peuvent modifier la mise en forme de l'ensemble de résultats global. Si vous sélectionnez la colonne ROUTINE_DEFINITION, vous devez ajuster les retours-chariot imbriqués, en transférant par exemple l'ensemble de résultats dans une grille ou en réintégrant ROUTINE_DEFINITION dans sa propre zone de texte.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(** 128 **)**|Nom spécifique du catalogue Ce nom est le même que ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|Nom spécifique du schéma.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|Nom spécifique du schéma.<br /><br /> **\*\* Important \* \* ** n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |SPECIFIC_NAME|**nvarchar(** 128 **)**|Nom spécifique du catalogue Ce nom est le même que ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar(** 128 **)**|Nom de catalogue de la fonction|  
-|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|Nom du schéma contenant cette fonction.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|Nom du schéma contenant cette fonction.<br /><br /> **\*\* Important \* \* ** n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |ROUTINE_NAME|**nvarchar(** 128 **)**|Nom de la fonction.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Renvoie la valeur PROCEDURE pour les procédures stockées et la valeur FUNCTION pour les fonctions.|  
 |MODULE_CATALOG|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
@@ -56,15 +56,15 @@ ms.locfileid: "33240599"
 |UDT_SCHEMA|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
 |UDT_NAME|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
 |DATA_TYPE|**nvarchar(** 128 **)**|Type de données de la valeur renvoyée de la fonction. Retourne **table** si une fonction table.|  
-|CHARACTER_MAXIMUM_LENGTH|**int**|Longueur maximale en caractères, lorsque la valeur renvoyée est de type caractère.<br /><br /> -1 pour **xml** et les données de type de valeur élevée.|  
-|CHARACTER_OCTET_LENGTH|**int**|Longueur maximale en octets, lorsque la valeur renvoyée est de type caractère.<br /><br /> -1 pour **xml** et les données de type de valeur élevée.|  
+|CHARACTER_MAXIMUM_LENGTH|**Int**|Longueur maximale en caractères, lorsque la valeur renvoyée est de type caractère.<br /><br /> -1 pour **xml** et les données de type de valeur élevée.|  
+|CHARACTER_OCTET_LENGTH|**Int**|Longueur maximale en octets, lorsque la valeur renvoyée est de type caractère.<br /><br /> -1 pour **xml** et les données de type de valeur élevée.|  
 |COLLATION_CATALOG|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
 |COLLATION_SCHEMA|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
 |COLLATION_NAME|**nvarchar(** 128 **)**|Nom de classement de la valeur renvoyée. Renvoie la valeur NULL pour les types non-caractère.|  
 |CHARACTER_SET_CATALOG|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
 |CHARACTER_SET_SCHEMA|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
 |CHARACTER_SET_NAME|**nvarchar(** 128 **)**|Nom du jeu de caractères de la valeur renvoyée. Renvoie la valeur NULL pour les types non-caractère.|  
-|NUMERIC_PRECISION|**smallint**|Précision numérique de la valeur renvoyée. Pour les types non numériques, retourne NULL.|  
+|NUMERIC_PRECISION|**smallint**|Précision numérique de la valeur renvoyée. Pour les types non numériques, retourne la valeur NULL.|  
 |NUMERIC_PRECISION_RADIX|**smallint**|Base de la précision numérique de la valeur renvoyée. Renvoie la valeur NULL pour les types non numériques.|  
 |NUMERIC_SCALE|**smallint**|Échelle de la valeur renvoyée. Renvoie la valeur NULL pour les types non numériques.|  
 |DATETIME_PRECISION|**smallint**|Précision de fraction de seconde si la valeur de retour est de type **datetime**. Dans le cas contraire, la valeur NULL est retournée.|  
@@ -79,7 +79,7 @@ ms.locfileid: "33240599"
 |MAXIMUM_CARDINALITY|**bigint**|NULL. Réservé pour un usage ultérieur.|  
 |DTD_IDENTIFIER|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|Renvoie la valeur SQL pour une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] et la valeur EXTERNAL pour une fonction externe.<br /><br /> Les fonctions sont toujours en SQL.|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Retourne les 4 000 premiers caractères du texte de définition de la fonction ou de la procédure stockée, si ces dernières ne sont pas chiffrées. Dans le cas contraire, la valeur NULL est retournée.<br /><br /> Pour garantir l’obtention de la définition complète, interrogez la [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) fonction ou la colonne de la définition de la [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) affichage catalogue.|  
+|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Retourne les 4 000 premiers caractères du texte de définition de la fonction ou de la procédure stockée, si ces dernières ne sont pas chiffrées. Dans le cas contraire, la valeur NULL est retournée.<br /><br /> Pour vous assurer d’obtenir la définition complète, interrogez la [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) fonction ou la colonne de définition dans le [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vue de catalogue.|  
 |EXTERNAL_NAME|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL. Réservé pour un usage ultérieur.|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL. Réservé pour un usage ultérieur.|  

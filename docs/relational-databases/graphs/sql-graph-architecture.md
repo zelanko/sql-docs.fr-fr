@@ -19,13 +19,13 @@ caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 7cfba1fc79e44bb28a433c3b31fe5f4236037d6e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 49a0d942fd4d738b31d71d44fc74392469d047c2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051507"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546399"
 ---
 # <a name="sql-graph-architecture"></a>Graphique de l’Architecture SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ Le tableau suivant répertorie les valeurs valides pour `graph_type` colonne
 
 |Valeur de colonne  |Description  |
 |---   |---   |
-| 1  |GRAPH_ID  |
+|1  |GRAPH_ID  |
 |2  |GRAPH_ID_COMPUTED  |
 |3  |GRAPH_FROM_ID  |
 |4  |GRAPH_FROM_OBJ_ID  |
@@ -105,19 +105,19 @@ Le tableau suivant répertorie les valeurs valides pour `graph_type` colonne
 Colonnes implicites dans une table de nœuds  
 |Nom de la colonne    |Type de données  |is_hidden  |Commentaire  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint | 1  |colonne de graph_id interne  |
+|graph_id_\<hex_string> |bigint |1  |colonne de graph_id interne  |
 |$node_id_\<hex_string > |NVARCHAR   |0  |Colonne d’id de nœud externe  |
 
 Colonnes implicites dans un tableau de bord  
 |Nom de la colonne    |Type de données  |is_hidden  |Commentaire  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint | 1  |colonne de graph_id interne  |
+|graph_id_\<hex_string> |bigint |1  |colonne de graph_id interne  |
 |$edge_id_\<hex_string > |NVARCHAR   |0  |colonne d’id externe edge  |
-|from_obj_id_\<hex_string>  |INT    | 1  |interne à partir de l’id d’objet de nœud  |
-|from_id_\<hex_string>  |bigint | 1  |Interne à partir du nœud graph_id  |
+|from_obj_id_\<hex_string>  |INT    |1  |interne à partir de l’id d’objet de nœud  |
+|from_id_\<hex_string>  |bigint |1  |Interne à partir du nœud graph_id  |
 |$from_id_\<hex_string > |NVARCHAR   |0  |externe à partir de l’id de nœud  |
-|to_obj_id_\<hex_string>    |INT    | 1  |interne à l’id d’objet de nœud  |
-|to_id_\<hex_string>    |bigint | 1  |Interne à graph_id de nœud  |
+|to_obj_id_\<hex_string>    |INT    |1  |interne à l’id d’objet de nœud  |
+|to_id_\<hex_string>    |bigint |1  |Interne à graph_id de nœud  |
 |$to_id_\<hex_string >   |NVARCHAR   |0  |externe à l’id de nœud  |
  
 ### <a name="system-functions"></a>Fonctions système

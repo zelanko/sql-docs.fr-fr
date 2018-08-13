@@ -23,13 +23,13 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe3a9ff4070761807066ac6f1e2c9ed752bb1db0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8127ca4f6f09a106d010fa1f65432799efa6e403
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425598"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565773"
 ---
 # <a name="working-with-query-notifications"></a>Utilisation de notifications de requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Nombre de secondes pendant lesquelles la notification de requête doit rester active.<br /><br /> La valeur par défaut est 432 000 secondes (5 jours). La valeur minimale est 1 seconde, et la valeur maximale est 2^31-1 secondes.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texte du message de la notification. Il est défini par l'utilisateur et n'a aucun format prédéfini.<br /><br /> Par défaut, la chaîne est vide. Vous pouvez spécifier un message à l'aide de 1-2000 caractères.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Options de notification de requêtes. Elles sont spécifiées dans une chaîne avec *nom*=*valeur* syntaxe. L'utilisateur est chargé de créer le service et de lire les notifications de la file d'attente.<br /><br /> La valeur par défaut est une chaîne vide.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Options de notification de requêtes. Celles-ci sont spécifiées dans une chaîne avec la syntaxe *nom*=*valeur*. L'utilisateur est chargé de créer le service et de lire les notifications de la file d'attente.<br /><br /> La valeur par défaut est une chaîne vide.|  
   
  L'abonnement aux notifications est toujours validé, que l'instruction ait été exécutée dans une transaction utilisateur ou en mode de validation automatique, ou que la transaction dans laquelle l'instruction s'est exécutée ait été validée ou restaurée. La notification du serveur est déclenchée lorsque l'une des conditions de notification non valides suivantes se produit : modification des données sous-jacentes ou du schéma ou expiration du délai d'attente imparti (selon l'opération qui se produit en premier). Les inscriptions de notification sont supprimées dès qu'elles sont déclenchées. Par conséquent, lorsque l'application reçoit des notifications, l'application doit encore s'abonner au cas où elle souhaiterait obtenir d'autres mises à jour.  
   
@@ -93,7 +93,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
 ```  
   
- Notez que sélectionner * ne pas supprimer l’entrée de la file d’attente, contrairement à RECEIVE \* à partir de l’est. Cela bloque un thread serveur si la file d'attente est vide. S'il existe des entrées de file d'attente au moment de l'appel, elles sont retournées immédiatement ; sinon, l'appel attend qu'une entrée de file d'attente soit soumise.  
+ Notez que SELECT * ne supprime pas l’entrée de la file d’attente, contrairement à RECEIVE \* FROM. Cela bloque un thread serveur si la file d'attente est vide. S'il existe des entrées de file d'attente au moment de l'appel, elles sont retournées immédiatement ; sinon, l'appel attend qu'une entrée de file d'attente soit soumise.  
   
 ```  
 RECEIVE * FROM MyQueue  
@@ -101,7 +101,7 @@ RECEIVE * FROM MyQueue
   
  Cette instruction retourne immédiatement un jeu de résultats vide si la file d'attente est vide ; sinon, elle retourne toutes les notifications de la file d'attente.  
   
- Si SSPROP_QP_NOTIFICATION_MSGTEXT et SSPROP_QP_NOTIFICATION_OPTIONS ne sont pas NULL et ne sont pas vides, l'en-tête TDS de notifications de requêtes contenant les trois propriétés définies plus haut sont envoyées au serveur avec chaque exécution de la commande. Si l'un d'eux est NULL (ou vide), l'en-tête n'est pas envoyé et DB_E_ERRORSOCCURRED est déclenché (ou DB_S_ERRORSOCCURRED si les propriétés sont toutes deux marquées comme étant facultatives) et la valeur d'état est DBPROPSTATUS_BADVALUE. La validation se produit dans la phase de préparation et d'exécution. De même, DB_S_ERRORSOCCURED est déclenché lorsque les propriétés de notification de requête sont définies pour les connexions à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versions antérieures [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. La valeur d'état dans ce cas est DBPROPSTATUS_NOTSUPPORTED.  
+ Si SSPROP_QP_NOTIFICATION_MSGTEXT et SSPROP_QP_NOTIFICATION_OPTIONS ne sont pas NULL et ne sont pas vides, l'en-tête TDS de notifications de requêtes contenant les trois propriétés définies plus haut sont envoyées au serveur avec chaque exécution de la commande. Si l'un d'eux est NULL (ou vide), l'en-tête n'est pas envoyé et DB_E_ERRORSOCCURRED est déclenché (ou DB_S_ERRORSOCCURRED si les propriétés sont toutes deux marquées comme étant facultatives) et la valeur d'état est DBPROPSTATUS_BADVALUE. La validation se produit dans la phase de préparation et d'exécution. De la même façon, DB_S_ERRORSOCCURED est déclenché quand les propriétés de notification de requête sont définies pour les connexions sur les versions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] La valeur d'état dans ce cas est DBPROPSTATUS_NOTSUPPORTED.  
   
  L'initialisation d'un abonnement ne garantit pas que les messages suivants soient correctement remis. De plus, aucun contrôle n'est effectué en termes de validité du nom du service spécifié.  
   

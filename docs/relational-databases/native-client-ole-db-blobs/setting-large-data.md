@@ -19,13 +19,13 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 09c23da09502d9b5f9b1d91cdcdb06e9c09dabc8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54c2589db107e6646843739e098f9e4ae9ac00b6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421968"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550839"
 ---
 # <a name="setting-large-data"></a>Définition de données volumineuses
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37421968"
   
  Le consommateur crée un objet de stockage qui contient les données et passe au fournisseur un pointeur vers cet objet de stockage. Le fournisseur lit ensuite les données de l'objet de stockage du consommateur et les écrit dans la colonne BLOB.  
   
- Pour passer un pointeur vers son propre objet de stockage, le consommateur crée un accesseur qui lie la valeur de la colonne BLOB. Le consommateur appelle ensuite la **IRowsetChange::SetData** ou **IRowsetChange::InsertRow** méthode avec l’accesseur qui lie la colonne BLOB. Il passe un pointeur vers une interface de stockage située sur l'objet de stockage du consommateur.  
+ Pour passer un pointeur vers son propre objet de stockage, le consommateur crée un accesseur qui lie la valeur de la colonne BLOB. Le consommateur appelle ensuite la méthode **IRowsetChange::SetData** ou **IRowsetChange::InsertRow** avec l’accesseur qui lie la colonne BLOB. Il passe un pointeur vers une interface de stockage située sur l'objet de stockage du consommateur.  
   
  Cette rubrique aborde les fonctionnalités disponibles avec les fonctions suivantes :  
   
@@ -48,17 +48,17 @@ ms.locfileid: "37421968"
 ## <a name="how-to-set-large-data"></a>Définir des données volumineuses  
  Pour transmettre un pointeur à son propre objet de stockage, le consommateur crée un accesseur qui lie la valeur de la colonne BLOB, puis appelle les méthodes **IRowsetChange::SetData** ou **IRowsetChange::InsertRow** . Pour définir des données BLOB :  
   
-1.  Créez une structure DBOBJECT décrivant la manière dont la colonne BLOB doit être accessible. Définir le *dwFlag* élément de la structure DBOBJECT à STGM_READ, puis définissez le *iid* élément à IID_ISequentialStream (interface à exposer).  
+1.  Créez une structure DBOBJECT décrivant la manière dont la colonne BLOB doit être accessible. Définissez l’élément *dwFlag* de la structure DBOBJECT sur STGM_READ, puis définissez l’élément *iid* sur IID_ISequentialStream (l’interface à exposer).  
   
 2.  Définissez les propriétés du groupe de propriétés DBPROPSET_ROWSET de sorte que l'ensemble de lignes puisse être mis à jour.  
   
-3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définir le *wType* élément dans la structure DBBINDING sur DBTYPE_IUNKNOWN et le *pObject* élément pour qu’il pointe vers la structure DBOBJECT que vous avez créé.  
+3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définissez l’élément *wType* dans la structure DBBINDING sur DBTYPE_IUNKNOWN, puis l’élément *pObject* de sorte qu’il pointe vers la structure DBOBJECT que vous avez créée.  
   
 4.  Créez un accesseur à l'aide des informations de liaison du tableau des structures DBBINDINGS.  
   
 5.  Appelez la méthode **GetNextRows** pour extraire les lignes suivantes dans l'ensemble de lignes. Appelez la méthode **GetData** pour lire les données de l'ensemble de lignes.  
   
-6.  Créer un objet de stockage contenant les données (et également l’indicateur de longueur), puis appelez **IRowsetChange::SetData** (ou **IRowsetChange::InsertRow**) avec l’accesseur qui lie la colonne BLOB pour définir les données.  
+6.  Créez un objet de stockage contenant les données (et également l’indicateur de longueur), puis appelez **IRowsetChange::SetData** (ou **IRowsetChange::InsertRow**) avec l’accesseur qui lie la colonne BLOB pour définir les données.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment définir des données BLOB. Cet exemple crée une table, ajoute un exemple d'enregistrement, extrait cet enregistrement de l'ensemble de lignes, puis définit la valeur du champ BLOB.  

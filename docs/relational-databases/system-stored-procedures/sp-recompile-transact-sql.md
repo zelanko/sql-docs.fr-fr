@@ -1,5 +1,5 @@
 ---
-title: sp_recompile (Transact-SQL) | Documents Microsoft
+title: sp_recompile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 484008523d109f8852cdef34911c52d8f081218f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7c04b6daf385a80f82dc39e1b1891f737e7fb19a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246137"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544639"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>Arguments  
  [ @objname=] '*objet*'  
- Nom qualifié ou non qualifié d'une procédure stockée, d'un déclencheur, d'une table, d'une vue ou d'une fonction définie par l'utilisateur dans la base de données actuelle. *objet* est **nvarchar(776)**, sans valeur par défaut. Si *objet* est le nom d’un déclencheur de fonction définie par l’utilisateur, la procédure stockée, déclencheur ou procédure stocké ou fonction est recompilées lors de la prochaine fois qu’elle est exécutée. Si *objet* est le nom d’une table ou une vue, toutes les procédures stockées, les déclencheurs ou les fonctions définies par l’utilisateur qui font référence à la table ou vue seront recompilées lors de la prochaine fois qu’ils sont exécutés.  
+ Nom qualifié ou non qualifié d'une procédure stockée, d'un déclencheur, d'une table, d'une vue ou d'une fonction définie par l'utilisateur dans la base de données actuelle. *objet* est **nvarchar(776)**, sans valeur par défaut. Si *objet* est le nom d’un déclencheur de procédure, déclencheur ou fonction définie par l’utilisateur, la procédure stockée, stocké ou fonction est recompilées lors de la prochaine fois qu’elle est exécutée. Si *objet* est le nom d’une table ou vue, toutes les procédures stockées, déclencheurs ou fonctions définies par l’utilisateur qui font référence à la table ou vue seront recompilées lors de la prochaine fois qu’elles sont exécutées.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou un nombre différent de zéro (échec)  
@@ -59,7 +59,7 @@ sp_recompile [ @objname = ] 'object'
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recompile automatiquement les procédures stockées, les déclencheurs et les fonctions définies par l'utilisateur quand il est avantageux de le faire.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation ALTER pour l'objet spécifié.  
   
 ## <a name="examples"></a>Exemples  

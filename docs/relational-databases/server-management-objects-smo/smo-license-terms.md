@@ -1,7 +1,7 @@
 ---
 title: SQL Server Shared Management Objects (SMO) - termes du contrat de licence | Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2017
+ms.date: 08/08/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -12,13 +12,13 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: da7a9a138a5fd027f3b89c5f4b1d5db219c7d5d0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040427"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662241"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termes du contrat de licence Management Objects (SMO) partagée de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,14 +67,13 @@ de ce logiciel à moins que d’autres termes n’accompagnent ces produits, auq
   * le code soit divulgué ou distribué sous forme de code source, ou
   * d’autres aient le droit de le modifier.
 
-**3.    CHAMP D’APPLICATION DE LA LICENCE.** Le logiciel n’est pas vendu mais concédé sous licence. Sauf si une loi applicable vous accorde des droits supplémentaires, Microsoft se réserve l’ensemble des autres droits qui ne sont pas expressément accordés par ce contrat, que ce soit par implication, préclusion ou autrement. Vous pouvez utiliser le logiciel uniquement tel qu’explicitement autorisé dans le présent contrat. À cette fin, vous devez vous conformer aux restrictions techniques contenues dans le logiciel qui vous permettent de l’utiliser d’une certaine façon. Vous n’êtes pas autorisé à :
-* contourner les restrictions techniques contenues dans le logiciel ;
-* reconstituer la logique du logiciel, le décompiler ou le désassembler, sauf dans la mesure où ces opérations seraient expressément permises par la réglementation applicable nonobstant la présente limitation ;
-* effectuer plus de copies du logiciel que ce qui n’est autorisé dans le présent contrat ou par la réglementation applicable, nonobstant la présente limitation ;
-* publier le logiciel en vue d’une reproduction par autrui ;
-* louer ou prêter le logiciel ;
-* transférer le logiciel ou ce contrat à un tiers ; ou
-* utiliser le logiciel en association avec des services d’hébergement commercial.
+
+**3. CHAMP D’APPLICATION DE LA LICENCE.** Le logiciel n’est pas vendu mais concédé sous licence. Sauf si une loi applicable vous accorde des droits supplémentaires, Microsoft se réserve l’ensemble des autres droits qui ne sont pas expressément accordés par ce contrat, que ce soit par implication, préclusion ou autrement. Vous pouvez utiliser le logiciel uniquement tel qu’explicitement autorisé dans le présent contrat. À cette fin, vous devez vous conformer aux restrictions techniques contenues dans le logiciel qui vous permettent de l’utiliser d’une certaine façon. Vous ne pouvez pas effectuer les opérations suivantes :
+
+- Contourner les restrictions techniques contenues dans le logiciel.
+- Rétroconcevoir, décompiler ou le désassembler, sauf et uniquement dans la mesure où il autorise expressément la réglementation applicable nonobstant la présente limitation.
+- Vérifiez le nombre de copies du logiciel supérieur sont spécifiés dans le présent contrat ou autorisé par la réglementation applicable nonobstant la présente limitation.
+- Partager, publier, louer ou louer le logiciel ou fournir le logiciel en tant que solution autonome hébergée par les utilisateurs.
 
 **4.    MENTIONS DE TIERS.** Le logiciel peut inclure des composants tiers associés à des avis juridiques distincts ou régis par d’autres contrats, tel que cela est éventuellement indiqué dans le fichier ThirdPartyNotices accompagnant le logiciel.  Même si ces composants sont régis par d’autres contrats de licence, les clauses d’exclusion de responsabilité et les limitations et exclusions de recours et de dommages ci-dessous s’appliquent également.
 
@@ -106,3 +105,7 @@ Cette limitation s'applique uniquement à
 * les réclamations au titre de violation de contrat ou de garantie ou de condition, ou au titre de responsabilité stricte, de négligence ou d’une autre faute dans la limite autorisée par la loi en vigueur.
 
 Elle s'applique également même si Microsoft connaissait l’éventualité d’un tel dommage. La limitation ou l’exclusion ci-dessus peut également ne pas vous être applicable si votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages incidents, indirects ou de quelque nature que ce soit.
+
+> [!NOTE]
+> Section 3 a été mis à jour à partir du 8 août 2018.
+

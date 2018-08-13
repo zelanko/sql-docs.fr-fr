@@ -24,13 +24,13 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e0287d1c3a88281bb1b56a6d632e77beeeb7791f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f036dfc2f64b230d5023118bfb55b812665e7f29
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036382"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550799"
 ---
 # <a name="syspartitionparameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "38036382"
 |**parameter_id**|**Int**|ID du paramètre. Unique au sein de la fonction de partition, en commençant par 1.|  
 |**system_type_id**|**tinyint**|Identificateur du type système du paramètre. Correspond à la **system_type_id** colonne de la **sys.types** vue de catalogue.|  
 |**max_length**|**smallint**|Longueur maximale du paramètre, en octets.|  
-|**précision**|**tinyint**|Précision du paramètre s'il est de type numérique ; sinon, 0.|  
-|**mise à l’échelle**|**tinyint**|Échelle du paramètre s'il est de type numérique ; sinon, 0.|  
+|**Précision**|**tinyint**|Précision du paramètre s'il est de type numérique ; sinon, 0.|  
+|**Mise à l’échelle**|**tinyint**|Échelle du paramètre s'il est de type numérique ; sinon, 0.|  
 |**collation_name**|**sysname**|Nom du classement du paramètre s'il est constitué de caractères alphanumériques, sinon NULL.|  
 |**user_type_id**|**Int**|ID du type. Unique dans la base de données. Pour les types de données système **user_type_id** = **system_type_id**.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

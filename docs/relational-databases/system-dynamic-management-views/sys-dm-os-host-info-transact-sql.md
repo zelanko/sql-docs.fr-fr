@@ -22,13 +22,13 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0aa5f28f52c9d0df4e942809612e1ca59a1cb3c5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b64a026b1fcb4ce959b8a60938b73ccdb3c6c352
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38044235"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553449"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Cette vue est similaire à [sys.dm_os_windows_info](../../relational-databases/s
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
 Le `SELECT` autorisation sur `sys.dm_os_host_info` est accordé à la `public` rôle par défaut. Si révoqué, nécessite `VIEW SERVER STATE` autorisation sur le serveur.   
  
 >  [!CAUTION]

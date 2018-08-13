@@ -1,5 +1,5 @@
 ---
-title: CONTAINSTABLE (Transact-SQL) | Documents Microsoft
+title: CONTAINSTABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2015
 ms.prod: sql
@@ -37,20 +37,20 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c1741644ab38afd4003265b659c06b4b9448e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 22cb21d78757b1d5166c2443a8cde7dd5aef0403
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238526"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547599"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne une table composée de zéros, d'une ou de plusieurs ligne(s) pour les colonnes contenant des correspondances exactes ou floues (moins précises) de mots simples ou d'expressions, la proximité de mots à une certaine distance les uns des autres ou des correspondances pondérées. CONTAINSTABLE est utilisé dans le [à partir de la clause](../../t-sql/queries/from-transact-sql.md) d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction SELECT et est référencé comme s’il s’agissait d’un nom de table classique. Il effectue une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche en texte intégral sur la recherche en texte intégral indexées colonnes contenant des types de données de type caractère.  
+  Retourne une table composée de zéros, d'une ou de plusieurs ligne(s) pour les colonnes contenant des correspondances exactes ou floues (moins précises) de mots simples ou d'expressions, la proximité de mots à une certaine distance les uns des autres ou des correspondances pondérées. CONTAINSTABLE est utilisé dans le [à partir de la clause](../../t-sql/queries/from-transact-sql.md) d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction SELECT et est référencé comme s’il s’agissait d’un nom de table standard. Il effectue une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche en texte intégral sur la recherche en texte intégral indexées colonnes contenant des types de données de type caractère.  
   
- CONTAINSTABLE est utile pour les mêmes types de correspondance que le [prédicat CONTAINS](../../t-sql/queries/contains-transact-sql.md) et utilise les mêmes conditions de recherche CONTAINS.  
+ CONTAINSTABLE est utile pour les mêmes types de correspondances que la [prédicat CONTAINS](../../t-sql/queries/contains-transact-sql.md) et utilise les mêmes conditions de recherche que CONTAINS.  
   
  Toutefois, contrairement à CONTAINS, les requêtes utilisant CONTAINSTABLE retournent une valeur de classement de pertinence (RANK) et une clé de texte intégral (KEY) pour chaque ligne.  Pour plus d’informations sur les sortes de recherches en texte intégral prises en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md).  
   
@@ -119,9 +119,9 @@ CONTAINSTABLE
   
 ## <a name="arguments"></a>Arguments  
  *table*  
- Nom d'une table qui a été indexée en texte intégral. *table* peut être un un, deux, trois ou nom de l’objet en quatre parties de la base de données. Lors de l'interrogation d'une vue, une seule table de base indexée en texte intégral peut être impliquée.  
+ Nom d'une table qui a été indexée en texte intégral. *table* peut être un une, deux, trois ou nom de l’objet en quatre parties de la base de données. Lors de l'interrogation d'une vue, une seule table de base indexée en texte intégral peut être impliquée.  
   
- *table* ne peut pas spécifier un nom de serveur et ne peut pas être utilisé dans les requêtes sur des serveurs liés.  
+ *table* ne pouvez pas spécifier un nom de serveur et ne peut pas être utilisé dans les requêtes sur des serveurs liés.  
   
  *column_name*  
  Nom d'une ou de plusieurs colonnes indexées pour la recherche en texte intégral. Les colonnes peuvent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)**.  
@@ -130,10 +130,10 @@ CONTAINSTABLE
  Indique que plusieurs colonnes, délimitées par des virgules, peuvent être spécifiées. *column_list* doit être mis entre parenthèses. Une seule et même langue doit être utilisée dans toutes les colonnes de *column_list*, sauf si *language_term* est spécifié.  
   
  \*  
- Spécifie que dans les colonnes indexées en texte intégral tous les *table* doit être utilisée pour rechercher la condition de recherche donnée. Une seule et même langue doit être utilisée dans toutes les colonnes de la table, sauf si *language_term* est spécifié.  
+ Spécifie que tous les de texte intégral des colonnes indexées dans *table* doit être utilisé pour rechercher la condition de recherche donnée. Une seule et même langue doit être utilisée dans toutes les colonnes de la table, sauf si *language_term* est spécifié.  
   
  LANGUAGE *language_term*  
- Est la langue dont les ressources seront utilisées pour l’analyse lexicale, recherche de radical, dictionnaire des synonymes et des mots vides (ou [mot vide](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) dans le cadre de la requête. Ce paramètre est facultatif et peut être spécifié sous la forme d'une chaîne, d'un entier ou d'une valeur hexadécimale correspondant à l'identificateur de paramètres régionaux (LCID) d'une langue. Si une langue est définie avec *language_term*, elle est appliquée à tous les éléments de la condition de recherche. Si aucune valeur n'est définie, la langue du texte intégral de la colonne est utilisée.  
+ Est la langue dont les ressources seront utilisées pour la césure des mots, recherche de radical, dictionnaire des synonymes et des mots parasites (ou [mot vide](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) dans le cadre de la requête. Ce paramètre est facultatif et peut être spécifié sous la forme d'une chaîne, d'un entier ou d'une valeur hexadécimale correspondant à l'identificateur de paramètres régionaux (LCID) d'une langue. Si une langue est définie avec *language_term*, elle est appliquée à tous les éléments de la condition de recherche. Si aucune valeur n'est définie, la langue du texte intégral de la colonne est utilisée.  
   
  Si des documents de langues différentes sont stockés ensemble en tant qu'objets blob dans une colonne unique, l'identificateur de paramètres régionaux (LCID) d'un document donné détermine la langue utilisée pour l'indexation de son contenu. Quand une requête est effectuée sur la colonne, la spécification de *LANGUAGE**language_term* augmente la probabilité d’une meilleure correspondance.  
   
@@ -144,15 +144,15 @@ CONTAINSTABLE
  Si la langue spécifiée n'est pas valide ou si aucune ressource correspondant à cette langue n'est installée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur. Pour utiliser des ressources linguistiques neutres, indiquez 0x0 pour *language_term*.  
   
  *top_n_by_rank*  
- Spécifie que seules les *n* des correspondances de rang le plus élevés, par ordre décroissant, sont retournées. S’applique uniquement lorsqu’une valeur entière, *n*, est spécifié. Si *top_n_by_rank* est associé à d’autres paramètres, la requête peut retourner moins de lignes que le nombre de lignes correspondant effectivement à tous les prédicats. *Top_n_by_rank* permet d’augmenter les performances des requêtes en rappelant uniquement les accès les plus pertinents.  
+ Spécifie que seules les *n* des correspondances de rang le plus élevés, par ordre décroissant, sont retournées. S’applique uniquement quand une valeur entière, *n*, est spécifié. Si *top_n_by_rank* est associé à d’autres paramètres, la requête peut retourner moins de lignes que le nombre de lignes correspondant effectivement à tous les prédicats. *Top_n_by_rank* vous permet d’augmenter les performances des requêtes en rappelant uniquement les accès les plus pertinents.  
   
  <contains_search_condition>  
- Spécifie le texte à rechercher dans *column_name* et les conditions de correspondance à remplir. Pour plus d’informations sur les conditions de recherche, consultez [contient &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
+ Spécifie le texte à rechercher dans *column_name* et les conditions de correspondance à remplir. Pour plus d’informations sur les conditions de recherche, consultez [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
   
 ## <a name="remarks"></a>Notes  
  Les prédicats et les fonctions de texte intégral s'appliquent à une table unique, ce qui est implicite dans le prédicat FROM. Pour effectuer des recherches sur plusieurs tables, utilisez une table jointe dans votre clause FROM afin de baser votre recherche sur un jeu de résultats qui est le produit de deux tables ou plus.  
   
- La table retournée possède une colonne nommée **clé** qui contient les valeurs de clé de recherche en texte intégral. Chaque table indexée en texte intégral possède une colonne dont les valeurs sont uniques et les valeurs renvoyées dans le **clé** colonne sont les valeurs de clé de recherche en texte intégral des lignes qui correspondent aux critères de sélection spécifiés dans le contient la condition de recherche. Le **TableFulltextKeyColumn** propriété, obtenue à partir de la fonction OBJECTPROPERTYEX, fournit l’identité de cette colonne clé unique. Pour obtenir l’ID de la colonne associée à la clé de recherche en texte intégral de l’index de recherche en texte intégral, utilisez **sys.fulltext_indexes**. Pour plus d’informations, consultez [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ La table retournée possède une colonne nommée **clé** qui contient les valeurs de clé de recherche en texte intégral. Chaque table indexée en texte intégral comporte une colonne dont les valeurs sont garantis uniques et les valeurs retournées dans le **clé** colonne sont les valeurs de clé de recherche en texte intégral des lignes qui correspondent aux critères de sélection spécifiés dans la recherche de contenu condition. Le **TableFulltextKeyColumn** propriété, obtenue à partir de la fonction OBJECTPROPERTYEX, fournit l’identité de cette colonne clé unique. Pour obtenir l’ID de la colonne associée à la clé de recherche en texte intégral de l’index de recherche en texte intégral, utilisez **sys.fulltext_indexes**. Pour plus d’informations, consultez [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  Pour obtenir les lignes qui vous intéressent dans la table originale, spécifiez une jointure avec les lignes CONTAINSTABLE. La clause FROM d'une instruction SELECT utilisant la fonction CONTAINSTABLE se présente généralement comme suit :  
   
@@ -163,19 +163,19 @@ FROM table AS FT_TBL INNER JOIN
    ON FT_TBL.unique_key_column = KEY_TBL.[KEY];  
 ```  
   
- La table produite par CONTAINSTABLE comporte une colonne intitulée **rang**. Le **rang** colonne est une valeur (de 0 à 1000) pour chaque ligne indiquant le degré de correspondance avec les critères de sélection. Cette valeur de classement est généralement utilisée de l'une des manières suivantes dans l'instruction SELECT :  
+ La table produite par CONTAINSTABLE comporte une colonne intitulée **rang**. Le **rang** colonne est une valeur (entre 0 et 1000) pour chaque ligne indiquant le degré de correspondance avec les critères de sélection. Cette valeur de classement est généralement utilisée de l'une des manières suivantes dans l'instruction SELECT :  
   
 -   dans la clause ORDER BY, pour que les lignes ayant le degré de correspondance le plus élevé soient retournées en premier dans la table ;  
   
 -   dans la liste de sélection, pour indiquer la valeur de classement affectée à chaque ligne.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les autorisations d'exécution sont disponibles uniquement aux utilisateurs bénéficiant des privilèges SELECT appropriés sur la table ou sur les colonnes de la table référencée.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-simple-example"></a>A. Exemple simple  
- L’exemple suivant crée et remplit un tableau simple de deux colonnes, la liste des 3 comtés et les couleurs dans les indicateurs. L’informatique crée et remplit un catalogue de texte intégral et les index sur la table. Le **CONTAINSTABLE** syntaxe est illustrée. Cet exemple montre comment la valeur de classement augmente supérieure lorsque la valeur de recherche est remplie à plusieurs reprises. Dans la dernière requête Tanzanie qui contient le vert et noir a un rang plus élevé qu’Italie contenant uniquement une des couleurs interrogés.  
+ L’exemple suivant crée et remplit un tableau simple de deux colonnes, la liste des 3 comtés et les couleurs dans leurs indicateurs. L’informatique crée et remplit un catalogue de texte intégral et un index sur la table. Le **CONTAINSTABLE** syntaxe est illustrée. Cet exemple montre comment la valeur de classement augmente plus élevée lorsque la valeur de recherche est satisfaite plusieurs fois. Dans la dernière requête, Tanzanie qui contient le vert et noir a un rang plus élevé qu’Italie qui contiennent uniquement une des couleurs interrogées.  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -218,7 +218,7 @@ GO
 |-|  
 |**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
- L'exemple suivant utilise NEAR pour rechercher « `bracket` » et « `reflector` » à proximité l'un de l'autre dans la table `Production.Document`. Seules les lignes avec une valeur de rang supérieur ou égal à 50 sont retournées.  
+ L'exemple suivant utilise NEAR pour rechercher « `bracket` » et « `reflector` » à proximité l'un de l'autre dans la table `Production.Document`. Seules les lignes avec une valeur de classement supérieur ou égal à 50 sont retournées.  
   
 ```  
 USE AdventureWorks2012  

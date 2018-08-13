@@ -24,13 +24,13 @@ caps.latest.revision: 53
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 17a270028d94974643c1993730e353cea30dd897
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 314c2f152080f91b2180fe89bc2ef24307cc90a5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969791"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548569"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "37969791"
 |**server_id**|**Int**|ID local du serveur lié.|  
 |**nom**|**sysname**|Lorsque **server_id** = 0, il s’agit du nom du serveur.<br /><br /> Lorsque **server_id** > 0, il s’agit du nom local du serveur lié.|  
 |**product**|**sysname**|Nom de produit du serveur lié. « SQL Server » indique qu'il s'agit d'une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**fournisseur**|**sysname**|Nom du fournisseur OLE DB permettant de se connecter au serveur lié.|  
+|**Fournisseur**|**sysname**|Nom du fournisseur OLE DB permettant de se connecter au serveur lié.|  
 |**data_source**|**nvarchar(4000)**|Propriété de connexion à la source de données OLE DB.|  
 |**Emplacement**|**nvarchar(4000)**|Propriété de connexion de l'emplacement OLE DB. NULL si aucun.|  
 |**provider_string**|**nvarchar(4000)**|Propriété de connexion à la chaîne du fournisseur OLE DB.<br /><br /> A pour valeur NULL sauf si l'appelant dispose de l'autorisation ALTER ANY LINKED SERVER.|  
@@ -67,7 +67,7 @@ ms.locfileid: "37969791"
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Si la valeur est 1, l'appel d'une procédure stockée distante démarre une transaction distribuée et enregistre la transaction dans MS DTC. Pour plus d’informations, consultez [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Date de la dernière modification des informations de serveur.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  La valeur dans **provider_string** est toujours NULL sauf si l’appelant a l’autorisation ALTER ANY LINKED SERVER.  
   
  Autorisations ne sont pas requises pour afficher le serveur local (**server_id** = 0).  

@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_listextendedproperty (Transact-SQL) | Documents Microsoft
+title: Sys.fn_listextendedproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,13 +30,13 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3484c32c00c5f94f084cd5c0e49837181054df40
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d0480fcc7880febe136431ff50cb3405b8427c40
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238436"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559719"
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,31 +62,31 @@ fn_listextendedproperty (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- {valeur par défaut | '*property_name*' | NULL}  
+ {par défaut | «*property_name*' | NULL}  
  Est le nom de la propriété. *property_name* est **sysname**. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom de propriété.  
   
- {valeur par défaut | '*level0_object_type*' | NULL}  
+ {par défaut | «*level0_object_type*' | NULL}  
  Type défini par l'utilisateur ou utilisateur. *level0_object_type* est **varchar (128)**, avec NULL comme valeur par défaut. Les entrées valides sont ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, et NULL.  
   
 > [!IMPORTANT]  
 >  Les types de niveau 0 USER et TYPE seront éliminés dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement. À la place de USER, utilisez SCHEMA en tant que type de niveau 0. Pour TYPE, utilisez SCHEMA comme type de niveau 0 et TYPE comme type de niveau 1.  
   
- {valeur par défaut | '*level0_object_name*' | NULL}  
+ {par défaut | «*level0_object_name*' | NULL}  
  Nom du type d'objet de niveau 0 spécifié. *level0_object_name* est **sysname** avec NULL comme valeur par défaut. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom d'objet.  
   
- {valeur par défaut | '*level1_object_type*' | NULL}  
+ {par défaut | «*level1_object_type*' | NULL}  
  Type d'objet de niveau 1. *level1_object_type* est **varchar (128)** avec NULL comme valeur par défaut. Les entrées valides sont AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION et NULL.  
   
 > [!NOTE]  
 >  La valeur par défaut correspond à la valeur NULL, et la valeur 'default' est mappée sur le type d'objet DEFAULT.  
   
- {valeur par défaut | '*level1_object_name*' | NULL}  
+ {par défaut | «*level1_object_name*' | NULL}  
  Nom du type d'objet de niveau 1 spécifié. *level1_object_name* est **sysname** avec NULL comme valeur par défaut. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom d'objet.  
   
- {valeur par défaut | '*level2_object_type*' | NULL}  
- Type d'objet de niveau 2. *level2_object_type* est **varchar (128)** avec NULL comme valeur par défaut. Les entrées valides sont DEFAULT, la valeur par défaut (qui correspond à la valeur NULL) et NULL. Les entrées valides pour *level2_object_type* sont des colonnes, contrainte, EVENT NOTIFICATION, INDEX, paramètre, TRIGGER et NULL.  
+ {par défaut | «*level2_object_type*' | NULL}  
+ Type d'objet de niveau 2. *level2_object_type* est **varchar (128)** avec NULL comme valeur par défaut. Les entrées valides sont DEFAULT, la valeur par défaut (qui correspond à la valeur NULL) et NULL. Les entrées valides pour *level2_object_type* sont colonne contrainte, EVENT NOTIFICATION, INDEX, paramètre, TRIGGER et NULL.  
   
- {valeur par défaut | '*level2_object_name*' | NULL}  
+ {par défaut | «*level2_object_name*' | NULL}  
  Nom du type d'objet de niveau 2 spécifié. *level2_object_name* est **sysname** avec NULL comme valeur par défaut. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom d'objet.  
   
 ## <a name="tables-returned"></a>Tables retournées  
@@ -96,7 +96,7 @@ fn_listextendedproperty (
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
-|name|**sysname**|  
+|NAME|**sysname**|  
 |valeur|**sql_variant**|  
   
  Si la table renvoyée est vide, l'objet ne dispose pas de propriétés étendues, ou l'utilisateur n'est pas habilité à afficher la liste des propriétés étendues associées à cet objet. Lorsque les propriétés étendues de la base de données proprement dite sont retournées, les colonnes objtype et objname ont la valeur NULL.  
@@ -108,7 +108,7 @@ fn_listextendedproperty (
   
  Les objets se distinguent selon des niveaux : le niveau 0 étant le plus élevé et le niveau 2 le moins élevé. Si un type et un nom d'objet de niveau inférieur (niveau 1 ou 2) sont spécifiés, le type et le nom de l'objet parent ne doivent pas comporter la valeur NULL ou la valeur par défaut. Autrement, la fonction renvoie un jeu de résultats vide.  
   
- **objname** Latin1_General_CI_AI est fixe. Toutefois, vous pouvez contourner ce en substituant le classement dans la comparaison.  
+ **objname** est résolu en tant que Latin1_General_CI_AI. Toutefois, vous pouvez contourner ce en substituant le classement dans la comparaison.  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
@@ -120,7 +120,7 @@ LEFT JOIN sys.fn_listextendedproperty(N'MS_Description', N'user',N'HumanResource
 WHERE o.name = 'Employee';  
 ```  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les autorisations d'affichage des propriétés étendues des objets peuvent varier selon le type d'objet.  
   
 ## <a name="examples"></a>Exemples  
@@ -147,7 +147,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. Affichage des propriétés étendues de toutes les colonnes d'une table  
- L’exemple suivant répertorie les propriétés étendues des colonnes dans le `ScrapReason` table. Celle-ci est contenue dans le schéma `Production`.  
+ L’exemple suivant répertorie les propriétés étendues pour les colonnes dans le `ScrapReason` table. Celle-ci est contenue dans le schéma `Production`.  
   
 ```  
 USE AdventureWorks2012;  

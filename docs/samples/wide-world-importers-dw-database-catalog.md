@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 08/04/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de537c60f8adf2d4860e236421dd0457871ea025
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 757820680533cfa2eaff8403e2056f0a4d3b1a96
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984801"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556949"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catalogue de base de données WideWorldImportersDW
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 Explications pour les schémas, les tables et les procédures stockées dans la base de données WideWorldImportersDW. 
 
 La base de données WideWorldImportersDW est utilisé pour l’entreposage de données et le traitement analytique. Les données transactionnelles sur les achats et sont générées dans la base de données WideWorldImporters et chargées dans la base de données WideWorldImportersDW à l’aide un **processus ETL quotidien**.
@@ -51,11 +51,11 @@ WideWorldImportersDW a des tables de dimension suivantes. La description inclut 
 |Ville|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |Date|Nouvelle table avec les informations sur les dates, y compris exercice (selon le 1er novembre de démarrage pour l’exercice).|
-|Employee|`Application.People`.|
+|Employee|`Application.People` .|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Fournisseur|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`.|
-|TransactionType|`Application.TransactionTypes`.|
+|PaymentMethod|`Application.PaymentMethods` .|
+|TransactionType|`Application.TransactionTypes` .|
 
 ### <a name="fact-tables"></a>Tables de faits
 

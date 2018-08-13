@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_optimizer_info (Transact-SQL) | Documents Microsoft
+title: Sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5779c87d467a52e28623419d6cf6bac392907fae
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 282a55a0594a0d52a89066c997e6392bc8cc0dbb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464415"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557399"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,22 +37,22 @@ ms.locfileid: "34464415"
   Retourne des statistiques détaillées sur le fonctionnement de l'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez utiliser cette vue lorsque vous paramétrez une charge de travail pour identifier des problèmes ou des améliorations d'optimisation des requêtes. Par exemple, vous pouvez utiliser le nombre total des optimisations, la valeur du temps écoulé et la valeur de coût final pour comparer les optimisations de requête de la charge en cours et les modifications observées au cours du processus de paramétrage. Certains compteurs fournissent des données qui s'appliquent uniquement à l'usage interne du diagnostic [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces compteurs indiquent la mention « Interne uniquement ».  
   
 > [!NOTE]  
->  Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
+>  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Nom|Type de données| Description|  
+|Nom   |Type de données|Description|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|Nom de l'événement statistique de l'optimiseur.|  
 |**occurrence**|**bigint**|Nombre d'occurrences de l'événement d'optimisation pour ce compteur.|  
-|**valeur**|**float**|Valeur moyenne de la propriété par occurrence de l'événement.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**value**|**float**|Valeur moyenne de la propriété par occurrence de l'événement.|  
+|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
     
 ## <a name="remarks"></a>Notes  
- **Sys.dm_exec_query_optimizer_info** contient les propriétés suivantes (compteurs). Toutes les valeurs d'occurrence sont cumulatives et sont définies à 0 au redémarrage du système. Tous les champs de valeurs sont initialisés à NULL au redémarrage du système. Toutes les colonnes de valeurs qui indiquent une moyenne utilisent la valeur d'occurrence de la ligne comme dénominateur pour le calcul de la moyenne. Toutes les optimisations de requêtes sont mesurées lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détermine les modifications de **dm_exec_query_optimizer_info**, y compris les deux requêtes générées par l’utilisateur et système. L’exécution d’un plan déjà mis en cache ne modifie pas les valeurs de **dm_exec_query_optimizer_info**, seules les optimisations sont significatifs.  
+ **Sys.dm_exec_query_optimizer_info** contient les propriétés suivantes (compteurs). Toutes les valeurs d'occurrence sont cumulatives et sont définies à 0 au redémarrage du système. Tous les champs de valeurs sont initialisés à NULL au redémarrage du système. Toutes les colonnes de valeurs qui indiquent une moyenne utilisent la valeur d'occurrence de la ligne comme dénominateur pour le calcul de la moyenne. Toutes les optimisations de requêtes sont mesurées lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détermine les modifications de **dm_exec_query_optimizer_info**, y compris les deux requêtes utilisateur - et -générées par le système. L’exécution d’un plan déjà mis en cache ne modifie pas les valeurs **dm_exec_query_optimizer_info**, seules les optimisations sont significatives.  
   
 |Compteur|Occurrence|Valeur|  
 |-------------|----------------|-----------|  
@@ -86,7 +86,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
 |indicateur de jointure|Nombre de fois que l'algorithme de jointure a été forcé par un indicateur de jointure.|Non applicable|  
 |view reference|Nombre de fois qu'une vue a été référencée dans une requête|Non applicable|  
 |requête distante|Nombre d'optimisations dans lesquelles la requête faisait référence à au moins une source de données distante, par exemple une table dont le nom est en quatre parties ou un jeu de résultats OPENROWSET.|Non applicable|  
-|maximum DOP|Nombre total d'optimisations.|Valeur moyenne réelle de MAXDOP pour un plan optimisé. Par défaut, réelle de MAXDOP est déterminée par le **degré maximal de parallélisme** configuration du serveur d’option et peuvent être remplacés pour une requête spécifique par la valeur de l’indicateur de requête MAXDOP.|  
+|maximum DOP|Nombre total d'optimisations.|Valeur moyenne réelle de MAXDOP pour un plan optimisé. Par défaut, réelle de MAXDOP est déterminé par le **degré maximal de parallélisme** configuration du serveur option et peut être remplacée pour une requête spécifique par la valeur de l’indicateur de requête MAXDOP.|  
 |maximum recursion level|Nombre d'optimisations dans lesquelles un niveau MAXRECURSION supérieur à 0 a été spécifié à l'aide de l'indicateur de requête.|Niveau MAXRECURSION moyen dans les optimisations où un niveau de récursivité maximum est spécifié à l'aide de l'indicateur de requête.|  
 |indexed views loaded|Interne uniquement|Interne uniquement|  
 |indexed views matched|Nombre d'optimisations où une ou plusieurs vues indexées ont été trouvées.|Nombre moyen de vues mises en correspondance.|  
@@ -133,7 +133,7 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

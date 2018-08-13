@@ -19,13 +19,13 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023857"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556469"
 ---
 # <a name="automatic-tuning"></a>Paramétrage automatique
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -106,8 +106,7 @@ Certaines colonnes de cette vue sont décrits dans la liste suivante :
  - Description qui contient des informations pourquoi [!INCLUDE[ssde_md](../../includes/ssde_md.md)] pense que ce changement de plan est une régression des performances potentielles.
  - Date et heure de la régression potentielle est détectée.
  - Score de cette recommandation. 
- - Pour plus d’informations sur les problèmes tels que l’ID du plan détecté, ID du plan régressé, ID du plan qui doit être forcé pour résoudre le problème, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
- script qui peut-être être appliqué pour résoudre le problème, etc. Sont stockés les détails [au format JSON](../../relational-databases/json/index.md).
+ - Pour plus d’informations sur les problèmes tels que l’ID du plan détecté, ID du plan régressé, ID du plan qui doit être forcé pour résoudre le problème, [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script qui peut-être être appliquée pour résoudre le problème, etc. Sont stockés les détails [au format JSON](../../relational-databases/json/index.md).
 
 Utilisez la requête suivante pour obtenir un script qui résout le problème et des informations supplémentaires sur l’estimation bénéficiez :
 

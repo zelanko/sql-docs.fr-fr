@@ -1,5 +1,5 @@
 ---
-title: sp_wait_for_database_copy_sync (base de données de SQL Azure) | Documents Microsoft
+title: sp_wait_for_database_copy_sync (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -23,18 +23,18 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6658ab7b1b68637978ca76ea709c4c0a23414d07
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d1200ffc3a7bf643b55478297dc25e40b02a3dff
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237917"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557339"
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Géo-réplication Active - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Cette procédure aborde la relation [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] entre une base de données primaire et une base de données secondaire. Appel de la **sp_wait_for_database_copy_sync** entraîne l’application d’attendre que toutes les transactions validées sont répliquées et acceptées par la base de données secondaire active. Exécutez **sp_wait_for_database_copy_sync** uniquement la base de données primaire.  
+  Cette procédure aborde la relation [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] entre une base de données primaire et une base de données secondaire. Appel de la **sp_wait_for_database_copy_sync** oblige l’application à attendre que toutes les transactions validées sont répliquées et acceptées par la base de données secondaire active. Exécutez **sp_wait_for_database_copy_sync** uniquement la base de données primaire.  
   
 ||  
 |-|  
@@ -51,7 +51,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
  [ @target_server =] 'nom_serveur'  
  Nom du serveur SQL Database qui héberge la base de données secondaire active. server_name est de type sysname, sans valeur par défaut.  
   
- [ @target_database =] 'nom_base_de_données'  
+ [ @target_database =] 'database_name'  
  Nom de la base de données secondaire active. database_name est de type sysname, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -63,16 +63,16 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   Le lien est introuvable sur le nom du serveur ou la base de données spécifié.  
   
--   La connectivité de l'interlien est perdue. **sp_wait_for_database_copy_sync** est retourné après le délai de connexion.  
+-   La connectivité de l'interlien est perdue. **sp_wait_for_database_copy_sync** retournera après expiration du délai de connexion.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Tout utilisateur dans la base de données primaire peut appeler cette procédure stockée système. La connexion doit être un utilisateur dans les bases de données primaire et secondaire active.  
   
 ## <a name="remarks"></a>Notes  
- Toutes les transactions validées avant un **sp_wait_for_database_copy_sync** appel sont envoyées à la base de données secondaire active.  
+ Toutes les transactions validées avant un **sp_wait_for_database_copy_sync** appel sont envoyés à la base de données secondaire active.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant appelle **sp_wait_for_database_copy_sync** pour vous assurer que toutes les transactions sont validées dans la base de données primaire, db0, envoyées à sa base de données secondaire active sur l’ubfyu5ssyt du serveur cible.  
+ L’exemple suivant appelle **sp_wait_for_database_copy_sync** pour vous assurer que toutes les transactions sont validées dans la base de données primaire, db0, soient envoyées à sa base de données secondaire active sur l’ubfyu5ssyt du serveur cible.  
   
 ```  
 USE db0;  

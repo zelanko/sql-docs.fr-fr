@@ -1,5 +1,5 @@
 ---
-title: Sys.default_constraints (Transact-SQL) | Documents Microsoft
+title: Sys.default_constraints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9da755e03c4cbdf9390db34e167da20ad3b78a61
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 362006b22a60ab8c7e36ca7f3b8bbe513eb6c31c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239359"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561512"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contient une ligne pour chaque objet qui est une définition de la valeur par défaut (créée dans le cadre d’une instruction CREATE TABLE ou ALTER TABLE au lieu d’une instruction CREATE DEFAULT), avec **sys.objects.type** = D.  
+  Contient une ligne pour chaque objet qui est une définition default (créée dans le cadre d’une instruction CREATE TABLE ou ALTER TABLE au lieu d’une instruction CREATE DEFAULT), avec **sys.objects.type** = D.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "35239359"
 |**Définition**|**nvarchar(max)**|Expression SQL qui définit cette valeur par défaut.|  
 |**is_system_named**|**bit**|1 = Le nom a été généré par le système.<br /><br /> 0 = Le nom a été fourni par l'utilisateur.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  

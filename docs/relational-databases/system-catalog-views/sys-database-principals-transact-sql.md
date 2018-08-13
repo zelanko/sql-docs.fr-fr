@@ -24,13 +24,13 @@ caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a879dfcc6dd0feb57126574947b51f84261af915
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ca53a33d2b339b8d4ad2f54481c182b8c228939a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995871"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552769"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "37995871"
 ## <a name="remarks"></a>Notes  
  Le *PasswordLastSetTime* propriétés sont disponibles sur toutes les configurations prises en charge de SQL Server, mais les autres propriétés sont uniquement disponibles lorsque SQL Server s’exécute sur Windows Server 2003 ou version ultérieure et CHECK_POLICY et CHECK_ EXPIRATION sont activés. Consultez [stratégie de mot de passe](../../relational-databases/security/password-policy.md) pour plus d’informations.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Tout utilisateur peut consulter son nom d'utilisateur, les utilisateurs système et les rôles de base de données fixes. Pour voir les autres utilisateurs, vous devez disposer de l'autorisation ALTER ANY USER, ou d'une autorisation sur l'utilisateur. Pour afficher les rôles définis par l'utilisateur, vous devez disposer de l'autorisation ALTER ANY ROLE, ou appartenir au rôle.  
   
 ## <a name="examples"></a>Exemples  

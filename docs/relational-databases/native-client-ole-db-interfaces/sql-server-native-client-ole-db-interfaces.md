@@ -19,15 +19,15 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc385c19386a151625cbccf07e498f5a35b88827
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5c152794e719cd4337b54d628dae385734043668
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413578"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552149"
 ---
-# <a name="sql-server-native-client-ole-db-interfaces"></a>Interfaces SQL Server Native Client (OLE DB)
+# <a name="sql-server-native-client-ole-db-interfaces"></a>Interfaces (OLE DB) de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "37413578"
   
  Cela [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client référence de programmation ne documente pas la totalité des interfaces OLE DB et des méthodes, uniquement les interfaces et les méthodes qui exposent un comportement spécifique au fournisseur lors de l’utilisation du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB fournisseur.  
   
- Pour obtenir une description complète des méthodes et interfaces OLE DB de core, consultez le [de référence du programmeur OLE DB](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ Pour une description complète des principales interfaces et méthodes OLE DB, consultez [OLE DB Programmer’s Reference](http://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

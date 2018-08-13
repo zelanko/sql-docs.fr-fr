@@ -1,5 +1,5 @@
 ---
-title: Sys.column_master_keys (Transact-SQL) | Documents Microsoft
+title: Sys.column_master_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -32,30 +32,30 @@ caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f961586da2bb4bd9a3169fe955d989557535ba7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 61b7c2eb43ec5d30dea98b7eda00f072f883793d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181775"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553009"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque clé principale de base de données ajouté à l’aide de la [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) instruction. Chaque ligne représente une clé principale de colonne (CMK).  
     
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Le nom de la clé CMK.|  
-|**column_master_key_id**|**int**|ID de la clé principale de colonne.|  
+|**column_master_key_id**|**Int**|ID de la clé principale de colonne.|  
 |**create_date**|**datetime**|Date de que création de la clé principale de colonne.|  
 |**modify_date**|**datetime**|Date de que dernière modification de la clé principale de colonne.|  
-|**key_store_provider_name**|**sysname**|Nom du fournisseur pour le magasin de clés principales de colonne qui contient la clé CMK. Les valeurs autorisées sont :<br /><br /> MSSQL_CERTIFICATE_STORE – si le magasin de clés principales de colonne est un magasin de certificats.<br /><br /> Défini par l’utilisateur valeur, si le magasin de clés principales de colonne est d’un type personnalisé.|  
-|**key_path**|**nvarchar(4000)**|Une colonne clé principale spécifique à la banque de chemin d’accès de la clé. Le format du chemin d’accès varie selon le type de magasin de clé principale de colonne. Exemple :<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Pour un magasin de clés principales de colonne personnalisée, le développeur est chargé de définir un chemin de clé est pour le magasin de clés principales de colonne personnalisé.|  
+|**key_store_provider_name**|**sysname**|Nom du fournisseur pour le magasin de clés principales de colonne qui contient la clé CMK. Valeurs autorisées sont :<br /><br /> MSSQL_CERTIFICATE_STORE – si le magasin de clés principales de colonne est un Store de certificat.<br /><br /> Défini par l’utilisateur valeur, si le magasin de clés principales de colonne est d’un type personnalisé.|  
+|**key_path**|**nvarchar(4000)**|Un chemin de spécifiques aux magasins de clé principale de colonne de la clé. Le format du chemin d’accès varie selon le type de magasin de clé principale de colonne. Exemple :<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Pour un magasin de clés principales de colonne personnalisée, le développeur est chargé de définir un chemin de clé est pour le magasin de clés principales de colonne personnalisée.|  
   
-## <a name="permissions"></a>Autorisations  
- Requiert le **VIEW ANY COLUMN MASTER KEY** autorisation.  
+## <a name="permissions"></a>Permissions  
+ Nécessite le **VIEW ANY COLUMN MASTER KEY** autorisation.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

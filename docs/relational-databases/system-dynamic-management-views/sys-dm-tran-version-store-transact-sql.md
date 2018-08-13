@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_version_store (Transact-SQL) | Documents Microsoft
+title: Sys.dm_tran_version_store (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -23,22 +23,22 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7de332c09b586b1c3a7feba4097a940ba9f29a83
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bfb296c8224eb066c8e5f03f94436e05ce6cd4b4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467625"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561919"
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne une table virtuelle qui affiche tous les enregistrements de version dans la banque des versions. **Sys.dm_tran_version_store** n’est pas efficace, car elle interroge le magasin de versions entier, et la banque des versions peut être très volumineuse.  
+  Retourne une table virtuelle qui affiche tous les enregistrements de version dans la banque des versions. **Sys.dm_tran_version_store** n’est pas efficace, car elle interroge le magasin de versions entier, et la banque des versions peut être très volumineux.  
   
  Chaque enregistrement avec contrôle de version est stocké sous forme de données binaires, avec des informations de suivi ou d'état. À l'instar des enregistrements des tables de la base de données, ceux de la banque des versions sont stockés dans des pages de 8 192 octets. Si un enregistrement excède ces 8 192 octets, il est réparti sur deux enregistrements.  
   
- Comme l'enregistrement avec contrôle de version est stocké sous forme binaire, cela ne pose pas de problème avec les différents classements des différentes bases de données. Utilisez **sys.dm_tran_version_store** pour rechercher les versions précédentes des lignes dans la représentation binaire, tels qu’ils existent dans la banque des versions.  
+ Comme l'enregistrement avec contrôle de version est stocké sous forme binaire, cela ne pose pas de problème avec les différents classements des différentes bases de données. Utilisez **sys.dm_tran_version_store** pour rechercher les versions précédentes des lignes dans la représentation binaire tels qu’ils existent dans la banque des versions.  
   
   
 ## <a name="syntax"></a>Syntaxe  
@@ -49,11 +49,11 @@ sys.dm_tran_version_store
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Numéro de séquence de la transaction qui produit la version de l'enregistrement.|  
 |**version_sequence_num**|**bigint**|Numéro de séquence de l'enregistrement avec version. Cette valeur est unique dans la transaction produisant la version.|  
-|**database_id**|**int**|ID de base de données de l'enregistrement avec contrôle de version.|  
+|**database_id**|**Int**|ID de base de données de l'enregistrement avec contrôle de version.|  
 |**rowset_id**|**bigint**|ID d'ensemble de lignes de l'enregistrement.|  
 |**status**|**tinyint**|Indique si un enregistrement avec version a été réparti sur deux enregistrements. Si la valeur est 0, l'enregistrement est stocké sur une seule page. Si la valeur est 1, l'enregistrement est réparti sur deux enregistrements, lesquels sont stockés sur deux pages différentes.|  
 |**min_length_in_bytes**|**smallint**|Longueur minimale de l'enregistrement, en octets.|  
@@ -62,7 +62,7 @@ sys.dm_tran_version_store
 |**record_length_second_part_in_bytes**|**smallint**|Longueur de la deuxième partie de l'enregistrement avec contrôle de version, en octets.|  
 |**record_image_second_part**|**varbinary(8000)**|Image binaire de la deuxième partie de l'enregistrement avec contrôle de version.|  
   
-## <a name="permissions"></a>Autorisations
+## <a name="permissions"></a>Permissions
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   

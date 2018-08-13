@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_input_buffer (Transact-SQL) | Documents Microsoft
+title: Sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da708fb9606b5e5d52165680af8dff74a9201115
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 583a49e34b922e128ea7b55cf0c738789ca60a06
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464065"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565053"
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>Sys.dm_exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
   
 ## <a name="arguments"></a>Arguments  
 *session_id*  
-L’id de session exécute le lot à rechercher. *session_id* est **smallint**. *session_id* peut être obtenu à partir des objets de gestion dynamique suivants :  
+L’id de session exécute le lot à rechercher. *session_id* est **smallint**. *session_id* peut être obtenu à partir d’objets de gestion dynamique suivants :  
   
 -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
@@ -53,23 +53,23 @@ L’id de session exécute le lot à rechercher. *session_id* est **smallint**. 
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)   
   
 *request_id*  
-Request_id de [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* est **int**.  
+(Request_id) à partir de [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* est **int**.  
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**event_type**|**nvarchar (256)**|Le type d’événement dans le tampon d’entrée pour le spid donné.|  
 |**parameters**|**smallint**|Tous les paramètres fournis pour l’instruction.|  
-|**event_info**|**nvarchar(max)**|Le texte de l’instruction dans le tampon d’entrée pour le spid donné.|  
+|**event_info**|**nvarchar(max)**|Le texte de l’instruction dans la mémoire tampon d’entrée pour le spid donné.|  
   
-## <a name="permissions"></a>Autorisations  
- Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l’utilisateur a l’autorisation VIEW SERVER STATE, l’utilisateur voit les sessions de tout en cours d’exécution sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; sinon, l’utilisateur voit uniquement la session active.  
+## <a name="permissions"></a>Permissions  
+ Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l’utilisateur a l’autorisation VIEW SERVER STATE, l’utilisateur verra en cours d’exécution toutes les sessions sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; sinon, l’utilisateur verra uniquement la session active.  
   
- Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si l’utilisateur est le propriétaire de la base de données, l’utilisateur s’affiche en cours d’exécution toutes les sessions sur le [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; sinon, l’utilisateur voit uniquement la session active.  
+ Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si l’utilisateur est le propriétaire de la base de données, l’utilisateur verra en cours d’exécution toutes les sessions sur le [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; sinon, l’utilisateur verra uniquement la session active.  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction de gestion dynamique peut être utilisée conjointement avec sys.dm_exec_sessions ou sys.dm_exec_requests faisant **CROSS APPLY**.  
+ Cette fonction de gestion dynamique peut être utilisée conjointement avec sys.dm_exec_sessions ou sys.dm_exec_requests en effectuant les **CROSS APPLY**.  
   
 ## <a name="examples"></a>Exemples  
   

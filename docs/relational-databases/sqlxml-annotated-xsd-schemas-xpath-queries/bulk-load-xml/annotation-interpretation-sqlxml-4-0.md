@@ -1,5 +1,5 @@
 ---
-title: Interprétation d’annotation (SQLXML 4.0) | Documents Microsoft
+title: Interprétation des annotations (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 67d586555fa81a456c87cc94379740e71c982696
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8665f5d348b3e6c7fa1b7d49b376586243a1ca29
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969904"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553039"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>Interprétation d'annotation (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Les rubriques de cette section décrivent comment le chargement en masse XML interprète les annotations dans le schéma XSD. Le comportement décrit ici s'applique également aux annotations dans le schéma XDR.  
   
 > [!NOTE]  
->  Les informations fournies dans ces rubriques décrivent uniquement les annotations utilisées par le chargement en masse XML lors de son traitement. Pour obtenir une liste complète des annotations pour le schéma XSD sont pris en charge par SQLXML 4.0, consultez [à l’aide des Annotations dans les schémas XSD &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md). Pour une liste des annotations prises en charge pour les schémas XDR, consultez [de schémas XDR annotés &#40;déconseillé dans SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+>  Les informations fournies dans ces rubriques décrivent uniquement les annotations utilisées par le chargement en masse XML lors de son traitement. Pour obtenir une liste complète des annotations pour le schéma XSD sont pris en charge par SQLXML 4.0, consultez [à l’aide des Annotations dans les schémas XSD &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md). Pour obtenir la liste des annotations prises en charge pour les schémas XDR, consultez [de schémas XDR annotés &#40;déconseillé dans SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [SQL : Relationship et la règle de tri par clé &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
@@ -50,6 +50,6 @@ ms.locfileid: "32969904"
  Décrit comment la **SQL : Overflow** annotation est interprétée de chargement en masse XML.  
   
  [Autres Annotations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations.md)  
- Décrit comment les annotations suivantes sont interprétées dans le chargement en masse XML : **SQL : ID-préfixe**, **SQL : use-cdata**, **SQL : url-encode**, **sql : is-mapping-schema**, **SQL : Key-champs**.  
+ Décrit comment les annotations suivantes sont interprétées dans le chargement en masse XML : **SQL : ID-préfixe**, **SQL : use-cdata**, **SQL : url-encode**, **sql : schéma de mappage est**, **SQL : Key-champs**.  
   
   

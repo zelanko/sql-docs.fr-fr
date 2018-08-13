@@ -1,5 +1,5 @@
 ---
-title: Sys.foreign_key_columns (Transact-SQL) | Documents Microsoft
+title: Sys.foreign_key_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,28 +24,29 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 110528e8445703497beab5eb9339fb65d026d582
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 84a994759cf06b5ce3a0e41e6fa731a8477ce4ca
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561513"
 ---
 # <a name="sysforeignkeycolumns-transact-sql"></a>sys.foreign_key_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contient une ligne pour chaque colonne, ou ensemble de colonnes, comportant une clé étrangère.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**constraint_object_id**|**int**|ID de la contrainte FOREIGN KEY.|  
-|**constraint_column_id**|**int**|ID de la colonne ou un ensemble de colonnes qui composent la clé étrangère (*1.. n* où n = nombre de colonnes).|  
-|**parent_object_id**|**int**|ID du parent de la contrainte, qui est l'objet référençant.|  
-|**parent_column_id**|**int**|ID de la colonne parente, qui est la colonne référençante.|  
-|**referenced_object_id**|**int**|ID de l'objet référencé, qui contient la clé candidate.|  
-|**referenced_column_id**|**int**|ID de la colonne référencée (colonne clé candidate).|  
+|**constraint_object_id**|**Int**|ID de la contrainte FOREIGN KEY.|  
+|**constraint_column_id**|**Int**|ID de colonne, ou le jeu de colonnes, qui composent la clé étrangère (*1.. n* où n = nombre de colonnes).|  
+|**parent_object_id**|**Int**|ID du parent de la contrainte, qui est l'objet référençant.|  
+|**parent_column_id**|**Int**|ID de la colonne parente, qui est la colonne référençante.|  
+|**referenced_object_id**|**Int**|ID de l'objet référencé, qui contient la clé candidate.|  
+|**referenced_column_id**|**Int**|ID de la colonne référencée (colonne clé candidate).|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

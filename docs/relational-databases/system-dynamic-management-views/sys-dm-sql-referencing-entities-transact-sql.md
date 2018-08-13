@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_sql_referencing_entities (Transact-SQL) | Documents Microsoft
+title: Sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: adf5f058b8eb39f4eecfd13d922ba723664a73a0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b78b7d54b5065496b587b6493e986b263d8919fd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467765"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548949"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne une ligne pour chaque entité dans la base de données actuelle qui référence une autre entité définie par l'utilisateur par nom. Une dépendance entre deux entités est créée lorsqu’une entité, appelée la *entité référencée*, apparaît par nom dans une expression SQL rendue persistante d’une autre entité, appelée la *entité de référence*. Par exemple, si un type défini par l'utilisateur est spécifié comme entité référencée, cette fonction retourne chaque entité définie par l'utilisateur qui référence ce type par nom dans sa définition. La fonction ne retourne pas les entités dans d'autres bases de données qui peuvent référencer l'entité spécifiée. Cette fonction doit être exécutée dans le contexte de la base de données master pour retourner un déclencheur DDL au niveau du serveur comme une entité de référence.  
+  Retourne une ligne pour chaque entité dans la base de données actuelle qui référence une autre entité définie par l'utilisateur par nom. Une dépendance entre deux entités est créée lorsqu’une entité, appelée le *entité référencée*, apparaît par nom dans une expression SQL rendue persistante d’une autre entité, appelée le *entité de référence*. Par exemple, si un type défini par l'utilisateur est spécifié comme entité référencée, cette fonction retourne chaque entité définie par l'utilisateur qui référence ce type par nom dans sa définition. La fonction ne retourne pas les entités dans d'autres bases de données qui peuvent référencer l'entité spécifiée. Cette fonction doit être exécutée dans le contexte de la base de données master pour retourner un déclencheur DDL au niveau du serveur comme une entité de référence.  
   
  Vous pouvez utiliser cette fonction de gestion dynamique pour établir un rapport sur les types d'entités suivants dans la base de données actuelle qui référencent l'entité spécifiée :  
   
@@ -64,7 +64,7 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *schema_name.Referenced*_*nom_entité*  
+ *schema_name.Referenced*_*entity_name*  
  Est le nom de l’entité référencée.  
   
  *schema_name* est obligatoire sauf lorsque la classe référencée est PARTITION_FUNCTION.  
@@ -78,11 +78,11 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|Schéma auquel l'entité de référence appartient. Autorise la valeur NULL.<br /><br /> NULL pour les déclencheurs DDL au niveau de la base de données et au niveau du serveur.|  
 |referencing_entity_name|**sysname**|Nom de l’entité de référence. N'accepte pas la valeur NULL.|  
-|referencing_id|**int**|ID de l'entité de référence. N'accepte pas la valeur NULL.|  
+|referencing_id|**Int**|ID de l'entité de référence. N'accepte pas la valeur NULL.|  
 |referencing_class|**tinyint**|Classe de l'entité de référence. N'accepte pas la valeur NULL.<br /><br /> 1 = objet<br /><br /> 12 = déclencheur DDL au niveau de la base de données<br /><br /> 13 = déclencheur DDL au niveau du serveur|  
 |referencing_class_desc|**nvarchar(60)**|Description de la classe d’entité de référence.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|Indique que la résolution de l'ID d'entité référencée se produit au moment de l'exécution, car elle dépend du schéma de l'appelant.<br /><br /> 1 = l'entité de référence a la possibilité de référencer l'entité ; toutefois, la résolution de l'ID d'entité référencée dépend de l'appelant et ne peut pas être déterminée. Cela se produit uniquement pour les références non liées au schéma à une procédure stockée, procédure stockée étendue ou fonction définie par l'utilisateur appelée dans une instruction EXECUTE.<br /><br /> 0 = l'entité référencée ne dépend pas de l'appelant.|  
@@ -105,7 +105,7 @@ sys.dm_sql_referencing_entities (
   
 |Type d'entité|Entité de référence|Entité référencée|  
 |-----------------|------------------------|-----------------------|  
-|Table|Oui*|Oui|  
+|Table de charge de travail|Oui*|Oui|  
 |Affichage|Oui|Oui|  
 |Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Oui|Oui|  
 |Procédure stockée CLR|non|Oui|  
@@ -122,11 +122,11 @@ sys.dm_sql_referencing_entities (
 |Collection de schémas XML|non|Oui|  
 |Fonction de partition|non|Oui|  
   
- \* Une table est suivie comme entité de référence uniquement lorsqu’il fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, type défini par l’utilisateur ou collection de schémas XML dans la définition d’une colonne calculée, une contrainte CHECK ou une contrainte par défaut.  
+ \* Une table est suivie comme entité de référence uniquement lorsqu’il fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, de type défini par l’utilisateur ou de collection de schémas XML dans la définition d’une colonne calculée, une contrainte CHECK ou une contrainte par défaut.  
   
  ** Les procédures stockées numérotées avec une valeur entière supérieure à 1 ne sont pas suivies en tant qu'entité de référence ou référencée.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -134,7 +134,7 @@ sys.dm_sql_referencing_entities (
   
 -   Requiert l’autorisation SELECT sur sys.dm_sql_referencing_entities. Par défaut, l'autorisation SELECT est accordée à public.  
   
-### <a name="includesssql14includessssql14-mdmd---includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### <a name="includesssql14includessssql14-mdmd---includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
   
 -   Ne requiert aucune autorisation sur l'objet référencé. Des résultats partiels peuvent être retournés si l'utilisateur a l'autorisation VIEW DEFINITION uniquement sur certaines entités de référence.  
   
@@ -158,7 +158,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Retour des entités qui font référence à un type donné  
- L'exemple suivant retourne les entités qui référencent le type d'alias `dbo.Flag`. Le jeu de résultats montre que deux procédures stockées utilisent ce type. Le `dbo.Flag` type est également utilisé dans la définition de plusieurs colonnes dans le `HumanResources.Employee` table ; Toutefois, étant donné que le type n’est pas dans la définition d’une colonne calculée, une contrainte CHECK ou une contrainte par défaut dans la table, ne retourne aucune ligne pour le `HumanResources.Employee` table.  
+ L'exemple suivant retourne les entités qui référencent le type d'alias `dbo.Flag`. Le jeu de résultats montre que deux procédures stockées utilisent ce type. Le `dbo.Flag` type est également utilisé dans la définition de plusieurs colonnes dans le `HumanResources.Employee` table ; Toutefois, étant donné que le type n’est pas dans la définition d’une colonne calculée, une contrainte CHECK ou une contrainte par défaut dans la table, ne retourne aucune ligne pour le `HumanResources.Employee`table.  
   
 ```sql  
 USE AdventureWorks2012;  

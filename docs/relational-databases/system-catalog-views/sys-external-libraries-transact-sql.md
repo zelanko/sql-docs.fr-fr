@@ -22,13 +22,13 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 110f514c4688536decfd29c412ce310746cd972e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3f6d833488982da777d0f146d55f0a67fa945de5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001191"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553259"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>Sys.external_libraries (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "38001191"
 
 Prend en charge la gestion des bibliothèques de package liés aux runtimes externes comme R ou Python.
 
-## <a name="sysexternallibraries"></a>Sys.external_libraries
+## <a name="sysexternallibraries"></a>sys.external_libraries
 
 Le sys.external_libraries de vue de catalogue répertorie une ligne pour chaque bibliothèque externe qui a été téléchargé dans la base de données.
 

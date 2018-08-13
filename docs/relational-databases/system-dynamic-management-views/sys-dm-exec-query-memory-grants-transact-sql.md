@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_memory_grants (Transact-SQL) | Documents Microsoft
+title: Sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,23 +23,23 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f783df6df249f5ce045454070771566b59ba0bba
-ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 0c0d13ebbda9f8031987b5545715de96fc37c12a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34812053"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559589"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne des informations sur toutes les requêtes qui ont demandé et sont en attente d’une allocation de mémoire ou qui ont reçu une allocation de mémoire. Les requêtes qui ne nécessitent pas une allocation de mémoire n’apparaîtra pas dans cette vue. Par exemple, trier et les opérations de jointure de hachage ont des allocations de mémoire pour l’exécution de requête, lors de requêtes sans un **ORDER BY** clause ne disposera d’une mémoire accorder.  
+  Retourne des informations sur toutes les requêtes qui ont demandé et sont en attente d’une allocation de mémoire ou ont reçu une allocation de mémoire. Les requêtes qui ne nécessitent pas une allocation de mémoire n’apparaîtront pas dans cette vue. Par exemple, trier et les opérations de jointure de hachage ont des allocations de mémoire pour l’exécution des requêtes, lors de requêtes sans un **ORDER BY** clause n’aura pas une mémoire accorder.  
   
- Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d'exposer ces informations, chaque ligne contenant des données qui n'appartient pas au locataire connecté est filtrée. En outre, les valeurs dans les colonnes **scheduler_id**, **wait_order**, **pool_id**, **group_id** sont filtrées ; la valeur de colonne est définie avec la valeur NULL.  
+ Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d'exposer ces informations, chaque ligne contenant des données qui n'appartient pas au locataire connecté est filtrée. En outre, les valeurs dans les colonnes **scheduler_id**, **wait_order**, **pool_id**, **group_id** sont filtrées ; la valeur de colonne est définie. avec la valeur NULL.  
   
 > [!NOTE]  
-> Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_query_memory_grants**.  
+> À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_query_memory_grants**.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "34812053"
 |**request_time**|**datetime**|Date et heure auxquelles cette requête a demandé l'allocation de mémoire.|  
 |**grant_time**|**datetime**|Date et heure auxquelles la mémoire a été allouée pour cette requête. NULL si la mémoire n'a pas encore été allouée.|  
 |**requested_memory_kb**|**bigint**|Quantité totale de mémoire demandée, en kilo-octets.|  
-|**granted_memory_kb**|**bigint**|Quantité totale de mémoire actuellement allouée, en kilo-octets. Peut être NULL si la mémoire n'a pas encore été allouée. Dans une situation type, cette valeur doit être le même que **requested_memory_kb**. Pour la création d'index, le serveur peut autoriser de la mémoire à la demande supplémentaire au-delà de la mémoire allouée initialement.|  
+|**granted_memory_kb**|**bigint**|Quantité totale de mémoire actuellement allouée, en kilo-octets. Peut être NULL si la mémoire n'a pas encore été allouée. Dans une situation type, cette valeur doit être identique à **requested_memory_kb**. Pour la création d'index, le serveur peut autoriser de la mémoire à la demande supplémentaire au-delà de la mémoire allouée initialement.|  
 |**required_memory_kb**|**bigint**|Mémoire minimale requise pour exécuter cette requête, en kilo-octets. **requested_memory_kb** est identique ou supérieure à cette quantité.|  
 |**used_memory_kb**|**bigint**|Mémoire physique utilisée à ce moment, en kilo-octets.|  
 |**max_used_memory_kb**|**bigint**|Mémoire physique maximale utilisée jusqu'à ce moment, en kilo-octets.|  
@@ -67,9 +67,9 @@ ms.locfileid: "34812053"
 |**pool_id**|**Int**|ID du pool de ressources auquel appartient ce groupe de charge de travail.|  
 |**is_small**|**tinyint**|Si la valeur est définie sur 1, cette allocation utilise le sémaphore de ressource le plus petit. Si la valeur est définie sur 0, c'est que le sémaphore de ressource ordinaire est utilisé.|  
 |**ideal_memory_kb**|**bigint**|Taille de l'allocation mémoire, en kilo-octets (Ko) pour l'ajuster à la mémoire physique. Elle est basée sur l'estimation de la cardinalité.|  
-|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
@@ -77,20 +77,20 @@ Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], nécessite le `VIEW D
 ## <a name="remarks"></a>Notes  
  Un scénario de débogage type pour le délai d'attente de la requête peut ressembler à ce qui suit :  
   
--   Vérifiez l’état de mémoire de système global à l’aide [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)et les compteurs de performance différents.  
+-   Vérifier l’état de mémoire de système global à l’aide [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)et différents compteurs de performance.  
   
 -   Recherchez les réservations de mémoire de requête en cours d’exécution dans **sys.dm_os_memory_clerks** où `type = 'MEMORYCLERK_SQLQERESERVATIONS'`.  
   
--   Recherchez les requêtes en attente<sup>1</sup> d’allocations à l’aide de **sys.dm_exec_query_memory_grants**.  
+-   Recherchez les requêtes en attente<sup>1</sup> pour les allocations à l’aide de **sys.dm_exec_query_memory_grants**.  
   
     ```sql  
     --Find all queries waiting in the memory queue  
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
     
-    <sup>1</sup> dans ce scénario, le type d’attente est généralement RESOURCE_SEMAPHORE. Pour plus d’informations, consultez [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
+    <sup>1</sup> Dans ce scénario, le type d’attente est généralement RESOURCE_SEMAPHORE. Pour plus d’informations, consultez [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
   
--   Recherche de cache pour les requêtes avec des allocations de mémoire à l’aide de [sys.dm_exec_cached_plans &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) et [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+-   Cache pour les requêtes de recherche avec des allocations de mémoire à l’aide de [sys.dm_exec_cached_plans &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) et [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
     ```sql  
     -- retrieve every query plan from the plan cache  
@@ -100,7 +100,7 @@ Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], nécessite le `VIEW D
     GO  
     ```  
   
--   Examinez les requêtes utilisant beaucoup de mémoire à l’aide de [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).  
+-   Examiner plus en détail les requêtes utilisant beaucoup de mémoire à l’aide de [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).  
   
     ```sql  
     --Find top 5 queries by average CPU time  
@@ -112,15 +112,15 @@ Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], nécessite le `VIEW D
     GO  
     ```  
   
--   Si une perte de contrôle de la requête, examinez le plan d’exécution à partir de [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) et le texte à partir du lot [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+-   Si une requête rebelle est suspectée, examinez le plan d’exécution à partir de [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) et le texte à partir du traitement [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
- Les requêtes qui utilisent des vues de gestion dynamiques qui incluent `ORDER BY` ou agrégats peuvent augmenter la consommation de mémoire et par conséquent contribuer au problème pour résoudre des problèmes.  
+ Les requêtes qui utilisent des vues de gestion dynamique qui incluent `ORDER BY` ou agrégats peuvent augmenter la consommation de mémoire et par conséquent contribuer au problème qu’ils tentent de résoudre.  
   
  La fonctionnalité Gouverneur de ressources permet à un administrateur de base de données de répartir des ressources serveur entre plusieurs pools de ressources (64 pools au maximum). À partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], chaque pool se comporte comme une instance de petit serveur indépendante et requiert 2 sémaphores. Le nombre de lignes qui sont retournées à partir de **sys.dm_exec_query_resource_semaphores** peut être jusqu'à 20 fois plus de lignes qui sont retournées dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
- [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

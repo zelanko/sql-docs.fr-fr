@@ -18,13 +18,13 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d45c3b54eb6b5e09c00ea94cfef924b3c94fa70
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6c15bfc29ae02e362ea1010ef67b0a99e4b05dc0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420478"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551129"
 ---
 # <a name="ssvariant-structure"></a>Structure SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "37420478"
 
   Le **SSVARIANT** structure, qui est définie dans sqlncli.h, correspond à une valeur DBTYPE_SQLVARIANT dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur Native Client OLE DB.  
   
- **SSVARIANT** est une union de discrimination. Selon la valeur du membre vt, le consommateur peut identifier le membre à lire. les valeurs VT correspondent aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données. Par conséquent, le **SSVARIANT** structure peut contenir n’importe quel type de SQL Server. Pour plus d’informations sur la structure de données pour les types OLE DB standard, consultez [indicateurs de Type](http://go.microsoft.com/fwlink/?LinkId=122171).  
+ **SSVARIANT** est une union de discrimination. En fonction de la valeur du membre vt, le consommateur peut identifier le membre à lire. Les valeurs de vt correspondent aux types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ainsi, la structure **SSVARIANT** peut contenir n’importe quel type SQL Server. Pour plus d’informations sur la structure de données pour les types OLE DB standard, consultez [indicateurs de Type](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
 ## <a name="remarks"></a>Notes  
- Lorsque DataTypeCompat == 80, plusieurs **SSVARIANT** sous-types deviennent des chaînes. Par exemple, les valeurs vt suivantes apparaissent dans **SSVARIANT** en tant que VT_SS_WVARSTRING :  
+ Quand DataTypeCompat==80, plusieurs sous-types **SSVARIANT** deviennent des chaînes. Par exemple, les valeurs de vt suivantes apparaissent dans **SSVARIANT** en tant que VT_SS_WVARSTRING :  
   
 -   VT_SS_DATETIMEOFFSET  
   
@@ -58,22 +58,22 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  Pour l’ensemble complet de macros d’accès pour chaque membre de la **SSVARIANT** structure, consultez le fichier sqlncli.hi.  
   
- Le tableau suivant décrit les membres de la **SSVARIANT** structure :  
+ Le tableau suivant décrit les membres de la structure **SSVARIANT** :  
   
 |Membre|Indicateur de type OLE DB|Type de données OLE DB C|Valeur vt|Commentaires|  
 |------------|---------------------------|------------------------|--------------|--------------|  
-|VT|SSVARTYPE|||Spécifie le type de valeur contenue dans le **SSVARIANT** struct.|  
-|bTinyIntVal|DBTYPE_UI1|**OCTETS**|**VT_SS_UI1**|Prend en charge la **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
-|sShortIntVal|DBTYPE_I2|**COURT**|**VT_SS_I2**|Prend en charge la **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
+|VT|SSVARTYPE|||Spécifie le type de valeur contenu dans la structure **SSVARIANT**.|  
+|bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|Prend en charge la **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
+|sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|Prend en charge la **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
 |lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|Prend en charge la **int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
 |llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|Prend en charge la **bigint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
 |fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|Prend en charge la **réel** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
 |dblFloatVal|DBTYPE_R8|**double**|**VT_SS_R8**|Prend en charge la **float** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
 |cyMoneyVal|DBTYPE_CY|**LARGE_INTEGER**|**VT_SS_MONEY VT_SS_SMALLMONEY**|Prend en charge la **money** et **smallmoney** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données.|  
-|fBitVal|DBTYPE_BOOL|**TYPE VARIANT_BOOL**|**VT_SS_BIT**|Prend en charge la **bits** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
+|fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|Prend en charge la **bits** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
 |rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|Prend en charge la **uniqueidentifier** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
 |numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|Prend en charge la **numérique** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
-|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Prend en charge la **date** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.|  
+|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Prend en charge le type de données **date**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2**|Prend en charge la **smalldatetime**, **datetime**, et **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données.|  
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Prend en charge la **temps** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.<br /><br /> Inclut les membres suivants :<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**octets**) spécifie l’échelle pour *tTime2Val* valeur.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Prend en charge la **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.<br /><br /> Inclut les membres suivants :<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**octets**) spécifie l’échelle pour *tsDataTimeVal* valeur.|  
