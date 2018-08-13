@@ -1,5 +1,5 @@
 ---
-title: sp_updateextendedproperty (Transact-SQL) | Documents Microsoft
+title: sp_updateextendedproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fef4a744e237d81edc15ec7dbcef79a67e5edc70
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9e8d86bbcb6a35babce5ce2da7a0c63a8c310ddf
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261185"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533098"
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,10 +61,10 @@ sp_updateextendedproperty
  Nom de la propriété à mettre à jour. *property_name* est **sysname**, et ne peut pas être NULL.  
   
  [ @value=] {'*valeur*'}  
- Valeur associée à la propriété. *valeur* est **sql_variant**, avec NULL comme valeur par défaut. La taille de *valeur* peut-être pas dépasser 7 500 octets.  
+ Valeur associée à la propriété. *valeur* est **sql_variant**, avec NULL comme valeur par défaut. La taille de *valeur* peut ne pas être plus de 7 500 octets.  
   
  [ @level0type=] {'*level0_object_type*'}  
- Type défini par l'utilisateur ou utilisateur. *level0_object_type* est **varchar (128)**, avec NULL comme valeur par défaut. Les entrées valides sont ASSEMBLY, contrat, NOTIFICATION d’événement, groupe de fichiers, TYPE DE MESSAGE, fonction de PARTITION, schéma de PARTITION, le repère de PLAN, REMOTE SERVICE BINDING, ROUTE, schéma, SERVICE, utilisateur, déclencheur, TYPE et NULL.  
+ Type défini par l'utilisateur ou utilisateur. *level0_object_type* est **varchar (128)**, avec NULL comme valeur par défaut. Les entrées valides sont ASSEMBLY, contrat, NOTIFICATION d’événement, groupe de fichiers, TYPE DE MESSAGE, fonction de PARTITION, schéma de PARTITION, le repère de PLAN, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, utilisateur, déclencheur, TYPE et NULL.  
   
 > [!IMPORTANT]  
 >  Les types de niveau 0 USER et TYPE seront éliminés dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement. À la place de USER, utilisez SCHEMA en tant que type de niveau 0. Pour TYPE, utilisez SCHEMA comme type de niveau 0 et TYPE comme type de niveau 1.  
@@ -88,11 +88,11 @@ sp_updateextendedproperty
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- À des fins de définition des propriétés étendues, les objets dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données sont répartis sur trois niveaux (0, 1 et 2). Le niveau 0 est le niveau le plus élevé et est composé d'objets relevant de l'étendue de la base de données. Les objets de niveau 1 figurent dans l'étendue du schéma ou de l'utilisateur tandis que les objets de niveau 2 se trouvent dans les objets de niveau 1. Vous pouvez définir des propriétés étendues pour les objets de tous ces niveaux. Les références à un objet d'un niveau donné doivent être qualifiées par les noms des objets de niveau supérieur possédant ou contenant l'objet en question.  
+ Pour les besoins de définition des propriétés étendues, les objets dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données sont répartis sur trois niveaux (0, 1 et 2). Le niveau 0 est le niveau le plus élevé et est composé d'objets relevant de l'étendue de la base de données. Les objets de niveau 1 figurent dans l'étendue du schéma ou de l'utilisateur tandis que les objets de niveau 2 se trouvent dans les objets de niveau 1. Vous pouvez définir des propriétés étendues pour les objets de tous ces niveaux. Les références à un objet d'un niveau donné doivent être qualifiées par les noms des objets de niveau supérieur possédant ou contenant l'objet en question.  
   
- Étant donné un valide *property_name* et *valeur*, si tous les noms et les types d’objet sont null, la propriété mise à jour appartient à la base de données actuelle.  
+ Étant donné un valide *property_name* et *valeur*, si tous les types d’objets et les noms sont null, la propriété mise à jour appartient à la base de données actuelle.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les membres des rôles de base de données fixes db_owner et db_ddladmin peuvent mettre à jour les propriétés étendues de n'importe quel objet, avec toutefois la restriction suivante : db_ddladmin ne peut pas ajouter de propriétés à la base de données elle-même, ni aux utilisateurs ou rôles.  
   
  Les utilisateurs peuvent mettre à jour les propriétés étendues des objets qu'ils possèdent ou pour lesquels ils disposent d'autorisations ALTER ou CONTROL.  

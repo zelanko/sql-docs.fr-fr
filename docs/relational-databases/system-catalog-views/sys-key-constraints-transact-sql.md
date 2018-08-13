@@ -1,5 +1,5 @@
 ---
-title: Sys.key_constraints (Transact-SQL) | Documents Microsoft
+title: Sys.key_constraints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,26 +24,26 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f37e98f8da62f99b3c92d22610bdb4874efcded6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e76b780b65d97435e14716cf327334de0e8d8c23
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181235"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543159"
 ---
 # <a name="syskeyconstraints-transact-sql"></a>sys.key_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contient une ligne pour chaque objet qui est une clé primaire ou une contrainte unique. Inclut **sys.objects.type** PK et UQ.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**\<Colonnes héritent de sys.objects >**||Pour obtenir la liste des colonnes qui hérite de cette vue, consultez [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|**unique_index_id**|**int**|ID de l'index unique correspondant dans l'objet parent qui a été créé pour appliquer cette contrainte.|  
+|**unique_index_id**|**Int**|ID de l'index unique correspondant dans l'objet parent qui a été créé pour appliquer cette contrainte.|  
 |**is_system_named**|**bit**|1 = Le nom a été généré par le système.<br /><br /> 0 = Le nom a été fourni par l'utilisateur.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

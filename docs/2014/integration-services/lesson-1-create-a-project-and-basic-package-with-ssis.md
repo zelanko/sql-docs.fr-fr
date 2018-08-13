@@ -14,12 +14,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c429f832ec89abe78b77dd1e8ece10082aeb0026
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cf5b1d813261786201f366e7f8dee6c296451c7
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331949"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359616"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Leçon 1 : Création du package de base et du package du projet
   Au cours de cette leçon, vous allez créer un package ETL simple qui extrait des données d'une seule source de fichier plat, transforme ces données en utilisant deux composants de transformation de recherche et les écrit dans la table de faits **FactCurrency** de la base de données **AdventureWorksDW2012**. Dans le cadre de cette leçon, vous allez apprendre à créer de nouveaux packages, ajouter et configurer des sources de données et des destinations et enfin, à utiliser le nouveau flux de contrôle et les composants de flux de données.  
@@ -30,7 +30,7 @@ ms.locfileid: "37331949"
 ## <a name="understanding-the-package-requirements"></a>Connaissances préalables à la création d'un package  
  Ce didacticiel nécessite Microsoft SQL Server Data Tools.  
   
- Pour plus d'informations sur l'installation de SQL Server Data Tools, consultez [Téléchargement de SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
+ Pour plus d'informations sur l'installation de SQL Server Data Tools, consultez [Téléchargement de SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-2017).  
   
  Avant de créer un package, vous devez maîtriser les connaissances relatives au formatage utilisé pour les données sources et la destination. Une fois ces connaissances maîtrisées, vous êtes prêt à définir les transformations nécessaires pour mapper les données source avec les données de destination.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "37331949"
 |Colonne de fichier plat|Nom de la table|Nom de la colonne|Type de données|  
 |----------------------|----------------|-----------------|---------------|  
 |0|FactCurrency|AverageRate|float|  
-| 1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
+|1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|Date|  
 |3|FactCurrency|EndOfDayRate|FLOAT|  
   

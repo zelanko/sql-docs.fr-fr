@@ -17,15 +17,15 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ff1a164c98fa04cdf2d490ece9f088e255a6e164
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1bb3a6ce20cad1f42ce6baf7f90424a6697ab029
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032623"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542989"
 ---
-# <a name="smo-programming---getting-started-in-visual-c-net"></a>Programmation SMO - prise en main dans Visual c# .NET
+# <a name="smo-programming---getting-started-in-visual-c-net"></a>Programmation SMO - Bien démarrer avec Visual C# .NET
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET est un des langages de programmation managés pris en charge par le common language runtime (CLR) dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Pour plus d’informations sur le langage c#, consultez le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation .NET. Vous pouvez utiliser aussi bien [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] que [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] pour développer des applications SMO.  

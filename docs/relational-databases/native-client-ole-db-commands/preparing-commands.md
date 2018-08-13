@@ -18,13 +18,13 @@ ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0bb783907259eeb5ba40ed90a71671887cab3a74
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 096aff783be598522569d0963679080971d776ed
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418318"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532969"
 ---
 # <a name="preparing-commands"></a>Préparation des commandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "37418318"
   
  Pour les commandes préparées, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit la prise en charge native de la préparation et de l'exécution des instructions de commande. Lorsque vous préparez une instruction, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un plan d'exécution, le met en cache et retourne un handle de ce plan d'exécution au fournisseur. Le fournisseur utilise ensuite ce handle pour exécuter l'instruction à plusieurs reprises. Aucune procédure stockée n'est créée. Étant donné que le handle identifie directement le plan d'exécution pour une instruction SQL au lieu de faire correspondre l'instruction au plan d'exécution dans le cache (comme c'est le cas pour l'exécution directe), il est plus efficace de préparer une instruction que de l'exécuter directement, si vous savez que l'instruction sera exécutée plusieurs fois.  
   
- Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], les instructions préparées ne peuvent pas être utilisées pour créer des objets temporaires et ne peut pas référencer des procédures stockées système qui créent des objets temporaires, tels que des tables temporaires. Ces procédures doivent être exécutées directement.  
+ Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], les instructions préparées ne peuvent pas être utilisées pour créer des objets temporaires et elles ne peuvent pas référencer des procédures stockées système qui créent des objets temporaires, comme des tables temporaires. Ces procédures doivent être exécutées directement.  
   
  Certaines commandes ne doivent jamais être préparées. Par exemple, les commandes qui spécifient l'exécution de procédure stockée ou incluent du texte non valide pour la création de procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne doivent pas être préparées.  
   
@@ -46,17 +46,17 @@ ms.locfileid: "37418318"
   
  La création de procédure stockée temporaire est contrôlée par la propriété d'initialisation spécifique au fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client SSPROP_INIT_USEPROCFORPREP. Si la valeur de propriété est SSPROPVAL_USEPROCFORPREP_ON ou SSPROPVAL_USEPROCFORPREP_ON_DROP, le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client essaie de créer une procédure stockée lorsqu'une commande est préparée. La création de procédure stockée réussit si l'utilisateur d'application a des autorisations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suffisantes.  
   
- Pour les consommateurs qui se déconnectent rarement, la création de procédures stockées temporaires peut nécessiter des ressources significatives de **tempdb**, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données système dans lequel les objets temporaires sont créés. Lorsque la valeur de SSPROP_INIT_USEPROCFORPREP est SSPROPVAL_USEPROCFORPREP_ ON, les procédures stockées temporaires créées par le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sont supprimées uniquement lorsque la session qui a créé la commande perd sa connexion à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si cette connexion est la connexion par défaut créée lors de l'initialisation de la source de données, la procédure stockée temporaire est supprimée uniquement lorsque la source de données devient non initialisée.  
+ Pour les consommateurs qui se déconnectent rarement, la création de procédures stockées temporaires peut nécessiter des ressources significatives de **tempdb**, la base de données système de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où les objets temporaires sont créés. Lorsque la valeur de SSPROP_INIT_USEPROCFORPREP est SSPROPVAL_USEPROCFORPREP_ ON, les procédures stockées temporaires créées par le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sont supprimées uniquement lorsque la session qui a créé la commande perd sa connexion à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si cette connexion est la connexion par défaut créée lors de l'initialisation de la source de données, la procédure stockée temporaire est supprimée uniquement lorsque la source de données devient non initialisée.  
   
  Lorsque la valeur de SSPROP_INIT_USEPROCFORPREP est SSPROPVAL_USEPROCFORPREP_ON_DROP, les procédures stockées temporaires du fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sont supprimées lorsque l'un des événements suivants se produit :  
   
 -   Le consommateur utilise **ICommandText::SetCommandText** pour indiquer une nouvelle commande.  
   
--   Le consommateur utilise **ICommandPrepare::Unprepare** pour indiquer qu’il ne requiert plus le texte de commande.  
+-   Le consommateur utilise **ICommandPrepare::Unprepare** pour indiquer qu’il n’a plus besoin du texte de la commande.  
   
 -   Le consommateur libère toutes les références à l'objet de commande à l'aide de la procédure stockée temporaire.  
   
- Un objet de commande a au plus une procédure stockée temporaire **tempdb**. Toute procédure stockée temporaire existante représente le texte de commande actuel d'un objet de commande spécifique.  
+ Un objet de commande a au plus une procédure stockée temporaire dans **tempdb**. Toute procédure stockée temporaire existante représente le texte de commande actuel d'un objet de commande spécifique.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Commandes](../../relational-databases/native-client-ole-db-commands/commands.md)  

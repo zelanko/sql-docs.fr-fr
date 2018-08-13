@@ -18,13 +18,13 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8fd9e0cbb3ce90e40e53965000452d8a2dca1de
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0f7e7437486c601bfc04a3ad7a173d0d42b19b37
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419388"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537229"
 ---
 # <a name="persisted-data-source-objects"></a>Objets source de données persistants
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "37419388"
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client prend en charge les objets de source de données persistant avec la **IPersistFile** interface.  
   
 ## <a name="examples"></a>Exemples  
- **A. Conserver l’initialisation de source de données :**  
+ **A. Rendre persistante l’initialisation d’une source de données :**  
   
- Cet exemple illustre une fonction qui rend persistantes les propriétés d'initialisation de la source de données définissant un serveur, une base de données et l'utilisation du mode d'authentification Windows pour la connexion. Le nom du serveur et le nom de la base de données sont reçus dans le *pLocation* et *pDatasource* paramètres de la fonction.  
+ Cet exemple illustre une fonction qui rend persistantes les propriétés d'initialisation de la source de données définissant un serveur, une base de données et l'utilisation du mode d'authentification Windows pour la connexion. Le nom du serveur et de la base de données sont reçus dans les paramètres *pLocation* et *pDatasource* de la fonction.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -144,7 +144,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Utilisez l’initialisation de source de données persistantes :**  
+ **B. Utiliser l’initialisation persistante de la source de données :**  
   
  Cet exemple utilise un objet source de données persistant avec des propriétés d'initialisation supplémentaires qui fournissent un nom de connexion et un mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -232,7 +232,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- Le **IPersistFile::Save** méthode peut être appelée avant ou après l’appel **IDBInitialize::Initialize**. Appeler cette méthode après un retour réussi de **IDBInitialize::Initialize** garantit une spécification de source de données valide est conservée.  
+ La méthode **IPersistFile::Save** peut être appelée avant ou après l’appel de **IDBInitialize::Initialize**. Le fait d’appeler cette méthode après un retour réussi de **IDBInitialize::Initialize** garantit qu’une spécification de source de données valide est rendue persistante.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Objets Source de données &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

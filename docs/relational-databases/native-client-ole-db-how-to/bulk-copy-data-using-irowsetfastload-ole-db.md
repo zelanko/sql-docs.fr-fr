@@ -19,13 +19,13 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 684ef570f471e4e580ac1c720e30022da3e1293f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 11c891207168ba6b65277f8e3b572e00c7f7c1b4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408628"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541709"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copier des données en bloc avec IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37408628"
   
  Le consommateur notifie SQLOLEDB de son besoin de copie en bloc en affectant la valeur  VARIANT_TRUE à la propriété SQLOLEDB spécifique au fournisseur SSPROP_ENABLEFASTLOAD. Avec la propriété définie sur la source de données, le consommateur crée une session SQLOLEDB. La nouvelle session permet au client d’accéder à **IRowsetFastLoad**.  
   
- Vous trouverez un exemple complet qui illustre l’utilisation de **IRowsetFastLoad** pour copier en bloc des enregistrements dans une table. Dans cet exemple, 10 enregistrements sont ajoutés à la table **IRFLTable**. Vous devez créer la table **IRFLTable** dans la base de données.  
+ Un exemple complet illustrant l’utilisation de **IRowsetFastLoad** pour copier en bloc les enregistrements dans une table est disponible. Dans cet exemple, 10 enregistrements sont ajoutés à la table **IRFLTable**. Vous devez créer la table **IRFLTable** dans la base de données.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkID=85384) .  
   
@@ -46,11 +46,11 @@ ms.locfileid: "37408628"
   
 1.  Établissez une connexion à la source de données.  
   
-2.  Affectez la valeur VARIANT_TRUE à la propriété de source de données SQLOLEDB spécifique au fournisseur SSPROP_ENABLEFASTLOAD. Avec cette propriété la valeur VARIANT_TRUE, la session nouvellement créée autorise l’accès du consommateur à **IRowsetFastLoad**.  
+2.  Affectez la valeur VARIANT_TRUE à la propriété de source de données SQLOLEDB spécifique au fournisseur SSPROP_ENABLEFASTLOAD. Avec cette propriété définie sur VARIANT_TRUE, la session nouvellement créée accorde au consommateur l’accès à **IRowsetFastLoad**.  
   
 3.  Créer une session qui demande le **IOpenRowset** interface.  
   
-4.  Appelez **IOpenRowset::OpenRowset** pour ouvrir un ensemble de lignes qui inclut toutes les lignes de la table (dans lequel les données sont à copier à l’aide d’opération de copie en bloc).  
+4.  Appelez **IOpenRowset::OpenRowset** pour ouvrir un ensemble de lignes qui inclut toutes les lignes de la table (dans laquelle les données doivent être copiées avec l’opération de copie en bloc).  
   
 5.  Effectuez les liaisons nécessaires et créez un accesseur à l’aide de **IAccessor::CreateAccessor**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "37408628"
   
  Exécutez la première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)])  pour créer la table utilisée par l'application.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, modifiez la chaîne de connexion à partir de L"(local) » à L"(local)\\\name », où nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  Exécutez la troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour supprimer la table utilisée par l'application.  
   

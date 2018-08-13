@@ -23,13 +23,13 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05632eebe6bd329815016da40db4705be0b935ed
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3f4bb702cfbe30b26b2f38fa159a9a49b90efed7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015174"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542389"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "38015174"
 ## <a name="remarks"></a>Notes  
  Dans le résultat, les allocateurs au niveau de la base de données font référence aux tables utilisateur, aux index, et aux tables système. VARHEAP avec object_id = NULL fait référence à la mémoire allouée aux tables contenant des colonnes de longueur variable.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Toutes les lignes sont retournées si vous avez l'autorisation VIEW DATABASE STATE sur la base de données active. Sinon, un ensemble de lignes vide est retourné.  
   
  Si vous n'avez pas l'autorisation VIEW DATABASE, toutes les colonnes seront retournées pour les lignes dans les tables sur lesquelles vous avez l'autorisation SELECT.  

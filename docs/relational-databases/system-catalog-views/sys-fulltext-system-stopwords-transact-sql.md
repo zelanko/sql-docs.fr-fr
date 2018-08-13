@@ -1,5 +1,5 @@
 ---
-title: Sys.fulltext_system_stopwords (Transact-SQL) | Documents Microsoft
+title: Sys.fulltext_system_stopwords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,25 +27,25 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 56d8b1c92560e0a161c7b020d6e9f111bc8dd44d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 40ba819fcc6e488b76717c61c225180e91571473
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179025"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542929"
 ---
 # <a name="sysfulltextsystemstopwords-transact-sql"></a>sys.fulltext_system_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Fournit l'accès à la liste de mots vides système.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**stopword**|**nvarchar(64)**|Terme considéré pour une correspondance de mot vide.|  
-|**ID_langue**|**int**|Identificateur des paramètres régionaux (LCID) de la langue. Ce LCID est utilisé pour l'analyse lexicale.|  
+|**ID_langue**|**Int**|Identificateur des paramètres régionaux (LCID) de la langue. Ce LCID est utilisé pour l'analyse lexicale.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

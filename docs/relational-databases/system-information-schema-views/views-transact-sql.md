@@ -1,5 +1,5 @@
 ---
-title: VUES (Transact-SQL) | Documents Microsoft
+title: VUES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5bee96bce64e04ad41e47a9ba560ba5ee8a34492
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 23cf5b50a9d9fcc53d682e8e461b41658c53433f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237468"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536599"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie une ligne pour les vues accessibles à l'utilisateur actuel dans la base de données active.  
   
- Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA. *** view_name*.  
+ Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA. *** nom_vue*.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la vue.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la vue.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
-|**NOM_TABLE**|**nvarchar(** 128 **)**|Nom de la vue.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la vue.<br /><br /> **\*\* Important \* \* ** n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**TABLE_NAME**|**nvarchar(** 128 **)**|Nom de la vue.|  
 |**DÉFINITION_DE_VUE**|**nvarchar (** 4000 **)**|Si la longueur de la définition est supérieure à **nvarchar (** 4000 **)**, cette colonne est NULL. Sinon, cette colonne correspond au texte de définition de la vue.|  
 |**CHECK_OPTION**|**varchar (** 7 **)**|Type de WITH CHECK OPTION. Équivaut à CASCADE si la vue d'origine a été créée à l'aide de WITH CHECK OPTION. Renvoie NONE dans le cas contraire.|  
 |**IS_UPDATABLE**|**varchar (** 2 **)**|Spécifie si la vue peut être mise à jour. Renvoie toujours NO.|  

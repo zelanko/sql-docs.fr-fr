@@ -1,5 +1,5 @@
 ---
-title: Sys.types (Transact-SQL) | Documents Microsoft
+title: Sys.types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,38 +25,38 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ce1d7cbfc11a425a1e39622b379ad8b34cac6e10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9b4dc0dd6455823e2f08327a418032b47309b474
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221230"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539359"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contient une ligne par type système et par type défini par l'utilisateur.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom du type. Est unique dans le schéma.|  
 |**system_type_id**|**tinyint**|ID du type de système interne du type.|  
-|**user_type_id**|**int**|ID du type. Unique dans la base de données. Pour les types de données système **user_type_id** = **system_type_id**.|  
-|**schema_id**|**int**|Identificateur du schéma auquel appartient le type.|  
-|**principal_id**|**int**|ID du propriétaire spécifique s'il diffère du propriétaire du schéma. Par défaut, le propriétaire du schéma détient les objets contenus dans le schéma. Cependant, il est possible de spécifier un autre propriétaire à l'aide de l'instruction ALTER AUTHORIZATION qui permet de changer de propriétaire.<br /><br /> La valeur est NULL en l'absence de propriétaire de remplacement spécifique.|  
-|**max_length**|**smallint**|Longueur maximale (en octets) du type.<br /><br /> -1 = la colonne est de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Pour **texte** des colonnes, le **max_length** valeur sera 16.|  
-|**precision**|**tinyint**|Précision maximale du type s'il est basé sur un nombre ; sinon, 0.|  
-|**scale**|**tinyint**|Échelle maximale du type s'il est de type numérique ; sinon, 0.|  
-|**collation_name**|**sysname**|Nom du classement du type s’il est de type caractère ; autres wise, NULL.|  
+|**user_type_id**|**Int**|ID du type. Unique dans la base de données. Pour les types de données système **user_type_id** = **system_type_id**.|  
+|**schema_id**|**Int**|Identificateur du schéma auquel appartient le type.|  
+|**principal_id**|**Int**|ID du propriétaire spécifique s'il diffère du propriétaire du schéma. Par défaut, le propriétaire du schéma détient les objets contenus dans le schéma. Cependant, il est possible de spécifier un autre propriétaire à l'aide de l'instruction ALTER AUTHORIZATION qui permet de changer de propriétaire.<br /><br /> La valeur est NULL en l'absence de propriétaire de remplacement spécifique.|  
+|**max_length**|**smallint**|Longueur maximale (en octets) du type.<br /><br /> -1 = la colonne est de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Pour **texte** colonnes, le **max_length** valeur sera 16.|  
+|**Précision**|**tinyint**|Précision maximale du type s'il est basé sur un nombre ; sinon, 0.|  
+|**Mise à l’échelle**|**tinyint**|Échelle maximale du type s'il est de type numérique ; sinon, 0.|  
+|**collation_name**|**sysname**|Nom du classement du type s’il est basé sur des caractères ; autres wise, NULL.|  
 |**is_nullable**|**bit**|Le type accepte les valeurs NULL.|  
 |**is_user_defined**|**bit**|1 = type défini par l'utilisateur.<br /><br /> 0 = type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**is_assembly_type**|**bit**|1 = l'implémentation du type est définie dans un assembly CLR.<br /><br /> 0 = le type est basé sur un type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**default_object_id**|**int**|ID de la valeur par défaut autonome liée au type à l’aide de [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md).<br /><br /> 0 = aucune valeur par défaut n'existe.|  
-|**rule_object_id**|**int**|ID de la règle autonome liée au type à l’aide de [sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md).<br /><br /> 0 = aucune règle n'existe.|  
+|**default_object_id**|**Int**|ID de la valeur par défaut autonome liée au type à l’aide de [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md).<br /><br /> 0 = aucune valeur par défaut n'existe.|  
+|**rule_object_id**|**Int**|ID de la règle autonome liée au type à l’aide de [sp_bindrule](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md).<br /><br /> 0 = aucune règle n'existe.|  
 |**is_table_type**|**bit**|Indique que le type est une table.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,5 @@
 ---
-title: Sys.spatial_reference_systems (Transact-SQL) | Documents Microsoft
+title: Sys.spatial_reference_systems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,13 +25,13 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: acdf8059c75ac6bec1bdd45fc7e1d348331a7e90
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f1cb77a5da692f17a790d2eb5ffca6f82a939449
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219920"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538289"
 ---
 # <a name="sysspatialreferencesystems-transact-sql"></a>sys.spatial_reference_systems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,16 +39,16 @@ ms.locfileid: "33219920"
   Répertorie les systèmes de référence spatiale (SRID) pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|spatial_reference_id|**int**|SRID pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|spatial_reference_id|**Int**|SRID pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |authority_name|**nvarchar(128)**|Autorité du SRID.|  
-|authorized_spatial_reference_id|**int**|SRID attribué par l’autorité nommée dans **authority_name**.|  
+|authorized_spatial_reference_id|**Int**|SRID attribué par l’autorité nommée dans **authority_name**.|  
 |well_known_text|**nvarchar(4000)**|Représentation WKT du SRID.|  
 |unit_of_measure|**nvarchar(128)**|Nom de l'unité de mesure.|  
 |unit_conversion_factor|**float**|Longueur de l'unité de mesure en mètres.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
   

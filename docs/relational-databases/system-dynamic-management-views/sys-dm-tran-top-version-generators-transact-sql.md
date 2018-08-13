@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_top_version_generators (Transact-SQL) | Documents Microsoft
+title: Sys.dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,21 +23,21 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dad87c14f7b8f1af31b7a0245e3bbe0b634089c5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54b55bec3dd52a014286457770a40b51e0dd35c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467266"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536009"
 ---
 # <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Renvoie une table virtuelle pour les objets qui génèrent la majorité des versions d'un magasin de versions. **Sys.dm_tran_top_version_generators** retourne les 256 premières agrégées des longueurs d’enregistrements qui sont regroupés par le **database_id** et **rowset_id**. **Sys.dm_tran_top_version_generators** récupère les données en interrogeant le **dm_tran_version_store** table virtuelle. **Sys.dm_tran_top_version_generators** est une vue inefficace pour exécuter, car cette vue interroge la banque des versions et de la banque des versions peut être très volumineuse. Nous vous recommandons d'utiliser cette fonction pour rechercher les clients les plus volumineux de la banque des versions.  
+  Renvoie une table virtuelle pour les objets qui génèrent la majorité des versions d'un magasin de versions. **Sys.dm_tran_top_version_generators** retourne les 256 premières longueurs d’enregistrements qui sont regroupées par agrégés le **database_id** et **rowset_id**. **Sys.dm_tran_top_version_generators** récupère les données en interrogeant le **dm_tran_version_store** table virtuelle. **Sys.dm_tran_top_version_generators** est une vue inefficace pour exécuter, car cette vue interroge la banque des versions et la banque des versions peut être très volumineux. Nous vous recommandons d'utiliser cette fonction pour rechercher les clients les plus volumineux de la banque des versions.  
   
 > [!NOTE]  
->  Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_tran_top_version_generators**.  
+>  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_tran_top_version_generators**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,20 +48,20 @@ sys.dm_tran_top_version_generators
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|ID de la base de données.|  
+|**database_id**|**Int**|ID de la base de données.|  
 |**rowset_id**|**bigint**|ID de l'ensemble de lignes.|  
-|**aggregated_record_length_in_bytes**|**int**|La somme des longueurs des enregistrements pour chaque **database_id** et **rowset_id paire** dans la banque des versions.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**aggregated_record_length_in_bytes**|**Int**|Somme des longueurs des enregistrements pour chaque **database_id** et **rowset_id paire** dans la banque des versions.|  
+|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Autorisations
+## <a name="permissions"></a>Permissions
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
 
 ## <a name="remarks"></a>Notes  
- Étant donné que **sys.dm_tran_top_version_generators** devra peut-être lire de nombreuses pages car il analyse le magasin de versions entier, en cours d’exécution **sys.dm_tran_top_version_generators** peut interférer avec les performances du système.  
+ Étant donné que **sys.dm_tran_top_version_generators** devra peut-être lire de nombreuses pages lors de l’analyse le magasin de versions entier, en cours d’exécution **sys.dm_tran_top_version_generators** peut interférer avec le système performances.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant illustre un scénario de test dans lequel quatre transactions simultanées, chacune étant identifiée par un numéro de séquence de transaction, sont exécutées dans une base de données où les options ALLOW_SNAPSHOT_ISOLATION et READ_COMMITTED_SNAPSHOT sont définies à ON. Les transactions suivantes sont exécutées :  

@@ -25,13 +25,13 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2f619900c47a3797a033c4eb7c48dd7c423a8c53
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3f9bbeb2e2123e8e0f681a13d8e08f4092e7be27
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985115"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543729"
 ---
 # <a name="sysquerystorequerytext-transact-sql"></a>Sys.query_store_query_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37985115"
 |**is_part_of_encrypted_module**|**bit**|Texte de la requête fait partie d’un module de cryptée.|  
 |**has_restricted_text**|**bit**|Texte de la requête contient un mot de passe ou d’autres mots unmentionable.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite le **VIEW DATABASE STATE** autorisation.  
   
 ## <a name="see-also"></a>Voir aussi  

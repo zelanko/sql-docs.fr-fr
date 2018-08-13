@@ -19,13 +19,13 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0a157d42f4bb464cef821f344d0218ecd150e76f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ae264e0fce4837aef78822e32df2f5ff6ca39903
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410600"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541149"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "37410600"
 
   Retourne un pointeur vers un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client SSERRORINFO structure contenant le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détails de l’erreur.  
   
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client définit les **ISQLServerErrorInfo** interface d’erreur. Cette interface retourne les détails d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erreur, y compris sa gravité et son état.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client définit les **ISQLServerErrorInfo** interface d’erreur. Cette interface retourne les détails d’une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment sa gravité et son état.  
 
   
 ## <a name="syntax"></a>Syntaxe  
@@ -47,10 +47,10 @@ HRESULT GetErrorInfo(
   
 ## <a name="arguments"></a>Arguments  
  *ppSSErrorInfo*[out]  
- Pointeur vers une structure SSERRORINFO. Si la méthode échoue ou si aucun [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les informations relatives à l’erreur, le fournisseur n’alloue pas de mémoire et garantit que le *ppSSErrorInfo* argument est un pointeur null en sortie.  
+ Pointeur vers une structure SSERRORINFO. Si la méthode échoue ou qu’il n’existe pas d’informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associées à l’erreur, le fournisseur n’alloue pas de mémoire et vérifie que l’argument *ppSSErrorInfo* est un pointeur null en sortie.  
   
  *ppErrorStrings*[out]  
- Pointeur vers un pointeur de chaîne de caractère Unicode. Si la méthode échoue ou si aucun [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informations associées à une erreur, le fournisseur n’alloue pas de mémoire et garantit que le *ppErrorStrings* argument est un pointeur null en sortie. Libération de la *ppErrorStrings* argument avec le **IMalloc::Free** méthode libère les trois membres de chaîne individuels de la structure SSERRORINFO retournée, comme la mémoire est allouée dans un bloc.  
+ Pointeur vers un pointeur de chaîne de caractère Unicode. Si la méthode échoue ou qu’il n’existe pas d’informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associées à l’erreur, le fournisseur n’alloue pas de mémoire et vérifie que l’argument *ppErrorStrings* est un pointeur null en sortie. La libération de l’argument *ppErrorStrings* avec la méthode **IMalloc::Free** libère les trois membres de type chaîne individuels de la structure SSERRORINFO retournée, la mémoire étant allouée dans un bloc.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
@@ -63,7 +63,7 @@ HRESULT GetErrorInfo(
  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB Native peut allouer suffisamment de mémoire pour terminer la demande.  
   
 ## <a name="remarks"></a>Notes  
- Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif alloue la mémoire pour les chaînes SSERRORINFO et OLECHAR retournées à travers les pointeurs passés par le consommateur. Le consommateur doit libérer cette mémoire en utilisant la **IMalloc::Free** méthode lorsqu’il ne nécessite plus l’accès aux données d’erreur.  
+ Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif alloue la mémoire pour les chaînes SSERRORINFO et OLECHAR retournées à travers les pointeurs passés par le consommateur. Le consommateur doit désallouer cette mémoire avec la méthode **IMalloc::Free** quand il n’est plus nécessaire d’accéder aux données d’erreur.  
   
  La structure SSERRORINFO est définie comme suit :  
   
@@ -83,15 +83,15 @@ SSERRORINFO;
   
 |Membre|Description|  
 |------------|-----------------|  
-|*pwszMessage*|Message d'erreur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le message est retourné par le biais du **IErrorInfo::GetDescription** (méthode).|  
+|*pwszMessage*|Message d'erreur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le message est retourné via la méthode **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l'erreur s'est produite.|  
 |*pwszProcedure*|Le nom de la procédure stockée qui génère l'erreur si l'erreur s'est produite dans une procédure stockée ; sinon, une chaîne vide.|  
-|*lNative*|Numéro d'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le numéro d’erreur est identique à celui retourné dans le *plNativeError* paramètre de la **ISQLErrorInfo::GetSQLInfo** (méthode).|  
+|*lNative*|Numéro d'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le numéro d’erreur est identique à celui retourné dans le paramètre *plNativeError* de la méthode **ISQLErrorInfo::GetSQLInfo**.|  
 |*bState*|État de l'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*bClass*|Gravité de l'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |*wLineNumber*|Le cas échéant, la ligne d'une procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a généré le message d'erreur. Si aucune procédure n'est impliquée, la valeur par défaut est 1.|  
   
- Pointeurs dans la structure font référence à des adresses dans la chaîne retournée dans le *ppErrorStrings* argument.  
+ Pointeurs dans les adresses de type référence de la structure de la chaîne retournée dans l’argument *ppErrorStrings*.  
   
 ## <a name="see-also"></a>Voir aussi  
  [ISQLServerErrorInfo &#40;OLE DB&#41;](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   

@@ -1,5 +1,5 @@
 ---
-title: Sys.Events (Transact-SQL) | Documents Microsoft
+title: Sys.Events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,26 +24,26 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 95cc7112d42a0e2975d886dc8cfa58dc6d7193d3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7621b5aba9bb67a07421339e1e72b29f06f4c5ff
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179365"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532730"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Contient une ligne pour chaque événement pour lequel un déclencheur ou une notification sont activés. Ces événements représentent les types d’événements qui sont spécifiés lors de la notification d’événement ou le déclencheur est créée à l’aide de [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) ou [CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md).  
+  Contient une ligne pour chaque événement pour lequel un déclencheur ou une notification sont activés. Ces événements représentent les types d’événements qui sont spécifiées lors de la notification d’événements ou de déclencheur est créée à l’aide de [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) ou [CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md).  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID du déclencheur ou de la notification d'événement. Cette valeur, avec **type**permet d’identifier la ligne.|  
-|**type**|**int**|Événement qui active le déclencheur.|  
+|**object_id**|**Int**|ID du déclencheur ou de la notification d'événement. Cette valeur, avec **type**, identifie de façon unique identifie la ligne.|  
+|**type**|**Int**|Événement qui active le déclencheur.|  
 |**type_desc**|**nvarchar(60)**|Description de l'événement qui active le déclencheur.|  
 |**is_trigger_event**|**bit**|1 = Événement de déclencheur.<br /><br /> 0 = Événement de notification.|  
-|**event_group_type**|**int**|Groupe d'événements sur lequel le déclencheur ou la notification d'événements est créé(e), ou null si le déclencheur n'est pas créé sur un groupe d'événements.|  
+|**event_group_type**|**Int**|Groupe d'événements sur lequel le déclencheur ou la notification d'événements est créé(e), ou null si le déclencheur n'est pas créé sur un groupe d'événements.|  
 |**event_group_type_desc**|**nvarchar(60)**|Description du groupe d'événements sur lequel le déclencheur ou la notification d'événements est créé(e), ou null si le déclencheur n'est pas créé sur un groupe d'événements.|  
   
 ## <a name="see-also"></a>Voir aussi  

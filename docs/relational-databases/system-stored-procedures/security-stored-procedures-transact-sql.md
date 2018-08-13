@@ -1,5 +1,5 @@
 ---
-title: (Transact-SQL) des procédures stockées de sécurité | Documents Microsoft
+title: Sécurité procédures stockées (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ae3eb8d4d0c88f4065f82536cc3a6b00bb51fb0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d4d0ec605c9cc1df08384cc8c2a95aa3cec25587
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239739"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541789"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>Procédures stockées liées à la sécurité (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les suivant procédures stockées système qui permettent de gérer la sécurité. Certaines de ces procédures stockées sont déconseillées, mais restent disponibles pour prendre en charge la compatibilité descendante. Les rubriques relatives aux procédures déconseillées indiquent leur remplacement.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les suivant procédures stockées système qui sont utilisés pour gérer la sécurité. Certaines de ces procédures stockées sont déconseillées, mais soit toujours disponible pour prendre en charge la compatibilité descendante. Les rubriques relatives aux procédures déconseillées indiquent leur remplacement.  
 
 |||  
 |-|-|  
@@ -50,7 +50,7 @@ ms.locfileid: "33239739"
 |[sp_control_dbmasterkey_password](../../relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql.md) |[sp_dbfixedrolepermission](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md) (déconseillée)
 |[sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md) (déconseillée) |[sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md) (déconseillée)
 |[sp_denylogin](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md) (déconseillée) |[sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)
-|[la procédure sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (déconseillée) |[sys.sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) |
+|[sp_dropalias](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md) (déconseillée) |[sys.sp_drop_trusted_assembly]( sys-sp-drop-trusted-assembly-transact-sql.md) |
 |[sp_dropapprole](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md) (déconseillée) |[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) |
 |[sp_droplogin](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md) (déconseillée) |[sp_dropremotelogin](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md) (déconseillée) |
 |[sp_droprole](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md) (déconseillée) |[sp_droprolemember](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) (déconseillée) |

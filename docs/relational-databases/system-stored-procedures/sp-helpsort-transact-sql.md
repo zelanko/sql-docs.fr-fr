@@ -1,5 +1,5 @@
 ---
-title: sp_helpsort (Transact-SQL) | Documents Microsoft
+title: sp_helpsort (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eed0e712a4cba2400b864b0170b08a6007d85e63
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b72de312f8d3ab7abadc592b14149d47f65dfa7a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253692"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539409"
 ---
 # <a name="sphelpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helpsort
 ## <a name="remarks"></a>Notes  
  Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé avec un classement spécifié pour être compatible avec une installation antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_helpsort** renvoie des résultats vides. Lorsque ce comportement survient, vous pouvez déterminer le classement en créant une requête sur l'objet SERVERPROPERTY, telle que : `SELECT SERVERPROPERTY ('Collation');`.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

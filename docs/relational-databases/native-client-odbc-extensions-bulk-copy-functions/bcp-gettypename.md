@@ -21,13 +21,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 90b98b23bff869b0fbf0498669d389a7d834a84d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426221"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539679"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *jeton*  
+ *Jeton*  
  Valeur indiquant un jeton de type BCP.  
   
  *field*  
@@ -78,8 +78,8 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|Avant ou après|**texte**|  
 |**SQLBIGBINARY**|non|**binaire**|  
 |**SQLBINARY**|non|**Binaire**|  
-|**SQLBIGVARBINARY**|non|**Varbinary**|  
-|**SQLVARBINARY**|non|**Varbinary**|  
+|**SQLBIGVARBINARY**|non|**varbinary**|  
+|**SQLVARBINARY**|non|**varbinary**|  
 |**SQLIMAGE**|Avant ou après|**Image**|  
 |**SQLINTN**|Avant ou après|**int null**|  
 |**SQLDATETIMN**|Avant ou après|**datetime-null**|  
@@ -91,12 +91,12 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|Avant ou après|**Min**|  
 |**SQLAOPMAX**|Avant ou après|**Max**|  
 |**SQLDATETIM4**|Avant ou après|**smalldatetime**|  
-|**SQLMONEY4**|Avant ou après|**Smallmoney**|  
-|**SQLFLT4**|Avant ou après|**Réel**|  
+|**SQLMONEY4**|Avant ou après|**smallmoney**|  
+|**SQLFLT4**|Avant ou après|**réel**|  
 |**SQLUNIQUEID**|Avant ou après|**uniqueidentifier**|  
 |**SQLNCHAR**|non|**NCHAR**|  
 |**SQLNVARCHAR**|non|**Nvarchar**|  
-|**SQLNTEXT**|Avant ou après|**Ntext**|  
+|**SQLNTEXT**|Avant ou après|**ntext**|  
 |**SQLVARIANT**|Avant ou après|**sql_variant**|  
 |**SQLINT8**|Avant ou après|**Bigint**|  
 |**SQLCHARACTER**|Oui|**varchar(max)**|  

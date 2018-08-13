@@ -23,13 +23,13 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cf11f8672c16b1a8c6ae3fd4676f69381d74bc72
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 987f5eb48c2699f15d60fcc39adb9afcf57e4949
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061387"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534059"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "38061387"
 |xacts_copied_to_local|**bigint**|Nombre de transactions copiées du pipeline de transactions dans le tableau de génération de la base de données.|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|Nombre de transactions dans chaque génération.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
   
 ## <a name="usage-scenario"></a>Scénario d'utilisation  

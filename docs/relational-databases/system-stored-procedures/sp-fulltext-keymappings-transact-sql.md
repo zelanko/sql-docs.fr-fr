@@ -24,13 +24,13 @@ caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e55e2b1494a8b575e240340969ce127a63b5f2e9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 30c9344b6a0205741617f5b76764b6f585c15179
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969741"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533269"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -53,7 +53,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  *ID de document*  
  Identificateur de document (DocId) interne qui correspond à la valeur de la clé. Une valeur *docid* non valide ne retourne pas de résultat.  
   
- *clé*  
+ *Clé*  
  Valeur de la clé de texte intégral pour une table spécifiée. Une valeur *key* non valide ne retourne pas de résultat. Pour plus d’informations sur les valeurs de clé de recherche en texte intégral, consultez [gérer des index de recherche en texte intégral](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 > [!IMPORTANT]  
@@ -71,7 +71,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
  <sup>*</sup> Le type de données pour la clé est identique au type de données de la colonne de clé de recherche en texte intégral dans la table de base.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Cette fonction est publique et ne requiert pas d'autorisation spéciale.  
   
 ## <a name="remarks"></a>Notes  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_memory_pools (Transact-SQL) | Documents Microsoft
+title: Sys.dm_fts_memory_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,28 +23,28 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2492793fdfa677450e5fcc21a5f520f54bfe8aa0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e41365558907570414ffbed099883a13b0b9f58e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464455"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532909"
 ---
 # <a name="sysdmftsmemorypools-transact-sql"></a>sys.dm_fts_memory_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations sur les pools de mémoire partagée disponibles pour le composant Full-Text Gatherer dans le cadre d'une analyse de texte intégral ou d'une étendue d'analyse de texte intégral.  
    
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**pool_id**|**int**|ID du pool de mémoire alloué.<br /><br /> 0 = petites zones de mémoire tampon<br /><br /> 1 = grandes zones de mémoire tampon|  
-|**buffer_size**|**int**|Taille de chaque mémoire tampon allouée dans le pool.|  
-|**min_buffer_limit**|**int**|Nombre minimum de mémoires tampons allouées dans le pool de mémoire.|  
-|**max_buffer_limit**|**int**|Nombre maximum de mémoires tampons allouées dans le pool de mémoire.|  
-|**buffer_count**|**int**|Nombre actuel de mémoires tampons partagées dans le pool de mémoire.|  
+|**pool_id**|**Int**|ID du pool de mémoire alloué.<br /><br /> 0 = petites zones de mémoire tampon<br /><br /> 1 = grandes zones de mémoire tampon|  
+|**buffer_size**|**Int**|Taille de chaque mémoire tampon allouée dans le pool.|  
+|**min_buffer_limit**|**Int**|Nombre minimum de mémoires tampons allouées dans le pool de mémoire.|  
+|**max_buffer_limit**|**Int**|Nombre maximum de mémoires tampons allouées dans le pool de mémoire.|  
+|**buffer_count**|**Int**|Nombre actuel de mémoires tampons partagées dans le pool de mémoire.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   

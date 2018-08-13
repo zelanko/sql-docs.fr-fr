@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL) | Documents Microsoft
+title: CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a83c0a60da4029892b258443833902f24c954d19
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5e317243066e51a9c253af8177d8245fa33dac5a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230231"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540469"
 ---
 # <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne une version associée à la dernière transaction validée. Cette version peut être utilisée lors de l’énumération des modifications à l’aide de [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md).  
+  Retourne une version associée à la dernière transaction validée. Cette version peut être utilisée lorsque vous énumérez des modifications à l’aide de [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

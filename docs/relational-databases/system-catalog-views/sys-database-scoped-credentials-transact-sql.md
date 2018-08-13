@@ -22,13 +22,13 @@ caps.latest.revision: 2
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a559b19863da9e6cc2a1ee3ccf8323d4a245af10
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ebf2bff55e94aad4143c32ab91ca8ab9ea820281
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989381"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538249"
 ---
 # <a name="sysdatabasescopedcredentials-transact-sql"></a>Sys.database_scoped_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "37989381"
 |target_type|**nvarchar(100)**|Type de base de données limitées d’informations d’identification. Retourne `NULL` pour la base de données étendue des informations d’identification.|  
 |target_id|**Int**|ID de l’objet mappé sur les informations d’identification de niveau base de données. Retourne 0 pour la base de données étendue des informations d’identification|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation `CONTROL` sur la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  

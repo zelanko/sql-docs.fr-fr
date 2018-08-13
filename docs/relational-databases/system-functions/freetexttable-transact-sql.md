@@ -26,20 +26,20 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f2d3c0c014db5a0cd5aab0dee22e6622fd24f20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5dbb201a507d168a06b6417c5648c209807bc773
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239049"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540559"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Est une fonction utilisée dans le [à partir de la clause](../../t-sql/queries/from-transact-sql.md) d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] une instruction SELECT pour effectuer une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche en texte intégral sur la recherche en texte intégral indexées colonnes contenant des types de données de type caractère. Cette fonction retourne une table de zéro, un ou plusieurs lignes pour les colonnes contenant des valeurs qui correspondent à la signification et pas seulement au libellé exact, du texte spécifié *chaîne_texte_libre*. FREETEXTTABLE est référencé comme s'il s'agissait d'un nom de table classique.  
+  Est une fonction utilisée dans le [à partir de la clause](../../t-sql/queries/from-transact-sql.md) d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] une instruction SELECT pour effectuer une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche en texte intégral sur la recherche en texte intégral indexées colonnes contenant des types de données de type caractère. Cette fonction retourne une table de zéro, une ou plusieurs lignes pour les colonnes contenant des valeurs qui correspondent à la signification et pas seulement aux mots exacts, du texte spécifié *freetext_string*. FREETEXTTABLE est référencé comme s'il s'agissait d'un nom de table classique.  
   
- FREETEXTTABLE est utile pour les mêmes types de correspondance que le [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md),  
+ FREETEXTTABLE est utile pour les mêmes types de correspondances que la [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md),  
   
  Les requêtes utilisant FREETEXTTABLE retournent une valeur de classement de pertinence (RANK) et une clé de texte intégral (KEY) pour chaque ligne.  
   
@@ -62,9 +62,9 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>Arguments  
  *table*  
- Nom de la table marquée pour les requêtes de texte intégral. *table* ou *affichage*peut être un un, deux ou nom de l’objet de base de données en trois parties. Lors de l'interrogation d'une vue, une seule table de base indexée en texte intégral peut être impliquée.  
+ Nom de la table marquée pour les requêtes de texte intégral. *table* ou *vue*peut être un une, deux ou nom d’objet de base de données de trois parties. Lors de l'interrogation d'une vue, une seule table de base indexée en texte intégral peut être impliquée.  
   
- *table* ne peut pas spécifier un nom de serveur et ne peut pas être utilisé dans les requêtes sur des serveurs liés.  
+ *table* ne pouvez pas spécifier un nom de serveur et ne peut pas être utilisé dans les requêtes sur des serveurs liés.  
   
  *column_name*  
  Nom d'une ou de plusieurs colonnes de texte intégral indexées de la table spécifiée dans la clause FROM. Les colonnes peuvent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)**.  
@@ -78,7 +78,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  *freetext_string*  
  Texte à rechercher dans *column_name*. Tout texte, y compris des mots, expressions et phrases peuvent être entrés. Des correspondances sont générées si l'un des termes ou les formes de quelque terme que ce soit sont trouvés dans l'index de texte intégral.  
   
- Contrairement à dans le CONTAINS recherche condition where et est un mot clé, lorsqu’il est utilisé dans *chaîne_texte_libre* le mot « et » est considéré comme un mot parasite, ou [mot vide](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)et seront ignorées.  
+ Contrairement à dans le CONTAINS de recherche de condition where et est un mot clé, lorsqu’il est utilisé dans *freetext_string* le mot « and » est considéré comme un mot parasite, ou [mot vide](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)et seront ignorées.  
   
  L'utilisation de WEIGHT, de FORMSOF, de caractères génériques, de NEAR et d'autres syntaxes n'est pas autorisée. La chaîne *freetext_string* est découpée en mots en vue de la recherche des radicaux et de l’analyse dans le dictionnaire des synonymes.  
   
@@ -94,22 +94,22 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  Si la langue spécifiée n'est pas valide ou si aucune ressource correspondant à cette langue n'est installée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur. Pour utiliser des ressources linguistiques neutres, indiquez 0x0 pour *language_term*.  
   
  *top_n_by_rank*  
- Spécifie que seules les *n*des correspondances de rang le plus élevés, par ordre décroissant, sont retournées. S’applique uniquement lorsqu’une valeur entière, *n*, est spécifié. Si *top_n_by_rank* est associé à d’autres paramètres, la requête peut retourner moins de lignes que le nombre de lignes correspondant effectivement à tous les prédicats. *Top_n_by_rank* permet d’augmenter les performances des requêtes en rappelant uniquement les accès les plus pertinents.  
+ Spécifie que seules les *n*des correspondances de rang le plus élevés, par ordre décroissant, sont retournées. S’applique uniquement quand une valeur entière, *n*, est spécifié. Si *top_n_by_rank* est associé à d’autres paramètres, la requête peut retourner moins de lignes que le nombre de lignes correspondant effectivement à tous les prédicats. *Top_n_by_rank* vous permet d’augmenter les performances des requêtes en rappelant uniquement les accès les plus pertinents.  
   
 ## <a name="remarks"></a>Notes  
  Les prédicats et les fonctions de texte intégral s'appliquent à une table unique, ce qui est implicite dans le prédicat FROM. Pour effectuer des recherches sur plusieurs tables, utilisez une table jointe dans votre clause FROM afin de baser votre recherche sur un jeu de résultats qui est le produit de deux tables ou plus.  
   
  FREETEXTTABLE utilise les mêmes conditions de recherche que le prédicat FREETEXT.  
   
- Comme CONTAINSTABLE, la table renvoyée possède des colonnes nommées **clé** et **rang**, qui sont référencé dans la requête pour obtenir les lignes appropriées et utiliser la ligne de valeurs de classement.  
+ Comme CONTAINSTABLE, la table retournée possède des colonnes nommées **clé** et **rang**, qui sont référencées dans la requête pour obtenir les lignes appropriées et utiliser les valeurs de rang des lignes.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  FREETEXTTABLE ne peut être appelée que par les utilisateurs disposant des privilèges SELECT appropriés sur la table spécifiée ou les colonnes référencées de la table.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-simple-example"></a>A. Exemple simple  
- L’exemple suivant crée et remplit un tableau simple de deux colonnes, la liste des 3 comtés et les couleurs dans les indicateurs. L’informatique crée et remplit un catalogue de texte intégral et les index sur la table. Le **FREETEXTTABLE** syntaxe est illustrée.  
+ L’exemple suivant crée et remplit un tableau simple de deux colonnes, la liste des 3 comtés et les couleurs dans leurs indicateurs. L’informatique crée et remplit un catalogue de texte intégral et un index sur la table. Le **FREETEXTTABLE** syntaxe est illustrée.  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -167,12 +167,12 @@ GO
 ```  
   
 > [!NOTE]  
->  Le langage *language_term* paramete*r* n’est pas nécessaire d’utiliser le *top_n_by_rank* paramètre *.*  
+>  Le langage *language_term* paramete*r* n’est pas nécessaire pour utiliser le *top_n_by_rank* paramètre *.*  
   
 ## <a name="see-also"></a>Voir aussi  
  [Commencer à utiliser la recherche en texte intégral](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Créer et gérer des catalogues de texte intégral](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [CRÉER le catalogue de texte intégral & #40 ; Transact-SQL & #41 ;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [Créer et gérer des index de recherche en texte intégral](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   

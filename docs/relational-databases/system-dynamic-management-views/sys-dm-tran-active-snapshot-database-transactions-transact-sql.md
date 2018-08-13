@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Documents Microsoft
+title: Sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 55
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 761d9196100f97fe763aa5739d96d7f41373e59b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: edfc0e1de9cf342027c42a3c05de3c6bee1dda98
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467635"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533549"
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34467635"
  Cette vue de gestion dynamique n'inclut pas les transactions système.  
   
 > [!NOTE]  
->  Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
+>  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,20 +62,20 @@ sys.dm_tran_active_snapshot_database_transactions
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|Numéro d'identification unique assigné pour la transaction. L'ID de transaction permet principalement d'identifier la transaction dans les opérations de verrouillage.|  
 |**transaction_sequence_num**|**bigint**|Numéro de séquence de la transaction. Il s'agit d'un numéro de séquence unique qui est attribué à une transaction lorsqu'elle démarre. Les transactions qui ne produisent pas d'enregistrements de version et n'utilisent pas d'analyses d'instantané ne recevront pas de numéro de séquence.|  
 |**commit_sequence_num**|**bigint**|Numéro de séquence qui indique quand la transaction se termine (validée ou arrêtée). Pour les transactions actives, la valeur est NULL.|  
-|**is_snapshot**|**int**|0 = n'est pas une transaction d'isolement d'instantané.<br /><br /> 1 = est une transaction d'isolement d'instantané.|  
-|**session_id**|**int**|ID de la session qui a démarré la transaction.|  
+|**is_snapshot**|**Int**|0 = n'est pas une transaction d'isolement d'instantané.<br /><br /> 1 = est une transaction d'isolement d'instantané.|  
+|**session_id**|**Int**|ID de la session qui a démarré la transaction.|  
 |**first_snapshot_sequence_num**|**bigint**|Il s'agit du plus petit numéro de séquence des transactions qui étaient actives lors de la création d'un instantané. Lors de l'exécution, une transaction d'instantané prend un instantané de toutes les transactions actives présentes. Pour les transactions non liées à des instantanés, la valeur 0 est affichée dans cette colonne.|  
-|**max_version_chain_traversed**|**int**|Longueur maximale de la chaîne de versions traversée pour trouver la version cohérente d'un point de vue transactionnel.|  
+|**max_version_chain_traversed**|**Int**|Longueur maximale de la chaîne de versions traversée pour trouver la version cohérente d'un point de vue transactionnel.|  
 |**average_version_chain_traversed**|**real**|Nombre moyen de versions de ligne dans les chaînes de versions traversées.|  
 |**elapsed_time_seconds**|**bigint**|Temps écoulé depuis que la transaction a obtenu son numéro de séquence.|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Autorisations
+## <a name="permissions"></a>Permissions
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
@@ -147,9 +147,9 @@ elapsed_time_seconds
 333  
 ```  
   
- Les informations suivantes évaluent les résultats à partir de **sys.dm_tran_active_snapshot_database_transactions**:  
+ Les informations suivantes évaluent les résultats de **sys.dm_tran_active_snapshot_database_transactions**:  
   
--   XSN-57 : Étant donné que cette transaction n’est pas exécutée en isolement d’instantané, la `is_snapshot` valeur et `first_snapshot_sequence_num` sont `0`. `transaction_sequence_num` indique qu'un numéro de séquence de transaction a été attribué à cette transaction, car au moins l'une des options de base de données ALLOW_SNAPSHOT_ISOLATION et READ_COMMITTED_SNAPSHOT est activée (ON).  
+-   XSN-57 : Étant donné que cette transaction n’est pas exécutée en isolement d’instantané, le `is_snapshot` valeur et `first_snapshot_sequence_num` sont `0`. `transaction_sequence_num` indique qu'un numéro de séquence de transaction a été attribué à cette transaction, car au moins l'une des options de base de données ALLOW_SNAPSHOT_ISOLATION et READ_COMMITTED_SNAPSHOT est activée (ON).  
   
 -   XSN-58 : Cette transaction n'est pas exécutée avec le niveau d'isolement d'instantané, et les informations fournies pour XSN-57 s'appliquent.  
   

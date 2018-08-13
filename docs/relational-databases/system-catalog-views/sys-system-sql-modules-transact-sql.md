@@ -1,5 +1,5 @@
 ---
-title: Sys.system_sql_modules (Transact-SQL) | Documents Microsoft
+title: Sys.system_sql_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8cb9a47bc2801d5d2d519333700f582a726af804
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6f566fa663aecbb0a1ab7e82396a5560f8ecb48b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221460"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543379"
 ---
 # <a name="syssystemsqlmodules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie une ligne par objet système qui contient un module défini par le langage SQL. Les objets système de type FN, IF, P, PC, TF, V sont associés à un module SQL. Pour identifier l’objet conteneur, vous pouvez joindre cette vue à [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md).  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|Numéro d'identification de l'objet conteneur, unique dans une base de données.|  
+|**object_id**|**Int**|Numéro d'identification de l'objet conteneur, unique dans une base de données.|  
 |**Définition**|**nvarchar(max)**|Texte SQL qui définit ce module.|  
 |**uses_ansi_nulls**|**bit**|1 = Le module a été créé lorsque l'option de base de données SET ANSI_NULLS était activée (ON).<br /><br /> Retourne toujours 1.|  
 |**uses_quoted_identifier**|**bit**|1 = Le module a été créé avec l'instruction SET QUOTED_IDENTIFIER ON.<br /><br /> Retourne toujours 1.|  
@@ -47,9 +47,9 @@ ms.locfileid: "33221460"
 |**uses_database_collation**|**bit**|0 = Le module ne dépend pas du classement par défaut de la base de données.<br /><br /> Retourne toujours 0.|  
 |**is_recompiled**|**bit**|0 = La procédure n'a pas été créée en utilisant l'option WITH RECOMPILE.<br /><br /> Retourne toujours 0.|  
 |**null_on_null_input**|**bit**|0 = Le module n'a pas été créé pour produire un résultat NULL pour toute entrée NULL.<br /><br /> Retourne toujours 0.|  
-|**execute_as_principal_id**|**int**|Retourne toujours la valeur NULL|  
+|**execute_as_principal_id**|**Int**|Retourne toujours la valeur NULL|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -25,13 +25,13 @@ caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2d1396ef79eb69b96a40f075c50cd38b6ad77d24
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 11c367628354ba0aadef7459fb602b2b44081bf9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015005"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536079"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
  [ @read_only= ] { 0 | 1 }  
  Un indicateur de type **bits**. La valeur 1, la valeur de la clé spécifiée ne peut pas être modifiée à nouveau sur cette connexion logique. Si 0 (valeur par défaut), alors que la valeur peut être modifié.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  N’importe quel utilisateur peut définir un contexte de session pour sa session.  
   
 ## <a name="remarks"></a>Notes  

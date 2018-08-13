@@ -1,4 +1,4 @@
-3. Sur tous les nœuds du cluster, ouvrez les ports de pare-feu de Pacemaker. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
+3. Sur tous les nœuds du cluster, ouvrez les ports de pare-feu de Pacemaker. Pour ouvrir ces ports avec `firewalld`, exécutez la commande suivante :
 
    ```bash
    sudo firewall-cmd --permanent --add-service=high-availability
@@ -36,6 +36,7 @@
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
    sudo pcs cluster setup --name <clusterName> <node1> <node2> <node3> 
    sudo pcs cluster start --all
+   sudo pcs cluster enable --all
    ```
    
    >[!NOTE]

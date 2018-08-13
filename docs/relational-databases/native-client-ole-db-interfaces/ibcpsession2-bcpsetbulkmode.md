@@ -16,13 +16,13 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 80b5776826790bf9026df5d25965c4116367b974
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b0cd923904b13e9cb63b72010e89d4079b966e22
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419628"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539179"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,13 +65,13 @@ HRESULT BCPSetBulkMode (
 |||  
 |-|-|  
 |**S_OK**|S_OK|  
-|**E_FAIL**|Une erreur spécifique au fournisseur s’est produite, pour plus d’informations utilisent l’interface ISQLServerErrorInfo.|  
+|**E_FAIL**|Une erreur spécifique au fournisseur s’est produite. Pour obtenir des informations détaillées, utilisez l’interface ISQLServerErrorInfo.|  
 |**E_UNEXPECTED**|L'appel à la méthode était inattendu. Par exemple, le **IBCPSession2::BCPInit** (méthode) n’a pas été appelée avant d’appeler IBCPSession2::BCPSetBulkMode.|  
 |**E_INVALIDARG**|L'argument n'était pas valide.|  
 |**E_OUTOFMEMORY**|Erreur de mémoire insuffisante.|  
   
 ## <a name="remarks"></a>Notes  
- IBCPSession2::BCPSetBulkMode peut être utilisé pour copier en une requête ou une table de bloc. Lorsque IBCPSession2::BCPSetBulkMode est utilisé pour copier en dehors d’une instruction de requête en bloc, il doit être appelé avant d’appeler `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` pour spécifier l’instruction de requête.  
+ IBCPSession2::BCPSetBulkMode peut être utilisé pour copier en une requête ou une table de bloc. Lorsque IBCPSession2::BCPSetBulkMode est utilisé pour copier en bloc une instruction de requête, il doit être appelé avant d’appeler `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` pour spécifier l’instruction de requête.  
   
  Vous devez éviter de combiner la syntaxe d'appel RPC avec la syntaxe de requête de lot (`{rpc func};SELECT * from Tbl`, par exemple) dans un texte de commande simple.  Cela entraîne ICommandPrepare::Prepare retourner une erreur et vous empêche de récupérer les métadonnées. Utilisez la syntaxe ODBC CALL (`{call func}; SELECT * from Tbl`, par exemple) si vous devez combiner l'exécution d'une procédure stockée et une requête de lot dans un texte de commande simple.  
   

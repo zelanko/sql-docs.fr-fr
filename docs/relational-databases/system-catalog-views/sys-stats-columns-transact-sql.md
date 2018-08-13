@@ -1,5 +1,5 @@
 ---
-title: Sys.stats_columns (Transact-SQL) | Documents Microsoft
+title: Sys.stats_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -24,27 +24,27 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d595953b3caf3cdc9d39ae92fab72a707221697
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 188b01d0f57751b6e62472cdd1f7ee5e947e95c0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220680"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543429"
 ---
 # <a name="sysstatscolumns-transact-sql"></a>sys.stats_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contient une ligne pour chaque colonne qui fait partie de **sys.stats** des statistiques.  
+  Contient une ligne pour chaque colonne qui fait partie de **sys.stats** statistiques.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID de l'objet dont cette colonne fait partie.|  
-|**stats_id**|**int**|ID des statistiques auxquelles cette colonne prend part.<br /><br />Si les statistiques correspondent à un index, le *stats_id* valeur est identique à la *index_id* valeur dans le [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vue de catalogue.|  
-|**stats_column_id**|**int**|Ordinal à partir de 1 dans l'ensemble des colonnes de statistiques.|  
-|**column_id**|**int**|ID de la colonne à partir de **sys.columns**.|  
+|**object_id**|**Int**|ID de l'objet dont cette colonne fait partie.|  
+|**stats_id**|**Int**|ID des statistiques auxquelles cette colonne prend part.<br /><br />Si les statistiques correspondent à un index, le *stats_id* valeur est identique à la *index_id* valeur dans le [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vue de catalogue.|  
+|**stats_column_id**|**Int**|Ordinal à partir de 1 dans l'ensemble des colonnes de statistiques.|  
+|**column_id**|**Int**|ID de la colonne à partir de **sys.columns**.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

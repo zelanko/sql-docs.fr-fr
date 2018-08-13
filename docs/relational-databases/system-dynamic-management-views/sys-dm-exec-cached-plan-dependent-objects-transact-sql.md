@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_cached_plan_dependent_objects (Transact-SQL) | Documents Microsoft
+title: Sys.dm_exec_cached_plan_dependent_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3843b253b9fcd65a5acee5c35706b22048087f06
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3f272098fcb86893fa98b33245769909d176282d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463455"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540379"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>Arguments  
  *plan_handle*  
- Identifie de façon univoque un plan d'exécution de requête pour un traitement exécuté ; ce plan réside dans la mémoire cache des plans. *plan_handle* est **varbinary(64)**. Le *plan_handle* peut être obtenu à partir des objets de gestion dynamique suivants :  
+ Identifie de façon univoque un plan d'exécution de requête pour un traitement exécuté ; ce plan réside dans la mémoire cache des plans. *plan_handle* est **varbinary (64)**. Le *plan_handle* peut être obtenu à partir d’objets de gestion dynamique suivants :  
   
 -   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -55,13 +55,13 @@ dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**usecounts**|**int**|Nombre d'utilisations du curseur ou contexte d'utilisation.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  
+|**usecounts**|**Int**|Nombre d'utilisations du curseur ou contexte d'utilisation.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  
 |**memory_object_address**|**varbinary(8)**|Adresse mémoire du curseur ou contexte d'utilisation.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  
 |**cacheobjtype**|**nvarchar(50)**|Type d’objet de cache de Plan. Colonne n'acceptant pas la valeur NULL. Les valeurs possibles sont<br /><br /> Plan exécutable<br /><br /> Fonction compilée par le CLR<br /><br /> Procédure compilée par le CLR<br /><br /> Curseur|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="physical-joins"></a>Jointures physiques  

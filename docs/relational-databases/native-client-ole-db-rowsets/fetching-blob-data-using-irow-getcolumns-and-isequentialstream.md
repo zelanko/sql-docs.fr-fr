@@ -1,5 +1,5 @@
 ---
-title: Extraction de données BLOB avec IRow::GetColumns et ISequentialStream | Microsoft Docs
+title: Récupération (fetch) de données BLOB avec IRow::GetColumns et ISequentialStream | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,19 +19,19 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 437faea72feaad150d2b9b1fd28bc1478b27136b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0566d7108284cba3554bd48ef469a3cecd388c38
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414808"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532869"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Extraction de données BLOB à l'aide d'IRow::GetColumns et ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  La fonction suivante utilise **IRow::GetColumns** et **ISequentialStream** pour extraire des données volumineuses :  
+  La fonction suivante utilise les interfaces **IRow::GetColumns** et **ISequentialStream** pour récupérer (fetch) les données volumineuses :  
   
 ```  
 void InitializeAndExecuteCommand()  

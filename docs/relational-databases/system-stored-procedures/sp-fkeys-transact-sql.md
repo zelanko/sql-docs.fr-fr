@@ -1,5 +1,5 @@
 ---
-title: sp_fkeys (Transact-SQL) | Documents Microsoft
+title: sp_fkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fdb582cf8e77e61d7723ea1c6ed2e854ef8f6940
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fc012a7b05f2387756e25bfb86c93896d3f94190
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258621"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536659"
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,10 +55,10 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  [ @pktable_owner=] '*nom_propriétaire_pk*'  
  Est le nom du propriétaire de la table (contenant la clé primaire) utilisée pour retourner des informations de catalogue. *nom_propriétaire_pk* est **sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *nom_propriétaire_pk* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel possède une table ayant le nom spécifié, ce sont les colonnes de cette table qui sont retournées. Si *nom_propriétaire_pk* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table avec l’objet *nom_de_la_pktable*, la procédure recherche une table avec l’objet *nom_de_la_pktable* appartenant au propriétaire de la base de données. S'il en existe une, les colonnes de cette table sont retournées.  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel possède une table ayant le nom spécifié, ce sont les colonnes de cette table qui sont retournées. Si *nom_propriétaire_pk* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table avec la valeur *nom_de_la_pktable*, la procédure recherche une table avec la valeur *nom_de_la_pktable* appartenant au propriétaire de la base de données. S'il en existe une, les colonnes de cette table sont retournées.  
   
  [ @pktable_qualifier =] '*l’argument identificateur_table_fk*'  
- Est le nom du qualificateur de table (contenant la clé primaire). *l’argument identificateur_table_fk* est de type sysname, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les tables (*qualifier.owner.name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le qualificateur représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+ Est le nom du qualificateur de table (contenant la clé primaire). *l’argument identificateur_table_fk* est de type sysname, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (*qualifier.owner.name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le qualificateur représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
  [ @fktable_name=] '*fktable_name*'  
  Nom de la table (contenant une clé étrangère) utilisée pour retourner les informations de catalogue. *FKTABLE_NAME* est de type sysname, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Ce paramètre ou le *nom_de_la_pktable* paramètre, ou les deux, doivent être fournis.  
@@ -66,17 +66,17 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  [ @fktable_owner =] '*fktable_owner*'  
  Nom du propriétaire de la table (contenant une clé étrangère) utilisée pour retourner les informations de catalogue. *fktable_owner* est **sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *fktable_owner* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel possède une table ayant le nom spécifié, ce sont les colonnes de cette table qui sont retournées. Si *fktable_owner* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table avec l’objet *fktable_name*, la procédure recherche une table avec l’objet *fktable_name* appartenant au propriétaire de la base de données. S'il en existe une, les colonnes de cette table sont retournées.  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel possède une table ayant le nom spécifié, ce sont les colonnes de cette table qui sont retournées. Si *fktable_owner* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table avec la valeur *fktable_name*, la procédure recherche une table avec la valeur *fktable_name* appartenant au propriétaire de la base de données. S'il en existe une, les colonnes de cette table sont retournées.  
   
  [ @fktable_qualifier=] '*fktable_qualifier*'  
  Est le nom du qualificateur de table (contenant une clé étrangère). *FKTABLE_QUALIFIER* est **sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le qualificateur représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |PKTABLE_QUALIFIER|**sysname**|Nom du qualificateur de la table (où figure la clé primaire). Ce champ peut contenir la valeur NULL.|  
 |PKTABLE_OWNER|**sysname**|Nom du propriétaire de la table (où figure la clé primaire). Ce champ retourne toujours une valeur.|  
@@ -105,7 +105,7 @@ Si le nom de la table de clé primaire est spécifié et que le nom de la table 
   
 La procédure stockée sp_fkeys est équivalente à SQLForeignKeys dans ODBC.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert `SELECT` autorisation sur le schéma.  
   
 ## <a name="examples"></a>Exemples  

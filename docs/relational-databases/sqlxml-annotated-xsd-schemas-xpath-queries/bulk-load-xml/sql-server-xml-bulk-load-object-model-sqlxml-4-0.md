@@ -1,5 +1,5 @@
 ---
-title: SQL Server en bloc charge modèle d’objet XML (SQLXML 4.0) | Documents Microsoft
+title: XML en bloc charge modèle objet SQL Server (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -36,13 +36,13 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43ca8f3b345f5db9c0d11217caef744e9172bd22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 800a306d2cca5888d055e69b5694552e99546bdc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973414"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537881"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modèle objet de chargement en masse XML de SQL Server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "32973414"
  Execute  
  Procède au chargement en masse des données à l'aide du fichier de schéma et du fichier de données (ou flux) fournis en guise de paramètres.  
   
-## <a name="properties"></a>Propriétés  
- Chargement en masse  
- Spécifie si un chargement en masse doit avoir lieu. Cette propriété est utile si vous souhaitez générer uniquement les schémas (consultez les propriétés SchemaGen, SGDropTables et SGUseID qui suivent) et de pas effectuer un chargement en masse. Il s'agit d'une propriété booléenne. Lorsque la propriété est définie sur TRUE, le processus de chargement en masse XML s'exécute. Lorsqu'elle est définie sur FALSE, aucun processus de chargement en masse XML n'a lieu.  
+## <a name="properties"></a>Properties  
+ Chargement en bloc  
+ Spécifie si un chargement en masse doit avoir lieu. Cette propriété est utile si vous souhaitez générer uniquement les schémas (voir les propriétés SchemaGen, SGDropTables et SGUseID qui suivent) et pas effectuer un chargement en masse. Il s'agit d'une propriété booléenne. Lorsque la propriété est définie sur TRUE, le processus de chargement en masse XML s'exécute. Lorsqu'elle est définie sur FALSE, aucun processus de chargement en masse XML n'a lieu.  
   
  La valeur par défaut est TRUE.  
   
@@ -64,14 +64,14 @@ ms.locfileid: "32973414"
  Lorsque la propriété est définie sur TRUE, le chargement en masse XML recherche chaque valeur insérée dans les contraintes (ce qui signifie qu'une violation de contrainte entraîne une erreur).  
   
 > [!NOTE]  
->  Pour laisser cette propriété définie sur FALSE, vous devez avoir **ALTER TABLE** les autorisations sur les tables cibles. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Pour laisser cette propriété définie sur FALSE, vous devez avoir **ALTER TABLE** autorisations sur les tables cibles. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  La valeur par défaut est FALSE. Lorsqu'il est défini sur FALSE, le chargement en masse XML ignore les contraintes au cours d'une opération d'insertion. Dans l'implémentation actuelle, vous devez définir les tables dans l'ordre des relations entre clés primaires et clés étrangères dans le schéma de mappage. Autrement dit, une table dotée d'une clé primaire doit être définie avant la table avec clé étrangère correspondante sans quoi le chargement en masse XML se soldera par un échec.  
   
  Notez que si vous procédez à une propagation d'identité, cette option ne s'applique pas et la vérification des contraintes restera activée. Ceci se produit lorsque `KeepIdentity=False` et qu'il existe une relation où le parent est un champ d'identité et la valeur est attribuée à l'enfant telle qu'elle est générée.  
   
  ConnectionCommand  
- Identifie un objet de connexion existant (par exemple, l’objet command ADO ou ICommand) que le chargement en masse XML doit utiliser. Vous pouvez utiliser la propriété ConnectionCommand au lieu de spécifier une chaîne de connexion avec la propriété ConnectionString. La propriété de Transaction doit être définie sur TRUE si vous utilisez ConnectionCommand.  
+ Identifie un objet de connexion existant (par exemple, l’objet commande ADO ou ICommand) que le chargement en masse XML doit utiliser. Vous pouvez utiliser la propriété ConnectionCommand au lieu de spécifier une chaîne de connexion avec la propriété ConnectionString. La propriété de Transaction doit être définie sur TRUE si vous utilisez ConnectionCommand.  
   
  Si vous utilisez les propriétés ConnectionString et de ConnectionCommand, chargement en masse XML utilise la dernière propriété spécifiée.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "32973414"
  Si la valeur est TRUE, les déclencheurs seront activés comme d'habitude lors des opérations d'insertion.  
   
 > [!NOTE]  
->  Pour laisser cette propriété définie sur FALSE, vous devez avoir **ALTER TABLE** les autorisations sur les tables cibles. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Pour laisser cette propriété définie sur FALSE, vous devez avoir **ALTER TABLE** autorisations sur les tables cibles. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  Notez que si vous ne procédez à aucune propagation d'identité, cette option ne s'applique pas et les déclencheurs resteront activés. Ceci se produit lorsque `KeepIdentity=False` et qu'il existe une relation où le parent est un champ d'identité et la valeur est attribuée à l'enfant telle qu'elle est générée.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "32973414"
  IgnoreDuplicateKeys  
  Spécifie la démarche à suivre en cas de tentative d'insertion de valeurs dupliquées dans une colonne clé. Si cette propriété est définie sur TRUE et si une tentative d'insertion d'un enregistrement avec valeur dupliquée dans une colonne clé a lieu, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'insère pas cet enregistrement. En revanche, il insère l'enregistrement suivant ; l'opération de chargement en masse ne peut donc pas aboutir à un échec. Si cette propriété est définie sur FALSE, le chargement en masse échoue dès qu'une tentative d'insertion d'une valeur dupliquée dans une colonne clé a lieu.  
   
- Lorsque la propriété IgnoreDuplicateKeys est définie sur TRUE, une instruction COMMIT est émise pour chaque enregistrement inséré dans la table. ce qui ralentit les performances. La propriété peut être définie sur « true » uniquement lorsque la propriété Transaction a la valeur False, car le comportement transactionnel est implémenté à l’aide de fichiers.  
+ Lorsque la propriété IgnoreDuplicateKeys est définie sur TRUE, une instruction COMMIT est émise pour chaque enregistrement inséré dans la table. ce qui ralentit les performances. La propriété peut être définie sur TRUE uniquement si la propriété de Transaction est définie sur FALSE, car le comportement transactionnel est implémenté à l’aide de fichiers.  
   
  La valeur par défaut est FALSE.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "32973414"
  La valeur de cette propriété s'applique à toutes les colonnes qui interviennent dans le chargement en masse. La valeur par défaut est TRUE.  
   
 > [!NOTE]  
->  Pour laisser cette propriété définie sur TRUE, vous devez avoir **ALTER TABLE** les autorisations sur les tables cibles. Sinon, vous devez lui attribuer la valeur FALSE. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
+>  Pour laisser cette propriété définie sur TRUE, vous devez avoir **ALTER TABLE** autorisations sur les tables cibles. Sinon, vous devez lui attribuer la valeur FALSE. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md).  
   
  KeepNulls  
  Spécifie la valeur à utiliser pour une colonne pour laquelle un attribut ou un élément enfant correspondant est manquant dans le document XML. Il s'agit d'une propriété booléenne. Lorsque la propriété est définie sur TRUE, le chargement en masse XML affecte une valeur NULL à la colonne. Il n'affecte pas la valeur par défaut de la colonne (le cas échéant) telle que définie sur le serveur. La valeur de cette propriété s'applique à toutes les colonnes qui interviennent dans le chargement en masse.  
@@ -125,13 +125,13 @@ ms.locfileid: "32973414"
  SchemaGen  
  Spécifie si les tables requises doivent être créées avant une opération de chargement en masse. Il s'agit d'une propriété booléenne. Si cette propriété est définie sur TRUE, les tables identifiées dans le schéma de mappage sont créées (la base de données doit exister). Si un ou plusieurs des tables existent déjà dans la base de données, la sgdroptables, propriété détermine si ces tables préexistantes doivent être supprimées et recréées.  
   
- La valeur par défaut pour la propriété SchemaGen est FALSE. SchemaGen ne crée pas de contraintes de clé primaire sur les tables nouvellement créés. SchemaGen est le cas, toutefois, créer des contraintes FOREIGN KEY dans la base de données s’il peut trouver de correspondance **SQL : Relationship** et **SQL : Key-champs** annotations dans le schéma de mappage et si le champ clé se compose d’une seule colonne.  
+ La valeur par défaut pour la propriété SchemaGen est FALSE. SchemaGen ne crée pas de contraintes PRIMARY KEY sur les tables nouvellement créées. SchemaGen est le cas, toutefois, créer des contraintes de clé étrangère dans la base de données s’il peut trouver de correspondance **SQL : Relationship** et **SQL : Key-champs** annotations dans le schéma de mappage et si le champ clé se compose de une seule colonne.  
   
  Notez que si vous définissez la propriété SchemaGen sur TRUE, le chargement en masse XML effectue les opérations suivantes :  
   
 -   Il crée les tables nécessaires à partir des noms d'élément et d'attribut. C'est pourquoi il est primordial que vous n'utilisiez pas de mots réservés [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les noms d'élément et d'attribut dans le schéma.  
   
--   Retourne les données de toutes les colonnes désignées à l’aide de dépassement de capacité du [SQL : Overflow-champ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md) dans [type de données xml](../../../t-sql/xml/xml-transact-sql.md) format.  
+-   Retourne les données pour toutes les colonnes désignées à l’aide de dépassement le [SQL : Overflow-champ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md) dans [type de données xml](../../../t-sql/xml/xml-transact-sql.md) format.  
   
  SGDropTables  
  Spécifie si les tables existantes doivent être supprimées et recréées. Vous utilisez cette propriété lorsque la propriété SchemaGen est définie sur TRUE. Si SGDropTables est FALSE, les tables existantes sont conservées. Les tables existantes sont supprimées et recréées lorsque cette propriété a la valeur TRUE.  
@@ -139,7 +139,7 @@ ms.locfileid: "32973414"
  La valeur par défaut est FALSE.  
   
  SGUseID  
- Spécifie si l’attribut dans le schéma de mappage qui est identifié en tant que **id** type peut être utilisé pour la création d’une contrainte PRIMARY KEY lorsque la table est créée. Utilisez cette propriété lorsque la propriété SchemaGen est définie sur TRUE. Si SGUseID est TRUE, l’utilitaire SchemaGen utilise un attribut pour lequel **dt : type = « id »** est spécifié en tant que colonne de clé primaire et ajoute la contrainte PRIMARY KEY appropriée lors de la création de la table.  
+ Spécifie si l’attribut dans le schéma de mappage qui est identifié en tant que **id** type peut être utilisé dans la création d’une contrainte PRIMARY KEY lorsque la table est créée. Utilisez cette propriété lorsque la propriété SchemaGen est définie sur TRUE. Si SGUseID est TRUE, l’utilitaire SchemaGen utilise un attribut pour lequel **dt : type = « id »** est spécifié en tant que colonne de clé primaire et ajoute la contrainte PRIMARY KEY appropriée lors de la création de la table.  
   
  La valeur par défaut est FALSE.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "32973414"
  Spécifie si le chargement en masse doit avoir lieu sous la forme d'une transaction, auquel cas la restauration est garantie si le chargement en masse échoue. Il s'agit d'une propriété booléenne. Si la propriété est définie sur TRUE, le chargement en masse intervient dans un contexte transactionnel. La propriété TempFilePath est utile uniquement lorsque la Transaction est définie sur TRUE.  
   
 > [!NOTE]  
->  Si vous chargez des données binaires (par exemple, l’image bin.hex et bin.base64 aux types de données XML du fichier binaire, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des types de données), la propriété de Transaction doit être définie sur FALSE.  
+>  Si vous chargez des données binaires (par exemple, types de données XML bin.hex et bin.base64 aux binary et image [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] types de données), la propriété de Transaction doit être définie sur FALSE.  
   
  La valeur par défaut est FALSE.  
   

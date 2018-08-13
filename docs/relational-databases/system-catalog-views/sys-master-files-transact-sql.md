@@ -24,13 +24,13 @@ caps.latest.revision: 56
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd7c2b9aac08fe6133c2138f5a1c2ea5369ec34c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f3250f1b522300f066962e84c8b91f2225c88049
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039033"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538349"
 ---
 # <a name="sysmasterfiles-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "38039033"
 > [!NOTE]  
 >  Lorsque vous supprimez ou reconstruisez des index volumineux ou lorsque vous supprimez ou tronquez des tables volumineuses, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] diffère les désallocations des pages actives et de leurs blocs associés jusqu'à ce que la transaction soit validée. Les opérations de suppression différées ne libèrent pas immédiatement l'espace alloué. Par conséquent, dès qu'un objet volumineux est supprimé ou tronqué, les valeurs retournées par sys.master_files peuvent ne pas refléter l'espace disque réellement disponible.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les autorisations minimales requises pour consulter la ligne correspondante sont les autorisations CREATE DATABASE, ALTER ANY DATABASE ou VIEW ANY DEFINITION.  
   
 ## <a name="see-also"></a>Voir aussi  

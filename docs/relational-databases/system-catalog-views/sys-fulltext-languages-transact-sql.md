@@ -1,5 +1,5 @@
 ---
-title: Sys.fulltext_languages (Transact-SQL) | Documents Microsoft
+title: Sys.fulltext_languages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,22 +25,22 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dabc9334091b5b545c78b069b3e9f31a5a68a1bd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b137d433f06eddcd57bc01bb2b26900c3fdd3483
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182055"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535209"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Cet affichage catalogue contient une ligne par langue dont les analyseurs lexicaux sont enregistrés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque ligne affiche l'identificateur de paramètres régionaux (LCID) et le nom de la langue. Lorsque des analyseurs lexicaux sont enregistrés pour une langue, les autres resources linguistiques de cette langue (générateurs de formes dérivées, mots parasites [mots vides] et fichiers de dictionnaire des synonymes) deviennent disponibles pour des opérations d'indexation et d'interrogation de texte intégral. La valeur de **nom** ou **lcid** peuvent être spécifiés dans les requêtes de recherche en texte intégral et les index de texte intégral [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions.  
+  Cet affichage catalogue contient une ligne par langue dont les analyseurs lexicaux sont enregistrés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque ligne affiche l'identificateur de paramètres régionaux (LCID) et le nom de la langue. Lorsque des analyseurs lexicaux sont enregistrés pour une langue, les autres resources linguistiques de cette langue (générateurs de formes dérivées, mots parasites [mots vides] et fichiers de dictionnaire des synonymes) deviennent disponibles pour des opérations d'indexation et d'interrogation de texte intégral. La valeur de **nom** ou **lcid** peuvent être spécifiés dans les requêtes de recherche en texte intégral et les index de recherche en texte intégral [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions.  
    
-|Colonne|Data type| Description|  
+|colonne|Data type|Description|  
 |------------|---------------|-----------------|  
-|**lcid**|**int**|Identificateur des paramètres régionaux (LCID) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de la langue.|  
+|**LCID**|**Int**|Identificateur des paramètres régionaux (LCID) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de la langue.|  
 |**nom**|**sysname**|Représente la valeur de l’alias dans [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondant à la valeur de **lcid** ou la représentation sous forme de chaîne du LCID numérique.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valeurs retournées pour les langues par défaut  
@@ -62,7 +62,7 @@ ms.locfileid: "33182055"
 |Néerlandais|1043|  
 |Anglais|1033|  
 |Français|1036|  
-|Allemand|1031|  
+|German|1031|  
 |**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Greek|1032|  
 |Goudjrati|1095|  
 |Hébreu|1037|  
@@ -103,9 +103,9 @@ ms.locfileid: "33182055"
 |Vietnamien|1066|  
   
 ## <a name="remarks"></a>Notes  
- Pour mettre à jour la liste des langues inscrites avec la recherche en texte intégral, utilisez [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'.  
+ Pour mettre à jour la liste des langues inscrites avec la recherche en texte intégral, utilisez [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**».  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -113,7 +113,7 @@ ms.locfileid: "33182055"
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurer et gérer des fichiers de dictionnaire des synonymes pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Configurer et gérer des mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

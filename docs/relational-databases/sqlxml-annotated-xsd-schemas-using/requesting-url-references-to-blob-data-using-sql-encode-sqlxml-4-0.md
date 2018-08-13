@@ -1,5 +1,5 @@
 ---
-title: 'Demande de références URL à des données d’objet BLOB à l’aide de sql : encode (SQLXML 4.0) | Documents Microsoft'
+title: 'Demande de références URL à des données BLOB à l’aide de sql : encode (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,21 +24,21 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 537e2656730c7659edd22ac68722bf43e892ad3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5eba5d17938d4bcfce27fb70476cad3e8974a1c0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970654"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543335"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Demande de références URL à des données BLOB à l'aide de sql:encode (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Dans un schéma XSD annoté, lorsqu'un attribut (ou élément) est mappé à une colonne BLOB dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les données sont retournées au format encodé en base 64 dans XML.  
   
- Si vous souhaitez une référence aux données (un URI) doit être retournée qui peut être utilisé ultérieurement pour récupérer les données BLOB dans un format binaire, spécifiez la **sql : encode** annotation. Vous pouvez spécifier **sql : encode** sur un attribut ou élément de type simple.  
+ Si vous souhaitez une référence aux données (un URI) doit être retourné qui peut être utilisé ultérieurement pour récupérer les données BLOB dans un format binaire, spécifiez la **sql : encode** annotation. Vous pouvez spécifier **sql : encode** sur un attribut ou élément de type simple.  
   
- Spécifiez le **sql : encode** annotation pour indiquer qu’une URL vers le champ doit être retournée au lieu de la valeur du champ. **SQL : encode** dépend de la clé primaire pour générer une sélection singleton dans l’URL. La clé primaire peut être spécifiée à l’aide de la **SQL : Key-champs** annotation.  
+ Spécifiez le **sql : encode** annotation pour indiquer qu’une URL au champ doit être retournée au lieu de la valeur du champ. **SQL : encode** dépend de la clé primaire pour générer une sélection singleton dans l’URL. La clé primaire peut être spécifiée à l’aide de la **SQL : Key-champs** annotation.  
   
  Le **sql : encode** annotation peut être affectée le « url » ou la valeur « default ». Une valeur « default » retourne des données au format encodé en base 64.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "32970654"
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Spécification de sql:encode pour obtenir une référence URL à des données BLOB  
- Dans cet exemple, le schéma de mappage spécifie **sql : encode** sur la **LargePhoto** attribut à récupérer la référence URI d’une photo de produit spécifique (au lieu de récupérer les données binaires dans un format encodé en Base 64).  
+ Dans cet exemple, le schéma de mappage spécifie **sql : encode** sur le **LargePhoto** attribut à récupérer la référence URI à une photo de produit spécifique (au lieu de récupérer les données binaires en Base 64 - format codé).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -91,7 +91,7 @@ ms.locfileid: "32970654"
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

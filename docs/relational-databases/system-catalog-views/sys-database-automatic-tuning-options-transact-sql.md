@@ -26,13 +26,13 @@ caps.latest.revision: 24
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 6a9fc30a86c3033264dc723de282caffd03289fd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e4c5cd169f7beca5cd7af3b96f1df229eb844d77
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38065399"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543331"
 ---
 # <a name="sysdatabaseautomatictuningoptions-transact-sql"></a>Sys.Database\_automatique\_tuning_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "38065399"
 |**raison**|**smallint**|Indique pourquoi États souhaitées et réels sont différents.<br />2 = DÉSACTIVÉ<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
 |**reason_desc**|**nvarchar(60)**|Description textuelle de la raison pour laquelle les États souhaitées et réels sont différents.<br />DÉSACTIVÉ = Option est désactivée par le système<br />QUERY_STORE_OFF = Query Store est mis hors tension<br />QUERY_STORE_READ_ONLY = Store de la requête est en mode lecture seule<br />NOT_SUPPORTED = disponible uniquement dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition| 
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’autorisation `VIEW DATABASE STATE`.  
   
 ## <a name="see-also"></a>Voir aussi  

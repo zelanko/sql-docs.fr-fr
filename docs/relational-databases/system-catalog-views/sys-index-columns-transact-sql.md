@@ -1,5 +1,5 @@
 ---
-title: Sys.index_columns (Transact-SQL) | Documents Microsoft
+title: Sys.index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,31 +24,31 @@ caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eb87377beeff12c6071ace2f03fee14ba9d92bf5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4d46709b314df0511faad3abc3dc9a80947264dd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182265"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533919"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contient une ligne par colonne qui fait partie d’un **sys.indexes** index ou table non ordonnée (segment).  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID de l'objet pour lequel l'index est défini.|  
-|**index_id**|**int**|Identificateur de l'index où la colonne est définie.|  
-|**index_column_id**|**int**|Identificateur de l'index de colonne. **index_column_id** est unique seulement dans **index_id**.|  
-|**column_id**|**int**|ID de la colonne dans **object_id**.<br /><br /> 0 = Identificateur de ligne (RID) dans un index non-cluster.<br /><br /> **column_id** est unique seulement dans **object_id**.|  
-|**key_ordinal**|**tinyint**|Valeur ordinale (basée sur la valeur 1) dans l'ensemble de colonnes clés.<br /><br /> 0 = N'est pas une colonne clé, ou est un index XML, un index columnstore ou un index spatial.<br /><br /> Remarque : Un index XML ou spatial ne peut pas être une clé, car les colonnes sous-jacentes ne sont pas comparables, ce qui signifie que que leurs valeurs ne peuvent pas être triées.|  
+|**object_id**|**Int**|ID de l'objet pour lequel l'index est défini.|  
+|**index_id**|**Int**|Identificateur de l'index où la colonne est définie.|  
+|**index_column_id**|**Int**|Identificateur de l'index de colonne. **index_column_id** est unique seulement dans **index_id**.|  
+|**column_id**|**Int**|ID de la colonne dans **object_id**.<br /><br /> 0 = Identificateur de ligne (RID) dans un index non-cluster.<br /><br /> **column_id** est unique seulement dans **object_id**.|  
+|**key_ordinal**|**tinyint**|Valeur ordinale (basée sur la valeur 1) dans l'ensemble de colonnes clés.<br /><br /> 0 = N'est pas une colonne clé, ou est un index XML, un index columnstore ou un index spatial.<br /><br /> Remarque : Un index XML ou spatial ne peut pas être une clé, car les colonnes sous-jacentes ne sont pas comparables, ce qui signifie que leurs valeurs ne peuvent pas être triées.|  
 |**partition_ordinal**|**tinyint**|Valeur ordinale (basée sur la valeur 1) dans l'ensemble de colonnes de partitionnement. Un index cluster columnstore peut avoir au plus une colonne de partitionnement.<br /><br /> 0 = N'est pas une colonne de partitionnement.|  
 |**is_descending_key**|**bit**|1 = Colonne clé d'index avec un ordre de tri descendant.<br /><br /> 0 = Colonne clé d'index avec un ordre de tri croissant, ou il s'agit d'une colonne qui fait partie d'un index de hachage.|  
-|**is_included_column**|**bit**|1 = colonne non clé ajoutée à l’index à l’aide de la clause CREATE INDEX INCLUDE ou la colonne fait partie d’un index columnstore.<br /><br /> 0 = Colonne non incluse.<br /><br /> Les colonnes ajoutées implicitement car ils font partie de la clé de clustering ne sont pas répertoriées dans **sys.index_columns**.<br /><br /> Les colonnes ajoutées implicitement car il s'agit de colonnes de partitionnement sont retournées avec la valeur 0.|  
+|**is_included_column**|**bit**|1 = colonne est une colonne non clée ajoutée à l’index à l’aide de la clause CREATE INDEX INCLUDE ou de la colonne fait partie d’un index columnstore.<br /><br /> 0 = Colonne non incluse.<br /><br /> Les colonnes ajoutées implicitement car ils font partie de la clé de clustering ne figurent pas dans **sys.index_columns**.<br /><br /> Les colonnes ajoutées implicitement car il s'agit de colonnes de partitionnement sont retournées avec la valeur 0.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  

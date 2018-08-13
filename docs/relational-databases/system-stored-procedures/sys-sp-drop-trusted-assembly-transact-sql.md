@@ -24,13 +24,13 @@ caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ffdc0c87a798b23ce25e544b26ea63132495b53
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0263585b455c93c34772a0c95d68095c4c0114ff
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971851"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537389"
 ---
 # <a name="sysspdroptrustedassembly-transact-sql"></a>Sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ La valeur de hachage SHA2_512 de l’assembly à supprimer de la liste des assem
 
 Cette procédure supprime un assembly à partir de [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
-## <a name="permissions"></a>Autorisations
+## <a name="permissions"></a>Permissions
 
 Nécessite l’appartenance dans le `sysadmin` rôle serveur fixe ou `CONTROL SERVER` autorisation.
 
