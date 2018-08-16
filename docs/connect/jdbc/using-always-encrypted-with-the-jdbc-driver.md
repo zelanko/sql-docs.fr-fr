@@ -14,12 +14,12 @@ caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd5d3bb54c4587c177160cdf99f2f0dacc2bb086
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: b0dc1141fd4f01fef3e49380cdd048faba105ed9
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279280"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662471"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Utilisation d’Always Encrypted avec le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,11 +46,11 @@ Microsoft JDBC Driver for SQL Server communique avec un magasin de clés à l’
 ### <a name="using-built-in-column-master-key-store-providers"></a>Utilisation des fournisseurs de magasin de clés principales de colonne intégrés
 Microsoft JDBC Driver for SQL Server est fourni avec les fournisseurs de magasin de clé principale de la colonne intégrés suivants. Certains de ces fournisseurs sont pré-enregistré avec les noms des fournisseurs spécifiques (utilisées pour rechercher le fournisseur) en fonction des informations d’identification supplémentaires ou de l’inscription explicite.
 
-| Classe | Description | Nom de fournisseur (pour la recherche) |Est déjà inscrit ?|
-|:---|:---|:---|:---|
-|**SQLServerColumnEncryptionAzureKeyVaultProvider**| Un fournisseur pour un magasin de clés Azure Key Vault.| AZURE_KEY_VAULT|non|
-|**SQLServerColumnEncryptionCertificateStoreProvider**| Fournisseur du magasin de certificats Windows.|MSSQL_CERTIFICATE_STORE|Oui
-|**SQLServerColumnEncryptionJavaKeyStoreProvider**| Un fournisseur pour le magasin de clés Java|MSSQL_JAVA_KEYSTORE|Oui|
+| Classe                                                 | Description                                        | Nom de fournisseur (pour la recherche)  | Est déjà inscrit ? |
+| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Un fournisseur pour un magasin de clés Azure Key Vault. | AZURE_KEY_VAULT         | non                 |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Fournisseur du magasin de certificats Windows.      | MSSQL_CERTIFICATE_STORE | Oui                |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Un fournisseur pour le magasin de clés Java                   | MSSQL_JAVA_KEYSTORE     | Oui                |
 
 Pour les fournisseurs de magasin de clés préalablement inscrit, vous n’avez pas besoin d’apporter des modifications de code d’application à utiliser ces fournisseurs, mais notez les éléments suivants :
 
@@ -368,7 +368,7 @@ Always Encrypted peut également être activé pour les requêtes individuelles.
 - L’application peut accéder à la clé principale de colonne qui protège les clés de chiffrement de colonne, qui chiffrent les colonnes de base de données interrogées. Pour utiliser le fournisseur de Java clé Store, vous devez fournir les informations d’identification supplémentaires dans la chaîne de connexion. Pour plus d’informations, consultez [fournisseur de Store de clé Java Using](#using-java-key-store-provider).
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configuration du mode d’envoi des valeurs java.sql.Time au serveur
-Le **sendTimeAsDatetime** propriété de connexion est utilisée pour configurer la façon dont la valeur java.sql.Time est envoyée au serveur. Lorsque cette propriété a la valeur false, la valeur d’heure est envoyée en tant qu’un type d’heure SQL Server. Lorsque cette propriété a la valeur true, l’heure d’envoi de la valeur en un type datetime. Si une colonne time est chiffrée, le **sendTimeAsDatetime** propriété doit être défini sur false, comme des colonnes chiffrées ne prennent pas en charge la conversion à partir de l’heure en date/heure. Notez également que cette propriété est true par défaut, lorsque vous utilisez des colonnes chiffrées de temps vous devez donc affectez-lui la valeur false. Sinon, le pilote lève une exception. À partir de la version 6.0 du pilote, la classe SQLServerConnection a deux méthodes pour configurer la valeur de cette propriété par programmation :
+La propriété de connexion **sendTimeAsDatetime** est utilisée pour configurer la manière dont la valeur java.sql.Time est envoyée au serveur. Lorsque cette propriété a la valeur false, la valeur d’heure est envoyée en tant qu’un type d’heure SQL Server. Lorsque cette propriété a la valeur true, l’heure d’envoi de la valeur en un type datetime. Si une colonne time est chiffrée, le **sendTimeAsDatetime** propriété doit être défini sur false, comme des colonnes chiffrées ne prennent pas en charge la conversion à partir de l’heure en date/heure. Notez également que cette propriété est true par défaut, lorsque vous utilisez des colonnes chiffrées de temps vous devez donc affectez-lui la valeur false. Sinon, le pilote lève une exception. À partir de la version 6.0 du pilote, la classe SQLServerConnection a deux méthodes pour configurer la valeur de cette propriété par programmation :
  
 * setSendTimeAsDatetime void publique (sendTimeAsDateTimeValue booléenne)
 * public boolean getSendTimeAsDatetime()
@@ -385,12 +385,13 @@ Si Always Encrypted n’est pas activé, les requêtes ayant des paramètres qui
 
 Le tableau ci-dessous récapitule le comportement des requêtes, selon qu’Always Encrypted est activé ou non :
 
-|Caractéristique de la requête | Always Encrypted est activé et l’application peut accéder aux clés et à leurs métadonnées|Always Encrypted est activé et l’application ne peut pas accéder aux clés et à leurs métadonnées | Always Encrypted est désactivé|
-|:---|:---|:---|:---|
-| Requêtes avec des paramètres ciblant des colonnes chiffrées. | Des valeurs de paramètres sont chiffrées en toute transparence. | Error | Error|
-| Requêtes qui récupèrent des données à partir de colonnes chiffrées, sans paramètres ciblant des colonnes chiffrées.| Les résultats de colonnes chiffrées sont déchiffrés de manière transparente. L’application reçoit des valeurs en texte clair des types de données JDBC correspondant aux types SQL Server configurés pour les colonnes chiffrées. | Error | Les résultats des colonnes chiffrées ne sont pas déchiffrés. L’application reçoit des valeurs chiffrées sous la forme de tableaux d’octets (byte[]).
+| Caractéristique de la requête                                                                           | Always Encrypted est activé et l’application peut accéder aux clés et à leurs métadonnées                                                                                                                        | Always Encrypted est activé et l’application ne peut pas accéder aux clés et à leurs métadonnées | Always Encrypted est désactivé                                                                                        |
+| :--------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ |
+| Requêtes avec des paramètres ciblant des colonnes chiffrées.                                           | Des valeurs de paramètres sont chiffrées en toute transparence.                                                                                                                                                           | Error                                                                             | Error                                                                                                               |
+| Requêtes qui récupèrent des données à partir de colonnes chiffrées, sans paramètres ciblant des colonnes chiffrées. | Les résultats de colonnes chiffrées sont déchiffrés de manière transparente. L’application reçoit des valeurs en texte clair des types de données JDBC correspondant aux types SQL Server configurés pour les colonnes chiffrées. | Error                                                                             | Les résultats des colonnes chiffrées ne sont pas déchiffrés. L’application reçoit des valeurs chiffrées sous la forme de tableaux d’octets (byte[]). |
 
-### <a name="inserting-and-retrieving-encrypted-data-examples"></a>Insertion et extraire des exemples de données chiffrées 
+### <a name="inserting-and-retrieving-encrypted-data-examples"></a>Insertion et extraire des exemples de données chiffrées
+
 Les exemples suivants illustrent la récupération et la modification de données dans des colonnes chiffrées. Les exemples supposent que la table cible avec le schéma et les colonnes SSN et BirthDate chiffrées. Si vous avez configuré une clé principale de colonne nommé « MyCMK » et une clé de chiffrement de colonne nommé « MyCEK » (comme décrit dans les sections de fournisseurs de magasin de clés précédentes), vous pouvez créer la table à l’aide de ce script :
 
 ```sql
@@ -436,7 +437,9 @@ Si vous utilisez un fournisseur de magasin de clés Java clé Store :
 ```
 
 ### <a name="inserting-data-example"></a>Exemple d’insertion de données
+
 Cet exemple insère une ligne dans la table Patients. Notez les points suivants :
+
 - L’exemple de code ne contient aucun élément spécifique au chiffrement. Microsoft JDBC Driver for SQL Server détecte automatiquement et chiffre les paramètres qui ciblent des colonnes chiffrées. Ce comportement rend le chiffrement transparent pour l’application.
 - Les valeurs insérées dans les colonnes de base de données, y compris les colonnes chiffrées, sont passés comme paramètres à l’aide de SQLServerPreparedStatement. L’utilisation de paramètres est facultative lors de l’envoi de valeurs à des colonnes non chiffrées (même si elle est vivement recommandée, car elle contribue à empêcher l’injection SQL), mais elle est nécessaire pour les valeurs qui ciblent des colonnes chiffrées. Si les valeurs insérées dans les colonnes chiffrées ont été passés en tant que littéraux incorporés dans l’instruction de requête, la requête échoue, car le pilote serait en mesure de déterminer les valeurs de colonnes chiffrées cibles et il n’aurait pas chiffrer les valeurs. Par conséquent, le serveur les rejettera en les considérant comme incompatibles avec les colonnes chiffrées.
 - Toutes les valeurs sont imprimées par le programme sous la forme de texte en clair, car Microsoft JDBC Driver pour SQL Server déchiffre de manière transparente les données récupérées à partir des colonnes chiffrées.
@@ -461,7 +464,9 @@ catch (SQLException e) {
 ```
 
 ### <a name="retrieving-plaintext-data-example"></a>Exemple de récupération de données en texte clair
+
 L’exemple suivant montre le filtrage de données basé sur des valeurs chiffrées, ainsi que la récupération de données en texte clair à partir de colonnes chiffrées. Notez les points suivants :
+
 - La valeur utilisée dans la clause WHERE pour filtrer la colonne SSN doit être passée en tant que paramètre, afin que Microsoft JDBC Driver pour SQL Server puisse la chiffrer de manière transparente avant de l’envoyer à la base de données.
 - Toutes les valeurs sont imprimées par le programme sous la forme de texte en clair, car Microsoft JDBC Driver pour SQL Server déchiffre de manière transparente les données récupérées à partir des colonnes SSN et BirthDate.
 
@@ -485,11 +490,13 @@ catch (SQLException e) {
     e.printStackTrace();
 }
 ```
-  
+
 ### <a name="retrieving-encrypted-data-example"></a>Exemple de récupération de données chiffrées
+
 Si Always Encrypted n’est pas activé, une requête peut toujours récupérer des données à partir de colonnes chiffrées, tant qu’aucun de ses paramètres ne ciblent des colonnes chiffrées.
 
 L’exemple suivant illustre la récupération de données chiffrées binaires à partir de colonnes chiffrées. Notez les points suivants :
+
 - Étant donné qu’Always Encrypted n’est pas toujours activé dans la chaîne de connexion, la requête retourne des valeurs SSN et BirthDate chiffrées sous la forme de tableaux d’octets (le programme convertit les valeurs en chaînes).
 - Une requête qui récupère des données à partir de colonnes chiffrées lorsqu’Always Encrypted est désactivé peut avoir des paramètres, tant qu’aucun d’eux ne cible une colonne chiffrée. La requête suivante filtre en fonction des noms (LastName), qui ne sont pas chiffrés dans la base de données. Si la requête filtre par SSN ou BirthDate, la requête échoue.
 
@@ -512,21 +519,26 @@ catch (SQLException e) {
 ```
 
 ### <a name="avoiding-common-problems-when-querying-encrypted-columns"></a>Éviter les problèmes courants lors de l’interrogation de colonnes chiffrées
+
 Cette section décrit des catégories d’erreurs courantes liées à l’interrogation des colonnes chiffrées à partir d’applications Java, et fournit des conseils sur la façon de les éviter.
 
 ### <a name="unsupported-data-type-conversion-errors"></a>Erreurs liées à la conversion de types de données non pris en charge
+
 Always Encrypted ne prend en charge que peu de conversions de types de données chiffrées. Pour obtenir la liste détaillée des conversions de types prises en charge, consultez [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Voici comment procéder pour éviter les erreurs de conversion de types de données. Assurez-vous que :
 
 - vous utilisez les méthodes d’accesseur set appropriée lors de la transmission de valeurs pour les paramètres qui ciblent des colonnes chiffrées. Assurez-vous que le type de données SQL Server du paramètre est exactement le même que le type de la colonne cible ou une conversion du type de données SQL Server du paramètre vers le type de cible de la colonne est pris en charge. Méthodes de l’API ont été ajoutées aux classes SQLServerPreparedStatement et SQLServerCallableStatement SQLServerResultSet pour passer des paramètres correspondant aux types de données SQL Server spécifiques. Par exemple, si une colonne ne sont pas chiffrée. vous pouvez utiliser la méthode setTimestamp() pour passer un paramètre à un datetime2 ou à une colonne datetime. Mais quand une colonne est chiffrée, vous devrez utiliser la méthode exacte représentant le type de la colonne dans la base de données. Par exemple, utiliser setTimestamp() pour transmettre des valeurs à une colonne chiffrée datetime2 et utiliser setDateTime() pour transmettre des valeurs à une colonne datetime chiffré. Consultez [toujours chiffré référence des API pour le pilote JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) pour une liste complète des nouvelles API.
 - La précision et l’échelle des paramètres ciblant les colonnes des types de données SQL Server decimal et numeric sont les mêmes que celles configurées pour la colonne cible. Méthodes de l’API ont été ajoutées aux classes SQLServerPreparedStatement et SQLServerCallableStatement SQLServerResultSet pour accepter la précision et l’échelle ainsi que les valeurs de données pour les paramètres/colonnes représentant les types de données decimal et numeric. Consultez [toujours chiffré référence des API pour le pilote JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) pour obtenir la liste complète des API de nouveau/surchargé.  
-- la précision/échelle de fractions de paramètres ciblant des colonnes de type datetime2, datetimeoffset ou types de données SQL Server n’est pas supérieure à la précision/échelle de fractions pour la colonne cible dans les requêtes qui modifient les valeurs de la colonne cible . Méthodes de l’API ont été ajoutées aux classes SQLServerPreparedStatement et SQLServerCallableStatement SQLServerResultSet pour accepter la précision/échelle de fractions, ainsi que les valeurs de paramètres représentant ces types de données. Pour obtenir une liste complète des API de nouveau/surchargé, consultez [toujours chiffré référence des API pour le pilote JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).   
+- la précision/échelle de fractions de paramètres ciblant des colonnes de type datetime2, datetimeoffset ou types de données SQL Server n’est pas supérieure à la précision/échelle de fractions pour la colonne cible dans les requêtes qui modifient les valeurs de la colonne cible . Méthodes de l’API ont été ajoutées aux classes SQLServerPreparedStatement et SQLServerCallableStatement SQLServerResultSet pour accepter la précision/échelle de fractions, ainsi que les valeurs de paramètres représentant ces types de données. Pour obtenir une liste complète des API de nouveau/surchargé, consultez [toujours chiffré référence des API pour le pilote JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
 ### <a name="errors-due-to-incorrect-connection-properties"></a>Erreurs dues à des propriétés de connexion incorrectes
-Cette section décrit comment configurer les paramètres de connexion correctement pour utiliser des données Always Encrypted. Dans la mesure où les types de données chiffrées prennent en charge les conversions limitées, le **sendTimeAsDatetime** et **sendStringParametersAsUnicode** paramètres de connexion nécessitent une configuration appropriée lors de l’utilisation des colonnes chiffrées. Assurez-vous que : 
+
+Cette section décrit comment configurer les paramètres de connexion correctement pour utiliser des données Always Encrypted. Dans la mesure où les types de données chiffrées prennent en charge les conversions limitées, le **sendTimeAsDatetime** et **sendStringParametersAsUnicode** paramètres de connexion nécessitent une configuration appropriée lors de l’utilisation des colonnes chiffrées. Assurez-vous que :
+
 - [sendTimeAsDatetime](setting-the-connection-properties.md) connexion est défini sur false lors de l’insertion de données dans des colonnes de temps chiffrées. Pour plus d’informations, consultez [configurer comment les valeurs java.sql.Time sont envoyées au serveur](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
 - [sendStringParametersAsUnicode](setting-the-connection-properties.md) connexion est défini sur true (ou est considérée comme la valeur par défaut) lorsque de l’insertion des données dans des colonnes de char/varchar/varchar(max) chiffrées.
 
 ### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Erreurs dues au passage de texte en clair au lieu de valeurs chiffrées
+
 Les valeurs qui ciblent une colonne chiffrée doivent être chiffrées dans l’application. Toute tentative d’insertion, de modification ou de filtrage par une valeur en texte clair dans une colonne chiffrée entraîne une erreur similaire à celle-ci :
 
 ```java
@@ -534,6 +546,7 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 ```
 
 Pour éviter ces erreurs, procédez comme suit :
+
 - Activez Always Encrypted pour les requêtes d’application ciblant des colonnes chiffrées (pour la chaîne de connexion ou pour une requête spécifique).
 - vous utilisez des instructions préparées et paramètres à envoyer des données ciblant des colonnes chiffrées. L’exemple suivant illustre une requête qui filtre incorrectement une colonne chiffrée (SSN) à l’aide d’un littéral ou d’une constante, au lieu de passer le littéral à l’intérieur d’un paramètre. Cette requête échoue :
 
@@ -542,29 +555,38 @@ ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customer
 ```
 
 ## <a name="force-encryption-on-input-parameters"></a>Forcer le chiffrement sur les paramètres d’entrée
+
 La fonctionnalité de forcer le chiffrement applique le chiffrement d’un paramètre lors de l’utilisation de Always Encrypted. Si le chiffrement forcé est utilisé et que SQL Server informe le pilote que le paramètre ne nécessite pas de chiffrement, la requête utilisant le paramètre échoue. Cette propriété fournit une protection supplémentaire contre les attaques au niveau de la sécurité qui impliquent un serveur SQL Server compromis fournissant des métadonnées de chiffrement incorrectes au client, ce qui peut entraîner la divulgation de données. Les méthodes set * dans les classes SQLServerPreparedStatement et SQLServerCallableStatement et de la mise à jour\* méthodes dans la classe SQLServerResultSet sont surchargées afin d’accepter un argument booléen pour spécifier le paramètre de chiffrement de force. Si la valeur de cet argument est false, le pilote ne sont pas forcer le chiffrement sur les paramètres. Si forcer le chiffrement est défini à true, la requête paramètre est uniquement envoyé si la colonne de destination est chiffrée et Always Encrypted est activé sur la connexion ou sur l’instruction. À l’aide de cette propriété donne une couche supplémentaire de sécurité, d’assurer que le pilote ne par inadvertance envoyer des données vers SQL Server en texte brut lorsqu’elle doit être chiffré.
 
 Pour plus d’informations sur les méthodes SQLServerPreparedStatement et SQLServerCallableStatement sont surchargées avec le paramètre de chiffrement de force, consultez [toujours chiffré référence des API pour le pilote JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>Contrôle de l’impact d’Always Encrypted sur les performances
+
 Always Encrypted étant une technologie de chiffrement côté client, la dégradation des performances s’observe côté client, et non dans la base de données. Outre les opérations de chiffrement et de déchiffrement, les autres sources de dégradation des performances côté client sont les suivantes :
+
 - Allers-retours supplémentaires vers la base de données pour récupérer des métadonnées pour les paramètres de requête.
 - Appels au magasin de clés principales de colonne pour accéder à une clé principale de colonne.
 
 Cette section décrit les outils intégrés d’optimisation des performances dans Microsoft JDBC Driver pour SQL Server et comment vous pouvez contrôler l’impact des deux facteurs ci-dessus sur les performances.
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Contrôle des allers-retours vers la base de données en vue de la récupération des métadonnées pour les paramètres de requête
+
 Si Always Encrypted est activé pour une connexion, le pilote appelle par défaut [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans valeurs de paramètre) à SQL Server. [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) analyse l’instruction de requête afin de savoir si des paramètres doivent être chiffrés. Si c’est le cas, pour chaque paramètre à chiffrer, il retourne des informations relatives au chiffrement qui permettent au pilote de chiffrer les valeurs de paramètre. Ce comportement garantit un haut niveau de transparence à l’application cliente. Tant que l’application utilise des paramètres pour transmettre des valeurs qui ciblent des colonnes chiffrées au pilote, l’application (et le développeur d’applications) n’a pas besoin de connaître les requêtes qui accèdent à des colonnes chiffrées.
 
 ### <a name="setting-always-encrypted-at-the-query-level"></a>Configuration d’Always Encrypted au niveau de la requête
+
 Pour contrôler l’impact sur les performances de la récupération des métadonnées de chiffrement pour les requêtes paramétrables, vous pouvez activer Always Encrypted pour chaque requête, au lieu de le configurer pour la connexion. De cette façon, sys.sp_describe_parameter_encryption est appelé uniquement pour les requêtes dont les paramètres ciblent des colonnes chiffrées. Notez toutefois que de cette façon, vous réduisez la transparence du chiffrement. Si vous modifiez les propriétés de chiffrement de vos colonnes de base de données, vous devrez modifier le code de votre application pour l’aligner sur les modifications du schéma.
 
 Pour contrôler le comportement Always Encrypted des requêtes individuelles, vous devez configurer les objets de l’instruction individuelle en passant un Enum, SQLServerStatementColumnEncryptionSetting, qui spécifie comment les données sont envoyées et reçues lors de la lecture et l’écriture colonnes chiffrées pour cette instruction spécifique. Voici quelques conseils utiles :
+
 - Si la plupart des requêtes qu’une application cliente envoie par le biais d’une connexion de base de données accèdent à des colonnes chiffrées, appliquez les recommandations suivantes :
+
     - Affectez la valeur **Activé** au mot clé de la chaîne de connexion **columnEncryptionSetting**.
     - Définissez SQLServerStatementColumnEncryptionSetting.Disabled pour les requêtes qui n’accèdent à aucune colonne chiffrée. Ce paramètre désactive à la fois l’appel de sys.sp_describe_parameter_encryption et la tentative de déchiffrement des valeurs du jeu de résultats.
     - Définissez SQLServerStatementColumnEncryptionSetting.ResultSet pour les requêtes qui n’ont aucun paramètre exigeant un chiffrement, mais qui récupèrent des données de colonnes chiffrées. Ce paramètre désactive l’appel de sys.sp_describe_parameter_encryption et le chiffrement des paramètres. La requête est alors en mesure de déchiffrer les résultats des colonnes de chiffrement.
+
 - Si la plupart des requêtes qu’une application cliente envoie par le biais d’une connexion de base de données n’accèdent pas à des colonnes chiffrées, appliquez les recommandations suivantes :
+
     - Affectez la valeur **Disabled** au mot clé de la chaîne de connexion **columnEncryptionSetting**.
     - Définissez SQLServerStatementColumnEncryptionSetting.Enabled pour les requêtes qui ont des paramètres qui doivent être chiffrés. Ce paramètre active à la fois l’appel de sys.sp_describe_parameter_encryption et le déchiffrement des résultats de requête récupérés à partir des colonnes chiffrées.
     - Définissez SQLServerStatementColumnEncryptionSetting.ResultSet pour les requêtes qui n’ont aucun paramètre exigeant un chiffrement, mais qui récupèrent des données de colonnes chiffrées. Ce paramètre désactive l’appel de sys.sp_describe_parameter_encryption et le chiffrement des paramètres. La requête est alors en mesure de déchiffrer les résultats des colonnes de chiffrement.
@@ -603,6 +625,7 @@ catch (SQLException e) {
 ```
 
 ### <a name="column-encryption-key-caching"></a>Mise en cache des clés de chiffrement de colonne
+
 Pour réduire le nombre d’appels à un magasin de clés principales de colonne pour déchiffrer les clés de chiffrement de colonne, Microsoft JDBC Driver pour SQL Server met en cache les clés de chiffrement de colonne en texte en clair dans la mémoire. Après avoir reçu la valeur de clé de chiffrement de colonne chiffrée à partir des métadonnées de la base de données, le pilote tente d’abord de trouver la clé de chiffrement de colonne en texte en clair qui correspond à la valeur de clé chiffrée. Le pilote appelle le magasin de clés qui contient la clé principale de colonne uniquement s’il ne peut pas trouver la valeur de clé de chiffrement de colonne chiffrée dans le cache.
 
 Vous pouvez configurer une valeur time-to-live pour les entrées de clés de chiffrement de colonne dans le cache à l’aide de l’API, setColumnEncryptionKeyCacheTtl(), dans la classe SQLServerConnection. La valeur de durée de vie par défaut pour les entrées de clés de chiffrement de colonne dans le cache est de deux heures. Pour désactiver la mise en cache, utilisez la valeur 0. Pour définir n’importe quelle valeur time-to-live, utilisez l’API suivante :
@@ -620,6 +643,7 @@ SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 Uniquement les jours, heures, MINUTES ou secondes sont prises en charge en tant que l’unité de temps.  
 
 ## <a name="copying-encrypted-data-using-sqlserverbulkcopy"></a>Copie les données chiffrées à l’aide de SQLServerBulkCopy
+
 Grâce à SQLServerBulkCopy, les données qui sont déjà chiffrées et stockées dans une table peuvent être copiées vers une autre table, sans que vous ayez à les déchiffrer. Pour cela :
 
 - Vérifiez que la configuration du chiffrement de la table cible est identique à celle de la table source. Les deux tables doivent avoir les mêmes colonnes chiffrées, et ces colonnes doivent être chiffrées à l’aide des mêmes types et des mêmes clés de chiffrement. Si une colonne cible est chiffrée différemment de la colonne source correspondante, vous ne pourrez pas déchiffrer les données de la table cible après les avoir copiées. Les données seront endommagées.
@@ -630,4 +654,5 @@ Grâce à SQLServerBulkCopy, les données qui sont déjà chiffrées et stockée
 > Faites attention quand vous spécifiez AllowEncryptedValueModifications, car cette option peut endommager la base de données. En effet, Microsoft JDBC Driver pour SQL Server ne vérifie pas si les données sont chiffrées, ou si elles sont correctement chiffrées à l’aide du même type de chiffrement, du même algorithme et de la même clé que la colonne cible.
 
 ## <a name="see-also"></a> Voir aussi
+
 [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

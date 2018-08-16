@@ -14,12 +14,12 @@ caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1870693ad4c12a6f04cd3b01380b77de728c245c
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454373"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662461"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notes de publication pour le pilote JDBC
 
@@ -27,7 +27,7 @@ ms.locfileid: "39454373"
 
 ## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>Mises à jour apportées à Microsoft JDBC Driver 7.0 pour SQL Server
 
-Microsoft JDBC Driver 7.0 pour SQL Server est entièrement conforme à la spécification de l’API JDBC 4.2. Les fichiers JAR dans le package 7.0 sont nommées en fonction de la compatibilité des versions de Java. Par exemple, le fichier de mssql-jdbc-7.0.0.jre8.jar à partir du package 7.0 doit être utilisé avec Java 8.
+Microsoft JDBC Driver 7.0 pour SQL Server est entièrement conforme à la spécification de l’API JDBC 4.2. Les fichiers JAR dans le package 7.0 sont nommées en fonction de la compatibilité des versions de Java. Par exemple, le fichier mssql-jdbc-7.0.0.jre10.jar à partir du package 7.0 doit être utilisé avec Java 10.
 
 ### <a name="support-for-jdk-10"></a>Prise en charge de JDK 10
 
@@ -59,7 +59,7 @@ Microsoft JDBC Driver 7.0 pour SQL Server introduit la nouvelle propriété de c
 
 ### <a name="added-azure-key-vault-provider-constructors"></a>Constructeurs de fournisseur Ajout Azure Key Vault
 
-Microsoft JDBC Driver 7.0 pour SQL Server présente de nouveau un constructeur précédemment supprimé, pour `SQLServerColumnEncryptionAzureKeyVaultProvider`, authentification autorisée à l’aide d’une méthode personnalisée est implémentée via `SQLServerKeyVaultAuthenticationCallback` pour extraire un jeton d’accès.
+Microsoft JDBC Driver 7.0 pour SQL Server réintroduit un constructeur précédemment supprimé, pour `SQLServerColumnEncryptionAzureKeyVaultProvider`, authentification autorisée à l’aide d’une méthode personnalisée est implémentée via `SQLServerKeyVaultAuthenticationCallback` pour extraire un jeton d’accès.
 
 Les nouveaux constructeurs ont le ci-dessous définition :
 
@@ -84,7 +84,7 @@ Microsoft JDBC Driver 7.0 pour SQL Server a mis à jour sa dépendance maven sur
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Mises à jour apportées à Microsoft JDBC Driver 6.4 pour SQL Server
 
-Microsoft JDBC Driver 6.4 pour SQL Server est entièrement conforme aux spécifications de JDBC 4.1 et 4.2. Les fichiers JAR dans le package de 6,4 sont nommées en fonction de la compatibilité des versions de Java. Par exemple, le fichier mssql-jdbc-6.4.0.jre8.jar à partir du package 6,4 est recommandé à utiliser avec Java 8.
+Microsoft JDBC Driver 6.4 pour SQL Server est entièrement conforme aux spécifications de JDBC 4.1 et 4.2. Les fichiers JAR dans le package de 6,4 sont nommées en fonction de la compatibilité des versions de Java. Par exemple, le fichier mssql-jdbc-6.4.0.jre8.jar à partir du package 6,4 doit être utilisé avec Java 8.
 
 ### <a name="support-for-jdk-9"></a>Prise en charge de JDK 9
 
@@ -134,10 +134,14 @@ Le pilote JDBC a mis à jour sa dépendance maven sur azure-activedirectory-libr
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Mises à jour apportées à Microsoft JDBC Driver 6.2 pour SQL Server
 
-Microsoft JDBC Driver 6.2 pour SQL Server est entièrement conforme aux spécifications de JDBC 4.1 et 4.2. Les fichiers JAR dans le package 6.0 sont nommées en fonction de la compatibilité des versions de Java. Par exemple, le fichier mssql-jdbc-6.2.1.jre8.jar à partir du package 6.2 est recommandé à utiliser avec Java 8.
+Microsoft JDBC Driver 6.2 pour SQL Server est entièrement conforme aux spécifications de JDBC 4.1 et 4.2. Les fichiers JAR dans le package 6.2 sont nommées en fonction de la compatibilité des versions de Java. Par exemple, le fichier mssql-jdbc-6.2.2.jre8.jar à partir du package 6.2 est recommandé à utiliser avec Java 8.
 
 > [!NOTE]  
-> Un problème avec l’amélioration de la mise en cache de métadonnées a été trouvé dans la RTW 6.2 JDBC a publié le 29 juin 2017. L’amélioration a été restaurée et de nouveaux fichiers JAR (version 6.2.1) ont été publiés à partir du 17 juillet 2017, sur le [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), et [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Mettez à jour vos projets pour utiliser le 6.2.1 libérer les fichiers JAR. Veuillez consulter [notes de publication](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) pour plus d’informations.
+> Un problème avec l’amélioration de la mise en cache de métadonnées a été trouvé dans la RTW 6.2 JDBC a publié le 29 juin 2017. L’amélioration a été restaurée et les nouveaux fichiers JAR (version 6.2.1) ont été publiés à partir du 17 juillet 2017. 
+>
+> Une autre amélioration pour mettre à niveau la version de bibliothèque dépendante d’Azure Key Vault à 1.0.0 a eu lieu, et les nouveaux fichiers JAR (version 6.2.2) ont été publiés sur le 19 octobre 2017.
+>
+> Télécharger les dernières mises à jour dans JDBC Driver 6.2 sur [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), et [Maven Central](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Mettez à jour vos projets pour utiliser le 6.2.2 libérer les fichiers JAR. Veuillez consulter les notes pour [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) et [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) pour plus d’informations.
 
 ### <a name="azure-active-directory-aad-support-for-linux"></a>Prise en charge de Azure Active Directory (AAD) pour Linux
 

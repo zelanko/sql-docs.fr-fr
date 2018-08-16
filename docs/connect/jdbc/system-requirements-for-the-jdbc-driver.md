@@ -14,12 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7d43fbc0488886915689565475dd5e69967c348
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: MTE75
+ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454053"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662281"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Configuration requise pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -78,31 +78,30 @@ ms.locfileid: "39454053"
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-6.4.0.jre7.jar|4.1|7|Nécessite Java Runtime Environment (JRE) 7.0. À l’aide de JRE 6.0 ou inférieure lève une exception.<br /><br /> Les nouvelles fonctionnalités dans 6.4 incluent : l’authentification Azure AD pour Linux, méthode Principal/mot de passe pour Kerberos, la détection automatique du domaine dans le SPN pour l’authentification entre domaines, la délégation contrainte Kerberos, délai de requête, délai d’expiration de Socket et préparées handle d’instruction réutiliser. |  
 |mssql-jdbc-6.4.0.jre8.jar|4.2|8|Nécessite Java Runtime Environment (JRE) 8.0. À l’aide de JRE 7.0 ou inférieure lève une exception.<br /><br /> Les nouvelles fonctionnalités dans 6.4 incluent : l’authentification Azure AD pour Linux, méthode Principal/mot de passe pour Kerberos, la détection automatique du domaine dans le SPN pour l’authentification entre domaines, la délégation contrainte Kerberos, délai de requête, délai d’expiration de Socket et préparées handle d’instruction réutiliser. |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Nécessite Java Runtime Environment (JRE) 9.0. À l’aide de JRE 8.0 ou inférieur lève une exception.<br /><br /> Les nouvelles fonctionnalités dans 6.4 incluent : l’authentification Azure AD pour Linux, méthode Principal/mot de passe pour Kerberos, la détection automatique du domaine dans le SPN pour l’authentification entre domaines, la délégation contrainte Kerberos, délai de requête, délai d’expiration de Socket et préparées handle d’instruction réutiliser. |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Nécessite Java Runtime Environment (JRE) 9.0. À l’aide de JRE 8.0 ou inférieur lève une exception.<br /><br /> Les nouvelles fonctionnalités dans 6.4 incluent : l’authentification Azure AD pour Linux, méthode Principal/mot de passe pour Kerberos, la détection automatique du domaine dans le SPN pour l’authentification entre domaines, la délégation contrainte Kerberos, délai de requête, délai d’expiration de Socket et préparées handle d’instruction réutiliser. |
 
+JDBC Driver 6.4 est également disponible sur le référentiel Central Maven et peuvent être ajoutés à un projet Maven en ajoutant le code suivant dans le fichier POM. XML 
 
-  JDBC Driver 6.4 est également disponible sur le référentiel Central Maven et peuvent être ajoutés à un projet Maven en ajoutant le code suivant dans le fichier POM. XML 
-  
  ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
     <version>6.4.0.jre9</version>
 </dependency>
-```    
+```
 
 **Microsoft JDBC Driver 6.2 pour SQL Server :**  
   
-  JDBC Driver 6.2 comprend deux bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-6.2.1.jre7.jar**, et **mssql-jdbc-6.2.1.jre8.jar**. 
+  JDBC Driver 6.2 inclut deux bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-6.2.2.jre7.jar** et **mssql-jdbc-6.2.2.jre8.jar**. 
   
- JDBC Driver 6.2 a été conçu pour être pris en charge par toutes les principales machines virtuelles Java équivalentes à Sun, mais il a été testé uniquement sur Sun JRE 5.0, 6.0, 7.0 et 8.0. 
+ JDBC Driver 6.2 a été conçu pour être pris en charge par toutes les principales machines virtuelles Java équivalentes à Sun, mais il a été testé uniquement sur Sun JRE 5.0, 6.0, 7.0 et 8.0.
   
  Le tableau suivant récapitule les versions prises en charge par les deux fichiers JAR fournis avec Microsoft JDBC Drivers 6.0 et 4.2 pour SQL Server :  
   
 |JAR|Compatibilité avec la version de JDBC|Java Version recommandée|Description|  
-|---------|-----------------------------|----------------------|-----------------|   
-|MSSQL-jdbc-6.2.1.jre7.jar|4.1|7|Nécessite Java Runtime Environment (JRE) 7.0. À l’aide de JRE 6.0 ou inférieure lève une exception.<br /><br /> Les nouvelles fonctionnalités dans 6.2 incluent : l’authentification Azure AD pour Linux, méthode Principal/mot de passe pour Kerberos, la détection automatique du domaine dans le SPN pour l’authentification entre domaines, la délégation contrainte Kerberos, délai de requête, délai d’expiration de Socket et préparées handle d’instruction réutiliser. |  
-|MSSQL-jdbc-6.2.1.jre8.jar|4.2|8|Nécessite Java Runtime Environment (JRE) 8.0. À l’aide de JRE 7.0 ou inférieure lève une exception.<br /><br /> Les nouvelles fonctionnalités dans 6.2 incluent : l’authentification Azure AD pour Linux, méthode Principal/mot de passe pour Kerberos, la détection automatique du domaine dans le SPN pour l’authentification entre domaines, la délégation contrainte Kerberos, délai de requête, délai d’expiration de Socket et préparées réutilisation de handle d’instruction|    
+|---------|-----------------------------|----------------------|-----------------|
+|MSSQL-jdbc-6.2.2.jre7.jar|4.1|7|Nécessite Java Runtime Environment (JRE) 7.0. À l’aide de JRE 6.0 ou inférieure lève une exception.<br /><br /> Les nouvelles fonctionnalités dans 6.2 incluent : l’authentification Azure AD pour Linux, méthode Principal/mot de passe pour Kerberos, la détection automatique du domaine dans le SPN pour l’authentification entre domaines, la délégation contrainte Kerberos, délai de requête, délai d’expiration de Socket et préparées handle d’instruction réutiliser. |  
+|MSSQL-jdbc-6.2.3.jre8.jar|4.2|8|Nécessite Java Runtime Environment (JRE) 8.0. À l’aide de JRE 7.0 ou inférieure lève une exception.<br /><br /> Les nouvelles fonctionnalités dans 6.2 incluent : l’authentification Azure AD pour Linux, méthode Principal/mot de passe pour Kerberos, la détection automatique du domaine dans le SPN pour l’authentification entre domaines, la délégation contrainte Kerberos, délai de requête, délai d’expiration de Socket et préparées réutilisation de handle d’instruction|    
 
   JDBC Driver 6.2 est également disponible sur le référentiel Central Maven et peuvent être ajoutés à un projet Maven en ajoutant le code suivant dans le fichier POM. XML 
   
@@ -110,7 +109,7 @@ ms.locfileid: "39454053"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.2.1.jre8</version>
+    <version>6.2.2.jre8</version>
 </dependency>
 ```    
 

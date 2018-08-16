@@ -14,12 +14,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 620722d0e9f0f82f624c3385c4c524c307098333
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: 43fccc172756b8e7afdb4522c53693915be0f23c
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452133"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662331"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Questions fréquentes (FAQ) sur le pilote JDBC
 
@@ -58,8 +58,8 @@ Microsoft JDBC Driver 6.2 prend en charge les spécifications de JDBC 4.0, 4.1 e
 
 | JAR                       | Spécification JDBC     | Version du JDK |
 | ------------------------- | ---------------------- | ----------- |
-| MSSQL-jdbc-6.2.1.jre8.jar | JDBC 4.2, 4.1 et 4.0 | JDK 8.0     |
-| MSSQL-jdbc-6.2.1.jre7.jar | JDBC 4.1 et 4.0       | JDK 7.0     |
+| MSSQL-jdbc-6.2.2.jre8.jar | JDBC 4.2, 4.1 et 4.0 | JDK 8.0     |
+| MSSQL-jdbc-6.2.2.jre7.jar | JDBC 4.1 et 4.0       | JDK 7.0     |
 
 Les pilotes Microsoft JDBC 6.0 et 4.2 pour SQL Server prend en charge les spécifications de JDBC 4.0, 4.1 et 4.2 et inclure deux bibliothèques de classes JAR dans le package d’installation comme suit :
 
@@ -70,7 +70,7 @@ Les pilotes Microsoft JDBC 6.0 et 4.2 pour SQL Server prend en charge les spéci
 
 Le Microsoft JDBC Driver 4.1 pour SQL Server prend en charge la spécification JDBC 4.0 et inclut une bibliothèque de classes JAR dans le package d’installation comme suit :
 
-| JAR           | Spécification JDBC | Version du JDK     |
+| JAR           | Spécification JDBC | Version JDK     |
 | ------------- | ------------------ | --------------- |
 | sqljdbc41.jar | JDBC 4.0           | JDK 7.0 et 6.0 |
 

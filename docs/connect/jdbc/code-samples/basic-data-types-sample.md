@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98c351eef36810032e55941683996c007a8c39d3
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 04511587586fc2faef1471a9e6a8d1629fe62c78
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452072"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662411"
 ---
 # <a name="basic-data-types-sample"></a>Exemple de types de données de base
 
@@ -29,7 +29,7 @@ Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcno
   
 Le fichier de code de cet exemple, BasicDataTypes.java, se trouve à l’emplacement suivant :  
 
-```
+```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
 ```
 
@@ -46,7 +46,7 @@ Dans l’exemple suivant, le code établit une connexion à la base de données,
   
 Ensuite, l’exemple utilise plusieurs méthodes update\<Type> de la classe SQLServerResultSet pour mettre à jour les données du jeu de résultats, puis appelle la méthode [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) pour réenregistrer ces données dans la base de données.  
   
-Enfin, l’exemple actualise les données dans le jeu de résultats et appelle ensuite la méthode displayRow personnalisée pour l’afficher.  
+Enfin, l'exemple actualise les données du jeu de résultats, puis rappelle la méthode personnalisée displayRow pour les afficher.  
 
 ```java
 import java.sql.Connection;

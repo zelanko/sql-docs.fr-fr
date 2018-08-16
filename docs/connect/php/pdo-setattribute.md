@@ -14,12 +14,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4bb058781139fd4a22fde87ddaab05a292499ca
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eb11436fdfda8e2bb0744d866ece700259e11586
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006857"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662251"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,12 +51,11 @@ Retourne true en cas de réussite ; sinon, false.
 |PDO::ATTR_ORACLE_NULLS|PDO|Consultez la documentation de PDO.|Spécifie comment les valeurs Null doivent être retournées.<br /><br />PDO::NULL_NATURAL n’effectue aucune conversion.<br /><br />PDO::NULL_EMPTY_STRING convertit une chaîne vide en valeur Null.<br /><br />PDO::NULL_TO_STRING convertit la valeur Null en chaîne vide.|  
 |PDO::ATTR_STATEMENT_CLASS|PDO|Consultez la documentation de PDO.|Définit la classe d’instruction fournie par l’utilisateur dérivée de PDOStatement.<br /><br />Exige `array(string classname, array(mixed constructor_args))`.<br /><br />Pour plus d’informations, consultez la documentation de PDO.|  
 |PDO::ATTR_STRINGIFY_FETCHES|PDO|True ou False|Convertit les valeurs numériques en chaînes lors de la récupération des données.|  
-|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|De 1 jusqu’à la limite de la mémoire PHP.|Configure la taille de la mémoire tampon qui contient le jeu de résultats.<br /><br />La valeur par défaut est 10 240 Ko (10 Mo).<br /><br />Pour plus d’informations sur les requêtes qui créent un curseur côté client, consultez [Types de curseur &#40;pilote PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|De 1 jusqu’à la limite de la mémoire PHP.|Définit la taille de la mémoire tampon qui contient le jeu de résultats lors de l’utilisation d’un curseur côté client.<br /><br />La valeur par défaut est 10 240 Ko, si ce n’est pas spécifié dans le fichier php.ini.<br /><br />Zéro et les nombres négatifs ne sont pas autorisés.<br /><br />Pour plus d’informations sur les requêtes qui créent un curseur côté client, consultez [Types de curseur &#40;pilote PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|Spécifie une exécution de requête directe ou préparée. Pour plus d’informations, consultez [Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|Définit l’encodage de jeu de caractères utilisé par le pilote pour communiquer avec le serveur.<br /><br />PDO::SQLSRV_ENCODING_BINARY n’est pas pris en charge.<br /><br />La valeur par défaut est PDO::SQLSRV_ENCODING_UTF8.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|True ou False|Gère les extractions de numériques à partir de colonnes avec des types numériques SQL (bit, entier, smallint, tinyint, float ou real).<br /><br />Lorsque indicateur d’option de connexion ATTR_STRINGIFY_FETCHES est activé, la valeur de retour est une chaîne, même lorsque SQLSRV_ATTR_FETCHES_NUMERIC_TYPE est activé.<br /><br />Lorsque le type PDO retourné dans la colonne de la liaison est PDO_PARAM_INT, la valeur de retour à partir d’une colonne d’entiers est int, même si SQLSRV_ATTR_FETCHES_NUMERIC_TYPE est désactivé.|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|entier|Définit le délai d’attente de la requête, en secondes.<br /><br />La valeur par défaut est 0, ce qui signifie que le pilote attend indéfiniment les résultats.<br /><br />Les nombres négatifs ne sont pas autorisés.|  
-|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|entier|Définit la taille de la mémoire tampon de requête.<br /><br />La valeur par défaut est 10 240 Ko, si ce n’est pas spécifié dans le fichier php.ini.<br /><br />Zéro et les nombres négatifs ne sont pas autorisés.<br /><br />Pour plus d’informations sur les requêtes qui créent un curseur côté client, consultez [Types de curseur &#40;pilote PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
   
 PDO traite certains des attributs prédéfinis et exige que le pilote en traite d’autres. Tous les attributs personnalisés et toutes les options de connexion sont traités par le pilote. Un attribut, une option de connexion ou une valeur qui ne sont pas pris en charge sont signalés selon le paramètre de PDO::ATTR_ERRMODE.  
   
