@@ -27,12 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1d629b6dd1157c44e4a1bee1bbc944d48b4caff5
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401491"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020643"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Contrôle d'accès pour les données sensibles présentes dans les packages
   Pour protéger les données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous pouvez définir un niveau de protection qui permet de protéger uniquement les données sensibles ou toutes les données du package. En outre, vous pouvez chiffrer ces données avec un mot de passe ou une clé utilisateur ou vous fier à la base de données pour chiffrer les données. De plus, le niveau de protection que vous utilisez pour un package n'est pas nécessairement statique, mais change tout au long du cycle de vie du package. On définit souvent un niveau de protection pendant le développement et un autre dès le déploiement du package.  
@@ -98,7 +98,7 @@ ms.locfileid: "35401491"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>Pour définir ou modifier le niveau de protection d'un package dans les outils de données SQL Server  
   
-1.  Examinez les valeurs disponibles pour la propriété **ProtectionLevel** dans la rubrique [Définition du niveau de protection des packages](#set_protection)et déterminez la valeur appropriée pour votre package.  
+1.  Examinez les valeurs disponibles pour la propriété **ProtectionLevel** dans la section [Niveaux de protection](#protection-levels), puis déterminez la valeur appropriée pour votre package.  
   
 2.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui contient le package.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35401491"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>Pour définir ou modifier le niveau de protection de package à l'invite de commandes  
   
-1.  Examinez les valeurs disponibles pour la propriété **ProtectionLevel** dans la section [Définition du niveau de protection des packages](#set_protection), puis déterminez la valeur appropriée pour votre package.  
+1.  Examinez les valeurs disponibles pour la propriété **ProtectionLevel** dans la section [Niveaux de protection](#protection-levels), puis déterminez la valeur appropriée pour votre package.  
   
 2.  Examinez les mappages pour l’option **Encrypt** dans la rubrique [Utilitaire dtutil](../../integration-services/dtutil-utility.md)et déterminez l’entier approprié à utiliser comme valeur de la propriété **ProtectionLevel** sélectionnée.  
   

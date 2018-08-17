@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 234996e85d88e9bed0313c2bf3abbf5f81eae65a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71cc5f675917e0e99c9f5a9806b8e928626c84eb
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865364"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609668"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurer un serveur pour l’écoute sur un port TCP spécifique
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,17 @@ Comme le port 1433 est la norme connue pour [!INCLUDE[ssNoVersion](../../include
     > [!NOTE]  
     >  Si vous avez des difficultés à ouvrir le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md).  
   
-2.  Dans la boîte de dialogue **Propriétés TCP/IP** , sous l’onglet **Adresses IP** , plusieurs adresses IP apparaissent au format **IP1**, **IP2**, jusqu’à **IPAll**. Une de ces adresses correspond à l'adresse IP de la carte de bouclage, 127.0.0.1. D'autres adresses sont affichées pour chaque adresse IP sur l'ordinateur. (Vous verrez probablement l’adresse IP version 4 et l’adresse IP version 6.) Cliquez avec le bouton droit sur chaque adresse, puis cliquez sur **Propriétés** pour identifier l’adresse IP que vous voulez configurer.  
+2.  Dans la boîte de dialogue **Propriétés TCP/IP** , sous l’onglet **Adresses IP** , plusieurs adresses IP apparaissent au format **IP1**, **IP2**, jusqu’à **IPAll**. Une de ces adresses correspond à l'adresse IP de la carte de bouclage, 127.0.0.1. D'autres adresses sont affichées pour chaque adresse IP sur l'ordinateur. (Vous verrez probablement l’adresse IP version 4 et l’adresse IP version 6.) Cliquez avec le bouton droit sur chaque adresse, puis cliquez sur **Propriétés** pour identifier l’adresse IP que vous voulez configurer.  
   
 3.  Si la boîte de dialogue **Ports TCP dynamiques** contient **0**pour indiquer que [!INCLUDE[ssDE](../../includes/ssde-md.md)] écoute les ports dynamiques, supprimez le 0.  
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Dans la boîte de dialogue **Propriétés* **IP***n**, dans la zone **Port TCP**, tapez le numéro du port sur lequel vous voulez que cette adresse IP écoute, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés* **IP***n**, dans la zone **Port TCP**, tapez le numéro du port sur lequel vous voulez que cette adresse IP écoute, puis cliquez sur **OK**. Plusieurs ports peuvent être spécifiés en les séparant par une virgule.
+
+    > [!NOTE] 
+    > Si le paramètre **Écouter tout** sous l’onglet **Protocole** a la valeur « Oui », seules les valeurs **Port TCP** et **TCP Dynamic Port** (Port TCP dynamique) sous la section **IPAll** seront utilisées et les sections **IP *** n* individuelles seront ignorées dans leur intégralité. Si le paramètre **Écouter tout** a la valeur « Non », les paramètres **Port TCP** et **Port TCP dynamique** sous la section **IPAll** seront ignorés et les paramètres **Port TCP**, **Port TCP dynamique** et **Activé** des sections **IP***n* individuelles seront utilisés à la place.
+    > Chaque section **IP***n* présente un paramètre **Activé** avec la valeur par défaut « Non », ce qui amène [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à ignorer cette adresse IP, même si elle a un port défini.  
   
 5.  Dans le volet de la console, cliquez sur **Services SQL Server**.  
   

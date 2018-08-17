@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4ed0905805e3d7bed8841e29739f559bbbbdc9ac
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558879"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662481"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,30 @@ Le serveur calcule le jeu de résultats et, pour toutes les colonnes chiffrées 
 
 Pour plus d’informations sur la façon de développer des applications à l’aide d’Always Encrypted avec des pilotes clients particuliers, consultez [Always Encrypted (développement client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
+## <a name="remarks"></a>Notes 
+
+Le déchiffrement est effectué via le client. Cela signifie que certaines actions qui se produisent uniquement côté serveur ne fonctionneront pas en utilisant Always Encrypted. 
+
+Voici un exemple d’une mise à jour qui tente de déplacer des données d’une colonne chiffrée vers une colonne non chiffrée sans retourner de jeu de résultats au client : 
+
+```sql
+update dbo.Patients set testssn = SSN
+```
+
+Si SSN est une colonne chiffrée à l’aide d’Always Encrypted, l’instruction de mise à jour ci-dessus échoue avec une erreur similaire à :
+
+```
+Msg 206, Level 16, State 2, Line 89
+Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
+```
+
+Pour mettre à jour correctement la colonne, effectuez les étapes suivantes :
+
+1. Sélectionnez les données de la colonne SSN et stockez-les comme jeu de résultats dans l’application. Cela permettra à l’application (*pilote* client) de déchiffrer la colonne.
+2. Insérez les données du jeu de résultats dans SQL Server. 
+
+ >[!IMPORTANT]
+ > Dans ce scénario, les données sont non chiffrées quand elles sont renvoyées au serveur, car la colonne de destination est un type varchar standard qui n’accepte pas les données chiffrées. 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>Sélection d’un chiffrement déterministe ou aléatoire  
  Le moteur de base de données n’opère jamais sur des données en texte clair stockées dans des colonnes chiffrées, mais il prend quand même en charge les requêtes sur des données chiffrées, en fonction du type de chiffrement de la colonne. Always Encrypted prend en charge deux types de chiffrement : le chiffrement aléatoire et le chiffrement déterministe.  

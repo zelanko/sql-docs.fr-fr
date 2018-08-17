@@ -1,7 +1,7 @@
 ---
 title: Groupes de disponibilité distribués (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/12/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c96db6aa66cae06f1f1b1ca4779c094fe1ef9164
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 02f4cc65d9dd19a30904de9f1b76091fb4723c6d
+ms.sourcegitcommit: 0cda14b1151d9bce1253d96dea038c038484f07a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400712"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39616087"
 ---
 # <a name="distributed-availability-groups"></a>Groupes de disponibilité distribués
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ Un groupe de disponibilité distribué requiert que les groupes de disponibilit�
 
 La figure suivante montre une vue générale d’un groupe de disponibilité distribué qui englobe deux groupes de disponibilité (AG 1 et AG 2), chacun configuré sur son propre cluster WSFC. Le groupe de disponibilité distribué a un total de quatre réplicas, à raison de deux par groupe de disponibilité. Chaque groupe de disponibilité peut prendre en charge le nombre maximal de réplicas, donc une disponibilité distribuée peut avoir jusqu’à 18 réplicas au total.
 
-<a name="fig1"></a>
-![Vue d’ensemble d’un groupe de disponibilité distribué][1]
+
+![Vue d’ensemble d’un groupe de disponibilité distribué](./media/distributed-availability-group/dag-01-high-level-view-distributed-ag.png)
 
 Vous pouvez configurer le déplacement des données dans des groupes de disponibilité distribués sous forme synchrone ou asynchrone. Toutefois, le déplacement des données est légèrement différent au sein des groupes de disponibilité distribués par rapport à un groupe de disponibilité traditionnel. Bien que chaque groupe de disponibilité ait un réplica principal, une seule copie des bases de données participant à un groupe de disponibilité distribué accepte les insertions, les mises à jour et les suppressions. Comme indiqué dans la figure suivante, AG 1 est le groupe de disponibilité principal. Son réplica principal envoie les transactions aux réplicas secondaires d’AG 1 et au réplica principal d’AG2. Le réplica principal d’AG 2 est également appelé un *redirecteur*. Un redirecteur est un réplica principal dans un groupe de disponibilité secondaire au sein d’un groupe de disponibilité distribué. Le redirecteur reçoit des transactions du réplica principal dans le groupe de disponibilité principal et les transfère aux réplicas secondaires dans son propre groupe de disponibilité.  Le redirecteur maintient ensuite à jour les réplicas secondaires d’AG 2. 
 
-![Groupe de disponibilité distribué et son déplacement de données][2]
+![Groupe de disponibilité distribué et son déplacement de données](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 
 Pour que le réplica principal d’AG 2 accepte les insertions, les mises à jour et les suppressions, vous n’avez d’autre choix que de basculer manuellement le groupe de disponibilité distribué à partir d’AG 1. Dans la figure précédente, étant donné qu’AG 1 contient la copie accessible en écriture de la base de données, émettre un basculement fait d’AG 2 le groupe de disponibilité qui peut gérer les insertions, les mises à jour et les suppressions. Pour plus d’informations sur la façon de basculer un groupe de disponibilité distribué vers un autre, consultez [Basculer vers un groupe de disponibilité secondaire]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
 
@@ -79,7 +79,7 @@ Les groupes de disponibilité distribués ne fonctionnent qu’avec les groupes 
 Un groupe de disponibilité distribué englobe plusieurs groupes de disponibilité, chacun situé sur son propre cluster WSFC sous-jacent, et est une construction SQL Server uniquement.  Cela signifie que les clusters WSFC qui hébergent les différents groupes de disponibilité peuvent avoir différentes versions principales de Windows Server. Les versions principales de SQL Server doivent être les mêmes, comme indiqué dans la section précédente. Très comparable à [la figure initiale](#fig1), la figure suivante montre AG 1 et AG 2 participant à un groupe de disponibilité distribué, mais chacun des clusters WSFC correspond à une version différente de Windows Server.
 
 
-![Groupes de disponibilité distribués avec des clusters WSFC dotés de versions différentes de Windows Server][3]
+![Groupes de disponibilité distribués avec des clusters WSFC dotés de versions différentes de Windows Server](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)
 
 Les clusters WSFC individuels et leurs groupes de disponibilité correspondants suivent les règles traditionnelles. En d’autres termes, ils peuvent être joints ou non à un domaine (Windows Server 2016 ou version ultérieure). Quand deux groupes de disponibilité différents sont combinés dans un groupe de disponibilité distribué unique, quatre scénarios sont possibles :
 
@@ -104,7 +104,7 @@ Voici les trois principaux scénarios d’utilisation d’un groupe de disponibi
 
 Un groupe de disponibilité traditionnel requiert que tous les serveurs fassent partie du même cluster WSFC, ce qui peut compliquer la couverture de plusieurs centres de données. La figure suivante présente l’architecture d’un groupe de disponibilité traditionnel multisite, flux de données compris. Il existe un réplica principal qui envoie les transactions à tous les réplicas secondaires. Cette configuration est moins souple à certains égards qu’un groupe de disponibilité distribué. Par exemple, vous devez implémenter des éléments tels qu’Active Directory (le cas échéant) et le témoin d’un quorum dans le cluster WSFC. Vous pouvez également être amené à prendre en compte d’autres aspects d’un cluster WSFC, tels que la modification des votes de nœud.
 
-![Groupe de disponibilité traditionnel multisite][4]
+![Groupe de disponibilité traditionnel multisite](./media/distributed-availability-group/dag-04-traditional-multi-site-ag.png)
 
 Les groupes de disponibilité distribués offrent un scénario de déploiement plus flexible pour les groupes de disponibilité qui couvrent plusieurs centres de données. Vous pouvez même vous servir de groupes de disponibilité distribués là où des fonctionnalités telles que la [copie des journaux de transaction]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server) étaient utilisées par le passé dans des situations de type récupération d'urgence. Toutefois, contrairement à la copie des journaux de transaction, les groupes de disponibilité distribués ne sont pas compatibles avec l’application différée des transactions. Cela signifie que les groupes de disponibilité ou les groupes de disponibilité distribués ne peuvent être d’aucun secours si une erreur humaine entraîne une mise à jour ou une suppression de données incorrecte.
 
@@ -139,12 +139,12 @@ Les groupes de disponibilité distribués peuvent vous aider à augmenter la tai
 
 En d’autres termes, un réplica principal peut participer à deux groupes de disponibilité distribués différents. Dans la figure suivante, AG 1 et AG 2 participent au groupe de disponibilité distribué AG 1, tandis qu’AG 2 et AG 3 participent au groupe de disponibilité distribué AG 2. Le réplica principal (ou redirecteur) d’AG 2 est à la fois un réplica secondaire pour le groupe de disponibilité distribué AG 1 et un réplica principal du groupe de disponibilité distribué AG 2.
 
-![Augmentation de la taille des instances des lectures avec des groupes de disponibilité distribués][5]
+![Augmentation de la taille des instances des lectures avec des groupes de disponibilité distribués](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
 Dans la figure suivante, AG 1 fait office de réplica principal pour deux groupes de disponibilité distribués : le groupe de disponibilité distribué AG 1 (composé d’AG 1 et AG 2) et le groupe de disponibilité distribué AG 2 (composé d’AG 1 et AG 3).
 
 
-![Autre exemple d’augmentation de la taille des instances des lectures avec des groupes de disponibilité distribués][6]
+![Autre exemple d’augmentation de la taille des instances des lectures avec des groupes de disponibilité distribués]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
 
 
 Dans les deux exemples précédents, les trois groupes de disponibilité peuvent comprendre jusqu’à 27 réplicas en tout, qui peuvent tous être utilisés pour des requêtes en lecture seule. 
@@ -157,7 +157,7 @@ Le [routage en lecture seule]( https://docs.microsoft.com/sql/database-engine/av
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>Initialiser des groupes de disponibilité secondaires dans un groupe de disponibilité distribué
 
-Bénéficiant de [l’amorçage automatique]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group), les groupes de disponibilité distribués constituent la méthode principale pour initialiser le réplica principal sur le deuxième groupe de disponibilité. Une restauration complète de la base de données sur le réplica principal du deuxième groupe de disponibilité est possible si vous effectuez les opérations suivantes :
+Bénéficiant de [l’amorçage automatique](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group), les groupes de disponibilité distribués constituent la méthode principale pour initialiser le réplica principal sur le deuxième groupe de disponibilité. Une restauration complète de la base de données sur le réplica principal du deuxième groupe de disponibilité est possible si vous effectuez les opérations suivantes :
 
 1. Restaurez la sauvegarde de base de données à l’aide de WITH NORECOVERY.
 2. Si nécessaire, restaurez les sauvegardes de fichier journal appropriées à l’aide de WITH NORECOVERY.
@@ -168,18 +168,18 @@ Quand vous ajoutez le réplica principal du deuxième groupe de disponibilité a
 
 * La sortie dans `sys.dm_hadr_automatic_seeding` sur le réplica principal du deuxième groupe de disponibilité affiche un `current_state` de valeur FAILED avec le motif « Seeding Check Message Timeout » (Expiration du message de vérification de l’amorçage).
 
-* Le journal SQL Server actuel sur le réplica principal du deuxième groupe de disponibilité indique que l’amorçage a fonctionné et que les [LSN]( https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) ont été synchronisés.
+* Le journal SQL Server actuel sur le réplica principal du deuxième groupe de disponibilité indique que l’amorçage a fonctionné et que les [LSN](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide) ont été synchronisés.
 
 * La sortie dans `sys.dm_hadr_automatic_seeding` sur le réplica principal du premier groupe de disponibilité indique que current_state a pour valeur COMPLETED. 
 
 * L’amorçage a également un comportement différent avec des groupes de disponibilité distribués. Pour que l’amorçage commence sur le deuxième réplica, vous devez y émettre la commande `ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE`. Bien que cette condition s’applique systématiquement à tout réplica secondaire participant au groupe de disponibilité sous-jacent, le réplica principal du deuxième groupe de disponibilité a déjà les autorisations appropriées pour permettre à l’amorçage de commencer une fois qu’il est ajouté au groupe de disponibilité distribué. 
 
-### <a name="view-distributed-availability-group-information"></a>Afficher les informations relatives aux groupes de disponibilité distribués 
-    
-Comme mentionné précédemment, un groupe de disponibilité distribué est une construction SQL Server uniquement, et il n’est pas visible dans le cluster WSFC sous-jacent. La figure suivante illustre deux clusters WSFC différents (CLUSTER_A et CLUSTER_B), chacun ayant ses propres groupes de disponibilité. Seuls AG1 dans CLUSTER_A et AG2 dans CLUSTER_B sont présentés ici. 
+## <a name="monitor-distributed-availability-group-health"></a>Surveiller l’intégrité du groupe de disponibilité distribué
 
-<!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
-<a name="fig7"></a>
+Un groupe de disponibilité distribué est une construction SQL Server uniquement, et il n’est pas visible dans le cluster WSFC sous-jacent. La figure suivante illustre deux clusters WSFC différents (CLUSTER_A et CLUSTER_B), chacun ayant ses propres groupes de disponibilité. Seuls AG1 dans CLUSTER_A et AG2 dans CLUSTER_B sont présentés ici. 
+
+[Deux clusters WSFC avec plusieurs groupes de disponibilité via la commande PowerShell Get-ClusterGroup](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
+
 
 ```
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
@@ -205,65 +205,203 @@ Cluster Group                   JC                    Online
 
 Toutes les informations détaillées sur un groupe de disponibilité distribué sont dans SQL Server, plus spécifiquement dans les vues de gestion dynamique du groupe de disponibilité. Actuellement, la seule information indiquée dans SQL Server Management Studio pour un groupe de disponibilité distribué est sur le réplica principal pour les groupes de disponibilité. Comme l’illustre la figure suivante, sous le dossier Groupes de disponibilité, SQL Server Management Studio indique qu’il existe un groupe de disponibilité distribué. La figure montre AG1 comme réplica principal pour un groupe de disponibilité qui est local à cette instance, et non pour un groupe de disponibilité distribué.
 
-![Vue dans SQL Server Management Studio du réplica principal sur le premier cluster WSFC d’un groupe de disponibilité distribué][8]
+![Vue dans SQL Server Management Studio du réplica principal sur le premier cluster WSFC d’un groupe de disponibilité distribué](./media/distributed-availability-group/dag-08-view-smss-primary-replica-first-wsfc-distributed-ag.png)
 
 
 Toutefois, si vous cliquez sur le groupe de disponibilité distribué, aucune option n’est disponible (voir la figure suivante) et les dossiers Bases de données de disponibilité, Écouteurs de groupe de disponibilité et Réplicas de disponibilité développés sont tous vides. SQL Server Management Studio 16 affiche ce résultat, mais cela peut changer dans une version ultérieure de SQL Server Management Studio.
 
-![Aucune option disponible pour l’action][9]
+![Aucune option disponible pour l’action](./media/distributed-availability-group/dag-09-no-options-available-action.png)
 
 Comme le montre la figure ci-dessous, les réplicas secondaires n’affichent rien dans SQL Server Management Studio concernant le groupe de disponibilité distribué. Ces noms de groupes de disponibilité sont mappés aux rôles indiqués dans l’image de [cluster CLUSTER_A WSFC](#fig7) précédente.
 
-![Vue dans SQL Server Management Studio d’un réplica secondaire][10]
+![Vue dans SQL Server Management Studio d’un réplica secondaire](./media/distributed-availability-group/dag-10-view-ssms-secondary-replica.png)
+
+### <a name="dmv-to-list-all-availability-replica-names"></a>Vue de gestion dynamique pour répertorier tous les noms de réplica de disponibilité
 
 Les mêmes concepts sont valables quand vous utilisez les vues de gestion dynamique. En exécutant la requête suivante, vous pouvez voir tous les groupes de disponibilité (réguliers et distribués) et les nœuds qui y participent. Ce résultat s’affiche uniquement si vous interrogez le réplica principal dans l’un des clusters WSFC qui font partie du groupe de disponibilité distribué. Il existe une nouvelle colonne dans la vue de gestion dynamique `sys.availability_groups` nommée `is_distributed`, qui a la valeur 1 quand le groupe de disponibilité est un groupe de disponibilité distribué. Pour afficher cette colonne
 
 ```sql
-SELECT ag.[name] as 'AG Name', 
-    ag.Is_Distributed, 
-    ar.replica_server_name as 'Replica Name'
-FROM    sys.availability_groups ag
-  INNER JOIN sys.availability_replicas ar       
-    ON  ag.group_id = ar.group_id
+-- shows replicas associated with availability groups
+SELECT 
+   ag.[name] AS [AG Name], 
+   ag.Is_Distributed, 
+   ar.replica_server_name AS [Replica Name]
+FROM sys.availability_groups AS ag 
+INNER JOIN sys.availability_replicas AS ar       
+   ON ag.group_id = ar.group_id
+GO
 ```
 
 La figure suivante montre un exemple de sortie du deuxième cluster WSFC qui participe à un groupe de disponibilité distribué. SPAG1 est composé de deux réplicas : DENNIS et JY. Toutefois, le groupe de disponibilité distribué nommé SPDistAG a les noms des deux groupes de disponibilité participants (SPAG1 et SPAG2) plutôt que les noms des instances, comme avec un groupe de disponibilité traditionnel. 
 
-![Exemple de sortie de la requête précédente][11]
+![Exemple de sortie de la requête précédente](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
+
+### <a name="dmv-to-list-distribtued-ag-health"></a>Vue de gestion dynamique pour afficher l’intégrité du groupe de disponibilité distribué
 
 Dans SQL Server Management Studio, tout état indiqué dans le Tableau de bord et d’autres zones concerne uniquement la synchronisation locale dans ce groupe de disponibilité. Pour afficher l’intégrité d’un groupe de disponibilité distribué, interrogez les vues de gestion dynamique. L’exemple de requête suivante étend et affine la requête précédente :
 
 ```sql
-SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM    sys.availability_groups ag
-  INNER JOIN sys.availability_replicas ar
-    ON ag.group_id = ar.group_id
-  INNER JOIN sys.dm_hadr_availability_replica_states ars       
-    ON ar.replica_id = ars.replica_id
+-- shows sync status of distributed AG
+SELECT 
+   ag.[name] AS [AG Name], 
+   ag.is_distributed, 
+   ar.replica_server_name AS [Underlying AG], 
+   ars.role_desc AS [Role], 
+   ars.synchronization_health_desc AS [Sync Status]
+FROM  sys.availability_groups AS ag
+INNER JOIN sys.availability_replicas AS ar 
+   ON  ag.group_id = ar.group_id        
+INNER JOIN sys.dm_hadr_availability_replica_states AS ars       
+   ON  ar.replica_id = ars.replica_id
 WHERE ag.is_distributed = 1
+GO
 ```
        
        
-![État des groupes de disponibilité distribués][12]
+![État des groupes de disponibilité distribués](./media/distributed-availability-group/dag-12-distributed-ag-status.png)
 
+### <a name="dmv-to-view-underlying-performance"></a>Vue de gestion dynamique pour afficher les performances sous-jacentes
 
 Pour étendre la requête précédente, vous pouvez également afficher les performances sous-jacentes par le biais des vues de gestion dynamique en ajoutant `sys.dm_hadr_database_replicas_states`. Actuellement, la vue de gestion dynamique stocke des informations concernant uniquement le deuxième groupe de disponibilité. L’exemple de requête suivant, exécuté sur le groupe de disponibilité principal, génère l’exemple de sortie ci-dessous :
 
-```
-SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM    sys.databases dbs
-  INNER JOIN sys.dm_hadr_database_replica_states drs
-    ON dbs.database_id = drs.database_id
-  INNER JOIN sys.availability_groups ag
-    ON drs.group_id = ag.group_id
-  INNER JOIN sys.dm_hadr_availability_replica_states ars
-    ON ars.replica_id = drs.replica_id
-  INNER JOIN sys.availability_replicas ar
-    ON ar.replica_id = ars.replica_id
+```sql
+-- shows underlying performance of distributed AG
+SELECT 
+   ag.[name] AS [Distributed AG Name], 
+   ar.replica_server_name AS [Underlying AG], 
+   dbs.[name] AS [Database],
+   ars.role_desc AS [Role],
+   drs.synchronization_health_desc AS [Sync Status],
+   drs.log_send_queue_size,
+   drs.log_send_rate, 
+   drs.redo_queue_size, 
+   drs.redo_rate
+FROM sys.databases AS dbs
+INNER JOIN sys.dm_hadr_database_replica_states AS drs
+   ON dbs.database_id = drs.database_id
+INNER JOIN sys.availability_groups AS ag
+   ON drs.group_id = ag.group_id
+INNER JOIN sys.dm_hadr_availability_replica_states AS ars
+   ON ars.replica_id = drs.replica_id
+INNER JOIN sys.availability_replicas AS ar
+   ON ar.replica_id = ars.replica_id
 WHERE ag.is_distributed = 1
+GO
 ```
 
-![Informations sur les performances d’un groupe de disponibilité distribué][13]
+
+![Informations sur les performances d’un groupe de disponibilité distribué](./media/distributed-availability-group/dag-13-performance-information-distributed-ag.png)
+
+### <a name="dmv-to-view-performance-counters-for-distributed-ag"></a>Vue de gestion dynamique pour afficher les compteurs de performances pour le groupe de disponibilité distribué
+La requête ci-dessous affiche les compteurs de performances associés spécifiquement au groupe de disponibilité distribué. 
+
+
+ ```sql
+ -- displays OS performance counters related to the distributed ag named 'distributedag'
+ SELECT * FROM sys.dm_os_performance_counters WHERE instance_name LIKE '%distributed%'
+ ```
+
+ ![Vue de gestion dynamique affichant les compteurs de performances du système d’exploitation pour le groupe de disponibilité distribué](./media/distributed-availability-group/dmv-os-performance-counters.png)
+
+
+ >[!NOTE]
+ >Le filtre `LIKE` doit porter le nom du groupe de disponibilité distribué. Dans cet exemple, le nom du groupe de disponibilité distribué est « distributedag ». Changez le modificateur `LIKE` afin de refléter le nom de votre groupe de disponibilité distribué.  
+
+### <a name="dmv-to-display-health-of-both-ag-and-distributed-ag"></a>Vue de gestion dynamique pour afficher l’intégrité du groupe de disponibilité et du groupe de disponibilité distribué
+La requête ci-dessous affiche une mine d’informations sur l’intégrité du groupe de disponibilité et du groupe de disponibilité distribué. [Merci Tracy Boggiano !](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
+
+ ```sql
+ -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
+ SELECT 
+    ag.name AS 'Distributed AG', 
+    ar.replica_server_name AS 'AG', 
+    dbs.name AS 'Database', 
+    ars.role_desc, 
+    drs.synchronization_health_desc, 
+    drs.log_send_queue_size, 
+    drs.log_send_rate, 
+    drs.redo_queue_size, 
+    drs.redo_rate,
+    drs.suspend_reason_desc,
+    drs.last_sent_time,
+    drs.last_received_time,
+    drs.last_hardened_time,
+    drs.last_redone_time,
+    drs.last_commit_time,
+    drs.secondary_lag_seconds
+ FROM sys.databases dbs 
+ INNER JOIN sys.dm_hadr_database_replica_states drs 
+    ON dbs.database_id = drs.database_id
+ INNER JOIN sys.availability_groups ag 
+    ON drs.group_id = ag.group_id
+ INNER JOIN sys.dm_hadr_availability_replica_states ars 
+    ON ars.replica_id = drs.replica_id
+ INNER JOIN sys.availability_replicas ar 
+    ON ar.replica_id =  ars.replica_id
+ --WHERE ag.is_distributed = 1
+ GO
+ ```
+
+![Intégrité du groupe de disponibilité et du groupe de disponibilité distribué](./media/distributed-availability-group/dmv-sync-status-send-rate.png)
+
+### <a name="dmvs-to-view-metadata-of-distributed-ag"></a>Vues de gestion dynamique pour afficher les métadonnées du groupe de disponibilité distribué
+Les requêtes ci-dessous affichent des informations sur les URL de point de terminaison utilisées par les groupes de disponibilité, dont le groupe de disponibilité distribué.  [Merci David Barbarin !](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
+
+
+ ```sql
+ -- shows endpoint url and sync state for ag, and dag
+ SELECT
+    ag.name AS group_name,
+    ag.is_distributed,
+    ar.replica_server_name AS replica_name,
+    ar.endpoint_url,
+    ar.availability_mode_desc,
+    ar.failover_mode_desc,
+    ar.primary_role_allow_connections_desc AS allow_connections_primary,
+    ar.secondary_role_allow_connections_desc AS allow_connections_secondary,
+    ar.seeding_mode_desc AS seeding_mode
+ FROM sys.availability_replicas AS ar
+ JOIN sys.availability_groups AS ag
+    ON ar.group_id = ag.group_id
+ GO
+ ```
+
+
+![Vue de gestion dynamique des métadonnées pour le groupe de disponibilité distribué](./media/distributed-availability-group/dmv-metadata-dag2.png)
+
+
+
+### <a name="dmv-to-show-current-state-of-seeding"></a>Vue de gestion dynamique pour afficher l’état actuel de l’amorçage
+La requête ci-dessous affiche des informations sur l’état actuel de l’amorçage. Cela est utile pour le dépannage des erreurs de synchronisation entre les réplicas. [Encore merci David Barbarin !](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
+ ```sql
+ -- shows current_state of seeding 
+ SELECT
+    ag.name AS aag_name,
+    ar.replica_server_name,
+    d.name AS database_name,
+    has.current_state,
+    has.failure_state_desc AS failure_state,
+    has.error_code,
+    has.performed_seeding,
+    has.start_time,
+    has.completion_time,
+    has.number_of_attempts
+ FROM sys.dm_hadr_automatic_seeding AS has
+ JOIN sys.availability_groups AS ag
+    ON ag.group_id = has.ag_id
+ JOIN sys.availability_replicas AS ar
+    ON ar.replica_id = has.ag_remote_replica_id
+ JOIN sys.databases AS d
+    ON d.group_database_id = has.ag_db_id
+ GO
+ ```
+
+
+![État actuel de l’amorçage](./media/distributed-availability-group/dmv-seeding.png)
+
+
 
 
 ### <a name="next-steps"></a>Étapes suivantes 
@@ -273,20 +411,5 @@ WHERE ag.is_distributed = 1
 * [Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Créer un groupe de disponibilité avec Transact-SQL](create-an-availability-group-transact-sql.md)
-
-<!--Image references-->
-[1]: ./media/dag-01-high-level-view-distributed-ag.png
-[2]: ./media/dag-02-distributed-ag-data-movement.png
-[3]: ./media/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png
-[4]: ./media/dag-04-traditional-multi-site-ag.png
-[5]: ./media/dag-05-scaling-out-reads-with-distributed-ags.png
-[6]: ./media/dag-06-another-scaling-out-reads-using-distributed-ags-example.png
-[7]: ./media/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png
-[8]: ./media/dag-08-view-smss-primary-replica-first-wsfc-distributed-ag.png
-[9]: ./media/dag-09-no-options-available-action.png
-[10]: ./media/dag-10-view-ssms-secondary-replica.png
-[11]: ./media/dag-11-example-output-of-query-above.png
-[12]: ./media/dag-12-distributed-ag-status.png
-[13]: ./media/dag-13-performance-information-distributed-ag.png
 
  

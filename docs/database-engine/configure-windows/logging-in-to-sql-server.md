@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 7b5b27ecc45f59de8948cf6ddf0b0153132b6a35
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324433"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008901"
 ---
 # <a name="logging-in-to-sql-server"></a>Connexion à SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "36324433"
 >  Si vous avez sélectionné un classement respectant la casse lors de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], votre connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] respecte également la casse.  
   
 ## <a name="format-for-specifying-the-name-of-sql-server"></a>Format à utiliser pour spécifier le nom de SQL Server  
- Lorsque vous vous connectez à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , vous devez spécifier le nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est l'instance par défaut (une instance sans nom), indiquez alors le nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, ou l'adresse IP de cet ordinateur. Si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance nommée (comme SQLEXPRESS), indiquez le nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, ou l'adresse IP de l'ordinateur, et ajoutez une barre oblique suivie du nom de l'instance.  
+ Quand vous vous connectez à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous devez spécifier le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est l'instance par défaut (une instance sans nom), indiquez alors le nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, ou l'adresse IP de cet ordinateur. Si l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance nommée (comme SQLEXPRESS), indiquez le nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, ou l'adresse IP de l'ordinateur, et ajoutez une barre oblique suivie du nom de l'instance.  
   
  Les exemples suivants permettent de se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui s'exécute sur un ordinateur nommé APPHOST. Si une instance nommée est spécifiée, ces exemples utilisent le nom d'instance SQLEXPRESS.  
   
@@ -50,8 +50,8 @@ ms.locfileid: "36324433"
   
 |Type d'instance|Entrée pour le nom du serveur|  
 |----------------------|-------------------------------|  
-|Connexion à une instance par défaut en utilisant le protocole par défaut. (Il s'agit de l'entrée recommandée pour une instance par défaut.)|APPHOST|  
-|Connexion à une instance nommée en utilisant le protocole par défaut. (Il s'agit de l'entrée recommandée pour une instance nommée.)|APPHOST\SQLEXPRESS|  
+|Connexion à une instance par défaut en utilisant le protocole par défaut.|APPHOST|  
+|Connexion à une instance nommée en utilisant le protocole par défaut. |APPHOST\SQLEXPRESS|  
 |Connexion à une instance par défaut sur le même ordinateur en utilisant un point pour indiquer que l'instance s'exécute sur l'ordinateur local.|.|  
 |Connexion à une instance nommée sur le même ordinateur en utilisant un point pour indiquer que l'instance s'exécute sur l'ordinateur local.|.\SQLEXPRESS|  
 |Connexion à une instance par défaut sur le même ordinateur en utilisant localhost pour indiquer que l'instance s'exécute sur l'ordinateur local.|localhost|  
@@ -62,8 +62,8 @@ ms.locfileid: "36324433"
 |Connexion à une instance nommée sur le même ordinateur en imposant une connexion de mémoire partagée.|lpc:APPHOST\SQLEXPRESS|  
 |Connexion à une instance par défaut écoutant l'adresse TCP 192.168.17.28 à l'aide d'une adresse IP.|192.168.17.28|  
 |Connexion à une instance nommée écoutant sur l'adresse TCP 192.168.17.28 à l'aide d'une adresse IP.|192.168.17.28\SQLEXPRESS|  
-|Connexion à une instance par défaut qui n'écoute pas sur le port TCP par défaut, en spécifiant le port utilisé, dans le cas présent 2828. (Cela n'est pas nécessaire si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] écoute sur le port par défaut (1433).)|APPHOST,2828|  
-|Connexion à une instance nommée sur un port TCP désigné, dans le cas présent 2828. (Cela est souvent nécessaire si le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser ne s'exécute pas sur l'ordinateur hôte.)|APPHOST,2828|  
+|Connexion à une instance par défaut qui n'écoute pas sur le port TCP par défaut, en spécifiant le port utilisé, dans le cas présent 2828. (La spécification d’un numéro de port n’est pas nécessaire si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] écoute sur le port par défaut (1433).)|APPHOST,2828|  
+|Connexion à une instance nommée sur un port TCP désigné, dans le cas présent 2828. (La spécification d’un numéro de port est souvent nécessaire si le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser ne s’exécute pas sur l’ordinateur hôte.)|APPHOST,2828|  
 |Connexion à une instance par défaut qui n'écoute pas sur le port TCP par défaut, en spécifiant à la fois l'adresse IP et le port TCP utilisés, dans le cas présent 2828.|192.168.17.28,2828|  
 |Connexion à une instance nommée en spécifiant à la fois l'adresse IP et le port TCP utilisés, dans le cas présent 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Connexion à une instance par défaut par son nom, en imposant une connexion TCP.|tcp:APPHOST|  
@@ -82,7 +82,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Se connecter à une instance de SQL Server &#40;invite de commandes&#41;](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Les ressources suivantes peuvent vous aider à résoudre un problème de connexion.  
@@ -96,6 +96,6 @@ WHERE session_id = @@SPID;
   
  [Utiliser l'utilitaire sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [Création d'une connexion](../../t-sql/lesson-2-1-creating-a-login.md)  
+ [Création d'une connexion](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
   
   

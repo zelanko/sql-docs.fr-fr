@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 281eb9435fc3b251b9dfbc3d723a10f1df652f66
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541719"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008891"
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ Pour plus d’informations sur la quantité de mémoire physique prise en charge
   
 Les systèmes de mémoire virtuelle autorisent le surengagement de la mémoire physique, de sorte que le rapport entre la mémoire virtuelle et la mémoire physique peut être supérieur à 1:1. Il est alors possible d'exécuter des programmes plus volumineux sur des ordinateurs offrant diverses configurations de la mémoire physique. Toutefois, dans la plupart des cas, l'utilisation d'une quantité de mémoire virtuelle nettement plus importante que les plages de travail moyennes combinées de tous les processus peut entraîner une détérioration des performances. 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-memory-architecture"></a>Architecture de la mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+## <a name="sql-server-memory-architecture"></a>Architecture de la mémoire de SQL Server
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acquiert et libère la mémoire dynamiquement selon ses besoins. En règle générale, un administrateur ne doit plus spécifier la quantité de mémoire à allouer à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], même si cette option existe toujours et est obligatoire dans certains environnements.
 

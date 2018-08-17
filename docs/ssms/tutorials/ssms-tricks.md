@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
-ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
+ms.openlocfilehash: a2a57d1e870695bcd2a19b609f966ae9ccde697e
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39228455"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020673"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutoriel : Conseils et astuces supplémentaires pour utiliser SSMS
 Ce tutoriel vous propose des astuces supplémentaires pour utiliser SQL Server Management Studio (SSMS). Cet article vous montre comment : 
@@ -210,7 +210,7 @@ Le chemin d’accès à votre journal des erreurs SQL Server peut varier en fonc
 Vous avez plusieurs options pour rechercher le nom de votre serveur SQL avant et après vous y être connecté.  
 
 ### <a name="before-you-connect-to-sql-server"></a>Avant de vous connecter à SQL Server
-1. Suivez les étapes pour localiser le [journal des erreurs SQL Server sur le disque](#finding-your-error-log-if-you-cannot-connect-to-sql). 
+1. Suivez les étapes pour localiser le [journal des erreurs SQL Server sur le disque](#finding-your-error-log-if-you-cannot-connect-to-sql). Votre chemin peut être différent du chemin indiqué dans l’image ci-dessous.
 2. Ouvrez le fichier errorlog.log dans le Bloc-notes.  
 3. Recherchez le texte *Server name is*.
     

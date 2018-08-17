@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2f54fce498fb1782c09c8caa24c7459432115cec
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9df60193005f6a83d6894a0718ba473f6b868d69
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451583"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609718"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  Représente une chaîne de caractères au format Unicode. *character_string* est de type **sysname** et est limité à 128 caractères. Les entrées de plus de 128 caractères retournent une valeur NULL.  
   
  '*quote_character*'  
- Représente une chaîne d'un seul caractère à utiliser en tant que délimiteur. Il peut s’agir d’une apostrophe (  **'**), d’un crochet droit ou gauche (  **[]**) ou d’un guillemet double (  **"**). Si *quote_character* n’est pas spécifié, les crochets sont utilisés.  
+ Représente une chaîne d'un seul caractère à utiliser en tant que délimiteur. Il peut s’agir d’une apostrophe ( **'**), d’un crochet droit ou gauche ( **[]**), d’un guillemet double ( **"**), d’une parenthèse gauche ou droite ( **()** ), d’un signe inférieur ou supérieur à ( **><** ), d’une accolade gauche ou droite ( **{}** ) ou d’un accent grave ( **\`** ). La valeur NULL est retournée si un caractère non autorisé est fourni. Si *quote_character* n’est pas spécifié, les crochets sont utilisés.  
   
 ## <a name="return-types"></a>Types de retour  
  **nvarchar(258)**  

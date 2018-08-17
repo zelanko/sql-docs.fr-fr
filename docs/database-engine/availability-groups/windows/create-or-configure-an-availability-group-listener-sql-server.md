@@ -18,19 +18,19 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
-ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
+ms.openlocfilehash: 53f49ad6acc123634143eec72b0f9b5b084cd929
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37065999"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609658"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Créer ou configurer un écouteur de groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment créer ou configurer un *écouteur de groupe de disponibilité* unique pour un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
->  Pour créer le premier écouteur d'un groupe de disponibilité, nous vous recommandons d'utiliser [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Évitez de créer un écouteur directement dans le cluster WSFC, sauf si cela s'avère nécessaire, par exemple, pour créer un écouteur supplémentaire.  
+>  Pour créer le premier écouteur d’un groupe de disponibilité, nous vous recommandons vivement d’utiliser [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Évitez de créer un écouteur directement dans le cluster WSFC, sauf si cela s'avère nécessaire, par exemple, pour créer un écouteur supplémentaire.  
   
 -   **Avant de commencer :**  
   
@@ -110,7 +110,7 @@ ms.locfileid: "37065999"
   
 ###  <a name="WinPermissions"></a> Autorisations Windows  
   
-|Autorisations|Lien|  
+|Permissions|Lien|  
 |-----------------|----------|  
 |Le nom d’objet cluster (CNO) du cluster WSFC qui héberge le groupe de disponibilité doit disposer de l’autorisation de **création d’objets ordinateur** .<br /><br /> Dans Active Directory, un CNO ne dispose pas par défaut explicitement de l’autorisation de **création d’objets ordinateur** et peut créer 10 objets ordinateur virtuel (VCO). Une fois les 10 VCO créés, la création de VCO supplémentaires échoue. Vous pouvez éviter cela en accordant l'autorisation explicite au CNO du cluster WSFC. Notez que les VCO des groupes de disponibilité que vous avez supprimé ne sont pas supprimés automatiquement dans Active Directory et sont pris en compte dans le nombre maximal par défaut de 10 VCO, sauf s'ils sont supprimés manuellement.<br /><br /> Dans certaines organisations, la stratégie de sécurité interdit d’accorder l’autorisation de **création d’objets ordinateur** aux comptes d’utilisateur individuels.|*Étapes pour configurer le compte de la personne qui installe le cluster* dans [Guide pas à pas du cluster de basculement : Configuration des comptes dans Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Étapes de préconfiguration du nom du compte de cluster* dans [Guide pas à pas du cluster de basculement : Configuration des comptes dans Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
 |Si votre organisation requiert la préconfiguration du compte d’ordinateur pour un nom de réseau virtuel d’écouteur, vous devrez être membre du groupe **Opérateur de compte** ou vous aurez besoin de l’aide de l’administrateur de domaine.|*Étapes de préconfiguration d’un compte pour un service cluster ou une application* dans [Guide pas à pas du cluster de basculement : Configuration des comptes dans Active Directory](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
@@ -120,7 +120,7 @@ ms.locfileid: "37065999"
   
 ###  <a name="SqlPermissions"></a> Autorisations SQL Server  
   
-|Tâche|Autorisations|  
+|Tâche|Permissions|  
 |----------|-----------------|  
 |Pour créer un écouteur de groupe de disponibilité|Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.|  
 |Pour modifier un écouteur de groupe de disponibilité existant|Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.|  

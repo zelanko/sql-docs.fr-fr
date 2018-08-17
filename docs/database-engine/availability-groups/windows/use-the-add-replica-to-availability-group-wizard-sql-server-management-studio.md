@@ -18,12 +18,12 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cd49e3ee7241a25531b6a2efcefe891b5993e8b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 21316e480ddaa3ea7f96ffdf530ef61edbbda2c1
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771115"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609678"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Utiliser l'Assistant Ajouter un réplica au groupe de disponibilité (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34771115"
     |**Points de terminaison**|Utilisez cet onglet pour vérifier le point de terminaison de mise en miroir de bases de données existant, le cas échéant, pour chaque nouveau réplica secondaire. Si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, l'Assistant tente de créer le point de terminaison automatiquement.<br /><br /> <br /><br /> Remarque : si une instance de serveur s’exécute sous un compte d’utilisateur qui n’appartient pas au domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l’Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.|  
     |**Préférences de sauvegarde**|Utilisez cet onglet pour spécifier vos préférences de sauvegarde pour le groupe de disponibilité dans son ensemble, si vous souhaitez modifier le paramètre actuel, et pour indiquer vos priorités de sauvegarde pour les différents réplicas de disponibilité.|  
   
-6.  Si les réplicas sélectionnés contiennent des bases de données comportant une clé principale de base de données, entrez les mots de passe pour les clés principales de base de données sur la page **Entrer les mots de passe** . La colonne **État** indique **Mot de passe requis** pour les bases de données qui comportent une clé principale de base de données. Après avoir entré les mots de passe, cliquez sur **Actualiser**. Si vous avez entré correctement les mots de passe, la colonne État indique **Mot de passe entré**.  
+6.  Si les réplicas sélectionnés contiennent des bases de données comportant une clé principale de base de données, entrez les mots de passe pour les clés principales de base de données dans la colonne **Mot de passe**. La colonne **État** indique **Mot de passe requis** pour les bases de données qui comportent une clé principale de base de données. L’option **Suivant** est grisée jusqu’à ce que le mot de passe correct soit entré dans la colonne **Mot de passe**. Après avoir entré les mots de passe, cliquez sur **Actualiser**. Si les mots de passe entrés sont corrects, la colonne État indique **Mot de passe entré** et **Suivant** devient disponible.  
   
 7.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l'une des options suivantes :  
   
