@@ -54,7 +54,7 @@ Un serveur de rapports SQL Server Reporting Services installé en mode SharePoin
 |8|SQL Server 2012 et SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
 |9|SQL Server 2012|SQL Server 2012|SharePoint 2010|
 |10|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
-|11|SQL Server 2008 R2|SQL Server 2012 et SQL Server 2012 SP1* ou version ultérieure|SharePoint 2010|
+|11|SQL Server 2008 R2|SQL Server 2012 et SQL Server 2012 SP1 ou version ultérieure|SharePoint 2010|
 |12|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
 |13|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
 |14|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
