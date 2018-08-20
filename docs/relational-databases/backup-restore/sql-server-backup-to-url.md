@@ -14,12 +14,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50a8d11c653e7b31dd27a8705d925f60d795a7a0
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984091"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175296"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +82,9 @@ ms.locfileid: "38984091"
   
  Pour savoir comment créer une signature d’accès partagé, voir les exemples [Créer une signature d’accès partagé](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) plus loin dans cette rubrique. De même, pour savoir comment créer des informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , voir les exemples [Créer des informations d'identification](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) plus loin dans cette rubrique.  
   
- Pour plus d’informations sur les informations d’identification en général, consultez [Informations d’identification](http://msdn.microsoft.com/library/ms161950.aspx).  
+ Pour plus d’informations sur les informations d’identification en général, consultez [Informations d’identification](../security/authentication-access/credentials-database-engine.md).  
   
- Pour des informations sur d’autres exemples d’utilisation des informations d’identification, voir [Créer un proxy de SQL Server Agent](http://msdn.microsoft.com/library/ms175834.aspx).  
+ Pour des informations sur d’autres exemples d’utilisation des informations d’identification, voir [Créer un proxy de SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Limitations  
   

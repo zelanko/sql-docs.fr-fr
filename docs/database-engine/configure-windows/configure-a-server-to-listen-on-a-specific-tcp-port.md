@@ -21,17 +21,17 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 71cc5f675917e0e99c9f5a9806b8e928626c84eb
-ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
+ms.openlocfilehash: b78d6b459408aa36f2e219460e9346534c685c78
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39609668"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175154"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurer un serveur pour l’écoute sur un port TCP spécifique
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment configurer une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pour l'écoute sur un port fixe spécifique à l'aide du Gestionnaire de configuration SQL Server. Si elle est activée, l’instance par défaut du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] écoute le port TCP 1433. Les instances nommées du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et de [!INCLUDE[ssEW](../../includes/ssew-md.md)] sont configurées pour des [ports dynamiques](https://msdn.microsoft.com/library/dd981060). Cela signifie qu'elles sélectionnent un port disponible lorsque le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré. Lorsque vous vous connectez à une instance nommée par l'intermédiaire d'un pare-feu, configurez le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour écouter un port spécifique, de façon à pouvoir ouvrir le port approprié dans le pare-feu.  
+  Cette rubrique explique comment configurer une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pour l'écoute sur un port fixe spécifique à l'aide du Gestionnaire de configuration SQL Server. Si elle est activée, l’instance par défaut du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] écoute le port TCP 1433. Les instances nommées du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et de [!INCLUDE[ssEW](../../includes/ssew-md.md)] sont configurées pour des [ports dynamiques](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab.md). Cela signifie qu'elles sélectionnent un port disponible lorsque le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré. Lorsque vous vous connectez à une instance nommée par l'intermédiaire d'un pare-feu, configurez le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour écouter un port spécifique, de façon à pouvoir ouvrir le port approprié dans le pare-feu.  
 
 Comme le port 1433 est la norme connue pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certaines organisations spécifient que le numéro de port de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être changé pour des raisons de sécurité. Ceci peut être utile dans certains environnements. Cependant, l’architecture TCP/IP permet à un [scanneur de port](https://wikipedia.org/wiki/Port_scanner) d’interroger les ports ouverts : par conséquent, le changement du numéro de port n’est pas considéré comme une mesure de sécurité robuste.
 

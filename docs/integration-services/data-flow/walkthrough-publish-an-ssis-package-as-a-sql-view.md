@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e559147286aa4f5664c09c38a80a4e568eff175
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 61e97bf25b13f8edd225e7b57ede4cecd0a78e35
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407951"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175138"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procédure pas à pas : publier un package SSIS en tant que vue SQL
   Cette procédure pas à pas fournit des étapes détaillées sur la publication d’un package SSIS en tant que vue SQL dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -66,7 +66,7 @@ ms.locfileid: "35407951"
   
         |ID|FirstName|LastName|  
         |--------|---------------|--------------|  
-        | 1|John|Doe|  
+        |1|John|Doe|  
         |2|Jane|Doe|  
   
     4.  Faites glisser le composant **Source OLE DB** de la **Boîte à outils SSIS** vers le **Concepteur de flux de données**.  
@@ -130,7 +130,7 @@ ms.locfileid: "35407951"
   
         1.  Spécifiez le schéma de la base de données dans lequel vous souhaitez créer la vue (champ Schéma).  
   
-        2.  Spécifiez si les données doivent être chiffrées avant d’être envoyées sur le réseau (champ Chiffrer). Consultez la rubrique [Utilisation du chiffrement sans validation](http://msdn.microsoft.com/library/ms131691.aspx) pour plus d’informations sur ce paramètre et sur le paramètre TrustServerCertificate.  
+        2.  Spécifiez si les données doivent être chiffrées avant d’être envoyées sur le réseau (champ Chiffrer). Consultez la rubrique [Utilisation du chiffrement sans validation](../../relational-databases/native-client/features/using-encryption-without-validation.md) pour plus d’informations sur ce paramètre et sur le paramètre TrustServerCertificate.  
   
         3.  Spécifiez si un certificat de serveur auto-signé peut être utilisé quand le paramètre de chiffrement est activé (champ**TrustServerCertificate** ).  
   
@@ -213,7 +213,7 @@ GO
   
  Au moment de l’exécution, quand la vue est exécutée, la requête de serveur lié définie dans la vue démarre le package SSIS spécifié dans la requête, puis reçoit la sortie du package sous forme de jeu de résultats tabulaire.  
   
-1.  Avant de créer la vue, tapez et exécutez la requête suivante dans la nouvelle fenêtre de requête. OPENQUERY est une fonction d’ensemble de lignes prise en charge par SQL Server. Elle exécute la requête directe indiquée sur le serveur lié spécifié à l’aide du fournisseur OLE DB associé au serveur lié. Il est possible de référencer OPENQUERY dans la clause FROM d’une requête SELECT comme s’il s’agissait du nom d’une table. Consultez la [documentation OPENQUERY sur MSDN Library](http://msdn.microsoft.com/library/ms188427.aspx) pour plus d’informations.  
+1.  Avant de créer la vue, tapez et exécutez la requête suivante dans la nouvelle fenêtre de requête. OPENQUERY est une fonction d’ensemble de lignes prise en charge par SQL Server. Elle exécute la requête directe indiquée sur le serveur lié spécifié à l’aide du fournisseur OLE DB associé au serveur lié. Il est possible de référencer OPENQUERY dans la clause FROM d’une requête SELECT comme s’il s’agissait du nom d’une table. Consultez la [documentation OPENQUERY sur MSDN Library](../../t-sql/functions/openquery-transact-sql.md) pour plus d’informations.  
   
     ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   

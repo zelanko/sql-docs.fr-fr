@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ccbf65c2b1d297b8fd36ef75f84a6a8c09b21175
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 470355f14c589d5ef62d9de2493d64ef4b8f48aa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950494"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175123"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server Agent, objet Jobs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,8 @@ ms.locfileid: "32950494"
 |**Planifications**|Informations sur les travaux lancés par des planifications.|  
   
 ## <a name="see-also"></a> Voir aussi  
- [Implémenter des travaux](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [Utiliser des objets de performance](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Implémenter des travaux](../../ssms/agent/implement-jobs.md)   
+ [Utiliser des objets de performance](../../ssms/agent/use-performance-objects.md)   
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

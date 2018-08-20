@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9d20946e721e4bff7c231466af55ac0c01a4140e
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 63eeb5e123eb7168aa045ca695fa8adef3d39d09
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541479"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175143"
 ---
 # <a name="extended-events-tools"></a>Outils associés aux événements étendus
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "39541479"
   
 -   Fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Il s’agit d’un outil puissant que vous pouvez utiliser pour créer, modifier et gérer des sessions d’événements étendus. Pour plus d’informations, consultez [Utiliser le fournisseur PowerShell pour les événements étendus](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cela vous permet de créer et d'exécuter les exemples de code fournis dans les rubriques Événements étendus. Pour plus d’informations, consultez [Explorateur d’objets](http://msdn.microsoft.com/library/469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cela vous permet de créer et d'exécuter les exemples de code fournis dans les rubriques Événements étendus. Pour plus d’informations, consultez [Explorateur d’objets](../../ssms/object/object-explorer.md).  
   
  En plus des sessions que vous créez, une session de l'intégrité du système par défaut existe sur le serveur. Elle recueille des données système qui peuvent vous aider à résoudre des problèmes de performances. Pour plus d’informations, consultez [Utiliser la session system_health](../../relational-databases/extended-events/use-the-system-health-session.md).  
   

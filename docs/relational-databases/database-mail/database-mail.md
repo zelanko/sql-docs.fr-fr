@@ -20,11 +20,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9364bacf4e9f601c8cce9d5dfe4cd550d4b7405e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79469da3f919204e3ceb0d3e9a4b9968ba56ba02
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175139"
 ---
 # <a name="database-mail"></a>Messagerie de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +114,7 @@ ms.lasthandoff: 05/03/2018
   
  Vous pouvez configurer l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manière à envoyer des messages électroniques à des opérateurs prédéfinis lorsque :  
   
--   Une alerte est déclenchée. Les alertes peuvent être configurées pour l'envoi de notifications par courrier électronique d'événements spécifiques qui se produisent. Par exemple, des alertes peuvent être configurées pour notifier à un opérateur une situation du système d'exploitation ou un événement de base de données particuliers, qui peuvent nécessiter une action immédiate. Pour plus d’informations sur la configuration des alertes, consultez [Alertes](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
+-   Une alerte est déclenchée. Les alertes peuvent être configurées pour l'envoi de notifications par courrier électronique d'événements spécifiques qui se produisent. Par exemple, des alertes peuvent être configurées pour notifier à un opérateur une situation du système d'exploitation ou un événement de base de données particuliers, qui peuvent nécessiter une action immédiate. Pour plus d’informations sur la configuration des alertes, consultez [Alertes](../../ssms/agent/alerts.md).  
   
 -   Une tâche planifiée, telle qu'une sauvegarde de base de données ou un événement de réplication, réussit ou échoue. Par exemple, vous pouvez utiliser la messagerie de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour notifier à des opérateurs qu'une erreur s'est produite lors d'un traitement de fin de mois.  
   
