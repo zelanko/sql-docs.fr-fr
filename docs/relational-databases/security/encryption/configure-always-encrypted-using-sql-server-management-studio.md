@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d2156c3523e6dcc53c04ebf011406b715abe530
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543069"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175114"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurer Always Encrypted à l’aide de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ Pour plus d’informations, consultez [Créer et stocker des clés principales d
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>Exécution d’opérations de mise à niveau de la DAC quand la base de données ou le fichier DACPAC utilise Always Encrypted
 
-Les[opérations DAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) sont prises en charge sur les fichiers DACPAC et les bases de données avec des schémas contenant des colonnes chiffrées. Des considérations particulières s’appliquent à l’opération de mise à niveau de la DAC. Consultez [Mettre à niveau une application de la couche Données](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) pour savoir comment effectuer une opération de mise à niveau de la DAC dans différents outils, notamment SSMS. 
+Les[opérations DAC](../../data-tier-applications/data-tier-applications.md) sont prises en charge sur les fichiers DACPAC et les bases de données avec des schémas contenant des colonnes chiffrées. Des considérations particulières s’appliquent à l’opération de mise à niveau de la DAC. Consultez [Mettre à niveau une application de la couche Données](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) pour savoir comment effectuer une opération de mise à niveau de la DAC dans différents outils, notamment SSMS. 
 
 Quand vous mettez à niveau une base de données à l’aide d’un fichier DACPAC et que le fichier DACPAC ou la base de données cible a des colonnes chiffrées, l’opération de mise à niveau déclenche une opération de chiffrement de données si toutes les conditions suivantes sont remplies :
 - La base de données contient une colonne avec des données.
@@ -418,7 +418,7 @@ Pour plus d’informations, consultez [Créer et stocker des clés principales d
 
 ## <a name="migrating-databases-with-encrypted-columns-using-bacpac"></a>Migration de bases de données avec des colonnes chiffrées à l’aide d’un fichier BACPAC
 
-Quand vous exportez une base de données, toutes les données stockées dans les colonnes chiffrées sont récupérées et placées dans le fichier [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) obtenu (sous forme chiffrée). Le fichier BACPAC obtenu contient également les métadonnées pour les clés Always Encrypted.
+Quand vous exportez une base de données, toutes les données stockées dans les colonnes chiffrées sont récupérées et placées dans le fichier [BACPAC](../../data-tier-applications/data-tier-applications.md) obtenu (sous forme chiffrée). Le fichier BACPAC obtenu contient également les métadonnées pour les clés Always Encrypted.
 
 Quand vous importez le fichier BACPAC dans une base de données, les données chiffrées dans le fichier BACPAC sont chargées dans la base de données et les métadonnées de clé Always Encrypted sont recréées.
 
