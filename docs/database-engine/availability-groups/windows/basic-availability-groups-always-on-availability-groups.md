@@ -13,12 +13,12 @@ caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cf0814bacd6c47d86f21709d24acaf2af742f0d5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bf0b1b5a0455fcc35e35614b5abbd2e350aa108e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768655"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175134"
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>Groupes de disponibilité de base (Groupes de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34768655"
 ## <a name="configuration"></a>Configuration  
  Un groupe de disponibilité de base Always On peut être créé sur deux serveurs SQL Server 2016 Standard Edition. Lorsque vous créez un groupe de disponibilité de base, vous devez spécifier les deux réplicas lors de la création.  
   
- Pour créer un groupe de disponibilité de base, utilisez la commande transact-SQL **CREATE AVAILABILITY GROUP** et spécifiez l’option **WITH BASIC** (la valeur par défaut étant **ADVANCED**). Pour plus d’informations, consultez [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md). À ce stade, il n’existe aucune prise en charge de l’interface utilisateur pour créer des groupes de disponibilité de base dans SQL Server Management Studio.  
+ Pour créer un groupe de disponibilité de base, utilisez la commande transact-SQL **CREATE AVAILABILITY GROUP** et spécifiez l’option **WITH BASIC** (la valeur par défaut étant **ADVANCED**). Vous pouvez également créer le groupe de disponibilité de base à l’aide de l’interface utilisateur dans SQL Server Management Studio à partir de la version 17.8. Pour plus d’informations, consultez [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md). 
   
 > [!NOTE]  
 >  Les limitations des groupes de disponibilité de base s’appliquent à la commande **CREATE AVAILABILITY GROUP** lorsque **WITH BASIC** est spécifiée. Par exemple, vous obtiendrez une erreur si vous essayez de créer un groupe de disponibilité de base qui permet un accès en lecture. Les autres limitations s’appliquent de la même manière. Reportez-vous à la section Limitations de cette rubrique pour plus d’informations.  

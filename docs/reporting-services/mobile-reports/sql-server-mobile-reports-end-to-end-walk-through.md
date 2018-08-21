@@ -15,12 +15,12 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6bdc2fb6be0a80639d5f396fa9bc24abfb8833
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ce71e2b7a1991b6ebf4b495907c74c1e59c939
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022686"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175110"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : procédure pas à pas de bout en bout
 Étapes permettant de créer des rapports mobiles pour n’importe quelle taille d’écran avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] sur le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et de les afficher dans les applications mobiles Power BI.
@@ -70,7 +70,7 @@ En savoir plus sur [les sources de données partagées dans Reporting Services](
    
 ## <a name="shared-dataset">Créer un jeu de données partagé</a>  
   
-Utilisez un outil client [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] existant, tel que le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], pour créer le jeu de données partagé.  Cette procédure pas à pas utilise [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Installez le Générateur de rapports](https://msdn.microsoft.com/library/ff519551.aspx)ou lancez-le à partir de votre portail web. Vous allez créer trois jeux de données : un pour la valeur de l’indicateur de performance clé, un pour la tendance de l’indicateur de performance clé et un autre avec davantage de champs pour le rapport mobile Reporting Services.     
+Utilisez un outil client [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] existant, tel que le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], pour créer le jeu de données partagé.  Cette procédure pas à pas utilise [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Installez le Générateur de rapports](../install-windows/install-report-builder.md)ou lancez-le à partir de votre portail web. Vous allez créer trois jeux de données : un pour la valeur de l’indicateur de performance clé, un pour la tendance de l’indicateur de performance clé et un autre avec davantage de champs pour le rapport mobile Reporting Services.     
   
 1. À partir de votre portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , cliquez sur **Nouveau** > **Rapport paginé** pour démarrer [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   

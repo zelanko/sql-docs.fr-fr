@@ -1,7 +1,7 @@
 ---
 title: Source Azure Data Lake Store | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/16/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8bcab4b05afd22e06951e31f3037075830fba22
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3d179247f8d76a06c154ee2585a79ba6d1193554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409301"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175122"
 ---
 # <a name="azure-data-lake-store-source"></a>Source Azure Data Lake Store
   Le composant **Source Azure Data Lake Store** permet à un package SSIS de lire des données dans Azure Data Lake Store. Les formats de fichier pris en charge sont le format texte et Avro.
@@ -44,3 +44,7 @@ ms.locfileid: "35409301"
         Si le format de fichier est le format texte, vous devez renseigner le champ **Délimiteur de colonne** . Sélectionnez également l’option **Noms de colonne dans la première ligne de données** si la première ligne du fichier contient des noms de colonne.  
   
 3.  Après avoir spécifié les informations de connexion, basculez vers la page **Colonnes** pour mapper les colonnes sources sur les colonnes de destination du flux de données SSIS.   
+
+## <a name="text-qualifier"></a>Qualificateur de texte
+
+La **source Azure Data Lake Store** ne prend pas en charge les qualificateurs de texte. Si vous devez spécifier un qualificateur de texte pour traiter vos fichiers correctement, téléchargez les fichiers sur votre ordinateur local et traitez les fichiers avec la **Source du fichier plat**. La Source du fichier plat vous permet de spécifier un qualificateur de texte. Pour plus d’informations, consultez [Source du fichier plat](flat-file-source.md).
