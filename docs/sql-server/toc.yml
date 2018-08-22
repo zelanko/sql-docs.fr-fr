@@ -1,49 +1,40 @@
+items:
 - name: Bienvenue
   href: sql-server-technical-documentation.md
 - name: Vue d'ensemble
   items:
-    - name: Nouveautés de SQL Server 2016
-      href: what-s-new-in-sql-server-2016.md
-    - name: "Nouveautés de SQL Server\_2017"
-      href: what-s-new-in-sql-server-2017.md
-    - name: "Éditions et fonctionnalités prises en charge de SQL Server\_2016"
-      href: editions-and-components-of-sql-server-2016.md
-    - name: "Éditions et fonctionnalités prises en charge de SQL Server\_2017"
-      href: editions-and-components-of-sql-server-2017.md
-    - name: Spécifications des capacités maximales pour SQL Server
-      href: maximum-capacity-specifications-for-sql-server.md
-    - name: Limites de capacité de calcul par l'édition de SQL Server
-      href: compute-capacity-limits-by-edition-of-sql-server.md
-    - name: Programme d'amélioration du produit
-      href: customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: Configurer SQL Server pour envoyer des commentaires à Microsoft
-      href: sql-server-customer-feedback.md
-    - name: Partenaires
-      items:
-        - name: Surveillance
-          href: partner-monitor-sql-server.md
-        - name: Haute disponibilité et récupération d’urgence
-          href: partner-hadr-sql-server.md
-        - name: Gestion
-          href: partner-management-sql-server.md
-        - name: Développement
-          href: partner-dev-sql-server.md
+  - name: Nouveautés de SQL Server 2016
+    href: what-s-new-in-sql-server-2016.md
+  - name: Nouveautés de SQL Server 2017
+    href: what-s-new-in-sql-server-2017.md
+  - name: Éditions et fonctionnalités prises en charge de SQL Server 2016
+    href: editions-and-components-of-sql-server-2016.md
+  - name: Éditions et fonctionnalités prises en charge de SQL Server 2017
+    href: editions-and-components-of-sql-server-2017.md
+  - name: Spécifications des capacités maximales pour SQL Server
+    href: maximum-capacity-specifications-for-sql-server.md
+  - name: Limites de capacité de calcul par l'édition de SQL Server
+    href: compute-capacity-limits-by-edition-of-sql-server.md
+  - name: Programme d'amélioration du produit
+    href: customer-experience-improvement-program-for-sql-server-data-tools.md
+  - name: Configurer SQL Server pour envoyer des commentaires à Microsoft
+    href: sql-server-customer-feedback.md
 - name: Nouveaux articles et articles mis à jour
   href: new-updated-sql-server.md
 - name: Notes de publication
   items:
-    - name: Notes de SQL Server 2017
-      href: sql-server-2017-release-notes.md
-    - name: Notes de SQL Server 2016
-      href: sql-server-2016-release-notes.md
-    - name: Notes de SQL Server 2014
-      href: sql-server-2014-release-notes.md
-    - name: Notes de publication de SQL Server 2012 Service Pack
-      href: sql-server-2012-sp4-release-notes.md
-    - name: Notes de SQL Server 2012
-      href: sql-server-2012-release-notes.md
-    - name: Notes de SQL Server 2008 R2 SP2
-      href: sql-server-2008-r2-sp2-release-notes.md
+  - name: Notes de SQL Server 2017
+    href: sql-server-2017-release-notes.md
+  - name: Notes de SQL Server 2016
+    href: sql-server-2016-release-notes.md
+  - name: Notes de SQL Server 2014
+    href: sql-server-2014-release-notes.md
+  - name: Notes de publication de SQL Server 2012 Service Pack
+    href: sql-server-2012-sp4-release-notes.md
+  - name: Notes de SQL Server 2012
+    href: sql-server-2012-release-notes.md
+  - name: Notes de SQL Server 2008 R2 SP2
+    href: sql-server-2008-r2-sp2-release-notes.md
 - name: SQL Server sur Linux
   href: ../linux/sql-server-linux-overview.md
 - name: Analysis Services
@@ -62,7 +53,7 @@
   href: ../integration-services/sql-server-integration-services.md
 - name: Master Data Services
   href: ../master-data-services/master-data-services-overview-mds.md
-- name: "Reporting\_Services"
+- name: Reporting Services
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: Assistant de migration SQL Server
   href: ../ssma/sql-server-migration-assistant.md
@@ -76,35 +67,51 @@
   href: ../tools/overview-sql-tools.md
 - name: Ressources
   items:
-    - name: Blogs
-      items:
-        - name: SQL Server
-          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: Moteur de base de données SQL Server
-          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: "Sécurité SQL\_Server"
-          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools
-          href: 'https://blogs.msdn.microsoft.com/ssdt/'
-    - name: Découvrir
-      items:
-        - name: Microsoft Virtual Academy
-          href: 'https://mva.microsoft.com/product-training/sql-server#!lang=1033'
-        - name: SQL sur Channel 9
-          href: 'https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year'
-    - name: Commentaires et aide
-      items:
-        - name: "Contribuez à la documentation SQL\_!"
-          href: sql-server-docs-contribute.md
-        - name: UserVoice - Proposer une amélioration de SQL Server
-          href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: DBA Stack Exchange
-          href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow
-          href: 'http://stackoverflow.com/questions/tagged/sql-server'
-        - name: Forums MSDN
-          href: 'https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver'
-        - name: Reddit
-          href: 'https://www.reddit.com/r/SQLServer'
-    - name: Contenu local avec la visionneuse d’aide
-      href: sql-server-help-installation.md
+  - name: Blogs
+    items:
+    - name: SQL Server
+      href: https://blogs.technet.microsoft.com/dataplatforminsider/
+    - name: Moteur de base de données SQL Server
+      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
+    - name: Sécurité SQL Server
+      href: https://blogs.msdn.microsoft.com/sqlsecurity/
+    - name: SQL Server Data Tools
+      href: https://blogs.msdn.microsoft.com/ssdt/
+  - name: Découvrir
+    items:
+    - name: Microsoft Virtual Academy
+      href: https://mva.microsoft.com/product-training/sql-server#!lang=1033
+    - name: SQL sur Channel 9
+      href: https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year
+  - name: Commentaires et aide
+    items:
+    - name: Contribuez à la documentation SQL !
+      href: sql-server-docs-contribute.md
+    - name: UserVoice - Proposer une amélioration de SQL Server
+      href: https://feedback.azure.com/forums/908035-sql-server
+    - name: DBA Stack Exchange
+      href: https://dba.stackexchange.com/questions/tagged/sql-server
+    - name: Stack Overflow
+      href: http://stackoverflow.com/questions/tagged/sql-server
+    - name: Forums MSDN
+      href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
+    - name: Reddit
+      href: https://www.reddit.com/r/SQLServer
+  - name: Partenaires
+    items:
+    - name: Surveillance
+      href: partner-monitor-sql-server.md
+    - name: Haute disponibilité et récupération d’urgence
+      href: partner-hadr-sql-server.md
+    - name: Gestion
+      href: partner-management-sql-server.md
+    - name: Développement
+      href: partner-dev-sql-server.md
+  - name: Contenu local avec la visionneuse d’aide
+    href: sql-server-help-installation.md
+ms.openlocfilehash: 0d29421fad73e4a36283ad042c5e467abb7a8a75
+ms.sourcegitcommit: 489e29bce510fae6d826d5b6548eb9612fc2bd62
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40427375"

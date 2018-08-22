@@ -1,12 +1,13 @@
+items:
 - name: Vue d'ensemble
   href: report-data-ssrs.md
 - name: Sources de données prises en charge par Reporting Services
   href: data-sources-supported-by-reporting-services-ssrs.md
-- name: 'Connexions de données, sources de données et chaînes de connexion (Générateur de rapports et SSRS)'
+- name: Connexions de données, sources de données et chaînes de connexion (Générateur de rapports et SSRS)
   href: data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
 - name: Ajouter et vérifier une connexion de données
   href: add-and-verify-a-data-connection-report-builder-and-ssrs.md
-- name: 'Créer, modifier, puis supprimer des sources de données partagées'
+- name: Créer, modifier, puis supprimer des sources de données partagées
   href: create-modify-and-delete-shared-data-sources-ssrs.md
 - name: Créer et modifier des sources de données incorporées
   href: create-and-modify-embedded-data-sources.md
@@ -15,52 +16,52 @@
 - name: Ajouter des données à partir de sources de données externes
   href: add-data-from-external-data-sources-ssrs.md
   items:
-    - name: Type de connexion SQL Server
-      href: sql-server-connection-type-ssrs.md
-    - name: Type de connexion Analysis Services pour MDX
-      href: analysis-services-connection-type-for-mdx-ssrs.md
-      items:
-        - name: "Propriétés de champ étendues pour une base de données Analysis\_Services"
-          href: extended-field-properties-for-an-analysis-services-database-ssrs.md
-    - name: Type de connexion PowerPivot
-      href: power-pivot-connection-type-ssrs.md
-    - name: Type de connexion de liste SharePoint
-      href: sharepoint-list-connection-type-ssrs.md
-    - name: Type de connexion SQL Azure
-      href: sql-azure-connection-type-ssrs.md
-    - name: Type de connexion OLE DB
-      href: ole-db-connection-type-ssrs.md
-    - name: Type de connexion à un entrepôt de données SQL Server Parallel Data Warehouse
-      href: sql-server-parallel-data-warehouse-connection-type-ssrs.md
-    - name: Type de connexion Teradata
-      href: teradata-connection-type-ssrs.md
-    - name: Type de connexion Oracle
-      href: oracle-connection-type-ssrs.md
-    - name: Type de connexion SAP NetWeaver BI
-      href: sap-netweaver-bi-connection-type-ssrs.md
-    - name: Type de connexion Hyperion Essbase
-      href: hyperion-essbase-connection-type-ssrs.md
-    - name: Type de connexion ODBC
-      href: odbc-connection-type-ssrs.md
-    - name: Type de connexion XML
-      href: xml-connection-type-ssrs.md
-      items:
-        - name: "Syntaxe de requête\_XML pour les données de rapport\_XML"
-          href: xml-query-syntax-for-xml-report-data-ssrs.md
-        - name: Syntaxe du chemin d'accès à l'élément pour des données de rapport XML
-          href: element-path-syntax-for-xml-report-data-ssrs.md
-    - name: Connexion à un modèle de rapport
-      href: report-model-connection-ssrs.md
-    - name: Type de connexion Analysis Services pour DMX
-      href: analysis-services-connection-type-for-dmx-ssrs.md
-      items:
-        - name: Récupérer des données d'un modèle d'exploration de données (DMX)
-          href: retrieve-data-from-a-data-mining-model-dmx-ssrs.md
-    - name: "Extensions pour le traitement des données et fournisseurs de données\_.NET Framework"
-      href: data-processing-extensions-and-net-framework-data-providers-ssrs.md
-      items:
-        - name: Inscrire un fournisseur de données .NET Framework standard
-          href: register-a-standard-net-framework-data-provider-ssrs.md
+  - name: Type de connexion SQL Server
+    href: sql-server-connection-type-ssrs.md
+  - name: Type de connexion Analysis Services pour MDX
+    href: analysis-services-connection-type-for-mdx-ssrs.md
+    items:
+    - name: Propriétés de champ étendues pour une base de données Analysis Services
+      href: extended-field-properties-for-an-analysis-services-database-ssrs.md
+  - name: Type de connexion PowerPivot
+    href: power-pivot-connection-type-ssrs.md
+  - name: Type de connexion de liste SharePoint
+    href: sharepoint-list-connection-type-ssrs.md
+  - name: Type de connexion SQL Azure
+    href: sql-azure-connection-type-ssrs.md
+  - name: Type de connexion OLE DB
+    href: ole-db-connection-type-ssrs.md
+  - name: Type de connexion à un entrepôt de données SQL Server Parallel Data Warehouse
+    href: sql-server-parallel-data-warehouse-connection-type-ssrs.md
+  - name: Type de connexion Teradata
+    href: teradata-connection-type-ssrs.md
+  - name: Type de connexion Oracle
+    href: oracle-connection-type-ssrs.md
+  - name: Type de connexion SAP NetWeaver BI
+    href: sap-netweaver-bi-connection-type-ssrs.md
+  - name: Type de connexion Hyperion Essbase
+    href: hyperion-essbase-connection-type-ssrs.md
+  - name: Type de connexion ODBC
+    href: odbc-connection-type-ssrs.md
+  - name: Type de connexion XML
+    href: xml-connection-type-ssrs.md
+    items:
+    - name: Syntaxe de requête XML pour les données de rapport XML
+      href: xml-query-syntax-for-xml-report-data-ssrs.md
+    - name: Syntaxe du chemin d'accès à l'élément pour des données de rapport XML
+      href: element-path-syntax-for-xml-report-data-ssrs.md
+  - name: Connexion à un modèle de rapport
+    href: report-model-connection-ssrs.md
+  - name: Type de connexion Analysis Services pour DMX
+    href: analysis-services-connection-type-for-dmx-ssrs.md
+    items:
+    - name: Récupérer des données d'un modèle d'exploration de données (DMX)
+      href: retrieve-data-from-a-data-mining-model-dmx-ssrs.md
+  - name: Extensions pour le traitement des données et fournisseurs de données .NET Framework
+    href: data-processing-extensions-and-net-framework-data-providers-ssrs.md
+    items:
+    - name: Inscrire un fournisseur de données .NET Framework standard
+      href: register-a-standard-net-framework-data-provider-ssrs.md
 - name: Gérer des sources de données de rapports
   href: manage-report-data-sources.md
 - name: Spécifier des informations d'identification et de connexion pour les sources de données de rapport
@@ -84,60 +85,64 @@
 - name: Datasets de rapport
   href: report-datasets-ssrs.md
   items:
-    - name: Outils de création de requêtes
-      href: query-design-tools-ssrs.md
-      items:
-        - name: Générer une requête dans le concepteur de requêtes relationnelles
-          href: build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md
-        - name: Associer un paramètre de requête à un paramètre de rapport
-          href: associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md
-        - name: Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services
-          href: define-parameters-in-the-mdx-query-designer-for-analysis-services.md
-        - name: Boîte de dialogue Définir les paramètres de la requête
-          href: define-query-parameters-dialog-box.md
-        - name: Interface utilisateur du Concepteur de requêtes DMX Analysis Services
-          href: analysis-services-dmx-query-designer-user-interface.md
-        - name: Interface utilisateur du Concepteur de requêtes MDX Analysis Services
-          href: analysis-services-mdx-query-designer-user-interface.md
-        - name: Interface utilisateur du concepteur de requêtes graphique
-          href: graphical-query-designer-user-interface.md
-        - name: Interface utilisateur du Concepteur de requêtes relationnelles
-          href: relational-query-designer-user-interface-report-builder.md
-        - name: Interface utilisateur du Concepteur de requêtes Hyperion Essbase
-          href: hyperion-essbase-query-designer-user-interface.md
-        - name: Interface utilisateur du concepteur de requêtes de modèle de rapport
-          href: report-model-query-designer-user-interface.md
-        - name: Interface utilisateur du Concepteur de requêtes SAP NetWeaver BI
-          href: sap-netweaver-bi-query-designer-user-interface.md
-        - name: Concepteur de requêtes de liste SharePoint
-          href: sharepoint-list-query-designer-report-builder.md
-        - name: Interface utilisateur du Concepteur de requêtes textuel
-          href: text-based-query-designer-user-interface-report-builder.md
-    - name: Datasets incorporés et partagés
-      href: embedded-and-shared-datasets-report-builder-and-ssrs.md
-    - name: Créer un dataset partagé ou incorporé
-      href: create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md
-    - name: Parties de rapports et datasets dans le Générateur de rapports
-      href: report-parts-and-datasets-in-report-builder.md
-    - name: Gérer des datasets partagés
-      href: manage-shared-datasets.md
-    - name: 'Ajouter, modifier ou actualiser des champs dans le volet des données de rapport'
-      href: add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md
-    - name: Ajouter un filtre à un dataset
-      href: add-a-filter-to-a-dataset-report-builder-and-ssrs.md
-    - name: Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles
-      href: show-hidden-datasets-for-parameter-values-multidimensional-data.md
-    - name: Définir un message d'absence de données pour une région de données
-      href: set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md
-    - name: Collection de champs de dataset
-      href: dataset-fields-collection-report-builder-and-ssrs.md
-    - name: 'Boîte de dialogue Propriétés du dataset, Filtres'
-      href: dataset-properties-dialog-box-filters.md
-    - name: 'Boîte de dialogue Propriétés du dataset, Options'
-      href: dataset-properties-dialog-box-options-report-builder.md
-    - name: 'Boîte de dialogue Propriétés du dataset, Paramètres'
-      href: dataset-properties-dialog-box-parameters.md
-    - name: 'Boîte de dialogue Propriétés du dataset, Requête'
-      href: dataset-properties-dialog-box-query-report-builder.md
-    - name: Datasets incorporés dans le rapport et datasets partagés
-      href: report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md
+  - name: Outils de création de requêtes
+    href: query-design-tools-ssrs.md
+    items:
+    - name: Générer une requête dans le concepteur de requêtes relationnelles
+      href: build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md
+    - name: Associer un paramètre de requête à un paramètre de rapport
+      href: associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md
+    - name: Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services
+      href: define-parameters-in-the-mdx-query-designer-for-analysis-services.md
+    - name: Boîte de dialogue Définir les paramètres de la requête
+      href: define-query-parameters-dialog-box.md
+    - name: Interface utilisateur du Concepteur de requêtes DMX Analysis Services
+      href: analysis-services-dmx-query-designer-user-interface.md
+    - name: Interface utilisateur du Concepteur de requêtes MDX Analysis Services
+      href: analysis-services-mdx-query-designer-user-interface.md
+    - name: Interface utilisateur du concepteur de requêtes graphique
+      href: graphical-query-designer-user-interface.md
+    - name: Interface utilisateur du Concepteur de requêtes relationnelles
+      href: relational-query-designer-user-interface-report-builder.md
+    - name: Interface utilisateur du Concepteur de requêtes Hyperion Essbase
+      href: hyperion-essbase-query-designer-user-interface.md
+    - name: Interface utilisateur du concepteur de requêtes de modèle de rapport
+      href: report-model-query-designer-user-interface.md
+    - name: Interface utilisateur du Concepteur de requêtes SAP NetWeaver BI
+      href: sap-netweaver-bi-query-designer-user-interface.md
+    - name: Concepteur de requêtes de liste SharePoint
+      href: sharepoint-list-query-designer-report-builder.md
+    - name: Interface utilisateur du Concepteur de requêtes textuel
+      href: text-based-query-designer-user-interface-report-builder.md
+  - name: Datasets incorporés et partagés
+    href: embedded-and-shared-datasets-report-builder-and-ssrs.md
+  - name: Créer un dataset partagé ou incorporé
+    href: create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md
+  - name: Parties de rapports et datasets dans le Générateur de rapports
+    href: report-parts-and-datasets-in-report-builder.md
+  - name: Gérer des datasets partagés
+    href: manage-shared-datasets.md
+  - name: Ajouter, modifier ou actualiser des champs dans le volet des données de rapport
+    href: add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md
+  - name: Ajouter un filtre à un dataset
+    href: add-a-filter-to-a-dataset-report-builder-and-ssrs.md
+  - name: Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles
+    href: show-hidden-datasets-for-parameter-values-multidimensional-data.md
+  - name: Définir un message d'absence de données pour une région de données
+    href: set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md
+  - name: Collection de champs de dataset
+    href: dataset-fields-collection-report-builder-and-ssrs.md
+  - name: Boîte de dialogue Propriétés du dataset, Options
+    href: dataset-properties-dialog-box-options-report-builder.md
+  - name: Boîte de dialogue Propriétés du dataset, Paramètres
+    href: dataset-properties-dialog-box-parameters.md
+  - name: Boîte de dialogue Propriétés du dataset, Requête
+    href: dataset-properties-dialog-box-query-report-builder.md
+  - name: Datasets incorporés dans le rapport et datasets partagés
+    href: report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md
+ms.openlocfilehash: 6bbd47205998e0b16b44f4e98cfe6d02718713bb
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40427297"
