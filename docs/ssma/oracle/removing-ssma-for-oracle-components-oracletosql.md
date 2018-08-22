@@ -1,5 +1,5 @@
 ---
-title: Suppression de SSMA pour les composants Oracle (OracleToSQL) | Documents Microsoft
+title: Suppression de SSMA pour les composants Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,51 +15,51 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e685e49b8d31bd1b3885c845c619f75a8b2c8b67
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a301770224db68e0f812650ce87c15a3f2e5f7bf
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777805"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395881"
 ---
-# <a name="removing-ssma--for-oracle-components-oracletosql"></a>Suppression de SSMA pour les composants Oracle (OracleToSQL)
-Lorsque vous avez terminé bases de données de migration d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous souhaiterez peut-être désinstaller les composants SSMA. Vous pouvez désinstaller les composants du client à tout moment. Toutefois, vous ne devez pas désinstaller le pack d’extension à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , sauf si vos bases de données migrés ne plus utilisent les fonctions dans le **ssma_oracle** schéma de la **sysdb** base de données.  
+# <a name="removing-ssma--for-oracle-components-oracletosql"></a>Suppression de composants SSMA pour Oracle (OracleToSQL)
+Lorsque vous avez terminé les bases de données migration d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous souhaiterez peut-être désinstaller des composants SSMA. Vous pouvez désinstaller les composants du client à tout moment. Toutefois, vous ne devez pas désinstaller le pack d’extension à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sauf si vos bases de données migrées ne plus utilisent les fonctions dans le **ssma_oracle** schéma de la **sysdb** base de données.  
   
-## <a name="uninstalling-the-ssma-for-oracle-client"></a>Désinstallation de SSMA pour Client Oracle  
+## <a name="uninstalling-the-ssma-for-oracle-client"></a>Désinstallation de SSMA pour Oracle Client  
 Vous pouvez désinstaller SSMA à l’aide de **Ajout / Suppression de programmes**.  
   
 **Pour désinstaller SSMA**  
   
 1.  Dans le panneau de configuration, ouvrez **Ajout / Suppression de programmes**.  
   
-2.  Sélectionnez  **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant pour Oracle**, puis cliquez sur **supprimer**.  
+2.  Sélectionnez  **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant pour Oracle**, puis cliquez sur **supprimer**.  
   
 3.  Pour confirmer que vous souhaitez désinstaller SSMA, cliquez sur **Oui**.  
   
 ## <a name="uninstalling-the-extension-pack"></a>Désinstallation du Pack d’Extension  
-Si vous êtes sûr de vos bases de données migrées n’utilisent pas les objets dans le **sysdb.ssma_oracle** schéma, vous pouvez supprimer le Pack d’extension à l’aide de **Ajout / Suppression de programmes**.  
+Si vous êtes sûr vos bases de données migrées n’utilisent pas les objets dans le **sysdb.ssma_oracle** schéma, vous pouvez supprimer le pack d’extension à l’aide de **Ajout / Suppression de programmes**.  
   
-**Pour désinstaller le Pack d’extension**  
+**Pour désinstaller le pack d’extension**  
   
 1.  Dans le panneau de configuration, ouvrez **Ajout / Suppression de programmes**.  
   
-2.  Sélectionnez **Microsoft SQL Server Migration Assistant pour Oracle Extension Pack**, puis cliquez sur **supprimer**.  
+2.  Sélectionnez **Microsoft SQL Server Migration Assistant pour le Pack d’Extension Oracle**, puis cliquez sur **supprimer**.  
   
-3.  Pour confirmer que vous souhaitez désinstaller le Pack d’extension, cliquez sur **Oui**.  
+3.  Pour confirmer que vous souhaitez désinstaller le pack d’extension, cliquez sur **Oui**.  
   
-4.  Dans les Instances de la page des utilitaires des Scripts de base de données, sélectionnez une instance, puis sur **suivant**.  
+4.  Sur les Instances avec la page de Scripts de base de données d’utilitaires, sélectionnez une instance, puis cliquez sur **suivant**.  
   
 5.  Dans la page Paramètres de connexion, sélectionnez la méthode d’authentification, puis cliquez sur **suivant**.  
   
-    L’authentification Windows permet de tenter de se connecter à l’instance de vos informations d’identification Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Si vous sélectionnez [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] l’authentification, vous devez entrer un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] nom d’utilisateur et mot de passe.  
+    L’authentification Windows utilisera vos informations d’identification Windows pour tenter de se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous sélectionnez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification, vous devez entrer un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom de connexion et mot de passe.  
   
-6.  Dans la page Fin de l’opération, cliquez sur **OK**.  
+6.  Dans la page opération terminée, cliquez sur **OK**.  
   
 7.  Dans la page Terminer, cliquez sur **Exit**.  
   
-Après la désinstallation, vous pouvez vérifier que les objets dans le **sysdb.ssma_oracle** schéma, voire la totalité **sysdb** de base de données, a été supprimé à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Toutefois, si vous utilisez d’autres produits SSMA, ils également utilisent le **sysdb** base de données. Si la base de données existe et que vous êtes sûr qu’aucune autre base de données ne référence des objets dans cette base de données, vous pouvez détacher la base de données.  
+Après la désinstallation, vous pouvez vérifier que les objets dans le **sysdb.ssma_oracle** schéma, voire la totalité **sysdb** de base de données, a été supprimée à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Toutefois, si vous utilisez d’autres produits SSMA, ils également utilisent le **sysdb** base de données. Si la base de données existe et que vous êtes sûr qu’aucune autre base de données ne référence des objets dans cette base de données, vous pouvez détacher la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
-[L’installation de SSMA pour Client Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[Installation de SSMA pour Oracle Client &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [Installation des composants SSMA sur SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
   

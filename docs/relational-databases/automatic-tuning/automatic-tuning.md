@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: a710c1bd6731feaae662133ff8f18bbf9ac12976
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556469"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394603"
 ---
 # <a name="automatic-tuning"></a>Paramétrage automatique
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Le réglage automatique dans [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.m
 
 ## <a name="why-automatic-tuning"></a>Pourquoi le réglage automatique ?
 
-Une des principales tâches d’administration de base de données classique est analyse la charge de travail, en identifiant critiques [!INCLUDE[tsql_md](../../includes/tsql_md.md)] les requêtes, les index qui doivent être ajoutés pour améliorer les performances et rarement utilisée index. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Fournit des informations détaillées sur les requêtes et les index que vous devez surveiller. Toutefois, le contrôle en permanence et la base de données est une tâche difficile et fastidieuse, en particulier lors du traitement de nombreuses bases de données. La gestion d’un très grand nombre de bases de données peut s’avérer impossible de faire de façon efficace. Au lieu de surveillance et de régler votre base de données manuellement, vous pouvez envisager de déléguer certaines de la surveillance et réglage des actions à [!INCLUDE[ssde_md](../../includes/ssde_md.md)] à l’aide de la fonctionnalité de réglage automatique.
+Une des principales tâches d’administration de base de données classique est analyse la charge de travail, en identifiant critiques [!INCLUDE[tsql_md](../../includes/tsql-md.md)] les requêtes, les index qui doivent être ajoutés pour améliorer les performances et rarement utilisée index. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Fournit des informations détaillées sur les requêtes et les index que vous devez surveiller. Toutefois, le contrôle en permanence et la base de données est une tâche difficile et fastidieuse, en particulier lors du traitement de nombreuses bases de données. La gestion d’un très grand nombre de bases de données peut s’avérer impossible de faire de façon efficace. Au lieu de surveillance et de régler votre base de données manuellement, vous pouvez envisager de déléguer certaines de la surveillance et réglage des actions à [!INCLUDE[ssde_md](../../includes/ssde_md.md)] à l’aide de la fonctionnalité de réglage automatique.
 
 ### <a name="how-does-automatic-tuning-works"></a>En quoi le fonctionnement du réglage automatique ?
 
@@ -58,7 +58,7 @@ Correction du plan automatique est une fonctionnalité de réglage automatique i
 
 ### <a name="what-is-sql-plan-choice-regression"></a>Quelle est la régression de choix de plan SQL ?
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] peut utiliser différents plans SQL pour exécuter le [!INCLUDE[tsql_md](../../includes/tsql_md.md)] requêtes. Plans de requête varient selon les statistiques, les index et les autres facteurs. Le plan optimal qui doit être utilisé pour exécuter certaines [!INCLUDE[tsql_md](../../includes/tsql_md.md)] requête peut être modifiée au fil du temps. Dans certains cas, le nouveau plan peut ne pas être une meilleure que la précédente, et le nouveau plan peut entraîner une baisse des performances.
+[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] peut utiliser différents plans SQL pour exécuter le [!INCLUDE[tsql_md](../../includes/tsql-md.md)] requêtes. Plans de requête varient selon les statistiques, les index et les autres facteurs. Le plan optimal qui doit être utilisé pour exécuter certaines [!INCLUDE[tsql_md](../../includes/tsql-md.md)] requête peut être modifiée au fil du temps. Dans certains cas, le nouveau plan peut ne pas être une meilleure que la précédente, et le nouveau plan peut entraîner une baisse des performances.
 
  ![Régression de choix de plan SQL](media/plan-choice-regression.png "régression de choix de plan SQL") 
 
@@ -94,7 +94,7 @@ Plans forcés manuellement ne doivent pas être forcées indéfiniment, étant d
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit toutes les vues nécessaires et les procédures requises pour surveiller les performances et résoudre les problèmes dans le Store de la requête.
 
-Dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], vous pouvez rechercher les régressions de choix de plan à l’aide de vues de système de Store de la requête. Dans [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte et montre les régressions de choix de plan potentiels et les actions recommandées qui doivent être appliquées dans le [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) vue. La vue affiche des informations sur le problème, l’importance du problème et des détails tels que la requête identifiée, l’ID du plan régressé, l’ID du plan qui a été utilisé comme base de référence pour la comparaison et le [!INCLUDE[tsql_md](../../includes/tsql_md.md)] instruction qui peut être exécutée pour corriger le problème.
+Dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], vous pouvez rechercher les régressions de choix de plan à l’aide de vues de système de Store de la requête. Dans [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte et montre les régressions de choix de plan potentiels et les actions recommandées qui doivent être appliquées dans le [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) vue. La vue affiche des informations sur le problème, l’importance du problème et des détails tels que la requête identifiée, l’ID du plan régressé, l’ID du plan qui a été utilisé comme base de référence pour la comparaison et le [!INCLUDE[tsql_md](../../includes/tsql-md.md)] instruction qui peut être exécutée pour corriger le problème.
 
 | Type | description | DATETIME | score | détails | … |
 | --- | --- | --- | --- | --- | --- |
@@ -106,7 +106,7 @@ Certaines colonnes de cette vue sont décrits dans la liste suivante :
  - Description qui contient des informations pourquoi [!INCLUDE[ssde_md](../../includes/ssde_md.md)] pense que ce changement de plan est une régression des performances potentielles.
  - Date et heure de la régression potentielle est détectée.
  - Score de cette recommandation. 
- - Pour plus d’informations sur les problèmes tels que l’ID du plan détecté, ID du plan régressé, ID du plan qui doit être forcé pour résoudre le problème, [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script qui peut-être être appliquée pour résoudre le problème, etc. Sont stockés les détails [au format JSON](../../relational-databases/json/index.md).
+ - Pour plus d’informations sur les problèmes tels que l’ID du plan détecté, ID du plan régressé, ID du plan qui doit être forcé pour résoudre le problème, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script qui peut-être être appliquée pour résoudre le problème, etc. Sont stockés les détails [au format JSON](../../relational-databases/json/index.md).
 
 Utilisez la requête suivante pour obtenir un script qui résout le problème et des informations supplémentaires sur l’estimation bénéficiez :
 
