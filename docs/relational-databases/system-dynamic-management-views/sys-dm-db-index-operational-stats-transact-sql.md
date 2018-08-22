@@ -24,15 +24,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e112d94a65a92750c7a6c2652298aa1ca0bf1938
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 04fd27011957e6c3d1f52810e7ca416239871906
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543309"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392926"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retourne les e/s de bas niveau en cours, verrouillage, activité d’accès et méthode pour chaque partition d’une table ou un index dans la base de données.    
     
@@ -84,7 +84,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>Table retournée    
     
-|Nom de colonne|Type de données|Description|    
+|Nom de colonne|Type de données| Description|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|ID de la base de données.|    
 |**object_id**|**Int**|ID de la table ou de la vue.|    

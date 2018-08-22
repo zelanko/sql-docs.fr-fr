@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7beabaaf63194cc699c3711a87dd1e59d244c068
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0a83ac3429a3012269a35c64ba5fdcbec18b2d4c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981331"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395723"
 ---
-# <a name="datasources-object-tmsl"></a>Sources de données, objet (TMSL)
+# <a name="datasources-object-tmsl"></a>DataSources, objet (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Définit une connexion à une source de données utilisée par le modèle soit lors de l’importation pour ajouter des données au modèle, ou dans les requêtes directes via le mode DirectQuery.  Modèles en mode DirectQuery peuvent posséder une seule **DataSource** objet.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "38981331"
  Type de DataSource. À l’heure actuelle, la seule valeur valide est fournisseur (1) - chaîne de connexion normale.  
   
  connectionString  
- La chaîne de connexion qui spécifie le serveur et la base de données au minimum, mais qui peut également inclure d’autres propriétés prises en charge par le SGBDR externe, tel qu’un compte d’utilisateur ou le fournisseur de données. Cette valeur est requise. Consultez [classe SqlConnectionStringBuilder](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx) pour plus d’informations sur SQL Server les propriétés de chaîne de connexion de base de données.  
+ La chaîne de connexion qui spécifie le serveur et la base de données au minimum, mais qui peut également inclure d’autres propriétés prises en charge par le SGBDR externe, tel qu’un compte d’utilisateur ou le fournisseur de données. Cette valeur est requise. Consultez [classe SqlConnectionStringBuilder](/dotnet/framework/data/adonet/connection-string-syntax) pour plus d’informations sur SQL Server les propriétés de chaîne de connexion de base de données.  
   
  impersonationMode  
  Spécifie si Analysis Services doivent emprunter l’identité de l’utilisateur qui demande la requête. Cette propriété est une valeur numérique qui spécifie les informations d’identification à utiliser pour l’emprunt d’identité. Les valeurs d'énumération sont les suivantes :  

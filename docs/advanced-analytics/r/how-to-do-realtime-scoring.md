@@ -1,32 +1,30 @@
 ---
-title: Comment effectuer le calcul de score en temps réel ou la notation native dans SQL Server Machine Learning | Microsoft Docs
+title: Comment effectuer la notation en temps réel ou la notation native dans SQL Server Machine Learning | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 265a40d01be772b36ce7e49d06aeef8d3f5d81e5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dfea308f268d666ce070c21a7dd9afa513f95406
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085851"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40395319"
 ---
-# <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Comment effectuer le calcul de score en temps réel ou la notation native dans SQL Server
+# <a name="how-to-perform-real-time-scoring-or-native-scoring-in-sql-server"></a>Comment effectuer la notation en temps réel ou la notation native dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article fournit des instructions et des exemples de code pour l’exécution de la notation en temps réel et les fonctionnalités de calcul de score natives dans SQL Server 2017 et SQL Server 2016. La notation en temps réel et de notation native vise à améliorer les performances des opérations de calcul de score par petits lots.
+Cet article explique deux approches dans SQL Server pour prévoir les résultats en temps quasi réel à l’aide de modèles préentraînés écrites en R. Les scores en temps réel et notation native sont conçus pour vous permettent d’utiliser un modèle d’apprentissage sans devoir installer R. Étant donné un modèle préentraîné dans un format compatible - enregistré dans une base de données SQL Server - vous pouvez utiliser des techniques d’accès aux données standard pour générer rapidement des scores de prédiction sur les nouvelles entrées.
 
-Calcul de score en temps réel et de notation native sont conçus pour vous permettent d’utiliser un modèle d’apprentissage sans devoir installer R. Il vous suffit de faire est d’obtenir un modèle préformé dans un format compatible et l’enregistrer dans une base de données SQL Server.
-
-## <a name="choosing-a-scoring-method"></a>Choix d’une méthode de notation
+## <a name="choose-a-scoring-method"></a>Choisissez une méthode de notation
 
 Les options suivantes sont prises en charge pour la prédiction par lot rapide :
 
-+ **Notation native**: la fonction PREDICT de T-SQL dans SQL Server 2017
-+ **Calcul de score en temps réel**: à l’aide de la procédure stockée\_rxPredict de procédure stockée dans SQL Server 2016 ou SQL Server 2017.
++ **Notation native**: la fonction PREDICT de T-SQL dans SQL Server 2017 Windows, SQL Server 2017 Linux et Azure SQL Database.
++ **Calcul de score en temps réel**: à l’aide de la procédure stockée\_rxPredict de procédure stockée dans SQL Server 2016 ou SQL Server 2017 (Windows uniquement).
 
 > [!NOTE]
 > Utilisation de la fonction PREDICT est recommandée dans SQL Server 2017.
@@ -168,16 +166,16 @@ Si vous obtenez l’erreur, « erreur s’est produite pendant l’exécution d
 > [!NOTE]
 > Étant donné que les colonnes et les valeurs retournées par **PREDICT** peut varier selon le type de modèle, vous devez définir le schéma des données retournées à l’aide un **WITH** clause.
 
-## <a name="realtime-scoring-with-sprxpredict"></a>En temps réel de notation avec sp_rxPredict
+## <a name="real-time-scoring-with-sprxpredict"></a>Notation avec sp_rxPredict en temps réel
 
 Cette section décrit les étapes requises pour configurer **en temps réel** prédiction et fournit un exemple montrant comment appeler la fonction à partir de T-SQL.
 
-### <a name ="bkmk_enableRtScoring"></a> Étape 1. Activer la procédure de notation en temps réel
+### <a name ="bkmk_enableRtScoring"></a> Étape 1. Activer la procédure de calcul de score en temps réel
 
 Vous devez activer cette fonctionnalité pour chaque base de données que vous souhaitez utiliser pour calculer les scores. L’administrateur du serveur doit exécuter l’utilitaire de ligne de commande, RegisterRExt.exe, qui est inclus dans le package RevoScaleR.
 
 > [!NOTE]
-> Dans l’ordre de score pour fonctionner et en temps réel, les fonctionnalités du CLR de SQL doit être activé dans l’instance ; en outre, la base de données doit être marquée comme digne de confiance. Lorsque vous exécutez le script, ces actions sont effectuées pour vous. Toutefois, prendre en compte les implications de sécurité supplémentaires avant de faire cela !
+> Pour calculer les scores en temps réel pour fonctionner, les fonctionnalités SQL CLR doit être activés dans l’instance ; en outre, la base de données doit être marquée comme digne de confiance. Lorsque vous exécutez le script, ces actions sont effectuées pour vous. Toutefois, prendre en compte les implications de sécurité supplémentaires avant de faire cela !
 
 1. Ouvrez une invite de commandes avec élévation de privilèges et accédez au dossier où se trouve RegisterRExt.exe. Le chemin d’accès suivant peut être utilisé dans une installation par défaut :
     
@@ -236,15 +234,17 @@ EXEC sp_rxPredict
 > 
 > Par conséquent, vous devrez peut-être filtrer les types non pris en charge dans vos données d’entrée avant de l’utiliser pour calculer les scores en temps réel.
 > 
-> Pour plus d’informations sur les types SQL correspondants, consultez [le mappage de Type SQL-CLR](https://msdn.microsoft.com/library/bb386947.aspx) ou [mappage des données de paramètre CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
+> Pour plus d’informations sur les types SQL correspondants, consultez [le mappage de Type SQL-CLR](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) ou [mappage des données de paramètre CLR](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
 
-## <a name="disable-realtime-scoring"></a>Désactiver le calcul de score en temps réel
+## <a name="disable-real-time-scoring"></a>Désactiver le calcul de score en temps réel
 
-Pour désactiver la fonctionnalité de calcul de score en temps réel, ouvrez une invite de commandes avec élévation de privilèges et exécutez la commande suivante : `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
+Pour désactiver les fonctionnalités de calcul de score en temps réel, ouvrez une invite de commandes avec élévation de privilèges et exécutez la commande suivante : `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>En temps réel de la notation dans Microsoft R Server ou Machine Learning Server
+## <a name="real-time-scoring-in-other-microsoft-product"></a>Notation dans les autres produits Microsoft en temps réel
 
-Machine Learning Server prend en charge distribuée en temps réel à partir de modèles publiés comme un service web de notation. Pour plus d’informations, consultez ces articles :
+Si vous utilisez un serveur autonome ou un composant Microsoft Machine Learning Server au lieu d’analytique en base de données de SQL Server, vous disposez d’autres options en plus des procédures stockées et fonctions T-SQL pour générer des prédictions.
+
+Le serveur autonome et le Machine Learning Server prennent en charge le concept d’un *service web* pour le déploiement de code. Vous pouvez les regrouper R ou Python préformés de modèle comme un service web, appelé au moment de l’exécution pour évaluer les nouvelles entrées de données. Pour plus d’informations, consultez ces articles :
 
 + [Quels sont les services web dans Machine Learning Server ?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [Nouveautés d’Opérationnalisation ?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)

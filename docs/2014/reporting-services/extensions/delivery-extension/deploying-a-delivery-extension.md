@@ -19,12 +19,12 @@ caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 653369ef20b2febbf90c34e059c9105cdfeaafbf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 112fd1263b0dce321093a271964173e924c703d2
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194879"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392509"
 ---
 # <a name="deploying-a-delivery-extension"></a>Déploiement d'une extension de remise
   Les extensions de remise fournissent leurs informations de configuration sous la forme d'un fichier de configuration XML. Le fichier XML est conforme au schéma XML défini pour les extensions de remise. Les extensions de remise fournissent l'infrastructure nécessaire pour définir et modifier le fichier de configuration.  
@@ -38,7 +38,7 @@ ms.locfileid: "37194879"
   
  Le tableau suivant décrit les attributs de l'élément `Extension` pour les extensions de remise.  
   
-|Attribute|Description|  
+|Attribute| Description|  
 |---------------|-----------------|  
 |`Name`|Nom unique de l'extension (par exemple, « Messagerie électronique du serveur de rapports » pour l'extension de remise par messagerie ou « Partage de fichiers du serveur de rapports » pour l'extension de remise par partage de fichiers). La longueur maximale de l'attribut `Name` s'élève à 255 caractères. Le nom doit être unique parmi toutes les entrées de la `Extension` élément d’un fichier de configuration. Si un nom existe en double, le serveur de rapports retourne une erreur.|  
 |`Type`|Liste séparée par des virgules qui inclut l'espace de noms complet, ainsi que le nom de l'assembly.|  
@@ -91,7 +91,7 @@ ms.locfileid: "37194879"
     </CodeGroup>  
     ```  
   
-     L'appartenance URL n'est qu'une des nombreuses conditions d'appartenance que vous pouvez sélectionner pour l'extension de remise. Pour plus d’informations sur la sécurité d’accès du code dans [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], consultez [Développement sécurisé &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
+     L'appartenance URL n'est qu'une des nombreuses conditions d'appartenance que vous pouvez sélectionner pour l'extension de remise. Pour plus d’informations sur la sécurité d’accès du code dans [!INCLUDE[ssRS](../../../includes/ssrs.md)], consultez [Développement sécurisé &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
   
 ## <a name="deploying-the-extension-to-report-manager"></a>Déploiement de l'extension dans le Gestionnaire de rapports  
  Si votre extension de remise implémente l'interface <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl>, votre extension de remise peut être utilisée avec la page d'abonnement du Gestionnaire de rapports. Pour que l'interface utilisateur d'abonnement soit disponible, vous devez déployer votre extension dans le Gestionnaire de rapports.  
@@ -138,7 +138,7 @@ ms.locfileid: "37194879"
     </CodeGroup>  
     ```  
   
-     L'appartenance URL n'est qu'une des nombreuses conditions d'appartenance que vous pouvez sélectionner pour l'extension de remise. Pour plus d’informations sur la sécurité d’accès du code dans [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], consultez [Développement sécurisé &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
+     L'appartenance URL n'est qu'une des nombreuses conditions d'appartenance que vous pouvez sélectionner pour l'extension de remise. Pour plus d’informations sur la sécurité d’accès du code dans [!INCLUDE[ssRS](../../../includes/ssrs.md)], consultez [Développement sécurisé &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
   
 ## <a name="verifying-the-deployment"></a>Vérification du déploiement  
  Vous pouvez vérifier que votre extension de remise a été correctement déployée sur le serveur de rapports en utilisant la méthode <xref:ReportService2010.ReportingService2010.ListExtensions%2A> du service Web. Vous pouvez également ouvrir le Gestionnaire de rapports et vérifier que votre extension est effectivement répertoriée dans la liste des extensions de remise disponibles pour un abonnement. Pour plus d’informations sur le Gestionnaire de rapports et abonnements, consultez [abonnements et remises &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  

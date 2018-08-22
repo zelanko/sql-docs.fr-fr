@@ -1,5 +1,5 @@
 ---
-title: sp_help_category (Transact-SQL) | Documents Microsoft
+title: sp_help_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e131d1152c3deb2debf78a59686365b85953530
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a84cde301cf3c3db39f8df1999b9e4c39416c324
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254881"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393673"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +48,18 @@ sp_help_category [ [ @class = ] 'class' ]
   
 ## <a name="arguments"></a>Arguments  
  [  **@class=**] **'***classe***'**  
- Classe faisant l'objet d'une demande d'informations. *classe* est **varchar(8)**, avec la valeur par défaut **travail**. *classe* peut prendre l’une des valeurs suivantes.  
+ Classe faisant l'objet d'une demande d'informations. *classe* est **varchar(8)**, avec une valeur par défaut **travail**. *classe* peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**JOB**|Fournit des informations sur une catégorie de travaux.|  
 |**ALERTE**|Fournit des informations sur une catégorie d'alertes.|  
-|**(OPÉRATEUR)**|Fournit des informations sur une catégorie d'opérateurs.|  
+|**OPÉRATEUR**|Fournit des informations sur une catégorie d'opérateurs.|  
   
  [  **@type=** ] **'***type***'**  
  Type de catégorie faisant l'objet d'une demande d'informations. *type* est **varchar(12)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**LOCAL**|Catégorie de travaux locale.|  
 |**MULTI-SERVEUR**|Catégorie de travaux multiserveur.|  
@@ -69,7 +69,7 @@ sp_help_category [ [ @class = ] 'class' ]
  Nom de la catégorie faisant l'objet d'une demande d'informations. *nom* est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@suffix=** ] *suffixe*  
- Spécifie si le **category_type** colonne du jeu de résultats est un identificateur ou un nom. *suffixe* est **bits**, avec une valeur par défaut **0**. **1** montre la **category_type** en tant que nom, et **0** indique qu’il a un ID.  
+ Spécifie si le **category_type** colonne du jeu de résultats est un ID ou un nom. *suffixe* est **bits**, avec une valeur par défaut **0**. **1** montre le **category_type** en tant que nom, et **0** indique qu’il a un ID.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -77,17 +77,17 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="result-sets"></a>Jeux de résultats  
  Lorsque **@suffix** est **0**, **sp_help_category** retourne le jeu de résultats suivant :  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**category_id**|**int**|ID de la catégorie|  
+|**category_id**|**Int**|ID de la catégorie|  
 |**category_type**|**tinyint**|Type de catégorie :<br /><br /> **1** = local<br /><br /> **2** = multiserveur<br /><br /> **3** = none|  
 |**nom**|**sysname**|Nom de la catégorie|  
   
  Lorsque **@suffix** est **1**, **sp_help_category** retourne le jeu de résultats suivant :  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**category_id**|**int**|ID de la catégorie|  
+|**category_id**|**Int**|ID de la catégorie|  
 |**category_type**|**sysname**|Type de catégorie : Un des **LOCAL**, **multiserveur**, ou **NONE**|  
 |**nom**|**sysname**|Nom de la catégorie|  
   
@@ -96,7 +96,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
  Si aucun paramètre n'est spécifié, le jeu de résultats fournit des informations sur toutes les catégories de travaux.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -105,7 +105,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemples  
   

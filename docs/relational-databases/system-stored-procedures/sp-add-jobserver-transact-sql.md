@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobserver (Transact-SQL) | Documents Microsoft
+title: sp_add_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.openlocfilehash: c2bcb3132902669a6ea544b9962942ed3adadc4a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262313"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396524"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [  **@job_id =** ] *job_id*  
  Numéro d'identification du travail. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [  **@job_name =** ] **'***nom_travail***'**  
  Nom du travail. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
+>  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@server_name =** ] **'***server***'**  
- Nom du serveur vers lequel envoyer le travail. *serveur* est **nvarchar (30)**, avec une valeur par défaut de l’argument '. *serveur* peut être **(LOCAL)** pour un serveur local, ou le nom du serveur cible existant.  
+ [  **@server_name =** ] **'***server***»**  
+ Nom du serveur vers lequel envoyer le travail. *serveur* est **nvarchar (30)**, avec une valeur par défaut de l’argument '. *serveur* peut être **(LOCAL)** pour un serveur local, ou le nom d’un serveur cible existant.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -68,7 +68,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -77,7 +77,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_jobserver** pour les travaux qui impliquent plusieurs serveurs.  
   
@@ -87,7 +87,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  L'exemple suivant affecte le travail `NightlyBackups` pour une exécution sur le serveur local.  
   
 > [!NOTE]  
->  Cet exemple suppose que la `NightlyBackups` travail existe déjà.  
+>  Cet exemple suppose que le `NightlyBackups` travail existe déjà.  
   
 ```  
 USE msdb ;  

@@ -1,5 +1,5 @@
 ---
-title: sp_notify_operator (Transact-SQL) | Documents Microsoft
+title: sp_notify_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b07c05c67f0b4e199ad096d8f2a5f12951e46178
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c99d4ca8eb182f8e4873acf97aec4ca5c101ce84
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261585"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392778"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_notify_operator
 > **Remarque :** une adresse de messagerie doit être définie pour l’opérateur qu’il puisse recevoir des messages.  
   
  [  **@subject=** ] **'***sujet***'**  
- L’objet du message électronique. *objet* est **nvarchar (256)** sans valeur par défaut.  
+ Le sujet du message électronique. *objet* est **nvarchar (256)** sans valeur par défaut.  
   
  [  **@body=** ] **'***message***'**  
  Corps du message électronique. *message* est **nvarchar (max)** sans valeur par défaut.  
@@ -73,7 +73,7 @@ sp_notify_operator
  Nom d'un fichier à joindre au message électronique. *pièce jointe* est **nvarchar (512)**, sans valeur par défaut.  
   
  [  **@mail_database=** ] **'***mail_host_database***'**  
- Spécifie le nom de la base de données hôte de courrier. *mail_host_database* est **nvarchar (128)**. Si aucun *mail_host_database* est spécifié, le **msdb** base de données est utilisée par défaut.  
+ Spécifie le nom de la base de données hôte de courrier. *mail_host_database* est **nvarchar (128)**. Si aucun *mail_host_database* est spécifié, le **msdb** base de données est utilisé par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -83,7 +83,7 @@ sp_notify_operator
   
  La messagerie de base de données et une base de données hôte de courrier doivent être configurées avant qu'une notification puisse être envoyée à un opérateur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -92,7 +92,7 @@ sp_notify_operator
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant envoie une notification par courrier électronique à l'opérateur `François Ajenstat` à l'aide du profil de messagerie de la base de données `AdventureWorks Administrator`. Le message électronique a pour objet `Test Notification`. Le message électronique contient la phrase « This is a test of notification via e-mail. ».  
@@ -110,7 +110,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de l’Agent SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Procédures stockées de SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  

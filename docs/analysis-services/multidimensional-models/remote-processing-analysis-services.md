@@ -1,5 +1,5 @@
 ---
-title: À distance du traitement (Analysis Services) | Documents Microsoft
+title: À distance de traitement (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,29 +9,29 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e7afa72ef5a2f3ad9c27f0d8586b622c033be73
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4860a890ba0443b66f9568edd05257eff7ad70b2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022306"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395734"
 ---
 # <a name="remote-processing-analysis-services"></a>Traitement à distance (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Vous pouvez exécuter un traitement planifié ou sans assistance sur une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La demande de traitement proviendra d'un ordinateur, mais s'exécutera sur un autre ordinateur du même réseau.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
   
 -   Si vous exécutez différentes versions de SQL Server sur chaque ordinateur, les bibliothèques clientes doivent correspondre à la version de l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui traite le modèle.
   
 -   Sur le serveur distant, l'option **Autoriser les connexions à distance à cet ordinateur** doit être activée, et le compte qui émet la demande de traitement doit être répertorié en tant qu'utilisateur autorisé.  
   
--   Les règles du Pare-feu Windows doivent être configurées pour autoriser les connexions entrantes à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vérifiez que vous pouvez vous connecter à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distante à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Consultez [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Les règles du Pare-feu Windows doivent être configurées pour autoriser les connexions entrantes à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vérifiez que vous pouvez vous connecter à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distante à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Consultez [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   Résolvez les erreurs de traitement local existantes avant de tenter le traitement à distance. Quand le traitement de la demande est local, vérifiez que les données peuvent être récupérées à partir de la source de données relationnelles externe. Pour obtenir des instructions sur la spécification des informations d’identification utilisées pour récupérer des données, consultez [Définir les options d’emprunt d’identité &#40;SSAS - Multidimensionnel&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).  
   
 ## <a name="on-demand-remote-processing"></a>Traitement à distance à la demande  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]accepte les demandes de traitement des comptes d’utilisateur ou une application qui ont [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] des autorisations d’administrateur. Si vous êtes administrateur, vérifiez que vous pouvez vous connecter à l'instance distante et traiter la base de données manuellement via la connexion à distance.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] accepte les demandes de traitement des comptes d'utilisateur ou d'application disposants des autorisations d'administrateur pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si vous êtes administrateur, vérifiez que vous pouvez vous connecter à l'instance distante et traiter la base de données manuellement via la connexion à distance.  
   
 1.  Sur l'ordinateur qui sera utilisé pour planifier le traitement, démarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , puis connectez-vous à l'instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distante.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "34022306"
   
  Utilisez les liens suivants pour définir les autorisations :  
   
--   [Configurer SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+-   [Configurer l'Agent SQL Server](../../ssms/agent/configure-sql-server-agent.md)  
   
--   [SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec) suggère d'autres rôles serveur fixes s'il n'est pas possible d'accorder des autorisations à **sysadmin** .  
+-   [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md) suggère d'autres rôles serveur fixes s'il n'est pas possible d'accorder des autorisations à **sysadmin** .  
   
  Après avoir configuré les autorisations du compte, passez aux étapes suivantes.  
   
@@ -91,10 +91,10 @@ ms.locfileid: "34022306"
 2.  Dans la dernière étape, modifiez le travail pour qu'il soit exécuté selon la planification de votre choix, en ajoutant toutes les alertes ou notifications nécessaires à la gestion du travail. Vous pouvez également affiner le script de traitement ou créer plusieurs étapes au sein du travail pour traiter les objets indépendamment.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Composants de SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+ [Composants SQL Server Agent](../../ssms/agent/sql-server-agent.md)   
  [Planification des tâches administratives SSAS avec SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [Le traitement par lots & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [Traitement par lots &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Le traitement des objets & #40 ; XMLA & #41 ;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [Traitement des objets &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

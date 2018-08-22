@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264875"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393197"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
   Cette rubrique présente les concepts, la configuration requise et les composants nécessaires pour utiliser le service de stockage d'objets blob Windows Azure comme destination de sauvegarde. Les fonctionnalités de sauvegarde et de restauration sont identiques ou similaires à l'utilisation de l'option DISK ou TAPE, à quelques différences près. Les différences, les exceptions notables et des exemples de code sont inclus dans cette rubrique.  
@@ -86,9 +86,9 @@ ms.locfileid: "37264875"
   
  Pour obtenir des instructions étape par étape sur la création d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informations d’identification, consultez [créer une information d’identification](#credential) exemple plus loin dans cette rubrique.  
   
- Pour plus d'informations sur les informations d'identification en général, consultez [Informations d'identification](http://msdn.microsoft.com/en-us/library/ms161950.aspx).  
+ Pour plus d’informations sur les informations d’identification en général, consultez [Informations d’identification](../security/authentication-access/credentials-database-engine.md).  
   
- Pour obtenir plus d'informations et d'autres exemples d'utilisation des informations d'identification, consultez [Créer un proxy de SQL Server Agent](http://msdn.microsoft.com/library/ms175834.aspx).  
+ Pour plus d’informations sur d’autres exemples où les informations d’identification sont utilisées, consultez [créer un Proxy de l’Agent SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Limitations  
   

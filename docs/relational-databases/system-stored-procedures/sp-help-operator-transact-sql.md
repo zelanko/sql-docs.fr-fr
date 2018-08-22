@@ -1,5 +1,5 @@
 ---
-title: sp_help_operator (Transact-SQL) | Documents Microsoft
+title: sp_help_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fc94dd72bdb96516c6cd65f1e405951cbf8ff45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2e95006d991f9a3c8380c2144c5744e2e798c34c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258793"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394897"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,33 +61,33 @@ sp_help_operator
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Numéro d'identification de l'opérateur.|  
+|**id**|**Int**|Numéro d'identification de l'opérateur.|  
 |**nom**|**sysname**|Nom de l’opérateur.|  
 |**enabled**|**tinyint**|L'opérateur est disponible pour recevoir des notifications :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
 |**email_address**|**nvarchar(100)**|Adresse de messagerie de l'opérateur.|  
-|**last_email_date**|**int**|Date de la dernière notification envoyée par courrier électronique à l'opérateur.|  
-|**last_email_time**|**int**|Heure de la dernière notification envoyée par courrier électronique à l'opérateur.|  
+|**last_email_date**|**Int**|Date de la dernière notification envoyée par courrier électronique à l'opérateur.|  
+|**last_email_time**|**Int**|Heure de la dernière notification envoyée par courrier électronique à l'opérateur.|  
 |**pager_address**|**nvarchar(100)**|Adresse de radiomessagerie de l'opérateur.|  
-|**last_pager_date**|**int**|Date de la dernière notification envoyée par radiomessagerie à l'opérateur.|  
-|**last_pager_time**|**int**|Heure de la dernière notification envoyée par radiomessagerie à l'opérateur.|  
-|**weekday_pager_start_time**|**int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie pendant la semaine.|  
-|**weekday_pager_end_time**|**int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie pendant la semaine.|  
-|**saturday_pager_start_time**|**int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le samedi.|  
-|**saturday_pager_end_time**|**int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le samedi.|  
-|**sunday_pager_start_time**|**int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le dimanche.|  
-|**sunday_pager_end_time**|**int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le dimanche.|  
-|**jours_radiomessagerie**|**tinyint**|Un masque de bits (**1** = dimanche, **64** = samedi) de jours de la semaine indiquant à quel moment l’opérateur peut recevoir des notifications par radiomessagerie.|  
+|**last_pager_date**|**Int**|Date de la dernière notification envoyée par radiomessagerie à l'opérateur.|  
+|**last_pager_time**|**Int**|Heure de la dernière notification envoyée par radiomessagerie à l'opérateur.|  
+|**weekday_pager_start_time**|**Int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie pendant la semaine.|  
+|**weekday_pager_end_time**|**Int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie pendant la semaine.|  
+|**saturday_pager_start_time**|**Int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le samedi.|  
+|**saturday_pager_end_time**|**Int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le samedi.|  
+|**sunday_pager_start_time**|**Int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le dimanche.|  
+|**sunday_pager_end_time**|**Int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le dimanche.|  
+|**jours_radiomessagerie**|**tinyint**|Un masque de bits (**1** = dimanche, **64** = samedi) de jours de la semaine qui indique quand l’opérateur est disponible pour recevoir des notifications par radiomessagerie.|  
 |**netsend_address**|**nvarchar(100)**|Adresse de l'opérateur pour les notifications envoyées par le réseau|  
-|**last_netsend_date**|**int**|Date de la dernière notification envoyée à l'opérateur via le réseau.|  
-|**last_netsend_time**|**int**|Heure de la dernière notification envoyée à l'opérateur via le réseau.|  
+|**last_netsend_date**|**Int**|Date de la dernière notification envoyée à l'opérateur via le réseau.|  
+|**last_netsend_time**|**Int**|Heure de la dernière notification envoyée à l'opérateur via le réseau.|  
 |**category_name**|**sysname**|Nom de la catégorie à laquelle appartient cet opérateur.|  
   
 ## <a name="remarks"></a>Notes  
  **sp_help_operator** doit être exécuté à partir de la **msdb** base de données.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -96,7 +96,7 @@ sp_help_operator
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple vous renseigne sur l'opérateur `François Ajenstat`.  

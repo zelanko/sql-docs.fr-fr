@@ -21,14 +21,14 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1d9e2c090c6470cb23849ae35ad5b950b1e246b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 99ab3ab7debd5542f57d9008ae83baf1deb0e2c6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979891"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392114"
 ---
-# <a name="creating-script-files-sybasetosql"></a>Création de fichiers de Script (SybaseToSQL)
+# <a name="creating-script-files-sybasetosql"></a>Création de fichiers de script (SybaseToSQL)
 La première étape avant le lancement de l’application de console SSMA consiste à créer le fichier de script et, si nécessaire de créer le fichier de la valeur de la variable et le fichier de connexion de serveur.  
   
 Le fichier de script peut être divisé en trois sections, reportages.., :  
@@ -73,7 +73,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <…All commands…>  
@@ -110,7 +110,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <migrate-data>  
@@ -143,7 +143,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -176,7 +176,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <!--synchronization-->  
@@ -187,7 +187,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </synchronize-target>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <!--data migration-->  
@@ -222,7 +222,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -275,7 +275,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <…All commands…>  
@@ -317,7 +317,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <…All commands…>  
@@ -357,7 +357,7 @@ Le fichier de script contient une séquence de commandes de flux de travail de m
   
 Par exemple, une migration de données standard d’une table spécifique dans une base de données Sybase suit la hiérarchie de : base de données -&gt;schéma -&gt;Table.  
   
-Lorsque toutes les commandes dans le fichier de script sont exécutées avec succès, l’application de console SSMA se termine et retourne le contrôle à l’utilisateur. Le contenu d’un fichier de script est plus ou moins statique avec des informations sur les variables contenues dans un [les fichiers de valeurs de Variable](http://msdn.microsoft.com/395be464-4b19-44f7-91e5-b8876d6743dc) ou, dans une section distincte du fichier de script pour les valeurs des variables.  
+Lorsque toutes les commandes dans le fichier de script sont exécutées avec succès, l’application de console SSMA se termine et retourne le contrôle à l’utilisateur. Le contenu d’un fichier de script est plus ou moins statique avec des informations sur les variables contenues dans un [les fichiers de valeurs de Variable](creating-variable-value-files-sybasetosql.md) ou, dans une section distincte du fichier de script pour les valeurs des variables.  
   
 **Exemple :**  
   

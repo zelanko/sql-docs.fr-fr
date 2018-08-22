@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
@@ -14,12 +13,12 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f8135f70466ecef4fb77a876a38823af7dd8c27d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ef00c8493ab700976e1ede1b6d6631b6d2fe8da
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312329"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392542"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensions à AdventureWorks pour présenter l'OLTP en mémoire
     
@@ -190,7 +189,7 @@ ms.locfileid: "37312329"
   
 -   *Colonnes autorisant des valeurs NULL dans l’index* : dans la table d’origine, la colonne SalesPersonID autorise les valeurs NULL, tandis que dans les nouvelles tables, la colonne n’accepte pas les valeurs NULL et a une contrainte par défaut avec la valeur (-1). Cela est dû au fait que les index des tables optimisées en mémoire ne peuvent pas avoir de colonnes autorisant des valeurs NULL dans la clé d'index ; -1 est un substitut de la valeur NULL dans ce cas.  
   
--   *Colonnes calculées[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] : les colonnes calculées SalesOrderNumber et TotalDue sont omises, car * ne prend pas en charge les colonnes calculées dans les tables optimisées en mémoire. La nouvelle vue Sales.vSalesOrderHeader_extended_inmem reflète les colonnes SalesOrderNumber et TotalDue. Par conséquent, vous pouvez utiliser cette vue si ces colonnes sont nécessaires.  
+-   *Colonnes calculées[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] : les colonnes calculées SalesOrderNumber et TotalDue sont omises, car*  ne prend pas en charge les colonnes calculées dans les tables optimisées en mémoire. La nouvelle vue Sales.vSalesOrderHeader_extended_inmem reflète les colonnes SalesOrderNumber et TotalDue. Par conséquent, vous pouvez utiliser cette vue si ces colonnes sont nécessaires.  
   
 -   *Contraintes de clé étrangère* ne sont pas pris en charge pour les tables mémoire optimisées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. En outre, SalesOrderHeader_inmem est une table très sollicitée dans l'exemple de charge de travail, et les contraintes de clé étrangère nécessitent un traitement supplémentaire pour toutes les opérations DML, avec des recherches dans les autres tables référencées dans ces contraintes. Par conséquent, on formule l'hypothèse que l'application garantit l'intégrité référentielle, et celle-ci n'est pas validée lorsque des lignes sont insérées. L'intégrité référentielle des données de cette table peut être vérifiée à l'aide de la procédure stockée dbo.usp_ValidateIntegrity, en utilisant le script suivant :  
   
@@ -746,8 +745,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**nombre**|**taille sur disque en Mo**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA| 1|128|  
-|UNDER CONSTRUCTION|DELTA| 1|8|  
+|UNDER CONSTRUCTION|DATA|1|128|  
+|UNDER CONSTRUCTION|DELTA|1|8|  
   
  Comme vous pouvez le voir, la majeure partie de l'espace est utilisé par les fichiers de données et delta précréés. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] créé au préalable une paire de fichiers (données, delta) par processeur logique. En outre, les fichiers de données ont une taille prédimensionnée de 128 Mo, et les fichiers delta de 8 Mo, afin d'optimiser l'insertion des données dans ces fichiers.  
   
@@ -792,8 +791,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**nombre**|**taille sur disque en Mo**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA| 1|128|  
-|UNDER CONSTRUCTION|DELTA| 1|8|  
+|UNDER CONSTRUCTION|DATA|1|128|  
+|UNDER CONSTRUCTION|DELTA|1|8|  
   
  Nous avons toujours 16 paires de fichiers précréés, prêtes au fur et à mesure que les points de contrôle se ferment.  
   

@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3db142c979aba9a2ac6b42782bc3d2beef8c1587
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0122769e599963658cc2f481c7273de7803505d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166310"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396532"
 ---
 # <a name="choosing-microsoft-reporting-and-analysis-tools"></a>Choix des outils d'analyse et de rapports Microsoft
   Le tableau suivant mappe les charges de travail pour l'analyse et la création de rapports de données aux outils Microsoft BI qui sont le mieux adaptés à ces charges de travail.  
@@ -40,11 +40,11 @@ ms.locfileid: "37166310"
 |Accéder à des rapports avec des appareils mobiles||||[HTML 5 (prend en charge l’affichage de fichiers dont la taille est inférieure à 10 Mo)](http://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (prend en charge l’affichage < 250 Mo)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Power BI pour application de Windows](https://support.office.com/article/Power-BI-for-Windows-app-6e4145b4-e882-4134-a89c-66e54cc5c8eb?ui=en-US&rs=en-US&ad=US)<br /><br /> [application iPad pour Power BI](http://support.powerbi.com/knowledgebase/articles/467172-get-started-with-the-ipad-app-for-power-bi-preview)||  
 |Collaborer et partager|||[Sites SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391849)|[Sites d’équipe SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391850)|[Sites Power BI](http://go.microsoft.com/fwlink/p/?LinkId=391852)||  
 |**BI d'entreprise**|Professionnel de l'informatique||||||  
-|Créer des modèles d'entreprise multidimensionnels/tabulaires||||||[Analysis Services](http://msdn.microsoft.com/library/bb522607\(v=sql.120\).aspx)|  
+|Créer des modèles d'entreprise multidimensionnels/tabulaires||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |Créer des visualisations de données ad-hoc|||[Power View pour SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391858)||||  
 |Créer des tableaux de bord|||[Tableaux de bord SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=391859)<br /><br /> [Services PerformancePoint](http://technet.microsoft.com/library/ee424392.aspx)||||  
-|Créer des rapports opérationnels||||||<sup>1</sup> [reporting Services](http://msdn.microsoft.com/library/ms159106\(v=sql.120\).aspx)|  
-|Créer des rapports personnalisés et incorporés||||||<sup>1</sup> [reporting Services](http://msdn.microsoft.com/library/ms159106\(v=sql.120\).aspx)|  
+|Créer des rapports opérationnels||||||<sup>1</sup> [reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
+|Créer des rapports personnalisés et incorporés||||||<sup>1</sup> [reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Analyse avancée**|Données scientifiques||||||  
 |Effectuer des analyses prédictives en libre-service||||||[Données des compléments d’exploration de données pour Excel](http://msdn.microsoft.com/library/dn282385\(v=sql.120\).aspx)|  
 |Utiliser des algorithmes d'exploration de données||||||[Exploration de données dans Analysis Services](http://technet.microsoft.com/library/bb510516\(v=sql.120\).aspx)|  

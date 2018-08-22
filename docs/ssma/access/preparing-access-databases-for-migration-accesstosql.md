@@ -1,5 +1,5 @@
 ---
-title: Préparation des bases de données Access de Migration (AccessToSQL) | Documents Microsoft
+title: Préparation des bases de données Access pour la Migration (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -27,35 +27,35 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: eca76e8b1a585c4d97528792cef161ef68771f7e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: dd412dee3a9265d19e255d23900125691d1a0f9a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774195"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393653"
 ---
-# <a name="preparing-access-databases-for-migration-accesstosql"></a>Préparation des bases de données Access de migration (AccessToSQL)
-Avant de migrer des bases de données Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous devez déterminer les bases de données à migrer et vous assurer que ces bases de données sont prêts pour la migration.  
+# <a name="preparing-access-databases-for-migration-accesstosql"></a>Préparation des bases de données Access pour la migration (AccessToSQL)
+Avant de migrer des bases de données Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez déterminer les bases de données à migrer et vous assurer que ces bases de données sont prêtes pour la migration.  
   
-## <a name="determining-when-to-migrate-to-sql-server"></a>Déterminer le moment auquel effectuer la migration vers SQL Server  
-Le moteur de base de données Jet, qui est utilisé en tant que le moteur de base de données pour l’accès, est une solution flexible et facile à utiliser pour la gestion des données. Toutefois, comme les bases de données plus volumineux et plus critique, de nombreux utilisateurs trouvent dont ils ont besoin d’améliorer les performances, de sécurité ou de disponibilité. Pour les applications qui nécessitent une plateforme de données plus fiable, envisagez de déplacer les bases de données sous-jacent pour les applications à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Pour plus d’informations sur le choix du moment auquel la migration, consultez la [page des informations de migration](http://go.microsoft.com/fwlink/?LinkId=68571) sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] site Web.  
+## <a name="determining-when-to-migrate-to-sql-server"></a>Détermination des cas de migrer vers SQL Server  
+Le moteur de base de données Jet, qui est utilisé en tant que le moteur de base de données pour l’accès, est une solution flexible et facile à utiliser pour la gestion des données. Toutefois, comme les bases de données deviennent plus volumineuses et plus stratégiques, de nombreux utilisateurs trouvent qu’elles nécessitent de meilleures performances, de sécurité ou de disponibilité. Pour les applications qui requièrent une plateforme de données plus robuste, envisagez de déplacer les bases de données sous-jacent pour les applications à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur le choix du moment auquel la migration, consultez le [page d’informations de migration](http://go.microsoft.com/fwlink/?LinkId=68571) sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] site Web.  
   
-Après la migration des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous pouvez continuer à utiliser l’accès à l’aide de tables liées, ou vous pouvez migrer manuellement vos applications pour [!INCLUDE[msCoName](../../includes/msconame_md.md)] code basé sur le .NET Framework qui interagit directement avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Après la migration des bases de données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez continuer à utiliser l’accès à l’aide de tables liées, ou vous pouvez migrer manuellement vos applications à [!INCLUDE[msCoName](../../includes/msconame_md.md)] code basé sur le .NET Framework qui interagit directement avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="determining-which-databases-to-migrate"></a>Déterminer les bases de données à migrer  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) pour l’accès peut trouver des bases de données Access pour vous. Vous pouvez ensuite exporter les métadonnées relatives à ces bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Pour plus d’informations sur l’exportation et d’interroger les métadonnées, consultez [exportation d’un inventaire accès](http://msdn.microsoft.com/7e1941fb-3d14-4265-aff6-c77a4026d0ed).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour l’accès puissent localiser des bases de données Access pour vous. Vous pouvez ensuite exporter les métadonnées relatives à ces bases de données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur l’exportation et d’interroger les métadonnées, consultez [exportation d’un inventaire Access](exporting-an-access-inventory-accesstosql.md).  
 
    > [!NOTE]
-   > Pas toutes les fonctionnalités d’accès et les paramètres sont pris en charge par, ou peuvent être facilement converties [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Avant de commencer la migration des bases de données, consultez [fonctionnalités accès incompatibles](http://msdn.microsoft.com/99d45b9c-e3b9-4d56-8c25-b594b887ace1).
+   > Pas toutes les fonctionnalités d’accès et les paramètres sont pris en charge par, ou peuvent être facilement converties en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avant de commencer la migration des bases de données, consultez [fonctionnalités Access incompatibles](incompatible-access-features-accesstosql.md).
   
-## <a name="preparing-for-migration"></a>Préparation de migration  
-Suivez les indications suivantes pour vous aider à préparer vos bases de données Access pour la migration vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+## <a name="preparing-for-migration"></a>Préparation pour la migration  
+Utilisez les instructions suivantes pour aider à préparer vos bases de données Access pour la migration vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="upgrading-older-access-databases"></a>La mise à niveau des bases de données Access  
-SSMA pour Access prend en charge Access 97 et versions ultérieures. Si vous avez des bases de données à partir de versions antérieures d’Access, ouvrir et enregistrer des bases de données dans Access 97 ou version ultérieure.  
+### <a name="upgrading-older-access-databases"></a>Mise à niveau les anciennes bases de données Access  
+SSMA pour Access prend en charge Access 97 et versions ultérieures. Si vous avez des bases de données à partir de versions antérieures d’Access, ouvrir et enregistrer les bases de données dans Access 97 ou version ultérieure.  
   
-### <a name="removing-workgroup-protection"></a>Suppression de la protection du groupe de travail  
-SSMA ne peut pas migrer des bases de données qui utilisent la protection du groupe de travail. Pour supprimer la protection du groupe de travail à partir d’une base de données Access, procédez comme suit :  
+### <a name="removing-workgroup-protection"></a>Suppression de la protection de groupe de travail  
+SSMA ne peut pas migrer des bases de données qui utilisent la protection de groupe de travail. Pour supprimer la protection de groupe de travail à partir d’une base de données Access, procédez comme suit :  
   
 1.  Copiez le fichier de base de données Access vers un autre emplacement.  
   
@@ -63,24 +63,24 @@ SSMA ne peut pas migrer des bases de données qui utilisent la protection du gro
   
 3.  Sur le **outils** menu, pointez sur **sécurité**, puis sélectionnez **autorisations d’accès**.  
   
-4.  Sélectionnez le **utilisateurs** option, sélectionnez le **Admin** utilisateur, puis assurez-vous que le **administrer** est autorisé.  
+4.  Sélectionnez le **utilisateurs** option, sélectionnez le **administrateur** utilisateur, puis assurez-vous que le **administrer** cette autorisation est activée.  
   
-5.  Sélectionnez le **groupes** option, sélectionnez le **utilisateurs** de groupe et vérifiez que le **administrer** est autorisé.  
+5.  Sélectionnez le **groupes** option, sélectionnez le **utilisateurs** de groupe, puis assurez-vous que le **administrer** cette autorisation est activée.  
   
 6.  Cliquez sur **OK**, puis, dans le **fichier** menu, cliquez sur **Exit**.  
   
-Vous pouvez maintenant utiliser SSMA pour migrer la base de données copiée. Après avoir chargé le schéma [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous pouvez sécuriser manuellement la base de données sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Vous pouvez maintenant utiliser SSMA pour migrer la base de données copiée. Après avoir chargé le schéma dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez sécuriser manuellement la base de données sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="backing-up-databases"></a>Sauvegarde des bases de données  
-Avant de migrer vos bases de données Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous devez sauvegarder les accès aux bases de données que vous migrerez, ainsi que les [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dans lequel vous effectuez la migration des bases de données accèdent aux objets et des données.  
+Avant de migrer vos bases de données Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez sauvegarder les accès aux bases de données que vous effectuez la migration, ainsi que les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans lequel vous allez migrer les bases de données accèdent aux objets et données.  
   
 Pour sauvegarder une base de données Access, sur le **outils** menu, pointez sur **utilitaires de base de données**, puis sélectionnez **sauvegarder la base de données**.  
   
-Pour plus d’informations sur la façon de sauvegarder [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] bases de données, consultez « sauvegarde et restauration des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]» dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] la documentation en ligne.  
+Pour plus d’informations sur la façon de sauvegarder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données, consultez « sauvegarde et restauration des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]» dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
   
 ### <a name="documenting-databases"></a>Documentation des bases de données  
-Vous souhaiterez également les propriétés, telles que les listes d’objets de base de données, les tailles des fichiers et les autorisations, de vos bases de données Access de document. Pour générer cette documentation dans Access, sur le **outils** menu, pointez sur **analyser**, puis cliquez sur **documentées**.  
+Vous souhaiterez également les propriétés, telles que les listes d’objets de base de données, les tailles de fichier et les autorisations, vos bases de données d’accès de document. Pour générer cette documentation dans Access, sur le **outils** menu, pointez sur **analyser**, puis cliquez sur **documentées**.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration des bases de données de l’accès à SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Liaison des Applications d’accès à SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)
+[Migration bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Liaison d’Applications Access vers SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

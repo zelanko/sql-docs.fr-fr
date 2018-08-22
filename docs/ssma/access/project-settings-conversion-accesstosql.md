@@ -1,5 +1,5 @@
 ---
-title: Paramètres (Conversion) (AccessToSQL) du projet | Documents Microsoft
+title: Paramètres (Conversion) (AccessToSQL) du projet | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,101 +19,101 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0d910b3d32f9ff05571fd965d29ac3028cc43144
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8afec0f77dcb47a4b201ddf86dfbde5d58ec1d20
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774565"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392301"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Paramètres du projet (Conversion) (AccessToSQL)
-Les paramètres de projet de Conversion vous permettent de configurer la façon dont les objets sont convertis à partir des objets de base de données Access à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou des objets de base de données SQL Azure.  
+Les paramètres de projet de Conversion vous permettent de configurer le mode de conversion des objets à partir d’objets de base de données Access à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de base de données SQL Azure.  
   
-Le volet de la Conversion est disponible dans le **les paramètres de projet** et **les paramètres de projet par défaut** boîtes de dialogue.  
+Le volet de la Conversion est disponible dans le **paramètres du projet** et **par défaut des paramètres de projet** boîtes de dialogue.  
   
--   Utilisez le **les paramètres de projet** boîte de dialogue pour définir les options de configuration pour le projet actuel. Pour accéder aux paramètres de conversion, sur le **outils** menu, sélectionnez **les paramètres de projet**, cliquez sur **général** en bas du volet gauche, puis **Conversion**.  
+-   Utilisez le **paramètres du projet** boîte de dialogue pour définir les options de configuration pour le projet actuel. Pour accéder aux paramètres de conversion, sur le **outils** menu, sélectionnez **paramètres du projet**, cliquez sur **général** en bas du volet gauche, puis sélectionnez  **Conversion**.  
   
--   Utilisez le **les paramètres de projet par défaut** boîte de dialogue pour définir les options de configuration pour tous les projets. Pour accéder aux paramètres de conversion, sur le **outils** menu, sélectionnez **les paramètres de projet par défaut**, sélectionnez le type de projet de migration pour lequel les paramètres sont requis pour être affichés / a été remplacée par **Version cible de la Migration** liste déroulante, cliquez sur **général** en bas du volet gauche, puis **Conversion**.  
+-   Utilisez le **par défaut des paramètres de projet** boîte de dialogue pour définir les options de configuration pour tous les projets. Pour accéder aux paramètres de conversion, sur le **outils** menu, sélectionnez **par défaut des paramètres de projet**, sélectionnez le type de projet de migration pour lequel les paramètres sont requis pour être affiché / a été remplacée par  **Version cible de migration** liste déroulante, cliquez sur **général** en bas du volet gauche, puis sélectionnez **Conversion**.  
   
 ## <a name="options"></a>Options  
 **Ajouter une clé primaire**  
-Crée une nouvelle clé primaire dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou une table SQL Azure si une table Access n’a aucune clé primaire ou un index unique.  
+Crée une nouvelle clé primaire dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une table SQL Azure si une table Access n’a aucune clé primaire ou un index unique.  
   
--   **Mode par défaut**: False  
+-   **Par défaut en Mode**: False  
   
--   **Mode optimisé**: False  
+-   **Mode optimiste**: False  
   
 -   **Mode plein**: True  
   
-Lorsqu’il est connecté à SQL Azure, il est par défaut la valeur True. **Ajouter des colonnes timestamp**  
+Lorsque connecté à SQL Azure, il est par défaut la valeur True. **Ajouter des colonnes timestamp**  
 Spécifie si SSMA doit créer une valeur d’horodatage si nécessaire.  
   
--   **Mode par défaut**: permettent de SSMA décider  
+-   **Par défaut en Mode**: SSMA permettent de décider  
   
--   **Mode optimisé**: jamais  
+-   **Mode optimiste**: jamais  
   
--   **Mode plein**: permettent de SSMA décider  
+-   **Mode plein**: SSMA permettent de décider  
   
-**Inclure un rapport d’évaluation de données avec les rapports d’évaluation de conversion**  
+**Inclure un rapport d’évaluation de données avec la conversion des rapports d’évaluation**  
 Inclut une évaluation des données dans le rapport d’évaluation.  
   
--   **Mode par défaut**: True  
+-   **Par défaut en Mode**: True  
   
--   **Mode optimisé**: False  
+-   **Mode optimiste**: False  
   
 -   **Mode plein**: True  
   
-**Type de message lorsqu’une clé primaire contient des colonnes acceptant les valeurs null**  
-Spécifie le type de message (avertissement, erreur ou rien) SSMA affiche dans le volet de sortie lorsqu’il détecte des clés primaires avec des colonnes acceptant les valeurs NULL.  
+**Type de message lorsqu’une clé primaire comprend des colonnes de type nullable**  
+Spécifie le type de message (avertissement, erreur ou rien) indiquant SSMA dans le volet de sortie lorsqu’il détecte des clés primaires avec les colonnes de type nullable.  
   
--   **Mode par défaut**: avertissement  
+-   **Par défaut en Mode**: avertissement  
   
--   **Mode optimisé**: aucun message  
+-   **Mode optimiste**: aucun message  
   
 -   **Mode plein**: erreur  
   
 **Type de message lorsque les colonnes clés étrangères sont de tailles différentes**  
-Spécifie le type de message (avertissement, erreur ou rien) SSMA affiche dans le volet de sortie lorsqu’il trouve une clé étrangère incorrecte de texte.  
+Spécifie le type de message (avertissement, erreur ou rien) indiquant SSMA dans le volet de sortie lorsqu’il détecte une clé étrangère incorrecte de texte.  
   
--   **Mode par défaut**: avertissement  
+-   **Par défaut en Mode**: avertissement  
   
--   **Mode optimisé**: aucun message  
+-   **Mode optimiste**: aucun message  
   
 -   **Mode plein**: erreur  
   
 **Type de message lorsque les colonnes Mémo sont indexées.**  
-Spécifie le type de message (avertissement, erreur ou rien) SSMA affiche dans le volet de sortie lorsqu’il détecte un index contenant un **avoir** colonne.  
+Spécifie le type de message (avertissement, erreur ou rien) indiquant SSMA dans le volet de sortie lorsqu’il détecte un index qui contient un **mémo** colonne.  
   
--   **Mode par défaut**: avertissement  
+-   **Par défaut en Mode**: avertissement  
   
--   **Mode optimisé**: aucun message  
+-   **Mode optimiste**: aucun message  
   
 -   **Mode plein**: erreur  
   
 **Avertir en cas d’une requête complexe utilise un caractère générique (\&#42 ;)**  
-Affiche un avertissement dans le volet de sortie et liste d’erreurs quand un nom de colonne dans une instruction SELECT est un caractère générique (*).  
+Affiche un avertissement dans le volet de sortie et liste d’erreurs lorsqu’un nom de colonne dans une instruction SELECT est un caractère générique (*).  
   
--   **Mode par défaut**: True  
+-   **Par défaut en Mode**: True  
   
--   **Mode optimisé**: False  
+-   **Mode optimiste**: False  
   
 -   **Mode plein**: True  
   
-**Avertir lors de la modification du nom d’identificateur**  
-Affiche un message dans le rapport d’évaluation et dans le volet de sortie lorsque le nom d’identificateur d’objet est modifié par SSMA.  
+**Avertir lorsque le nom d’identificateur est modifié.**  
+Affiche un message dans le rapport d’évaluation et dans le volet de sortie lorsqu’un nom d’identificateur objet est modifié par SSMA.  
   
--   **Mode par défaut**: True  
+-   **Par défaut en Mode**: True  
   
--   **Mode optimisé**: False  
+-   **Mode optimiste**: False  
   
 -   **Mode plein**: True  
   
 **Avertir en cas d’identificateur sera être mis entre guillemets.**  
-Affiche un message dans le rapport d’évaluation et dans le volet de sortie lorsque le nom d’identificateur d’objet figurent entre guillemets par SSMA. Les identificateurs ne sont nécessaire lorsque le nom est un mot clé ou contient des caractères spéciaux.  
+Affiche un message dans le rapport d’évaluation et dans le volet de sortie lorsque le nom d’identificateur d’objet sera être mis entre guillemets par SSMA. Les identificateurs sont nécessaire lorsque le nom est un mot clé ou contient des caractères spéciaux.  
   
--   **Mode par défaut**: True  
+-   **Par défaut en Mode**: True  
   
--   **Mode optimisé**: False  
+-   **Mode optimiste**: False  
   
 -   **Mode plein**: True  
   

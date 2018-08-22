@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
@@ -14,19 +13,19 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2c2b4c055eea6aef2e7825ee6589c6611ceaf7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04cc9e0bea00d1eb2bc542a996ff4bc39e1009f2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295229"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394283"
 ---
 # <a name="hash-indexes"></a>Index de hachage
   Les index sont utilisés comme points d'entrée pour les tables mémoire optimisées. La lecture de lignes dans une table requiert un index pour localiser les données en mémoire.  
   
  Un index de hachage se compose d'une collection de compartiments organisés dans un tableau. Une fonction de hachage mappe les clés d'index aux compartiments correspondants dans l'index de hachage. L'illustration suivante montre trois clés d'index qui sont mappées à trois compartiments différents dans l'index de hachage. Dans l'illustration, le nom de fonction de hachage est f (x).  
   
- ![Clés d’index mappées à des compartiments. ] (../../2014/database-engine/media/hekaton-tables-2.gif "Clés d’index mappées à des compartiments.")  
+ ![Clés d’index mappées à des compartiments. ](../../2014/database-engine/media/hekaton-tables-2.gif "Clés d’index mappées à des compartiments.")  
   
  La fonction de hachage utilisée pour les index de hachage présente les caractéristiques suivantes :  
   
@@ -44,7 +43,7 @@ ms.locfileid: "37295229"
   
  La structure de l'index de hachage en mémoire comporte un tableau de pointeurs de mémoire. Chaque compartiment mappe à un décalage dans ce tableau. Chaque compartiment dans le tableau pointe sur la première ligne dans ce compartiment de hachage. Chaque ligne dans le compartiment pointe sur la ligne suivante, ce qui résulte dans une chaîne de lignes pour chaque compartiment de hachage, comme illustré dans la figure ci-dessous.  
   
- ![La structure d’index de hachage en mémoire. ] (../../2014/database-engine/media/hekaton-tables-3.gif "La structure d’index de hachage en mémoire.")  
+ ![La structure d’index de hachage en mémoire. ](../../2014/database-engine/media/hekaton-tables-3.gif "La structure d’index de hachage en mémoire.")  
   
  L'illustration comprend trois compartiments avec des lignes. Le deuxième compartiment supérieur contient les trois lignes rouges. La quatrième compartiment contient une seule ligne bleue. Le compartiment inférieur contient les deux lignes vertes. Il peut s'agir de versions différentes de la même ligne.  
   

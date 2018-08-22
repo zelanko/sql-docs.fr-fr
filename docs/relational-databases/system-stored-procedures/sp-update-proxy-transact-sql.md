@@ -1,5 +1,5 @@
 ---
-title: sp_update_proxy (Transact-SQL) | Documents Microsoft
+title: sp_update_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 072c36097eb465fa43a785c59d4b0ef73d6d351f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 31154f48d9d13e6ebb67b25919a45ff7a1f7db8b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259809"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395925"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_update_proxy
  Numéro d'identification des nouvelles informations d'identification du proxy. Le *credential_id* est **int**, avec NULL comme valeur par défaut. Soit *credential_name* ou *credential_id* peut être spécifié.  
   
  [ **@new_name**=] **'***nouveau_nom***'**  
- Le nouveau nom du proxy. Le *nouveau_nom* est **sysname**, avec NULL comme valeur par défaut. Quand il est fourni, la procédure modifie le nom du proxy à *nouveau_nom*. Si cet argument est NULL, le nom du proxy reste inchangé.  
+ Le nouveau nom du proxy. Le *nouveau_nom* est **sysname**, avec NULL comme valeur par défaut. Lorsque fourni, la procédure modifie le nom du proxy à *nouveau_nom*. Si cet argument est NULL, le nom du proxy reste inchangé.  
   
  [ **@enabled** =] *is_enabled*  
  Indique si le proxy est activé. Le *is_enabled* indicateur est **tinyint**, avec NULL comme valeur par défaut. Lorsque *is_enabled* est **0**, le proxy n’est pas activé et ne peut pas être utilisé par une étape de travail. Si cet argument est NULL, l'état du proxy reste inchangé.  
@@ -81,9 +81,9 @@ sp_update_proxy
   
  Soit **@credential_name** ou **@credential_id** doit être spécifié pour modifier les informations d’identification pour le proxy. Si ces deux arguments sont spécifiés, ils doivent tous les deux référencer les mêmes informations d'identification, sinon la procédure stockée échoue.  
   
- Cette procédure modifie le proxy sans modifier son accès. Pour modifier l’accès à un serveur proxy, utilisez **sp_grant_login_to_proxy** et **sp_revoke_login_from_proxy**.  
+ Cette procédure modifie le proxy sans modifier son accès. Pour modifier l’accès à un proxy, utilisez **sp_grant_login_to_proxy** et **sp_revoke_login_from_proxy**.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** rôle de sécurité fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
@@ -100,8 +100,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de l’Agent SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Implémenter la sécurité de l’Agent SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [Procédures stockées de SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Implémenter la sécurité SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   

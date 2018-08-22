@@ -20,12 +20,12 @@ caps.latest.revision: 79
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 7032966cb0fb1975b65847ac1e6e0a6c5dc43b1d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ed369dbd8cd63f7d1cb9e63adf0721fcb07e612
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172190"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392927"
 ---
 # <a name="surface-area-configuration"></a>Configuration de la surface d'exposition
   Dans la configuration par défaut des nouvelles installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], de nombreuses fonctionnalités ne sont pas activées. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe et démarre de manière sélective uniquement les principaux services et fonctionnalités, de manière à réduire le nombre de fonctionnalités qui peuvent être soumises à une attaque d'un utilisateur malveillant. Un administrateur système peut modifier ces valeurs par défaut au moment de l'installation, et également activer ou désactiver sélectivement les fonctionnalités d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en cours d'exécution. En outre, certains composants peuvent ne pas être disponibles lors de la connexion à partir d'autres ordinateurs jusqu'à ce que les protocoles soient configurés.  
@@ -65,7 +65,7 @@ ms.locfileid: "37172190"
   
  Vous pouvez également définir des options du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de la procédure stockée `sp_configure`. Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
- Pour modifier la propriété **EnableIntegrated Security** de [!INCLUDE[ssRS](../../includes/ssrs-md.md)], utilisez les paramètres de propriété dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour modifier les propriétés **Événements programmés et remise du rapport activés** et **Service Web et accès HTTP activés** , modifiez le fichier de configuration **RSReportServer.config** .  
+ Pour modifier la propriété **EnableIntegrated Security** de [!INCLUDE[ssRS](../../includes/ssrs.md)], utilisez les paramètres de propriété dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour modifier les propriétés **Événements programmés et remise du rapport activés** et **Service Web et accès HTTP activés** , modifiez le fichier de configuration **RSReportServer.config** .  
   
 ## <a name="command-prompt-options"></a>Options d'invite de commandes  
  Utilisez l’applet de commande **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell pour appeler des stratégies de configuration de la surface d’exposition. Pour plus d’informations, consultez [Utiliser les applets de commande du Moteur de base de données](../../database-engine/use-the-database-engine-cmdlets.md).  

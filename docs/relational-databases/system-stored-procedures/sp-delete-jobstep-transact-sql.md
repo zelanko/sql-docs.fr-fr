@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobstep (Transact-SQL) | Documents Microsoft
+title: sp_delete_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f877431a45f475bee0adb303724b63b544c943bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e47c28276cd555138c4360060186515cf6f5ecf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248134"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393853"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  [  **@job_id=** ] *job_id*  
  Numéro d'identification du travail duquel il faut supprimer l'étape. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'***nom_travail***'**  
  Nom du travail duquel il faut supprimer l'étape. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
   
-> **Remarque :** soit *job_id* ou *job_name* doit être spécifié ; ne peut pas être spécifiés.  
+> **Remarque :** soit *job_id* ou *nom_travail* doit être spécifié ; ne peut pas être spécifiés.  
   
  [  **@step_id=** ] *id_de_l*  
  Numéro d'identification de l'étape supprimée. *l’argument id_étape*est **int**, sans valeur par défaut.  
@@ -61,18 +61,18 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Si vous supprimez une étape de travail, les autres étapes contenant une référence à l'étape supprimée sont automatiquement mises à jour.  
   
  Pour plus d’informations sur les étapes associées à un travail particulier, exécutez **sp_help_jobstep**.  
   
-> **Remarque :** appel **sp_delete_jobstep** avec un *id_de_l* la valeur zéro supprime toutes les étapes de travail pour le travail.  
+> **Remarque :** appelant **sp_delete_jobstep** avec un *id_de_l* la valeur zéro supprime toutes les étapes de travail pour le travail.  
   
  Microsoft SQL Server Management Studio est un outil simple, basé sur une interface graphique, qui permet de gérer les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -81,9 +81,9 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Seuls les membres du **sysadmin** peut supprimer une étape de travail appartenant à un autre utilisateur.  
+ Seuls les membres du **sysadmin** peut supprimer une étape de travail qui est détenue par un autre utilisateur.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime l'étape `1` du travail `Weekly Sales Data Backup`.  
@@ -99,7 +99,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher ou modifier les travaux](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [Afficher ou modifier les travaux](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

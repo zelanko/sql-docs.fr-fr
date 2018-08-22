@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
@@ -14,12 +13,12 @@ caps.latest.revision: 13
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c89d7c7baf7422ba3bc6a457509ea7e8ac37a001
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd605179f7eb15783c90fa9bc3c72d08d16764c3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331722"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392105"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Création de procédures stockées compilées en mode natif
   Les procédures stockées compilées en mode natif n'implémentent pas la surface d'exposition totale de programmabilité et de requête [!INCLUDE[tsql](../../includes/tsql-md.md)] . Certaines constructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ne peuvent pas être utilisées dans des procédures stockées compilées en mode natif. Pour plus d’informations, consultez [constructions prises en charge dans Natively Compiled Stored Procedures](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md).  
@@ -61,7 +60,7 @@ go
 |------------|-----------------|  
 |`SCHEMABINDING`|Les procédures stockées compilées en mode natif doivent être liés au schéma des objets référencés. Cela signifie que la table référencée par la procédure ne peut pas être supprimée. Tables référencées dans la procédure doivent inclure leur nom de schéma et les caractères génériques (\*) ne sont pas autorisés dans les requêtes. `SCHEMABINDING` est uniquement pris en charge pour les procédures stockées compilées en mode natif dans cette version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`EXECUTE AS`|Les procédures stockées compilées en mode natif ne prennent pas en charge `EXECUTE AS CALLER`, qui est le contexte d'exécution par défaut. Par conséquent, vous devez spécifier le contexte d'exécution. Les options `EXECUTE AS OWNER`, `EXECUTE AS` *utilisateur*, et `EXECUTE AS SELF` sont pris en charge.|  
-|`BEGIN ATOMIC`|Le corps d'une procédure stockée compilée en mode natif doit être un bloc Atomic. Les blocs Atomic garantissent l'exécution atomique de la procédure stockée. Si la procédure est appelée en dehors du contexte d'une transaction active, elle démarre une nouvelle transaction, qui valide la transaction à la fin du bloc Atomic. Deux options sont obligatoires pour les blocs Atomic dans les procédures stockées compilées en mode natif :<br /><br /> `TRANSACTION ISOLATION LEVEL`. Consultez [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md) pour les niveaux d’isolation pris en charge.<br /><br /> `LANGUAGE`. Le langage de la procédure stockée doit être défini sur l'un des langages ou des alias de langage disponibles.|  
+|`BEGIN ATOMIC`|Le corps d'une procédure stockée compilée en mode natif doit être un bloc Atomic. Les blocs Atomic garantissent l'exécution atomique de la procédure stockée. Si la procédure est appelée en dehors du contexte d'une transaction active, elle démarre une nouvelle transaction, qui valide la transaction à la fin du bloc Atomic. Deux options sont obligatoires pour les blocs Atomic dans les procédures stockées compilées en mode natif :<br /><br /> `TRANSACTION ISOLATION LEVEL` . Consultez [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md) pour les niveaux d’isolation pris en charge.<br /><br /> `LANGUAGE` . Le langage de la procédure stockée doit être défini sur l'un des langages ou des alias de langage disponibles.|  
   
  En ce qui concerne `EXECUTE AS` et les connexions Windows, une erreur peut se produire en raison de l'emprunt d'identité effectué via `EXECUTE AS`. Si un compte d'utilisateur utilise l'authentification Windows, il doit y avoir une confiance totale entre le compte de service utilisé pour l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le domaine de la connexion Windows. S'il n'y a pas de confiance totale, le message d'erreur suivant est retourné lorsque vous créez une procédure stockée compilée en mode natif : Message 15404, Impossible d'obtenir des informations sur le groupe Windows NT/utilisateur « nom d'utilisateur », code d'erreur 0x5.  
   

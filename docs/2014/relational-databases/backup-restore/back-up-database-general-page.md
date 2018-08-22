@@ -15,12 +15,12 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 025d5eac30815b6d9110dcca7214e7e88412a23d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8930abc8ead43bed31d53ed8e412d5d367b6051c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290955"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396127"
 ---
 # <a name="back-up-database-general-page"></a>Sauvegarder la base de données (page Général)
   La page **Général** de la boîte de dialogue **Sauvegarder la base de données** vous permet d'afficher ou de modifier les paramètres d'une opération de sauvegarde de base de données.  
@@ -37,7 +37,7 @@ ms.locfileid: "37290955"
 -   [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  Vous pouvez définir un plan de maintenance de base de données pour créer des sauvegardes de base de données. Pour plus d'informations, consultez [Plans de maintenance de base de données](http://msdn.microsoft.com/library/ms187658.aspx) dans la documentation en ligne de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
+    >  Vous pouvez définir un plan de maintenance de base de données pour créer des sauvegardes de base de données. Pour plus d'informations, consultez [Plans de maintenance de base de données](../maintenance-plans/maintenance-plans.md) dans la documentation en ligne de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
  **Pour créer une sauvegarde partielle**  
   

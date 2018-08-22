@@ -23,15 +23,15 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0403c7074df0f81081cda167fe9bbf04626f2522
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4f1d6ce53d09c120784505245ac903a6f3833920
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985741"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392323"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Paramètres du projet (mappage de Type) (AccessToSQL)
-Les paramètres de mappage de Type de projet vous permettent de définir des mappages de type par défaut pour le projet SSMA. Vous pouvez également spécifier des mappages de type pour les objets de base de données individuelle. Pour plus d’informations, consultez [Source de mappage et les Types de données cible](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+Les paramètres de mappage de Type de projet vous permettent de définir des mappages de type par défaut pour le projet SSMA. Vous pouvez également spécifier des mappages de type pour les objets de base de données individuelle. Pour plus d’informations, consultez [Source de mappage et les Types de données cible](mapping-source-and-target-data-types-accesstosql.md).  
   
 Mappage de type est disponible dans le **paramètres du projet** et **par défaut des paramètres de projet** boîtes de dialogue :  
   
@@ -44,7 +44,7 @@ Mappage de type est disponible dans le **paramètres du projet** et **par défau
 Le type de données Access à mapper.  
   
 **Type de cible**  
-La cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou type de données SQL Azure pour le type de données d’accès spécifié.  
+La cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou type de données SQL Azure pour le type de données d’accès spécifié.  
   
 Le tableau suivant présente le mappage par défaut entre les types de données source et cible.  
   
@@ -76,10 +76,10 @@ Cliquez pour modifier un type de données dans la liste de mappage.
 **Supprimer**  
 Cliquez pour supprimer le mappage de type de données sélectionnée dans la liste de mappage.  
   
-**Réinitialiser les valeurs par défaut**  
+**Rétablir les valeurs par défaut**  
 Cliquez pour réinitialiser tous les mappages de type de données pour les valeurs par défaut SSMA.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Mappage de types de données sources et cibles](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[Mappage de types de données sources et cibles](mapping-source-and-target-data-types-accesstosql.md)  
 [Reference(Access) d’Interface utilisateur](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

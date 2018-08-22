@@ -13,19 +13,19 @@ caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e9f17e76dca1f5f3266908ed8f009161cf1d829
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155420"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393439"
 ---
 # Guide de conception d'index SQL Server
   L'engorgement des applications de base de données est souvent imputable à des index mal conçus ou en nombre insuffisant. La conception d'index efficaces est primordiale pour le bon fonctionnement des bases de données et des applications. Ce guide de conception d'index SQL Server contient les informations et les meilleures pratiques nécessaires à la création d'index efficaces pour répondre aux besoins de votre application.  
   
 **S’applique aux**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] via [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sauf indication contraire.  
   
- Ce guide suppose que le lecteur connaît les types d'index disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir description générale des types d'index, consultez [Types d'index](http://msdn.microsoft.com/library/ms175049.aspx).  
+ Ce guide suppose que le lecteur connaît les types d'index disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir description générale des types d'index, consultez [Types d'index](../relational-databases/indexes/indexes.md).  
   
 ##  <a name="Top"></a> Dans ce Guide  
  [Principes fondamentaux de conception de index](#Basics)  
@@ -171,7 +171,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  Le plan d'exécution ci-dessous pour cette requête montre que l'optimiseur de requête a utilisé un opérateur SORT pour retourner l'ensemble de résultats dans l'ordre spécifié par la clause ORDER BY.  
   
- ![Plan d’exécution indique un opérateur SORT est utilisé. ] (media/indexsort1.gif "Plan d’exécution indique un opérateur SORT est utilisé.")  
+ ![Plan d’exécution indique un opérateur SORT est utilisé. ](media/indexsort1.gif "Plan d’exécution indique un opérateur SORT est utilisé.")  
   
  Si un index est créé avec les colonnes clés correspondant à celles de la clause ORDER BY de la requête, l'opérateur SORT peut être supprimé du plan de requête, ce qui rend celui-ci plus efficace.  
   

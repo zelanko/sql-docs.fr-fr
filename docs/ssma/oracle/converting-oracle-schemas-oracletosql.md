@@ -15,18 +15,18 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a87d72a0d017be9b0f6e010d8ba5344e33469aad
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 277ad816d887a7f5641d8d37e7bdc60dc7ddb28a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982441"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396540"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Conversion de schémas Oracle (OracleToSQL)
-Après vous être connecté à Oracle, connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], et définir le projet et les options de mappage de données, vous pouvez convertir des objets de base de données Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objets de base de données.  
+Après vous être connecté à Oracle, connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et définir le projet et les options de mappage de données, vous pouvez convertir des objets de base de données Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets de base de données.  
   
 ## <a name="the-conversion-process"></a>Le processus de Conversion  
-Convertir des objets de base de données accepte les définitions d’objets à partir d’Oracle, les convertit en similaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objets et charge ensuite ces informations dans les métadonnées SSMA. Il ne charge pas les informations dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Vous pouvez ensuite afficher les objets et leurs propriétés à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Explorateur de métadonnées.  
+Convertir des objets de base de données accepte les définitions d’objets à partir d’Oracle, les convertit en similaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets et charge ensuite ces informations dans les métadonnées SSMA. Il ne charge pas les informations dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez ensuite afficher les objets et leurs propriétés à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées.  
   
 Lors de la conversion, SSMA imprime les messages de sortie dans le volet de sortie et messages d’erreur vers le volet Liste d’erreurs. Utilisez les informations de sortie et d’erreur pour déterminer si vous devez modifier vos bases de données Oracle ou de votre processus de conversion pour obtenir les résultats de la conversion souhaitée.  
   
@@ -34,13 +34,13 @@ Lors de la conversion, SSMA imprime les messages de sortie dans le volet de sort
 Avant de convertir des objets, passez en revue les options de conversion de projet dans le **paramètres du projet** boîte de dialogue. À l’aide de cette boîte de dialogue, vous pouvez définir comment SSMA convertit les fonctions et variables globales. Pour plus d’informations, consultez [paramètres du projet &#40;Conversion&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
   
 ## <a name="conversion-results"></a>Résultats de la conversion  
-Le tableau suivant présente les objets d’Oracle sont convertis et résultant [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objets :  
+Le tableau suivant présente les objets d’Oracle sont convertis et résultant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets :  
   
 |||  
 |-|-|  
 |Objets Oracle|Objets SQL Server qui en résulte|  
-|Fonctions|Si la fonction peut être directement convertie en [!INCLUDE[tsql](../../includes/tsql_md.md)], SSMA crée une fonction.<br /><br />Dans certains cas, la fonction doit être convertie à une procédure stockée. Dans ce cas, SSMA crée une procédure stockée et une fonction qui appelle la procédure stockée.|  
-|Procédures|Si la procédure peut être directement convertie en [!INCLUDE[tsql](../../includes/tsql_md.md)], SSMA crée une procédure stockée.<br /><br />Dans certains cas, une procédure stockée doit être appelée dans une transaction autonome. Dans ce cas, SSMA crée deux procédures stockées : celui qui implémente la procédure et une autre qui est utilisée pour appeler l’implémentation d’une procédure stockée.|  
+|Fonctions|Si la fonction peut être directement convertie en [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA crée une fonction.<br /><br />Dans certains cas, la fonction doit être convertie à une procédure stockée. Dans ce cas, SSMA crée une procédure stockée et une fonction qui appelle la procédure stockée.|  
+|Procédures|Si la procédure peut être directement convertie en [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA crée une procédure stockée.<br /><br />Dans certains cas, une procédure stockée doit être appelée dans une transaction autonome. Dans ce cas, SSMA crée deux procédures stockées : celui qui implémente la procédure et une autre qui est utilisée pour appeler l’implémentation d’une procédure stockée.|  
 |.|SSMA crée un ensemble de procédures stockées et fonctions sont unifiées par des noms d’objet similaires.|  
 |Séquences|SSMA crée des objets de séquence (SQL Server 2012 ou SQL Server 2014) ou émule les séquences Oracle.|  
 |Tables avec des objets dépendants, tels que les index et déclencheurs|SSMA crée des tables avec des objets dépendants.|  
@@ -114,10 +114,10 @@ Pour chaque élément qui ne peut pas être converti, vous devez déterminer ce 
   
 -   Vous pouvez modifier l’objet dans la base de données Oracle pour supprimer ou de réviser le code problématique. Pour charger le code mis à jour dans SSMA, vous devrez mettre à jour les métadonnées. Pour plus d’informations, consultez [connexion à la base de données Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
   
--   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Explorateur de métadonnées et l’Explorateur de métadonnées d’Oracle, désactivez la case à cocher en regard de l’élément avant de charger les objets vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et migration des données à partir d’Oracle.  
+-   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées et l’Explorateur de métadonnées d’Oracle, désactivez la case à cocher en regard de l’élément avant de charger les objets vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et migration des données à partir d’Oracle.  
   
 ## <a name="next-step"></a>Étape suivante  
-L’étape suivante du processus de migration consiste à [charger les objets convertis dans SQL Server](http://msdn.microsoft.com/a8ae33b2-1883-4785-922b-ea0e31c0b37a).  
+L’étape suivante du processus de migration consiste à [charger les objets convertis dans SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Bases de données de migration d’Oracle vers SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

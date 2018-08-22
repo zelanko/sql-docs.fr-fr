@@ -1,5 +1,5 @@
 ---
-title: Execute (méthode) (connexion ADO) | Documents Microsoft
+title: Execute, méthode (objet Connection ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,15 +20,15 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27d3f5318d093d18312dd531421f5c32755aeaf1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ff924966a2dccf448d6d55f8633f8dc49046f2d8
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278138"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393834"
 ---
-# <a name="execute-method-ado-connection"></a>Execute (méthode) (connexion ADO)
-Exécute la requête spécifiée, l’instruction SQL, une procédure stockée ou du texte spécifique au fournisseur.  
+# <a name="execute-method-ado-connection"></a>Execute, méthode (objet Connection ADO)
+Exécute la requête spécifiée, l’instruction SQL, le procédure stockée ou texte propre au fournisseur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,29 +42,29 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Retourne un [objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) référence d’objet.  
   
 #### <a name="parameters"></a>Paramètres  
- *commandText*  
- A **chaîne** valeur qui contient l’instruction SQL, procédure stockée, une URL ou spécifiques au fournisseur du texte à exécuter. **Si vous le souhaitez**, noms de table peuvent être utilisés uniquement si le fournisseur est compatible SQL. Exemple si un nom de la table « Customers » est utilisé, ADO ajoute automatiquement la syntaxe SQL Select standard pour créer et de passer « SELECT * FROM Customers » en tant qu’un [!INCLUDE[tsql](../../../includes/tsql_md.md)] instruction au fournisseur.  
+ *CommandText*  
+ Un **chaîne** valeur qui contient l’instruction SQL, procédure stockée, une URL ou texte propre au fournisseur à exécuter. **Si vous le souhaitez**, les noms de table peuvent être utilisés, mais uniquement si le fournisseur est SQL prenant en charge. Par exemple, si un nom de table de « Customers » est utilisés, ADO ajoute automatiquement la syntaxe SQL Select standard pour former et de passer de « SELECT * FROM Customers » en tant qu’un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction au fournisseur.  
   
  *RecordsAffected*  
- Facultatif. A **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée par l’opération.  
+ Facultatif. Un **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée de l’opération.  
   
  *Options*  
- Facultatif. A **Long** valeur qui indique la manière dont le fournisseur doit évaluer l’argument CommandText. Peut être un masque de bits d’une ou plusieurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeurs.  
+ Facultatif. Un **Long** valeur qui indique la manière dont le fournisseur doit évaluer l’argument CommandText. Peut être un masque de bits d’une ou plusieurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeurs.  
   
- **Remarque** utilisez la **ExecuteOptionEnum** valeur **adExecuteStream** pour améliorer les performances en réduisant le traitement interne et pour les applications que vous portez à partir de Visual Basic 6.0.  
+ **Remarque** utilisation le **ExecuteOptionEnum** valeur **adExecuteStream** pour améliorer les performances en réduisant le traitement interne et pour les applications que vous portez à partir de Visual Basic 6.0.  
   
  N’utilisez pas **adExecuteStream** avec la **Execute** méthode d’un **connexion** objet.  
   
- N’utilisez pas les valeurs CommandTypeEnum adCmdFile ou adCmdTableDirect avec Execute. Ces valeurs peuvent uniquement être utilisées en tant qu’options avec la [Open (méthode) (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) et [méthode Requery](../../../ado/reference/ado-api/requery-method.md) méthodes d’un **Recordset**.  
+ N’utilisez pas les valeurs CommandTypeEnum adCmdFile ou adCmdTableDirect avec Execute. Ces valeurs peuvent uniquement être utilisées en tant qu’options avec les [méthode Open (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) et [méthode Requery](../../../ado/reference/ado-api/requery-method.md) méthodes d’un **Recordset**.  
   
 ## <a name="remarks"></a>Notes  
- À l’aide de la **Execute** méthode sur un [connexion Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) objet exécute toute requête que vous passez à la méthode dans l’argument CommandText sur la connexion spécifiée. Si l’argument CommandText spécifie une requête retourne des lignes, les résultats générés par l’exécution sont stockés dans une nouvelle **Recordset** objet. Si la commande ne vise pas à retourner des résultats (par exemple, une requête SQL UPDATE) le fournisseur retourne **rien** tant que l’option **adExecuteStream** est spécifiée, sinon exécutez retourne un fermé **Recordset**.  
+ À l’aide de la **Execute** méthode sur un [objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) objet exécute toute requête que vous passez à la méthode dans l’argument CommandText sur la connexion spécifiée. Si l’argument CommandText spécifie une requête retourne des lignes, tous les résultats générés par cette exécution sont stockés dans une nouvelle **Recordset** objet. Si la commande ne vise pas à retourner des résultats (par exemple, une requête SQL UPDATE) le fournisseur retourne **rien** aussi longtemps que l’option **adExecuteStream** est spécifié ; sinon exécutez retourne un fermé **Recordset**.  
   
- Retourné **Recordset** objet est toujours un curseur avant uniquement en lecture seule. Si vous avez besoin d’un **Recordset** objet avec davantage de fonctionnalités, commencez par créer un **Recordset** de l’objet avec les paramètres de propriété de votre choix, puis utilisez le **Recordset** l’objet[ Open (méthode) (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode à exécuter la requête et retourner le type de curseur souhaité.  
+ Retourné **Recordset** objet est toujours un curseur en lecture seule, avant uniquement. Si vous avez besoin d’un **Recordset** objet avec davantage de fonctionnalités, commencez par créer un **Recordset** de l’objet avec les paramètres de propriété souhaitée, puis utilisez le **Recordset** l’objet[ Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode à exécuter la requête et retourner le type de curseur souhaités.  
   
- Le contenu de la *CommandText* argument sont spécifique au fournisseur et peut être n’importe quel format de commande spécial qui prend en charge par le fournisseur ou de la syntaxe SQL standard.  
+ Le contenu de la *CommandText* argument sont spécifique au fournisseur et peut être une syntaxe SQL standard ou n’importe quel format de commande spécial qui prend en charge par le fournisseur.  
   
- Un événement ExecuteComplete est déclenché lorsque cette opération se termine.  
+ ExecuteComplete, événement est émis lorsque cette opération se termine.  
   
 > [!NOTE]
 >  URL à l’aide du modèle http appellent automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  

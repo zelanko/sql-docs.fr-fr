@@ -17,12 +17,12 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 095c9f205a98b5ac2ecd5a40ab66448ad9e21176
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6dabef37d796ca1279c1444cf6ecafce6973c86b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308869"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392063"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Administrer des serveurs à l'aide de SQL Server Management Studio
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est un client d’administration intégré complet, conçu pour répondre à la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exigences de gestion de l’administrateur serveur. Dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], les tâches d'administration sont effectuées à l'aide de l'Explorateur d'objets qui vous permet de vous connecter à n'importe quel serveur de la famille des produits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et de parcourir son contenu sous forme graphique. Un serveur peut être une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)], d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou d'[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "37308869"
   
 -   Inscrire des serveurs  
   
--   vous connecter à une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)], de [!INCLUDE[ssAS](../includes/ssas-md.md)], de [!INCLUDE[ssRS](../includes/ssrs-md.md)] ou de [!INCLUDE[ssIS](../includes/ssis-md.md)] ;  
+-   vous connecter à une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)], de [!INCLUDE[ssAS](../includes/ssas-md.md)], de [!INCLUDE[ssRS](../includes/ssrs.md)] ou de [!INCLUDE[ssIS](../includes/ssis-md.md)] ;  
   
 -   Configurer les propriétés du serveur  
   

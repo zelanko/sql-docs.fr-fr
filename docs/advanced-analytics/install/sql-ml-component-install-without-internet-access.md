@@ -1,6 +1,6 @@
 ---
-title: Installer les composants de SQL Server machine Learning Services sans accès à internet | Microsoft Docs
-description: En mode hors connexion ou déconnecté R Machine Learning et Pytyon le programme d’installation sur l’instance de SQL Server isolé.
+title: Installer les composants R et Python sans accès à internet d’apprentissage SQL Server | Microsoft Docs
+description: En mode hors connexion ou déconnecté Machine Learning R et Python le programme d’installation sur l’instance de SQL Server isolé.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/02/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56624d2a5fcc97035f434cb1ee1d4fdee4dedeba
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546259"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437649"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-features-on-computers-with-no-internet-access"></a>Installer les fonctionnalités de R et Python sur des ordinateurs sans accès à internet d’apprentissage SQL Server
+# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installer SQL Server d’apprentissage R et Python sur des ordinateurs sans accès à internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Par défaut, les programmes d’installation de se connecter à des sites de téléchargement Microsoft pour obtenir requis et les composants mis à jour pour machine learning sur SQL Server. Si des contraintes de pare-feu empêchent le programme d’installation d’atteindre ces sites, vous pouvez utiliser un périphérique connecté à internet pour télécharger les fichiers, transférer des fichiers vers un serveur hors connexion, puis exécutez le programme d’installation.

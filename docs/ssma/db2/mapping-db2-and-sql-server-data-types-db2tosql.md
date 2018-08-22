@@ -1,5 +1,5 @@
 ---
-title: Mappage de DB2 et des Types de données SQL Server (DB2ToSQL) | Documents Microsoft
+title: Mappage de DB2 et les Types de données SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,32 +16,32 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d354f1b9fb44e77dc840f74d5692c1149e70ab0e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 618a2e11ffb60e36e289bf9e134c8633f28ce71c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775025"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392967"
 ---
-# <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mappage de DB2 et des Types de données SQL Server (DB2ToSQL)
-Les types de base de données DB2 diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] types de base de données. Lorsque vous convertissez des objets de base de données DB2 à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des objets, vous devez spécifier le mappage des types de données à partir de DB2 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
+# <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mappage de DB2 et les Types de données SQL Server (DB2ToSQL)
+Les types de base de données DB2 diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de base de données. Lorsque vous convertissez des objets de base de données DB2 à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets, vous devez spécifier le mappage des types de données de DB2 vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
   
 ## <a name="default-mappings"></a>Mappages par défaut  
-SSMA a un jeu de mappages de types de données. Pour obtenir la liste des mappages par défaut, consultez [les paramètres de projet &#40;le mappage de Type&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
+SSMA a un ensemble de mappages de types de données par défaut. Pour la liste des mappages par défaut, consultez [paramètres du projet &#40;le mappage de Type&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
   
-## <a name="type-mapping-inheritance"></a>Mappage d’héritage de type  
-Vous pouvez personnaliser les mappages de type pour le projet au niveau, le niveau de catégorie objet (par exemple, toutes les procédures stockées) ou objet. Les paramètres sont hérités du niveau supérieur, sauf si elles sont remplacées à un niveau inférieur. Par exemple, si vous mappez **smallmoney** à **money** au niveau du projet, tous les objets dans le projet utilisera ce mappage, sauf si vous personnalisez le mappage au niveau de l’objet ou une catégorie.  
+## <a name="type-mapping-inheritance"></a>Type de mappage de l’héritage  
+Vous pouvez personnaliser les mappages de type au niveau du projet, niveau de catégorie d’objet (par exemple, toutes les procédures stockées) ou niveau de l’objet. Paramètres sont hérités du niveau supérieur, sauf si elles sont remplacées à un niveau inférieur. Par exemple, si vous mappez **smallmoney** à **money** au niveau du projet, tous les objets dans le projet utilisera ce mappage, sauf si vous personnalisez le mappage au niveau objet ou une catégorie.  
   
-Lorsque vous affichez la **le mappage de Type** onglet SSMA, l’arrière-plan est coloré pour afficher lesquelles mappages de type sont héritées. L’arrière-plan d’un mappage de type est jaune pour tout mappage de type hérité et le blanc pour tout mappage est spécifié au niveau actuel.  
+Lorsque vous affichez le **le mappage de Type** onglet SSMA, l’arrière-plan est coloré pour afficher lesquelles mappages de type sont héritées. L’arrière-plan d’un mappage de type est jaune pour tout mappage de type hérité, blanc pour tout mappage est spécifié au niveau actuel.  
   
 ## <a name="customizing-data-type-mappings"></a>Personnalisation mappages de types de données  
-La procédure suivante montre comment mapper des types de données au niveau du projet, une base de données ou un niveau de l’objet :  
+La procédure suivante montre comment mapper des types de données sur le projet, la base de données ou le niveau de l’objet :  
   
 **Pour mapper les types de données**  
   
-1.  Pour personnaliser le mappage de type de données pour la totalité du projet, ouvrez le **les paramètres de projet** boîte de dialogue :  
+1.  Pour personnaliser le mappage de type de données pour la totalité du projet, ouvrez le **paramètres du projet** boîte de dialogue :  
   
-    1.  Sur le **outils** menu, sélectionnez **les paramètres de projet**.  
+    1.  Sur le **outils** menu, sélectionnez **paramètres du projet**.  
   
     2.  Dans le volet gauche, sélectionnez **le mappage de Type**.  
   
@@ -57,31 +57,31 @@ La procédure suivante montre comment mapper des types de données au niveau du 
   
     1.  Cliquez sur **Ajouter**.  
   
-    2.  Sous **type de Source de**, sélectionnez le type de données DB2 à mapper.  
+    2.  Sous **type de Source**, sélectionnez le type de données DB2 à mapper.  
   
-    3.  Si le type requiert une longueur, spécifiez la longueur minimale de données pour le mappage dans le **à partir de** case et la longueur maximale des données dans le **à** boîte.  
+    3.  Si le type requiert une longueur, spécifiez la longueur minimale de données pour le mappage dans le **à partir de** boîte et la longueur maximale des données dans le **à** boîte.  
   
         Cela vous permet de personnaliser le mappage de données pour les valeurs inférieures et supérieures du même type de données.  
   
-    4.  Sous **type cible**, sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type de données.  
+    4.  Sous **type cible**, sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  
   
-        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur de données dans le **remplacer** boîte.  
+        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur de données dans le **remplacer par** boîte.  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Pour modifier un mappage de type de données, procédez comme suit :  
   
     1.  Cliquez sur **Modifier**.  
   
-    2.  Sous **type de Source de**, sélectionnez le type de données DB2 à mapper.  
+    2.  Sous **type de Source**, sélectionnez le type de données DB2 à mapper.  
   
-    3.  Si le type requiert une longueur, spécifiez la longueur minimale de données pour le mappage dans le **à partir de** case et la longueur maximale des données dans le **à** boîte.  
+    3.  Si le type requiert une longueur, spécifiez la longueur minimale de données pour le mappage dans le **à partir de** boîte et la longueur maximale des données dans le **à** boîte.  
   
         Cela vous permet de personnaliser le mappage de données pour les valeurs inférieures et supérieures du même type de données.  
   
-    4.  Sous **type cible**, sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type de données.  
+    4.  Sous **type cible**, sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  
   
-        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur de données dans le **remplacer par** zone, puis [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur de données dans le **remplacer par** zone, puis [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Pour supprimer un mappage de type de données personnalisé, procédez comme suit :  
   
@@ -89,11 +89,11 @@ La procédure suivante montre comment mapper des types de données au niveau du 
   
     2.  Cliquez sur **Supprimer**.  
   
-        Impossible de supprimer les mappages hérités. Toutefois, héritée de mappages sont remplacés par des mappages personnalisés sur un objet spécifique ou la catégorie d’objet.  
+        Impossible de supprimer les mappages hérités. Toutefois, des mappages hérités sont remplacées par des mappages personnalisés sur un objet spécifique ou une catégorie d’objet.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-L’étape suivante du processus de migration consiste à [rapport d’évaluation &#40;DB2ToSQL&#41; ](../../ssma/db2/assessment-report-db2tosql.md) ou [conversion de schémas de DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Si vous créez un rapport d’évaluation, les objets DB2 sont automatiquement convertis durant l’évaluation.  
+L’étape suivante du processus de migration consiste à [rapport d’évaluation &#40;DB2ToSQL&#41; ](../../ssma/db2/assessment-report-db2tosql.md) ou [conversion des schémas DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Si vous créez un rapport d’évaluation, les objets DB2 sont automatiquement convertis durant l’évaluation.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Bases de données DB2 migration vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[Bases de données de migration de DB2 vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

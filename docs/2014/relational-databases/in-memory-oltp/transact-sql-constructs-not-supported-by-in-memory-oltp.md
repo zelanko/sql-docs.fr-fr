@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
@@ -14,12 +13,12 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe4388cff478cf3d8f8fd773c8b0926793b0cc0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdcf9d6be713b77c2fd7f3a43872026eebce5c50
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258855"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392112"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
   Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne prennent pas en charge la surface d'exposition [!INCLUDE[tsql](../../includes/tsql-md.md)] complète qui est prise en charge par les tables sur disque et les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétées. Lorsque vous tentez d'utiliser une des fonctionnalités non prises en charge, le serveur retourne une erreur.  

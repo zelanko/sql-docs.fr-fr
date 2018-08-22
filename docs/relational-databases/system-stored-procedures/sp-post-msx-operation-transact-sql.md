@@ -1,5 +1,5 @@
 ---
-title: sp_post_msx_operation (Transact-SQL) | Documents Microsoft
+title: sp_post_msx_operation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f6d0dfc8c9a9925f7bf2fa84c4b9330b99c60c3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a1524f9e3f20a774d32c491bc264f2c6c63e7b18
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261035"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394092"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,9 +55,9 @@ sp_post_msx_operation
   
 |Type d'objet|Opération|  
 |-----------------|---------------|  
-|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
+|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> Suppression<br /><br /> START<br /><br /> STOP|  
 |**SERVEUR**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**PLANIFICATION**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
+|**PLANIFICATION**|INSERT<br /><br /> UPDATE<br /><br /> Suppression|  
   
  [  **@object_type =**] **'***objet***'**  
  Type d'objet pour lequel l'opération doit être publiée. Les types valides sont **travail**, **SERVER**, et **planification**. *objet* est **varchar(64)**, avec une valeur par défaut **travail**.  
@@ -78,19 +78,19 @@ sp_post_msx_operation
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  **sp_post_msx_operation** doit être exécuté à partir de la **msdb** base de données.  
   
- **sp_post_msx_operation** peut toujours être appelée en toute sécurité, car il détermine tout d’abord si le serveur actuel est un Agent Microsoft SQL Server multiserveur et, dans ce cas, si *objet*est un travail multiserveur.  
+ **sp_post_msx_operation** peut toujours être appelée en toute sécurité, car il détermine tout d’abord si le serveur actuel est un Agent Microsoft SQL Server multiserveur et, le cas échéant, si *objet*est un travail multiserveur.  
   
- Après une opération a été validée, elle apparaît dans le **sysdownloadlist** table. Après qu'un travail a été créé et publié, les modifications ultérieures apportées à ce travail doivent être aussi communiquées aux serveurs cibles (TSX). L'opération est également réalisée à l'aide de la liste de téléchargement. .  
+ Une fois une opération a été publiée, il apparaît dans le **sysdownloadlist** table. Après qu'un travail a été créé et publié, les modifications ultérieures apportées à ce travail doivent être aussi communiquées aux serveurs cibles (TSX). L'opération est également réalisée à l'aide de la liste de téléchargement. .  
   
- Il est fortement recommandé de gérer la liste de téléchargement à l'aide de SQL Server Management Studio. Pour plus d’informations, consultez [afficher ou modifier les travaux](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7).  
+ Il est fortement recommandé de gérer la liste de téléchargement à l'aide de SQL Server Management Studio. Pour plus d’informations, consultez [afficher ou modifier les travaux](../../ssms/agent/view-or-modify-jobs.md).  
   
-## <a name="permissions"></a>Autorisations  
- Pour exécuter cette procédure stockée, les utilisateurs doivent disposer du **sysadmin** rôle serveur fixe.  
+## <a name="permissions"></a>Permissions  
+ Pour exécuter cette procédure stockée, les utilisateurs doivent avoir le **sysadmin** rôle serveur fixe.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   

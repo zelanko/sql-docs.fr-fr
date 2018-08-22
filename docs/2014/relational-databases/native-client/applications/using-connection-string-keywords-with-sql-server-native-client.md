@@ -5,7 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 79
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f3c3607adf896b799bd323b834e4ae53313a679
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ce3c43b14342da1dc8b7d6b1605579b2825a979c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429148"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393221"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client
   Certaines API [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilisent des chaînes de connexion pour spécifier des attributs de connexion. Les chaînes de connexion sont des listes de mots clés et de valeurs associées ; chaque mot clé identifie un attribut de connexion particulier.  
@@ -80,7 +80,7 @@ ms.locfileid: "37429148"
 |`QuotedId`|Lorsque la valeur « yes » est spécifiée, QUOTED_IDENTIFIERS est défini à ON pour la connexion, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise les règles ISO concernant l'utilisation de guillemets dans les instructions SQL. Lorsque la valeur « no » est spécifiée, QUOTED_IDENTIFIERS est défini à OFF pour la connexion. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise dans ce cas les règles [!INCLUDE[tsql](../../../includes/tsql-md.md)] héritées concernant l'utilisation de guillemets dans les instructions SQL. Pour plus d’informations, consultez [effets des Options ISO](../../native-client-odbc-queries/executing-statements/effects-of-iso-options.md).|  
 |`Regional`|Lorsque la valeur « yes » est spécifiée, le pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilise les paramètres du client pour convertir monnaie, date et heure en données caractères. La conversion est unidirectionnelle uniquement ; le pilote ne reconnaît pas les formats standard non-ODBC pour les chaînes de date ou les valeurs monétaires contenues par exemple dans un paramètre utilisé dans une instruction INSERT ou UPDATE. Lorsque la valeur « no » est spécifiée, le pilote utilise les chaînes standard ODBC pour représenter les données de monnaie, date et heure converties en données caractères.|  
 |`SaveFile`|Nom d'un fichier source de données ODBC dans lequel les attributs de la connexion actuelle sont enregistrés si la connexion réussit.|  
-|`Server`|Nom d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La valeur doit être le nom d'un serveur sur le réseau, une adresse IP ou le nom d'un alias du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Le mot clé `Address` remplace le mot clé `Server`.<br /><br /> Vous pouvez vous connecter à l’instance par défaut sur le serveur local en spécifiant une des opérations suivantes :<br /><br /> -   `Server=;`<br />-   `Server=.;`<br />-   `Server=(local);`<br />-   `Server=(localhost);`<br />-   **Server=(LocalDB)\\**  *instancename* `;`<br /><br /> Pour plus d’informations sur la prise en charge de la base de données locale, consultez [SQL Server Native Client prend en charge pour la base de données locale](../features/sql-server-native-client-support-for-localdb.md).<br /><br /> Pour spécifier une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ajouter **\\*** InstanceName*.<br /><br /> Si aucun serveur n'est spécifié, une connexion est établie à l'instance par défaut sur l'ordinateur local.<br /><br /> Si vous spécifiez une adresse IP, assurez-vous que les protocoles TCP/IP ou de canaux nommés sont activés dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> La syntaxe complète du mot clé `Server` est la suivante :<br /><br /> `Server=`[*protocole*`:`]*Server*[`,`*port*]<br /><br /> *protocole* peut être `tcp` (TCP/IP), `lpc` (mémoire partagée), ou `np` (canaux nommés).<br /><br /> Voici un exemple de spécification d'un canal nommé :<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> Cette ligne spécifie le protocole de canal nommé, un canal nommé sur l'ordinateur local (`\\.\pipe`), le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (`MSSQL$MYINST01`) et le nom par défaut du canal nommé (`sql/query`).<br /><br /> Si ni un *protocole* ni le `Network` mot clé est spécifié, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilise l’ordre des protocoles spécifié dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.<br /><br /> *port* est le port auquel se connecter, sur le serveur spécifié. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise le port 1433.<br /><br /> Les espaces sont ignorés au début de la valeur passée à `Server` dans les chaînes de connexion ODBC lors de l'utilisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
+|`Server`|Nom d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La valeur doit être le nom d'un serveur sur le réseau, une adresse IP ou le nom d'un alias du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Le mot clé `Address` remplace le mot clé `Server`.<br /><br /> Vous pouvez vous connecter à l’instance par défaut sur le serveur local en spécifiant l’un des éléments suivants :<br /><br /> -   `Server=;`<br />-   `Server=.;`<br />-   `Server=(local);`<br />-   `Server=(localhost);`<br />-   **Server=(LocalDB)\\**  *instancename* `;`<br /><br /> Pour plus d’informations sur la prise en charge de la base de données locale, consultez [SQL Server Native Client prend en charge pour la base de données locale](../features/sql-server-native-client-support-for-localdb.md).<br /><br /> Pour spécifier une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ajouter **\\*** InstanceName*.<br /><br /> Si aucun serveur n'est spécifié, une connexion est établie à l'instance par défaut sur l'ordinateur local.<br /><br /> Si vous spécifiez une adresse IP, assurez-vous que les protocoles TCP/IP ou de canaux nommés sont activés dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> La syntaxe complète du mot clé `Server` est la suivante :<br /><br /> `Server=`[*protocole*`:`]*Server*[`,`*port*]<br /><br /> *protocole* peut être `tcp` (TCP/IP), `lpc` (mémoire partagée), ou `np` (canaux nommés).<br /><br /> Voici un exemple de spécification d'un canal nommé :<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> Cette ligne spécifie le protocole de canal nommé, un canal nommé sur l'ordinateur local (`\\.\pipe`), le nom de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (`MSSQL$MYINST01`) et le nom par défaut du canal nommé (`sql/query`).<br /><br /> Si ni un *protocole* ni le `Network` mot clé est spécifié, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilise l’ordre des protocoles spécifié dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager.<br /><br /> *port* est le port auquel se connecter, sur le serveur spécifié. Par défaut, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise le port 1433.<br /><br /> Les espaces sont ignorés au début de la valeur passée à `Server` dans les chaînes de connexion ODBC lors de l'utilisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
 |`ServerSPN`|Nom principal de service (SPN) du serveur. La valeur par défaut est une chaîne vide. Une chaîne vide fait en sorte que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilise le nom principal de service par défaut généré par le pilote.|  
 |`StatsLog_On`|Lorsque la valeur « yes » est spécifiée, active la capture de données de performances du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Lorsque la valeur « no » est spécifiée, les données de performances du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne sont pas disponibles sur la connexion.|  
 |`StatsLogFile`|Chemin d'accès complet et nom de fichier d'un fichier utilisé pour enregistrer les statistiques de performances du pilote ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
@@ -103,19 +103,19 @@ ms.locfileid: "37429148"
   
 -   **IDataInitialize::GetDataSource**  
   
- Dans le premier cas, une chaîne du fournisseur peut être utilisée pour initialiser des propriétés de connexion en définissant la propriété DBPROP_INIT_PROVIDERSTRING dans le jeu de propriétés DBPROPSET_DBINIT. Dans le deuxième cas, une chaîne d’initialisation peut être passée à **IDataInitialize::GetDataSource** méthode pour initialiser les propriétés de connexion. Les deux méthodes initialisent les mêmes propriétés de connexion OLE DB, mais des jeux de mots clés différents sont utilisés. L’ensemble des mots clés utilisés par **IDataInitialize::GetDataSource** est au minimum la description des propriétés dans le groupe de propriétés d’initialisation.  
+ Dans le premier cas, une chaîne du fournisseur peut être utilisée pour initialiser des propriétés de connexion en définissant la propriété DBPROP_INIT_PROVIDERSTRING dans le jeu de propriétés DBPROPSET_DBINIT. Dans le deuxième cas, une chaîne d’initialisation peut être passée à la méthode **IDataInitialize::GetDataSource** pour initialiser des propriétés de connexion. Les deux méthodes initialisent les mêmes propriétés de connexion OLE DB, mais des jeux de mots clés différents sont utilisés. L’ensemble de mots clés utilisé par **IDataInitialize::GetDataSource** est au minimum la description des propriétés présentes dans le groupe de propriétés d’initialisation.  
   
  Lorsqu'un paramètre de chaîne du fournisseur qui a une propriété OLE DB correspondante définie à une certaine valeur par défaut ou explicitement définie avec une valeur, la valeur de la propriété OLE DB remplace le paramètre dans la chaîne du fournisseur.  
   
- Les propriétés booléennes définies dans les chaînes du fournisseur via des valeurs DBPROP_INIT_PROVIDERSTRING sont définies à l'aide des valeurs « yes » et « no ». Les propriétés booléennes définies dans les chaînes d’initialisation à l’aide de **IDataInitialize::GetDataSource** sont définies avec les valeurs « true » et « false ».  
+ Les propriétés booléennes définies dans les chaînes du fournisseur via des valeurs DBPROP_INIT_PROVIDERSTRING sont définies à l'aide des valeurs « yes » et « no ». Les propriétés booléennes définies dans les chaînes d’initialisation à l’aide de **IDataInitialize::GetDataSource** sont définies à l’aide des valeurs « true » et « false ».  
   
- Applications à l’aide de **IDataInitialize::GetDataSource** pouvez également utiliser les mots clés utilisés par **IDBInitialize::Initialize** mais uniquement pour les propriétés qui n’ont pas de valeur par défaut. Si une application utilise à la fois le **IDataInitialize::GetDataSource** mot clé et le **IDBInitialize::Initialize** mot clé dans la chaîne d’initialisation, le **IDataInitialize :: GetDataSource** paramètre de mot clé est utilisé. Il est fortement recommandé que les applications n’utilisent pas **IDBInitialize::Initialize** mots clés dans **IDataInitialize : GetDatasource** chaînes de connexion, car ce comportement ne peut pas être maintenu dans un avenir versions.  
+ Les applications qui utilisent **IDataInitialize::GetDataSource** peuvent également utiliser les mots clés utilisés par **IDBInitialize::Initialize**, mais uniquement pour les propriétés qui n’ont pas de valeur par défaut. Si une application utilise à la fois le mot clé **IDataInitialize::GetDataSource** et le mot clé **IDBInitialize::Initialize** dans la chaîne d’initialisation, le paramètre de mot clé **IDataInitialize::GetDataSource** est utilisé. Il est fortement recommandé que les applications n’utilisent pas de mots clés **IDBInitialize::Initialize** dans les chaînes de connexion **IDataInitialize:GetDataSource**, car ce comportement peut ne pas être conservé dans les versions ultérieures.  
   
- **Remarque :** une chaîne de connexion passée via **IDataInitialize::GetDataSource** est convertie en propriétés et appliquée **IDBProperties::SetProperties**. Si les services de composants ont trouvé la description de propriété dans **IDBProperties::GetPropertyInfo**, cette propriété sera appliquée en tant que propriété autonome. Sinon, elle sera appliquée par le biais de la propriété DBPROP_PROVIDERSTRING. Par exemple, si vous spécifiez la chaîne de connexion **Data Source = server1 ; Serveur = Serveur2**, `Data Source` est défini en tant que propriété, mais `Server` passera à une chaîne de fournisseur.  
+ **Remarque :** une chaîne de connexion passée via **IDataInitialize::GetDataSource** est convertie en propriétés et appliquée **IDBProperties::SetProperties**. Si les services de composants ont trouvé la description de la propriété dans **IDBProperties::GetPropertyInfo**, cette propriété sera appliquée comme une propriété autonome. Sinon, elle sera appliquée par le biais de la propriété DBPROP_PROVIDERSTRING. Par exemple, si vous spécifiez la chaîne de connexion **Data Source = server1 ; Serveur = Serveur2**, `Data Source` est défini en tant que propriété, mais `Server` passera à une chaîne de fournisseur.  
   
- Si vous spécifiez plusieurs instances de la même propriété spécifique au fournisseur, la première valeur de la première propriété sera utilisée.  
+ Si vous spécifiez plusieurs instances de la même propriété spécifique au fournisseur, la première valeur de la première propriété est utilisée.  
   
- Chaînes de connexion utilisées par les applications OLE DB utilisant DBPROP_INIT_PROVIDERSTRING avec **IDBInitialize::Initialize** ont la syntaxe suivante :  
+ Les chaînes de connexion utilisées par les applications OLE DB utilisant DBPROP_INIT_PROVIDERSTRING avec **IDBInitialize::Initialize** ont la syntaxe suivante :  
   
  `connection-string ::= empty-string[;] | attribute[;] | attribute; connection-string`  
   
@@ -129,7 +129,7 @@ ms.locfileid: "37429148"
   
  Les valeurs d'attributs peuvent éventuellement être placées entre accolades, et ceci est d'ailleurs recommandé. Cela évite tout problème lorsque des valeurs d'attributs contiennent des signes non alphanumériques. Il est supposé que la première accolade fermante dans la valeur termine la valeur ; par conséquent, les valeurs ne peuvent pas contenir de caractères d'accolade fermante.  
   
- Un caractère d’espace après que le signe = d’un mot de clé de chaîne de connexion sera interprété comme un littéral, même si la valeur est placée entre guillemets.  
+ Un espace après le signe égal (=) d’un mot clé de chaîne de connexion sera interprété comme un littéral, même si la valeur est placée entre guillemets.  
   
  Le tableau suivant décrit les mots clés qui peuvent être utilisés avec DBPROP_INIT_PROVIDERSTRING.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "37429148"
 |`Net`|SSPROP_INIT_NETWORKLIBRARY|Synonyme de « Network ».|  
 |`Network`|SSPROP_INIT_NETWORKLIBRARY|Bibliothèque réseau utilisée pour établir une connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.|  
 |`Network Library`|SSPROP_INIT_NETWORKLIBRARY|Synonyme de « Network ».|  
-|`PacketSize`|SSPROP_INIT_PACKETSIZE|Taille de paquet réseau. La valeur par défaut est 4 096.|  
+|`PacketSize`|SSPROP_INIT_PACKETSIZE|Taille de paquet réseau. La valeur par défaut est 4096.|  
 |`PersistSensitive`|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|Accepte les chaînes « yes » et « no » comme valeurs. Lorsque « no » est spécifié, l'objet source de données n'est pas autorisé à rendre les informations d'authentification sensibles persistantes|  
 |`PWD`|DBPROP_AUTH_PASSWORD|Mot de passe de compte de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`Server`|DBPROP_INIT_DATASOURCE|Nom d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.<br /><br /> Lorsque cette valeur n'est pas spécifiée, une connexion est établie à l'instance par défaut sur l'ordinateur local.<br /><br /> Pour plus d'informations sur la syntaxe d'adresse valide, consultez la description du mot clé ODBC `Server` dans cette rubrique.|  
@@ -164,7 +164,7 @@ ms.locfileid: "37429148"
 |`UseProcForPrepare`|SSPROP_INIT_USEPROCFORPREP|Ce mot clé est déconseillé et sa valeur est ignorée par le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
 |`WSID`|SSPROP_INIT_WSID|Identificateur de station de travail.|  
   
- Chaînes de connexion utilisées par les applications OLE DB à l’aide de **IDataInitialize::GetDataSource** ont la syntaxe suivante :  
+ Les chaînes de connexion utilisées par les applications OLE DB utilisant **IDataInitialize::GetDataSource** ont la syntaxe suivante :  
   
  `connection-string ::= empty-string[;] | attribute[;] | attribute; connection-string`  
   
@@ -182,11 +182,11 @@ ms.locfileid: "37429148"
   
  Les valeurs d'attributs peuvent éventuellement être placées entre guillemets simples ou doubles, et ceci est d'ailleurs recommandé. Cela évite tout problème lorsque des valeurs contiennent des caractères non alphanumériques. Le caractère de guillemet utilisé peut également apparaître dans des valeurs, à condition d'être doublé.  
   
- Un caractère d’espace après que le signe = d’un mot de clé de chaîne de connexion sera interprété comme un littéral, même si la valeur est placée entre guillemets.  
+ Un espace après le signe égal (=) d’un mot clé de chaîne de connexion sera interprété comme un littéral, même si la valeur est placée entre guillemets.  
   
  Si une chaîne de connexion a plusieurs des propriétés répertoriées dans le tableau suivant, la valeur de la dernière propriété sera utilisée.  
   
- Le tableau suivant décrit les mots clés qui peuvent être utilisées avec **IDataInitialize::GetDataSource**:  
+ Le tableau suivant décrit les mots clés qui peuvent être utilisés avec **IDataInitialize::GetDataSource** :  
   
 |Mot clé|Propriété d'initialisation|Description|  
 |-------------|-----------------------------|-----------------|  
@@ -206,22 +206,22 @@ ms.locfileid: "37429148"
 |`MARS Connection`|SSPROP_INIT_MARSCONNECTION|Active ou désactive MARS (Multiple Active Result Set) sur la connexion. Les valeurs reconnues sont « true » et « false ». La valeur par défaut est « false ».|  
 |`Network Address`|SSPROP_INIT_NETWORKADDRESS|Adresse réseau d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.<br /><br /> Pour plus d'informations sur la syntaxe d'adresse valide, consultez la description du mot clé ODBC `Address`, plus loin dans cette rubrique.|  
 |`Network Library`|SSPROP_INIT_NETWORKLIBRARY|Bibliothèque réseau utilisée pour établir une connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.|  
-|`Packet Size`|SSPROP_INIT_PACKETSIZE|Taille de paquet réseau. La valeur par défaut est 4 096.|  
+|`Packet Size`|SSPROP_INIT_PACKETSIZE|Taille de paquet réseau. La valeur par défaut est 4096.|  
 |`Password`|DBPROP_AUTH_PASSWORD|Mot de passe de compte de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`Persist Security Info`|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|Accepte les chaînes « true » et « false » comme valeurs. Lorsque « false » est spécifié, l'objet source de données n'est pas autorisé à rendre les informations d'authentification sensibles persistantes|  
 |`Provider`||Pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ce doit être « SQLNCLI11 ».|  
 |`Server SPN`|SSPROP_INIT_SERVERSPN|Nom principal de service (SPN) du serveur. La valeur par défaut est une chaîne vide. Une chaîne vide fait en sorte que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilise le nom principal de service par défaut généré par le fournisseur.|  
 |`Trust Server Certificate`|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Accepte les chaînes « true » et « false » comme valeurs. La valeur par défaut est « false », ce qui signifie que le certificat de serveur sera validé.|  
-|`Use Encryption for Data`|SSPROP_INIT_ENCRYPT|Spécifie si les données doivent être chiffrées avant d'être envoyées sur le réseau. Les valeurs possibles sont « true » et « false ». La valeur par défaut est « false ».|  
+|`Use Encryption for Data`|SSPROP_INIT_ENCRYPT|Spécifie si les données doivent être chiffrées avant d'être envoyées sur le réseau. Les valeurs possibles sont « true » et « false ». La valeur par défaut est « false ».|  
 |`User ID`|DBPROP_AUTH_USERID|Nom du compte de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`Workstation ID`|SSPROP_INIT_WSID|Identificateur de station de travail.|  
   
- **Remarque** dans la chaîne de connexion, la propriété « Ancien mot de passe » définit SSPROP_AUTH_OLD_PASSWORD, qui est le mot de passe (peut-être périmé) actuel qui n’est pas disponible via une propriété de chaîne du fournisseur.  
+ **Remarque** Dans la chaîne de connexion, la propriété « Ancien Mot de passe » définit SSPROP_AUTH_OLD_PASSWORD, qui correspond au mot de passe actuel (éventuellement périmé) qui n’est pas disponible via une propriété de chaîne de fournisseur.  
   
 ## <a name="activex-data-objects-ado-connection-string-keywords"></a>Mots clés de chaîne de connexion ActiveX Data Objects (ADO)  
- Applications ADO attribuent la **ConnectionString** propriété du **ADODBConnection** objets ou fournir une chaîne de connexion en tant que paramètre à la **Open** méthode de **ADODBConnection** objets.  
+ Les applications ADO définissent la propriété **ConnectionString** des objets **ADODBConnection** ou fournissent une chaîne de connexion comme paramètre à la méthode **Open** des objets **ADODBConnection**.  
   
- Les applications ADO peuvent également utiliser les mots clés utilisés par OLE DB **IDBInitialize::Initialize** méthode, mais uniquement pour les propriétés qui n’ont pas de valeur par défaut. Si une application utilise les deux mots clés ADO et le **IDBInitialize::Initialize** mots clés dans la chaîne d’initialisation, le paramètre de mot clé ADO seront utilisés. Il est vivement recommandé que les applications utilisent uniquement des mots clés de chaîne de connexion ADO.  
+ Les applications ADO peuvent également utiliser les mots clés utilisés par la méthode OLE DB **IDBInitialize::Initialize**, mais uniquement pour les propriétés qui n’ont pas de valeur par défaut. Si une application utilise à la fois les mots clés ADO et les mots clés **IDBInitialize::Initialize** dans la chaîne d’initialisation, le paramètre de mot clé ADO est utilisé. Il est vivement recommandé que les applications utilisent uniquement des mots clés de chaîne de connexion ADO.  
   
  Les chaînes de connexion utilisées par ADO ont la syntaxe suivante :  
   
@@ -257,17 +257,17 @@ ms.locfileid: "37429148"
 |`MARS Connection`|SSPROP_INIT_MARSCONNECTION|Active ou désactive MARS (Multiple Active Result Set) sur la connexion si le serveur est [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou version ultérieure. Les valeurs reconnues sont « true » et « false ». La valeur par défaut est « false ».|  
 |`Network Address`|SSPROP_INIT_NETWORKADDRESS|Adresse réseau d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.<br /><br /> Pour plus d'informations sur la syntaxe d'adresse valide, consultez la description du mot clé ODBC `Address` dans cette rubrique.|  
 |`Network Library`|SSPROP_INIT_NETWORKLIBRARY|Bibliothèque réseau utilisée pour établir une connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans l'organisation.|  
-|`Packet Size`|SSPROP_INIT_PACKETSIZE|Taille de paquet réseau. La valeur par défaut est 4 096.|  
+|`Packet Size`|SSPROP_INIT_PACKETSIZE|Taille de paquet réseau. La valeur par défaut est 4096.|  
 |`Password`|DBPROP_AUTH_PASSWORD|Mot de passe de compte de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`Persist Security Info`|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|Accepte les chaînes « true » et « false » comme valeurs. Lorsque « false » est spécifié, l'objet source de données n'est pas autorisé à rendre les informations d'authentification sensibles persistantes.|  
 |`Provider`||Pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ce doit être « SQLNCLI11 ».|  
 |`Server SPN`|SSPROP_INIT_SERVERSPN|Nom principal de service (SPN) du serveur. La valeur par défaut est une chaîne vide. Une chaîne vide fait en sorte que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utilise le nom principal de service par défaut généré par le fournisseur.|  
 |`Trust Server Certificate`|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|Accepte les chaînes « true » et « false » comme valeurs. La valeur par défaut est « false », ce qui signifie que le certificat de serveur sera validé.|  
-|`Use Encryption for Data`|SSPROP_INIT_ENCRYPT|Spécifie si les données doivent être chiffrées avant d'être envoyées sur le réseau. Les valeurs possibles sont « true » et « false ». La valeur par défaut est « false ».|  
+|`Use Encryption for Data`|SSPROP_INIT_ENCRYPT|Spécifie si les données doivent être chiffrées avant d'être envoyées sur le réseau. Les valeurs possibles sont « true » et « false ». La valeur par défaut est « false ».|  
 |`User ID`|DBPROP_AUTH_USERID|Nom du compte de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`Workstation ID`|SSPROP_INIT_WSID|Identificateur de station de travail.|  
   
- **Remarque** dans la chaîne de connexion, la propriété « Ancien mot de passe » définit SSPROP_AUTH_OLD_PASSWORD, qui est le mot de passe (peut-être périmé) actuel qui n’est pas disponible via une propriété de chaîne du fournisseur.  
+ **Remarque** Dans la chaîne de connexion, la propriété « Ancien Mot de passe » définit SSPROP_AUTH_OLD_PASSWORD, qui correspond au mot de passe actuel (éventuellement périmé) qui n’est pas disponible via une propriété de chaîne de fournisseur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Génération d’applications avec SQL Server Native Client](building-applications-with-sql-server-native-client.md)  

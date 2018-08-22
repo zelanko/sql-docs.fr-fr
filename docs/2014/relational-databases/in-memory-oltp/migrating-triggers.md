@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
@@ -14,12 +13,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49dd8abf026cc3beffe30b0137abe643b29a97d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9a6d313a61b3119d762d7c88945f559e9a2e345
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175353"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394685"
 ---
 # <a name="migrating-triggers"></a>Migration de déclencheurs
   Cette rubrique présente les déclencheurs DDL et DML et les tables mémoire optimisées.  
@@ -38,7 +37,7 @@ ms.locfileid: "37175353"
   
  Selon l'événement déclencheur (FOR/AFTER ou INSTEAD OF), vous pouvez inclure le contenu du déclencheur dans la procédure stockée appropriée qui exécute l'instruction INSERT, UPDATE ou DELETE sur cette table. Par exemple, lorsque vous migrez un déclencheur AFTER INSERT, vous pouvez modifier la procédure stockée qui effectue l'opération d'insertion en ajoutant le contenu du déclencheur après l'instruction INSERT appropriée.  
   
- Utilisez une procédure stockée interprétée ou une procédure stockée compilée en mode natif. La plupart les constructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans une procédure stockée interprétée s'exécutent sur une table mémoire optimisée. Toutefois, seul un sous-ensemble de constructions [!INCLUDE[tsql](../../includes/tsql-md.md)] est pris en charge dans les procédures stockées compilées en mode natif. Pour plus d'informations sur la prise en charge de [!INCLUDE[tsql](../../includes/tsql-md.md)] sur les tables mémoire optimisées, consultez [Accès aux tables optimisées en mémoire à l’aide du Transact-SQL interprété](accessing-memory-optimized-tables-using-interpreted-transact-sql.md). Pour plus d'informations sur la prise en charge de [!INCLUDE[tsql](../../includes/tsql-md.md)] dans les procédures stockées compilées en mode natif, consultez [Les constructions Transact-SQL ne sont pas prises en charge par l'OLTP en mémoire](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ Utilisez une procédure stockée interprétée ou une procédure stockée compilée en mode natif. La plupart les constructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans une procédure stockée interprétée s'exécutent sur une table mémoire optimisée. Toutefois, seul un sous-ensemble de constructions [!INCLUDE[tsql](../../includes/tsql-md.md)] est pris en charge dans les procédures stockées compilées en mode natif. Pour plus d'informations sur la prise en charge de [!INCLUDE[tsql](../../includes/tsql-md.md)] sur les tables mémoire optimisées, consultez [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md). Pour plus d'informations sur la prise en charge de [!INCLUDE[tsql](../../includes/tsql-md.md)] dans les procédures stockées compilées en mode natif, consultez [Les constructions Transact-SQL ne sont pas prises en charge par l'OLTP en mémoire](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
  Voici un exemple simple de simulation du comportement des déclencheurs DML sur une table mémoire optimisée.  
   

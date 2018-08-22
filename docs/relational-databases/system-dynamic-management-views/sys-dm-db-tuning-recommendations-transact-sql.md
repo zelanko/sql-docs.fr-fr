@@ -26,12 +26,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f90bdf2966092f003e45b3bb6c8d80710875b59a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 3f8e2957802d527a4e4845e95eedb2ea7cdcd375
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554249"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393405"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_db\_paramétrage\_recommandations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "39554249"
 | **valide\_dans la mesure où** | **datetime2** | La première fois que cette recommandation a été générée. |
 | **last\_refresh** | **datetime2** | La dernière fois cette recommandation a été générée. |
 | **state** | **nvarchar(4000)** | Document JSON qui décrit l’état de la recommandation. Les champs suivants sont disponibles :<br />-   `currentValue` -l’état actuel de la recommandation.<br />-   `reason` – constante qui décrit la raison pour laquelle il est recommandé dans l’état actuel.|
-| **est\_exécutable\_action** | **bit** | 1 = la recommandation peut être exécutée sur la base de données par le biais de [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = la recommandation ne peut pas être exécutée sur la base de données (par exemple : recommandation uniquement ou rétabli d’informations) |
+| **est\_exécutable\_action** | **bit** | 1 = la recommandation peut être exécutée sur la base de données par le biais de [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script.<br />0 = la recommandation ne peut pas être exécutée sur la base de données (par exemple : recommandation uniquement ou rétabli d’informations) |
 | **est\_revertable\_action** | **bit** | 1 = la recommandation sont surveillée et automatiquement annulée par le moteur de base de données.<br />0 = la recommandation ne peut pas être surveillée et restaurée automatiquement. La plupart des &quot;exécutable&quot; actions seront &quot;revertable&quot;. |
 | **execute\_action\_start\_time** | **datetime2** | Date de que la recommandation est appliquée. |
 | **execute\_action\_duration** | **time** | Durée de l’action d’exécution. |
@@ -59,13 +59,13 @@ ms.locfileid: "39554249"
 | **rétablir\_action\_initié\_par** | **nvarchar(4000)** | `User` = Plan recommandé manuellement obligation d’utilisateur. <br /> `System` = Système restauré automatiquement la recommandation. |
 | **rétablir\_action\_initié\_temps** | **datetime2** | Date à laquelle que la recommandation a été annulée. |
 | **score** | **Int** | Estimation du/de l’impact de cette recommandation sur le 0-100 mise à l’échelle (plus la meilleure) |
-| **Détails** | **nvarchar(max)** | Document JSON qui contient des informations détaillées sur la recommandation. Les champs suivants sont disponibles :<br /><br />`planForceDetails`<br />-    `queryId` -requête\_id de la requête de régression.<br />-    `regressedPlanId` -plan_id du plan de régression.<br />-   `regressedPlanExecutionCount` -Nombre d’exécutions de la requête avec un plan de régression avant la régression est détecté.<br />-    `regressedPlanAbortedCount` -Nombre d’erreurs détectées pendant l’exécution du plan de régression.<br />-    `regressedPlanCpuTimeAverage` -Moyenne temps processeur consommé par la requête de régression avant la détection de la régression.<br />-    `regressedPlanCpuTimeStddev` -Écart de temps processeur consommé par la requête de régression avant la régression est détecté.<br />-    `recommendedPlanId` -plan_id du plan qui doit être forcé.<br />-   `recommendedPlanExecutionCount`-Nombre d’exécutions de la requête avec le plan qui doit être forcée avant la détection de la régression.<br />-    `recommendedPlanAbortedCount` -Nombre d’erreurs détectées pendant l’exécution du plan qui doit être forcée.<br />-    `recommendedPlanCpuTimeAverage` -Moyenne temps processeur consommé par la requête exécutée avec le plan qui doit être forcé (calculé avant la détection de la régression).<br />-    `recommendedPlanCpuTimeStddev` Écart de temps processeur consommé par la requête de régression avant la régression est détecté.<br /><br />`implementationDetails`<br />-  `method` -La méthode qui doit être utilisée pour corriger la régression. Valeur est toujours `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script qui doit être exécuté pour forcer le plan recommandé. |
+| **Détails** | **nvarchar(max)** | Document JSON qui contient des informations détaillées sur la recommandation. Les champs suivants sont disponibles :<br /><br />`planForceDetails`<br />-    `queryId` -requête\_id de la requête de régression.<br />-    `regressedPlanId` -plan_id du plan de régression.<br />-   `regressedPlanExecutionCount` -Nombre d’exécutions de la requête avec un plan de régression avant la régression est détecté.<br />-    `regressedPlanAbortedCount` -Nombre d’erreurs détectées pendant l’exécution du plan de régression.<br />-    `regressedPlanCpuTimeAverage` -Moyenne temps processeur consommé par la requête de régression avant la détection de la régression.<br />-    `regressedPlanCpuTimeStddev` -Écart de temps processeur consommé par la requête de régression avant la régression est détecté.<br />-    `recommendedPlanId` -plan_id du plan qui doit être forcé.<br />-   `recommendedPlanExecutionCount`-Nombre d’exécutions de la requête avec le plan qui doit être forcée avant la détection de la régression.<br />-    `recommendedPlanAbortedCount` -Nombre d’erreurs détectées pendant l’exécution du plan qui doit être forcée.<br />-    `recommendedPlanCpuTimeAverage` -Moyenne temps processeur consommé par la requête exécutée avec le plan qui doit être forcé (calculé avant la détection de la régression).<br />-    `recommendedPlanCpuTimeStddev` Écart de temps processeur consommé par la requête de régression avant la régression est détecté.<br /><br />`implementationDetails`<br />-  `method` -La méthode qui doit être utilisée pour corriger la régression. Valeur est toujours `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script qui doit être exécuté pour forcer le plan recommandé. |
   
 ## <a name="remarks"></a>Notes  
  Informations retournées par `sys.dm_db_tuning_recommendations` est mis à jour lorsque le moteur de base de données identifie la régression potentielle des performances de requête et n’est pas persistant. Recommandations sont simplement conservées jusque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est redémarré. Les administrateurs de base de données doivent effectuer régulièrement des copies de sauvegarde de la recommandation de paramétrage s’ils souhaitent conserver après le recyclage du serveur. 
 
  `currentValue` champ dans le `state` colonne peut avoir les valeurs suivantes :
- | État | Description |
+ | État |  Description |
  |--------|-------------|
  | `Active` | Recommandation est active et non encore appliqué. Utilisateur peut prendre le script de recommandation et exécutez-le manuellement. |
  | `Verifying` | La recommandation est appliquée par [!INCLUDE[ssde_md](../../includes/ssde_md.md)] et processus de vérification interne compare les performances du plan forcé avec le plan de régression. |
@@ -75,7 +75,7 @@ ms.locfileid: "39554249"
 
 Document JSON dans `state` colonne contient la raison pour laquelle décrit la raison pour laquelle la recommandation dans l’état actuel. Les valeurs dans le champ raison peuvent être : 
 
-| Reason | Description |
+| Reason |  Description |
 |--------|-------------|
 | `SchemaChanged` | Recommandation a expiré, car le schéma d’une table référencée est modifié. |
 | `StatisticsChanged`| Recommandation a expiré en raison de la modification de statistiques sur une table référencée. |

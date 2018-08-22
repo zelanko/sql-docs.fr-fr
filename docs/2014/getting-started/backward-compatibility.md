@@ -29,25 +29,25 @@ caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 631bdc9fe69f16e3cb5b98e85a62fe30eccbdc46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8bf37ee58a365fdd2135e91d4d71e1818c407d1
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152680"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392510"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   Les sections suivantes présentent des informations sur la compatibilité descendante pour les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ces informations concernent les fonctionnalités déconseillées, les fonctionnalités supprimées, les dernières modifications et les modifications de comportement.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique|Description|  
+|Rubrique| Description|  
 |-----------|-----------------|  
 |[Compatibilité descendante de SQL Server](../../2014/getting-started/sql-server-backward-compatibility.md)|Contient des rubriques qui décrivent les modifications de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos applications. Les fonctionnalités incluses dans cette rubrique incluent la programmabilité des données, les outils de configuration de la surface d'exposition, le programme d'installation, les services [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et autres modifications de fonctionnalités générales.|  
 |[Compatibilité descendante du moteur de base de données SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)|Contient des rubriques qui décrivent les modifications de [!INCLUDE[ssDE](../includes/ssde-md.md)] dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos applications.|  
 |[Compatibilité descendante d’Analysis Services](../../2014/analysis-services/analysis-services-backward-compatibility.md)|Contient des rubriques qui décrivent les modifications de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos applications.|  
 |[Compatibilité descendante d’Integration Services](../integration-services/integration-services-backward-compatibility.md)|Décrit les modifications de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos applications Data Transformation Services existantes.|  
-|[Compatibilité descendante de Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)|Contient des rubriques qui décrivent les modifications de [!INCLUDE[ssRS](../includes/ssrs-md.md)] dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos solutions [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] existantes.|  
+|[Compatibilité descendante de Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)|Contient des rubriques qui décrivent les modifications de [!INCLUDE[ssRS](../includes/ssrs.md)] dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos solutions [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] existantes.|  
 |[Compatibilité descendante &#40;Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|Contient des rubriques qui décrivent les modifications de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos solutions [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] existantes.|  
 |[Compatibilité descendante de la réplication](../../2014/relational-databases/replication/replication-backward-compatibility.md)|Contient des rubriques qui décrivent les modifications du [!INCLUDE[ssDE](../includes/ssde-md.md)] dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos solutions de réplication existantes.|  
   

@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,18 +24,18 @@ caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a89101132ebbad9edfcf8bd2c6190e8f86caf32
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4de5badcb2b8c67d23b00fcb645c44fa8e1b1681
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408448"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393670"
 ---
 # <a name="changing-passwords-programmatically"></a>Modification des mots de passe par programme
   Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la gestion d’expiration de mot de passe par programme, via le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif et le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client et via les modifications le **Connexion à SQL Server** boîtes de dialogue.  
   
 > [!NOTE]  
->  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver leurs informations d’identification, chiffrez-les à l’aide de la [API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Pour plus d’informations sur l’utilisation de mots de passe, consultez [mots de passe forts](../../security/strong-passwords.md).  
+>  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver les informations d’identification, chiffrez-les avec [l’API de chiffrement Win32](http://go.microsoft.com/fwlink/?LinkId=64532). Pour plus d’informations sur l’utilisation des mots de passe, consultez [Mots de passe forts](../../security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Codes d'erreur des connexions SQL Server  
  Lorsqu'une connexion ne peut pas être établie en raison de problèmes d'authentification, l'un des codes d'erreur SQL Server suivants est disponible pour aider l'application à établir le diagnostic et la récupération.  
@@ -58,12 +58,12 @@ ms.locfileid: "37408448"
 ### <a name="ole-db-user-interface-password-expiration"></a>Expiration du mot de passe de l'interface utilisateur OLE DB  
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge l’expiration de mot de passe à travers les modifications apportées à la **connexion à SQL Server** boîtes de dialogue. Si la valeur de DBPROP_INIT_PROMPT est définie sur DBPROMPT_NOPROMPT, la tentative de connexion initiale échoue si le mot de passe a expiré.  
   
- Si DBPROP_INIT_PROMPT a été défini sur toute autre valeur, l’utilisateur voit le **connexion à SQL Server** boîte de dialogue, quel que soit le mot de passe a expiré ou pas. L’utilisateur peut cliquer sur le **Options** bouton et vérifier **modifier le mot de passe** pour modifier le mot de passe.  
+ Si DBPROP_INIT_PROMPT a été défini sur une autre valeur, l’utilisateur voit la boîte de dialogue de **compte de connexion SQL Server**, que le mot de passe ait expiré ou non. L’utilisateur peut cliquer sur le bouton **Options** et cocher **Changer le mot de passe** pour modifier le mot de passe.  
   
- Si l’utilisateur clique sur OK et le mot de passe a expiré, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] invite l’utilisateur à entrer et à confirmer un nouveau mot de passe en utilisant le **mot de passe de modification SQL Server** boîte de dialogue.  
+ Si l’utilisateur clique sur OK et que le mot de passe a expiré, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] invite l’utilisateur à entrer et à confirmer un nouveau mot de passe à l’aide de la boîte de dialogue **Changement de mot de passe SQL Server**.  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>Comportement d'invite OLE DB et comptes verrouillés  
- Les tentatives de connexion peuvent échouer en raison du compte verrouillé. Si cela se produit après l’affichage de la **connexion à SQL Server** boîte de dialogue, le message d’erreur de serveur s’affiche à l’utilisateur et la tentative de connexion est abandonnée. Il peut également se produire après l’affichage de la **mot de passe de modification SQL Server** boîte de dialogue si l’utilisateur entre une valeur incorrecte pour l’ancien mot de passe. Dans ce cas le même message d'erreur s'affiche et la tentative de connexion est abandonnée.  
+ Les tentatives de connexion peuvent échouer en raison du compte verrouillé. Si cela se produit après l’affichage de la boîte de dialogue de **compte de connexion SQL Server**, le message d’erreur du serveur s’affiche pour l’utilisateur et la tentative de connexion est abandonnée. Cette situation peut aussi avoir lieu après l’affichage de la boîte de dialogue **Changement de mot de passe SQL Server** si l’utilisateur entre une valeur incorrecte pour l’ancien mot de passe. Dans ce cas le même message d'erreur s'affiche et la tentative de connexion est abandonnée.  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>Regroupement de connexions OLE DB, expiration de mot de passe et comptes verrouillés  
  Un compte peut être verrouillé ou son mot de passe peut expirer pendant que la connexion est toujours active dans un pool de connexions. Le serveur contrôle les mots de passe périmés et les comptes verrouillés en deux occasions. La première occasion correspond au moment de la création de la connexion. La seconde occasion se produit lors de la réinitialisation de la connexion, quand la connexion est extraite du pool.  
@@ -85,7 +85,7 @@ ms.locfileid: "37408448"
   
  Notez que chaque fois que la propriété « Ancien Mot de passe » propriété est définie, le fournisseur suppose qu'une tentative de modification du mot de passe a lieu, à moins que l'authentification Windows ne soit également spécifiée, dans quel cas elle est toujours prioritaire.  
   
- Si l’authentification Windows est utilisée, la spécification l’ancien mot de passe entraîne DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED selon si l’ancien mot de passe a été spécifié comme REQUIRED ou OPTIONAL, respectivement et la valeur d’état de DBPROPSTATUS_ CONFLICTINGBADVALUE est retourné dans *dwStatus*. Cette exception est détectée lorsque **IDBInitialize::Initialize** est appelée.  
+ Si l’authentification Windows est utilisée, la spécification de l’ancien mot de passe se traduit par DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED, selon que l’ancien mot de passe a respectivement été spécifié comme REQUIRED ou OPTIONAL, et que la valeur d’état de DBPROPSTATUS_CONFLICTINGBADVALUE est retournée dans *dwStatus*. Cela est détecté quand **IDBInitialize::Initialize** est appelée.  
   
  Si une tentative de modifier le mot de passe échoue de façon inattendue, le serveur retourne le code d'erreur 18468. Une erreur OLEDB standard est retournée à partir de la tentative de connexion.  
   
@@ -99,12 +99,12 @@ ms.locfileid: "37408448"
   
  Si [SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md) est appelée et la valeur de **DriverCompletion** est définie sur SQL_DRIVER_NOPROMPT, la tentative de connexion initiale échoue si le mot de passe a expiré. La valeur SQLSTATE 28000 et la valeur de code d’erreur native 18487 sont retournées par les appels suivants à **SQLError** ou **SQLGetDiagRec**.  
   
- Si **DriverCompletion** a été défini sur une autre valeur, l’utilisateur voit le **connexion à SQL Server** boîte de dialogue, quel que soit le mot de passe a expiré ou pas. L’utilisateur peut cliquer sur le **Options** bouton et vérifier **modifier le mot de passe** pour modifier le mot de passe.  
+ Si **DriverCompletion** a été défini sur une autre valeur, l’utilisateur voit le **connexion à SQL Server** boîte de dialogue, quel que soit le mot de passe a expiré ou pas. L’utilisateur peut cliquer sur le bouton **Options** et cocher **Changer le mot de passe** pour modifier le mot de passe.  
   
  Si l’utilisateur clique sur OK et le mot de passe a expiré, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] invites pour entrer et confirmer un nouveau mot de passe à l’aide du **mot de passe de modification SQL Server** boîte de dialogue.  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>Comportement d'invite ODBC et comptes verrouillés  
- Les tentatives de connexion peuvent échouer en raison du compte verrouillé. Si cela se produit après l’affichage de la **connexion à SQL Server** boîte de dialogue, le message d’erreur de serveur s’affiche à l’utilisateur et la tentative de connexion est abandonnée. Il peut également se produire après l’affichage de la **mot de passe de modification SQL Server** boîte de dialogue si l’utilisateur entre une valeur incorrecte pour l’ancien mot de passe. Dans ce cas le même message d'erreur s'affiche et la tentative de connexion est abandonnée.  
+ Les tentatives de connexion peuvent échouer en raison du compte verrouillé. Si cela se produit après l’affichage de la boîte de dialogue de **compte de connexion SQL Server**, le message d’erreur du serveur s’affiche pour l’utilisateur et la tentative de connexion est abandonnée. Cette situation peut aussi avoir lieu après l’affichage de la boîte de dialogue **Changement de mot de passe SQL Server** si l’utilisateur entre une valeur incorrecte pour l’ancien mot de passe. Dans ce cas le même message d'erreur s'affiche et la tentative de connexion est abandonnée.  
   
 #### <a name="odbc-connection-pooling-password-expiry-and-locked-accounts"></a>Regroupement de connexions ODBC, expiration de mot de passe et comptes verrouillés  
  Un compte peut être verrouillé ou son mot de passe peut expirer pendant que la connexion est toujours active dans un pool de connexions. Le serveur contrôle les mots de passe périmés et les comptes verrouillés en deux occasions. La première occasion correspond au moment de la création de la connexion. La seconde occasion se produit lors de la réinitialisation de la connexion, quand la connexion est extraite du pool.  

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
@@ -14,12 +13,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4f3f8fcac44dc238440006eddaf44681f8cbaee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3712e3b2e602bd403f4c1d312603577a4045a95a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158870"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396523"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transactions dans les tables mémoire optimisées
   Le contrôle de version de ligne des tables sur disque (à l'aide de l'isolation SNAPSHOT ou avec READ_COMMITTED_SNAPSHOT) fournit un type de contrôle d'accès concurrentiel optimiste. Les programmes d'écriture et les programmes de lecture ne se bloquent pas les uns les autres. Avec les tables mémoire optimisées, les programmes d'écriture ne bloquent pas les autres programmes d'écriture. Avec le contrôle de version de ligne pour les tables sur disque, une transaction verrouille la ligne et les transactions concomitantes tentant de mettre à jour cette ligne sont bloquées. Il n'existe pas de verrouillage avec les tables mémoire optimisées. En revanche, si deux transactions tentent de mettre à jour la même ligne, un conflit d'écriture/écriture (erreur 41302) se produit.  
@@ -74,7 +73,7 @@ ms.locfileid: "37158870"
 ### <a name="transaction-lifetime"></a>Durée de vie des transactions  
  Les problèmes mentionnés dans le tableau précédent peuvent se produire à différents stades au cours d'une transaction. L'illustration suivante montre les phases d'une transaction qui accède à des tables mémoire optimisées.  
   
- ![Durée de vie d’une transaction. ] (../../2014/database-engine/media/hekaton-transactions.gif "Durée de vie d’une transaction.")  
+ ![Durée de vie d’une transaction. ](../../2014/database-engine/media/hekaton-transactions.gif "Durée de vie d’une transaction.")  
 Durée de vie d'une transaction qui accède à des tables mémoire optimisées.  
   
 #### <a name="regular-processing"></a>Traitement normal  

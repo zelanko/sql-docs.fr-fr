@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobschedule (Transact-SQL) | Documents Microsoft
+title: sp_help_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: edaebbc89b6422bd529963dc851371747f7d22be
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ac24c12f2ec6f7228857b013c8478db070a52e64
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261558"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394912"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Arguments  
  [  **@job_id=** ] *job_id*  
- Numéro d’identification du travail. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+ Numéro d’identification. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'***nom_travail***'**  
  Nom du travail. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
   
-> **Remarque :** soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
+> **Remarque :** soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
  [  **@schedule_name=** ] **'***nom_de_la_planification***'**  
  Nom de l'élément de planification pour le travail. *nom_de_la_planification*est **sysname**, avec NULL comme valeur par défaut.  
@@ -70,34 +70,34 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**schedule_id**|**int**|Numéro d'identificateur de la planification.|  
+|**schedule_id**|**Int**|Numéro d'identificateur de la planification.|  
 |**schedule_name**|**sysname**|Nom de la planification.|  
-|**enabled**|**int**|Si la planification est activée (**1**) ou désactivée (**0**).|  
-|**freq_type**|**int**|Valeur indiquant quand le travail doit être exécuté.<br /><br /> **1** = une fois<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuellement, relatif à la **freq_interval**<br /><br /> **64** = exécuter lorsque **SQLServerAgent** démarrage du service.|  
-|**freq_interval**|**int**|Jours lorsque la tâche est exécutée. La valeur dépend de la valeur de **freq_type**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|Unités de **freq_subday_interval**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|Nombre de **freq_subday_type** périodes entre chaque exécution du travail. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**int**|Planifiées du travail de le **freq_interval** dans chaque mois. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_recurrence_factor**|**int**|Nombre de mois devant s'écouler entre les exécutions planifiées du travail.|  
-|**active_start_date**|**int**|Date d'activation de la planification.|  
-|**active_end_date**|**int**|Date de fin de la planification.|  
-|**active_start_time**|**int**|Heure de début de la planification.|  
-|**active_end_time**|**int**|Heure de fin de la planification.|  
+|**enabled**|**Int**|Si la planification est activée (**1**) ou désactivée (**0**).|  
+|**freq_type**|**Int**|Valeur indiquant quand le travail doit être exécuté.<br /><br /> **1** = une fois<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuellement, relatif à la **freq_interval**<br /><br /> **64** = exécuter lorsque **SQLServerAgent** démarrage du service.|  
+|**freq_interval**|**Int**|Jours lorsque la tâche est exécutée. La valeur dépend de la valeur de **freq_type**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**Int**|Unités pour **freq_subday_interval**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**Int**|Nombre de **freq_subday_type** périodes entre chaque exécution du travail. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**Int**|Planifiées du travail de le **freq_interval** dans chaque mois. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_recurrence_factor**|**Int**|Nombre de mois devant s'écouler entre les exécutions planifiées du travail.|  
+|**active_start_date**|**Int**|Date d'activation de la planification.|  
+|**active_end_date**|**Int**|Date de fin de la planification.|  
+|**active_start_time**|**Int**|Heure de début de la planification.|  
+|**active_end_time**|**Int**|Heure de fin de la planification.|  
 |**date_created**|**datetime**|Date de création de la planification.|  
 |**schedule_description**|**nvarchar(4000)**|Description en anglais de la planification qui est dérivée des valeurs dans **msdb.dbo.sysschedules**. Lorsque *include_description* est **0**, cette colonne contienne un texte indiquant que la description n’a pas été demandée.|  
-|**next_run_date**|**int**|Date à laquelle la planification va lancer l'exécution du travail.|  
-|**next_run_time**|**int**|Heure à laquelle la planification va lancer l'exécution du travail.|  
+|**next_run_date**|**Int**|Date à laquelle la planification va lancer l'exécution du travail.|  
+|**next_run_time**|**Int**|Heure à laquelle la planification va lancer l'exécution du travail.|  
 |**schedule_uid**|**uniqueidentifier**|Identificateur de la planification.|  
-|**job_count**|**int**|Nombre de travaux retournés.|  
+|**job_count**|**Int**|Nombre de travaux retournés.|  
   
-> **Remarque :****sp_help_jobschedule** retourne des valeurs à partir de la **dbo.sysjobschedules** et **dbo.sysschedules** dans les tables système **msdb** . **sysjobschedules** met à jour toutes les 20 minutes. Cela peut affecter les valeurs retournées par cette procédure stockée.  
+> **Remarque :****sp_help_jobschedule** retourne des valeurs à partir de la **dbo.sysjobschedules** et **dbo.sysschedules** tables système dans **msdb** .   **sysjobschedules** met à jour toutes les 20 minutes. Cela peut affecter les valeurs retournées par cette procédure stockée.  
   
 ## <a name="remarks"></a>Notes  
- Les paramètres de **sp_help_jobschedule** peut être utilisé uniquement dans certaines combinaisons. Si *id_de_la_planification* est spécifié, ni *job_id* ni *job_name* peut être spécifié. Dans le cas contraire, le *job_id* ou *job_name* paramètres peuvent être utilisés avec *nom_de_la_planification*.  
+ Les paramètres de **sp_help_jobschedule** peut être utilisé uniquement dans certaines combinaisons. Si *id_de_la_planification* est spécifié, ni *job_id* ni *nom_travail* peut être spécifié. Sinon, le *job_id* ou *nom_travail* paramètres peuvent être utilisés avec *nom_de_la_planification*.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** . Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -106,9 +106,9 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membres de **SQLAgentUserRole** peuvent uniquement afficher les propriétés des planifications de travaux dont ils sont propriétaires.  
+ Membres de **SQLAgentUserRole** peut uniquement afficher les propriétés des planifications des travaux dont ils sont propriétaires.  
   
 ## <a name="examples"></a>Exemples  
   

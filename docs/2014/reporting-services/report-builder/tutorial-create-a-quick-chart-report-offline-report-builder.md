@@ -18,17 +18,17 @@ caps.latest.revision: 25
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 31d50f1fa8869cd3bff62f137a61a704518e588d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 2875419d255b10d73a5c7df88841ca11926bd039
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39400782"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393184"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
   Dans ce didacticiel, vous allez créer un graphique à secteurs à l'aide d'un Assistant, puis le modifier quelque peu afin d'obtenir un petit aperçu des opérations réalisables. Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux méthodes aboutissent au même résultat, à savoir un graphique à secteurs semblable à celui de l'illustration suivante :  
   
- ! [Afficher « Mon premier graphique à secteurs « à exécution] (.. /Media/RS-my1stpierunview.gif « mon premier graphique à secteurs » en mode d’exécution »)  
+ ![« Mon premier graphique à secteurs « à exécution afficher](../media/rs-my1stpierunview.gif "mon premier graphique à secteurs dans la vue de l’exécution")  
   
 ## <a name="prerequisites"></a>Prérequis  
  Que vous utilisiez des données XML ou une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)], vous devez avoir accès au Générateur de rapports [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Vous pouvez exécuter la version autonome ou la version ClickOnce disponible à partir du Gestionnaire de rapports ou d'un site SharePoint. Seule la première étape, l'ouverture du Générateur de rapports, est différente pour les versions ClickOnce. Pour plus d’informations, consultez [installation, désinstallation et prise en charge du Générateur de rapports](../install-uninstall-and-report-builder-support.md).  

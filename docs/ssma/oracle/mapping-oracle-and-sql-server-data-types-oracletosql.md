@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 54b67cbb38c9884afc19f6da6283bfda99f93e88
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6948b81ca2460d4de74393aa880f95fe3f11dfb1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979322"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394695"
 ---
-# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mappage d’Oracle et les Types de données SQL Server (OracleToSQL)
-Les types de base de données Oracle diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] types de base de données. Lorsque vous convertissez des objets de base de données Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objets, vous devez spécifier le mappage des types de données d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
+# <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mappage de types de données Oracle et SQL Server (OracleToSQL)
+Les types de base de données Oracle diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de base de données. Lorsque vous convertissez des objets de base de données Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets, vous devez spécifier le mappage des types de données d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
   
 ## <a name="default-mappings"></a>Mappages par défaut  
 SSMA a un ensemble de mappages de types de données par défaut. Pour la liste des mappages par défaut, consultez [paramètres du projet &#40;le mappage de Type&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
@@ -62,11 +62,11 @@ La procédure suivante montre comment mapper des types de données sur le projet
   
         Cela vous permet de personnaliser le mappage de données pour les valeurs inférieures et supérieures du même type de données.  
   
-    4.  Sous **type cible**, sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type de données.  
+    4.  Sous **type cible**, sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  
   
         Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur de données dans le **remplacer par** boîte.  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Pour modifier un mappage de type de données, procédez comme suit :  
   
@@ -78,9 +78,9 @@ La procédure suivante montre comment mapper des types de données sur le projet
   
         Cela vous permet de personnaliser le mappage de données pour les valeurs inférieures et supérieures du même type de données.  
   
-    4.  Sous **type cible**, sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type de données.  
+    4.  Sous **type cible**, sélectionnez la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  
   
-        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur de données dans le **remplacer par** zone, puis [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur de données dans le **remplacer par** zone, puis [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Pour supprimer un mappage de type de données personnalisé, procédez comme suit :  
   
@@ -91,7 +91,7 @@ La procédure suivante montre comment mapper des types de données sur le projet
         Impossible de supprimer les mappages hérités. Toutefois, des mappages hérités sont remplacées par des mappages personnalisés sur un objet spécifique ou une catégorie d’objet.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
-L’étape suivante du processus de migration consiste à [créer un rapport d’évaluation](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357) ou [convertir les objets de base de données Oracle à la syntaxe de SQL Server](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272). Si vous créez un rapport d’évaluation, les objets Oracle sont automatiquement convertis durant l’évaluation.  
+L’étape suivante du processus de migration consiste à [créer un rapport d’évaluation](assessing-oracle-schemas-for-conversion-oracletosql.md) ou [convertir les objets de base de données Oracle à la syntaxe de SQL Server](converting-oracle-schemas-oracletosql.md). Si vous créez un rapport d’évaluation, les objets Oracle sont automatiquement convertis durant l’évaluation.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Bases de données de migration d’Oracle vers SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7e17bf897c91021a06ebb5605b072f27aa624d3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6d6c2d2463600effd7e7d8868a3a198edf746bc5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422358"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395102"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Types CLR volumineux définis par l’utilisateur (ODBC)
   Cette rubrique traite des modifications apportées à ODBC dans SQL Server Native Client pour prendre en charge les types CLR volumineux définis par l'utilisateur.  
@@ -160,7 +160,7 @@ ms.locfileid: "37422358"
 |Version du serveur|SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
 |SQL Server 2005|`UDT`|`varbinary(max)`|  
-|SQL Server 2008 et versions ultérieur|`UDT`|`UDT`|  
+|SQL Server 2008 et ultérieur|`UDT`|`UDT`|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Fonctions ODBC prenant en charge les types CLR volumineux définis par l'utilisateur  
  Cette section indique les modifications apportées aux fonctions ODBC SQL Server Native Client au niveau des types CLR volumineux définis par l'utilisateur.  

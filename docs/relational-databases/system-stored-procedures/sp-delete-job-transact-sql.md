@@ -1,5 +1,5 @@
 ---
-title: sp_delete_job (Transact-SQL) | Documents Microsoft
+title: sp_delete_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90d213daa9d5a17a6630142e06e5b7ef441a9e9c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b4f55f1c4dd0d83f7db9f92027f95bcfeea7ad7c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262912"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393425"
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,19 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  [  **@job_id=** ] *job_id*  
  Numéro d'identification du travail à supprimer. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'***nom_travail***'**  
  Nom du travail à supprimer. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  Soit *job_id* ou *job_name*doit être spécifié ; ne peut pas être spécifiés.  
+>  Soit *job_id* ou *nom_travail*doit être spécifié ; ne peut pas être spécifiés.  
   
- [  **@originating_server=** ] **'***server***'**  
+ [  **@originating_server=** ] **'***server***»**  
  À usage interne uniquement.  
   
  [  **@delete_history=** ] *delete_history*  
- Spécifie s'il faut supprimer l'historique du travail. *delete_history* est **bits**, avec une valeur par défaut **1**. Lorsque *delete_history* est **1**, l’historique des travaux pour le travail est supprimé. Lorsque *delete_history* est **0**, l’historique des travaux n’est pas supprimé.  
+ Spécifie s'il faut supprimer l'historique du travail. *delete_history* est **bits**, avec une valeur par défaut **1**. Lorsque *delete_history* est **1**, l’historique des travaux pour le travail sont supprimé. Lorsque *delete_history* est **0**, l’historique des travaux ne sont pas supprimé.  
   
- Notez que lorsqu’un travail est supprimé et l’historique n’est pas supprimé, des informations d’historique pour le travail seront affiche pas dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilisateur graphique historique de l’interface, mais les informations seront trouvent toujours dans le **sysjobhistory** de table dans le **msdb** base de données.  
+ Notez que lorsqu’un travail est supprimé et l’historique n’est pas supprimé, les informations d’historique pour le travail ne seront pas visibles dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilisateur graphique historique de l’interface, mais les informations seront trouvent toujours dans le **sysjobhistory**de table dans le **msdb** base de données.  
   
  [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
  Indique s'il faut supprimer les planifications associées à ce travail si aucun autre travail n'y fait référence. *delete_unused_schedule* est **bits**, avec une valeur par défaut **1**. Lorsque *delete_unused_schedule* est **1**, les planifications associées à ce travail sont supprimées si aucun autre travail fait référence à la planification. Lorsque *delete_unused_schedule* est **0**, les planifications ne sont pas supprimées.  
@@ -71,18 +71,18 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Le **@originating_server** argument est réservé à un usage interne.  
   
- Le **@delete_unused_schedule** argument fournit la compatibilité descendante avec les versions précédentes de SQL Server en supprimant automatiquement les planifications qui ne sont associées à aucun travail. Notez que, par défaut, ce paramètre permet la compatibilité amont. Pour conserver les planifications qui ne sont pas associées à une tâche, vous devez fournir la valeur **0** comme le **@delete_unused_schedule** argument.  
+ Le **@delete_unused_schedule** argument fournit la compatibilité descendante avec les versions précédentes de SQL Server en supprimant automatiquement les planifications qui ne sont pas attachées à n’importe quel travail. Notez que, par défaut, ce paramètre permet la compatibilité amont. Pour conserver les planifications qui ne sont pas associées à une tâche, vous devez fournir la valeur **0** en tant que le **@delete_unused_schedule** argument.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
  Cette procédure stockée ne peut pas supprimer les plans de maintenance ni les travaux relevant de plans de maintenance. Pour supprimer les plans de maintenance, vous devez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -91,7 +91,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Les membres du rôle serveur fixe **sysadmin** peuvent exécuter **sp_delete_job** pour supprimer un travail. Un utilisateur qui n'est pas membre du rôle serveur fixe **sysadmin** n'a le droit de supprimer que les travaux dont il est propriétaire.  
   

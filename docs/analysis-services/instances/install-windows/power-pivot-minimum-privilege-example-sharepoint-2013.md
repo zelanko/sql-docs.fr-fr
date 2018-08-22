@@ -1,5 +1,5 @@
 ---
-title: Power Pivot avec privilèges Minimum exemple - SharePoint 2013 | Documents Microsoft
+title: Power Pivot avec privilèges Minimum exemple - SharePoint 2013 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c58a33f7a8c1ab0e8676f6d32b14b03274707c9e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0f26430a70d3ff6f2688727b135e8bf46649af62
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020006"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394904"
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot avec privilèges Minimum exemple - SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Cette rubrique décrit un exemple de configuration de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013 avec les privilèges minimum. La configuration utilise un compte différent pour chacun des trois composants et chaque compte dispose du niveau minimum de privilèges.  
   
 ## <a name="summary-of-accounts"></a>Récapitulatif des comptes  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013 prend en charge l’utilisation du compte Service réseau pour le compte de service Analysis Services. Le compte Service réseau n'est pas un scénario pris en charge avec SharePoint 2010. Pour plus d’informations sur les comptes de Service, consultez [configurer les comptes de Service Windows et les autorisations](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013 prend en charge l’utilisation du compte Service réseau pour le compte de service Analysis Services. Le compte Service réseau n'est pas un scénario pris en charge avec SharePoint 2010. Pour plus d’informations sur les comptes de Service, consultez [configurer les comptes de Service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  Le tableau suivant récapitule les trois comptes utilisés dans cet exemple de configuration avec privilèges minimums.  
   
-|Portée|Nom|  
+|Portée|Nom   |  
 |-----------|----------|  
 |Compte Administrateur SharePoint|**SPAdmin**|  
 |Compte de batterie de serveurs SharePoint|**SPFarm**|  

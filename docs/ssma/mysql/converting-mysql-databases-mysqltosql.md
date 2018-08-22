@@ -16,18 +16,18 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3ad0a909c9fce73955bee29070febfa32037a91c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 83cd35918c6d2fbc3190ebcedd3606b622e549f1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985771"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392084"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Conversion de bases de données MySQL (MySQLToSQL)
-Après vous être connecté à MySQL, connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure et définir le projet et les options de mappage de données, vous pouvez convertir des objets de base de données MySQL à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou objets de base de données SQL Azure.  
+Après vous être connecté à MySQL, connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure et définir le projet et les options de mappage de données, vous pouvez convertir des objets de base de données MySQL à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de base de données SQL Azure.  
   
 ## <a name="the-conversion-process"></a>Le processus de Conversion  
-Convertir des objets de base de données accepte les définitions d’objets à partir de MySQL, les convertit en similaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure objets et charge ensuite ces informations dans les métadonnées SSMA. Il ne charge pas les informations dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Vous pouvez ensuite afficher les objets et leurs propriétés à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou de l’Explorateur de métadonnées SQL Azure.  
+Convertir des objets de base de données accepte les définitions d’objets à partir de MySQL, les convertit en similaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure objets et charge ensuite ces informations dans les métadonnées SSMA. Il ne charge pas les informations dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez ensuite afficher les objets et leurs propriétés à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l’Explorateur de métadonnées SQL Azure.  
   
 Lors de la conversion, SSMA imprime les messages de sortie dans le volet de sortie et messages d’erreur vers le volet Liste d’erreurs. Utilisez les informations de sortie et d’erreur pour déterminer si vous devez modifier vos bases de données MySQL ou votre processus de conversion pour obtenir les résultats de la conversion souhaitée.  
   
@@ -35,13 +35,13 @@ Lors de la conversion, SSMA imprime les messages de sortie dans le volet de sort
 Avant de convertir des objets, passez en revue les options de conversion de projet dans le **paramètres du projet** boîte de dialogue. À l’aide de cette boîte de dialogue, vous pouvez définir comment SSMA convertit les tables et index. Pour plus d’informations, consultez [paramètres du projet &#40;Conversion&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
 ## <a name="conversion-results"></a>Résultats de la conversion  
-Le tableau suivant présente les objets de MySQL sont convertis et résultant [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objets :  
+Le tableau suivant présente les objets de MySQL sont convertis et résultant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets :  
   
 |||  
 |-|-|  
 |**Objets de MySQL**|**Objets SQL Server qui en résulte**|  
-|Tables avec des objets dépendants, tels que des index|SSMA crée des tables avec des objets dépendants. Table est convertie avec tous les index et contraintes. Les index sont convertis en distinct [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objets.<br /><br />**Mappage de type de données spatiales** peut être effectuée uniquement au niveau de nœud de table.<br /><br />Pour plus d’informations sur les paramètres de Conversion de la Table, consultez [paramètres de Conversion](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|  
-|Fonctions|Si la fonction peut être directement convertie en données Transact-SQL, SSMA crée une fonction. Dans certains cas, la fonction doit être convertie à une procédure stockée. Cela est possible à l’aide de **fonction Conversion** dans Paramètres du projet. Dans ce cas, SSMA crée une procédure stockée et une fonction qui appelle la procédure stockée.<br /><br />**Choix donné :**<br /><br />Convertir en fonction des paramètres de projet<br /><br />Convertir (fonction)<br /><br />Conversion d’une procédure stockée<br /><br />Pour plus d’informations sur les paramètres de Conversion de la fonction, consultez [paramètres de Conversion](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|  
+|Tables avec des objets dépendants, tels que des index|SSMA crée des tables avec des objets dépendants. Table est convertie avec tous les index et contraintes. Les index sont convertis en distinct [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets.<br /><br />**Mappage de type de données spatiales** peut être effectuée uniquement au niveau de nœud de table.<br /><br />Pour plus d’informations sur les paramètres de Conversion de la Table, consultez [paramètres de Conversion](conversion-settings-mysqltosql.md)|  
+|Fonctions|Si la fonction peut être directement convertie en données Transact-SQL, SSMA crée une fonction. Dans certains cas, la fonction doit être convertie à une procédure stockée. Cela est possible à l’aide de **fonction Conversion** dans Paramètres du projet. Dans ce cas, SSMA crée une procédure stockée et une fonction qui appelle la procédure stockée.<br /><br />**Choix donné :**<br /><br />Convertir en fonction des paramètres de projet<br /><br />Convertir (fonction)<br /><br />Conversion d’une procédure stockée<br /><br />Pour plus d’informations sur les paramètres de Conversion de la fonction, consultez [paramètres de Conversion](conversion-settings-mysqltosql.md)|  
 |Procédures|Si la procédure peut être directement convertie en données Transact-SQL, SSMA crée une procédure stockée. Dans certains cas, une procédure stockée doit être appelée dans une transaction autonome. Dans ce cas, SSMA crée deux procédures stockées : celui qui implémente la procédure et une autre qui est utilisée pour appeler l’implémentation d’une procédure stockée.|  
 |Conversion de la base de données|Bases de données en tant qu’objets de MySQL ne sont pas converties directement en SSMA pour MySQL. Bases de données MySQL sont traités plus comme un nom de schéma et tous les paramètres physiques sont perdues lors de la conversion. SSMA pour MySQL utilise [mappage de bases de données MySQL à des schémas de SQL Server &#40;MySQLToSQL&#41; ](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) pour mapper des objets de base de données MySQL pour la paire de schéma/base de données SQL Server appropriée.|  
 |Conversion de déclencheur|**SSMA crée des déclencheurs selon les règles suivantes :**<br /><br />AVANT la conversion des déclencheurs dans les déclencheurs INSTEAD OF T-SQL<br /><br />Déclencheurs AFTER sont convertis en déclencheurs après T-SQL avec ou sans itérations par lignes.|  
@@ -110,7 +110,7 @@ Pour chaque élément qui ne peut pas être converti, vous devez déterminer ce 
   
 -   Vous pouvez modifier l’objet dans la base de données MySQL pour supprimer ou de réviser le code problématique. Pour charger le code mis à jour dans SSMA, vous devrez mettre à jour les métadonnées. Pour plus d’informations, consultez [connexion à MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
--   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou de l’Explorateur de métadonnées SQL Azure et l’Explorateur de métadonnées de MySQL, désactivez la case à cocher en regard de l’élément avant de charger les objets vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure et la migration des données à partir de MySQL.  
+-   Vous pouvez exclure l’objet de la migration. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l’Explorateur de métadonnées SQL Azure et l’Explorateur de métadonnées de MySQL, désactivez la case à cocher en regard de l’élément avant de charger les objets vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure et la migration des données à partir de MySQL.  
   
 ## <a name="next-step"></a>Étape suivante  
 L’étape suivante du processus de migration est [le chargement des objets de base de données convertis dans SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  

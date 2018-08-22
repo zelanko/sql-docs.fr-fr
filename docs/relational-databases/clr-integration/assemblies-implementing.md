@@ -14,14 +14,14 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8145f722068b6e160d6c1c801fdadeca2051f1b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 337b45e5f441be3de009c7cc9a4d8115c6bbb17f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353091"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394089"
 ---
-# <a name="assemblies---implementing"></a>Assemblys - implémentation
+# <a name="assemblies---implementing"></a>Assemblys - Implémentation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique fournit des informations sur les concepts suivants, afin de vous aider à implémenter et à utiliser les assemblys dans vos bases de données :  
   
@@ -72,7 +72,7 @@ ms.locfileid: "37353091"
   
  **Pour supprimer un assembly à l’aide de SQL Server Management Studio**  
   
--   [Supprimer des objets](http://msdn.microsoft.com/library/49541441-179c-40d3-ba0c-01bcae545984)  
+-   [Supprimer des objets](../../ssms/object/delete-objects.md)  
   
  Par défaut, l'exécution de tous les assemblys créés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est désactivée. Vous pouvez utiliser la **clr activé** possibilité du **sp_configure** procédures stockées système pour désactiver ou activer l’exécution de tous les assemblys sont chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La désactivation de l'exécution d'un assembly empêche l'exécution des fonctions CLR (Common Language Runtime), des procédures stockées, des déclencheurs, des agrégats et des types définis par l'utilisateur, de même qu'elle arrête leur exécution si celle-ci est en cours. Elle n'entrave cependant pas la possibilité de créer, de modifier ou de supprimer des assemblys. Pour plus d’informations, consultez [Server Configuration Option clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   

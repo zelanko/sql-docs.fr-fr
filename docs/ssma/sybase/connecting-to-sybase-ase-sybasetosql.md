@@ -18,22 +18,22 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0fe501e639b5896eb0f83391e6be40b8f8961ba9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a8411cdb507b27e69f86f0d853e1c98b4d24d29a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980091"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392116"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Connexion à Sybase ASE (SybaseToSQL)
-Pour migrer des bases de données Sybase Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, vous devez vous connecter à Adaptive Server qui contient les bases de données que vous souhaitez migrer. Lorsque vous vous connectez, SSMA Obtient les métadonnées relatives à toutes les bases de données sur le serveur Adaptive et affiche les métadonnées de la base de données dans le volet Explorateur de métadonnées de Sybase. SSMA stocke des informations sur le serveur de base de données, mais ne stocke pas les mots de passe.  
+Pour migrer des bases de données Sybase Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez vous connecter à Adaptive Server qui contient les bases de données que vous souhaitez migrer. Lorsque vous vous connectez, SSMA Obtient les métadonnées relatives à toutes les bases de données sur le serveur Adaptive et affiche les métadonnées de la base de données dans le volet Explorateur de métadonnées de Sybase. SSMA stocke des informations sur le serveur de base de données, mais ne stocke pas les mots de passe.  
   
 Votre connexion à ASE reste active jusqu'à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez vous reconnecter à ASE si vous souhaitez une connexion active au serveur.  
   
 Métadonnées relatives au serveur adaptatif ne sont pas automatiquement mis à jour. Au lieu de cela, si vous souhaitez mettre à jour les métadonnées dans l’Explorateur de métadonnées de Sybase, vous devez manuellement mettre à jour les métadonnées, comme décrit dans la section « Actualisation Sybase ASE métadonnées » plus loin dans cette rubrique.  
   
 ## <a name="required-ase-permissions"></a>Autorisations requises ASE  
-Le compte qui est utilisé pour se connecter à l’ASE doit avoir au moins **public** accès à la base de données master et aux bases de données source à migrer vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. En outre, pour sélectionner les autorisations sur les tables qui sont en cours de migration, l’utilisateur doit disposer des autorisations SELECT sur les tables système suivantes :  
+Le compte qui est utilisé pour se connecter à l’ASE doit avoir au moins **public** accès à la base de données master et aux bases de données source à migrer vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. En outre, pour sélectionner les autorisations sur les tables qui sont en cours de migration, l’utilisateur doit disposer des autorisations SELECT sur les tables système suivantes :  
   
 -   [source_db].dbo.sysobjects  
   
@@ -54,7 +54,7 @@ Le compte qui est utilisé pour se connecter à l’ASE doit avoir au moins **pu
 -   master.dbo.sysdatabases  
   
 ## <a name="establishing-a-connection-to-ase"></a>Établir une connexion à l’ASE  
-Lorsque vous vous connectez à un serveur Adaptive, SSMA lit les métadonnées de base de données sur le serveur de base de données, puis ajoute ces métadonnées au fichier projet. Ces métadonnées sont utilisées par SSMA lorsqu’il convertit les objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou la syntaxe SQL Azure, et quand il migre les données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Vous pouvez parcourir ces métadonnées dans le volet Explorateur de métadonnées Sybase et passez en revue les propriétés des objets de base de données individuelle.  
+Lorsque vous vous connectez à un serveur Adaptive, SSMA lit les métadonnées de base de données sur le serveur de base de données, puis ajoute ces métadonnées au fichier projet. Ces métadonnées sont utilisées par SSMA lorsqu’il convertit les objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou la syntaxe SQL Azure, et quand il migre les données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez parcourir ces métadonnées dans le volet Explorateur de métadonnées Sybase et passez en revue les propriétés des objets de base de données individuelle.  
   
 > [!IMPORTANT]  
 > Avant d’essayer de se connecter au serveur de base de données, assurez-vous que le serveur de base de données est en cours d’exécution et qu’il peut accepter les connexions.  
@@ -106,7 +106,7 @@ Lorsque vous vous connectez à un serveur Adaptive, SSMA lit les métadonnées d
     Pour plus d’informations, consultez [se connecter à Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
   
 ## <a name="reconnecting-to-sybase-ase"></a>Rétablir la connexion à Sybase ASE  
-Votre connexion au serveur de base de données reste active jusqu'à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez reconnecter si vous souhaitez une connexion active au serveur adaptative. Vous pouvez travailler hors connexion jusqu'à ce que vous souhaitez mettre à jour des métadonnées, de charger des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, et migrer les données.  
+Votre connexion au serveur de base de données reste active jusqu'à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez reconnecter si vous souhaitez une connexion active au serveur adaptative. Vous pouvez travailler hors connexion jusqu'à ce que vous souhaitez mettre à jour des métadonnées, de charger des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, et migrer les données.  
   
 ## <a name="refreshing-sybase-ase-metadata"></a>L’actualisation des métadonnées de Sybase ASE  
 Les métadonnées sur les bases de données ASE ne sont pas actualisée automatiquement. Les métadonnées dans l’Explorateur de métadonnées Sybase sont un instantané des métadonnées lorsque vous tout d’abord connecté au serveur adaptatif ou de la dernière fois que vous avez actualisé manuellement les métadonnées. Vous pouvez manuellement mettre à jour des métadonnées pour une base de données, un schéma de base de données unique ou toutes les bases de données.  
@@ -123,7 +123,7 @@ Les métadonnées sur les bases de données ASE ne sont pas actualisée automati
   
 ## <a name="next-step"></a>Étape suivante  
   
--   L’étape suivante du processus de migration consiste à [se connecter à une instance de SQL Server](http://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [connexion à une instance de SQL Azure](http://msdn.microsoft.com/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
+-   L’étape suivante du processus de migration consiste à [se connecter à une instance de SQL Server](connecting-to-sql-server-sybasetosql.md) / [connexion à une instance de SQL Azure](connecting-to-azure-sql-db-sybasetosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Migration des bases de données de Sybase ASE pour SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

@@ -18,17 +18,17 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c14e4422f0033df05dc259ad180f4f2baa380e7b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 62c56e876a3579d136eb2bff7a594d651b4e084e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982341"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395928"
 ---
-# <a name="command-line-options-in-ssma-console-sybasetosql"></a>Options de ligne de commande dans la Console SSMA (SybaseToSQL)
+# <a name="command-line-options-in-ssma-console-sybasetosql"></a>Options de ligne de commande dans la console SSMA (SybaseToSQL)
 Microsoft vous offre un ensemble complet des options de ligne de commande pour exécuter et contrôler les activités SSMA. Les sections suivantes détaillent les mêmes.  
   
-## <a name="command-line-options-in-ssma-console"></a>Options de ligne de commande dans la Console SSMA  
+## <a name="command-line-options-in-ssma-console"></a>Options de ligne de commande dans la console SSMA  
 Décrites dans ce document est la console options de commande.  
   
 Pour les besoins de cette section, le terme « option » est également appelé 'switch'.  
@@ -128,7 +128,7 @@ Cela indique le dossier de paramètres d’environnement projet pour le projet S
 ### <a name="secure-password-option-psecurepassword"></a>Option de mot de passe sécurisée : – p/securepassword  
 Cette option indique le mot de passe chiffré pour les connexions au serveur. Il diffère de toutes les autres options : l’option exécute n’importe quel script ni permet dans toutes les activités liées à la migration, mais vous aide à gérer le chiffrement de mot de passe pour les connexions du serveur utilisé dans le projet de migration.  
   
-Vous ne pouvez pas entrer de toute autre option ou mot de passe en tant que le paramètre de ligne de commande. Sinon, il en résulte une erreur. Pour plus d’informations, reportez-vous à la [la gestion des mots de passe](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) section.  
+Vous ne pouvez pas entrer de toute autre option ou mot de passe en tant que le paramètre de ligne de commande. Sinon, il en résulte une erreur. Pour plus d’informations, reportez-vous à la [la gestion des mots de passe](managing-passwords-sybasetosql.md) section.  
   
 Les options de sous-section suivantes sont prises en charge pour `–p/securepassword`:  
   

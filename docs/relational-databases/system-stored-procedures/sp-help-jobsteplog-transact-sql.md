@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobsteplog (Transact-SQL) | Documents Microsoft
+title: sp_help_jobsteplog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,17 +22,17 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0957fff641ef4306d66c3ee4a233062503008b9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f8ce4b84dc7fd8e049cc9fafd71995dfb09bca7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261684"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396324"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne les métadonnées spécifiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] journal d’étapes de travail de l’Agent. **sp_help_jobsteplog** ne retourne pas le journal réel.  
+  Retourne les métadonnées spécifiques à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] journal d’étapes de travail de l’Agent. **sp_help_jobsteplog** ne retourne pas le journal réel.  
 
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -50,11 +50,11 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  [  **@job_id =**] **'***job_id***'**  
  Numéro d'identification du travail pour lequel renvoyer des informations du journal d'étapes de travail. *job_id* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'***nom_travail***'**  
  Nom du travail. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
+>  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
  [ **@step_id =**] *step_id*  
  Numéro d'identification de l'étape du travail. S'il n'est pas inclus, toutes les étapes du travail sont englobées. *l’argument id_étape* est **int**, avec NULL comme valeur par défaut.  
@@ -67,11 +67,11 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**uniqueidentifier**|Identificateur unique du travail.|  
+|**job_id**|**uniqueidentifier**|Identificateur unique de la tâche.|  
 |**job_name**|**sysname**|Nom du travail.|  
-|**step_id**|**int**|Identificateur de l'étape du travail. Par exemple, si l’étape est la première étape du travail, ses *id_de_l* est 1.|  
+|**step_id**|**Int**|Identificateur de l'étape du travail. Par exemple, si l’étape est la première étape du travail, son *id_de_l* est 1.|  
 |**step_name**|**sysname**|Nom de l’étape du travail.|  
 |**step_uid**|**uniqueidentifier**|Identificateur unique de l'étape du travail (généré par le système).|  
 |**date_created**|**datetime**|Date de création de l'étape.|  
@@ -82,7 +82,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Notes  
  **sp_help_jobsteplog** est dans le **msdb** base de données.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -91,9 +91,9 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membres de **SQLAgentUserRole** peuvent consulter uniquement les étapes de travail qu’ils possèdent les métadonnées de journal étape du travail.  
+ Membres de **SQLAgentUserRole** peuvent uniquement afficher les étapes de travail qu’ils possèdent les métadonnées de journal étape du travail.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -128,6 +128,6 @@ GO
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_delete_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
- [Procédures stockées de l’Agent SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Procédures stockées de SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

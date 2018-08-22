@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f19468e128b6009a19acd2ace84c99dc2e0140d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92c1e8d4a1014e7af89e056fe43244a51fb9d9a9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303029"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395893"
 ---
 # <a name="thread-pool-properties"></a>Propriétés du pool de threads
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise le multithreading pour de nombreuses opérations, afin d’optimiser les performances globales du serveur en exécutant plusieurs travaux en parallèle. Pour gérer les threads plus efficacement, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise des pools pour préallouer les threads et faciliter leur disponibilité pour le travail suivant.  
@@ -279,9 +279,9 @@ ms.locfileid: "37303029"
 >  Pour obtenir des instructions sur la définition des propriétés, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos des processus et des threads](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [Plusieurs processeurs](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Groupes de processeurs](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [Sur les processus et Threads](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [Plusieurs processeurs](/windows/desktop/ProcThread/multiple-processors)   
+ [Groupes de processeurs](/windows/desktop/ProcThread/processor-groups)   
  [Modifications de SQL Server 2012 du Pool de threads Analysis Services](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 Configuration settings (Wordpress Blog)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Prise en charge des systèmes dotés de plus de 64 processeurs](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

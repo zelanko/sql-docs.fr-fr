@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 375a0f62bbf482a7c033d235836ea64b78cb2da2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 19da91838703adc4ae224a645e1f0a6e65fe032c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983871"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392762"
 ---
 # <a name="roles-object-tmsl"></a>Roles, objet (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38983871"
                   et administrateur. Consultez [rôles et autorisations &#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) pour plus d’informations sur les autorisations de base de données.  
   
  membres  
- Membres se composent d’un nom de membre et l’ID, où nom de membre est l’alias ou le nom convivial d’un principe de sécurité de Windows, et l’ID est l’identificateur de sécurité. Les deux sont spécifiés dans la définition de rôle. Consultez [composants SID](https://msdn.microsoft.com/library/windows/desktop/aa379597\(v=vs.85\).aspx) pour plus d’informations sur les identificateurs.  
+ Membres se composent d’un nom de membre et l’ID, où nom de membre est l’alias ou le nom convivial d’un principe de sécurité de Windows, et l’ID est l’identificateur de sécurité. Les deux sont spécifiés dans la définition de rôle. Consultez [composants SID](/windows/desktop/SecAuthZ/sid-components) pour plus d’informations sur les identificateurs.  
   
  autorisations de table  
  Une autorisation de table est un objet nommé avec les autorisations définies via une expression DAX. Cette propriété est facultative, utilisé pour appliquer un filtre de sécurité.  

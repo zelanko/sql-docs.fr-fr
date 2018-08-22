@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4779f29c90256809c6dfc364365571e28aea7af6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c127ef44f10723a74b2f03fed46ea42b9bbdfff5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980471"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392080"
 ---
-# <a name="connecting-to-oracle-database-oracletosql"></a>Connexion à la base de données Oracle (OracleToSQL)
-Pour migrer des bases de données Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous devez vous connecter à la base de données Oracle que vous souhaitez migrer. Lorsque vous vous connectez, SSMA Obtient les métadonnées relatives à tous les schémas Oracle, puis l’affiche dans le volet Explorateur de métadonnées d’Oracle. SSMA stocke des informations sur le serveur de base de données, mais ne stocke pas les mots de passe.  
+# <a name="connecting-to-oracle-database-oracletosql"></a>Connexion à Oracle Database (OracleToSQL)
+Pour migrer des bases de données Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez vous connecter à la base de données Oracle que vous souhaitez migrer. Lorsque vous vous connectez, SSMA Obtient les métadonnées relatives à tous les schémas Oracle, puis l’affiche dans le volet Explorateur de métadonnées d’Oracle. SSMA stocke des informations sur le serveur de base de données, mais ne stocke pas les mots de passe.  
   
 Votre connexion à la base de données reste active jusqu'à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez reconnecter si vous souhaitez une connexion active à la base de données.  
   
@@ -47,7 +47,7 @@ Le compte qui est utilisé pour se connecter à la base de données Oracle doit 
 -   SÉLECTIONNEZ N’IMPORTE QUEL DICTIONNAIRE  
   
 ## <a name="establishing-a-connection-to-oracle"></a>Établir une connexion à Oracle  
-Lorsque vous vous connectez à une base de données, SSMA lit les métadonnées de base de données, puis ajoute ces métadonnées au fichier projet. Ces métadonnées sont utilisées par SSMA lorsqu’il convertit des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntaxe, et quand il migre les données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Vous pouvez parcourir ces métadonnées dans le volet Explorateur de métadonnées d’Oracle et passez en revue les propriétés des objets de base de données individuelle.  
+Lorsque vous vous connectez à une base de données, SSMA lit les métadonnées de base de données, puis ajoute ces métadonnées au fichier projet. Ces métadonnées sont utilisées par SSMA lorsqu’il convertit des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntaxe, et quand il migre les données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez parcourir ces métadonnées dans le volet Explorateur de métadonnées d’Oracle et passez en revue les propriétés des objets de base de données individuelle.  
   
 > [!IMPORTANT]  
 > Avant d’essayer de vous connecter, vérifiez que le serveur de base de données est en cours d’exécution et qu’il peut accepter les connexions.  
@@ -97,7 +97,7 @@ Lorsque vous vous connectez à une base de données, SSMA lit les métadonnées 
     Pour plus d’informations, consultez [se connecter à Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
 ## <a name="reconnecting-to-oracle"></a>Rétablir la connexion à Oracle  
-Votre connexion au serveur de base de données reste active jusqu'à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez reconnecter si vous souhaitez une connexion active à la base de données. Vous pouvez travailler hors connexion jusqu'à ce que vous souhaitez mettre à jour des métadonnées, de charger des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], et migrer les données.  
+Votre connexion au serveur de base de données reste active jusqu'à ce que vous fermiez le projet. Lorsque vous rouvrez le projet, vous devez reconnecter si vous souhaitez une connexion active à la base de données. Vous pouvez travailler hors connexion jusqu'à ce que vous souhaitez mettre à jour des métadonnées, de charger des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et migrer les données.  
   
 ## <a name="refreshing-oracle-metadata"></a>L’actualisation des métadonnées d’Oracle  
 Métadonnées relatives à la base de données Oracle ne sont pas actualisée automatiquement. Les métadonnées dans l’Explorateur de métadonnées d’Oracle sont un instantané de métadonnées lors de la première connexion, ou la dernière fois que vous avez actualisé manuellement les métadonnées. Vous pouvez manuellement mettre à jour des métadonnées pour tous les schémas, un seul schéma ou les objets de base de données individuelle.  
@@ -122,11 +122,11 @@ Métadonnées relatives à la base de données Oracle ne sont pas actualisée au
   
     Pour afficher les définitions de codage en couleurs, cliquez sur le **légende** bouton.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="next-step"></a>Étape suivante  
   
--   L’étape suivante du processus de migration consiste à [se connecter à une instance de SQL Server](http://msdn.microsoft.com/1b2a8059-1829-4904-a82f-9c06de1e245f).  
+-   L’étape suivante du processus de migration consiste à [se connecter à une instance de SQL Server](connecting-to-sql-server-oracletosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Bases de données de migration d’Oracle vers SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

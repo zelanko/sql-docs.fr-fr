@@ -1,5 +1,5 @@
 ---
-title: Créez les fichiers de connexion du serveur (OracleToSQL) | Documents Microsoft
+title: Création des fichiers de connexion de serveur (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +16,15 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 9657dc521ea0130f0f322c423dad906d0759197a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7a892b34da2b631371f70f6f6beee0c8c6c321fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776955"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395133"
 ---
-# <a name="creating-the-server-connection-files-oracletosql"></a>Créez les fichiers de connexion du serveur (OracleToSQL)
-Informations sur le serveur peuvent être spécifiées dans la section serveurs du fichier de script ou dans un fichier de connexion de serveur distinct. Le paramètre de ligne de commande pour le fichier de connexion de serveur est, `-c <serverconnectionfile>`. Si le même id de serveur est présent dans le fichier de script et le fichier de connexion de serveur, la définition de serveur dans le fichier de script est pris en compte.  
+# <a name="creating-the-server-connection-files-oracletosql"></a>Création des fichiers de connexion de serveur (OracleToSQL)
+Informations sur le serveur peuvent être spécifiées dans la section serveurs du fichier de script ou dans un fichier de connexion de serveur distinct. Le paramètre de ligne de commande pour le fichier de connexion de serveur est, `-c <serverconnectionfile>`. Si le même id de serveur est présent dans le fichier de script et le fichier de connexion de serveur, la définition du serveur dans le fichier de script est considéré comme.  
   
 **Exemple : 1**  
   
@@ -106,8 +106,8 @@ Informations sur le serveur peuvent être spécifiées dans la section serveurs 
 ```  
   
 ## <a name="next-step"></a>Étape suivante  
-L’étape suivante d’exploitation de la console est [l’exécution de la Console SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+L’étape suivante de d’exploitation de la console est [l’exécution de la Console SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la console SSMA](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Exécution de la console SSMA](executing-the-ssma-console-oracletosql.md)  
   

@@ -6,8 +6,7 @@ ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4cb287936b2cdbb73a53f04f3e10dc5304e41a54
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: c16f4ae091e48b46e2978d0287ff90a95e116e5a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557259"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392083"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "39557259"
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures  
  Le tableau suivant décrit les colonnes pour `sys.dm_db_xtp_checkpoint_files`, en commençant par **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
   
-|Nom de colonne|Type|Description|  
+|Nom de colonne|Type| Description|  
 |-----------------|----------|-----------------|  
 |container_id|**Int**|ID du conteneur (représenté en tant que fichier de type FILESTREAM dans sys.database_files) dont les données ou le fichier delta font partie. Jointures avec file_id dans [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID du conteneur, faisant partie de la racine, données ou le fichier delta. Jointures avec file_guid dans la table sys.database_files.|  
@@ -74,7 +73,7 @@ ms.locfileid: "39557259"
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  Le tableau suivant décrit les colonnes pour `sys.dm_db_xtp_checkpoint_files`, pour **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
-|Nom de colonne|Type|Description|  
+|Nom de colonne|Type| Description|  
 |-----------------|----------|-----------------|  
 |container_id|**Int**|ID du conteneur (représenté en tant que fichier de type FILESTREAM dans sys.database_files) dont les données ou le fichier delta font partie. Jointures avec file_id dans [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID du conteneur dont les données ou le fichier delta font partie.|  

@@ -1,5 +1,5 @@
 ---
-title: Nouveau projet (SSMA) (MySQLToSQL) | Documents Microsoft
+title: Nouveau projet (SSMA) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +16,15 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 92c0d05c34027b17f43cf0d9c8ba98f70d3ff017
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c0989e289d12c0850e68e06bde42a12ae8f79c6b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776705"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393591"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Nouveau projet (SSMA) (MySQLToSQL)
-Utilisez le **nouveau projet** boîte de dialogue pour créer un projet SSMA. Pour accéder à la **nouveau projet** boîte de dialogue le **fichier** menu, cliquez sur **nouveau projet**.  
+Utilisez le **nouveau projet** boîte de dialogue pour créer un nouveau projet SSMA. Pour accéder à la **nouveau projet** boîte de dialogue le **fichier** menu, cliquez sur **nouveau projet**.  
   
 ## <a name="options"></a>Options  
 **Nom**  
@@ -33,21 +33,21 @@ Entrez le nom du projet. SSMA permet d’ajouter l’extension de fichier.
   
 **Emplacement**  
   
-Entrez ou recherchez le dossier ou l’emplacement réseau pour enregistrer le projet.  
+Entrez ou recherchez le dossier ou un emplacement réseau pour enregistrer le projet.  
   
 **MigrateTo**  
   
-Vous avez le choix de la version de la base de données cible dessous la liste :  
+Sélectionnez une de la version de base de données cible en dessous de la liste :  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
 -   SQL Azure  
   

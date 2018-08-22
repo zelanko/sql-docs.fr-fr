@@ -1,7 +1,7 @@
 ---
 title: sp_rxPredict | Microsoft Docs
 ms.custom: ''
-ms.date: 07/14/2017
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -17,26 +17,26 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sp_rxPredict procedure
-author: jeannt
-ms.author: jeannt
-manager: craigg
-ms.openlocfilehash: ede8232f36f42cc2b9758bdee8f50457ebd58dfe
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 8f46403afef0e2f6cf967561a8fd24ec6409fe93
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036047"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40434859"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Génère une valeur prédite basée sur un modèle stocké.
+Génère une valeur prédite pour une entrée donnée selon un modèle stocké dans un format binaire dans une base de données SQL Server machine learning.
 
-Fournit la notation sur les modèles d’apprentissage automatique dans quasiment en temps réel. `sp_rxPredict` est une procédure stockée fournie comme un wrapper pour le `rxPredict` fonctionner dans [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) et [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package). Il est écrit en C++ et est spécialement optimisée pour les opérations de calcul de score. Il prend en charge les deux R ou Python modèles machine learning.
+Fournit des modèles R et Python machine learning dans quasiment en temps réel de notation. `sp_rxPredict` est une procédure stockée fournie comme un wrapper pour le `rxPredict` fonction R au [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) et [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)et le [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) fonction Python dans [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) et [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Il est écrit en C++ et est spécialement optimisée pour les opérations de calcul de score.
 
-**Cette rubrique s’applique à**:  
+**Cet article s’applique à**:  
 - SQL Server 2017  
-- SQL Server 2016 R Services avec mise à niveau vers Microsoft R Server  
+- SQL Server 2016 R Services avec [mis à niveau les composants R](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -69,11 +69,10 @@ Pour activer l’utilisation de la procédure stockée, SQLCLR doit être activ�
 L’utilisateur doit avoir `EXECUTE` autorisation sur la base de données.
 
 ### <a name="supported-platforms"></a>Plateformes prises en charge
-
-Requiert l’une des éditions suivantes :  
-- SQL Server 2017 Machine Learning Services (inclut Microsoft R Server 9.1.0).)  
-- Microsoft Machine Learning Server  
-- SQL Server R Services 2016, avec une mise à niveau de l’instance R Services pour Microsoft R Server 9.1.0). ou version ultérieure  
+ 
+- SQL Server 2017 Machine Learning Services (inclut R Server 9.2)  
+- SQL Server 2017 Machine Learning Server (autonome) 
+- SQL Server R Services 2016, avec une mise à niveau de l’instance de R Services à R Server 9.1.0). ou version ultérieure  
 
 ### <a name="supported-algorithms"></a>Algorithmes pris en charge
 
@@ -101,5 +100,5 @@ En plus de constituer une requête SQL valide, les données d’entrée dans *@i
 
 `sp_rxPredict` prend en charge uniquement les types de colonne de .NET suivants : double, float, short, ushort, long, ulong et chaîne. Vous devrez peut-être filtrer les types non pris en charge dans vos données d’entrée avant de l’utiliser pour calculer les scores en temps réel. 
 
-  Pour plus d’informations sur les types SQL correspondants, consultez [le mappage de Type SQL-CLR](https://msdn.microsoft.com/library/bb386947.aspx) ou [mappage des données de paramètre CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
+  Pour plus d’informations sur les types SQL correspondants, consultez [le mappage de Type SQL-CLR](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) ou [mappage des données de paramètre CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 

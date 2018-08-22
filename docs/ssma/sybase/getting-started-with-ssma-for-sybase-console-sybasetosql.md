@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a94afc188ce7fe1ce758586a78e523908c49b1d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 320bce2d4678781e56bb18a54e0e19d4877cc1d5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980641"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396538"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Bien démarrer avec SSMA pour Sybase Console (SybaseToSQL)
 Cette section décrit la procédure de lancement et de bien démarrer avec SSMA pour l’application de console Sybase. Également répertoriés dans le présent document sont les conventions utilisées dans une fenêtre de sortie de Console SSMA classique.  
@@ -52,9 +52,9 @@ Une fois que la console est lancée avec succès sur votre système Windows, vou
   
 Fonctionnalités supplémentaires :  
   
-1.  [Spécifiez un mot de passe](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) et d’importation/exportation vers d’autres ordinateurs de la fenêtre.  
+1.  [Spécifiez un mot de passe](managing-passwords-sybasetosql.md) et d’importation/exportation vers d’autres ordinateurs de la fenêtre.  
   
-2.  [Générer des rapports](http://msdn.microsoft.com/19278f6a-6d58-4867-9d71-c6228040466e) pour afficher le code xml détaillé des rapports pour la migration de données et d’évaluation/conversion de sortie. Vous pouvez également générer des rapports d’erreurs détaillées pour les commandes d’actualisation et la synchronisation.  
+2.  [Générer des rapports](generating-reports-sybasetosql.md) pour afficher le code xml détaillé des rapports pour la migration de données et d’évaluation/conversion de sortie. Vous pouvez également générer des rapports d’erreurs détaillées pour les commandes d’actualisation et la synchronisation.  
   
 ## <a name="ssma-console-output-conventions"></a>Conventions de sortie de Console SSMA  
 Lors de l’exécution les commandes de script SSMA et options, le programme de console affiche les résultats et les messages (information, erreur, etc.) à l’utilisateur sur la console ou, si nécessaire, redirige vers un fichier de sortie xml. Chaque type de message dans la sortie est signifié par une couleur unique. Par exemple, le message texte en couleur blanche indique les commandes du fichier de script ; celui de couleur verte représente une invite pour les entrées d’utilisateur et ainsi de suite.  

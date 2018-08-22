@@ -14,19 +14,19 @@ caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 358c88c0fef9c4ffaf7c7fc93458be1b1563d94e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dbf7ee01520d139ce6b56912f6b35500ee35352
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163805"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393436"
 ---
-# <a name="lesson-2-create-a-sql-server-credential"></a>Leçon 2 : Créer des informations d’identification SQL Server
+# <a name="lesson-2-create-a-sql-server-credential"></a>Leçon 2 : Créer des informations d’identification SQL Server
   **Informations d'identification :** les informations d'identification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont des objets utilisés pour stocker les informations d'authentification requises pour la connexion à une ressource en dehors de SQL Server.  Ici, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processus de sauvegarde et restauration utilisent les informations d’identification pour s’authentifier sur le service de stockage d’objets Blob Windows Azure. Les informations d'identification contiennent le nom du compte de stockage et ses valeurs de **clé d'accès** . Une fois les informations d'identification créées, vous devez les spécifier dans l'option WITH CREDENTIAL lorsque vous publiez des instructions BACKUP/RESTORE. Pour plus d'informations sur l'affichage, la copie ou la régénération des **access keys**de compte de stockage, consultez [Afficher, copier et régénérer les clés d'accès d'un compte de stockage Windows Azure](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
- Pour plus d'informations sur les informations d'identification en général, consultez [Informations d'identification](http://msdn.microsoft.com/library/ms161950.aspx).  
+ Pour obtenir des informations générales sur les informations d’identification, consultez [informations d’identification](../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
- Pour obtenir plus d'informations et d'autres exemples d'utilisation des informations d'identification, consultez [Créer un proxy de SQL Server Agent](http://msdn.microsoft.com/library/ms175834.aspx).  
+ Pour plus d’informations sur d’autres exemples où les informations d’identification sont utilisées, consultez [créer un Proxy de l’Agent SQL Server](../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 > [!IMPORTANT]  
 >  La configuration requise pour la création d’une information d’identification SQL Server décrite ci-dessous est spécifique aux processus de sauvegarde de SQL Server ([SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md), et [SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server, lorsqu'il accède au stockage Azure pour écrire ou lire des sauvegardes, utilise le nom du compte de stockage et les informations de clé d'accès.  Pour plus d’informations sur la création des informations d’identification pour stocker les fichiers de base de données dans le stockage Azure, consultez [leçon 3 : créer des informations d’identification SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  

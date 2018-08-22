@@ -26,17 +26,17 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 83e8fddb94f2c2cdc51131417b589d7c8691a88d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: beddb03c2d5806f9a3e3114346808d54379a9d74
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985591"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392771"
 ---
-# <a name="command-line-options-in-ssma-console-mysqltosql"></a>Options de ligne de commande dans la Console SSMA (MySQLToSQL)
+# <a name="command-line-options-in-ssma-console-mysqltosql"></a>Options de ligne de commande dans la console SSMA (MySQLToSQL)
 Microsoft vous fournit avec des options de ligne de commande ensemble robuste pour exécuter et contrôler les activités SSMA. Les sections suivantes détaillent les mêmes.  
   
-## <a name="command-line-options-in-ssma-console"></a>Options de ligne de commande dans la Console SSMA  
+## <a name="command-line-options-in-ssma-console"></a>Options de ligne de commande dans la console SSMA  
 Décrites dans ce document est la console options de commande.  
   
 Pour les besoins de cette section, le terme « option » est également appelé 'switch'.  
@@ -136,7 +136,7 @@ Cela indique le dossier de paramètres d’environnement projet pour le projet S
 ### <a name="secure-password-option-psecurepassword"></a>Option de mot de passe sécurisée : – p/securepassword  
 Cette option indique le mot de passe chiffré pour les connexions au serveur. Il diffère de toutes les autres options : l’option exécute n’importe quel script ni permet dans toutes les activités liées à la migration, mais vous aide à gérer le chiffrement de mot de passe pour les connexions du serveur utilisé dans le projet de migration.  
   
-Vous ne pouvez pas entrer de toute autre option ou mot de passe en tant que le paramètre de ligne de commande. Sinon, il en résulte une erreur. Pour plus d’informations, reportez-vous à la [la gestion des mots de passe](http://msdn.microsoft.com/4ffbc587-ea3f-49ad-bc42-a654f672325e) section.  
+Vous ne pouvez pas entrer de toute autre option ou mot de passe en tant que le paramètre de ligne de commande. Sinon, il en résulte une erreur. Pour plus d’informations, reportez-vous à la [la gestion des mots de passe](managing-passwords-mysqltosql.md) section.  
   
 Les options de sous-section suivantes sont prises en charge pour `–p/securepassword`:  
   

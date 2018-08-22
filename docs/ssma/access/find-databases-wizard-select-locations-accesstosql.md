@@ -18,17 +18,17 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075c46589600ea31dc03bd4e4f5503ddb6fd1987
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 43efa0e2ed9f58f59fa8b77d74824e094f90edc9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979481"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392787"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Assistant de bases de données (sélectionner des emplacements) Rechercher (AccessToSQL)
 Dans la page Sélectionner les emplacements de l’Assistant trouver les bases de données, vous entrez les paramètres de recherche pour rechercher des bases de données Access.  
   
-Pour ouvrir l’Assistant trouver les bases de données, sur le **fichier** menu, cliquez sur **trouver les bases de données**. Pour plus d’informations sur l’utilisation de cette boîte de dialogue, consultez [Ajout et suppression des fichiers de base de données Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+Pour ouvrir l’Assistant trouver les bases de données, sur le **fichier** menu, cliquez sur **trouver les bases de données**. Pour plus d’informations sur l’utilisation de cette boîte de dialogue, consultez [Ajout et suppression des fichiers de base de données Access](adding-and-removing-access-database-files-accesstosql.md)  
   
 ## <a name="options"></a>Options  
 **Parcourir**  
@@ -65,6 +65,6 @@ Pour rechercher des bases de données qui correspondent à un critère de taille
 Entrez le nom d’utilisateur Windows complète du propriétaire. Cela peut être mis en forme en tant que *domaine*\\*utilisateur*.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Ajout et suppression de fichiers de base de données Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Ajout et suppression de fichiers de base de données Access](adding-and-removing-access-database-files-accesstosql.md)  
 [Reference(Access) d’Interface utilisateur](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

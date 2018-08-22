@@ -1,5 +1,5 @@
 ---
-title: sp_update_job (Transact-SQL) | Documents Microsoft
+title: sp_update_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e36396f911c7506660fd82c5540307e95023950
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7412bc6defa6d25520570e23556e77e8824c8a88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262214"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396104"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [  **@job_id =**] *job_id*  
  Numéro d'identification du travail à mettre à jour. *job_id*est **uniqueidentifier**.  
   
- [  **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'***nom_travail***'**  
  Nom du travail. *job_name*est **nvarchar (128)**.  
   
-> **Remarque :** soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
+> **Remarque :** soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
  [  **@new_name =**] **'***nouveau_nom***'**  
- Nouveau nom du travail. *nouveau_nom*est **nvarchar (128)**.  
+ Nouveau nom du travail. *new_name*est **nvarchar (128)**.  
   
  [  **@enabled =**] *activé*  
  Spécifie si le travail est activé (**1**) ou désactivée (**0**). *activé*est **tinyint**.  
@@ -85,7 +85,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  La catégorie du travail. *catégorie*est **nvarchar (128)**.  
   
  [  **@owner_login_name =**] **'***connexion***'**  
- Nom du compte de connexion propriétaire du travail. *connexion*est **nvarchar (128)** seuls les membres de la **sysadmin** rôle serveur fixe peut modifier la propriété d’un travail.  
+ Nom du compte de connexion propriétaire du travail. *connexion*est **nvarchar (128)** seuls les membres de la **sysadmin** rôle serveur fixe peut modifier l’appartenance des travaux.  
   
  [  **@notify_level_eventlog =**] *niveau_journal_événements*  
  Indique le moment auquel une entrée doit être ajoutée pour ce travail dans le journal des applications Microsoft Windows. *niveau_journal_événements*est **int**, et peut prendre l’une des valeurs suivantes.  
@@ -116,7 +116,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Nom de l'opérateur auquel un message par radiomessagerie est envoyé. *opérateur_page* est **nvarchar (128)**.  
   
  [ **@delete_level =**] *delete_level*  
- Indique le moment où le travail doit être supprimé. *l’argument niveau_suppression*est **int**. *niveau_suppression*utilise les mêmes valeurs que *niveau_journal_événements*.  
+ Indique le moment où le travail doit être supprimé. *delete_leve*est **int**. *niveau_suppression*utilise les mêmes valeurs que *niveau_journal_événements*.  
   
  [  **@automatic_post =**] *envoi_automatique*  
  Réservé.  
@@ -127,9 +127,9 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="remarks"></a>Notes  
  **sp_update_job** doit être exécuté à partir de la **msdb** base de données.  
   
- **sp_update_job** modifie uniquement les paramètres pour lesquelles les valeurs sont fournies. Si un paramètre est manquant, la valeur actuelle est retenue.  
+ **sp_update_job** modifie uniquement les paramètres pour le paramètre auquel les valeurs sont fournies. Si un paramètre est manquant, la valeur actuelle est retenue.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -138,9 +138,9 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Seuls les membres du **sysadmin** peut utiliser cette procédure stockée pour modifier les attributs des travaux qui appartiennent à d’autres utilisateurs.  
+ Seuls les membres du **sysadmin** pouvez utiliser cette procédure stockée pour modifier les attributs de travaux qui est détenus par d’autres utilisateurs.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple modifie le nom, la description et l'état (activé ou non) du travail `NightlyBackups`.  
