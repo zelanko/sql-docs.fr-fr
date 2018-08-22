@@ -16,12 +16,12 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c366d18c9f8c4606da6cc864df7a7d399151c6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 778e28463c8fcb6b46a59e5929801dd56c819186
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180946"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395727"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Leçon 4 : Stockage des données sur les fournisseurs dans MDS
   Master Data Services (MDS) est une solution SQL Server de gestion des données de référence. La gestion des données de référence (MDM) correspond aux efforts d'une organisation en vue de découvrir et de définir des listes de données non transactionnelles.  
@@ -30,9 +30,9 @@ ms.locfileid: "37180946"
   
  Un modèle peut contenir une ou plusieurs entités. Chaque entité a des attributs (colonnes) et des membres (lignes). Chaque ligne contient les données de référence. Dans cette leçon, vous allez créer un modèle Fournisseurs avec deux entités nommées Fournisseur et État. L'entité Fournisseur a les attributs suivants : Code, Nom, Prénom du contact, Nom de famille du contact, Adresse de messagerie du contact, Adresse, Ville, État, Code postal et Pays. Consultez [Attributs (Master Data Services)](http://msdn.microsoft.com/library/ee633745.aspx) pour plus d'informations sur les attributs en général. Les attributs Code et Nom correspondent aux colonnes SupplierID et Nom du fournisseur dans le fichier Excel des fournisseurs nettoyé et contenant les correspondances.  
   
- Un attribut basé sur un domaine est un attribut dont les valeurs sont remplies par les membres d'une autre entité. Les attributs basés sur un domaine empêchent les utilisateurs d'entrer des valeurs d'attribut qui ne sont pas valides. Une valeur d'attribut peut uniquement être sélectionnée dans la liste déroulante qui est remplie par une autre entité. Dans ce didacticiel, l'attribut État de l'entité Fournisseur est un attribut basé sur un domaine, avec les valeurs de l'entité État. Vous pouvez modifier la valeur de l'attribut État de l'entité Fournisseur uniquement par l'une des valeurs de l'entité État. Consultez [Attributs basés sur un domaine](http://msdn.microsoft.com/library/ff487058.aspx) pour plus de détails.  
+ Un attribut basé sur un domaine est un attribut dont les valeurs sont remplies par les membres d'une autre entité. Les attributs basés sur un domaine empêchent les utilisateurs d'entrer des valeurs d'attribut qui ne sont pas valides. Une valeur d'attribut peut uniquement être sélectionnée dans la liste déroulante qui est remplie par une autre entité. Dans ce didacticiel, l'attribut État de l'entité Fournisseur est un attribut basé sur un domaine, avec les valeurs de l'entité État. Vous pouvez modifier la valeur de l'attribut État de l'entité Fournisseur uniquement par l'une des valeurs de l'entité État. Consultez [Attributs basés sur un domaine](../master-data-services/domain-based-attributes-master-data-services.md) pour plus de détails.  
   
- Une hiérarchie dérivée dans MDS est basée sur la relation de l'attribut basé sur un domaine qui existe dans le modèle. Dans ce didacticiel, vous allez créer une hiérarchie dérivée entre l'entité Fournisseur et l'entité État. Après avoir créé la hiérarchie dérivée, vous verrez la liste des États dans le navigateur de Master Data Manager. Lorsque vous cliquerez sur un État dans la liste, vous verrez les fournisseurs qui appartiennent à cet État dans le volet droit. Vous allez créer une hiérarchie dérivée basée sur cette relation ultérieurement. Consultez [Hiérarchies dérivées](http://msdn.microsoft.com/library/ee633747.aspx) pour plus de détails.  
+ Une hiérarchie dérivée dans MDS est basée sur la relation de l'attribut basé sur un domaine qui existe dans le modèle. Dans ce didacticiel, vous allez créer une hiérarchie dérivée entre l'entité Fournisseur et l'entité État. Après avoir créé la hiérarchie dérivée, vous verrez la liste des États dans le navigateur de Master Data Manager. Lorsque vous cliquerez sur un État dans la liste, vous verrez les fournisseurs qui appartiennent à cet État dans le volet droit. Vous allez créer une hiérarchie dérivée basée sur cette relation ultérieurement. Consultez [Hiérarchies dérivées](../master-data-services/derived-hierarchies-master-data-services.md) pour plus de détails.  
   
  Vous avez créé une base de connaissances dans DQS et vous l'avez utilisée pour le nettoyage et la correspondance des données des fournisseurs, puis vous avez stocké les résultats dans le fichier Data.xls contenant les données des fournisseurs nettoyées et mises en correspondance. Dans cette leçon, vous allez télécharger les données nettoyées et mises en correspondance dans MDS. DQS contient uniquement les connaissances relatives aux données (métadonnées) alors que MDS stocke les données elles-mêmes (ensemble de référence). Exemple : DQS peut acquérir des connaissances sur plusieurs fournisseurs, mais MDS ne conserve que les fournisseurs qu'une société utilise.  
   

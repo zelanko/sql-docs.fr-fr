@@ -23,15 +23,15 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bf73284de3f23aa861c446e4a2ed67278f4a5ce5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 21cbf6f3a5dac0b77669b940bf27be26198a4456
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979701"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394072"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Définition des Options de Migration (AccessToSQL) et de Conversion
-Pour chaque projet SSMA, vous pouvez définir les options au niveau du projet. Ces options spécifient la façon dont les objets sont convertis, la migration des données, et la correspondance entre les types de sources de données et les types de données cible. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, vérifiez que les options de configuration sont appropriées pour le projet.  
+Pour chaque projet SSMA, vous pouvez définir les options au niveau du projet. Ces options spécifient la façon dont les objets sont convertis, la migration des données, et la correspondance entre les types de sources de données et les types de données cible. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vérifiez que les options de configuration sont appropriées pour le projet.  
   
 ## <a name="configuration-options-and-modes"></a>Modes et les Options de configuration  
 SSMA a quatre ensembles de paramètres de configuration et les quatre modes de configuration de ces paramètres : par défaut, Optimistic, complète et personnalisée. Le mode par défaut est recommandé pour la plupart des utilisateurs. Utiliser le mode optimiste pour les conversions simples. Utilisez le mode complet si vous souhaitez afficher tous les messages. Dans le mode personnalisé, vous définissez les options.  
@@ -48,7 +48,7 @@ Les paramètres sont décrits dans la section « Référence de l’Interface u
   
 -   [Paramètres du projet (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
   
-## <a name="setting-project-options"></a>Définition des Options de projet  
+## <a name="setting-project-options"></a>Définition des options du projet  
 Dans SSMA, vous pouvez configurer les paramètres par défaut pour tous les projets. Ces paramètres sont enregistrés dans le fichier de configuration de SSMA et appliqués à tout nouveau projet que vous créez.  
   
 **Pour définir les options de projet par défaut**  
@@ -85,12 +85,12 @@ Vous pouvez également personnaliser les paramètres pour le projet actuel. Ces 
 ## <a name="next-steps"></a>Étapes suivantes  
 L’étape suivante de la migration dépend des besoins de votre projet :  
   
--   Pour personnaliser le mappage des types de données source et cible, consultez [Source de mappage et les Types de données cible](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+-   Pour personnaliser le mappage des types de données source et cible, consultez [Source de mappage et les Types de données cible](mapping-source-and-target-data-types-accesstosql.md)  
   
--   Pour personnaliser le mappage des bases de données source et cible, consultez [Source de mappage et de bases de données cible](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
+-   Pour personnaliser le mappage des bases de données source et cible, consultez [Source de mappage et de bases de données cible](mapping-source-and-target-databases-accesstosql.md)  
   
--   Sinon, vous pouvez convertir les définitions d’objets de base de données Access dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou définitions d’objets SQL Azure. Pour plus d’informations, consultez [conversion des objets de base de données Access](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+-   Sinon, vous pouvez convertir les définitions d’objets de base de données Access dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou définitions d’objets SQL Azure. Pour plus d’informations, consultez [conversion des objets de base de données Access](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration bases de données Access vers SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migration bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

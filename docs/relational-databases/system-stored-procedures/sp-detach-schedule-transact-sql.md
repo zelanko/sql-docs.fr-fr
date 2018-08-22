@@ -1,5 +1,5 @@
 ---
-title: sp_detach_schedule (Transact-SQL) | Documents Microsoft
+title: sp_detach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df165b840d0785fb87e7e5abeffc72ca660317cf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 708dea0c3ba2c3abc9ca0827caa9f5c548c56902
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245130"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394268"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ sp_detach_schedule
  [  **@job_id=** ] *job_id*  
  Numéro d'identification du travail à partir duquel supprimer la planification. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'***nom_travail***'**  
  Nom du travail à partir duquel supprimer la planification. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
+>  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
  [  **@schedule_id=** ] *id_de_la_planification*  
  Numéro d'identification de la planification à supprimer du travail. *id_de_la_planification* est **int**, avec NULL comme valeur par défaut.  
@@ -66,15 +66,15 @@ sp_detach_schedule
 >  Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié, mais ne peut pas être spécifiés.  
   
  [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
- Spécifie si les planifications de travail inutilisées doivent être supprimées. *delete_unused_schedule* est **bits**, avec une valeur par défaut **0**, ce qui signifie que toutes les planifications sont conservées, même si aucun travail n’y fait référence. Si la valeur **1**, les planifications de travail inutilisées sont supprimées si aucun travail n’y fait référence.  
+ Spécifie si les planifications de travail inutilisées doivent être supprimées. *delete_unused_schedule* est **bits**, avec une valeur par défaut **0**, ce qui signifie que toutes les planifications sont conservées, même si aucun travail ne référencez-les. Si la valeur **1**, les planifications de travail inutilisées sont supprimées si aucun travail n’y fait référence.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -85,7 +85,7 @@ sp_detach_schedule
   
  Notez que le propriétaire du travail peut joindre un travail à une planification et détacher un travail d'une planification sans être le propriétaire de la planification. Toutefois, une planification ne peut pas être supprimée si le détachement la conserve sans travaux, à moins que l'appelant ne soit le propriétaire de la planification.  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue une vérification pour déterminer si l'utilisateur est propriétaire de la planification. Seuls les membres de la **sysadmin** rôle serveur fixe peut dissocier les planifications des travaux appartenant à un autre utilisateur.  
   

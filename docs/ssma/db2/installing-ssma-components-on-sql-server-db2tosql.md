@@ -1,5 +1,5 @@
 ---
-title: Installation des composants SSMA sur SQL Server (DB2ToSQL) | Documents Microsoft
+title: Installation des composants SSMA sur SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,20 +16,20 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 68ab6b91368a7ac4e888539d8271d59a7dcd3d62
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 60ad2e0967236d6d15e4de01abfdfa8b8aa5fa73
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775015"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394860"
 ---
 # <a name="installing-ssma-components-on-sql-server-db2tosql"></a>Installation des composants SSMA sur SQL Server (DB2ToSQL)
-Dans cette version de SSMA il n’est pas nécessaire pour une installation distincte sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] du pack d’extension SSMA, qui prend en charge la migration des données et les fournisseurs de DB2 pour activer la connectivité du serveur à serveur.  
+Dans cette version de SSMA il est inutile pour une installation distincte sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du pack d’extension SSMA, qui prend en charge la migration des données et les fournisseurs de DB2 pour activer la connectivité du serveur à serveur.  
   
-## <a name="ssma-for-db2-extension-pack"></a>SSMA pour le Pack d’Extension DB2  
-Le Pack d’extension SSMA ajoute un schéma de la base de données dans l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Le **sysdb** schéma contient les tables et procédures stockées qui sont requises pour migrer des données et les fonctions définies par l’utilisateur qui émulent les fonctions du système DB2.  
+## <a name="ssma-for-db2-extension-pack"></a>SSMA pour DB2 le Pack d’Extension  
+Le pack d’extension SSMA ajoute un schéma de la base de données dans l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le **sysdb** schéma contient les tables et procédures stockées qui sont nécessaires pour migrer des données et les fonctions définies par l’utilisateur qui émulent des fonctions du système DB2.  
   
 ## <a name="see-also"></a>Voir aussi  
-[L’installation de SSMA pour DB2 Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
-[Bases de données DB2 migration vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[Installation de SSMA pour DB2 Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
+[Bases de données de migration de DB2 vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

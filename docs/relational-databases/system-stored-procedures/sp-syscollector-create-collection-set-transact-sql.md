@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_create_collection_set (Transact-SQL) | Documents Microsoft
+title: sp_syscollector_create_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cefec5de4c7bba8d2b184a202f5a21c4a25901c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e709e05834ed30701d2944547945ba439b8d418d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261608"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395283"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,21 +78,21 @@ sp_syscollector_create_collection_set
  La valeur par défaut *collection_mode* est 0. Lorsque *collection_mode* est 0, *schedule_uid* ou *nom_de_la_planification* doit être spécifié.  
   
  [  **@days_until_expiration =** ] *days_until_expiration*  
- Est le nombre de jours pendant lesquels les données collectées sont enregistrées dans l’entrepôt de données de gestion. *days_until_expiration* est **smallint** avec la valeur par défaut 730 (deux ans). *days_until_expiration* doit être 0 ou un entier positif.  
+ Est le nombre de jours pendant lesquels les données collectées sont enregistrées dans l’entrepôt de données de gestion. *days_until_expiration* est **smallint** avec une valeur par défaut de 730 (deux ans). *days_until_expiration* doit être 0 ou un entier positif.  
   
  [  **@proxy_id =** ] *proxy_id*  
- Identificateur unique pour un compte d'Agent proxy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* est **int** avec une valeur par défaut NULL. Si spécifié, *proxy_name* doit être NULL. Pour obtenir des *proxy_id*, interrogez la table système sysproxies. Le rôle de base de données fixe dc_admin doit avoir l'autorisation d'accéder au proxy. Pour plus d’informations, consultez [créer un Proxy de l’Agent SQL Server](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+ Identificateur unique pour un compte d'Agent proxy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* est **int** avec une valeur par défaut NULL. Si spécifié, *proxy_name* doit être NULL. Pour obtenir *proxy_id*, interrogez la table système sysproxies. Le rôle de base de données fixe dc_admin doit avoir l'autorisation d'accéder au proxy. Pour plus d’informations, consultez [créer un Proxy de l’Agent SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
  [  **@proxy_name =** ] '*proxy_name*'  
- Nom du compte proxy. *proxy_name* est **sysname** avec une valeur par défaut NULL. Si spécifié, *proxy_id* doit être NULL. Pour obtenir des *proxy_name*, interrogez la table système sysproxies.  
+ Nom du compte proxy. *proxy_name* est **sysname** avec une valeur par défaut NULL. Si spécifié, *proxy_id* doit être NULL. Pour obtenir *proxy_name*, interrogez la table système sysproxies.  
   
  [  **@schedule_uid =** ] '*schedule_uid*'  
- GUID qui pointe vers une planification. *schedule_uid* est **uniqueidentifier** avec une valeur par défaut NULL. Si spécifié, *nom_de_la_planification* doit être NULL. Pour obtenir des *schedule_uid*, interrogez la table système sysschedules.  
+ GUID qui pointe vers une planification. *schedule_uid* est **uniqueidentifier** avec une valeur par défaut NULL. Si spécifié, *nom_de_la_planification* doit être NULL. Pour obtenir *schedule_uid*, interrogez la table système sysschedules.  
   
- Lorsque *collection_mode* est définie sur 0, *schedule_uid* ou *nom_de_la_planification* doit être spécifié. Lorsque *collection_mode* est définie sur 1, *schedule_uid* ou *nom_de_la_planification* est ignoré s’il est spécifié.  
+ Lorsque *collection_mode* est définie sur 0, *schedule_uid* ou *nom_de_la_planification* doit être spécifié. Lorsque *collection_mode* est défini sur 1, *schedule_uid* ou *nom_de_la_planification* est ignoré si spécifié.  
   
  [  **@schedule_name =** ] '*nom_de_la_planification*'  
- Est le nom de la planification. *nom_de_la_planification* est **sysname** avec une valeur par défaut NULL. Si spécifié, *schedule_uid* doit être NULL. Pour obtenir des *nom_de_la_planification*, interrogez la table système sysschedules.  
+ Est le nom de la planification. *nom_de_la_planification* est **sysname** avec une valeur par défaut NULL. Si spécifié, *schedule_uid* doit être NULL. Pour obtenir *nom_de_la_planification*, interrogez la table système sysschedules.  
   
  [  **@logging_level =** ] *logging_level*  
  Niveau de journalisation. *logging_level* est **smallint** avec l’une des valeurs suivantes :  
@@ -121,7 +121,7 @@ sp_syscollector_create_collection_set
  Description du jeu d'éléments de collecte. *Description* est **nvarchar (4000)** avec une valeur par défaut NULL.  
   
  [ **@collection_set_id =** ] *collection_set_id*  
- Identificateur local unique pour le jeu d'éléments de collecte. *collection_set_id* est **int** avec une sortie et est requis.  
+ Identificateur local unique pour le jeu d'éléments de collecte. *collection_set_id* est **int** avec une sortie et est obligatoire.  
   
  [  **@collection_set_uid =** ] '*collection_set_uid*'  
  GUID pour le jeu d'éléments de collecte. *collection_set_uid* est **uniqueidentifier** avec une sortie avec une valeur par défaut NULL.  
@@ -132,7 +132,7 @@ sp_syscollector_create_collection_set
 ## <a name="remarks"></a>Notes  
  sp_syscollector_create_collection_set doit être exécuté dans le contexte de la base de données système msdb.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'appartenance au rôle de base de données fixe dc_admin (avec autorisation EXECUTE) pour exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

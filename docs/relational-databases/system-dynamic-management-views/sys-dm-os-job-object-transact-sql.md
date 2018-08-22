@@ -26,19 +26,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
-ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
+ms.openlocfilehash: 673f1bffeea908da211cd5ff76bad9d96dabcded
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39164210"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396309"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Retourne une ligne unique décrivant la configuration de l’objet de travail qui gère le processus SQL Server, ainsi que certaines statistiques de consommation de ressources au niveau de l’objet de travail. Retourne un jeu vide si SQL Server n’est pas en cours d’exécution dans un objet de tâche. 
 
-Un objet de tâche est une construction de Windows qui implémente la gouvernance des ressources processeur, mémoire et d’e/s au niveau du système d’exploitation. Pour plus d’informations sur les objets de travail, consultez [objets travail](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
+Un objet de tâche est une construction de Windows qui implémente la gouvernance des ressources processeur, mémoire et d’e/s au niveau du système d’exploitation. Pour plus d’informations sur les objets de travail, consultez [objets travail](/windows/desktop/ProcThread/job-objects). 
   
 |Colonnes|Type de données|Description|  
 |-------------|---------------|-----------------|  

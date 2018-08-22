@@ -30,12 +30,12 @@ caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189836"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394202"
 ---
 # <a name="reporting-services-report-server"></a>Serveur de rapports Reporting Services
   Cette rubrique est une vue d'ensemble du serveur de rapports [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , le composant central d'une installation [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Il se compose d'une paire de moteurs de traitement et d'une collection d'extensions spécialisées qui gèrent l'authentification, le traitement des données, le rendu et les opérations de remise. Un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] s'exécute dans l'un des deux modes de déploiement : mode natif ou mode SharePoint. Consultez la section [Comparaison des fonctionnalités du mode natif et du mode SharePoint](#bkmk_featuresupport) pour obtenir une comparaison des fonctionnalités.  
@@ -119,7 +119,7 @@ ms.locfileid: "37189836"
  Les développeurs tiers peuvent créer des extensions supplémentaires pour remplacer ou étendre les capacités de traitement du serveur de rapports. Pour en savoir plus sur les interfaces de programmation à la disposition des développeurs d'applications, consultez les [Références Techniques](../../2014/reporting-services/technical-reference-ssrs.md).  
   
 ###  <a name="bkmk_nativewithwebparts"></a> En Mode natif avec composants WebPart SharePoint  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit deux composants WebPart que vous pouvez installer et inscrire sur une instance de [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 ou version ultérieure, ou [!INCLUDE[spPortalServ](../includes/spportalserv-md.md)] 2003 ou version ultérieure. À partir d'un site SharePoint, vous pouvez utiliser les composants WebPart pour rechercher et afficher les rapports stockés et traités sur un serveur de rapports qui s'exécute en mode natif. Ces composants WebPart ont été introduits dans des versions antérieures de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit deux composants WebPart que vous pouvez installer et inscrire sur une instance de [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 ou version ultérieure, ou SharePoint Portal Server 2003 ou version ultérieure. À partir d'un site SharePoint, vous pouvez utiliser les composants WebPart pour rechercher et afficher les rapports stockés et traités sur un serveur de rapports qui s'exécute en mode natif. Ces composants WebPart ont été introduits dans des versions antérieures de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_sharepointmode"></a> Mode SharePoint  
  En mode SharePoint, un serveur de rapports doit s'exécuter dans une batterie de serveurs SharePoint. Les fonctionnalités de traitement, de rendu et de gestion de serveur de rapports sont représentées par un serveur d’applications SharePoint exécutant le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint shared service et un ou plusieurs [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] applications de service. Un site SharePoint fournit l'accès frontal au contenu et aux opérations du serveur de rapports.  

@@ -1,5 +1,5 @@
 ---
-title: sp_help_proxy (Transact-SQL) | Documents Microsoft
+title: sp_help_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a64cf35c51d4857b666798debb633828b6c66b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0cfde22d702fa71b46ae4795beca42b8e7bd37d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259799"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394478"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,14 +59,14 @@ sp_help_proxy
   
  Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Système d'exploitation (CmdExec)|  
 |Snapshot|Agent d'instantané de réplication|  
 |LogReader|Agent de lecture du journal des réplications|  
 |Distribution|Agent de Distribution de réplication|  
-|Fusion|Agent de fusion de réplication|  
+|Fusion|Replication Merge Agent|  
 |QueueReader|Agent de lecture de la file d'attente de réplication|  
 |ANALYSISQUERY|Commandes Analysis Services|  
 |ANALYSISCOMMAND|Requête Analysis Services|  
@@ -81,29 +81,29 @@ sp_help_proxy
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**proxy_id**|**int**|Numéro d'identification du proxy.|  
+|**proxy_id**|**Int**|Numéro d'identification du proxy.|  
 |**nom**|**sysname**|Nom du proxy.|  
 |**credential_identity**|**sysname**|Nom du domaine Microsoft Windows et nom d'utilisateur pour les informations d'identification associées au serveur proxy.|  
 |**enabled**|**tinyint**|Indique si ce serveur proxy est activé. { **0** = non activé, **1** = activé}|  
 |**description**|**nvarchar(1024)**|Description de ce serveur proxy.|  
 |**user_sid**|**varbinary(85)**|Numéro d'identification de sécurité (SID) Windows de l'utilisateur Windows pour ce serveur proxy.|  
-|**credential_id**|**int**|Identifiant des informations d'identification associées à ce serveur proxy.|  
-|**credential_identity_exists**|**int**|Indique si l'identifiant des informations d'identification existe. { 0 = inexistant, 1 = existant }|  
+|**credential_id**|**Int**|Identifiant des informations d'identification associées à ce serveur proxy.|  
+|**credential_identity_exists**|**Int**|Indique si l'identifiant des informations d'identification existe. { 0 = inexistant, 1 = existant }|  
   
 ## <a name="remarks"></a>Notes  
  Lorsque aucun paramètre n’est fourni, **sp_help_proxy** répertorie des informations pour tous les proxys de l’instance.  
   
- Pour déterminer les serveurs proxy qu’une connexion peuvent utiliser pour un sous-système donné, spécifiez *nom* et *subsystem_name*. Lorsque ces arguments sont fournis, **sp_help_proxy** répertorie les serveurs proxy auxquels la connexion spécifiée peut accéder et qui peuvent être utilisés pour le sous-système spécifié.  
+ Pour déterminer quels serveurs proxy qu’une connexion peuvent utiliser pour un sous-système donné, spécifiez *nom* et *subsystem_name*. Lorsque ces arguments sont fournis, **sp_help_proxy** répertorie les proxys auxquels la connexion spécifiée peut accéder et qui peuvent être utilisés pour le sous-système spécifié.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer du rôle de base de données fixe **SQLAgentOperatorRole** dans la base de données **msdb** .  
   
- Pour plus d’informations sur les **SQLAgentOperatorRole**, consultez [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour plus d’informations sur **SQLAgentOperatorRole**, consultez [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 > [!NOTE]  
->  Le **credential_identity** et **user_sid** colonnes sont retournées uniquement dans le jeu de résultats lorsque les membres de **sysadmin** exécuter cette procédure stockée.  
+>  Le **credential_identity** et **user_sid** colonnes sont uniquement renvoyées dans le jeu de résultats lorsque les membres de **sysadmin** exécuter cette procédure stockée.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -131,7 +131,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de l’Agent SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Procédures stockées de SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   

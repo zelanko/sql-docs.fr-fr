@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
@@ -14,12 +13,12 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0632bb70a18930e71319554bba99b0660e986483
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db4148f2dfa7ce8d0520f71f5027e16c789f62fc
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182892"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393867"
 ---
 # <a name="collations-and-code-pages"></a>Classements et pages de codes
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] est limité au niveau des pages de codes prises en charge pour les colonnes (var)char dans les tables mémoire optimisées et les classements pris en charge utilisés dans des index et des procédures stockées compilées en mode natif.  

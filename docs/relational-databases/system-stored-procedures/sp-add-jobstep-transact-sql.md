@@ -22,12 +22,12 @@ caps.latest.revision: 80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc7970a2d38786a49beed08e63068be1abab4d51
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b8e883169b394c181765df03218bd19a0ffce18f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38003660"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395905"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,9 +103,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!IMPORTANT]  
 >  Une macro d’échappement doit désormais accompagner tous les jetons utilisés dans les étapes de travail, sans quoi ces étapes de travail échoue. De plus, vous devez désormais mettre les noms de jeton entre parenthèses et placer un signe dollar (`$`) au début de la syntaxe du jeton. Exemple :  
 >   
->  `$(ESCAPE_` *nom de macro* `(DATE))`  
+>  `$(ESCAPE_` *Nom de macro* `(DATE))`  
   
- Pour plus d’informations sur ces jetons et la mise à jour des étapes de travail pour utiliser la nouvelle syntaxe de jeton, consultez [utiliser des jetons dans les étapes de travail](http://msdn.microsoft.com/library/105bbb66-0ade-4b46-b8e4-f849e5fc4d43).  
+ Pour plus d’informations sur ces jetons et la mise à jour des étapes de travail pour utiliser la nouvelle syntaxe de jeton, consultez [utiliser des jetons dans les étapes de travail](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
 >  Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont : **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** et **WMI(***propriété***)**. Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
@@ -199,7 +199,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  Un proxy peut être identifié par *proxy_name* ou *proxy_id*.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -208,7 +208,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Le créateur de l'étape de travail doit disposer des droits d'accès au proxy pour cette étape. Membres de la **sysadmin** rôle de serveur fixe a accès à tous les serveurs proxy. Pour les autres utilisateurs, les droits d'accès à un proxy doivent être octroyés explicitement.  
   
@@ -232,7 +232,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher ou modifier les travaux](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [Afficher ou modifier les travaux](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   

@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a7ea23403e1c020a717b3a6fa1e1b5bad06146a
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: e38b7be06836dbbce868356fa9a4f9784c1f5219
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509218"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396086"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Paramètres du projet (mappage de Type) (DB2ToSQL)
-La page mappage de Type de la **paramètres du projet** boîte de dialogue contient les paramètres qui personnalisent comment SSMA convertit les types de données DB2 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] types de données.  
+La page mappage de Type de la **paramètres du projet** boîte de dialogue contient les paramètres qui personnalisent comment SSMA convertit les types de données DB2 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données.  
   
 La page mappage de Type est disponible dans le **paramètres du projet** et **par défaut des paramètres de projet** boîtes de dialogue.  
   
@@ -41,7 +41,7 @@ Le tableau suivant présente le **le mappage de Type** onglet options :
 Le type de données DB2 mappé.  
   
 **Type de cible**  
-La cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type de données pour le type de données DB2 spécifié.  
+La cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données pour le type de données DB2 spécifié.  
   
 Consultez les tableaux dans la section suivante pour la valeur par défaut SSMA pour DB2 les mappages de types.  
   
@@ -63,7 +63,7 @@ Dans SSMA pour DB2, vous pouvez définir des mappages de types personnalisés po
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>Type d’Argument par défaut et de retourner le mappage de Type de valeur  
 Le tableau suivant contient le mappage de type de données par défaut pour les arguments et valeurs de retour.  
   
-|DB2 Type de données|Par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Type de données|  
+|DB2 Type de données|Par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Type de données|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
@@ -119,7 +119,7 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 ### <a name="default-column-type-mapping"></a>Mappage de Type de colonne par défaut  
 Le tableau suivant contient le mappage de type par défaut pour les colonnes.  
   
-|DB2 Type de données|Par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Type de données|  
+|DB2 Type de données|Par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Type de données|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
@@ -187,7 +187,7 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 ### <a name="default-local-variable-type-mapping"></a>Mappage de Type de Variable locale par défaut  
 Le tableau suivant contient le mappage de type par défaut pour les variables locales.  
   
-|DB2 Type de données|Par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Type de données|  
+|DB2 Type de données|Par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Type de données|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  

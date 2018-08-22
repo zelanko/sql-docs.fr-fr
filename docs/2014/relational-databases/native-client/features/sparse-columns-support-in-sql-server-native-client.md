@@ -5,7 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +17,19 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7eec938ad1b94286b986d3897e9935763dcd108
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b3bc95c58caafc0f1aa60c0d02b1c53c09b0c712
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422368"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394681"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Prise en charge des colonnes éparses dans SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge les colonnes éparses. Pour plus d’informations sur les colonnes éparses dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [utiliser des colonnes éparses](../../tables/use-sparse-columns.md) et [utiliser des jeux de colonnes](../../tables/use-column-sets.md).  
   
  Pour plus d’informations sur les colonnes éparses prennent en charge dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [colonnes éparses prennent en charge &#40;ODBC&#41; ](../odbc/sparse-columns-support-odbc.md) et [colonnes éparses prennent en charge &#40;OLE DB&#41; ](../ole-db/sparse-columns-support-ole-db.md) .  
   
- Pour plus d’informations sur les exemples d’applications qui illustrent cette fonctionnalité, consultez [exemples de programmation de données SQL Server](http://msftdpprodsamples.codeplex.com/).  
+ Pour plus d’informations sur les exemples d’applications qui illustrent cette fonctionnalité, consultez [Exemples de programmation de données SQL Server](http://msftdpprodsamples.codeplex.com/).  
   
 ## <a name="user-scenarios-for-sparse-columns-and-sql-server-native-client"></a>Scénarios utilisateur pour les colonnes éparses et SQL Server Native Client  
  Le tableau suivant résume les scénarios utilisateur courants avec colonnes éparses pour les utilisateurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client :  

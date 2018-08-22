@@ -20,12 +20,12 @@ caps.latest.revision: 126
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dac6134987f8a6d3964d919d1aff7688b74da7fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02aa7277a06857f415143fd4497b0971773a03b6
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312309"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395227"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Fonctionnalités prises en charge par les éditions de SQL Server 2014
   Cette rubrique fournit des détails sur les fonctionnalités prises en charge par les différentes éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -157,7 +157,7 @@ ms.locfileid: "37312309"
   
 |Nom de la fonctionnalité|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] le suivi des modifications|Oui|Oui|Oui|Oui|Oui|Oui|Oui|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Le suivi des modifications|Oui|Oui|Oui|Oui|Oui|Oui|Oui|  
 |Réplication de fusion|Oui|Oui|Oui|Oui (abonné uniquement)|Oui (abonné uniquement)|Oui (abonné uniquement)|Oui (abonné uniquement)|  
 |Réplication transactionnelle|Oui|Oui|Oui|Oui (abonné uniquement)|Oui (abonné uniquement)|Oui (abonné uniquement)|Oui (abonné uniquement)|  
 |Réplication d'instantané|Oui|Oui|Oui|Oui (abonné uniquement)|Oui (abonné uniquement)|Oui (abonné uniquement)|Oui (abonné uniquement)|  
@@ -446,7 +446,7 @@ ms.locfileid: "37312309"
   
 |Nom de la fonctionnalité|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]|Oui|Oui|Oui|||||  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|Oui|Oui|Oui|||||  
 |Compléments d'exploration de données pour Excel et Visio 2010|Oui|Oui|Oui|||||  
 |[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Oui|Oui||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Oui|Oui||||||  

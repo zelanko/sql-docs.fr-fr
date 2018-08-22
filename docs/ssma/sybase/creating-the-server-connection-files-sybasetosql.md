@@ -1,5 +1,5 @@
 ---
-title: Créez les fichiers de connexion du serveur (SybaseToSQL) | Documents Microsoft
+title: Création des fichiers de connexion de serveur (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 758d450a9e47605a05cb411d532babfaefe109e1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c51bc4e86c14fa1f7f45818f8ca18f751c8cd892
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779295"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394473"
 ---
-# <a name="creating-the-server-connection-files-sybasetosql"></a>Créez les fichiers de connexion du serveur (SybaseToSQL)
-Informations sur le serveur peuvent être spécifiées dans la section serveurs du fichier de script ou dans un fichier de connexion de serveur distinct. Le paramètre de ligne de commande pour le fichier de connexion de serveur est, `-c <serverconnectionfile>`. Si le même id de serveur est présent dans le fichier de script et le fichier de connexion de serveur, la définition de serveur dans le fichier de script est pris en compte.  
+# <a name="creating-the-server-connection-files-sybasetosql"></a>Création des fichiers de connexion de serveur (SybaseToSQL)
+Informations sur le serveur peuvent être spécifiées dans la section serveurs du fichier de script ou dans un fichier de connexion de serveur distinct. Le paramètre de ligne de commande pour le fichier de connexion de serveur est, `-c <serverconnectionfile>`. Si le même id de serveur est présent dans le fichier de script et le fichier de connexion de serveur, la définition du serveur dans le fichier de script est considéré comme.  
   
 **Exemple :**  
   
@@ -112,8 +112,8 @@ Informations sur le serveur peuvent être spécifiées dans la section serveurs 
 L’utilisateur peut valider facilement son fichier de connexion de serveur par rapport au fichier de définition de schéma **S2SSConsoleScriptServersSchema.xsd** disponibles dans le dossier « Schémas ».  
   
 ## <a name="next-step"></a>Étape suivante  
-L’étape suivante d’exploitation de la console est [l’exécution de la Console SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+L’étape suivante de d’exploitation de la console est [l’exécution de la Console SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la console SSMA](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Exécution de la console SSMA](executing-the-ssma-console-sybasetosql.md)  
   

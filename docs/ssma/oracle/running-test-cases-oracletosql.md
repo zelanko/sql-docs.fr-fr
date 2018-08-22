@@ -13,15 +13,15 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5368db04a4f5442620a8f347608bf5aded86703b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 917f18c705c5cb0615cc5ac0b702f31372cf8a8a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982371"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395487"
 ---
-# <a name="running-test-cases-oracletosql"></a>Cas de Test en cours d’exécution (OracleToSQL)
-Lorsque le testeur de SSMA exécute un cas de Test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance des objets entre Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est déterminée en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
+# <a name="running-test-cases-oracletosql"></a>Exécution de cas de test (OracleToSQL)
+Lorsque le testeur de SSMA exécute un cas de Test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance des objets entre Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est déterminée en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
   
 Une condition requise pour le test a réussi est que tous les objets Oracle sont convertis et chargées dans la base de données cible. En outre, les données de table doivent être migrées afin que le contenu des tables sur les deux plateformes est synchronisé.  
   
@@ -32,7 +32,7 @@ Pour exécuter le cas de Test préparée :
   
 2.  Dans le **se connecter à Oracle** boîte de dialogue, entrez les informations de connexion, puis cliquez sur **Connect**.  
   
-Lorsque le test est terminé, le rapport de cas de Test est créé. Cliquez sur le **rapport** bouton pour afficher la [rapport de cas de Test](http://msdn.microsoft.com/8da14323-9dd6-4019-bf79-3e8b972a9bc0). Le résultat du test (rapport de cas de Test) est automatiquement stocké dans le [référentiel des résultats des tests](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4) pour une utilisation ultérieure.  
+Lorsque le test est terminé, le rapport de cas de Test est créé. Cliquez sur le **rapport** bouton pour afficher la [rapport de cas de Test](viewing-test-case-reports-oracletosql.md). Le résultat du test (rapport de cas de Test) est automatiquement stocké dans le [référentiel des résultats des tests](using-test-repositories-oracletosql.md) pour une utilisation ultérieure.  
   
 ## <a name="test-case-execution-steps"></a>Étapes d’exécution de cas de test  
   
@@ -55,14 +55,14 @@ Supposons que la table vérifiée est nommée USER_TABLE. Pour une telle table, 
 |USER_TABLE$ NEW_ID|vue|Identification des lignes insérées et modifiées.|  
 |USER_TABLE$ ANCIEN|vue|Simplifiée de la représentation sous forme de lignes supprimés et remplacés.|  
   
-L’objet suivant est créé dans le schéma de table vérifié au niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+L’objet suivant est créé dans le schéma de table vérifié au niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||||  
 |-|-|-|  
 |Nom   |Type|Description|  
 |USER_TABLE$ Trg|déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
   
-Et les objets suivants sont créés au [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]dans la base de données ssmatesterdb.  
+Et les objets suivants sont créés au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans la base de données ssmatesterdb.  
   
 ||||  
 |-|-|-|  

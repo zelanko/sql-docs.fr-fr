@@ -1,5 +1,5 @@
 ---
-title: Rapport de Migration de données (AccessToSQL) | Documents Microsoft
+title: Rapport de Migration de données (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,19 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: abe41ca0672776faae966d375daca718c6769434
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d030ca48bee67e322d27365a80c97d9b02071e7d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774985"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394413"
 ---
 # <a name="data-migration-report-accesstosql"></a>Rapport de Migration de données (AccessToSQL)
-Le **rapport de Migration de données** boîte de dialogue s’affiche après la migration des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Le **rapport de Migration de données** boîte de dialogue apparaît une fois que vous migrez des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Options  
 **État**  
-Indique l’état de la migration des données à partir de la source de la base de données cible.  
+Affiche l’état de la migration de données à partir de la source vers la base de données cible.  
   
 **From**  
 La table source.  
@@ -42,7 +42,7 @@ Le nombre de lignes de données dans la table source.
 **Nombre de lignes a été migrées**  
 Le nombre de lignes de données migrés avec succès à la table cible.  
   
-**Rapport**  
+**Ratio**  
 Le pourcentage de lignes migrés avec succès.  
   
 **Détails**  

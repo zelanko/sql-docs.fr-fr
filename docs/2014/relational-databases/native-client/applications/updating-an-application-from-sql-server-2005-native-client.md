@@ -1,11 +1,11 @@
 ---
-title: La mise à jour une Application à partir de SQL Server 2005 Native Client | Microsoft Docs
+title: Mise à jour d’une application à partir de SQL Server 2005 Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,21 +15,21 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 956e7aa2befcd53c2d18a2d1530fae7fdad0a0f2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0f4cb945f216c9069be45528fcca02c8b5ac3fec
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413329"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393217"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Mise à jour d'une application depuis SQL Server 2005 Native Client
   Cette rubrique décrit les modifications essentielles apportées à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client depuis [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
  Lorsque vous effectuez une mise à niveau de MDAC (Microsoft Data Access Components) vers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vous pouvez constater également des différences de comportement. Pour plus d’informations, consultez [mise à jour d’une Application vers SQL Server Native Client à partir de MDAC](updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 livrés avec [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 livrés avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 livré avec [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 livré avec [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] et [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 livré avec [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 livré avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 livré avec [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 livré avec [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] et [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
   
-|Modification du comportement dans SQL Server Native Client depuis [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Description|  
+|Modification du comportement dans SQL Server Native Client depuis [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]| Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB effectue un remplissage uniquement à l'échelle définie.|Pour les conversions dans lesquelles les données sont envoyées au serveur, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (depuis [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) remplit les zéros à droite dans les données uniquement jusqu'à la longueur maximale de valeurs `datetime`. SQL Server Native Client 9.0 effectuaient un remplissage à neuf chiffres.|  
 |Valider DBTYPE_DBTIMESTAMP pour ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (à compter de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) implémente la spécification OLE DB pour *bScale* dans ICommandWithParameter::SetParameterInfo doit être défini à la précision de fractions pour DBTYPE_DBTIMESTAMP.|  

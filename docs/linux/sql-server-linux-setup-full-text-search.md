@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: f9207a9ccee4917b8c2aa1e7731da4afe6e15658
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085841"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395484"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installer la recherche en texte intégral SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Les étapes suivantes installent la [recherche en texte intégral de SQL Server](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-server-fts**) sur Linux. La recherche en texte intégral vous permet d’exécuter des requêtes de texte intégral sur des données caractères dans des tables SQL Server. Pour les problèmes connus pour cette version, consultez les [notes de publication](sql-server-linux-release-notes.md).
+Les étapes suivantes installent la [recherche en texte intégral de SQL Server](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) sur Linux. La recherche en texte intégral vous permet d’exécuter des requêtes de texte intégral sur des données caractères dans des tables SQL Server. Pour les problèmes connus pour cette version, consultez les [notes de publication](sql-server-linux-release-notes.md).
 
 > [!NOTE]
 > Avant d’installer la recherche en texte intégral de SQL Server, tout d'abord [installer SQL Server](sql-server-linux-setup.md#platforms). Cela configure les clés et les référentiels que vous utiliserez pour installer le package **mssql-server-fts**.

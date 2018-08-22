@@ -16,18 +16,18 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3af1de2e98b4baf4800603a8eb177b80fdb1da6f
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26b95bc37f1ba7726c607e6275889ecd6a3fecd9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985501"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394864"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>Migration des bases de données de DB2 vers SQL Server (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) pour DB2 est un environnement complet qui vous permet de migrer rapidement des bases de données DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou base de données SQL Azure. À l’aide de SSMA pour DB2, vous pouvez passer en revue les objets de base de données et de données, évaluer les bases de données pour la migration, migrer des objets de base de données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou base de données SQL Azure, et migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou base de données SQL Azure. Notez que vous ne pouvez pas migrer les schémas SYS et système DB2.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour DB2 est un environnement complet qui vous permet de migrer rapidement des bases de données DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure. À l’aide de SSMA pour DB2, vous pouvez passer en revue les objets de base de données et de données, évaluer les bases de données pour la migration, migrer des objets de base de données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure, et migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure. Notez que vous ne pouvez pas migrer les schémas SYS et système DB2.  
   
 ## <a name="recommended-migration-process"></a>Processus de Migration recommandé  
-Pour pouvoir migrer des objets et des données à partir de bases de données DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou Azure SQL DB, utilisez le processus suivant :  
+Pour pouvoir migrer des objets et des données à partir de bases de données DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL DB, utilisez le processus suivant :  
   
 1.  [Nouveau projet SSMA](http://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0).  
   
@@ -47,7 +47,7 @@ Pour pouvoir migrer des objets et des données à partir de bases de données DB
   
     Vous pouvez effectuer cela dans une des manières suivantes :  
   
-    -   Enregistrer un script et exécutez-le dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+    -   Enregistrer un script et exécutez-le dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     -   Synchroniser les objets de base de données.  
   

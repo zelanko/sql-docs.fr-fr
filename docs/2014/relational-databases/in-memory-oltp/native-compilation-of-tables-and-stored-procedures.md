@@ -5,8 +5,7 @@ ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
@@ -14,12 +13,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4130e24dc67fd174130ed0e45e145242e79b86d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7508457f1f46f09e65871abde8d0ab9c11a178b6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217349"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394417"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilation en mode natif de tables et de procédures stockées
   L'OLTP en mémoire introduit le concept de compilation native. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut compiler en mode natif des procédures stockées qui accèdent aux tables optimisées en mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut également compiler en mode natif des tables optimisées en mémoire. La compilation native permet un accès aux données plus rapide et une exécution des requêtes plus efficace que le [!INCLUDE[tsql](../../includes/tsql-md.md)](traditionnel) interprété. La compilation en mode natif de tables et de procédures stockées produit des DLL.  

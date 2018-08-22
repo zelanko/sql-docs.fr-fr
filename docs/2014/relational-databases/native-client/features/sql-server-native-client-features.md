@@ -5,7 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76e7798edc0d11555d0281ff6c026f63f7ea3426
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ce15c9964eb7f0fe8dfc8338aba2499043ff7e77
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411308"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395483"
 ---
 # <a name="sql-server-native-client-features"></a>Fonctionnalités de SQL Server Native Client
   En plus de l'exposition des fonctionnalités Windows (anciennement Microsoft) Data Access Components (WDAC), [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implémente plusieurs autres fonctionnalités pour tirer parti des fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "37411308"
  [Prise en charge de FILESTREAM](filestream-support.md)  
  Traite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la fonctionnalité FILESTREAM améliorée.  
   
- [Nom de principal du service &#40;SPN&#41; prise en charge dans les connexions clientes](service-principal-name-spn-support-in-client-connections.md)  
+ [Prise en charge des noms de principal du service &#40;SPN&#41; dans les connexions clientes](service-principal-name-spn-support-in-client-connections.md)  
  Explique comment la prise en charge des noms de principaux du service a été étendue pour permettre l'authentification mutuelle à travers l'ensemble des protocoles.  
   
  [Prise en charge des colonnes éparses dans SQL Server Native Client](sparse-columns-support-in-sql-server-native-client.md)  
@@ -90,7 +90,7 @@ ms.locfileid: "37411308"
  Décrit un changement de comportement introduit dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Si vous fournissez une mémoire tampon de longueur fixe lors de la liaison d'un résultat de colonne ou d'un paramètre de sortie et que le caractère `wchar` écrit dans la mémoire tampon avant le caractère de fin est un point de code de substitut étendu d'une paire de substitution, et si le caractère `wchar` suivant est un point de code de substitut faible, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client n'ajoutera pas le point de code de substitut étendu à la mémoire tampon.  
   
  [Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- Décrit la façon dont votre application peut être configurée pour tirer parti de la récupération d’urgence haute disponibilité, fonctionnalités ajoutées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+ Explique comment votre application peut être configurée pour tirer parti des fonctionnalités de récupération d'urgence haute disponibilité, ajoutées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Accès aux informations de diagnostic dans le journal des événements étendus](accessing-diagnostic-information-in-the-extended-events-log.md)  
  Présente les améliorations apportées à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et au suivi de données qui vous donne accès aux informations de diagnostic dans la mémoire tampon en anneau et le journal XEvents.  

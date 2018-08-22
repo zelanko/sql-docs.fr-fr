@@ -1,5 +1,5 @@
 ---
-title: Paramètres (Type de mappage) du projet (SybaseToSQL) | Documents Microsoft
+title: Paramètres du projet (mappage de Type) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d0a2f1d6883afc093162e97fc30d39881655544e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b0c4e2743c4169bd7626ca66c9d9dba609facdaa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779445"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395690"
 ---
-# <a name="project-settings-type-mapping-sybasetosql"></a>Paramètres (Type de mappage) du projet (SybaseToSQL)
-La page mappage de Type de la **les paramètres de projet** boîte de dialogue contient des paramètres permettant de personnaliser comment SSMA convertit les types de données Sybase Adaptive Server Enterprise (ASE) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des types de données.  
+# <a name="project-settings-type-mapping-sybasetosql"></a>Paramètres du projet (Mappage de type) (SybaseToSQL)
+La page mappage de Type de la **paramètres du projet** boîte de dialogue contient les paramètres qui personnalisent comment SSMA convertit les types de données Sybase Adaptive Server Enterprise (ASE) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données.  
   
-La page mappage de Type est disponible dans le **les paramètres de projet** et **les paramètres de projet par défaut** boîtes de dialogue.  
+La page mappage de Type est disponible dans le **paramètres du projet** et **par défaut des paramètres de projet** boîtes de dialogue.  
   
--   Pour spécifier les paramètres de mappage de type pour tous les futurs projets SSMA, sur le **outils** menu, sélectionnez **les paramètres de projet par défaut**, sélectionnez le type de projet de migration pour lequel les paramètres sont requis pour être affichées ou modifiées à partir de **Version cible de la Migration** liste déroulante, puis sélectionnez **mappage de Type** en bas du volet gauche.  
+-   Pour spécifier les paramètres de mappage de type pour tous les futurs projets SSMA, sur le **outils** menu, sélectionnez **par défaut des paramètres de projet**, sélectionnez le type de projet de migration pour lequel les paramètres sont requis pour être affichés ou a été remplacée par **Version cible de Migration** liste déroulante, puis sélectionnez **le mappage de Type** en bas du volet gauche.  
   
 -   Pour spécifier les paramètres pour le projet actuel, sur le **outils** menu, sélectionnez **paramètres du projet**, puis sélectionnez **le mappage de Type** en bas du volet gauche.  
   
@@ -37,9 +37,9 @@ La page mappage de Type est disponible dans le **les paramètres de projet** et 
 Le type de données ASE mappé.  
   
 **Type de cible**  
-La cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type de données pour le type de données ASE spécifié.  
+La cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données pour le type de données ASE spécifié.  
   
-Consultez le tableau dans la section suivante pour la valeur par défaut SSMA pour Sybase mappage du type.  
+Consultez le tableau dans la section suivante pour la valeur par défaut SSMA pour Sybase les mappage de type.  
   
 **Ajouter**  
 Cliquez pour ajouter un type de données à la liste de mappage.  
@@ -48,15 +48,15 @@ Cliquez pour ajouter un type de données à la liste de mappage.
 Cliquez pour modifier le type de données sélectionné dans la liste de mappage.  
   
 **Supprimer**  
-Cliquez pour supprimer le mappage de type de données sélectionnées à partir de la liste de mappage.  
+Cliquez pour supprimer le mappage de type de données sélectionnée dans la liste de mappage.  
   
-**Réinitialiser les valeurs par défaut**  
+**Rétablir les valeurs par défaut**  
 Cliquez pour réinitialiser la liste de mappage de type pour les valeurs par défaut SSMA.  
   
 ## <a name="default-type-mapping"></a>Mappage de Type par défaut  
-Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des types de données.  
+Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données.  
   
-|Type de données de ASE|Type de données de SQL Server|  
+|Type de données de l’ASE|Type de données de SQL Server|  
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binaire**|**binaire**|  
@@ -71,8 +71,8 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |**Char [8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
 |**variable de caractère**|**varchar**|  
-|**variable de caractères [\*... 8000]**|**varchar[\*]**|  
-|**variable de caractères [8001..\*]**|**varchar(max)**|  
+|**variable de caractère [\*... 8000]**|**varchar[\*]**|  
+|**variable de caractère [8001..\*]**|**varchar(max)**|  
 |**caractère [\*... 8000]**|**char[\*]**|  
 |**caractère [8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
@@ -130,7 +130,7 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**UNICHAR**|**nchar**|  
-|**UNICHAR variable**|**nvarchar**|  
+|**UNICHAR varying**|**nvarchar**|  
 |**UNICHAR varying [\*... 4000]**|**nvarchar[\*]**|  
 |**UNICHAR varying [4001..\*]**|**nvarchar(max)**|  
 |**UNICHAR [\*... 4000]**|**nchar[\*]**|  
@@ -139,8 +139,8 @@ Le tableau suivant contient le mappage de type par défaut entre ASE et [!INCLUD
 |**univarchar**|**nvarchar**|  
 |**univarchar [\*... 4000]**|**nvarchar[\*]**|  
 |**univarchar [4001..\*]**|**nvarchar(max)**|  
-|**bigint non signé**|**numeric[20][0]**|  
-|**entier non signé**|**bigint**|  
+|**valeurs bigint non signées**|**numeric[20][0]**|  
+|**int non signé**|**bigint**|  
 |**smallint non signé**|**Int**|  
 |**tinyint non signé**|**tinyint**|  
 |**varbinary**|**varbinary**|  

@@ -1,5 +1,5 @@
 ---
-title: sp_stop_job (Transact-SQL) | Documents Microsoft
+title: sp_stop_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 67e1476e8f0612796e3f31644aca192c2c25a90f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e057b6c0178ca87803aede7d83c2054aac852f2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258694"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394900"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_name =**] **'***job_name***'**  
+ [  **@job_name =**] **'***nom_travail***'**  
  Nom du travail à arrêter. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@job_id =**] *job_id*  
@@ -68,14 +68,14 @@ sp_stop_job
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- **sp_stop_job** envoie un signal d’arrêt à la base de données. Certains processus peuvent être arrêtés immédiatement et certains doivent atteindre un point stable (ou un point d’entrée pour le chemin d’accès du code) avant qu’ils peuvent s’arrêter. Certaines instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de longue durée telles que BACKUP, RESTORE et certaines commandes DBCC peuvent prendre beaucoup de temps. Lorsqu’ils sont en cours d’exécution, il peut prendre un certain temps avant que la tâche est annulée. L'arrêt d'un travail provoque l'enregistrement d'une entrée « Travail annulé » dans l'historique des travaux.  
+ **sp_stop_job** envoie un signal d’arrêt à la base de données. Certains processus peuvent être arrêtés immédiatement et certains doivent atteindre un point stable (ou un point d’entrée pour le chemin d’accès du code) avant qu’elles peuvent ne pas. Certaines instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de longue durée telles que BACKUP, RESTORE et certaines commandes DBCC peuvent prendre beaucoup de temps. Lorsque ces éléments s’exécutent, peut prendre un certain temps avant que le travail est annulé. L'arrêt d'un travail provoque l'enregistrement d'une entrée « Travail annulé » dans l'historique des travaux.  
   
- Si un travail exécute actuellement une étape de type **CmdExec** ou **PowerShell**, le processus en cours d’exécution (par exemple, MyProgram.exe) est obligé de mettre fin prématurément. La fin prématurée peut aboutir à un comportement imprévisible ; les fichiers que le processus utilise risquant, par exemple, d'être bloqués alors qu'ils sont ouverts. Par conséquent, **sp_stop_job** doit être utilisée uniquement dans des circonstances extrêmes si le travail contient des étapes de type **CmdExec** ou **PowerShell**.  
+ Si un travail exécute actuellement une étape de type **CmdExec** ou **PowerShell**, le processus en cours d’exécution (par exemple, MyProgram.exe) est obligé de s’arrêter prématurément. La fin prématurée peut aboutir à un comportement imprévisible ; les fichiers que le processus utilise risquant, par exemple, d'être bloqués alors qu'ils sont ouverts. Par conséquent, **sp_stop_job** doit être utilisée uniquement dans des circonstances extrêmes si le travail contient des étapes de type **CmdExec** ou **PowerShell**.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -84,9 +84,9 @@ sp_stop_job
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membres de **SQLAgentUserRole** et **SQLAgentReaderRole** peuvent interrompre uniquement les travaux dont ils sont propriétaires. Membres de **SQLAgentOperatorRole** peut s’arrêter tous les travaux locaux, y compris ceux qui appartiennent à d’autres utilisateurs. Membres de **sysadmin** peut s’arrêter tous les travaux locaux et multiserveurs.  
+ Membres de **SQLAgentUserRole** et **SQLAgentReaderRole** peuvent interrompre uniquement les travaux dont ils sont propriétaires. Membres de **SQLAgentOperatorRole** peut arrêter tous les travaux locaux, y compris ceux qui sont détenus par d’autres utilisateurs. Membres de **sysadmin** peut arrêter tous les travaux locaux et multiserveurs.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant arrête un travail nommé `Weekly Sales Data Backup`.  

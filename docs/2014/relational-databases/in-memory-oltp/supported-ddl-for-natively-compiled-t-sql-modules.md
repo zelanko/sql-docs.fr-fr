@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
@@ -14,14 +13,14 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6cdd5c7d154f1841aa5c90e110a596d8684a535
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6a118b8d9dfe69f5890c9c66e71c2319a6a27a1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233269"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396318"
 ---
-# <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>Constructions prises en charge sur les procédures stockées compilées en mode natif
+# <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>Constructions prises en charge dans les procédures stockées compilées en mode natif
   Cette rubrique répertorie les constructions prises en charge dans les procédures stockées compilées en mode natif.  
   
  Pour plus d’informations sur les constructions non prises en charge, consultez [Constructions Transact-SQL non prises en charge par l’OLTP en mémoire](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  

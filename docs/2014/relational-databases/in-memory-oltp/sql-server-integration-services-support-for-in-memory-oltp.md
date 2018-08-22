@@ -5,8 +5,7 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
@@ -14,12 +13,12 @@ caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5c8848a26d5aee71036994e106fac2edf5bcbccd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a22740aa92ee21eb76d1b4c3d61e207a9a903119
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223309"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395909"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>Prise en charge d'OLTP en mémoire par SQL Server Integration Services
   Utilisez une table mémoire optimisée, une vue référençant des tables mémoire optimisées ou une procédure stockée compilée en mode natif en tant que source ou destination pour votre package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS). Utilisez la [source ADO NET](../../integration-services/data-flow/ado-net-source.md), la [source OLE DB](../../integration-services/data-flow/ole-db-source.md)ou la [source ODBC](../../integration-services/data-flow/odbc-source.md) dans le flux de données d’un package SSIS et configurez le composant source pour récupérer des données d’une table mémoire optimisée ou d’une vue, ou spécifiez une instruction SQL pour exécuter une procédure stockée compilée en mode natif. De même, utilisez la [destination ADO NET](../../integration-services/data-flow/ado-net-destination.md), la [destination OLE DB](../../integration-services/data-flow/ole-db-destination.md)ou la [destination ODBC](../../integration-services/data-flow/odbc-destination.md) pour charger des données dans une table mémoire optimisée ou une vue, ou spécifiez une instruction SQL pour exécuter une procédure stockée compilée en mode natif.  

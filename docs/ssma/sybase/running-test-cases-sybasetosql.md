@@ -1,5 +1,5 @@
 ---
-title: Exécuter des cas de Test (SybaseToSQL) | Documents Microsoft
+title: Exécuter des cas de Test (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,66 +18,66 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5751a704fdea6e7c87aa43e1b4fedc1107d89f8c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e74fe0d569c627df15b4a75200b6821a236404ef
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779355"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394645"
 ---
-# <a name="running-test-cases-sybasetosql"></a>Cas de Test en cours d’exécution (SybaseToSQL)
-Lorsque le testeur de SSMA s’exécute à un cas de Test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance des objets entre Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est déterminé en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
+# <a name="running-test-cases-sybasetosql"></a>Exécution de cas de test (SybaseToSQL)
+Lorsque le testeur de SSMA exécute un cas de Test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance des objets entre Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est déterminée en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
   
-Une condition requise pour un test réussi est que tous les objets Sybase sont convertis et chargées dans la base de données cible. En outre, les données de table doivent être migrées et que le contenu des tables sur les deux plateformes est synchronisé.  
+Une condition requise pour le test a réussi est que tous les objets Sybase sont convertis et chargées dans la base de données cible. En outre, les données de table doivent être migrées afin que le contenu des tables sur les deux plateformes est synchronisé.  
   
 ## <a name="run-test-case"></a>Exécuter des cas de Test  
 Pour exécuter le cas de Test préparée :  
   
 1.  Cliquez sur le **exécuter** bouton.  
   
-2.  Dans le **se connecter à Sybase** boîte de dialogue, entrez les informations de connexion, puis cliquez sur **connexion**.  
+2.  Dans le **se connecter à Sybase** boîte de dialogue, entrez les informations de connexion, puis cliquez sur **Connect**.  
   
-Lorsque le test est terminé, le rapport de cas de Test est créé. Cliquez sur le **rapport** bouton pour afficher la [afficher des rapports de cas de Test &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). Le résultat du test (rapport de cas de Test) est automatiquement stocké dans le [référentiels de Test à l’aide de &#40;SybaseToSQL&#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md) pour une utilisation ultérieure.  
+Lorsque le test est terminé, le rapport de cas de Test est créé. Cliquez sur le **rapport** bouton pour afficher la [affichage de rapports de cas de Test &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). Le résultat du test (rapport de cas de Test) est automatiquement stocké dans le [référentiels de Test à l’aide de &#40;SybaseToSQL&#41; ](../../ssma/sybase/using-test-repositories-sybasetosql.md) pour une utilisation ultérieure.  
   
-## <a name="test-case-execution-steps"></a>Étapes d’exécution des cas de test  
+## <a name="test-case-execution-steps"></a>Étapes d’exécution de cas de test  
   
 ### <a name="prerequisites"></a>Prérequis  
-Testeur de SSMA vérifie si toutes les conditions préalables sont remplies pour que l’exécution du test avant le début du test. Si certaines conditions ne sont pas satisfaites, un message d’erreur s’affiche.  
+Testeur de SSMA vérifie si toutes les conditions préalables sont remplies pour l’exécution de test avant le début du test. Si certaines conditions ne sont pas satisfaites, un message d’erreur s’affiche.  
   
 ### <a name="initialization"></a>Initialisation  
-À ce stade, SSMA testeur crée auxiliaires objets (tables, déclencheurs et vues) à la fois au niveau de la Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Ils permettent aux modifications de suivi dans les tables affectées choisis pour la vérification si le mode de comparaisons de table est **modifie seulement**.  
+À ce stade, SSMA testeur crée auxiliaires objets (tables, déclencheurs et vues) à la fois au niveau du Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ils permettent le suivi des modifications effectuées dans les tables concernées choisis pour la vérification si le mode de comparaisons de table est **change uniquement**.  
   
 Supposons que la table vérifiée est nommée USER_TABLE. Pour une telle table, les objets auxiliaires suivants sont créés dans Sybase.  
   
-Les objets suivants sont créés au Sybase, dans la base de données SSMATESTER2005db ou SSMATESTER2008db et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dans la base de données ssmatesterdb_syb.  
+Les objets suivants sont créés à Sybase dans la base de données SSMATESTER2005db ou SSMATESTER2008db et au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la base de données ssmatesterdb_syb.  
   
 |Nom   |Type|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|Déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
 |USER_TABLE$ Aud|Table de charge de travail|Tableau dans lequel sont enregistrés les lignes supprimées et remplacées.|  
 |USER_TABLE$ AudID|Table de charge de travail|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
-|USER_TABLE|Affichage|Représentation simplifiée des modifications de la table.|  
-|$ USER_TABLE nouveau|Affichage|Simplifiée de la représentation sous forme de lignes insérées et remplacés.|  
-|USER_TABLE$ new_id|Affichage|Identification des lignes insérées et modifiés.|  
-|$ USER_TABLE ancien|Affichage|Simplifiée de la représentation sous forme de lignes supprimés et remplacés.|  
+|USER_TABLE|Affichage|Représentation sous forme simplifiée de modifications de la table.|  
+|USER_TABLE$ nouveau|Affichage|Simplifiée de la représentation sous forme de lignes insérées et remplacés.|  
+|USER_TABLE$ new_id|Affichage|Identification des lignes insérées et modifiées.|  
+|USER_TABLE$ ancien|Affichage|Simplifiée de la représentation sous forme de lignes supprimés et remplacés.|  
   
-L’objet suivant est créé dans la base de données de table vérifié à Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+L’objet suivant est créé dans la base de données de table vérifié dans Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Nom   |Type|Description|  
 |--------|--------|---------------|  
 |USER_TABLE$ Trg|Déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
   
-### <a name="test-object-calls"></a>Appels de l’objet de test  
-À ce stade, SSMA testeur appelle chaque objet sélectionné pour le test, compare les résultats et affiche le rapport.  
+### <a name="test-object-calls"></a>Appels d’objet de test  
+À ce stade, testeur de SSMA appelle chaque objet sélectionné pour le test, compare les résultats et affiche le rapport.  
   
 ### <a name="finalization"></a>Finalisation  
-Lors de la finalisation SSMA testeur nettoie les objets auxiliaires créés lors de la **initialisation** étape.  
+Pendant la finalisation SSMA testeur nettoie les objets auxiliaires créés à le **initialisation** étape.  
   
 ## <a name="next-step"></a>Étape suivante  
 [Affichage des rapports de cas de Test &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Sélection et configuration d’objets pour le Test &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
+[Sélection et la configuration des objets à tester &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
 [Sélectionner et configurer les objets affectés &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
-[Test de migration des objets de base de données &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Test des objets de base de données migrés &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

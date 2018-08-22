@@ -1,5 +1,5 @@
 ---
-title: sp_help_schedule (Transact-SQL) | Documents Microsoft
+title: sp_help_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1803a5a2842d40700cc4b0f82c800cfbb6cc2e05
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a77859fd5c113d9b40832c81472e62aaef05fcda
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261738"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395733"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_help_schedule
  Nom de la planification à répertorier. *nom_de_la_planification* est **sysname**, sans valeur par défaut. Soit *id_de_la_planification* ou *nom_de_la_planification* peut être spécifié.  
   
  [ **@attached_schedules_only** =] *attached_schedules_only* ]  
- Spécifie s'il faut afficher seulement les planifications auxquelles un travail est attaché. *attached_schedules_only* est **bits**, avec une valeur par défaut **0**. Lorsque *attached_schedules_only* est **0**, toutes les planifications sont affichées. Lorsque *attached_schedules_only* est **1**, le jeu de résultats contient uniquement des planifications qui sont associées à une tâche.  
+ Spécifie s'il faut afficher seulement les planifications auxquelles un travail est attaché. *attached_schedules_only* est **bits**, avec une valeur par défaut **0**. Lorsque *attached_schedules_only* est **0**, toutes les planifications sont affichées. Lorsque *attached_schedules_only* est **1**, le jeu de résultats contient uniquement les planifications qui sont attachées à un travail.  
   
  [ **@include_description** =] *include_description*  
  Spécifie s'il faut inclure les descriptions dans le jeu de résultats. *include_description* est **bits**, avec une valeur par défaut **0**. Lorsque *include_description* est **0**, le *schedule_description* colonne du jeu de résultats contient un espace réservé. Lorsque *include_description* est **1**, la description de la planification est incluse dans le jeu de résultats.  
@@ -66,30 +66,30 @@ sp_help_schedule
 ## <a name="result-sets"></a>Jeux de résultats  
  Cette procédure retourne le jeu de résultats suivant :  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**schedule_id**|**int**|Numéro d'identificateur de la planification.|  
+|**schedule_id**|**Int**|Numéro d'identificateur de la planification.|  
 |**schedule_uid**|**uniqueidentifier**|Identificateur de la planification.|  
 |**schedule_name**|**sysname**|Nom de la planification.|  
-|**enabled**|**int**|Si la planification est activée (**1**) ou désactivée (**0**).|  
-|**freq_type**|**int**|Valeur indiquant quand le travail doit être exécuté.<br /><br /> **1** = une fois<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuellement, relatif à la **freq_interval**<br /><br /> **64** = lancé au démarrage du service SQLServerAgent.|  
-|**freq_interval**|**int**|Jours lorsque la tâche est exécutée. La valeur dépend de la valeur de **freq_type**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|Unités de **freq_subday_interval**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|Nombre de **freq_subday_type** périodes entre chaque exécution du travail. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**int**|Planifiées du travail de le **freq_interval** dans chaque mois. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_recurrence_factor**|**int**|Nombre de mois devant s'écouler entre les exécutions planifiées du travail.|  
-|**active_start_date**|**int**|Date d'activation de la planification.|  
-|**active_end_date**|**int**|Date de fin de la planification.|  
-|**active_start_time**|**int**|Heure de début de la planification.|  
-|**active_end_time**|**int**|Heure de fin de la planification.|  
+|**enabled**|**Int**|Si la planification est activée (**1**) ou désactivée (**0**).|  
+|**freq_type**|**Int**|Valeur indiquant quand le travail doit être exécuté.<br /><br /> **1** = une fois<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuellement, relatif à la **freq_interval**<br /><br /> **64** = lancé au démarrage du service SQLServerAgent.|  
+|**freq_interval**|**Int**|Jours lorsque la tâche est exécutée. La valeur dépend de la valeur de **freq_type**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**Int**|Unités pour **freq_subday_interval**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**Int**|Nombre de **freq_subday_type** périodes entre chaque exécution du travail. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**Int**|Planifiées du travail de le **freq_interval** dans chaque mois. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_recurrence_factor**|**Int**|Nombre de mois devant s'écouler entre les exécutions planifiées du travail.|  
+|**active_start_date**|**Int**|Date d'activation de la planification.|  
+|**active_end_date**|**Int**|Date de fin de la planification.|  
+|**active_start_time**|**Int**|Heure de début de la planification.|  
+|**active_end_time**|**Int**|Heure de fin de la planification.|  
 |**date_created**|**datetime**|Date de création de la planification.|  
 |**schedule_description**|**nvarchar(4000)**|Description en anglais de la planification (sur demande).|  
-|**job_count**|**int**|Renvoie le nombre de travaux auxquels la planification fait référence.|  
+|**job_count**|**Int**|Renvoie le nombre de travaux auxquels la planification fait référence.|  
   
 ## <a name="remarks"></a>Notes  
  Lorsque aucun paramètre n’est fourni, **sp_help_schedule** répertorie des informations sur toutes les planifications de l’instance.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -98,7 +98,7 @@ sp_help_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Membres de **SQLAgentUserRole** peuvent uniquement afficher les planifications dont ils sont propriétaires.  
   

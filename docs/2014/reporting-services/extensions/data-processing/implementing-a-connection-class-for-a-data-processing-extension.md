@@ -19,21 +19,21 @@ caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9be8bc7507cad3a44b4330cc3c49a00abc1953e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aeb429ce455856c9438b0a45053edce7e0c1bdcf
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309339"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393828"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implémentation d'une classe Connection pour une extension pour le traitement des données
   L’objet **Connection** représente une connexion de base de données ou une ressource similaire et représente le point de départ pour les utilisateurs d’une extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Il représente des connexions aux serveurs de base de données, bien que toute entité ayant un comportement similaire puisse être exposée comme un objet **Connection**.  
   
  Pour implémenter un objet **Connection**, créez une classe qui implémente <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> et peut implémenter <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>.  
   
- Dans votre implémentation, vous devez garantir qu'une connexion est créée et ouverte avant que les commandes puissent être exécutées. Veillez à ce que votre implémentation oblige les clients à ouvrir et fermer des connexions explicitement, plutôt qu'une implémentation qui ouvre et ferme des connexions implicitement pour le client. Effectuez vos vérifications de la sécurité lorsque la connexion est obtenue. La nécessité d'une connexion existante pour les autres classes dans votre extension pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] garantit ensuite que les vérifications de la sécurité sont toujours effectuées lors de l'utilisation de votre source de données.  
+ Dans votre implémentation, vous devez garantir qu'une connexion est créée et ouverte avant que les commandes puissent être exécutées. Veillez à ce que votre implémentation oblige les clients à ouvrir et fermer des connexions explicitement, plutôt qu'une implémentation qui ouvre et ferme des connexions implicitement pour le client. Effectuez vos vérifications de la sécurité lorsque la connexion est obtenue. La nécessité d'une connexion existante pour les autres classes dans votre extension pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs.md)] garantit ensuite que les vérifications de la sécurité sont toujours effectuées lors de l'utilisation de votre source de données.  
   
- Les propriétés de la connexion souhaitée sont représentées sous la forme d'une chaîne de connexion. Il est fortement recommandé que les extensions pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] prennent en charge la propriété <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> à l'aide du système de paire nom/valeur familier défini par OLE DB.  
+ Les propriétés de la connexion souhaitée sont représentées sous la forme d'une chaîne de connexion. Il est fortement recommandé que les extensions pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs.md)] prennent en charge la propriété <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> à l'aide du système de paire nom/valeur familier défini par OLE DB.  
   
 > [!NOTE]  
 >  Les objets **Connection** consomment souvent beaucoup de ressources, vous pouvez donc envisager de regrouper des connexions ou faire appel à d’autres techniques pour réduire ce problème.  

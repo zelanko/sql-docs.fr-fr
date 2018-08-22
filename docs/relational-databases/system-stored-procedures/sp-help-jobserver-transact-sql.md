@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobserver (Transact-SQL) | Documents Microsoft
+title: sp_help_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e1efcd128c2c77bcac729c7a529f9dc909457cc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fdaa9481c51188767834679031b6cdc9084f969d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256084"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395896"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ sp_help_jobserver
  [  **@job_id=** ] *job_id*  
  Numéro d'identification du travail pour lequel renvoyer des informations. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'***job_name***'**  
+ [  **@job_name=** ] **'***nom_travail***'**  
  Nom du travail pour lequel renvoyer des informations. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés.  
+>  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
  [  **@show_last_run_details=** ] *afficher_les_détails_de_dernière_exécution*  
  Indique si les informations de la dernière exécution doivent faire partie du jeu de résultats. *afficher_les_détails_de_dernière_exécution* est **tinyint**, avec une valeur par défaut **0**. **0** n’inclut pas les informations de la dernière exécution, et **1** est.  
@@ -64,24 +64,24 @@ sp_help_jobserver
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**int**|Numéro d'identification du serveur cible.|  
+|**server_id**|**Int**|Numéro d'identification du serveur cible.|  
 |**server_name**|**nvarchar(30)**|Nom de l'ordinateur du serveur cible.|  
 |**enlist_date**|**datetime**|Date d'inscription du serveur cible sur le serveur maître.|  
 |**last_poll_date**|**datetime**|Date à laquelle le serveur cible a interrogé pour la dernière fois le serveur maître.|  
   
- Si **sp_help_jobserver** est exécutée avec *afficher_les_détails_de_dernière_exécution* la valeur **1**, le jeu de résultats comporte ces colonnes supplémentaires.  
+ Si **sp_help_jobserver** est exécutée avec *afficher_les_détails_de_dernière_exécution* définie sur **1**, le jeu de résultats comporte ces colonnes supplémentaires.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**last_run_date**|**int**|Date du début de la dernière exécution du travail sur ce serveur cible.|  
-|**last_run_time**|**int**|Heure du début de la dernière exécution du travail sur ce serveur.|  
-|**last_run_duration**|**int**|Durée du travail lors de sa dernière exécution sur ce serveur cible (en secondes).|  
+|**last_run_date**|**Int**|Date du début de la dernière exécution du travail sur ce serveur cible.|  
+|**last_run_time**|**Int**|Heure du début de la dernière exécution du travail sur ce serveur.|  
+|**last_run_duration**|**Int**|Durée du travail lors de sa dernière exécution sur ce serveur cible (en secondes).|  
 |**last_outcome_message**|**nvarchar(1024)**|Décrit le dernier résultat du travail.|  
-|**last_run_outcome**|**int**|Résultat du travail à l'issue de sa dernière exécution sur ce serveur.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
+|**last_run_outcome**|**Int**|Résultat du travail à l'issue de sa dernière exécution sur ce serveur.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -90,9 +90,9 @@ sp_help_jobserver
   
 -   **SQLAgentOperatorRole**  
   
- Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Pour en savoir plus sur les autorisations de ces rôles, consultez [Rôles de base de données fixes de l'Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membres de **SQLAgentUserRole** peut uniquement afficher des informations sur les travaux dont ils sont propriétaires.  
+ Membres de **SQLAgentUserRole** peuvent uniquement afficher les informations sur les travaux dont ils sont propriétaires.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant renvoie des informations, dont les informations sur la dernière exécution, du travail `NightlyBackups`.  

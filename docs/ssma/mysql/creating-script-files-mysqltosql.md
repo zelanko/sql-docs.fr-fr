@@ -21,14 +21,14 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f685c51851962c720093ef3c387332ce8de87766
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: daf26b975bbcf150b481e3d2dedfea75cafaa4f5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982511"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393868"
 ---
-# <a name="creating-script-files-mysqltosql"></a>Création de fichiers de Script (MySQLToSQL)
+# <a name="creating-script-files-mysqltosql"></a>Création de fichiers de script (MySQLToSQL)
 La première étape avant le lancement de l’application de console SSMA consiste à créer le fichier de script et, si nécessaire de créer le fichier de la valeur de la variable et le fichier de connexion de serveur.  
   
 Le fichier de script peut être divisé en trois sections, reportages.., :  
@@ -73,7 +73,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <…All commands…>  
@@ -110,7 +110,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <migrate-data>  
@@ -143,7 +143,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -176,7 +176,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <!--synchronization-->  
@@ -187,7 +187,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </synchronize-target>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <!--data migration-->  
@@ -222,7 +222,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -275,7 +275,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <…All commands…>  
@@ -317,7 +317,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     </output-providers>  
     ```  
-    *ou*  
+    *Ou*  
   
     ```xml  
     <…All commands…>  
@@ -357,7 +357,7 @@ Le fichier de script contient une séquence de commandes de flux de travail de m
   
 Par exemple, une migration de données standard d’une table spécifique dans une base de données MySQL suit la hiérarchie de : base de données -&gt; Table.  
   
-Lorsque toutes les commandes dans le fichier de script sont exécutées avec succès, l’application de console SSMA se termine et retourne le contrôle à l’utilisateur. Le contenu d’un fichier de script est plus ou moins statique avec des informations sur les variables contenues dans un [les fichiers de valeurs de Variable](http://msdn.microsoft.com/1dc56a7b-8e3a-4576-ad4f-47050bf7e28a) ou, dans une section distincte du fichier de script pour les valeurs des variables.  
+Lorsque toutes les commandes dans le fichier de script sont exécutées avec succès, l’application de console SSMA se termine et retourne le contrôle à l’utilisateur. Le contenu d’un fichier de script est plus ou moins statique avec des informations sur les variables contenues dans un [les fichiers de valeurs de Variable](creating-variable-value-files-mysqltosql.md) ou, dans une section distincte du fichier de script pour les valeurs des variables.  
   
 **Exemple :**  
   

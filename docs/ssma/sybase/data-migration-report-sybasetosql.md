@@ -1,5 +1,5 @@
 ---
-title: Rapport de Migration de données (SybaseToSQL) | Documents Microsoft
+title: Rapport de Migration de données (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,19 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0e4f2e50603b970a2b1ec5c1eec4e258e80cfb3b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9e1f04f6a5df77be0bfc13227e1033842b5dd291
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778506"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394644"
 ---
-# <a name="data-migration-report-sybasetosql"></a>Rapport de Migration de données (SybaseToSQL)
-Le **rapport de Migration de données** boîte de dialogue s’affiche après la migration des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+# <a name="data-migration-report-sybasetosql"></a>Rapport de migration des données (SybaseToSQL)
+Le **rapport de Migration de données** boîte de dialogue apparaît une fois que vous migrez des données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Options  
 **État**  
-Indique l’état de la migration des données à partir de la source de la base de données cible.  
+Affiche l’état de la migration de données à partir de la source vers la base de données cible.  
   
 **From**  
 La table source.  
@@ -42,7 +42,7 @@ Le nombre de lignes de données dans la table source.
 **Nombre de lignes a été migrées**  
 Le nombre de lignes de données migrés avec succès à la table cible.  
   
-**Rapport**  
+**Ratio**  
 Le pourcentage de lignes migrés avec succès.  
   
 **Détails**  

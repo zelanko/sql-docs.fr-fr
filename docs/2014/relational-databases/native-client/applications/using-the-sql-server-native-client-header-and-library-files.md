@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ caps.latest.revision: 63
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf209f7897aed59e32d648e0305f9c7ba0e119a9
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f0d38f93bb5677ff679ee85b36c9a0cd77377d2a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415070"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395912"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Utilisation des fichiers bibliothèques et de l'en-tête SQL Server Native Client
   Les fichiers bibliothèque et d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client sont installés avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Lors du développement d'une application, il importe de copier et d'installer tous les fichiers requis pour le développement sur votre environnement de développement. Pour plus d’informations sur l’installation et la redistribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [l’installation de SQL Server Native Client](installing-sql-server-native-client.md).  

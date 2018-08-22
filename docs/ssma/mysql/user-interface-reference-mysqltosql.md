@@ -16,14 +16,14 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e29e979597563511f91977cf9815aa0e06290ae1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f5acb0977326b148667a62ae0c86bb47f443174
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983311"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394260"
 ---
-# <a name="user-interface-reference-mysqltosql"></a>Référence de l’Interface utilisateur (MySQLToSQL)
+# <a name="user-interface-reference-mysqltosql"></a>Guide de référence de l’interface utilisateur (MySQLToSQL)
 Cette section inclut des rubriques d’aide pour SQL Server Migration Assistant (SSMA) pour MySQL.  
   
 ## <a name="in-this-section"></a>Dans cette section  
@@ -39,7 +39,7 @@ Le tableau suivant répertorie les boîtes de dialogue SSMA :
 |[Se connecter à la base de données SQL Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Utilisez le **se connecter à SQL Azure** boîte de dialogue se connecter à l’instance de SQL Azure à laquelle vous souhaitez migrer.|  
 |[Paramètres de conversion (MySQL)](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|Utilisez le **paramètres** onglet pour définir les paramètres au niveau du nœud.|  
 |[Rapport de Migration de données &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Affiche les résultats de migration de données de MySQL vers SQL Server ou SQL Azure.|  
-|[Paramètres de migration de données](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)|Utilisez le **paramètres de Migration de données étendus** tab pour écrire des requêtes personnalisées pour la migration de données.|  
+|[Paramètres de migration de données](data-migration-settings-mysqltosql.md)|Utilisez le **paramètres de Migration de données étendus** tab pour écrire des requêtes personnalisées pour la migration de données.|  
 |[Modifier le mappage de Type &#40;MySQLToSQL&#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Utilisez le **modifier un mappage de Type** boîte de dialogue pour créer ou modifier le mappage des types de données entre les bases de données source et cible et les objets de base de données.|  
 |[Paramètres globaux &#40;éditeur&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|Utilisez la page de l’éditeur de la **paramètres globaux** boîte de dialogue pour configurer les options de l’éditeur de code.|  
 |[Paramètres globaux &#40;boîtes de dialogue&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|Utilisez la page de boîtes de dialogue de la **paramètres globaux** boîte de dialogue pour configurer les paramètres de l’avertissement et de la boîte de dialogue par défaut.|  

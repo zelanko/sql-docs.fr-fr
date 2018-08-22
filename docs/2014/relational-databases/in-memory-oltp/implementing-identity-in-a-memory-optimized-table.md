@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
@@ -14,12 +13,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cdc1b44fda79d5b8ea8f940e18fc3b00240a6752
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba289f67393796acb3f99d05a09ab90df4505bfb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229239"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395119"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Implémentation d'IDENTITY dans une table optimisée en mémoire
   IDENTITY(1, 1) est pris en charge sur une table mémoire optimisée. Cependant, les colonnes d'identité avec définition IDENTITY(x, y) où x != 1 ou y != 1 ne sont pas prises en charge sur les tables mémoire optimisées. La solution pour les valeurs IDENTITY utilise l'objet SEQUENCE ([Sequence Numbers](../sequence-numbers/sequence-numbers.md)).  

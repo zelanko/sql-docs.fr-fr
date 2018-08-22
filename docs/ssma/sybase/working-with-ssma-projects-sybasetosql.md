@@ -16,20 +16,20 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d3097c1b4f52a53f7c2a846cc4d25707f9766313
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d8f95fad58c2cc0b4011a7a3b1dd34f1985e3777
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981643"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395891"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>Utilisation de projets SSMA (SybaseToSQL)
-Pour migrer des bases de données Sybase Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, vous créez tout d’abord un projet SSMA. Le projet est un fichier qui contient des métadonnées sur les bases de données ASE que vous souhaitez migrer vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, les métadonnées sur l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure qui reçoit les objets migrés et les données, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure informations de connexion et les paramètres du projet.  
+Pour migrer des bases de données Sybase Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous créez tout d’abord un projet SSMA. Le projet est un fichier qui contient des métadonnées sur les bases de données ASE que vous souhaitez migrer vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, les métadonnées sur l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure qui reçoit les objets migrés et les données, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure informations de connexion et les paramètres du projet.  
   
-Lorsque vous ouvrez un projet, il est déconnecté [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Cela vous permet de travailler hors connexion. Vous pouvez vous reconnecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Pour plus d’informations, consultez [connexion à SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [connexion à Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md).  
+Lorsque vous ouvrez un projet, il est déconnecté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Cela vous permet de travailler hors connexion. Vous pouvez vous reconnecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Pour plus d’informations, consultez [connexion à SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [connexion à Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md).  
   
 ## <a name="reviewing-default-project-settings"></a>Examen des paramètres de projet par défaut  
-SSMA contient plusieurs options de conversion et chargement d’objets de base de données, migration de données et la synchronisation de SSMA avec ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Les paramètres par défaut pour ces options conviennent pour de nombreux utilisateurs. Toutefois, avant de créer un nouveau projet SSMA, vous devez examiner les options et, si vous le souhaitez, modifiez les valeurs par défaut qui seront utilisés pour vos nouveaux projets.  
+SSMA contient plusieurs options de conversion et chargement d’objets de base de données, migration de données et la synchronisation de SSMA avec ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Les paramètres par défaut pour ces options conviennent pour de nombreux utilisateurs. Toutefois, avant de créer un nouveau projet SSMA, vous devez examiner les options et, si vous le souhaitez, modifiez les valeurs par défaut qui seront utilisés pour vos nouveaux projets.  
   
 **Pour passer en revue les paramètres de projet par défaut**  
   
@@ -45,7 +45,7 @@ SSMA contient plusieurs options de conversion et chargement d’objets de base d
   
     -   Pour plus d’informations sur les options de migration, consultez [paramètres du projet &#40;Migration&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md).  
   
-    -   Pour plus d’informations sur les options de chargement d’objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], consultez [paramètres du projet &#40;synchronisation&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md).  
+    -   Pour plus d’informations sur les options de chargement d’objets dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [paramètres du projet &#40;synchronisation&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md).  
   
     -   Pour plus d’informations sur les options de l’interface graphique utilisateur, consultez [paramètres du projet &#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md).  
   
@@ -57,7 +57,7 @@ SSMA contient plusieurs options de conversion et chargement d’objets de base d
     > Les paramètres de SQL Azure seront affichera uniquement lorsque vous sélectionnez **Migration vers SQL Azure** lors de la création d’un projet.  
   
 ## <a name="creating-new-projects"></a>Création de projets  
-Pour migrer des données à partir de bases de données ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, vous devez d’abord créer un projet.  
+Pour migrer des données à partir de bases de données ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez d’abord créer un projet.  
   
 **Pour créer un projet**  
   
@@ -69,17 +69,17 @@ Pour migrer des données à partir de bases de données ASE [!INCLUDE[ssNoVersio
   
 3.  Dans le **emplacement** zone, entrez ou sélectionnez un dossier pour le projet.  
   
-4.  Dans le **à la Migration** liste déroulante, sélectionnez la version du serveur cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilisé pour la migration. Les options disponibles sont :  
+4.  Dans le **à la Migration** liste déroulante, sélectionnez la version du serveur cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour la migration. Les options disponibles sont :  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Base de données SQL Azure  
   
@@ -108,7 +108,7 @@ Lorsque vous enregistrez un projet, SSMA conserve les paramètres du projet et �
         SSMA analysera les schémas Sybase ASE et enregistrer les métadonnées dans le fichier projet.  
   
 ## <a name="opening-projects"></a>Ouverture de projets  
-Lorsque vous ouvrez un projet, il est déconnecté de l’ASE et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Cela vous permet de travailler hors connexion. Pour mettre à jour des métadonnées, charger des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Pour migrer des données, vous devez vous reconnecter à ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure.  
+Lorsque vous ouvrez un projet, il est déconnecté de l’ASE et de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Cela vous permet de travailler hors connexion. Pour mettre à jour des métadonnées, charger des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Pour migrer des données, vous devez vous reconnecter à ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
 **Pour ouvrir un projet**  
   
@@ -120,10 +120,10 @@ Lorsque vous ouvrez un projet, il est déconnecté de l’ASE et de [!INCLUDE[ss
   
 2.  Pour vous reconnecter à ASE, sur le **fichier** menu, sélectionnez **reconnexion à Sybase**.  
   
-3.  Pour vous reconnecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, sur le **fichier** menu, sélectionnez **reconnexion à SQL Server** / **reconnexion à SQL Azure**.  
+3.  Pour vous reconnecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, sur le **fichier** menu, sélectionnez **reconnexion à SQL Server** / **reconnexion à SQL Azure**.  
   
 ## <a name="next-step"></a>Étape suivante  
-L’étape suivante du processus de migration consiste à [se connecter à Sybase ASE](http://msdn.microsoft.com/a45a2330-9175-4c9e-af38-ef920e350614).  
+L’étape suivante du processus de migration consiste à [se connecter à Sybase ASE](connecting-to-sybase-ase-sybasetosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Migration des bases de données de Sybase ASE pour SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

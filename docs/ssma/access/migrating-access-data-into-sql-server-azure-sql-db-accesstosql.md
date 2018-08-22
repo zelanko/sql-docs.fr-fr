@@ -25,27 +25,27 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9cb790ec1b79827b7db578001633c75ef6e1b191
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7f63f3ac016a35cae82161cd9af1cfaafaf33353
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979471"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394493"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>Migration de données Access vers SQL Server - Azure SQL DB (AccessToSQL)
-Une fois que vous avez créé les objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous pouvez migrer des données à partir de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure.  
+Une fois que vous avez créé les objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez migrer des données à partir de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
 ## <a name="setting-migration-options"></a>Définition des Options de Migration  
-Avant de migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, passez en revue les options de migration de projet dans le **paramètres du projet** boîte de dialogue. Dans cette boîte de dialogue, vous pouvez définir la taille de lot de migration, le verrouillage de table, la contrainte de vérification, le déclencheur d’insertion se déclencher, identité et manipulation, d’une valeur null et comment gérer les dates qui sont hors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] plage. Pour plus d’informations, consultez [paramètres du projet (Migration)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+Avant de migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, passez en revue les options de migration de projet dans le **paramètres du projet** boîte de dialogue. Dans cette boîte de dialogue, vous pouvez définir la taille de lot de migration, le verrouillage de table, la contrainte de vérification, le déclencheur d’insertion se déclencher, identité et manipulation, d’une valeur null et comment gérer les dates qui sont hors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plage. Pour plus d’informations, consultez [paramètres du projet (Migration)](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
   
 ## <a name="migrating-data"></a>Migration de données  
-Migration de données sont une opération de chargement en masse qui déplace les lignes de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure dans des transactions. Le nombre de lignes à charger dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure dans chaque transaction est configuré dans les paramètres du projet.  
+Migration de données sont une opération de chargement en masse qui déplace les lignes de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure dans des transactions. Le nombre de lignes à charger dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure dans chaque transaction est configuré dans les paramètres du projet.  
   
 Pour afficher les messages de la migration, vérifiez que le volet de sortie est visible. Le cas contraire, sur le **vue** menu, sélectionnez **sortie**.  
   
 **Pour migrer des données**  
   
-1.  Assurez-vous que vous avez chargé les objets de base de données Access dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure.  
+1.  Assurez-vous que vous avez chargé les objets de base de données Access dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
 2.  Dans l’Explorateur de métadonnées d’accès, sélectionnez les objets qui contiennent les données que vous souhaitez migrer :  
   
@@ -55,12 +55,12 @@ Pour afficher les messages de la migration, vérifiez que le volet de sortie est
   
 3.  Avec le bouton droit **bases de données** , puis sélectionnez **migrer des données**.  
   
-Vous pouvez également migrer des données en dehors de SSMA à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **bcp** utilitaire de ligne de commande ou [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]. Pour plus d’informations sur ces outils, consultez [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] la documentation en ligne.  
+Vous pouvez également migrer des données en dehors de SSMA à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp** utilitaire de ligne de commande ou [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations sur ces outils, consultez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
   
 ## <a name="next-step"></a>Étape suivante  
-Si vous avez des applications de base de données Access que vous souhaitez continuer à utiliser après la migration, lier les tables de base de données d’accès à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou des tables de SQL Azure. Pour plus d’informations, consultez [liaison d’Applications Access vers SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4).  
+Si vous avez des applications de base de données Access que vous souhaitez continuer à utiliser après la migration, lier les tables de base de données d’accès à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou des tables de SQL Azure. Pour plus d’informations, consultez [liaison d’Applications Access vers SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Migration bases de données Access vers SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Conversion de paramètre et les Options de Migration](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167)  
+[Migration bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Conversion de paramètre et les Options de Migration](setting-conversion-and-migration-options-accesstosql.md)  
   

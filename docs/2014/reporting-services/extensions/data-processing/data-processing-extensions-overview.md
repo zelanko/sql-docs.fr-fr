@@ -17,12 +17,12 @@ caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 14ec583360509be356aa12751c0a090b2a7dc676
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70b692948215315a4cafaec1389a4c1996e84a97
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191689"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395041"
 ---
 # <a name="data-processing-extensions-overview"></a>Vue d'ensemble des extensions pour le traitement des données
   Les extensions pour le traitement des données dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vous permettent de vous connecter à une source de données et de récupérer des données. Elles servent également de pont entre une source de données et un dataset Les extensions pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sont basées sur un sous-ensemble des interfaces de fournisseur de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "37191689"
 |Extension pour le traitement des données pour Oracle|Utilise le fournisseur de données .NET Framework pour Oracle. Avec cette extension, le serveur de rapports peut accéder à des sources de données Oracle par le biais du logiciel de connectivité client Oracle.|  
 |Extension pour le traitement des données pour ODBC|Utilise le fournisseur de données .NET Framework pour ODBC. Avec cette extension, le serveur de rapports peut accéder aux données dans n'importe quelle base de données pour laquelle il existe un pilote ODBC.|  
   
- Vous pouvez utiliser l'API de traitement de données [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] pour ajouter le traitement de données personnalisées à votre serveur de rapports.  
+ Vous pouvez utiliser l'API de traitement de données [!INCLUDE[ssRS](../../../includes/ssrs.md)] pour ajouter le traitement de données personnalisées à votre serveur de rapports.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] intègre la prise en charge des fournisseurs de données dans le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Si vous avez déjà implémenté un fournisseur de données complet, vous n'avez pas besoin d'implémenter une extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Toutefois, songez à étendre votre fournisseur de données de manière à inclure les fonctionnalités spécifiques à [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, notamment les informations d'identification de connexion sécurisée et les agrégats côté serveur.  

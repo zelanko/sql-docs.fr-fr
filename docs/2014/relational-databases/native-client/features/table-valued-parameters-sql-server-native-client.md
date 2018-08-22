@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +16,15 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4a3ddbb9e2ad681dbc1b054cc724ec989c71465
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c3cf4742331f811cac8dd53baa8f11e06dafb02f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422378"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396317"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Paramètres table (SQL Server Native Client)
-  Les paramètres table ont été introduits dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] et offrent un moyen efficace de passer plusieurs lignes de données au serveur. Les paramètres table fournissent des fonctionnalités semblables aux tableaux de paramètres, mais offrent plus de souplesse et une intégration plus étroite avec [!INCLUDE[tsql](../../../includes/tsql-md.md)] ; ils améliorent souvent les performances. Paramètres table peuvent également participer aux opérations de jeu basé, tandis que les tableaux de paramètres ne peuvent pas.  
+  Les paramètres table ont été introduits dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] et offrent un moyen efficace de passer plusieurs lignes de données au serveur. Les paramètres table fournissent des fonctionnalités semblables aux tableaux de paramètres, mais offrent plus de souplesse et une intégration plus étroite avec [!INCLUDE[tsql](../../../includes/tsql-md.md)] ; ils améliorent souvent les performances. Les paramètres table peuvent également participer aux opérations basées sur des ensembles, contrairement aux tableaux de paramètres.  
   
  Pour plus d’informations sur les paramètres table et ODBC, consultez [paramètres table &#40;ODBC&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   

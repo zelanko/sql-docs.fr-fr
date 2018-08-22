@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -16,12 +15,12 @@ caps.latest.revision: 53
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f4b47ee3a3f4274ca94175060f10722fa45b6693
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 66edebe05c59ca8bcb0d755f3e6d530718cf1388
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190389"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395313"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Conditions requises pour l'utilisation des tables optimisées en mémoire
   Outre le [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), voici la configuration requise pour utiliser OLTP en mémoire :  
@@ -56,7 +55,7 @@ ms.locfileid: "37190389"
   
 -   Si vous tentez de supprimer une large plage de lignes qui fait simultanément l'objet d'une charge de travail d'insertion ou de mise à jour, la suppression échouera probablement. Pour éviter ce problème, vous devez arrêter la charge de travail d'insertion ou de mise à jour avant d'effectuer la suppression. Sinon, vous pouvez aussi décomposer la transaction en transactions plus petites, qui sont moins susceptibles d'être perturbées par une charge de travail simultanée. Comme avec toutes les opérations d’écriture sur les tables optimisées en mémoire, utilisez la logique de nouvelle tentative ([instructions pour la logique de nouvelle tentative pour les Transactions sur les Tables optimisées en mémoire](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)).  
   
--   Si vous créez une ou plusieurs bases de données avec des tables optimisées en mémoire, vous devez activer l'initialisation instantanée de fichiers (accordez au compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le droit de l'utilisateur SE_MANAGE_VOLUME_NAME) pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Faute d'initialisation instantanée, les fichiers de stockage optimisés en mémoire (fichiers de données et delta) seront initialisés à la création, ce qui peut avoir un impact négatif sur les performances de votre charge de travail. Pour plus d'informations sur l'initialisation instantanée de fichiers, consultez [Initialisation des fichiers de base de données](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx). Pour plus d'informations sur la façon d'activer l'initialisation instantanée de fichiers, consultez [Comment et pourquoi activer l'initialisation instantanée de fichiers](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
+-   Si vous créez une ou plusieurs bases de données avec des tables optimisées en mémoire, vous devez activer l'initialisation instantanée de fichiers (accordez au compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le droit de l'utilisateur SE_MANAGE_VOLUME_NAME) pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Faute d'initialisation instantanée, les fichiers de stockage optimisés en mémoire (fichiers de données et delta) seront initialisés à la création, ce qui peut avoir un impact négatif sur les performances de votre charge de travail. Pour plus d'informations sur l'initialisation instantanée de fichiers, consultez [Initialisation des fichiers de base de données](../databases/database-instant-file-initialization.md). Pour plus d'informations sur la façon d'activer l'initialisation instantanée de fichiers, consultez [Comment et pourquoi activer l'initialisation instantanée de fichiers](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
  Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous tenons compte de vos commentaires pour améliorer le contenu de nos articles. Veuillez envoyer vos commentaires à [ sqlfeedback@microsoft.com ](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  

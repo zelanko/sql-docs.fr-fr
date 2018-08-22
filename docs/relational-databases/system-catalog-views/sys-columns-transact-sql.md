@@ -25,12 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5672a062fdab79cf7a903e5dfac2d1f369bd70de
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 88b5f3c402861bb06c854cf31bc411c1e12da079
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39550349"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394851"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,8 +85,8 @@ ms.locfileid: "39550349"
 |encryption_algorithm_name|**sysname**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Nom de l’algorithme de chiffrement.<br /><br /> AEAD_AES_256_CBC_HMAC_SHA_512 uniquement est pris en charge.|  
 |column_encryption_key_id|**Int**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> ID de la clé CEK.|  
 |column_encryption_key_database_name|**sysname**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)].<br /><br /> Le nom de la base de données où la clé de chiffrement de colonne existe si différente de celle de la base de données de la colonne. NULL si la clé existe dans la même base de données en tant que la colonne.|  
-|is_hidden|**bit**|**S’applique à** : [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indique si la colonne est masquée :<br /><br /> 0 = colonne régulier, non cachés, visible<br /><br /> 1 = la colonne masquée|  
-|is_masked|**bit**|**S’applique à** : [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indique si la colonne est masquée par un masquage dynamique des données :<br /><br /> 0 = colonne régulier, non masqué<br /><br /> 1 = colonne est masquée.|  
+|is_hidden|**bit**|**S’applique à** : [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indique si la colonne est masquée :<br /><br /> 0 = colonne régulier, non cachés, visible<br /><br /> 1 = la colonne masquée|  
+|is_masked|**bit**|**S’applique à** : [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indique si la colonne est masquée par un masquage dynamique des données :<br /><br /> 0 = colonne régulier, non masqué<br /><br /> 1 = colonne est masquée.|  
 
 
  

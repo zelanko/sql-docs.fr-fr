@@ -1,5 +1,5 @@
 ---
-title: CDC.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Documents Microsoft
+title: CDC.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +23,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a379027a084f4245c23c55262f09daaecbbaf8f1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2b5814bd16fc3c5c7b6fc67a99c5787d42e50b85
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236762"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393226"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,20 +79,20 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Numéro séquentiel dans le journal de validation associé à la modification qui préserve l'ordre de validation de la modification. Les modifications validées dans la même transaction partagent la même valeur LSN de validation.|  
 |**__$seqval**|**binary(10)**|Valeur de classement utilisée pour classer les modifications d'une ligne dans une transaction.|  
-|**__$operation**|**int**|Identifie l'opération du langage de manipulation de données permettant d'appliquer la ligne de données de modification à la source de données cible. Les valeurs possibles sont les suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (les valeurs de colonne capturées sont celles avant l'opération de mise à jour). Cette valeur s'applique uniquement lorsque l'option de filtre de lignes 'all update old' est spécifiée.<br /><br /> 4 = mise à jour (les valeurs de colonne capturées sont celles après l'opération de mise à jour)|  
+|**__$operation**|**Int**|Identifie l'opération du langage de manipulation de données permettant d'appliquer la ligne de données de modification à la source de données cible. Les valeurs possibles sont les suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (les valeurs de colonne capturées sont celles avant l'opération de mise à jour). Cette valeur s'applique uniquement lorsque l'option de filtre de lignes 'all update old' est spécifiée.<br /><br /> 4 = mise à jour (les valeurs de colonne capturées sont celles après l'opération de mise à jour)|  
 |**__$update_mask**|**varbinary(128)**|Masque de bits avec un bit correspondant à chaque colonne capturée identifiée pour l'instance de capture. Cette valeur a tous les bits définis à 1 lorsque **__ $operation** = 1 ou 2. Lorsque **__ $operation** = 3 ou 4, seuls les bits correspondant aux colonnes qui ont changé sont définis sur 1.|  
 |**\<<colonnes_de_table_source_capturées>**|variable|Les colonnes restantes retournées par la fonction sont les colonnes capturées identifiées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée dans la liste des colonnes capturées, toutes les colonnes de la table source sont retournées.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’appartenance dans le **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe. Pour tous les autres utilisateurs, requiert l'autorisation SELECT sur toutes les colonnes capturées dans la table source et, si un rôle de régulation pour l'instance de capture a été défini, l'appartenance à ce rôle de base de données. Lorsque l’appelant n’a pas l’autorisation d’afficher la source de données, la fonction retourne l’erreur 229 (« l’autorisation SELECT a été refusée sur l’objet 'fn_cdc_get_all_changes_...', base de données '\<DatabaseName >', schéma « cdc ». »).  
   
 ## <a name="remarks"></a>Notes  
  Si la plage de numéros séquentiels dans le journal spécifiée n'est pas située dans la chronologie de suivi des modifications pour l'instance de capture, la fonction retourne l'erreur 208 (« Un nombre insuffisant d'arguments a été fourni pour la procédure ou fonction cdc.fn_cdc_get_all_changes. »).  
   
- Colonnes de type de données **image**, **texte**, et **ntext** sont toujours associées à une valeur NULL lorsque la valeur **__ $operation** = 1 ou **__ $operation** = 3. Colonnes de type de données **varbinary (max)**, **varchar (max)**, ou **nvarchar (max)** assignés à une valeur NULL lorsque la valeur **__ $operation** = 3, sauf si la colonne a changé pendant la mise à jour. Lorsque **__ $operation** = 1, ces colonnes sont affectées de leur valeur au moment de la suppression. Les colonnes calculées incluses dans une instance de capture ont toujours une valeur NULL.  
+ Colonnes de type de données **image**, **texte**, et **ntext** sont toujours associées à une valeur NULL lorsque la valeur **__ $operation** = 1 ou **__ $ opération** = 3. Colonnes de type de données **varbinary (max)**, **varchar (max)**, ou **nvarchar (max)** bénéficient d’une valeur NULL lorsque la valeur **__ $operation** = 3 à moins que la colonne a changé pendant la mise à jour. Lorsque **__ $operation** = 1, ces colonnes sont affectées de leur valeur au moment de la suppression. Les colonnes calculées incluses dans une instance de capture ont toujours une valeur NULL.  
   
 ## <a name="examples"></a>Exemples  
- Plusieurs [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] modèles sont disponibles qui montrent comment utiliser les fonctions de requête de capture de données modifiées. Ces modèles sont disponibles sur le **vue** menu [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [l’Explorateur de modèles](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
+ Plusieurs [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] modèles sont disponibles qui montrent comment utiliser les fonctions de requête de capture de données modifiées. Ces modèles sont disponibles sur le **vue** menu [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [Explorateur de modèles](../../ssms/template/template-explorer.md).  
   
  Cet exemple illustre le `Enumerate All Changes for Valid Range Template`. Elle utilise la fonction `cdc.fn_cdc_get_all_changes_HR_Department` pour signaler toutes les modifications actuellement disponibles pour l’instance de capture `HR_Department`, qui est définie pour la source de table HumanResources.Department dans la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données.  
   

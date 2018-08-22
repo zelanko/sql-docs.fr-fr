@@ -45,12 +45,12 @@ caps.latest.revision: 40
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0830bee31cf48de3903584fcb1d9941a6c97d6c8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171160"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395903"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistance sur SQL Server
   [!INCLUDE[msCoName](../includes/msconame-md.md)] propose trois principales sources d'informations sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
@@ -68,7 +68,7 @@ ms.locfileid: "37171160"
   
  Vous pouvez accéder à la documentation en ligne des façons suivantes :  
   
--   Une copie de la documentation en ligne de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] est publiée dans MSDN Library et TechNet Library sur Internet. Les rubriques de ces copies de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont étoffées de commentaires de la communauté, par exemple des informations supplémentaires et des exemples de code d'autres clients. Vous pouvez afficher la copie MSDN Library à le [la documentation en ligne de SQL Server 2014](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
+-   Une copie de la documentation en ligne de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] est publiée dans MSDN Library et TechNet Library sur Internet. Les rubriques de ces copies de la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont étoffées de commentaires de la communauté, par exemple des informations supplémentaires et des exemples de code d'autres clients. Vous pouvez afficher la copie MSDN Library à le [la documentation en ligne de SQL Server 2014](../2014-toc/index.md).  
   
 -   Vous pouvez utiliser le Gestionnaire de bibliothèque d'aide pour installer la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un ordinateur local. Pour plus d’informations, consultez [ajouter ou supprimer de Documentation produit de SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
   

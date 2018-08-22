@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f079e76c4f3d7b659d3b48cf94a9e7fe54d27a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7ba5192de960d24bb918e9ec751e8c27c1e9d78
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308029"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40396083"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Se connecter au serveur (page Propriétés de connexion) Reporting Services
-  Utilisez cet onglet pour afficher ou spécifier les options de connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou d’inscription de [!INCLUDE[ssRS](../includes/ssrs-md.md)] dans **Serveurs inscrits**. **Se connecter** et **Options** s’affichent uniquement dans cette boîte de dialogue lors d’une connexion. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription de [!INCLUDE[ssRS](../includes/ssrs-md.md)].  
+  Utilisez cet onglet pour afficher ou spécifier les options de connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou d’inscription de [!INCLUDE[ssRS](../includes/ssrs.md)] dans **Serveurs inscrits**. **Se connecter** et **Options** s’affichent uniquement dans cette boîte de dialogue lors d’une connexion. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription de [!INCLUDE[ssRS](../includes/ssrs.md)].  
   
 ## <a name="options"></a>Options  
  **Délai de connexion (en ms)**  
@@ -40,7 +40,7 @@ ms.locfileid: "37308029"
  Cliquez sur cette option pour modifier l'apparence de la boîte de dialogue en masquant les options de connexion serveur supplémentaires, comme la mémorisation du mot de passe.  
   
  **Testerer**  
- Quand vous inscrivez [!INCLUDE[ssRS](../includes/ssrs-md.md)] dans **Serveurs inscrits**, cliquez ici pour tester la connexion.  
+ Quand vous inscrivez [!INCLUDE[ssRS](../includes/ssrs.md)] dans **Serveurs inscrits**, cliquez ici pour tester la connexion.  
   
  **Enregistrer**  
  Enregistre les paramètres dans **Serveurs inscrits**.  
