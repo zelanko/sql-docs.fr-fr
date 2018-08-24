@@ -1,3 +1,4 @@
+items:
 - name: Vue d'ensemble
   href: tables.md
 - name: Créer des tables (moteur de base de données)
@@ -11,10 +12,10 @@
 - name: Afficher la définition de table
   href: view-the-table-definition.md
   items:
-    - name: Table Properties - SSMS
-      href: table-properties-ssms.md
-    - name: Propriétés de la colonne (page Général)
-      href: column-properties-general-page.md
+  - name: Table Properties - SSMS
+    href: table-properties-ssms.md
+  - name: Propriétés de la colonne (page Général)
+    href: column-properties-general-page.md
 - name: Afficher les dépendances d'une table
   href: view-the-dependencies-of-a-table.md
 - name: Ajouter des colonnes à une table (moteur de base de données)
@@ -42,110 +43,96 @@
 - name: Contraintes de clé primaire et de clé étrangère
   href: primary-and-foreign-key-constraints.md
   items:
-    - name: Créer des clés primaires
-      href: create-primary-keys.md
-    - name: Modifier des clés primaires
-      href: modify-primary-keys.md
-    - name: Supprimer des clés primaires
-      href: delete-primary-keys.md
-    - name: Créer des relations de clé étrangère
-      href: create-foreign-key-relationships.md
-    - name: Modifier des relations de clé étrangère
-      href: modify-foreign-key-relationships.md
-    - name: Supprimer les relations entre les clés étrangères
-      href: delete-foreign-key-relationships.md
-    - name: Afficher les propriétés de clés étrangères
-      href: view-foreign-key-properties.md
-    - name: Désactiver des contraintes de clé étrangère pour la réplication
-      href: disable-foreign-key-constraints-for-replication.md
-    - name: Désactiver les contraintes de clé étrangère avec des instructions INSERT et UPDATE
-      href: disable-foreign-key-constraints-with-insert-and-update-statements.md
+  - name: Créer des clés primaires
+    href: create-primary-keys.md
+  - name: Modifier des clés primaires
+    href: modify-primary-keys.md
+  - name: Supprimer des clés primaires
+    href: delete-primary-keys.md
+  - name: Créer des relations de clé étrangère
+    href: create-foreign-key-relationships.md
+  - name: Modifier des relations de clé étrangère
+    href: modify-foreign-key-relationships.md
+  - name: Supprimer les relations entre les clés étrangères
+    href: delete-foreign-key-relationships.md
+  - name: Afficher les propriétés de clés étrangères
+    href: view-foreign-key-properties.md
+  - name: Désactiver des contraintes de clé étrangère pour la réplication
+    href: disable-foreign-key-constraints-for-replication.md
+  - name: Désactiver les contraintes de clé étrangère avec des instructions INSERT et UPDATE
+    href: disable-foreign-key-constraints-with-insert-and-update-statements.md
 - name: Contraintes uniques et contraintes de validation
   href: unique-constraints-and-check-constraints.md
   items:
-    - name: Créer des contraintes uniques
-      href: create-unique-constraints.md
-    - name: Modifier des contraintes uniques
-      href: modify-unique-constraints.md
-    - name: Supprimer des contraintes UNIQUE
-      href: delete-unique-constraints.md
-    - name: Créer des contraintes de validation
-      href: create-check-constraints.md
-    - name: Modifier des contraintes de validation
-      href: modify-check-constraints.md
-    - name: Supprimer des contraintes de validation
-      href: delete-check-constraints.md
-    - name: Désactiver des contraintes de validation lors de la réplication
-      href: disable-check-constraints-for-replication.md
-    - name: Désactiver des contraintes de validation avec des instructions INSERT et UPDATE
-      href: disable-check-constraints-with-insert-and-update-statements.md
+  - name: Créer des contraintes uniques
+    href: create-unique-constraints.md
+  - name: Modifier des contraintes uniques
+    href: modify-unique-constraints.md
+  - name: Supprimer des contraintes UNIQUE
+    href: delete-unique-constraints.md
+  - name: Créer des contraintes de validation
+    href: create-check-constraints.md
+  - name: Modifier des contraintes de validation
+    href: modify-check-constraints.md
+  - name: Supprimer des contraintes de validation
+    href: delete-check-constraints.md
+  - name: Désactiver des contraintes de validation lors de la réplication
+    href: disable-check-constraints-for-replication.md
+  - name: Désactiver des contraintes de validation avec des instructions INSERT et UPDATE
+    href: disable-check-constraints-with-insert-and-update-statements.md
 - name: Propriétés des colonnes de table (SQL Server Management Studio)
   href: table-column-properties-sql-server-management-studio.md
 - name: Tables temporelles
   href: temporal-tables.md
   items:
-    - name: Prise en main des tables temporelles de contrôle de version du système
-      href: getting-started-with-system-versioned-temporal-tables.md
-      items:
-        - name: Création d’une table temporelle avec gestion de version du système
-          href: creating-a-system-versioned-temporal-table.md
-        - name: Modification des données dans une table temporelle avec système par version
-          href: modifying-data-in-a-system-versioned-temporal-table.md
-        - name: Interrogation des données dans une table temporelle avec système par version
-          href: querying-data-in-a-system-versioned-temporal-table.md
-        - name: Modification du schéma d’une table temporelle à version contrôlée par le système
-          href: changing-the-schema-of-a-system-versioned-temporal-table.md
-        - name: Arrêt du contrôle de version par le système sur une table temporelle à version contrôlée par le système
-          href: stopping-system-versioning-on-a-system-versioned-temporal-table.md
-    - name: Scénarios d’utilisation de table temporelle
-      href: temporal-table-usage-scenarios.md
-    - name: Vérifications de cohérence système des tables temporelles
-      href: temporal-table-system-consistency-checks.md
-    - name: Partitionnement des tables temporelles
-      href: partitioning-with-temporal-tables.md
-    - name: Considérations et limitations liées aux tables temporelles
-      href: temporal-table-considerations-and-limitations.md
-    - name: Sécurité de la table temporelle
-      href: temporal-table-security.md
-    - name: Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système
-      href: manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
-    - name: Tables temporelles avec version gérée par le système avec tables optimisées en mémoire
-      href: system-versioned-temporal-tables-with-memory-optimized-tables.md
-      items:
-        - name: Création d’une table temporelle de contrôle de version du système à mémoire optimisée
-          href: creating-a-memory-optimized-system-versioned-temporal-table.md
-        - name: Utilisation des tables temporelles avec contrôle de version du système à mémoire optimisée
-          href: working-with-memory-optimized-system-versioned-temporal-tables.md
-        - name: Surveillance des tables temporelles avec contrôle de version du système à mémoire optimisée
-          href: monitoring-memory-optimized-system-versioned-temporal-tables.md
-        - name: Considérations relatives aux performances des tables temporelles optimisées en mémoire à version contrôlée par le système
-          href: memory-optimized-system-versioned-temporal-tables-performance.md
-    - name: Vues et fonctions de métadonnées de table temporelle
-      href: temporal-table-metadata-views-and-functions.md
-- name: "Didacticiel\_: utilisation du type de données hierarchyid"
+  - name: Prise en main des tables temporelles de contrôle de version du système
+    href: getting-started-with-system-versioned-temporal-tables.md
+    items:
+    - name: Création d’une table temporelle avec gestion de version du système
+      href: creating-a-system-versioned-temporal-table.md
+    - name: Modification des données dans une table temporelle avec système par version
+      href: modifying-data-in-a-system-versioned-temporal-table.md
+    - name: Interrogation des données dans une table temporelle avec système par version
+      href: querying-data-in-a-system-versioned-temporal-table.md
+    - name: Modification du schéma d’une table temporelle à version contrôlée par le système
+      href: changing-the-schema-of-a-system-versioned-temporal-table.md
+    - name: Arrêt du contrôle de version par le système sur une table temporelle à version contrôlée par le système
+      href: stopping-system-versioning-on-a-system-versioned-temporal-table.md
+  - name: Scénarios d’utilisation de table temporelle
+    href: temporal-table-usage-scenarios.md
+  - name: Vérifications de cohérence système des tables temporelles
+    href: temporal-table-system-consistency-checks.md
+  - name: Partitionnement des tables temporelles
+    href: partitioning-with-temporal-tables.md
+  - name: Considérations et limitations liées aux tables temporelles
+    href: temporal-table-considerations-and-limitations.md
+  - name: Sécurité de la table temporelle
+    href: temporal-table-security.md
+  - name: Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système
+    href: manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
+  - name: Tables temporelles avec version gérée par le système avec tables optimisées en mémoire
+    href: system-versioned-temporal-tables-with-memory-optimized-tables.md
+    items:
+    - name: Création d’une table temporelle de contrôle de version du système à mémoire optimisée
+      href: creating-a-memory-optimized-system-versioned-temporal-table.md
+    - name: Utilisation des tables temporelles avec contrôle de version du système à mémoire optimisée
+      href: working-with-memory-optimized-system-versioned-temporal-tables.md
+    - name: Surveillance des tables temporelles avec contrôle de version du système à mémoire optimisée
+      href: monitoring-memory-optimized-system-versioned-temporal-tables.md
+    - name: Considérations relatives aux performances des tables temporelles optimisées en mémoire à version contrôlée par le système
+      href: memory-optimized-system-versioned-temporal-tables-performance.md
+  - name: Vues et fonctions de métadonnées de table temporelle
+    href: temporal-table-metadata-views-and-functions.md
+- name: 'Didacticiel : utilisation du type de données hierarchyid'
   href: tutorial-using-the-hierarchyid-data-type.md
   items:
-    - name: 'Leçon 1 : Conversion d''une table en structure hiérarchique'
-      href: lesson-1-converting-a-table-to-a-hierarchical-structure.md
-      items:
-        - name: "Leçon\_1-1\_: étude de la structure actuelle de la table Employee"
-          href: lesson-1-1-examining-the-current-structure-of-the-employee-table.md
-        - name: "Leçon\_1-2\_: remplissage d’une table avec des données hiérarchiques existantes"
-          href: lesson-1-2-populating-a-table-with-existing-hierarchical-data.md
-        - name: "Leçon\_1-3\_: Optimisation de la table NewOrg"
-          href: lesson-1-3-optimizing-the-neworg-table.md
-        - name: "Leçon\_1-4\_: Résumé\_: Conversion d’une table en structure hiérarchique"
-          href: lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md
-    - name: 'Leçon 2 : Création et gestion de données dans une table hiérarchique'
-      href: lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
-      items:
-        - name: "Leçon\_2-1\_: Création d’une table à l’aide du type de données hierarchyid"
-          href: lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md
-        - name: "Leçon\_2-2\_: Remplissage d’une table hiérarchique à l’aide de méthodes hiérarchiques"
-          href: lesson-2-2-populating-a-hierarchical-table-using-hierarchical-methods.md
-        - name: "Leçon\_2-3\_: Interrogation d’une table hiérarchique à l’aide de méthodes hiérarchiques"
-          href: lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md
-        - name: "Leçon\_2-4\_: Réorganisation de données dans une table hiérarchique à l’aide de méthodes hiérarchiques"
-          href: lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md
-        - name: "Leçon\_2-5\_: Résumé\_: Gestion de données dans une table hiérarchique"
-          href: lesson-2-5-summary-managing-data-in-a-hierarchical-table.md
+  - name: "Leçon 1 : Conversion d'une table en structure hiérarchique"
+    href: lesson-1-converting-a-table-to-a-hierarchical-structure.md
+  - name: 'Leçon 2 : Création et gestion de données dans une table hiérarchique'
+    href: lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
+ms.openlocfilehash: fd255928f82fec333250060f5f70639eeb19aa8e
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42782050"
