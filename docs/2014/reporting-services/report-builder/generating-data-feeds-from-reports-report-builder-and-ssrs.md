@@ -118,7 +118,7 @@ ms.locfileid: "37202659"
   
  Les lignes de données pour les régions de données imbriquées sont en général larges, particulièrement si les tables et matrices imbriquées incluent des groupes et des totaux. Vous souhaiterez peut-être exporter le rapport vers un flux de données et afficher celui-ci pour vérifier que les données générées correspondent bien à vos attentes.  
   
- Lorsque l'extension de rendu Atom crée le document de service Atom, un identificateur unique est créé pour le flux de données et vous utilisez cet identificateur dans l'URL pour afficher le contenu du flux de données. L’exemple document de service Atom ci-dessus, inclut l’URL http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1». L'URL identifie le rapport (Product Sales Summary), le format de rendu Atom (ATOM) et le nom du flux de données (xAx0x1).  
+ Lorsque l'extension de rendu Atom crée le document de service Atom, un identificateur unique est créé pour le flux de données et vous utilisez cet identificateur dans l'URL pour afficher le contenu du flux de données. L’exemple document de service Atom ci-dessus, inclut l’URL http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1" . L'URL identifie le rapport (Product Sales Summary), le format de rendu Atom (ATOM) et le nom du flux de données (xAx0x1).  
   
  Les noms des éléments de rapport sont par défaut les noms d'élément RDL (Report Definition Language) des éléments de rapport et, souvent, ils ne sont pas intuitifs ni faciles à mémoriser. Par exemple, le nom par défaut de la première matrice placés dans un rapport est Tablix 1. Les flux de données utilisent ces noms.  
   

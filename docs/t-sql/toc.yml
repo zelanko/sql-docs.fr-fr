@@ -1,7 +1,6 @@
-- name: Vue d’ensemble
+items:
+- name: Vue d'ensemble
   href: language-reference.md
-- name: Nouveaux articles et articles mis à jour
-  href: new-updated-t-sql.md
 - name: Types de données
   href: ../t-sql/data-types/data-types-transact-sql.md
 - name: DBCC (Database Console Commands)
@@ -14,12 +13,18 @@
   href: ../t-sql/queries/queries.md
 - name: Instructions
   href: ../t-sql/statements/statements.md
-- name: 'Tutoriel : écriture d’instructions Transact-SQL'
+- name: "Didacticiel : écriture d'instructions Transact-SQL"
   href: tutorial-writing-transact-sql-statements.md
   items:
-    - name: "Leçon 1\_: Créer et interroger des objets de base de données"
-      href: lesson-1-creating-database-objects.md
-    - name: "Leçon 2\_: Configurer des autorisations sur des objets de base de données"
-      href: lesson-2-configuring-permissions-on-database-objects.md
-    - name: "Leçon\_3\_: Supprimer des objets de base de données"
-      href: lesson-3-deleting-database-objects.md
+  - name: 'Leçon 1 : Créer et interroger des objets de base de données'
+    href: lesson-1-creating-database-objects.md
+  - name: 'Leçon 2 : Configurer des autorisations sur des objets de base de données'
+    href: lesson-2-configuring-permissions-on-database-objects.md
+  - name: 'Leçon 3 : Supprimer des objets de base de données'
+    href: lesson-3-deleting-database-objects.md
+ms.openlocfilehash: fb01b88cf3a43481d18c932755520fcda2ac48b2
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899649"

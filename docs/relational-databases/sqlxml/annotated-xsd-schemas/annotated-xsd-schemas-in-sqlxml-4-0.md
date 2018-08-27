@@ -53,13 +53,13 @@ ms.locfileid: "39537949"
 ## <a name="other-resources"></a>Autres ressources  
  Vous trouverez des informations supplémentaires sur le langage XSD (XML Schema Definition), le langage XPath ( XML Path) et le langage XSLT (Extensible Stylesheet Language Transformations) sur les sites Web aux adresses suivantes :  
   
--   XML Schema Part 0 : Notions fondamentales, le W3C (de recommandationhttp://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0 : Notions fondamentales, le W3C de recommandation (http://www.w3.org/TR/xmlschema-0/)  
   
--   XML Schema Part 1 : Structures, le W3C (de recommandationhttp://www.w3.org/TR/xmlschema-1/)  
+-   XML Schema Part 1 : Structures, le W3C de recommandation (http://www.w3.org/TR/xmlschema-1/)  
   
--   XML Schema Part 2 : Datatypes de W3C (de recommandationhttp://www.w3.org/TR/xmlschema-2/)  
+-   XML Schema Part 2 : Datatypes de W3C de recommandation (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   
 -   XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
   
