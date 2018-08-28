@@ -62,13 +62,13 @@ caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f6855a5f92cd6f8b25d3a7ea9ecf4f4d05e7a015
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a471595321fba0e33f5ea37ea7bff68b528dafe5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452743"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083933"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -630,13 +630,13 @@ Spécifie qu’une ou plusieurs définitions de colonnes, définitions de colonn
 > En l’absence d’instruction ALTER TABLE, les instructions CREATE INDEX, DROP INDEX et ALTER INDEX ne sont pas prises en charge pour les index sur les tables optimisées en mémoire. 
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-**S’applique à**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**S’applique à**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Spécifie les noms des colonnes que le système utilisera pour enregistrer la période pour laquelle un enregistrement est valide. Vous pouvez spécifier des colonnes existantes ou créer des colonnes dans le cadre de l’argument ADD PERIOD FOR SYSTEM_TIME. Les colonnes doivent avoir le type de données datetime2 et doivent être définies comme NOT NULL. Si une colonne de période est définie avec la valeur NULL, une erreur est levée. Vous pouvez définir un [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) et/ou [spécifier les valeurs par défaut pour les colonnes](../../relational-databases/tables/specify-default-values-for-columns.md) pour les colonnes system_start_time et system_end_time. Consultez l’Exemple A, dans les exemples de [Gestion système des versions](#system_versioning) ci-dessous, qui illustre l’utilisation d’une valeur par défaut pour la colonne system_end_time.  
   
  Utilisez cet argument conjointement avec l’argument SYSTEM_VERSIONING pour activer la gestion système des versions sur une table existante. Pour plus d’informations, consultez [Tables temporelles](../../relational-databases/tables/temporal-tables.md) et [Prise en main des tables temporelles dans Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
- À compter de [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)], vous pouvez marquer l’une des colonnes de période, ou les deux, avec l’indicateur **HIDDEN** afin de masquer implicitement ces colonnes pour que **SELECT \* FROM***\<table>* ne retourne pas de valeur pour elles. Par défaut, les colonnes de période ne sont pas masquées. Pour pouvoir être utilisées, les colonnes masquées doivent être incluses explicitement dans toutes les requêtes qui référencent directement la table temporelle.  
+ À compter de [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)], vous pouvez marquer l’une des colonnes de période, ou les deux, avec l’indicateur **HIDDEN** afin de masquer implicitement ces colonnes pour que **SELECT \* FROM***\<table>* ne retourne pas de valeur pour elles. Par défaut, les colonnes de période ne sont pas masquées. Pour pouvoir être utilisées, les colonnes masquées doivent être incluses explicitement dans toutes les requêtes qui référencent directement la table temporelle.  
   
 DROP  
 Spécifie qu’une ou plusieurs définitions de colonnes, définitions de colonnes calculées ou contraintes de tables sont supprimées, ou qu’il faut supprimer la spécification pour les colonnes que le système utilisera pour la gestion système des versions.  

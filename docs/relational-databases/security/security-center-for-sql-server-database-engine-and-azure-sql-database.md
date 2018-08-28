@@ -21,13 +21,13 @@ caps.latest.revision: 55
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 02cd230fa1ec5201d58daffeb3adcfb1c776258c
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: efce93db98cf9b030ed45ce38611a5506904cadc
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559289"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43071630"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,9 +82,9 @@ ms.locfileid: "39559289"
   
  Liens supplémentaires pour les programmeurs d’applications :  
   
--   [Scénarios de sécurité des applications dans SQL Server](https://msdn.microsoft.com/library/bb669057.aspx)  
+-   [Scénarios de sécurité des applications dans SQL Server](/dotnet/framework/data/adonet/sql/application-security-scenarios-in-sql-server)  
   
--   [Écriture d’une instruction SQL dynamique sécurisée dans SQL Server](https://msdn.microsoft.com/library/bb669091.aspx)  
+-   [Écriture d’une instruction SQL dynamique sécurisée dans SQL Server](/dotnet/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server)  
   
 -   [Procédure : se protéger contre l'injection de code SQL dans ASP.NET (page éventuellement en anglais)](https://msdn.microsoft.com/library/ff648339.aspx)  
   

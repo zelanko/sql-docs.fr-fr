@@ -34,19 +34,19 @@ caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 67c5b75e86ca504f0dfde749902da6f2f1a7dd98
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 67dac44e6d59e89e1d05f9e0f9a81bb1dd944fac
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39539129"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43058976"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Réorganiser et reconstruire des index
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!NOTE]
-> Pour accéder au contenu relatif aux versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Réorganiser et reconstruire des index](https://msdn.microsoft.com/library/ms189858(SQL.120).aspx).
+> Pour accéder au contenu relatif aux versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Réorganiser et reconstruire des index](reorganize-and-rebuild-indexes.md).
 
 Cette rubrique explique comment réorganiser ou reconstruire un index fragmenté dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] modifie automatiquement des index quand des opérations d’insertion, de mise à jour ou de suppression sont effectuées sur les données sous-jacentes. Au fil des modifications, les informations figurant dans l'index sont éparpillées dans la base de données (fragmentée). La fragmentation intervient lorsque des index possèdent des pages dans lesquelles l'organisation logique (reposant sur la valeur de la clé) ne correspond pas à l'organisation physique dans le fichier de données. Une fragmentation importante des index peut diminuer les performances des requêtes et ralentir la vitesse de réponse de votre application, en particulier les opérations d’analyse.  
   

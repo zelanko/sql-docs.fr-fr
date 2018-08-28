@@ -16,20 +16,20 @@ caps.latest.revision: 11
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2f957c9579d5474f2f8d33593ceb37e4fc9c8de3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 1343e82e7d02feb2b4b9c164bf3b871999d6dffd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39551469"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43059772"
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Migrer des données sensibles protégées par Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
  Pour charger des données chiffrées sans effectuer de contrôle des métadonnées sur le serveur pendant les opérations de copie en bloc, créez l’utilisateur avec l’option **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Cette option est destinée à être utilisée par les outils hérités à partir de versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (par exemple, bcp.exe) ou à l’aide de flux de travail ETL (Extract-Transform-Load) tiers qui ne peuvent pas utiliser Always Encrypted. Cela permet à un utilisateur de déplacer des données en toute sécurité d’un ensemble de tables contenant des colonnes chiffrées vers un autre ensemble de tables avec des colonnes chiffrées (dans la même base de données ou dans une autre).  
  -  
  ## <a name="the-allowencryptedvaluemodifications-option"></a>L’option ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
- [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) et [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) comprennent l’option ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Si cette option est définie sur ON (la valeur par défaut est OFF), elle supprime les contrôles des métadonnées de chiffrement sur le serveur dans les opérations de copie en bloc, ce qui permet à l’utilisateur de copier en bloc des données chiffrées entre des tables ou des bases de données, sans déchiffrage des données.  
+ [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) et [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) comprennent l’option ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Si cette option est définie sur ON (la valeur par défaut est OFF), elle supprime les contrôles des métadonnées de chiffrement sur le serveur dans les opérations de copie en bloc, ce qui permet à l’utilisateur de copier en bloc des données chiffrées entre des tables ou des bases de données, sans déchiffrage des données.  
   
 ## <a name="data-migration-scenarios"></a>Scénarios de migration de données  
 Le tableau suivant présente les paramètres appropriés recommandés pour plusieurs scénarios de migration.  

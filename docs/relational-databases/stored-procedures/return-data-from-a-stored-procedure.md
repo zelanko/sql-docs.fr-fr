@@ -15,17 +15,17 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c3ab951e8364e8d6ca7c920493c6dee026f2d011
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 32fe5caa0bb31a31b9a4a137047c346f66935f74
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39544779"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083872"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Retour de données à partir d'une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Retour de données à partir d’une procédure stockée](https://msdn.microsoft.com/library/ms188655(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Retour de données à partir d’une procédure stockée](return-data-from-a-stored-procedure.md).
 
   Il existe trois méthodes permettant de retourner des données depuis une procédure vers un programme appelant : les jeux de résultats, les paramètres de sortie et les codes de retour. Cette rubrique fournit des informations sur les trois approches.  
   

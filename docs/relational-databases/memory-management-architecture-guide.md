@@ -19,13 +19,13 @@ caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f056477d1de9ad2d73240f12e033e1022c44979e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008891"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073058"
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "40008891"
 ## <a name="windows-virtual-memory-manager"></a>Gestionnaire de mémoire virtuelle Windows  
 Les zones d'espace d'adressage validées sont mappées à la mémoire physique disponible par le Gestionnaire de mémoire virtuelle Windows (VMM).  
   
-Pour plus d’informations sur la quantité de mémoire physique prise en charge par les divers systèmes d’exploitation, consultez la documentation Windows sur les [limites de la mémoire selon les versions de Windows](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx).  
+Pour plus d’informations sur la quantité de mémoire physique prise en charge par les divers systèmes d’exploitation, consultez la documentation Windows sur les [limites de la mémoire selon les versions de Windows](/windows/desktop/Memory/memory-limits-for-windows-releases).  
   
 Les systèmes de mémoire virtuelle autorisent le surengagement de la mémoire physique, de sorte que le rapport entre la mémoire virtuelle et la mémoire physique peut être supérieur à 1:1. Il est alors possible d'exécuter des programmes plus volumineux sur des ordinateurs offrant diverses configurations de la mémoire physique. Toutefois, dans la plupart des cas, l'utilisation d'une quantité de mémoire virtuelle nettement plus importante que les plages de travail moyennes combinées de tous les processus peut entraîner une détérioration des performances. 
 

@@ -14,13 +14,13 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b7418258c6b79e5cbc9f8af254fb849e06140b33
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8613f9fc6a92519f2ffaf584919ab3d65c88f3de
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561109"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083332"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importer des données d’Excel vers SQL Server ou Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Il existe plusieurs moyens d’importer des données provenant de fichiers Excel
 
 -   Vous pouvez importer des données directement d’Excel vers SQL en une seule étape avec l’un des outils suivants :
     -   [l’Assistant Importation/exportation SQL Server](#wiz) ;
-    -   SQL Server Integration Services (SSIS) (#ssis) ;
+    -   [SQL Server Integration Services (SSIS)](#ssis)
     -   la fonction [OPENROWSET](#openrowset).
 -   Vous pouvez importer des données en deux étapes en enregistrant vos données dans Excel sous forme de texte, puis en utilisant l’un des outils suivants pour importer le fichier texte :
     -   [l’Assistant Importation d’un fichier plat](#import-wiz) ;

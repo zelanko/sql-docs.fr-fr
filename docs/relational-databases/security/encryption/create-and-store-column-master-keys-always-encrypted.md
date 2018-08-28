@@ -14,13 +14,13 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c14fc0032b2b7bf6c36ce6f8cd592e82603265d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 54e46ce9630ed8ae84a5998946f36d05544df34c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549829"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073740"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Créer et stocker des clés principales de colonne (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ Vous pouvez stocker une clé principale de colonne Always Encrypted dans un maga
 
 Pour rendre un module de sécurité matériel disponible pour les applications d’un ordinateur donné, un fournisseur de stockage de clés (KSP) implémentant le CNG doit être installé et configuré sur l’ordinateur. Un pilote client avec Always Encrypted (fournisseur de clés principales de colonne intégré au pilote) utilise le KSP pour chiffrer et déchiffrer les clés de chiffrement de colonne, protégées par la clé principale de colonne stockée dans le magasin de clés.
 
-Windows inclut le fournisseur de stockage de clés (KSP) des logiciels Microsoft qui peut être utilisé à des fins de test. Consultez [CNG Key Storage Providers](https://msdn.microsoft.com/library/windows/desktop/bb931355.aspx)(Fournisseurs de stockage de clés CNG).
+Windows inclut le fournisseur de stockage de clés (KSP) des logiciels Microsoft qui peut être utilisé à des fins de test. Consultez [CNG Key Storage Providers](/windows/desktop/SecCertEnroll/cng-key-storage-providers)(Fournisseurs de stockage de clés CNG).
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>Création de clés principales de colonne dans un magasin de clés à l’aide du CNG ou d’un KSP
 

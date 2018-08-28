@@ -14,13 +14,13 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8919be74352e38cd1065cf8834fea930fcaef90a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 628d33d835012cb7264dbd63ddf536874223fb31
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546639"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43066200"
 ---
 # <a name="always-encrypted-cryptography"></a>Chiffrement Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39546639"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Clés, magasins de clé et algorithmes de chiffrement par clé  
  Always Encrypted utilise deux types de clés : des clés principales de colonne et des clés de chiffrement de colonne.  
   
- Une clé principale de colonne (CMK) est une clé de chiffrement de clé (par exemple, une clé utilisée pour chiffrer d'autres clés) qui est toujours contrôlée par le client et stockée dans un magasin de clés externe. Un pilote client avec Always Encrypted interagit avec le magasin de clés via un fournisseur de magasins CMK, qui peut faire partie de la bibliothèque de pilotes (un fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/système) ou de l’application cliente (un fournisseur personnalisé). Les bibliothèques de pilotes clients incluent actuellement des fournisseurs de magasins de clés [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour le [magasin de certificats Windows](https://msdn.microsoft.com/library/windows/desktop/aa388160) et les modules de sécurité matériels (HSM).  (Pour obtenir la liste des fournisseurs, consultez [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Un développeur d'applications peut proposer un fournisseur personnalisé pour un magasin arbitraire.  
+ Une clé principale de colonne (CMK) est une clé de chiffrement de clé (par exemple, une clé utilisée pour chiffrer d'autres clés) qui est toujours contrôlée par le client et stockée dans un magasin de clés externe. Un pilote client avec Always Encrypted interagit avec le magasin de clés via un fournisseur de magasins CMK, qui peut faire partie de la bibliothèque de pilotes (un fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/système) ou de l’application cliente (un fournisseur personnalisé). Les bibliothèques de pilotes clients incluent actuellement des fournisseurs de magasins de clés [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour le [magasin de certificats Windows](/windows/desktop/SecCrypto/using-certificate-stores) et les modules de sécurité matériels (HSM).  (Pour obtenir la liste des fournisseurs, consultez [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Un développeur d'applications peut proposer un fournisseur personnalisé pour un magasin arbitraire.  
   
  Une clé de chiffrement de colonne (CEK) est une clé de chiffrement de contenu (par exemple, une clé utilisée pour protéger les données) protégée par une clé CMK.  
   
