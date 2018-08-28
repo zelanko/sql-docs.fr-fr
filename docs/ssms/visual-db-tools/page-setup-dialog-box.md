@@ -17,12 +17,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0099048b3de1461971e115ea3cfff0d1ff9d95e6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7cc4329825ce9374cb7dae6bdd8b8823a913b2f4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999661"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42773933"
 ---
 # <a name="page-setup-dialog-box"></a>Boîte de dialogue Mise en page
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ Vous pouvez personnaliser votre conception de page à l'aide des options de la b
 Sélectionnez une taille dans la liste.  
   
 **Source**  
-Spécifie le papier à utiliser. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] répertorie les sources disponibles pour l'imprimante sélectionnée.  
+Spécifie le papier à utiliser. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] répertorie les sources disponibles pour l'imprimante sélectionnée.  
   
 ## <a name="orientation"></a>Orientation  
 **Portrait**  

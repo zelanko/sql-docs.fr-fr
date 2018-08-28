@@ -16,12 +16,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: a6918f65a2330062165b8b39b4dd930187122867
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: d57f8ffc3d6fb9d1bd85bfa96f4ba431dd7fb114
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926250"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774420"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>Notes de publication de SQL Server 2008 R2 SP2
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Ajout de la vue de gestion dynamique (DMV) **sys.dm_db_stats_properties**. Vous 
 ## <a name="20-before-you-install"></a>2.0 Avant d’installer  
 Pour plus d'informations sur l'installation des mises à jour de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , consultez la [documentation relative à la maintenance de SQL Server 2008 R2](http://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-Pour plus d'informations d'ordre général sur le démarrage et l'installation de SQL Server 2008 R2, consultez le fichier Lisez-moi de SQL Server 2008 R2. Le document Lisez-moi est disponible sur le support d'installation. Vous pouvez également trouver des informations supplémentaires dans la [documentation en ligne de SQL Server](http://msdn.microsoft.com/library/ms130214.aspx) et sur les [forums SQL Server](http://social.msdn.microsoft.com/Forums/category/sqlserver/).  
+Pour plus d'informations d'ordre général sur le démarrage et l'installation de SQL Server 2008 R2, consultez le fichier Lisez-moi de SQL Server 2008 R2. Le document Lisez-moi est disponible sur le support d'installation. Vous pouvez également trouver des informations supplémentaires dans la [documentation en ligne de SQL Server](sql-server-technical-documentation.md) et sur les [forums SQL Server](http://social.msdn.microsoft.com/Forums/category/sqlserver/).  
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Choisir le fichier approprié à télécharger et à installer  
 Utilisez le tableau suivant pour déterminer le fichier à télécharger et installer. Vérifiez que vous disposez de la configuration requise avant d'installer le Service Pack. La configuration requise est disponible sur les pages de téléchargement liées dans le tableau.  

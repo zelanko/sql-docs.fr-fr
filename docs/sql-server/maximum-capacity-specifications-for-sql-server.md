@@ -24,16 +24,16 @@ caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4007806d8db8c22b6f6e1ac1d1969db026bb6912
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 185353af9af9e65ec67e932b4b7da30238f9915f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36833377"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775050"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications des capacités maximales pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Pour du contenu relatif aux versions précédentes de SQL Server, consultez [Spécifications des capacités maximales pour SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
+ > Pour du contenu relatif aux versions précédentes de SQL Server, consultez [Spécifications des capacités maximales pour SQL Server](maximum-capacity-specifications-for-sql-server.md).
 
   Les tableaux suivants présentent la taille maximale et le nombre maximal des différents objets définis dans les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour naviguer jusqu'à la table d'une technologie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , cliquez sur son lien :  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36833377"
 |Octets dans le texte source d'une procédure stockée||Taille de lot inférieure ou 250 Mo||  
 |Octets par colonne **varchar(max)**, **varbinary(max)**, **xml**, **text**ou **image**||2^31-1||  
 |Caractères par colonne **ntext** ou **nvarchar (max)**||2^30-1||  
-|Index cluster par table|| 1||  
+|Index cluster par table||1||  
 |Colonnes dans les clauses GROUP BY, ORDER BY||Limité uniquement par le nombre d'octets||  
 |Colonnes ou expressions dans une instruction GROUP BY WITH CUBE ou WITH ROLLUP||10||  
 |Colonnes par clé d’index||32|Si la table contient au moins un index XML, la clé de clustering de la table d’utilisateur est limitée à 31 colonnes, car la colonne XML est ajoutée à la clé de clustering du principal index XML. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous pouvez inclure des colonnes non-clés dans un index non cluster pour éviter la limitation à un maximum de 32 colonnes clés. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
@@ -76,12 +76,12 @@ ms.locfileid: "36833377"
 |Taille de la base de données||524 272 téraoctets||  
 |Bases de données par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
 |Groupes de fichiers par base de données||32,767||  
-|Groupes de fichiers par base de données pour les données optimisées en mémoire|| 1||  
+|Groupes de fichiers par base de données pour les données optimisées en mémoire||1||  
 |Fichiers par base de données||32,767||  
 |Taille de fichier (données)||16 téraoctets||  
 |Taille de fichier (journal)||2 téraoctets||  
 |Fichiers de données pour les données optimisées en mémoire par base de données||4 096 dans [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. Les versions ultérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’imposent pas une telle limite stricte.||  
-|Fichier delta par fichier de données pour les données optimisées en mémoire|| 1||  
+|Fichier delta par fichier de données pour les données optimisées en mémoire||1||  
 |Références de table de clé étrangère par table||Sortantes = 253. Entrantes = 10 000.|Pour connaître les restrictions associées, consultez [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|  
 |Longueur d'identificateur (en caractères)||128||  
 |Instances par ordinateur||50 instances sur un serveur autonome.<br /><br /> 25 instances sur un cluster de basculement si vous utilisez un disque de cluster partagé, car l'option stockée pour votre installation de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge 50 instances sur un cluster de basculement si vous choisissez les partages SMB comme option de stockage de votre installation de cluster.||  
@@ -118,19 +118,19 @@ ms.locfileid: "36833377"
 |Nombre total d'instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||200*|  
 |Bases de données utilisateur par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], notamment les applications de la couche Données||50|  
 |Nombre total de bases de données utilisateur par utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||1,000|  
-|Groupes de fichiers par base de données|| 1|  
-|Fichiers de données par groupe de fichiers|| 1|  
-|Fichiers journaux par base de données|| 1|  
+|Groupes de fichiers par base de données||1|  
+|Fichiers de données par groupe de fichiers||1|  
+|Fichiers journaux par base de données||1|  
 |Volumes par ordinateur||3|  
   
- * Le nombre maximal d’instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prises en charge par l’utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut varier en fonction de la configuration matérielle du serveur. Pour obtenir des informations de prise en main, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](https://msdn.microsoft.com/library/ee210548.aspx). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’est pas disponible dans toutes les éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
+ * Le nombre maximal d’instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prises en charge par l’utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut varier en fonction de la configuration matérielle du serveur. Pour obtenir des informations de prise en main, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’est pas disponible dans toutes les éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objets d’application de la couche Données  
  Taille maximale et nombre maximal des différents objets testés dans les applications de la couche Données (DAC) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Object DAC||Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|  
 |------------------------------------------|-|------------------------------------------------------------------|  
-|Bases de données par DAC|| 1|  
+|Bases de données par DAC||1|  
 |Objets par DAC*||Limité par le nombre d'objets dans une base de données ou la mémoire disponible.|  
   
  * Les types d’objets inclus dans la limite sont des utilisateurs, des tables, des vues, des procédures stockées, des fonctions définies par l’utilisateur, des types de données définis par l’utilisateur, des rôles de base de données, des schémas et des types de table définis par l’utilisateur.  

@@ -16,12 +16,12 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38748bfc0ff21b9920ba554e6d7e0e89d5020e95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc6b8d884857ef39716e1a5b0e05fc1a148252fd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997321"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774193"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Dépannage de clusters de basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Le clustering de basculement est proposé avec une sécurité intégrée pour em
   
      Ce type de récupération à partir d'une défaillance du système d'exploitation peut prendre du temps. Si l'échec du système d'exploitation peut être facilement récupéré, évitez toutefois d'utiliser cette technique.  
   
-     Pour plus d’informations, consultez [Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) et [Procédure : récupérer d’une défaillance de cluster de basculement dans le scénario 2](https://msdn.microsoft.com/library/ms181075\(v=sql.105\).aspx).  
+     Pour plus d’informations, consultez [Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) et [Procédure : récupérer d’une défaillance de cluster de basculement dans le scénario 2](recover-from-failover-cluster-instance-failure.md).  
   
 ## <a name="resolving-common-problems"></a>Résolution des problèmes courants  
  La liste ci-dessous décrit les problèmes d'utilisation les plus courants et explique comment les résoudre.  

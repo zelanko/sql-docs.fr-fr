@@ -21,12 +21,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54714f5d4c1cd0db5c9117e3812107caf039676e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dfa43eb6ced096a5ae4facd215cf06a87a97976f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997661"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774867"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>Configurer le Concepteur de schémas de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ Pour pouvoir utiliser le Concepteur de schémas de base de données, il doit d�
 3.  Sélectionnez **Oui** quand vous êtes invité à spécifier si vous souhaitez installer le schéma de base de données.  
   
     > [!NOTE]  
-    > Cela entraîne la création de la table de schéma de base de données, de procédures stockées système et d'une fonction système dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+    > Cela entraîne la création de la table de schéma de base de données, de procédures stockées système et d'une fonction système dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-4.  Visual Studio créera les objets suivants sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
+4.  Visual Studio créera les objets suivants sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
     1.  Table sysdiagrams  
   

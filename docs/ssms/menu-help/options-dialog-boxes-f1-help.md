@@ -18,16 +18,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74dc369cb88d644f02a6db142fbf3e320fe15e8a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fac8561bcc2fb119918937b00e91c48afc3749fa
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979851"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774761"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Aide (F1) des boîtes de dialogue Options
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Cette section contient l’aide accessible par le biais de la touche F1 des boîtes de dialogue qui sont accessibles en cliquant sur **Options** dans le menu **Outils** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Cette section contient l’aide accessible par le biais de la touche F1 des boîtes de dialogue qui sont accessibles en cliquant sur **Options** dans le menu **Outils** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Options &#40;Concepteurs - Concepteurs Analysis Services - Général&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

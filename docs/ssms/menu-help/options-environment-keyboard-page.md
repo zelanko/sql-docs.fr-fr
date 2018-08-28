@@ -18,21 +18,21 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6218358bced6d36056b33ce82720d53cbc32bdab
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26d1e4734ae01e751a17c3a088c3e1a5e0f7af7e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982491"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774314"
 ---
 # <a name="options-environment---keyboard-page"></a>Options (Environnement - Page Clavier)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-La boîte de dialogue **Options** vous permet de personnaliser le schéma du clavier pour [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Utilisez cette option pour choisir un schéma de clavier. Pour accéder à cette page, cliquez sur **Options** dans le menu **Outils** , sélectionnez le dossier **Environnement** , puis cliquez sur **Clavier**.  
+La boîte de dialogue **Options** vous permet de personnaliser le schéma du clavier pour [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilisez cette option pour choisir un schéma de clavier. Pour accéder à cette page, cliquez sur **Options** dans le menu **Outils** , sélectionnez le dossier **Environnement** , puis cliquez sur **Clavier**.  
   
-La liste déroulante **Schéma du clavier** contient les collections de touches de raccourci disponibles. Pour charger un schéma spécifique, sélectionnez-le dans cette liste. Pour quitter la boîte de dialogue **Options** , cliquez sur **OK**. Le schéma que vous avez sélectionné est alors chargé dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+La liste déroulante **Schéma du clavier** contient les collections de touches de raccourci disponibles. Pour charger un schéma spécifique, sélectionnez-le dans cette liste. Pour quitter la boîte de dialogue **Options** , cliquez sur **OK**. Le schéma que vous avez sélectionné est alors chargé dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **Standard**  
-Le schéma standard est le schéma par défaut de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ; il ressemble de près aux touches de raccourci de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
+Le schéma standard est le schéma par défaut de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; il ressemble de près aux touches de raccourci de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
   
 Utilisez la grille **Raccourcis de la requête** pour associer une procédure stockée à un raccourci clavier.  
   
@@ -42,5 +42,5 @@ La combinaison de touches qui permet d'exécuter la procédure stockée.
 **Procédure stockée**  
 La procédure stockée qui s'exécute lorsque vous appuyez sur le raccourci clavier.  
   
-Pour obtenir la liste des touches de raccourci de chaque schéma, reportez-vous à [Raccourcis clavier dans SQL Server Management Studio](http://msdn.microsoft.com/98baaac4-0727-4ce4-8bfe-c63793ae69b8).  
+Pour obtenir la liste des touches de raccourci de chaque schéma, reportez-vous à [Raccourcis clavier dans SQL Server Management Studio](../sql-server-management-studio-keyboard-shortcuts.md).  
   

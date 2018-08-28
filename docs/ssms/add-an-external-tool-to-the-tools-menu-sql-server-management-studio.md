@@ -20,16 +20,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a6c1ce8380a7f64e688a9483d84d5d0cea90af8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e044b58e6b8db0eab591e19f129f9da3863f5022
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039606"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775020"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Ajouter un outil externe au menu Outils (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Vous pouvez lancer toute application [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows ou [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. Vous pouvez ajouter des applications externes au menu **Outils** et exécutées à partir de celui-ci.  
+Vous pouvez lancer toute application [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows ou [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Vous pouvez ajouter des applications externes au menu **Outils** et exécutées à partir de celui-ci.  
   
 ### <a name="to-add-an-external-tool-to-the-tools-menu"></a>Pour ajouter un outil externe au menu Outils  
   

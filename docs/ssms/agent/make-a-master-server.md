@@ -27,12 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 65b89207e6a532b7e9583da0c571857663a885d6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 5939da9370b1ac155697b740e7f957d1b25c17f8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985481"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775388"
 ---
 # <a name="make-a-master-server"></a>Créer un serveur maître
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "38985481"
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Cette rubrique décrit comment définir un serveur maître [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ou [!INCLUDE[tsql](../../includes/tsql_md.md)].  
+Cette rubrique décrit comment définir un serveur maître [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 **Dans cette rubrique**  
   
@@ -84,7 +84,7 @@ Les autorisations d'exécution de cette procédure sont accordées par défaut a
   
 2.  Cliquez avec le bouton droit sur **Agent SQL Server**, pointez sur **Administration multiserveur**, puis cliquez sur **Transformer en serveur maître**. L' **Assistant Serveur maître** vous guide au sein du processus de définition d'un serveur maître et d'ajout de serveurs cibles.  
   
-3.  Dans la page **Opérateur de serveur maître** , configurez un opérateur pour le serveur maître. Pour envoyer des notifications par e-mail ou par récepteur de radiomessagerie aux opérateurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent doit être configuré pour l’envoi d’e-mail. Pour envoyer des notifications aux opérateurs au moyen de **net send**, le service Messenger doit s’exécuter sur le serveur où réside [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+3.  Dans la page **Opérateur de serveur maître** , configurez un opérateur pour le serveur maître. Pour envoyer des notifications par e-mail ou par récepteur de radiomessagerie aux opérateurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être configuré pour l’envoi d’e-mail. Pour envoyer des notifications aux opérateurs au moyen de **net send**, le service Messenger doit s’exécuter sur le serveur où réside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
     **Adresse de messagerie**  
     Permet de spécifier l'adresse de messagerie de l'opérateur.  
@@ -98,7 +98,7 @@ Les autorisations d'exécution de cette procédure sont accordées par défaut a
 4.  Dans la page **Serveur cible** , sélectionnez les serveurs cibles pour le serveur maître.  
   
     **Serveurs inscrits**  
-    Répertorie les serveurs inscrits dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] qui ne sont pas déjà des serveurs cibles.  
+    Répertorie les serveurs inscrits dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] qui ne sont pas déjà des serveurs cibles.  
   
     **Serveurs cibles**  
     Répertorie les serveurs qui sont des serveurs cibles.  

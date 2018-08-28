@@ -18,12 +18,12 @@ caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e77e2f11cef4859412c0805d6dd1e082274b82ac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 567b2bf3e75de80ca32ec22f4efb8b353bda173c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772235"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776604"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renommer une instance de cluster de basculement SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +73,9 @@ ms.locfileid: "34772235"
   
 -   Corrigez les noms d'instance du serveur maître (MSX) et des serveurs cibles (TSX) lorsque le nom réseau du cluster/des ordinateurs est modifié. Pour plus d'informations, consultez les rubriques suivantes :  
   
-    -   [Annuler l'inscription de plusieurs serveurs cibles dans un serveur maître](http://msdn.microsoft.com/library/61a3713b-403a-4806-bfc4-66db72ca1156)  
+    -   [Annuler l’inscription de plusieurs serveurs cibles dans un serveur maître](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
-    -   [Créer un environnement multi-serveur](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)  
+    -   [Créer un environnement multi-serveur](../../../ssms/agent/create-a-multiserver-environment.md)  
   
 -   Reconfigurez la copie des journaux de transaction afin que le nom de serveur mis à jour soit utilisé dans les journaux de sauvegarde et de restauration. Pour plus d'informations, consultez les rubriques suivantes :  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34772235"
   
     -   [Supprimer la copie des journaux de transaction &#40;SQL Server&#41;](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
--   Mettez à jour les étapes de travail qui dépendent du nom du serveur. Pour plus d’informations, consultez [Gérer les étapes de travail](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31).  
+-   Mettez à jour les étapes de travail qui dépendent du nom du serveur. Pour plus d’informations, consultez [Gérer les étapes de travail](../../../ssms/agent/manage-job-steps.md).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Renommer un ordinateur qui héberge une instance autonome de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  

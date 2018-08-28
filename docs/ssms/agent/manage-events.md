@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1758496774b1b0d60257416e7b9133d313b671d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a2035ca0780e873f5d3cee8d9b649faa4f6ee8a9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981901"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774405"
 ---
 # <a name="manage-events"></a>Gérer les événements
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "38981901"
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Vous pouvez transférer à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tous les messages d'événements qui correspondent à un niveau de gravité d'erreur ou le dépassent. Cette fonction est qualifiée de *transfert d'événements*. Le serveur de transfert est un serveur dédié qui peut également être un serveur maître. Le transfert d'événements permet de centraliser la gestion des alertes pour un groupe de serveurs, réduisant ainsi la charge de travail sur les serveurs à utilisation intense.  
+Vous pouvez transférer à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tous les messages d'événements qui correspondent à un niveau de gravité d'erreur ou le dépassent. Cette fonction est qualifiée de *transfert d'événements*. Le serveur de transfert est un serveur dédié qui peut également être un serveur maître. Le transfert d'événements permet de centraliser la gestion des alertes pour un groupe de serveurs, réduisant ainsi la charge de travail sur les serveurs à utilisation intense.  
   
 Lorsqu'un serveur reçoit des événements pour un groupe d'autres serveurs, le serveur qui reçoit les événements est qualifié de *serveur de gestion des alertes*. Dans un environnement multiserveur, il est recommandé de désigner le serveur maître comme serveur de gestion des alertes.  
   
 ## <a name="advantages-of-using-an-alerts-management-server"></a>Avantages de l'utilisation du serveur de gestion des alertes  
 Les avantages liés à la désignation d'un serveur de gestion des alertes sont les suivants :  
   
--   **Centralisation**. Il est possible d'effectuer un contrôle centralisé et une vue consolidée des événements de plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à partir d'un seul serveur.  
+-   **Centralisation**. Il est possible d'effectuer un contrôle centralisé et une vue consolidée des événements de plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un seul serveur.  
   
 -   **Évolutivité**. De nombreux serveurs physiques peuvent être administrés comme un serveur logique unique. En fonction des besoins, vous pouvez ajouter et supprimer des serveurs dans ce groupe de serveurs physiques.  
   
@@ -68,15 +68,15 @@ Lors de la configuration d'un serveur de gestion des alertes, procédez comme su
   
 -   Planifiez avec soin le trafic réseau impliqué dans la configuration de plusieurs serveurs pour partager le même serveur de gestion des alertes. En cas d'encombrement, réduisez le nombre de serveurs utilisant un serveur particulier de gestion des alertes.  
   
-    Les serveurs inscrits dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] constituent la liste des serveurs disponibles devant être choisis par ce serveur comme serveur de transfert des alertes.  
+    Les serveurs inscrits dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] constituent la liste des serveurs disponibles devant être choisis par ce serveur comme serveur de transfert des alertes.  
   
--   Définissez sur l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] les alertes qui nécessitent une réponse serveur spécifique, au lieu de transférer les alertes aux serveurs de gestion des alertes.  
+-   Définissez sur l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les alertes qui nécessitent une réponse serveur spécifique, au lieu de transférer les alertes aux serveurs de gestion des alertes.  
   
     Le serveur de gestion des alertes considère tous les serveurs qui lui transfèrent des événements comme un ensemble logique. Par exemple, un serveur de gestion des alertes répond de la même façon à un événement 605 émanant du serveur A ou du serveur B.  
   
--   Après avoir configuré votre système d'alerte, vérifiez régulièrement la présence d'événements de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dans le journal des applications Microsoft Windows.  
+-   Après avoir configuré votre système d'alerte, vérifiez régulièrement la présence d'événements de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le journal des applications Microsoft Windows.  
   
-    Les conditions d'échec rencontrées par le moteur d'alertes sont consignées dans le journal des applications Windows local avec le nom source « Agent SQL Server ». Par exemple, si l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ne peut pas envoyer par courrier électronique une notification telle qu'elle a été définie, un événement est consigné dans le journal des applications.  
+    Les conditions d'échec rencontrées par le moteur d'alertes sont consignées dans le journal des applications Windows local avec le nom source « Agent SQL Server ». Par exemple, si l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas envoyer par courrier électronique une notification telle qu'elle a été définie, un événement est consigné dans le journal des applications.  
   
 Si une alerte définie localement est désactivée et si un événement qui aurait dû déclencher l'alerte se produit, l'événement est transféré au serveur de gestion des alertes (s'il remplit la condition de transfert d'alerte). Ce transfert permet la mise en fonction ou non de priorités locales (alertes définies localement qui sont également définies sur le serveur de gestion des alertes) sur le site local, selon les besoins de l'utilisateur. Vous pouvez également demander que les événements soient transférés, même s'ils sont gérés par des alertes locales.  
   

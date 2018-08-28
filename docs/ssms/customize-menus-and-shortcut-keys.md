@@ -25,11 +25,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4152bca5efcafb59de4f08c299b4ff3c9a66b9d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bcca6b82d28f350571105826131c0fd99152a12
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775590"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personnaliser des menus et des touches de raccourci
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -163,7 +164,7 @@ Les touches d’accès rapides pour les procédures stockées qui utilisent la t
 6.  Dans la boîte de dialogue **Personnaliser** , cliquez sur **Fermer**.  
   
 > [!NOTE]  
-> Certaines commandes sont disponibles uniquement lorsque [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] affiche le contenu pertinent. Si aucune commande du menu n'est disponible, l'élément de menu ne le sera pas non plus.  
+> Certaines commandes sont disponibles uniquement lorsque [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche le contenu pertinent. Si aucune commande du menu n'est disponible, l'élément de menu ne le sera pas non plus.  
   
 ## <a name="see-also"></a> Voir aussi  
 [Fonctionnalités de SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  

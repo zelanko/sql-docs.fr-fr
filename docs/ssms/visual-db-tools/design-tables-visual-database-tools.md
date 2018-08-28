@@ -22,12 +22,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e90ba79e8677cd0f61a60f5132a6d4ed827e6c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0999bcc6594de503ef1f0d9494ff6a9bb35ad89
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048486"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774074"
 ---
 # <a name="create-and-update-database-tables"></a>Créer et mettre à jour les tables de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ Le Concepteur de tables est un outil visuel où vous concevez et visualisez des 
 
 ## <a name="see-also"></a> Voir aussi
 
-[Tables](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f)  
+[Tables](../../relational-databases/tables/tables.md)  
 [Propriétés de la table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
 [Propriétés de colonne](column-properties-visual-database-tools.md)  
 [Ajouter des colonnes à une table](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  

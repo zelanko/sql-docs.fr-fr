@@ -20,16 +20,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a7eef59e5e20ff33936e0db32849c4f1be4bf6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06ce90737135ad4eb6e098d6d8005663c1e47338
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050096"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776326"
 ---
 # <a name="use-the-toolbox"></a>Utiliser la boîte à outils
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Vous pouvez sélectionner et faire glisser des éléments, du texte et des contrôles à partir de la boîte à outils vers des formulaires, des pages et des générateurs, puis faire glisser ces éléments à partir de ces sources de nouveau vers la boîte à outils pour une utilisation ultérieure. Par exemple, dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] , vous pouvez faire glisser une tâche vers un plan de maintenance.  
+Vous pouvez sélectionner et faire glisser des éléments, du texte et des contrôles à partir de la boîte à outils vers des formulaires, des pages et des générateurs, puis faire glisser ces éléments à partir de ces sources de nouveau vers la boîte à outils pour une utilisation ultérieure. Par exemple, dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , vous pouvez faire glisser une tâche vers un plan de maintenance.  
   
 Les éléments de la boîte à outils sont regroupés dans des sections appelés onglets. Voici une liste de référence des tâches courantes effectuées à l'aide de la boîte à outils. Des instructions sur leur réalisation sont également proposées.  
   

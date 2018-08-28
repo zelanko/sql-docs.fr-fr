@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4a2823e644e002dbb326ea98531d449377accac
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 29d06a93a797ca312ce4a6e60fabb9a221be4dc7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083811"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774311"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Procédure : utilisation des objets de base de données CLR
-Outre le langage de programmation Transact\-SQL, vous pouvez utiliser les langages .NET Framework pour créer des objets de base de données et récupérer et mettre à jour des données pour les bases de données SQL Server. Les objets de base de données écrits en code managé sont appelés objets de base de données Common Language Runtime (CLR) de SQL Server. Pour obtenir une explication des avantages de l'utilisation des objets de base de données CLR hébergés dans SQL Server, ainsi que sur le choix entre Transact\-SQL et CLR, consultez [Avantages de l'intégration du CLR](http://msdn.microsoft.com/en-us/library/ms131045.aspx) et [Avantages de l'utilisation du code managé pour créer des objets de base de données](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  
+Outre le langage de programmation Transact\-SQL, vous pouvez utiliser les langages .NET Framework pour créer des objets de base de données et récupérer et mettre à jour des données pour les bases de données SQL Server. Les objets de base de données écrits en code managé sont appelés objets de base de données Common Language Runtime (CLR) de SQL Server. Pour obtenir une explication des avantages de l'utilisation des objets de base de données CLR hébergés dans SQL Server, ainsi que sur le choix entre Transact\-SQL et CLR, consultez [Avantages de l'intégration du CLR](../relational-databases/clr-integration/clr-integration-overview.md) et [Avantages de l'utilisation du code managé pour créer des objets de base de données](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  
   
 Pour créer un objet de base de données CLR avec SQL Server Data Tools, vous créez un projet de base de données, puis vous lui ajoutez un objet de base de données CLR. Contrairement aux versions précédentes de Visual Studio, vous n'avez pas besoin de créer un projet CLR distinct, puis de lui ajouter une référence à partir du projet de base de données. Lorsque vous générez et publiez le projet de base de données, vous publiez automatiquement les objets CLR dans le projet en même temps. Une fois ces objets CLR publiés, ils peuvent être appelés et exécutés comme les autres objets de base de données.  
   
@@ -86,7 +86,7 @@ Pour plus d'informations sur les conditions de création d'objets de base de don
   
 1.  Dans l'**Explorateur d'objets SQL Server**, accédez à la base de données locale dans laquelle vous avez déployé votre projet.  
   
-2.  Par défaut, la fonctionnalité d'intégration du CLR est désactivée dans SQL Server. Pour utiliser des objets de base de données CLR, vous devez activer l'intégration du CLR. Pour cela, utilisez l'option CLR activé de la procédure stockée sp_configure. Pour plus d'informations, consultez la rubrique [Option CLR activé](http://msdn.microsoft.com/en-us/library/ms131048.aspx).  
+2.  Par défaut, la fonctionnalité d'intégration du CLR est désactivée dans SQL Server. Pour utiliser des objets de base de données CLR, vous devez activer l'intégration du CLR. Pour cela, utilisez l'option CLR activé de la procédure stockée sp_configure. Pour plus d'informations, consultez la rubrique [Option CLR activé](../relational-databases/clr-integration/clr-integration-enabling.md).  
   
     Cliquez avec le bouton droit sur la base de données et sélectionnez **Nouvelle requête**. Collez le code suivant dans le volet de requête et cliquez sur le bouton **Exécuter la requête**.  
   
@@ -105,7 +105,7 @@ Pour plus d'informations sur les conditions de création d'objets de base de don
 5.  Remplacez l'entrée par **425 312 1222** et accédez par tabulation à un autre champ. Notez que cette fois-ci, l'entrée est acceptée.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Avantages de l'intégration du CLR](http://msdn.microsoft.com/en-us/library/ms131045.aspx)  
+[Avantages de l'intégration du CLR](../relational-databases/clr-integration/clr-integration-overview.md)  
 [Avantages de l'utilisation du code managé pour créer des objets de base de données](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)  
 [Création d’objets de base de données avec intégration du Common Language Runtime (CLR)](http://msdn.microsoft.com/en-us/library/ms131046.aspx)  
   

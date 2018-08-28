@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8beaff6457919ea892715dbd527b8cb17ef9cef2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4d51e053e6ac4518743a737000baf926ccfd5adc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987821"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775603"
 ---
 # <a name="job-properties---new-job-steps-page"></a>Propriétés du travail - Nouveau travail (page Étapes)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37987821"
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Utilisez cette page pour consulter et organiser les étapes d'un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Utilisez cette page pour consulter et organiser les étapes d'un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  
 **Liste des étapes du travail**  
@@ -41,7 +41,7 @@ Répertorie les étapes de ce travail.
 Déplace le travail d'une étape, vers le haut ou vers le bas, dans la liste.  
   
 **Étape de démarrage**  
-Sélectionnez l'étape que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent va effectuer en premier lorsque le travail commence.  
+Sélectionnez l'étape que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent va effectuer en premier lorsque le travail commence.  
   
 **Nouveau**  
 Crée une nouvelle étape de travail au-dessous de l'étape de travail sélectionnée.  

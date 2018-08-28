@@ -17,12 +17,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee8da38abc3b4725530abaf812381d0197812fe6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e74ee9c4579071b14072dcccbab493126d69a0cb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049536"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775472"
 ---
 # <a name="print-dialog-box"></a>Imprimer, boîte de dialogue
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Vous pouvez spécifier la façon dont vous souhaitez imprimer un document en sé
   
 ## <a name="printer"></a>Imprimante  
 **Nom**  
-Spécifie l'imprimante. Sélectionnez une imprimante dans la liste. L'imprimante que vous sélectionnez devient l'imprimante par défaut jusqu'à ce que vous fermiez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ou que vous sélectionniez une autre imprimante. Les informations qui apparaissent dans les champs au-dessous de la liste s'appliquent à l'imprimante sélectionnée.  
+Spécifie l'imprimante. Sélectionnez une imprimante dans la liste. L'imprimante que vous sélectionnez devient l'imprimante par défaut jusqu'à ce que vous fermiez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou que vous sélectionniez une autre imprimante. Les informations qui apparaissent dans les champs au-dessous de la liste s'appliquent à l'imprimante sélectionnée.  
   
 **État**  
 Décrit l'état de l'imprimante sélectionnée, par exemple occupé ou prêt.  

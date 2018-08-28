@@ -20,12 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9126d758d0b51948072a924da34a5f8674ce2f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7b168a0164ac2acc212344e898d04c07913ae29
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041836"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774523"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Choisir des éléments de boîte à outils (page Tâches de maintenance)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Cet onglet de la boîte de dialogue **Personnaliser la boîte à outils** affich
 L’onglet **Tâches de maintenance** contient les colonnes d’informations suivantes :  
   
 **Nom**  
-Affiche les noms des composants disponibles. Chaque nom est précédé d'une case à cocher. Une case activée indique que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] a trouvé une entrée pour le composant dans le registre de votre ordinateur. Le composant est déjà affiché sous l’onglet **Boîte à outils** actif ou lui est ajouté quand vous cliquez sur **OK**. Si une case n’est pas cochée, le composant n’apparaît pas dans la **Boîte à outils**ou sera supprimé de la **Boîte à outils** quand vous cliquerez sur **OK**.  
+Affiche les noms des composants disponibles. Chaque nom est précédé d'une case à cocher. Une case activée indique que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] a trouvé une entrée pour le composant dans le registre de votre ordinateur. Le composant est déjà affiché sous l’onglet **Boîte à outils** actif ou lui est ajouté quand vous cliquez sur **OK**. Si une case n’est pas cochée, le composant n’apparaît pas dans la **Boîte à outils**ou sera supprimé de la **Boîte à outils** quand vous cliquerez sur **OK**.  
   
 **Chemin d'accès**  
 Affiche le chemin d'accès complet au composant. Pour identifier les composants par défaut fournis avec le produit, effectuez un tri sur cette colonne et recherchez ceux stockés dans le chemin d’installation de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1cf2e30ab5da5906beef8a73e8d04c6be014aae9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 361457778678c8edc08df87091174d0c5b65d31f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985311"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775386"
 ---
 # <a name="create-a-multiserver-environment"></a>Créer un environnement multiserveur
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ L'administration multiserveur nécessite que vous configuriez un serveur maître
   
 Par défaut, le chiffrement SSL (Secure Sockets Layer) complet et la validation de certificats sont activés pour les connexions entre les serveurs maîtres et les serveurs cible par défaut. Pour plus d’informations, consultez [Définir des options de chiffrement sur des serveurs cibles](../../ssms/agent/set-encryption-options-on-target-servers.md).  
   
-Si vous avez un grand nombre de serveurs cibles, évitez de définir votre serveur maître sur un serveur de production qui doit assurer des performances élevées pour d'autres fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , en effet, le trafic du serveur cible peut ralentir les performances du serveur de production. De plus, si vous transmettez des événements vers un serveur maître dédié, vous pouvez centraliser l'administration sur un seul serveur. Pour plus d’informations, consultez [Gérer les événements](../../ssms/agent/manage-events.md).  
+Si vous avez un grand nombre de serveurs cibles, évitez de définir votre serveur maître sur un serveur de production qui doit assurer des performances élevées pour d'autres fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en effet, le trafic du serveur cible peut ralentir les performances du serveur de production. De plus, si vous transmettez des événements vers un serveur maître dédié, vous pouvez centraliser l'administration sur un seul serveur. Pour plus d’informations, consultez [Gérer les événements](../../ssms/agent/manage-events.md).  
   
 > [!NOTE]  
-> Pour utiliser le traitement de travaux multiserveurs, le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent doit être membre du rôle de base de données **TargetServersRole** de la base de données **msdb** sur le serveur maître. L'Assistant Serveur maître ajoute automatique le compte de service à ce rôle au cours du processus d'inscription.  
+> Pour utiliser le traitement de travaux multiserveurs, le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être membre du rôle de base de données **TargetServersRole** de la base de données **msdb** sur le serveur maître. L'Assistant Serveur maître ajoute automatique le compte de service à ce rôle au cours du processus d'inscription.  
   
 ## <a name="considerations-for-multiserver-environments"></a>Considérations relatives aux environnements multiserveurs  
   

@@ -20,12 +20,12 @@ caps.latest.revision: 77
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0890c77c50af48ce34cdcb21cf7784ae69616a52
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 89eb39275b25147ca062c7b4e05ac3f4fae78967
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772035"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774195"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Créer un cluster de basculement SQL Server (programme d'installation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ms.locfileid: "34772035"
   
 10. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le programme d’installation exécute un autre ensemble de règles qui sont basées sur les fonctionnalités sélectionnées pour valider votre configuration.  
   
-11. Dans la page Configuration de l'instance, spécifiez s'il faut installer une instance par défaut ou une instance nommée. Pour plus d'informations, consultez [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).  
+11. Dans la page Configuration de l'instance, spécifiez s'il faut installer une instance par défaut ou une instance nommée. Pour plus d'informations, consultez [Instance Configuration](../../install/instance-configuration.md).  
   
      **Nom réseau [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** : indiquez un nom réseau pour le nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il s'agit du nom qui est utilisé pour identifier votre cluster de basculement sur le réseau.  
   

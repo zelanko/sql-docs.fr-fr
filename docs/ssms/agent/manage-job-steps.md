@@ -30,12 +30,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f942fa53b0b4db80a8f8f666a628ab43dde85691
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6995ca87cfd4c4c82c78e7859da9222e67c41e98
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980277"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774906"
 ---
 # <a name="manage-job-steps"></a>Gérer les étapes de travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Une étape du travail est une action exécutée par le travail sur une base de d
   
 -   Des programmes exécutables et des commandes du système d'exploitation  
   
--   [!INCLUDE[tsql](../../includes/tsql_md.md)] Des instructions, notamment des procédures stockées ou des procédures stockées étendues  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] Des instructions, notamment des procédures stockées ou des procédures stockées étendues  
   
 -   Des scripts PowerShell  
   
@@ -57,18 +57,18 @@ Une étape du travail est une action exécutée par le travail sur une base de d
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] Des tâches  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] Des packages  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Des packages  
   
-Chaque étape de travail s'exécute dans un contexte de sécurité spécifique. Si l'étape de travail spécifie un proxy, elle s'exécute dans le contexte des informations d'identification du proxy. Dans le cas inverse, l'étape de travail s'exécute dans le contexte du compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Seuls les membres du rôle de serveur fixe sysadmin sont autorisés à créer des travaux qui ne spécifient pas explicitement de proxy.  
+Chaque étape de travail s'exécute dans un contexte de sécurité spécifique. Si l'étape de travail spécifie un proxy, elle s'exécute dans le contexte des informations d'identification du proxy. Dans le cas inverse, l'étape de travail s'exécute dans le contexte du compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Seuls les membres du rôle de serveur fixe sysadmin sont autorisés à créer des travaux qui ne spécifient pas explicitement de proxy.  
   
 Les étapes de travail étant exécutées dans le contexte d’un utilisateur [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows spécifique, cet utilisateur doit disposer des autorisations et de la configuration nécessaires à l’exécution de l’étape de travail. Par exemple, si vous créez un travail qui requiert une lettre de lecteur ou un chemin d'accès UNC (Universal Naming Convention), les étapes du travail peuvent être exécutées sous votre compte d'utilisateur Windows pendant que les tâches sont testées. Toutefois, l'utilisateur Windows associé à l'étape de travail doit par ailleurs disposer des autorisations nécessaires, des configurations de lettres de lecteurs appropriées ou des droits d'accès au lecteur requis. Sinon, l'étape de travail échoue. Pour éviter ce problème, vérifiez que le proxy associé à chaque étape de travail dispose des autorisations nécessaires pour la tâche correspondant à l'étape de travail. Pour plus d’informations, consultez [Sécurité et protection (moteur de base de données)](http://msdn.microsoft.com/dfb39d16-722a-4734-94bb-98e61e014ee7).  
   
 ## <a name="job-step-logs"></a>Journaux d'étapes de travail  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent peut écrire le résultat de certaines étapes de travail dans un fichier du système d’exploitation ou dans la table sysjobstepslogs de la base de données msdb. Les types d'étapes de travail suivants peuvent écrire les résultats sur les deux destinations :  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut écrire le résultat de certaines étapes de travail dans un fichier du système d’exploitation ou dans la table sysjobstepslogs de la base de données msdb. Les types d'étapes de travail suivants peuvent écrire les résultats sur les deux destinations :  
   
 -   Des programmes exécutables et des commandes du système d'exploitation  
   
--   [!INCLUDE[tsql](../../includes/tsql_md.md)] Des instructions  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] Des instructions  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] Des tâches  
   
@@ -77,7 +77,7 @@ Seules les étapes de travail exécutées par des utilisateurs membres du rôle 
 Les journaux d'étapes de travail sont automatiquement supprimés dès lors que les travaux ou les étapes de travail sont supprimés.  
   
 > [!NOTE]  
-> La journalisation des tâches de réplication et des étapes de travail des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] est assurée par leur sous-système respectif. Vous ne pouvez pas utiliser l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] pour configurer la journalisation des étapes de travail pour ces types d'étapes de travail.  
+> La journalisation des tâches de réplication et des étapes de travail des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est assurée par leur sous-système respectif. Vous ne pouvez pas utiliser l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour configurer la journalisation des étapes de travail pour ces types d'étapes de travail.  
   
 ## <a name="executable-programs-and-operating-system-commands-as-job-steps"></a>Programmes exécutables et commandes du système d'exploitation en tant qu'étapes de travail  
 Les programmes exécutables et les commandes du système d'exploitation peuvent être utilisés en tant qu'étapes de travail. Ces fichiers peuvent posséder les extension bat, .cmd, .com ou .exe.  
@@ -92,18 +92,18 @@ Lorsque vous utilisez un programme exécutable ou une commande du système d'exp
     > Vous devez indiquer le chemin d'accès complet au fichier exécutable si ce dernier ne réside pas dans un répertoire spécifié dans le chemin système ou le chemin d'accès de l'utilisateur sous le nom duquel l'étape de travail est exécutée.  
   
 ## <a name="transact-sql-job-steps"></a>Étapes de travail Transact-SQL  
-Lorsque vous créez une étape de travail [!INCLUDE[tsql](../../includes/tsql_md.md)] , vous devez :  
+Lorsque vous créez une étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] , vous devez :  
   
 -   identifier la base de données dans laquelle le travail va être exécuté ;  
   
--   taper l'instruction [!INCLUDE[tsql](../../includes/tsql_md.md)] à exécuter. L'instruction peut faire appel à une procédure stockée ou à une procédure stockée étendue.  
+-   taper l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] à exécuter. L'instruction peut faire appel à une procédure stockée ou à une procédure stockée étendue.  
   
-Vous pouvez éventuellement ouvrir un fichier [!INCLUDE[tsql](../../includes/tsql_md.md)] existant en tant que commande pour l'étape de travail.  
+Vous pouvez éventuellement ouvrir un fichier [!INCLUDE[tsql](../../includes/tsql-md.md)] existant en tant que commande pour l'étape de travail.  
   
-[!INCLUDE[tsql](../../includes/tsql_md.md)] Les étapes de travail n’utilisent pas les proxies de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Au lieu de cela, l'étape de travail s'exécute au nom de son propriétaire ou sous le compte du service Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , si le propriétaire de l'étape de travail est membre du rôle de serveur sysadmin. Les membres du rôle serveur fixe sysadmin peuvent également préciser que les étapes de travail [!INCLUDE[tsql](../../includes/tsql_md.md)] s’exécutent sous le contexte d’un autre utilisateur par le biais du paramètre *database_user_name* de la procédure stockée sp_add_jobstep. Pour plus d’informations, consultez [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
+[!INCLUDE[tsql](../../includes/tsql-md.md)] Les étapes de travail n’utilisent pas les proxies de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Au lieu de cela, l'étape de travail s'exécute au nom de son propriétaire ou sous le compte du service Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si le propriétaire de l'étape de travail est membre du rôle de serveur sysadmin. Les membres du rôle serveur fixe sysadmin peuvent également préciser que les étapes de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] s’exécutent sous le contexte d’un autre utilisateur par le biais du paramètre *database_user_name* de la procédure stockée sp_add_jobstep. Pour plus d’informations, consultez [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755).  
   
 > [!NOTE]  
-> Une même étape de travail [!INCLUDE[tsql](../../includes/tsql_md.md)] peut contenir plusieurs lots. [!INCLUDE[tsql](../../includes/tsql_md.md)] Les étapes de travail peuvent intégrer des commandes GO incorporées.  
+> Une même étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] peut contenir plusieurs lots. [!INCLUDE[tsql](../../includes/tsql-md.md)] Les étapes de travail peuvent intégrer des commandes GO incorporées.  
   
 ## <a name="powershell-scripting-job-steps"></a>Étapes de travail de scripts PowerShell  
 Lorsque vous créez une étape de travail de script PowerShell, vous devez spécifier l'un des deux éléments suivants comme commande pour l'étape :  
@@ -112,12 +112,12 @@ Lorsque vous créez une étape de travail de script PowerShell, vous devez spéc
   
 -   Un fichier de script PowerShell existant à ouvrir.  
   
-Le sous-système [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent PowerShell ouvre une session PowerShell et charge les composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell. Le script PowerShell utilisé comme commande d’étape de travail peut faire référence aux applets de commande et au fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell. Pour plus d’informations sur l’écriture de scripts PowerShell à l’aide des composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] PowerShell, consultez [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
+Le sous-système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent PowerShell ouvre une session PowerShell et charge les composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Le script PowerShell utilisé comme commande d’étape de travail peut faire référence aux applets de commande et au fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations sur l’écriture de scripts PowerShell à l’aide des composants logiciels enfichables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consultez [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
 ## <a name="activex-scripting-job-steps"></a>Étapes de travail ActiveX Scripting  
   
 > [!IMPORTANT]  
-> L’étape de travail de scripts ActiveX sera supprimé de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.  
+> L’étape de travail de scripts ActiveX sera supprimé de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.  
   
 Lorsque vous créez une étape de travail ActiveX Scripting, vous devez :  
   
@@ -127,7 +127,7 @@ Lorsque vous créez une étape de travail ActiveX Scripting, vous devez :
   
 Vous pouvez également ouvrir un fichier de script ActiveX existant en tant que commande pour l'étape du travail. Les commandes de script ActiveX peuvent aussi être compilées en externe (par exemple, à l'aide de Microsoft Visual Basic), puis exécutées en tant que programmes exécutables.  
   
-Lorsqu'une commande d'étape de travail est un script ActiveX, vous pouvez utiliser l'objet SQLActiveScriptHost pour imprimer le résultat dans le journal d'historique des étapes de travail ou créer des objets COM. SQLActiveScriptHost est un objet global introduit par le système hôte d'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dans l'espace de noms de script. L’objet a deux méthodes (Print et CreateObject). L'exemple suivant illustre le fonctionnement du script ActiveX dans Visual Basic Scripting Edition (VBScript).  
+Lorsqu'une commande d'étape de travail est un script ActiveX, vous pouvez utiliser l'objet SQLActiveScriptHost pour imprimer le résultat dans le journal d'historique des étapes de travail ou créer des objets COM. SQLActiveScriptHost est un objet global introduit par le système hôte d'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans l'espace de noms de script. L’objet a deux méthodes (Print et CreateObject). L'exemple suivant illustre le fonctionnement du script ActiveX dans Visual Basic Scripting Edition (VBScript).  
   
 ```  
 ' VBScript example for ActiveX Scripting job step  
@@ -157,17 +157,17 @@ Les étapes de travail de réplication activent l'un des agents de réplication 
   
 -   Agent de lecture de file d'attente (travail QueueReader)  
   
-Lorsque la réplication est configurée, vous pouvez spécifier l'un des trois modes d'exécution suivants pour les agents de réplication : en continu après le démarrage de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , à la demande, ou selon un programme. Pour plus d’informations sur les agents de réplication, consultez [Présentation des Agents de réplication](http://msdn.microsoft.com/a35ecd7d-f130-483c-87e3-ddc8927bb91b).  
+Lorsque la réplication est configurée, vous pouvez spécifier l'un des trois modes d'exécution suivants pour les agents de réplication : en continu après le démarrage de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , à la demande, ou selon un programme. Pour plus d’informations sur les agents de réplication, consultez [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md).  
   
 ## <a name="analysis-services-job-steps"></a>Étapes de travail Analysis Services  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent prend en charge deux types distincts d’étapes de travail Analysis Services : les étapes de travail de commande et les étapes de travail de requête.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent prend en charge deux types distincts d’étapes de travail Analysis Services : les étapes de travail de commande et les étapes de travail de requête.  
   
 ### <a name="analysis-services-command-job-steps"></a>Étapes de travail de commande Analysis Services  
 Lorsque vous créez une étape de travail de commande [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] , vous devez :  
   
 -   identifier le serveur de bases de données OLAP sur lequel l'étape de travail doit s'exécuter ;  
   
--   taper l'instruction à exécuter. L’instruction doit être une méthode [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **XML pour** . L’instruction ne doit pas contenir d’enveloppe SOAP complète ou de méthode [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **XML** . Notez que, bien que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] prenne en charge les enveloppes SOAP (Simple Object Access Protocol) complètes et la méthode **Discover** , ce n’est pas le cas pour les étapes de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+-   taper l'instruction à exécuter. L’instruction doit être une méthode [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **XML pour** . L’instruction ne doit pas contenir d’enveloppe SOAP complète ou de méthode [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **XML** . Notez que, bien que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] prenne en charge les enveloppes SOAP (Simple Object Access Protocol) complètes et la méthode **Discover** , ce n’est pas le cas pour les étapes de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ### <a name="analysis-services-query-job-steps"></a>Étapes de travail de requête Analysis Services  
 Lorsque vous créez une étape de travail de requête [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] , vous devez :  
@@ -179,7 +179,7 @@ Lorsque vous créez une étape de travail de requête [!INCLUDE[ssASnoversion](.
 Pour plus d’informations sur MDX, consultez [Principes de base des instructions MDX (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b).  
   
 ## <a name="integration-services-packages"></a>Packages Integration Services  
-Lorsque vous créez une étape de travail de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] , vous devez effectuer les étapes suivantes :  
+Lorsque vous créez une étape de travail de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous devez effectuer les étapes suivantes :  
   
 -   identifier la source du package ;  
   
@@ -203,7 +203,7 @@ Lorsque vous créez une étape de travail de package [!INCLUDE[ssISnoversion](..
   
 Notez que si vous avez déployé le package dans le catalogue SSIS et que vous spécifiez **Catalogue SSIS** comme source du package, la plupart de ces informations de configuration sont obtenues automatiquement à partir du package. Sous l’onglet **Configuration** , vous pouvez spécifier l’environnement, les valeurs de paramètres, les valeurs de gestionnaire de connexions, les substitutions de propriété, et si le package s’exécute dans un environnement 32 bits.  
   
-Pour plus d’informations sur la création d’étapes de travail qui exécutent des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] , consultez [Travaux de SQL Server Agent pour les packages](http://msdn.microsoft.com/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
+Pour plus d’informations sur la création d’étapes de travail qui exécutent des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consultez [Travaux de SQL Server Agent pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -211,14 +211,14 @@ Pour plus d’informations sur la création d’étapes de travail qui exécuten
 |-|-|  
 |**Description**|**Rubrique**|  
 |Décrit comment créer une étape de travail avec un programme exécutable.|[Créer une étape de travail CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)|  
-|Décrit comment réinitialiser les autorisations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Configurer un utilisateur de manière à créer et à gérer des travaux de SQL Server Agent](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
-|Décrit comment créer une étape de travail [!INCLUDE[tsql](../../includes/tsql_md.md)] .|[Créer une étape de travail Transact-SQL](../../ssms/agent/create-a-transact-sql-job-step.md)|  
-|Décrit comment définir les options des étapes de travail Transact-SQL de l'Agent Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Définir les options d'une étape de travail Transact-SQL](../../ssms/agent/define-transact-sql-job-step-options.md)|  
+|Décrit comment réinitialiser les autorisations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configurer un utilisateur de manière à créer et à gérer des travaux de SQL Server Agent](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
+|Décrit comment créer une étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Créer une étape de travail Transact-SQL](../../ssms/agent/create-a-transact-sql-job-step.md)|  
+|Décrit comment définir les options des étapes de travail Transact-SQL de l'Agent Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Définir les options d'une étape de travail Transact-SQL](../../ssms/agent/define-transact-sql-job-step-options.md)|  
 |Décrit comment créer une étape de travail de script ActiveX.|[Créer une étape de travail de script ActiveX](../../ssms/agent/create-an-activex-script-job-step.md)|  
-|Décrit comment créer et définir les étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] qui exécutent les commandes et requêtes Analysis Services de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Créer une étape de travail Analysis Services](../../ssms/agent/create-an-analysis-services-job-step.md)|  
-|Décrit quelle mesure [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] doit exécuter si une défaillance se produit pendant l'exécution d'une tâche.|[Définir un flux en cas de réussite ou d'échec de l'étape de travail](../../ssms/agent/set-job-step-success-or-failure-flow.md)|  
+|Décrit comment créer et définir les étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécutent les commandes et requêtes Analysis Services de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Créer une étape de travail Analysis Services](../../ssms/agent/create-an-analysis-services-job-step.md)|  
+|Décrit quelle mesure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit exécuter si une défaillance se produit pendant l'exécution d'une tâche.|[Définir un flux en cas de réussite ou d'échec de l'étape de travail](../../ssms/agent/set-job-step-success-or-failure-flow.md)|  
 |Décrit comment afficher les détails d'une étape de travail dans la boîte de dialogue Propriétés de l'étape du travail.|[Afficher des informations sur une étape de travail](../../ssms/agent/view-job-step-information.md)|  
-|Décrit comment supprimer un journal d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Supprimer un journal d'étapes de travail](../../ssms/agent/delete-a-job-step-log.md)|  
+|Décrit comment supprimer un journal d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Supprimer un journal d'étapes de travail](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a> Voir aussi  
 [sysjobstepslogs (Transact-SQL)](http://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  

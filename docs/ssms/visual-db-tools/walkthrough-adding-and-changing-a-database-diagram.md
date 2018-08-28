@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a81fc1d6a60bc4bbb1d9ef2f67c3f5c32f60dc7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6d7190bb75167f55a8cf5c741d46f7f0134f5bb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054966"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776227"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajouter et modifier un schéma de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ Cette procédure pas à pas montre comment créer et modifier un schéma de base
 ## <a name="prerequisites"></a>Conditions préalables requises  
 Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments suivants :  
   
--   Accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] avec l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] .  
+-   Accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 -   Un compte avec des privilèges **dbo** de propriétaire de base de données  
   
@@ -46,7 +46,7 @@ Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments sui
   
 1.  Dans le menu **Affichage** , cliquez sur **Explorateur d’objets**.  
   
-2.  Ouvrez le nœud Bases de données puis le nœud [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] .  
+2.  Ouvrez le nœud Bases de données puis le nœud [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 3.  Cliquez avec le bouton droit sur le nœud Schémas de base de données et sélectionnez **Nouveau schéma de base de données**.  
   
@@ -217,7 +217,7 @@ Il s'agit d'un schéma de base contenant deux nouvelles tables et deux tables ex
 [Configurer le Concepteur de schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [Ajouter des tables à des schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
 [Créer des relations entre des tables sur un diagramme &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)  
-[Créer des index XML](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[Créer des index XML](../../relational-databases/xml/create-xml-indexes.md)  
 [Copier une image d’un schéma de base de données dans le Presse-papiers &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
 [Utiliser une disposition de schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   

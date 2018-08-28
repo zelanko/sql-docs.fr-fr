@@ -21,16 +21,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 491efcd61e5143439ed9cd22d510f978af062c63
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981801"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774765"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriétés de la colonne (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Il existe deux ensembles de propriétés pour les colonnes : un jeu complet que vous pouvez consulter sous l’onglet **Propriétés de la colonne** dans le Concepteur de tables (disponible uniquement pour les bases de données [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ) et un sous-ensemble que vous pouvez consulter dans la fenêtre Propriétés à l’aide de l’Explorateur de serveurs.  
+Il existe deux ensembles de propriétés pour les colonnes : un jeu complet que vous pouvez consulter sous l’onglet **Propriétés de la colonne** dans le Concepteur de tables (disponible uniquement pour les bases de données [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) et un sous-ensemble que vous pouvez consulter dans la fenêtre Propriétés à l’aide de l’Explorateur de serveurs.  
   
 > [!NOTE]  
 > Les propriétés mentionnées dans cette rubrique sont classées par catégorie et non par ordre alphabétique.  
@@ -42,7 +42,7 @@ Il existe deux ensembles de propriétés pour les colonnes : un jeu complet que 
 Ces propriétés s'affichent dans la fenêtre Propriétés lorsque vous sélectionnez une colonne dans l'Explorateur de serveurs.  
   
 > [!NOTE]  
-> Ces propriétés, accessibles dans l'Explorateur de serveurs, sont en lecture seule. Pour modifier les propriétés d'une colonne pour les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , sélectionnez la colonne dans le Concepteur de tables. Ces propriétés sont décrites plus loin dans cette rubrique.  
+> Ces propriétés, accessibles dans l'Explorateur de serveurs, sont en lecture seule. Pour modifier les propriétés d'une colonne pour les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sélectionnez la colonne dans le Concepteur de tables. Ces propriétés sont décrites plus loin dans cette rubrique.  
   
 **Catégorie Identité**  
 Peut être développée pour afficher les propriétés **Nom** et **Base de données** .  
@@ -60,13 +60,13 @@ S'étend pour afficher les propriétés restantes.
 Affiche le type de données de la colonne sélectionnée. Pour plus d’informations, consultez [Types de données (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Incrément d'identité**  
-Indique l’incrément qui sera ajouté à **Valeur initiale de la propriété Identity** pour chaque ligne ultérieure de la colonne d’identité. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Indique l’incrément qui sera ajouté à **Valeur initiale de la propriété Identity** pour chaque ligne ultérieure de la colonne d’identité. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Valeur initiale de la propriété Identity**  
-Affiche la valeur de départ affectée à la première ligne de la table pour la colonne d'identité. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Affiche la valeur de départ affectée à la première ligne de la table pour la colonne d'identité. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Est d'identité**  
-Détermine si la colonne sélectionnée est la colonne identité de la table. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Détermine si la colonne sélectionnée est la colonne identité de la table. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Longueur**  
 Affiche le nombre de caractères autorisés pour les types de données texte.  
@@ -84,7 +84,7 @@ Affiche le nombre maximal de chiffres qui peuvent apparaître à droite de la vi
 Pour accéder à ces propriétés, dans l’Explorateur de serveurs, cliquez avec le bouton droit sur la table contenant la colonne, choisissez **Ouvrir la définition de table**, puis sélectionnez la ligne dans la grille de table du Concepteur de tables.  
   
 > [!NOTE]  
-> Ces propriétés s'appliquent uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+> Ces propriétés s'appliquent uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Catégorie Général**  
 Peut être développée pour afficher **Nom**, **Autoriser les valeurs NULL**, **Type de données**, **Valeur ou liaison par défaut**, **Longueur**, **Précision**et **Échelle**.  
@@ -185,11 +185,11 @@ Indique si les valeurs d'identité d'origine sont préservées pendant la répli
 Indique si cette colonne est répliquée dans un autre emplacement.  
   
 **Est RowGuid**  
-Indique si [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilise la colonne en tant que ROWGUID. Vous pouvez définir cette valeur sur **Oui** uniquement pour une colonne dont le type de données est **uniqueidentifier**. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
+Indique si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la colonne en tant que ROWGUID. Vous pouvez définir cette valeur sur **Oui** uniquement pour une colonne dont le type de données est **uniqueidentifier**. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
   
 **Taille**  
 Affiche la taille en octets autorisée par le type de données de la colonne. Par exemple, un type de données **nchar** peut avoir une longueur de 10 (nombre de caractères), mais une taille de 20 pour tenir compte des jeux de caractères Unicode.  
   
 > [!NOTE]  
-> La longueur d’un type de données **varchar(max)** varie pour chaque ligne. sp_help retourne (-1) comme longueur de colonne **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] affiche -1 comme taille de colonne.  
+> La longueur d’un type de données **varchar(max)** varie pour chaque ligne. sp_help retourne (-1) comme longueur de colonne **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] affiche -1 comme taille de colonne.  
   

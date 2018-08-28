@@ -28,11 +28,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7320b1f4d91d94b4e53da3640458030057a45f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 399b756b0530079c6f38732da4ebf1ef94755e73
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774313"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Fenêtre Propriétés - Aide (F1) (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,5 +58,5 @@ Affiche les propriétés d'un objet.
 Le volet Description apparaît dans la partie inférieure de la fenêtre **Propriétés** et affiche le type de la propriété ainsi qu’une description succincte de celle-ci. Vous pouvez activer et désactiver la description de la propriété via la commande **Description** située dans le menu contextuel.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Propriétés (fenêtre) dans SQL Server Management Studio](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
+[Propriétés (fenêtre) dans SQL Server Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   

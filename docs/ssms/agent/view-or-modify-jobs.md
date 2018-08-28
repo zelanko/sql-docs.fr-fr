@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0c9677ba386ceda02136eb3eb67052e4eff0362d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9ddbf1591320678c75f74d6953229343bb457ced
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984131"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774309"
 ---
 # <a name="view-or-modify-jobs"></a>Afficher ou modifier les travaux
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,12 +71,12 @@ Les membres du rôle serveur fixe **sysadmin** peuvent afficher la définition o
 |||  
 |-|-|  
 |**Description**|**Rubrique**|  
-|Explique comment afficher des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Afficher un travail](../../ssms/agent/view-a-job.md)|  
-|Explique comment afficher le journal d’historique des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Afficher l'historique des travaux](../../ssms/agent/view-the-job-history.md)|  
-|Explique comment supprimer le contenu du journal d’historique des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Effacer le journal d'historique des travaux](../../ssms/agent/clear-the-job-history-log.md)|  
-|Explique comment définir des limites de taille dans les journaux d’historique des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Redimensionner le journal d'historique des travaux](../../ssms/agent/resize-the-job-history-log.md)|  
-|Explique comment modifier les propriétés des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Modifier un travail](../../ssms/agent/modify-a-job.md)|  
+|Explique comment afficher des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Afficher un travail](../../ssms/agent/view-a-job.md)|  
+|Explique comment afficher le journal d’historique des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Afficher l'historique des travaux](../../ssms/agent/view-the-job-history.md)|  
+|Explique comment supprimer le contenu du journal d’historique des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Effacer le journal d'historique des travaux](../../ssms/agent/clear-the-job-history-log.md)|  
+|Explique comment définir des limites de taille dans les journaux d’historique des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Redimensionner le journal d'historique des travaux](../../ssms/agent/resize-the-job-history-log.md)|  
+|Explique comment modifier les propriétés des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Modifier un travail](../../ssms/agent/modify-a-job.md)|  
   
 ## <a name="see-also"></a> Voir aussi  
-[sysjobhistory](http://msdn.microsoft.com/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
+[sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   

@@ -24,23 +24,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d6fadfa9b084a16f6464bbebf6d6a8e32b7cbbb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a5f04afddbc388dba0e4efde00f4cd1096ce1bc0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015968"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776330"
 ---
 # <a name="template-explorer"></a>Explorateur de modèles
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] propose divers modèles. Les modèles sont des fichiers réutilisables contenant des scripts SQL qui peuvent vous aider à créer des objets dans une base de données. À la première ouverture de l’Explorateur de modèles, une copie des modèles est placée dans le dossier de l’utilisateur dans C:\Utilisateur, sous AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose divers modèles. Les modèles sont des fichiers réutilisables contenant des scripts SQL qui peuvent vous aider à créer des objets dans une base de données. À la première ouverture de l’Explorateur de modèles, une copie des modèles est placée dans le dossier de l’utilisateur dans C:\Utilisateur, sous AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  
   
 Vous pouvez parcourir les modèles disponibles dans l'Explorateur de modèles, puis ouvrir un modèle pour incorporer code dans une fenêtre d'éditeur de code. Vous pouvez également créer des modèles personnalisés.  
   
 ## <a name="benefits-of-templates"></a>Avantages des modèles  
 Les modèles peuvent être utilisés pour les solutions, les projets et différents types d'éditeurs de code. Certains modèles sont destinés à la création d’objets tels que des bases de données, des tables, des vues, des index, des procédures stockées, des déclencheurs, des statistiques et des fonctions. D'autres modèles sont conçus pour simplifier la gestion de votre serveur en créant des propriétés étendues, des serveurs liés, des noms d'accès, des rôles et des utilisateurs. Il existe en outre certains modèles destinés à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)].  
   
-Les modèles de scripts fournis avec [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] contiennent des paramètres qui permettent de personnaliser le code. Quand vous ouvrez un modèle, utilisez la boîte de dialogue **Remplacer les paramètres de modèle** pour insérer des valeurs dans le script.  
+Les modèles de scripts fournis avec [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] contiennent des paramètres qui permettent de personnaliser le code. Quand vous ouvrez un modèle, utilisez la boîte de dialogue **Remplacer les paramètres de modèle** pour insérer des valeurs dans le script.  
   
 Créez des modèles personnalisés pour les tâches que vous effectuez fréquemment. Organisez les scripts personnalisés dans les dossiers existants ou créez une structure de dossiers.  
   

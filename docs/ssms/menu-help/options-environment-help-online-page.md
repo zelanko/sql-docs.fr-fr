@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 601439745dffa9c8902aa448cb8ce42c23ed867d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 445c56c70edc8f045ede5efdf921ba34c0ffa291
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042596"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775595"
 ---
 # <a name="options-environment---help---online-page"></a>Options (Environnement - Aide - Page En ligne)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-La boîte de dialogue **Options** vous permet de spécifier les sources d'aide à utiliser pour les recherches, y compris pour l'aide F1, dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] . Dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Environnement** , sélectionnez **Aide**, puis cliquez sur **En ligne**. Si la page **En ligne** n'apparaît pas dans la liste, activez la case à cocher **Afficher tous les paramètres** dans la boîte de dialogue **Options** .  
+La boîte de dialogue **Options** vous permet de spécifier les sources d'aide à utiliser pour les recherches, y compris pour l'aide F1, dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Environnement** , sélectionnez **Aide**, puis cliquez sur **En ligne**. Si la page **En ligne** n'apparaît pas dans la liste, activez la case à cocher **Afficher tous les paramètres** dans la boîte de dialogue **Options** .  
   
 **Lors du chargement du contenu d'aide**  
 Définit l'ordre dans lequel les sources d'aide sont utilisées pour l'aide F1 et spécifie les sources d'aide utilisées.  

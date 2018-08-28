@@ -21,16 +21,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87ad2f292481d44c10dba92fe6e122ac71560f91
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dc8b19a65fa85972915774d14315ac67ef85391b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988885"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774171"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Effacer les résultats d'une requête (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Quand vous avez exécuté une requête dans le **Concepteur de requêtes et de vues**, vous pouvez effacer le volet Résultats. Cette procédure s’applique aux requêtes créées à l’aide de l’option **Ouvrir la vue** ou **Ouvrir la table** de l’Explorateur d’objets. Dans[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], après l’exécution d’une requête dans l’Éditeur de requête, le volet Résultats ne peut être effacé qu’en fermant la fenêtre Éditeur de requête ou en exécutant une autre requête.  
+Quand vous avez exécuté une requête dans le **Concepteur de requêtes et de vues**, vous pouvez effacer le volet Résultats. Cette procédure s’applique aux requêtes créées à l’aide de l’option **Ouvrir la vue** ou **Ouvrir la table** de l’Explorateur d’objets. Dans[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], après l’exécution d’une requête dans l’Éditeur de requête, le volet Résultats ne peut être effacé qu’en fermant la fenêtre Éditeur de requête ou en exécutant une autre requête.  
   
 > [!NOTE]  
 > Cela n'annule pas les modifications que vous avez apportées à la base de données. Pour plus d’informations sur le fonctionnement du volet des résultats, consultez [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  

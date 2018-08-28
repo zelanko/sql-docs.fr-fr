@@ -23,24 +23,24 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb6cb14124589796e0e1a8e31f437b4eb7d6c383
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f75fac8ec104d32b84383b4303c3a9d3de1d53b8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984021"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42773954"
 ---
 # <a name="object-explorer-details-pane"></a>Volet Détails de l'Explorateur d'objets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Détails de l'Explorateur d'objets, un composant de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], fournit une vue tabulaire de tous les objets se trouvant dans le serveur ainsi qu'une interface utilisateur pour les gérer. Les fonctionnalités de l’Explorateur d’objets varient légèrement en fonction du type de serveur. Il contient toutefois des fonctionnalités de développement pour les bases de données et des fonctionnalités de gestion pour tous les types de serveurs.  
+Détails de l'Explorateur d'objets, un composant de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], fournit une vue tabulaire de tous les objets se trouvant dans le serveur ainsi qu'une interface utilisateur pour les gérer. Les fonctionnalités de l’Explorateur d’objets varient légèrement en fonction du type de serveur. Il contient toutefois des fonctionnalités de développement pour les bases de données et des fonctionnalités de gestion pour tous les types de serveurs.  
   
-Le volet Détails de l’Explorateur d’objets est visible dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] par défaut. Si tel n’est pas le cas, dans le menu **Affichage** , cliquez sur **Détails de l’Explorateur d’objets** ou appuyez sur **F7**.  
+Le volet Détails de l’Explorateur d’objets est visible dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] par défaut. Si tel n’est pas le cas, dans le menu **Affichage** , cliquez sur **Détails de l’Explorateur d’objets** ou appuyez sur **F7**.  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] affiche les dates avec le format des Options régionales et linguistiques Microsoft Windows en vigueur lors du démarrage de [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] . Redémarrez [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] pour que les nouveaux paramètres soient pris en compte.  
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] affiche les dates avec le format des Options régionales et linguistiques Microsoft Windows en vigueur lors du démarrage de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Redémarrez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour que les nouveaux paramètres soient pris en compte.  
   
 ## <a name="object-explorer-details"></a>Détails de l’Explorateur d’objets  
-Vous pouvez utiliser Détails de l’Explorateur d’objets pour parcourir les dossiers et les objets de votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Sur les systèmes d'exploitation 32 bits, l'Explorateur d'objets peut uniquement afficher 64 000 objets. Vous devez sélectionner une icône pour accéder à des objets supplémentaires.  
+Vous pouvez utiliser Détails de l’Explorateur d’objets pour parcourir les dossiers et les objets de votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sur les systèmes d'exploitation 32 bits, l'Explorateur d'objets peut uniquement afficher 64 000 objets. Vous devez sélectionner une icône pour accéder à des objets supplémentaires.  
   
 Détails de l'Explorateur d'objets comprend une barre d'outils contenant les icônes décrites dans le tableau suivant. Les icônes disponibles varient selon la situation.  
   
@@ -55,13 +55,13 @@ Détails de l'Explorateur d'objets comprend une barre d'outils contenant les ic�
 |**Recherche**|Fournit une zone pour entrer un terme de recherche pour certains objets de base de données.|  
   
 ### <a name="column-header-selections"></a>Sélections d'en-tête de colonne  
-Détails de l'Explorateur d'objets possède des colonnes sélectionnables. Vous pouvez cliquer avec le bouton droit sur n'importe quel en-tête de colonne et sélectionner les éléments à afficher. Vos sélections sont rendues persistantes à travers les différents objets que vous parcourez. Les sélections pour chaque utilisateur sont conservées lorsque vous quittez et redémarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Détails de l'Explorateur d'objets possède des colonnes sélectionnables. Vous pouvez cliquer avec le bouton droit sur n'importe quel en-tête de colonne et sélectionner les éléments à afficher. Vos sélections sont rendues persistantes à travers les différents objets que vous parcourez. Les sélections pour chaque utilisateur sont conservées lorsque vous quittez et redémarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!CAUTION]  
 > L'affichage de toutes les colonnes pour certains types d'objets (notamment Database) peut ralentir légèrement le rendu d'affichage pour les jeux d'objets volumineux.  
   
 ### <a name="sorting"></a>Tri  
-Cliquez une fois sur un en-tête de colonne pour trier la grille selon cette colonne. Cliquez à nouveau sur le même en-tête de colonne pour inverser l'ordre de trie par rapport à cette colonne. Les sélections de tri sont conservées pour chaque utilisateur dans tous les objets et dossiers, et au redémarrage de [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] .  
+Cliquez une fois sur un en-tête de colonne pour trier la grille selon cette colonne. Cliquez à nouveau sur le même en-tête de colonne pour inverser l'ordre de trie par rapport à cette colonne. Les sélections de tri sont conservées pour chaque utilisateur dans tous les objets et dossiers, et au redémarrage de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 ### <a name="filtering"></a>Filtrage  
 Vous pouvez filtrer certaines listes d’objets affichées dans Détails de l’Explorateur d’objets à l’aide de l’icône **Filtrer** située dans la barre d’outils Détails de l’Explorateur d’objets. L'icône est activée lorsque le filtrage est possible.  
@@ -93,7 +93,7 @@ Détails de l'Explorateur d'objets prend en charge la sélection de plusieurs ob
 ## <a name="sql-server-object-search"></a>Recherche d'objets SQL Server  
 Caractères génériques  
   
--   Les caractères génériques standard sont pris en charge. Par exemple, la chaîne de recherche **dm_os%counters** retourne dm_os_memory_cache_counters et dm_os_performance_counters. Pour plus d’informations, consultez [Procédure : exécution d’une recherche avec des caractères génériques](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40).  
+-   Les caractères génériques standard sont pris en charge. Par exemple, la chaîne de recherche **dm_os%counters** retourne dm_os_memory_cache_counters et dm_os_performance_counters. Pour plus d’informations, consultez [Procédure : exécution d’une recherche avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Étendue de recherche  
   

@@ -17,12 +17,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57d472c063bd4b2cf697186323942842f8d037c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbff0ee5307e9f0d6d7e53a740c950c869dc93c5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041876"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774410"
 ---
 # <a name="select-objects-object-explorer"></a>Sélectionner des objets (Explorateur d'objets)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ La boîte de dialogue **Sélectionner des objets** vous permet d’ajouter un ob
   
 ## <a name="options"></a>Options  
 **Sélectionnez ces types d'objets**  
-Affiche la liste des types auxquels les objets à sélectionner appartiennent. Les types incluent les principaux et éléments sécurisables de niveau de base de données et de niveau [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Cette zone est remplie à partir des sélections effectuées dans la boîte de dialogue **Sélectionner les types d’objets** , accessible à l’aide du bouton **Types d’objets** .  
+Affiche la liste des types auxquels les objets à sélectionner appartiennent. Les types incluent les principaux et éléments sécurisables de niveau de base de données et de niveau [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette zone est remplie à partir des sélections effectuées dans la boîte de dialogue **Sélectionner les types d’objets** , accessible à l’aide du bouton **Types d’objets** .  
   
 **Entrez les noms d'objets à sélectionner**  
 Entrez la liste séparée par des points-virgules des noms des objets à sélectionner. Les objets à sélectionner doivent être d’un type répertorié dans la zone **Sélectionnez ces types d’objets** . Les objets peuvent être sélectionnés dans une liste accessible en cliquant sur le bouton **Parcourir** .  

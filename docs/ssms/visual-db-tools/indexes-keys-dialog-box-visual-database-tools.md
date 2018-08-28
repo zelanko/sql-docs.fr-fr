@@ -18,19 +18,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae60933dc5f0614bd5a123b4ca61563b3c393a5a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c08c4c10b613f39e428a24d37e0e6f4e94e0148c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984991"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42773961"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Boîte de dialogue Index - Clés (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Utilisez cette boîte de dialogue pour créer ou modifier des index, des clés primaires et des clés uniques. Pour y accéder, ouvrez la définition de table pour la table possédant l’index ou la clé, cliquez avec le bouton droit sur la grille de définition de table et cliquez sur **Index/Clés**.  
   
 > [!NOTE]  
-> Si la table est publiée pour réplication, vous devez apporter vos modifications au schéma à l’aide de l’instruction Transact-SQL [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) ou de SMO (SQL Server Management Objects). Lorsque les modifications sont apportées au schéma à l'aide du Concepteur de tables ou du Concepteur de schémas de base de données, celui-ci tente d'abandonner la table et de la recréer. Toutefois, il est impossible d'abandonner les objets publiés, par conséquent les modifications du schéma échoueront.  
+> Si la table est publiée pour réplication, vous devez apporter vos modifications au schéma à l’aide de l’instruction Transact-SQL [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou de SMO (SQL Server Management Objects). Lorsque les modifications sont apportées au schéma à l'aide du Concepteur de tables ou du Concepteur de schémas de base de données, celui-ci tente d'abandonner la table et de la recréer. Toutefois, il est impossible d'abandonner les objets publiés, par conséquent les modifications du schéma échoueront.  
   
 ## <a name="options"></a>Options  
 **Clé ou index Primary/Unique sélectionné**  
@@ -67,7 +67,7 @@ Fournit un endroit auquel décrire la clé ou l'index. Pour écrire une descript
 Développée, elle affiche des informations pour **Créer comme Clustered**.  
   
 **Créer comme Clustered**  
-Rend la clé ou l'index cluster. Un seul index cluster est autorisé par table. Les données contenues dans la table sont stockées dans l'ordre de l'index cluster. Pour plus d’informations, consultez [Créer des index cluster](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) et [Créez des index non-cluster](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943).  
+Rend la clé ou l'index cluster. Un seul index cluster est autorisé par table. Les données contenues dans la table sont stockées dans l'ordre de l'index cluster. Pour plus d’informations, consultez [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md) et [Créez des index non-cluster](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Spécification de l'espace de données**  
 Développée, elle affiche des informations pour **(Type d’espace de données)**, **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
@@ -97,9 +97,9 @@ Indique si, quand la taille des pages intermédiaires de cet index augmente, ell
 **Ignorer les clés dupliquées**  
 Contrôle ce qui se produit lorsqu'une ligne dont la valeur de clé équivaut à la valeur d'une clé existante est insérée pendant une opération d'insertion en bloc. Si vous choisissez :  
   
--   **Oui** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] émet un avertissement, ignore la ligne entrante incriminée et tente d’insérer les lignes restantes.  
+-   **Oui** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] émet un avertissement, ignore la ligne entrante incriminée et tente d’insérer les lignes restantes.  
   
--   **Non** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] affiche un message d’erreur et restaure l’intégralité de l’opération d’insertion en bloc.  
+-   **Non** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche un message d’erreur et restaure l’intégralité de l’opération d’insertion en bloc.  
   
 **Colonnes incluses**  
 Affiche une liste avec la virgule comme séparateur des noms de toutes les colonnes constituant la clé d'index. Les colonnes de sous-clés ne peuvent être spécifiées que pour des index non-cluster. Cette propriété est masquée pour les index XML.  

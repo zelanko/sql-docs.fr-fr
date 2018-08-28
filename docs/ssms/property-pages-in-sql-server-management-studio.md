@@ -17,18 +17,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 350043c219ea1a35d681da8bd4718a54376430f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d18cc0c4c6ef5e13f5a26100d139af14954cfe7a
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042796"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775025"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Pages des propriétés dans SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Les boîtes de dialogue de page de propriétés de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] utilisent toutes un format commun pour l'affichage des informations avec des catégories pouvant être développées et réduites. Les champs affichés varient selon la propriété. Les propriétés affichées en gris sont en lecture seule. Les boutons Par catégorie et Alphabétique se trouvent en haut de chaque page de propriétés.  
+Les boîtes de dialogue de page de propriétés de [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] utilisent toutes un format commun pour l'affichage des informations avec des catégories pouvant être développées et réduites. Les champs affichés varient selon la propriété. Les propriétés affichées en gris sont en lecture seule. Les boutons Par catégorie et Alphabétique se trouvent en haut de chaque page de propriétés.  
   
-Le tableau ci-dessous décrit les éléments communs des boîtes de dialogue de page de propriétés [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] .  
+Le tableau ci-dessous décrit les éléments communs des boîtes de dialogue de page de propriétés [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
 |Élément|Description|  
 |-----------|---------------|  

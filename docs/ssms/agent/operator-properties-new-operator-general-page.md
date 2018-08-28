@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5c85048f2e5fb02fd060d3c813b1b4cdbc23d637
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7f235ae1b47a40bc8f4318cf9f953be670ab1e95
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035874"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776598"
 ---
 # <a name="operator-properties---new-operator-general-page"></a>Propriétés de l’opérateur - Nouvel opérateur (page Général)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38035874"
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Utilisez cette page pour afficher et modifier les propriétés générales des opérateurs de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Utilisez cette page pour afficher et modifier les propriétés générales des opérateurs de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  
 **Nom**  
@@ -56,10 +56,10 @@ Définit les périodes d'activité de la radiomessagerie.
 Permet de sélectionner les jours d'activité de la radiomessagerie.  
   
 **Début de journée**  
-Sélectionne l’heure après laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent envoie des messages à la radiomessagerie.  
+Sélectionne l’heure après laquelle l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envoie des messages à la radiomessagerie.  
   
 **Fin de journée**  
-Sélectionne l’heure après laquelle l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] n’envoie plus de messages à la radiomessagerie.  
+Sélectionne l’heure après laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent n’envoie plus de messages à la radiomessagerie.  
   
 ## <a name="see-also"></a> Voir aussi  
 [Opérateurs](../../ssms/agent/operators.md)  

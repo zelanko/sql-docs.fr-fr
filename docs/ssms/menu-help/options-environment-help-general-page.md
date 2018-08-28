@@ -17,23 +17,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfc7a585b40acca4658174b403207ad8480abf46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7684bccbeb7151730cdfdd541ecf02850f24c377
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042636"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774892"
 ---
 # <a name="options-environment---help---general-page"></a>Options (Environnement - Aide - Page Général)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Utilisez la boîte de dialogue **Options** pour choisir des ensembles de documentation et déterminer si les rubriques d’aide doivent être affichées à l’intérieur de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] ou dans une fenêtre extérieure distincte. Pour y accéder, cliquez sur **Options** dans le menu **Outils** , développez **Aide** dans le nœud **Environnement** et cliquez sur **Général**.  
+Utilisez la boîte de dialogue **Options** pour choisir des ensembles de documentation et déterminer si les rubriques d’aide doivent être affichées à l’intérieur de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou dans une fenêtre extérieure distincte. Pour y accéder, cliquez sur **Options** dans le menu **Outils** , développez **Aide** dans le nœud **Environnement** et cliquez sur **Général**.  
   
 > [!NOTE]  
 > Les changements apportés aux options de cette page ne prennent effet qu'après le redémarrage de l'environnement.  
   
 ## <a name="settings"></a>Paramètres  
 **Afficher l'aide en utilisant**  
-Spécifie la manière dont l'aide est affichée. Sélectionnez **Afficheur d’aide externe** dans la liste pour afficher les rubriques d’aide dans une fenêtre flottante externe. Sélectionnez **Afficheur d’aide intégré** pour afficher les rubriques d’aide dans une fenêtre de navigateur web à l’intérieur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Spécifie la manière dont l'aide est affichée. Sélectionnez **Afficheur d’aide externe** dans la liste pour afficher les rubriques d’aide dans une fenêtre flottante externe. Sélectionnez **Afficheur d’aide intégré** pour afficher les rubriques d’aide dans une fenêtre de navigateur web à l’intérieur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 **Résultats de la recherche par page**  
 Indique le nombre de rubriques affichées dans chaque page de **résultats de recherche** .  

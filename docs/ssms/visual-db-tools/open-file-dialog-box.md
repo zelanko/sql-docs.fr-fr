@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20f698a0f85f54a31b18f74ad364de1fc1dfb187
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 839d26440ad4f6d00c4992feb76211daba49617f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997921"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774167"
 ---
 # <a name="open-file-dialog-box"></a>Boîte de dialogue Ouvrir un fichier
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ La boîte de dialogue **Ouvrir un fichier** permet d'ouvrir un fichier existant 
 Pour accéder à cette boîte de dialogue, sélectionnez **Ouvrir** dans le menu **Fichier** , puis choisissez **Fichier**. Cette boîte de dialogue s'affiche également lorsque vous ouvrez des fichiers à partir d'autres éléments, comme la boîte de dialogue **Outils externes** . Dans le menu **Fichier** , sélectionnez **Ouvrir**et choisissez **Projet/Solution** pour ouvrir la boîte de dialogue **Ouvrir un projet** .  
   
 > [!NOTE]  
-> Avant d'ouvrir un projet ou un composant dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)], déterminez la fiabilité de son code. Le fait d'ouvrir le projet ou le composant dans un [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] peut entraîner l'exécution de son code dans un processus approuvé sur votre ordinateur local.  
+> Avant d'ouvrir un projet ou un composant dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], déterminez la fiabilité de son code. Le fait d'ouvrir le projet ou le composant dans un [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] peut entraîner l'exécution de son code dans un processus approuvé sur votre ordinateur local.  
   
 ## <a name="option"></a>Option  
 **Look in**  

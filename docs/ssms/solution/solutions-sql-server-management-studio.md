@@ -21,19 +21,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9741b7db06a3be3adb6eb86f044fd7403fe1c2c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a69fb847726732f3b1321593655f29c3bb2f6d1
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043466"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774762"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Solutions (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Une solution [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] est une collection d'un ou plusieurs projets connexes. Les projets sont des conteneurs que les développeurs utilisent pour organiser des fichiers associés, tels que des ensembles de scripts d'administration couramment utilisés.  
+Une solution [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est une collection d'un ou plusieurs projets connexes. Les projets sont des conteneurs que les développeurs utilisent pour organiser des fichiers associés, tels que des ensembles de scripts d'administration couramment utilisés.  
   
 ## <a name="solution-overview"></a>Vue d'ensemble de la solution  
-Vous pouvez utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] en tant que plateforme de développement de scripts pour le [!INCLUDE[ssDE](../../includes/ssde_md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Utilisez les éditeurs de code de [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] pour développer des scripts et des requêtes pour les bases de données relationnelles et multidimensionnelles, et collectez des scripts associés et les requêtes ensemble dans les projets.  
+Vous pouvez utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] en tant que plateforme de développement de scripts pour le [!INCLUDE[ssDE](../../includes/ssde_md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Utilisez les éditeurs de code de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour développer des scripts et des requêtes pour les bases de données relationnelles et multidimensionnelles, et collectez des scripts associés et les requêtes ensemble dans les projets.  
   
 Les projets peuvent contenir :  
   
@@ -41,7 +41,7 @@ Les projets peuvent contenir :
   
 -   des informations de connexion et des fichiers utilisés par les requêtes et les scripts.  
   
-Un ou plusieurs projets associés peuvent être combinés dans une solution. Les solutions et les projets peuvent être gérés à l'aide du volet Explorateur de solutions dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Un ou plusieurs projets associés peuvent être combinés dans une solution. Les solutions et les projets peuvent être gérés à l'aide du volet Explorateur de solutions dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 Les solutions et projets peuvent être intégrés dans une base de données [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual SourceSafe (VSS) (ou d'autres fournisseurs tiers de contrôle de code source) pour effectuer le suivi des modifications et la gestion du cycle de vie du développement.  
   
