@@ -18,13 +18,13 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b3052e7868f3bb998cb69ed1d88b9435b16385e2
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d6338a060ca3e5ab3f7e2f7a73b4a9a1fd9538c9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39545279"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102981"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ ms.locfileid: "39545279"
   
  L’illustration suivante montre les points définis par les coordonnées **(***Min. X***,***Min. Y***)** et **(***Max. X***,***Max. Y***)** du cadre englobant. Le niveau supérieur de la hiérarchie de grille est illustré comme une grille 4x4. À des fins d'illustration, les niveaux inférieurs sont omis. L'espace en dehors de la zone englobante est indiqué par un zéro (0). Notez que l'objet 'A' s'étend en partie au-delà du cadre et que l'objet 'B' se trouve complètement à l'extérieur du cadre dans la cellule 0.  
   
- ![Rectangle englobant affichant les coordonnées et la cellule 0.] (../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Rectangle englobant affichant les coordonnées et la cellule 0.")  
+ ![Rectangle englobant affichant les coordonnées et la cellule 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Rectangle englobant affichant les coordonnées et la cellule 0.")  
   
  Un cadre englobant correspond à une partie des données spatiales d'une application. Le fait que le cadre englobant de l'index contienne toutes les données stockées dans la colonne spatiale ou uniquement une partie d'entre elles dépend de l'application. Seules les opérations calculées sur des objets qui sont entièrement à l'intérieur du cadre englobant tirent parti de l'index spatial. Par conséquent, pour profiter au maximum d’un index spatial sur une colonne **geometry** , vous devez spécifier un cadre englobant qui contienne tous les objets ou la plupart d’entre eux.  
   

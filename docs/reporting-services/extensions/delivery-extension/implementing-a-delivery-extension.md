@@ -22,12 +22,12 @@ caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2e508497f7429f596285717978cc6c2953c9c320
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4388f157aba6ae590f2bc56109b18696e98ea49
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015926"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40411004"
 ---
 # <a name="implementing-a-delivery-extension"></a>Implémentation d'une extension de remise
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permet aux utilisateurs de créer et de publier des rapports qui, une fois créés et publiés, peuvent être remis à différents emplacements. De plus, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut plusieurs extensions de remise et une API de remise qui permettent aux développeurs de créer des extensions de remise supplémentaires pour étendre les fonctionnalités de remise proposées dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -53,17 +53,11 @@ ms.locfileid: "33015926"
  [Utilisation de la classe Paramètre pour une extension de remise](../../../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md)  
  Décrit les attributs d’une classe **Setting** et comment l’utiliser dans l’implémentation de votre extension de remise.  
   
- [Utilisation de l'interface IDeliveryReportServerInformation pour une extension de remise](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
- Décrit les attributs d’une interface **IDeliveryReportServerInformation** et comment l’utiliser dans l’implémentation de votre extension de remise.  
-  
  [Utilisation de la classe Rapport pour une extension de remise](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
  Décrit les attributs d’une classe **Report** et comment l’utiliser dans l’implémentation de votre extension de remise.  
   
  [Utilisation de la classe RenderedOutputFile pour une extension de remise](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
  Décrit les attributs d’une classe **RenderedOutputFile** et comment l’utiliser dans l’implémentation de votre extension de remise.  
-  
- [Implémentation de l’interface ISubscriptionBaseUIUserControl pour une extension de remise](../../../reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
- Décrit les attributs d'un contrôle utilisateur d'extension de remise et comment implémenter votre propre interface utilisateur pour un abonnement.  
   
  [Déploiement d'une extension de remise](../../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)  
  Décrit comment déployer votre extension de remise.  

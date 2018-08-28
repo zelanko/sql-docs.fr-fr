@@ -17,16 +17,15 @@ helpviewer_keywords:
 - attackable surface area [SQL Server]
 - installing SQL Server, security
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
-caps.latest.revision: 79
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c53853cc6a87e9dcef674245581446a4cf54f540
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 0a945e13450ed81bff0b5fc710942e04b86c7297
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108111"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032580"
 ---
 # <a name="surface-area-configuration"></a>Configuration de la surface d'exposition
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "39108111"
   
  Vous pouvez également définir des options du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide de la procédure stockée **sp_configure**. Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
- Pour modifier la propriété **EnableIntegrated Security** de [!INCLUDE[ssRS](../../includes/ssrs-md.md)], utilisez les paramètres de propriété dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour modifier les propriétés **Événements programmés et remise du rapport activés** et **Service Web et accès HTTP activés** , modifiez le fichier de configuration **RSReportServer.config** .  
+ Pour modifier la propriété **EnableIntegrated Security** de [!INCLUDE[ssRS](../../includes/ssrs.md)], utilisez les paramètres de propriété dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour modifier les propriétés **Événements programmés et remise du rapport activés** et **Service Web et accès HTTP activés** , modifiez le fichier de configuration **RSReportServer.config** .  
   
 ## <a name="command-prompt-options"></a>Options d'invite de commandes  
  Utilisez l’applet de commande **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell pour appeler des stratégies de configuration de la surface d’exposition. Pour plus d’informations, consultez [Utiliser les applets de commande du Moteur de base de données](../../relational-databases/scripting/use-the-database-engine-cmdlets.md).  

@@ -1,7 +1,7 @@
 ---
 title: Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 77c4ede074611b60c33777d64b8ff5308fc343f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 980f17539e4230d5064ad9cc6d7cfc387b7dad84
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021556"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40412744"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS)
   Les paramètres en cascade permettent de gérer d'importantes quantités de données de rapport. Vous pouvez définir un ensemble de paramètres associés, de telle sorte que la liste des valeurs d'un paramètre dépende de la valeur choisie dans un autre paramètre. Par exemple, le premier paramètre est indépendant et peut présenter une liste de catégories de produits. Lorsque l'utilisateur sélectionne une catégorie, le deuxième paramètre dépend de la valeur du premier paramètre. Ses valeurs sont mises à jour avec une liste de sous-catégories au sein de la catégorie choisie. Lorsque l'utilisateur affiche le rapport, les valeurs des paramètres de catégorie et de sous-catégorie permettent de filtrer les données du rapport.  
@@ -48,7 +48,7 @@ ms.locfileid: "33021556"
   
     1.  La liste des champs de sources de données. Par exemple, dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] , l'instruction SELECT spécifie la liste des noms de colonnes de bases de données à partir d'une table ou d'une vue donnée.  
   
-    2.  Un paramètre de requête par paramètre en cascade. Un paramètre de requête limite les données extraites de la source de données en spécifiant certaines valeurs à inclure dans la requête ou à exclure de la requête. En règle générale, les paramètres de requête se déclenchent dans une clause de restriction dans la requête. Par exemple, dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT, les paramètres de requête se déclenchent dans la clause WHERE. Pour plus d'informations, consultez la rubrique « Filtrage des lignes avec les clauses WHERE et HAVING » dans la documentation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la documentation en ligne [SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+    2.  Un paramètre de requête par paramètre en cascade. Un paramètre de requête limite les données extraites de la source de données en spécifiant certaines valeurs à inclure dans la requête ou à exclure de la requête. En règle générale, les paramètres de requête se déclenchent dans une clause de restriction dans la requête. Par exemple, dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT, les paramètres de requête se déclenchent dans la clause WHERE.  
   
 6.  Cliquez sur **Exécuter** (**!**). Une fois que vous avez inclus les paramètres de requête et exécuté la requête, les paramètres de rapport qui correspondent aux paramètres de requête sont automatiquement créés.  
   

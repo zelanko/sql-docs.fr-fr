@@ -17,12 +17,12 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fda5188298c2cae3b56bdb4119ae1bbc96679a2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 634672a3f769029549727c571c011ae5e4b03aef
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870804"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410028"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Résoudre les problèmes de connexion au moteur de base de données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ La connexion à SQL Server à l’aide de TCP/IP exige que Windows puisse établ
 ## <a name="testing-a-local-connection"></a>Test d’une connexion locale
 
 Avant de résoudre un problème de connexion à partir d’un autre ordinateur, commencez par tester votre capacité à vous connecter à partir d’une application cliente installée sur l’ordinateur qui exécute SQL Server. (Cela permet d’éviter les problèmes liés au pare-feu.) Cette procédure utilise SQL Server Management Studio. Si Management Studio n’est pas installé, consultez [Télécharger SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md). (Si vous n’êtes pas en mesure d’installer Management Studio, vous pouvez tester la connexion en utilisant l’utilitaire `sqlcmd.exe` qui est installé avec le moteur de base de données. Pour plus d’informations sur `sqlcmd.exe`, consultez [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md).)
-1.  Ouvrez une session sur l’ordinateur où SQL Server est installé à l’aide d’une connexion qui a l’autorisation d’accéder à SQL Server. (Lors de l’installation, SQL Server nécessite au moins une connexion à spécifier en tant qu’administrateur SQL Server. Si vous ne connaissez pas d’administrateur, consultez [Se connecter à SQL Server lorsque les administrateurs système n’y ont plus accès](http://msdn.microsoft.com/library/dd207004.aspx).)
+1.  Ouvrez une session sur l’ordinateur où SQL Server est installé à l’aide d’une connexion qui a l’autorisation d’accéder à SQL Server. (Lors de l’installation, SQL Server nécessite au moins une connexion à spécifier en tant qu’administrateur SQL Server. Si vous ne connaissez pas d’administrateur, consultez [Se connecter à SQL Server lorsque les administrateurs système n’y ont plus accès](connect-to-sql-server-when-system-administrators-are-locked-out.md).)
 2.   Dans la page de démarrage, tapez **SQL Server Management Studio**ou, sur des versions plus anciennes de Windows, dans le menu Démarrer, pointez sur **Tous les programmes**, sur **Microsoft SQL Server**, puis cliquez sur **SQL Server Management Studio**.
 3.  Dans la zone **Type de serveur** de la boîte de dialogue **Se connecter au serveur** , sélectionnez **Moteur de base de données**. Dans la zone **Authentification** , sélectionnez **Authentification Windows**. Dans la zone **Nom du serveur** , tapez l’un des éléments suivants :
 
@@ -107,7 +107,7 @@ Avant de résoudre un problème de connexion à partir d’un autre ordinateur, 
 Si vous recevez une erreur à ce stade, vous devez la résoudre avant de continuer. Il existe de nombreuses sources de problèmes possibles. Votre connexion peut être refusée. Votre base de données par défaut peut-être absente.
 
 >    [!NOTE] 
->    Certains messages d’erreur transmis au client intentionnellement ne donnent pas suffisamment d’informations pour résoudre le problème. Il s’agit d’une fonctionnalité de sécurité pour éviter de fournir à un attaquant des informations sur SQL Server. Pour afficher les informations complètes sur l’erreur, consultez le journal des erreurs SQL Server. Les détails y sont fournis. Si vous recevez l’erreur **18456 Échec de la connexion pour l’utilisateur**, la rubrique de la documentation en ligne [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) contient des informations supplémentaires sur les codes d’erreur. En outre, le blog d’Aaron Bertrand comprend une liste très complète des codes d’erreur à la page [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). Vous pouvez afficher le journal des erreurs avec SSMS (si vous pouvez vous connecter), dans la section Gestion de l’Explorateur d’objets. Sinon, vous pouvez afficher le journal des erreurs avec le programme Bloc-notes de Windows. L’emplacement par défaut varie en fonction de votre version et peut être modifié pendant l’installation. L’emplacement par défaut pour [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] est `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
+>    Certains messages d’erreur transmis au client intentionnellement ne donnent pas suffisamment d’informations pour résoudre le problème. Il s’agit d’une fonctionnalité de sécurité pour éviter de fournir à un attaquant des informations sur SQL Server. Pour afficher les informations complètes sur l’erreur, consultez le journal des erreurs SQL Server. Les détails y sont fournis. Si vous recevez l’erreur **18456 Échec de la connexion pour l’utilisateur**, la rubrique de la documentation en ligne [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contient des informations supplémentaires sur les codes d’erreur. En outre, le blog d’Aaron Bertrand comprend une liste très complète des codes d’erreur à la page [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). Vous pouvez afficher le journal des erreurs avec SSMS (si vous pouvez vous connecter), dans la section Gestion de l’Explorateur d’objets. Sinon, vous pouvez afficher le journal des erreurs avec le programme Bloc-notes de Windows. L’emplacement par défaut varie en fonction de votre version et peut être modifié pendant l’installation. L’emplacement par défaut pour [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] est `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Si vous pouvez vous connecter à l’aide de la mémoire partagée, testez la connexion à l’aide de TCP. Vous pouvez forcer une connexion TCP en spécifiant **tcp:** avant le nom. Exemple :
 
@@ -123,7 +123,7 @@ Si vous pouvez vous connecter avec la mémoire partagée mais pas avec TCP, vous
 ## <a name="opening-a-port-in-the-firewall"></a>Ouverture d’un port dans le pare-feu
 
 Depuis de nombreuses années, avec Windows XP Service Pack 2, le Pare-feu Windows est activé et bloque les connexions à partir d’un autre ordinateur. Pour vous connecter à l’aide de TCP/IP à partir d’un autre ordinateur, vous devez configurer le pare-feu sur l’ordinateur SQL Server pour autoriser les connexions au port TCP utilisé par le moteur de base de données. Comme mentionné précédemment, l’instance par défaut est généralement à l’écoute du port TCP 1433. Si vous avez des instances nommées, ou si vous avez modifié la valeur par défaut, le port TCP [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] peut être à l’écoute sur un autre port. Consultez la section du début portant sur la collecte d’informations pour déterminer votre port.  
-Si vous vous connectez à une instance nommée ou un port autre que le port TCP 1433, vous devez également ouvrir le port UDP 1434 pour le service SQL Server Browser. Pour obtenir des instructions détaillées sur l’ouverture d’un port dans le Pare-feu Windows, consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](https://msdn.microsoft.com/library/ms175043).
+Si vous vous connectez à une instance nommée ou un port autre que le port TCP 1433, vous devez également ouvrir le port UDP 1434 pour le service SQL Server Browser. Pour obtenir des instructions détaillées sur l’ouverture d’un port dans le Pare-feu Windows, consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](configure-a-windows-firewall-for-database-engine-access.md).
 
 ## <a name="testing-the-connection"></a>Test de la connexion
 

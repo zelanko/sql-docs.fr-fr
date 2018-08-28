@@ -19,12 +19,12 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe30b9faca81825b140259996af1fc6b0fedc2fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3da81b9f7683aec5bbbe5e2e6562128a3c66d702
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950554"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412722"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server Agent, objet Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "32950554"
 |**Redémarrages de SQL Server**|Nombre de redémarrages réussis de Microsoft SQL Server effectués par l'Agent SQL Server depuis le dernier démarrage de ce dernier.|  
   
 ## <a name="see-also"></a> Voir aussi  
- [Utiliser des objets de performance](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Utiliser des objets de performance](../../ssms/agent/use-performance-objects.md)   
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

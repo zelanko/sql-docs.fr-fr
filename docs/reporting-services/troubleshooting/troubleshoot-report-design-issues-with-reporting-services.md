@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3e81a3b98bbfe6507c768e541ac0fc613d28d52e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8269b227a144f8e600ca885adaf5b80f2a521e19
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055834"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412568"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Résoudre les problèmes de conception de rapports avec Reporting Services
 Des problèmes de conception de rapport peuvent se produire lorsque vous créez la mise en page de rapport en mode Conception dans une application de création de rapport. Utilisez cette rubrique pour vous aider à résoudre ces problèmes.   
@@ -66,5 +66,5 @@ Pour grouper plusieurs régions de données ou éléments de rapport, placez-les
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

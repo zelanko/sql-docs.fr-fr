@@ -23,12 +23,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a2c7f7713bf003837b5808d10e52a9a6c251f2e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 04725560e4a39903a9f0a9e1ca580443cdb7504e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782590"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40415813"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ Pour l’argument *id*, l’argument *property* spécifie le type des informatio
 |**IsCursorType**|Le paramètre de la procédure est de type CURSOR.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
 |**IsDeterministic**|La colonne est déterministe. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de la vue.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte. Aucune colonne calculée ou colonne de la vue.|  
 |**IsFulltextIndexed**|Colonne inscrite pour l’indexation en texte intégral.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**IsHidden**|Valeur de la colonne générée par le système. Correspond à **sys.columns.is_hidden**|**S'applique à**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 : Non masquée<br /><br /> 1 : Masquée|  
+|**IsHidden**|Valeur de la colonne générée par le système. Correspond à **sys.columns.is_hidden**|**S'applique à**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 : Non masquée<br /><br /> 1 : Masquée|  
 |**IsIdentity**|La colonne utilise la propriété IDENTITY.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
 |**IsIdNotForRepl**|La colonne vérifie le paramètre IDENTITY_INSERT.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
 |**IsIndexable**|La colonne peut être indexée.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  

@@ -21,12 +21,12 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b417d30db2ed5ecd85ba154ab304be7181c2dc71
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: dc4e04eb492331e66bdae460af96ad2fd69c57be
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550530"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410990"
 ---
 # <a name="authentication-with-the-report-server"></a>Authentification avec le serveur de rapports
 
@@ -73,14 +73,14 @@ ms.locfileid: "34550530"
   
 -   [Configurer l'authentification personnalisée ou par formulaire sur le serveur de rapports](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Descriptions de tâche|Liens|  
 |-----------------------|-----------|  
 |Configurez le type d'authentification intégrée de Windows.|[Configurer une authentification Windows sur le serveur de rapports](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
 |Configurez le type d'authentification de base.|[Configurer une authentification de base sur le serveur de rapports](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |Configurez soit l'authentification par formulaire, soit un type d'authentification personnalisé.|[Configurer l'authentification personnalisée ou par formulaire sur le serveur de rapports](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
-|Pour gérer le scénario d’authentification personnalisé, activez le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] .|[Configurer le portail Web pour passer des cookies d’authentification personnalisée](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
+|Pour gérer le scénario d’authentification personnalisé, activez le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] .|[Configurer le portail Web pour passer des cookies d’authentification personnalisée](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

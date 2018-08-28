@@ -3,9 +3,6 @@ title: Chiffrement TDE (Transparent Data Encryption) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-caps.latest.revision: 75
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0392a841a28df19105154521f9e93952f56c2bfe
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 0bb9b031042c9653c62f46b901359a79be587975
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564573"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43100059"
 ---
 # <a name="transparent-data-encryption-tde"></a>Chiffrement transparent des données (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +65,7 @@ ms.locfileid: "39564573"
   
  L'illustration ci-dessous montre l'architecture du chiffrement TDE. Seuls les éléments de niveau base de données (la clé de chiffrement de base de données et les parties ALTER DATABASE) sont configurables par l'utilisateur lors de l'utilisation du chiffrement transparent des données sur la [!INCLUDE[ssSDS](../../../includes/sssds-md.md)].  
   
- ![Affiche la hiérarchie décrite dans cette rubrique.] (../../../relational-databases/security/encryption/media/tde-architecture.gif "Affiche la hiérarchie décrite dans cette rubrique.")  
+ ![Affiche la hiérarchie décrite dans cette rubrique.](../../../relational-databases/security/encryption/media/tde-architecture.gif "Affiche la hiérarchie décrite dans cette rubrique.")  
   
 ## <a name="using-transparent-data-encryption"></a>Utilisation du chiffrement transparent des données  
  Pour utiliser le chiffrement transparent des données, procédez comme suit :  

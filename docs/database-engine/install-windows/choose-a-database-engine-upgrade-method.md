@@ -11,13 +11,14 @@ ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e5970629622e5f1e219bcdb80ec31341c12d585e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46b231d5402bef7b9a092278dfd5b0f809411c1e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206009"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409489"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Choisir une méthode de mise à niveau du moteur de base de données
 
@@ -79,7 +80,7 @@ ms.locfileid: "37206009"
  Après la migration des bases de données utilisateur, vous pointez les nouveaux utilisateurs sur la nouvelle instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de diverses méthodes (par exemple, en renommant le serveur, en utilisant une entrée DNS, en modifiant des chaînes de connexion).  La nouvelle approche de l’installation réduit les risques et les temps morts par rapport à une mise à niveau sur place. Elle facilite également les mises à niveau du matériel et du système d’exploitation conjointement avec la mise à niveau vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Si vous avez déjà une solution à haute disponibilité en place ou d’autres environnements d’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], accédez à [Mise à niveau propagée](#RollingUpgrade). Si vous n’avez pas de solution à haute disponibilité en place, vous pouvez envisager de configurer temporairement une [mise en miroir de base de données](http://msdn.microsoft.com/library/ms190941.aspx) pour réduire le temps d’arrêt afin de faciliter cette mise à niveau ou de saisir cette opportunité pour configurer un [groupe de disponibilité Always On](http://msdn.microsoft.com/library/hh510260.aspx) en tant que solution à haute disponibilité permanente.  
+>  Si vous avez déjà une solution à haute disponibilité en place ou d’autres environnements d’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], accédez à [Mise à niveau propagée](#RollingUpgrade). Si vous n’avez pas de solution à haute disponibilité en place, vous pouvez envisager de configurer temporairement une [mise en miroir de base de données](../database-mirroring/setting-up-database-mirroring-sql-server.md) pour réduire le temps d’arrêt afin de faciliter cette mise à niveau ou de saisir cette opportunité pour configurer un [groupe de disponibilité Always On](http://msdn.microsoft.com/library/hh510260.aspx) en tant que solution à haute disponibilité permanente.  
   
  Par exemple, vous pouvez utiliser cette approche pour mettre à niveau :  
   
