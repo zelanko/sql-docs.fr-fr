@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 042d7aa32742f0cddf18963a7a50ac1cc2dc9ec6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 881a2a42a8140502ca0d50765339a8c1cd0194c0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558269"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43098555"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Prise en charge de SQL Server Management Studio pour l'OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39558269"
   
 2.  Pour remplacer les paramètres du modèle, cliquez sur **Spécifier les valeurs des paramètres du modèle** dans le menu **Requête** .  
   
-     Pour plus d’informations sur la manière d’utiliser les modèles, consultez [Explorateur de modèles](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
+     Pour plus d’informations sur la manière d’utiliser les modèles, consultez [Explorateur de modèles](../../ssms/template/template-explorer.md).  
   
 3.  Dans l’ **Explorateur d’objets**, les tables sont d’abord triées en fonction des tables sur disque suivies des tables optimisées en mémoire. Utilisez les **Détails de l’Explorateur d’objets** pour afficher toutes les tables classées par nom.  
   

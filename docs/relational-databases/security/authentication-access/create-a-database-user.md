@@ -27,13 +27,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7d1df8ab9434915e891cdb98c86bc26bdf9b4b38
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 72d889e8be30c90a61627379d53ca41156fe0a27
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39535190"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096987"
 ---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -139,7 +139,7 @@ ms.locfileid: "39535190"
      Affiche ou spécifie les propriétés étendues de l'objet. Chaque propriété étendue est constituée d'une paire nom/valeur de métadonnées associées à l'objet.  
   
      **Points de suspension (…)**  
-     Cliquez sur les points de suspension **(…)** figurant après **Valeur** pour ouvrir la boîte de dialogue **Valeur de la propriété étendue** . Tapez ou affichez la valeur de la propriété étendue dans cet emplacement de plus grande taille. Pour plus d'informations, consultez [Boîte de dialogue Valeur de la propriété étendue](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Cliquez sur les points de suspension **(…)** figurant après **Valeur** pour ouvrir la boîte de dialogue **Valeur de la propriété étendue** . Tapez ou affichez la valeur de la propriété étendue dans cet emplacement de plus grande taille. Pour plus d'informations, consultez [Boîte de dialogue Valeur de la propriété étendue](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Supprimer**  
      Supprime la propriété étendue sélectionnée.  

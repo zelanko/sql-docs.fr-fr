@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cfe7a86be6ae9af1e9e17cd680353a6795751841
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538139"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094118"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Développer à l’aide d’Always Encrypted avec le Fournisseur de données .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 Cet exemple insère une ligne dans la table Patients. Notez les points suivants :
 - L’exemple de code ne contient aucun élément spécifique au chiffrement. Le fournisseur de données .NET Framework pour SQL Server détecte et chiffre automatiquement les paramètres *paramSSN* et *paramBirthdate* qui ciblent des colonnes chiffrées. Le chiffrement est donc transparent pour l’application. 
 - Les valeurs insérées dans les colonnes de base de données, y compris les colonnes chiffrées, sont passées en tant qu’objets [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) . L’utilisation de **SqlParameter** est facultative lors de l’envoi de valeurs aux colonnes non chiffrées (même si elle est vivement recommandée, car elle contribue à empêcher l’injection SQL), mais elle est nécessaire pour les valeurs qui ciblent des colonnes chiffrées. Si les valeurs insérées dans les colonnes SSN ou BirthDate ont été passées en tant que littéraux incorporés dans l’instruction de requête, la requête échouera, car le fournisseur de données .NET Framework pour SQL Server ne sera pas en mesure de déterminer les valeurs des colonnes chiffrées cibles et ne chiffrera donc pas les valeurs. Par conséquent, le serveur les rejettera en les considérant comme incompatibles avec les colonnes chiffrées.
-- Le type de données du paramètre ciblant la colonne SSN est défini sur une chaîne ANSI (non Unicode) qui est mappée vers le type de données SQL Server char/varchar. Si le type du paramètre avait été défini sur une chaîne Unicode (String) mappée vers nchar/nvarchar, la requête aurait échoué, car Always Encrypted ne prend pas en charge les conversions de valeurs nchar/nvarchar chiffrées en valeurs char/varchar chiffrées. Pour plus d’informations sur les mappages de type de données, consultez [Mappages de type de données SQL Server](https://msdn.microsoft.com/library/cc716729.aspx) .
+- Le type de données du paramètre ciblant la colonne SSN est défini sur une chaîne ANSI (non Unicode) qui est mappée vers le type de données SQL Server char/varchar. Si le type du paramètre avait été défini sur une chaîne Unicode (String) mappée vers nchar/nvarchar, la requête aurait échoué, car Always Encrypted ne prend pas en charge les conversions de valeurs nchar/nvarchar chiffrées en valeurs char/varchar chiffrées. Pour plus d’informations sur les mappages de type de données, consultez [Mappages de type de données SQL Server](/dotnet/framework/data/adonet/sql-server-data-type-mappings) .
 - Le type de données du paramètre inséré dans la colonne BirthDate est explicitement défini sur le type de données SQL Server cible à l’aide de la [propriété SqlParameter.SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), au lieu d’utiliser le mappage implicite des types .NET vers les types de données SQL Server appliqués lors de l’utilisation de la [propriété SqlParameter.DbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx). Par défaut, la [structure DateTime](https://msdn.microsoft.com/library/system.datetime.aspx) est mappée vers le type de données SQL Server datetime. Étant donné que les données de la colonne BirthDate sont de type « date » et qu’Always Encrypted ne prend pas en charge la conversion de valeurs « datetime » chiffrées en valeurs « date » chiffrées, l’utilisation du mappage par défaut entraînerait une erreur. 
 
 ```
