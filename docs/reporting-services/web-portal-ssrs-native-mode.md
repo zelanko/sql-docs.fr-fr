@@ -15,12 +15,12 @@ caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0c88c0e5710a85b8e29e3d0852ac608f5cfca30d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cd0de35d2bf5b18e1ccb9cdeadd8198f522c4135
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018064"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405296"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Portail web (SSRS en mode natif)
 
@@ -61,7 +61,7 @@ Vous pouvez utiliser le portail web pour parcourir les dossiers du serveur de ra
 
 Le portail web est uniquement utilisé pour les serveurs de rapports qui s’exécutent en mode natif. Il n'est pas pris en charge sur un serveur de rapports que vous configurez en mode intégré SharePoint.
 
-Certaines fonctionnalités du portail web sont disponibles uniquement dans les éditions spécifiées de [!INCLUDE[ssNoVersion](../includes/ssnoversion.md)]. Pour plus d’informations, consultez [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Certaines fonctionnalités du portail web sont disponibles uniquement dans les éditions spécifiées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
 Dans le cas d'une nouvelle installation, seuls les administrateurs locaux possèdent les autorisations suffisantes pour travailler avec le contenu et les paramètres. Pour octroyer des autorisations à d'autres utilisateurs, un administrateur local doit créer des attributions de rôles permettant d'accéder au serveur de rapports. Les pages et les tâches auxquelles un utilisateur pourra ensuite accéder dépendent des attributions de rôles qui ont été définies pour cet utilisateur. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports](security/grant-user-access-to-a-report-server-report-manager.md)
 

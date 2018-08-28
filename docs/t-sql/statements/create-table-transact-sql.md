@@ -50,12 +50,12 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d3164cec2ddeca0e5fe2c84fc915bd66ee0832bc
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: d70a8a17b0a168787da8f0894e2a8c681bd40b8d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216930"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405185"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -543,7 +543,7 @@ Indique qu’il faut créer un index sur la table. Il peut s’agir d’un index
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    
-**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  Spécifie le positionnement de données FILESTREAM pour la table lorsqu'un index cluster est créé. La clause FILESTREAM_ON permet le déplacement des données FILESTREAM vers un schéma de partition ou un groupe de fichiers FILESTREAM différent.  
   
@@ -606,7 +606,7 @@ Indique qu’il faut créer un index sur la table. Il peut s’agir d’un index
   
  FILESTREAM  
    
-**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  Valide uniquement pour les colonnes **varbinary(max)**. Spécifie le stockage FILESTREAM pour les données BLOB **varbinary(max)**.  
   

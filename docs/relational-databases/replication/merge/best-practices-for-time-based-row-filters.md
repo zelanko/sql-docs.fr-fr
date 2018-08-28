@@ -17,12 +17,12 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52e7df29e98c3193d90c23f7cb63199721b1de6b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 2c66f26fd27bd0f36161866ec0cf6e69b03bc752
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355441"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405188"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Bonnes pratiques en matière de filtres de lignes basés sur le temps
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Répliquer**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-| 1|Réception|112|2006-10-04| 1|  
+|1|Réception|112|2006-10-04|1|  
 |2|Dîner|112|2006-10-10|0|  
 |3|Soirée|112|2006-10-11|0|  
 |4|Mariage|112|2006-10-12|0|  
@@ -89,16 +89,16 @@ GO
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Répliquer**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-| 1|Réception|112|2006-10-04|0|  
-|2|Dîner|112|2006-10-10| 1|  
-|3|Soirée|112|2006-10-11| 1|  
-|4|Mariage|112|2006-10-12| 1|  
+|1|Réception|112|2006-10-04|0|  
+|2|Dîner|112|2006-10-10|1|  
+|3|Soirée|112|2006-10-11|1|  
+|4|Mariage|112|2006-10-12|1|  
   
  Les événements relatifs à la semaine à venir sont désormais signalés comme étant prêts à être répliqués. La prochaine fois que l'Agent de fusion s'exécutera pour l'abonnement utilisé par le coordinateur d'événements 112, les lignes 2, 3 et 4 seront téléchargées vers l'Abonné tandis que la ligne 1 sera supprimée de celui-ci.  
   
 ## <a name="see-also"></a> Voir aussi  
  [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
- [Implémenter des travaux](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [Implémenter des travaux](../../../ssms/agent/implement-jobs.md)   
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

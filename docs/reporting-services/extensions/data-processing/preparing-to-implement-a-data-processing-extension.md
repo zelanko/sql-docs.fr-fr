@@ -20,15 +20,15 @@ caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 457524a8fb05069961a80ccebbe719261b616bd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05b2a471086e49bf6bf4acb73543144af79f76fb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016416"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405292"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Préparation à l'implémentation d'une extension pour le traitement des données
-  Avant d’implémenter votre extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous devez définir les interfaces à implémenter. Vous pouvez fournir des implémentations spécifiques aux extensions du jeu d’interfaces complet, ou concentrer simplement votre implémentation sur un sous-ensemble, tel que les interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> et <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> dans lesquelles les clients interagissent essentiellement avec un jeu de résultats comme un objet **DataReader** et utilisent votre extension pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] comme un pont entre le jeu de résultats et votre source de données.  
+  Avant d’implémenter votre extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous devez définir les interfaces à implémenter. Vous pouvez fournir des implémentations spécifiques aux extensions du jeu d’interfaces complet, ou concentrer simplement votre implémentation sur un sous-ensemble, tel que les interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> et <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> dans lesquelles les clients interagissent essentiellement avec un jeu de résultats comme un objet **DataReader** et utilisent votre extension pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs.md)] comme un pont entre le jeu de résultats et votre source de données.  
   
  Vous pouvez implémenter des extensions pour le traitement des données selon l'une des deux manières suivantes :  
   
@@ -74,9 +74,9 @@ ms.locfileid: "33016416"
 |Interface|Description|Implémentation|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|Représente une session unique avec une source de données. Dans le cas d'un système de base de données client/serveur, il peut s'agir d'une connexion réseau au serveur.|Requis|  
-|IDbConnectionExtension|Représente des propriétés de connexion supplémentaires qui peuvent être implémentées par les extensions pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] relatives à la sécurité et l'authentification.|Ce paramètre est facultatif|  
+|IDbConnectionExtension|Représente des propriétés de connexion supplémentaires qui peuvent être implémentées par les extensions pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs.md)] relatives à la sécurité et l'authentification.|Ce paramètre est facultatif|  
 |IDbTransaction|Représente une transaction locale.|Requis|  
-|IDbTransactionExtension|Représente des propriétés de transaction supplémentaires qui peuvent être implémentées par les extensions pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs-md.md)].|Ce paramètre est facultatif|  
+|IDbTransactionExtension|Représente des propriétés de transaction supplémentaires qui peuvent être implémentées par les extensions pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs.md)].|Ce paramètre est facultatif|  
 |IDbCommand|Représente une requête ou commande utilisée pour une connexion à une source de données.|Requis|  
 |IDbCommandAnalysis|Représente des informations de commande supplémentaires pour analyser une requête et renvoyer une liste de noms de paramètre utilisés dans la requête.|Ce paramètre est facultatif|  
 |IDataParameter|Représente un paramètre ou une paire nom/valeur passée à une commande ou requête.|Requis|  
