@@ -19,16 +19,16 @@ helpviewer_keywords:
 - COLUMN_DOMAIN_USAGE view
 ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b09a9db99c0f4a2cb98402ad27f99afb22947ec7
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: f0edc7373b10ae9819858f65a703a86792cf14b2
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39532599"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43078062"
 ---
 # <a name="columndomainusage-transact-sql"></a>COLUMN_DOMAIN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "39532599"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Base de données dans laquelle réside le type de données alias.|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient le type de données alias.<br /><br /> **\*\* Important \* \* ** n’utilisez pas de vues INFORMATION_SCHEMA pour déterminer le schéma d’un type de données. La seule méthode fiable pour rechercher le schéma d'un type est d'utiliser la fonction TYPEPROPERTY.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient le type de données alias.<br /><br /> **\*\* Important \* \***  n’utilisez pas de vues INFORMATION_SCHEMA pour déterminer le schéma d’un type de données. La seule méthode fiable pour rechercher le schéma d'un type est d'utiliser la fonction TYPEPROPERTY.|  
 |**NOM_DOMAINE**|**sysname**|Type de données alias.|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la table.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Propriétaire de la table.<br /><br /> **\*\* Important \* \* ** n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Propriétaire de la table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**TABLE_NAME**|**sysname**|Base de données où le type de données alias est utilisé.|  
 |**COLUMN_NAME**|**sysname**|Colonne utilisant le type de données alias.|  
   

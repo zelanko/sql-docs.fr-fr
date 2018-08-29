@@ -1,8 +1,8 @@
 ---
-title: Commentaires client pour SQL Server sur Linux | Documents Microsoft
+title: Commentaires des clients pour SQL Server sur Linux | Microsoft Docs
 description: Décrit comment les commentaires des clients de SQL Server sont collectées et configuré sur Linux.
-author: annashres
-ms.author: anshrest
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 06/22/2018
 ms.topic: conceptual
@@ -10,20 +10,20 @@ ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 69a1e82544ad1566cdf9ec1937d88a8cc2a61975
-ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
+ms.openlocfilehash: 4bbe6fc1aa961c3a1e0e699b1d3a8df87233e874
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36329504"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43072178"
 ---
-# <a name="customer-feedback-for-sql-server-on-linux"></a>Commentaires client pour SQL Server sur Linux
+# <a name="customer-feedback-for-sql-server-on-linux"></a>Commentaires des clients pour SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Par défaut, Microsoft SQL Server collecte des informations sur la façon dont ses clients utilisent l’application. Plus précisément, SQL Server recueille des données sur l’expérience d’installation, l’utilisation et les performances. Elles aident Microsoft à améliorer le produit pour mieux répondre aux besoins des clients. Par exemple, Microsoft collecte des informations sur les types de codes d’erreur rencontrés par les utilisateurs afin que nous puissions corriger les bogues associés, améliorer notre documentation sur l’utilisation de SQL Server et déterminer s’il faudrait ajouter des fonctionnalités au produit pour mieux servir des clients.
 
-Ce document fournit des détails sur les types d’informations sont collectées et explique comment configurer Microsoft SQL Server sur Linux pour envoyer ce collectées des informations à Microsoft. SQL Server 2017 inclut une déclaration de confidentialité qui explique les informations que nous faire et ne collectent pas d’utilisateurs. Pour plus d’informations, consultez la [déclaration de confidentialité de](http://go.microsoft.com/fwlink/?LinkID=868444).
+Ce document fournit des informations détaillées sur les types d’informations sont collectées et sur la façon de configurer Microsoft SQL Server sur Linux pour envoyer ce collectées des informations à Microsoft. SQL Server 2017 inclut une déclaration de confidentialité qui explique quelles informations nous et ne collectent pas d’utilisateurs. Pour plus d’informations, consultez le [déclaration de confidentialité](http://go.microsoft.com/fwlink/?LinkID=868444).
 
 En particulier, Microsoft n’envoie par ce mécanisme aucune information de ces types :
 
@@ -31,7 +31,7 @@ En particulier, Microsoft n’envoie par ce mécanisme aucune information de ces
 - identifiants d’ouverture de session ou autres informations d’authentification ;
 - informations d’identification personnelle (PII).
 
-SQL Server 2017 collecte et envoie toujours des informations sur l’expérience d’installation à partir du processus d’installation afin de nous permettre de trouver et de résoudre rapidement les problèmes d’installation que rencontre le client. SQL Server 2017 peut être configuré pour ne pas pour envoyer des informations (sur la base d’une instance par serveur) à Microsoft via **mssql-conf**. MSSQL-conf est un script de configuration qui est installé avec SQL Server 2017 pour Red Hat Enterprise Linux, SUSE Linux Enterprise Server et Ubuntu.
+SQL Server 2017 collecte et envoie toujours des informations sur l’expérience d’installation à partir du processus d’installation afin de nous permettre de trouver et de résoudre rapidement les problèmes d’installation que rencontre le client. SQL Server 2017 peut être configuré pour ne pas pour envoyer d’informations (sur la base d’une instance par serveur) à Microsoft via **mssql-conf**. MSSQL-conf est un script de configuration qui s’installe avec SQL Server 2017 pour Red Hat Enterprise Linux, SUSE Linux Enterprise Server et Ubuntu.
 
 > [!NOTE]
 > Vous ne pouvez désactiver l’envoi d’informations à Microsoft que dans les versions payantes de SQL Server.
@@ -41,11 +41,11 @@ SQL Server 2017 collecte et envoie toujours des informations sur l’expérience
 Cette option vous permet de modifier si SQL Server envoie des commentaires à Microsoft ou non. Par défaut, cette valeur est définie sur true. Pour modifier la valeur, exécutez les commandes suivantes :
 
 > [!IMPORTANT]
-> Vous ne pouvez pas désactiver les commentaires client gratuitement éditions de SQL Server, Express et Developer.
+> Vous ne pouvez pas désactiver les commentaires des clients gratuitement éditions de SQL Server, Express et Developer.
 
 ### <a name="on-red-hat-suse-and-ubuntu"></a>Sur Ubuntu, SUSE et Red Hat
 
-1. Exécutez le script mssql-conf en tant que racine avec le **définir** commande **telemetry.customerfeedback**. L’exemple suivant désactive les commentaires des clients en spécifiant **false**.
+1. Exécutez le script mssql-conf en tant que root avec la **définir** commande **telemetry.customerfeedback**. L’exemple suivant désactive les commentaires des clients en spécifiant **false**.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
@@ -69,7 +69,7 @@ Pour désactiver les commentaires des clients sur docker, vous devez disposer de
    ```bash
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
-2. Exécuter l’image de conteneur
+2. Exécuter l’image conteneur
    ```bash
    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
    ```
@@ -78,17 +78,17 @@ Pour désactiver les commentaires des clients sur docker, vous devez disposer de
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
    ```
    
-## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>Audit local pour SQL Server sur la Collection de commentaires de l’utilisation de Linux
+## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>Audit local pour SQL Server sur la collecte de commentaires d’utilisation de Linux
 
-Microsoft SQL Server 2017 contient des fonctionnalités Internet qui peuvent recueillir et envoyer des informations sur votre ordinateur ou appareil (« informations standard de l’ordinateur ») à Microsoft. Le composant d’Audit Local de la collection de commentaires sur l’utilisation de SQL Server peut écrire des données collectées par le service vers un dossier désigné, qui représente les données (journaux) qui peuvent être envoyées à Microsoft. L’objectif de l’audit local est d’autoriser les clients à visualiser toutes les données collectées par Microsoft avec cette fonctionnalité, pour des raisons de conformité, de réglementation ou de validation de la confidentialité.
+Microsoft SQL Server 2017 contient des fonctionnalités Internet qui peuvent recueillir et envoyer des informations sur votre ordinateur ou appareil (« informations standard de l’ordinateur ») à Microsoft. Le composant d’Audit Local de la collection de commentaires sur l’utilisation de SQL Server puisse écrire des données collectées par le service dans un dossier désigné, représentant les données (journaux) qui seront envoyées à Microsoft. L’objectif de l’audit local est d’autoriser les clients à visualiser toutes les données collectées par Microsoft avec cette fonctionnalité, pour des raisons de conformité, de réglementation ou de validation de la confidentialité.
 
-Dans SQL Server sur Linux, d’Audit Local est configurable au niveau de l’instance du moteur de base de données SQL Server. Autres composants SQL Server et les outils SQL Server ne possèdent pas de fonctionnalité de Local d’Audit pour la collecte de commentaires d’utilisation.
+Dans SQL Server sur Linux, l’Audit Local est configurable au niveau de l’instance du moteur de base de données SQL Server. Autres composants SQL Server et les outils SQL Server n’ont pas la fonctionnalité d’Audit Local pour la collecte de commentaires d’utilisation.
 
 ### <a name="enable-local-audit"></a>Activer l’Audit Local
 
-Cette option permet d’Audit Local et vous permet de définir le répertoire dans lequel les journaux d’Audit Local sont créés.
+Cette option permet l’Audit Local et vous permet de définir le répertoire dans lequel les journaux d’Audit Local sont créées.
 
-1. Créez un répertoire cible pour les nouveaux journaux d’Audit Local. L’exemple suivant crée un nouveau **/tmp/audit** active :
+1. Créez un répertoire cible pour les nouveaux journaux d’Audit Local. L’exemple suivant crée un nouveau **/tmp/audit** directory :
 
    ```bash
    sudo mkdir /tmp/audit
@@ -101,7 +101,7 @@ Cette option permet d’Audit Local et vous permet de définir le répertoire da
    sudo chgrp mssql /tmp/audit
    ```
 
-1. Exécutez le script mssql-conf en tant que racine avec le **définir** commande **telemetry.userrequestedlocalauditdirectory**:
+1. Exécutez le script mssql-conf en tant que root avec la **définir** commande **telemetry.userrequestedlocalauditdirectory**:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
@@ -114,9 +114,9 @@ Cette option permet d’Audit Local et vous permet de définir le répertoire da
    ```
    
 ### <a name="on-docker"></a>Sur Docker
-Pour activer l’Audit Local docker, vous devez disposer de Docker [conserver vos données](sql-server-linux-configure-docker.md). 
+Pour activer l’Audit Local sur docker, vous devez disposer de Docker [conserver vos données](sql-server-linux-configure-docker.md). 
 
-1. Le répertoire cible pour les nouveaux journaux d’Audit Local se trouve dans le conteneur. Créer un répertoire cible pour les nouveaux journaux d’Audit Local dans le répertoire de l’hôte sur votre ordinateur. L’exemple suivant crée un nouveau **/audit** active :
+1. Le répertoire cible pour les nouveaux journaux d’Audit Local sera dans le conteneur. Créez un répertoire cible pour les nouveaux journaux d’Audit Local dans le répertoire de l’hôte sur votre ordinateur. L’exemple suivant crée un nouveau **/ d’audit** directory :
 
    ```bash
    sudo mkdir <host directory>/audit
@@ -132,7 +132,7 @@ Pour activer l’Audit Local docker, vous devez disposer de Docker [conserver vo
    ```bash
    echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
    ```
-2. Exécuter l’image de conteneur
+2. Exécuter l’image conteneur
    ```bash
    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
    ```
