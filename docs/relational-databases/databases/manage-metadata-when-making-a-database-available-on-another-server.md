@@ -40,12 +40,12 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993951"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405912"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gérer les métadonnées lors de la mise à disposition d’une base de données sur un autre serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "37993951"
   
  **Pour créer une alerte WMI à l'aide de SQL Server Management Studio**  
   
--   [Créer une alerte d'événement WMI](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [Créer une alerte d'événement WMI](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>Fonctionnement des notifications d'événements pour une base de données miroir  
  La remise de notifications d'événements entre bases de données qui implique une base de données mise en miroir est distante, par définition, car la base de données mise en miroir peut basculer. [!INCLUDE[ssSB](../../includes/sssb-md.md)] assure une prise en charge spéciale des bases de données mises en miroir, sous la forme d' *itinéraires mis en miroir*. Un itinéraire mis en miroir possède deux adresses : celle de l'instance du serveur principal et celle de l'instance du serveur miroir.  
@@ -214,11 +214,11 @@ ms.locfileid: "37993951"
   
 -   Connexion utilisée par le travail  
   
-     Pour créer ou exécuter des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez d'abord ajouter toutes les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requises par le travail à l'instance du serveur de destination. Pour plus d’informations, consultez [Configurer un utilisateur de manière à créer et à gérer des travaux de l’Agent SQL Server](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef).  
+     Pour créer ou exécuter des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez d'abord ajouter toutes les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requises par le travail à l'instance du serveur de destination. Pour plus d’informations, consultez [Configurer un utilisateur de manière à créer et à gérer des travaux de l’Agent SQL Server](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-     Le compte de démarrage du service définit le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dans le contexte duquel l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute, ainsi que ses autorisations réseau. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute dans le contexte d'un compte d'utilisateur spécifié. Le contexte du service de l'Agent affecte les paramètres du travail et son environnement d'exécution. Le compte doit avoir accès aux ressources, telles que les partages réseau, requises par le travail. Pour plus d’informations sur la façon de sélectionner et de modifier le compte de démarrage du service, consultez [Sélectionner un compte pour le service SQL Server Agent](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7).  
+     Le compte de démarrage du service définit le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows dans le contexte duquel l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute, ainsi que ses autorisations réseau. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute dans le contexte d'un compte d'utilisateur spécifié. Le contexte du service de l'Agent affecte les paramètres du travail et son environnement d'exécution. Le compte doit avoir accès aux ressources, telles que les partages réseau, requises par le travail. Pour plus d’informations sur la façon de sélectionner et de modifier le compte de démarrage du service, consultez [Sélectionner un compte pour le service SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
   
      Le bon fonctionnement du compte de démarrage du service repose sur une configuration correcte du domaine, du système de fichiers et des autorisations de Registre. Qui plus est, un travail peut nécessiter une ressource réseau partagée qui doit être configurée pour le compte du service. Pour plus d’informations, consultez [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -229,35 +229,35 @@ ms.locfileid: "37993951"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proxys d’Agent  
   
-     Un proxy d'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit le contexte de sécurité d'une étape de travail spécifiée. L'exécution d'un travail sur l'instance du serveur de destination implique la recréation manuelle de tous les proxys nécessaires sur cette instance. Pour plus d’informations, consultez [Créer un proxy d’Agent SQL Server](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988) et [Résoudre les problèmes liés aux travaux multiserveurs qui utilisent des proxys](http://msdn.microsoft.com/library/fc579bd3-010c-4f72-8b5c-d0cc18a1f280).  
+     Un proxy d'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit le contexte de sécurité d'une étape de travail spécifiée. L'exécution d'un travail sur l'instance du serveur de destination implique la recréation manuelle de tous les proxys nécessaires sur cette instance. Pour plus d’informations, consultez [Créer un proxy d’Agent SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md) et [Résoudre les problèmes liés aux travaux multiserveurs qui utilisent des proxys](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md).  
   
  Pour plus d'informations, consultez également :  
   
--   [Implémenter des travaux](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+-   [Implémenter des travaux](../../ssms/agent/implement-jobs.md)  
   
 -   [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (pour la mise en miroir de bases de données)  
   
 -   [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (quand vous installez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Configurer l’Agent SQL Server](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) (quand vous installez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Configurer l’Agent SQL Server](../../ssms/agent/configure-sql-server-agent.md) (quand vous installez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Implémenter la sécurité de l'Agent SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+-   [Implémenter la sécurité de l'Agent SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
   
  **Pour afficher des travaux existants et leurs propriétés**  
   
--   [Surveiller l'activité des travaux](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+-   [Surveiller l'activité des travaux](../../ssms/agent/monitor-job-activity.md)  
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [Afficher des informations sur une étape de travail](http://msdn.microsoft.com/library/e3f06492-dc86-4e06-b186-ea58aff6d591)  
+-   [Afficher des informations sur une étape de travail](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **Pour créer un travail**  
   
--   [Créer un travail](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Créer un travail](../../ssms/agent/create-a-job.md)  
   
--   [Créer un travail](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Créer un travail](../../ssms/agent/create-a-job.md)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>Meilleures pratiques pour utiliser un script afin de recréer un travail  
  Nous vous conseillons de commencer par générer le script d'un travail simple, en recréant le travail sur l'autre service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent et en exécutant le travail pour vérifier qu'il fonctionne comme prévu. Vous pourrait ainsi identifier les incompatibilités éventuelles et essayer de les résoudre. Si un travail faisant l'objet d'un script ne fonctionne pas comme prévu dans son nouvel environnement, nous vous conseillons de créer un travail équivalent qui fonctionne correctement dans cet environnement.  

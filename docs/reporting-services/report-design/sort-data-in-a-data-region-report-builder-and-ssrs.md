@@ -1,7 +1,7 @@
 ---
 title: Trier des données dans une région de données (Générateur de rapports et SSRS)| Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 642d8f6d08c21daa478bbc159b2fe71461ba0391
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df797c994e76d7dd816cd041d3b59cb9d14af052
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026996"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405319"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Trier des données dans une région de données (Générateur de rapports et SSRS)
   Pour changer l'ordre de tri des données dans une région de données à la première exécution d'un rapport, vous devez définir l'expression de tri sur le groupe ou la région de données. Par défaut, l'expression de tri d'un groupe a automatiquement la même valeur que l'expression de groupe.  
@@ -131,7 +131,6 @@ ms.locfileid: "33026996"
  Pour plus d’informations sur la façon dont les données sont regroupées dans une jauge, consultez [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  

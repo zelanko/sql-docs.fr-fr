@@ -20,18 +20,18 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9ffd3813cef86b31c439981ab03aa318b152620c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984501"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409373"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx).
 
-Microsoft SQL Server 2016 Express **LocalDB** est une fonctionnalité de [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) destinée aux développeurs. Elle est disponible dans Microsoft SQL Server 2016 Express with Advanced Services.  
+Microsoft SQL Server 2016 Express **LocalDB** est une fonctionnalité de [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) destinée aux développeurs. Elle est disponible dans Microsoft SQL Server 2016 Express with Advanced Services.  
 
  L'installation de**LocalDB** copie l'ensemble minimal des fichiers nécessaires pour démarrer le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Une fois LocalDB installé, vous pouvez lancer une connexion à l’aide d’une chaîne de connexion particulière. Lors de la connexion, l’infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessaire est créée et démarrée automatiquement, ce qui permet à l’application d’utiliser la base de données sans tâches de configuration complexes. Les outils de développement incluent un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui permet aux développeurs d'écrire et de tester le code [!INCLUDE[tsql](../../includes/tsql-md.md)] sans devoir gérer une instance de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]complète. 
  

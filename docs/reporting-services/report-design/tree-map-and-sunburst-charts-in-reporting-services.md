@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 106d85def85002e9cb917cf3cc9be7ac55c57ee4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002937"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406604"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Graphiques de compartimentage et en rayons de soleil dans Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -115,7 +115,7 @@ Dans un graphique en rayons de soleil, la hiérarchie est représentée par une 
   
   
 ##  <a name="bkmk_sample_data"></a> Échantillon de données Adventureworks  
- Cette section présente un exemple de requête et les étapes de base pour la création d’une source de données et d’un jeu de données dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Si votre rapport contient déjà une source de données et le jeu de données, vous pouvez ignorer cette section.  
+ Cette section présente un exemple de requête et les étapes de base pour la création d’une source de données et d’un jeu de données dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Si votre rapport contient déjà une source de données et le jeu de données, vous pouvez ignorer cette section.  
   
  La requête retourne des données de détail des ventes d’AdventureWorks par secteur de vente, catégorie de produit, sous-catégorie de produit et motif de vente.  
   

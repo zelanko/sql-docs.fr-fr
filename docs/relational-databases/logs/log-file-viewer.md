@@ -16,12 +16,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44f5ed33bef9ff57e6bc0c4262a950069ec5b480
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e67df0aaf68041d0eb8bb5a12e1054e432a48557
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942144"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406620"
 ---
 # <a name="log-file-viewer"></a>Visionneuse du fichier journal
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,6 +58,6 @@ ms.locfileid: "32942144"
   
 ## <a name="see-also"></a> Voir aussi  
  [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
- [Journal des erreurs de l'Agent SQL Server](http://msdn.microsoft.com/library/0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41)  
+ [Journal des erreurs de l'Agent SQL Server](../../ssms/agent/sql-server-agent-error-log.md)  
   
   

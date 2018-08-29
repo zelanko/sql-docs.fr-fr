@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2e826686c4b6fd42d8d5ba7755fa2d4cb8d0f3e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9c2edfdfde4bf02097e9a4470e21cbefd68aa2f3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331473"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410037"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Utilisation de fichiers Excel avec la tâche de script
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit le gestionnaire de connexions Excel, la source Excel et la destination Excel pour utiliser des données stockées dans des feuilles de calcul au format de fichier [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Les techniques décrites dans cette rubrique utilisent la tâche de script pour obtenir des informations sur les bases de données (fichiers de classeur) et tables (feuilles de calcul et plages nommées) Excel disponibles.
@@ -69,7 +69,7 @@ ms.locfileid: "35331473"
   
 4.  **Références**. Les exemples de code qui lisent des informations de schéma à partir de fichiers Excel requièrent une référence supplémentaire dans le projet de script à l’espace de noms **System.Xml**.  
   
-5.  Définissez le langage de script par défaut du composant Script en utilisant l’option **Langage de script** dans la page **Général** de la boîte de dialogue **Options**. Pour plus d'informations, consultez [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+5.  Définissez le langage de script par défaut du composant Script en utilisant l’option **Langage de script** dans la page **Général** de la boîte de dialogue **Options**. Pour plus d'informations, consultez [General Page](../general-page-of-integration-services-designers-options.md).  
   
 ##  <a name="example1"></a> Description de l’exemple 1 : vérifier si un fichier Excel existe  
  Cet exemple détermine si le fichier de classeur Excel spécifié dans la variable `ExcelFile` existe, puis définit la valeur booléenne de la variable `ExcelFileExists` sur le résultat. Vous pouvez utiliser cette valeur booléenne pour créer une branche dans le flux de travail du package.  

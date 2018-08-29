@@ -19,12 +19,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a49117cfe2bb24b4a5f47f22c9bff9e1afb9910
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbfb5af92127ab9d08d3bfabcb589250d748f1d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32924834"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406616"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurer la messagerie de l'Agent SQL Server en vue de l'utilisation de la messagerie de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,11 +77,11 @@ ms.locfileid: "32924834"
 ##  <a name="Follow_Up"></a> Tâches de suivi  
  Les tâches suivantes sont nécessaires pour terminer la configuration de l'Agent pour envoyer des alertes et des notifications.  
   
--   [Alertes](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)  
+-   [Alertes](../../ssms/agent/alerts.md)  
   
      Les alertes peuvent être configurées pour notifier à un opérateur une situation du système d'exploitation ou un événement de base de données particuliers.  
   
--   [Opérateurs](http://msdn.microsoft.com/library/38e8488f-2669-4cea-b9c3-5f394a663678)  
+-   [Opérateurs](../../ssms/agent/operators.md)  
   
      Les opérateurs sont des alias pour les personnes ou les groupes qui peuvent recevoir une notification électronique  
   

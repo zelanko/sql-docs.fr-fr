@@ -17,15 +17,15 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2b42df295abda51349793a4db8697ab03cb3cd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c77179704548ef164d61dae18bb311704247768c
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036956"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405907"
 ---
 # <a name="tutorial-introducing-expressions"></a>Didacticiel : introduction aux expressions
-Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , vous utilisez des expressions avec des opérateurs et des fonctions communes pour créer des rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] puissants et flexibles. 
+Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , vous utilisez des expressions avec des opérateurs et des fonctions communes pour créer des rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] puissants et flexibles. 
 
 Vous allez écrire des expressions qui concatènent des valeurs de noms, qui recherchent des valeurs dans un autre dataset, qui affichent différentes couleurs en fonction des valeurs de champ, etc.  
   

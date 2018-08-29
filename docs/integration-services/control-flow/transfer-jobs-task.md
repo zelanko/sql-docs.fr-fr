@@ -20,12 +20,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c06201f3c1512fb45f249983b24a275aaff4377
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 9ec3fc9e003b502d56725871920229f71dfd8f4a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409601"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406060"
 ---
 # <a name="transfer-jobs-task"></a>Tâche de transfert de travaux
   La tâche de transfert de travaux transfère un ou plusieurs travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "35409601"
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferJobsTask.TransferJobsTask>  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
 -   [Définir les propriétés d'une tâche ou d'un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
@@ -83,7 +83,7 @@ ms.locfileid: "35409601"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de travaux** pour donner un nom et une description à la tâche de transfert de travaux.  
   
 > [!NOTE]  
->  Seuls les membres du rôle serveur fixe **sysadmin** ou l'un des rôles de base de données fixe de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur de destination peuvent y créer des travaux. Pour accéder à des travaux sur le serveur source, les utilisateurs doivent au moins y être membres du rôle de base de données fixe **SQLAgentUserRole** . Pour plus d’informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôles de base de données fixe de l’Agent et leurs autorisations, consultez [Rôles de base de données fixe de l’Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+>  Seuls les membres du rôle serveur fixe **sysadmin** ou l'un des rôles de base de données fixe de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur de destination peuvent y créer des travaux. Pour accéder à des travaux sur le serveur source, les utilisateurs doivent au moins y être membres du rôle de base de données fixe **SQLAgentUserRole** . Pour plus d’informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôles de base de données fixe de l’Agent et leurs autorisations, consultez [Rôles de base de données fixe de l’Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ### <a name="options"></a>Options  
  **Nom**  
@@ -99,7 +99,7 @@ ms.locfileid: "35409601"
   Utilisez la page **Travaux** de la boîte de dialogue **Éditeur de tâche de transfert de travaux** pour spécifier les propriétés de copie d’un ou plusieurs travaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à une autre.  
   
 > [!NOTE]  
->  Pour accéder à des travaux sur le serveur source, les utilisateurs doivent au moins y être membres du rôle de base de données fixe **SQLAgentUserRole** . Pour créer des travaux sur le serveur de destination, l’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou de l’un des rôles de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour plus d’informations sur les rôles de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent et leurs autorisations, consultez [Rôles de base de données fixe de l’Agent SQL Server](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+>  Pour accéder à des travaux sur le serveur source, les utilisateurs doivent au moins y être membres du rôle de base de données fixe **SQLAgentUserRole** . Pour créer des travaux sur le serveur de destination, l’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou de l’un des rôles de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour plus d’informations sur les rôles de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent et leurs autorisations, consultez [Rôles de base de données fixe de l’Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ### <a name="options"></a>Options  
  **SourceConnection**  

@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c05923ff7be5c1264f5801c1190c7297ea793b55
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d67c538bb27eddd84ee7b254fd1beec8f22ed
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948394"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405916"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Créer un plan de maintenance (aire de conception de plan de maintenance)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "32948394"
      Affiche la boîte de dialogue **Création de rapport et enregistrement** . Pour plus d'informations sur cette boîte de dialogue, voir ci-dessous.  
   
      **Serveurs**  
-     Affichez la boîte de dialogue **Serveurs** qui permet de sélectionner les serveurs où sont exécutées les tâches du sous-plan. Cette option est activée uniquement sur des serveurs maîtres dans des environnements multiserveurs. Pour plus d’informations, consultez [Créer un environnement multiserveur](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6) et [Plan de maintenance &#40;Serveurs&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
+     Affichez la boîte de dialogue **Serveurs** qui permet de sélectionner les serveurs où sont exécutées les tâches du sous-plan. Cette option est activée uniquement sur des serveurs maîtres dans des environnements multiserveurs. Pour plus d’informations, consultez [Créer un environnement multiserveur](../../ssms/agent/create-a-multiserver-environment.md) et [Plan de maintenance &#40;Serveurs&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
   
      **Nom**  
      Affichez le nom du plan de maintenance. Pour les nouveaux plans de maintenance, le nom est spécifié dans une boîte de dialogue avant l'ouverture du concepteur de plan de maintenance. Pour renommer un plan de maintenance, cliquez dessus avec le bouton droit dans l’Explorateur d’objets, puis cliquez sur **Renommer**.  

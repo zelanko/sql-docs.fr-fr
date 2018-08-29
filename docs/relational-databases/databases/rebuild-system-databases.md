@@ -21,12 +21,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bc4b141721417b3097dc9142e2f47404021f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ae2466902ae6cd60a69687b33aab38fc6a72fd5
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932941"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405644"
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ ms.locfileid: "32932941"
 > [!WARNING]  
 >  La reconstruction de la base de données **msdb** à l’aide du script **instmsdb** élimine toutes les informations stockées dans **msdb** telles que les travaux, l’alerte, les opérateurs, les plans de maintenance, l’historique de sauvegarde, les paramètres de gestion basée sur des stratégies, la messagerie de base de données, l’entrepôt de données des performances, etc.  
   
-1.  Arrêtez tous les services qui établissent des connexions au [!INCLUDE[ssDE](../../includes/ssde-md.md)], dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]et toutes les applications qui utilisent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que banque de données.  
+1.  Arrêtez tous les services qui établissent des connexions au [!INCLUDE[ssDE](../../includes/ssde-md.md)], dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]et toutes les applications qui utilisent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que banque de données.  
   
 2.  Démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la ligne de commande à l'aide de la commande : `NET START MSSQLSERVER /T3608`  
   

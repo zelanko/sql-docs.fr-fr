@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 19844b1f626177e2a49144963f2f185565a86213
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769915"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405643"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services avec les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "34769915"
   
 -   **Mode SharePoint :** utilisez les pages de configuration de SharePoint dans les bibliothèques de documents pour les rapports qui sont déjà publiés sur un serveur SharePoint.  
   
--   **Conception de rappouts :** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new repouts. Pour plus d'informations, consultez la section « Conception de rapports », plus loin dans cette rubrique.  
+-   **Conception de rappouts :** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new repouts. Pour plus d'informations, consultez la section « Conception de rapports », plus loin dans cette rubrique.  
   
  **Ressources supplémentaires :**  
   
@@ -112,11 +112,11 @@ ms.locfileid: "34769915"
  Lors de l'utilisation d'un réplica secondaire en lecture seule en tant que source de données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , il est important de veiller à ce que la latence de mise à jour des données corresponde aux besoins des utilisateurs de rapports.  
   
 ##  <a name="bkmk_reportdesign"></a> Conception de rapports et groupes de disponibilité  
- Lors de la conception de rapports dans [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] ou d'un projet de rapport dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], un utilisateur peut configurer une chaîne de connexion de source de données de rapport afin qu'elle contienne les nouvelles propriétés de connexion fournies par [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. La prise en charge des nouvelles propriétés de connexion varie selon l'endroit où un utilisateur affiche un aperçu du rapport.  
+ Lors de la conception de rapports dans [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] ou d'un projet de rapport dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], un utilisateur peut configurer une chaîne de connexion de source de données de rapport afin qu'elle contienne les nouvelles propriétés de connexion fournies par [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. La prise en charge des nouvelles propriétés de connexion varie selon l'endroit où un utilisateur affiche un aperçu du rapport.  
   
--   **Aperçu local :** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] et de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 et de support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
+-   **Aperçu local :** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] et de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 et de support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
--   **Aperçu en mode distant ou serveur :** si, après avoir publié des rapports sur le serveur de rapports ou utilisé l'aperçu dans [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)], vous voyez une erreur similaire à celle qui suit, cela signifie que vous affichez un aperçu des rapports sur le serveur de rapports et que le correctif .Net Framework 3.5 SP1 pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] n'a pas été installé sur le serveur de rapports.  
+-   **Aperçu en mode distant ou serveur :** si, après avoir publié des rapports sur le serveur de rapports ou utilisé l'aperçu dans [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], vous voyez une erreur similaire à celle qui suit, cela signifie que vous affichez un aperçu des rapports sur le serveur de rapports et que le correctif .Net Framework 3.5 SP1 pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] n'a pas été installé sur le serveur de rapports.  
   
 > **Message d'erreur :** « Mot clé non pris en charge : applicationintent. »  
   

@@ -18,11 +18,12 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d74d77229e88e04c2d661da827b4d6183ab2d2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 070b34a724914147f87f48df00a1e5778695e3a5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405418"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>Configurer des alertes afin d'informer les administrateurs de stratégie en cas d'échec de stratégie
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +38,13 @@ ms.lasthandoff: 05/03/2018
   
  Pour configurer une alerte en réponse aux messages d'erreur de la Gestion basée sur des stratégies, consultez les rubriques suivantes :  
   
--   [Créer un opérateur](http://msdn.microsoft.com/library/1359d790-5905-4927-a208-e7155e7768a2)  
+-   [Créer un opérateur](../../ssms/agent/create-an-operator.md)  
   
--   [Créer une alerte utilisant un numéro d'erreur](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [Créer une alerte utilisant un numéro d'erreur](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Affecter des alertes à un opérateur](http://msdn.microsoft.com/library/aa818155-6fa2-4565-a09f-5c7e31c89754)  
+-   [Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Lorsque des stratégies sont évaluées à la demande, elles s'exécutent dans le contexte de sécurité de l'utilisateur. Pour écrire dans le journal des erreurs, l'utilisateur doit posséder l'autorisation ALTER TRACE ou être membre du rôle serveur fixe sysadmin. Les stratégies évaluées par un utilisateur qui dispose de moins de privilèges n'écrivent pas dans le journal des événements et ne déclenchent pas d'alerte.  
   
  Les modes d'exécution automatisés s'exécutent comme membre du rôle sysadmin. Cela permet à la stratégie d'écrire dans le journal des erreurs et de déclencher une alerte.  

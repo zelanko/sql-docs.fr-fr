@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e4aaea407128642cb8ce9e8696eac0236cd60379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f1a83936f219fb95e03554383f6374b9f696f47
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015636"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406525"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Implémentation d'une extension pour le traitement des données
   Les extensions pour le traitement des données dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vous permettent de vous connecter à une source de données et de récupérer des données. Elles servent également de pont entre une source de données et un dataset Les extensions pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sont basées sur un sous-ensemble des interfaces de fournisseur de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
@@ -59,9 +59,6 @@ ms.locfileid: "33015636"
   
  [Débogage du code des extensions pour le traitement des données](../../../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md)  
  Décrit comment déboguer le code dans vos extensions pour le traitement des données.  
-  
- [Suppression d’une extension pour le traitement des données](../../../reporting-services/extensions/data-processing/removing-a-data-processing-extension.md)  
- Décrit comment supprimer une extension pour le traitement des données d'un serveur de rapports ou d'un Concepteur de rapports.  
   
  Pour un exemple d’extension pour le traitement des données totalement implémentée, consultez [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
   

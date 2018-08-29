@@ -29,19 +29,19 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32fbe22707d4704b29195fd88098b94a4ee2d968
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 54b456761b7a2055f7eb52e95abf7e6dacba182f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350341"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405420"
 ---
 # <a name="replication-agents-overview"></a>Présentation des Agents de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La réplication utilise une série de programmes indépendants, appelés Agents, pour effectuer les tâches associées au suivi des modifications et à la distribution des données. Par défaut, les Agents de réplication s'exécutent comme des travaux planifiés sous [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent doit être démarré pour que ces travaux puissent s'exécuter. Les Agents de réplication peuvent être également exécutés à partir de la ligne de commande et par des applications qui utilisent des Replication Management Objects. Les Agents de réplication peuvent être administrés à partir du moniteur de réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="sql-server-agent"></a>SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent héberge et planifie les Agents utilisés dans le cadre de la réplication, en plus d'offrir un moyen simple d'exécuter les Agents de réplication. Par ailleurs,[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent contrôle et analyse les opérations qui ne relèvent pas de la réplication. Pour plus d’informations, consultez [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent héberge et planifie les Agents utilisés dans le cadre de la réplication, en plus d'offrir un moyen simple d'exécuter les Agents de réplication. Par ailleurs,[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent contrôle et analyse les opérations qui ne relèvent pas de la réplication. Pour plus d’informations, consultez [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md).  
   
 > [!IMPORTANT]  
 >  Par défaut, le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent est désactivé lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sauf si vous choisissez explicitement de démarrer automatiquement le service au cours de l'installation. Pour plus d'informations sur le démarrage du service de l'agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [Start, Stop, or Pause the SQL Server Agent Service](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c).  

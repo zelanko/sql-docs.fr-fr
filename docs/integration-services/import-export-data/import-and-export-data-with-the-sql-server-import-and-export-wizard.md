@@ -27,16 +27,16 @@ caps.latest.revision: 160
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c97ea19edfb53ddbf09316fa61f0ad6f97743cf6
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4284526fac130ede0cf85ef0c02ca9d0487b2554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402141"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409376"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server
 
- > Pour accéder au contenu associé aux versions précédentes de SQL Server, consultez [Exécuter l’Assistant Importation et Exportation SQL Server](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx).
+ > Pour accéder au contenu associé aux versions précédentes de SQL Server, consultez [Exécuter l’Assistant Importation et Exportation SQL Server](start-the-sql-server-import-and-export-wizard.md).
 
  La fonction de l’Assistant Importation et Exportation[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est de copier simplement des données d’une source vers une destination. Cette présentation décrit les sources de données que l’Assistant peut utiliser en tant que sources et destinations, ainsi que les autorisations nécessaires à l’exécution de l’Assistant.
 

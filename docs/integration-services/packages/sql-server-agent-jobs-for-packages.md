@@ -19,12 +19,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bac74e291dbaddb45662610abfb0681d1b144ae9
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 454daed366316554c181249414dd899d5d02c836
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405151"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406509"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Travaux de l'Agent SQL Server pour les packages
   Automatisez et planifiez l’exécution des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Vous pouvez planifier les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et sont stockés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
@@ -121,7 +121,7 @@ ms.locfileid: "35405151"
   
 6.  Pour le type d'étape de travail, sélectionnez **Package Integration Services** .  
   
-7.  Dans la liste **Exécuter en tant que** , sélectionnez **Compte de service SQL Server Agent** ou sélectionnez un compte proxy ayant les informations d'identification qui seront utilisées par le travail. Pour plus d'informations sur la création d'un compte proxy, consultez [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+7.  Dans la liste **Exécuter en tant que** , sélectionnez **Compte de service SQL Server Agent** ou sélectionnez un compte proxy ayant les informations d'identification qui seront utilisées par le travail. Pour plus d'informations sur la création d'un compte proxy, consultez [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
      En utilisant un compte proxy au lieu du **Compte de service SQL Server Agent** , vous pouvez résoudre les problèmes courants qui peuvent se produire lors de l'exécution d'un package à l'aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour plus d’informations sur ces problèmes, consultez l’article de la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] intitulé [Un package SSIS n’est pas exécuté lorsque vous appelez le package SSIS à partir d’une étape de travail de SQL Server Agent](http://support.microsoft.com/kb/918760).  
   
@@ -188,7 +188,7 @@ ms.locfileid: "35405151"
     >   
     >  L'environnement serveur qui contient la variable n'est pas sélectionné dans la zone de liste de l'onglet **Configuration** .  
   
-10. Pour créer une planification pour une étape de travail, cliquez sur **Planifications** dans le volet **Sélectionner une page** . Pour plus d'informations sur la manière de configurer une planification, consultez [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c).  
+10. Pour créer une planification pour une étape de travail, cliquez sur **Planifications** dans le volet **Sélectionner une page** . Pour plus d'informations sur la manière de configurer une planification, consultez [Schedule a Job](../../ssms/agent/schedule-a-job.md).  
   
     > [!TIP]  
     >  Lorsque vous nommez la planification, utilisez un nom unique et un descriptif, pour différencier plus facilement la planification des autres planifications de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

@@ -15,16 +15,16 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ead61697c2db5bc574699ac460584225564e5774
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c042f48873cec072e5aac7d48509244975e4ce2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332703"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406489"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Leçon 1 : Créer un projet et un package de base avec SSIS
 
- > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Leçon 1 : Création du package de base et du package du projet](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx).
+ > Pour accéder au contenu relatif aux versions précédentes de SQL Server, consultez [Leçon 1 : Création du package de base et du package du projet](lesson-1-create-a-project-and-basic-package-with-ssis.md).
 
 Au cours de cette leçon, vous allez créer un package ETL simple qui extrait des données d'une seule source de fichier plat, transforme ces données en utilisant deux composants de transformation de recherche et les écrit dans la table de faits **FactCurrency** de la base de données **AdventureWorksDW2012**. Dans le cadre de cette leçon, vous allez apprendre à créer de nouveaux packages, ajouter et configurer des sources de données et des destinations et enfin, à utiliser le nouveau flux de contrôle et les composants de flux de données.  
   
@@ -72,28 +72,28 @@ L'analyse du format des données sources et de destination indique que des reche
 |Colonne de fichier plat|Nom de la table|Nom de la colonne|Type de données|  
 |--------------------|--------------|---------------|-------------|  
 |0|FactCurrency|AverageRate|float|  
-| 1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
+|1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|Date|  
 |3|FactCurrency|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
 Cette leçon contient les tâches suivantes :  
   
--   [Étape 1 : Création d'un nouveau projet Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [Étape 1 : Création d’un projet Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Étape 2 : ajout et configuration d'un gestionnaire de connexions de fichiers plats](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Étape 2 : Ajout et configuration d’un gestionnaire de connexions de fichiers plats](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Étape 3 : ajout et configuration d'un gestionnaire de connexions OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Étape 3 : Ajout et configuration d’un gestionnaire de connexions OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Étape 4 : ajout d'une tâche de flux de données au package](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Étape 4 : Ajout d’une tâche de flux de données au package](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [Étape 5 : Ajout et configuration de la source de fichier plat](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
 -   [Étape 6 : Ajout et configuration des transformations de recherche](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Étape 7 : ajout et configuration de la destination OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [Étape 7 : Ajout et configuration de la destination OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Étape 8 : comment rendre le package de la leçon 1 plus facile à assimiler](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Étape 8 : Rendre le package de la leçon 1 plus facile à comprendre](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 -   [Étape 9 : Test de la leçon 1 du Package du didacticiel](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   

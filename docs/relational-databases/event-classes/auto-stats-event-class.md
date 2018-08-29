@@ -1,5 +1,26 @@
-title: "Auto Stats, classe d’événements | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: sql ms.reviewer: "" ms.suite: "sql" ms.technology: supportability ms.tgt_pltfrm: "" ms.topic: conceptual helpviewer_keywords: 
-  - "Auto Stats, classe d’événements" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "stevestein" ms.author: "sstein" manager: craigg
+---
+title: Auto Stats, classe d’événements | Microsoft Docs
+ms.custom: ''
+ms.date: 03/14/2017
+ms.prod: sql
+ms.reviewer: ''
+ms.suite: sql
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Auto Stats event class
+ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
+caps.latest.revision: 34
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 24ab2577ca22083c298b6f5b5099aee2a96b59c2
+ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40406697"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +57,7 @@ title: "Auto Stats, classe d’événements | Microsoft Docs" ms.custom: "" ms.d
 |**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |**Réussi**|**Int**|0 = erreur<br /><br /> 1 = réussite.<br /><br /> 2 = ignoré en raison de l'accélération du serveur (MSDE).|23|Oui|  
-|**TextData**|**ntext**|Le contenu de cette colonne dépend si les statistiques sont mises à jour de façon synchrone (**EventSubClass** 1) ou asynchrone (**EventSubClass** 2, 3 ou 4) :<br /><br /> 1 : Affiche les statistiques qui ont été mises à jour/créées.<br /><br /> 2, 3 ou 4 : NULL ; la colonne **IndexID** contient les ID d’index ou de statistiques des statistiques mises à jour.| 1|Oui|  
+|**TextData**|**ntext**|Le contenu de cette colonne dépend si les statistiques sont mises à jour de façon synchrone (**EventSubClass** 1) ou asynchrone (**EventSubClass** 2, 3 ou 4) :<br /><br /> 1 : Affiche les statistiques qui ont été mises à jour/créées.<br /><br /> 2, 3 ou 4 : NULL ; la colonne **IndexID** contient les ID d’index ou de statistiques des statistiques mises à jour.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |**Type**|**Int**|Type du travail.|57|Oui|  
   

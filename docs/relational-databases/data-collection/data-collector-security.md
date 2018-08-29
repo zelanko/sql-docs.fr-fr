@@ -17,19 +17,19 @@ caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7983692ff403f5d6330e3c4fc2169ee35d813125
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 34298ca95d57673ff8dd60af5a133f7106fa3834
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145470"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405784"
 ---
 # <a name="data-collector-security"></a>Sécurité du collecteur de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Le collecteur de données utilise le modèle de sécurité basée sur les rôles implémenté par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce modèle permet à l'administrateur de base de données d'exécuter les différentes tâches du collecteur de données dans un contexte de sécurité qui ne dispose que des autorisations requises pour effectuer ces tâches. Cette méthode est également utilisée pour les opérations qui impliquent des tables internes, uniquement accessibles à l'aide d'une procédure stockée ou d'une vue. Aucune autorisation n'est accordée aux tables internes. En revanche, il est procédé à une vérification des autorisations de l'utilisateur de la procédure stockée ou de la vue utilisée pour accéder à une table.  
   
 > [!IMPORTANT]  
->  Les autorisations concentriques constituent un autre aspect clé de ce modèle de sécurité. Dans le cadre des autorisations concentriques, les rôles les plus privilégiés héritent des autorisations des rôles les moins privilégiés sur des objets (notamment les alertes, les opérateurs, les travaux, les planifications et les proxys). Pour plus d'informations, consultez [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+>  Les autorisations concentriques constituent un autre aspect clé de ce modèle de sécurité. Dans le cadre des autorisations concentriques, les rôles les plus privilégiés héritent des autorisations des rôles les moins privilégiés sur des objets (notamment les alertes, les opérateurs, les travaux, les planifications et les proxys). Pour plus d'informations, consultez [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  Les sections suivantes offrent une description générale de la sécurité de la collecte de données, ainsi que des rôles que vous devez attribuer aux utilisateurs pour qu'ils puissent configurer et utiliser le collecteur de données, et effectuer des tâches associées à l'entrepôt de données de gestion.  
   
@@ -149,6 +149,6 @@ ms.locfileid: "33145470"
  Les membres du rôle **mdw_reader** disposent d’un accès en lecture à l’entrepôt de données de gestion. Comme ce rôle a pour but de prendre en charge la résolution de problèmes en fournissant l'accès aux données historiques, les membres de ce rôle ne peuvent pas consulter les autres éléments du schéma de l'entrepôt de données de gestion.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Implémenter la sécurité de l'Agent SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+ [Implémenter la sécurité de l'Agent SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

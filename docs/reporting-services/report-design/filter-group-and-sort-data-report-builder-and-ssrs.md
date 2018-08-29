@@ -1,7 +1,7 @@
 ---
 title: Filtrer, regrouper et trier des données (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -24,12 +24,12 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c2173ba773d10cb443c3c8b973cd64cd453ce567
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11081d98ab0f182e81a499b9222c15f3cf979141
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027366"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405550"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrer, regrouper et trier des données (Générateur de rapports et SSRS)
   Dans un rapport, les expressions sont utilisées pour aider à contrôler, organiser et trier les données de rapport. Par défaut, lorsque vous créez des datasets et concevez la mise en page de rapport, les propriétés des éléments de rapport prennent automatiquement la valeur d'expressions en fonction des champs, paramètres et autres éléments de dataset qui s'affichent dans le volet des données de rapport. Vous pouvez également ajouter un bouton de tri interactif à une cellule de tableau ou de matrice afin de permettre à un utilisateur de modifier interactivement l'ordre de tri des lignes pour des groupes ou pour des lignes situées dans des groupes.  
@@ -119,7 +119,7 @@ ms.locfileid: "33027366"
 ### <a name="sorting-data-in-a-dataset-query"></a>Tri des données dans une requête de dataset  
  Incluez l'ordre de tri dans la requête de dataset afin de pré-trier les données avant leur extraction pour un rapport. Le tri des données dans la requête est effectué par la source de données et non pas par le processeur de rapports.  
   
- Pour une source de données de type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez ajouter une clause ORDER BY à la requête de dataset. Par exemple, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante trie les colonnes Sales et Region by Sales dans la table SalesOrders par ordre décroissant : `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Pour plus d'informations, consultez la rubrique relative au tri des lignes à l'aide de ORDER BY dans la [documentation en ligne de SQL Server](http://go.microsoft.com/fwlink/?linkid=98335).  
+ Pour une source de données de type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez ajouter une clause ORDER BY à la requête de dataset. Par exemple, la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante trie les colonnes Sales et Region by Sales dans la table SalesOrders par ordre décroissant : `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`.  
   
 > [!NOTE]  
 >  Toutes les sources de données ne permettent pas de spécifier l'ordre de tri dans la requête.  
