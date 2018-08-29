@@ -2,7 +2,7 @@
 title: Exécutez l’Assistant Migration des données à partir de la ligne de commande (SQL Server) | Microsoft Docs
 description: Découvrez comment exécuter l’Assistant Migration des données à partir de la ligne de commande pour évaluer les bases de données SQL Server pour la migration
 ms.custom: ''
-ms.date: 08/18/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b1435aa321d4bebbfd2747dbb634845eeeb6e137
-ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
+ms.openlocfilehash: 4d4e178247f80cc9b953f093a401b25dfd13e73e
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40392799"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152700"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Exécutez l’Assistant Migration des données à partir de la ligne de commande
 Avec la version 2.1 et versions ultérieures, lorsque vous installez Data Migration Assistant, il installe également dmacmd.exe dans *% ProgramFiles%\\Microsoft Data Migration Assistant\\*. Utilisez dmacmd.exe pour évaluer vos bases de données en mode sans assistance et renvoyer le résultat au fichier JSON ou CSV. Cette méthode est particulièrement utile lors de l’évaluation de plusieurs bases de données ou des bases de données énormes. 

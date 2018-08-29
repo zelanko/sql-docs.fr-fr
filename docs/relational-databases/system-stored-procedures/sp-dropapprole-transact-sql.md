@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropapprole
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 56752702ef62ad4afae65bf2a935757e72c189d8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a041006f5d3ddd0524affa3455313ead98468dab
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047204"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034522"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +56,7 @@ sp_dropapprole [@rolename = ] 'role'
   
  **sp_dropapprole** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation ALTER ANY APPLICATION ROLE sur la base de données.  
   
 ## <a name="examples"></a>Exemples  

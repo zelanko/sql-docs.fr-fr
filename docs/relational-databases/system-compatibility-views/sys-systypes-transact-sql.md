@@ -25,13 +25,13 @@ caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 32f3ff7bb65822e0ce0c8e3e9192b88dd572c22b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: edcf376f9127ec1d9b874c24e0a11f67f7e334ff
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39537219"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43074146"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "39537219"
 |**XScale**|**tinyint**|Échelle interne, telle qu'utilisée par le serveur. À ne pas utiliser dans les requêtes.|  
 |**tdefault**|**Int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
 |**Domaine**|**Int**|ID de la procédure stockée qui contient les contrôles d'intégrité de ce type de données.|  
-|**uid**|**smallint**|ID de schéma du propriétaire du type.<br /><br /> Pour les bases de données mises à niveau à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID de schéma correspond à l'ID d'utilisateur du propriétaire.<br /><br /> **\*\* Important \* \* ** si vous utilisez une des opérations suivantes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions DDL, vous devez utiliser le [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) affichage au lieu de catalogue **sys.systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
+|**uid**|**smallint**|ID de schéma du propriétaire du type.<br /><br /> Pour les bases de données mises à niveau à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'ID de schéma correspond à l'ID d'utilisateur du propriétaire.<br /><br /> **\*\* Important \* \***  si vous utilisez une des opérations suivantes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instructions DDL, vous devez utiliser le [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) affichage au lieu de catalogue **sys.systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
 |**réservé**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**Int**|Si le caractère **collationid** est l’id du classement de la base de données actuelle ; sinon, sa valeur est NULL.|  
 |**usertype**|**smallint**|ID de type d'utilisateur. Déborde ou retourne la valeur NULL si le nombre de types de données dépasse 32 767.|  

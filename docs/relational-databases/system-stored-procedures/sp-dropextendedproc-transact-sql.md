@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dropextendedproc
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23361e6f28bdb87ab35a39ec68b448a60ad677d0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5eaab130612521ed99d7000745a2e811531b167f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049387"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034452"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
   
  **sp_dropextendedproc** ne peut pas être exécutée à l’intérieur d’une transaction.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_dropextendedproc**.  
   
 ## <a name="examples"></a>Exemples  

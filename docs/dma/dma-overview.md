@@ -2,7 +2,7 @@
 title: Vue d’ensemble de l’Assistant de Migration de données (SQL Server) | Microsoft Docs
 description: Découvrez comment utiliser Data Migration Assistant pour migrer des bases de données SQL Server à d’autres SQL Server ou les bases de données Azure
 ms.custom: ''
-ms.date: 03/15/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3480f529b5f560f50518fa3af4a810ea0acc0bbb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fbf3441d82f2de405e1a227821834b3943db3285
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781520"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152690"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Vue d’ensemble de l’Assistant Migration de données
 
@@ -44,7 +44,7 @@ L’Assistant de Migration de données (DMA) vous aide à mettre à niveau vers 
 
   - Modifications avec rupture
   - Changements de comportement
-  - Fonctionnalités déconseillées
+  - Fonctionnalités dépréciées
 
 - Découvrez les nouvelles fonctionnalités dans la plateforme SQL Server cible la base de données pouvant bénéficier du après une mise à niveau. Ceux-ci sont décrits en tant que recommandation de fonctionnalité et sont organisés dans les catégories suivantes :
 
