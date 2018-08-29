@@ -25,13 +25,13 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9216f9babb03814fb7f644add94f20db7bcc4439
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 229544e74b8a4c8f541c547f185bb6a954f44807
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556909"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43097798"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn_get_audit_file ( file_pattern,
     
     Cet argument doit inclure à la fois un chemin d'accès (lettre de lecteur ou partage réseau) et un nom de fichier qui peut inclure un caractère générique. Un seul astérisque (*) peut être utilisé pour recueillir plusieurs fichiers à partir d’un jeu de fichiers d’audit. Exemple :  
   
-    -   **\<chemin d’accès >\\ \* ** - collecter tous les fichiers d’audit à l’emplacement spécifié.  
+    -   **\<chemin d’accès >\\ \***  - collecter tous les fichiers d’audit à l’emplacement spécifié.  
   
     -   **\<chemin d’accès > \LoginsAudit_{GUID}** - collecter tous les fichiers d’audit ayant le nom spécifié et une paire GUID.  
   
@@ -66,7 +66,7 @@ fn_get_audit_file ( file_pattern,
  
     Cet argument est utilisé pour spécifier une URL de blob (y compris le point de terminaison de stockage et le conteneur). Pendant qu’il ne prend pas en charge un astérisque comme caractère générique, vous pouvez utiliser un préfixe de nom de fichier partiel (blob) (au lieu de nom d’objet blob complet) pour collecter des fichiers de plusieurs (objets BLOB) qui commencent par ce préfixe. Exemple :
  
-      - **\<Storage_endpoint\>/\<conteneur\>/\<nom_serveur\>/\<DatabaseName\> / ** -collecte tous les fichiers d’audit (BLOB) pour la base de données spécifique.    
+      - **\<Storage_endpoint\>/\<conteneur\>/\<nom_serveur\>/\<DatabaseName\> /**  -collecte tous les fichiers d’audit (BLOB) pour la base de données spécifique.    
       
       - **\<Storage_endpoint\>/\<conteneur\>/\<nom_serveur\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>.xel** -collecte un fichier d’audit spécifique (blob).
   

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ROUTINES view
 - INFORMATION_SCHEMA.ROUTINES view
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b4404c25500d6732db6f2346b1fdedb34e9bed8f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39548885"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43102016"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "39548885"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(** 128 **)**|Nom spécifique du catalogue Ce nom est le même que ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|Nom spécifique du schéma.<br /><br /> **\*\* Important \* \* ** n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|Nom spécifique du schéma.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |SPECIFIC_NAME|**nvarchar(** 128 **)**|Nom spécifique du catalogue Ce nom est le même que ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar(** 128 **)**|Nom de catalogue de la fonction|  
-|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|Nom du schéma contenant cette fonction.<br /><br /> **\*\* Important \* \* ** n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|Nom du schéma contenant cette fonction.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |ROUTINE_NAME|**nvarchar(** 128 **)**|Nom de la fonction.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Renvoie la valeur PROCEDURE pour les procédures stockées et la valeur FUNCTION pour les fonctions.|  
 |MODULE_CATALOG|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  

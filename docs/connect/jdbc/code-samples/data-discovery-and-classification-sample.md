@@ -13,18 +13,18 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f5a705de3823ea04d1cb79f8e6106152599fc0b
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: bb31601b55af1b95c53b37c846c3a8bbf17b10f4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467737"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784359"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Découverte et classification des données SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Cela [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] exemple d’application montre comment utiliser les méthodes getter du jeu de résultats pour récupérer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 'information Classification et de découverte de données SQL' à partir des tables contenant ces informations.
+Cela [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] exemple d’application montre comment utiliser les méthodes getter du jeu de résultats pour récupérer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 'information Classification et de découverte de données SQL' à partir des tables contenant ces informations.
   
 Le fichier de code pour cet exemple est nommé DataDiscoveryAndClassification.java, et il peut être trouvé à l’emplacement suivant :  
 

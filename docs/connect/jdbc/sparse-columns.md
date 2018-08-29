@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51310c2848526942e23152b9c02a4ad914118392
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: c582cfcd744d009cae0c966c4640f7406c200246
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459553"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784887"
 ---
 # <a name="sparse-columns"></a>Colonnes éparses
 
@@ -27,7 +27,7 @@ ms.locfileid: "39459553"
 
 Les colonnes éparses sont des colonnes ordinaires qui ont un stockage optimisé pour les valeurs NULL. Les colonnes éparses réduisent l’espace requis pour les valeurs Null, ce qui a pour effet d’augmenter la charge liée à la récupération de valeurs non Null. Envisagez d'utiliser des colonnes éparses lorsque l'espace économisé est d'au moins 20 à 40 pour cent.
 
-La version 3.0 du pilote JDBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] prend en charge les colonnes éparses quand vous vous connectez à un serveur [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (ou version ultérieure). Vous pouvez utiliser [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) ou [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) pour déterminer quelle colonne est éparse et laquelle est la colonne du jeu de colonnes.
+La version 3.0 du pilote JDBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les colonnes éparses quand vous vous connectez à un serveur [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (ou version ultérieure). Vous pouvez utiliser [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) ou [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) pour déterminer quelle colonne est éparse et laquelle est la colonne du jeu de colonnes.
 
 Le fichier de code de cet exemple, SparseColumns.java, se trouve à l’emplacement suivant :  
 

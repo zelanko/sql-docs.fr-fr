@@ -15,16 +15,16 @@ helpviewer_keywords:
 - LINKEDSERVERS rowset
 - enumerating data sources [OLE DB]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c6b1299005c0307f04f0f245f6e0ec6ee57b5063
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 2cfc0088c435bebb802fb8caff3ccc14162cf33a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39105765"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031504"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>Ensembles de lignes de schéma - Ensemble de lignes LINKEDSERVERS
+# <a name="schema-rowsets---linkedservers-rowset"></a>Ensembles de lignes de schéma - Ensemble de lignes LINKEDSERVERS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

@@ -14,18 +14,18 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0ae22a9fac4333271d564fb242803e4cc8eb0b4
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 2fd75507ca7c1615b0282a9f56a1e8f4b33bc22b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661821"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785102"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Utilisation d'une procédure stockée avec retour d'état
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Une procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que vous pouvez appeler est une procédure qui retourne un état ou un paramètre de résultat. Cette procédure permet généralement d'indiquer la réussite ou l'échec de la procédure stockée. Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] intègre la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), que vous pouvez utiliser pour appeler ce type de procédure stockée et traiter les données qu’elle retourne.
+Une procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous pouvez appeler est une procédure qui retourne un état ou un paramètre de résultat. Cette procédure permet généralement d'indiquer la réussite ou l'échec de la procédure stockée. Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] intègre la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), que vous pouvez utiliser pour appeler ce type de procédure stockée et traiter les données qu’elle retourne.
 
 Quand vous appelez ce type de procédure stockée à l’aide du pilote JDBC, vous devez utiliser la séquence d’échappement SQL `call` conjointement avec la méthode [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La syntaxe de la séquence d’échappement `call` avec un paramètre de retour d’état est la suivante :
 

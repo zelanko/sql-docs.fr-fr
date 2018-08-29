@@ -14,12 +14,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20ec695090a164fb0cb5509833db78bd6b38fe69
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: b6d923bce43ad2f9ed3fd0a7d33d456910125768
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662111"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785939"
 ---
 # <a name="understanding-transactions"></a>Présentation des transactions
 
@@ -43,7 +43,7 @@ L'exemple suivant effectue une transaction locale comprenant deux instructions d
 
 Une transaction distribuée met à jour les données sur au moins deux bases de données en réseau, tout en conservant les propriétés ACID (Atomicité, Cohérence, Isolation et Durabilité) importantes du traitement de transactions. La prise en charge de transactions distribuées a été ajoutée à l'API de JDBC dans la spécification de l'API facultative de JDBC 2.0. Les transactions distribuées sont généralement gérées automatiquement par le gestionnaire de transactions JTS (Java Transaction Service) dans l'environnement d'un serveur d'applications Java EE. Cependant, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge les transactions distribuées dans tout gestionnaire de transactions compatible avec l'API de transaction Java (JTA).
 
-Le pilote JDBC est intégré de manière transparente à MS DTC ([!INCLUDE[msCoName](../../includes/msconame_md.md)] Distributed Transaction Coordinator) pour offrir une véritable prise en charge des transactions distribuées avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. MS DTC est une fonctionnalité de transactions distribuées fournie par [!INCLUDE[msCoName](../../includes/msconame_md.md)] pour les systèmes d'exploitation [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. MS DTC utilise l'excellente technologie [!INCLUDE[msCoName](../../includes/msconame_md.md)] de traitement des transactions pour prendre en charge les caractéristiques XA, telles que le protocole de validation distribué complet à deux phases et la récupération des transactions distribuées.
+Le pilote JDBC est intégré de manière transparente à MS DTC ([!INCLUDE[msCoName](../../includes/msconame_md.md)] Distributed Transaction Coordinator) pour offrir une véritable prise en charge des transactions distribuées avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. MS DTC est une fonctionnalité de transactions distribuées fournie par [!INCLUDE[msCoName](../../includes/msconame_md.md)] pour les systèmes d'exploitation [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. MS DTC utilise l'excellente technologie [!INCLUDE[msCoName](../../includes/msconame_md.md)] de traitement des transactions pour prendre en charge les caractéristiques XA, telles que le protocole de validation distribué complet à deux phases et la récupération des transactions distribuées.
 
 Pour plus d’informations sur l’utilisation des transactions distribuées, consultez [présentation des Transactions XA](../../connect/jdbc/understanding-xa-transactions.md).
 

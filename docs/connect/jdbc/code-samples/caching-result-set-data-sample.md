@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33dcb1a7e9b00968b4b02aa2d32b2ab0cc769d10
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 5e8a0435a606152852c39450801497cd100fe90d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455207"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784195"
 ---
 # <a name="caching-result-set-data-sample"></a>Mise en cache de l'exemple de données du jeu de résultats
 
@@ -30,7 +30,7 @@ Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcno
 > [!NOTE]  
 > Limiter le nombre de lignes mises en cache sur le client et limiter le nombre total de lignes qu'un jeu de résultats peut contenir sont deux choses différentes. Pour contrôler le nombre total de lignes contenues dans un jeu de résultats, utilisez la méthode [setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) de l’objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), héritée par les objets [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) et [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
-Pour définir une limite du nombre de lignes mises en cache sur le client, vous devez d’abord utiliser un curseur côté serveur quand vous créez un des objets Statement en indiquant spécifiquement le type de curseur à utiliser lors de la création de l’objet Statement. Par exemple, le pilote JDBC fournit le type de curseur TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, qui est un curseur côté serveur d’avance rapide uniquement et en lecture seule, à utiliser avec les bases de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Pour définir une limite du nombre de lignes mises en cache sur le client, vous devez d’abord utiliser un curseur côté serveur quand vous créez un des objets Statement en indiquant spécifiquement le type de curseur à utiliser lors de la création de l’objet Statement. Par exemple, le pilote JDBC fournit le type de curseur TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, qui est un curseur côté serveur d’avance rapide uniquement et en lecture seule, à utiliser avec les bases de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 > Une alternative à l'utilisation d'un type de curseur spécifique à SQL Server est l'utilisation de la propriété de chaîne de connexion selectMethod, en définissant sa valeur sur « curseur ». Pour plus d’informations sur les types de curseurs pris en charge par le pilote JDBC, consultez [présentation des Types de curseur](../../../connect/jdbc/understanding-cursor-types.md).  

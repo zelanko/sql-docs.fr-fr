@@ -14,25 +14,25 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdfaa0fa75c8ff37ed3c165b5e080cee9cd7a0ba
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: f5878e83f9b23f273da46f356b05f8ce6563712e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662381"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785599"
 ---
 # <a name="working-with-a-connection"></a>Utilisation d'une connexion
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Les sections suivantes proposent des exemples des différents modes de connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à l’aide de la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+Les sections suivantes proposent des exemples des différents modes de connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
 > [!NOTE]  
-> Si vous rencontrez des problèmes de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] par le biais du pilote JDBC, consultez [Résolution des problèmes de connectivité](../../connect/jdbc/troubleshooting-connectivity.md) pour obtenir des suggestions de solutions.
+> Si vous rencontrez des problèmes de connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais du pilote JDBC, consultez [Résolution des problèmes de connectivité](../../connect/jdbc/troubleshooting-connectivity.md) pour obtenir des suggestions de solutions.
 
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>Création d'une connexion via la classe DriverManager
 
-La façon la plus simple de créer une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] consiste à charger le pilote JDBC et à appeler la méthode getConnection de la classe DriverManager, comme suit :
+La façon la plus simple de créer une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste à charger le pilote JDBC et à appeler la méthode getConnection de la classe DriverManager, comme suit :
 
 ```java
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  

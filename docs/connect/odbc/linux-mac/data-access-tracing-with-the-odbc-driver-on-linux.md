@@ -17,17 +17,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64a04e7c448161c22ca9a671e5fdbe706829bced
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f5a22a5f4eb06e983f2bc4d81eeb786f32b78751
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982184"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785117"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Traçage de l’accès aux données avec le pilote ODBC sur Linux et macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Le Gestionnaire de pilotes unixODBC sur macOS et Linux prend en charge le traçage de l’entrée des appels API ODBC et de sortie du pilote ODBC pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Le Gestionnaire de pilotes unixODBC sur macOS et Linux prend en charge le traçage de l’entrée des appels API ODBC et de sortie du pilote ODBC pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 Pour suivre le comportement de votre application ODBC, vous devez modifier le `odbcinst.ini` du fichier `[ODBC]` section pour définir les valeurs `Trace=Yes` et `TraceFile` pour le chemin d’accès du fichier qui doit contenir la trace de sortie ; par exemple :
 

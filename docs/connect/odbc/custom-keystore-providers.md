@@ -14,12 +14,12 @@ caps.latest.revision: 1
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 0d3a3b25ca2ead96d23b0d367ab633d900951de8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 613f8809003ba8f4501ea95371dedd44cff18a8d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047514"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786874"
 ---
 # <a name="custom-keystore-providers"></a>Fournisseurs de magasins de clés personnalisés
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -147,7 +147,7 @@ Nom d’espace réservé pour une fonction définie par le fournisseur de déchi
 |`alg`|[Entrée] La valeur de la [algorithme](../../t-sql/statements/create-column-encryption-key-transact-sql.md) attribut de métadonnées pour l’ECEK donné. Se terminant par null large-chaîne de caractères. Cela vise à identifier l’algorithme de chiffrement utilisé pour chiffrer l’ECEK donné.|
 |`ecek`|[Entrée] Pointeur vers l’ECEK à déchiffrer.|
 |`ecekLen`|[Entrée] Longueur de l’ECEK.|
-|`cekOut`|[Sortie] Le fournisseur doit allouer de mémoire pour l’ECEK déchiffrée et écrire son adresse dans le pointeur vers lequel pointé cekOut. Il doit être possible pour ce bloc de mémoire à l’aide de libérer le [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) ou gratuit (fonction) (Linux/Mac). Si aucune mémoire n’a été allouée en raison d’une erreur ou dans le cas contraire, le fournisseur est la valeur * cekOut à un pointeur null.|
+|`cekOut`|[Sortie] Le fournisseur doit allouer de mémoire pour l’ECEK déchiffrée et écrire son adresse dans le pointeur vers lequel pointé cekOut. Il doit être possible pour ce bloc de mémoire à l’aide de libérer le [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) ou gratuit (fonction) (Linux/Mac). Si aucune mémoire n’a été allouée en raison d’une erreur ou dans le cas contraire, le fournisseur est la valeur * cekOut à un pointeur null.|
 |`cekLen`|[Sortie] Le fournisseur d’écrire à l’adresse vers laquelle pointé cekLen la longueur de l’ECEK déchiffrée qu’il a écrit dans ** cekOut.|
 |`Return Value`|Retour différente de zéro pour indiquer la réussite, ou zéro pour indiquer un échec.|
 
@@ -164,7 +164,7 @@ Nom d’espace réservé pour une fonction définis par le fournisseur de chiffr
 |`alg`|[Entrée] La valeur de la [algorithme](../../t-sql/statements/create-column-encryption-key-transact-sql.md) attribut de métadonnées pour l’ECEK donné. Se terminant par null large-chaîne de caractères. Cela vise à identifier l’algorithme de chiffrement utilisé pour chiffrer l’ECEK donné.|
 |`cek`|[Entrée] Pointeur vers la clé CEK à chiffrer.|
 |`cekLen`|[Entrée] Longueur de la clé CEK.|
-|`ecekOut`|[Sortie] Le fournisseur doit allouer de mémoire pour la clé CEK chiffrée et écrire son adresse dans le pointeur vers lequel pointé ecekOut. Il doit être possible pour ce bloc de mémoire à l’aide de libérer le [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) ou gratuit (fonction) (Linux/Mac). Si aucune mémoire n’a été allouée en raison d’une erreur ou dans le cas contraire, le fournisseur est la valeur * ecekOut à un pointeur null.|
+|`ecekOut`|[Sortie] Le fournisseur doit allouer de mémoire pour la clé CEK chiffrée et écrire son adresse dans le pointeur vers lequel pointé ecekOut. Il doit être possible pour ce bloc de mémoire à l’aide de libérer le [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) ou gratuit (fonction) (Linux/Mac). Si aucune mémoire n’a été allouée en raison d’une erreur ou dans le cas contraire, le fournisseur est la valeur * ecekOut à un pointeur null.|
 |`ecekLen`|[Sortie] Le fournisseur d’écrire à l’adresse vers laquelle pointé ecekLen la longueur de la clé CEK chiffrée qui il a écrit dans ** ecekOut.|
 |`Return Value`|Retour différente de zéro pour indiquer la réussite, ou zéro pour indiquer un échec.|
 
@@ -190,7 +190,7 @@ Le **onError** paramètre pointe vers une fonction de signalement d’erreurs, a
 |Argument|Description|
 |:--|:--|
 |`ctx`|[Entrée] Contexte à créer des rapports sur l’erreur.|
-|`msg`|[Entrée] Le message d’erreur à signaler. Chaîne à caractères larges se terminant par null. Pour permettre à des informations paramétrables à présent, cette chaîne peut contenir des séquences de mise en forme insert au format accepté par le [FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx) (fonction). Fonctionnalités étendues peuvent être spécifiée par ce paramètre, comme décrit ci-dessous.|
+|`msg`|[Entrée] Le message d’erreur à signaler. Chaîne à caractères larges se terminant par null. Pour permettre à des informations paramétrables à présent, cette chaîne peut contenir des séquences de mise en forme insert au format accepté par le [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) (fonction). Fonctionnalités étendues peuvent être spécifiée par ce paramètre, comme décrit ci-dessous.|
 |...|[Entrée] Paramètres supplémentaires variadic pour tenir les spécificateurs de format dans msg, comme il convient.|
 
 Pour signaler lorsqu’une erreur s’est produite, l’onError d’appels de fournisseur, en fournissant le paramètre de contexte transmis à la fonction de fournisseur par le pilote et un message d’erreur avec des paramètres facultatifs supplémentaires à mettre en forme qu’il contient. Le fournisseur peut appeler cette fonction plusieurs fois pour publier plusieurs messages d’erreur consécutivement au sein de l’appel d’un fournisseur-fonction. Exemple :

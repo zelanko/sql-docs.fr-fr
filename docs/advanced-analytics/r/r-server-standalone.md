@@ -1,49 +1,55 @@
 ---
-title: SQL Server Machine Learning Server (autonome) et R Server (autonome) | Microsoft Docs
+title: Installation Standalone R Server ou Machine Learning Server dans SQL Server | Microsoft Docs
+description: Présentation de vue d’ensemble de R Server autonome et Machine Learning Server dans le programme d’installation de SQL Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: conceptual
+ms.date: 08/27/2018
+ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a8cdceabc26c55b6eade57712fa610d3e84808f5
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 34be09f068196ce51f44c47a02e36a9149ff17bf
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174786"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118297"
 ---
-# <a name="sql-server-machine-learning-server-standalone-and-r-server-standalone"></a>SQL Server Machine Learning Server (autonome) et R Server (autonome)
+# <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (autonome) et Machine Learning Server (autonome) dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Un serveur autonome est une installation de composants d’apprentissage automatique, exprimées en tant que fonctionnalités R et Python, qui s’exécutent indépendamment des instances de moteur de base de données SQL Server. Vous pouvez installer un serveur autonome en lui-même, sans dépendances sur SQL Server. Car un serveur autonome est indépendant de SQL Server, configuration et administration des tâches et outils sont plus similaires à une version non-SQL de Machine Learning Server, vous pouvez découvrir dans [cet article](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server).
+SQL Server fournit la prise en charge de l’installation pour un travail autonome R Server ou Machine Learning Server s’exécute indépendamment de SQL Server. Selon votre version de SQL Server, un serveur autonome possède une base de R open source et, éventuellement, Python, superposées aux bibliothèques de hautes performances à partir de Microsoft qui ajoutent l’analytique prédictive et de statistiques à l’échelle. Bibliothèques permettent également des tâches d’apprentissage écrites en R ou Python. 
 
-L’objectif d’une machine de formation autonome server consiste à fournir un environnement de développement riche en fonctionnalités, avec le traitement des charges de travail R et Python sur des jeux de données petites et grandes, à l’aide des packages propriétaires et les moteurs de calcul parallèle et distribué installé avec le serveur. Les packages R et Python sur un serveur autonome sont les mêmes que celles fournies dans une installation de SQL Server (en base de données), facilitant ainsi la portabilité du code et [changement de contexte de calcul](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context).
+Dans SQL Server 2016, cette fonctionnalité est appelée **R Server (autonome)** et est R uniquement. Dans SQL Server 2017, elle est appelée **Machine Learning Server (autonome)** et inclut R et Python.  
 
-Les développeurs de la raison principale pour laquelle choisissent qu'une autonome machine learning server consiste à déplacer au-delà les contraintes de mémoire et le traitement de l’open source R et Python. Serveurs autonomes peuvent charger et traiter de grandes quantités de données sur plusieurs cœurs et agréger les résultats en une seule sortie consolidée. Les algorithmes et les fonctions sont conçues pour la mise à l’échelle et utilitaire : garantissant une analytique prédictive, modélisation statistique, des visualisations de données et pointe algorithmes machine learning dans un produit commercial serveur conçu et pris en charge par Microsoft.
+> [!Note]
+> Installé par le programme d’installation de SQL Server, un serveur autonome est fonctionnellement équivalent pour les versions non SQL personnalisée de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), prenant en charge les mêmes scénarios utilisateur, y compris l’exécution à distance, Opérationnalisation et les services web et la collection complète des fonctions RevoScaleR et revoscalepy.
 
-En règle générale, nous vous recommandons de traiter (autonome) et (en base de données) installations mutuellement exclusif afin d’éviter les conflits de ressources, mais si vous disposez de suffisamment de ressources, il n’existe aucune interdiction par rapport à les installer à la fois sur le même ordinateur physique.
-
-Vous ne pouvez avoir qu’un serveur autonome sur l’ordinateur : soit [SQL Server 2017 Machine Learning Server (autonome)](../install/sql-machine-learning-standalone-windows-install.md) ou [SQL Server 2016 R Server (autonome)](../install/sql-r-standalone-windows-install.md). Vous devez désinstaller manuellement une version avant d’installer une version différente.
-
-## <a name="components-of-a-standalone-server"></a>Composants d’un serveur autonome
+## <a name="components"></a>Components
 
 SQL Server 2016 est R uniquement. SQL Server 2017 prend en charge R et Python. Le tableau suivant décrit les fonctionnalités de chaque version.
 
 | Composant | Description |
 |-----------|-------------|
-| Packages R | [RevoScaleR](revoscaler-overview.md) est la bibliothèque principale pour R évolutive avec des fonctions de manipulation de données, transformation, visualzation et l’analyse.  <br/>[MicrosoftML (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) ajoute des algorithmes d’apprentissage automatique pour créer des modèles personnalisés pour l’analyse de texte, l’analyse de l’image et l’analyse des sentiments. <br/>[mrsdeploy](operationalization-with-mrsdeploy.md) offres web déploiement de service (dans SQL Server 2017 uniquement). <br/>[olapR](how-to-create-mdx-queries-using-olapr.md) permet de spécifier des requêtes MDX dans R.|
-| Microsoft R Open (MRO) | [MRO](https://mran.microsoft.com/open) est open source distribution Microsoft de R. Le package et un interpréteur sont inclus. Utilisez toujours la version de MRO fournie dans le programme d’installation. |
+| Packages R | [**RevoScaleR** ](revoscaler-overview.md) est la bibliothèque principale pour R évolutive avec des fonctions de manipulation de données, de transformation, de visualisation et d’analyse.  <br/>[**MicrosoftML** ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) ajoute des algorithmes d’apprentissage automatique pour créer des modèles personnalisés pour l’analyse de texte, l’analyse de l’image et l’analyse des sentiments. <br/>[**sqlRUtils** ](generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) fournit des fonctions d’assistance pour placer des scripts R dans une procédure stockée T-SQL, l’inscription d’une procédure stockée avec une base de données et l’exécution de la procédure stockée à partir d’un environnement de développement R.<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) offres web déploiement de service (dans SQL Server 2017 uniquement). <br/>[**olapR** ](how-to-create-mdx-queries-using-olapr.md) permet de spécifier des requêtes MDX dans R.|
+| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) est open source distribution Microsoft de R. Le package et un interpréteur sont inclus. Utilisez toujours la version de MRO fournie dans le programme d’installation. |
 | Outils R | Invites de commandes et fenêtres de console R sont des outils standard dans une distribution de R. Les trouver à \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64. |
 | Exemples de R et scripts |  Les packages RevoScaleR et R Open source incluent les jeux de données intégrées afin que vous pouvez créer et exécuter le script à l’aide de données préinstallées. Examinez les \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets et \library\RevoScaleR. |
-| Packages Python | [revoscalepy](../python/what-is-revoscalepy.md) est la bibliothèque principale pour Python et évolutive avec des fonctions de manipulation de données, transformation, visualzation et l’analyse. <br/>[microsoftml (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) ajoute des algorithmes d’apprentissage automatique pour créer des modèles personnalisés pour l’analyse de texte, l’analyse de l’image et l’analyse des sentiments.  |
+| Packages Python | [**revoscalepy** ](../python/what-is-revoscalepy.md) est la bibliothèque principale pour Python et évolutive avec des fonctions de manipulation de données, de transformation, de visualisation et d’analyse. <br/>[**microsoftml** ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) ajoute des algorithmes d’apprentissage automatique pour créer des modèles personnalisés pour l’analyse de texte, l’analyse de l’image et l’analyse des sentiments.  |
 | Outils Python | L’outil de ligne de commande Python intégré est utile pour les tests ad hoc et tâches. Recherchez l’outil à \Program files\Microsoft SQL Server\140\PYTHON_SERVER\python.exe. |
 | Anaconda | Anaconda est une distribution open source de Python et les packages essentiels. |
 | Scripts et des exemples Python | Comme avec R, Python inclut des jeux de données intégrés et des scripts. Rechercher les données de revoscalepy à Files\Microsoft SQL Server\140\PYTHON_SERVER\lib\site-packages\revoscalepy\data\sample-data. |
-| Modèles préentraînés dans R et Python | Modèles préentraînés sont pris en charge et utilisable sur un serveur autonome, mais vous ne pouvez pas les installer via le programme d’installation de SQL Server. Le programme d’installation de Microsoft Machine Learning Server fournit les modèles, vous pouvez installer gratuitement. Pour plus d’informations, consultez [installation préformé modèles d’apprentissage automatique sur SQL Server](../install/sql-pretrained-models-install.md). |
+| Modèles préentraînés dans R et Python | Modèles préentraînés sont créés pour les cas d’usage spécifiques et gérés par l’équipe d’ingénierie science des données chez Microsoft. Vous pouvez utiliser les modèles préformés comme-consiste à noter les sentiments négatifs positif dans le texte, ou à détecter les fonctionnalités dans des images, à l’aide de nouvelles entrées de données que vous fournissez. Modèles préentraînés sont pris en charge et utilisable sur un serveur autonome, mais vous ne pouvez pas les installer via le programme d’installation de SQL Server. Pour plus d’informations, consultez [installation préformé modèles d’apprentissage automatique sur SQL Server](../install/sql-pretrained-models-install.md). |
 
-## <a name="get-started-step-by-step"></a>Prise en main de pas à pas
+## <a name="use-cases"></a>Cas d’utilisation
+
+Les développeurs R et Python choisissez généralement un serveur autonome de dépasser les contraintes de mémoire et le traitement de l’open source R et Python. Bibliothèques R et Python, l’exécution sur un serveur autonome peuvent charger et traiter de grandes quantités de données sur plusieurs cœurs et agréger les résultats en une seule sortie consolidée. Fonctions de hautes performances sont conçues pour la mise à l’échelle et utilitaire : garantissant une analytique prédictive, modélisation statistique, des visualisations de données et pointe algorithmes machine learning dans un produit commercial serveur conçu et pris en charge par Microsoft.
+
+Comme un serveur indépendant découplé à partir de SQL Server, l’environnement R et Python est configuré, sécurisées et accessibles en utilisant le système d’exploitation sous-jacent et les outils standards fournis dans le serveur autonome, pas de SQL Server. Il n’existe aucune prise en charge intégrée pour les données relationnelles SQL Server. Si vous souhaitez utiliser les données de SQL Server, vous pouvez créer des connexions et les objets source de données comme vous le feriez à partir de n’importe quel client.
+
+En outre à SQL Server, un serveur autonome est également utile comme un puissant environnement de développement si vous avez besoin de l’informatique local et distant. Les packages R et Python sur un serveur autonome sont les mêmes que ceux fournis avec une installation du moteur de base de données, ce qui permet la portabilité du code et [changement de contexte de calcul](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context).
+
+## <a name="how-to-get-started"></a>La prise en main
 
 Démarrer avec le programme d’installation, attacher les fichiers binaires à votre outil de développement favori et écrire votre premier script.
 
@@ -56,7 +62,10 @@ Installer l’une de ces versions :
 
 ### <a name="step-2-configure-a-development-tool"></a>Étape 2 : Configurer un outil de développement
 
-Configurer vos outils de développement pour utiliser les fichiers binaires de Machine Learning Server. Pour plus d’informations sur Python, consultez [les binaires Python de lien](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools). Pour obtenir des instructions sur la façon de se connecter dans R Studio, consultez [à l’aide de différentes Versions de R](https://support.rstudio.com/hc/en-us/articles/200486138-Using-Different-Versions-of-R) et pointez l’outil sur C:\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64. Vous pouvez également essayer [outils R pour Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation). 
+Sur un serveur autonome, il est courant de travailler localement à l’aide d’un environnement de développement installé sur le même ordinateur.
+
++ [Configurer les outils R](set-up-a-data-science-client.md)
++ [Configurer les outils Python](../python/setup-python-client-tools-sql.md)
 
 ### <a name="step-3-write-your-first-script"></a>Étape 3 : Écrire votre premier script
 
@@ -74,5 +83,5 @@ Serveurs autonomes peuvent utiliser le [Opérationnalisation](https://docs.micro
 
 ## <a name="see-also"></a>Voir aussi
 
- [SQL Server Machine Learning Services (en base de données)](sql-server-r-services.md)
+ [Installer R Server (autonome) ou Machine Learning Server (autonome)](../install/sql-machine-learning-standalone-windows-install.md)
 

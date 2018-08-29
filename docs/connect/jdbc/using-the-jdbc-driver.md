@@ -14,18 +14,18 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f62bc7457eaa02eedf9d15a377d70515229384ef
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 1ece23b74de9265f28468ae11702c07cdca1cecc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661791"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786794"
 ---
 # <a name="using-the-jdbc-driver"></a>Utilisation du pilote JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Cette section fournit des instructions de démarrage rapide pour la création d’une connexion simple à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à l’aide du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Avant de vous connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous devez installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sur votre ordinateur local ou un serveur ; par ailleurs, le pilote JDBC doit également être installé sur votre ordinateur local.  
+Cette section fournit des instructions de démarrage rapide pour la création d’une connexion simple à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]. Avant de vous connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur votre ordinateur local ou un serveur ; par ailleurs, le pilote JDBC doit également être installé sur votre ordinateur local.  
   
 ## <a name="choosing-the-right-jar-file"></a>Choix du fichier JAR approprié
 

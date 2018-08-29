@@ -13,22 +13,22 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f408cb1f6cb82610cfa74a4d59a3ce15e4307e64
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992911"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786253"
 ---
 # <a name="support-for-localdb"></a>Prise en charge de la base de données locale
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-LocalDB est une version légère de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] qui est disponible depuis [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Cette rubrique explique comment se connecter à une base de données dans une instance LocalDB.
+LocalDB est une version légère de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est disponible depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Cette rubrique explique comment se connecter à une base de données dans une instance LocalDB.
 
 ## <a name="remarks"></a>Notes 
 
-Pour plus d’informations sur la base de données locale, y compris comment installer LocalDB et configurer votre instance de base de données locale, consultez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] rubrique de la documentation en ligne sur [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
+Pour plus d’informations sur la base de données locale, y compris comment installer LocalDB et configurer votre instance de base de données locale, consultez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rubrique de la documentation en ligne sur [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express LocalDB.
 
 En bref, base de données locale vous permet de :
 

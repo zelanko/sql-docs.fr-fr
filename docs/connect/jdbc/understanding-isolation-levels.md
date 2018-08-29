@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74cc593c494c80492a96644f25fe4a7b6bc7a85e
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: f4a91678f90164a85907a21f50d74b50561ceaff
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662211"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784427"
 ---
 # <a name="understanding-isolation-levels"></a>Fonctionnement des niveaux d'isolement
 
@@ -65,7 +65,7 @@ Pour définir le niveau d’isolement pour une transaction, vous pouvez utiliser
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```
 
-Pour utiliser le nouveau niveau d'isolement d'instantané de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vous pouvez utiliser l'une des constantes `SQLServerConnection` :  
+Pour utiliser le nouveau niveau d'isolement d'instantané de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez utiliser l'une des constantes `SQLServerConnection` :  
 
 ```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
@@ -77,7 +77,7 @@ ou vous pouvez utiliser :
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```
 
-Pour plus d’informations sur les niveaux d’isolement [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], consultez « Niveaux d’isolement du [!INCLUDE[ssDE](../../includes/ssde_md.md)] » dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Pour plus d’informations sur les niveaux d’isolement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez « Niveaux d’isolement du [!INCLUDE[ssDE](../../includes/ssde_md.md)] » dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="see-also"></a> Voir aussi
 

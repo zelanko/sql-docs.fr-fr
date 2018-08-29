@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95c7157850f212893361e26927152c43af7b9a32
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 5cff468c8306631a03e7567f86cc5f5fd57137f8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457703"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785757"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Extraction de l'exemple de données du jeu de résultats
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Cet exemple d’application [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] montre comment récupérer un jeu de données à partir d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], puis comment afficher ces données.
+Cet exemple d’application [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] montre comment récupérer un jeu de données à partir d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis comment afficher ces données.
 
 Le fichier de code de cet exemple s’appelle RetrieveResultSet.java et se trouve à l’emplacement suivant :
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: yitam
 ms.author: v-yitam
 manager: mbarwin
-ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0cf0256c337d8851f6223ea895eb7e6d90e30665
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979821"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784018"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Guide pratique pour envoyer et récupérer des données ASCII dans Linux et macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ L’encodage pour le pilote PDO_SQLSRV par défaut est UTF-8 (PDO::SQLSRV_ENCODI
 ## <a name="example"></a> Exemple  
 Les exemples suivants montrent comment envoyer et récupérer des données ASCII utilisant les pilotes PHP pour SQL Server en spécifiant des paramètres régionaux spécifiques avant d’établir la connexion. Les paramètres régionaux dans les différentes plateformes Linux peuvent être nommés différemment à partir des mêmes paramètres régionaux dans macOS. Par exemple, les paramètres régionaux nous ISO-8859-1 (Latin 1) sont `en_US.ISO-8859-1` dans Linux, alors que dans macOS est le nom `en_US.ISO8859-1`.
   
-Les exemples supposent que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est installé sur un serveur. Toutes les sorties sont écrites dans le navigateur quand les exemples sont exécutés à partir du navigateur.  
+Les exemples supposent que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé sur un serveur. Toutes les sorties sont écrites dans le navigateur quand les exemples sont exécutés à partir du navigateur.  
   
 ```  
 <?php  

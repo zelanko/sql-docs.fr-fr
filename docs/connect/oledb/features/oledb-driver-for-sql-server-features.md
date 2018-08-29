@@ -16,14 +16,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, about OLE DB Driver for SQL Server
 - data access [OLE DB Driver for SQL Server], features
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c9a88c1be15e0e2d3b862e6bf10de3c59efffd79
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 24a91e845d26b4e01b8e90c60e78c9402e1ef73a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106855"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036319"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Fonctionnalités OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "39106855"
  Décrit un changement de comportement introduit dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Si vous fournissez une mémoire tampon de longueur fixe lors de la liaison d’un résultat de colonne ou d’un paramètre de sortie et que le caractère **wchar** écrit dans la mémoire tampon avant le caractère de fin est un point de code de substitut étendu d’une paire de substitution, et si le caractère **wchar** suivant est un point de code de substitut faible, OLE DB Driver pour SQL Server n’ajoutera pas le point de code de substitut étendu à la mémoire tampon.  
   
  [Prise en charge de la récupération d’urgence et de la haute disponibilité par OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
- Explique comment votre application peut être configurée pour tirer parti des fonctionnalités de reprise d’activité haute disponibilité ajoutées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+ Explique comment votre application peut être configurée pour tirer parti des fonctionnalités de récupération d'urgence haute disponibilité, ajoutées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Accès aux informations de diagnostic dans le journal des événements étendus](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  Présente les améliorations apportées à OLE DB Driver pour SQL Server et au suivi de données qui vous donne accès aux informations de diagnostic dans la mémoire tampon en anneau et le journal XEvents.  
@@ -100,7 +100,7 @@ ms.locfileid: "39106855"
  Décrit le pilote OLE DB pour la prise en charge de SQL Server pour la fonctionnalité de base de données locale.  
   
 ## <a name="see-also"></a> Voir aussi  
- [OLE DB Driver pour SQL Server](../../oledb/oledb-driver-for-sql-server.md)      
+ [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      
  [Rubriques de procédures OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
  [Installation d’OLE DB Driver pour SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
   

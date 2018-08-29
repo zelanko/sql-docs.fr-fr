@@ -14,22 +14,22 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0164fdcfebdf0fb92aac1f37820495ad8e591a41
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 615ffd21ab333a312bd14dd92348146130a6e231
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662201"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785598"
 ---
 # <a name="understanding-data-type-conversions"></a>Conversions de types de données
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Pour faciliter la conversion des types de données du langage de programmation Java en types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] assure les conversions des types de données requises par la spécification JDBC. Pour une flexibilité accrue, tous les types sont convertibles vers et depuis **objet**, **chaîne**, et **byte []** types de données.
+Pour faciliter la conversion des types de données du langage de programmation Java en types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] assure les conversions des types de données requises par la spécification JDBC. Pour une flexibilité accrue, tous les types sont convertibles vers et depuis **objet**, **chaîne**, et **byte []** types de données.
 
 ## <a name="getter-method-conversions"></a>Conversions de méthode d'accesseur Get
 
-Le tableau suivant, basé sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], présente le mappage des conversions du pilote JDBC pour les méthodes get\<Type>() de la classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), ainsi que les conversions prises en charge pour les méthodes get\<Type> de la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
+Le tableau suivant, basé sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], présente le mappage des conversions du pilote JDBC pour les méthodes get\<Type>() de la classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), ainsi que les conversions prises en charge pour les méthodes get\<Type> de la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
@@ -59,7 +59,7 @@ Trois catégories de conversions sont prises en charge par les méthodes updater
 
 Lorsque updateString est appelé sur un **binaire**, **varbinary**, **varbinary (max)**, ou **image** de type de données de colonne, il gère la valeur de chaîne en tant que valeur de chaîne hexadécimale.
 
-Quand le type de données de colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est **XML**, la valeur des données doit être du **XML**valide. Lors de l’appel updateBytes, updateBinaryStream ou updateBlob méthodes, la valeur de données doit être la représentation sous forme de chaîne hexadécimale des caractères XML. Exemple :
+Quand le type de données de colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est **XML**, la valeur des données doit être du **XML**valide. Lors de l’appel updateBytes, updateBinaryStream ou updateBlob méthodes, la valeur de données doit être la représentation sous forme de chaîne hexadécimale des caractères XML. Exemple :
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -81,13 +81,13 @@ Deux catégories de conversions sont prises en charge par les méthodes setter d
 
 - **Sans perte (x)** : conversions pour le cas numériques où le type setter est inférieur ou égal au type serveur sous-jacent. Par exemple, lors de l’appel de setBigDecimal sur une colonne **decimal** de serveur sous-jacente, aucune conversion n’est nécessaire. Pour les conversions de numérique à caractère, le type de données **numeric** Java est converti en **String**. Par exemple, l’appel de setDouble avec une valeur « 53 » sur une colonne varchar(50) produit une valeur caractère « 53 » dans cette colonne de destination.
 
-- **Converti (y)**: Conversions à partir de Java **numérique** type serveur sous-jacent **numérique** type qui est plus petite. Ces conversions sont standard et suivent les conventions de conversion [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. La précision est toujours tronquée (jamais arrondie) et tout dépassement de capacité génère une erreur de conversion non prise en charge. Par exemple, l’utilisation de updateDecimal avec la valeur « 1,9999 » sur une colonne d’entiers sous-jacente produit « 1 » dans la colonne de destination ; en revanche, si la valeur « 3000000000 » est passée, le pilote génère une erreur.
+- **Converti (y)**: Conversions à partir de Java **numérique** type serveur sous-jacent **numérique** type qui est plus petite. Ces conversions sont standard et suivent les conventions de conversion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La précision est toujours tronquée (jamais arrondie) et tout dépassement de capacité génère une erreur de conversion non prise en charge. Par exemple, l’utilisation de updateDecimal avec la valeur « 1,9999 » sur une colonne d’entiers sous-jacente produit « 1 » dans la colonne de destination ; en revanche, si la valeur « 3000000000 » est passée, le pilote génère une erreur.
 
-- **Dépendant des données (z)**: Conversions à partir de Java **chaîne** type sous-jacent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type de données varie selon les conditions suivantes : le pilote envoie le **chaîne** valeur à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] effectue des conversions, si nécessaire. Si sendStringParametersAsUnicode est définie sur true et que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sous-jacent est **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] n’autorise pas la conversion de **nvarchar** en **image** et lève une exception SQLServerException. Si sendStringParametersAsUnicode est défini sur false et que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sous-jacent est **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permet la conversion de **varchar** en **image** et aucune exception n’est levée.
+- **Dépendant des données (z)**: Conversions à partir de Java **chaîne** type sous-jacent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données varie selon les conditions suivantes : le pilote envoie le **chaîne** valeur à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue des conversions, si nécessaire. Si sendStringParametersAsUnicode est définie sur true et que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous-jacent est **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’autorise pas la conversion de **nvarchar** en **image** et lève une exception SQLServerException. Si sendStringParametersAsUnicode est défini sur false et que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous-jacent est **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet la conversion de **varchar** en **image** et aucune exception n’est levée.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] effectue les conversions et retourne les erreurs au pilote JDBC en cas de problème.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue les conversions et retourne les erreurs au pilote JDBC en cas de problème.
 
-Quand le type de données de colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est **XML**, la valeur des données doit être du **XML**valide. Lors de l’appel updateBytes, updateBinaryStream ou updateBlob méthodes, la valeur de données doit être la représentation sous forme de chaîne hexadécimale des caractères XML. Exemple :
+Quand le type de données de colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est **XML**, la valeur des données doit être du **XML**valide. Lors de l’appel updateBytes, updateBinaryStream ou updateBlob méthodes, la valeur de données doit être la représentation sous forme de chaîne hexadécimale des caractères XML. Exemple :
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -110,13 +110,13 @@ Trois catégories de conversions sont prises en charge par les méthodes setObje
 
 - **Sans perte (x)** : conversions pour le cas numériques où le type setter est inférieur ou égal au type serveur sous-jacent. Par exemple, lors de l’appel de setBigDecimal sur une colonne **decimal** de serveur sous-jacente, aucune conversion n’est nécessaire. Pour les conversions de numérique à caractère, le type de données **numeric** Java est converti en **String**. Par exemple, l’appel de setDouble avec une valeur « 53 » sur une colonne varchar(50) produit une valeur caractère « 53 » dans cette colonne de destination.
 
-- **Converti (y)**: Conversions à partir de Java **numérique** type serveur sous-jacent **numérique** type qui est plus petite. Ces conversions sont standard et suivent les conventions de conversion [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. La précision est toujours tronquée (jamais arrondie) et les dépassements génèrent une erreur de conversion non prise en charge. Par exemple, l’utilisation de updateDecimal avec la valeur « 1,9999 » sur une colonne d’entiers sous-jacente produit « 1 » dans la colonne de destination ; en revanche, si la valeur « 3000000000 » est passée, le pilote génère une erreur.
+- **Converti (y)**: Conversions à partir de Java **numérique** type serveur sous-jacent **numérique** type qui est plus petite. Ces conversions sont standard et suivent les conventions de conversion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La précision est toujours tronquée (jamais arrondie) et les dépassements génèrent une erreur de conversion non prise en charge. Par exemple, l’utilisation de updateDecimal avec la valeur « 1,9999 » sur une colonne d’entiers sous-jacente produit « 1 » dans la colonne de destination ; en revanche, si la valeur « 3000000000 » est passée, le pilote génère une erreur.
 
-- **Dépendant des données (z)**: Conversions à partir de Java **chaîne** type sous-jacent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] type de données varie selon les conditions suivantes : le pilote envoie le **chaîne** valeur à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] effectue des conversions, si nécessaire. Si la propriété de connexion sendStringParametersAsUnicode est définie sur true et que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sous-jacent est **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] n’autorise pas la conversion de **nvarchar** en **image** et lève une exception SQLServerException. Si sendStringParametersAsUnicode est défini sur false et que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sous-jacent est **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permet la conversion de **varchar** en **image** et aucune exception n’est levée.
+- **Dépendant des données (z)**: Conversions à partir de Java **chaîne** type sous-jacent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données varie selon les conditions suivantes : le pilote envoie le **chaîne** valeur à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue des conversions, si nécessaire. Si la propriété de connexion sendStringParametersAsUnicode est définie sur true et que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous-jacent est **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’autorise pas la conversion de **nvarchar** en **image** et lève une exception SQLServerException. Si sendStringParametersAsUnicode est défini sur false et que le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous-jacent est **image**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet la conversion de **varchar** en **image** et aucune exception n’est levée.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] effectue les conversions de définitions en masse et retourne les erreurs au pilote JDBC en cas de problème. Conversions côté client constituent l’exception et sont effectuées uniquement dans le cas de **date**, **temps**, **timestamp**, **booléenne**et  **Chaîne** valeurs.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue les conversions de définitions en masse et retourne les erreurs au pilote JDBC en cas de problème. Conversions côté client constituent l’exception et sont effectuées uniquement dans le cas de **date**, **temps**, **timestamp**, **booléenne**et  **Chaîne** valeurs.
 
-Quand le type de données de colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] est **XML**, la valeur des données doit être du **XML**valide. Lors de l'appel des méthodes setObject(byte[], SQLXML), setObject(inputStream, SQLXML) ou setObject(Blob, SQLXML), la valeur de données doit être la représentation sous forme de chaîne hexadécimale des caractères XML. Exemple :
+Quand le type de données de colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est **XML**, la valeur des données doit être du **XML**valide. Lors de l'appel des méthodes setObject(byte[], SQLXML), setObject(inputStream, SQLXML) ou setObject(Blob, SQLXML), la valeur de données doit être la représentation sous forme de chaîne hexadécimale des caractères XML. Exemple :
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E

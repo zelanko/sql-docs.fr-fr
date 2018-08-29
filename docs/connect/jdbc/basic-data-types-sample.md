@@ -14,18 +14,18 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6548433059e4537f58b70681b1958e40af0bb7f5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 6f67563ccf884c47b7fc3b86d32cd2b09fa393c9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456733"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784890"
 ---
 # <a name="basic-data-types-sample"></a>Exemple de types de données de base
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] montre comment utiliser les méthodes getter du jeu de résultats pour récupérer des valeurs de types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] de base ; il explique également comment se servir des méthodes update du jeu de résultats pour mettre à jour ces valeurs.
+Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] montre comment utiliser les méthodes getter du jeu de résultats pour récupérer des valeurs de types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base ; il explique également comment se servir des méthodes update du jeu de résultats pour mettre à jour ces valeurs.
 
 Le fichier de code de cet exemple, BasicDT.java, se trouve à l’emplacement suivant :
 

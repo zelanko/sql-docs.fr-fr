@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: bcb5b6636fcabab8d6cb5eb3709f632f9968c3a7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279260"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42784000"
 ---
 # <a name="tracing-driver-operation"></a>Suivi du fonctionnement du pilote
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "39279260"
 |TDS.Channel|Cette catégorie effectue le suivi des actions du canal de communication TCP avec SQL Server. Les messages journalisés incluent l'ouverture et la fermeture de sockets ainsi que les lectures et écritures. Elle effectue également le suivi des messages relatifs à l'établissement d'une connexion SSL (Secure Sockets Layer) à SQL Server.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINE, FINER ou FINEST.|  
 |TDS.Writer|Cette catégorie effectue le suivi des écritures dans le canal TDS. À noter que seule la longueur des écritures, et non le contenu, fait l'objet d'un suivi. Cette catégorie effectue également le suivi des problèmes lorsqu'un signal d'avertissement est envoyé au serveur pour annuler l'exécution d'une instruction.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINEST.|  
 |TDS.Reader|Cette catégorie effectue le suivi de certaines opérations de lecture à partir du canal TDS au niveau FINEST. Au niveau FINEST, le suivi peut être détaillé. Aux niveaux WARNING et SEVERE, cette catégorie effectue le suivi lorsque le pilote reçoit un protocole TDS non valide de SQL Server avant qu'il ne ferme la connexion.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINER et FINEST.|  
-|TDS.Command|Cette catégorie effectue le suivi des transitions d’état de bas niveau et d’autres informations associées à l’exécution de commandes TDS, telles que les exécutions d’instructions [!INCLUDE[tsql](../../includes/tsql_md.md)], les extractions de curseurs ResultSet, les validations, et ainsi de suite.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINEST.|  
+|TDS.Command|Cette catégorie effectue le suivi des transitions d’état de bas niveau et d’autres informations associées à l’exécution de commandes TDS, telles que les exécutions d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], les extractions de curseurs ResultSet, les validations, et ainsi de suite.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINEST.|  
 |TDS.TOKEN|Cette catégorie ne journalise que les jetons des paquets TDS et est moins claire que la catégorie TDS.DATA. Elle peut uniquement être activée en affectant le niveau de journalisation FINEST.<br /><br /> Au niveau FINEST, cette catégorie effectue le suivi des jetons TDS lors de leur traitement dans la réponse. Au niveau SEVERE, cette catégorie effectue le suivi en cas de jeton TDS non valide.|  
 |SQLServerDatabaseMetaData|Journalise les messages dans la classe [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  
 |SQLServerResultSetMetaData|Journalise les messages dans la classe [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  

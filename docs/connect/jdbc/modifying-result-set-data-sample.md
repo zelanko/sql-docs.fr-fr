@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d5714d97f6c7762fa1cfebf0480cb7e669255d9
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: af7c20d6540cb5db098bc8f08c33930355253be2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453983"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785114"
 ---
 # <a name="modifying-result-set-data-sample"></a>Modification de l'exemple de données du jeu de résultats
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] montre comment récupérer un jeu de données pouvant être mis à jour auprès d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Ensuite, en utilisant des méthodes de l’objet [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), il insère, puis modifie et enfin supprime une ligne de données dans l’ensemble de données.
+Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] montre comment récupérer un jeu de données pouvant être mis à jour auprès d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ensuite, en utilisant des méthodes de l’objet [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), il insère, puis modifie et enfin supprime une ligne de données dans l’ensemble de données.
 
 Le fichier de code de cet exemple est nommé UpdateResultSet.java et se trouve à l’emplacement suivant :
 
@@ -35,10 +35,10 @@ Le fichier de code de cet exemple est nommé UpdateResultSet.java et se trouve �
 
 ## <a name="requirements"></a>Spécifications
 
-Pour exécuter cet exemple d’application, vous devez définir le classpath de façon à inclure le fichier jar mssql-jdbc. Vous devez également avoir accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
+Pour exécuter cet exemple d’application, définissez le classpath de façon à inclure le fichier jar mssql-jdbc. L’accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] est également nécessaire. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers de bibliothèques de classes mssql-jdbc à utiliser en fonction de vos paramètres JRE (Java Runtime Environment). Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
 ## <a name="example"></a> Exemple
 

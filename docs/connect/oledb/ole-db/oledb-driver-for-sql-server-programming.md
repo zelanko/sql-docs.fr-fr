@@ -20,14 +20,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server
 - OLE DB Driver for SQL Server, OLE DB
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f009803808366fe784de790b01e412d7f6888194
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 9be35b231d518d975c5b9fb7d5657a044fa81e06
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109151"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036484"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Programmation du pilote OLE DB pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "39109151"
   
 -   [Erreurs](../../oledb/ole-db-errors/errors.md)  
   
--   [Noms de principaux du service dans les connexions clientes &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Noms de principal du service &#40;SPN&#41; dans les connexions clientes &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
 -   [Prise en charge des colonnes éparses &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
