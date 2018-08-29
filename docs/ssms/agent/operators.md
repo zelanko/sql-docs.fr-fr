@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ddf3e46378c8db62de8c2e04ba5674bf28c6ce2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 1d4233dae5b3ac669c50132a1589efe024009956
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980431"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775726"
 ---
 # <a name="operators"></a>Opérateurs
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38980431"
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Les opérateurs sont des alias pour les personnes ou les groupes qui peuvent recevoir une notification électronique à la fin des travaux ou en cas d'alertes. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent prend en charge la notification des administrateurs par le biais des opérateurs. Les opérateurs activent les fonctions de notification et de surveillance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+Les opérateurs sont des alias pour les personnes ou les groupes qui peuvent recevoir une notification électronique à la fin des travaux ou en cas d'alertes. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent prend en charge la notification des administrateurs par le biais des opérateurs. Les opérateurs activent les fonctions de notification et de surveillance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="operator-attributes-and-concepts"></a>Attributs et concepts relatifs aux opérateurs  
 Les attributs principaux d'un opérateur sont les suivants :  
@@ -52,13 +52,13 @@ Les attributs principaux d'un opérateur sont les suivants :
 -   Informations de contact  
   
 ### <a name="naming-an-operator"></a>Désignation d'un opérateur  
-Chaque opérateur doit avoir un nom. Les noms des opérateurs doivent être uniques dans l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et ne pas dépasser **128** caractères.  
+Chaque opérateur doit avoir un nom. Les noms des opérateurs doivent être uniques dans l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ne pas dépasser **128** caractères.  
   
 ### <a name="contact-information"></a>Informations de contact  
 Les informations de contact d'un opérateur définissent la façon dont l'opérateur est notifié. Les opérateurs peuvent être avertis par e-mail, par radiomessagerie ou par la commande **net send** :  
   
 > [!IMPORTANT]  
-> Les options du récepteur de radiomessagerie et **net send** seront supprimées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dans une version future de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
+> Les options du récepteur de radiomessagerie et **net send** seront supprimées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans une version future de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
   
 -   **Notification par courrier électronique**  
   
@@ -80,7 +80,7 @@ Les informations de contact d'un opérateur définissent la façon dont l'opéra
   
         Ce logiciel est propre au fournisseur de services de radiomessagerie. Le logiciel fait office de client de courrier électronique qui traite régulièrement sa boîte de réception en interprétant tout ou partie des informations relatives aux adresses de courrier électronique comme un numéro de récepteur de radiomessagerie, ou en comparant le nom associé au courrier électronique à un numéro de récepteur de radiomessagerie dans une table de correspondance.  
   
-        Si tous les opérateurs ont le même fournisseur de services de radiomessagerie, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] pour spécifier une mise en forme spécifique de courrier électronique exigé par le système de liaison par radiomessagerie/courrier électronique. Cette mise en forme spéciale peut être un préfixe ou un suffixe et elle peut être incluse dans les lignes suivantes du courrier électronique :  
+        Si tous les opérateurs ont le même fournisseur de services de radiomessagerie, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour spécifier une mise en forme spécifique de courrier électronique exigé par le système de liaison par radiomessagerie/courrier électronique. Cette mise en forme spéciale peut être un préfixe ou un suffixe et elle peut être incluse dans les lignes suivantes du courrier électronique :  
   
         **Objet :**  
   
@@ -96,7 +96,7 @@ Les informations de contact d'un opérateur définissent la façon dont l'opéra
     Envoie un message à l’opérateur par le biais de la commande **net send** . Pour **net send**, spécifiez le destinataire (ordinateur ou utilisateur) du message réseau.  
   
     > [!NOTE]  
-    > La commande **net send** utilise Microsoft Windows Messenger. Pour envoyer des alertes, ce service doit s'exécuter à la fois sur l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] s'exécute et sur l'ordinateur de l'opérateur.  
+    > La commande **net send** utilise Microsoft Windows Messenger. Pour envoyer des alertes, ce service doit s'exécuter à la fois sur l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute et sur l'ordinateur de l'opérateur.  
   
 ## <a name="alerting-and-fail-safe-operators"></a>Alertes et opérateurs de prévention de défaillance  
 Vous pouvez choisir les opérateurs à avertir en réponse à une alerte. Par exemple, vous pouvez attribuer des responsabilités alternées aux opérateurs, en planifiant des alertes qui les avertissent. Ainsi, une personne A peut être avertie des alertes intervenant le lundi, le mercredi ou le vendredi, tandis qu'une personne B peut l'être le mardi, le jeudi ou le samedi.  
@@ -109,7 +109,7 @@ L'opérateur de prévention de défaillance est averti lorsque :
   
     Cela peut être dû à l'impossibilité de joindre les principaux opérateurs, par exemple si les adresses de radiomessagerie sont incorrectes ou si les opérateurs ne sont pas en service.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent ne peut pas avoir accès aux tables système de la base de données **msdb** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne peut pas avoir accès aux tables système de la base de données **msdb** .  
   
     La table système **sysnotifications** précise les responsabilités des opérateurs en ce qui concerne les alertes.  
   
@@ -133,5 +133,5 @@ Un ou plusieurs des éléments suivants sont nécessaires pour avertir un opéra
 |Tâches associées à l'affectation d'alertes|[Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Définir la réponse à une alerte &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a> Voir aussi  
-[Messagerie de base de données](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)  
   

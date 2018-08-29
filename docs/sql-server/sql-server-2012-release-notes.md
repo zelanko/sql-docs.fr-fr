@@ -15,12 +15,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4e350a885524670905e5aa67d146b1531c32dae
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: bc599762d69e06886e95a85c3e58dbf3923e2ddf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926200"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775720"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notes de publication de SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ou Gestionnaire de configuration
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**Solution de contournement :** ceci peut se produire en cas d'échec d'installation du moteur SQL Server ou d'Analysis Services. Pour résoudre ce problème, reportez-vous aux journaux du programme d'installation SQL Server et corrigez les erreurs du moteur SQL Server Engine et d'Analysis Services. Pour plus d'informations, consultez Afficher et lire les fichiers journaux d'installation de SQL Server. Pour plus d'informations, consultez [Afficher et lire les fichiers journaux d'installation de SQL Server](http://msdn.microsoft.com/library/ms143702(SQL.110).aspx).  
+**Solution de contournement :** ceci peut se produire en cas d'échec d'installation du moteur SQL Server ou d'Analysis Services. Pour résoudre ce problème, reportez-vous aux journaux du programme d'installation SQL Server et corrigez les erreurs du moteur SQL Server Engine et d'Analysis Services. Pour plus d'informations, consultez Afficher et lire les fichiers journaux d'installation de SQL Server. Pour plus d'informations, consultez [Afficher et lire les fichiers journaux d'installation de SQL Server](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 La mise à niveau vers SQL Server 2012 d'un cluster de basculement SQL Server 2008, 2008 R2 Analysis Services peut échouer après un changement de nom du réseau  
 **Problème :** après avoir changé le nom réseau d'une instance de cluster de basculement Microsoft SQL Server 2008 ou 2008 R2 Analysis Services à l'aide de l'outil Administrateur de cluster Windows, l'opération de mise à niveau peut échouer.  
@@ -225,7 +225,7 @@ SQL Server 2012 est pris en charge sur les systèmes d'exploitation Windows Vist
   
 8.  La page **Progression de la réparation** indique l'état de l'opération de réparation. La page **Terminé** indique que l'opération est terminée.  
   
-Pour plus d'informations sur la réparation d'une instance de SQL Server, consultez [Réparer une installation défectueuse de SQL Server 2012](http://msdn.microsoft.com/library/cc646006(SQL.110).aspx).  
+Pour plus d'informations sur la réparation d'une instance de SQL Server, consultez [Réparer une installation défectueuse de SQL Server 2012](../database-engine/install-windows/repair-a-failed-sql-server-installation.md).  
   
 ### <a name="111-an-instance-of-sql-server-2012-might-fail-after-an-os-upgrade"></a>1.11 Une instance de SQL Server 2012 risque d'échouer après une mise à niveau du système d'exploitation  
 **Solution :** il est possible qu'une instance de SQL Server 2012 échoue et renvoie l'erreur suivante si vous mettez à jour le système d'exploitation de Windows Vista vers Windows 7 SP1.  
@@ -237,7 +237,7 @@ Pour plus d'informations sur la réparation d'une instance de SQL Server, consul
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 La mise à niveau de l'édition de SQL Server nécessite un redémarrage  
 **Problème**: lorsque vous mettez à niveau l'édition d'une instance de SQL Server 2012, il est possible que certaines des fonctionnalités associées à la nouvelle édition ne soient pas activées immédiatement.  
   
-**Solution de contournement**: redémarrez l'ordinateur après la mise à niveau de l'édition d'une instance de SQL Server 2012. Pour plus d'informations sur les mises à niveau prises en charge dans SQL Server 2012, consultez [Mises à niveau de version et d'édition prises en charge](http://msdn.microsoft.com/library/ms143393.aspx).  
+**Solution de contournement**: redémarrez l'ordinateur après la mise à niveau de l'édition d'une instance de SQL Server 2012. Pour plus d'informations sur les mises à niveau prises en charge dans SQL Server 2012, consultez [Mises à niveau de version et d'édition prises en charge](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 Une base de données avec des fichiers ou un groupe de fichiers en lecture seule ne peut pas être mise à niveau.  
 **Problème**: vous ne pouvez pas mettre à niveau une base de données en attachant une base de données ou en restaurant une à partir d'une sauvegarde si la base de données ou ses fichiers/groupes de fichiers sont accessibles en lecture seule.  L'erreur 3415 est retournée.  Ce problème s'applique également lors d'une mise à niveau sur place d'une instance de SQL Server. C'est-à-dire, si vous tentez de remplacer une instance existante de SQL Server en installant SQL Server 2012 et une ou plusieurs bases de données existantes sont en lecture seule.  
@@ -247,7 +247,7 @@ Pour plus d'informations sur la réparation d'une instance de SQL Server, consul
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 Échec de la réinstallation d'une instance de cluster de basculement SQL Server si vous utilisez la même adresse IP  
 **Problème :** si vous spécifiez une adresse IP incorrecte lors de l’installation d’une instance de cluster de basculement SQL Server, l’installation échoue. Après avoir désinstallé l'instance en échec, si vous tentez de réinstaller l'instance de cluster de basculement SQL Server avec le même nom d'instance et une adresse IP correcte, l'installation échoue. Cet échec est dû au groupe de ressources dupliqué conservé par l'installation précédente.  
   
-**Solution de contournement :** pour résoudre ce problème, utilisez un autre nom d'instance lors de la réinstallation, ou supprimez manuellement le groupe de ressources avant réinstallation. Pour plus d'informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server](http://msdn.microsoft.com/library/ms191545).  
+**Solution de contournement :** pour résoudre ce problème, utilisez un autre nom d'instance lors de la réinstallation, ou supprimez manuellement le groupe de ressources avant réinstallation. Pour plus d'informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

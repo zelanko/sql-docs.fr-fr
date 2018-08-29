@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01888485033e81c1fa625778f7bca987523af365
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2a69e8b536dcabc8500184413b19008bd6c910d0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974922"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775608"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,15 +70,15 @@ Affichez uniquement les travaux dont vous êtes propriétaire, à moins que vous
   
 5.  Dans la page **Général** de la boîte de dialogue **Propriétés de l'étape du travail** , vous pouvez afficher le type d'étape de travail et sa fonction.  
   
-6.  Cliquez sur la page **Avancé** pour afficher les mesures prises par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si l'étape du travail réussit ou échoue, le nombre de fois où l'étape du travail doit être tentée, l'emplacement où est écrite la sortie de l'étape du travail et l'utilisateur pour lequel elle est exécutée.  
+6.  Cliquez sur la page **Avancé** pour afficher les mesures prises par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent si l'étape du travail réussit ou échoue, le nombre de fois où l'étape du travail doit être tentée, l'emplacement où est écrite la sortie de l'étape du travail et l'utilisateur pour lequel elle est exécutée.  
   
 #### <a name="to-view-job-step-output"></a>Pour afficher la sortie d'une étape de travail  
   
 1.  Dans la boîte de dialogue **Propriétés de l'étape du travail** , cliquez sur la page **Avancé** .  
   
-2.  Selon la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à laquelle vous êtes connecté, vous pouvez afficher le fichier ou la table de sortie de l'étape de travail de la manière suivante :  
+2.  Selon la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous êtes connecté, vous pouvez afficher le fichier ou la table de sortie de l'étape de travail de la manière suivante :  
   
-    -   Si vous êtes connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou une version ultérieure, vous pouvez cliquer sur **Afficher** uniquement lorsque la case à cocher **Enregistrer un journal dans la table** est activée. Dans ce cas, la sortie de la table de travail est écrite dans la table **sysjobstepslogs** de la base de données **msdb** .  
+    -   Si vous êtes connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une version ultérieure, vous pouvez cliquer sur **Afficher** uniquement lorsque la case à cocher **Enregistrer un journal dans la table** est activée. Dans ce cas, la sortie de la table de travail est écrite dans la table **sysjobstepslogs** de la base de données **msdb** .  
   
     -   Le bouton **Afficher** est désactivé lorsque le résultat de l'étape de travail est écrit dans un fichier. Pour afficher le fichier de sortie d'une étape de travail, utilisez le Bloc-notes.  
   

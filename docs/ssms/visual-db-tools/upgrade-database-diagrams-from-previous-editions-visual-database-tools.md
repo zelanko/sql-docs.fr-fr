@@ -23,16 +23,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 637a674bcbbc22e0a10ac2e49c7ea0c875b85c44
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 60450ac29e788921557a76bde211775fecbc4734
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052977"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775714"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Mettre à niveau des schémas de base de données d'éditions antérieures (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Les schémas de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sont automatiquement mis à niveau lors de l'installation du schéma de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]. Pour obtenir plus d’instructions sur la configuration des schémas, consultez [Configurer le Concepteur de schémas de base de données (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
+Les schémas de base de données créés sur les éditions antérieures de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont automatiquement mis à niveau lors de l'installation du schéma de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour obtenir plus d’instructions sur la configuration des schémas, consultez [Configurer le Concepteur de schémas de base de données (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>Pour mettre à niveau des schémas de base de données hérités  
   
