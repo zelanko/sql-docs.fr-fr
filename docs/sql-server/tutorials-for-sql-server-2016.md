@@ -13,12 +13,12 @@ caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ce093e33e944e84b3985bbf79e0e3c895aa3ebdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d03b293418329fe6eeeba532778acca45ec9c860
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063627"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774192"
 ---
 # <a name="tutorials-for-sql-server"></a>Didacticiels pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38063627"
      
 -   Si un didacticiel utilise une des bases de données [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], vous devez télécharger et utiliser la version la plus récente disponible auprès de CodePlex. Pour plus d’informations, consultez [Bases de données AdventureWorks et scripts pour SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    
 -   Téléchargez un classeur [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] et des rapports [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] à utiliser avec des didacticiels sur [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , accédez à [Exemples Power View pour SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=220734).  
-- Découvrez le nouvel exemple [Wide World Importers](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) disponible dans le dépôt GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
+- Découvrez le nouvel exemple [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) disponible dans le dépôt GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
 
  
 ## <a name="current-tutorials"></a>Didacticiels actuels  

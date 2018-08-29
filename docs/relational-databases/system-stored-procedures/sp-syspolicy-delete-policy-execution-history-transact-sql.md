@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Documents Microsoft
+title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_delete_policy_execution_history
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d4e7f496124727389993c1e249b80aeaa7414b5f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b87056b364b5861c771496622176024a8748008c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262732"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019235"
 ---
 # <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
  Identificateur de la stratégie pour laquelle vous voulez supprimer l'historique d'exécution. *policy_id* est **int**et est requis. Sa valeur peut être NULL.  
   
  [  **@oldest_date=** ] **'***oldest_date***'**  
- Date la plus ancienne pour laquelle vous voulez conserver l'historique d'exécution de la stratégie. Tout historique d'exécution antérieur à cette date est supprimé. *l’argument oldest_date* est **datetime**et est requis. Sa valeur peut être NULL.  
+ Date la plus ancienne pour laquelle vous voulez conserver l'historique d'exécution de la stratégie. Tout historique d'exécution antérieur à cette date est supprimé. *oldest_date* est **datetime**et est requis. Sa valeur peut être NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -68,19 +67,19 @@ ON a.policy_id = b.policy_id
   
  Le comportement suivant s'applique si vous spécifiez Null pour l'une des deux valeurs suivantes, ou les deux :  
   
--   Pour supprimer tout l’historique d’exécution de stratégie, spécifiez la valeur NULL pour les deux *policy_id* et *oldest_date*.  
+-   Pour supprimer tout l’historique d’exécution de stratégie, spécifiez la valeur NULL pour les deux *policy_id* et pour *oldest_date*.  
   
 -   Pour supprimer tout l’historique d’exécution pour une stratégie spécifique, spécifiez un identificateur de stratégie pour *policy_id*, et spécifiez la valeur NULL en tant que *oldest_date*.  
   
--   Pour supprimer l’historique d’exécution pour toutes les stratégies avant une date spécifique, spécifiez NULL pour *policy_id*, spécifiez une date pour *oldest_date*.  
+-   Pour supprimer l’historique d’exécution de toutes les stratégies avant une date spécifique, spécifiez NULL pour *policy_id*, spécifiez une date pour *oldest_date*.  
   
- Pour archiver l'historique d'exécution de la stratégie, vous pouvez ouvrir le journal Historique de la stratégie dans l'Explorateur d'objets et exporter l'historique d'exécution dans un fichier. Pour accéder à l’historique de stratégie, développez **gestion**, avec le bouton droit **gestion des stratégies de**, puis cliquez sur **afficher l’historique**.  
+ Pour archiver l'historique d'exécution de la stratégie, vous pouvez ouvrir le journal Historique de la stratégie dans l'Explorateur d'objets et exporter l'historique d'exécution dans un fichier. Pour accéder au journal d’historique de la stratégie, développez **gestion**, avec le bouton droit **gestion des stratégies de**, puis cliquez sur **afficher l’historique**.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle de base de données fixe PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Élévation possible des informations d’identification : les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement de l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la plupart des objets soient créés dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Étant donné cette possible élévation des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs qui sont approuvés avec contrôle de la configuration de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Élévation possible des informations d’identification : les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement de l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la plupart des objets d’être créées dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Étant donné cette possible élévation des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs qui sont approuvés avec contrôle de la configuration de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime l'historique d'exécution de la stratégie avant une date spécifique pour une stratégie ayant un ID égal à 7.  
@@ -93,7 +92,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de gestion basée sur la stratégie &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Procédures stockées de gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_purge_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
   

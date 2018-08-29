@@ -18,17 +18,16 @@ helpviewer_keywords:
 - ROUTINE_COLUMNS view
 - INFORMATION_SCHEMA.ROUTINE_COLUMNS view
 ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ca7c277ab96cfc12a44b6b650f5f28a1821c08b5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: e976804e34e7074b23f89ba8c61eeb46a7d3d9e7
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557659"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43110462"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39557659"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Nom du catalogue ou de la base de données de la fonction table|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la fonction table.<br /><br /> **\*\* Important \* \* ** n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la fonction table.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|Nom de la fonction table|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|Nom de colonne.|  
 |**ORDINAL_POSITION**|**Int**|Numéro d’identification de colonne.|  
@@ -60,7 +59,7 @@ ms.locfileid: "39557659"
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|Retourne toujours la valeur Null.|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|Retourne le nom unique pour l’ordre de tri si la colonne est de données de type caractère ou **texte** type de données. Dans le cas contraire, la valeur NULL est retournée.|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Si la colonne est un type de données alias, elle correspond au nom de la base de données dans laquelle le type de données défini par l'utilisateur a été créé. Dans le cas contraire, la valeur NULL est retournée.|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Si la colonne est un type de données défini par l'utilisateur, elle représente le nom du schéma qui contient le type de données défini par l'utilisateur. Dans le cas contraire, la valeur NULL est retournée.<br /><br /> **\*\* Important \* \* ** n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Si la colonne est un type de données défini par l'utilisateur, elle représente le nom du schéma qui contient le type de données défini par l'utilisateur. Dans le cas contraire, la valeur NULL est retournée.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**NOM_DOMAINE**|**nvarchar(** 128 **)**|Si la colonne est un type de données défini par l'utilisateur, elle représente le nom du type de données défini par l'utilisateur. Dans le cas contraire, la valeur NULL est retournée.|  
   
 ## <a name="see-also"></a>Voir aussi  

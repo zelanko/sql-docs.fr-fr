@@ -18,20 +18,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba51c2cba1f2032fe6c55fc27dac7c3f5416cb8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef2fe44791cc401c5f71ee3c3bd6ff09d33d45b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33038776"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774678"
 ---
 # <a name="about-dialog-box"></a>Boîte de dialogue À propos de
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
-La boîte de dialogue **À propos de** fournit des informations sur le produit et permet d'accéder à d'autres informations relatives à l'ordinateur où s'exécute le produit. Pour les versions d'évaluation, l'entrée [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] répertorie le nombre de jours restant avant l'expiration de l'installation. Cette boîte de dialogue est accessible à partir du menu **?** (Aide).  
+La boîte de dialogue **À propos de** fournit des informations sur le produit et permet d'accéder à d'autres informations relatives à l'ordinateur où s'exécute le produit. Pour les versions d'évaluation, l'entrée [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] répertorie le nombre de jours restant avant l'expiration de l'installation. Cette boîte de dialogue est accessible à partir du menu **?** (Aide).  
   
 ## <a name="options"></a>Options  
 **Nom du composant**  
-Répertorie le nom de chaque élément [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] installé.  
+Répertorie le nom de chaque élément [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installé.  
   
 **Version**  
 Répertorie la version de chaque composant installé.  

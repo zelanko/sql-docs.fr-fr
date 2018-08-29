@@ -22,12 +22,12 @@ caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4b60892548f532385ff12a011b3cb89d631dabbf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b9fcea82b032cd709385e7d981d04d108295f19e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404701"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406719"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Création d'une transformation synchrone à l'aide du composant Script
   Vous utilisez un composant de transformation dans le flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour modifier et analyser les données acheminées de la source à la destination. Une transformation à sorties synchrones traite chacune des lignes d'entrée lorsqu'elles traversent le composant. Une transformation à sorties asynchrones patiente jusqu'à ce qu'elle ait reçu toutes les lignes d'entrée pour achever son traitement. Cette rubrique décrit une transformation synchrone. Pour plus d’informations sur les transformations asynchrones, consultez [Création d’une transformation asynchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Pour plus d’informations sur la différence entre les composants synchrones et asynchrones, consultez [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "35404701"
  Pour définir le langage de script du composant Script, vous définissez la propriété **ScriptLanguage** dans la page **Script** de l’**Éditeur de transformation de script**.  
   
 > [!NOTE]  
->  Pour définir le langage de script par défaut du composant Script, utilisez l’option **Langage de script** dans la page **Général** de la boîte de dialogue **Options**. Pour plus d’informations, consultez [Page Général](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+>  Pour définir le langage de script par défaut du composant Script, utilisez l’option **Langage de script** dans la page **Général** de la boîte de dialogue **Options**. Pour plus d’informations, consultez [Page Général](../general-page-of-integration-services-designers-options.md).  
   
  Un composant de transformation de flux de données possède une entrée et prend en charge une ou plusieurs sorties. La configuration de l’entrée et des sorties du composant est l’une des étapes à exécuter en mode Création des métadonnées, à l’aide de l’**Éditeur de transformation de script**, avant d’écrire le script personnalisé.  
   

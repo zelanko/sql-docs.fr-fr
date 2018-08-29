@@ -1,5 +1,5 @@
 ---
-title: sp_lookupcustomresolver (Transact-SQL) | Documents Microsoft
+title: sp_lookupcustomresolver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_lookupcustomresolver
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65770490b7a04efed2a4d7e70a2863fe45d5d453
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d2e70f21cd9b0cc15a0b895a7e52b88a885edf0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998446"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020098"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,18 +74,18 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="remarks"></a>Notes  
  **sp_lookupcustomresolver** est utilisé dans la réplication de fusion.  
   
- **sp_lookupcustomresolver** retourne une valeur NULL pour *resolver_clsid* lorsque le composant n’est pas inscrit à la Distribution et la valeur « 00000000-0000-0000-0000-000000000000 » lorsque l’inscription appartient à un Assembly .NET framework inscrit en tant qu’un gestionnaire de logique métier.  
+ **sp_lookupcustomresolver** retourne une valeur NULL pour *resolver_clsid* lorsque le composant n’est pas inscrit à la Distribution et la valeur « 00000000-0000-0000-0000-000000000000 » lorsque l’inscription appartient à un Assembly .NET framework enregistré comme un gestionnaire de logique métier.  
   
  **sp_lookupcustomresolver** est appelée par [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) et [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) pour valider le texte spécifié *article_resolver*.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **db_owner** du rôle de base de données fixe sur la base de données de publication permettre exécuter **sp_lookupcustomresolver**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **db_owner** rôle de base de données fixe sur la base de données de publication peut exécuter **sp_lookupcustomresolver**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Exécuter la logique métier lors de la synchronisation de fusion](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [Implémenter un gestionnaire de logique métier pour un article de fusion](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
- [Spécifiez un programme de résolution de l’Article de fusion](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
+ [Spécifier un résolveur d’articles de fusion](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
  [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
  [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

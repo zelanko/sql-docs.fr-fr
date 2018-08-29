@@ -1,5 +1,5 @@
 ---
-title: sp_OAGetErrorInfo (Transact-SQL) | Documents Microsoft
+title: sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b272cbcc6fc8221dede3b4a1274032926910186a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5bbb9231b96b26ee8c2a7cd23eef5c58a612e863
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260102"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036056"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,37 +69,37 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou un nombre différent de zéro (échec), qui représente la valeur entière de HRESULT renvoyée par l'objet OLE Automation.  
   
- Pour plus d’informations sur les Codes de retour HRESULT, consultez [OLE Automation Codes de retour et des informations d’erreur](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Pour plus d’informations sur les Codes de retour HRESULT, consultez [OLE Automation Codes de retour et les informations d’erreur](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Si aucun paramètre de sortie n'est spécifié, les informations d'erreur sont renvoyées au client sous la forme d'un ensemble de résultats.  
   
-|Noms des colonnes|Type de données| Description|  
+|Noms des colonnes|Type de données|Description|  
 |------------------|---------------|-----------------|  
 |**Erreur**|**binary (4)**|Représentation binaire du numéro d'erreur.|  
 |**Source**|**nvarchar(nn)**|Source de l'erreur.|  
 |**Description**|**nvarchar(nn)**|Description de l’erreur.|  
 |**HelpFile**|**nvarchar(nn)**|Fichier d'aide pour la source.|  
-|**HelpID**|**int**|ID du contexte de l'aide dans le fichier source d'aide.|  
+|**HelpID**|**Int**|ID du contexte de l'aide dans le fichier source d'aide.|  
   
 ## <a name="remarks"></a>Notes  
- Procédure stockée de chaque appel à une OLE Automation (à l’exception de **sp_OAGetErrorInfo**) réinitialise les informations d’erreur ; par conséquent, **sp_OAGetErrorInfo** Obtient des informations d’erreur uniquement pour l’appel de procédure stockée OLE Automation plus récente. Notez que puisque **sp_OAGetErrorInfo** ne réinitialise pas les informations d’erreur, il peut être appelée plusieurs fois pour obtenir les mêmes informations d’erreur.  
+ Procédure stockée de chaque appel à une OLE Automation (à l’exception **sp_OAGetErrorInfo**) réinitialise les informations d’erreur ; par conséquent, **sp_OAGetErrorInfo** Obtient des informations d’erreur uniquement pour la plus récente OLE Appel de procédure stockées Automation. Étant donné que **sp_OAGetErrorInfo** ne réinitialise pas les informations d’erreur, elle peut être appelée plusieurs fois pour obtenir les mêmes informations d’erreur.  
   
  Le tableau suivant donne la liste des erreurs OLE Automation et leurs causes courantes.  
   
 |Erreur et HRESULT|Cause courante|  
 |-----------------------|------------------|  
-|**Mauvais type de variable (0 x 80020008)**|Type de données d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] valeur passée comme un paramètre de méthode ne correspond pas à la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] type de données du paramètre de méthode ou une valeur NULL a été passée comme un paramètre de méthode.|  
+|**Mauvais type de variable (0 x 80020008)**|Type de données d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] valeur passée comme un paramètre de méthode ne correspond pas à la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] type de données du paramètre de méthode ou une valeur NULL a été passé comme paramètre de méthode.|  
 |**Nom inconnu (0 x 8002006)**|La propriété ou le nom de méthode spécifié n'a pu être trouvé pour l'objet spécifié.|  
-|**Chaîne de classe non valide (0x800401f3)**|Le ProgID ou le CLSID spécifié n'est pas inscrit en tant qu'objet OLE sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Serveurs OLE automation personnalisés doivent être enregistrés avant de pouvoir être instanciés à l’aide de **sp_OACreate**. Cela est possible à l’aide de l’utilitaire Regsvr32.exe pour les serveurs intra-processus (.dll), ou le **/REGSERVER** commutateur de ligne de commande pour les serveurs locaux (.exe).|  
+|**Chaîne de classe non valide (0x800401f3)**|Le ProgID ou le CLSID spécifié n'est pas inscrit en tant qu'objet OLE sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Serveurs OLE automation personnalisés doivent être enregistrés avant de pouvoir être instanciés à l’aide de **sp_OACreate**. Cela est possible à l’aide de l’utilitaire Regsvr32.exe pour les serveurs de process (.dll), ou le **/REGSERVER** commutateur de ligne de commande pour les serveurs locaux (.exe).|  
 |**Échec de l’exécution du serveur (0 x 80080005)**|L'objet OLE spécifié est inscrit comme serveur OLE local (fichier .EXE), mais le fichier .EXE ne peut pas être trouvé ou démarré.|  
 |**Le module spécifié est introuvable (0x8007007e)**|L'objet OLE spécifié est inscrit comme serveur OLE in-process (fichier .DLL), mais le fichier .DLL ne peut pas être trouvé ou chargé.|  
 |**Incompatibilité de type (0 x 80020005)**|Le type de données d'une variable locale [!INCLUDE[tsql](../../includes/tsql-md.md)] utilisée pour stocker une valeur de propriété renvoyée ou une valeur de retour de méthode ne correspond pas au type de données [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] de la valeur de retour de la propriété ou de la méthode. La raison peut aussi être que la valeur de retour d'une propriété ou d'une méthode était requise, mais qu'aucune valeur n'a été renvoyée.|  
 |**Le type de données ou la valeur du paramètre 'context' de sp_OACreate n'est pas valide. (0x8004275B)**|La valeur du paramètre de contexte doit être : 1, 4 ou 5.|  
   
- Pour plus d’informations sur le traitement des Codes de retour HRESULT, consultez [OLE Automation Codes de retour et des informations d’erreur](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Pour plus d’informations sur le traitement des Codes de retour HRESULT, consultez [OLE Automation Codes de retour et les informations d’erreur](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

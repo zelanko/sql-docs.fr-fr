@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7b344fb4320af3ca9c4778740c6a5055481d6fce
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a830d8fe28aec04b5c0ded2e382e41db535fd0e2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971748"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405909"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Guide pratique pour installer des extensions de sécurité personnalisées
 
@@ -127,6 +127,6 @@ Le nouveau portail et le serveur de rapports communiquent à l’aide d’API SO
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Configurer l'authentification personnalisée ou par formulaire sur le serveur de rapports](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
-[Configurer le Gestionnaire de rapports pour passer des cookies d’authentification personnalisée](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
+[Configurer le Gestionnaire de rapports pour passer des cookies d’authentification personnalisée](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

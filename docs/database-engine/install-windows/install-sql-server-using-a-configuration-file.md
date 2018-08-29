@@ -12,13 +12,14 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 48ae5549290ab4c8701da6bd75641dfabfc02872
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a8b7e7fdc732376e58d9b7923f2889a0ebc055e1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771075"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406716"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Installer SQL Server à l’aide d’un fichier de configuration
 
@@ -26,7 +27,7 @@ ms.locfileid: "34771075"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d’installation permet de générer un fichier de configuration basé sur les entrées système par défaut et celles effectuées au moment de l’exécution. Vous pouvez utiliser le fichier de configuration pour déployer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la totalité de l'entreprise avec la même configuration. Vous pouvez également standardiser les installations manuelles dans l'ensemble de l'entreprise, en créant un fichier de commandes qui lance Setup.exe. 
  
-Cet article a été spécifiquement mis à jour pour SQL Server 2016 et SQL Server 2017. Si vous utilisez une version antérieure de SQL Server, consultez [Installer SQL Server 2014 à l’aide d’un fichier de configuration](http://msdn.microsoft.com/library/dd239405(v=sql.120).aspx).
+Cet article a été spécifiquement mis à jour pour SQL Server 2016 et SQL Server 2017. Si vous utilisez une version antérieure de SQL Server, consultez [Installer SQL Server 2014 à l’aide d’un fichier de configuration](install-sql-server-2016-using-a-configuration-file.md).
  
 Le programme d'installation prend en charge l'utilisation du fichier de configuration uniquement via l'invite de commandes. L'ordre de traitement des paramètres lors de l'utilisation du fichier de configuration est décrit ci-dessous :  
   

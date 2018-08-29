@@ -1,5 +1,5 @@
 ---
-title: (Transact-SQL) de procédures stockées de réplication | Documents Microsoft
+title: Réplication procédures stockées (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ helpviewer_keywords:
 - replication stored procedures [SQL Server]
 - stored procedures [SQL Server replication]
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1fd8eab77569ab280cd8933723f145e82e64fced
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 660bb67917fc7026502acd76db64578a82b1c5a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993946"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019875"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>Procédures stockées de réplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +142,7 @@ ms.locfileid: "32993946"
 |[sp_generatefilters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-generatefilters-transact-sql.md)|[sp_showpendingchanges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)|  
 |[sp_get_distributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md)|[sp_showrowreplicainfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-showrowreplicainfo-transact-sql.md)|  
 |[sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)|[sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)|  
-|[sp_getagentparameterlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getagentparameterlist-transact-sql.md)|[sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)|  
+|[sp_getagentparameterlist ne &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getagentparameterlist-transact-sql.md)|[sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)|  
 |[sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)|[sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)|  
 |[sp_getmergedeletetype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getmergedeletetype-transact-sql.md)|[sp_unregister_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)|  
 |[sp_getqueuedrows &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getqueuedrows-transact-sql.md)|[sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)|  
@@ -157,7 +156,7 @@ ms.locfileid: "32993946"
 |[sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)||  
   
 ## <a name="see-also"></a>Voir aussi  
- [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+ [Concepts liés à RMO (Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Concepts de programmation en matière de réplication](../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

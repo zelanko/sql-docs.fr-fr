@@ -17,19 +17,19 @@ caps.latest.revision: 57
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d737e132369afdfe6d45d72d4c769e3970786bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756aa4f5a4b03ffea76d907e8e2205428b565065
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031466"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410982"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services pour SQL Server Management Studio (SSRS)
   Les administrateurs du serveur de rapports peuvent utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour :  
   
 -   Activer les fonctionnalités, définir les valeurs par défaut du serveur, et gérer des travaux en cours de exécution.  
   
--   Afficher et créer des rapports personnalisés. Dans l’Explorateur d’objets, un grand nombre de nœuds présentent un ensemble de rapports standard qui sont installés avec [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vous devez disposer des autorisations administrateur. Le schéma d'un rapport personnalisé doit correspondre au schéma des rapports installés. Pour plus d’informations, consultez [Rapports personnalisés dans Management Studio](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979) et [Rechercher la version du schéma de définition de rapport &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   Afficher et créer des rapports personnalisés. Dans l’Explorateur d’objets, un grand nombre de nœuds présentent un ensemble de rapports standard qui sont installés avec [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Vous devez disposer des autorisations administrateur. Le schéma d'un rapport personnalisé doit correspondre au schéma des rapports installés. Pour plus d’informations, consultez [Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md) et [Rechercher la version du schéma de définition de rapport &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
  Les auteurs de rapport peuvent utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour :  
   

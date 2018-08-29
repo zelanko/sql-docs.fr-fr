@@ -18,12 +18,12 @@ caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 652fa02e7410d9d62f8b4787c87bb02bc0e88816
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52160a10a8b404588103f36c90a103f9067530ba
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942244"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405421"
 ---
 # <a name="job-activity-monitor-refresh"></a>Actualisation du moniteur d'activité des travaux
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "32942244"
  Nombre de secondes entre deux tentatives d'actualisation automatique. La valeur par défaut est de 60 secondes. L'actualisation s'effectue toutes les 5 secondes lorsque la valeur spécifiée est inférieure ou égale à 5.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Surveiller l'activité des travaux](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+ [Surveiller l'activité des travaux](../../ssms/agent/monitor-job-activity.md)  
   
   

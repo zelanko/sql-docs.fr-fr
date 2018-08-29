@@ -20,12 +20,12 @@ caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 24dd0f5497d89f49234dc53e0ad71a7cf2e9ab47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d206256152536c562128072ceaf47b88fb78b0de
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021486"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405669"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Syntaxe de requête XML pour les données de rapport XML (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]vous permet de créer des datasets pour des sources de données XML. Après avoir défini une source de données, vous devez créer une requête pour le dataset. Selon le type de données XML sur lesquelles pointent la source de données, vous pouvez créer la requête du dataset en incluant une **requête** XML ou un chemin d’élément. Une **requête** XML commence par une balise **\<Query>** et comprend des espaces de noms et des éléments XML variant selon la source de données. Un chemin d'accès à un élément opère indépendamment des espaces de noms ; il précise les nœuds et les attributs de nœud à utiliser à partir des données XML sous-jacentes avec une syntaxe similaire à la syntaxe XPath. Pour plus d’informations sur les chemins d’éléments, consultez [Syntaxe du chemin vers l’élément pour des données de rapport XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "33021486"
   
 -   Pour les requêtes URL, les paramètres de la requête sont inclus en tant que paramètres URL standard.  
   
--   Pour les requêtes du service Web, les paramètres de la requête sont passés à la méthode du service Web. Pour définir un paramètre de requête, utilisez la page **Paramètres** de la boîte de dialogue **Propriétés du dataset** . Pour plus d’informations, consultez [Boîte de dialogue Propriétés du dataset, Paramètres](../../reporting-services/report-data/dataset-properties-dialog-box-parameters.md).  
+-   Pour les requêtes du service Web, les paramètres de la requête sont passés à la méthode du service Web. Pour définir un paramètre de requête, utilisez la page **Paramètres** de la boîte de dialogue **Propriétés du dataset** . 
   
 ### <a name="example"></a> Exemple  
  Les exemples fournis dans le tableau ci-dessous illustrent la manière d'extraire des données du service Web Report Server, un document XML et des données XML incorporées.  

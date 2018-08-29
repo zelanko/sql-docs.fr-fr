@@ -20,11 +20,12 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08498dcec9823006babd265e79945d1273953a57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03aada845eaf77e83833f3cc3252bca4a2d49e42
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405666"
 ---
 # <a name="model-database"></a>model, base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 |Données primaires|modeldev|model.mdf|Croissance automatique de 64 Mo jusqu’à saturation du disque.|  
 |Journal|modellog|modellog.ldf|Croissance automatique de 64 Mo jusqu’à un maximum de 2 téraoctets.|  
   
- Pour les versions antérieures à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], consultez [Base de données model](https://msdn.microsoft.com/library/ms186388\(v=sql.120\).aspx)pour découvrir les valeurs de croissance de fichier par défaut.  
+ Pour les versions antérieures à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], consultez [Base de données model](model-database.md)pour découvrir les valeurs de croissance de fichier par défaut.  
   
  Pour déplacer la base de données **model** ou les fichiers journaux, consultez [Déplacer des bases de données système](../../relational-databases/databases/move-system-databases.md).  
   

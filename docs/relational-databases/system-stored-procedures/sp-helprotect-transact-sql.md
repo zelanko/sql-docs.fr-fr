@@ -1,5 +1,5 @@
 ---
-title: sp_helprotect (Transact-SQL) | Documents Microsoft
+title: sp_helprotect (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ec420b58bf179d607326164a56ce8c257ba6725
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 716398a738b6ac9de991917ec056ed432c9a59a9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260373"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036122"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
  Si *object_statement* est une instruction, il peut être une instruction CREATE.  
   
- [  **@username =** ] **'***celui-ci***'**  
+ [  **@username =** ] **'***auxquels celui-ci a***'**  
  Nom du principal pour lequel des autorisations sont retournées. *celui-ci* est **sysname**, avec NULL comme valeur par défaut, qui retourne tous les principaux dans la base de données actuelle. *celui-ci* doit exister dans la base de données actuelle.  
   
  [  **@grantorname =** ] **'***grantor***'**  
@@ -71,11 +71,11 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Propriétaire**|**sysname**|Nom du propriétaire de l’objet.|  
 |**Objet**|**sysname**|Nom de l'objet.|  
-|**bénéficiaire**|**sysname**|Nom du principal auquel des autorisations sont accordées.|  
+|**Bénéficiaire**|**sysname**|Nom du principal auquel des autorisations sont accordées.|  
 |**Fournisseur d'autorisations**|**sysname**|Nom du principal qui a accordé des autorisations au bénéficiaire spécifié.|  
 |**ProtectType**|**nvarchar(10)**|Nom du type de protection :<br /><br /> GRANT REVOKE|  
 |**Action**|**nvarchar(60)**|Nom de l’autorisation. Les instructions valides d'autorisation varient selon le type d'objet.|  
@@ -98,7 +98,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
   
  Le rapport de sortie est trié par catégorie d'autorisation, propriétaire, objet, bénéficiaire, fournisseur, catégorie du type de protection, type de protection, action et ID séquentiel de colonne.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
  Les informations retournées sont sujettes à des restrictions d'accès aux métadonnées. Les entités sur lesquelles le principal ne possède pas d'autorisation n'apparaissent pas. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

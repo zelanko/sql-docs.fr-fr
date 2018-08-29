@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergealternatepublisher (Transact-SQL) | Documents Microsoft
+title: sp_helpmergealternatepublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergealternatepublisher
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f51c69c6034963dff80377570120dcd65027b762
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8cba4d17060e32ef24b8e5b07e689992982ca94
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995326"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035252"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +56,13 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**alternate_publisher**|**sysname**|Nom de l'autre serveur de publication.|  
 |**alternate_publisher_db**|**sysname**|Nom de la base de données de publication.|  
 |**alternate_publication**|**sysname**|Nom de la publication.|  
 |**alternate_distributor**|**sysname**|Nom du serveur de distribution.|  
-|**friendly_name**|**nvarchar(255)**|Description de l'autre serveur de publication.|  
+|**nom_convivial**|**nvarchar(255)**|Description de l'autre serveur de publication.|  
 |**enabled**|**bit**|Indique si le serveur est un autre serveur de publication. **1** Spécifie que le serveur de publication est activée en tant qu’un autre serveur de publication. **0** Spécifie qu’il n’est pas activé.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -73,7 +73,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
   
  Pendant chaque session de fusion, le système interroge le serveur de publication et l'Abonné pour obtenir la liste des autres serveurs de publication de chacun d'eux. Le processus de fusion ajoute ou supprime des entrées dans la liste des serveurs de publication de remplacement ; la liste sur le serveur de publication et celle sur l'Abonné sont alors correspondantes à l'issue de l'opération.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la liste d’accès à la publication peuvent exécuter **sp_helpmergealternatepublisher**.  
   
 ## <a name="see-also"></a>Voir aussi  

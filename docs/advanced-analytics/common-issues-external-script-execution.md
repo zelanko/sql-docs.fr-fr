@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8013a6c5edeacbc0b318571af2cf5cc7d95a09ad
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9a556a83e57dc41109914ff9da82405abd8b24e1
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392552"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118407"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problèmes courants avec le service Launchpad et l’exécution du script externe dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ Pour plus d’informations sur ces droits d’utilisateur, consultez la section 
 
 ## <a name="user-group-for-launchpad-cannot-log-on-locally"></a>Groupe d’utilisateurs pour Launchpad ne peut pas ouvrir une session localement
 
-Pendant l’installation des services Machine Learning, SQL Server crée le groupe d’utilisateurs Windows **SQLRUserGroup** et il configure ensuite avec tous les droits nécessaires pour Launchpad pour vous connecter à SQL Server et exécuter des tâches de script externe. Si ce groupe d’utilisateurs est activé, il est également utilisé pour exécuter des scripts Python.
+Pendant l’installation des Services Machine Learning, SQL Server crée le groupe d’utilisateurs Windows **SQLRUserGroup** et il configure ensuite avec tous les droits nécessaires pour Launchpad pour vous connecter à SQL Server et exécuter des tâches de script externe. Si ce groupe d’utilisateurs est activé, il est également utilisé pour exécuter des scripts Python.
 
 Toutefois, dans les organisations où sont appliquées des stratégies de sécurité plus restrictives, les droits qui sont requis par ce groupe a peut-être été manuellement supprimés ou ils peuvent être automatiquement révoqués par la stratégie. Si les droits ont été supprimées, Launchpad peut ne plus se connecter à SQL Server et SQL Server ne peut pas appeler le runtime externe.
 

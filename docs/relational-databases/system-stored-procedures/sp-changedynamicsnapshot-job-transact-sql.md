@@ -1,5 +1,5 @@
 ---
-title: sp_changedynamicsnapshot_job (Transact-SQL) | Documents Microsoft
+title: sp_changedynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c31883e19d688dd7158ece061144ae7d44ccf30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a87e787339fec7991d1cc4a1bee5e14b79a1a3fc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992166"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018392"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Date d'exécution de l'Agent de fusion. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuel relatif). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
+ Date d'exécution de l'Agent de fusion. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -136,7 +136,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Date à laquelle l’Agent de fusion cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- Heure de la journée à laquelle l’Agent de fusion est la première planifié, au format HHMMSS. *active_start_time_of_day* est **int**, avec NULL comme valeur par défaut.  
+ Est l’heure de la journée à laquelle l’Agent de fusion est premier planifié, au format HHMMSS. *active_start_time_of_day* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
  Heure à laquelle l’Agent de fusion cesse d'être planifié, au format HHMMSS. *active_end_time_of_day* est **int**, avec NULL comme valeur par défaut.  
@@ -158,8 +158,8 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_changedynamicsnapshot_job**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changedynamicsnapshot_job**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les paramètres de sécurité de la réplication](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

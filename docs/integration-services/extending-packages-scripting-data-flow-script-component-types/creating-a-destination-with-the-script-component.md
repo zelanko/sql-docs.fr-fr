@@ -23,12 +23,12 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fe44ad4d9c80e97f6bc94e08c66af9d7f312fa5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a6fadd30e1db32354c52fcef92b249765948c667
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401551"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405657"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Création d'une destination à l'aide du composant Script
   Les composants de destination dans le flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permettent d'enregistrer des données provenant de sources et de transformations en amont dans une source de données. En principe, le composant de destination se connecte à la source de données via un gestionnaire de connexions existant.  
@@ -48,7 +48,7 @@ ms.locfileid: "35401551"
  Pour sélectionner le langage de script qui sera utilisé par le composant Script, vous devez définir la propriété **ScriptLanguage** dans la page **Script** de la boîte de dialogue **Éditeur de transformation de script**.  
   
 > [!NOTE]  
->  Pour définir le langage de script par défaut du composant Script, utilisez l’option **Langage de script** dans la page **Général** de la boîte de dialogue **Options**. Pour plus d'informations, consultez [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+>  Pour définir le langage de script par défaut du composant Script, utilisez l’option **Langage de script** dans la page **Général** de la boîte de dialogue **Options**. Pour plus d'informations, consultez [General Page](../general-page-of-integration-services-designers-options.md).  
   
  Un composant de destination de flux de données possède une entrée et aucune sortie. La configuration de l’entrée du composant est l’une des étapes à exécuter en mode Création des métadonnées, à l’aide de l’**Éditeur de transformation de script**, avant d’écrire le script personnalisé.  
   

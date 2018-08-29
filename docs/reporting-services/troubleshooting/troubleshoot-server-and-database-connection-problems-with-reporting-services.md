@@ -15,12 +15,12 @@ caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3e639f2f410584a4b9d1cefc991e9c6540f9ea7f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 020a53efdc65a1460698eb631b516832ab31f057
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969321"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409362"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Résoudre les problèmes de connexion à un serveur et à une base de données avec Reporting Server
 Utilisez cette rubrique pour résoudre les problèmes que vous rencontrez lors de la connexion à un serveur de rapports. En outre, elle fournit des informations sur les messages de type « Erreur inattendue ». Pour plus d’informations sur la configuration de la source de données et des informations de connexion au serveur de rapports, voir [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) et [Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -125,5 +125,5 @@ Lorsque vous créez les bases de données du serveur de rapports, **ReportServer
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

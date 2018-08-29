@@ -14,18 +14,18 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: fb379c9d4200bc116d5db76c531856d7f9faf935
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020653"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406783"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Charger des données dans Azure SQL Data Warehouse avec SSIS (SQL Server Integration Services)
 
 Créez un package SSIS (SQL Server Integration Services) pour charger des données dans [Azure SQL Data Warehouse](/azure/sql-data-warehouse/index). Vous pouvez éventuellement restructurer, transformer et nettoyer les données qui traversent le flux de données SSIS.
 
-Cet article vous montre comment effectuer les opérations suivantes.
+Cet article vous montre comment effectuer les opérations suivantes :
 
 * Créer un projet Integration Services dans Visual Studio.
 * Concevoir un package SSIS qui charge des données de la source vers la destination.
@@ -33,7 +33,7 @@ Cet article vous montre comment effectuer les opérations suivantes.
 
 ## <a name="basic-concepts"></a>Concepts de base
 
-Le package est l’unité de travail de base dans SSIS. Les packages associés sont regroupés en projets. Vous créez des projets et concevez des packages dans Visual Studio avec SQL Server Data Tools. Le processus de conception est un processus visuel au cours duquel vous faites glisser et déposez des composants issus de la boîte à outils dans l’aire de conception, les connectez et définissez leurs propriétés. Une fois que vous avez terminé votre package, vous pouvez l’exécuter et éventuellement le déployer sur SQL Server pour le gérer, le surveiller et le sécuriser complètement.
+Le package est l’unité de travail de base dans SSIS. Les packages associés sont regroupés en projets. Vous créez des projets et concevez des packages dans Visual Studio avec SQL Server Data Tools. Le processus de conception est un processus visuel au cours duquel vous faites glisser et déposez des composants issus de la boîte à outils dans l’aire de conception, les connectez et définissez leurs propriétés. Une fois que vous avez terminé votre package, vous pouvez l’exécuter et éventuellement le déployer sur SQL Server ou SQL Database pour le gérer, le superviser et le sécuriser complètement.
 
 La présentation détaillée de SSIS dépasse le cadre de cet article. Pour en savoir plus, consultez les articles suivants :
 
@@ -196,7 +196,7 @@ Pour continuer le tutoriel avec cette option, vous avez besoin des éléments su
 8. Dans l’**Éditeur de destination ADO.NET**, sélectionnez l’onglet **Mappages** pour voir comment les colonnes de la source sont mappées aux colonnes de la destination.
    
     ![][13]
-9. Cliquez sur **OK** pour terminer la configuration de la source de données.
+9. Cliquez sur **OK** pour terminer la configuration de la destination.
 
 ## <a name="run-the-package-to-load-the-data"></a>Exécuter le package pour charger les données
 Exécutez le package en cliquant sur le bouton **Démarrer** dans la barre d’outils ou en sélectionnant l’une des options **Exécuter** dans le menu **Débogage**.

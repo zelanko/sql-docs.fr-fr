@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e6d704c10a90bf079b436c4923c6b21fff92319c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3f4468a43837e1f140a8fef0b7a7144eb087ec67
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770244"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411788"
 ---
 # <a name="logins-and-jobs-for-availability-group-databases"></a>Connexions et travaux pour les bases de données de groupe de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34770244"
   
 -   **Connexions**  
   
-     Si vous utilisez des bases de données à relation contenant-contenu, vous pouvez configurer les utilisateurs contenus dans les bases de données, et pour ces utilisateurs, vous n'avez pas besoin de créer des connexions sur des instances de serveur qui hébergent un réplica secondaire. Pour une base de données de disponibilité sans relation contenant-contenu, vous devrez créer les utilisateurs pour les connexions sur les instances de serveur qui hébergent les réplicas de disponibilité. Pour plus d’informations, consultez [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
+     Si vous utilisez des bases de données autonomes, vous pouvez configurer les utilisateurs contenus dans les bases de données, et pour ces utilisateurs, vous n'avez pas besoin de créer des connexions sur des instances de serveur qui hébergent un réplica secondaire. Pour une base de données de disponibilité sans relation contenant-contenu, vous devrez créer les utilisateurs pour les connexions sur les instances de serveur qui hébergent les réplicas de disponibilité. Pour plus d’informations, consultez [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
      Si l’une de vos applications utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou une connexion locale Windows, consultez [Connexions des applications qui utilisent l’authentification SQL Server ou une connexion locale Windows](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md#SSauthentication), plus loin dans cette rubrique.  
   
@@ -65,13 +65,14 @@ ms.locfileid: "34770244"
   
 -   [Créez un utilisateur de base de données](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
   
--   [Créer un travail](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Créer un travail](../../../ssms/agent/create-a-job.md)  
   
 -   [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
 ## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Contained Databases](../../../relational-databases/databases/contained-databases.md)   
- [Créer des travaux](http://msdn.microsoft.com/library/465fb7fc-7622-4252-a178-ea51691c935b)  
+ 
+  [Bases de données autonomes](../../../relational-databases/databases/contained-databases.md)   
+ [Créer des travaux](../../../ssms/agent/create-jobs.md)  
   
   

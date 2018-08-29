@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Documents Microsoft
+title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f4f5ef8c72155b83595f04c92cdeb2c1cf16a34
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40e4e8e4ab9603648abe6f92ae99a287755390a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239209"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019939"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ sp_add_log_shipping_secondary_primary
  Nom à utiliser pour le travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créé pour copier les sauvegardes du journal de transactions vers le serveur secondaire. *copy_job_name* est **sysname** et ne peut pas être NULL.  
   
  [ **@restore_job_name** =] '*restore_job_name*'  
- Nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’Agent sur le serveur secondaire qui restaure les sauvegardes de base de données secondaire. *restore_job_name* est **sysname** et ne peut pas être NULL.  
+ Est le nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’Agent sur le serveur secondaire qui restaure les sauvegardes à la base de données secondaire. *restore_job_name* est **sysname** et ne peut pas être NULL.  
   
  [ **@file_retention_period** =] '*file_retention_period*'  
  La longueur de la durée, en minutes, pendant laquelle un fichier de sauvegarde est conservé sur le serveur secondaire dans le chemin d’accès spécifié par le @backup_destination_directory paramètre avant d’être supprimé. *history_retention_period* est **int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
@@ -110,7 +109,7 @@ sp_add_log_shipping_secondary_primary
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  **sp_add_log_shipping_secondary_primary** doit être exécuté à partir de la **master** base de données sur le serveur secondaire. Elle effectue les actions suivantes :  
@@ -123,17 +122,17 @@ sp_add_log_shipping_secondary_primary
   
     2.  de créer un travail de copie pour l'ID secondaire qui est désactivé ;  
   
-    3.  Définit l’ID de tâche de copie dans le **log_shipping_secondary** entrée à l’ID de tâche de la copie.  
+    3.  Définit l’ID de travail de copie dans le **log_shipping_secondary** entrée à l’ID du travail de la tâche de copie.  
   
     4.  de créer un travail de restauration pour l'ID secondaire qui est désactivé ;  
   
-    5.  Définir l’ID de tâche de restauration dans le **log_shipping_secondary** entrée à l’ID de tâche du travail de restauration.  
+    5.  Définir l’ID de travail de restauration dans le **log_shipping_secondary** entrée à l’ID du travail de la tâche de restauration.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
- Cet exemple illustre l’utilisation de la **sp_add_log_shipping_secondary_primary** procédure stockée pour définir les informations de la base de données primaire [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur le serveur secondaire.  
+ Cet exemple illustre l’utilisation de la **sp_add_log_shipping_secondary_primary** procédure stockée pour définir les informations de base de données primaire [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur le serveur secondaire.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -153,7 +152,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de journaux de transaction & #40 ; SQL Server & #41 ;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

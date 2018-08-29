@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributiondb (Transact-SQL) | Documents Microsoft
+title: sp_helpdistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02065dbaa89a16c0d00ce8737bb79f29c5256495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df4a44be4ef3271e6af8e7148bfee50f40c71617
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996926"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018295"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,26 +45,26 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@database=**] **'***nom_base_de_données***'**  
- Nom de base de données dont les propriétés sont retournées. *database_name* est **sysname**, avec une valeur par défaut **%** pour toutes les bases de données associées au serveur de distribution et sur lequel l’utilisateur dispose d’autorisations.  
+ [  **@database=**] **'***database_name***'**  
+ Nom de base de données dont les propriétés sont retournées. *database_name* est **sysname**, avec une valeur par défaut **%** pour toutes les bases de données associées avec le serveur de distribution et sur lesquelles l’utilisateur dispose d’autorisations.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom de la base de données de distribution.|  
-|**rétention_de_distribution_minimale**|**int**|Durée minimale de rétention (exprimée en heures) avant la suppression des transactions|  
-|**max_distretention**|**int**|Durée maximale de rétention (exprimée en heures) avant la suppression des transactions|  
-|**rétention de l’historique**|**int**|Nombre d'heures de rétention de l'historique|  
+|**rétention_de_distribution_minimale**|**Int**|Durée minimale de rétention (exprimée en heures) avant la suppression des transactions|  
+|**max_distretention**|**Int**|Durée maximale de rétention (exprimée en heures) avant la suppression des transactions|  
+|**rétention de l’historique**|**Int**|Nombre d'heures de rétention de l'historique|  
 |**history_cleanup_agent**|**sysname**|Nom de l'Agent de nettoyage de l'historique|  
 |**distribution_cleanup_agent**|**sysname**|Nom de l'Agent de nettoyage de distribution.|  
-|**status**|**int**|À usage interne uniquement|  
+|**status**|**Int**|À usage interne uniquement|  
 |**argument dossier_de_données**|**nvarchar(255)**|Nom du répertoire utilisé pour stocker les fichiers de la base de données.|  
 |**data_file**|**nvarchar(255)**|Nom du fichier de base de données.|  
-|**argument taille_du_fichier_de_données**|**int**|Taille initiale du fichier de données en mégaoctets.|  
-|**argument dossier_journal**|**nvarchar(255)**|Nom du répertoire du fichier de base de données.|  
+|**taille_du_fichier_de_données**|**Int**|Taille initiale du fichier de données en mégaoctets.|  
+|**dossier_journal**|**nvarchar(255)**|Nom du répertoire du fichier de base de données.|  
 |**fichier_journal**|**nvarchar(255)**|Nom du fichier journal.|  
-|**l’argument taille_du_fichier_journal**|**int**|Taille initiale du fichier du journal en mégaoctets.|  
+|**log_file_size**|**Int**|Taille initiale du fichier du journal en mégaoctets.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -72,11 +72,11 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="remarks"></a>Notes  
  **sp_helpdistributiondb** est utilisée dans tous les types de réplication.  
   
-## <a name="permissions"></a>Autorisations  
- Membres de la **db_owner** rôle de base de données fixe ou **replmonitor** rôle dans une base de données de distribution et les utilisateurs dans la liste d’accès d’une publication à l’aide de la base de données de distribution peuvent exécuter **sp_helpdistributiondb** pour renvoyer des informations relatives au fichier. Membres de la **public** du rôle peuvent exécuter **sp_helpdistributiondb** pour retourner des informations de non lié à un fichier pour les bases de données de distribution auxquels ils ont accès.  
+## <a name="permissions"></a>Permissions  
+ Membres de la **db_owner** rôle de base de données fixe ou le **replmonitor** rôle dans une base de données de distribution et les utilisateurs dans la liste d’accès d’une publication à l’aide de la base de données de distribution peuvent exécuter. **sp_helpdistributiondb** pour retourner des informations relatives aux fichiers. Membres de la **public** du rôle peuvent exécuter **sp_helpdistributiondb** pour retourner les informations non liées aux fichiers des bases de données de distribution auxquels ils ont accès.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

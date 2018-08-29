@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_droptype
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f898820839afe4057805d9d6ed8bc4e53341065
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e0acf840ba2e117fd27539fe356431881f1fc91c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970311"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020213"
 ---
 # <a name="spdroptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_droptype [ @typename = ] 'type'
 > [!NOTE]  
 >  Vous ne pouvez pas supprimer un type de données alias si celui-ci est utilisé dans une définition de table ou si une règle ou une valeur par défaut lui est associée.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’appartenance dans le **db_owner** rôle de base de données fixe ou le **db_ddladmin** rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  

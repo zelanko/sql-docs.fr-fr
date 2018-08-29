@@ -1,5 +1,5 @@
 ---
-title: sp_setdefaultdatatypemapping (Transact-SQL) | Documents Microsoft
+title: sp_setdefaultdatatypemapping (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_setdefaultdatatypemapping
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b8d3751448d553666f7b7301c42329f32a7713a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c980adc28cfa99348cd771652d23df424c92d8b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003746"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019322"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Marque un mappage de type de données existant entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de données de gestion (SGBD) en tant que la valeur par défaut. Cette procédure stockée est exécutée sur une base de données du serveur.  
+  Marque un mappage de type de données existant entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestion SGBD (système) en tant que la valeur par défaut de base de données. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +68,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [ **@source_dbms**=] **'***source_dbms***'**  
  Nom du SGBD à partir duquel les types de données sont mappés. *source_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Base de données source au format [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Base de données Oracle source.|  
@@ -106,7 +106,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [ **@destination_dbms** =] **'***destination_dbms***'**  
  Nom du SGBD de destination. *destination_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destination.|  
 |**ORACLE**|Base de données Oracle de destination.|  
@@ -140,11 +140,11 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  Les mappages de types de données par défaut s'appliquent à toutes les topologies de réplication qui comprennent le SGBD spécifié.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_setdefaultdatatypemapping**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier des mappages de Type de données pour un serveur de publication Oracle](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
+ [Spécifier des mappages de types de données pour un serveur de publication Oracle](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
  [sp_helpdatatypemap &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)  
   

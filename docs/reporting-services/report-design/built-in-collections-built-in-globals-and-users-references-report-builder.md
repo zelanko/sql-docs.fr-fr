@@ -1,7 +1,7 @@
 ---
 title: Références à des champs Globals et Users prédéfinis (Générateur de rapports et SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 55074e9c10cbe8b5afb3e94533c37befb892416a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f5e0a3a9876af054da4e868ec809609effc117c
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022066"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405925"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Collections intégrées - Références à des champs Globals et Users prédéfinis (Générateur de rapports)
   La collection de champs prédéfinis, qui inclut à la fois les collections **Globals** et **User** , représente les valeurs globales fournies par Reporting Services pendant le traitement d’un rapport. La collection **Globals** fournit des valeurs, telles que le nom du rapport, l'heure de début du traitement du rapport et les numéros des pages actuelles pour l'en-tête ou le pied de page du rapport. La collection **User** fournit les paramètres d'identificateur d'utilisateur et de langue. Ces valeurs peuvent être utilisées dans les expressions pour filtrer les résultats dans un rapport.  
@@ -81,9 +81,7 @@ ms.locfileid: "33022066"
 |----------------|--------------|---------------------|  
 |**Langage**|**Chaîne**|Langue de l'utilisateur qui exécute le rapport. Par exemple, `en-US`.|  
 |**UserID**|**String**|Identificateur de l'utilisateur qui exécute le rapport. Si vous utilisez l'authentification Windows, cette valeur correspond au compte de domaine de l'utilisateur actuel. La valeur est déterminée par l'extension de sécurité de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , qui peut utiliser l'authentification Windows ou une authentification personnalisée.|  
-  
- Pour plus d’informations sur la prise en charge de plusieurs langues dans un rapport, consultez « Considérations sur la conception de la solution pour les déploiements multilingues ou globaux » dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne SQL Server](http://go.microsoft.com/fwlink/?LinkId=120955).  
-  
+ 
 ### <a name="using-locale-settings"></a>Utilisation des paramètres régionaux  
  Vous pouvez utiliser des expressions pour faire référence aux paramètres régionaux sur un ordinateur client au moyen de la valeur **User.Language** pour déterminer l'aspect d'un rapport pour l'utilisateur. Par exemple, vous pouvez créer un rapport qui utilise une expression de requête différente en fonction de la valeur d'un paramètre régional. La requête peut changer de façon à récupérer des informations localisées, provenant d'une colonne différente selon la langue indiquée en retour. Vous pouvez également utiliser une expression dans les paramètres de langue du rapport ou des éléments de rapport basés sur cette variable.  
   

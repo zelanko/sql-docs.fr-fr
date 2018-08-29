@@ -19,12 +19,12 @@ caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0655653463bc48ad0de71799f2e521f10e5c13b7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7c8bb8f52eac86a0439185b77cb175d990d659a5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769025"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405774"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurer un groupe de disponibilité pour les transactions distribuées
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ Afin de garantir des transactions distribuées, le groupe de disponibilité doit
 
 Dans une transaction distribuée, les applications clientes utilisent Microsoft Distributed Transaction Coordinator (MS DTC ou DTC) afin de garantir la cohérence transactionnelle entre plusieurs sources de données. DTC est un service disponible sur les systèmes d’exploitation Windows Server pris en charge. Pour une transaction distribuée, DTC est le *coordinateur de la transaction*. Normalement, une instance de SQL Server est le *gestionnaire de ressources*. Quand une base de données est dans un groupe de disponibilité, chaque base de données doit être son propre gestionnaire de ressources. 
 
-[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] n’empêche pas les transactions distribuées pour des bases de données dans un groupe de disponibilité, même quand le groupe de disponibilité n’est pas configuré pour les transactions distribuées. Cependant, quand un groupe de disponibilité n’est pas configuré pour les transactions distribuées, le basculement peut échouer dans certaines situations. En particulier, l’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] du nouveau réplica principal ne peut parfois pas obtenir le résultat de la transaction auprès du DTC. Pour permettre à l’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] d’obtenir le résultat des transactions incertaines auprès du DTC après un basculement, configurez le groupe de disponibilité pour les transactions distribuées. 
+[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] n’empêche pas les transactions distribuées pour des bases de données dans un groupe de disponibilité, même quand le groupe de disponibilité n’est pas configuré pour les transactions distribuées. Cependant, quand un groupe de disponibilité n’est pas configuré pour les transactions distribuées, le basculement peut échouer dans certaines situations. En particulier, l’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] du nouveau réplica principal ne peut parfois pas obtenir le résultat de la transaction auprès du DTC. Pour permettre à l’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] d’obtenir le résultat des transactions incertaines auprès du DTC après un basculement, configurez le groupe de disponibilité pour les transactions distribuées. 
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
 Avant de configurer un groupe de disponibilité pour prendre en charge les transactions distribuées, vous devez respecter les prérequis suivants :
 
-* Toutes les instances de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] qui participent à la transaction distribuée doivent être [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] ou ultérieur.
+* Toutes les instances de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] qui participent à la transaction distribuée doivent être [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] ou ultérieur.
 
 * Les groupes de disponibilité doivent s’exécuter sur Windows Server 2016 ou Windows Server 2012 R2. Pour Windows Server 2012 R2, vous devez installer la mise à jour KB3090973 disponible à l’adresse [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
 
@@ -94,7 +94,7 @@ ALTER AVAILABILITY GROUP MyaAG
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Transactions distribuées - concepts techniques
 
-Une transaction distribuée s’étend sur deux bases de données ou plus. En tant que gestionnaire des transactions, DTC coordonne la transaction entre les instances de SQL Server et d’autres sources de données. Chaque instance du moteur de base de données [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] peut fonctionner comme gestionnaire de ressources. Quand un groupe de disponibilité est configuré avec `DTC_SUPPORT = PER_DB`, les bases de données peuvent fonctionner comme gestionnaires de ressources. Pour plus d'informations, consultez la documentation MS DTC.
+Une transaction distribuée s’étend sur deux bases de données ou plus. En tant que gestionnaire des transactions, DTC coordonne la transaction entre les instances de SQL Server et d’autres sources de données. Chaque instance du moteur de base de données [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] peut fonctionner comme gestionnaire de ressources. Quand un groupe de disponibilité est configuré avec `DTC_SUPPORT = PER_DB`, les bases de données peuvent fonctionner comme gestionnaires de ressources. Pour plus d'informations, consultez la documentation MS DTC.
 
 Une transaction avec deux bases de données ou plus dans une même instance du moteur de base de données est en réalité une transaction distribuée. Cette instance gère la transaction distribuée de manière interne ; elle apparaît comme une transaction locale pour l'utilisateur. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] promeut toutes les transactions entre bases de données vers DTC quand les bases de données sont dans un groupe de disponibilité configuré avec `DTC_SUPPORT = PER_DB`, même au sein d’une seule instance de SQL Server. 
 
@@ -123,16 +123,16 @@ La liste suivante explique comment l’application travaille avec DTC pour effec
 
 Chaque entité participant à une transaction distribuée est appelée un gestionnaire de ressources. Voici des exemples de gestionnaires de ressources :
 
-* Une instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]. 
+* Une instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]. 
 * Une base de données dans un groupe de disponibilité qui a été configuré pour les transactions distribuées.
 * Le service DTC, qui peut aussi être un gestionnaire de transactions.
 * Autres sources de données. 
 
-Pour pouvoir participer à des transactions distribuées, une instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] s’inscrit auprès d’un DTC. Normalement, l’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] s’inscrit auprès de DTC sur le serveur local. Chaque instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] crée un gestionnaire de ressources avec un identificateur de gestionnaire de ressources unique (RMID, Resource Manager Identifier) et l’inscrit auprès de DTC. Dans la configuration par défaut, toutes les bases de données sur une instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] utilisent le même RMID. 
+Pour pouvoir participer à des transactions distribuées, une instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] s’inscrit auprès d’un DTC. Normalement, l’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] s’inscrit auprès de DTC sur le serveur local. Chaque instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] crée un gestionnaire de ressources avec un identificateur de gestionnaire de ressources unique (RMID, Resource Manager Identifier) et l’inscrit auprès de DTC. Dans la configuration par défaut, toutes les bases de données sur une instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] utilisent le même RMID. 
 
-Quand une base de données est dans un groupe de disponibilité, la copie en lecture-écriture de la base de données, ou réplica principal, peut être déplacée dans une autre instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]. Pour prendre en charge les transactions distribuées pendant ce déplacement, chaque base de données doit agir comme un gestionnaire de ressources distinct et doit avoir un RMID unique. Quand un groupe de disponibilité a `DTC_SUPPORT = PER_DB`, [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] crée un gestionnaire de ressources pour chaque base de données et s’inscrit auprès de DTC en utilisant un RMID unique. Dans cette configuration, la base de données est un gestionnaire de ressources pour les transactions DTC.
+Quand une base de données est dans un groupe de disponibilité, la copie en lecture-écriture de la base de données, ou réplica principal, peut être déplacée dans une autre instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]. Pour prendre en charge les transactions distribuées pendant ce déplacement, chaque base de données doit agir comme un gestionnaire de ressources distinct et doit avoir un RMID unique. Quand un groupe de disponibilité a `DTC_SUPPORT = PER_DB`, [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] crée un gestionnaire de ressources pour chaque base de données et s’inscrit auprès de DTC en utilisant un RMID unique. Dans cette configuration, la base de données est un gestionnaire de ressources pour les transactions DTC.
 
-Pour plus d’informations sur les transactions distribuées dans [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], consultez [Transactions distribuées](#distTran).
+Pour plus d’informations sur les transactions distribuées dans [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], consultez [Transactions distribuées](#distTran).
 
 ## <a name="manage-unresolved-transactions"></a>Gérer les transactions non résolues
 
@@ -142,9 +142,9 @@ Le résultat des transactions actives qui est produit pendant le changement du R
 * Ajout ou suppression d’une base de données dans un groupe de disponibilité. 
 * Suppression d’un groupe de disponibilité.
 
-Dans les cas précédents, si le réplica principal bascule sur une nouvelle instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], l’instance tente de contacter DTC pour identifier le résultat de la transaction. DTC ne peut pas retourner le résultat, car le RMID utilisé par la base de données pour obtenir le résultat des transactions incertaines pendant la récupération n’a pas été inscrit auparavant. Par conséquent, la base de données passe à l’état SUSPECT.
+Dans les cas précédents, si le réplica principal bascule sur une nouvelle instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], l’instance tente de contacter DTC pour identifier le résultat de la transaction. DTC ne peut pas retourner le résultat, car le RMID utilisé par la base de données pour obtenir le résultat des transactions incertaines pendant la récupération n’a pas été inscrit auparavant. Par conséquent, la base de données passe à l’état SUSPECT.
 
-Le nouveau journal des erreurs de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] a une entrée similaire à l’exemple suivant :
+Le nouveau journal des erreurs de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] a une entrée similaire à l’exemple suivant :
 
 ```
 Microsoft Distributed Transaction Coordinator (MS DTC) 
@@ -158,7 +158,7 @@ SQL Server detected a DTC/KTM in-doubt transaction with UOW
 following the guideline for Troubleshooting DTC Transactions.
 ```
 
-L’exemple précédent montre que DTC n’a pas pu réinscrire la base de données à partir du nouveau réplica principal dans la transaction qui a été créée après le basculement. L’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] ne peut pas déterminer le résultat de la transaction distribuée et elle marque donc la base de données comme étant suspecte. La transaction est marquée en tant qu’unité de travail et elle est référencée par un GUID. Pour pouvoir récupérer la base de données, validez ou annulez la transaction manuellement. 
+L’exemple précédent montre que DTC n’a pas pu réinscrire la base de données à partir du nouveau réplica principal dans la transaction qui a été créée après le basculement. L’instance de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] ne peut pas déterminer le résultat de la transaction distribuée et elle marque donc la base de données comme étant suspecte. La transaction est marquée en tant qu’unité de travail et elle est référencée par un GUID. Pour pouvoir récupérer la base de données, validez ou annulez la transaction manuellement. 
 
 >[!WARNING]
 >Quand vous validez ou que vous annulez manuellement une transaction, cela peut affecter une application. Vérifiez que l’action de validation ou d’annulation est cohérente avec les spécifications de votre application. 

@@ -1,5 +1,5 @@
 ---
-title: sp_OAMethod (Transact-SQL) | Documents Microsoft
+title: sp_OAMethod (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef5d79a14aaee0b8f23738c3e359e37032d80318
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 28e14076113b89c980756d42ddc126f75792d1a4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260805"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035099"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_OAMethod objecttoken , methodname
  *MethodName*  
  Nom de la méthode de l'objet OLE à appeler.  
   
- *ReturnValue***sortie**  
+ *ReturnValue***sortie**   
  Valeur renvoyée de la méthode de l'objet OLE. Si elle est spécifiée, il doit s'agir d'une variable locale du type de données approprié.  
   
- Si la méthode retourne une valeur unique, soit elle spécifie une variable locale pour *returnvalue*, qui retourne la méthode retourne la valeur dans la variable locale ou ne spécifiez pas *returnvalue*, qui retourne la valeur de retour de méthode au client comme un jeu de résultats d’une seule colonne et d’une ligne unique.  
+ Si la méthode retourne une valeur unique, soit elle spécifie une variable locale pour *returnvalue*, qui retourne la méthode retourne la valeur dans la variable locale ou ne spécifiez pas *returnvalue*, qui retourne le méthode retourne une valeur au client comme un jeu de résultats d’une seule colonne et d’une ligne unique.  
   
  Si la méthode retourne la valeur est un objet OLE, *returnvalue* doit être une variable locale du type de données **int**. Un jeton d'objet est stocké dans la variable locale et il peut être utilisé avec d'autres procédures stockées OLE Automation.  
   
@@ -72,7 +72,7 @@ sp_OAMethod objecttoken , methodname
  [  *@parametername*** =**] *paramètre*[ **sortie** ]  
  Paramètre de la méthode. Si spécifié, *paramètre* doit être une valeur de type de données approprié.  
   
- Pour obtenir la valeur de retour d’un paramètre de sortie, *paramètre* doit être une variable locale du type de données approprié, et **sortie** doit être spécifié. Si un paramètre constant est spécifié ou si **sortie** n’est pas spécifié, les retournent la valeur à partir d’un paramètre de sortie est ignorée.  
+ Pour obtenir la valeur de retour d’un paramètre de sortie, *paramètre* doit être une variable locale du type de données approprié, et **sortie** doit être spécifié. Si un paramètre constant est spécifié, ou si **sortie** n’est pas spécifié, une renvoie la valeur à partir d’un paramètre de sortie est ignorée.  
   
  Si spécifié, *nom_paramètre* doit être le nom de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] paramètre nommé. Notez que  **@** *nom_paramètre*n’est pas un [!INCLUDE[tsql](../../includes/tsql-md.md)] variable locale. Le signe arobase (**@**) est supprimé, et *nom_paramètre*est passé à l’objet OLE en tant que le nom du paramètre. Tous les paramètres nommés doivent être spécifiés après tous les paramètres positionnels.  
   
@@ -80,27 +80,27 @@ sp_OAMethod objecttoken , methodname
  Marque de réservation indiquant que plusieurs paramètres peuvent être spécifiés.  
   
 > [!NOTE]  
->  *@parametername* possible un paramètre nommé car il fait partie de la méthode spécifiée et est transmis à l’objet. Les autres paramètres pour cette procédure stockée sont spécifiés par position, et non par nom.  
+>  *@parametername* possible un paramètre nommé car il fait partie de la méthode spécifiée et est transmise à l’objet. Les autres paramètres pour cette procédure stockée sont spécifiés par position, et non par nom.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou un nombre différent de zéro (échec), qui représente la valeur entière de HRESULT renvoyée par l'objet OLE Automation.  
   
- Pour plus d’informations sur les Codes de retour HRESULT, [OLE Automation Codes de retour et des informations d’erreur](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Pour plus d’informations sur les Codes de retour HRESULT, [OLE Automation Codes de retour et les informations d’erreur](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Si la valeur renvoyée par la méthode est un tableau à une ou deux dimensions, le tableau sera renvoyé au client sous la forme d'un jeu de résultats :  
   
--   Un tableau à une dimension est retourné au client sous la forme d'un jeu de résultats d'une seule ligne avec autant de colonnes qu'il y a d'éléments dans le tableau. En d’autres termes, le tableau est renvoyé en tant que (colonnes).  
+-   Un tableau à une dimension est retourné au client sous la forme d'un jeu de résultats d'une seule ligne avec autant de colonnes qu'il y a d'éléments dans le tableau. En d’autres termes, le tableau est retourné en tant que (colonnes).  
   
 -   Un tableau à deux dimensions est retourné au client sous la forme d'un jeu de résultats qui contient autant de colonnes qu'il y a d'éléments dans la première dimension du tableau et autant de lignes qu'il y a d'éléments dans la seconde dimension du tableau. Autrement dit, le tableau est renvoyé sous la forme (colonnes, lignes).  
   
- Lorsque la valeur de retour d’une propriété ou valeur de retour de méthode est un tableau, **sp_OAGetProperty** ou **sp_OAMethod** renvoie un jeu de résultats pour le client. (Les paramètres de sortie de la méthode ne peuvent pas être des tableaux). Ces procédures analysent toutes les valeurs de données dans le tableau pour déterminer les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les longueurs de données appropriés à utiliser pour chaque colonne du jeu de résultats. Pour une colonne particulière, ces procédures utilisent le type de données et la longueur requis pour représenter toutes les valeurs des données de cette colonne.  
+ Lorsque la valeur de retour d’une propriété ou valeur de retour de méthode est un tableau, **sp_OAGetProperty** ou **sp_OAMethod** retourne un jeu de résultats pour le client. (Les paramètres de sortie de la méthode ne peuvent pas être des tableaux). Ces procédures analysent toutes les valeurs de données dans le tableau pour déterminer les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les longueurs de données appropriés à utiliser pour chaque colonne du jeu de résultats. Pour une colonne particulière, ces procédures utilisent le type de données et la longueur requis pour représenter toutes les valeurs des données de cette colonne.  
   
  Lorsque toutes les valeurs de données d'une colonne partagent le même type de données, ce type est utilisé pour toute la colonne. Lorsque les valeurs de données d'une colonne utilisent des types de données différents, le choix du type pour l'ensemble de la colonne se fait sur la base du tableau suivant.  
   
-||int|float|money|datetime|varchar|nvarchar|  
+||INT|FLOAT|money|DATETIME|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
-|**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
+|**Int**|**Int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
@@ -110,13 +110,13 @@ sp_OAMethod objecttoken , methodname
 ## <a name="remarks"></a>Notes  
  Vous pouvez également utiliser **sp_OAMethod** pour obtenir une valeur de propriété.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-calling-a-method"></a>A. Appel d'une méthode  
- L’exemple suivant appelle la `Connect` méthode précédemment créé **SQLServer** objet.  
+ L’exemple suivant appelle la `Connect` méthode de l’élément précédemment créé **SQLServer** objet.  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -129,7 +129,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. Obtention d'une propriété  
- L’exemple suivant obtient la `HostName` propriété (de précédemment créé **SQLServer** objet) et le stocke dans une variable locale.  
+ L’exemple suivant obtient le `HostName` propriété (de l’élément précédemment créé **SQLServer** objet) et le stocke dans une variable locale.  
   
 ```  
 DECLARE @property varchar(255);  

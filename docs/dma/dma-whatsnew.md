@@ -1,7 +1,7 @@
 ---
 title: Quelles sont les nouveautés dans Data Migration Assistant (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,17 +15,25 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 620590f03bf429dbc1633a1f78bb921def5fd585
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 188c19f173e8c53995d84a74ecc04d1cac9eae92
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982151"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118327"
 ---
-# <a name="whats-new-in-data-migration-assistant"></a>Quelles sont les nouveautés dans Data Migration Assistant
-Cette rubrique répertorie les ajouts dans chaque version de Data Migration Assistant (DMA).
+# <a name="whats-new-in-data-migration-assistant"></a>Nouveautés de Data Migration Assistant
+Cet article répertorie les ajouts dans chaque version de Data Migration Assistant (DMA).
+
+## <a name="dma-v40"></a>DMA v4.0
+La version v4.0 de DMA présente la fonctionnalité de recommandations SKU de base de données SQL Azure, ce qui permet aux utilisateurs d’identifier le minimum recommandé SKU de base de données SQL Azure en fonction des compteurs de performances collectés à partir des ou les ordinateurs hébergeant vos bases de données. Cette fonctionnalité fournit des recommandations relatives à la tarification du niveau, de niveau de calcul et de taille maximale de données, ainsi que coût estimé par mois. Il offre également la possibilité de configurer toutes vos bases de données vers Azure en bloc.
+
+> [!NOTE]
+> Cette fonctionnalité est actuellement accessible uniquement via l’Interface de ligne de commande (CLI). Prise en charge de cette fonctionnalité via l’interface utilisateur DMA est prévue pour la remise à plus tard cette année.
+
+Pour plus d’informations, consultez l’article [identifier la référence SKU à base de données SQL Azure appropriée pour votre base de données locale](dma-sku-recommend-sql-db.md).
 
 ## <a name="dma-v36"></a>DMA v3.6
 La version de la version 3.6 du DMA présente « Correction automatique » pour les objets de schéma qui sont affectés par les bloqueurs de migration courants.
@@ -64,7 +72,7 @@ Si le fichier de sauvegarde physique est sur un ordinateur exécutant :
 > Détails de l’utilisation d’un partage 'samba' ou la commande « mnt » sont dépasse le cadre de cet article.
 
 ### <a name="migrating-windows-logins"></a>Connexions Windows migration
-Bien que la migration des connexions d’Active Directory (AD) est officiellement pris en charge par SQL Server 2017 sur Linux, il nécessite une configuration supplémentaire pour fonctionner correctement. Reportez-vous à la rubrique [l’authentification Active Directory avec SQL Server sur Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) pour plus d’informations sur la configuration des connexions Active Directory sur SQL Server 2017 sur Linux. Après avoir effectué la configuration requise, le programme d’installation est terminée et vous pouvez migrer les connexions Active Directory comme d’habitude. Authentification SQL standard fonctionne comme prévu, sans aucune installation supplémentaire.
+Bien que la migration des connexions d’Active Directory (AD) est officiellement pris en charge par SQL Server 2017 sur Linux, il nécessite une configuration supplémentaire pour fonctionner correctement. Consultez l’article [l’authentification Active Directory avec SQL Server sur Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) pour plus d’informations sur la configuration des connexions Active Directory sur SQL Server 2017 sur Linux. Après avoir effectué la configuration requise, le programme d’installation est terminée et vous pouvez migrer les connexions Active Directory comme d’habitude. Authentification SQL standard fonctionne comme prévu, sans aucune installation supplémentaire.
 
 ## <a name="dma-v32"></a>DMA v3.2
 La version de v3.2 de DMA inclut les ajouts suivants :
@@ -86,9 +94,9 @@ La version de la version 3.0 de DMA étend l’évaluation de la base de donnée
 
 ## <a name="dma-v21"></a>DMA v2.1
 La version de la version 2.1 de DMA inclut les ajouts suivants :
-- Prise en charge de ligne de commande pour l’exécution des évaluations en mode sans assistance, ce qui facilite l’exécution des évaluations à l’échelle. Pour plus d’informations, reportez-vous à la rubrique [exécuter Data Migration Assistant à partir de la ligne de commande](dma-commandline.md).
+- Prise en charge de ligne de commande pour l’exécution des évaluations en mode sans assistance, ce qui facilite l’exécution des évaluations à l’échelle. Pour plus d’informations, consultez l’article [exécuter Data Migration Assistant à partir de la ligne de commande](dma-commandline.md).
 - Améliorations des performances lorsque les utilisateurs de lancement et fermer le DMA.
-- La possibilité de configurer le délai de connexion SQL. Pour plus d’informations, reportez-vous à la rubrique [paramètres de Configuration de Data Migration Assistant](dma-configurationsettings.md).
+- La possibilité de configurer le délai de connexion SQL. Pour plus d’informations, consultez l’article [paramètres de Configuration de Data Migration Assistant](dma-configurationsettings.md).
 
 ## <a name="dma-v20"></a>DMA v2.0
 La version v2.0 de DMA inclut améliorées recommandations de fonctionnalités de la base de données Stretch pour fournir des tables hiérarchisées appropriées qui optimisent les économies de stockage.
@@ -98,7 +106,7 @@ La version v1.0 de DMA est la version initiale, et il fournit pour :
 - Détection des problèmes qui peuvent affecter une mise à niveau vers une version locale de SQL Server. Les conclusions sont décrits comme des problèmes de compatibilité, et ils sont classés dans les domaines suivants :
     - Modifications avec rupture
     - Changements de comportement
-    - Fonctionnalités déconseillées
+    - Fonctionnalités dépréciées
 - Découverte des nouvelles fonctionnalités de la plateforme de SQL Server cible la base de données peut bénéficier d’une mise à niveau. Les conclusions sont décrites en tant que recommandation de fonctionnalité, et ils sont classés dans les domaines suivants :
     - Performances
     - Sécurité
