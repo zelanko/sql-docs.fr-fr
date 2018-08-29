@@ -1,5 +1,5 @@
 ---
-title: sp_server_diagnostics (Transact-SQL) | Documents Microsoft
+title: sp_server_diagnostics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 181b5ba51d87db43392af280d8fc4178da54dcc4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4896d26edb0aeb186f8408dff2ccf31d1aedcfe8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263298"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028168"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
  [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
  Indique l'intervalle de temps auquel la procédure stockée s'exécutera de façon répétée pour envoyer les informations d'intégrité.  
   
- *repeat_interval_in_seconds* est **int** avec la valeur par défaut 0. Les valeurs de paramètre valides sont 0, ou toute valeur égale à ou supérieure à 5. La procédure stockée doit s'exécuter au moins 5 secondes pour retourner des données complètes. La valeur minimale pour que la procédure stockée s'exécute en mode de répétition est de 5 secondes.  
+ *repeat_interval_in_seconds* est **int** avec la valeur par défaut de 0. Les valeurs de paramètre valides sont 0, ou toute valeur égale à ou supérieure à 5. La procédure stockée doit s'exécuter au moins 5 secondes pour retourner des données complètes. La valeur minimale pour que la procédure stockée s'exécute en mode de répétition est de 5 secondes.  
   
  Si ce paramètre n'est pas spécifié, ou si la valeur spécifiée est 0, la procédure stockée retournera des données une fois puis s'arrêtera.  
   
@@ -62,12 +62,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Jeux de résultats  
 **sp_server_diagnostics** renvoie les informations suivantes  
   
-|Colonne|Data type| Description|  
+|colonne|Data type|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indique l'horodateur de la création de ligne. Chaque ligne dans un ensemble de lignes unique a le même horodateur.|  
-|**component_type**|**sysname**|Indique si la ligne contient des informations pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au niveau du composant ou d’un groupe de disponibilité Always On de l’instance :<br /><br /> instance<br /><br /> Always On : groupe de disponibilité|  
+|**component_type**|**sysname**|Indique si la ligne contient des informations pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au niveau du composant, ou pour un groupe de disponibilité Always On de l’instance :<br /><br /> instance<br /><br /> Always On : groupe de disponibilité|  
 |**nom du composant**|**sysname**|Indique le nom du composant ou le nom du groupe de disponibilité :<br /><br /> système<br /><br /> ressource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> événements<br /><br /> *\<nom du groupe de disponibilité >*|  
-|**state**|**int**|Indique l'état d'intégrité du composant :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state**|**Int**|Indique l'état d'intégrité du composant :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Décrit la colonne d'état. Les descriptions qui correspondent aux valeurs dans la colonne d'état sont :<br /><br /> 0 : inconnu<br /><br /> 1 : nettoyer<br /><br /> 2 : avertissement<br /><br /> 3 : erreur|  
 |**data**|**varchar (max)**|Spécifie des données spécifiques au composant.|  
   
@@ -75,15 +75,15 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **système**: recueille des données à partir d’un point de vue du système sur les verrouillages spinlock, conditions de traitement sévères, tâches improductives, défauts de page et l’utilisation du processeur. Ces informations permettent d'obtenir une recommandation de l'état d'intégrité global.  
   
--   **ressource**: collecte des données à partir d’un point de vue des ressources sur les pages de mémoire physique et virtuelle, les pools de mémoires tampons, le cache et autres objets en mémoire. Ces informations produit une recommandation d’état d’intégrité global.  
+-   **ressource**: recueille des données à partir d’un point de vue des ressources sur les pages de mémoire physique et virtuelle, les pools de mémoires tampons, le cache et autres objets de mémoire. Ces informations produit une recommandation d’état d’intégrité globale.  
   
--   **query_processing**: attente de collecte des données à partir d’un point de vue du traitement des requêtes sur les threads de travail, tâches, types, les sessions sollicitant beaucoup l’UC et les tâches de blocage. Ces informations produit une recommandation d’état d’intégrité global.  
+-   **query_processing**: recueille des données à partir d’un point de vue du traitement des requêtes sur les threads de travail, tâches, attendre des types, les sessions sollicitant beaucoup l’UC et les tâches de blocage. Ces informations produit une recommandation d’état d’intégrité globale.  
   
--   **io_subsystem**: collecte des données sur les e/s. En plus des données de diagnostics, ce composant produit un état d'intégrité sain ou un état d'intégrité d'avertissement uniquement pour un sous-système d'E/S.  
+-   **io_subsystem**: collecte les données d’e/s. En plus des données de diagnostics, ce composant produit un état d'intégrité sain ou un état d'intégrité d'avertissement uniquement pour un sous-système d'E/S.  
   
--   **événements**: collecte des données et des surfaces via la procédure stockée sur les erreurs et les événements d’intérêt enregistrés par le serveur, notamment des détails sur les exceptions de mémoire tampon en anneau, en anneau des événements de mémoire tampon sur l’allocation de mémoire, la mémoire, le Moniteur du planificateur pool de mémoires tampons, verrouillages spinlock, sécurité et la connectivité. Les événements afficheront toujours 0 comme état.  
+-   **événements**: recueille des données et des surfaces via la procédure stockée sur les erreurs et les événements d’intérêt enregistrés par le serveur, notamment des détails sur les exceptions de mémoire tampon en anneau, en anneau des événements de la mémoire tampon sur l’allocation de mémoire, de la mémoire, le Moniteur du planificateur pool de mémoires tampons, les verrouillages spinlock, sécurité et la connectivité. Les événements afficheront toujours 0 comme état.  
   
--   **\<nom du groupe de disponibilité >**: collecte des données pour le groupe de disponibilité spécifié (si component_type = « toujours sur : AvailabilityGroup »).  
+-   **\<nom du groupe de disponibilité >**: collecte les données de groupe de disponibilité spécifié (si component_type = « toujours sur : AvailabilityGroup »).  
   
 ## <a name="remarks"></a>Notes  
 Du point de vue d'un échec, les composant system, resource et query_processing seront exploités pour la détection de pannes, tandis que les composants io_subsystem et events le seront uniquement à des fins de diagnostics.  
@@ -101,9 +101,9 @@ Le tableau suivant mappe les composants à leurs états d'intégrité associés.
 Le (x) dans chaque ligne représente des états d'intégrité valides pour le composant. Par exemple, io_subsystem indiquera un bon état ou un avertissement. Il n'affichera pas les états d'erreur.  
  
 > [!NOTE]
-> L’exécution de la procédure interne sp_server_diagnostics est implémentée sur un thread préemptif à priorité élevée.
+> L’exécution de procédure interne sp_server_diagnostics est implémentée sur un thread préemptif en haute priorité.
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  

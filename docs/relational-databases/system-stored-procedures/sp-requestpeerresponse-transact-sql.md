@@ -1,5 +1,5 @@
 ---
-title: sp_requestpeerresponse (Transact-SQL) | Documents Microsoft
+title: sp_requestpeerresponse (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83f5cfcac2f109b88fc63ab96942d7682bdb2a90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b722bac6727e6d64bb0c2c475ca900ea78c8fc1d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998206"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024371"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,14 +60,14 @@ sp_requestpeerresponse [ @publication = ] 'publication'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_requestpeerresponse** est utilisé dans la réplication transactionnelle d’égal à égal.  
+ **sp_requestpeerresponse** est utilisé dans la réplication transactionnelle peer-to-peer.  
   
- **sp_requestpeerresponse** permet de s’assurer que toutes les commandes ont été reçues par tous les autres nœuds avant la restauration d’une base de données publiée dans une topologie d’égal à égal. Cette procédure est également utilisée lors de la réplication de modifications DDL (Data Definition Language) effectuées lorsqu'un nœud était hors ligne, pour déterminer le moment où les modifications arrivent sur les autres nœuds.  
+ **sp_requestpeerresponse** permet de s’assurer que toutes les commandes ont été reçus par tous les autres nœuds avant la restauration d’une base de données publiée dans une topologie d’égal à égal. Cette procédure est également utilisée lors de la réplication de modifications DDL (Data Definition Language) effectuées lorsqu'un nœud était hors ligne, pour déterminer le moment où les modifications arrivent sur les autres nœuds.  
   
  **sp_requestpeerresponse** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_requestpeerresponse**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_requestpeerresponse**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   

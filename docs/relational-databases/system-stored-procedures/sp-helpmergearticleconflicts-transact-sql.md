@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergearticleconflicts (Transact-SQL) | Documents Microsoft
+title: sp_helpmergearticleconflicts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d533e2cf1aad3d7ee0b9610e010b42baabf054ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fb4fe8ff1dadebe5f2bb2a7af5209c2e761e0af
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995166"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037302"
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,16 +58,16 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**article**|**sysname**|Nom de l'article.|  
 |**source_owner**|**sysname**|Propriétaire de l'objet source.|  
 |**source_object**|**nvarchar(386)**|Nom de l'objet source.|  
 |**conflict_table**|**nvarchar(258)**|Nom de la table stockant les conflits d'insertion ou de mise à jour.|  
 |**guidcolname**|**sysname**|Nom du RowGuidCol de l'objet source.|  
-|**centralized_conflicts**|**int**|Spécifie si les enregistrements des conflits sont stockés sur le serveur de publication donné.|  
+|**centralized_conflicts**|**Int**|Spécifie si les enregistrements des conflits sont stockés sur le serveur de publication donné.|  
   
- Si l’article possède uniquement des conflits de suppression et aucune **conflict_table** lignes, le nom de la **conflict_table** dans le résultat de jeu a la valeur NULL.  
+ Si l’article a une seule des conflits de suppression et aucun **conflict_table** lignes, le nom de la **conflict_table** dans le résultat de jeu est NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -75,8 +75,8 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Notes  
  **sp_helpmergearticleconflicts** est utilisé dans la réplication de fusion.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe et le **db_owner** du rôle de base de données fixe peut exécuter **sp_helpmergearticleconflicts**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe et le **db_owner** rôle de base de données fixe peuvent exécuter **sp_helpmergearticleconflicts**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

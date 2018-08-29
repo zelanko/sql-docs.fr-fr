@@ -1,5 +1,5 @@
 ---
-title: Sys.destination_data_spaces (Transact-SQL) | Documents Microsoft
+title: Sys.destination_data_spaces (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,27 +21,28 @@ helpviewer_keywords:
 - sys.destination_data_spaces catalog view
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acc10d0843e1cc24dcd1080fa71b273e39348428
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c4b761959398e566a639c16a26e62136ae4f8ff2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037217"
 ---
 # <a name="sysdestinationdataspaces-transact-sql"></a>sys.destination_data_spaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne par destination d'espace de données d'un schéma de partition.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**partition_scheme_id**|**int**|ID du schéma de partition dont l'opération de partitionnement est réalisée à destination de l'espace de données.|  
-|**destination_id**|**int**|ID (ordinal à partir de 1) du mappage de destination, unique dans le schéma de partition.|  
-|**data_space_id**|**int**|ID de l'espace de données avec lequel sont mappées les données pour la destination de ce schéma.|  
+|**partition_scheme_id**|**Int**|ID du schéma de partition dont l'opération de partitionnement est réalisée à destination de l'espace de données.|  
+|**destination_id**|**Int**|ID (ordinal à partir de 1) du mappage de destination, unique dans le schéma de partition.|  
+|**data_space_id**|**Int**|ID de l'espace de données avec lequel sont mappées les données pour la destination de ce schéma.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

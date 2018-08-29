@@ -1,5 +1,5 @@
 ---
-title: sp_getdefaultdatatypemapping (Transact-SQL) | Documents Microsoft
+title: sp_getdefaultdatatypemapping (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_getdefaultdatatypemapping
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9acad164a82b8506ecceebeab01fb5f4c03b75b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff9df7e27545aa130398e0a81ffcf24855503aba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999122"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025708"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne des informations sur le mappage par défaut pour le type de données spécifié entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de données de gestion (SGBD). Cette procédure stockée est exécutée sur une base de données du serveur.  
+  Retourne des informations sur le mappage par défaut pour le type de données spécifié entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de données de gestion (SGBD). Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [ **@source_dbms**=] **'***source_dbms***'**  
  Nom du SGBD à partir duquel les types de données sont mappés. *source_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes :  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Base de données source au format [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Base de données Oracle source.|  
@@ -85,12 +85,12 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  Échelle du type de données du SGBD source. *source_scale* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@source_nullable=** ] *source_nullable*  
- Indique si le type de données du SGBD source prend en charge la valeur NULL. *source_nullable* est **bits**, avec la valeur par défaut **1**, ce qui signifie que les valeurs NULL sont prises en charge.  
+ Indique si le type de données du SGBD source prend en charge la valeur NULL. *source_nullable* est **bits**, avec une valeur par défaut **1**, ce qui signifie que les valeurs NULL sont prises en charge.  
   
  [ **@destination_dbms** =] **'***destination_dbms***'**  
  Nom du SGBD de destination. *destination_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes :  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destination.|  
 |**ORACLE**|Base de données Oracle de destination.|  
@@ -117,8 +117,8 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@destination_nullable=** ] *destination_nullable *** sortie**  
  Indique si le type de données du SGBD de destination prend en charge la valeur NULL. *destination_nullable* est **bits**, avec NULL comme valeur par défaut. **1** signifie que les valeurs NULL sont prises en charge.  
   
- [  **@dataloss=** ] *perte *** sortie**  
- Indique si le mappage présente un risque de perte de données. *perte* est **bits**, avec NULL comme valeur par défaut. **1** signifie qu’il existe un risque potentiel de perte de données.  
+ [  **@dataloss=** ] *perte de données *** sortie**  
+ Indique si le mappage présente un risque de perte de données. *perte de données* est **bits**, avec NULL comme valeur par défaut. **1** signifie qu’il existe un risque potentiel de perte de données.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -126,9 +126,9 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="remarks"></a>Notes  
  **sp_getdefaultdatatypemapping** est utilisée dans tous les types de réplication entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SGBD.  
   
- **sp_getdefaultdatatypemapping** renvoie les données de destination par défaut de type qui est la plus proche pour le type de données source spécifiée.  
+ **sp_getdefaultdatatypemapping** retourne les données de destination par défaut de type qui est la plus proche pour le type de données source spécifiée.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_getdefaultdatatypemapping**.  
   
 ## <a name="see-also"></a>Voir aussi  

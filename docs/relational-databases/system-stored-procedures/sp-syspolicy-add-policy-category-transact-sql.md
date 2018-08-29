@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_add_policy_category (Transact-SQL) | Documents Microsoft
+title: sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_add_policy_category
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 134777b90dcb5213d1f8a747de4bd34151afcca2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 20bf30b2f0ad96ce46f6990d3d4efeab1a1fe398
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254724"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033313"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
   
 ## <a name="arguments"></a>Arguments  
  [  **@name=** ] **'***nom***'**  
- Est le nom de la catégorie de stratégie. *nom* est **sysname**et est requis. *nom* ne peut pas être une chaîne NULL ou vide.  
+ Est le nom de la catégorie de stratégie. *nom* est **sysname**et est requis. *nom* ne peut pas être NULL ou une chaîne vide.  
   
  [  **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
- Détermine si l'abonnement à la base de données est autorisé pour la catégorie de stratégie. *mandate_database_subscriptions* est un **bits** valeur par défaut est 1 (activé).  
+ Détermine si l'abonnement à la base de données est autorisé pour la catégorie de stratégie. *mandate_database_subscriptions* est un **bits** valeur, par défaut est 1 (activé).  
   
  [  **@policy_category_id=** ] *policy_category_id*  
  Est l’identificateur de la catégorie de stratégie. *policy_category_id* est **int**et est retourné en tant que sortie.  
@@ -61,11 +60,11 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_add_policy_category dans le contexte de la base de données système msdb.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle de base de données fixe PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Élévation possible des informations d’identification : les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement de l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la plupart des objets soient créés dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Étant donné cette possible élévation des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs qui sont approuvés avec contrôle de la configuration de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Élévation possible des informations d’identification : les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement de l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la plupart des objets d’être créées dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Étant donné cette possible élévation des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs qui sont approuvés avec contrôle de la configuration de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une catégorie de stratégie dans laquelle l'abonnement à la catégorie n'est pas autorisé. Cela signifie que des bases de données individuelles peuvent être configurées pour s'abonner aux stratégies de la catégorie ou annuler l'abonnement.  
@@ -82,7 +81,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de gestion basée sur la stratégie &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Procédures stockées de gestion basée sur des stratégies &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_delete_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
   

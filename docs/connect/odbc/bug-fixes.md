@@ -16,18 +16,18 @@ caps.latest.revision: 69
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3b5969a723b230139b9466f75569375f97a0d7b0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6ef479b95e62c2f489b06905b33318a877a60ad5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946903"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787153"
 ---
 # <a name="list-of-bugs-fixed"></a>Liste des bogues corrigés
 
-Cette page contient une liste des bogues corrigés dans chaque version, en commençant par [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 du pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+Cette page contient une liste des bogues corrigés dans chaque version, en commençant par [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 du pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd"></a>Correctifs de bogues dans le [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.2 du pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Correctifs de bogues dans le [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.2 du pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Correction d’un message d’erreur concernant l’authentification Azure Active Directory
 - Correction de la détection encodage lorsque les variables d’environnement de paramètres régionaux sont définis différemment
@@ -40,7 +40,7 @@ Cette page contient une liste des bogues corrigés dans chaque version, en comme
 - Correction d’un problème de cache lors de l’utilisation de l’authentification ADAL sur Windows
 - Correction d’un problème qui a été de verrouillage et de remplacement trace ouvre une session sur Windows
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>Correctifs de bogues dans le [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.1 de pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Correctifs de bogues dans le [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.1 de pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Fixe le délai de 1 seconde lors de l’appel SQLFreeHandle lorsque MARS est activé et l’attribut de connexion « Encrypt = yes »
 - Correction d’un incident de l’erreur 22003 dans SQLGetData lorsque la taille du tampon transmis dans est plus petite, les données extraites (Windows)
@@ -50,7 +50,7 @@ Cette page contient une liste des bogues corrigés dans chaque version, en comme
 - Correction d’un avertissement sur le programme d’installation Mac OS
 - Correction d’envoi état incorrect vers SQL Server lors de la tentative de récupération de la Session lors de la résilience des connexions et le regroupement de connexions à la fois sont activées, à l’origine de la session doit être supprimée par le serveur
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Correctifs de bogues dans le [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 du pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Correctifs de bogues dans le [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 du pilote ODBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Correction d’un bogue où lorsque vous utilisez l’authentification Kerberos, l’insertion en bloc peut échouer avec l’erreur « accès refusé »
 - Solution de contournement supprimée pour un bogue unixODBC présent dans la version ci-dessous 2.3.1 (pilote a doublé les tailles de certaines mémoires tampon transmises à unixODBC)

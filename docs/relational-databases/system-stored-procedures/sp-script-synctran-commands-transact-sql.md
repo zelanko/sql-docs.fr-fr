@@ -1,5 +1,5 @@
 ---
-title: sp_script_synctran_commands (Transact-SQL) | Documents Microsoft
+title: sp_script_synctran_commands (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_script_synctran_commands
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3705a28d85c7375aad701d77a517719778954c25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b86c1064eb96174243ea15cba6f5f84a77e40a1f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997756"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031806"
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Génère un script qui contient le **sp_addsynctrigger** appels à appliquer aux abonnés pour les abonnements pouvant être. Il y a un **sp_addsynctrigger** appeler pour chaque article de la publication. Le script généré contient également le **sp_addqueued_artinfo** appels qui créent le **MSsubsciption_articles** table est nécessaire pour traiter les publications en file d’attente. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
+  Génère un script qui contienne le **sp_addsynctrigger** appels à appliquer aux abonnés pour les abonnements d’être mise à jour. Il y a un **sp_addsynctrigger** appeler pour chaque article de la publication. Le script généré contient également le **sp_addqueued_artinfo** appels qui créent le **MSsubsciption_articles** table qui est nécessaire pour traiter les publications en file d’attente. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,10 +61,10 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_script_synctran_commands** est utilisé dans la réplication transactionnelle et d’instantané.  
   
- **sp_addqueued_artinfo** est utilisée pour les abonnements pouvant être mis en file d’attente.  
+ **sp_addqueued_artinfo** est utilisé pour les abonnements de mettre à jour en file d’attente.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_script_synctran_commands**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_script_synctran_commands**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_addsynctriggers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   

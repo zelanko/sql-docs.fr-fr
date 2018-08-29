@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_help_change_data_capture (Transact-SQL) | Documents Microsoft
+title: Sys.sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1fd52d38d96f83c6be7c0a327fca797f934a466
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f29ac764c9d948d435765abd3d11d260cbd0d59c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263215"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027245"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +68,13 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Nom du schéma de table source.|  
 |source_table|**sysname**|Nom de la table source.|  
 |capture_instance|**sysname**|Nom de l'instance de capture.|  
-|object_id|**int**|ID de la table de modifications associée à la table source.|  
-|source_object_id|**int**|ID de la table source.|  
+|object_id|**Int**|ID de la table de modifications associée à la table source.|  
+|source_object_id|**Int**|ID de la table source.|  
 |start_lsn|**binary(10)**|Numéro séquentiel dans le journal qui représente le point de terminaison inférieur pour interroger la table de modifications.<br /><br /> NULL = le point de terminaison inférieur n'a pas été établi.|  
 |end_lsn|**binary(10)**|Numéro séquentiel dans le journal qui représente le point de terminaison supérieur pour interroger la table de modifications. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cette colonne a toujours pour valeur NULL.|  
 |supports_net_changes|**bit**|La prise en charge des modifications nettes est activée.|  
@@ -88,9 +87,9 @@ sys.sp_cdc_help_change_data_capture
 |captured_column_list|**nvarchar(max)**|Liste des colonnes sources capturées.|  
   
 ## <a name="remarks"></a>Notes  
- Lorsque les deux *source_schema* et *source_name* par défaut avec la valeur NULL ou sont explicitement la valeur NULL, cette procédure stockée retourne des informations pour la base de données toutes les instances de capture auquel l’appelant a accès SELECT à. Lorsque *source_schema* et *source_name* sont non NULL, seules les informations sur la table activée nommée spécifique sont retournées.  
+ Lorsque les deux *source_schema* et *source_name* par défaut avec la valeur NULL ou sont explicitement la valeur NULL, cette procédure stockée retourne des informations pour l’ensemble de la base de données des instances de capture que l’appelant a sélectionnez l’accès à. Lorsque *source_schema* et *source_name* sont non NULL, seules les informations sur la table activée nommée spécifique sont retournées.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Lorsque *source_schema* et *source_name* ont la valeur NULL, l’autorisation de l’appelant détermine les tables activées qui sont inclus dans le jeu de résultats. Les appelants doivent avoir l'autorisation SELECT sur toutes les colonnes capturées de l'instance de capture et être membres d'un rôle de régulation défini pour les informations de table à inclure. Les membres du rôle de base de données db_owner peuvent afficher des informations concernant toutes les instances de capture définies. Lorsque des informations pour une table activée spécifique sont demandées, les mêmes critères SELECT et d'appartenance sont appliqués pour la table nommée.  
   
 ## <a name="examples"></a>Exemples  

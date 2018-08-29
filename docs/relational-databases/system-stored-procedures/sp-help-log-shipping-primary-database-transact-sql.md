@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_primary_database (Transact-SQL) | Documents Microsoft
+title: sp_help_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_primary_database
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56f3955c179e73d30172f0ed2126a600b1c1771a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8f30e2e1bc5755875164ce5a0cb8019e28353fcd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255781"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025268"
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,14 +56,14 @@ sp_help_log_shipping_primary_database
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne| Description|  
+|Nom de colonne|Description|  
 |-----------------|-----------------|  
 |**primary_id**|ID de la base de données primaire pour la configuration de la copie des journaux de transaction.|  
 |**primary_database**|Nom de la base de données primaire dans la configuration d'envoi de journaux.|  
 |**backup_directory**|Répertoire où les fichiers de sauvegarde des journaux de transactions du serveur principal sont stockés.|  
 |**backup_share**|Réseau ou chemin d'accès UNC au répertoire de sauvegarde.|  
 |**backup_retention_period**|Durée de conservation (en minutes) avant la suppression d'un fichier de sauvegarde de journal dans le répertoire de sauvegarde.|  
-|**backup_compression**|Indique si la configuration de copie des journaux utilise [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = désactivé. Ne jamais compresser des sauvegardes de journal.<br /><br /> **1** = activé. Toujours compresser des sauvegardes de journal.<br /><br /> **2** = utiliser le paramètre de la [afficher ou configurer l’Option de Configuration de serveur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Ceci est la valeur par défaut.<br /><br /> La compression de la sauvegarde est prise en charge uniquement dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou les versions ultérieures). Dans les autres éditions, la valeur est toujours 2.|  
+|**backup_compression**|Indique si la configuration de copie des journaux utilise [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = désactivé. Ne jamais compresser des sauvegardes de journal.<br /><br /> **1** = activé. Toujours compresser des sauvegardes de journal.<br /><br /> **2** = utiliser le paramètre de la [afficher ou configurer l’Option de Configuration de serveur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Il s'agit de la valeur par défaut.<br /><br /> La compression de la sauvegarde est prise en charge uniquement dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou les versions ultérieures). Dans les autres éditions, la valeur est toujours 2.|  
 |**backup_job_id**|Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de tâche de l’Agent associé à la tâche de sauvegarde sur le serveur principal.|  
 |**monitor_server**|Le nom de l’instance de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilisé en tant que serveur moniteur dans la configuration d’envoi de journaux.|  
 |**monitor_server_security_mode**|Mode de sécurité utilisé pour la connexion au serveur moniteur.<br /><br /> 1 = Authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
@@ -79,7 +78,7 @@ sp_help_log_shipping_primary_database
 ## <a name="remarks"></a>Notes  
  **sp_help_log_shipping_primary_database** doit être exécuté à partir de la **master** base de données sur le serveur principal.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
@@ -91,7 +90,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de journaux de transaction & #40 ; SQL Server & #41 ;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

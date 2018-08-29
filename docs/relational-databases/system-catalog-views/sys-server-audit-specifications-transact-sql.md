@@ -1,5 +1,5 @@
 ---
-title: Sys.server_audit_specifications (Transact-SQL) | Documents Microsoft
+title: Sys.server_audit_specifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - sys.server_audit_specifications catalog view
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8f6eba2b4cd9d41c00fa48434f72bee8d093559
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e00fc4993b4afcc559b11ec8e057349aa8bee310
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219630"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038330"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient des informations à propos des spécifications de l'audit du serveur dans un audit SQL Server sur une instance de serveur. Pour plus d’informations sur SQL Server Audit, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom de la spécification du serveur.|  
 |**server_specification_id**|**Int**|ID de la **server_specification**.|  
@@ -45,8 +45,8 @@ ms.locfileid: "33219630"
 |**is_state_enabled**|**tinyint**|État de la spécification d'audit :<br /><br /> 0 – DÉSACTIVÉE<br /><br /> 1 – ACTIVÉE|  
 |**audit_GUID**|**uniqueidentifier**|GUID de l'audit qui contient cette spécification. Utilisé pendant l'énumération des spécifications d'audit de serveur membres pendant le démarrage du serveur.|  
   
-## <a name="permissions"></a>Autorisations  
- Les principaux avec le **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** autorisation ont accès à cette vue de catalogue. En outre, l’entité de sécurité ne doit pas être refusée **VIEW ANY DEFINITION** autorisation.  
+## <a name="permissions"></a>Permissions  
+ Les principaux avec le **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** autorisation ont accès à cette vue de catalogue. En outre, le principal ne doit pas être refusé **VIEW ANY DEFINITION** autorisation.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

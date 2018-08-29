@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d82517f09ad18c7cc0b2e8d49acfdae6ab200ee9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: adec12d90732b37a6613d31b819fa6e907649948
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037017"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038151"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ sp_table_validation [ @table = ] 'table'
   
  Valeurs à virgule flottante sont susceptibles de générer des différences de somme de contrôle si en mode caractère **bcp** a été utilisé, ce qui est le cas si la publication a non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés. Cela est dû à des erreurs mineures et inévitables de précision lors de la conversion vers le mode caractère et à partir de ce mode.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour exécuter **sp_table_validation**, vous devez disposer des autorisations SELECT sur la table en cours de validation.  
   
 ## <a name="see-also"></a>Voir aussi  

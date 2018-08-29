@@ -1,5 +1,5 @@
 ---
-title: sp_addsubscriber_schedule (Transact-SQL) | Documents Microsoft
+title: sp_addsubscriber_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber_schedule
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c5d170d9060f232f2dbf6f5761a3c5ea51495fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47f15ca86c8b0a8059ff42daa6c0cb5a806a037d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991576"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035529"
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [  **@agent_type =** ] *agent_type*  
  Type de l'Agent. *agent_type* est **smallint**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**0** (valeur par défaut)|Agent de distribution|  
 |**1**|Agent de fusion|  
@@ -79,16 +78,16 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**8**|Semaine|  
 |**16**|Mois|  
 |**32**|Mensuelle relative|  
-|**64** (par défaut)|Démarrage automatique|  
+|**64** (valeur par défaut)|Démarrage automatique|  
 |**128**|Périodique|  
   
  [  **@frequency_interval =** ] *frequency_interval*  
- Valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est **int**, avec une valeur par défaut **1**.  
+ Est la valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est **int**, avec une valeur par défaut **1**.  
   
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Date de l'Agent de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuel relatif). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
+ Date de l'Agent de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1** (par défaut)|Première|  
 |**2**|Seconde|  
@@ -106,7 +105,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
-|**4** (par défaut)|Minute|  
+|**4** (valeur par défaut)|Minute|  
 |**8**|Heure|  
   
  [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
@@ -116,13 +115,13 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  Heure à laquelle l’Agent de distribution est planifié pour la première fois, au format HHMMSS. *active_start_time_of_day* est **int**, avec une valeur par défaut **0**.  
   
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- L’heure de la journée à laquelle l’Agent de Distribution cesse d’être planifié, représentée au format HHMMSS. *active_end_time_of_day*est **int**, avec 235959 par défaut, ce qui signifie 11:59:59 PM comme sur une horloge de 24 heures.  
+ L’heure de la journée à laquelle l’Agent de Distribution cesse d’être planifié, représentée au format HHMMSS. *active_end_time_of_day*est **int**, avec 235959 par défaut, qui correspond à 11:59:59 P.M. comme sur une horloge de 24 heures.  
   
  [ **@active_start_date =** ] *active_start_date*  
  Date à laquelle l’Agent de distribution est planifié pour la première fois, au format AAAAMMJJ. *active_start_date* est **int**, avec une valeur par défaut **0**.  
   
  [  **@active_end_date =** ] *active_end_date*  
- Date à laquelle l’Agent de distribution cesse d'être planifié, au format AAAAMMJJ. *active_end_date* est **int**, avec 99991231 par défaut, qui correspond au 31 décembre 9999.  
+ Date à laquelle l’Agent de distribution cesse d'être planifié, au format AAAAMMJJ. *active_end_date* est **int**, avec 99991231 par défaut, ce qui signifie que le 31 décembre 9999.  
   
  [  **@publisher =** ] **'***publisher***'**  
  Spécifie un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
@@ -136,7 +135,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ## <a name="remarks"></a>Notes  
  **sp_addsubscriber_schedule** est utilisé dans la réplication de capture instantanée, la réplication transactionnelle et la réplication de fusion.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_addsubscriber_schedule**.  
   
 ## <a name="see-also"></a>Voir aussi  

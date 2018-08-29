@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_start_job (Transact-SQL) | Documents Microsoft
+title: Sys.sp_cdc_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_start_job
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d5d423c3bf0eea7488839928b9c11b9e266a16c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e744a907cf7991c0e913bc8a240a5743b91d8a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249768"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031547"
 ---
 # <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,24 +46,24 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>Arguments  
  [[  **@job_type=** ] **'***type_du_travail***'** ]  
- Type du travail à ajouter. *type_du_travail* est **nvarchar (20)** avec une valeur par défaut **capture**. Les entrées valides sont **capture** et **nettoyage**.  
+ Type du travail à ajouter. *type_du_travail* est **nvarchar (20)** avec une valeur par défaut **capturer**. Les entrées valides sont **capturer** et **nettoyage**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  sys.sp_cdc_start_job peut être utilisée par un administrateur pour démarrer de manière explicite le travail de capture ou le travail de nettoyage.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-starting-a-capture-job"></a>A. Démarrage d'un travail de capture  
- L'exemple suivant démarre le travail de capture pour la base de données `AdventureWorks2012`. En spécifiant une valeur pour *type_du_travail* n’est pas nécessaire, car le type de tâche par défaut est **capture**.  
+ L'exemple suivant démarre le travail de capture pour la base de données `AdventureWorks2012`. En spécifiant une valeur pour *type_du_travail* n’est pas nécessaire, car le type de tâche par défaut est **capturer**.  
   
 ```  
 USE AdventureWorks2012;  

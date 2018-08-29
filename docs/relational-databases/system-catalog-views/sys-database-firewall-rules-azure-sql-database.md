@@ -22,17 +22,16 @@ helpviewer_keywords:
 - database_firewall_rules
 - sys.database_firewall_rules
 ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
-caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ea5b9d5cb50740e349aa6d3cf58bd20f620a8ab6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 068f01bc17a9f907aafaac6d39370be2a0480f57
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038327"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038130"
 ---
 # <a name="sysdatabasefirewallrules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "38038327"
 ## <a name="remarks"></a>Notes  
  Pour supprimer une règle de pare-feu de base de données, utilisez [sp_delete_database_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md). Pour définir une règle de pare-feu pour tous les [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [sp_set_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md). Pour retourner des règles de pare-feu plus d’informations sur la base de données existante, interrogez [sys.database_firewall_rules (Azure SQL Database)](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Cette vue est disponible dans le **master** base de données et dans chaque base de données utilisateur. L'accès en lecture seule à cette vue est disponible pour tous les utilisateurs autorisés à se connecter à la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  

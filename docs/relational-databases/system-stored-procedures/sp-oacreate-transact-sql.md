@@ -1,5 +1,5 @@
 ---
-title: sp_OACreate (Transact-SQL) | Documents Microsoft
+title: sp_OACreate (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c7f4598f309549a34cc9dbc39b0ba1a964160bc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 02a05fb8b97c1ae74682b442c45ca54552052236
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263497"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019448"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  *OLEComponent* est le nom du composant du serveur OLE Automation, et *objet* est le nom de l’objet OLE. L’objet OLE spécifié doit être valide et doit prendre en charge la **IDispatch** interface.  
   
- Par exemple, SQLDMO. SQL Server est le ProgID de SQL-DMO **SQLServer** objet. SQL-DMO a un nom de composant SQLDMO, le **SQLServer** objet est valide et (telles que SQL-DMO tous les objets) le **SQLServer** prend en charge de l’objet **IDispatch**.  
+ Par exemple, SQLDMO. SQL Server est le ProgID de SQL-DMO **SQLServer** objet. SQL-DMO a un nom de composant SQLDMO, le **SQLServer** objet est valid et (telles que SQL-DMO tous les objets) le **SQLServer** prend en charge de l’objet **IDispatch**.  
   
  *clsid*  
  Identificateur de classe (CLSID) de l'objet OLE à créer. Cette chaîne de caractères décrit la classe de l’objet OLE et se présente sous la forme : **' {***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}'**. L’objet OLE spécifié doit être valide et doit prendre en charge la **IDispatch** interface.  
@@ -57,7 +57,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  Par exemple, {00026BA1-0000-0000-C000-000000000046} est le CLSID de SQL-DMO **SQLServer** objet.  
   
  *objecttoken* **sortie**  
- Jeton d’objet retourné, et doit être une variable locale du type de données **int**. Ce jeton d'objet identifie l'objet OLE créé et il est utilisé dans les appels aux autres procédures stockées de OLE Automation.  
+ Est le jeton de l’objet retourné, et doit être une variable locale du type de données **int**. Ce jeton d'objet identifie l'objet OLE créé et il est utilisé dans les appels aux autres procédures stockées de OLE Automation.  
   
  *Contexte*  
  Spécifie le contexte d'exécution dans lequel l'objet OLE nouvellement créé s'exécute. Si cet argument est spécifié, il doit avoir une des valeurs suivantes :  
@@ -70,9 +70,9 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Si non spécifié, la valeur par défaut est **5**. Cette valeur est passée en tant que le *dwClsContext* paramètre de l’appel à **CoCreateInstance**.  
   
- Si un serveur OLE d’in-process est autorisé (à l’aide d’une valeur de contexte de **1** ou **5** ou en ne spécifiant une valeur de contexte), il a accès à la mémoire et aux autres ressources détenues par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un serveur OLE in-process peut endommager la mémoire ou les ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et provoquer des résultats imprévisibles, comme une violation d'accès [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Si un serveur OLE d’in-process est autorisé (à l’aide d’une valeur de contexte de **1** ou **5** ou en ne spécifiant une valeur de contexte), il a accès à la mémoire et autres ressources détenues par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un serveur OLE in-process peut endommager la mémoire ou les ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et provoquer des résultats imprévisibles, comme une violation d'accès [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Lorsque vous spécifiez une valeur de contexte de **4**, un serveur OLE local n’a pas accès à aucun [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ressources et il ne peut pas endommager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mémoire ou ressources.  
+ Lorsque vous spécifiez une valeur de contexte de **4**, un serveur OLE local n’a pas accès à tout [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ressources et il ne peut pas endommager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mémoire ou ressources.  
   
 > [!NOTE]  
 >  Les paramètres de cette procédure stockée sont spécifiés par position, et non pas par nom.  
@@ -80,14 +80,14 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou un nombre différent de zéro (échec), qui représente la valeur entière de HRESULT renvoyée par l'objet OLE Automation.  
   
- Pour plus d’informations sur les Codes de retour HRESULT, consultez [OLE Automation Codes de retour et des informations d’erreur](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Pour plus d’informations sur les Codes de retour HRESULT, consultez [OLE Automation Codes de retour et les informations d’erreur](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="remarks"></a>Notes  
  Si les procédures OLE automation sont activées, un appel à **sp_OACreate** démarre l’environnement d’exécution partagé de OLE Automation. Pour plus d’informations sur l’activation de OLE automation, consultez [Ole Automation Server Configuration Option procédures](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md).  
   
  L'objet OLE créé est automatiquement détruit à la fin du lot d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

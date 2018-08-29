@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_default (Transact-SQL) | Documents Microsoft
+title: sp_help_agent_default (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_agent_default
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ea2d817e869f7ff66ddf70243e01b2f334fb14b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a835b1bafa037e249450118cb08f3d886bb6283b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994656"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017815"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
   
 ## <a name="arguments"></a>Arguments  
  [  **@profile_id=**] *profile_id *** sortie**  
- Identificateur de la configuration par défaut du type d'Agent. *profile_id* est **int**, sans valeur par défaut. *profile_id* est également un paramètre de sortie et retourne l’ID de la configuration par défaut pour le type de l’agent.  
+ Identificateur de la configuration par défaut du type d'Agent. *profile_id* est **int**, sans valeur par défaut. *profile_id* est également un paramètre de sortie qui retourne l’ID de la configuration par défaut pour le type d’agent.  
   
  [  **@agent_type=**] **'***agent_type***'**  
  Type de l'Agent. *agent_type* est **int**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
@@ -66,8 +66,8 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ## <a name="remarks"></a>Notes  
  **sp_help_agent_default** est utilisée dans tous les types de réplication.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **replmonitor** du rôle de base de données fixe peut exécuter **sp_help_agent_default**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou le **replmonitor** rôle de base de données fixe peuvent exécuter **sp_help_agent_default**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

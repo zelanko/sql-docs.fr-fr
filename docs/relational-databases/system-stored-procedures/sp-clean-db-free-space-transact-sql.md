@@ -1,5 +1,5 @@
 ---
-title: sp_clean_db_free_space (Transact-SQL) | Documents Microsoft
+title: sp_clean_db_free_space (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ghost records
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e8f84f3539ea192a132282eee280f26ba80da5d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c2870d2f88a3a984b4d8df958e6fac2afd6500c6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689257"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024355"
 ---
 # <a name="spcleandbfreespace-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_clean_db_free_space
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @dbname=] '*nom_base_de_données*'  
+ [ @dbname=] '*database_name*'  
  Nom de la base de données à nettoyer. *dbname* est **sysname** et ne peut pas être NULL.  
   
  [ @cleaning_delay=] '*Délai_en_Secondes*'  
@@ -57,15 +57,15 @@ sp_clean_db_free_space
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Opérations de suppression d’une table ou de mettre à jour les opérations qui entraînent une ligne peut libérer immédiatement l’espace sur une page en supprimant les références à la ligne. Cependant, dans certains cas, la ligne peut physiquement être conservée sur la page de données sous la forme d'un enregistrement fantôme. Les enregistrements fantômes sont supprimés régulièrement par un processus en arrière-plan. Ces données résiduelles ne sont pas retournées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] en réponse aux requêtes. Cependant, dans des environnements dans lesquels la sécurité physique des données ou des fichiers de sauvegarde est menacée, vous pouvez utiliser sp_clean_db_free_space pour nettoyer ces enregistrements fantômes.  
+ Opérations de suppression d’une table ou de mettre à jour les opérations qui entraînent une déplacement d’une ligne peut libérer immédiatement l’espace sur une page en supprimant les références à la ligne. Cependant, dans certains cas, la ligne peut physiquement être conservée sur la page de données sous la forme d'un enregistrement fantôme. Les enregistrements fantômes sont supprimés régulièrement par un processus en arrière-plan. Ces données résiduelles ne sont pas retournées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] en réponse aux requêtes. Cependant, dans des environnements dans lesquels la sécurité physique des données ou des fichiers de sauvegarde est menacée, vous pouvez utiliser sp_clean_db_free_space pour nettoyer ces enregistrements fantômes.  
   
  La durée d'exécution de sp_clean_db_free_space dépend de la taille du fichier, de l'espace disponible et de la capacité du disque. Dans la mesure où l'exécution de sp_clean_db_free_space peut affecter de manière significative l'activité d'E/S, il est recommandé d'exécuter cette procédure en dehors des heures d'activité.  
   
  Avant d'exécuter sp_clean_db_free_space, il est recommandé de créer une sauvegarde de base de données complète.  
   
- Le [sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) procédure stockée permettant d’effacer un seul fichier.  
+ Connexe [sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md) procédure stockée permettant d’effacer un seul fichier.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle de base de données db_owner.  
   
 ## <a name="examples"></a>Exemples  
@@ -80,6 +80,6 @@ EXEC sp_clean_db_free_space
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
- <br>[Guide de processus de nettoyage des enregistrements fantômes](../ghost-record-cleanup-process-guide.md) 
+ <br>[Guide de processus de nettoyage de fantômes](../ghost-record-cleanup-process-guide.md) 
   
   

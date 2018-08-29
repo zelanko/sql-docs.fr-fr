@@ -1,5 +1,5 @@
 ---
-title: Interrogation des catalogues système SQL Server FAQ | Documents Microsoft
+title: Interrogation des catalogues système SQL Server FAQ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 caps.latest.revision: 51
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc310dc86a720dbf0bd2a833a6bedd63f1875b27
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bf88696005c7ac3f743f23f1ee75fd362a3e5243
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181755"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030507"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Questions fréquentes sur l'interrogation des catalogues système de SQL Server
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +40,19 @@ ms.locfileid: "33181755"
   
 ### <a name="data-types"></a>Types de données  
   
--   [Comment pour rechercher les types de données des colonnes d’une table spécifiée ?](#_FAQ7)  
+-   [Comment trouver les types de données des colonnes d’une table spécifiée ?](#_FAQ7)  
   
--   [Comment pour rechercher les types de données LOB d’une table spécifiée ?](#_FAQ14)  
+-   [Comment trouver les types de données LOB d’une table spécifiée ?](#_FAQ14)  
   
--   [Comment pour rechercher les colonnes qui dépendent d’un type de données spécifié ?](#_FAQ22)  
+-   [Comment trouver les colonnes qui dépendent d’un type de données spécifié ?](#_FAQ22)  
   
--   [Comment pour rechercher les colonnes calculées qui dépendent d’un type CLR défini par l’utilisateur ou d’un type de données alias ?](#_FAQ23)  
+-   [Comment trouver les colonnes calculées qui dépendent d’un type CLR défini par l’utilisateur ou d’un type de données alias ?](#_FAQ23)  
   
--   [Comment pour rechercher les paramètres qui dépendent d’un type défini par l’utilisateur CLR ou d’un type d’alias ?](#_FAQ24)  
+-   [Comment trouver les paramètres qui dépendent d’un type CLR défini par l’utilisateur ou d’un type d’alias ?](#_FAQ24)  
   
--   [Comment pour trouver les contraintes CHECK qui dépendent d’un type CLR défini par l’utilisateur spécifié ?](#_FAQ25)  
+-   [Comment trouver les contraintes CHECK qui dépendent d’un type CLR défini par l’utilisateur spécifié ?](#_FAQ25)  
   
--   [Comment trouver les vues, les fonctions Transact-SQL et les procédures stockées Transact-SQL qui dépendent d’un type défini par l’utilisateur CLR ou d’un type d’alias ?](#_FAQ26)  
+-   [Comment trouver les vues, les fonctions Transact-SQL et les procédures stockées Transact-SQL qui dépendent d’un type CLR défini par l’utilisateur ou d’un type d’alias ?](#_FAQ26)  
   
 ### <a name="tables-indexes-views-and-constraints"></a>Tables, index, vues et contraintes  
   
@@ -60,23 +60,23 @@ ms.locfileid: "33181755"
   
 -   [Comment pour rechercher toutes les tables qui n’ont pas d’un index cluster dans une base de données spécifié ?](#_FAQ1)  
   
--   [Comment pour rechercher toutes les tables qui ne comportent pas d’index ?](#_FAQ4)  
+-   [Comment pour rechercher toutes les tables qui n’ont pas d’un index ?](#_FAQ4)  
   
 -   [Comment pour rechercher toutes les tables qui n’ont pas d’une clé primaire ?](#_FAQ3)  
   
 -   [Comment pour rechercher toutes les tables qui ont une colonne d’identité ?](#_FAQ5)  
   
--   [Comment rechercher toutes les tables et les index qui sont partitionnés ?](#_FAQ32)  
+-   [Comment trouver toutes les tables et index sont partitionnés ?](#_FAQ32)  
   
 -   [Comment trouver toutes les vues dans une base de données ?](#_FAQ13)  
   
--   [Comment pour rechercher la définition d’une vue ?](#_FAQ35)  
+-   [Comment trouver la définition d’une vue ?](#_FAQ35)  
   
--   [Comment faire pour rechercher toutes les entités qui ont été modifiées dans les dernier N jours ?](#_FAQ6)  
+-   [Comment trouver toutes les entités qui ont été modifiées dans les dernier N jours ?](#_FAQ6)  
   
--   [Comment pour rechercher les colonnes d’une clé primaire pour une table spécifiée ?](#_FAQ16)  
+-   [Comment trouver les colonnes d’une clé primaire pour une table spécifiée ?](#_FAQ16)  
   
--   [Comment pour rechercher les colonnes d’une clé étrangère d’une table spécifiée ?](#_FAQ17)  
+-   [Comment trouver les colonnes d’une clé étrangère d’une table spécifiée ?](#_FAQ17)  
   
 -   [Comment déterminer si une colonne est utilisée dans une expression de colonne calculée ?](#_FAQ20)  
   
@@ -94,23 +94,23 @@ ms.locfileid: "33181755"
   
 ### <a name="modules-stored-procedures-user-defined-functions-and-triggers"></a>Modules (procédures stockées, fonctions définies par l'utilisateur et déclencheurs)  
   
--   [Comment pour rechercher toutes les procédures stockées dans une base de données ?](#_FAQ9)  
+-   [Comment trouver toutes les procédures stockées dans une base de données ?](#_FAQ9)  
   
--   [Comment pour rechercher toutes les fonctions définies par l’utilisateur dans une base de données ?](#_FAQ12)  
+-   [Comment trouver toutes les fonctions définies par l’utilisateur dans une base de données ?](#_FAQ12)  
   
 -   [Comment trouver les paramètres pour une fonction ou procédure stockée spécifiée ?](#_FAQ10)  
   
 -   [Comment trouver les dépendances sur une fonction spécifiée ?](#_FAQ8)  
   
--   [Comment pour afficher la définition d’un module ?](#_FAQ15)  
+-   [Comment afficher la définition d’un module ?](#_FAQ15)  
   
--   [Comment pour afficher la définition d’un déclencheur de niveau serveur ?](#_FAQ19)  
+-   [Comment afficher la définition d’un déclencheur de niveau serveur ?](#_FAQ19)  
   
 ### <a name="schemas-users-roles-and-permissions"></a>Schémas, utilisateurs, rôles et autorisations  
   
--   [Comment faire pour rechercher tous les propriétaires des entités contenues dans un schéma spécifié ?](#_FAQ2)  
+-   [Comment trouver tous les propriétaires des entités contenues dans un schéma spécifié ?](#_FAQ2)  
   
--   [Comment faire pour rechercher les autorisations accordées ou refusées à un principal spécifié ?](#_FAQ18)  
+-   [Comment trouver les autorisations accordées ou refusées à un principal spécifié ?](#_FAQ18)  
   
 ## <a name="answers"></a>Réponses  
   
@@ -146,7 +146,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ2"></a> Comment faire pour rechercher tous les propriétaires des entités contenues dans un schéma spécifié ?  
+###  <a name="_FAQ2"></a> Comment trouver tous les propriétaires des entités contenues dans un schéma spécifié ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` et `<schema_name>` par des noms valides.  
   
 ```  
@@ -209,7 +209,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ4"></a> Comment pour rechercher toutes les tables qui ne comportent pas d’index ?  
+###  <a name="_FAQ4"></a> Comment pour rechercher toutes les tables qui n’ont pas d’un index ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` par un nom de base de données valide.  
   
 ```  
@@ -261,7 +261,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ7"></a> Comment pour rechercher les types de données des colonnes d’une table spécifiée ?  
+###  <a name="_FAQ7"></a> Comment trouver les types de données des colonnes d’une table spécifiée ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` et `<schema_name.table_name>` par des noms valides.  
   
 ```  
@@ -304,7 +304,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ9"></a> Comment pour rechercher toutes les procédures stockées dans une base de données ?  
+###  <a name="_FAQ9"></a> Comment trouver toutes les procédures stockées dans une base de données ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` par un nom valide.  
   
 ```  
@@ -349,7 +349,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ12"></a> Comment pour rechercher toutes les fonctions définies par l’utilisateur dans une base de données ?  
+###  <a name="_FAQ12"></a> Comment trouver toutes les fonctions définies par l’utilisateur dans une base de données ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` par un nom de base de données valide.  
   
 ```  
@@ -386,7 +386,7 @@ FROM sys.views;
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ6"></a> Comment faire pour rechercher toutes les entités qui ont été modifiées dans les dernier N jours ?  
+###  <a name="_FAQ6"></a> Comment trouver toutes les entités qui ont été modifiées dans les dernier N jours ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` et `<n_days>` par des valeurs valides.  
   
 ```  
@@ -406,7 +406,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ14"></a> Comment pour rechercher les types de données LOB d’une table spécifiée ?  
+###  <a name="_FAQ14"></a> Comment trouver les types de données LOB d’une table spécifiée ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` et `<schema_name.table_name>` par des noms valides.  
   
 ```  
@@ -434,7 +434,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ15"></a> Comment pour afficher la définition d’un module ?  
+###  <a name="_FAQ15"></a> Comment afficher la définition d’un module ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` et `<schema_name.object_name>` par des noms valides.  
   
 ```  
@@ -459,7 +459,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ19"></a> Comment pour afficher la définition d’un déclencheur de niveau serveur ?  
+###  <a name="_FAQ19"></a> Comment afficher la définition d’un déclencheur de niveau serveur ?  
   
 ```  
 SELECT definition  
@@ -470,7 +470,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ16"></a> Comment pour rechercher les colonnes d’une clé primaire pour une table spécifiée ?  
+###  <a name="_FAQ16"></a> Comment trouver les colonnes d’une clé primaire pour une table spécifiée ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` et `<schema_name.table_name>` par des noms valides.  
   
 ```  
@@ -513,7 +513,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ17"></a> Comment pour rechercher les colonnes d’une clé étrangère d’une table spécifiée ?  
+###  <a name="_FAQ17"></a> Comment trouver les colonnes d’une clé étrangère d’une table spécifiée ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` et `<schema_name.table_name>` par des noms valides.  
   
 ```  
@@ -537,7 +537,7 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ18"></a> Comment faire pour rechercher les autorisations accordées ou refusées à un principal spécifié ?  
+###  <a name="_FAQ18"></a> Comment trouver les autorisations accordées ou refusées à un principal spécifié ?  
  L'exemple suivant crée une fonction pour renvoyer le nom de l'entité dont les autorisations sont vérifiées. La fonction est appelée dans les requêtes qui suivent. La fonction doit être créée dans chaque base de données dans laquelle vous voulez vérifier les autorisations.  
   
 ```  
@@ -664,8 +664,8 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ22"></a> Comment pour rechercher les colonnes qui dépendent d’un type défini par l’utilisateur CLR ou d’un type d’alias ?  
- Avant d’exécuter la requête suivante, remplacez `<database_name>` avec un nom valide et `<schema_name.data_type_name>` avec un type CLR défini par l’utilisateur valid, qualifié par un schéma, ou le nom de type qualifié par un schéma un alias. La requête suivante requiert l’appartenance à la **db_owner** rôle ou des autorisations pour voir toutes les colonnes calculées et colonnes dépendantes métadonnées dans la base de données.  
+###  <a name="_FAQ22"></a> Comment trouver les colonnes qui dépendent d’un type CLR défini par l’utilisateur ou d’un type d’alias ?  
+ Avant d’exécuter la requête suivante, remplacez `<database_name>` avec un nom valide et `<schema_name.data_type_name>` avec un type CLR défini par l’utilisateur valid, qualifié par un schéma ou le nom de type alias qualifié par un schéma. La requête suivante nécessite l’appartenance dans le **db_owner** rôle ou les autorisations pour afficher la colonne calculée et toutes les colonnes dépendantes métadonnées dans la base de données.  
   
 ```  
 USE <database_name>;  
@@ -686,7 +686,7 @@ GO
   
 ```  
   
- La requête suivante retourne une vue étroite et restreinte des colonnes dépendantes d’un alias ou un type CLR défini par l’utilisateur, mais le jeu de résultats est visible pour le **public** rôle. Vous pouvez utiliser cette requête si vous avez accordé à d'autres les autorisations REFERENCE sur votre type défini par l'utilisateur et que vous n'êtes pas autorisé à afficher les métadonnées des objets créés par d'autres utilisant ce type.  
+ La requête suivante retourne une vue étroite et restreinte des colonnes dépendantes d’un alias ou un type CLR défini par l’utilisateur, mais le jeu de résultats est visible par le **public** rôle. Vous pouvez utiliser cette requête si vous avez accordé à d'autres les autorisations REFERENCE sur votre type défini par l'utilisateur et que vous n'êtes pas autorisé à afficher les métadonnées des objets créés par d'autres utilisant ce type.  
   
 ```  
 USE <database_name>;  
@@ -702,7 +702,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ23"></a> Comment pour rechercher les colonnes calculées qui dépendent d’un type défini par l’utilisateur CLR ou d’un type d’alias ?  
+###  <a name="_FAQ23"></a> Comment trouver les colonnes calculées qui dépendent d’un type CLR défini par l’utilisateur ou d’un type d’alias ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` par un nom valide et `<schema_name.data_type_name>` par un type CLR défini par l'utilisateur qualifié par un schéma valide, ou un nom de type alias.  
   
 ```  
@@ -719,8 +719,8 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ24"></a> Comment pour rechercher les paramètres qui dépendent d’un type défini par l’utilisateur CLR ou d’un type d’alias ?  
- Avant d'exécuter la requête suivante, remplacez `<database_name>` par un nom valide et `<schema_name.data_type_name>` par un type CLR défini par l'utilisateur qualifié par un schéma valide, ou un nom de type alias. La requête suivante requiert l’appartenance à la **db_owner** rôle ou des autorisations pour voir toutes les colonnes calculées et colonnes dépendantes métadonnées dans la base de données.  
+###  <a name="_FAQ24"></a> Comment trouver les paramètres qui dépendent d’un type CLR défini par l’utilisateur ou d’un type d’alias ?  
+ Avant d'exécuter la requête suivante, remplacez `<database_name>` par un nom valide et `<schema_name.data_type_name>` par un type CLR défini par l'utilisateur qualifié par un schéma valide, ou un nom de type alias. La requête suivante nécessite l’appartenance dans le **db_owner** rôle ou les autorisations pour afficher la colonne calculée et toutes les colonnes dépendantes métadonnées dans la base de données.  
   
 ```  
 USE <database_name>;  
@@ -745,7 +745,7 @@ GO
   
 ```  
   
- La requête suivante retourne une vue étroite et restreinte des paramètres qui dépendent d’un type CLR défini par l’utilisateur ou un alias, mais le jeu de résultats est visible pour le **public** rôle. Vous pouvez utiliser cette requête si vous avez accordé à d'autres les autorisations REFERENCE sur votre type défini par l'utilisateur et que vous n'êtes pas autorisé à afficher les métadonnées des objets créés par d'autres utilisant ce type.  
+ La requête suivante retourne une vue étroite et restreinte des paramètres qui dépendent d’un type CLR défini par l’utilisateur ou un alias, mais le jeu de résultats est visible par le **public** rôle. Vous pouvez utiliser cette requête si vous avez accordé à d'autres les autorisations REFERENCE sur votre type défini par l'utilisateur et que vous n'êtes pas autorisé à afficher les métadonnées des objets créés par d'autres utilisant ce type.  
   
 ```  
 USE <database_name>;  
@@ -761,7 +761,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ25"></a> Comment pour trouver les contraintes CHECK qui dépendent d’un type CLR défini par l’utilisateur spécifié ?  
+###  <a name="_FAQ25"></a> Comment trouver les contraintes CHECK qui dépendent d’un type CLR défini par l’utilisateur spécifié ?  
  Avant d’exécuter la requête suivante, remplacez `<database_name>` avec un nom valide et `<schema_name.data_type_name>` avec un nom de type défini par l’utilisateur CLR valid, qualifié par un schéma.  
   
 ```  
@@ -781,10 +781,10 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ26"></a> Comment trouver les vues, les fonctions Transact-SQL et les procédures stockées Transact-SQL qui dépendent d’un type défini par l’utilisateur CLR ou d’un type d’alias ?  
+###  <a name="_FAQ26"></a> Comment trouver les vues, les fonctions Transact-SQL et les procédures stockées Transact-SQL qui dépendent d’un type CLR défini par l’utilisateur ou d’un type d’alias ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` par un nom valide et `<schema_name.data_type_name>` par un type CLR défini par l'utilisateur qualifié par un schéma valide, ou un nom de type alias.  
   
- Les paramètres définis dans une fonction ou une procédure sont implicitement liés à un schéma. Par conséquent, les paramètres qui dépendent d’un type CLR défini par l’utilisateur ou un type d’alias peuvent être affichés à l’aide de la [sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) affichage catalogue. Les procédures et les déclencheurs ne sont pas liés au schéma. Cela signifie l'interruption des dépendances entre une expression définie dans le corps de la procédure ou du déclencheur et un type d'alias ou un type CLR défini par l'utilisateur. Vues liées à un schéma et des fonctions définies par l’utilisateur qui contiennent des expressions qui dépendent d’un type défini par l’utilisateur CLR liée au schéma ou un type d’alias sont maintenues dans le **sys.sql_dependencies** affichage catalogue. Les dépendances entre des types et des fonctions et des procédures CLR ne sont pas maintenues.  
+ Les paramètres définis dans une fonction ou une procédure sont implicitement liés à un schéma. Par conséquent, les paramètres qui dépendent d’un type CLR défini par l’utilisateur ou le type d’alias sont consultables à l’aide de la [sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) vue de catalogue. Les procédures et les déclencheurs ne sont pas liés au schéma. Cela signifie l'interruption des dépendances entre une expression définie dans le corps de la procédure ou du déclencheur et un type d'alias ou un type CLR défini par l'utilisateur. Vues liées à un schéma et de fonctions définies par l’utilisateur qui possèdent des expressions qui dépendent d’un type défini par l’utilisateur CLR liée au schéma ou de type d’alias sont conservées dans le **sys.sql_dependencies** vue de catalogue. Les dépendances entre des types et des fonctions et des procédures CLR ne sont pas maintenues.  
   
  La requête suivante retourne toutes les dépendances liées à un schéma dans des vues, des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] et des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] pour un type CLR défini par l'utilisateur ou un type d'alias.  
   
@@ -862,7 +862,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ30"></a> Comment rechercher tous les objets qui ont un nom de colonne spécifié ?  
+###  <a name="_FAQ30"></a> Comment trouver tous les objets qui ont un nom de colonne spécifié ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` et `<column_name>` par des noms valides.  
   
 ```  
@@ -906,7 +906,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ32"></a> Comment rechercher toutes les tables et les index qui sont partitionnés ?  
+###  <a name="_FAQ32"></a> Comment trouver toutes les tables et index sont partitionnés ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` par un nom valide.  
   
 ```  
@@ -968,7 +968,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ35"></a> Comment pour rechercher la définition d’une vue ?  
+###  <a name="_FAQ35"></a> Comment trouver la définition d’une vue ?  
  Avant d'exécuter la requête suivante, remplacez `<database_name>` et `<schema_name.object_name>` par des noms valides.  
   
 ```  

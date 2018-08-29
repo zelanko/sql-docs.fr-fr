@@ -1,5 +1,5 @@
 ---
-title: sp_monitor (Transact-SQL) | Documents Microsoft
+title: sp_monitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 277062160e01f0111eeade2dc4a05b3c6a3ab59d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f7e84891d55949751645e3b3d35d8b13fc3a742
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259629"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024054"
 ---
 # <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_monitor
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne| Description|  
+|Nom de colonne|Description|  
 |-----------------|-----------------|  
 |**last_run**|Temps **sp_monitor** de la dernière exécution.|  
 |**current_run**|Temps **sp_monitor** est en cours d’exécution.|  
 |**secondes**|Nombre de secondes écoulées depuis **sp_monitor** a été exécuté.|  
 |**cpu_busy**|Nombre de secondes que l'UC de l'ordinateur serveur a consacrées à des tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**io_busy**|Nombre de secondes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a consacrées aux opérations d'entrée et de sortie.|  
-|**Des temps d’inactivité**|Nombre de secondes pendant lesquelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été inactif.|  
+|**Inactivité**|Nombre de secondes pendant lesquelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été inactif.|  
 |**packets_received**|Nombre de paquets entrants lus par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**packets_sent**|Nombre de paquets sortants écrits par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**packet_errors**|Nombre d'erreurs détectées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la lecture ou de l'écriture des paquets.|  
@@ -67,9 +67,9 @@ sp_monitor
 ## <a name="remarks"></a>Notes  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure le suivi, par le biais d'une série de fonctions, du volume de son activité. L’exécution de **sp_monitor** affiche les valeurs retournées par ces fonctions et montre combien ils ont été modifiés depuis la dernière exécution de la procédure.  
   
- Pour chaque colonne, les statistiques sont imprimées sous la forme *nombre*(*nombre*)-*nombre*% ou *nombre*(*nombre*). La première *nombre* fait référence au nombre de secondes (pour **cpu_busy**, **io_busy**, et **inactif**) ou le nombre total (pour les autres variables) depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été redémarré. Le *nombre* entre parenthèses correspond au nombre de secondes ou nombre total depuis la dernière **sp_monitor** a été exécuté. Le pourcentage est le pourcentage de temps depuis **sp_monitor** de la dernière exécution. Par exemple, si le rapport affiche **cpu_busy** comme 4250 (215)-68 %, le processeur est occupés secondes 4250 depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dernier démarrage, pendant 215 secondes depuis **sp_monitor** était la dernière exécution et 68 pour cent de la durée totale depuis **sp_monitor** de la dernière exécution.  
+ Pour chaque colonne, les statistiques sont imprimées sous la forme *nombre*(*nombre*)-*nombre*% ou *nombre*(*nombre*). La première *nombre* fait référence au nombre de secondes (pour **cpu_busy**, **io_busy**, et **inactif**) ou le nombre total (pour les autres variables) dans la mesure où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été redémarré. Le *nombre* entre parenthèses correspond au nombre de secondes ou nombre total depuis la dernière fois **sp_monitor** a été exécuté. Le pourcentage est le pourcentage de temps depuis **sp_monitor** de la dernière exécution. Par exemple, si le rapport affiche **cpu_busy** 4250 (215)-68 %, le processeur a été occupés secondes 4250 depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dernier démarrage, pendant 215 secondes depuis **sp_monitor** était la dernière exécution et 68 % du Nombre total de temps écoulé depuis **sp_monitor** de la dernière exécution.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
@@ -89,7 +89,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**cpu_busy**|**io_busy**|**Des temps d’inactivité**|  
+|**cpu_busy**|**io_busy**|**Inactivité**|  
 |190(0)-0%|187(0)-0%|148(556)-99%|  
   
 ||||  

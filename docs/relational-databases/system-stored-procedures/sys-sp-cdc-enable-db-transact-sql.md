@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_enable_db (Transact-SQL) | Documents Microsoft
+title: Sys.sp_cdc_enable_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], enabling databases
 - sp_cdc_enable_db
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03a2ffce46b6789e32cccc361760f2aea842adb7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0f8c68e5366d8cd55475621ff4985c48a47ed4ae
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255769"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030283"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +53,14 @@ sys.sp_cdc_enable_db
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Capture de données modifiées ne peut pas être activée sur [bases de données système](../../relational-databases/databases/system-databases.md) ou bases de données de distribution.  
   
- sys.sp_cdc_enable_db crée les objets de capture de données modifiées qui ont une portée à l'échelle de la base de données, y compris les tables de métadonnées et les déclencheurs DDL. Il crée le schéma cdc et l’utilisateur de base de données de capture de données modifiées et définit la colonne is_cdc_enabled pour l’entrée de la base de données dans les également le [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) affichage 1 catalogue.  
+ sys.sp_cdc_enable_db crée les objets de capture de données modifiées qui ont une portée à l'échelle de la base de données, y compris les tables de métadonnées et les déclencheurs DDL. Il crée le schéma cdc et l’utilisateur de base de données cdc et définit la colonne is_cdc_enabled pour l’entrée de la base de données dans les également le [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) affichage 1 catalogue.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle serveur fixe sysadmin.  
   
 ## <a name="examples"></a>Exemples  

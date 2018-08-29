@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_add_job (Transact-SQL) | Documents Microsoft
+title: Sys.sp_cdc_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_add_job
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c42d2150a148f1a288c1fa447f4bb1d9020fe09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5d218512e68e3d96a95e43ba3d155ad11f997449
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261958"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017870"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,23 +64,23 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  *max_trans* est valide uniquement pour les travaux de capture.  
   
  [ **@maxscans** ] **= *** max_scans*  
- Nombre maximal de cycles d'analyse à exécuter afin d'extraire toutes les lignes du journal. *max_scans* est **int** avec la valeur par défaut est 10.  
+ Nombre maximal de cycles d'analyse à exécuter afin d'extraire toutes les lignes du journal. *max_scans* est **int** avec une valeur par défaut de 10.  
   
  *max_scan* est valide uniquement pour les travaux de capture.  
   
  [ **@continuous** ] **= *** continue*  
  Indique si le travail de capture doit être exécuté en continu (1) ou une seule fois (0). *continue* est **bits** avec 1 comme valeur par défaut.  
   
- Lorsque *continue* = 1, le [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) tâche analyse le journal et traite jusqu'à (*max_trans* \* *max_scans*) des transactions. Il attend alors pendant le nombre de secondes spécifié dans *polling_interval* avant de commencer l’analyse de journal suivante.  
+ Lorsque *continue* = 1, le [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) tâche analyse le journal et traite jusqu'à (*max_trans* \* *max_scans*) transactions. Il attend alors pendant le nombre de secondes spécifié dans *polling_interval* avant de commencer l’analyse du journal suivante.  
   
- Lorsque *continue* = 0, la **sp_cdc_scan** s’exécute jusqu'à *max_scans* analyses du journal, en traitant un maximum de *max_trans* transaction pendant chaque analyse, puis se ferme.  
+ Lorsque *continue* = 0, le **sp_cdc_scan** travail s’exécute jusqu'à *max_scans* analyses du journal, traitant un maximum de *max_trans* transaction pendant chaque analyse et puis se ferme.  
   
  *continue* est valide uniquement pour les travaux de capture.  
   
  [ **@pollinginterval** ] **= *** polling_interval*  
- Nombre de secondes entre les cycles d’analyse de journal. *polling_interval* est **bigint** avec la valeur par défaut est 5.  
+ Nombre de secondes entre les cycles d’analyse de journal. *polling_interval* est **bigint** avec une valeur par défaut 5.  
   
- *polling_interval* n’est valide uniquement pour la capture des travaux lorsque *continue* est définie sur 1. Si elle est spécifiée, la valeur ne peut pas être négative et ne peut pas dépasser 24 heures. Si une valeur de 0 est spécifiée, il n'y a aucune attente entre les analyses de journal.  
+ *polling_interval* est valide uniquement pour la capture des travaux lorsque *continue* est défini sur 1. Si elle est spécifiée, la valeur ne peut pas être négative et ne peut pas dépasser 24 heures. Si une valeur de 0 est spécifiée, il n'y a aucune attente entre les analyses de journal.  
   
  [ **@retention** ] **= *** rétention*  
  Nombre de minutes pendant lesquelles les lignes de données modifiées doivent être conservées dans les tables de modifications. *rétention* est **bigint** avec 4320 (72 heures) par défaut. La valeur maximale est égale à 52494800 (100 ans). Si elle est spécifiée, la valeur doit être un entier positif.  
@@ -95,7 +94,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Un travail de nettoyage est créé en utilisant les valeurs par défaut lorsque la première table dans la base de données est activée pour la capture des données modifiées. Un travail de capture est créé en utilisant les valeurs par défaut lorsque la première table dans la base de données est activée pour la capture des données modifiées et qu'aucune publication transactionnelle n'existe pour la base de données. Lorsqu'une publication transactionnelle existe, le lecteur de journal transactionnel est utilisé pour conduire le mécanisme de capture et un travail de capture séparé n'est ni requis ni autorisé.  
@@ -104,9 +103,9 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Le nom de la tâche est **cdc. ***< nom_base_de_données >***_cleanup** ou **cdc. ***< nom_base_de_données >***_capture**, où *< nom_base_de_données >* est le nom de la base de données actuelle. Si un travail portant le même nom existe déjà, le nom est ajouté avec une période (**.**) suivi d’un identificateur unique, par exemple : **capture de données modifiées. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
- Pour afficher la configuration actuelle d’une tâche de nettoyage ou de capture, utilisez [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Pour modifier la configuration d’un travail, utilisez [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
+ Pour afficher la configuration actuelle d’un travail de nettoyage ou de capture, utilisez [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Pour modifier la configuration d’un travail, utilisez [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’appartenance dans le **db_owner** rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  

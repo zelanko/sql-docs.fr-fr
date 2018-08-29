@@ -1,5 +1,5 @@
 ---
-title: sp_xml_preparedocument (Transact-SQL) | Documents Microsoft
+title: sp_xml_preparedocument (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,34 +18,33 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 02946ee1a36df965d11c85eabbaba86d7f1a7e14
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: afc84c779c05dc2826bde815b4f499abc95c8380
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262679"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025718"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Lit le texte XML fourni en entrée, l'analyse à l'aide de l'analyseur MSXML (Msxmlsql.dll), puis fournit le document analysé dans un état exploitable. Ce document analysé est une représentation arborescente des différents nœuds du document XML : éléments, attributs, textes, commentaires, etc.  
   
- **sp_xml_preparedocument** retourne un handle qui peut être utilisé pour accéder à la représentation interne nouvellement créée du document XML. Ce handle est valide pour la durée de la session ou jusqu'à ce que le handle est invalidé par l’exécution de **sp_xml_removedocument**.  
+ **sp_xml_preparedocument** retourne un handle qui peut être utilisé pour accéder à la représentation interne nouvellement créée du document XML. Ce handle est valide pendant la durée de la session ou jusqu'à ce qu’il soit invalidé par l’exécution de **sp_xml_removedocument**.  
   
 > [!NOTE]  
->  Un document analysé est stocké dans le cache interne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'analyseur MSXML utilise un huitième de la mémoire totale disponible pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour éviter l’exécution de la mémoire, exécutez **sp_xml_removedocument** afin de libérer la mémoire.  
+>  Un document analysé est stocké dans le cache interne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'analyseur MSXML utilise un huitième de la mémoire totale disponible pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour éviter de manquer de mémoire, exécutez **sp_xml_removedocument** pour libérer de la mémoire.  
   
 > [!NOTE]  
->  Pour en amont la compatibilité, **sp_xml_preparedocument** réduit la demande de modification (char(13)) et LF (char(10)) caractères dans les attributs, même si ces caractères sont décomposés en entités.  
+>  Pour descendante compatibilité, **sp_xml_preparedocument** réduit le retour chariot (char(13)) et LF (char(10)) caractères dans les attributs, même si ces caractères sont décomposés en entités.  
   
 > [!NOTE]  
->  L’analyseur XML appelé par **sp_xml_preparedocument** peut analyser des DTD internes et les déclarations d’entité. Étant donné que construits à des fins malveillantes des DTD et les entités déclarations peuvent être utilisées pour effectuer une attaque par déni de service, nous recommandons que les utilisateurs pas passer directement des documents XML à partir de sources non approuvées de **sp_xml_preparedocument**.  
+>  L’analyseur XML appelé par **sp_xml_preparedocument** peut analyser des DTD internes et les déclarations d’entité. Étant donné que construite à des fins malveillantes des DTD et les entités déclarations peuvent être utilisées pour effectuer une attaque par déni de service, nous recommandons que les utilisateurs de transmettre pas directement les documents XML à partir de sources non approuvées de **sp_xml_preparedocument**.  
 >   
->  Pour atténuer les attaques d’extension d’entité récursive, **sp_xml_preparedocument** limite à 10 000 le nombre d’entités qui peuvent être étendues sous une seule entité au niveau supérieur d’un document. Cette limite ne s'applique pas aux entités numériques ou de caractères. Elle permet de stocker des documents contenant de nombreuses références d'entités, mais elle empêche une entité d'être étendue de manière récursive dans une chaîne supérieure à 10 000 extensions.  
+>  Pour atténuer les attaques d’extension entité récursive, **sp_xml_preparedocument** limite à 10 000 le nombre d’entités qui peuvent être étendues sous une seule entité au niveau supérieur d’un document. Cette limite ne s'applique pas aux entités numériques ou de caractères. Elle permet de stocker des documents contenant de nombreuses références d'entités, mais elle empêche une entité d'être étendue de manière récursive dans une chaîne supérieure à 10 000 extensions.  
   
 > [!NOTE]  
 >  **sp_xml_preparedocument** limite le nombre d’éléments pouvant être ouverts simultanément à 256.  
@@ -74,14 +73,14 @@ OUTPUT
 >  **sp_xml_preparedocument** peut traiter uniquement de texte ou XML non typé. Si une valeur d'instance à utiliser en entrée est déjà du XML typé, commencez par la convertir en une nouvelle instance XML non typée ou en une chaîne, puis passez cette valeur en entrée. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
  [ *xpath_namespaces* ]  
- Spécifie les déclarations d'espaces de noms utilisées dans les expressions XPath de ligne et de colonne sous OPENXML. *xpath_namespaces* est un paramètre de texte : **char**, **nchar**, **varchar**, **nvarchar**, **detexte**, **ntext** ou **xml**.  
+ Spécifie les déclarations d'espaces de noms utilisées dans les expressions XPath de ligne et de colonne sous OPENXML. *xpath_namespaces* est un paramètre de texte : **char**, **nchar**, **varchar**, **nvarchar**, **texte**, **ntext** ou **xml**.  
   
- La valeur par défaut est  **\<racine xmlns:mp = "urn : schemas-microsoft-com-metaprop » >**. *xpath_namespaces* fournit l’URI d’espace de noms des préfixes utilisés dans les expressions XPath sous OPENXML au moyen d’un document XML bien formé. *xpath_namespaces* déclare le préfixe qui doit être utilisé pour faire référence à l’espace de noms **urn : schemas-microsoft-com-metaprop**; fournit les métadonnées sur les éléments XML analysés. Bien que cette technique vous permette de redéfinir le préfixe de l'espace de noms des métapropriétés, cet espace de noms n'est pas perdu. Le préfixe **mp** est toujours valide pour **urn : schemas-microsoft-com-metaprop** même si *xpath_namespaces* ne contient aucun une telle déclaration.  
+ La valeur par défaut est  **\<racine xmlns:mp = "urn : schemas-microsoft-com-metaprop" >**. *xpath_namespaces* fournit l’URI d’espace de noms pour les préfixes utilisés dans les expressions XPath sous OPENXML au moyen d’un document XML bien formé. *xpath_namespaces* déclare le préfixe doit être utilisé pour faire référence à l’espace de noms **urn : schemas-microsoft-com-metaprop**; fournit les métadonnées sur les éléments XML analysés. Bien que cette technique vous permette de redéfinir le préfixe de l'espace de noms des métapropriétés, cet espace de noms n'est pas perdu. Le préfixe **mp** est toujours valide pour **urn : schemas-microsoft-com-metaprop** même si *xpath_namespaces* ne contient aucun une telle déclaration.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou >0 (échec)  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -132,7 +131,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 ```  
   
 ### <a name="c-specifying-a-namespace-uri"></a>C. Spécification d'un URI d'espace de noms  
- L'exemple suivant retourne un descripteur pour la représentation interne nouvellement créée du document XML fourni en entrée. L’appel à `sp_xml_preparedocument` conserve la `mp` préfixe au mappage d’espace de noms de métapropriétés et ajoute le `xyz` préfixe de mappage de l’espace de noms `urn:MyNamespace`.  
+ L'exemple suivant retourne un descripteur pour la représentation interne nouvellement créée du document XML fourni en entrée. L’appel à `sp_xml_preparedocument` conserve la `mp` préfixe au mappage d’espace de noms de métapropriétés et ajoute le `xyz` préfixe de mappage à l’espace de noms `urn:MyNamespace`.  
   
 ```  
 DECLARE @hdoc int;  
@@ -159,7 +158,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
   
 ## <a name="see-also"></a>Voir aussi  
  <br>[Code XML stocké Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
- <br>[Procedures(Transact-SQL) stockées du système](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+ <br>[Système stockées Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
  <br>[Sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
  <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)

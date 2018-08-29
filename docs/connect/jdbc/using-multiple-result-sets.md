@@ -14,18 +14,18 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e17da2ae58d76268ec962c007b0fd81b5fc06d60
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 08f1f202ded4c9e0053cfc6c315b87c6f4616eee
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662401"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787237"
 ---
 # <a name="using-multiple-result-sets"></a>Utilisation de plusieurs jeux de résultats
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Lors de l’utilisation de procédures stockées SQL ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] inline qui retournent plusieurs jeux de résultats, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit la méthode [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) de la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) pour récupérer chaque jeu de données retourné. En outre, lors de l’exécution d’une instruction qui retourne plus d’un jeu de résultats, vous pouvez utiliser la méthode [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) de la classe SQLServerStatement car elle retourne une valeur **boolean** qui indique si la valeur retournée est un jeu de résultats ou un nombre de mises à jour.
+Lors de l’utilisation de procédures stockées SQL ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inline qui retournent plusieurs jeux de résultats, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit la méthode [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) de la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) pour récupérer chaque jeu de données retourné. En outre, lors de l’exécution d’une instruction qui retourne plus d’un jeu de résultats, vous pouvez utiliser la méthode [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) de la classe SQLServerStatement car elle retourne une valeur **boolean** qui indique si la valeur retournée est un jeu de résultats ou un nombre de mises à jour.
 
 Si la méthode execute retourne la valeur **true**, l’instruction exécutée a retourné au moins un jeu de résultats. Vous pouvez accéder au premier jeu de résultats en appelant la méthode getResultSet. Pour déterminer si des jeux de résultats supplémentaires sont disponibles, vous pouvez appeler la méthode [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md), qui retourne une valeur **boolean** **true** en cas de disponibilité de jeux de résultats supplémentaires. Si des jeux de résultats supplémentaires sont disponibles, vous pouvez appeler la méthode getResultSet pour y accéder, tout en continuant le processus jusqu’à ce que tous les jeux de résultats soient traités. Si la méthode getMoreResults retourne **false**, il existe aucune plusieurs jeux de résultats au processus.
 

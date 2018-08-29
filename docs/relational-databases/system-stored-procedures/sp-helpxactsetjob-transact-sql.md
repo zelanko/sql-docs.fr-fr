@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (Transact-SQL) | Documents Microsoft
+title: sp_helpxactsetjob (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef643efb849a0f178ac98bf439360fca87d21983
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58ebd1b5592a7a4b17f665555689b32e8456d714
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997206"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027515"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Affiche des informations sur le travail Xactset pour un serveur de publication Oracle. Cette procédure stockée est exécutée sur une base de données du serveur.  
+  Affiche des informations sur le travail Xactset pour un serveur de publication Oracle. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,31 +50,31 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**numéro_travail**|**int**|Numéro de travail Oracle.|  
+|**numéro_travail**|**Int**|Numéro de travail Oracle.|  
 |**lastdate**|**varchar(22)**|Dernière date d'exécution du travail.|  
 |**thisdate**|**varchar(22)**|Heure de la modification|  
 |**nextdate**|**varchar(22)**|Date de la prochaine exécution du travail.|  
 |**rompu**|**varchar (1)**|Indicateur signalant si le travail est interrompu.|  
-|**intervalle**|**varchar(200)**|Intervalle du travail.|  
-|**Échecs**|**int**|Nombre d'échecs du travail.|  
+|**Intervalle**|**varchar(200)**|Intervalle du travail.|  
+|**échecs**|**Int**|Nombre d'échecs du travail.|  
 |**xactsetjobwhat**|**varchar(200)**|Nom de la procédure exécutée par le travail.|  
 |**xactsetjob**|**varchar (1)**|État du travail, qui peut être l'un des suivants :<br /><br /> **1** -le travail est activé.<br /><br /> **0** -le travail est désactivé.|  
-|**xactsetlonginterval**|**int**|Intervalle long pour le travail.|  
-|**xactsetlongthreshold**|**int**|Seuil long pour le travail.|  
-|**xactsetshortinterval**|**int**|Intervalle court pour le travail.|  
-|**xactsetshortthreshold**|**int**|Seuil court pour le travail.|  
+|**xactsetlonginterval**|**Int**|Intervalle long pour le travail.|  
+|**xactsetlongthreshold**|**Int**|Seuil long pour le travail.|  
+|**xactsetshortinterval**|**Int**|Intervalle court pour le travail.|  
+|**xactsetshortthreshold**|**Int**|Seuil court pour le travail.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_helpxactsetjob** est utilisé dans la réplication de capture instantanée et réplication transactionnelle pour les serveurs de publication Oracle.  
+ **sp_helpxactsetjob** est utilisé dans la réplication d’instantané ou transactionnelle pour une publication Oracle.  
   
  **sp_helpxactsetjob** retourne toujours les paramètres actuels pour le travail Xactset (HREPL_XactSetJob) sur le serveur de publication. Si le travail Xactset est actuellement dans la file d'attente des travaux, il renvoie en outre des attributs du travail à partir de la vue du dictionnaire de données USER_JOB créée sous le compte administrateur sur le serveur de publication Oracle.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seul un membre de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_helpxactsetjob**.  
   
 ## <a name="see-also"></a>Voir aussi  

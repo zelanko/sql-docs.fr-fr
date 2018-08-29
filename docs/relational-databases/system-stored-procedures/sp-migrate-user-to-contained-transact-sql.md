@@ -1,5 +1,5 @@
 ---
-title: sp_migrate_user_to_contained (Transact-SQL) | Documents Microsoft
+title: sp_migrate_user_to_contained (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 606898bf92ff727cd3d48f49f7f352cf06e8f9fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: da98251792db96d766f63183715bd39f0a394406
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257834"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031932"
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Convertit un utilisateur de la base de données mappé à un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en utilisateur de base de données à relation contenant-contenu avec mot de passe. Dans une base de données à relation contenant-contenu, utilisez cette procédure pour supprimer les dépendances sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où la base de données est installée. **sp_migrate_user_to_contained** sépare l’utilisateur d’origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion, afin que les paramètres tels que la langue par défaut et le mot de passe puissent être administrés séparément pour cette base de données. **sp_migrate_user_to_contained** peut être utilisé avant de déplacer la base de données à une autre instance de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d’éliminer les dépendances sur actuel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions d’instance.  
+  Convertit un utilisateur de la base de données mappé à un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en utilisateur de base de données autonome avec mot de passe. Dans une base de données autonome, utilisez cette procédure pour supprimer les dépendances sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où la base de données est installée. **sp_migrate_user_to_contained** sépare l’utilisateur à partir de la version d’origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion, afin que les paramètres tels que la langue par défaut et le mot de passe puissent être administrés séparément pour la base de données de relation contenant-contenu. **sp_migrate_user_to_contained** peut être utilisé avant de passer la relation contenant-contenu de la base de données à une autre instance de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d’éliminer les dépendances sur actuel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions de l’instance.  
   
- **Remarque** cette procédure est utilisée uniquement dans une base de données. Pour plus d’informations, consultez [Contained Databases](../../relational-databases/databases/contained-databases.md).  
+ **Remarque** cette procédure est utilisée uniquement dans une base de données de relation contenant-contenu. Pour plus d’informations, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,19 +47,19 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 ## <a name="arguments"></a>Arguments  
  [ **@username =** ] **N'***utilisateur***'**  
- Nom d'un utilisateur dans la base de données à relation contenant-contenu actuelle mappée à un compte de connexion authentifié [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur est **sysname**, avec une valeur par défaut **NULL**.  
+ Nom d'un utilisateur dans la base de données autonome actuelle mappée à un compte de connexion authentifié [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur est **sysname**, avec une valeur par défaut **NULL**.  
   
  [ **@rename =** ] **N'***copy_login_name***'** | **N'***keep_name***'**  
- Lorsqu’un utilisateur de base de données basé sur une connexion a un autre nom d’utilisateur que le nom de connexion, utilisez *keep_name* pour conserver le nom d’utilisateur de base de données pendant la migration. Utilisez *copy_login_name* pour créer le nouvel utilisateur de base de données avec le nom de la connexion, au lieu de l’utilisateur. Lorsqu'un utilisateur de la base de données basé sur un compte de connexion a le même nom d'utilisateur que le nom de connexion, les deux options créent l'utilisateur de base de données à relation contenant-contenu sans modifier le nom.  
+ Lorsqu’un utilisateur de base de données basé sur une connexion a un autre nom d’utilisateur que le nom de connexion, utilisez *keep_name* pour conserver le nom d’utilisateur de base de données pendant la migration. Utilisez *copy_login_name* pour créer le nouvel utilisateur de base de données de relation contenant-contenu avec le nom de la connexion, au lieu de l’utilisateur. Lorsqu'un utilisateur de la base de données basé sur un compte de connexion a le même nom d'utilisateur que le nom de connexion, les deux options créent l'utilisateur de base de données autonome sans modifier le nom.  
   
  [ **@disablelogin =** ] **N'***disable_login***'** | **N'***do_not_disable_login***'**  
- *disable_login* désactive la connexion dans la base de données master. Pour vous connecter lors de la connexion est désactivée, la connexion doit fournir le nom de la base de données que le **catalogue initial** dans le cadre de la chaîne de connexion.  
+ *disable_login* désactive la connexion dans la base de données master. Pour vous connecter lorsque la connexion est désactivée, la connexion doit fournir le nom de relation contenant-contenu de la base de données que le **catalogue initial** dans le cadre de la chaîne de connexion.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_migrate_user_to_contained** crée l’utilisateur de base de données de relation contenant-contenu avec mot de passe, quel que soit les propriétés ou les autorisations du compte de connexion. Par exemple, la procédure peut réussir si la connexion est désactivée ou si l’utilisateur se voit refuser le **CONNECT** autorisé à la base de données.  
+ **sp_migrate_user_to_contained** crée l’utilisateur de base de données de relation contenant-contenu avec mot de passe, quel que soit les propriétés ou les autorisations de la connexion. Par exemple, la procédure peut réussir si la connexion est désactivée ou si l’utilisateur se voit refuser le **CONNECT** autorisé à la base de données.  
   
  **sp_migrate_user_to_contained** présente les restrictions suivantes.  
   
@@ -74,17 +74,17 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 -   **sp_migrate_user_to_contained** ne peut pas être utilisé dans une base de données système.  
   
 ## <a name="security"></a>Sécurité  
- Lorsque vous migrez des utilisateurs, veillez à ne pas désactiver ou supprimer tous les comptes de connexion de l'administrateur dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si toutes les connexions sont supprimées, consultez [se connecter à SQL Server lorsque système les administrateurs ont plus accès](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
+ Lorsque vous migrez des utilisateurs, veillez à ne pas désactiver ou supprimer tous les comptes de connexion de l'administrateur dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si toutes les connexions sont supprimées, consultez [se connecter à SQL Server lorsque les administrateurs système sont verrouillés](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
   
- Si le **BUILTIN\Administrateurs** connexion n’est présente, les administrateurs peuvent se connecter en démarrant leur application à l’aide de la **exécuter en tant qu’administrateur** option.  
+ Si le **BUILTIN\Administrateurs** connexion est présente, les administrateurs peuvent se connecter en démarrant leur application à l’aide de la **exécuter en tant qu’administrateur** option.  
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
  Requiert l’autorisation **CONTROL SERVER** .  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-migrating-a-single-user"></a>A. Migration d'un seul utilisateur  
- L'exemple suivant migre un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommé `Barry`, vers un utilisateur de base de données à relation contenant-contenu avec mot de passe. L'exemple ne modifie pas le nom d'utilisateur et conserve le compte de connexion actif.  
+ L'exemple suivant migre un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommé `Barry`, vers un utilisateur de base de données autonome avec mot de passe. L'exemple ne modifie pas le nom d'utilisateur et conserve le compte de connexion actif.  
   
 ```sql  
 sp_migrate_user_to_contained   
@@ -94,8 +94,8 @@ sp_migrate_user_to_contained
   
 ```  
   
-### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>B. Migration de tous les utilisateurs de la base de données avec des comptes de connexion vers des utilisateurs de base de données à relation contenant-contenu sans comptes de connexion  
- L'exemple suivant migre tous les utilisateurs basés sur des comptes de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers des utilisateurs de base de données à relation contenant-contenu avec mots de passe. L'exemple exclut les comptes de connexion qui ne sont pas activés. L'exemple doit être exécuté dans la base de données à relation contenant-contenu.  
+### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>B. Migration de tous les utilisateurs de la base de données avec des comptes de connexion vers des utilisateurs de base de données autonome sans comptes de connexion  
+ L'exemple suivant migre tous les utilisateurs basés sur des comptes de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers des utilisateurs de base de données autonome avec mots de passe. L'exemple exclut les comptes de connexion qui ne sont pas activés. L'exemple doit être exécuté dans la base de données autonome.  
   
 ```sql  
 DECLARE @username sysname ;  
@@ -121,7 +121,8 @@ DEALLOCATE user_cursor ;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
- [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)  
+ 
+  [Migrer vers une base de données partiellement autonome](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
+ [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)  
   
   

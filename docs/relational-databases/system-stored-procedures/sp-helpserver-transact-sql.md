@@ -1,5 +1,5 @@
 ---
-title: sp_helpserver (Transact-SQL) | Documents Microsoft
+title: sp_helpserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa1a9a5841f5b43a6dea6f0650a7686f499b4965
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5252f299a0d542fe2f91f75d658ff63aec980712
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258591"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038632"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,16 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@server =** ] **'***server***'**  
- Serveur sur lequel sont fournies les informations. Lorsque *server* n’est pas spécifié, les rapports sur tous les serveurs de **master.sys.servers**. *serveur* est **sysname**, avec NULL comme valeur par défaut.  
+ [  **@server =** ] **'***server***»**  
+ Serveur sur lequel sont fournies les informations. Lorsque *server* n’est pas spécifié, des rapports sur tous les serveurs de **master.sys.servers**. *serveur* est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@optname =** ] **'***option***'**  
  Option qui décrit le serveur. *option* est **varchar (** 35 **)**, avec NULL comme valeur par défaut et doit être une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**compatible avec le classement**|Affecte l'exécution des requêtes distribuées sur les serveurs liés. Si cette option a la valeur true,|  
-|**Accès aux données**|Active ou désactive un serveur lié pour l'accès des requêtes distribuées.|  
+|**accès aux données**|Active ou désactive un serveur lié pour l'accès des requêtes distribuées.|  
 |**serveur de distribution**|Serveur de distribution.|  
 |**dpub**|Serveur de publication distant de ce serveur de distribution.|  
 |**validation de schéma différée**|La vérification du schéma des tables distantes est ignorée au début de la requête.|  
@@ -67,28 +67,28 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**utiliser le classement distant**|Le classement d'une colonne distante est utilisé à la place de celui du serveur local.|  
   
  [  **@show_topology =** ] **'***afficher_la_topologie***'**  
- Relation entre le serveur spécifié et d'autres serveurs. *afficher_la_topologie* est **varchar (** 1 **)**, avec NULL comme valeur par défaut. Si *afficher_la_topologie* n’est pas égal à **t** ou a la valeur NULL, **sp_helpserver** renvoie les colonnes répertoriées dans la section des jeux de résultats. Si *afficher_la_topologie* est égal à **t**, en plus des colonnes répertoriées dans les jeux de résultats, **sp_helpserver** retourne également **topy** et **sp_helpserver** plus d’informations.  
+ Relation entre le serveur spécifié et d'autres serveurs. *afficher_la_topologie* est **varchar (** 1 **)**, avec NULL comme valeur par défaut. Si *afficher_la_topologie* n’est pas égal à **t** ou est NULL, **sp_helpserver** renvoie les colonnes figurant dans la section jeux de résultats. Si *afficher_la_topologie* est égal à **t**, outre les colonnes répertoriées dans les jeux de résultats, **sp_helpserver** retourne également **topy** et **topy** plus d’informations.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou 1 (échec).  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom du serveur.|  
 |**network_name**|**sysname**|Nom réseau du serveur.|  
 |**status**|**varchar (** 70 **)**|État du serveur.|  
 |**id**|**char (** 4 **)**|Numéro d'identification du serveur.|  
 |**collation_name**|**sysname**|Classement du serveur.|  
-|**connect_timeout**|**int**|Valeur du délai d'expiration de la connexion au serveur lié.|  
-|**query_timeout**|**int**|Valeur du délai d'expiration des requêtes sur le serveur lié.|  
+|**connect_timeout**|**Int**|Valeur du délai d'expiration de la connexion au serveur lié.|  
+|**query_timeout**|**Int**|Valeur du délai d'expiration des requêtes sur le serveur lié.|  
   
 ## <a name="remarks"></a>Notes  
  Un même serveur peut avoir plusieurs états.  
   
-## <a name="permissions"></a>Autorisations  
- Aucuns autorisations ne sont vérifiées.  
+## <a name="permissions"></a>Permissions  
+ Sans les autorisations sont vérifiées.  
   
 ## <a name="examples"></a>Exemples  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_setapprole (Transact-SQL) | Documents Microsoft
+title: sp_setapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_setapprole
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ac733afa3f8afef74a9d6affb16e0f9dbcd5b4a9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 44588ed7365e7f38ec514e1d272e342572f8c967
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259056"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038712"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,18 +52,18 @@ sp_setapprole [ @rolename = ] 'role',
  Nom du rôle d'application défini dans la base de données active. *rôle* est **sysname**, sans valeur par défaut. *rôle* doit exister dans la base de données actuelle.  
   
  [  **@password =** ] **{chiffrer N'***mot de passe***'}**  
- Mot de passe nécessaire pour activer le rôle d'application. *mot de passe* est **sysname**, sans valeur par défaut. *mot de passe* peut être obscurci à l’aide de ODBC **chiffrer** (fonction). Lorsque vous utilisez la **chiffrer** (fonction), le mot de passe doit être converti en une chaîne Unicode en plaçant **N** avant le premier guillemet.  
+ Mot de passe nécessaire pour activer le rôle d'application. *mot de passe* est **sysname**, sans valeur par défaut. *mot de passe* peut être obscurci à l’aide de ODBC **chiffrer** (fonction). Lorsque vous utilisez le **chiffrer** (fonction), le mot de passe doit être converti en une chaîne Unicode en plaçant **N** avant le premier guillemet.  
   
- L’option encrypt n’est pas pris en charge sur les connexions qui sont à l’aide de **SqlClient**.  
+ L’option encrypt n’est pas pris en charge sur les connexions qui utilisent **SqlClient**.  
   
 > [!IMPORTANT]  
->  ODBC **chiffrer** (fonction) ne fournit pas de chiffrement. Vous ne devez pas compter sur cette fonction pour protéger des mots de passe transmis sur un réseau. Si de telles informations doivent être transmises sur un réseau, utilisez SSL ou IPSec.  
+>  ODBC **chiffrer** fonction ne fournit pas de chiffrement. Vous ne devez pas compter sur cette fonction pour protéger des mots de passe transmis sur un réseau. Si de telles informations doivent être transmises sur un réseau, utilisez SSL ou IPSec.  
   
  **@encrypt = 'none'**  
  Indique qu'aucun codage ne doit être utilisé. Le mot de passe est transmis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous forme de texte brut. Il s'agit du paramètre par défaut.  
   
  **@encrypt= « odbc »**  
- Spécifie que ODBC est obfusquer le mot de passe à l’aide de ODBC **chiffrer** fonction avant d’envoyer le mot de passe pour le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Ceci peut être spécifié seulement si vous utilisez un client ODBC ou le fournisseur OLE DB pour SQL Server.  
+ Spécifie qu’ODBC doit obfusquer le mot de passe à l’aide de ODBC **chiffrer** (fonction) avant d’envoyer le mot de passe pour le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Ceci peut être spécifié seulement si vous utilisez un client ODBC ou le fournisseur OLE DB pour SQL Server.  
   
  [  **@fCreateCookie =** ] **true** | **false**  
  Indique si un cookie doit être créé. **true** est implicitement converti en 1. **false** est implicitement converti en 0.  
@@ -79,17 +78,17 @@ sp_setapprole [ @rolename = ] 'role',
  0 (succès) et 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Une fois qu’une application rôle est activé à l’aide de **sp_setapprole**, il demeure actif jusqu'à ce que l’utilisateur se déconnecte du serveur ou exécute **sp_unsetapprole**. **sp_setapprole** peuvent être exécutées directement par [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. **sp_setapprole** ne peut pas être exécutée dans une autre procédure stockée ou dans une transaction définie par l’utilisateur.  
+ Après une application le rôle est activé à l’aide de **sp_setapprole**, le rôle reste actif jusqu'à ce que l’utilisateur se déconnecte du serveur ou exécute **sp_unsetapprole**. **sp_setapprole** peuvent être exécutées directement par [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. **sp_setapprole** ne peut pas être exécutée dans une autre procédure stockée ou dans une transaction définie par l’utilisateur.  
   
- Pour une vue d’ensemble des rôles d’application, consultez [les rôles d’Application](../../relational-databases/security/authentication-access/application-roles.md).  
+ Pour une vue d’ensemble des rôles d’application, consultez [rôles d’Application](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!IMPORTANT]  
 >  Pour protéger le mot de passe d'un rôle d'application lors de sa transmission sur un réseau, vous devez toujours utiliser une connexion chiffrée pour activer un rôle d'application.  
 >   
->  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **chiffrer** option n’est pas pris en charge par **SqlClient**. Si vous devez stocker des informations d'identification, chiffrez-les à l'aide des fonctions API de chiffrement. Le paramètre *mot de passe* est stocké comme un hachage unidirectionnel. Pour préserver la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], stratégie de complexité de mot de passe n’est pas appliquée par **sp_addapprole**. Pour appliquer la stratégie de complexité de mot de passe, utilisez [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md).  
+>  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC **chiffrer** option n’est pas pris en charge par **SqlClient**. Si vous devez stocker des informations d'identification, chiffrez-les à l'aide des fonctions API de chiffrement. Le paramètre *mot de passe* est stocké sous la forme d’un hachage unidirectionnel. Pour préserver la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], stratégie de complexité de mot de passe n’est pas appliquée par **sp_addapprole**. Pour appliquer la stratégie de complexité de mot de passe, utilisez [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance au **public** et la connaissance du mot de passe pour le rôle.  
+## <a name="permissions"></a>Permissions  
+ Nécessite l’appartenance au **public** et connaissance du mot de passe pour le rôle.  
   
 ## <a name="examples"></a>Exemples  
   

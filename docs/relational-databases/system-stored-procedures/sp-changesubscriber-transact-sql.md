@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriber (Transact-SQL) | Documents Microsoft
+title: sp_changesubscriber (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2cb0047dd66b0c3fd96d399e404b801401d202a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 799a2a8b398d3ff6eff13a83a3cc60af90421cc4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993126"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019830"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
  Intervalle de *frequency_type*. *frequency_interval* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- Date de la tâche de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuel relatif). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
+ Date de la tâche de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -114,7 +114,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**16**|Dernière|  
   
  [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- Indique la fréquence à laquelle la tâche de distribution doit se répéter pendant la période définie par *frequency_type*. *frequency_recurrence_factor* est **int**, avec NULL comme valeur par défaut.  
+ Indique la fréquence à laquelle la tâche de distribution doit se répéter pendant le *frequency_type*. *frequency_recurrence_factor* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@frequency_subday=**] *frequency_subday*  
  Fréquence de replanification nécessaire pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
@@ -164,14 +164,14 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="remarks"></a>Notes  
  **sp_changesubscriber** est utilisée dans tous les types de réplication.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_changesubscriber**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [sp_helpserver & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

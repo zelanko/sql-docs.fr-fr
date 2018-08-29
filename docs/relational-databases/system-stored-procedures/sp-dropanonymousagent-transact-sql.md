@@ -1,5 +1,5 @@
 ---
-title: sp_dropanonymousagent (Transact-SQL) | Documents Microsoft
+title: sp_dropanonymousagent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropanonymousagent
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 10b75c7c2e083a09dbebfc720487511397a1af90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6440ede3f3fe645946cfc1bfc01fe65fb20c6e55
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988504"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025952"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +44,7 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
   
 ## <a name="arguments"></a>Arguments  
  [  **@subid=**] *sub_id*  
- Est l’identificateur global d’un abonnement anonyme. *sub_id* est **uniqueidentifier**, sans valeur par défaut. Cet identificateur peut être récupéré sur l’abonné à l’aide de **sp_helppullsubscription**. La valeur de la **subid** champ du jeu de résultats retourné est à cet identificateur global.  
+ Est l’identificateur global d’un abonnement anonyme. *sub_id* est **uniqueidentifier**, sans valeur par défaut. Cet identificateur peut être récupéré sur l’abonné à l’aide de **sp_helppullsubscription**. La valeur dans le **subid** champ de jeu de résultats retourné est cet identificateur global.  
   
  [  **@type=**] *type*  
  Est le type d’abonnement. *type* est **int**, sans valeur par défaut. Les valeurs valides sont **1** ou **2**. Spécifiez **1**, si la réplication d’instantané ou réplication transactionnelle à l’aide de l’Agent de Distribution. Spécifiez **2**, si à l’aide de l’Agent de fusion de réplication de fusion.  
@@ -59,8 +57,8 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
   
  Cette procédure stockée permet de supprimer uniquement les Agents d'abonnement anonymes et ne permet pas de supprimer les abonnements connus.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **db_owner** du rôle de base de données fixe dans la base de données de distribution permettre exécuter **sp_dropanonymousagent**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **db_owner** du rôle fixe de base de données dans la base de données de distribution peuvent exécuter **sp_dropanonymousagent**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

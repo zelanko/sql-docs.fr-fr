@@ -18,16 +18,15 @@ helpviewer_keywords:
 - database metadata [SQL Server]
 - metadata [SQL Server], permissions
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
-caps.latest.revision: 51
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8d4eaac9765f36b72e068bb39cda4d3377a67d56
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1cd39b93b761bd6466f3c0627df40aa9b67bbb2b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323959"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024118"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuration de la visibilité des métadonnées
   La visibilité des métadonnées est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Par exemple, la requête suivante retourne une ligne si l'utilisateur bénéficie d'une autorisation telle que SELECT ou INSERT sur la table `myTable`.  

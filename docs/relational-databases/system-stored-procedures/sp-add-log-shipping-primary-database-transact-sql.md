@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_primary_database (Transact-SQL) | Documents Microsoft
+title: sp_add_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_primary_database
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
-caps.latest.revision: 35
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39627cca65071d2f08fe990c63d6e3ce836ce3b0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b73ec62b6b0abc8ab8334efdc5f26c5bd2748605
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240029"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034737"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,8 +62,8 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  [  **@database=** ] '*base de données*'  
  Nom de la base de données primaire pour la copie des journaux de transaction. *base de données* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
   
- [  **@backup_directory=** ] '*Répertoire_Sauvegarde*'  
- Chemin d'accès au dossier de sauvegarde sur le serveur principal. *Répertoire_Sauvegarde* est **nvarchar (500)**, sans valeur par défaut, et ne peut pas être NULL.  
+ [  **@backup_directory=** ] '*backup_directory*'  
+ Chemin d'accès au dossier de sauvegarde sur le serveur principal. *backup_directory* est **nvarchar (500)**, sans valeur par défaut, et ne peut pas être NULL.  
   
  [  **@backup_share=** ] '*backup_share*'  
  Chemin d'accès réseau au répertoire de sauvegarde sur le serveur principal. *backup_share* est **nvarchar (500)**, sans valeur par défaut, et ne peut pas être NULL.  
@@ -95,10 +94,10 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  Est la longueur de la durée, en minutes, après la dernière sauvegarde avant qu’un *threshold_alert ne* erreur est générée. *backup_threshold* est **int**, avec une valeur par défaut de 60 minutes.  
   
  [  **@threshold_alert=** ] *threshold_alert ne*  
- Est de l’alerte à déclencher lorsque le seuil de sauvegarde est dépassé. *l’argument threshold_alert* est **int**, avec 14 420 comme valeur par défaut.  
+ Est l’alerte à déclencher lorsque le seuil de sauvegarde est dépassé. *threshold_alert ne* est **int**, avec 14 420 comme valeur par défaut.  
   
  [  **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
- Spécifie si une alerte est déclenchée lorsque *backup_threshold* est dépassé. La valeur par défaut zéro (0) indique que l'alerte est désactivée et ne sera pas déclenchée. *threshold_alert_enabled* est **bits**.  
+ Spécifie si une alerte est déclenchée quand *backup_threshold* est dépassé. La valeur par défaut zéro (0) indique que l'alerte est désactivée et ne sera pas déclenchée. *threshold_alert_enabled* est **bits**.  
   
  [  **@history_retention_period=** ] *history_retention_period*  
  Période de rétention, en minutes, de l'historique. *history_retention_period* est **int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
@@ -116,13 +115,13 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = Activé. Toujours compresser des sauvegardes de journal.  
   
- 2 = utiliser le paramètre de la [afficher ou configurer l’Option de Configuration de serveur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Ceci est la valeur par défaut.  
+ 2 = utiliser le paramètre de la [afficher ou configurer l’Option de Configuration de serveur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Il s'agit de la valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  **sp_add_log_shipping_primary_database** doit être exécuté à partir de la **master** base de données sur le serveur principal. Cette procédure stockée remplit les fonctions suivantes :  
@@ -131,13 +130,13 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 2.  Elle crée un travail de sauvegarde pour la base de données primaire qui est désactivée.  
   
-3.  Définit l’ID de tâche de sauvegarde dans le **log_shipping_primary_databases** entrée à l’ID de tâche de la tâche de sauvegarde.  
+3.  Définit l’ID de tâche de sauvegarde dans le **log_shipping_primary_databases** entrée à l’ID du travail de la tâche de sauvegarde.  
   
 4.  Ajoute un enregistrement moniteur local dans la table **log_shipping_monitor_primary** sur le serveur principal à l’aide des arguments fournis.  
   
 5.  Si le serveur moniteur est différent du serveur principal, ajoute un enregistrement moniteur dans **log_shipping_monitor_primary** sur le moniteur de serveur à l’aide des arguments fournis.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
@@ -167,7 +166,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de journaux de transaction & #40 ; SQL Server & #41 ;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

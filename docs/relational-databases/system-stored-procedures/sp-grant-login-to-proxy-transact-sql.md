@@ -1,5 +1,5 @@
 ---
-title: sp_grant_login_to_proxy (Transact-SQL) | Documents Microsoft
+title: sp_grant_login_to_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_grant_login_to_proxy
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
-caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e07e03296c9264245504b65136a467e0fe7040e2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 87c6185eb5da00bd004e56eb45a48ac0d963258e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259609"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033658"
 ---
 # <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,11 +68,11 @@ sp_grant_login_to_proxy
 ## <a name="remarks"></a>Notes  
  **sp_grant_login_to_proxy** doit être exécuté à partir de la **msdb** base de données.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe peut exécuter **sp_grant_login_to_proxy**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** du rôle serveur fixe peut-être exécuter **sp_grant_login_to_proxy**.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant permet la connexion `adventure-works\terrid` d’utiliser le proxy `Catalog application proxy`.  
+ L’exemple suivant permet la connexion `adventure-works\terrid` pour utiliser le proxy `Catalog application proxy`.  
   
 ```  
 USE msdb ;  

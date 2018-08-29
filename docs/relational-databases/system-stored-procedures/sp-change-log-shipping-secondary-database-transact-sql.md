@@ -1,5 +1,5 @@
 ---
-title: sp_change_log_shipping_secondary_database (Transact-SQL) | Documents Microsoft
+title: sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_secondary_database
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e4ee6324e92130f3f887fe3a36ecd5469cd9d99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bee5104ed19e6d7d7454a0fc91fb5059153bb8b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239139"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023628"
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,10 +74,10 @@ sp_change_log_shipping_secondary_database
  Avec la valeur 1, les utilisateurs sont déconnectés de la base de données secondaire lors de l'exécution d'une opération de restauration. Par défaut = 0. *disconnect_users* est **bits** et ne peut pas être NULL.  
   
  [  **@block_size =** ] '*block_size*'  
- Taille, en octets, qui définit la taille des blocs pour l'unité de sauvegarde. *block_size* est **int** avec la valeur par défaut -1.  
+ Taille, en octets, qui définit la taille des blocs pour l'unité de sauvegarde. *block_size* est **int** avec une valeur par défaut de -1.  
   
  [  **@buffer_count =** ] '*buffer_count*'  
- Nombre total de mémoires tampons utilisées par l'opération de sauvegarde ou de restauration. *buffer_count* est **int** avec la valeur par défaut -1.  
+ Nombre total de mémoires tampons utilisées par l'opération de sauvegarde ou de restauration. *buffer_count* est **int** avec une valeur par défaut de -1.  
   
  [  **@max_transfer_size =** ] '*max_transfer_size*'  
  Taille, en octets, de la demande d'entrée ou de sortie maximale émise par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'unité de sauvegarde. *max_transfersize* est **int** et peut être NULL.  
@@ -87,28 +86,28 @@ sp_change_log_shipping_secondary_database
  Nombre de minutes pouvant s'écouler entre les opérations de restauration avant qu'une alerte ne soit générée. *restore_threshold* est **int** et ne peut pas être NULL.  
   
  [  **@threshold_alert =** ] '*threshold_alert ne*'  
- Alerte générée en cas de dépassement du seuil de restauration. *l’argument threshold_alert* est **int**, avec une valeur par défaut 14420.  
+ Alerte générée en cas de dépassement du seuil de restauration. *threshold_alert ne* est **int**, avec une valeur par défaut 14420.  
   
  [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
- Spécifie si une alerte est déclenchée lorsque *restore_threshold*est dépassé. 1 = activées ; 0 = désactivées. *threshold_alert_enabled* est **bits** et ne peut pas être NULL.  
+ Spécifie si une alerte est déclenchée quand *restore_threshold*est dépassé. 1 = activées ; 0 = désactivées. *threshold_alert_enabled* est **bits** et ne peut pas être NULL.  
   
  [  **@history_retention_period =** ] '*history_retention_period*'  
- Période de rétention, en minutes, de l'historique. *history_retention_period* est **int**. Une valeur 1440 sera utilisée si aucun n’est spécifié.  
+ Période de rétention, en minutes, de l'historique. *history_retention_period* est **int**. Une valeur de 1440 sera utilisée si aucun n’est spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  **sp_change_log_shipping_secondary_database** doit être exécuté à partir de la **master** base de données sur le serveur secondaire. Elle effectue les actions suivantes :  
   
-1.  Modifie les paramètres de la **log_shipping_secondary_database** enregistre si nécessaire.  
+1.  Modifie les paramètres de la **log_shipping_secondary_database** enregistre en fonction des besoins.  
   
 2.  Modifie l’enregistrement du moniteur local dans **log_shipping_monitor_secondary** sur le serveur secondaire à l’aide des arguments fournis, si nécessaire.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
@@ -127,7 +126,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de journaux de transaction & #40 ; SQL Server & #41 ;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

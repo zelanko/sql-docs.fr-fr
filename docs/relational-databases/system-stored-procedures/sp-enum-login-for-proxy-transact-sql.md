@@ -1,5 +1,5 @@
 ---
-title: sp_enum_login_for_proxy (Transact-SQL) | Documents Microsoft
+title: sp_enum_login_for_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: 18
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f3c4751f3d9dfaa60110f7e859bc8157de2c9246
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7faec16e49bb2776babb126a5f4d314889b70c2b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249931"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036271"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ sp_enum_login_for_proxy
   
 ## <a name="arguments"></a>Arguments  
  [ **@name**=] '*nom*'  
- Le nom d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principal, d’une connexion, d’un rôle serveur ou **msdb** rôle de base de données pour lequel répertorier des proxys. Le nom est **nvarchar (256)**, avec NULL comme valeur par défaut.  
+ Le nom d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entité de sécurité, login, rôle de serveur, ou **msdb** rôle de base de données pour énumérer les serveurs proxy. Le nom est **nvarchar (256)**, avec NULL comme valeur par défaut.  
   
  [ **@proxy_id**=] *id*  
  Numéro d'identification du serveur proxy pour lequel énumérer les informations. Le *proxy_id* est **int**, avec NULL comme valeur par défaut. Soit le *id* ou *proxy_name* peut être spécifié.  
@@ -61,12 +59,12 @@ sp_enum_login_for_proxy
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**proxy_id**|**int**|Numéro d'identification du proxy.|  
+|**proxy_id**|**Int**|Numéro d'identification du proxy.|  
 |**proxy_name**|**sysname**|Nom du proxy.|  
 |**nom**|**sysname**|Nom du principal de sécurité pour l'association.|  
-|**flags**|**int**|Type du principal de sécurité.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion<br /><br /> **1** = rôle de système fixe<br /><br /> **2** = rôle de base de données dans **msdb**|  
+|**flags**|**Int**|Type du principal de sécurité.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion<br /><br /> **1** = rôle de système fixe<br /><br /> **2** = rôle de base de données dans **msdb**|  
   
 ## <a name="remarks"></a>Notes  
  Lorsque aucun paramètre n’est fourni, **sp_enum_login_for_proxy** répertorie des informations sur toutes les connexions dans l’instance pour chaque serveur proxy.  
@@ -77,8 +75,8 @@ sp_enum_login_for_proxy
   
  Cette procédure stockée se trouve dans **msdb**.  
   
-## <a name="permissions"></a>Autorisations  
- Les autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
+## <a name="permissions"></a>Permissions  
+ Autorisations d’exécution pour cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
   

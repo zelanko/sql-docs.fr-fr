@@ -1,5 +1,5 @@
 ---
-title: sp_configure_peerconflictdetection (Transact-SQL) | Documents Microsoft
+title: sp_configure_peerconflictdetection (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ad2e7b3c0fd877dad8b14360d7c3f65331cb8cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 07555d1f5e26538b1bdf980c65d5f08cfa546717
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991676"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031656"
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @action=] '*action*'  
  Spécifie s'il faut activer ou désactiver la détection de conflit pour une publication. *action* est **nvarchar (5)**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**enable**|Active la détection de conflit pour une publication.|  
 |**disable**|Désactive la détection de conflit pour une publication.|  
@@ -71,7 +71,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @continue_onconflict=] '*continue_onconflict*']  
- Détermine si l'Agent de distribution continue à traiter les modifications lorsqu'un conflit est détecté. *continue_onconflict* est **nvarchar (5)** avec la valeur par défaut FALSE.  
+ Détermine si l'Agent de distribution continue à traiter les modifications lorsqu'un conflit est détecté. *continue_onconflict* est **nvarchar (5)** valeur par défaut est false.  
   
 > [!CAUTION]  
 >  Nous vous recommandons de conserver la valeur par défaut FALSE. Lorsque cette option a la valeur TRUE, l'Agent de distribution tente de converger les données dans la topologie en appliquant la ligne en conflit du nœud doté de l'ID d'appelant le plus élevé. Cette méthode ne garantit pas la convergence. Vous devez vous assurer que la topologie est cohérente après la détection d'un conflit. Pour plus d'informations, consultez « Gestion des conflits » dans [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
@@ -86,9 +86,9 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- sp_configure_peerconflictdetection est utilisé dans la réplication transactionnelle d'égal à égal. Pour utiliser la détection de conflit, tous les nœuds doivent exécuter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou versions ultérieures et la détection doivent être activé pour tous les nœuds.  
+ sp_configure_peerconflictdetection est utilisé dans la réplication transactionnelle d'égal à égal. Pour utiliser la détection de conflit, tous les nœuds doivent exécuter [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou versions ultérieures et la détection doivent être activée pour tous les nœuds.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner.  
   
 ## <a name="see-also"></a>Voir aussi  

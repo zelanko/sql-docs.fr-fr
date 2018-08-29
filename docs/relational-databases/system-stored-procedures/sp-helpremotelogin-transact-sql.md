@@ -1,5 +1,5 @@
 ---
-title: sp_helpremotelogin (Transact-SQL) | Documents Microsoft
+title: sp_helpremotelogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60fe6f30365e63394f80b481fe155b26caa4061b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e0dc7cdc8e647adf1d8ea5e4e2903509c16a2f62
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249441"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033372"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,18 +59,18 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |server|**sysname**|Nom d'un serveur distant défini sur le serveur local.|  
 |local_user_name|**sysname**|Connexion du serveur local à laquelle sont mappées les connexions distantes.|  
-|remote_user_name|**sysname**|Ouverture de session sur le serveur distant qui est mappée à local_user_name.|  
+|remote_user_name|**sysname**|Connexion sur le serveur distant qui est mappée à local_user_name.|  
 |options|**sysname**|Trusted = La connexion distante n'a pas à fournir de mot de passe lors de la connexion au serveur local à partir du serveur distant.<br /><br /> Untrusted (ou vide) = La connexion distante doit fournir un mot de passe lors de la connexion au serveur local à partir du serveur distant.|  
   
 ## <a name="remarks"></a>Notes  
- Faites appel à sp_helpserver pour répertorier les noms des serveurs distants définis sur le serveur local.  
+ Faites appel à sp_helpserver pour afficher les noms des serveurs distants définis sur le serveur local.  
   
-## <a name="permissions"></a>Autorisations  
- Aucuns autorisations ne sont vérifiées.  
+## <a name="permissions"></a>Permissions  
+ Sans les autorisations sont vérifiées.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -91,7 +91,7 @@ EXEC sp_helpremotelogin;
 ## <a name="see-also"></a>Voir aussi  
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

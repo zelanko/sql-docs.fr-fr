@@ -1,5 +1,5 @@
 ---
-title: sp_resyncmergesubscription (Transact-SQL) | Documents Microsoft
+title: sp_resyncmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35f5311da7b2d878a738695ee62a65c947f98693
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78cfd43dfa297f44555d8790e3bea41efcde9652
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000776"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033390"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Resynchronise un abonnement de fusion avec un état de validation connu que vous spécifiez. Ceci permet de forcer la convergence ou de synchroniser la base de données d'abonnement par rapport à un point dans le temps, tel que la dernière validation qui a abouti, ou à une date spécifiée. L'instantané n'est pas réappliqué lors de la resynchronisation d'un abonnement à l'aide de cette méthode. Cette procédure stockée n'est pas utilisée pour les abonnements de réplication d'instantané ou de réplication transactionnelle. Cette procédure stockée est exécutée sur le serveur de publication, sur la base de données de publication, ou sur la base de données d’abonnement de l’abonné.  
+  Resynchronise un abonnement de fusion avec un état de validation connu que vous spécifiez. Ceci permet de forcer la convergence ou de synchroniser la base de données d'abonnement par rapport à un point dans le temps, tel que la dernière validation qui a abouti, ou à une date spécifiée. L'instantané n'est pas réappliqué lors de la resynchronisation d'un abonnement à l'aide de cette méthode. Cette procédure stockée n'est pas utilisée pour les abonnements de réplication d'instantané ou de réplication transactionnelle. Cette procédure stockée est exécutée sur le serveur de publication, sur la base de données de publication, ou sur l’abonné, sur la base de données d’abonnement.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,10 +84,10 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="remarks"></a>Notes  
  **sp_resyncmergesubscription** est utilisé dans la réplication de fusion.  
   
- La valeur **0** pour le *resync_type* paramètre réapplique toutes les modifications apportées depuis l’instantané initial, peut être gourmande en ressources, mais éventuellement moins qu’une réinitialisation complète. Par exemple, si l'instantané initial a été fourni un mois auparavant, cette valeur provoque la réapplication des données du mois écoulé. Si l'instantané contient 1 gigaoctet (Go) de données et que le nombre de modifications depuis le mois dernier correspond à 2 mégaoctets (Mo) de données, il est plus efficace de réappliquer les données que de réappliquer l'ensemble de l'instantané de 1 Go.  
+ La valeur **0** pour le *resync_type* paramètre, qui réapplique toutes les modifications depuis l’instantané initial, peut être gourmande en ressources, mais éventuellement moins qu’une réinitialisation complète. Par exemple, si l'instantané initial a été fourni un mois auparavant, cette valeur provoque la réapplication des données du mois écoulé. Si l'instantané contient 1 gigaoctet (Go) de données et que le nombre de modifications depuis le mois dernier correspond à 2 mégaoctets (Mo) de données, il est plus efficace de réappliquer les données que de réappliquer l'ensemble de l'instantané de 1 Go.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_resyncmergesubscription**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_resyncmergesubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

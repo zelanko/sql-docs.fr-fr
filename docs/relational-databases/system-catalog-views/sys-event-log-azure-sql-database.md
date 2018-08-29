@@ -22,17 +22,16 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 55408f62c8e66c33bcb58682831970312c51130d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7091aa6596fd66260ae43d39f0f19e5770b6dcdf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998171"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030139"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ ms.locfileid: "37998171"
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**connectivité**|**connection_successful**|0|**connection_successful**|0|Connexion à la base de données réussie.|  
 |**connectivité**|**connection_failed**|0|**invalid_login_name**|2|Le nom de connexion n'est pas valide dans cette version de SQL Server.|  
-|**connectivité**|**connection_failed**| 1|**windows_auth_not_supported**|2|Les identifiants de connexion Windows ne sont pas pris en charge dans cette version de SQL Server.|  
+|**connectivité**|**connection_failed**|1|**windows_auth_not_supported**|2|Les identifiants de connexion Windows ne sont pas pris en charge dans cette version de SQL Server.|  
 |**connectivité**|**connection_failed**|2|**attach_db_not_supported**|2|L'utilisateur a tenté de joindre un fichier de base de données non pris en charge.|  
 |**connectivité**|**connection_failed**|3|**change_password_not_supported**|2|L'utilisateur a demandé la modification du passe de connexion qui n'est pas prise en charge.|  
 |**connectivité**|**connection_failed**|4|**login_failed_for_user**|2|Échec de la connexion pour l'utilisateur.|  
@@ -80,16 +79,16 @@ ms.locfileid: "37998171"
 |**connectivité**|**connection_failed**|8|**client_close**|2|*Remarque : S’applique uniquement à la base de données SQL Azure V11.*<br /><br /> Le délai de connexion du client a peut-être expiré. Essayez d'augmenter le délai d'expiration de la connexion.|  
 |**connectivité**|**connection_failed**|9|**reconfiguration**|2|*Remarque : S’applique uniquement à la base de données SQL Azure V11.*<br /><br /> La connexion a échoué car la base de données était en cours de reconfiguration.|  
 |**connectivité**|**connection_terminated**|0|**idle_connection_timeout**|2|*Remarque : S’applique uniquement à la base de données SQL Azure V11.*<br /><br /> La connexion est restée inactive plus longtemps que ne l'autorise le seuil défini pour le système.|  
-|**connectivité**|**connection_terminated**| 1|**reconfiguration**|2|*Remarque : S’applique uniquement à la base de données SQL Azure V11.*<br /><br /> La session a été interrompue en raison d'une reconfiguration de la base de données.|  
+|**connectivité**|**connection_terminated**|1|**reconfiguration**|2|*Remarque : S’applique uniquement à la base de données SQL Azure V11.*<br /><br /> La session a été interrompue en raison d'une reconfiguration de la base de données.|  
 |**connectivité**|**la limitation**|*\<code de raison >*|**reason_code**|2|*Remarque : S’applique uniquement à la base de données SQL Azure V11.*<br /><br /> La demande est limitée.  Code de raison de la limitation :  *\<code motif >*. Pour plus d’informations, consultez [la limitation du moteur](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**connectivité**|**throttling_long_transaction**|40549|**long_transaction**|2|*Remarque : S’applique uniquement à la base de données SQL Azure V11.*<br /><br /> La session a pris fin, car elle contient une transaction à long terme. Essayez de diminuer la durée de la transaction. Pour plus d’informations, consultez [limites de ressources](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivité**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Remarque : S’applique uniquement à la base de données SQL Azure V11.*<br /><br /> La session a pris fin car elle a acquis trop de verrous. Essayez de lire ou de modifier moins de lignes au cours d'une transaction. Pour plus d’informations, consultez [limites de ressources](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivité**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Remarque : S’applique uniquement à la base de données SQL Azure V11.*<br /><br /> La session a pris fin en raison d'une utilisation excessive de TEMPDB. Essayez de modifier votre requête afin de réduire l'utilisation de l'espace de table temporaire. Pour plus d’informations, consultez [limites de ressources](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivité**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Remarque : S’applique uniquement à la base de données SQL Azure V11.*<br /><br /> La session a pris fin en raison d'une utilisation de l'espace pour le journal de transactions excessive. Essayez de modifier moins de lignes au cours d'une transaction. Pour plus d’informations, consultez [limites de ressources](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**connectivité**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Remarque : S’applique uniquement à la base de données SQL Azure V11.*<br /><br /> La session a pris fin en raison d'une utilisation de mémoire excessive. Essayez de modifier votre requête afin que le nombre de lignes à traiter soit moins important. Pour plus d’informations, consultez [limites de ressources](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**moteur**|**blocage**|0|**blocage**|2|Un blocage s'est produit.|  
+|**Moteur**|**blocage**|0|**blocage**|2|Un blocage s'est produit.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les utilisateurs autorisés à accéder à la **master** base de données ont un accès en lecture seule à cette vue.  
   
 ## <a name="remarks"></a>Notes  

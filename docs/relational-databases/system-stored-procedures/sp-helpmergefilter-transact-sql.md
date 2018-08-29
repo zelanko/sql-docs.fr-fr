@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergefilter (Transact-SQL) | Documents Microsoft
+title: sp_helpmergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e35fe61b91fb503b87ba0a0195e77ad7ea0de50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 327e47c5dbb48b7944a8389c2fd56ccec96b8668
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996036"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030815"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,23 +51,23 @@ sp_helpmergefilter [ @publication= ] 'publication'
  Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
  [  **@article=**] **'***article***'**  
- Nom de l'article. *article* est **sysname**, avec une valeur par défaut **%**, qui retourne les noms de tous les articles.  
+ Nom de l'article. *article* est **sysname**, avec une valeur par défaut **%**, qui renvoie le nom de tous les articles.  
   
  [  **@filtername=**] **'***filtername***'**  
- Nom du filtre pour lequel il faut renvoyer des informations. *FilterName* est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur tous les filtres définis sur l’article ou de la publication.  
+ Nom du filtre pour lequel il faut renvoyer des informations. *FilterName* est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur tous les filtres définis sur l’article ou la publication.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**join_filterid**|**int**|Identificateur du filtre de jointure.|  
+|**join_filterid**|**Int**|Identificateur du filtre de jointure.|  
 |**nom de filtre**|**sysname**|Nom du filtre.|  
 |**nom de l’article**|**sysname**|Nom de l'article de jointure.|  
 |**join_filterclause**|**nvarchar(2000)**|Clause FILTER qualifiant la jointure.|  
-|**join_unique_key**|**int**|Indique si la jointure porte sur une clé unique.|  
+|**join_unique_key**|**Int**|Indique si la jointure porte sur une clé unique.|  
 |**propriétaire de la table de base**|**sysname**|Nom du propriétaire de la table de base.|  
 |**nom de la table de base**|**sysname**|Nom de la table de base.|  
-|**propriétaire de la table jointure**|**sysname**|Nom du propriétaire de la table jointe à la table de base.|  
+|**propriétaire de table de jointure**|**sysname**|Nom du propriétaire de la table jointe à la table de base.|  
 |**nom de table de jointure**|**sysname**|Nom de la table jointe à la table de base.|  
 |**nom de l’article**|**sysname**|Nom de l'article de la table jointe à la table de base.|  
 |**filter_type**|**tinyint**|Type de filtre de fusion parmi les types suivants :<br /><br /> **1** = filtre de jointure uniquement<br /><br /> **2** = relation d’enregistrements logiques<br /><br /> **3** = les deux|  
@@ -78,8 +78,8 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_helpmergefilter** est utilisé dans la réplication de fusion.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe et le **db_owner** du rôle de base de données fixe peut exécuter **sp_helpmergefilter**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe et le **db_owner** rôle de base de données fixe peuvent exécuter **sp_helpmergefilter**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_changemergefilter (Transact-SQL) | Documents Microsoft
+title: sp_changemergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changemergefilter
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 332cb7bd6d4afa477064bd014e36dc2e5b6e8aa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c700ffbcee68cd3557dd5e5a170e8cbba59a0f50
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992906"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033002"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  Le tableau ci-dessous décrit les propriétés des articles et les valeurs de ces propriétés.  
   
-|Propriété|Valeur| Description|  
+|Propriété|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Filtre de jointure.<br /><br /> Cette option est nécessaire pour la prise en charge d'Abonnés [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relation d'enregistrement logique.|  
@@ -79,17 +79,17 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|La jointure se fait sur une clé unique.|  
 ||**false**|La jointure ne se fait pas sur une clé unique.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *force_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+ [  **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
+ Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion n’invalident pas l’instantané n’est pas valide. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
   
- **1** signifie que les modifications apportées à l’article de fusion peuvent invalider l’instantané n’est pas valide, et s’il existe des abonnements nécessitant un nouvel instantané, donne l’autorisation de l’instantané existant soit marqué comme obsolète et de générer un nouvel instantané.  
+ **1** signifie que les modifications apportées à l’article de fusion peuvent invalider l’instantané n’est pas valide, et s’il existe des abonnements existants qui nécessitent un nouvel instantané, autorise l’instantané existant soit marqué comme obsolète et de générer un nouvel instantané.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *force_reinit_subscription* est un **bits** avec une valeur par défaut **0**.  
+ [  **@force_reinit_subscription =** ] *àce_reinit_subscription*  
+ Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits** avec une valeur par défaut **0**.  
   
- **0** Spécifie que les modifications apportées à l’article de fusion ne provoquent pas la réinitialisation des abonnements. Si la procédure stockée détecte que la modification nécessite la réinitialisation des abonnements existants, une erreur se produit et aucune modification n'est effectuée.  
+ **0** Spécifie que les modifications apportées à l’article de fusion ne provoquent pas la réinitialisation de l’abonnement. Si la procédure stockée détecte que la modification nécessite la réinitialisation des abonnements existants, une erreur se produit et aucune modification n'est effectuée.  
   
  **1** signifie que les modifications à l’article de fusion entraîne la réinitialisation des abonnements existants et autorise la réinitialisation des abonnements se produise.  
   
@@ -103,11 +103,11 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  Pour utiliser des enregistrements logiques, la publication et les articles doivent répondre à certaines conditions. Pour plus d’informations, consultez [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_changemergefilter**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changemergefilter**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Changer les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Modifier les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

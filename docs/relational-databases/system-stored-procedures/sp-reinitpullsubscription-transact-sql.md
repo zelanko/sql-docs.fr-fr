@@ -1,5 +1,5 @@
 ---
-title: sp_reinitpullsubscription (Transact-SQL) | Documents Microsoft
+title: sp_reinitpullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1f044d6ae29565326b130e248e4e0e770ab8e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ed19307a7a79856b808ade07338e2e8d595fdf4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997076"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018252"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
  Nom de la base de données du serveur de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
   
  [  **@publication=**] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, avec une valeur par défaut de tous les, marque tous les abonnements pour la réinitialisation.  
+ Nom de la publication. *publication* est **sysname**, par défaut, all, marque tous les abonnements pour réinitialisation.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -62,19 +62,19 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Notes  
  **sp_reinitpullsubscription** est utilisé dans la réplication transactionnelle.  
   
- **sp_reinitpullsubscription** n’est pas pris en charge pour la réplication transactionnelle d’égal à égal.  
+ **sp_reinitpullsubscription** n’est pas pris en charge pour la réplication transactionnelle peer-to-peer.  
   
  **sp_reinitpullsubscription** peut être appelée à partir de l’abonné pour réinitialiser l’abonnement, au cours de la prochaine exécution de l’Agent de Distribution.  
   
- Abonnements aux publications créées avec la valeur **false** pour **@immediate_sync** ne peut pas être réinitialisé à partir de l’abonné.  
+ Abonnements aux publications créées avec la valeur **false** pour **@immediate_sync** ne peuvent pas être réinitialisés à partir de l’abonné.  
   
- Vous pouvez réinitialiser un abonnement par extraction de données en l’exécutant **sp_reinitpullsubscription** sur l’abonné ou **sp_reinitsubscription** sur le serveur de publication.  
+ Vous pouvez réinitialiser un abonnement par extraction en l’exécutant **sp_reinitpullsubscription** sur l’abonné ou **sp_reinitsubscription** sur le serveur de publication.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_reinitpullsubscription**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Réinitialiser un abonnement](../../relational-databases/replication/reinitialize-a-subscription.md)   

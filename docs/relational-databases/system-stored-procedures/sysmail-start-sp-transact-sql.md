@@ -1,5 +1,5 @@
 ---
-title: sysmail_start_sp (Transact-SQL) | Documents Microsoft
+title: sysmail_start_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sysmail_start_sp
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9513e95d52aed4ee7fb525504dfb112092e1807d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2fa805836387ae94cca2cba189eb4a9a9b20d8a3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255009"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024178"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,25 +44,25 @@ sysmail_start_sp
 ```  
   
 ## <a name="arguments"></a>Arguments  
- Aucun  
+ None  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Messagerie de base de données n’est pas activé ou installé[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Utilisez l'Assistant Configuration de la messagerie de base de données pour activer et installer les objets de messagerie de base de données.  
   
  Cette procédure stockée se trouve dans le **msdb** base de données. Elle démarre la file d'attente de la messagerie de base de données contenant les demandes de messages sortants et active [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour le programme externe.  
   
- Dès que les files d'attente ont démarré, le programme externe de la messagerie de base de données peut traiter les messages. Cette procédure vous permet de redémarrer les files d’attente une fois que les files d’attente ont été arrêtés avec le **sysmail_stop_sp** procédure stockée.  
+ Dès que les files d'attente ont démarré, le programme externe de la messagerie de base de données peut traiter les messages. Cette procédure vous permet de redémarrer les files d’attente une fois que les files d’attente ont été arrêtés avec la **sysmail_stop_sp** procédure stockée.  
   
 > [!NOTE]  
 >  Cette procédure stockée démarre simplement les files d'attente de la messagerie de base de données. Elle n'active pas la remise de messages [!INCLUDE[ssSB](../../includes/sssb-md.md)] dans la base de données.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

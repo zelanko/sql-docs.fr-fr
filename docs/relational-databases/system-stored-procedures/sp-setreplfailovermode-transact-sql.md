@@ -1,5 +1,5 @@
 ---
-title: sp_setreplfailovermode (Transact-SQL) | Documents Microsoft
+title: sp_setreplfailovermode (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_setreplfailovermode
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6e61491e5764bd6bf5d4f3727532d5bd6790c7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eff9cf8dea592fdf711634e29ba4b175f18c9f22
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998336"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028348"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
  [**@failover_mode=**] **'***failover_mode***'**  
  Mode de basculement pour l'abonnement. *failover_mode* est **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**immédiate** ou **synchronisation**|Les modifications de données effectuées sur l'Abonné sont instantanément copiées en bloc sur le serveur de publication.|  
+|**immédiate** ou **sync**|Les modifications de données effectuées sur l'Abonné sont instantanément copiées en bloc sur le serveur de publication.|  
 |**En file d’attente**|Modifications de données sont stockées dans un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file d’attente.|  
   
 > [!NOTE]  
@@ -76,10 +76,10 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_setreplfailovermode** est utilisé dans la réplication transactionnelle ou la réplication d’instantané pour les abonnements sont activés, soit pour la file d’attente de la mise à jour avec le basculement vers la mise à jour immédiate ou mise à jour immédiate avec basculement en attente mise à jour.  
+ **sp_setreplfailovermode** est utilisé dans la réplication d’instantané ou réplication transactionnelle pour les abonnements sont activés, soit en file d’attente de la mise à jour avec le basculement vers la mise à jour immédiate ou mise à jour immédiate avec basculement en file d’attente la mise à jour.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_setreplfailovermode**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_setreplfailovermode**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Basculer entre les Modes de mise à jour d’un abonnement transactionnel actualisable](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   

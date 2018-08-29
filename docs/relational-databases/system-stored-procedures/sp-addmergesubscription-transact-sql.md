@@ -1,5 +1,5 @@
 ---
-title: sp_addmergesubscription (Transact-SQL) | Documents Microsoft
+title: sp_addmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d5b8cf744909969166b2d391604735c1a2a7db4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5848206d391b324c4e0d221af560fb9ee92120ee
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993666"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026233"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Est le nom de la base de données d’abonnement. *bd_abonné*est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
- Est le type d’abonnement. *subscription_type*est **nvarchar (15)**, avec PUSH comme valeur par défaut. Si **push**, un abonnement par émission de données est ajouté et l’Agent de fusion est ajouté au serveur de distribution. Si **extraction**, un abonnement extrait est ajouté sans ajouter un Agent de fusion sur le serveur de distribution.  
+ Est le type d’abonnement. *subscription_type*est **nvarchar (15)**, avec PUSH comme valeur par défaut. Si **push**, un abonnement envoyé est ajouté et l’Agent de fusion est ajouté sur le serveur de distribution. Si **extraction**, un abonnement par extraction est ajouté sans ajouter un Agent de fusion sur le serveur de distribution.  
   
 > [!NOTE]  
 >  Les abonnements anonymes ne doivent pas utiliser cette procédure stockée.  
@@ -87,10 +86,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscriber_type=**] **'***subscriber_type***'**  
  Type d'abonné. *subscriber_type*est **nvarchar (15)**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**local** (par défaut)|Abonné connu uniquement sur le serveur de publication.|  
-|**Global**|Abonné connu sur tous les serveurs.|  
+|**local** (valeur par défaut)|Abonné connu uniquement sur le serveur de publication.|  
+|**global**|Abonné connu sur tous les serveurs.|  
   
  Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, les abonnements locaux sont des abonnements clients, et les abonnements globaux sont des abonnements serveur.  
   
@@ -98,7 +97,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Est un nombre indiquant la priorité de l’abonnement. *priorité_d*est **réel**, avec NULL comme valeur par défaut. Pour les abonnements de type local et anonyme, la valeur affectée à la priorité est 0.0. Pour les abonnements de type global, la valeur affectée à la priorité doit être inférieure à 100.0.  
   
  [  **@sync_type=**] **'***sync_type***'**  
- Type de synchronisation d'abonnement. *sync_type*est **nvarchar (15)**, avec une valeur par défaut **automatique**. Peut être **automatique** ou **aucun**. Si **automatique**, le schéma et les données initiales des tables publiées sont transférées tout d’abord à l’abonné. Si **aucun**, il est supposé que l’abonné possède déjà le schéma et les données initiales des tables publiées. Les données et les tables système sont toujours transférées.  
+ Type de synchronisation d'abonnement. *sync_type*est **nvarchar (15)**, avec une valeur par défaut **automatique**. Peut être **automatique** ou **aucun**. Si **automatique**, le schéma et les données initiales des tables publiées sont transférées vers l’abonné tout d’abord. Si **aucun**, il est supposé l’abonné possède déjà le schéma et les données initiales des tables publiées. Les données et les tables système sont toujours transférées.  
   
 > [!NOTE]  
 >  Nous vous recommandons de ne pas spécifier une valeur de **aucun**.  
@@ -163,7 +162,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Fréquence à laquelle *frequency_subday* doit se produire entre chaque fusion. *frequency_subday_interval* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- Heure de la journée à laquelle l’Agent de fusion est la première planifié, au format HHMMSS. *active_start_time_of_day* est **int**, avec NULL comme valeur par défaut.  
+ Est l’heure de la journée à laquelle l’Agent de fusion est premier planifié, au format HHMMSS. *active_start_time_of_day* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
  Heure à laquelle l’Agent de fusion cesse d'être planifié, au format HHMMSS. *active_end_time_of_day* est **int**, avec NULL comme valeur par défaut.  
@@ -178,10 +177,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Invite de commandes facultative à exécuter. *optional_command_line*est **nvarchar (4000)**, avec NULL comme valeur par défaut. Cet argument est utilisé pour ajouter une commande qui permet de capturer le résultat et de le sauvegarder dans un fichier ou de spécifier un fichier de configuration ou un attribut.  
   
  [  **@description=**] **'***description***'**  
- Est une brève description de cet abonnement de fusion. *Description*est **nvarchar (255)**, avec NULL comme valeur par défaut. Cette valeur est affichée par le moniteur de réplication dans le **nom convivial** colonne, qui peut être utilisé pour trier les abonnements d’une publication analysée.  
+ Est une brève description de cet abonnement de fusion. *Description*est **nvarchar (255)**, avec NULL comme valeur par défaut. Cette valeur est affichée par le moniteur de réplication dans le **nom convivial** colonne, qui peut être utilisé pour trier les abonnements pour une publication analysée.  
   
  [  **@enabled_for_syncmgr=**] **'***l’argument enabled_for_syncmgr***'**  
- Spécifie si l'abonnement peut être synchronisé à l'aide du Gestionnaire de synchronisation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *l’argument enabled_for_syncmgr* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si **false**, l’abonnement n’est pas inscrit avec le Gestionnaire de synchronisation. Si **true**, l’abonnement est enregistré avec le Gestionnaire de synchronisation et peut être synchronisé sans démarrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Spécifie si l'abonnement peut être synchronisé à l'aide du Gestionnaire de synchronisation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *l’argument enabled_for_syncmgr* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si **false**, l’abonnement n’est pas inscrit avec le Gestionnaire de synchronisation. Si **true**, l’abonnement est enregistré avec le Gestionnaire de synchronisation et peuvent être synchronisée sans démarrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  [  **@offloadagent=** ] *remote_agent_activation*  
  Indique si l'Agent peut être activé à distance. *remote_agent_activation* est **bits** avec une valeur par défaut **0**.  
@@ -199,7 +198,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Le *@merge_job_name* paramètre est déconseillé et ne peut pas être définie. *merge_job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
  [ **@hostname**=] **'***nom d’hôte***'**  
- Remplace la valeur retournée par [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) lorsque cette fonction est utilisée dans la clause WHERE d’un filtre paramétré. *Nom d’hôte* est **sysname**, avec NULL comme valeur par défaut.  
+ Remplace la valeur retournée par [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) lorsque cette fonction est utilisée dans la clause WHERE d’un filtre paramétré. *nom d’hôte* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Pour des raisons de performance, il est recommandé de ne pas appliquer de fonctions aux noms de colonne dans les clauses des filtres de lignes paramétrables, telles que `LEFT([MyColumn]) = SUSER_SNAME()`. Si vous utilisez [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) dans une clause de filtre et que vous remplacez la valeur HOST_NAME, il peut être nécessaire de convertir les types de données à l’aide de [convertir](../../t-sql/functions/cast-and-convert-transact-sql.md). Pour plus d'informations sur la conduite à adopter dans cette situation, consultez la section « Substitution de la valeur de HOST_NAME » de la rubrique [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
@@ -210,19 +209,19 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_addmergesubscription** est utilisé dans la réplication de fusion.  
   
- Lorsque **sp_addmergesubscription** est exécutée par un membre de la **sysadmin** rôle de serveur pour créer un abonnement par émission de données fixe le travail de l’Agent de fusion est implicitement créé et s’exécute sous le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service Agent. Nous vous recommandons d’exécuter [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) et spécifiez les informations d’identification d’un compte Windows différent, spécifique à l’agent pour **@job_login** et **@job_password**. Pour plus d’informations, voir [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Lorsque **sp_addmergesubscription** est exécutée par un membre de la **sysadmin** fixe le rôle de serveur pour créer un abonnement envoyé, le travail de l’Agent de fusion est implicitement créé et s’exécute sous le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent compte de service. Nous vous recommandons d’exécuter [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) et spécifiez les informations d’identification d’un compte Windows différent, spécifique à l’agent pour **@job_login** et **@job_password**. Pour plus d’informations, voir [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_addmergesubscription**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addmergesubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Créer un abonnement par extraction](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Résolution interactive des conflits](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
- [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  

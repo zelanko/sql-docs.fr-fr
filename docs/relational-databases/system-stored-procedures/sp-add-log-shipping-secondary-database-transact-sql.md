@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_secondary_database (Transact-SQL) | Documents Microsoft
+title: sp_add_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_database
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
-caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70abdc5cb67beeb779af3722d3b5e7f91b923e21
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 56090e1f012bb0e9d490997c9b3dcc7e497641c9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239779"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035541"
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,10 +85,10 @@ sp_add_log_shipping_secondary_database
  Si la valeur est définie à 1, les utilisateurs sont déconnectés de la base de données secondaire au moment de la restauration. Par défaut = 0. *Déconnecter* utilisateurs est **bits** et ne peut pas être NULL.  
   
  [ **@block_size** =] '*block_size*'  
- Taille, en octets, qui définit la taille des blocs pour l'unité de sauvegarde. *block_size* est **int** avec la valeur par défaut -1.  
+ Taille, en octets, qui définit la taille des blocs pour l'unité de sauvegarde. *block_size* est **int** avec une valeur par défaut de -1.  
   
  [ **@buffer_count** =] '*buffer_count*'  
- Nombre total de mémoires tampons utilisées par l'opération de sauvegarde ou de restauration. *buffer_count* est **int** avec la valeur par défaut -1.  
+ Nombre total de mémoires tampons utilisées par l'opération de sauvegarde ou de restauration. *buffer_count* est **int** avec une valeur par défaut de -1.  
   
  [ **@max_transfer_size** =] '*max_transfer_size*'  
  Taille, en octets, de la demande d'entrée ou de sortie maximale émise par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'unité de sauvegarde. *max_transfersize* est **int** et peut être NULL.  
@@ -98,7 +97,7 @@ sp_add_log_shipping_secondary_database
  Nombre de minutes pouvant s'écouler entre les opérations de restauration avant qu'une alerte ne soit générée. *restore_threshold* est **int** et ne peut pas être NULL.  
   
  [ **@threshold_alert** =] '*threshold_alert ne*'  
- Est de l’alerte à déclencher lorsque le seuil de sauvegarde est dépassé. *l’argument threshold_alert* est **int**, avec 14 420 comme valeur par défaut.  
+ Est l’alerte à déclencher lorsque le seuil de sauvegarde est dépassé. *threshold_alert ne* est **int**, avec 14 420 comme valeur par défaut.  
   
  [ **@threshold_alert_enabled** =] '*threshold_alert_enabled*'  
  Indique si une alerte est générée lorsque *backup_threshold* est dépassé. La valeur 1 par défaut indique que l'alerte sera générée. *threshold_alert_enabled* est **bits**.  
@@ -110,24 +109,24 @@ sp_add_log_shipping_secondary_database
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  **sp_add_log_shipping_secondary_database** doit être exécuté à partir de la **master** base de données sur le serveur secondaire. Elle effectue les actions suivantes :  
   
-1.  **sp_add_log_shipping_secondary_primary** doit être appelée avant cette procédure stockée pour initialiser l’informations de base de données sur le serveur secondaire de copie des journaux de principal.  
+1.  **sp_add_log_shipping_secondary_primary** doit être appelée avant cette procédure stockée pour initialiser le journal principal les informations de base de données sur le serveur secondaire d’expédition.  
   
-2.  Ajoute une entrée pour la base de données secondaire **log_shipping_secondary_databases** à l’aide des arguments fournis.  
+2.  Ajoute une entrée pour la base de données secondaire dans **log_shipping_secondary_databases** à l’aide des arguments fournis.  
   
 3.  Ajoute un enregistrement moniteur local dans **log_shipping_monitor_secondary** sur le serveur secondaire à l’aide des arguments fournis.  
   
 4.  Si le serveur moniteur est différent du serveur secondaire, ajoute un enregistrement moniteur dans **log_shipping_monitor_secondary** sur le moniteur de serveur à l’aide des arguments fournis.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
- Cet exemple illustre l’utilisation de la **sp_add_log_shipping_secondary_database** procédure stockée pour ajouter la base de données **LogShipAdventureWorks** en tant que base de données secondaire dans une configuration d’envoi de journaux avec la base de données primaire [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] résidant sur le serveur principal TRIBECA.  
+ Cet exemple illustre l’utilisation de la **sp_add_log_shipping_secondary_database** procédure pour ajouter la base de données stockée **LogShipAdventureWorks** en tant que base de données secondaire dans une configuration d’envoi de journaux avec la base de données primaire [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] résidant sur le serveur principal TRIBECA.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_database   
@@ -144,7 +143,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de journaux de transaction & #40 ; SQL Server & #41 ;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

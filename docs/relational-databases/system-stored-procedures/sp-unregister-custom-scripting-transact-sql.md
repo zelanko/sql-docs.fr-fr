@@ -1,5 +1,5 @@
 ---
-title: sp_unregister_custom_scripting (Transact-SQL) | Documents Microsoft
+title: sp_unregister_custom_scripting (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_unregister_custom_scripting
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9956d2836bc9111105117a816189ec284eba3664
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a62df4743139a976a5571b07b762127e95c6d5c3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999016"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037802"
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cette procédure stockée supprime une procédure stockée personnalisée définie par l’utilisateur ou [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script qui a été enregistré par l’exécution de [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
+  Cette procédure stockée supprime une procédure stockée personnalisée définie par l’utilisateur ou [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script qui a été enregistrée en exécutant [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
  [ **@type** =] **'***type***'**  
  Type de la procédure stockée personnalisée ou du script personnalisé à supprimer. *type* est **varchar (16)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**insert**|Procédure stockée ou script personnalisé enregistré, exécuté lors de la réplication d'une instruction INSERT.|  
 |**Mise à jour**|Procédure stockée ou script personnalisé enregistré, exécuté lors de la réplication d'une instruction UPDATE.|  
@@ -69,8 +69,8 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="remarks"></a>Notes  
  **sp_unregister_custom_scripting** est utilisé dans la réplication transactionnelle et d’instantané.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe ou la **db_ddladmin** du rôle de base de données fixe peut exécuter **sp_unregister_custom_scripting**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe ou le **db_ddladmin** rôle de base de données fixe peuvent exécuter **sp_ unregister_custom_scripting**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_db_selective_xml_index (Transact-SQL) | Documents Microsoft
+title: sp_db_selective_xml_index (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_db_selective_xml_index procedure
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af5f2cd7f027c583c8eeb262834ce90700b37ae0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7cbf1ef48a7cdc66a7e895c371a83e2648c6a602
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237036"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022169"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33237036"
   Active ou désactive la fonctionnalité d'index XML sélectif sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Appelée sans paramètres, la procédure stockée retourne 1 si l'index XML sélectif est activé sur une base de données particulière.  
   
 > [!NOTE]  
->  Afin de désactiver l’Index XML sélectif à l’aide de cette procédure stockée, la base de données doit être mis en mode de récupération simple à l’aide du [Options ALTER DATABASE SET &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) commande.  
+>  Afin de désactiver l’Index XML sélectif à l’aide de cette procédure stockée, la base de données doit être placée en mode de récupération simple à l’aide de la [Options ALTER DATABASE SET &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) commande.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "33237036"
   
 ## <a name="arguments"></a>Arguments  
  [ **@ db_name =** ] **'***db_name***'**  
- Nom de la base de données sur laquelle l'index XML sélectif doit être activé ou désactivé. Si *db_name* est NULL, la base de données actuelle est supposé.  
+ Nom de la base de données sur laquelle l'index XML sélectif doit être activé ou désactivé. Si *db_name* est NULL, la base de données en cours est supposé.  
   
  [  **@action =** ] **'***action***'**  
  Détermine s'il faut activer ou désactiver l'index. Si une valeur autre que 'on', ‘true’, ‘off’ ou ‘false’ est passée, une erreur sera générée.  

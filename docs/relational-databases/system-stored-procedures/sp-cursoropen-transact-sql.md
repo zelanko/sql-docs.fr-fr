@@ -1,5 +1,5 @@
 ---
-title: sp_cursoropen (Transact-SQL) | Documents Microsoft
+title: sp_cursoropen (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6dae6b21a86c6cc68ab241328c5c190580888c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c10ba380b31a2d8169dcf0a57de15418db059eac
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240319"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028158"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sp_cursoropen cursor OUTPUT, stmt
   
 ## <a name="arguments"></a>Arguments  
  *cursor*  
- Identificateur de curseur généré par SQL Server. *curseur* est un *gérer* valeur qui doit être fourni pour toutes les procédures suivantes impliquant le curseur, par exemple sp_cursorfetch. *curseur* est un paramètre obligatoire avec une **int** valeur de retour.  
+ Identificateur de curseur généré par SQL Server. *curseur* est un *gérer* valeur qui doit être fourni pour toutes les procédures suivantes qui impliquent le curseur, par exemple sp_cursorfetch. *curseur* est un paramètre obligatoire avec une **int** valeur de retour.  
   
- *curseur* permet à plusieurs curseurs d’être actives sur une connexion de base de données unique.  
+ *curseur* permet à plusieurs curseurs d’être actifs sur une connexion de base de données unique.  
   
  *stmt*  
- Paramètre obligatoire qui définit le jeu de résultats de curseur. Toute chaîne de requête valide (syntaxe et liaison) de n’importe quel type de chaîne (indépendamment des données Unicode, taille, etc.) peut servir valide *stmt* type valeur.  
+ Paramètre obligatoire qui définit le jeu de résultats de curseur. N’importe quelle chaîne de requête valide (syntaxe et liaison) de n’importe quel type de chaîne (indépendamment des données Unicode, taille, etc.) peut servir de valide *stmt* type de valeur.  
   
- *paramètres scrollopt*  
- Option de défilement. *paramètres scrollopt* est un paramètre optionnel qui requiert l’une des opérations suivantes **int** valeurs d’entrée.  
+ *scrollopt*  
+ Option de défilement. *scrollopt* est un paramètre optionnel qui requiert l’une des opérations suivantes **int** valeurs d’entrée.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,16 +74,16 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- En raison de la possibilité que la valeur demandée n’est pas appropriée pour le curseur défini par *stmt*, ce paramètre sert à la fois d’entrée et sortie. Dans de tels cas, SQL Server affecte une valeur appropriée.  
+ En raison de la possibilité que la valeur demandée n’est pas appropriée pour le curseur défini par *stmt*, ce paramètre sert à la fois d’entrée et de sortie. Dans de tels cas, SQL Server affecte une valeur appropriée.  
   
  *ccopt*  
  Option de contrôle en matière d'accès concurrentiel. *ccopt* est un paramètre optionnel qui requiert l’une des opérations suivantes **int** valeurs d’entrée.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (précédemment appelé LOCKCC)|  
-|0x0004|**OPTIMISTE** (précédemment appelé optcc)|  
+|0x0004|**OPTIMISTE** (anciennement optcc)|  
 |0x0008|OPTIMISTIC (précédemment appelé OPTCCVAL)|  
 |0x2000|ALLOW_DIRECT|  
 |0x4000|UPDT_IN_PLACE|  
@@ -96,11 +96,11 @@ sp_cursoropen cursor OUTPUT, stmt
  Comme avec *scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent substituer demandé *ccopt* valeurs.  
   
  *nombre de lignes*  
- Nombre de lignes de tampon d'extraction à utiliser avec AUTO_FETCH. La valeur par défaut est de 20 lignes. *nombre de lignes* se comporte différemment lorsque affecté comme une valeur d’entrée ou une valeur de retour.  
+ Nombre de lignes de tampon d'extraction à utiliser avec AUTO_FETCH. La valeur par défaut est de 20 lignes. *nombre de lignes* se comporte différemment lorsqu’assigné comme une valeur d’entrée ou une valeur de retour.  
   
 |Comme une valeur d'entrée|Comme une valeur de retour|  
 |--------------------|---------------------|  
-|Lorsque le AUTO_FETCH *scrollopt* valeur est spécifiée *rowcount* représente le nombre de lignes à placer dans le tampon d’extraction.<br /><br /> Remarque : > 0 est une valeur valide quand AUTO_FETCH est spécifiée, mais il est ignoré.|Représente le nombre de lignes dans le résultat défini, sauf quand le *scrollopt* la valeur AUTO_FETCH est spécifiée.|  
+|Lorsque le AUTO_FETCH *scrollopt* est spécifiée *rowcount* représente le nombre de lignes à placer dans le tampon d’extraction.<br /><br /> Remarque : > 0 est une valeur valide quand AUTO_FETCH est spécifiée, mais est sinon ignoré.|Représente le nombre de lignes dans le résultat défini, sauf quand le *scrollopt* AUTO_FETCH est spécifiée.|  
   
 -  
   
@@ -122,7 +122,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0x0002  
  Une opération FETCH est en cours.  
   
- Un  
+ A  
  Ce curseur a été libéré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et n'est pas disponible.  
   
  Lorsqu'une erreur est générée, les valeurs de retour peuvent être incohérentes et l'exactitude ne peut pas être garantie.  
@@ -133,7 +133,7 @@ sp_cursoropen cursor OUTPUT, stmt
  Retourné si le nombre de lignes est inconnu ou non applicable.  
   
  -n  
- Retourné lorsqu'un remplissage asynchrone est appliqué. Représente le nombre de lignes qui ont été placés dans l’extraction de la mémoire tampon quand le *scrollopt* la valeur AUTO_FETCH est spécifiée.  
+ Retourné lorsqu'un remplissage asynchrone est appliqué. Représente le nombre de lignes qui ont été placés dans l’opération de récupération de la mémoire tampon lorsque la *scrollopt* AUTO_FETCH est spécifiée.  
   
  Si l'appel de procédure distante est utilisé, les valeurs de retour sont les suivantes.  
   
@@ -157,7 +157,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ## <a name="stmt-parameter"></a>Paramètre stmt  
  Si *stmt* Spécifie l’exécution d’une procédure stockée, les paramètres d’entrée peuvent être définis en tant que constantes dans le cadre de la *stmt* de chaîne ou spécifié en tant que *boundparam* arguments. Les variables déclarées peuvent être passées comme paramètres liés de cette façon.  
   
- Le contenu autorisé du *stmt* paramètre varient en fonction du ou non le *ccopt* ALLOW_DIRECT retournent la valeur a été liée par OR au reste de la *ccopt* des valeurs, par exemple :  
+ Le contenu autorisé du *stmt* paramètre varient selon s’il faut ou non le *ccopt* ALLOW_DIRECT retourner la valeur a été liée par OR au reste de la *ccopt* des valeurs, par exemple :  
   
 -   Si ALLOW_DIRECT n’est pas spécifié, soit un [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ou EXECUTE instruction appelant une procédure stockée contenant une instruction SELECT unique doit être utilisée. En outre, l’instruction SELECT doit obtenir la qualification de curseur ; Autrement dit, il ne peut pas contenir les mots clés SELECT INTO ou FOR BROWSE.  
   
@@ -174,7 +174,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH et AUTO_CLOSE peuvent être liés par OR à FAST_FORWARD.  
   
- Si check_accepted_types a la valeur ON, au moins une des cinq dernières *scrollopt* valeurs (KEYSET_ACCEPTABLE`,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE ou FAST_FORWARD_ACCEPTABLE) doit également avoir la valeur ON.  
+ Si CHECK_ACCEPTED_TYPES a la valeur ON, au moins un des cinq dernières *scrollopt* valeurs (KEYSET_ACCEPTABLE`,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE ou FAST_FORWARD_ACCEPTABLE) doit également avoir la valeur ON.  
   
  Les curseurs STATIC sont toujours ouverts comme READ_ONLY. Cela signifie que la table sous-jacente ne peut pas être mise à jour via ce curseur.  
   
@@ -188,9 +188,9 @@ sp_cursoropen cursor OUTPUT, stmt
   
  UPDT_IN_PLACE peut être lié par OR à READ_ONLY, SCROLL_LOCKS, ou l'une des valeurs OPTIMISTIC.  
   
- Si check_accepted_types a la valeur ON, au moins une des quatre dernières *ccopt* valeurs (READ_ONLY_ACCEPTABLE, SCROLL_LOCKS_ACCEPTABLE et une des valeurs OPTIMISTIC_ACCEPTABLE) doivent également avoir la valeur ON.  
+ Si check_accepted_types a la valeur ON, au moins l’une des quatre dernières *ccopt* valeurs (READ_ONLY_ACCEPTABLE, SCROLL_LOCKS_ACCEPTABLE et une des valeurs OPTIMISTIC_ACCEPTABLE) doivent également avoir la valeur ON.  
   
- Les fonctions UPDATE et DELETE positionnées peuvent être effectuées uniquement dans le tampon d’extraction et uniquement si la *ccopt* valeur est égale à SCROLL_LOCKS ou OPTIMISTIC. Si SCROLL_LOCKS est la valeur spécifiée, la réussite de l'opération est garantie. Si OPTIMISTIC est la valeur spécifiée, l'opération échoue si la ligne a changé depuis la dernière extraction.  
+ Les fonctions UPDATE et DELETE positionnées peuvent être effectuées uniquement au sein de la mémoire tampon d’extraction et seulement si le *ccopt* valeur est égale à SCROLL_LOCKS ou OPTIMISTIC. Si SCROLL_LOCKS est la valeur spécifiée, la réussite de l'opération est garantie. Si OPTIMISTIC est la valeur spécifiée, l'opération échoue si la ligne a changé depuis la dernière extraction.  
   
  La raison de cet échec est que, lorsqu'OPTIMISTIC est la valeur spécifiée, une fonction de contrôle d'accès concurrentiel optimiste est exécutée en comparant les valeurs d'horodatage ou de somme de contrôle, comme déterminé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l'une de ces lignes ne correspond pas, l'opération échoue.  
   
@@ -213,7 +213,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  *{type de données de nom de variable locale} [,... n].*  
   
- Les paramètres suivants sont utilisés pour passer les valeurs à remplacer pour les *nom de variable locale* dans l’instruction.  
+ Les paramètres suivants sont utilisés pour passer les valeurs à substituer le *nom de variable locale* dans l’instruction.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   

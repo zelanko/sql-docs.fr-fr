@@ -1,5 +1,5 @@
 ---
-title: sp_helpsubscriptionerrors (Transact-SQL) | Documents Microsoft
+title: sp_helpsubscriptionerrors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpsubscriptionerrors
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d02a5a5323956bb5835d41ff3c9df6fcccf630d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 870e8197a8182ab813ea8b165b46b4888f96726e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996856"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031962"
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,18 +66,18 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 ## <a name="result-set"></a>Jeu de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Identification de l'erreur|  
+|**id**|**Int**|Identification de l'erreur|  
 |**time**|**datetime**|Heure à laquelle l'erreur s'est produite.|  
-|**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**source_type_id**|**int**|Identification du type de source de l'erreur|  
+|**error_type_id**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**source_type_id**|**Int**|Identification du type de source de l'erreur|  
 |**source_name**|**nvarchar(100)**|Nom de la source de l'erreur|  
 |**error_code**|**sysname**|Code d'erreur|  
-|**texte_erreur**|**ntext**|Message d’erreur.|  
+|**texte_erreur**|**ntext**|message d’erreur.|  
 |**xact_seqno**|**varbinary(16)**|Numéro séquentiel dans le journal de la première transaction du traitement dont l'exécution a échoué. Uniquement utilisé par les Agents de distribution, c'est le numéro séquentiel dans le journal de la première transaction dans le lot dont l'exécution a échoué.|  
-|**id_de_commande**|**int**|ID de commande du traitement dont l'exécution a échoué. Utilisé uniquement par les Agents de distribution, il s'agit de l'ID de commande de la première commande du lot en échec.|  
-|**session_id**|**int**|ID de la session de l'agent dans laquelle l'erreur s'est produite.|  
+|**command_id**|**Int**|ID de commande du traitement dont l'exécution a échoué. Utilisé uniquement par les Agents de distribution, il s'agit de l'ID de commande de la première commande du lot en échec.|  
+|**session_id**|**Int**|ID de la session de l'agent dans laquelle l'erreur s'est produite.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -85,8 +85,8 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Notes  
  **sp_helpsubscriptionerrors** est utilisé avec la réplication transactionnelle et de capture instantanée.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_helpsubscriptionerrors**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_helpsubscriptionerrors**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   

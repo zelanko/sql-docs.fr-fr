@@ -1,5 +1,5 @@
 ---
-title: sp_enum_proxy_for_subsystem (Transact-SQL) | Documents Microsoft
+title: sp_enum_proxy_for_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
-caps.latest.revision: 27
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b524d44236cb9c5a070b460a3f3a0d0736b16aca
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 53ab72a592ca0d99bf9e19d68a886de8c1e091db
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251917"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030855"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,24 +63,24 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**subsystem_id**|**int**|Numéro d'identification du sous-système|  
+|**subsystem_id**|**Int**|Numéro d'identification du sous-système|  
 |**subsystem_name**|**sysname**|Nom du sous-système.|  
-|**proxy_id**|**int**|Numéro d'identification du proxy.|  
+|**proxy_id**|**Int**|Numéro d'identification du proxy.|  
 |**proxy_name**|**sysname**|Nom du proxy.|  
   
 ## <a name="remarks"></a>Notes  
  Lorsque aucun paramètre n’est fourni, **sp_enum_proxy_for_subsystem** répertorie des informations sur tous les proxys de l’instance de chaque sous-système.  
   
- Lorsqu’un id ou un nom de proxy est fourni, **sp_enum_proxy_for_subsystem** répertorie des sous-systèmes auxquels le proxy ait accès à. Lorsqu’un id ou un nom de sous-système est fourni, **sp_enum_proxy_for_subsystem** répertorie des proxys qui ont accès à ce sous-système.  
+ Lorsqu’un id ou un nom de proxy est fourni, **sp_enum_proxy_for_subsystem** répertorie des sous-systèmes auxquels le proxy a accès à. Lorsqu’un id ou un nom de sous-système est fourni, **sp_enum_proxy_for_subsystem** répertorie les serveurs proxy qui ont accès à ce sous-système.  
   
  Lorsque des informations de proxy et de sous-systèmes sont fournies, le jeu de résultats renvoie une ligne si le proxy spécifié dispose d'un accès au sous-système spécifié.  
   
  Cette procédure stockée se trouve dans **msdb**.  
   
-## <a name="permissions"></a>Autorisations  
- Les autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
+## <a name="permissions"></a>Permissions  
+ Autorisations d’exécution pour cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
   

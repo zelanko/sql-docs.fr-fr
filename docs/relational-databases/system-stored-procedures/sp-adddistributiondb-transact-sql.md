@@ -1,5 +1,5 @@
 ---
-title: sp_adddistributiondb (Transact-SQL) | Documents Microsoft
+title: sp_adddistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/30/2018
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7c542df69b94ae6022b8914b050f97d4295e6df5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db1cc4feb71c3b7c7bdc09e1c62f5fa1237a3d0d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992496"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029174"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,19 +70,19 @@ sp_adddistributiondb [ @database= ] 'database'
  Nom du fichier de base de données. *data_file* est **nvarchar (255)**, avec une valeur par défaut **base de données**. Si la valeur est NULL, la procédure stockée crée un nom de fichier en utilisant le nom de la base de données.  
   
  [  **@data_file_size=**] *taille_du_fichier_de_données*  
- Taille initiale du fichier de données en mégaoctets (MB). *l’argument taille_du_fichier_de_données i*s **int**, avec une valeur par défaut de 5 Mo.  
+ Taille initiale du fichier de données en mégaoctets (MB). *taille_du_fichier_de_données je*s **int**, avec une valeur par défaut de 5 Mo.  
   
  [  **@log_folder=**] **'***dossier_journal***'**  
- Est le nom du répertoire du fichier journal de base de données. *l’argument dossier_journal* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si sa valeur est NULL, le répertoire de données de cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé, par exemple `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
+ Est le nom du répertoire du fichier journal de base de données. *dossier_journal* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si sa valeur est NULL, le répertoire de données de cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé, par exemple `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
  [  **@log_file=**] **'***fichier_journal***'**  
  Est le nom du fichier journal. *fichier_journal* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si la valeur est NULL, la procédure stockée crée un nom de fichier en utilisant le nom de la base de données.  
   
  [  **@log_file_size=**] *log_file_size*  
- Taille initiale du fichier journal en mégaoctets (MB). *l’argument taille_du_fichier_journal* est **int**, avec une valeur par défaut 0 Mo, ce qui signifie que la taille du fichier est créée à l’aide du journal plus petit taille de fichier autorisée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Taille initiale du fichier journal en mégaoctets (MB). *log_file_size* est **int**, avec une valeur par défaut 0 Mo, ce qui signifie que la taille du fichier est créée en utilisant le journaux de plus petite taille de fichier autorisée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [  **@min_distretention=**] *rétention_de_distribution_minimale*  
- Période de rétention minimale, en heures, avant que les transactions soient supprimées de la base de données de distribution. *rétention_de_distribution_minimale* est **int**, avec une valeur 0 par défaut.  
+ Période de rétention minimale, en heures, avant que les transactions soient supprimées de la base de données de distribution. *rétention_de_distribution_minimale* est **int**, avec la valeur par défaut est 0.  
   
  [  **@max_distretention=**] *max_distretention*  
  Est la période de rétention maximale, en heures, avant la suppression des transactions. *max_distretention* est **int**, avec une valeur par défaut de 72 heures. Les abonnements qui n'ont pas reçu de commandes répliquées plus anciennes que la période de rétention maximale de la distribution sont marqués comme inactifs et doivent être réinitialisés. Une instruction RAISERROR 21011 est émise pour chaque abonnement inactif. La valeur **0** signifie que les transactions répliquées n’est pas stockées dans la base de données de distribution.  
@@ -92,7 +91,7 @@ sp_adddistributiondb [ @database= ] 'database'
  Nombre d'heures de rétention de l'historique. *history_retention* est **int**, avec une valeur par défaut de 48 heures.  
   
  [  **@security_mode=**] *security_mode*  
- Mode de sécurité à utiliser lors de la connexion à un serveur de distribution. *security_mode* est **int**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification ; **1** Spécifie l’authentification intégrée de Windows.  
+ Mode de sécurité à utiliser lors de la connexion à un serveur de distribution. *security_mode* est **int**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification ; **1** Spécifie l’authentification intégrée Windows.  
   
  [  **@login=**] **'***connexion***'**  
  Nom de connexion utilisé lors de la connexion au serveur de distribution pour créer la base de données de distribution. Cela est nécessaire si *security_mode* a la valeur **0**. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
@@ -100,23 +99,23 @@ sp_adddistributiondb [ @database= ] 'database'
  [  **@password=**] **'***mot de passe***'**  
  Mot de passe utilisé lors de la connexion au serveur de distribution. Cela est nécessaire si *security_mode* a la valeur **0**. *mot de passe* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@createmode=**] *mode de création*  
- *mode de création* est **int**, avec une valeur par défaut 1, et peut prendre l’une des valeurs suivantes.  
+ [  **@createmode=**] *createmode*  
+ *createmode* est **int**, avec une valeur par défaut 1, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**1** (par défaut)|CRÉER une base de données ou utiliser l’existant de base de données, puis appliquez **instdist.sql** pour créer des objets de réplication dans la base de données de distribution.|  
+|**1** (par défaut)|CRÉER une base de données ou utiliser l’existant de base de données, puis appliquer **instdist.sql** fichier à créer des objets de réplication dans la base de données de distribution.|  
 |**2**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
  [  **@from_scripting =** ] *from_scripting*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
  
  [  **@deletebatchsize_xact=**] *deletebatchsize_xact*  
- Spécifie la taille du lot à utiliser pendant le nettoyage des transactions expirées à partir des tables MSRepl_Transactions. *deletebatchsize_xact* est **int**, avec la valeur par défaut est 5000. Ce paramètre a été introduit dans SQL Server 2017, suivi par les versions de SQL Server 2012 SP4 et SQL Server 2016 SP2.  
+ Spécifie la taille de lot à utiliser pendant le nettoyage de transactions expirées à partir des tables MSRepl_Transactions. *deletebatchsize_xact* est **int**, avec une valeur par défaut de 5000. Ce paramètre a été introduit dans SQL Server 2017, suivie des versions dans SQL Server 2012 SP4 et SQL Server 2016 SP2.  
 
  [  **@deletebatchsize_cmd=**] *deletebatchsize_cmd*  
- Spécifie la taille du lot à utiliser lors du nettoyage des commandes expirées à partir des tables MSRepl_Commands. *deletebatchsize_cmd* est **int**, avec la valeur par défaut est 2000. Ce paramètre a été introduit dans SQL Server 2017, suivi par les versions de SQL Server 2012 SP4 et SQL Server 2016 SP2. 
+ Spécifie la taille de lot à utiliser pendant le nettoyage des commandes expirées à partir des tables MSRepl_Commands. *deletebatchsize_cmd* est **int**, avec la valeur par défaut est 2000. Ce paramètre a été introduit dans SQL Server 2017, suivie des versions dans SQL Server 2012 SP4 et SQL Server 2016 SP2. 
  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -185,7 +184,7 @@ GO
   
 ```  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_adddistributiondb**.  
   
 ## <a name="see-also"></a>Voir aussi  

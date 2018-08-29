@@ -1,5 +1,5 @@
 ---
-title: sp_linkedservers (Transact-SQL) | Documents Microsoft
+title: sp_linkedservers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_linkedservers
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58c827d61009f2c4be3ba86f2a12f49c3eb178ff
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 009131848d6e9cf942737ddc54c3d1b00f6e1163
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252671"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038162"
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,17 +48,17 @@ sp_linkedservers
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|Nom du serveur lié.|  
 |**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|Nom du fournisseur OLE DB gérant l'accès au serveur lié spécifié.|  
 |**SRV_PRODUCT**|**nvarchar(** 128 **)**|Nom de produit du serveur lié.|  
-|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|Propriété de source de données OLE DB correspondant au serveur lié spécifié.|  
+|**INFORMATIONS SRV_DATASOURCE**|**nvarchar (** 4000 **)**|Propriété de source de données OLE DB correspondant au serveur lié spécifié.|  
 |**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|Propriété de chaîne du fournisseur OLE DB correspondant au serveur lié.|  
 |**SRV_LOCATION**|**nvarchar (** 4000 **)**|Propriété d'emplacement OLE DB correspondant au serveur lié spécifié.|  
 |**SRV_CAT**|**sysname**|Propriété de catalogue OLE DB correspondant au serveur lié spécifié.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -71,6 +71,6 @@ sp_linkedservers
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Distributed des procédures stockées de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
+ [Distribué des procédures stockées de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

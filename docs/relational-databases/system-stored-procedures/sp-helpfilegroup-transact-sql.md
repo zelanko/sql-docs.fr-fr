@@ -1,5 +1,5 @@
 ---
-title: sp_helpfilegroup (Transact-SQL) | Documents Microsoft
+title: sp_helpfilegroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpfilegroup
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61e297999776254e85372c4b6ce25927396fdff6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 085425bd8d50c31fb894268ebce416c23c285b6b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260785"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028017"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,31 +45,31 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="arguments"></a>Arguments  
  [  **@filegroupname =** ] **'***nom***'**  
- Nom logique des groupes de fichiers de la base de données active. *nom* est **sysname**, avec NULL comme valeur par défaut. Si *nom* n’est pas spécifié, tous les groupes de fichiers dans la base de données actuelle sont répertoriées et uniquement le premier jeu de résultats dans la section des jeux de résultats s’affiche.  
+ Nom logique des groupes de fichiers de la base de données active. *nom* est **sysname**, avec NULL comme valeur par défaut. Si *nom* n’est pas spécifié, tous les groupes de fichiers dans la base de données active sont répertoriées et uniquement le premier jeu de résultats dans la section jeux de résultats s’affiche.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**groupname**|**sysname**|Nom du groupe de fichiers|  
 |**GroupID**|**smallint**|Identificateur numérique du groupe de fichiers.|  
-|**FileCount**|**int**|Nombre de fichiers appartenant au groupe de fichiers.|  
+|**FileCount**|**Int**|Nombre de fichiers appartenant au groupe de fichiers.|  
   
  Si *nom* est spécifié, une ligne pour chaque fichier dans le groupe de fichiers est retournée.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|Nom logique du fichier dans le groupe de fichiers.|  
 |**fileid**|**smallint**|Identificateur numérique du fichier.|  
 |**filename**|**NCHAR(260)**|Nom physique du fichier, y compris le chemin d'accès du répertoire.|  
 |**size**|**nvarchar(15)**|Taille du fichier en kilo-octets.|  
 |**MaxSize**|**nvarchar(15)**|Taille maximale du fichier.<br /><br /> Taille maximale que peut atteindre le fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
-|**croissance**|**nvarchar(15)**|Incrément de croissance du fichier. Quantité d'espace ajoutée au fichier chaque fois que de l'espace supplémentaire est nécessaire.<br /><br /> 0 = La taille du fichier est fixe et n'augmente pas.|  
+|**Croissance**|**nvarchar(15)**|Incrément de croissance du fichier. Quantité d'espace ajoutée au fichier chaque fois que de l'espace supplémentaire est nécessaire.<br /><br /> 0 = La taille du fichier est fixe et n'augmente pas.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

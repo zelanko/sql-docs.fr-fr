@@ -19,14 +19,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7398658ce254bcfd8b4b1059625d8628852225aa
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: b83b13e1cd0c4818a21351fb5433dae89f54cd0a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108941"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032354"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Extraction d'une ligne unique avec IRow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

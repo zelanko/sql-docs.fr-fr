@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_get_captured_columns (Transact-SQL) | Documents Microsoft
+title: Sys.sp_cdc_get_captured_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: a53411c8be883f65f511473415dfc0226b21dcf2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34550580"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024144"
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,34 +51,34 @@ sys.sp_cdc_get_captured_columns
  [ @capture_instance =] '*capture_instance*'  
  Nom de l'instance de capture associée à une table source. *capture_instance* est **sysname** et ne peut pas être NULL.  
   
- Pour générer un rapport sur les instances de capture pour la table, exécutez le [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) procédure stockée.  
+ Pour créer des rapports sur les instances de capture pour la table, exécutez le [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) procédure stockée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Nom du schéma de table source.|  
 |source_table|**sysname**|Nom de la table source.|  
 |capture_instance|**sysname**|Nom de l'instance de capture.|  
 |column_name|**sysname**|Nom de la colonne source capturée.|  
-|column_id|**int**|ID de la colonne dans la table source.|  
-|column_ordinal|**int**|Position de la colonne dans la table source.|  
+|column_id|**Int**|ID de la colonne dans la table source.|  
+|column_ordinal|**Int**|Position de la colonne dans la table source.|  
 |data_type|**sysname**|Type de données de la colonne.|  
-|character_maximum_length|**int**|Longueur maximale en caractères de la colonne basée sur les caractères ; sinon, NULL.|  
+|character_maximum_length|**Int**|Longueur maximale en caractères de la colonne basée sur les caractères ; sinon, NULL.|  
 |numeric_precision|**tinyint**|Précision de la colonne si elle est numérique ; sinon, NULL.|  
 |numeric_precision_radix|**smallint**|Base de précision de la colonne si elle est numérique ; sinon, NULL.|  
-|numeric_scale|**int**|Échelle de la colonne si elle est numérique ; sinon, NULL.|  
+|numeric_scale|**Int**|Échelle de la colonne si elle est numérique ; sinon, NULL.|  
 |datetime_precision|**smallint**|Précision de la colonne si elle est basée sur datetime ; sinon, NULL.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez sys.sp_cdc_get_captured_columns pour obtenir des informations de colonne sur les colonnes capturées retournées en interrogeant les fonctions de requête de capture instance [cdc.fn_cdc_get_all_changes_ < instance_capture >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) ou [cdc.fn_cdc_get_net_changes_ < instance_capture >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). Les noms de colonnes, ID et position restent constants pendant la vie de l'instance de capture. Seul le type de données de colonne change lorsque le type de données de la colonne source sous-jacente dans la table faisant l'objet d'un suivi change. Les colonnes qui sont ajoutés ou supprimés d’une table source n’ont aucun impact sur les colonnes capturées des instances de capture existantes.  
+ Utilisez sys.sp_cdc_get_captured_columns pour obtenir des informations de colonne sur les colonnes capturées retournées en interrogeant les fonctions de requête d’instance capture [cdc.fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) ou [cdc.fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). Les noms de colonnes, ID et position restent constants pendant la vie de l'instance de capture. Seul le type de données de colonne change lorsque le type de données de la colonne source sous-jacente dans la table faisant l'objet d'un suivi change. Les colonnes qui sont ajoutées ou supprimées d’une table source n’ont aucun impact sur les colonnes capturées des instances de capture existantes.  
   
  Utilisez [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) pour obtenir plus d’informations sur la définition de données (instructions DDL language) appliquées à une table source. Toute modification DDL qui a modifié la structure d'une colonne source faisant l'objet d'un suivi est retournée dans le jeu de résultats.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle de base de données fixe db_owner. Pour tous les autres utilisateurs, requiert l'autorisation SELECT sur toutes les colonnes capturées dans la table source et, si un rôle de régulation pour l'instance de capture a été défini, l'appartenance à ce rôle de base de données. Lorsque l'appelant n'a pas l'autorisation de consulter les données sources, la fonction retourne l'erreur 22981 (L'objet n'existe pas ou l'accès est refusé.).  
   
 ## <a name="examples"></a>Exemples  

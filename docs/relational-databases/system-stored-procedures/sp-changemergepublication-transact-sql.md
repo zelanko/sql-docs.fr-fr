@@ -1,5 +1,5 @@
 ---
-title: sp_changemergepublication (Transact-SQL) | Documents Microsoft
+title: sp_changemergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 016105db76d618ed2753fc95dc5a7ee5d1288b14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 471f0f8f764256c35b0922867f0560d329123d2b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992926"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034402"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Le tableau ci-dessous décrit les propriétés modifiables de la publication ainsi que les limites liées aux valeurs de ces propriétés.  
   
-|Propriété|Valeur| Description|  
+|Propriété|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Les abonnements anonymes sont autorisés.|  
 ||**false**|Les abonnements anonymes ne sont pas autorisés.|  
@@ -99,18 +99,18 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**ftp_password**||Mot de passe utilisateur utilisé pour la connexion au service FTP.|  
 |**ftp_port**||Le numéro de port du service FTP du serveur de distribution. Indique le numéro de port TCP du site FTP où sont stockés les fichiers d'instantané de la publication.|  
 |**ftp_subdirectory**||Indique l'emplacement où sont créés les fichiers d'instantanés si la publication prend en charge la propagation d'instantanés par FTP.|  
-|**generation_leveling_threshold**|**int**|Spécifie le nombre de modifications qui sont contenus dans une génération. Une génération est une collection de modifications remises à un serveur de publication ou à un Abonné.|  
+|**generation_leveling_threshold**|**Int**|Spécifie le nombre de modifications qui sont contenus dans une génération. Une génération est une collection de modifications remises à un serveur de publication ou à un Abonné.|  
 |**keep_partition_changes**|**true**|La synchronisation est optimisée et seuls les abonnés qui détiennent des lignes dans les partitions modifiées sont concernés. La modification de cette propriété requiert un nouvel instantané.|  
 ||**false**|La synchronisation n'est pas optimisée et les partitions envoyées à tous les abonnés seront vérifiées lors de la modification de leurs données. La modification de cette propriété requiert un nouvel instantané.|  
-|**max_concurrent_merge**||Il s’agit d’un **int** qui représente le nombre maximal de processus de fusion simultanés qui peuvent être exécutées sur une publication. Si ce nombre est 0, il n'y a pas de limite. Si ce nombre est supérieur au nombre planifié de processus de fusion à exécuter simultanément, les travaux en trop sont placés dans une file d'attente jusqu'à ce qu'un processus de fusion en cours d'exécution s'achève.|  
-|**max_concurrent_dynamic_snapshots**||Il s’agit d’un **int** que représente le nombre maximal de sessions d’instantané pour générer des données filtrées de capture instantanée qui peut exécuter simultanément sur une publication de fusion qui utilise des filtres de lignes paramétrables. Si **0**, il n’existe aucune limite. Si ce nombre est supérieur au nombre planifié de processus d'instantané à exécuter simultanément, les travaux en trop sont placés dans une file d'attente jusqu'à ce qu'un processus de fusion en cours d'exécution s'achève.|  
+|**max_concurrent_merge**||Il s’agit d’un **int** qui représente le nombre maximal de processus de fusion simultanés qui peut être exécutée sur une publication. Si ce nombre est 0, il n'y a pas de limite. Si ce nombre est supérieur au nombre planifié de processus de fusion à exécuter simultanément, les travaux en trop sont placés dans une file d'attente jusqu'à ce qu'un processus de fusion en cours d'exécution s'achève.|  
+|**max_concurrent_dynamic_snapshots**||Il s’agit d’un **int** que représente le nombre maximal de sessions d’instantané pour générer les données filtrées de capture instantanée qui peut être exécutée simultanément sur une publication de fusion qui utilise des filtres de lignes paramétrables. Si **0**, il n’existe aucune limite. Si ce nombre est supérieur au nombre planifié de processus d'instantané à exécuter simultanément, les travaux en trop sont placés dans une file d'attente jusqu'à ce qu'un processus de fusion en cours d'exécution s'achève.|  
 |**post_snapshot_script**||Spécifie un pointeur vers un **.sql** emplacement du fichier. L'Agent de distribution ou de fusion exécute le script de post-instantané après que tous les autres scripts d'objets et données répliqués ont été appliqués lors d'une synchronisation initiale. La modification de cette propriété requiert un nouvel instantané.|  
 |**pre_snapshot_script**||Spécifie un pointeur vers un **.sql** emplacement du fichier. L'Agent de fusion exécute le script de pré-instantané avant tous les scripts d'objets répliqués, lors de l'application d'un instantané chez un abonné. La modification de cette propriété requiert un nouvel instantané.|  
 |**publication_compatibility_level**|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 ||**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**publish_to_activedirectory**|**true**|Ce paramètre est déconseillé et il n'est pris en charge que pour la compatibilité descendante des scripts. Vous ne pouvez plus ajouter d'informations de publication dans Active Directory.|  
 ||**false**|Supprime les informations de publication d'Active Directory.|  
-|**replicate_ddl**|**1**|Instructions de définition Language (DDL) de données qui sont exécutées sur le serveur de publication sont répliquées.|  
+|**replicate_ddl**|**1**|Instructions DDL (Definition Language) de données qui sont exécutées sur le serveur de publication sont répliquées.|  
 ||**0**|Les instructions DDL ne sont pas répliquées.|  
 |**retention**||Il s’agit d’un **int** qui représente le nombre de *retention_period_unit* unités pour lequel enregistrer les modifications pour la publication concernée. L'abonnement expire et doit être réinitialisé s'il n'est pas synchronisé pendant la période de rétention et que les modifications en attente qu'il aurait dû recevoir ont été supprimées par une opération de nettoyage sur le serveur de distribution. La période de rétention maximale autorisée correspond au nombre de jours entre la date actuelle et le 31 décembre 9999.<br /><br /> Remarque : La période de rétention pour les publications de fusion a une période de grâce de 24 heures pour prendre en charge les abonnés dans des fuseaux horaires différents.|  
 |**retention_period_unit**|**day**|La période de rétention est spécifiée en jours.|  
@@ -118,32 +118,32 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**month**|La période de rétention est spécifiée en mois.|  
 ||**year**|La période de rétention est spécifiée en années.|  
 |**snapshot_in_defaultfolder**|**true**|Les fichiers d'instantané sont stockés dans le dossier d'instantané par défaut.|  
-||**false**|Fichiers d’instantanés sont stockés dans l’emplacement secondaire spécifié par *alt_snapshot_folder*. Cette combinaison indique que les fichiers d'instantané sont stockés dans les emplacements par défaut et de remplacement.|  
+||**false**|Fichiers d’instantané sont stockés dans l’autre emplacement spécifié par *alt_snapshot_folder*. Cette combinaison indique que les fichiers d'instantané sont stockés dans les emplacements par défaut et de remplacement.|  
 |**snapshot_ready**|**true**|L'instantané de la publication est disponible.|  
 ||**false**|L'instantané de la publication n'est pas disponible.|  
 |**status**|**Active**|La publication est dans un état actif.|  
-||**Inactif**|La publication est dans un état inactif.|  
-|**sync_mode**|**native** ou<br /><br /> **bcp natif**|La sortie programme de la copie en bloc en mode natif de toutes les tables est utilisée pour l'instantané initial.|  
+||**inactif**|La publication est dans un état inactif.|  
+|**sync_mode**|**natif** ou<br /><br /> **bcp natif**|La sortie programme de la copie en bloc en mode natif de toutes les tables est utilisée pour l'instantané initial.|  
 ||**character**<br /><br /> ou **bcp caractère**|La sortie programme de la copie en bloc en mode caractère de toutes les tables est utilisée pour l'instantané initial, ce qui est requis pour tous les Abonnés non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**use_partition_groups**<br /><br /> Remarque : après avoir utilisé partition_groups, si vous revenez à l’utilisation **« setupbelongs »** et la valeur **use_partition_groups = false** dans **changemergearticle**, cela ne peut-être pas reflété correctement après la capture instantanée. Les déclencheurs générés par l'instantané sont conformes avec les groupes de partition.<br /><br /> La solution à ce scénario consiste à définir l’état inactif, modifiez le **use_partition_groups**, puis définissez le statut actif.|**true**|La publication utilise des partitions précalculées.|  
+|**use_partition_groups**<br /><br /> Remarque : après avoir utilisé partition_groups, si vous revenez à l’utilisation **« setupbelongs »** et définissez **use_partition_groups = false** dans **changemergearticle**, cela ne peut pas être reflété correctement après qu’un instantané est créé. Les déclencheurs générés par l'instantané sont conformes avec les groupes de partition.<br /><br /> La solution de contournement pour ce scénario consiste à définir l’état inactif, modifiez le **use_partition_groups**, puis définissez le statut actif.|**true**|La publication utilise des partitions précalculées.|  
 ||**false**|La publication n'utilise pas de partitions précalculées.|  
 |**validate_subscriber_info**||Répertorie les fonctions utilisées pour extraire des informations d'Abonné. Puis, valide les critères de filtrage dynamiques utilisés pour l'Abonné pour vérifier que les informations sont partitionnées régulièrement.|  
 |**web_synchronization_url**||Valeur par défaut de l'URL Internet utilisée pour la synchronisation Web.|  
 |NULL (par défaut)||Retourne la liste des valeurs prises en charge pour *propriété*.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *force_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+ [  **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
+ Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
- **0** Spécifie que la modification de la publication n’invalide l’instantané. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
+ **0** Spécifie que la modification de la publication n’invalide pas l’instantané. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
   
- **1** Spécifie que la modification de la publication peut invvalidate l’instantané. S’il existe des abonnements existants qui nécessiteraient un nouvel instantané, donne l’autorisation pour l’instantané existant être marqué comme obsolète et un nouvel instantané doit être créé.  
+ **1** Spécifie que la modification de la publication peut invvalidate l’instantané. S’il existe des abonnements existants qui nécessitent un nouvel instantané, donne l’autorisation pour l’instantané existant soit marqué comme obsolète et un nouvel instantané doit être généré.  
   
- Consultez la section Notes pour les propriétés, modification requiert un nouvel instantané doit être créé.  
+ Consultez la section Notes pour les propriétés qui, si modifiées, nécessitent un nouvel instantané doit être généré.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirme que l'action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *force_reinit_subscription* est un **bits** avec une valeur par défaut **0**.  
+ [  **@force_reinit_subscription =** ] *àce_reinit_subscription*  
+ Confirme que l'action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits** avec une valeur par défaut **0**.  
   
- **0** Spécifie que la modification de la publication ne requiert pas que les abonnements soient réinitialisés. Si la procédure stockée détecte que la modification nécessite la réinitialisation des abonnements existants, une erreur se produit et aucune modification n'est effectuée.  
+ **0** Spécifie que la publication de modification ne nécessite pas que les abonnements soient réinitialisés. Si la procédure stockée détecte que la modification nécessite la réinitialisation des abonnements existants, une erreur se produit et aucune modification n'est effectuée.  
   
  **1** Spécifie que si vous modifiez la publication entraînent la réinitialisation des abonnements existants et autorise la réinitialisation des abonnements se produise.  
   
@@ -155,7 +155,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_changemergepublication** est utilisé dans la réplication de fusion.  
   
- La modification des propriétés suivantes requiert qu'un nouvel instantané soit généré. Vous vous devez spécifier une valeur de **1** pour le *force_invalidate_snapshot* paramètre.  
+ La modification des propriétés suivantes requiert qu'un nouvel instantané soit généré. Vous vous devez spécifier une valeur de **1** pour le *àce_invalidate_snapshot* paramètre.  
   
 -   **alt_snapshot_folder**  
   
@@ -185,7 +185,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **use_partition_groups**  
   
- Vous devez réinitialiser les abonnements existants pour modifier les propriétés suivantes. Vous devez spécifier une valeur de **1** pour le *force_reinit_subscription* paramètre.  
+ Vous devez réinitialiser les abonnements existants pour modifier les propriétés suivantes. Vous devez spécifier une valeur de **1** pour le *àce_reinit_subscription* paramètre.  
   
 -   **dynamic_filters**  
   
@@ -196,12 +196,12 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_changemergepublication**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changemergepublication**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les propriétés d’une publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Changer les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Modifier les propriétés des publications et des articles](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   

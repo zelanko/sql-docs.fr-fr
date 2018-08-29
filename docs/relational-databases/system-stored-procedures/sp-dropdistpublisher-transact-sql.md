@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistpublisher (Transact-SQL) | Documents Microsoft
+title: sp_dropdistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_dropdistpublisher
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf5001349f38cf69a130d35f57424b8820af61fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc49942492078a1659d36fd4ad00d2116918cd5f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990434"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018219"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime un serveur de publication de distribution. Cette procédure stockée est exécutée sur une base de données du serveur.  
+  Supprime un serveur de publication de distribution. Cette procédure stockée est exécutée sur le serveur de distribution sur une base de données.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,18 +51,18 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
  Nom du serveur de publication à supprimer. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
  [  **@no_checks=** ] *no_checks*  
- Spécifie si **sp_dropdistpublisher** vérifie que le serveur de publication a désinstallé le serveur comme serveur de distribution. *no_checks* est **bits**, avec une valeur par défaut **0**.  
+ Spécifie si **sp_dropdistpublisher** vérifie que le serveur de publication a bien désinstallé le serveur comme serveur de distribution. *no_checks* est **bits**, avec une valeur par défaut **0**.  
   
- Si **0**, la réplication vérifie que le serveur de publication distant a désinstallé le serveur local comme serveur de distribution. Si le serveur de publication est local, la réplication vérifie qu'il ne reste aucun objet de publication ou de distribution sur le serveur local.  
+ Si **0**, réplication vérifie que le serveur de publication distant a désinstallé le serveur local comme serveur de distribution. Si le serveur de publication est local, la réplication vérifie qu'il ne reste aucun objet de publication ou de distribution sur le serveur local.  
   
- Si **1**, tous les objets de réplication associés à l’éditeur de distribution sont supprimés, même si un serveur de publication distant ne peut pas être atteint. Après cela, le serveur de publication distant doit désinstaller la réplication à l’aide [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) avec **@ignore_distributor**  =  **1**.  
+ Si **1**, tous les objets de réplication associés à l’éditeur de distribution sont supprimés, même si un serveur de publication distant ne peut pas être atteint. Après cette opération, le serveur de publication distant doit désinstaller à l’aide de la réplication [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) avec **@ignore_distributor**  =  **1**.  
   
  [  **@ignore_distributor=** ] *ignore_distributor*  
  Spécifie si les objets de distribution sont conservés sur le serveur de distribution lorsque le serveur de publication est supprimé. *ignore_distributor* est **bits** et peut prendre l’une des valeurs suivantes :  
   
  **1** = appartenant à des objets de distribution le *publisher* restent sur le serveur de distribution.  
   
- **0** = des objets de distribution pour le *publisher* sont nettoyées sur le serveur de distribution.  
+ **0** = des objets de distribution pour le *publisher* sont nettoyées au niveau du serveur de distribution.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -75,7 +75,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_dropdistpublisher**.  
   
 ## <a name="see-also"></a>Voir aussi  

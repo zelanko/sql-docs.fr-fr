@@ -1,5 +1,5 @@
 ---
-title: sp_addserver (Transact-SQL) | Documents Microsoft
+title: sp_addserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - machine names [SQL Server]
 - computer names
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
-caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4263ae95f80518504fca71cf5622b4d3c65c850b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f1727c6388cf70b5df3a620b281cefffb701ac4e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238496"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024429"
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,20 +48,20 @@ sp_addserver [ @server = ] 'server' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@server =** ] **'***server***'**  
+ [  **@server =** ] **'***server***»**  
  Indique le nom du serveur. Les noms de serveurs doivent être uniques et suivre les règles de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows concernant les noms des ordinateurs, bien que l'utilisation d'espaces ne soit pas autorisée. *server* est de type **sysname**et n'a pas de valeur par défaut.  
   
- Lorsque plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installés sur un ordinateur, chacune fonctionne comme s’il se trouve sur un serveur distinct. Spécifier une instance nommée en faisant référence à *server* en tant que *nomserveur\nominstance*.  
+ Lorsque plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installés sur un ordinateur, chacune fonctionne comme s’il se trouve sur un serveur distinct. Spécifiez une instance nommée en faisant référence à *server* comme *servername\instancename*.  
   
  [  **@local =** ] **'LOCAL'**  
- Spécifie que le serveur est ajouté comme un serveur local. **@local** est **varchar (10)**, avec NULL comme valeur par défaut. Spécification de **@local** en tant que **LOCAL** définit **@server** en tant que le nom du serveur local et le @@SERVERNAME fonction pour retourner la valeur de *server*.  
+ Spécifie que le serveur est ajouté comme un serveur local. **@local** est **varchar (10)**, avec NULL comme valeur par défaut. Spécification **@local** comme **LOCAL** définit **@server** en tant que le nom du serveur local et @ le @@SERVERNAME fonction pour retourner la valeur de *server*.  
   
- Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte à cette variable le nom de l'ordinateur. Par défaut, le nom d’ordinateur est les manière dont les utilisateurs se connectent à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans configuration supplémentaire nécessaire.  
+ Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte à cette variable le nom de l'ordinateur. Par défaut, le nom d’ordinateur est les manière dont les utilisateurs se connectent à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans nécessiter une configuration supplémentaire.  
   
  La définition locale entre en vigueur qu’après le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est redémarré. Seul un serveur local peut être défini dans chaque instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  [ **@duplicate_ok =** ] **'duplicate_OK'**  
- Spécifie si les noms de serveur en double sont autorisés. **@duplicate_OK** est **varchar(13)**, avec NULL comme valeur par défaut. **@duplicate_OK** peut avoir uniquement la valeur **duplicate_OK** ou NULL. Si **duplicate_OK** est spécifié et le nom du serveur qui est déjà ajouté existe, aucune erreur n’est levée. Si les paramètres nommés ne sont pas utilisés, **@local** doit être spécifié.  
+ Spécifie si les noms de serveur en double sont autorisés. **@duplicate_OK** est **varchar(13)**, avec NULL comme valeur par défaut. **@duplicate_OK** peut uniquement avoir la valeur **duplicate_OK** ou NULL. Si **duplicate_OK** est spécifié et le nom du serveur qui est déjà ajouté existe, aucune erreur n’est générée. Si les paramètres nommés ne sont pas utilisés, **@local** doit être spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -74,7 +73,7 @@ sp_addserver [ @server = ] 'server' ,
   
  À l’aide de **sp_addserver** pour ajouter un serveur distant n’est plus disponible. Utilisez de préférence [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) .  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle serveur fixe **setupadmin** .  
   
 ## <a name="examples"></a>Exemples  
@@ -88,7 +87,7 @@ sp_addserver 'ACCOUNTS', 'local';
  [Renommer un ordinateur qui héberge une Instance autonome de SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_helpserver & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procédures stockées de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   

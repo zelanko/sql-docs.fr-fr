@@ -1,5 +1,5 @@
 ---
-title: sp_helpsrvrole (Transact-SQL) | Documents Microsoft
+title: sp_helpsrvrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpsrvrole
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3addbb80d8423147a34c5b9fd9b1e3eab29471ab
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 03da770b709c30d02ef785f747bde2d4c403b105
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253761"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020754"
 ---
 # <a name="sphelpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
  [  **@srvrolename=** ] **'***rôle***'**  
  Nom du rôle serveur fixe. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* peut prendre l’une des valeurs suivantes.  
   
-|Rôle serveur fixe| Description|  
+|Rôle serveur fixe|Description|  
 |-----------------------|-----------------|  
 |sysadmin|Administrateurs système|  
 |securityadmin|Administrateurs de la sécurité|  
@@ -63,21 +63,21 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nom du rôle de serveur|  
-| Description|**sysname**|Description de ServerRole|  
+|Description|**sysname**|Description de ServerRole|  
   
 ## <a name="remarks"></a>Notes  
  Les rôles serveur fixes sont définis au niveau du serveur et possèdent les autorisations d'effectuer des opérations administratives spécifiques au niveau du serveur. Il est impossible d'ajouter, de supprimer ou de modifier des rôles serveur fixes.  
   
- Pour ajouter ou supprimer des membres de rôles de serveur, consultez [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Pour ajouter ou de membres supprimés à partir de rôles de serveur, consultez [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Toutes les connexions sont un membre public. sp_helpsrvrole ne reconnaît pas le rôle public, car, en interne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’implémente pas publics en tant que rôle.  
+ Toutes les connexions sont un membre public. sp_helpsrvrole ne reconnaît pas le rôle public, car, en interne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’implémente pas publique en tant que rôle.  
   
- sp_helpsrvrole ne prend pas un rôle de serveur défini par l’utilisateur en tant qu’argument. Pour répertorier les rôles de serveur définis par l’utilisateur, consultez les exemples de [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrole n’accepte pas un rôle de serveur défini par l’utilisateur en tant qu’argument. Pour répertorier les rôles de serveur définis par l’utilisateur, consultez les exemples dans [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  

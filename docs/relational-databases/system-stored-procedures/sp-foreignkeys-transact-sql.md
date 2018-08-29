@@ -1,5 +1,5 @@
 ---
-title: sp_foreignkeys (Transact-SQL) | Documents Microsoft
+title: sp_foreignkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_foreignkeys
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf14d0f424a81b7e990d33d5dc596676e12505ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bd49a4fd7f1c172c2f46d686cef941d19add2dad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261838"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020658"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  Nom de la table contenant une clé primaire. *l’argument nom_table_pk* est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@pktab_schema =** ] **'***schéma_table_pk***'**  
- Nom du schéma contenant une clé primaire. *l’argument schéma_table_pk*est **sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom du propriétaire.  
+ Nom du schéma contenant une clé primaire. *schéma_table_pk*est **sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom du propriétaire.  
   
  [  **@pktab_catalog =** ] **'***l’argument catalogue_table_pk***'**  
  Nom du catalogue contenant une clé primaire. *l’argument catalogue_table_pk*est **sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom de la base de données.  
@@ -72,12 +72,12 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  Nom du catalogue contenant une clé étrangère. *l’argument catalogue_table_fk*est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Divers produits SGBD prennent en charge d’affectation de noms en trois parties pour les tables (*catalogue ***.*** schéma ***.*** table*), qui est représenté dans le jeu de résultats.  
+ Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (*catalogue ***.*** schéma ***.*** table*), qui est représenté dans le jeu de résultats.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|Catalogue de la table contenant la clé primaire.|  
 |**PKTABLE_SCHEM**|**sysname**|Schéma de la table contenant la clé primaire.|  
@@ -97,9 +97,9 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  Dans le jeu de résultats, les colonnes FK_NAME et PK_NAME retournent toujours une valeur NULL.  
   
 ## <a name="remarks"></a>Notes  
- **sp_foreignkeys** interroge l’ensemble de lignes FOREIGN_KEYS de la **IDBSchemaRowset** interface du fournisseur OLE DB qui correspond à *serveur_de_la_table*. Le *table_name*, *table_schema*, *table_catalog*, et *colonne* paramètres sont passés à cette interface pour restreindre les lignes retournées.  
+ **sp_foreignkeys** interroge l’ensemble de lignes Foreign_Keys contenu dans le **IDBSchemaRowset** interface du fournisseur OLE DB qui correspond à *serveur_de_la_table*. Le *table_name*, *table_schema*, *table_catalog*, et *colonne* paramètres sont passés à cette interface pour limiter les lignes retourné.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="examples"></a>Exemples  
@@ -115,7 +115,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers & #40 ; Transact-SQL & #41 ;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

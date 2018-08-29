@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_maintenance_plan
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
-caps.latest.revision: 30
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12b5a6f22c7cfdde137b7e15b6a146175838ddd0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f8333faf08808f5299c17e159d96d3db7588df28
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018466"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021762"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="remarks"></a>Notes  
  **sp_add_maintenance_plan** doit être exécuté à partir de la **msdb** crée un plan de maintenance de nouveau, mais il est vide et la base de données. Pour ajouter une ou plusieurs bases de données et les associer à un travail ou les travaux, exécutez **sp_add_maintenance_plan_db** et **sp_add_maintenance_plan_job**.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_maintenance_plan**.  
   
 ## <a name="examples"></a>Exemples  

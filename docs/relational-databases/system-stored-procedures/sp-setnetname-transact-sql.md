@@ -1,5 +1,5 @@
 ---
-title: sp_setnetname (Transact-SQL) | Documents Microsoft
+title: sp_setnetname (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8671aea34c2a6ffb4e8da9791a535f0dfd0d0baf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 71dcca516c1533c048d424e68d6aaae197d032ba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251625"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024883"
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Définit les noms de réseau **sys.servers** à leurs noms d’ordinateurs réseau réels pour les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette procédure peut être utilisée pour activer l'exécution d'appels de procédures stockées distantes à des ordinateurs dont le nom réseau contient des identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non valides.  
+  Définit les noms de réseau **sys.servers** à leurs noms d’ordinateurs réseau réels pour les instances distantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette procédure peut être utilisée pour activer l'exécution d'appels de procédures stockées distantes à des ordinateurs dont le nom réseau contient des identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non valides.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ sp_setnetname
   
 ## <a name="arguments"></a>Arguments  
  **@server = '** *server* **'**  
- Nom du serveur distant tel qu'il est référencé dans la syntaxe RPC codée par l'utilisateur. Une seule ligne de **sys.servers** doit déjà exister pour pouvoir utiliser *server*. *server* est de type **sysname**et n'a pas de valeur par défaut.  
+ Nom du serveur distant tel qu'il est référencé dans la syntaxe RPC codée par l'utilisateur. Exactement une ligne dans **sys.servers** doit déjà exister pour pouvoir utiliser *server*. *server* est de type **sysname**et n'a pas de valeur par défaut.  
   
  **@netname ='** *network_name* **'**  
  Nom réseau de l'ordinateur auquel les appels de procédures stockées distantes sont effectuées. *network_name* est **sysname**, sans valeur par défaut.  
@@ -58,12 +58,12 @@ sp_setnetname
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Certains appels de procédures stockées distantes à des ordinateurs Windows peuvent rencontrer des problèmes si le nom d'ordinateur contient des identificateurs non valides.  
   
- Les serveurs liés et les serveurs distants résidant dans le même espace de nom, ils ne peuvent pas avoir le même nom. Toutefois, vous pouvez définir un serveur lié et un serveur distant sur un serveur spécifié en affectant des noms différents et à l’aide de **sp_setnetname** pour définir le nom réseau d’un d’eux au nom réseau du serveur sous-jacent.  
+ Les serveurs liés et les serveurs distants résidant dans le même espace de nom, ils ne peuvent pas avoir le même nom. Toutefois, vous pouvez définir un serveur lié et un serveur distant sur un serveur spécifié en affectant des noms différents et à l’aide de **sp_setnetname** pour définir le nom de réseau d’un d’eux au nom réseau du serveur sous-jacent.  
   
 ```  
 --Assume sqlserv2 is actual name of SQL Server   
@@ -78,7 +78,7 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 > [!NOTE]  
 >  À l’aide de **sp_setnetname** pour pointer un serveur lié sur le serveur local n’est pas pris en charge. Les serveurs référencés de cette manière ne peuvent pas participer à une transaction distribuée.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’appartenance dans le **sysadmin** et **setupadmin** rôles serveur fixes.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,5 +1,5 @@
 ---
-title: Sys.Database audit_specifications (Transact-SQL) | Documents Microsoft
+title: Sys.database_audit_specifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - sys.database_audit_specifications catalog view
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91195df8c736b15429d4ac7e339ff19217c91bfd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9581acdf727d46157925010c47f92cea00862d8b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181645"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027297"
 ---
-# <a name="sysdatabaseauditspecifications-transact-sql"></a>Sys.Database audit_specifications (Transact-SQL)
+# <a name="sysdatabaseauditspecifications-transact-sql"></a>Sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient des informations sur les spécifications de l'audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance de serveur. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|Nom|**sysname**|Nom de la spécification d’audit.|  
-|database_specification_id|**int**|ID de la spécification de base de données.|  
+|Nom   |**sysname**|Nom de la spécification d’audit.|  
+|database_specification_id|**Int**|ID de la spécification de base de données.|  
 |create_date|**datetime**|Date de création de la spécification d'audit.|  
 |modified_date|**datetime**|Date de dernière modification de la spécification d'audit.|  
 |is_state_enabled|**bit**|État de la spécification d'audit :<br /><br /> 0 – DÉSACTIVÉE<br /><br /> 1 – ACTIVÉE|  
@@ -48,10 +48,10 @@ ms.locfileid: "33181645"
 ## <a name="remarks"></a>Notes  
  Si une base de données est en mode lecture seule, la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit ne peut pas ajouter de spécifications de l'audit de la base de données.  
   
-## <a name="permissions"></a>Autorisations  
- Les principaux avec le **ALTER ANY DATABASE AUDIT** ou **VIEW DEFINITION** autorisations, le rôle dbo et les membres du rôle de base de données fixe db_owners ont accès à cette vue de catalogue. En outre, l’entité de sécurité ne doit pas être refusée **VIEW DEFINITION** autorisation.  
+## <a name="permissions"></a>Permissions  
+ Les principaux avec le **ALTER ANY DATABASE AUDIT** ou **VIEW DEFINITION** autorisations, le rôle dbo et les membres du rôle de base de données fixe db_owners ont accès à cette vue de catalogue. En outre, le principal ne doit pas être refusé **VIEW DEFINITION** autorisation.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

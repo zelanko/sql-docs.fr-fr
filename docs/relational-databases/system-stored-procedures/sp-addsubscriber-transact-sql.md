@@ -1,5 +1,5 @@
 ---
-title: sp_addsubscriber (Transact-SQL) | Documents Microsoft
+title: sp_addsubscriber (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a78d29cfa36616e1d440295d5ed089d9489ecd31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12fd46f0437354429fde60e81e6eaf33e668e948
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993036"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020022"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,9 +73,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  [  **@type=**] *type*  
  Type d'abonné. *type* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
-|**0** (valeur par défaut)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonné|  
+|**0** (valeur par défaut)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné|  
 |**1**|Serveur de la source de données ODBC.|  
 |**2**|Base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |**3**|Fournisseur OLE DB|  
@@ -125,7 +124,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**8**|Semaine|  
 |**16**|Mois|  
 |**32**|Mensuelle relative|  
-|**64** (par défaut)|Démarrage automatique|  
+|**64** (valeur par défaut)|Démarrage automatique|  
 |**128**|Périodique|  
   
 > [!NOTE]  
@@ -138,9 +137,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. La propriété est maintenant spécifiée sur une base par abonnement lors de l’exécution [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Lorsqu'une valeur est spécifiée, elle sert alors de valeur par défaut au moment de la création des abonnements pour cet Abonné et un message d'avertissement s'affiche.  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- Date de l'Agent de réplication. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuel relatif). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
+ Date de l'Agent de réplication. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1** (par défaut)|Première|  
 |**2**|Seconde|  
@@ -164,7 +163,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Une fois|  
 |**2**|Seconde|  
-|**4** (par défaut)|Minute|  
+|**4** (valeur par défaut)|Minute|  
 |**8**|Heure|  
   
 > [!NOTE]  
@@ -183,7 +182,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. La propriété est maintenant spécifiée sur une base par abonnement lors de l’exécution [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Lorsqu'une valeur est spécifiée, elle sert alors de valeur par défaut au moment de la création des abonnements pour cet Abonné et un message d'avertissement s'affiche.  
   
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Heure à laquelle l’Agent de réplication cesse d'être planifié, au format HHMMSS. *active_end_time_of_day*est **int**, avec 235959 par défaut, ce qui signifie 11:59:59 PM comme sur une horloge de 24 heures.  
+ Heure à laquelle l’Agent de réplication cesse d'être planifié, au format HHMMSS. *active_end_time_of_day*est **int**, avec 235959 par défaut, qui correspond à 11:59:59 P.M. comme sur une horloge de 24 heures.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. La propriété est maintenant spécifiée sur une base par abonnement lors de l’exécution [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Lorsqu'une valeur est spécifiée, elle sert alors de valeur par défaut au moment de la création des abonnements pour cet Abonné et un message d'avertissement s'affiche.  
@@ -195,7 +194,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. La propriété est maintenant spécifiée sur une base par abonnement lors de l’exécution [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Lorsqu'une valeur est spécifiée, elle sert alors de valeur par défaut au moment de la création des abonnements pour cet Abonné et un message d'avertissement s'affiche.  
   
  [  **@active_end_date=**] *active_end_date*  
- Date à laquelle l'Agent de réplication cesse d'être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec 99991231 par défaut, qui correspond au 31 décembre 9999.  
+ Date à laquelle l'Agent de réplication cesse d'être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec 99991231 par défaut, ce qui signifie que le 31 décembre 9999.  
   
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. La propriété est maintenant spécifiée sur une base par abonnement lors de l’exécution [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Lorsqu'une valeur est spécifiée, elle sert alors de valeur par défaut au moment de la création des abonnements pour cet Abonné et un message d'avertissement s'affiche.  
@@ -210,13 +209,13 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. La propriété est maintenant spécifiée sur une base par abonnement lors de l’exécution [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Lorsqu'une valeur est spécifiée, elle sert alors de valeur par défaut au moment de la création des abonnements pour cet Abonné et un message d'avertissement s'affiche.  
   
  [  **@encrypted_password=**] *encrypted_password*  
- Ce paramètre est déconseillé et est fourni pour assurer la compatibilité descendante uniquement le paramètre *encrypted_password* n’importe quelle valeur mais **0** entraîne une erreur.  
+ Ce paramètre est déconseillé et est fourni pour la compatibilité descendante uniquement définissant *encrypted_password* à n’importe quelle valeur mais **0** entraîne une erreur.  
   
  [ **@publisher**=] **'***publisher***'**  
  Spécifie un serveur de publication non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  *serveur de publication* ne doit pas être utilisé lors de la publication d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
+>  *serveur de publication* ne doit pas être utilisé lors de la publication à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -224,16 +223,16 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## <a name="remarks"></a>Notes  
  **sp_addsubscriber** est utilisé dans la réplication de capture instantanée, la réplication transactionnelle et la réplication de fusion.  
   
- **sp_addsubscriber** n’est pas requis lors de l’abonné dispose uniquement d’abonnements anonymes aux publications de fusion.  
+ **sp_addsubscriber** n’est pas nécessaire lors de l’abonné dispose uniquement d’abonnements anonymes aux publications de fusion.  
   
- **sp_addsubscriber** écrit dans le [MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md) de table dans le **distribution** base de données.  
+ **sp_addsubscriber** écrit dans le [MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md) table dans le **distribution** base de données.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_addsubscriber**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Créer un abonnement par extraction](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  

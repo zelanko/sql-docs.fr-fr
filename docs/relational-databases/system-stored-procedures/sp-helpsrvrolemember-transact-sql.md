@@ -1,5 +1,5 @@
 ---
-title: sp_helpsrvrolemember (Transact-SQL) | Documents Microsoft
+title: sp_helpsrvrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4c800464cf0da918e748ba6b6c9d1ffc4c093a0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4bbc6ed2343b9a659b30b737135c9f28cb2b401b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250726"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035233"
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
  *rôle* peut être une des valeurs suivantes.  
   
-|Rôle serveur fixe| Description|  
+|Rôle serveur fixe|Description|  
 |-----------------------|-----------------|  
 |sysadmin|Administrateurs système|  
 |securityadmin|Administrateurs de la sécurité|  
@@ -65,7 +65,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nom du rôle de serveur|  
 |MemberName|**sysname**|Nom d’un membre du rôle serveur|  
@@ -74,13 +74,13 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ## <a name="remarks"></a>Notes  
  Utilisez sp_helprolemember pour afficher les membres d’un rôle de base de données.  
   
- Toutes les connexions sont un membre public. sp_helpsrvrolemember ne reconnaît pas le rôle public, car, en interne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’implémente pas publics en tant que rôle.  
+ Toutes les connexions sont un membre public. sp_helpsrvrolemember ne reconnaît pas le rôle public, car, en interne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’implémente pas publique en tant que rôle.  
   
- Pour ajouter ou supprimer des membres de rôles de serveur, consultez [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Pour ajouter ou de membres supprimés à partir de rôles de serveur, consultez [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- sp_helpsrvrolemember ne prend pas un rôle de serveur défini par l’utilisateur en tant qu’argument. Pour déterminer les membres d’un rôle de serveur défini par l’utilisateur, consultez les exemples de [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrolemember n’accepte pas un rôle de serveur défini par l’utilisateur en tant qu’argument. Pour déterminer les membres d’un rôle de serveur défini par l’utilisateur, consultez les exemples de [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  

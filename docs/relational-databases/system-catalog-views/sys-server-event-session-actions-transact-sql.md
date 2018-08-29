@@ -1,5 +1,5 @@
 ---
-title: Sys.server_event_session_actions (Transact-SQL) | Documents Microsoft
+title: Sys.server_event_session_actions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,30 +22,30 @@ helpviewer_keywords:
 - xe
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d5593ee2852542af4bee958846172f30a2b0a07
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cfb1abc59c30f9524c026bbe48095a1a0bcb7cc4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220560"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026948"
 ---
 # <a name="sysservereventsessionactions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque action d'un événement d'une session d'événements.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
-|event_id|**int**|ID de l'événement. Cet ID est unique dans l'objet de la session d'événements. N'accepte pas la valeur NULL.|  
-|name|**sysname**|Le nom de l’action. Autorise la valeur NULL.|  
+|event_session_id|**Int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
+|event_id|**Int**|ID de l'événement. Cet ID est unique dans l'objet de la session d'événements. N'accepte pas la valeur NULL.|  
+|NAME|**sysname**|Le nom de l’action. Autorise la valeur NULL.|  
 |package|**sysname**|Nom du package d'événement qui contient l'événement. Autorise la valeur NULL.|  
 |module|**sysname**|Nom du module qui contient l'événement. Autorise la valeur NULL.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  

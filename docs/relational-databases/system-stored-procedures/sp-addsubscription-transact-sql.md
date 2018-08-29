@@ -17,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-caps.latest.revision: 53
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08f0e46bde340eb1b64f8c7ad9ba2d1f8ec63d9f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea2923af852801639d3cc2007d872a2823bc5d1b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989331"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026868"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +147,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-| 1|Une fois|  
+|1|Une fois|  
 |2|À la demande|  
 |4|Tous les jours|  
 |8|Semaine|  
@@ -165,7 +164,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-| 1|Première|  
+|1|Première|  
 |2|Seconde|  
 |4|Troisième|  
 |8|Quatrième|  
@@ -180,7 +179,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-| 1|Une fois|  
+|1|Une fois|  
 |2|Seconde|  
 |4|Minute|  
 |8|Heure|  
@@ -283,8 +282,8 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|0 (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonné|  
-| 1|Serveur de la source de données ODBC.|  
+|0 (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné|  
+|1|Serveur de la source de données ODBC.|  
 |2|Base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |3|Fournisseur OLE DB|  
   
@@ -315,7 +314,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  Lors de la sélection des options **sync_type** , *replication support only*, *initialize with backup*ou *initialize from lsn*, l'Agent de lecture du journal doit s'exécuter après l'exécution de **sp_addsubscription**, afin que les scripts d'installation soient écrits dans la base de données de distribution. L'Agent de lecture du journal doit s'exécuter sous un compte membre du rôle serveur fixe **sysadmin** . Lorsque l'option **sync_type** a la valeur *Automatic*, aucune action particulière de l'Agent de lecture du journal n'est requise.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres du rôle serveur fixe sysadmin ou du rôle de base de données fixe db_owner peuvent exécuter sp_addsubscription. Pour les abonnements par extraction de données (pull), les utilisateurs ayant une connexion à la liste d'accès aux publications peuvent exécuter sp_addsubscription.  
   
 ## <a name="example"></a>Exemple  

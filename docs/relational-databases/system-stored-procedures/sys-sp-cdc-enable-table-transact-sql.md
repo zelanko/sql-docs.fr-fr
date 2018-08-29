@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_enable_table (Transact-SQL) | Documents Microsoft
+title: Sys.sp_cdc_enable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0ed70b21e667a1738433335e3e3c869c3b410523
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 309c72bea23d32f50070e140f641030703ee42b1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263517"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032889"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sys.sp_cdc_enable_table
  [  **@source_name =** ] **'***source_name***'**  
  Nom de la table source sur laquelle activer la capture de données modifiées. *source_name* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
   
- *source_name* doit exister dans la base de données actuelle. Les tables dans le **cdc** le schéma ne peut pas être activé pour la capture de données modifiées.  
+ *source_name* doit exister dans la base de données actuelle. Tables dans le **cdc** schéma ne peut pas être activé pour la capture de données modifiées.  
   
  [  **@role_name =** ] **'***nom_rôle***'**  
  Nom du rôle de base de données utilisé pour réguler l'accès aux données modifiées. *nom_rôle* est **sysname** et doit être spécifié. En cas de définition explicitement sur NULL, aucun rôle de régulation n'est utilisé pour limiter l'accès aux données de modifications.  
@@ -75,7 +74,7 @@ sys.sp_cdc_enable_table
  [  **@capture_instance =** ] **'***capture_instance***'**  
  Nom de l'instance de capture utilisée pour nommer les objets de capture de données modifiées spécifiques à l'instance. *capture_instance* est **sysname** et ne peut pas être NULL.  
   
- Si non spécifié, le nom est dérivé du nom de schéma ainsi que le nom de la table source au format *schemaname_sourcename*. *capture_instance* ne peut pas dépasser 100 caractères et doit être unique au sein de la base de données. Si spécifié ou dérivé, *capture_instance* n’importe quel espace blanc situé à droite de la chaîne est retiré.  
+ Si non spécifié, le nom est dérivé du nom de schéma ainsi que le nom de la table source au format *schemaname_sourcename*. *capture_instance* ne peut pas dépasser 100 caractères et doit être unique au sein de la base de données. Si spécifié ou dérivé, *capture_instance* n’importe quel espace blanc à droite de la chaîne est retiré.  
   
  Une table source peut avoir un maximum de deux instances de capture. Pour plus d’informations, consultez [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
@@ -86,7 +85,7 @@ sys.sp_cdc_enable_table
   
  S'il a la valeur 1, les fonctions nécessaires pour interroger les modifications nettes sont générées également.  
   
- Si *supports_net_changes* est définie sur 1, *index_name* doit être spécifié, ou la table source doit avoir une clé primaire définie.  
+ Si *supports_net_changes* est défini sur 1, *index_name* doit être spécifié, ou la table source doit avoir une clé primaire définie.  
   
  [  **@index_name =** ] **' *** index_name*'  
  Nom d'un index unique utilisé pour identifier de manière unique les lignes dans la table source. *index_name* est **sysname** et peut être NULL. Si spécifié, *index_name* doit être un index unique valid sur la table source. Si *index_name* est spécifié, les colonnes d’index identifiées prévaut sur toute colonne de clé primaire définie comme identificateur de ligne unique pour la table.  
@@ -94,7 +93,7 @@ sys.sp_cdc_enable_table
  [  **@captured_column_list =** ] **'***captured_column_list***'**  
  Identifie les colonnes de la table source qui doivent être incluses dans la table de modifications. *captured_column_list* est **nvarchar (max)** et peut être NULL. Si la valeur est NULL, toutes les colonnes sont incluses dans la table de modifications.  
   
- Les noms de colonnes doivent être des colonnes valides dans la table source. Les colonnes définies dans un index de clé primaire ou les colonnes définies dans un index référencé par *index_name* doit être inclus.  
+ Les noms de colonnes doivent être des colonnes valides dans la table source. Colonnes définies dans un index de clé primaire, ou les colonnes définies dans un index référencé par *index_name* doit être inclus.  
   
  *captured_column_list* est une liste séparée par des virgules de noms de colonnes. Des noms de colonnes individuels dans la liste peuvent être cités en utilisant des guillemets doubles ("") ou des crochets ([]). Si un nom de colonne contient une virgule incorporée, il doit être entouré de guillemets.  
   
@@ -117,23 +116,23 @@ sys.sp_cdc_enable_table
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- Pour pouvoir activer une table pour la capture de données modifiées, la base de données doit être activée. Pour déterminer si la base de données est activée pour la capture de données modifiées, interrogez la **is_cdc_enabled** colonne dans la [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vue de catalogue. Pour activer la base de données, utilisez la [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) procédure stockée.  
+ Pour pouvoir activer une table pour la capture de données modifiées, la base de données doit être activée. Pour déterminer si la base de données est activée pour la capture de données modifiées, interrogez la **is_cdc_enabled** colonne dans le [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vue de catalogue. Pour activer la base de données, utilisez le [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) procédure stockée.  
   
  Lorsque la capture de données modifiées est activée pour une table, une table de modifications et une ou deux fonctions de requêtes sont générées. La table de modifications sert de base de données de référentiel pour les modifications de table source extraites du journal des transactions par le processus de capture. Les fonctions de requête sont utilisées pour extraire des données de la table de modifications. Les noms de ces fonctions sont dérivés de la *capture_instance* paramètre comme suit :  
   
--   Fonction de toutes les modifications : **cdc.fn_cdc_get_all_changes_ < instance_capture >**  
+-   Fonction de toutes les modifications : **cdc.fn_cdc_get_all_changes_ < capture_instance >**  
   
--   Fonction des modifications nettes : **cdc.fn_cdc_get_net_changes_ < instance_capture >**  
+-   Fonction de modifications nettes : **cdc.fn_cdc_get_net_changes_ < capture_instance >**  
   
- **Sys.sp_cdc_enable_table** crée également les tâches de capture et de nettoyage pour la base de données si la table source est la première table dans la base de données doit être activée pour la capture de données modifiées et qu’aucune publication transactionnelle n’existe pour la base de données. Il définit les **is_tracked_by_cdc** colonne dans la [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) affichage 1 catalogue.  
+ **Sys.sp_cdc_enable_table** crée également les tâches de capture et de nettoyage pour la base de données si la table source est la première table dans la base de données doit être activé pour la capture de données modifiées et aucune publication transactionnelle n’existe pour la base de données. Il définit le **is_tracked_by_cdc** colonne dans le [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) affichage 1 catalogue.  
   
 > [!NOTE]  
 >  Il n'est pas nécessaire que l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soit en cours d'exécution lorsque la capture de données modifiées est activée pour une table. Toutefois, le processus de capture ne traitera pas le journal des transactions et n'écrira pas d'entrées dans la table de modifications si l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne s'exécute pas.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’appartenance dans le **db_owner** rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  

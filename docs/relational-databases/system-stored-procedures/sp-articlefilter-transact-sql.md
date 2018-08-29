@@ -1,5 +1,5 @@
 ---
-title: sp_articlefilter (Transact-SQL) | Documents Microsoft
+title: sp_articlefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articlefilter
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ec7582f644a3701ef209c2ad3d4774e1aefdfb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a562613e5c22d50b3aec0c338ac09b2cad7355e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992542"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032602"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,17 +62,17 @@ sp_articlefilter [ @publication = ] 'publication'
  [  **@filter_clause=**] **'***filter_clause***'**  
  Clause de restriction (WHERE) qui définit un filtre horizontal. Lorsque vous entrez la clause de restriction, omettez le mot clé où. *filter_clause* est **ntext**, avec NULL comme valeur par défaut.  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *force_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+ [  **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
+ Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications de l’article n’invalident pas l’instantané n’est pas valide. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
   
- **1** indique que les modifications apportées à l’article peuvent invalider l’instantané n’est pas valide, s’il existe des abonnements nécessitant un nouvel instantané pour générer un nouvel instantané et de l’instantané existant soit marqué comme obsolète.  
+ **1** Spécifie que les modifications apportées à l’article peuvent invalider l’instantané n’est pas valide et il existe des abonnements qui nécessitent un nouvel instantané, autorise l’instantané existant soit marqué comme obsolète et de générer un nouvel instantané.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *force_reinit_subscription* est un **bits**, avec une valeur par défaut **0**.  
+ [  **@force_reinit_subscription =** ] *àce_reinit_subscription*  
+ Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits**, avec une valeur par défaut **0**.  
   
- **0** Spécifie que les modifications de l’article n’invalident pas nécessaire pour la réinitialisation des abonnements. Si la procédure stockée détecte que la modification requiert la réinitialisation des abonnements, une erreur se produit et aucune modification n'est effectuée.  
+ **0** Spécifie que les modifications de l’article n’invalident pas besoin de la réinitialisation des abonnements. Si la procédure stockée détecte que la modification requiert la réinitialisation des abonnements, une erreur se produit et aucune modification n'est effectuée.  
   
  **1** indique que les modifications apportées à l’article entraînent la réinitialisation des abonnements existants et autorise la réinitialisation des abonnements se produise.  
   
@@ -87,24 +86,24 @@ sp_articlefilter [ @publication = ] 'publication'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_articlefilter** est utilisé dans la réplication de capture instantanée et la réplication transactionnelle.  
+ **sp_articlefilter** est utilisé dans la réplication d’instantané ou transactionnelle.  
   
- L’exécution de **sp_articlefilter** pour un article avec des abonnements existants nécessite que la réinitialisation de ces abonnements.  
+ L’exécution de **sp_articlefilter** pour un article avec des abonnements existants nécessite que les abonnements soient réinitialisés.  
   
  **sp_articlefilter** crée le filtre et insère l’ID de la procédure stockée de filtre dans le **filtre** colonne de la [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) table, puis Insère le texte de la clause de restriction dans la **filter_clause** colonne.  
   
  Pour créer un article avec un filtre horizontal, exécutez [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sans aucune *filtre* paramètre. Exécutez **sp_articlefilter**, fournissant tous les paramètres y compris *filter_clause*, puis exécutez [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), en fournissant tous les paramètres y compris ce même *filter_clause*. Si le filtre existe déjà et si le **type** dans **sysarticles** est **1** (article basé sur journal), le filtre précédent est supprimé et un nouveau filtre est créé.  
   
- Si *nom_de_filtre* et *filter_clause* ne sont pas fournies, le filtre précédent est supprimé et l’ID du filtre est définie sur **0**.  
+ Si *nom_de_filtre* et *filter_clause* ne sont pas fournies, le filtre précédent est supprimé et l’ID du filtre est défini sur **0**.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlefilter-transac_1.sql)]  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_articlefilter**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_articlefilter**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir un article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Définir et modifier un filtre de lignes statique](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   

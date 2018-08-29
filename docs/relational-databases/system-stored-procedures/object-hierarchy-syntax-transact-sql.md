@@ -1,5 +1,5 @@
 ---
-title: Syntaxe de hiérarchie (Transact-SQL) de l’objet | Documents Microsoft
+title: Objet de la syntaxe de hiérarchie (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - objects [SQL Server], hierarchy syntax
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e7b3df2aad780cabe33855374cc5b6372366eeaf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 979d67b930d95817c0c27f671885c9b5fd9fb0d4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238050"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032537"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Syntaxe de hiérarchie des objets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Le *propertyname* paramètre de sp_OAGetProperty et sp_OASetProperty et le *methodname* paramètre de sp_OAMethod prennent en charge une syntaxe de hiérarchie des objets qui est similaire à celle de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Lorsque vous utilisez cette syntaxe spéciale, ces paramètres ont la forme générale suivante.  
+  Le *propertyname* paramètre de sp_OAGetProperty et sp_OASetProperty et le *nom_méthode* paramètre de sp_OAMethod prennent en charge une syntaxe de hiérarchie d’objets qui est similaire à celle de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Lorsque vous utilisez cette syntaxe spéciale, ces paramètres ont la forme générale suivante.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +63,7 @@ ms.locfileid: "33238050"
 ## <a name="remarks"></a>Notes  
  Si *TraversedObject* n’est pas spécifié, *Propriété_ou_méthode* est requis.  
   
- Si *Propriété_ou_méthode* n’est pas spécifié, le *TraversedObject* est retourné en tant que paramètre de sortie du jeton d’objet à partir de la procédure stockée OLE Automation. Si *Propriété_ou_méthode* est spécifié, la propriété ou méthode de le *TraversedObject* est appelée, et la valeur de propriété ou méthode de valeur de retour est retournée en tant que paramètre de sortie de l’automatisation OLE de procédure stockée.  
+ Si *Propriété_ou_méthode* n’est pas spécifié, le *TraversedObject* est retourné en tant que paramètre de sortie du jeton d’objet à partir de la procédure stockée OLE Automation. Si *Propriété_ou_méthode* est spécifié, la propriété ou méthode de le *TraversedObject* est appelée, et la valeur de propriété ou la valeur de retour de méthode est retournée comme paramètre de sortie à partir de l’Automation OLE procédure stockée.  
   
  Si aucun élément de la *TraversedObject* liste ne retourne pas d’un objet OLE, une erreur est générée.  
   

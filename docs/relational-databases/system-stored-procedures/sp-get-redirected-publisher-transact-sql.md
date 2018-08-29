@@ -1,5 +1,5 @@
 ---
-title: sp_get_redirected_publisher (Transact-SQL) | Documents Microsoft
+title: sp_get_redirected_publisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ f1_keywords:
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28785969ea0bab2319d52461aa3e9a60f9be916d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a2abcc6205929146a37be95fa3943cad1b0ce4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994986"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028616"
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,24 +60,24 @@ sp_get_redirected_publisher
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**redirected_publisher**|**sysname**|Nom du serveur de publication après redirection.|  
-|**error_number**|**int**|Numéro de l'erreur de validation.|  
-|**error_severity**|**int**|Gravité de l'erreur de validation.|  
+|**error_number**|**Int**|Numéro de l'erreur de validation.|  
+|**error_severity**|**Int**|Gravité de l'erreur de validation.|  
 |**error_message**|**nvarchar(4000)**|Texte du message d'erreur de validation.|  
   
 ## <a name="remarks"></a>Notes  
  *redirected_publisher* renvoie le nom de serveur de publication actuel. Retourne la valeur null si le serveur de publication et les bases de données de publication n'ont pas été redirigés à l’aide de **sp_redirect_publisher**.  
   
- Si la validation n’est pas requise ou si aucune entrée n’existe pour le serveur de publication et de la base de données de publication, *error_number* et *error_severity* retournent 0 et *error_message* retourne la valeur null.  
+ Si la validation n’est pas requise ou si aucune entrée n’existe pour le serveur de publication et de la base de données de publication, *error_number* et *error_severity* retournent 0 et *error_message* Retourne la valeur null.  
   
- Si la validation est requise, la procédure stockée de la validation [sp_validate_redirected_publisher &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) est appelée pour vérifier que la cible de la redirection est un hôte approprié pour la publication base de données. Si la validation réussit, **sp_get_redirected_publisher** retourne le nom du serveur de publication redirigé, 0 pour le *error_number* et *error_severity* colonnes et la valeur null dans le *error_message* colonne.  
+ Si la validation est requise, la procédure stockée de la validation [sp_validate_redirected_publisher &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) est appelée pour vérifier que la cible de la redirection est un hôte approprié pour la publication base de données. Si la validation réussit, **sp_get_redirected_publisher** retourne le nom du serveur de publication redirigé, 0 pour le *error_number* et *error_severity* des colonnes et des valeurs null dans le *error_message* colonne.  
   
  Si la validation est requise et échoue, le nom du serveur de publication redirigé est retourné avec les informations d'erreur.  
   
-## <a name="permissions"></a>Autorisations  
- L’appelant doit être un membre de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe pour la base de données de distribution ou un membre d’une liste d’accès à une publication définie associée à la base de données du serveur de publication.  
+## <a name="permissions"></a>Permissions  
+ L’appelant doit être un membre de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe pour la base de données de distribution ou un membre d’une liste d’accès à une publication définie associé à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

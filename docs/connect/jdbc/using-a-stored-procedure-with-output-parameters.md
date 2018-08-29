@@ -14,18 +14,18 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2556a8d637b78dbc0c0ab9c8740d1e63f156e3b
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: a463bcd89bd2b38b6f0c6ec316039bc28c49d4f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662171"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787202"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Utilisation d'une procédure stockée avec des paramètres de sortie
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Une procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que vous pouvez appeler est une procédure qui retourne un ou plusieurs paramètres OUT, qui sont des paramètres utilisés par la procédure stockée pour retourner des données à l’application appelante. Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), que vous pouvez utiliser pour appeler ce type de procédure stockée et traiter les données qu’elle retourne.
+Une procédure stockée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous pouvez appeler est une procédure qui retourne un ou plusieurs paramètres OUT, qui sont des paramètres utilisés par la procédure stockée pour retourner des données à l’application appelante. Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), que vous pouvez utiliser pour appeler ce type de procédure stockée et traiter les données qu’elle retourne.
 
 Quand vous appelez ce type de procédure stockée avec le pilote JDBC, vous devez utiliser la séquence d’échappement SQL `call` conjointement avec la méthode [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La syntaxe de la séquence d’échappement `call` avec des paramètres OUT est la suivante :
 
@@ -36,12 +36,12 @@ Quand vous appelez ce type de procédure stockée avec le pilote JDBC, vous deve
 
 Quand vous construisez la séquence d’échappement `call`, spécifiez les paramètres OUT en utilisant le caractère ? (point d'interrogation). Ce caractère fait office d'espace réservé pour les valeurs de paramètre qui sont retournées par la procédure stockée. Pour spécifier une valeur pour un paramètre OUT, vous devez spécifier le type de données de chaque paramètre avec la méthode [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) de la classe SQLServerCallableStatement avant d’exécuter la procédure stockée.
 
-La valeur que vous spécifiez pour le paramètre OUT dans la méthode registerOutParameter doit être un des types de données JDBC contenus dans java.sql.Types, qui est mappé à un des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] natifs. Pour plus d’informations sur JDBC et [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] des types de données, consultez [comprendre les Types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
+La valeur que vous spécifiez pour le paramètre OUT dans la méthode registerOutParameter doit être un des types de données JDBC contenus dans java.sql.Types, qui est mappé à un des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] natifs. Pour plus d’informations sur JDBC et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des types de données, consultez [comprendre les Types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
 Quand vous passez une valeur à la méthode registerOutParameter pour un paramètre OUT, vous devez spécifier non seulement le type de données à utiliser pour le paramètre, mais également la position ordinale du paramètre ou le nom du paramètre dans la procédure stockée. Par exemple, si votre procédure stockée contient un seul paramètre OUT, sa valeur ordinale est 1 ; si la procédure stockée contient deux paramètres, la première valeur ordinale est 1 et la seconde 2.
 
 > [!NOTE]  
-> Le pilote JDBC ne prend pas en charge l’utilisation des types de données CURSOR, SQLVARIANT, TABLE et TIMESTAMP de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] en tant que paramètres OUT.
+> Le pilote JDBC ne prend pas en charge l’utilisation des types de données CURSOR, SQLVARIANT, TABLE et TIMESTAMP de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant que paramètres OUT.
 
 Par exemple, créez la procédure stockée suivante dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] :
 

@@ -1,5 +1,5 @@
 ---
-title: sp_replcounters (Transact-SQL) | Documents Microsoft
+title: sp_replcounters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_replcounters
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cc67b000b231146c9544ea7ef1bc1e2a3b6b667
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 314f7f24ededf85927205f0615af39138898c795
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997086"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027136"
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ sp_replcounters
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**Base de données**|**sysname**|Nom de la base de données.|  
-|**Transactions répliquées**|**int**|Nombre de transactions qui attendent dans le journal d'être remises à la base de données de distribution.|  
-|**Taux de réplication trans/s**|**float**|Nombre moyen de transactions transmises par seconde à la base de données de distribution.|  
+|**Sauvegarde de la base de données**|**sysname**|Nom de la base de données.|  
+|**Transactions répliquées**|**Int**|Nombre de transactions qui attendent dans le journal d'être remises à la base de données de distribution.|  
+|**Taux de réplication transactions/seconde**|**float**|Nombre moyen de transactions transmises par seconde à la base de données de distribution.|  
 |**Latence de réplication**|**float**|Temps moyen (en secondes) que les transactions restent dans le journal avant d'être distribuées.|  
 |**Replbeginlsn**|**binary(10)**|Numéro séquentiel dans le journal (LSN) du point de troncature courant dans le journal.|  
 |**Replnextlsn**|**binary(10)**|Numéro de séquence d'enregistrement (LSN) de l'enregistrement validé suivant en attente de remise à la base de données de distribution.|  
@@ -57,7 +57,7 @@ sp_replcounters
 ## <a name="remarks"></a>Notes  
  **sp_replcounters** est utilisé dans la réplication transactionnelle.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’appartenance dans le **db_owner** rôle de base de données fixe ou **sysadmin** rôle serveur fixe.  
   
 ## <a name="see-also"></a>Voir aussi  

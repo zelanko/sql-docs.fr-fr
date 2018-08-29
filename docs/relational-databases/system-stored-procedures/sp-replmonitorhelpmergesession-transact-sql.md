@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelpmergesession (Transact-SQL) | Documents Microsoft
+title: sp_replmonitorhelpmergesession (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1d59aba126e66d523e23c680c55f679cbbfa6ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25bacdedf9ed9be6baa5e467cf81b809ff9cab1f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003582"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037672"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +56,16 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  [ **@hours** =] *heures*  
  Plage horaire pour laquelle sont retournées les informations d'historique des sessions de l'Agent. *heures* est **int**, qui peut être une des plages suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |< **0**|Retourne des informations sur les exécutions passées de l'Agent, dans la limite de 100 exécutions.|  
 |**0** (valeur par défaut)|Retourne des informations sur toutes les exécutions passées de l'Agent.|  
-|> **0**|Retourne des informations sur l’agent qui s’est produite au cours de la dernière *heures* nombre d’heures.|  
+|> **0**|Retourne des informations sur l’agent exécutions qui se sont produites au cours de la dernière *heures* nombre d’heures.|  
   
  [ **@session_type** =] *session_type*  
  Filtre l'ensemble de résultats en fonction du résultat final de la session. *SESSION_TYPE* est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**1** (par défaut)|Sessions de l'Agent se soldant par une nouvelle tentative ou par un succès.|  
 |**0**|Sessions de l'Agent se soldant par un échec.|  
@@ -81,20 +81,20 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**ID de session**|**int**|ID de la session de travail d'Agent.|  
-|**État**|**int**|État de l'exécution de l'Agent :<br /><br /> **1** = démarrage<br /><br /> **2** = réussite<br /><br /> **3** = en cours<br /><br /> **4** = inactif<br /><br /> **5** = nouvelle tentative<br /><br /> **6** = Échec|  
+|**ID de session**|**Int**|ID de la session de travail d'Agent.|  
+|**État**|**Int**|État de l'exécution de l'Agent :<br /><br /> **1** = démarrage<br /><br /> **2** = réussite<br /><br /> **3** = en cours<br /><br /> **4** = inactif<br /><br /> **5** = nouvelle tentative<br /><br /> **6** = Échec|  
 |**StartTime**|**datetime**|Début de la session de travail de l’agent de temps.|  
-|**EndTime**|**datetime**|Session de travail de l’agent de temps a été effectuée.|  
-|**Duration**|**int**|Durée cumulée de cette session de travail (en secondes)|  
-|**UploadedCommands**|**int**|Nombre de commandes téléchargées (upload) pendant la session d'Agent.|  
-|**DownloadedCommands**|**int**|Nombre de commandes téléchargées (download) pendant la session d'Agent.|  
-|**Messages d’erreur**|**int**|Nombre de messages d'erreur générés pendant la session d'Agent.|  
-|**Code d’erreur**|**int**|ID de l'erreur qui s'est produite|  
+|**EndTime**|**datetime**|Session de travail de l’agent de temps s’est terminée.|  
+|**Duration**|**Int**|Durée cumulée de cette session de travail (en secondes)|  
+|**UploadedCommands**|**Int**|Nombre de commandes téléchargées (upload) pendant la session d'Agent.|  
+|**DownloadedCommands**|**Int**|Nombre de commandes téléchargées (download) pendant la session d'Agent.|  
+|**Messages d’erreur**|**Int**|Nombre de messages d'erreur générés pendant la session d'Agent.|  
+|**ID d’erreur**|**Int**|ID de l'erreur qui s'est produite|  
 |**PercentageDone**|**decimal**|Pourcentage estimé des modifications déjà remises dans une session active.|  
-|**TimeRemaining**|**int**|Nombre estimé de secondes restantes dans une session active.|  
-|**CurrentPhase**|**int**|Phase actuelle d'une session active ; ce paramètre peut prendre l'une des valeurs suivantes.<br /><br /> **1** = téléchargement<br /><br /> **2** = téléchargement|  
+|**TimeRemaining**|**Int**|Nombre estimé de secondes restantes dans une session active.|  
+|**CurrentPhase**|**Int**|Phase actuelle d'une session active ; ce paramètre peut prendre l'une des valeurs suivantes.<br /><br /> **1** = téléchargement<br /><br /> **2** = téléchargement|  
 |**LastMessage**|**nvarchar(500)**|Dernier message journalisé par l'Agent de fusion pendant la session.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -103,10 +103,10 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="remarks"></a>Notes  
  **sp_replmonitorhelpmergesession** est utilisé pour surveiller la réplication de fusion.  
   
- Lors de l’exécution sur l’abonné, **sp_replmonitorhelpmergesession** retourne uniquement des informations sur les cinq dernières sessions de l’Agent de fusion.  
+ Lors de l’exécution sur l’abonné, **sp_replmonitorhelpmergesession** retourne uniquement des informations sur les cinq dernières sessions d’Agent de fusion.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **db_owner** ou **replmonitor** du rôle de base de données fixe sur la base de données de distribution sur le serveur de distribution ou sur la base de données d’abonnement sur l’abonné permettre exécuter **sp_replmonitorhelpmergesession**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **db_owner** ou **replmonitor** rôle de base de données fixe sur la base de données de distribution sur le serveur de distribution ou sur la base de données d’abonnement sur l’abonné peuvent exécuter **sp_ replmonitorhelpmergesession**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveiller la réplication par programmation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

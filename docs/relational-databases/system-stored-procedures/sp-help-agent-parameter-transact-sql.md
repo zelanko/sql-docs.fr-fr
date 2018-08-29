@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_parameter (Transact-SQL) | Documents Microsoft
+title: sp_help_agent_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_agent_parameter
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9176a2b583cc3cb4212a51f898ecbbe3d2685cc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb9d2e6ed445ddc9df876a5cee759cf928fe823a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994386"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038892"
 ---
 # <a name="sphelpagentparameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**profile_id**|**int**|ID du profil de l'Agent.|  
+|**profile_id**|**Int**|ID du profil de l'Agent.|  
 |**parameter_name**|**sysname**|Nom du paramètre.|  
-|**valeur**|**nvarchar(255)**|Valeur du paramètre.|  
+|**value**|**nvarchar(255)**|Valeur du paramètre.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -62,8 +62,8 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ## <a name="remarks"></a>Notes  
  **sp_help_agent_parameter** est utilisée dans tous les types de réplication.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **replmonitor** du rôle de base de données fixe peut exécuter **sp_help_agent_parameter**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou le **replmonitor** rôle de base de données fixe peuvent exécuter **sp_help_agent_parameter**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des profils d’Agent de réplication](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

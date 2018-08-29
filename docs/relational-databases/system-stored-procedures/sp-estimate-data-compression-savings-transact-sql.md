@@ -1,5 +1,5 @@
 ---
-title: sp_estimate_data_compression_savings (Transact-SQL) | Documents Microsoft
+title: sp_estimate_data_compression_savings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25798372f2b949446b746164665dbfe6752443d7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1271953cc69e8302c2a36088fcea1bca3588a01e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260582"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027538"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33260582"
   
  Pour estimer la taille de l'objet s'il devait utiliser le paramètre de compression demandé, cette procédure stockée échantillonne l'objet source et charge ces données dans une table et un index équivalents, créés dans tempdb. La table ou l'index créés dans tempdb sont ensuite compressés au paramètre demandé et les gains de compression estimés sont calculés.  
   
- Pour modifier l’état de compression de table, l’index ou partition, utilisez le [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instructions. Pour obtenir des informations générales sur la compression, consultez [la Compression des données](../../relational-databases/data-compression/data-compression.md).  
+ Pour modifier l’état de compression d’une table, l’index ou partition, utilisez le [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instructions. Pour obtenir des informations générales sur la compression, consultez [la Compression des données](../../relational-databases/data-compression/data-compression.md).  
   
 > [!NOTE]  
 >  Si les données existantes sont fragmentées, vous pouvez être en mesure de réduire leur taille sans utiliser la compression en reconstruisant l'index. Pour les index, le facteur de remplissage sera appliqué pendant une reconstruction d'index. Cela pourrait augmenter la taille de l'index.  
@@ -61,14 +61,14 @@ sp_estimate_data_compression_savings
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @schema_name=] '*nom_schéma*'  
- Nom du schéma de base de données qui contient la table ou la vue indexée. *schema_name* est **sysname**. Si *nom_schéma* est NULL, le schéma par défaut de l’utilisateur actuel est utilisé.  
+ [ @schema_name=] '*schema_name*'  
+ Nom du schéma de base de données qui contient la table ou la vue indexée. *schema_name* est **sysname**. Si *schema_name* est NULL, le schéma par défaut de l’utilisateur actuel est utilisé.  
   
- [ @object_name=] '*nom_objet*'  
+ [ @object_name=] '*object_name*'  
  Nom du schéma de la table ou de la vue indexée sur laquelle se trouve l'index. *object_name* est de type **sysname**.  
   
  [ @index_id=] '*index_id*'  
- Identificateur de l’index. *index_id* est **int**, et peut prendre l’une des valeurs suivantes : le numéro d’identification d’un index, NULL ou 0 si *object_id* est un segment de mémoire. Pour retourner des informations sur tous les index d'une table de base ou d'une vue, spécifiez la valeur NULL. Si vous spécifiez la valeur NULL, vous devez également spécifier NULL pour *partition_number*.  
+ Identificateur de l’index. *index_id* est **int**, et peut prendre l’une des valeurs suivantes : le numéro d’ID d’un index, NULL ou 0 si *object_id* est un segment de mémoire. Pour retourner des informations sur tous les index d'une table de base ou d'une vue, spécifiez la valeur NULL. Si vous spécifiez la valeur NULL, vous devez également spécifier NULL pour *partition_number*.  
   
  [ @partition_number=] '*partition_number*'  
  Numéro de partition dans l'objet. *partition_number* est **int**, et peut prendre l’une des valeurs suivantes : le numéro de partition d’un index ou segment de mémoire, NULL ou 1 pour un segment de mémoire ou un index non partitionné.  
@@ -84,12 +84,12 @@ sp_estimate_data_compression_savings
 ## <a name="result-sets"></a>Jeux de résultats  
  Le jeu de résultats suivant est retourné pour fournir la taille actuelle et estimée de la table, de l'index ou de la partition.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|Nom de la table ou de la vue indexée.|  
 |schema_name|**sysname**|Schéma de la table ou de la vue indexée.|  
-|index_id|**int**|ID d'index d'un index :<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = index cluster<br /><br /> > 1 = Index non cluster|  
-|partition_number|**int**|Numéro de partition. Retourne 1 pour une table ou un index non partitionnés.|  
+|index_id|**Int**|ID d'index d'un index :<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = index cluster<br /><br /> > 1 = Index non cluster|  
+|partition_number|**Int**|Numéro de partition. Retourne 1 pour une table ou un index non partitionnés.|  
 |size_with_current_compression_setting (Ko)|**bigint**|Taille de la table, de l'index ou de la partition demandés tels qu'ils existent actuellement.|  
 |size_with_requested_compression_setting (Ko)|**bigint**|Taille estimée de la table, de l'index ou de la partition qui utilise le paramètre de compression demandé et, le cas échéant, le facteur de remplissage existant, en supposant qu'il n'y a pas de fragmentation.|  
 |sample_size_with_current_compression_setting (Ko)|**bigint**|Taille de l'exemple avec le paramètre de compression actuel. Cela inclut toute fragmentation éventuelle.|  
@@ -108,7 +108,7 @@ sp_estimate_data_compression_savings
   
  Si l'ID d'index ou de partition n'existe pas, aucun résultat n'est retourné.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation SELECT sur la table.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  

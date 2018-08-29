@@ -1,5 +1,5 @@
 ---
-title: Sys.configurations (Transact-SQL) | Documents Microsoft
+title: Sys.configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,25 +21,25 @@ helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25de8a6eb70c79551caca8188c4f67a786e62172
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4f006cdbe3fa99f206af97dcae5edf97a6a86be0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181715"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030558"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient une ligne pour chaque valeur d’option de configuration du serveur dans le système.  
-|Nom de colonne|Type de données| Description|  
+  Contient une ligne pour chaque valeur d’option de configuration de l’échelle du serveur dans le système.  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**configuration_id**|**int**|ID unique pour la valeur de configuration.|  
+|**configuration_id**|**Int**|ID unique pour la valeur de configuration.|  
 |**nom**|**nvarchar(35)**|Nom de l'option de configuration.|  
-|**valeur**|**sql_variant**|Valeur configurée pour cette option.|  
+|**value**|**sql_variant**|Valeur configurée pour cette option.|  
 |**minimum**|**sql_variant**|Valeur minimale pour l'option de configuration.|  
 |**maximum**|**sql_variant**|Valeur maximale pour l'option de configuration.|  
 |**value_in_use**|**sql_variant**|Valeur en cours d'exécution actuellement en effet pour cette option.|  
@@ -50,13 +50,13 @@ ms.locfileid: "33181715"
  Pour obtenir la liste de toutes les options de configuration de serveur, consultez [les Options de Configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
->  Pour plus d’options de configuration au niveau de la base de données, consultez [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Pour configurer Soft-NUMA, consultez [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+>  Pour les options de configuration au niveau de la base de données, consultez [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Pour configurer Soft-NUMA, consultez [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue de Configuration du serveur &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
+ [Affichages catalogue de Configuration de l’échelle du serveur &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

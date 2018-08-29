@@ -1,5 +1,5 @@
 ---
-title: sp_helpuser (Transact-SQL) | Documents Microsoft
+title: sp_helpuser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 343439dd04f9f74c0a5444afef25921072d9d14c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2f69c77b548de159a6b6c40ceddccb169e477ede
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261125"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028942"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name_in_db =** ] **'***celui-ci***'**  
- Nom de l'utilisateur de base de données ou du rôle de base de données dans la base de données en cours. *celui-ci* doit exister dans la base de données actuelle. *celui-ci* est **sysname**, avec NULL comme valeur par défaut. Si *celui-ci* n’est pas spécifié, **sp_helpuser** retourne des informations sur toutes les entités de base de données.  
+ [  **@name_in_db =** ] **'***auxquels celui-ci a***'**  
+ Nom de l'utilisateur de base de données ou du rôle de base de données dans la base de données en cours. *celui-ci* doit exister dans la base de données actuelle. *celui-ci* est **sysname**, avec NULL comme valeur par défaut. Si *auxquels celui-ci a* n’est pas spécifié, **sp_helpuser** retourne des informations sur tous les principaux de base de données.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Le tableau suivant présente les résultats obtenus lorsque ni un compte d’utilisateur ni un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou utilisateur Windows est spécifié pour *celui-ci*.  
+ Le tableau suivant présente le jeu de résultats lorsque ni un compte d’utilisateur ni un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un utilisateur de Windows est spécifié pour *auxquels celui-ci a*.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|Utilisateurs dans la base de données en cours.|  
 |**RoleName**|**sysname**|Rôles auxquels **nom d’utilisateur** appartient.|  
@@ -68,24 +68,24 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
  Le tableau ci-dessous indique l'ensemble de résultats obtenu, lorsqu'aucun compte d'utilisateur n'est spécifié et que des alias existent dans la base de données en cours.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Connexions affectées comme alias aux utilisateurs de la base de données en cours.|  
 |**UserNameAliasedTo**|**sysname**|Nom d'utilisateur dans la base de données en cours dont la connexion est affectée comme alias.|  
   
- Le tableau suivant présente le jeu de résultats lorsqu’un rôle est spécifié pour *celui-ci*.  
+ Le tableau suivant présente le jeu de résultats lorsqu’un rôle est spécifié pour *auxquels celui-ci a*.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom_rôle**|**sysname**|Nom du rôle dans la base de données en cours.|  
+|**Nom_rôle**|**sysname**|Nom du rôle dans la base de données en cours.|  
 |**Role_id**|**smallint**|ID du rôle dans la base de données en cours.|  
 |**Users_in_role**|**sysname**|Membre du rôle dans la base de données en cours.|  
 |**ID d’utilisateur**|**smallint**|ID d'utilisateur du membre du rôle.|  
   
 ## <a name="remarks"></a>Notes  
- Pour afficher des informations sur l’appartenance des rôles de base de données, utilisez [sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Pour afficher plus d’informations sur les membres du rôle serveur, utilisez [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)et pour afficher des informations sur les entités de niveau serveur, utilisez [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ Pour afficher des informations sur l’appartenance des rôles de base de données, utilisez [sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Pour afficher des informations sur les membres du rôle serveur, utilisez [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)et pour afficher des informations sur les principaux de niveau serveur, utilisez [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
  Les informations retournées sont sujettes à des restrictions d'accès aux métadonnées. Les entités sur lesquelles le principal ne possède pas d'autorisation n'apparaissent pas. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

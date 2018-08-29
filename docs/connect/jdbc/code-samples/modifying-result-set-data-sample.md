@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f43960439d015bb9c23598d1182c13ced74347d2
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 0be9716b5b1f48d4d38a374069ba66b5f5d8b37c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454343"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787233"
 ---
 # <a name="modifying-result-set-data-sample"></a>Modification de l'exemple de données du jeu de résultats
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] montre comment récupérer un jeu de données pouvant être mis à jour auprès d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Ensuite, en utilisant des méthodes de l’objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), il insère, puis modifie et enfin supprime une ligne de données dans l’ensemble de données.
+Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] montre comment récupérer un jeu de données pouvant être mis à jour auprès d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ensuite, en utilisant des méthodes de l’objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), il insère, puis modifie et enfin supprime une ligne de données dans l’ensemble de données.
 
 Le fichier de code de cet exemple est nommé UpdateResultSet.java et se trouve à l’emplacement suivant :
 

@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriber_schedule (Transact-SQL) | Documents Microsoft
+title: sp_changesubscriber_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_changesubscriber_schedule
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f07d6cdb364e6ff4ef03cae49db7c320c9778c4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b5ac5b579a2988e2cd7d1f123d51dad7043c509
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993646"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029082"
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  Heure de première planification de la tâche de distribution. *active_start_time_of_day* est **int**, avec une valeur par défaut **0**.  
   
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Heure à laquelle la tâche de distribution cesse d'être planifiée. *active_end_time_of_day* est **int**, avec une valeur par défaut **235959**, ce qui signifie que 11:59:59 PM avec un affichage horaire au format 24 heures).  
+ Heure à laquelle la tâche de distribution cesse d'être planifiée. *active_end_time_of_day* est **int**, avec une valeur par défaut **235959**, ce qui signifie que 11:59:59 P.M. avec un affichage horaire au format 24 heures).  
   
  [  **@active_start_date=**] *active_start_date*  
  Date de première planification de la tâche de distribution, au format AAAAMMJJ. *active_start_date* est **int**, avec une valeur par défaut **0**.  
@@ -102,7 +102,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ## <a name="remarks"></a>Notes  
  **sp_changesubscriber_schedule** est utilisée dans tous les types de réplication.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_changesubscriber_schedule**.  
   
 ## <a name="see-also"></a>Voir aussi  

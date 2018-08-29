@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergearticlecolumn (Transact-SQL) | Documents Microsoft
+title: sp_helpmergearticlecolumn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergearticlecolumn
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eea23a02bca21cdb714c3437bdcbb3c5ea10042f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82240c6d24f6387e8d1a9e6e105e8fdc9e0ee9e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994636"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025238"
 ---
 # <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +50,15 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
  Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
  [  **@article=**] **'***article***'**  
- Est le nom d’une table ou une vue qui est de l’article pour récupérer des informations sur. *article* est **sysname**, sans valeur par défaut.  
+ Est le nom d’une table ou une vue qui est l’article pour récupérer des informations sur. *article* est **sysname**, sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|Identifie la colonne.|  
 |**column_name**|**sysname**|Nom de la colonne d'une table ou d'une vue.|  
-|**publié**|**bit**|Indique si le nom de la colonne est publié.<br /><br /> **1** Spécifie que la colonne est publiée.<br /><br /> **0** Spécifie qu’il n’est pas publié.|  
+|**Publié**|**bit**|Indique si le nom de la colonne est publié.<br /><br /> **1** Spécifie que la colonne est publiée.<br /><br /> **0** Spécifie qu’elle n’est pas publiée.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -66,7 +66,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Notes  
  **sp_helpmergearticlecolumn** est utilisé dans la réplication de fusion.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **replmonitor** du rôle fixe de base de données dans la base de données de distribution ou de la liste d’accès à la publication peuvent exécuter **sp_helpmergearticlecolumn**.  
   
 ## <a name="see-also"></a>Voir aussi  

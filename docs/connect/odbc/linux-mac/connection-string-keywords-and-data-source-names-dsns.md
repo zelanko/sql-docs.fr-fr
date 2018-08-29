@@ -18,17 +18,17 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878a88fac188f23f48c25fdc54fec7540a9b6771
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: abd4df2a4f08cd8f47bacc4a209375b65a541e1a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982311"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787209"
 ---
 # <a name="connecting-to-sql-server"></a>Connexion à SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Cette rubrique explique comment créer une connexion à une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Cette rubrique explique comment créer une connexion à une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="connection-properties"></a>Propriétés de connexion  
 
@@ -43,7 +43,7 @@ La valeur passée à la **pilote** mot clé peut prendre l’une des opérations
 
 -   le chemin de la bibliothèque du pilote, spécifié dans le fichier .ini du modèle utilisé pour installer le pilote.  
 
-Pour créer un DSN, créer (si nécessaire) et modifiez le fichier **~/.odbc.ini** (`.odbc.ini` dans votre répertoire de base) pour un DSN utilisateur accessible uniquement à l’utilisateur actuel, ou `/etc/odbc.ini` pour une source de données système (des privilèges d’administrateur requis.) Voici un exemple de fichier qui montre les entrées exigées pour un nom de source de données :  
+Pour créer un DSN, créer (si nécessaire) et modifiez le fichier **~/.odbc.ini** (`.odbc.ini` dans votre répertoire de base) pour un DSN utilisateur accessible uniquement à l’utilisateur actuel, ou `/etc/odbc.ini` pour une source de données système (des privilèges d’administrateur requis.) Voici un exemple de fichier qui montre les entrées exigées pour un nom de source de données :  
 
 ```  
 [MSSQLTest]  
@@ -67,7 +67,7 @@ Vous pouvez vérifier que votre pilote fonctionne à l’aide de `isql` pour tes
  - **master.INFORMATION_SCHEMA.TABLES bcp out -S de fichier OutFile.dat <server> - U <name> - P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Utilisation du protocole SSL (Secure Sockets Layer)  
-Vous pouvez utiliser le protocole SSL (Secure Sockets Layer) pour chiffrer les connexions à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Le protocole SSL protège les noms d’utilisateur et mots de passe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur le réseau. Il vérifie également l’identité du serveur à des fins de protection contre les attaques de l’intercepteur (« man in the middle »).  
+Vous pouvez utiliser le protocole SSL (Secure Sockets Layer) pour chiffrer les connexions à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le protocole SSL protège les noms d’utilisateur et mots de passe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le réseau. Il vérifie également l’identité du serveur à des fins de protection contre les attaques de l’intercepteur (« man in the middle »).  
 
 L’activation du chiffrement renforce la sécurité au détriment des performances.
 
@@ -78,7 +78,7 @@ Quels que soient les paramètres pour **Encrypt** et **TrustServerCertificate**,
 ||**TrustServerCertificate = non**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur ne sont pas chiffrées.|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur ne sont pas chiffrées.|  
-|**Encrypt=yes**|Le certificat de serveur est vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.<br /><br />Le nom (ou l’adresse IP) indiqué dans un nom commun de l’objet ou autre nom de l’objet dans un certificat SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] doit correspondre exactement au nom (ou à l’adresse IP) du serveur spécifié dans la chaîne de connexion.|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.|  
+|**Encrypt=yes**|Le certificat de serveur est vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.<br /><br />Le nom (ou l’adresse IP) indiqué dans un nom commun de l’objet ou autre nom de l’objet dans un certificat SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit correspondre exactement au nom (ou à l’adresse IP) du serveur spécifié dans la chaîne de connexion.|Le certificat de serveur n’est pas vérifié.<br /><br />Les données envoyées entre le client et le serveur sont chiffrées.|  
 
 Par défaut, les connexions chiffrées vérifient toujours le certificat du serveur. Toutefois, si vous vous connectez à un serveur qui dispose d’un certificat auto-signé, également ajouter le `TrustServerCertificate` possibilité de contourner la vérification du certificat à la liste des autorités de certification approuvées :  
 
@@ -100,7 +100,7 @@ Le protocole SSL utilise la bibliothèque OpenSSL. Le tableau suivant présente 
 |SUSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
 |SUSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
 |Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
+|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
 |Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
   
 Vous pouvez également spécifier le chiffrement dans la chaîne de connexion en utilisant le `Encrypt` option lors de l’utilisation **SQLDriverConnect** pour vous connecter.

@@ -1,5 +1,5 @@
 ---
-title: sp_removedistpublisherdbreplication (Transact-SQL) | Documents Microsoft
+title: sp_removedistpublisherdbreplication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_removedistpublisherdbreplication
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02194543d95dc03491d4b882555e48698c100ba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a99244a59c0022ed92797fc8c5e10bd3bf3dae63
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996056"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022567"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_removedistpublisherdbreplication** est utilisé par la réplication transactionnelle et de capture instantanée.  
+ **sp_removedistpublisherdbreplication** est utilisé par la réplication transactionnelle et d’instantané.  
   
- **sp_removedistpublisherdbreplication** est utilisé lorsqu’une base de données publiée doit être recréé sans également supprimer la base de données de distribution. Les métadonnées suivantes sont supprimées :  
+ **sp_removedistpublisherdbreplication** est utilisé lorsqu’une base de données publiée doit être recréée sans supprimer également la base de données de distribution. Les métadonnées suivantes sont supprimées :  
   
 -   Toutes les métadonnées de publication  
   
@@ -68,8 +68,8 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
   
 -   Les métadonnées de tous les travaux d'Agent de réplication appartenant à la publication  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe sur le serveur de distribution ou les membres de la **db_owner** du rôle de base de données fixe dans la base de données de distribution permettre exécuter **sp_removedistpublisherdbreplication**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe sur le serveur de distribution ou les membres de la **db_owner** du rôle fixe de base de données dans la base de données de distribution peuvent exécuter **sp_ removedistpublisherdbreplication**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

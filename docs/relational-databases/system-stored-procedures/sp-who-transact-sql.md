@@ -1,5 +1,5 @@
 ---
-title: sp_who (Transact-SQL) | Documents Microsoft
+title: sp_who (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_who
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
-caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f21ac270ac0f448291b5e6eb8874182598e933ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 17d178f1fdf5784ca1e9d9f7dc9042a70611137c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261918"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036939"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  *ID de session* est un numéro d’identification de session appartenant à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. *ID de session* est **smallint**.  
   
- **ACTIVE** exclut les sessions en attente pour la commande suivante à partir de l’utilisateur.  
+ **ACTIVE** exclut les sessions en attente de la commande suivante à partir de l’utilisateur.  
   
  Si aucune valeur n'est fournie, la procédure répertorie toutes les sessions appartenant à l'instance.  
   
@@ -59,30 +58,30 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- **sp_who** renvoie un jeu de résultats avec les informations suivantes.  
+ **sp_who** retourne un jeu de résultats avec les informations suivantes.  
   
-|Colonne|Data type| Description|  
+|colonne|Data type|Description|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|ID de la session.|  
-|**ECID**|**smallint**|ID du contexte d'exécution d'un thread donné associé à un ID de session spécifique.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, où 0 représente toujours le principal ou thread parent et {1, 2, 3,... *n*} les sous-threads.|  
-|**status**|**nchar(30)**|État du processus Les valeurs possibles sont les suivantes :<br /><br /> **dormant**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réinitialise la session.<br /><br /> **En cours d’exécution**. La session exécute un ou plusieurs traitements. Lorsque la fonctionnalité MARS (Multiple Active Result Sets) est activée, une session peut exécuter plusieurs traitements. Pour plus d’informations, consultez [à l’aide de Multiple Active Result Sets & #40 ; MARS & #41 ; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **arrière-plan**. La session exécute une tâche en arrière-plan, telle qu'une détection de blocage.<br /><br /> **restauration**. Un processus d'annulation est en cours dans la session.<br /><br /> **en attente**. La session attend qu'un thread de travail soit disponible.<br /><br /> **exécutable**. La tâche de la session figure dans la file d'attente exécutable d'un planificateur lors de l'attente de l'obtention d'un quantum.<br /><br /> **spinloop**. La tâche de la session attend qu'un verrouillage total de l'UC se libère.<br /><br /> **suspendu**. La session attend la fin d'un événement, tel qu'une E/S.|  
+|**ECID**|**smallint**|ID du contexte d'exécution d'un thread donné associé à un ID de session spécifique.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, où 0 représente toujours la main ou thread parent et {1, 2, 3,... *n*} les sous-threads.|  
+|**status**|**nchar(30)**|État du processus Les valeurs possibles sont les suivantes :<br /><br /> **dormant**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réinitialise la session.<br /><br /> **en cours d’exécution**. La session exécute un ou plusieurs traitements. Lorsque la fonctionnalité MARS (Multiple Active Result Sets) est activée, une session peut exécuter plusieurs traitements. Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **arrière-plan**. La session exécute une tâche en arrière-plan, telle qu'une détection de blocage.<br /><br /> **restauration**. Un processus d'annulation est en cours dans la session.<br /><br /> **en attente**. La session attend qu'un thread de travail soit disponible.<br /><br /> **exécutable**. La tâche de la session figure dans la file d'attente exécutable d'un planificateur lors de l'attente de l'obtention d'un quantum.<br /><br /> **spinloop**. La tâche de la session attend qu'un verrouillage total de l'UC se libère.<br /><br /> **suspendu**. La session attend la fin d'un événement, tel qu'une E/S.|  
 |**nom de connexion**|**nchar(128)**|Nom de connexion associé à ce processus particulier|  
 |**Nom d’hôte**|**nchar(128)**|Nom de l'hôte ou de l'ordinateur pour chaque processus|  
 |**blk**|**char (5)**|ID de session du processus bloquant, s'il en existe un. Dans les autres cas, cette colonne a la valeur NULL.<br /><br /> Lorsqu'une transaction associée à un ID de session spécifié est bloquée par une transaction distribuée orpheline, cette colonne renvoie la valeur « -2 » pour la transaction orpheline qui bloque.|  
 |**dbname**|**nchar(128)**|Base de données dont se sert le processus|  
-|**Cmd**|**nchar(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] commande ([!INCLUDE[tsql](../../includes/tsql-md.md)] instruction interne [!INCLUDE[ssDE](../../includes/ssde-md.md)] processus et ainsi de suite) l’exécution du processus.|  
-|**request_id**|**int**|ID des demandes s'exécutant dans une session spécifique|  
+|**cmd**|**nchar(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] commande ([!INCLUDE[tsql](../../includes/tsql-md.md)] instruction, interne [!INCLUDE[ssDE](../../includes/ssde-md.md)] processus et ainsi de suite) l’exécution pour le processus.|  
+|**request_id**|**Int**|ID des demandes s'exécutant dans une session spécifique|  
   
- En cas de traitement parallèle, des sous-threads sont créés pour l'lD de session spécifique. Le thread principal est indiqué sous la forme `spid = <xxx>` et `ecid =0`. Les autres sous-threads ont le même `spid = <xxx>`, mais avec **ecid** > 0.  
+ En cas de traitement parallèle, des sous-threads sont créés pour l'lD de session spécifique. Le thread principal est indiqué sous la forme `spid = <xxx>` et `ecid =0`. Les autres sous-threads ont les mêmes `spid = <xxx>`, mais avec **ecid** > 0.  
   
 ## <a name="remarks"></a>Notes  
  Un processus bloquant, qui peut disposer d'un verrou exclusif, est un processus qui conserve les ressources dont un autre processus a besoin.  
   
  Toutes les transactions distribuées orphelines reçoivent la valeur d'ID de session « -2 ». Les transactions distribuées orphelines sont des transactions distribuées qui ne sont associées à aucun ID de session. Pour plus d’informations, consultez [Utiliser les transactions marquées pour récupérer des bases de données associées uniformément &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
- Requête le **is_user_process** colonne de sys.dm_exec_sessions pour séparer les processus système des processus utilisateur.  
+ Requête la **is_user_process** colonne de sys.dm_exec_sessions pour séparer les processus système des processus utilisateur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation VIEW SERVER STATE sur le serveur pour voir toutes les sessions en cours d'exécution dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans le cas contraire, l'utilisateur ne voit que la session en cours.  
   
 ## <a name="examples"></a>Exemples  

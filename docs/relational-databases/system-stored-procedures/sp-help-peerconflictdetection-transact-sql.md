@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10490c69dd5d278d7d298dc8ebd4b10ff8106be9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01ab569de510b115e0c2643192254366d5b41ebb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994676"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021060"
 ---
 # <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
  Nom de la publication pour laquelle renvoyer les informations. *publication* est **sysname**, sans valeur par défaut.  
   
  [ @timeout=] *délai d’attente*  
- Spécifie la durée, en secondes, du délai d'expiration de la procédure durant l'attente d'une réponse de chaque nœud dans la topologie. Si la topologie contient un Abonné en lecture seule, spécifier une valeur de délai d'attente n'est pas valide. Les Abonnés en lecture seule ne répondent jamais à un appel de cette procédure. *délai d’attente* est **int**, avec la valeur par défaut est 60.  
+ Spécifie la durée, en secondes, du délai d'expiration de la procédure durant l'attente d'une réponse de chaque nœud dans la topologie. Si la topologie contient un Abonné en lecture seule, spécifier une valeur de délai d'attente n'est pas valide. Les Abonnés en lecture seule ne répondent jamais à un appel de cette procédure. *délai d’attente* est **int**, avec une valeur par défaut de 60.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  sp_help_peerconflictdetection retourne trois jeux de résultats. Ces résultats sont décrits dans les rubriques suivantes :  
@@ -67,7 +67,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="remarks"></a>Notes  
  sp_help_peerconflictdetection est utilisé dans la réplication transactionnelle d'égal à égal.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner.  
   
 ## <a name="see-also"></a>Voir aussi  

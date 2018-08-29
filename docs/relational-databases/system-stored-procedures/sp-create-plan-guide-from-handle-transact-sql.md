@@ -1,5 +1,5 @@
 ---
-title: sp_create_plan_guide_from_handle (Transact-SQL) | Documents Microsoft
+title: sp_create_plan_guide_from_handle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c57ad0976f2079fb1f5129b1cea59817157af01a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 78d466a6860eb145c409f32735c812f17a051e44
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239379"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032969"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  Est le nom du repère de plan. Les noms des repères de plan sont limités à la base de données active. *plan_guide_name* doivent respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peut pas commencer par le signe dièse (#). La longueur maximale de *plan_guide_name* est de 124 caractères.  
   
  [ @plan_handle =] *plan_handle*  
- Identifie un traitement dans le repère de plan. *plan_handle* est **varbinary(64)**. *plan_handle* peut être obtenu à partir de la [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vue de gestion dynamique.  
+ Identifie un traitement dans le repère de plan. *plan_handle* est **varbinary (64)**. *plan_handle* peut être obtenu à partir de la [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vue de gestion dynamique.  
   
  [ @statement_start_offset =] { *statement_start_offset* | NULL}]  
  Identifie la position de départ de l’instruction dans le lot spécifié *plan_handle*. *statement_start_offset* est **int**, avec NULL comme valeur par défaut.  
@@ -63,12 +63,12 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  Un repère de plan ne peut pas être créé pour tous les types d'instructions. Si un repère de plan ne peut pas être créé pour une instruction du lot, la procédure stockée ignore l'instruction et passe à la suivante dans le lot. Si une instruction apparaît plusieurs fois dans le même lot, le plan de la dernière occurrence est activé et les plans précédents de l'instruction sont désactivés. Si aucune instruction dans le lot ne peut être utilisée dans un repère de plan, l'erreur 10532 est générée et l'instruction échoue. Nous vous recommandons de toujours obtenir le descripteur de plan à partir de la vue de gestion dynamique sys.dm_exec_query_stats pour empêcher toute occurrence de cette erreur.  
   
 > [!IMPORTANT]  
->  L'instruction sp_create_plan_guide_from_handle crée des repères de plan basés sur les plans qui apparaissent dans le cache du plan. Autrement dit, le texte du lot, les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et le plan d'exécution XML sont transférés, caractère par caractère (y compris les valeurs littérales passées à la requête), du cache du plan au repère de plan obtenu. Ces chaînes de texte peuvent contenir des informations sensibles stockées ensuite dans les métadonnées de la base de données. Les utilisateurs disposant des autorisations appropriées peuvent afficher ces informations à l’aide de l’affichage catalogue sys.plan_guides et **propriétés du repère de Plan** boîte de dialogue de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour garantir qu'aucune information sensible n'est divulguée par le biais d'un repère de plan, nous vous recommandons d'examiner les repères de plan créés à partir du cache du plan.  
+>  L'instruction sp_create_plan_guide_from_handle crée des repères de plan basés sur les plans qui apparaissent dans le cache du plan. Autrement dit, le texte du lot, les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et le plan d'exécution XML sont transférés, caractère par caractère (y compris les valeurs littérales passées à la requête), du cache du plan au repère de plan obtenu. Ces chaînes de texte peuvent contenir des informations sensibles stockées ensuite dans les métadonnées de la base de données. Les utilisateurs disposant des autorisations appropriées peuvent afficher ces informations à l’aide de la vue de catalogue sys.plan_guides et **propriétés du repère de Plan** boîte de dialogue dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour garantir qu'aucune information sensible n'est divulguée par le biais d'un repère de plan, nous vous recommandons d'examiner les repères de plan créés à partir du cache du plan.  
   
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>Création de repères de plan pour plusieurs instructions dans un plan de requête  
  Comme l'instruction sp_create_plan_guide, l'instruction sp_create_plan_guide_from_handle supprime du cache du plan le plan de requête du lot ou module ciblé. Cette suppression permet de garantir que tous les utilisateurs commencent à utiliser le nouveau repère de plan. Lorsque vous créez un repère de plan pour plusieurs instructions dans un plan de requête unique, vous pouvez différer la suppression du plan du cache en créant tous les repères de plan dans une transaction explicite. Cette méthode permet au plan de rester dans le cache jusqu'à ce que la transaction soit terminée et qu'un repère de plan soit créé pour chaque instruction spécifiée. Voir l'exemple B.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation VIEW SERVER STATE. De plus, des autorisations individuelles sont requises pour chaque repère de plan créé à l'aide de l'instruction sp_create_plan_guide_from_handle. Pour créer un repère de plan de type objet nécessite l’autorisation ALTER sur l’objet référencé. Pour créer un repère de plan de type SQL ou TEMPLATE, il vous faut une autorisation ALTER sur la base de données active. Pour déterminer le type de repère de plan qui sera créé, exécutez la requête suivante :  
   
 ```  

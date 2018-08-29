@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriptiondtsinfo (Transact-SQL) | Documents Microsoft
+title: sp_changesubscriptiondtsinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changesubscriptiondtsinfo
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 55c43914d883ce5f704ad6c7648d473bd38611fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ffbeb38fbdde20f3fdccd9be817c1111e3f651f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990984"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034089"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,16 +61,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 >  Un package DTS doit avoir un mot de passe.  
   
  [ **@dts_package_location**=] **'***dts_package_location***'**  
- Spécifie l'emplacement du package. *dts_package_location* est un **nvarchar(12)**, avec NULL comme valeur par défaut qui indique que l’emplacement du package ne doit être modifiée. L’emplacement du package peut être modifié pour **distributeur** ou **abonné**.  
+ Spécifie l'emplacement du package. *dts_package_location* est un **nvarchar (12)**, avec NULL comme valeur par défaut qui spécifie que l’emplacement du package doit demeurer inchangé. L’emplacement du package peut être modifié à **distributeur** ou **abonné**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_changesubscriptiondtsinfo** est utilisé pour la réplication de capture instantanée et la réplication transactionnelle qui sont uniquement les abonnements par envoi de données.  
+ **sp_changesubscriptiondtsinfo** est utilisé pour la réplication d’instantané ou transactionnelle qui sont uniquement les abonnements envoyés.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle de serveur fixe **db_owner** rôle de base de données fixe, ou le créateur de l’abonnement peut exécuter **sp_changesubscriptiondtsinfo**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe **db_owner** rôle de base de données fixe ou le créateur de l’abonnement peut exécuter **sp_changesubscriptiondtsinfo**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

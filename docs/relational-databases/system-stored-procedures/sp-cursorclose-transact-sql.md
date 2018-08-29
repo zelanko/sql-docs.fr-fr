@@ -1,5 +1,5 @@
 ---
-title: sp_cursorclose (Transact-SQL) | Documents Microsoft
+title: sp_cursorclose (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursorclose
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb3db5049ff370a9dccad98dd7e90efb2e346f0f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b1556ebbfd0f5e01cfccae734036122360e68944
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237125"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022005"
 ---
 # <a name="spcursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ferme et annule le curseur, mais aussi libère toutes les ressources associées ; Autrement dit, elle supprime la table temporaire utilisée pour prendre en charge le jeu de clés ou statiques **curseur**. sp_cursorclose est appelée en spécifiant ID = 9 dans un paquet de stream (TDS) de données tabulaires.  
+  Ferme et libère le curseur, mais aussi libère toutes les ressources associées ; Autrement dit, elle supprime la table temporaire utilisée pour prendre en charge KEYSET ou STATIC **curseur**. sp_cursorclose est appelée en spécifiant ID = 9 dans un paquet data stream (TDS).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_cursorclose cursor
 >  La valeur d'entrée -1 s'appliquera vers tous les curseurs de la connexion actuelle.  
   
 ## <a name="remarks"></a>Notes  
- *curseur* renvoie des messages d’erreur si la procédure a été exécutée une fois que le curseur a été fermé ou si un handle non valide est spécifié.  
+ *curseur* retournera des messages d’erreur si la procédure a été exécutée une fois que le curseur a été fermé ou si un handle non valide est spécifié.  
   
  L'état RPC indique le succès ou l'échec global.  
   

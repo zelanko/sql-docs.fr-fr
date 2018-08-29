@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepublication (Transact-SQL) | Documents Microsoft
+title: sp_dropmergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergepublication
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a360ce767a80dd9f77f35a22d92b65d3a52777c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8876bc0e1007d942bde42a9a5a2472b58f6fa1f5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990564"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030787"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>Arguments  
  [  **@publication=**] **'***publication***'**  
- Est le nom de la publication à supprimer. *publication* est **sysname**, sans valeur par défaut. Si **tous les**, toutes les publications de fusion existantes sont supprimées, ainsi que le travail de l’Agent d’instantané qui s’y rapportent. Si vous spécifiez une valeur particulière pour *publication*, seuls cette publication et son travail de l’Agent de capture instantanée associé sont supprimés.  
+ Est le nom de la publication à supprimer. *publication* est **sysname**, sans valeur par défaut. Si **tous les**, toutes les publications de fusion existantes sont supprimées, ainsi que le travail de l’Agent d’instantané qui s’y rapportent. Si vous spécifiez une valeur particulière pour *publication*, seuls cette publication et son travail d’Agent de capture instantanée associé sont supprimés.  
   
  [  **@ignore_distributor =**] *ignore_distributor*  
  Permet de supprimer une publication sans effectuer de tâches de nettoyage au niveau du serveur de distribution. *ignore_distributor* est **bits**, avec une valeur par défaut **0**. Ce paramètre est également utilisé lors de la réinstallation du serveur de distribution.  
@@ -66,15 +66,15 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_dropmergepublication** est utilisé dans la réplication de fusion.  
   
- **sp_dropmergepublication** supprime tous les articles associés à une publication de manière récursive et puis supprime la publication elle-même. Une publication ne peut être supprimée si elle fait l'objet d'un ou de plusieurs abonnements. Pour plus d’informations sur la suppression des abonnements, consultez [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) et [supprimer un abonnement par extraction](../../relational-databases/replication/delete-a-pull-subscription.md).  
+ **sp_dropmergepublication** supprime tous les articles associés à une publication de manière récursive et puis supprime la publication elle-même. Une publication ne peut être supprimée si elle fait l'objet d'un ou de plusieurs abonnements. Pour plus d’informations sur la suppression des abonnements, consultez [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) et [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
- L’exécution de **sp_dropmergepublication** pour supprimer une publication ne supprime pas les objets publiés à partir de la base de données de publication ou les objets correspondants de la base de données d’abonnement. Utilisez DROP \<objet > pour supprimer ces objets manuellement si nécessaire.  
+ L’exécution de **sp_dropmergepublication** pour supprimer une publication ne supprime pas les objets publiés de la base de données de publication ou les objets correspondants de la base de données d’abonnement. Utilisez DROP \<objet > pour supprimer ces objets manuellement si nécessaire.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_dropmergepublication**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_dropmergepublication**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Supprimer une Publication](../../relational-databases/replication/publish/delete-a-publication.md)   

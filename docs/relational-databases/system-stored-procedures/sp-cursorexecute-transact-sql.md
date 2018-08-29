@@ -1,5 +1,5 @@
 ---
-title: sp_cursorexecute (Transact-SQL) | Documents Microsoft
+title: sp_cursorexecute (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursor_execute
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae17034cdcc2d048e539961bf07971acb3b3410
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 47c6f3a1c0356f00843ba086d1d7994071c24ba6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238789"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029870"
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crée et remplit un curseur basé sur le plan d'exécution créé par sp_cursorprepare. Cette procédure, couplée avec sp_cursorprepare, a la même fonction que sp_cursoropen, mais est fractionnée en deux phases. sp_cursorexecute est appelée en spécifiant ID = 4 dans un paquet de stream (TDS) de données tabulaires.  
+  Crée et remplit un curseur basé sur le plan d'exécution créé par sp_cursorprepare. Cette procédure, couplée avec sp_cursorprepare, a la même fonction que sp_cursoropen, mais est fractionnée en deux phases. sp_cursorexecute est appelée en spécifiant ID = 4 dans un paquet data stream (TDS).  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,8 +53,8 @@ sp_cursorexecute prepared_handle, cursor
  *cursor*  
  Est l’identificateur de curseur généré par SQL Server. *curseur* est un paramètre obligatoire qui doit être fourni pour toutes les procédures suivantes qui agissent sur le curseur, par exemple sp_cursorfetch  
   
- *paramètres scrollopt*  
- Option de défilement. *paramètres scrollopt* est un paramètre optionnel qui requiert un **int** valeur d’entrée. Le sp_cursorexecute*scrollopt* paramètre a les mêmes options de valeur que celles pour sp_cursoropen.  
+ *scrollopt*  
+ Option de défilement. *scrollopt* est un paramètre optionnel qui requiert un **int** valeur d’entrée. Le sp_cursorexecute*scrollopt* paramètre a les mêmes options de valeur que celles pour sp_cursoropen.  
   
 > [!NOTE]  
 >  La valeur PARAMETERIZED_STMT n'est pas prise en charge.  
@@ -69,11 +69,11 @@ sp_cursorexecute prepared_handle, cursor
 >  Si un *ccopt* valeur n’est pas spécifiée, la valeur par défaut est OPTIMISTIC indépendamment de *ccopt* valeur spécifiée dans sp_cursorprepare.  
   
  *nombre de lignes*  
- Paramètre optionnel qui indique le nombre de lignes de tampon d'extraction à utiliser avec AUTO_FETCH. La valeur par défaut est de 20 lignes. *nombre de lignes* se comporte différemment lorsque affecté comme une valeur d’entrée ou une valeur de retour.  
+ Paramètre optionnel qui indique le nombre de lignes de tampon d'extraction à utiliser avec AUTO_FETCH. La valeur par défaut est de 20 lignes. *nombre de lignes* se comporte différemment lorsqu’assigné comme une valeur d’entrée ou une valeur de retour.  
   
 |Comme une valeur d'entrée|Comme une valeur de retour|  
 |--------------------|---------------------|  
-|Quand AUTO_FETCH est spécifiée avec les curseurs FAST_FORWARD *rowcount* représente le nombre de lignes à placer dans le tampon d’extraction.|Représente le nombre de lignes dans le jeu de résultats. Lorsque le *scrollopt* AUTO_FETCH valeur est spécifiée, *rowcount* retourne le nombre de lignes qui ont été extraites dans le tampon d’extraction.|  
+|Lorsqu’AUTO_FETCH est spécifié avec les curseurs FAST_FORWARD *rowcount* représente le nombre de lignes à placer dans le tampon d’extraction.|Représente le nombre de lignes dans le jeu de résultats. Lorsque le *scrollopt* AUTO_FETCH est spécifiée, *rowcount* retourne le nombre de lignes qui ont été extraites dans le tampon d’extraction.|  
   
  *bound_param*  
  Indique l'utilisation facultative de paramètres supplémentaires.  
@@ -84,7 +84,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Valeur de retour de code  
  *nombre de lignes* peut renvoyer les valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |-1|Nombre de lignes inconnues.|  
 |-n|Un remplissage asynchrone est appliqué.|  
@@ -92,10 +92,10 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="remarks"></a>Notes  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Paramètres scrollopt et ccopt  
- *paramètres scrollopt* et *ccopt* sont utiles lorsque les plans mis en cache sont anticipés pour le cache du serveur, ce qui signifie que que le descripteur préparé qui identifie l’instruction doit être recompilé. Le *scrollopt* et *ccopt* les valeurs de paramètre doivent correspondre à celles envoyées dans la demande d’origine à sp_cursorprepare.  
+ *scrollopt* et *ccopt* sont utiles lorsque les plans mis en cache sont anticipés pour le cache du serveur, ce qui signifie que le handle préparé qui identifie l’instruction doit être recompilé. Le *scrollopt* et *ccopt* les valeurs de paramètre doivent correspondre à celles envoyées dans la demande d’origine à sp_cursorprepare.  
   
 > [!NOTE]  
->  PARAMETERIZED_STMT ne doit pas être attribuée à *scrollopt*.  
+>  PARAMETERIZED_STMT ne doit pas être assignée à *scrollopt*.  
   
  L'incapacité à fournir des valeurs correspondantes entraînera la recompilation des plans, annulant ainsi les opérations de préparation et d'exécution.  
   

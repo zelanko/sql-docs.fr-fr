@@ -1,5 +1,5 @@
 ---
-title: sp_replsetoriginator (Transact-SQL) | Documents Microsoft
+title: sp_replsetoriginator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replsetoriginator
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 680fdf8c36c87549de43825ffd2a7aa5c8fba0f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bfba001bb6890c4a15975c78aee7818f02835b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996136"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026818"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
  [  **@server_name=**] **'***nom_serveur***'**  
  Nom du serveur auquel s'applique la transaction. *originating_server* est **sysname**, sans valeur par défaut.  
   
- [  **@database_name=**] **'***nom_base_de_données***'**  
+ [  **@database_name=**] **'***database_name***'**  
  Nom de la base de données à laquelle s'applique la transaction. *originating_db* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -58,8 +58,8 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="remarks"></a>Notes  
  **sp_replsetoriginator** est exécutée par l’Agent de Distribution pour enregistrer la source des transactions appliquées par réplication. Cette information est utilisée pour appeler une détection en boucle des abonnements transactionnels bidirectionnels qui possèdent le jeu de propriétés de la boucle.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe du serveur de publication, les membres de la **db_owner** du rôle de base de données fixe sur la base de données de publication, ou les utilisateurs dans la liste d’accès aux publications (PAL) permettre exécuter **sp_replsetoriginator**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres du **sysadmin** rôle serveur fixe sur le serveur de publication, les membres de la **db_owner** rôle de base de données fixe sur la base de données de publication, ou les utilisateurs dans la liste d’accès aux publications (PAL) peuvent exécuter **sp_replsetoriginator**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

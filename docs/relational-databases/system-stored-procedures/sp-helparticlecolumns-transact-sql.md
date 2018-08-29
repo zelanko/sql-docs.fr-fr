@@ -1,5 +1,5 @@
 ---
-title: sp_helparticlecolumns (Transact-SQL) | Documents Microsoft
+title: sp_helparticlecolumns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b5f5e70a599df333a4d00083929108f9a7172d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6847491bbf8cbf517478ab6cb620f158577ca3e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995856"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034321"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,20 +64,20 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**id de colonne**|**int**|Identificateur de la colonne.|  
+|**id de colonne**|**Int**|Identificateur de la colonne.|  
 |**column**|**sysname**|Nom de la colonne.|  
-|**publié**|**bit**|Indique si la colonne est publiée :<br /><br /> **0** = Non<br /><br /> **1** = Oui|  
+|**Publié**|**bit**|Indique si la colonne est publiée :<br /><br /> **0** = Non<br /><br /> **1** = Oui|  
 |**type de serveur de publication**|**sysname**|Type de données de la colonne sur le serveur de publication.|  
-|**Type d’abonné**|**sysname**|Type de données de la colonne sur l'Abonné.|  
+|**type d’abonné**|**sysname**|Type de données de la colonne sur l'Abonné.|  
   
 ## <a name="remarks"></a>Notes  
  **sp_helparticlecolumns** est utilisé dans la réplication transactionnelle et d’instantané.  
   
  **sp_helparticlecolumns** est utile dans une partition verticale.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe ou de la liste d’accès de la publication active peut exécuter **sp_helparticlecolumns**.  
   
 ## <a name="see-also"></a>Voir aussi  

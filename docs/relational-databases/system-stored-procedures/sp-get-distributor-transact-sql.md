@@ -1,5 +1,5 @@
 ---
-title: sp_get_distributor (Transact-SQL) | Documents Microsoft
+title: sp_get_distributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f4cd34760ff4bd447bc5a2621508629264adee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 088b2d2c6e334d48fae3e9257f76c5fd8129c15d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994096"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021288"
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_get_distributor
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**Installé**|**int**|**0** = No ; **1** = Oui|  
-|**serveur de distribution**|**sysname**|Nom du serveur de distribution|  
-|**base de données de distribution installé**|**int**|**0** = No ; **1** = Oui|  
-|**est le serveur de publication de distribution**|**int**|**0** = No ; **1** = Oui|  
-|**a le serveur de publication de distribution distant**|**int**|**0** = No ; **1** = Oui|  
+|**installé**|**Int**|**0** = No ; **1** = yes|  
+|**serveur de distribution**|**sysname**|Nom du serveur du serveur de distribution|  
+|**base de données de distribution installé**|**Int**|**0** = No ; **1** = yes|  
+|**est le serveur de publication de distribution**|**Int**|**0** = No ; **1** = yes|  
+|**a le serveur de publication de distribution distant**|**Int**|**0** = No ; **1** = yes|  
   
 ## <a name="remarks"></a>Notes  
- **sp_get_distributor** est utilisée principalement par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans l’instantané, transactionnelle et la réplication de fusion.  
+ **sp_get_distributor** est principalement utilisée par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et de capture instantanée, transactionnelle, la réplication de fusion.  
   
-## <a name="permissions"></a>Autorisations  
- Tout utilisateur peut exécuter **sp_get_distributor**. Un jeu de résultats non NULL est retourné lorsque cette stockée procédure est exécutée par les membres de la **db_owner** ou **replmonitor** base de données fixe sur la base de données de distribution, ou les membres de la **db_owner** rôle de base de données fixe sur au moins une base de données publiée. Un jeu de résultats non NULL est également retourné lorsque cette procédure stockée est exécutée par les utilisateurs dans la liste d’accès de publication (PAL) d’au moins une base de données publiée, ou à la publication de la base de données de distribution pour un serveur non-SQL, peuvent également exécuter **sp_get_distributor**.  
+## <a name="permissions"></a>Permissions  
+ Tout utilisateur peut exécuter **sp_get_distributor**. Un jeu de résultats non NULL est retourné lorsque cette stockée procédure est exécutée par les membres de la **db_owner** ou **replmonitor** base de données fixe sur la base de données de distribution, ou les membres de la  **db_owner** rôle de base de données fixe sur au moins une base de données publiée. Un jeu de résultats non NULL est également retourné lorsque cette procédure stockée est exécutée par les utilisateurs dans la liste d’accès de publication (PAL) d’au moins une base de données publiée, ou dans la PAL de la base de données de distribution pour un serveur non-SQL, peuvent également exécuter **sp _get_distributor**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   

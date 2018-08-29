@@ -1,5 +1,5 @@
 ---
-title: sp_setsubscriptionxactseqno (Transact-SQL) | Documents Microsoft
+title: sp_setsubscriptionxactseqno (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f59325c709b8d16d5e120a135d5d9f9697692b1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96592ae1f8f2b1de9e2d294c27d68598d2718ed7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000466"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037976"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 ## <a name="result-set"></a>Jeu de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**XACT_SEQNO D’ORIGINE**|**varbinary(16)**|Numéro séquentiel d'enregistrement d'origine de la transaction suivante à appliquer à l'Abonné.|  
 |**XACT_SEQNO MIS À JOUR**|**varbinary(16)**|Numéro séquentiel d'enregistrement mis à jour de la transaction suivante à appliquer à l'Abonné.|  
-|**NOMBRE DE FLUX DE DONNÉES D’ABONNEMENT**|**int**|Nombre de flux d'abonnements utilisés au cours de la dernière synchronisation.|  
+|**NOMBRE DE FLUX DE DONNÉES D’ABONNEMENT**|**Int**|Nombre de flux d'abonnements utilisés au cours de la dernière synchronisation.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -79,15 +79,15 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
  **sp_setsubscriptionxactseqno** ne peut pas être utilisé dans une topologie de réplication transactionnelle d’égal à égal.  
   
- **sp_setsubscriptionxactseqno** peut être utilisé pour ignorer une transaction spécifique qui provoque une erreur lorsque appliquée à l’abonné. Lors d’un échec et après l’arrêt de l’Agent de Distribution, appelez [sp_helpsubscriptionerrors &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) sur le serveur de distribution pour récupérer la valeur xact_seqno de la transaction en échec, puis appelez **sp_setsubscriptionxactseqno**, en passant cette valeur pour *xact_seqno*. Ainsi, seules les commandes consécutives à ce numéro séquentiel d'enregistrement sont traitées.  
+ **sp_setsubscriptionxactseqno** peut être utilisé pour ignorer une transaction spécifique qui provoque une erreur lorsque s’applique sur l’abonné. En cas d’un échec et une fois que l’Agent de Distribution s’arrête, appelez [sp_helpsubscriptionerrors &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) sur le serveur de distribution pour récupérer la valeur xact_seqno de la transaction en échec, puis appelez **sp_setsubscriptionxactseqno**, en passant cette valeur pour *xact_seqno*. Ainsi, seules les commandes consécutives à ce numéro séquentiel d'enregistrement sont traitées.  
   
  Spécifiez la valeur **0** pour *xact_seqno* pour fournir toutes les commandes en attente dans la base de données de distribution vers l’abonné.  
   
- **sp_setsubscriptionxactseqno** risque d’échouer si l’Agent de Distribution utilise des flux multi-abonnements.  
+ **sp_setsubscriptionxactseqno** peut échouer si l’Agent de Distribution utilise des flux multi-abonnements.  
   
  Lorsque cette erreur se produit, vous devez exécuter l'Agent de distribution avec un seul flux d'abonnements. Pour plus d'informations, consultez [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_setsubscriptionxactseqno**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_setsubscriptionxactseqno**.  
   
   

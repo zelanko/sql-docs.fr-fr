@@ -1,5 +1,5 @@
 ---
-title: sp_check_subset_filter (Transact-SQL) | Documents Microsoft
+title: sp_check_subset_filter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - sp_check_subset_filter
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29eb4ae1b96c8f9a116b221282ea4b293059b2c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33964ac01b09fe9a67a194fe62f37f34eb50d4cd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989954"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038729"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Est si la publication peut utiliser des partitions précalculées ; où **1** signifie que les partitions précalculées peuvent être utilisées, et **0** signifie qu’ils ne peuvent pas être utilisés.|  
-|**has_dynamic_filters**|**bit**|Si la clause de filtre fournie inclut au moins un filtre de lignes paramétrable ; où **1** signifie qu’un filtre de lignes paramétrable est utilisé, et **0** signifie que cette fonction n’est pas utilisée.|  
+|**can_use_partition_groups**|**bit**|Est si la publication est éligible pour l’utilisation de partitions précalculées. où **1** signifie que les partitions précalculées peuvent être utilisées, et **0** signifie qu’ils ne peuvent pas être utilisés.|  
+|**has_dynamic_filters**|**bit**|Si la clause de filtre fournie comprend au moins un filtre de lignes paramétrable ; où **1** signifie qu’un filtre de lignes paramétrable est utilisé, et **0** signifie qu’une telle fonction n’est pas utilisée.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Listes des fonctions de la clause de filtre qui filtrent dynamiquement un article, où chaque fonction est séparée par un point-virgule.|  
 |**uses_host_name**|**bit**|Si le [HOST_NAME()](../../t-sql/functions/host-name-transact-sql.md) fonction est utilisée dans la clause de filtre, où **1** signifie que cette fonction est présente.|  
 |**uses_suser_sname**|**bit**|Si le [SUSER_SNAME()](../../t-sql/functions/suser-sname-transact-sql.md) fonction est utilisée dans la clause de filtre, où **1** signifie que cette fonction est présente.|  
@@ -79,10 +79,10 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
   
  **sp_check_subset_filter** peut être exécutée sur une table, même si la table n’est pas publiée. Cette procédure stockée peut être utilisée pour vérifier une clause de filtre avant de définir un article filtré.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_check_subset_filter**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_check_subset_filter**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Optimiser les performances des filtres paramétrés avec des Partitions précalculées](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  
+ [Optimiser les performances des filtres paramétrés avec des partitions précalculées](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  
   
   

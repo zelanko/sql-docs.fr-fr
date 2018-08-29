@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributor (Transact-SQL) | Documents Microsoft
+title: sp_helpdistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributor
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e634d01d6bf241d6d626fb6c28038aa6175b2468
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0b7e22c946626c10d08781e00886083d0991d01
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003136"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022578"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
  [  **@distribdb=**] **'***base_de_données_de_distribution***'** sortie  
  Est le nom de la base de données de distribution. *base_de_données_de_distribution* est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
   
- [  **@directory=**] **'***active***'** sortie  
+ [  **@directory=**] **'***directory***'** sortie  
  Est le répertoire de travail. *répertoire* est **nvarchar (255)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
   
  [  **@account=**] **'***compte***' sortie**  
@@ -98,16 +98,16 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**Serveur de distribution**|**sysname**|Nom du serveur de distribution.|  
-|**Base de données de distribution**|**sysname**|Nom de la base de données de distribution.|  
+|**serveur de distribution**|**sysname**|Nom du serveur de distribution.|  
+|**base de données de distribution**|**sysname**|Nom de la base de données de distribution.|  
 |**Répertoire**|**nvarchar(255)**|Nom du répertoire de travail.|  
-|**Compte**|**nvarchar(255)**|Nom du compte d'utilisateur Windows.|  
-|**rétention du point de distrib min**|**int**|Période de rétention de distribution minimale.|  
-|**rétention du point de distrib max**|**int**|Période maximale de rétention de distribution.|  
-|**rétention de l’historique**|**int**|Période de rétention de l'historique.|  
-|**agent de nettoyage de l’historique**|**nvarchar(100)**|Nom de l'Agent de nettoyage de l'historique|  
+|**compte**|**nvarchar(255)**|Nom du compte d'utilisateur Windows.|  
+|**rétention de distrib min**|**Int**|Période de rétention de distribution minimale.|  
+|**rétention de distrib max**|**Int**|Période maximale de rétention de distribution.|  
+|**rétention de l’historique**|**Int**|Période de rétention de l'historique.|  
+|**agent de nettoyage d’historique**|**nvarchar(100)**|Nom de l'Agent de nettoyage de l'historique|  
 |**agent de nettoyage de distribution**|**nvarchar(100)**|Nom de l'Agent de nettoyage de distribution.|  
 |**nom du serveur RPC**|**sysname**|Nom du serveur de distribution local ou distant.|  
 |**nom de connexion RPC**|**sysname**|Connexion utilisée pour les appels de procédure à distance au serveur de distribution distant.|  
@@ -119,10 +119,10 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ## <a name="remarks"></a>Notes  
  **sp_helpdistributor** est utilisée dans tous les types de réplication.  
   
- Si un ou plusieurs paramètres de sortie sont spécifiées lors de l’exécution **sp_helpdistributor**, tous les paramètres de sortie la valeur NULL sont affectées des valeurs à la sortie et aucun jeu de résultats n’est renvoyée. Si aucun paramètre de sortie n'est spécifié, un ensemble de résultats est retourné.  
+ Si un ou plusieurs paramètres de sortie sont spécifiés lors de l’exécution **sp_helpdistributor**, tous les paramètres de sortie la valeur NULL sont affectées des valeurs à la sortie et aucun jeu de résultats n’est renvoyée. Si aucun paramètre de sortie n'est spécifié, un ensemble de résultats est retourné.  
   
-## <a name="permissions"></a>Autorisations  
- Le résultat suivant définie les colonnes ou paramètres de sortie sont retournés aux membres de la **sysadmin** rôle serveur fixe du serveur de publication et la **db_owner** rôle de base de données fixe sur la base de données de publication :  
+## <a name="permissions"></a>Permissions  
+ Le résultat suivant définie les colonnes ou paramètres de sortie sont retournés aux membres de la **sysadmin** rôle serveur fixe sur le serveur de publication et la **db_owner** rôle de base de données fixe sur la base de données de publication :  
   
 |Colonne de l'ensemble de résultats|Paramètre de sortie|  
 |-----------------------|----------------------|  
@@ -132,7 +132,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |history retention|**@history_retention**|  
 |history cleanup agent|**@history_cleanupagent**|  
 |distribution cleanup agent|**@distrib_cleanupagent**|  
-|rpc login name|aucun|  
+|rpc login name|none|  
   
  La colonne de l'ensemble de résultats suivante est retournée aux utilisateurs dans la liste d'accès aux publications sur le serveur de distribution :  
   
@@ -148,7 +148,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |publisher type|**@publisher_type**|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   

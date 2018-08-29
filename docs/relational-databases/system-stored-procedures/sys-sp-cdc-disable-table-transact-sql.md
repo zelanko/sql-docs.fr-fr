@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_disable_table (Transact-SQL) | Documents Microsoft
+title: Sys.sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 16356cc8a5d427a9432ac8c753b1e51d915337d4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9450d80191ac611004cc39528820f49949232823
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255923"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028327"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,12 +69,12 @@ sys.sp_cdc_disable_table
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- **Sys.sp_cdc_disable_table** supprime la capture de données modifiées modifier la table et les fonctions système associées à l’instance de capture et de la table source spécifiée. Il supprime toutes les lignes associées à l’instance de capture spécifiée à partir de la modification des tables de système de capture de données et le définit le **is_tracked_by_cdc** colonne pour l’entrée de table dans le [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) affichage 0 catalogue.  
+ **Sys.sp_cdc_disable_table** supprime la capture de données modifiées modifier la table et les fonctions système associées à l’instance de capture et de la table source spécifié. Il supprime toutes les lignes associées à l’instance de capture spécifiée à partir de la modification des tables de système de capture de données et jeux le **is_tracked_by_cdc** colonne pour l’entrée de table dans le [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) vue de catalogue égal à 0.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’appartenance dans le **db_owner** rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  

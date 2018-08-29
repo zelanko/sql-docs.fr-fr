@@ -1,5 +1,5 @@
 ---
-title: sp_vupgrade_replication (Transact-SQL) | Documents Microsoft
+title: sp_vupgrade_replication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_vupgrade_replication
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c12d5f2b9ffbbf2d3d1d3ce11b76e32a3f3ed12f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f95cf47caaa3c5fd6c361647389031f97b98185
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002666"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031102"
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 ## <a name="arguments"></a>Arguments  
  [  **@login=**] **'***connexion***'**  
- Nom de connexion de l'administrateur système à utiliser lors de la création d'objets système dans la base de données de distribution. *login* est de type **sysname**, avec NULL comme valeur par défaut. Ce paramètre n’est pas nécessaire si *security_mode* a la valeur **1**, qui est l’authentification Windows.  
+ Nom de connexion de l'administrateur système à utiliser lors de la création d'objets système dans la base de données de distribution. *login* est de type **sysname**, avec NULL comme valeur par défaut. Ce paramètre n’est pas obligatoire si *security_mode* a la valeur **1**, qui est l’authentification Windows.  
   
 > [!NOTE]  
 >  Ce paramètre est ignoré lorsque vous effectuez une mise à niveau vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.  
   
  [  **@password=**] **'***mot de passe***'**  
- Est le mot de passe administrateur système à utiliser lors de la création de nouveaux objets système dans la base de données de Distribution. *mot de passe* est **sysname**, avec une valeur par défaut **''** (chaîne vide). Ce paramètre n’est pas nécessaire si *security_mode* a la valeur **1**, qui est l’authentification Windows.  
+ Est le mot de passe administrateur système à utiliser lors de la création d’objets système dans la base de données de Distribution. *mot de passe* est **sysname**, avec une valeur par défaut **''** (chaîne vide). Ce paramètre n’est pas obligatoire si *security_mode* a la valeur **1**, qui est l’authentification Windows.  
   
 > [!NOTE]  
 >  Ce paramètre est ignoré lorsque vous mettez à niveau vers SQL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.  
@@ -70,7 +70,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@security_mode=**] **'***security_mode***'**  
- Mode de sécurité de connexion à utiliser lors de la création d'objets système dans la base de données de distribution. *security_mode* est **bits** avec la valeur par défaut **0**. Si **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification est utilisée. Si **1**, l’authentification Windows est utilisée.  
+ Mode de sécurité de connexion à utiliser lors de la création d'objets système dans la base de données de distribution. *security_mode* est **bits** avec une valeur par défaut **0**. Si **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification est utilisée. Si **1**, l’authentification Windows est utilisée.  
   
 > [!NOTE]  
 >  Ce paramètre est ignoré lorsque vous effectuez une mise à niveau vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.  
@@ -81,7 +81,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ## <a name="remarks"></a>Notes  
  **sp_vupgrade_replication** est utilisé lors de la mise à niveau de tous les types de réplication.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_vupgrade_replication**.  
   
 ## <a name="see-also"></a>Voir aussi  

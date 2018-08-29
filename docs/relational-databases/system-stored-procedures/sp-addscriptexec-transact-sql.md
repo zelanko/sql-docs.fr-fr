@@ -1,5 +1,5 @@
 ---
-title: sp_addscriptexec (Transact-SQL) | Documents Microsoft
+title: sp_addscriptexec (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e3122de37c27e8372c2aca77f4dde0b267a8d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50606c2b80e5aeae4cb68c453a130dc557111988
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989594"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035191"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +58,13 @@ sp_addscriptexec [ @publication = ] publication
   
  **0** = l’agent s’arrête.  
   
- **1** = l’agent poursuit le script et ignore l’erreur.  
+ **1** = l’agent continue le script et ignore l’erreur.  
   
  [  **@publisher=** ] **'***publisher***'**  
  Spécifie un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
->  *serveur de publication* ne doit pas être utilisé lors de la publication d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
+>  *serveur de publication* ne doit pas être utilisé lors de la publication à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -75,19 +74,19 @@ sp_addscriptexec [ @publication = ] publication
   
  **sp_addscriptexec** n’est pas utilisé pour la réplication d’instantané.  
   
- Pour utiliser **sp_addscriptexec**, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service doit disposer de lecture et écriture sur les autorisations instantané de l’emplacement et en lecture sur l’emplacement où tous les scripts est stockés.  
+ Pour utiliser **sp_addscriptexec**, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service doit disposer de lecture et d’autorisations en écriture sur les autorisations instantané de l’emplacement et en lecture sur l’emplacement où tous les scripts sont stockées.  
   
- Le [utilitaire sqlcmd](../../tools/sqlcmd-utility.md) est utilisé pour exécuter le script sur l’abonné, et le script est exécuté dans le contexte de sécurité utilisé par l’Agent de Distribution ou l’Agent de fusion lors de la connexion à la base de données d’abonnement. Lorsque l’agent est exécuté sur une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le [utilitaire osql](../../tools/osql-utility.md) est utilisé à la place de [sqlcmd](../../tools/sqlcmd-utility.md).  
+ Le [utilitaire sqlcmd](../../tools/sqlcmd-utility.md) est utilisé pour exécuter le script sur l’abonné, et le script est exécuté dans le contexte de sécurité utilisé par l’Agent de Distribution ou l’Agent de fusion lors de la connexion à la base de données d’abonnement. Lorsque l’agent est exécuté sur une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le [utilitaire osql](../../tools/osql-utility.md) est utilisé au lieu de [sqlcmd](../../tools/sqlcmd-utility.md).  
   
- **sp_addscriptexec** est utile dans l’application de scripts pour les abonnés et utilise [sqlcmd](../../tools/sqlcmd-utility.md) pour appliquer le contenu du script à l’abonné. Toutefois, dans la mesure où les configurations des Abonnés peuvent varier, des scripts testés avant la publication sur le serveur de publication peuvent toujours provoquer des erreurs sur un Abonné. *SkipError* fournit la possibilité que l’Agent de Distribution ou l’Agent de fusion ignorer les erreurs et continuer. Utilisez [sqlcmd](../../tools/sqlcmd-utility.md) pour tester des scripts avant d’exécuter **sp_addscriptexec**.  
+ **sp_addscriptexec** est utile dans l’application de scripts pour les abonnés et utilise [sqlcmd](../../tools/sqlcmd-utility.md) pour appliquer le contenu du script à l’abonné. Toutefois, dans la mesure où les configurations des Abonnés peuvent varier, des scripts testés avant la publication sur le serveur de publication peuvent toujours provoquer des erreurs sur un Abonné. *SkipError* fournit la possibilité de l’Agent de Distribution ou l’Agent de fusion ignorer les erreurs et continuer. Utilisez [sqlcmd](../../tools/sqlcmd-utility.md) pour tester les scripts avant d’exécuter **sp_addscriptexec**.  
   
 > [!NOTE]  
 >  Les erreurs ignorées sont toujours consignées dans l'historique de l'Agent à titre de référence.  
   
- À l’aide de **sp_addscriptexec** pour valider un fichier de script pour les publications utilisant FTP pour la remise d’instantanés est uniquement pris en charge pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés.  
+ À l’aide de **sp_addscriptexec** pour valider un fichier de script pour les publications utilisant FTP pour la remise d’instantanés est uniquement pris en charge pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_addscriptexec**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addscriptexec**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécuter des Scripts pendant la synchronisation &#40;programmation Transact-SQL&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   

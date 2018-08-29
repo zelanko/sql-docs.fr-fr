@@ -1,5 +1,5 @@
 ---
-title: sp_getqueuedrows (Transact-SQL) | Documents Microsoft
+title: sp_getqueuedrows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ec0e31b852a1aea3cfd964a47660fd4953c196d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7aa57cc268f5bc70bc0c2ebf03e0f05a4d8950d8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994416"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029000"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,11 +62,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ## <a name="result-sets"></a>Jeux de résultats  
  Affiche toutes les lignes détenant actuellement au moins une transaction en attente pour la table d'abonnement.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Action**|**nvarchar(10)**|Type d'action à appliquer au moment de la synchronisation.<br /><br /> INS= insertion <br /><br /> DEL = suppression<br /><br /> UPD = mise à jour|  
-|**Tranid**|**nvarchar (70)**|Identificateur de transaction sous lequel la commande a été exécutée.|  
-|**column1 table... n**||La valeur pour chaque colonne de la table spécifiée dans *tablename*.|  
+|**tranid**|**nvarchar (70)**|Identificateur de transaction sous lequel la commande a été exécutée.|  
+|**Colonne1 table... n**||La valeur pour chaque colonne de la table spécifiée dans *tablename*.|  
 |**MSrepl_tran_version**|**uniqueidentifier**|Cette colonne permet d'assurer le suivi des modifications apportées aux données répliquées et de détecter les conflits sur le serveur de publication. Cette colonne est automatiquement ajoutée à la table.|  
   
 ## <a name="remarks"></a>Notes  
@@ -74,7 +74,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
  **sp_getqueuedrows** recherche les lignes d’une table donnée sur un abonnement de base de données qui ont participé à une mise à jour en file d’attente, mais actuellement pas résolues par l’agent de lecture de file d’attente.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  **sp_getqueuedrows** requiert des autorisations SELECT sur la table spécifiée dans *tablename*.  
   
 ## <a name="see-also"></a>Voir aussi  

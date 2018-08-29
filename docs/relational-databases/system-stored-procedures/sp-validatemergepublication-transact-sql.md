@@ -1,5 +1,5 @@
 ---
-title: sp_validatemergepublication (Transact-SQL) | Documents Microsoft
+title: sp_validatemergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_validatemergepublication
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f038c33a58eae7fd9a12d0b0b6a223d325be140
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2abb97e73958695c4be57157e0523d0d1b4829b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998506"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029949"
 ---
 # <a name="spvalidatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_validatemergepublication [@publication=] 'publication'
  [  **@level=** ] *niveau*  
  Type de validation à réaliser. *niveau* est **tinyint**, sans valeur par défaut. Le paramètre « level » peut avoir l'une des valeurs suivantes :  
   
-|Valeur de level (niveau)| Description|  
+|Valeur de level (niveau)|Description|  
 |-----------------|-----------------|  
 |**1**|Validation du décompte de lignes uniquement.|  
 |**2**|Validation du nombre de lignes et de la somme de contrôle. Pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]abonnés, il est automatiquement défini sur **3**.|  
@@ -64,7 +64,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_validatemergepublication** est utilisé dans la réplication de fusion.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_validatemergepublication**.  
   
 ## <a name="see-also"></a>Voir aussi  

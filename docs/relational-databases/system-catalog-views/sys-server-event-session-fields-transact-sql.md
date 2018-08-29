@@ -1,5 +1,5 @@
 ---
-title: Sys.server_event_session_fields (Transact-SQL) | Documents Microsoft
+title: Sys.server_event_session_fields (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,29 +22,29 @@ helpviewer_keywords:
 - xe
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6b9aae1c5666203ac57ccb3ca4f762226cdca151
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3aed898936ab65dab5646dc12379a6eb9ba90bb6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220260"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020375"
 ---
 # <a name="sysservereventsessionfields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque colonne personnalisable définie explicitement sur les événements et les cibles.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
-|object_id|**int**|ID de l'objet auquel est associé ce champ. N'accepte pas la valeur NULL.|  
-|name|**sysname**|Le nom du champ. N'accepte pas la valeur NULL.|  
+|event_session_id|**Int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
+|object_id|**Int**|ID de l'objet auquel est associé ce champ. N'accepte pas la valeur NULL.|  
+|NAME|**sysname**|Le nom du champ. N'accepte pas la valeur NULL.|  
 |valeur|**sql_variant**|La valeur du champ. N'accepte pas la valeur NULL.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  

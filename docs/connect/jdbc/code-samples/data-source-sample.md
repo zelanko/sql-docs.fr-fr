@@ -14,18 +14,18 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61fb9ed58ab1afddfcb0375e6a6048dbee994360
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 166cc1aa7764a310d7cc6741afcd3e4dce3f2f62
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452173"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784738"
 ---
 # <a name="data-source-sample"></a>Exemple de source de données
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] montre comment se connecter à une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] avec un objet de source de données. Il montre également comment extraire des données d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] avec une procédure stockée.
+Cet exemple d’application du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] montre comment se connecter à une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec un objet de source de données. Il montre également comment extraire des données d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec une procédure stockée.
 
 Le fichier de code de cet exemple, ConnectDataSource.java, se trouve à l’emplacement suivant :
 

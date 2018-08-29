@@ -1,6 +1,6 @@
 ---
 title: 'Leçon du didacticiel Analysis Services 2 : obtenir des données | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9adeebfbd3c49761adb816a7d28472a61ffca5cc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007200"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062210"
 ---
 # <a name="get-data"></a>Obtenir des données
 
@@ -22,7 +22,7 @@ ms.locfileid: "38007200"
 
 Dans cette leçon, vous utilisez **obtenir des données** pour vous connecter à la base de données exemple AdventureWorksDW, sélectionner des données, aperçu et filtrer, puis importer dans votre espace de travail du modèle.  
   
-En utilisant obtenir des données, vous pouvez importer des données à partir d’un large éventail de sources. Données peuvent également être interrogées à l’aide d’une expression de formule M Power Query ou un [expression de requête SQL native](../tabular-models/ssas-import-query.md).
+Sous le capot, obtenir des données est Power Query, qui fournit un large éventail d’outils pour la connexion et la mise en forme des données pour la modélisation et l’analyse. Pour plus d’informations, consultez [Documentation de Power Query](https://docs.microsoft.com/power-query/). 
 
 > [!NOTE]
 > Tâches et des images dans ce didacticiel illustrent la connexion à une base de données AdventureWorksDW2014 sur un serveur local. Dans certains cas, une base de données AdventureWorksDW sur Azure SQL Data Warehouse peut afficher des objets différents ; Toutefois, ils sont fondamentalement les mêmes.

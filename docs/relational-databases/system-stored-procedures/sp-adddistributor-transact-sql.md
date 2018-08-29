@@ -1,5 +1,5 @@
 ---
-title: sp_adddistributor (Transact-SQL) | Documents Microsoft
+title: sp_adddistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -21,21 +21,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_adddistributor
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bb7c48d0726b51d18c878317325bca642cdf6874
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 920138f85dbf0e3a0a5b170879958711c777afaf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993686"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037312"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crée une entrée dans le [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) table (s’il n’est pas le cas), marque l’entrée de serveur comme serveur de distribution et stocke les informations sur les propriétés. Cette procédure stockée est exécutée sur la base de données master du serveur de distribution pour enregistrer et marquer le serveur en tant que serveur de distribution. Dans le cas d'un serveur de distribution distant, la procédure stockée est également exécutée sur le serveur de publication à partir de la base de données master.  
+  Crée une entrée dans le [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) table (s’il n’est pas le cas), marque l’entrée de serveur comme serveur de distribution et stocke les informations de propriété. Cette procédure stockée est exécutée sur la base de données master du serveur de distribution pour enregistrer et marquer le serveur en tant que serveur de distribution. Dans le cas d'un serveur de distribution distant, la procédure stockée est également exécutée sur le serveur de publication à partir de la base de données master.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -74,7 +73,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistributor-transa_1.sql)]  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_adddistributor**.  
   
 ## <a name="see-also"></a>Voir aussi  

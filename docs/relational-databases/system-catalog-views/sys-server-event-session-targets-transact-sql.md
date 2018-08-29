@@ -1,5 +1,5 @@
 ---
-title: Sys.server_event_session_targets (Transact-SQL) | Documents Microsoft
+title: Sys.server_event_session_targets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,30 +22,30 @@ helpviewer_keywords:
 - xe
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54af7feefe5241df2af127a4e684f3dce2b3b7a8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9b38bfd00a699cb997f6cc73776daf6bed5f4cb8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219860"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023998"
 ---
 # <a name="sysservereventsessiontargets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque cible d'événement d'une session d'événements.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
-|target_id|**int**|ID de la cible. Cet ID est unique au sein de l'objet de la session d'événements. N'accepte pas la valeur NULL.|  
-|name|**sysname**|Nom de la cible d'événement. N'accepte pas la valeur NULL.|  
+|event_session_id|**Int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
+|target_id|**Int**|ID de la cible. Cet ID est unique au sein de l'objet de la session d'événements. N'accepte pas la valeur NULL.|  
+|NAME|**sysname**|Nom de la cible d'événement. N'accepte pas la valeur NULL.|  
 |package|**sysname**|Nom du package d'événement qui contient la cible d'événement. N'accepte pas la valeur NULL.|  
 |module|**sysname**|Nom du module qui contient la cible d'événement. N'accepte pas la valeur NULL.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  

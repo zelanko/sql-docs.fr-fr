@@ -1,5 +1,5 @@
 ---
-title: sp_schemafilter (Transact-SQL) | Documents Microsoft
+title: sp_schemafilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce33fa1ffb73f3ba663eb9ec7fedf0e13d5ec8e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4da23d87736d7ad9af4c00c5f4704e9cbbdd5160
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997516"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027033"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Arguments  
  [**@publisher** =] **'***publisher***'**  
- Nom de la non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+ Est le nom de la non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
  [**@schema** =] **'***schéma***'**  
  Nom du schéma. *schéma* est **sysname**, avec NULL comme valeur par défaut.  
@@ -56,7 +56,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
  [**@operation** =] **'***opération***'**  
  Action à effectuer sur ce schéma. *opération* est **nvarchar (4)**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**add**|Ajoute le schéma spécifié à la liste des schémas qui ne peuvent pas être publiés.|  
 |**DROP**|Supprime le schéma spécifié de la liste des schémas qui ne peuvent pas être publiés.|  
@@ -64,7 +64,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**SchemaName**|**sysname**|Nom du schéma dont la publication n'est pas admise.|  
   
@@ -72,10 +72,10 @@ sp_schemafilter [ @publisher = ] 'publisher'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_schemafilter** ne doit être utilisée que pour les serveurs de publication hétérogènes.  
+ **sp_schemafilter** doit uniquement être utilisé pour les serveurs de publication hétérogènes.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** du rôle serveur fixe du serveur de distribution peuvent exécuter **sp_schemafilter**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** du rôle serveur fixe sur le serveur de distribution peuvent exécuter **sp_schemafilter**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

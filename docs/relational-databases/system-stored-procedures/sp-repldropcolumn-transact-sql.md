@@ -1,5 +1,5 @@
 ---
-title: sp_repldropcolumn (Transact-SQL) | Documents Microsoft
+title: sp_repldropcolumn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_repldropcolumn
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2613b4c2aded7ee192bdd456b3d9d51ec1587eda
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06d0015da7f02085cbe61765042d90328295f735
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002349"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021163"
 ---
 # <a name="sprepldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,21 +62,21 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
  Indique si la procédure stockée est exécutée par un agent de réplication. *from_agent* est de type int, avec une valeur par défaut 0, où la valeur 1 est utilisée lorsque cette procédure stockée est exécutée par un agent de réplication, et dans tous les autres cas la valeur par défaut 0 doit être utilisée.  
   
  [ @schema_change_script =] '*schema_change_script*'  
- Spécifie le nom et le chemin d'accès d'un script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour modifier les procédures stockées personnalisées générées par le système. *schema_change_script* est nvarchar (4000), avec NULL comme valeur par défaut. La réplication permet aux procédures stockées personnalisées définies par l'utilisateur de remplacer une ou plusieurs procédures par défaut utilisées dans la réplication transactionnelle. *schema_change_script* est exécuté après une modification de schéma est apportée à un article de table répliqué à l’aide de sp_repldropcolumn et peut être utilisée pour effectuer l’une des opérations suivantes :  
+ Spécifie le nom et le chemin d'accès d'un script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour modifier les procédures stockées personnalisées générées par le système. *schema_change_script* est nvarchar (4000), avec NULL comme valeur par défaut. La réplication permet aux procédures stockées personnalisées définies par l'utilisateur de remplacer une ou plusieurs procédures par défaut utilisées dans la réplication transactionnelle. *schema_change_script* est exécuté après une modification de schéma est apportée à un article de table répliquée à l’aide de sp_repldropcolumn et peut être utilisée pour effectuer l’une des opérations suivantes :  
   
--   Si des procédures stockées personnalisées sont automatiquement régénérées, *schema_change_script* peut être utilisé pour supprimer ces procédures stockées personnalisées et de les remplacer par les procédures personnalisées stockées définies par l’utilisateur qui prend en charge le nouveau schéma.  
+-   Si des procédures stockées personnalisées sont automatiquement régénérées, *schema_change_script* peut être utilisé pour supprimer ces procédures stockées personnalisées et remplacez-les par les procédures personnalisées stockées définies par l’utilisateur qui prend en charge le nouveau schéma.  
   
 -   Si des procédures stockées personnalisées ne sont pas régénérées automatiquement, *schema_change_script*peut être utilisé pour régénérer ces procédures stockées ou personnalisées définies par l’utilisateur de créer des procédures stockées.  
   
- [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
- Active ou désactive la possibilité d'invalider un instantané. *force_invalidate_snapshot* est de type bit, avec 1 comme valeur par défaut.  
+ [ @force_invalidate_snapshot =] *àce_invalidate_snapshot*  
+ Active ou désactive la possibilité d'invalider un instantané. *àce_invalidate_snapshot* est de type bit, avec 1 comme valeur par défaut.  
   
  1 spécifie que les modifications de l'article peuvent invalider l'instantané et dans ce cas, la valeur 1 autorise la réalisation du nouvel instantané.  
   
  0 spécifie que les modifications de l'article n'invalident pas l'instantané.  
   
- [ @force_reinit_subscription =] *force_reinit_subscription*  
- Active ou désactive la possibilité de réinitialiser l'abonnement. *force_reinit_subscription* est de type bit, avec 0 comme valeur par défaut.  
+ [ @force_reinit_subscription =] *àce_reinit_subscription*  
+ Active ou désactive la possibilité de réinitialiser l'abonnement. *àce_reinit_subscription* est de type bit avec 0 comme valeur par défaut.  
   
  0 spécifie que les modifications de l'article ne provoquent pas la réinitialisation de l'abonnement.  
   
@@ -85,7 +85,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres du rôle serveur fixe sysadmin sur le serveur de publication ou les membres des rôles de base de données fixes db_owner ou db_ddladmin de la base de données de publication peuvent exécuter sp_repldropcolumn.  
   
 ## <a name="see-also"></a>Voir aussi  

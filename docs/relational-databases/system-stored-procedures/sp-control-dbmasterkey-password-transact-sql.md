@@ -1,5 +1,5 @@
 ---
-title: sp_control_dbmasterkey_password (Transact-SQL) | Documents Microsoft
+title: sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_dbmasterkey_password
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a9894a10965affbd65406276445f6c84f05ce76e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a468fc35805dc51bd76a51021fab82f66c8fc25
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239229"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037532"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- @db_name= N'*nom_base_de_données*'  
+ @db_name= N'*database_name*'  
  Spécifie le nom de la base de données associée à ces informations d'identification. Il ne peut s'agir d'une base de données système. *database_name* est **nvarchar**.  
   
  @password= N'*mot de passe*'  
@@ -63,7 +62,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!CAUTION]  
 >  Ne créez pas d'informations d'identification de clé principale pour une base de données qui doit être inaccessible à sa et à d'autres principaux de serveur dotés de privilèges de haut niveau. Vous pouvez configurer une base de données de sorte que la hiérarchie de ses clés ne puisse pas être déchiffrée par la clé principale du service. Cette option est prise en charge dans le cadre d'une défense en profondeur de bases de données qui contiennent des données chiffrées qui ne doivent pas être accessibles à sa ni à d'autres principaux de serveur dotés de privilèges de haut niveau. La création d'informations d'identification de clé principale pour une telle base de données supprime cette défense en profondeur en permettant à sa et à d'autres principaux de serveur dotés de privilèges de haut niveau de déchiffrer la base de données.  
   
- Informations d’identification qui sont créées à l’aide de sp_control_dbmasterkey_password sont visibles dans le [sys.master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) affichage catalogue. Les noms des informations d'identification créées pour les clés principales des bases de données ont le format suivant :`##DBMKEY_<database_family_guid>_<random_password_guid>##`. Le mot de passe est stocké en tant que secret des informations d'identification. À chaque mot de passe ajouté dans la banque d'informations d'identification correspond une ligne dans sys.credentials.  
+ Informations d’identification qui sont créées à l’aide de sp_control_dbmasterkey_password sont visibles dans le [sys.master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) vue de catalogue. Les noms des informations d'identification créées pour les clés principales des bases de données ont le format suivant :`##DBMKEY_<database_family_guid>_<random_password_guid>##`. Le mot de passe est stocké en tant que secret des informations d'identification. À chaque mot de passe ajouté dans la banque d'informations d'identification correspond une ligne dans sys.credentials.  
   
  Vous ne pouvez pas utiliser sp_control_dbmasterkey_password pour créer des informations d'identification pour les bases de données système suivantes : master, model, msdb ou tempdb.  
   
@@ -81,7 +80,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
   
  **Problème de compatibilité descendante potentiel :** actuellement, la procédure stockée ne vérifie pas si une clé principale existe. Cette opération est autorisée à des fins de compatibilité descendante, mais affiche un avertissement. Ce comportement est déconseillé. Dans une prochaine version de la clé principale doit exister et le mot de passe utilisé dans la procédure stockée **sp_control_dbmasterkey_password** doit être le même mot de passe comme l’un des mots de passe utilisés pour chiffrer la clé principale de base de données.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation CONTROL sur la base de données.  
   
 ## <a name="examples"></a>Exemples  

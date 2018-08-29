@@ -1,5 +1,5 @@
 ---
-title: sp_repldone (Transact-SQL) | Documents Microsoft
+title: sp_repldone (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_repldone
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b06b31afb6daae2f6faa8436f0ec6ed88ef494ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eda5dc47a5fa841b29bc01634395acd7fff53ace
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000226"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024506"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33000226"
   Met à jour l'enregistrement identifiant la dernière transaction distribuée du serveur. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
 > [!CAUTION]  
->  Si vous exécutez **sp_repldone** manuellement, vous pouvez invalider l’ordre et la cohérence des transactions délivrées. **sp_repldone** doit uniquement être utilisé pour la résolution des problèmes de réplication comme indiqué par un professionnel expérimenté de la réplication.  
+>  Si vous exécutez **sp_repldone** manuellement, vous pouvez invalider l’ordre et la cohérence des transactions remises. **sp_repldone** doit uniquement être utilisé pour la résolution des problèmes de réplication comme indiqué par un professionnel expérimenté réplication prise en charge.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,19 +53,19 @@ sp_repldone [ @xactid= ] xactid
   
 ## <a name="arguments"></a>Arguments  
  [  **@xactid=**] *xactid*  
- Est le numéro de séquence du journal (LSN) du premier enregistrement de la dernière transaction distribuée du serveur. *xactid* est **Binary (10)**, sans valeur par défaut.  
+ Est le numéro de séquence de journal (LSN) du premier enregistrement de la dernière transaction distribuée du serveur. *xactid* est **Binary (10)**, sans valeur par défaut.  
   
  [  **@xact_seqno=**] *xact_seqno*  
- Est le numéro LSN du dernier enregistrement de la dernière transaction distribuée du serveur. *xact_seqno* est **Binary (10)**, sans valeur par défaut.  
+ Est le LSN du dernier enregistrement de la dernière transaction distribuée du serveur. *xact_seqno* est **Binary (10)**, sans valeur par défaut.  
   
  [  **@numtrans=**] *numtrans*  
  Est le nombre de transactions distribuées. *numtrans* est **int**, sans valeur par défaut.  
   
- [  **@time=**] *heure*  
+ [  **@time=**] *temps*  
  Nombre de millisecondes, le cas échéant, nécessaires pour distribuer la dernière série de transactions. *temps* est **int**, sans valeur par défaut.  
   
  [  **@reset=**] *réinitialiser*  
- État de la réinitialisation. *réinitialiser* est **int**, sans valeur par défaut. Si **1**, tous les répliquées dans le journal des transactions sont marquées comme distribuées. Si **0**, le journal des transactions est réinitialisé à la première transaction répliquée et aucune transaction répliquée n’est marquées comme distribuées. *réinitialiser* est valide uniquement lorsque les deux *xactid* et *xact_seqno* ont la valeur NULL.  
+ État de la réinitialisation. *réinitialiser* est **int**, sans valeur par défaut. Si **1**et répliqué toutes les transactions dans le journal sont marquées comme distribuées. Si **0**, le journal des transactions est réinitialisé à la première transaction répliquée et aucune transaction répliquée n’est marquée comme distribuée. *réinitialiser* est valide uniquement lorsque les deux *xactid* et *xact_seqno* ont la valeur NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -79,11 +79,11 @@ sp_repldone [ @xactid= ] xactid
   
  Les paramètres requis *xactid* et *xact_seqno* peut être obtenu à l’aide de **sp_repltrans** ou **sp_replcmds**.  
   
-## <a name="permissions"></a>Autorisations  
- Membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_repldone**.  
+## <a name="permissions"></a>Permissions  
+ Membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_repldone**.  
   
 ## <a name="examples"></a>Exemples  
- Lorsque *xactid* est NULL, *xact_seqno* est NULL, et *réinitialiser* est **1**, tous les répliquées dans le journal des transactions sont marquées comme distribuées. Cette fonction est utile lorsque il y a des transactions répliquées situées dans le journal des transactions qui ne sont plus valides et que vous désirez tronquer le journal, par exemple :  
+ Lorsque *xactid* est NULL, *xact_seqno* est NULL, et *réinitialiser* est **1**et répliqué toutes les transactions dans le journal sont marquées comme distribuées. Cette fonction est utile lorsque il y a des transactions répliquées situées dans le journal des transactions qui ne sont plus valides et que vous désirez tronquer le journal, par exemple :  
   
 ```  
 EXEC sp_repldone @xactid = NULL, @xact_segno = NULL, @numtrans = 0,     @time = 0, @reset = 1  

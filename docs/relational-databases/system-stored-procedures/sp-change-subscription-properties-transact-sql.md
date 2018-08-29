@@ -1,5 +1,5 @@
 ---
-title: sp_change_subscription_properties (Transact-SQL) | Documents Microsoft
+title: sp_change_subscription_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c049bd3ede58a884028cf3f1415660ebf2365f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 352a97795452a73837fb6111dd62c915844cd373
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992466"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036681"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,14 +76,14 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  Le tableau ci-dessous décrit les propriétés des articles et les valeurs de ces propriétés.  
   
-|Propriété|Valeur| Description|  
+|Propriété|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Indique l'emplacement du dossier de remplacement pour l'instantané. Si l'argument est défini à NULL, les fichiers d'instantané sont prélevés à l'emplacement par défaut spécifié par le serveur de publication.|  
 |**distrib_job_login**||Nom de connexion du compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent s'exécute.|  
-|**distrib_job_password**||Mot de passe du compte Windows sous lequel l’agent s’exécute.|  
-|**argument**||Connexion du serveur de distribution.|  
-|**argument**||Mot de passe de serveur de distribution.|  
-|**argument distributor_security_mode**|**1**|Utilise l'authentification Windows pour la connexion au serveur de distribution.|  
+|**distrib_job_password**||Mot de passe pour le compte Windows sous lequel l’agent s’exécute.|  
+|**distributor_login**||Connexion du serveur de distribution.|  
+|**distributor_password**||Mot de passe du serveur de distribution.|  
+|**distributor_security_mode**|**1**|Utilise l'authentification Windows pour la connexion au serveur de distribution.|  
 ||**0**|Utilise l'authentification  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de distribution.|  
 |**argument dts_package_name**||Définit le nom du package DTS (Data Transformation Services) SQL Server 2000. Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
 |**dts_package_password**||Spécifie le mot de passe du package. *dts_package_password* est **sysname** avec une valeur par défaut NULL, qui indique que la propriété de mot de passe ne doit être modifiée.<br /><br /> Remarque : Un package DTS doit avoir un mot de passe.<br /><br /> Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
@@ -101,11 +100,11 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ||**0**|Utiliser l'authentification de base pour la synchronisation Web.<br /><br /> Remarque : La synchronisation Web nécessite une connexion SSL au serveur Web.|  
 |**internet_timeout**||Délai en secondes avant l'expiration d'une demande de synchronisation Web.|  
 |**internet_url**||URL qui représente l'emplacement de l'écouteur de réplication pour la synchronisation Web.|  
-|**merge_job_login**||Compte de connexion pour le compte Windows sous lequel l’agent s’exécute.|  
-|**merge_job_password**||Mot de passe du compte Windows sous lequel l’agent s’exécute.|  
-|**publisher_login**||Nom de connexion du serveur de publication La modification *publisher_login* est uniquement pris en charge pour les abonnements aux publications de fusion.|  
-|**publisher_password**||Mot de passe de serveur de publication. La modification *publisher_password* est uniquement pris en charge pour les abonnements aux publications de fusion.|  
-|**publisher_security_mode**|**1**|Utiliser l'authentification Windows pour la connexion au serveur de publication. La modification *publisher_security_mode* est uniquement pris en charge pour les abonnements aux publications de fusion.|  
+|**merge_job_login**||Nom de connexion pour le compte Windows sous lequel l’agent s’exécute.|  
+|**merge_job_password**||Mot de passe pour le compte Windows sous lequel l’agent s’exécute.|  
+|**publisher_login**||Nom de connexion du serveur de publication Modification *publisher_login* est uniquement pris en charge pour les abonnements aux publications de fusion.|  
+|**publisher_password**||Mot de passe de serveur de publication. Modification *publisher_password* est uniquement pris en charge pour les abonnements aux publications de fusion.|  
+|**publisher_security_mode**|**1**|Utiliser l'authentification Windows pour la connexion au serveur de publication. Modification *publisher_security_mode* est uniquement pris en charge pour les abonnements aux publications de fusion.|  
 ||**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de publication.|  
 |**use_ftp**|**true**|Utiliser FTP au lieu du protocole standard pour extraire les instantanés.|  
 ||**false**|Utiliser le protocole standard pour extraire les instantanés.|  
@@ -119,15 +118,15 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Notes  
  **sp_change_subscription_properties** est utilisée dans tous les types de réplication.  
   
- **sp_change_subscription_properties** est utilisée pour les abonnements extraits.  
+ **sp_change_subscription_properties** est utilisé pour les abonnements extraits.  
   
- Pour les serveurs de publication Oracle, la valeur de *publisher_db* est ignorée, car Oracle n’autorise qu’une base de données par instance du serveur.  
+ Pour les serveurs de publication Oracle, la valeur de *publisher_db* est ignoré, car Oracle n’autorise qu’une base de données par instance du serveur.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_change_subscription_properties**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_change_subscription_properties**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et modifier les propriétés d'un abonnement par extraction (pull)](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+ [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
  [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   

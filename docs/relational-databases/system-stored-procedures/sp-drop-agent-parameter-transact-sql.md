@@ -1,5 +1,5 @@
 ---
-title: sp_drop_agent_parameter (Transact-SQL) | Documents Microsoft
+title: sp_drop_agent_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_drop_agent_parameter
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21c04d3e2661608e6dd2f6d1f64826fd0d0f2d8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e97721099ee3abe6d6afc9e9dabaa363e9842d9a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988484"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032046"
 ---
 # <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
  Identificateur du profil dont l'un des paramètres doit être supprimé. *profile_id* est **int**, sans valeur par défaut.  
   
  [  **@parameter_name=**] **'***nom_paramètre***'**  
- Nom du paramètre à supprimer. *nom_paramètre* est **sysname**, avec une valeur par défaut **%**. Si **%**, tous les paramètres pour le profil spécifié sont supprimés.  
+ Nom du paramètre à supprimer. *parameter_name* est **sysname**, avec une valeur par défaut **%**. Si **%**, tous les paramètres pour le profil spécifié sont supprimés.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -58,7 +58,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ## <a name="remarks"></a>Notes  
  **sp_drop_agent_parameter** est utilisée dans tous les types de réplication.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_drop_agent_parameter**.  
   
 ## <a name="see-also"></a>Voir aussi  

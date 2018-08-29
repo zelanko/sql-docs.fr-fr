@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_stop_job (Transact-SQL) | Documents Microsoft
+title: Sys.sp_cdc_stop_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_stop_job
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8f9ac01b53e3d7823fb00e68d49f9a4905ddac96
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 22372eb9bbd32018e93cd8cd2230741656685987
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255732"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026483"
 ---
 # <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +46,18 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>Arguments  
  [[  **@job_type=** ] **' *** type_du_travail*']  
- Type du travail à ajouter. *type_du_travail* est **nvarchar (20)** avec une valeur par défaut **capture**. Les entrées valides sont **capture** et **nettoyage**.  
+ Type du travail à ajouter. *type_du_travail* est **nvarchar (20)** avec une valeur par défaut **capturer**. Les entrées valides sont **capturer** et **nettoyage**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  sys.sp_cdc_stop_job peut être utilisée par un administrateur pour arrêter de manière explicite le travail de capture ou le travail de nettoyage.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,5 +1,5 @@
 ---
-title: sp_helpdb (Transact-SQL) | Documents Microsoft
+title: sp_helpdb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7961664bce12a2f1b73e8ca90c6cca11e1075d27
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 09dc7e451e5122600b0ea32222f6fa913c2716f8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255133"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027703"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,19 +52,19 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom de la base de données.|  
 |**DB_SIZE**|**nvarchar(13)**|Taille totale de la base de données.|  
-|**propriétaire**|**sysname**|Base de données propriétaire, tel que **sa**.|  
+|**Propriétaire**|**sysname**|Base de données propriétaire, tel que **sa**.|  
 |**dbid**|**smallint**|ID de la base de données.|  
 |**created**|**nvarchar(11)**|Date de création de la base de données.|  
 |**status**|**nvarchar(600)**|Liste de valeurs, séparées par des virgules, d'options de base de données actuellement définies pour la base de données.<br /><br /> Les options définies par des valeurs booléennes ne sont affichées que si elles sont activées. Les options non booléennes sont répertoriées avec leurs valeurs correspondantes sous la forme de *option_name*=*valeur*.<br /><br /> Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Niveau de compatibilité de la base de données : 60, 65, 70, 80 ou 90.|  
   
- Si *nom* est spécifié, il est un jeu de résultats supplémentaire qui montre la répartition de fichier pour la base de données spécifié.  
+ Si *nom* est spécifié, il est un jeu de résultats supplémentaire qui indique l’allocation de fichier pour la base de données spécifié.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**nchar(128)**|Nom de fichier logique.|  
 |**fileid**|**smallint**|ID de fichier.|  
@@ -72,16 +72,16 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**filegroup**|**nvarchar(128)**|Groupe de fichiers auquel le fichier appartient.<br /><br /> NULL = Il s'agit d'un fichier journal. Ils ne font jamais partie d'un groupe de fichiers.|  
 |**size**|**nvarchar(18)**|Taille du fichier exprimée en mégaoctets.|  
 |**MaxSize**|**nvarchar(18)**|Taille maximale du fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
-|**croissance**|**nvarchar(18)**|Incrément de croissance du fichier. Cela indique la quantité d’espace ajoutée au fichier que chaque nouvel espace de temps est nécessaire.|  
-|**Utilisation**|**varchar (9)**|Utilisation du fichier. Pour un fichier de données, la valeur est **'données uniquement'** et du fichier journal de la valeur est **journal uniquement**.|  
+|**Croissance**|**nvarchar(18)**|Incrément de croissance du fichier. Ce compteur indique la quantité d’espace ajoutée au fichier que chaque nouvel espace de temps est nécessaire.|  
+|**Utilisation**|**varchar (9)**|Utilisation du fichier. Pour un fichier de données, la valeur est **'données uniquement'** et pour le fichier journal est la valeur **journal uniquement**.|  
   
 ## <a name="remarks"></a>Notes  
- Le **état** rapports quelles options ont été définies à ON dans la base de données du jeu de colonnes dans le résultat. Toutes les options de base de données ne sont pas signalées par le **état** colonne. Pour afficher une liste complète des paramètres de la base de données en cours, utilisez la **sys.databases** vue de catalogue.  
+ Le **état** rapports quelles options ont été définies à ON dans la base de données du jeu de colonnes dans le résultat. Toutes les options de base de données ne sont pas signalées par le **état** colonne. Pour afficher une liste complète des paramètres d’option de base de données actuelle, utilisez la **sys.databases** vue de catalogue.  
   
-## <a name="permissions"></a>Autorisations  
- Lorsqu’une base de données est spécifié, l’appartenance à la **public** rôle dans la base de données est nécessaire. Lorsqu’aucune base de données n’est spécifié, l’appartenance au **public** rôle dans le **master** base de données est requise.  
+## <a name="permissions"></a>Permissions  
+ Lorsqu’une base de données est spécifié, l’appartenance à la **public** rôle dans la base de données est nécessaire. Lorsque aucune base de données n’est spécifié, l’appartenance à la **public** rôle dans le **master** base de données est requis.  
   
- Si une base de données ne sont pas accessibles, **sp_helpdb** affiche l’erreur message 15622 et autant d’informations sur la base de données que possible.  
+ Si une base de données n’est pas accessible, **sp_helpdb** affiche l’erreur message 15622 et autant d’informations sur la base de données que possible.  
   
 ## <a name="examples"></a>Exemples  
   

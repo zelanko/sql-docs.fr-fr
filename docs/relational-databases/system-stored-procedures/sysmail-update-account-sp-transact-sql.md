@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_account_sp (Transact-SQL) | Documents Microsoft
+title: sysmail_update_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_account_sp
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: 51
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ad64d1d455a4419c66949ba0196f9a9557a8ae52
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3aa7b018044aca4dec144e2be66bfba68cef5597
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262181"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021832"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,16 +57,16 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 ## <a name="arguments"></a>Arguments  
  [ **@account_id** =] *account_id*  
- ID du compte à mettre à jour. *account_id* est **int**, avec NULL comme valeur par défaut. Au moins un des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
+ ID du compte à mettre à jour. *account_id* est **int**, avec NULL comme valeur par défaut. Au moins une des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
   
  [ **@account_name** =] **'***account_name***'**  
- Nom du compte à mettre à jour. *account_name* est **sysname**, avec NULL comme valeur par défaut. Au moins un des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
+ Nom du compte à mettre à jour. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Au moins une des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
   
  [ **@email_address** =] **'***email_address***'**  
  Nouvelle adresse de messagerie d'où le message est envoyé. Cette adresse doit être une adresse de messagerie Internet. Le nom de serveur figurant dans l'adresse identifie le serveur qu'utilise la messagerie de base de données pour envoyer le courrier à partir de ce compte. *email_address* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
   
- [ **@display_name** =] **'***nom_complet***'**  
- Nouveau nom complet à utiliser sur des messages électroniques à partir de ce compte. *nom_complet* est **nvarchar (128)**, sans valeur par défaut.  
+ [ **@display_name** =] **'***display_name***'**  
+ Nouveau nom complet à utiliser sur des messages électroniques à partir de ce compte. *display_name* est **nvarchar (128)**, sans valeur par défaut.  
   
  [ **@replyto_address** =] **'***replyto_address***'**  
  Nouvelle adresse à utiliser dans le champ « Répondre à » des messages électroniques envoyés à partir de ce compte. *replyto_address* est **nvarchar (128)**, sans valeur par défaut.  
@@ -76,7 +75,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  Nouvelle description du compte. *Description* est **nvarchar (256)**, avec NULL comme valeur par défaut.  
   
  [ **@mailserver_name** =] **'***nom_serveur***'**  
- Nouveau nom de serveur de messagerie SMTP à utiliser pour ce compte. L’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de résoudre la *nom_serveur* en une adresse IP. *nom_serveur* est **sysname**, sans valeur par défaut.  
+ Nouveau nom de serveur de messagerie SMTP à utiliser pour ce compte. L’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de résoudre le *nom_serveur* à une adresse IP. *nom_serveur* est **sysname**, sans valeur par défaut.  
   
  [ **@mailserver_type** =] **'***server_type***'**  
  Nouveau type du serveur de messagerie. *server_type* est **sysname**, sans valeur par défaut. Seule la valeur **'SMTP'** est pris en charge.  
@@ -85,7 +84,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  Nouveau numéro de port du serveur de messagerie. *numéro_port* est **int**, sans valeur par défaut.  
   
  [ **@timeout** =] **'***délai d’attente***'**  
- Paramètre Timeout pour SmtpClient.Send d'un message e-mail. *Délai d’attente* est **int** en secondes, sans valeur par défaut.  
+ Paramètre Timeout pour SmtpClient.Send d'un message e-mail. *Délai d’attente* est **int** en quelques secondes, sans valeur par défaut.  
   
  [ **@username** =] **'***nom d’utilisateur***'**  
  Nouveau nom d'utilisateur servant lors de la connexion au serveur de messagerie. *Nom d’utilisateur* est **sysname**, sans valeur par défaut.  
@@ -107,13 +106,13 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
  La procédure stockée **sysmail_update_account_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-changing-the-information-for-an-account"></a>A. Modification des informations d'un compte  
- L’exemple suivant met à jour le compte `AdventureWorks Administrator` dans les **msdb** base de données. Les informations du compte prennent les valeurs fournies.  
+ L’exemple suivant met à jour le compte `AdventureWorks Administrator` dans le **msdb** base de données. Les informations du compte prennent les valeurs fournies.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  

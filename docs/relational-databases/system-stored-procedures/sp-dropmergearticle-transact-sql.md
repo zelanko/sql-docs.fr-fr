@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergearticle (Transact-SQL) | Documents Microsoft
+title: sp_dropmergearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_dropmergearticle
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adcb52b18b12c61f8ea0154d668e000c9ca47020
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87a999b49b7239531b7aa374c1695226af3df1a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991278"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028968"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,17 +61,17 @@ sp_dropmergearticle [ @publication= ] 'publication'
  [  **@reserved=**] *réservé*  
  Elle est réservée pour un usage futur. *réservé* est **nvarchar (20)**, avec NULL comme valeur par défaut.  
   
- [  **@force_invalidate_snapshot=**] *force_invalidate_snapshot*  
- Active ou désactive la possibilité d'invalider un instantané. *force_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+ [  **@force_invalidate_snapshot=**] *àce_invalidate_snapshot*  
+ Active ou désactive la possibilité d'invalider un instantané. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion n’invalident pas l’instantané n’est pas valide.  
   
  **1** signifie que les modifications apportées à l’article de fusion peuvent invalider l’instantané n’est pas valide, et si c’est le cas, la valeur **1** autorise le nouvel instantané de se produire.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirme que la suppression de l'article nécessite la réinitialisation des abonnements existants. *force_reinit_subscription* est un **bits**, avec une valeur par défaut **0**.  
+ [  **@force_reinit_subscription =** ] *àce_reinit_subscription*  
+ Confirme que la suppression de l'article nécessite la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits**, avec une valeur par défaut **0**.  
   
- **0** indique que la suppression de l’article n’entraîne pas la réinitialisation des abonnements.  
+ **0** indique que la suppression de l’article n’entraîne pas la réinitialisation de l’abonnement.  
   
  **1** signifie que la suppression de l’article entraîne la réinitialisation des abonnements existants et autorise la réinitialisation des abonnements se produise.  
   
@@ -84,10 +84,10 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_dropmergearticle** est utilisé dans la réplication de fusion. Pour plus d’informations sur la suppression des articles, consultez [ajouter et supprimer des Articles de Publications existantes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
- L’exécution de **sp_dropmergearticle** pour supprimer un article d’une publication ne supprime pas l’objet à partir de la base de données de publication ou de l’objet correspondant de la base de données d’abonnement. Utilisez `DROP <object>` pour supprimer manuellement ces objets le cas échéant.  
+ L’exécution de **sp_dropmergearticle** pour supprimer un article d’une publication ne supprime pas l’objet de la base de données de publication ou de l’objet correspondant de la base de données d’abonnement. Utilisez `DROP <object>` pour supprimer manuellement ces objets le cas échéant.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_dropmergearticle**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_dropmergearticle**.  
   
 ## <a name="example"></a>Exemple  
   

@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_profileaccount_sp (Transact-SQL) | Documents Microsoft
+title: sysmail_update_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_profileaccount_sp
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
-caps.latest.revision: 41
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ee2f44070644e305163e6a7ae38eea9a81ba9fa1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b81459e3c11c2ce17b133359074a921ddc1e1b66
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260905"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037419"
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,22 +50,22 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
  Identificateur du profil à mettre à jour. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit le *profile_id* ou *profile_name* doit être spécifié.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- Nom du profil à mettre à jour. *profile_name* est **sysname**, avec NULL comme valeur par défaut. Soit le *profile_id* ou *profile_name* doit être spécifié.  
+ Nom du profil à mettre à jour. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit le *profile_id* ou *profile_name* doit être spécifié.  
   
  [ **@account_id** =] *account_id*  
  ID du compte à mettre à jour. *account_id* est **int**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* doit être spécifié.  
   
  [ **@account_name** =] **'***account_name***'**  
- Nom du compte à mettre à jour. *account_name* est **sysname**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* doit être spécifié.  
+ Nom du compte à mettre à jour. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* doit être spécifié.  
   
- [ **@sequence_number** =] *numéros de séquence*  
- Nouveau numéro de séquence du compte. *numéros de séquence* est **int**, sans valeur par défaut. Le numéro de séquence détermine l'ordre dans lequel les comptes sont utilisés dans le profil.  
+ [ **@sequence_number** =] *sequence_number*  
+ Nouveau numéro de séquence du compte. *sequence_number* est **int**, sans valeur par défaut. Le numéro de séquence détermine l'ordre dans lequel les comptes sont utilisés dans le profil.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Renvoie une erreur si le compte spécifié n'est pas associé au profil spécifié.  
@@ -77,11 +76,11 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
  La procédure stockée **sysmail_update_profileaccount_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant modifie le numéro de séquence du compte `Admin-BackupServer` au sein du profil `AdventureWorks Administrator` dans les **msdb** base de données. Une fois ce code exécuté, le numéro de séquence du compte est `3`. Cela indique qu'il sera utilisé si les deux premiers comptes échouent.  
+ L’exemple suivant modifie le numéro de séquence du compte `Admin-BackupServer` au sein du profil `AdventureWorks Administrator` dans le **msdb** base de données. Une fois ce code exécuté, le numéro de séquence du compte est `3`. Cela indique qu'il sera utilisé si les deux premiers comptes échouent.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profileaccount_sp  

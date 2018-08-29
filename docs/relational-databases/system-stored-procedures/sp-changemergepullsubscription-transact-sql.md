@@ -1,5 +1,5 @@
 ---
-title: sp_changemergepullsubscription (Transact-SQL) | Documents Microsoft
+title: sp_changemergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31e745e3ab75ae237a440db10c05b3ed4cd7d29e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81b03ee49bb3184490d8ba8182b70557e5b0d8a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992386"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018274"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,14 +64,14 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  [  **@value=**] **'***valeur***'**  
  Est la nouvelle valeur pour la propriété spécifiée. *valeur*est **nvarchar (255)**, et peut prendre l’une des valeurs dans la table.  
   
-|Propriété|Valeur| Description|  
+|Propriété|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Emplacement de stockage du dossier d'instantanés, si cet emplacement est différent ou en complément de l'emplacement par défaut.|  
 |**description**||Description de cet abonnement extrait.|  
-|**Serveur de distribution**||Nom du serveur de distribution.|  
-|**argument**||ID de connexion utilisé sur le serveur de distribution pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**argument**||Un mot de passe (chiffré) utilisé sur le serveur de distribution pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
-|**argument distributor_security_mode**|**1**|Utilise l'authentification Windows pour la connexion au serveur de distribution.|  
+|**serveur de distribution**||Nom du serveur de distribution.|  
+|**distributor_login**||ID de connexion utilisé sur le serveur de distribution pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**distributor_password**||Mot de passe (chiffré) sur le serveur de distribution pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
+|**distributor_security_mode**|**1**|Utilise l'authentification Windows pour la connexion au serveur de distribution.|  
 ||**0**|Utilise l'authentification  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de distribution.|  
 |**dynamic_snapshot_location**||Chemin d'accès au dossier dans lequel les fichiers d'instantané sont enregistrés.|  
 |**ftp_address**||Disponible pour compatibilité descendante uniquement. Est l’adresse réseau du service de transfert de protocole FTP (File) pour le serveur de distribution.|  
@@ -85,8 +85,8 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**0**|Utilise l'authentification de base pour se connecter au serveur Web qui héberge la synchronisation Web.|  
 |**internet_timeout**||Délai en secondes avant l'expiration d'une demande de synchronisation Web.|  
 |**internet_url**||URL qui représente l'emplacement de l'écouteur de réplication pour la synchronisation Web.|  
-|**merge_job_login**||Compte de connexion pour le compte Windows sous lequel l’agent s’exécute.|  
-|**merge_job_password**||Mot de passe du compte Windows sous lequel l’agent s’exécute.|  
+|**merge_job_login**||Nom de connexion pour le compte Windows sous lequel l’agent s’exécute.|  
+|**merge_job_password**||Mot de passe pour le compte Windows sous lequel l’agent s’exécute.|  
 |**priority**||Disponible pour compatibilité descendante uniquement. Exécutez [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) sur le serveur de publication à la place pour modifier la priorité d’un abonnement.|  
 |**publisher_login**||ID de connexion utilisé côté serveur de publication pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**publisher_password**||Mot de passe (chiffré) utilisé côté serveur de publication pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -94,7 +94,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**1**|Utiliser l'authentification Windows pour la connexion au serveur de publication.|  
 ||**2**|Déclencheurs de synchronisation utilisent statique **sysservers** entrée pour l’appel de procédure distante (RPC) et le serveur de publication doit être définie dans le **sysservers** table en tant que serveur distant ou serveur lié.|  
 |**sync_type**|**Automatique**|Le schéma et les données initiales des tables publiées sont transférés en premier lieu vers l'Abonné.|  
-||**Aucun**|L'Abonné dispose déjà du schéma et des données initiales pour les tables publiées ; les données et les tables système sont toujours transférées.|  
+||**None**|L'Abonné dispose déjà du schéma et des données initiales pour les tables publiées ; les données et les tables système sont toujours transférées.|  
 |**use_ftp**|**true**|Utilise FTP au lieu du protocole usuel pour extraire les instantanés.|  
 ||**false**|Utilise le protocole usuel pour extraire les instantanés.|  
 |**use_web_sync**|**true**|L'abonnement peut être synchronisé sur HTTP.|  
@@ -114,11 +114,11 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_changemergepullsubscription**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_changemergepullsubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et modifier les propriétés d'un abonnement par extraction (pull)](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+ [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   

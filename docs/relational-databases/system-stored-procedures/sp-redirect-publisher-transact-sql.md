@@ -1,5 +1,5 @@
 ---
-title: sp_redirect_publisher (Transact-SQL) | Documents Microsoft
+title: sp_redirect_publisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8df59d709ef04d94626ac2ab6a3ba268d63ab76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8085bbdea45ba9d537f110fb4979d29b8b72d04f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999906"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022229"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,15 +61,15 @@ sp_redirect_publisher
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
- **sp_redirect_publisher** est utilisé pour autoriser un serveur de publication de réplication à être redirigées vers le serveur principal actuel d’un groupe de disponibilité Always On en associant la paire serveur de publication/base de données à un écouteur d’un groupe de disponibilité. Exécutez **sp_redirect_publisher** une fois que l’écouteur du groupe de disponibilité a été configuré pour le groupe de disponibilité qui contient la base de données publiée.  
+ **sp_redirect_publisher** est utilisé pour autoriser un serveur de publication de réplication à être redirigées vers le principal actuel d’un groupe de disponibilité Always On en associant la paire serveur de publication/base de données avec un écouteur d’un groupe de disponibilité. Exécutez **sp_redirect_publisher** une fois que l’écouteur de groupe de disponibilité a été configuré pour le groupe de disponibilité qui contient la base de données publiée.  
   
- Si la base de données de publication sur le serveur de publication d’origine est supprimée d’un groupe de disponibilité du réplica principal, exécutez **sp_redirect_publisher** sans spécifier de valeur pour le *@redirected_publisher* paramètre à supprimer de la redirection de la paire serveur de publication/base de données. Pour plus d’informations sur la redirection de l’éditeur, consultez [maintenance une base de données de Publication AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Si la base de données de publication sur le serveur de publication d’origine est supprimée d’un groupe de disponibilité sur le réplica principal, exécutez **sp_redirect_publisher** sans spécifier de valeur pour le *@redirected_publisher* paramètre à supprimer la redirection pour la paire serveur de publication/base de données. Pour plus d’informations sur la redirection du serveur de publication, consultez [maintenance une base de données de Publication AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
-## <a name="permissions"></a>Autorisations  
- L’appelant doit être un membre de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe pour la base de données de distribution ou un membre d’une liste d’accès à une publication définie associée à la base de données du serveur de publication.  
+## <a name="permissions"></a>Permissions  
+ L’appelant doit être un membre de la **sysadmin** rôle serveur fixe le **db_owner** rôle de base de données fixe pour la base de données de distribution ou un membre d’une liste d’accès à une publication définie associé à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

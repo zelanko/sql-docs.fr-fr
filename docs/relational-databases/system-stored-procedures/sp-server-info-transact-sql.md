@@ -1,5 +1,5 @@
 ---
-title: sp_server_info (Transact-SQL) | Documents Microsoft
+title: sp_server_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0715ea7f2f58b8212b48e990c3e2d2f76301b373
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9355b4a6ca344111c5b3d9365823b2175942bcea
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261115"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026206"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
  ID entier de l'attribut. *attribute_id* est **int**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun  
+ None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**ID_D**|**int**|Numéro d'identification de l'attribut.|  
+|**ATTRIBUTE_ID**|**Int**|Numéro d'identification de l'attribut.|  
 |**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Nom de l'attribut.|  
 |**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Valeur actuelle de l'attribut.|  
   
@@ -75,12 +75,12 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**18**|COLLATION_SEQ<br /><br /> Spécifie l'ordre du jeu de caractères de ce serveur.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> Spécifie si le SGBD sous-jacent prend en charge les points d'enregistrement nommés.|O|  
 |**20**|MULTI_RESULT_SETS<br /><br /> Spécifie si la base de données sous-jacente ou la passerelle elle-même gère les jeux de résultats multiples (plusieurs instructions peuvent être envoyées par l'intermédiaire de la passerelle et plusieurs jeux de résultats peuvent être retournés au client).|O|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> Spécifie s’il convient de **sp_tables**, la passerelle retourne uniquement les tables, vues et ainsi de suite, accessible par l’utilisateur actuel (autrement dit, l’utilisateur qui a au moins les autorisations SELECT pour la table).|O|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> Spécifie s’il dans **sp_tables**, la passerelle retourne uniquement les tables, vues et ainsi de suite, accessible par l’utilisateur actuel (autrement dit, l’utilisateur qui a au moins les autorisations SELECT pour la table).|O|  
 |**100**|USERID_LENGTH<br /><br /> Spécifie le nombre maximal de caractères pour un nom d'utilisateur.|128|  
-|**101**|QUALIFIER_TERM<br /><br /> Spécifie le terme utilisé par le fournisseur du SGBD pour désigner un qualificateur de table (première partie d'un nom en trois parties).|database|  
+|**101**|QUALIFIER_TERM<br /><br /> Spécifie le terme utilisé par le fournisseur du SGBD pour désigner un qualificateur de table (première partie d'un nom en trois parties).|base de données|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> Spécifie si le SGBD sous-jacent prend en charge les transactions nommées.|O|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> Spécifie si les procédures stockées peuvent être exécutées comme événements de langage.|O|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> Spécifie s’il convient de **sp_stored_procedures**, la passerelle retourne uniquement les procédures stockées qui sont exécutables par l’utilisateur actuel.|O|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> Spécifie s’il dans **sp_stored_procedures**, la passerelle retourne uniquement les procédures stockées qui sont exécutables par l’utilisateur actuel.|O|  
 |**105**|MAX_INDEX_COLS<br /><br /> Spécifie le nombre maximal de colonnes dans un index pour le SGBD.|16|  
 |**106**|RENAME_TABLE<br /><br /> Spécifie si les tables peuvent être renommées.|O|  
 |**107**|RENAME_COLUMN<br /><br /> Spécifie si les colonnes peuvent être renommées.|O|  
@@ -95,7 +95,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ## <a name="remarks"></a>Notes  
  **sp_server_info** retourne un sous-ensemble des informations fournies par **SQLGetInfo** dans ODBC.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="see-also"></a>Voir aussi  

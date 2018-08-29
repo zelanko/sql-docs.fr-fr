@@ -1,5 +1,5 @@
 ---
-title: sp_link_publication (Transact-SQL) | Documents Microsoft
+title: sp_link_publication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17e1b051fed32e78cd18cc634b7688245ecb0972
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80513a0245d13cb955c9ced0e2f02d6f3d241d2e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001926"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026148"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,13 +73,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 |-----------|-----------------|  
 |**0**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification avec la connexion spécifiée dans cette procédure stockée en tant que *connexion* et *mot de passe*.<br /><br /> Remarque : dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette option a été utilisée pour spécifier un appel de procédure distante dynamique (RPC).|  
 |**1**|Utilise le contexte de sécurité (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows) de l'utilisateur apportant la modification sur l'Abonné.<br /><br /> Remarque : Ce compte doit également exister sur le serveur de publication avec des privilèges suffisants. Lorsque vous utilisez l'authentification Windows, la délégation de compte de sécurité doit être prise en charge.|  
-|**2**|Utilise une connexion au serveur lié existante, définie par l’utilisateur créée à l’aide de **sp_link_publication**.|  
+|**2**|Utilise une connexion de serveur lié existante, définie par l’utilisateur créée à l’aide **sp_link_publication**.|  
   
  [ **@login**=] **'***connexion***'**  
- Connexion d'accès. *login* est de type **sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié quand *security_mode* est **0**.  
+ Connexion d'accès. *login* est de type **sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* est **0**.  
   
  [ **@password**=] **'***mot de passe***'**  
- Est le mot de passe. *mot de passe* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié quand *security_mode* est **0**.  
+ Est le mot de passe. *mot de passe* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* est **0**.  
   
  [  **@distributor=** ] **'***distributeur***'**  
  Est le nom du serveur de distribution. *serveur de distribution* est **sysname**, avec NULL comme valeur par défaut.  
@@ -94,12 +94,12 @@ sp_link_publication [ @publisher = ] 'publisher'
   
  Pour les abonnements envoyés, l’entrée peut être nettoyée par [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Pour les abonnements extraits, l’entrée peut être nettoyée par [sp_droppullsubscription &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) ou [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Vous pouvez également appeler **sp_link_publication** avec un mot de passe NULL pour effacer l’entrée dans le [MSsubscription_properties &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) (table système) pour les problèmes de sécurité.  
   
- Le mode par défaut utilisé par un Abonné de mise à jour immédiate lors de sa connexion au serveur de publication n'autorise pas l'utilisation de l'authentification Windows. La connexion avec un mode d'authentification Windows suppose qu'un serveur lié a été configuré au niveau du serveur de publication, et l'Abonné de mise à jour immédiate doit utiliser cette connexion lors de la mise à jour de l'Abonné. Cela requiert la **sp_link_publication** de s’exécuter avec *security_mode* = **2**. Lorsque vous utilisez l'authentification Windows, la délégation de compte de sécurité doit être prise en charge.  
+ Le mode par défaut utilisé par un Abonné de mise à jour immédiate lors de sa connexion au serveur de publication n'autorise pas l'utilisation de l'authentification Windows. La connexion avec un mode d'authentification Windows suppose qu'un serveur lié a été configuré au niveau du serveur de publication, et l'Abonné de mise à jour immédiate doit utiliser cette connexion lors de la mise à jour de l'Abonné. Cela nécessite la **sp_link_publication** à exécuter avec *security_mode* = **2**. Lorsque vous utilisez l'authentification Windows, la délégation de compte de sécurité doit être prise en charge.  
   
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_link_publication**.  
   
 ## <a name="see-also"></a>Voir aussi  

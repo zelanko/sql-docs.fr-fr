@@ -1,5 +1,5 @@
 ---
-title: sp_clean_db_file_free_space (Transact-SQL) | Documents Microsoft
+title: sp_clean_db_file_free_space (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_clean_db_file_free_space
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 52f5fb5b32a49ef6bcb4922069dc7f5250c771c9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bcd6c21404593244104bc58cc9beab4164c4283a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689127"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036661"
 ---
 # <a name="spcleandbfilefreespace-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime des informations qui sont restées sur les pages de la base de données en raison des routines de modification de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sp_clean_db_file_free_space nettoie toutes les pages dans un fichier de base de données.  
+  Supprime des informations qui sont restées sur les pages de la base de données en raison des routines de modification de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sp_clean_db_file_free_space nettoie toutes les pages dans un fichier d’une base de données.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_clean_db_file_free_space
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @dbname=] '*nom_base_de_données*'  
+ [ @dbname=] '*database_name*'  
  Nom de la base de données à nettoyer. *dbname* est **sysname** et ne peut pas être NULL.  
   
  [ @fileid=] '*numéro_fichier*'  
@@ -67,9 +67,9 @@ sp_clean_db_file_free_space
   
  Avant d'exécuter sp_clean_db_file_free_space, il est recommandé de créer une sauvegarde de base de données complète.  
   
- Le [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) procédure stockée nettoie tous les fichiers de la base de données.  
+ Connexe [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) procédure stockée nettoie tous les fichiers dans la base de données.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle de base de données db_owner.  
   
 ## <a name="examples"></a>Exemples  
@@ -84,6 +84,6 @@ EXEC sp_clean_db_file_free_space
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
- <br>[Guide de processus de nettoyage des enregistrements fantômes](../ghost-record-cleanup-process-guide.md) 
+ <br>[Guide de processus de nettoyage de fantômes](../ghost-record-cleanup-process-guide.md) 
   
   

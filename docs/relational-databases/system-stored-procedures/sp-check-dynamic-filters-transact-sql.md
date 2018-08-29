@@ -1,5 +1,5 @@
 ---
-title: sp_check_dynamic_filters (Transact-SQL) | Documents Microsoft
+title: sp_check_dynamic_filters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -31,15 +31,15 @@ helpviewer_keywords:
 - sp_check_dynamic_filters
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 248a5234a0620ce18122723db7bce88c61201758
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f63c62f5aa36fe85b38922c68d5daf90f919642
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990044"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023439"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Est si la publication peut utiliser des partitions précalculées ; où **1** signifie que les partitions précalculées peuvent être utilisées, et **0** signifie qu’ils ne peuvent pas être utilisés.|  
+|**can_use_partition_groups**|**bit**|Est si la publication est éligible pour l’utilisation de partitions précalculées. où **1** signifie que les partitions précalculées peuvent être utilisées, et **0** signifie qu’ils ne peuvent pas être utilisés.|  
 |**has_dynamic_filters**|**bit**|Est si le filtre de lignes paramétrable au moins a été défini dans la publication. où **1** signifie qu’un ou plusieurs filtres de lignes paramétrable existent, et **0** signifie qu’aucun filtre dynamique n’existe.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Indique les fonctions utilisées pour filtrer les articles dans une publication, chaque fonction étant séparée par un point-virgule.|  
 |**validate_subscriber_info**|**nvarchar(500)**|Indique les fonctions utilisées pour filtrer les articles dans une publication, chaque fonction étant séparée par un signe plus (+).|  
@@ -76,12 +76,12 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_check_dynamic_filters** est utilisé dans la réplication de fusion.  
   
- Si une publication a été définie pour utiliser des partitions précalculées, **sp_check_dynamic_filters** recherche les violations des restrictions de partitions précalculées. S'il en existe, une erreur est renvoyée. Pour plus d’informations, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+ Si une publication a été définie pour utiliser les partitions précalculées, **sp_check_dynamic_filters** recherche les violations des restrictions de partitions précalculées. S'il en existe, une erreur est renvoyée. Pour plus d’informations, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
  Si une publication est définie comme ayant des filtres de lignes paramétrables et qu'aucun filtrage n'est trouvé, une erreur est renvoyée.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_check_dynamic_filters**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_check_dynamic_filters**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer les Partitions d’une Publication de fusion avec des filtres paramétrés](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

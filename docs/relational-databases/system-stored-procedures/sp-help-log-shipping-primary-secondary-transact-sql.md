@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_primary_secondary (Transact-SQL) | Documents Microsoft
+title: sp_help_log_shipping_primary_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_primary_secondary
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 378e343b0fd7a699c9455676dc1e4f5a5f2d25e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 43880bb1fac1de9fb9d8657f5fcc143cf96645f3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250403"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022159"
 ---
 # <a name="sphelplogshippingprimarysecondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_help_log_shipping_primary_secondary
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne| Description|  
+|Nom de colonne|Description|  
 |-----------------|-----------------|  
 |**secondary_server**|Le nom de l’instance secondaire de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux.|  
 |**secondary_database**|Nom de la base de données secondaire dans la configuration de la copie des journaux de transactions.|  
@@ -61,11 +60,11 @@ sp_help_log_shipping_primary_secondary
 ## <a name="remarks"></a>Notes  
  **sp_help_log_shipping_primary_secondary** doit être exécuté à partir de la **master** base de données sur le serveur principal.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
- Cet exemple illustre l’utilisation de **sp_help_log_shipping_primary_secondary** pour récupérer une liste de base de données secondaire des bases de données associées avec la base de données principal [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Cet exemple illustre l’utilisation de **sp_help_log_shipping_primary_secondary** pour récupérer une liste de base de données secondaire bases de données associées à la base de données primaire [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 EXECUTE master.dbo.sp_help_log_shipping_primary_secondary @primary_database=N'AdventureWorks';  
@@ -73,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de journaux de transaction & #40 ; SQL Server & #41 ;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

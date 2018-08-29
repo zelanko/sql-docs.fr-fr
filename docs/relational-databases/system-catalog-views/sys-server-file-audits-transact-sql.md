@@ -1,5 +1,5 @@
 ---
-title: Sys.server_file_audits (Transact-SQL) | Documents Microsoft
+title: Sys.server_file_audits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,45 +21,45 @@ helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e10ec5dc755f1a8487aecd40b620eb0a3eefe8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0ac050160e62718a87a5dfa920471861eaadcfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222100"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035929"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient des informations détaillées sur le type d’audit de fichier dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’audit sur une instance de serveur. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Contient des informations supplémentaires sur le type d’audit de fichier dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’audit sur une instance de serveur. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|audit_id|**int**|ID de l'audit.|  
-|name|**sysname**|Nom de l’audit.|  
+|audit_id|**Int**|ID de l'audit.|  
+|NAME|**sysname**|Nom de l’audit.|  
 |audit_guid|**uniqueidentifier**|GUID de l'audit.|  
 |create_date|**datetime**|Date UTC de création de l'audit de fichier.|  
 |modify_date|**datatime**|Date UTC de la dernière modification de l'audit de fichier.|  
-|principal_id|**int**|ID du propriétaire de l'audit, tel qu'enregistré sur le serveur.|  
+|principal_id|**Int**|ID du propriétaire de l'audit, tel qu'enregistré sur le serveur.|  
 |Type|**char(2)**|Type d'audit :<br /><br /> 0 = Journal des événements de sécurité NT<br /><br /> 1 = Journal des événements d'applications NT<br /><br /> 2 = Fichier du système de fichiers|  
 |type_desc|**nvarchar(60)**|Description du type d'audit.|  
 |on_failure|**tinyint**|En cas d'échec :<br /><br /> 0 = Continuer<br /><br /> 1 = Arrêter l'instance de serveur<br /><br /> 2 = Faire échouer l'opération|  
 |on_failure_desc|**nvarchar(60)**|En cas d'échec d'écriture d'une entrée d'audit :<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
 |is_state_enabled|**tinyint**|0 = Désactivé<br /><br /> 1 = Activé|  
-|queue_delay|**int**|Temps d'attente maximal suggéré, en millisecondes, avant d'écrire sur le disque. Si la valeur est 0, l'audit garantit une écriture avant la poursuite de l'événement.|  
+|queue_delay|**Int**|Temps d'attente maximal suggéré, en millisecondes, avant d'écrire sur le disque. Si la valeur est 0, l'audit garantit une écriture avant la poursuite de l'événement.|  
 |prédicat|**nvarchar(8000)**|Expression de prédicat qui est appliquée à l'événement.|  
 |max_file_size|**bigint**|Taille maximale de l'audit en mégaoctets :<br /><br /> 0 = Illimitée/non applicable au type d'audit sélectionné.|  
-|max_rollover_files|**int**|Nombre maximal de fichiers à utiliser avec l'option de substitution.|  
-|max_files|**int**|Nombre maximal de fichiers à utiliser sans l'option de substitution.|  
-|reserved_disk_space|**int**|Quantité d'espace disque à réserver par fichier.|  
+|max_rollover_files|**Int**|Nombre maximal de fichiers à utiliser avec l'option de substitution.|  
+|max_files|**Int**|Nombre maximal de fichiers à utiliser sans l'option de substitution.|  
+|reserved_disk_space|**Int**|Quantité d'espace disque à réserver par fichier.|  
 |log_file_path|**nvarchar(260)**|Chemin d'accès à l'audit. Chemin d'accès au fichier pour l'audit de fichier, chemin d'accès du journal des applications pour l'audit de journal des applications.|  
 |log_file_name|**nvarchar(260)**|Nom de base du fichier journal fourni dans CREATE AUDIT DDL. Un nombre incrémentiel est ajouté au fichier base_log_name en tant que suffixe pour la création du nom de fichier journal.|  
   
-## <a name="permissions"></a>Autorisations  
- Les principaux avec le **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** autorisation ont accès à cette vue de catalogue. En outre, l’entité de sécurité ne doit pas être refusée **VIEW ANY DEFINITION** autorisation.  
+## <a name="permissions"></a>Permissions  
+ Les principaux avec le **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** autorisation ont accès à cette vue de catalogue. En outre, le principal ne doit pas être refusé **VIEW ANY DEFINITION** autorisation.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

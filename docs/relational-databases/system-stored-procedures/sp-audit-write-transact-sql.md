@@ -1,5 +1,5 @@
 ---
-title: sp_audit_write (Transact-SQL) | Documents Microsoft
+title: sp_audit_write (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_audit_write
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84b7ea14b205b2642c8c67c24793310ca8245832
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9e52313f827d49200e58910d4fa577d39d91567f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239299"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037891"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,9 +61,9 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
  Les échecs sont dus à des paramètres d'entrée incorrects ou à l'impossibilité d'écrire dans le journal d'audit cible.  
   
 ## <a name="remarks"></a>Notes  
- Lorsque le **USER_DEFINED_AUDIT_GROUP** est ajouté à une spécification d’audit de serveur ou d’une spécification d’audit de base de données, l’événement déclenché par **sp_audit_write** seront inclus dans le journal d’audit.  
+ Lorsque le **USER_DEFINED_AUDIT_GROUP** est ajouté à une spécification d’audit de serveur ou une spécification d’audit de base de données, l’événement déclenché par **sp_audit_write** figureront dans le journal d’audit.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’appartenance dans le **public** rôle de base de données.  
   
 ## <a name="examples"></a>Exemples  

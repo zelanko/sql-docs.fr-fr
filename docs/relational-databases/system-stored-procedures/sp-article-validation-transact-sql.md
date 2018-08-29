@@ -1,5 +1,5 @@
 ---
-title: sp_article_validation (Transact-SQL) | Documents Microsoft
+title: sp_article_validation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_article_validation
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eabbaf95392de7e5389fdd54f8724045682ec2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2670bd674589cf67acac91100d4419365de66da2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991566"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037751"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,17 +69,17 @@ sp_article_validation [ @publication = ] 'publication'
  [  **@full_or_fast=**] *full_or_fast*  
  Méthode utilisée pour calculer le nombre de lignes. *full_or_fast* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
-|**Value**|**Description**|  
+|**Valeur**|**Description**|  
 |---------------|---------------------|  
 |**0**|Effectue un comptage total à l’aide de Count.|  
-|**1**|Effectue un comptage rapide à partir de **sysindexes.rows**. Le décompte de lignes **sysindexes** est plus rapide que le décompte de lignes dans la table. Toutefois, **sysindexes** est mis à jour immédiatement, et le nombre de lignes peut être inexact.|  
-|**2** (par défaut)|Exécute un comptage rapide conditionnel en essayant d'abord la méthode rapide. Si la méthode rapide affiche des différences, revient à la méthode totale. Si *expected_rowcount* a la valeur NULL et la procédure stockée est en cours d’utilisation pour obtenir la valeur, un Count complète est toujours utilisée.|  
+|**1**|Effectue un comptage rapide à partir de **sysindexes.rows**. Le décompte de lignes **sysindexes** est plus rapide que le décompte de lignes dans la table réelle. Toutefois, **sysindexes** est mis à jour de manière différée, et le nombre de lignes peut être inexact.|  
+|**2** (par défaut)|Exécute un comptage rapide conditionnel en essayant d'abord la méthode rapide. Si la méthode rapide affiche des différences, revient à la méthode totale. Si *expected_rowcount* a la valeur NULL et la procédure stockée est en cours d’utilisation pour obtenir la valeur, un Count (\*) complète est toujours utilisée.|  
   
  [  **@shutdown_agent=**] *shutdown_agent*  
  Spécifie si l'Agent de distribution doit être fermé immédiatement après l'achèvement de la validation. *shutdown_agent* est **bits**, avec une valeur par défaut **0**. Si **0**, l’Agent de Distribution ne s’arrête pas. Si **1**, l’Agent de Distribution s’arrête après la validation de l’article.  
   
  [  **@subscription_level=**] *subscription_level*  
- Spécifie si la validation est récupérée par un ensemble d'abonnés. *subscription_level* est **bits**, avec une valeur par défaut **0**. Si **0**, la validation est appliquée à tous les abonnés. Si **1**, la validation est appliquée uniquement à un sous-ensemble des abonnés spécifiés par les appels à **sp_marksubscriptionvalidation** dans la transaction actuellement ouverte.  
+ Spécifie si la validation est récupérée par un ensemble d'abonnés. *subscription_level* est **bits**, avec une valeur par défaut **0**. Si **0**, validation est appliquée à tous les abonnés. Si **1**, la validation est appliquée uniquement à un sous-ensemble des abonnés spécifiés par les appels à **sp_marksubscriptionvalidation** dans la transaction actuellement ouverte.  
   
  [  **@reserved=**] *réservé*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -97,10 +96,10 @@ sp_article_validation [ @publication = ] 'publication'
 ## <a name="remarks"></a>Notes  
  **sp_article_validation** est utilisé dans la réplication transactionnelle.  
   
- **sp_article_validation** entraîne la validation des informations doivent être collectées sur l’article spécifié et envoie une requête de validation dans le journal des transactions. Lorsque l'Agent de distribution reçoit la requête, il compare les informations de validation de la requête à la table des Abonnés. Les résultats de la validation sont affichés dans les messages d'alerte du gestionnaire de réplication et de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **sp_article_validation** entraîne la validation des informations soient collectées sur l’article spécifié et envoie une requête de validation dans le journal des transactions. Lorsque l'Agent de distribution reçoit la requête, il compare les informations de validation de la requête à la table des Abonnés. Les résultats de la validation sont affichés dans les messages d'alerte du gestionnaire de réplication et de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les utilisateurs avec toutes les autorisations SELECT sur la table source pour l’article en cours de validation peut exécuter **sp_article_validation**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les utilisateurs disposant de toutes les autorisations SELECT sur la table source pour l’article en cours de validation peut exécuter **sp_article_validation**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Valider des données répliquées](../../relational-databases/replication/validate-replicated-data.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_replshowcmds (Transact-SQL) | Documents Microsoft
+title: sp_replshowcmds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_replshowcmds
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74526c46a3758829a89c71d41c071070ec907d5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4572fb1e09be2064fda17860ac64beb495783177
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998686"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023428"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Renvoie les commandes pour les transactions signalées pour la réplication dans un format lisible. **sp_replshowcmds** peut être exécutée que quand les connections clientes (y compris la connexion en cours) ne lisent pas les transactions répliquées à partir du journal. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
+  Renvoie les commandes pour les transactions signalées pour la réplication dans un format lisible. **sp_replshowcmds** peut être exécuté que quand les connections clientes (y compris la connexion actuelle) ne lisent pas les transactions répliquées à partir du journal. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,29 +51,29 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ## <a name="result-sets"></a>Jeux de résultats  
  **sp_replshowcmds** est une procédure de diagnostic qui retourne des informations sur la base de données de publication à partir de laquelle elle est exécutée.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**binary(10)**|Numéro de séquence de la commande.|  
-|**originator_id**|**int**|ID de l’émetteur de commande, toujours **0**.|  
-|**publisher_database_id**|**int**|ID de la base de données serveur de publication, toujours **0**.|  
-|**article_id**|**int**|ID de l’article.|  
-|**type**|**int**|Type de commande.|  
+|**originator_id**|**Int**|ID de l’émetteur de commande, toujours **0**.|  
+|**publisher_database_id**|**Int**|ID de la base de données serveur de publication, toujours **0**.|  
+|**article_id**|**Int**|ID de l’article.|  
+|**type**|**Int**|Type de commande.|  
 |**commande**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] commande.|  
   
 ## <a name="remarks"></a>Notes  
  **sp_replshowcmds** est utilisé dans la réplication transactionnelle.  
   
- À l’aide de **sp_replshowcmds**, vous pouvez afficher les transactions qui sont actuellement pas distribuées (les transactions qui demeurent dans le journal des transactions qui n’ont pas été envoyées au serveur de distribution).  
+ À l’aide de **sp_replshowcmds**, vous pouvez afficher les transactions qui ne sont pas distribuées (les transactions qui demeurent dans le journal des transactions qui n’ont pas été envoyées au serveur de distribution).  
   
- Les clients qui exécutent **sp_replshowcmds** et **sp_replcmds** au sein de la même base de données reçoivent le message d’erreur 18752.  
+ Les clients qui exécutent **sp_replshowcmds** et **sp_replcmds** au sein de la base de données même recevoir le message d’erreur 18752.  
   
- Pour éviter cette erreur, le premier client doit se déconnecter ou le rôle du client comme lecteur du journal doit être libéré par l’exécution **sp_replflush**. Une fois tous les clients déconnectés à partir du lecteur de journal, **sp_replshowcmds** peut être exécuté avec succès.  
+ Pour éviter cette erreur, le premier client doit se déconnecter ou le rôle du client comme lecteur du journal doit être libéré par l’exécution **sp_replflush**. Une fois tous les clients déconnectés du lecteur de journal, **sp_replshowcmds** peut être exécuté avec succès.  
   
 > [!NOTE]  
->  **sp_replshowcmds** doit être exécutée uniquement pour résoudre les problèmes de réplication.  
+>  **sp_replshowcmds** doit être uniquement exécutée pour résoudre les problèmes de réplication.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_replshowcmds**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_replshowcmds**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Messages d’erreur](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

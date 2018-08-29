@@ -31,16 +31,15 @@ helpviewer_keywords:
 - passwords [SQL Server], complexity
 - characters [SQL Server], password policies
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
-caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3e6ac04417e8b8d136d05f943d941c4d1177e087
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c72482740aed5f90bba4c5e8e212950943cda699
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268535"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032992"
 ---
 # <a name="password-policy"></a>Stratégie de mot de passe
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut exploiter les mécanismes de stratégie de mot de passe Windows. La stratégie de mot de passe s'applique à une connexion qui utilise l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à un utilisateur de base de données autonome avec un mot de passe.  
@@ -104,7 +103,7 @@ ms.locfileid: "37268535"
   
  La stratégie de sécurité peut être définie dans Windows ou peut être reçue du domaine. Pour afficher la stratégie de mot de passe sur l’ordinateur, utilisez le composant logiciel enfichable MMC Stratégie de sécurité locale (**secpol.msc**).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  

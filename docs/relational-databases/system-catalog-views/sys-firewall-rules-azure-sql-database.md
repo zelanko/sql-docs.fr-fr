@@ -22,17 +22,16 @@ helpviewer_keywords:
 - firewall_rules
 - sys.firewall_rules
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 090ec967e25fff1fac3761298214e0366c0f2478
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 88fec5755999e4fcb036e01e272e0e4fea8f36da
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000902"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032392"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys_firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "38000902"
 ## <a name="remarks"></a>Notes  
  Pour supprimer une règle de pare-feu de base de données, utilisez [sp_delete_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md). Pour définir une règle de pare-feu pour une base de données, consultez [sys.database_firewall_rules &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md). Pour retourner des informations sur les règles de pare-feu existantes, interrogez sys.firewall_rules (Azure SQL Database).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Accès en lecture seule à cette vue est disponible pour tous les utilisateurs autorisés à se connecter à la **master** base de données.  
   
 ## <a name="see-also"></a>Voir aussi  

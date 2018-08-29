@@ -1,5 +1,5 @@
 ---
-title: sp_helplinkedsrvlogin (Transact-SQL) | Documents Microsoft
+title: sp_helplinkedsrvlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9615c833939c18b3653fa4035258b91bb5bdfc8
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 74f2885b8b1226afbcd7f4aceb4d6f5835e20a0b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33253262"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036571"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
  Nom du serveur lié auquel s'applique le mappage de connexion. *nom_du_serveur_distant* est **sysname**, avec NULL comme valeur par défaut. Si cet argument a la valeur NULL, tous les mappages de connexions précisés sur les serveurs liés définis sur l'ordinateur local exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont renvoyés.  
   
  [  **@locallogin=**] **'***locallogin***'**  
- Est la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion sur le serveur local ayant un mappage au serveur lié *nom_du_serveur_distant*. *LocalLogin* est **sysname**, avec NULL comme valeur par défaut. La valeur NULL spécifie que tous les mappages de connexion définis sur *nom_du_serveur_distant* sont retournées. Si ce n’est pas NULL, un mappage pour *locallogin* à *nom_du_serveur_distant* doit déjà exister. *LocalLogin* peut être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un utilisateur Windows. L'utilisateur Windows doit avoir une autorisation d'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directe ou par son appartenance à un groupe Windows qui possède une autorisation d'accès.  
+ Est le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion sur le serveur local qui possède un mappage au serveur lié *nom_du_serveur_distant*. *LocalLogin* est **sysname**, avec NULL comme valeur par défaut. NULL indique que tous les mappages de connexion définis sur *nom_du_serveur_distant* sont retournés. Si ce n’est pas NULL, un mappage pour *locallogin* à *nom_du_serveur_distant* doit déjà exister. *LocalLogin* peut être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un utilisateur Windows. L'utilisateur Windows doit avoir une autorisation d'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directe ou par son appartenance à un groupe Windows qui possède une autorisation d'accès.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -60,14 +60,14 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |-----------------|---------------|-----------------|  
 |**Serveur lié**|**sysname**|Nom du serveur lié.|  
 |**Connexion locale**|**sysname**|Connexion locale à laquelle s'applique le mappage.|  
-|**Est le mappage automatique**|**smallint**|0 = **connexion locale** est mappé à **connexion distante** lors de la connexion à **serveur lié**.<br /><br /> 1 = **connexion locale** est mappé à la même connexion et mot de passe lors de la connexion à **serveur lié**.|  
+|**Est le mappage automatique**|**smallint**|0 = **connexion locale** est mappé à **Remote Login** lors de la connexion à **serveur lié**.<br /><br /> 1 = **connexion locale** est mappé à la même connexion et mot de passe lors de la connexion à **serveur lié**.|  
 |**Connexion à distance**|**sysname**|Nom de connexion sur **LinkedServer** qui est mappé à **LocalLogin** lorsque **IsSelfMapping** est 0. Si **IsSelfMapping** est 1, **RemoteLogin** a la valeur NULL.|  
   
 ## <a name="remarks"></a>Notes  
- Avant de supprimer les mappages de connexion, utilisez **sp_helplinkedsrvlogin** pour déterminer les serveurs liés qui sont impliqués.  
+ Avant de supprimer des mappages de connexion, utilisez **sp_helplinkedsrvlogin** pour déterminer les serveurs liés qui sont impliqués.  
   
-## <a name="permissions"></a>Autorisations  
- Aucuns autorisations ne sont vérifiées.  
+## <a name="permissions"></a>Permissions  
+ Sans les autorisations sont vérifiées.  
   
 ## <a name="examples"></a>Exemples  
   

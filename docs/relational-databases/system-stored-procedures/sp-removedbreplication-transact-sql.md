@@ -1,5 +1,5 @@
 ---
-title: sp_removedbreplication (Transact-SQL) | Documents Microsoft
+title: sp_removedbreplication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aee6f832fda56d69e064ef49c669ab2d945c5140
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbeda476ae204ce33c44dd858f90e19a677e74e4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998003"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026575"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +58,8 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 |||  
 |-|-|  
 |**Tran**|Supprime les objets de publication dans une réplication transactionnelle.|  
-|**Fusion**|Supprime les objets de publication dans une réplication de fusion.|  
-|**les deux** (par défaut)|Supprime tous les objets de publication de la réplication.|  
+|**fusion**|Supprime les objets de publication dans une réplication de fusion.|  
+|**les deux** (valeur par défaut)|Supprime tous les objets de publication de la réplication.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -74,7 +74,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_removedbreplication**.  
   
 ## <a name="example"></a>Exemple  

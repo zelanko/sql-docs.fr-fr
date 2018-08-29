@@ -1,5 +1,5 @@
 ---
-title: sp_grant_publication_access (Transact-SQL) | Documents Microsoft
+title: sp_grant_publication_access (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_grant_publication_access
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c6739cd65e016e08773831d0bc87e46ac27ae1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 681e62cea3b5bf9a22cedd1ab1803737b2080642
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994196"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023937"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +45,10 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
   
 ## <a name="arguments"></a>Arguments  
  [ **@publication**=] **'***publication***'**  
- Nom de la publication à laquelle accéder. **'***publication***'** est **sysname**, sans valeur par défaut.  
+ Nom de la publication à laquelle accéder. **«***publication***'** est **sysname**, sans valeur par défaut.  
   
  [ **@login**=] **'***connexion***'**  
- ID de la connexion. **'***connexion***'** est **sysname**, sans valeur par défaut.  
+ ID de la connexion. **«***connexion***'** est **sysname**, sans valeur par défaut.  
   
  [  **@reserved =**] **'***réservé***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -63,8 +61,8 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
   
  Cette procédure stockée peut être appelée de façon répétitive.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_grant_publication_access**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_grant_publication_access**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   

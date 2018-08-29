@@ -1,5 +1,5 @@
 ---
-title: sp_replicationdboption (Transact-SQL) | Documents Microsoft
+title: sp_replicationdboption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replicationdboption
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9a88d295f6ae5ff0fcfab7121a4057dd84f75957
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b577600e5757ee630795724d965603f3478391ce
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000326"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024448"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,18 +54,18 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [**@optname=**] **'***optname***'**  
  Option de base de données de réplication à activer ou à désactiver. *optname* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**publication de fusion**|La base de données peut être utilisée pour les publications de fusion.|  
-|**Publier**|La base de données peut être utilisée pour les autres types de publications.|  
-|**S’abonner**|La base de données est une base de données d'abonnement.|  
-|**synchronisation avec la sauvegarde**|La base de données est activée pour la sauvegarde coordonnée. Pour plus d’informations, consultez [activer les sauvegardes coordonnées pour la réplication transactionnelle &#40;Transact-SQL de programmation de réplication&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
+|**publier**|La base de données peut être utilisée pour les autres types de publications.|  
+|**s’abonner**|La base de données est une base de données d'abonnement.|  
+|**synchroniser avec la sauvegarde**|La base de données est activée pour la sauvegarde coordonnée. Pour plus d’informations, consultez [activer les sauvegardes coordonnées pour la réplication transactionnelle &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
  [  **@value=**] **'***valeur***'**  
  Indique si l'option de base de données de réplication doit être activée ou désactivée. *valeur* est **sysname**et peut être **true** ou **false**. Lorsque cette valeur est **false** et *optname* est **publication de fusion**, les abonnements à la base de données publiée de fusion sont également supprimés.  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
- Indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est **bits**, avec une valeur par défaut **0**, ce qui signifie que le serveur de distribution doit être connecté à et mis à jour avec le nouvel état de la base de données de publication. La valeur **1** doit être spécifié uniquement si le serveur de distribution est inaccessible et **sp_replicationdboption** est utilisé pour désactiver la publication.  
+ Indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est **bits**, avec une valeur par défaut **0**, ce qui signifie que le serveur de distribution doit être connecté à et mis à jour avec le nouvel état de la base de données de publication. La valeur **1** doit être spécifié uniquement si le serveur de distribution n’est pas accessible et **sp_replicationdboption** est utilisée pour désactiver la publication.  
   
  [  **@from_scripting=**] *from_scripting*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -81,12 +80,12 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
  Pour désactiver la publication, la base de données de publication doit être en ligne. Si un instantané existe pour la base de données de publication, elle doit être supprimée pour pouvoir désactiver la publication. Un instantané de base de données est une copie en lecture seule hors ligne d'une base de données et n'est pas lié à un instantané de réplication. Pour plus d’informations, consultez [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_replicationdboption**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Créer une publication](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Supprimer une Publication](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Désactiver la publication et la distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   

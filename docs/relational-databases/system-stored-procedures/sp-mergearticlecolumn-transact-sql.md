@@ -1,5 +1,5 @@
 ---
-title: sp_mergearticlecolumn (Transact-SQL) | Documents Microsoft
+title: sp_mergearticlecolumn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e426586be6229cb62e36d8fdcab13663785240b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50886bd5bd4ab34852362e678a2f8c2f4a2fc459
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023927"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +58,10 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  Nom de l'article dans la publication. *article* est **sysname**, sans valeur par défaut.  
   
  [  **@column =**] **'***colonne***'**  
- Identifie les colonnes sur lesquelles la partition verticale doit être créée. *colonne* est **sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est spécifiée et que `@operation = N'add'`, toutes les colonnes de la table source sont ajoutées à l'article par défaut. *colonne* ne peut pas être NULL lorsque *opération* a la valeur **supprimer**. Pour exclure des colonnes à partir d’un article, exécutez **sp_mergearticlecolumn** et spécifiez *colonne* et `@operation = N'drop'` pour chaque colonne doit être supprimée à partir du spécifié *article*.  
+ Identifie les colonnes sur lesquelles la partition verticale doit être créée. *colonne* est **sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est spécifiée et que `@operation = N'add'`, toutes les colonnes de la table source sont ajoutées à l'article par défaut. *colonne* ne peut pas être NULL lorsque *opération* a la valeur **drop**. Pour exclure des colonnes à partir d’un article, exécutez **sp_mergearticlecolumn** et spécifiez *colonne* et `@operation = N'drop'` pour chaque colonne à supprimer à partir du spécifié *article*.  
   
  [  **@operation =**] **'***opération***'**  
- État de la réplication. *opération* est **nvarchar (4)**, avec ADD comme valeur par défaut. **ajouter** marque la colonne pour la réplication. **DROP** supprime la colonne.  
+ État de la réplication. *opération* est **nvarchar (4)**, avec une valeur par défaut de l’ajouter. **ajouter** marque la colonne pour la réplication. **DROP** supprime la colonne.  
   
  [  **@schema_replication=**] **'***schema_replication***'**  
  Indique qu'une modification du schéma sera propagée lors de l'exécution de l'Agent de fusion. *schema_replication* est **nvarchar (5)**, avec FALSE comme valeur par défaut.  
@@ -68,17 +69,17 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 > [!NOTE]  
 >  Uniquement **FALSE** est pris en charge pour *schema_replication*.  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Active ou désactive la possibilité d'invalider un instantané. *force_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+ [  **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
+ Active ou désactive la possibilité d'invalider un instantané. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion n’entraînent pas l’instantané n’est pas valide.  
   
  **1** Spécifie que les modifications apportées à l’article de fusion peuvent invalider l’instantané n’est pas valide, et si c’est le cas, la valeur **1** autorise le nouvel instantané de se produire.  
   
- [* *@force_reinit_subscription =] *** force_reinit_subscription*  
- Active ou désactive la possibilité de réinitialiser l'abonnement. *force_reinit_subscription* est de type bit, avec une valeur par défaut **0**.  
+ [* *@force_reinit_subscription =] *** àce_reinit_subscription*  
+ Active ou désactive la possibilité de réinitialiser l'abonnement. *àce_reinit_subscription* est un peu avec une valeur par défaut **0**.  
   
- **0** Spécifie que les modifications apportées à l’article de fusion n’entraînent pas la réinitialisation des abonnements.  
+ **0** Spécifie que les modifications apportées à l’article de fusion n’entraînent pas la réinitialisation de l’abonnement.  
   
  **1** Spécifie que les modifications apportées à l’article de fusion peuvent invalider l’abonnement pour réinitialisation, et si c’est le cas, la valeur **1** autorise la réinitialisation des abonnements se produise.  
   
@@ -97,11 +98,11 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="example"></a>Exemple  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_mergearticlecolumn**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_mergearticlecolumn**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Définir et modifier un filtre de jointure entre des articles de fusion](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

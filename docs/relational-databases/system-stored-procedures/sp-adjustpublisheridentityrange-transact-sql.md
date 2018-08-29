@@ -1,5 +1,5 @@
 ---
-title: sp_adjustpublisheridentityrange (Transact-SQL) | Documents Microsoft
+title: sp_adjustpublisheridentityrange (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adjustpublisheridentityrange
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8d39485c2ed9519353a2175fa4e127a5900b0e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb3d39fd2c1f4369af598af1c593ea530150d2ab
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987184"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032777"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
  Nom de la publication dans laquelle de nouvelles plages d'identité sont réaffectées. *publication* est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@table_name=**] **'***table_name***'**  
- Nom de la table dans laquelle de nouvelles plages d'identité sont réaffectées. *nom_table* est **sysname**, avec NULL comme valeur par défaut.  
+ Nom de la table dans laquelle de nouvelles plages d'identité sont réaffectées. *table_name* est **sysname**, avec NULL comme valeur par défaut.  
   
  [  **@table_owner=**] **'***table_owner***'**  
  Nom du propriétaire de la table au niveau du serveur de publication. *TABLE_OWNER* est **sysname**, avec NULL comme valeur par défaut. Si *table_owner* n’est pas spécifié, le nom de l’utilisateur actuel est utilisé.  
@@ -64,10 +63,10 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
   
  Lorsque le paramètre d'affectation automatique de plage d'identités est activé pour une publication, l'Agent de distribution ou de fusion est responsable de l'ajustement automatique de la plage d'identités en fonction de la valeur de seuil de la publication. Toutefois, si pour une raison quelconque l’Agent de Distribution ou l’Agent de fusion n'a pas été exécuté pendant une période de temps, et la ressource de plage d’identité a été sensiblement sollicitée jusqu’au point de seuil, les utilisateurs peuvent appeler **sp_adjustpublisheridentityrange** pour allouer une nouvelle plage de valeurs pour un serveur de publication.  
   
- Lors de l’exécution **sp_adjustpublisheridentityrange**, *publication* ou *table_name* doit être spécifié. Si les deux sont spécifiés ou aucun des deux, un message d'erreur est renvoyé.  
+ Lors de l’exécution **sp_adjustpublisheridentityrange**, soit *publication* ou *table_name* doit être spécifié. Si les deux sont spécifiés ou aucun des deux, un message d'erreur est renvoyé.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_adjustpublisheridentityrange**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_adjustpublisheridentityrange**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md)   

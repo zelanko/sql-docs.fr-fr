@@ -1,5 +1,5 @@
 ---
-title: sp_mergedummyupdate (Transact-SQL) | Documents Microsoft
+title: sp_mergedummyupdate (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergedummyupdate
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d31ad74486c8be2b964f4dd3f02c5b5a04ac0b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c06f7c39d495808bd700947082b7416f7dd2853
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994836"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021568"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +57,10 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ## <a name="remarks"></a>Notes  
  **sp_mergedummyupdate** est utilisé dans la réplication de fusion.  
   
- **sp_mergedummyupdate** est utile si vous écrivez votre propre pour les conflits de réplication (Wzcnflct.exe).  
+ **sp_mergedummyupdate** est utile si vous écrivez votre propre alternative pour les conflits de réplication (Wzcnflct.exe).  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **db_owner** du rôle de base de données fixe peut exécuter **sp_mergedummyupdate**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **db_owner** rôle de base de données fixe peuvent exécuter **sp_mergedummyupdate**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_changesubstatus (Transact-SQL) | Documents Microsoft
+title: sp_changesubstatus (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94c26330636d4e13fe84a2776a72315a418d3d96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 269b2eab987560b2c043c887d7a90c2c4ddc1a95
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993466"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019436"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Arguments  
  [  **@publication=**] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**. Si *publication* n’est pas spécifié, toutes les publications sont affectées.  
+ Nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**. Si *publication* n’est pas spécifiée, toutes les publications sont affectées.  
   
  [  **@article=**] **'***article***'**  
  Nom de l'article. Doit être unique et propre à la publication. *article* est **sysname**, avec une valeur par défaut **%**. Si *article* n’est pas spécifiée, tous les articles sont affectées.  
@@ -84,14 +84,14 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@status =**] **'***état***'**  
  L’état de l’abonnement dans le **syssubscriptions** table. *état* est **sysname**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**Active**|L'abonné est synchronisé et reçoit des données.|  
-|**Inactif**|L'entrée de l'abonné existe, sans abonnement.|  
+|**inactif**|L'entrée de l'abonné existe, sans abonnement.|  
 |**abonné**|L'abonné demande des données mais n'est pas encore synchronisé.|  
   
  [  **@previous_status=**] **'***previous_status***'**  
- État antérieur de l'abonnement. *previous_status* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre vous permet de modifier les abonnements ayant actuellement cet état, ce qui permet de fonctions de groupe sur un ensemble spécifique d’abonnements (par exemple, si tous les abonnements pour revenir **abonné**).  
+ État antérieur de l'abonnement. *previous_status* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre vous permet de modifier les abonnements ayant actuellement cet état, permettant ainsi des fonctions de groupe sur un ensemble spécifique d’abonnements (par exemple, la définition active tous les abonnements retour au **abonné**).  
   
  [  **@destination_db=**] **'***destination_db***'**  
  Nom de la base de données de destination. *destination_db* est **sysname**, avec une valeur par défaut **%**.  
@@ -100,7 +100,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  Fréquence de planification de la tâche de distribution. *frequency_type* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@frequency_interval=**] *frequency_interval*  
- Valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est **int**, avec NULL comme valeur par défaut.  
+ Est la valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est **int**, avec NULL comme valeur par défaut.  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  Date de la tâche de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur 32 (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
@@ -161,10 +161,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
  [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
  > [!NOTE]  
->  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. Paramètre *remote_agent_server_name* à n’importe quelle valeur non NULL, génère une erreur.  
+>  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. Paramètre *remote_agent_server_name* vers n’importe quelle valeur non NULL génère une erreur.  
   
  [ **@dts_package_name**=] **'***l’argument dts_package_name***'**  
- Spécifie le nom du package DTS (Data Transformation Services). *l’argument dts_package_name* est un **sysname**, avec NULL comme valeur par défaut. Par exemple, pour un package nommé **DTSPub_Package** vous spécifiez `@dts_package_name = N'DTSPub_Package'`.  
+ Spécifie le nom du package DTS (Data Transformation Services). *l’argument dts_package_name* est un **sysname**, avec NULL comme valeur par défaut. Par exemple, pour un package nommé **DTSPub_Package** vous spécifieriez `@dts_package_name = N'DTSPub_Package'`.  
   
  [ **@dts_package_password**=] **'***dts_package_password***'**  
  Spécifie le mot de passe du package. *dts_package_password* est **sysname** avec une valeur par défaut NULL, qui indique que la propriété de mot de passe ne doit être modifiée.  
@@ -191,12 +191,12 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- **sp_changesubstatus** est utilisé dans la réplication de capture instantanée et la réplication transactionnelle.  
+ **sp_changesubstatus** est utilisé dans la réplication d’instantané ou transactionnelle.  
   
- **sp_changesubstatus** modifie l’état de l’abonné dans le **syssubscriptions** table avec l’état modifié. Si nécessaire, il met à jour l’état de l’article dans la **sysarticles** table pour indiquer active ou inactive. Si nécessaire, il définit l’indicateur de réplication ou désactiver le **sysobjects** table pour la table répliquée.  
+ **sp_changesubstatus** modifie l’état de l’abonné dans le **syssubscriptions** table avec l’état modifié. Si nécessaire, elle met à jour l’état de l’article dans le **sysarticles** table pour indiquer active ou inactive. Si nécessaire, il définit l’indicateur de réplication ou désactiver le **sysobjects** table pour la table répliquée.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle de serveur fixe **db_owner** rôle de base de données fixe, ou le créateur de l’abonnement peut exécuter **sp_changesubstatus**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe **db_owner** rôle de base de données fixe ou le créateur de l’abonnement peut exécuter **sp_changesubstatus**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   

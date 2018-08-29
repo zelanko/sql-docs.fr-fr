@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_profile_sp (Transact-SQL) | Documents Microsoft
+title: sysmail_update_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_profile_sp
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
-caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a1b6d810355590ddc69c0b57fa0fc3e24e461696
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c4cbd14af00e8a2c4858c611b051cc0bc03a1993
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259649"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030641"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +45,10 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
 ## <a name="arguments"></a>Arguments  
  [ **@profile_id** =] *profile_id*  
- Identificateur du profil à mettre à jour. *profile_id* est **int**, avec NULL comme valeur par défaut. Au moins un des *profile_id* ou *profile_name* doit être spécifié. Si les deux arguments sont indiqués, la procédure modifie le nom du profil.  
+ Id de profil à mettre à jour. *profile_id* est **int**, avec NULL comme valeur par défaut. Au moins une des *profile_id* ou *profile_name* doit être spécifié. Si les deux arguments sont indiqués, la procédure modifie le nom du profil.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- Nom du profil à mettre à jour ou nouveau nom pour le profil. *profile_name* est **sysname**, avec NULL comme valeur par défaut. Au moins un des *profile_id* ou *profile_name* doit être spécifié. Si les deux arguments sont indiqués, la procédure modifie le nom du profil.  
+ Nom du profil à mettre à jour ou nouveau nom pour le profil. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Au moins une des *profile_id* ou *profile_name* doit être spécifié. Si les deux arguments sont indiqués, la procédure modifie le nom du profil.  
   
  [ **@description** =] **'***description***'**  
  Nouvelle description du profil. *Description* est **nvarchar (256)**, avec NULL comme valeur par défaut.  
@@ -62,13 +61,13 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
  La procédure stockée **sysmail_update_profile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
  **A. Modification de la description d’un profil**  
   
- L’exemple suivant modifie la description pour le profil nommé `AdventureWorks Administrator` dans les **msdb** base de données.  
+ L’exemple suivant modifie la description pour le profil nommé `AdventureWorks Administrator` dans le **msdb** base de données.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  

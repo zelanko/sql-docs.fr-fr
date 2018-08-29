@@ -25,13 +25,13 @@ caps.latest.revision: 37
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3f8e2957802d527a4e4845e95eedb2ea7cdcd375
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3fee5cae4701b9c7acf43604e73f65af54657aa6
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40393405"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43069670"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_db\_paramétrage\_recommandations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "40393405"
  Informations retournées par `sys.dm_db_tuning_recommendations` est mis à jour lorsque le moteur de base de données identifie la régression potentielle des performances de requête et n’est pas persistant. Recommandations sont simplement conservées jusque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est redémarré. Les administrateurs de base de données doivent effectuer régulièrement des copies de sauvegarde de la recommandation de paramétrage s’ils souhaitent conserver après le recyclage du serveur. 
 
  `currentValue` champ dans le `state` colonne peut avoir les valeurs suivantes :
- | État |  Description |
+ | État | Description |
  |--------|-------------|
  | `Active` | Recommandation est active et non encore appliqué. Utilisateur peut prendre le script de recommandation et exécutez-le manuellement. |
  | `Verifying` | La recommandation est appliquée par [!INCLUDE[ssde_md](../../includes/ssde_md.md)] et processus de vérification interne compare les performances du plan forcé avec le plan de régression. |
@@ -75,7 +75,7 @@ ms.locfileid: "40393405"
 
 Document JSON dans `state` colonne contient la raison pour laquelle décrit la raison pour laquelle la recommandation dans l’état actuel. Les valeurs dans le champ raison peuvent être : 
 
-| Reason |  Description |
+| Reason | Description |
 |--------|-------------|
 | `SchemaChanged` | Recommandation a expiré, car le schéma d’une table référencée est modifié. |
 | `StatisticsChanged`| Recommandation a expiré en raison de la modification de statistiques sur une table référencée. |

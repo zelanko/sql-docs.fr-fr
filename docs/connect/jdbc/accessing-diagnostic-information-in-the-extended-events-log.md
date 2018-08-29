@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca0f63442af44bdce4b8c3b18af0beab1cd8a9ee
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: a717bcf2a5c7b0c0b80bece12b77871573414a31
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278710"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42787151"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ com.microsoft.sqlserver.jdbc.traceactivity = on
   
  Pour plus d’informations, consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md). L'indicateur de trace est utilisé avec les enregistreurs d'objets JDBC correspondants pour décider s'il faut tracer et envoyer l'ActivityId dans le pilote JDBC. En plus de la mise à jour du fichier Logging.Properties, l'enregistreur com.microsoft.sqlserver.jdbc doit être activé avec le niveau FINER ou plus élevé. Si vous voulez envoyer ActivityId au serveur pour des requêtes effectuées par une classe donnée, l’enregistreur de classe correspondant doit être activé avec le niveau FINER ou FINEST. Par exemple, si la classe est SQLServerStatement, activez l'enregistreur com.microsoft.sqlserver.jdbc.SQLServerStatement.  
   
- L’exemple suivant utilise [!INCLUDE[tsql](../../includes/tsql_md.md)] pour démarrer une session d’événements étendus qui est stockée dans une mémoire tampon en anneau et enregistre l’ID d’activité envoyé par un client lors des opérations par lot et RPC :  
+ L’exemple suivant utilise [!INCLUDE[tsql](../../includes/tsql-md.md)] pour démarrer une session d’événements étendus qui est stockée dans une mémoire tampon en anneau et enregistre l’ID d’activité envoyé par un client lors des opérations par lot et RPC :  
   
 ```sql
 create event session MySession on server  

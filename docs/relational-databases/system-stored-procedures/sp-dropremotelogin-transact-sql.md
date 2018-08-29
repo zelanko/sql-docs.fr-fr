@@ -1,5 +1,5 @@
 ---
-title: sp_dropremotelogin (Transact-SQL) | Documents Microsoft
+title: sp_dropremotelogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4565f5a3005a556d24777a220ff020816f01a346
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 89633f39028047e4caf4bb2dd8db0f4ce022c96c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256585"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026496"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,15 +60,15 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Si une seule *remoteserver* est spécifié, toutes les connexions à distance pour ce serveur distant sont supprimées du serveur local. Si *connexion* est également spécifiées, tous les à distance les connexions à partir de *remoteserver* mappées sur cette connexion locale sont supprimés à partir du serveur local. Si *nom_distant* est également spécifiée, seule la connexion à distance pour cet utilisateur à distance à partir de *remoteserver* est supprimé du serveur local.  
+ Si seuls *remoteserver* est spécifié, toutes les connexions à distance pour ce serveur distant sont supprimées du serveur local. Si *connexion* est également spécifiées, qui est distantes toutes les connexions à partir de *remoteserver* mappées sur cette connexion locale sont supprimées du serveur local. Si *nom_distant* est également spécifiée, seule la connexion à distance pour cet utilisateur à distance à partir de *remoteserver* est supprimé du serveur local.  
   
  Pour ajouter des utilisateurs du serveur local, utilisez **sp_addlogin**. Pour supprimer des utilisateurs du serveur local, utilisez **sp_droplogin**.  
   
- Les connexions distantes sont obligatoires uniquement lorsque vous utilisez des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 et les versions ultérieures utilisent à la place des connexions de serveurs liés. Utilisez **sp_addlinkedsrvlogin** et **sp_droplinkedsrvlogin** pour ajouter et supprimer des connexions du serveur lié.  
+ Les connexions distantes sont obligatoires uniquement lorsque vous utilisez des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 et les versions ultérieures utilisent à la place des connexions de serveurs liés. Utilisez **sp_addlinkedsrvlogin** et **sp_droplinkedsrvlogin** pour ajouter et supprimer des connexions de serveurs liés.  
   
  **sp_dropremotelogin** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’appartenance dans le **sysadmin** ou **securityadmin** rôles serveur fixes.  
   
 ## <a name="examples"></a>Exemples  

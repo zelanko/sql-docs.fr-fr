@@ -1,5 +1,5 @@
 ---
-title: sp_ivindexhasnullcols (Transact-SQL) | Documents Microsoft
+title: sp_ivindexhasnullcols (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_ivindexhasnullcols
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4431ae915c43d6ceb96200c3ebbf6aa976dd4ff3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7ca9be2e67f49a2881171dcfb4e0a99a6672bd6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995056"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023729"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@viewname**=] **'***view_name***'**  
+ [ **@viewname**=] **'***nom_vue***'**  
  Nom de la vue à vérifier. *view_name* est **sysname**, sans valeur par défaut.  
   
  [ **@fhasnullcols**=] *field_has_null_columns* sortie  
  Indicateur qui précise si l'index de la vue a des colonnes acceptant des valeurs NULL. *view_name* est **sysname**, sans valeur par défaut. Retourne une valeur de **1** si l’index de la vue a des colonnes acceptant des valeurs NULL. Retourne une valeur de **0** si la vue ne contient-elle pas les colonnes qui acceptent les valeurs NULL.  
   
 > [!NOTE]  
->  Si la procédure stockée elle-même renvoie un code de retour de **1**, ce qui signifie que l’exécution de la procédure stockée une défaillance, cette valeur est **0** et doit être ignorée.  
+>  Si la procédure stockée elle-même renvoie un code de retour **1**, ce qui signifie que l’exécution de la procédure stockée a connu une défaillance, cette valeur est **0** et doit être ignorée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -63,8 +63,8 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
   
  Par défaut, les articles de vue indexée d'une publication sont créés en tant que tables sur les Abonnés. Toutefois, lorsque la colonne indexée autorise les valeurs NULL, la vue indexée est créée en tant que vue indexée sur l'Abonné, au lieu de l'être en tant que table. L'exécution de cette procédure stockée indique à l'utilisateur si la vue indexée active est concernée par ce problème.  
   
-## <a name="permissions"></a>Autorisations  
- Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** du rôle de base de données fixe peut exécuter **sp_ivindexhasnullcols**.  
+## <a name="permissions"></a>Permissions  
+ Seuls les membres de la **sysadmin** rôle serveur fixe ou le **db_owner** rôle de base de données fixe peuvent exécuter **sp_ivindexhasnullcols**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
