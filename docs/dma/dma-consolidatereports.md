@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 0b17f375ddc6ad9bac5a3b5d3f9bf4df9c588a02
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
-ms.translationtype: HT
+ms.openlocfilehash: 05c3df493c809132d6fbfad1d96cc84d4d873dd3
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118437"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152630"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation avec le DMA
 
@@ -83,6 +83,8 @@ Créer une base de données appelée **EstateInventory** et une table appelée *
 - InstanceName
 - DatabaseName
 - AssessmentFlag
+
+![Contenu de la table SQL Server](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
 
 Si cette base de données n’est pas sur l’ordinateur d’outils, assurez-vous que l’ordinateur outils dispose d’une connectivité réseau à cette instance de SQL Server.
 
