@@ -12,21 +12,21 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d2f4cd73d4d20d4b54573b300c5006bebd5fb6eb
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 1cfbd5bce17c658a7dff33bc7a590a22d525c193
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109001"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018188"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Prise en charge des colonnes éparses (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cette rubrique fournit des informations sur le pilote OLE DB pour la prise en charge de SQL Server pour les colonnes éparses. Pour plus d’informations sur les colonnes éparses, consultez [prise en charge des colonnes éparses dans OLE DB Driver pour SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md). Pour obtenir un exemple, consultez [colonne d’affichage et les métadonnées de catalogue pour les colonnes éparses &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
+  Cette rubrique fournit des informations sur le pilote OLE DB pour la prise en charge de SQL Server pour les colonnes éparses. Pour plus d’informations sur les colonnes éparses, consultez [prise en charge des colonnes éparses dans OLE DB Driver pour SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md). [Afficher les métadonnées de colonne et de catalogue pour les colonnes éparses (OLE DB)](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
 ## <a name="ole-db-statement-metadata"></a>Métadonnées d'instruction OLE DB  
  À partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], une nouvelle valeur d'indicateur DBCOLUMNFLAGS, DBCOLUMNFLAGS_SS_ISCOLUMNSET, est disponible. Cette valeur doit être définie pour les colonnes qui sont des valeurs **column_set**. L’indicateur DBCOLUMNFLAGS peut être récupéré via la *dwFlags* paramètre de IColumnsInfo::GetColumnsInfo et la colonne DBCOLUMN_FLAGS de l’ensemble de lignes retourné par IColumnsRowset::GetColumnsRowset.  

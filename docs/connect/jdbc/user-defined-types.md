@@ -14,21 +14,21 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72dca79e295f54d4c01421ef79408008bd559210
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 55db7c7c903f4b22a85f9762f13f845ea7ea17ba
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039138"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785444"
 ---
 # <a name="user-defined-types"></a>Types définis par l’utilisateur
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Les types définis par l'utilisateur (UDT, User-Defined Types) ont été introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] pour permettre à un développeur d'étendre le système de type scalaire du serveur en stockant des objets CLR (Common Language Runtime) dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Les UDT peuvent contenir plusieurs éléments et avoir des comportements, contrairement aux types de données alias traditionnels qui ne comprennent qu'un seul type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Auparavant, les UDT étaient limités à une taille maximale de 8 kilo-octets. Dans [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)], il existe désormais une prise en charge des types définis par l'utilisateur (UDT) supérieurs à 64 kilo-octets. La version 3.0 du pilote JDBC prend à présent également en charge les UDT supérieurs à 64 kilo-octets lorsque vous spécifiez le format UserDefined.  
-  
- Il n'existe aucune modification du comportement pour les types définis par l'utilisateur (UDT) dont la taille est inférieure ou égale à 8 000 octets, mais les types définis par l'utilisateur plus volumineux sont pris en charge et affichent une taille « illimitée ».  
-  
-## <a name="see-also"></a> Voir aussi  
- [Présentation des types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
-  
-  
+Les types définis par l'utilisateur (UDT, User-Defined Types) ont été introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pour permettre à un développeur d'étendre le système de type scalaire du serveur en stockant des objets CLR (Common Language Runtime) dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les UDT peuvent contenir plusieurs éléments et avoir des comportements, contrairement aux types de données alias traditionnels qui ne comprennent qu'un seul type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Auparavant, les UDT étaient limités à une taille maximale de 8 kilo-octets. Dans [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)], il existe désormais une prise en charge des types définis par l'utilisateur (UDT) supérieurs à 64 kilo-octets. La version 3.0 du pilote JDBC prend à présent également en charge les UDT supérieurs à 64 kilo-octets lorsque vous spécifiez le format UserDefined.
+
+Il n'existe aucune modification du comportement pour les types définis par l'utilisateur (UDT) dont la taille est inférieure ou égale à 8 000 octets, mais les types définis par l'utilisateur plus volumineux sont pris en charge et affichent une taille « illimitée ».
+
+## <a name="see-also"></a> Voir aussi
+
+[Présentation des types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

@@ -14,17 +14,17 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 377afbebe029add867a2d02cb02a38421dc8d1f2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662281"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785608"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Configuration requise pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Pour accéder aux données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] à l’aide du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], vous devez installer les composants suivants sur votre ordinateur :
+  Pour accéder aux données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] à l’aide du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], vous devez installer les composants suivants sur votre ordinateur :
 
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([Télécharger](download-microsoft-jdbc-driver-for-sql-server.md))
 - Environnement d'exécution Java
@@ -44,7 +44,7 @@ ms.locfileid: "39662281"
   
 **Microsoft JDBC Driver 7.0 pour SQL Server :**  
 
-  Le 7.0 du pilote JDBC comprend deux bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-7.0.0.jre8.jar**, et **mssql-jdbc-7.0.0.jre10.jar**.
+  JDBC Driver 7.0 inclut deux bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-7.0.0.jre8.jar** et **mssql-jdbc-7.0.0.jre10.jar**.
 
   JDBC Driver 7.0 a été conçu pour être pris en charge par toutes les principales machines virtuelles Java équivalentes à Sun, mais il a été testé uniquement sur Sun JRE 8.0 et 10.0.
   
@@ -68,7 +68,7 @@ ms.locfileid: "39662281"
   
 **Microsoft JDBC Driver 6.4 pour SQL Server :**  
 
-  JDBC Driver 6.4 comprend trois bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, et **mssql-jdbc-6.4.0.jre9.jar** .
+  JDBC Driver 6.4 inclut deux bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-6.4.0.jre7.jar** et **mssql-jdbc-6.4.0.jre8.jar**.
 
   JDBC Driver 6.4 a été conçu pour être pris en charge par toutes les principales machines virtuelles Java équivalentes à Sun, mais il a été testé uniquement sur Sun JRE 7.0, 8.0 et 9.0.
   
@@ -149,9 +149,9 @@ JDBC Driver 6.4 est également disponible sur le référentiel Central Maven et 
  Le pilote JDBC est conçu pour fonctionner sur tout système d'exploitation prenant en charge l'utilisation d'une machine virtuelle Java (JVM). Toutefois, seuls les systèmes d'exploitation Sun Solaris, SUSE Linux et Windows ont été testés officiellement.  
   
 ## <a name="supported-languages"></a>Langues prises en charge  
- Le pilote JDBC prend en charge tous les classements de colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Pour plus d’informations sur les classements pris en charge par le pilote JDBC, consultez [fonctionnalités internationales du pilote JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+ Le pilote JDBC prend en charge tous les classements de colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les classements pris en charge par le pilote JDBC, consultez [fonctionnalités internationales du pilote JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
- Pour plus d’informations sur les classements, consultez la rubrique « Utilisation des classements » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+ Pour plus d’informations sur les classements, consultez la rubrique « Utilisation des classements » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

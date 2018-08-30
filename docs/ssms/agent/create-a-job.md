@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 101dad288e673a597a1e3bb5110bf8870b289135
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 44d895479d0de91a6a721ef1d41b2df60386533c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980251"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776612"
 ---
 # <a name="create-a-job"></a>Créer un travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38980251"
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Cette rubrique explique comment créer un travail de l'Agent SQL Server dans [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], de [!INCLUDE[tsql](../../includes/tsql_md.md)] ou de SQL Server Management Objects (SMO).  
+Cette rubrique explique comment créer un travail de l'Agent SQL Server dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou de SQL Server Management Objects (SMO).  
   
 Pour ajouter des étapes de travail, des planifications, des alertes et des notifications à envoyer aux opérateurs, utilisez les liens d'accès aux rubriques figurant dans la section Voir aussi.  
   
@@ -54,11 +54,11 @@ Pour ajouter des étapes de travail, des planifications, des alertes et des noti
   
 ### <a name="Restrictions"></a>Limitations et restrictions  
   
--   Pour créer un travail, l'utilisateur doit être membre de l'un des rôles de base de données fixes de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou du rôle de serveur fixe **sysadmin** . Un travail ne peut être modifié que par son propriétaire ou par les membres du rôle **sysadmin** . Pour plus d’informations sur les rôles de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, consultez [Rôles de base de données fixe de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+-   Pour créer un travail, l'utilisateur doit être membre de l'un des rôles de base de données fixes de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou du rôle de serveur fixe **sysadmin** . Un travail ne peut être modifié que par son propriétaire ou par les membres du rôle **sysadmin** . Pour plus d’informations sur les rôles de base de données fixe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consultez [Rôles de base de données fixe de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 -   L'attribution d'un travail à une autre connexion ne garantit pas que le nouveau propriétaire dispose des autorisations nécessaires pour exécuter le travail.  
   
--   Les travaux locaux sont mis en cache par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] local. Ainsi, toutes les modifications obligent implicitement l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à remettre le travail dans le cache. Étant donné que l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ne met pas le travail en mémoire cache tant que la procédure stockée **sp_add_jobserver** n’est pas appelée, il est plus efficace d’appeler **sp_add_jobserver** en dernier.  
+-   Les travaux locaux sont mis en cache par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] local. Ainsi, toutes les modifications obligent implicitement l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à remettre le travail dans le cache. Étant donné que l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne met pas le travail en mémoire cache tant que la procédure stockée **sp_add_jobserver** n’est pas appelée, il est plus efficace d’appeler **sp_add_jobserver** en dernier.  
   
 ### <a name="Security"></a>Sécurité  
   
@@ -90,7 +90,7 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
   
 7.  Sur la page **Alertes** , organisez les alertes pour le travail. Pour plus d’informations sur les options disponibles dans cette page, consultez [Propriétés du travail - Nouveau travail &#40;page Alertes&#41;](../../ssms/agent/job-properties-new-job-alerts-page.md).  
   
-8.  Sur la page **Notifications** , définissez des actions que l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] devra exécuter une fois le travail terminé. Pour plus d’informations sur les options disponibles dans cette page, consultez [Propriétés du travail - Nouveau travail &#40;page Notifications&#41;](../../ssms/agent/job-properties-new-job-notifications-page.md).  
+8.  Sur la page **Notifications** , définissez des actions que l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devra exécuter une fois le travail terminé. Pour plus d’informations sur les options disponibles dans cette page, consultez [Propriétés du travail - Nouveau travail &#40;page Notifications&#41;](../../ssms/agent/job-properties-new-job-notifications-page.md).  
   
 9. Sur la page **Cibles** , gérez les serveurs cibles pour le travail. Pour plus d’informations sur les options disponibles dans cette page, consultez [Propriétés du travail - Nouveau travail &#40;page Cibles&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
   
@@ -150,5 +150,5 @@ Pour plus d'informations, consultez :
 ## <a name="SMOProcedure"></a>Utilisation de SQL Server Management Objects  
 **Pour créer un travail de l'Agent SQL Server**  
   
-Appelez la méthode **Create** de la classe **Job** à l’aide du langage de programmation de votre choix, tel que Visual Basic, Visual C# ou PowerShell. Pour obtenir un exemple de code, consultez [Planification des tâches administratives automatiques dans l’Agent SQL Server](http://msdn.microsoft.com/900242ad-d6a2-48e9-8a1b-f0eea4413c16).  
+Appelez la méthode **Create** de la classe **Job** à l’aide du langage de programmation de votre choix, tel que Visual Basic, Visual C# ou PowerShell. Pour obtenir un exemple de code, consultez [Planification des tâches administratives automatiques dans l’Agent SQL Server](../../relational-databases/server-management-objects-smo/tasks/scheduling-automatic-administrative-tasks-in-sql-server-agent.md).  
   

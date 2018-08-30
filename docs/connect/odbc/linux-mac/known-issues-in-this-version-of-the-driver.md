@@ -15,12 +15,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cd3bb6f733b9d9cac1dc3973e65199c9357bbbb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a4a07cb8f8c5c3043ee307b7b7653846cc2d4e6e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054717"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784448"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Problèmes connus dans cette version du pilote
 
@@ -30,7 +30,7 @@ Cet article contient une liste des problèmes connus avec Microsoft ODBC Driver 
 
 D’autres problèmes seront publiés sur le [blog de l’équipe du pilote Microsoft ODBC](http://blogs.msdn.com/b/sqlnativeclient/).  
 
-- Windows, Linux et macOS convertissent différemment des caractères de la zone PUA (Private Use Area) ou des caractères EUDC (End User-Defined Characters). Les conversions effectuées sur le serveur dans [!INCLUDE[tsql](../../../includes/tsql_md.md)] utilisent la bibliothèque de conversion Windows. Les conversions dans le pilote utilisent les bibliothèques de conversion Windows, Linux ou macOS. Chaque bibliothèque peut produire des résultats différents lors de l’exécution de ces conversions. Pour plus d’informations, consultez [End-User-Defined and Private Use Area Characters](http://msdn.microsoft.com/library/dd317802.aspx).
+- Windows, Linux et macOS convertissent différemment des caractères de la zone PUA (Private Use Area) ou des caractères EUDC (End User-Defined Characters). Les conversions effectuées sur le serveur dans [!INCLUDE[tsql](../../../includes/tsql-md.md)] utilisent la bibliothèque de conversion Windows. Les conversions dans le pilote utilisent les bibliothèques de conversion Windows, Linux ou macOS. Chaque bibliothèque peut produire des résultats différents lors de l’exécution de ces conversions. Pour plus d’informations, consultez [End-User-Defined and Private Use Area Characters](/windows/desktop/Intl/end-user-defined-characters).
 
 - Si le client d’encodage est UTF-8, le Gestionnaire de pilotes ne pas toujours convertit correctement de UTF-8 en UTF-16. Actuellement, une altération des données se produit lorsqu’un ou plusieurs caractères dans la chaîne ne sont pas des caractères UTF-8 valides. Les caractères ASCII sont mappés correctement. Le Gestionnaire de pilotes essaie d’effectuer cette conversion lors de l’appel des versions SQLCHAR de l’API ODBC (par exemple, SQLDriverConnectA). Le gestionnaire de pilotes n’essaie pas d’effectuer cette conversion lors de l’appel des versions SQLWCHAR de l’API ODBC (par exemple, SQLDriverConnectW).  
 

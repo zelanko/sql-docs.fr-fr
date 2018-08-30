@@ -14,21 +14,21 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4b68de60f6d1ffa345018478b5abc70ecf2839b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: b2339270e54cd05209e4843c66e3339b9aae270f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109821"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028028"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversions de client à serveur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cet article décrit les conversions de date/heure effectuées entre une application cliente écrite avec OLE DB Driver pour SQL Server et [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou version ultérieure).  
+  Décrit les conversions de date et d’heure effectuées entre une application cliente écrite avec le pilote OLE DB pour SQL Server et [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou ultérieur).  
   
 ## <a name="conversions"></a>Conversions  
  Cette rubrique décrit les conversions effectuées sur le client. Si le client spécifie la précision en fractions de seconde pour un paramètre qui diffère de celui défini sur le serveur, la conversion peut provoquer un échec dans les cas où le serveur autoriserait le succès de l'opération. En particulier, le client traite toute troncation des fractions de seconde comme une erreur, alors que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] arrondit les valeurs d’heure à la seconde entière la plus proche.  

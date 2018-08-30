@@ -14,21 +14,21 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 60adf00e05d190f72229b252a3877b417be7f260
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: c5b69cb8fac0d91728e9cef945e83159e3151bc5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109431"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024417"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversions de serveur à client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cet article décrit les conversions de date/heure effectuées entre [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou version ultérieure) et une application cliente écrite avec OLE DB Driver pour SQL Server.  
+  Décrit les conversions de date/heure effectuées entre [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou ultérieur) et une application cliente écrite avec le pilote OLE DB pour SQL Server.  
   
 ## <a name="conversions"></a>Conversions  
  Le tableau suivant décrit les conversions entre le type retourné au client et le type de la liaison. Paramètres de sortie, si ICommandWithParameters::SetParameterInfo a été appelée et que le type spécifié dans *pwszDataSourceType* ne correspond pas au type réel sur le serveur, une conversion implicite sera effectué par le serveur , et le type retourné au client correspond au type spécifié via ICommandWithParameters::SetParameterInfo. Ceci peut aboutir à des résultats de conversion inattendus quand les règles de conversion du serveur sont différentes de celles décrites dans cet article. Par exemple, quand une date par défaut doit être fournie, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise 1900-1-1, plutôt que 1899-12-30.  

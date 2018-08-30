@@ -1,6 +1,6 @@
 ---
-title: Afficher une colonne et des métadonnées de catalogue pour les colonnes éparses (OLE DB)
-description: Afficher une colonne et des métadonnées de catalogue pour les colonnes éparses (OLE DB)
+title: Afficher les métadonnées de colonne et de catalogue pour les colonnes éparses (OLE DB)
+description: Afficher les métadonnées de colonne et de catalogue pour les colonnes éparses (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,14 +12,14 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7fff85eaf61d32f2e064a827e53349bd832e411c
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 05dbd350c0986d18978308842b537991ef24c11f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108991"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024578"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Afficher une colonne et des métadonnées de catalogue pour les colonnes éparses (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "39108991"
  Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure. Pour plus d’informations sur les colonnes éparses, consultez [prise en charge des colonnes éparses dans OLE DB Driver pour SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a> Exemple  
- Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
   
 ```  
 #include <stddef.h>  

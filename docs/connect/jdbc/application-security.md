@@ -1,5 +1,5 @@
 ---
-title: Sécurité des applications | Documents Microsoft
+title: Sécurité des applications | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8226badb1031792badc1601cd12c2a0e2f13c9bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4132dfdc915f45f67b267a197dbfeef2004eb36f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827764"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784414"
 ---
 # <a name="application-security"></a>Sécurité des applications
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Lorsque vous utilisez le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], il est important de prendre des précautions pour garantir la sécurité de votre application. Les sections suivantes contiennent des informations sur les diverses mesures que vous pouvez prendre pour sécuriser votre application.  
+  Quand vous utilisez [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], il est important de prendre certaines précautions pour garantir la sécurité de l'application. Les sections suivantes contiennent des informations sur les diverses mesures que vous pouvez prendre pour sécuriser votre application.  
   
 ## <a name="using-java-policy-permissions"></a>Utilisation d'autorisations de stratégie Java  
- Lorsque vous utilisez le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], il est important de spécifier les autorisations de stratégie Java requises par le pilote JDBC. Java Runtime Environment (JRE) intègre un modèle de sécurité étendu que vous pouvez utiliser en cours d'exécution pour déterminer si un thread a accès à une ressource. Les fichiers de politique de sécurité peuvent contrôler cet accès. Les fichiers de politique sont gérés par le déployeur et l'administrateur système pour le conteneur ; cependant, les autorisations répertoriées dans cette rubrique sont celles qui affectent le fonctionnement du pilote JDBC.  
+ Lorsque vous utilisez le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], il est important de spécifier les autorisations de stratégie Java requises par le pilote JDBC. Java Runtime Environment (JRE) intègre un modèle de sécurité étendu que vous pouvez utiliser en cours d'exécution pour déterminer si un thread a accès à une ressource. Les fichiers de politique de sécurité peuvent contrôler cet accès. Les fichiers de politique sont gérés par le déployeur et l'administrateur système pour le conteneur ; cependant, les autorisations répertoriées dans cette rubrique sont celles qui affectent le fonctionnement du pilote JDBC.  
   
  Voici à quoi ressemble une autorisation de politique dans le fichier de politique.  
   
@@ -63,11 +63,11 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  Le code « file:/install_dir/lib/- » fait référence au répertoire d'installation du pilote JDBC.  
   
 ## <a name="protecting-server-communication"></a>Protection de la communication avec le serveur  
- Lorsque vous utilisez le pilote JDBC pour communiquer avec un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] base de données, vous pouvez sécuriser le canal de communication à l’aide de la sécurité du protocole Internet (IPSEC) ou couche de Sockets sécurisée (SSL) ; ou vous pouvez utiliser les deux.  
+ Lorsque vous utilisez le pilote JDBC pour communiquer avec une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez sécuriser le canal de communication à l'aide de la sécurité du protocole Internet (IPSEC) ou du protocole SSL (Secure Sockets Layer) ; sinon, vous pouvez utiliser ces deux techniques à la fois.  
   
- La prise en charge du protocole SSL peut être utilisée pour fournir un niveau supplémentaire de protection conjointement avec la sécurité IPSEC. Pour plus d’informations sur l’utilisation de SSL, consultez [le chiffrement SSL à l’aide de](../../connect/jdbc/using-ssl-encryption.md).  
+ La prise en charge du protocole SSL peut être utilisée pour fournir un niveau supplémentaire de protection conjointement avec la sécurité IPSEC. Pour plus d’informations sur l’utilisation de SSL, consultez [utilisation du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Sécurisation des applications de pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

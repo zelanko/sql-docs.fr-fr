@@ -1,5 +1,5 @@
 ---
-title: Configuration système requise pour les pilotes Microsoft pour PHP pour SQL Server | Microsoft Docs
+title: Configuration système requise pour Microsoft Drivers for PHP for SQL Server
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -16,12 +16,12 @@ caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cfb813b857557a3a30bd89d9c96346ee261bc89
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 1941388b2bd7b0bb21e0da5a55876166c378c01e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174946"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783853"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Configuration système requise pour Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -67,13 +67,13 @@ Si vous téléchargez la version Windows du pilote sur une version 64 bits de Wi
 |ODBC Driver 13  | | | |O| | |
 |ODBC Driver 11  |O|O|O|O|O|O|
 
-Si vous utilisez le pilote SQLSRV, [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) retourne des informations sur la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Microsoft ODBC Driver for SQL Server est utilisé par le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Si vous utilisez le pilote PDO_SQLSRV, vous pouvez utiliser [PDO::getAttribute](../../connect/php/pdo-getattribute.md) pour découvrir la version.  
+Si vous utilisez le pilote SQLSRV, [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) retourne des informations sur la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server est utilisé par le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Si vous utilisez le pilote PDO_SQLSRV, vous pouvez utiliser [PDO::getAttribute](../../connect/php/pdo-getattribute.md) pour découvrir la version.  
 
 ## <a name="sql-server"></a>SQL Server
 
 Bases de données SQL Azure sont pris en charge. Pour plus d’informations, consultez [Connexion à Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md).
 
-|PHP pour la version du pilote SQL Server&#8594;<br />&#8595; Version SQL Server|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
+|PHP pour la version du pilote SQL Server&#8594;<br />&#8595; Version de SQL Server|5.3<br />&nbsp;|5.2<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|
 |---|---|---|---|---|---|---|
 |Azure SQL Database        |O|O|O| | | |
 |Azure SQL Managed Instance|O|O|O| | | |
@@ -107,7 +107,7 @@ Les systèmes d’exploitation pris en charge pour les versions du pilote sont l
 |Ubuntu 15.04 (64 bits)                    | | | |O| | |
 |Debian 9 (64 bits)                        |O|O| | | | |
 |Debian 8 (64 bits)                        |O|O|O| | | |
-|Red Hat Enterprise Linux 7 (64 bits)      |O|O|O|O| | |
+|Red Hat Enterprise Linux 7 (64-bit)      |O|O|O|O| | |
 |SuSE Enterprise Linux 12 (64 bits)        |O|O| | | | |
 |macOS High Sierra (64 bits)               |O| | | | | |
 |macOS Sierra (64 bits)                    |O|O|O| | | |

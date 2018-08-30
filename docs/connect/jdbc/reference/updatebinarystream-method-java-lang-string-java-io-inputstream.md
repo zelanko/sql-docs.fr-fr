@@ -1,5 +1,5 @@
 ---
-title: updateBinaryStream (méthode) (java.io.InputStream) | Documents Microsoft
+title: updateBinaryStream, méthode (int, java.io.InputStream) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e228e4914fb9fd5790450d5f246592581bf0397a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8c5fa61211d6d1adcdcd1944d191b944486afc95
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850414"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784008"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream"></a>Méthode updateBinaryStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>Paramètres  
  *columnLabel*  
   
- A **chaîne** qui contient l’étiquette de colonne.  
+ Valeur **String** qui contient le nom de la colonne.  
   
  *x*  
   
@@ -46,16 +46,16 @@ public void updateBinaryStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode updateBinaryStream est spécifiée par la méthode updateBinaryStream dans l’interface java.sql.ResultSet.  
   
  À l’aide de cette méthode pour le **image**, **texte**, et **ntext** les types de données SQL Server peuvent avoir un impact sur les performances.  
   
- Cette méthode passe les octets à partir d’un objet InputStream sélectionné [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] colonnes binaires telles que binary, varbinary, varbinary (max), image, xml et udt. La mise à jour de colonnes de caractères n'est pas prise en charge avec cette méthode. Pour mettre à jour des colonnes de type caractère avec un InputStream, utilisez le [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md) (méthode).  
+ Cette méthode passe les octets à partir d’un objet InputStream à des colonnes binaires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sélectionnées, telles que binary, varbinary, varbinary(max), image, xml et udt. La mise à jour de colonnes de caractères n'est pas prise en charge avec cette méthode. Pour mettre à jour des colonnes de caractères avec InputStream, utilisez la méthode [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthode updateBinaryStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)   
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [updateBinaryStream, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)   
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

@@ -14,23 +14,23 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d787ffe76f2f1d97c486bd4c789ab5de5632b45
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: cfbf0ef8a02695a2bc3a1870a2660cf2bff23b7d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107115"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785128"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Configuration système requise, installation et fichiers de pilote
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] prend en charge les connexions à SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro_md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]et [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)].  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les connexions à SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]et [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Windows peut être installé sur un ordinateur qui possède également une ou plusieurs versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client.  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows peut être installé sur un ordinateur qui possède également une ou plusieurs versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-ODBC Driver 13 et 13.1 pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], outre les précautions ci-dessus, prend en charge de SQL Server 2016. 
+ODBC Driver 13 et 13.1 pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], outre les précautions ci-dessus, prend en charge de SQL Server 2016. 
 
-La version 17 du pilote ODBC pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] prend en charge toutes celles ci-dessus et également SQL Server 2017.
+La version 17 du pilote ODBC pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge toutes celles ci-dessus et également SQL Server 2017.
   
 Le nom du pilote que vous spécifiez dans une chaîne de connexion est `ODBC Driver 11 for SQL Server` ou `ODBC Driver 13 for SQL Server` (pour 13 et 13.1) ou `ODBC Driver 17 for SQL Server`.
   
@@ -59,7 +59,7 @@ Le pilote est installé lorsque vous exécutez `msodbcsql.msi` à partir d’un 
 [!NOTE]
 Pour ceux qui ont le pilote 17.1.0.1 installé, il est recommandé de désinstaller manuellement avant d’installer le pilote 17.2.0.1 ou version ultérieure
 
-Il peut être installé côte à côte avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client.  
+Il peut être installé côte à côte avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
 
 Quand vous appelez `msodbcsql.msi`, seuls les composants clients sont installés par défaut. Les composants clients sont des fichiers qui prennent en charge l’exécution d’une application développée à l’aide du pilote. Pour installer les composants du SDK, spécifiez `ADDLOCAL=ALL` sur la ligne de commande. Exemple :  
   
@@ -95,7 +95,7 @@ Une application qui utilise les fonctions BCP doit spécifier le pilote à parti
 
 Par exemple, lorsque vous compilez une application ODBC avec `msodbcsql11.lib` et `msodbcsql.h`, utilisez « DRIVER = {ODBC Driver 11 for SQL Server} » dans la chaîne de connexion.
 
-## <a name="components-of-the-microsoft-odbc-driver-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>Composants de Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Windows 
+## <a name="components-of-the-microsoft-odbc-driver-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Composants de Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows 
  Le pilote ODBC sur Windows contient les composants suivants :
  
 |Composant|Description|  
@@ -104,7 +104,7 @@ Par exemple, lorsque vous compilez une application ODBC avec `msodbcsql11.lib` e
 |msodbcdiag17.dll ou <br> msodbcdiag13.dll ou <br> msodbcdiag11.dll|Le fichier de bibliothèque de liens dynamiques (DLL) qui contient l’interface de diagnostics (suivi) du pilote. Ce fichier est installé dans % SYSTEMROOT%\System32.|
 |msodbcsqlr17.rll ou <br> msodbcsqlr13.rll ou <br> msodbcsqlr11.rll|Fichier de ressources qui accompagne la bibliothèque du pilote. Ce fichier est installé dans % SYSTEMROOT%\System32\1033.| 
 |s13ch_msodbcsql.chm ou <br> s11ch_msodbcsql.chm |Fichier d’aide de l’Assistant Source de données qui explique comment créer une source de données pour le pilote. Ce fichier est installé dans %SYSTEMROOT%\System32\1033 <br /> <br /> **Remarque :** aucun fichier chm pour 17 du pilote ODBC. |  
-|msodbcsql.h|Fichier d’en-tête qui contient toutes les nouvelles définitions nécessaires à l’utilisation du pilote.<br /><br /> **Remarque :**  vous ne pouvez pas référencer msodbcsql.h et odbcss.h dans le même programme.<br /><br /> msodbcsql.h pour la version 17 du pilote ODBC ou 13 est installé dans %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK. <br /> msodbcsql.h pour ODBC Driver 11 est installé dans %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.| 
+|msodbcsql.h|Fichier d’en-tête qui contient toutes les nouvelles définitions nécessaires à l’utilisation du pilote.<br /><br /> **Remarque :**  vous ne pouvez pas référencer msodbcsql.h et odbcss.h dans le même programme.<br /><br /> msodbcsql.h pour ODBC Driver 17 est installé dans %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\13\SDK. <br /> msodbcsql.h pour ODBC Driver 11 est installé dans %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.| 
 |msodbcsql17.lib ou <br> msodbcsql13.lib ou <br> msodbcsql11.lib|Fichier bibliothèque nécessaire pour appeler les fonctions de l’utilitaire **bcp** qui font partie du pilote.<br /><br /> **Remarque :** Si vous référencez ce fichier bibliothèque dans votre programme, vérifiez qu’il se trouve dans votre chemin système et dans le chemin système de ceux qui utilisent l’application.<br /><br /> msodbcsql17.lib ou msodbcsql13.lib est installé dans %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK.<br /> msodbcsql11.lib est installé dans %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.|
 
   

@@ -1,5 +1,5 @@
 ---
-title: Configuration système requise (pilote ODBC pour SQL Server) | Microsoft Docs
+title: Configuration requise pour OLE DB Driver pour SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: sql
@@ -18,17 +18,17 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bab69d8a2ebf405e99cc9cff7e4cdadb94d79f98
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fcac85e31f20d84377a2788e373892e05e8fddfa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047482"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784192"
 ---
 # <a name="system-requirements"></a>Configuration système requise
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Cette rubrique répertorie la configuration requise pour utiliser [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Linux et macOS.
+Cette rubrique répertorie la configuration requise pour utiliser [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS.
 
 
 ## <a name="microsoft-odbc-driver-13-131-and-17-for-sql-server"></a>Microsoft ODBC Driver 13, 13.1 et 17 for SQL Server
@@ -52,7 +52,7 @@ Les pilotes Linux et macOS sont disponibles uniquement pour les versions 64 bits
 |Ubuntu Linux 16.10|13, 13.1|
 |Ubuntu Linux 17.10|17|
 
-L’installation de packages pour le [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 et 17 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sur Linux et macOS, résoudre les dépendances du pilote automatiquement lorsqu’il est installé à l’aide du système de gestion de package de votre distribution, comme décrit dans [ Installation du pilote](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+L’installation de packages pour le [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 et 17 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS, résoudre les dépendances du pilote automatiquement lorsqu’il est installé à l’aide du système de gestion de package de votre distribution, comme décrit dans [ Installation du pilote](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
 ## <a name="microsoft-odbc-driver-11-for-sql-server"></a>Microsoft ODBC Driver 11 for SQL Server  
   

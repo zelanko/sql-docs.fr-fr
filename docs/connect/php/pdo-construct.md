@@ -14,17 +14,17 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e426530a16fbe6d9749b505723d3251e43f94aa7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 848a06e1b383b1416396111bf4d0e907bfba3568
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979702"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785458"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Crée une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+Crée une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,9 +36,9 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 #### <a name="parameters"></a>Paramètres  
 *$dsn* : chaîne qui contient le nom du préfixe (toujours `sqlsrv`), un signe deux-points et le mot clé Server. Par exemple, `"sqlsrv:server=(local)"`. Vous pouvez éventuellement spécifier d’autres mots clés de connexion. Consultez [Connection Options](../../connect/php/connection-options.md) pour obtenir la description du mot clé Server et des autres mots clés de connexion. La totalité de *$dsn* est entre guillemets, si bien que chaque mot clé de connexion ne doit pas être individuellement mis entre guillemets.  
   
-*$username*: facultatif. Chaîne qui contient le nom de l’utilisateur. Pour vous connecter en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , spécifiez l’ID de connexion. Pour vous  connecter avec l’authentification Windows, spécifiez `""`.  
+*$username*: facultatif. Chaîne qui contient le nom de l’utilisateur. Pour vous connecter en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , spécifiez l’ID de connexion. Pour vous  connecter avec l’authentification Windows, spécifiez `""`.  
   
-*$password*: facultatif. Chaîne qui contient le mot de passe de l’utilisateur. Pour vous connecter en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , spécifiez le mot de passe. Pour vous  connecter avec l’authentification Windows, spécifiez `""`.  
+*$password*: facultatif. Chaîne qui contient le mot de passe de l’utilisateur. Pour vous connecter en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , spécifiez le mot de passe. Pour vous  connecter avec l’authentification Windows, spécifiez `""`.  
   
 *$driver_options*: facultatif. Vous pouvez spécifier les attributs du Gestionnaire de pilotes PDO et des attributs de pilotes spécifiques [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] : PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Un attribut non valide ne lève pas d’exception. Les attributs non valides lèvent des exceptions quand ils sont spécifiés avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   

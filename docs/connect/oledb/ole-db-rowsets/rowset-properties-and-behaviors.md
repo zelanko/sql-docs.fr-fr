@@ -17,14 +17,14 @@ helpviewer_keywords:
 - properties [OLE DB]
 - OLE DB rowsets, properties
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 11b4361f43ff05ff009f70a2baeb627656443f9b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 7c98299d1dc55a19d2199222ea3e639ae1e5d4bb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108651"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037432"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriétés et comportements de l'ensemble de lignes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "39108651"
 |DBPROP_ACCESSORDER|R/W : lecture/écriture<br /><br /> Valeur par défaut : DBPROPVAL_AO_RANDOM<br /><br /> Description : ordre d'accès. Ordre dans lequel les colonnes doivent être accessibles dans l'ensemble de lignes.<br /><br /> DBPROPVAL_AO_RANDOM : les colonnes sont accessibles dans n'importe quel ordre.<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS : les colonnes liées en tant qu'objets de stockage sont accessibles uniquement dans l'ordre séquentiel déterminé par l'ordinal de colonne.<br /><br /> DBPROPVAL_AO_SEQUENTIAL : toutes les colonnes doivent être accessibles dans l'ordre séquentiel déterminé par l'ordinal de colonne.|  
 |DBPROP_APPENDONLY|Cette propriété de l’ensemble de lignes n’est pas implémentée par le pilote OLE DB pour SQL Server. Toute tentative de lecture ou d'écriture de la valeur de propriété génère une erreur.|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|Lecture/Écriture : lecture seule<br /><br /> Valeur par défaut : VARIANT_TRUE<br /><br /> Description : Le pilote OLE DB pour le bloc d’objets de stockage SQL Server à l’aide d’autres méthodes de l’ensemble de lignes.|  
-|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : le pilote OLE DB pour SQL Server prend en charge les signets pour l’identification des lignes de l’ensemble de lignes lorsque DBPROP_BOOKMARKS ou DBPROP_LITERALBOOKMARKS a la valeur VARIANT_TRUE.<br /><br /> L'affectation de la valeur VARIANT_TRUE à l'une ou l'autre des propriétés ne permet pas le positionnement dans l'ensemble de lignes à partir d'un signet. Affectez VARIANT_TRUE à DBPROP_IRowsetLocate ou DBPROP_IRowsetScroll pour créer un ensemble de lignes prenant en charge le positionnement dans l'ensemble de lignes à partir d'un signet.<br /><br /> Le pilote OLE DB pour SQL Server utilise un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] curseur pour prendre en charge un ensemble de lignes qui contient des signets. Pour plus d’informations, consultez [Ensembles de lignes et curseurs SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> Remarque : Définition de ces propriétés en conflit avec d’autres pilotes OLE DB pour les propriétés de définition de curseur SQL Server provoque une erreur. Par exemple, si DBPROP_BOOKMARKS a la valeur VARIANT_TRUE alors que DBPROP_OTHERINSERT a également la valeur VARIANT_TRUE, une erreur est générée lorsque le consommateur essaie d'ouvrir un ensemble de lignes.|  
+|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W : lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : le pilote OLE DB pour SQL Server prend en charge les signets pour l’identification des lignes de l’ensemble de lignes lorsque DBPROP_BOOKMARKS ou DBPROP_LITERALBOOKMARKS a la valeur VARIANT_TRUE.<br /><br /> L'affectation de la valeur VARIANT_TRUE à l'une ou l'autre des propriétés ne permet pas le positionnement dans l'ensemble de lignes à partir d'un signet. Affectez VARIANT_TRUE à DBPROP_IRowsetLocate ou DBPROP_IRowsetScroll pour créer un ensemble de lignes prenant en charge le positionnement dans l'ensemble de lignes à partir d'un signet.<br /><br /> Le pilote OLE DB pour SQL Server utilise un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] curseur pour prendre en charge un ensemble de lignes qui contient des signets. Pour plus d’informations, consultez [Ensembles de lignes et curseurs SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> Tout conflit de ces propriétés avec d’autres propriétés de définition de curseur du pilote OLE DB pour SQL Server provoque une erreur. Par exemple, si DBPROP_BOOKMARKS a la valeur VARIANT_TRUE alors que DBPROP_OTHERINSERT a également la valeur VARIANT_TRUE, une erreur est générée lorsque le consommateur essaie d'ouvrir un ensemble de lignes.|  
 |DBPROP_BOOKMARKSKIPPED|Lecture/Écriture : lecture seule<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : le pilote OLE DB pour SQL Server retourne DB_E_BADBOOKMARK si le consommateur indique un signet non valide lors du positionnement ou d’une recherche dans un ensemble de lignes contenant un signet.|  
 |DBPROP_BOOKMARKTYPE|Lecture/Écriture : lecture seule<br /><br /> Valeur par défaut : DBPROPVAL_BMK_NUMERIC<br /><br /> Description : Le pilote OLE DB pour SQL Server implémente uniquement des signets numériques. Un pilote OLE DB pour le signet de SQL Server est entier non signé 32 bits, de type DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|Cette propriété de l’ensemble de lignes n’est pas implémentée par le pilote OLE DB pour SQL Server. Toute tentative de lecture ou d'écriture de la valeur de propriété génère une erreur.|  

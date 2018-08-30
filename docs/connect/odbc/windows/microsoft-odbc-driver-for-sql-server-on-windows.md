@@ -14,17 +14,17 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5d818e4ce5c267432e6e456e11720f546ebaa19
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 08d1c94854e4d073d4cb26a3e2e320a0d93c08f1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047437"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787828"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Pilote Microsoft ODBC pour SQL Server sur Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Les pilotes ODBC de Microsoft pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sont des pilotes ODBC autonomes qui fournissent une interface de programmation d’application (API) implémentant les interfaces ODBC standards à Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+Les pilotes ODBC de Microsoft pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont des pilotes ODBC autonomes qui fournissent une interface de programmation d’application (API) implémentant les interfaces ODBC standards à Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 Microsoft ODBC Driver for SQL Server peut servir à créer des applications. Vous pouvez également mettre à niveau vos anciennes applications qui utilisent actuellement un pilote ODBC plus ancien. ODBC Driver for SQL Server prend en charge les connexions à Azure SQL Database, Azure SQL Data Warehouse, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 et SQL Server 2005.  
 
@@ -32,13 +32,13 @@ Microsoft ODBC Driver for SQL Server peut servir à créer des applications. Vou
 
 | Options de version       | Fonctionnalités prises en charge      |
 | ------------- |---------------| 
-| Microsoft ODBC Driver 17 for SQL Server | <ul><li>Always Encrypted prise en charge des API BCP</li><li>Nouvel attribut de chaîne de connexion UseFMTONLY conduit le pilote à utiliser les métadonnées héritées dans les cas spéciaux nécessitant des tables temporaires</li>
-| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD Authentication</li><li>Groupes de disponibilité AlwaysOn</li></ul>   | 
-| Microsoft ODBC Driver 13 for SQL Server      | <ul><li>Noms de domaine internationaux</li></ul> |
+| Microsoft ODBC Driver 17 for SQL Server | <ul><li>Always Encrypted prise en charge des API BCP</li><li>Nouvel attribut de chaîne de connexion UseFMTONLY conduit le pilote à utiliser les métadonnées héritées dans les cas spéciaux nécessitant des tables temporaires</li>
+| Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Azure AD Authentication</li><li>Groupes de disponibilité AlwaysOn</li></ul>   | 
+| Microsoft ODBC Driver 13 for SQL Server      | <ul><li>Noms de domaine internationaux</li></ul> |
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>Regroupement de connexions prenant en charge les pilotes</li><li>Résilience des connexions</li><li>Exécution asynchrone (méthode d’interrogation)</li></ul> |    
 
 ## <a name="documentation"></a>Documentation  
-Cette documentation sur Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] inclut ce qui suit :  
+Cette documentation sur Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut ce qui suit :  
   
 -   [Notes de publication](../../../connect/odbc/windows/release-notes.md)  
 -   [Fonctionnalités de Microsoft ODBC Driver for SQL Server sur Windows](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  
