@@ -1,6 +1,6 @@
 ---
-title: 'Leçon 14 : Déployer | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Leçon 13 : Déployer | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 533b6197c72d03876b928f4024fc5eb4fb0f2fc0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b2ed8149cef9e9886398feebf43329f962b9537
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034734"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792280"
 ---
-# <a name="lesson-13-deploy"></a>Leçon 13 : déployer
+# <a name="lesson-13-deploy"></a>Leçon 13 : Déployer
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Dans cette leçon, vous allez configurer les propriétés de déploiement ; en spécifiant un local ou instance de serveur Azure et un nom pour le modèle. Vous allez ensuite déployer le modèle à cette instance. Une fois que votre modèle est déployé, les utilisateurs y connecter à l’aide d’une application cliente de création de rapports. Pour en savoir plus sur le déploiement, consultez [déploiement de solutions de modèle tabulaire](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md) et [déployer sur Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy).  
