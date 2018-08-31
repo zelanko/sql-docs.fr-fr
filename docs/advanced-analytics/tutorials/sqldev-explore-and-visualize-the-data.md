@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cffbc00b5b3a3c1c8ab01e14319f3267e323022a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6b34de3c71629a1563bf0d480306680dc6253748
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394267"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703622"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Leçon 3 : Explorer et visualiser les données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ Dans le dataset d’origine, les identificateurs de taxis et les enregistrements
 
 Pour créer le tracé, utilisez [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), une des fonctions R améliorées fournies dans [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Cette étape trace un histogramme basé sur les données à partir d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] requête. Vous pouvez encapsuler cette fonction dans une procédure stockée, **PlotHistogram**.
 
-1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez sur le **TaxiNYC_Sample** de base de données, développez **programmabilité**, puis développez **Stored Procedures** pour afficher le procédures créées dans la leçon 2.
+1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez sur le **NYCTaxi_Sample** de base de données, développez **programmabilité**, puis développez **Stored Procedures** pour afficher le procédures créées dans la leçon 2.
 
 2. Avec le bouton droit **PlotHistogram** et sélectionnez **modifier** pour afficher la source. Vous pouvez exécuter cette procédure pour appeler **rxHistogram** sur les données contenues dans la colonne tipped de nyctaxi_sample table.
 
@@ -126,7 +126,9 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
     > [!NOTE]
     > Commutateurs de commande pour bcp respectent la casse.
   
-3.  Si la connexion réussit, vous serez invité à entrer davantage d’informations sur le format du fichier graphique. Appuyez sur Entrée à chaque invite pour accepter les valeurs par défaut, à l’exception de ces modifications :
+3.  Si la connexion réussit, vous serez invité à entrer davantage d’informations sur le format du fichier graphique. 
+
+   Appuyez sur Entrée à chaque invite pour accepter les valeurs par défaut, à l’exception de ces modifications :
     
     -   Pour **prefix-length of field plot**, tapez 0.
   

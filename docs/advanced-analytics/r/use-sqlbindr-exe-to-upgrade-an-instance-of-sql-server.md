@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e781ee8330400a7b6e40ed249ce072cc8f9f83e6
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: c2a209f782b264ac7e69514c9aa4cc840534258c
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174796"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795658"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Mettre à niveau machine learning (R et Python) des composants dans les instances SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -163,7 +163,7 @@ OutputDataSet <- data.frame(Name, Version);'
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-Pour SQL Server 2016 R Services liés à Machine Learning Server 9.3, package de Base de R doit être 3.4.1, RevoScaleR doit être 9.3, et vous devez également avoir MicrosoftML 9.3. 
+Pour SQL Server 2016 R Services liés à Machine Learning Server 9.3, package de Base de R doit être 3.4.3, RevoScaleR doit être 9.3, et vous devez également avoir MicrosoftML 9.3. 
 
 Si vous avez ajouté les modèles préentraînés, les modèles sont incorporés dans la bibliothèque de MicrosoftML et vous pouvez les appeler via les fonctions de MicrosoftML. Pour plus d’informations, consultez [exemples R pour MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml).
 
@@ -183,7 +183,7 @@ Les instructions suivantes expliquent comment placer les fichiers pour une insta
     |---------|----------|
     | R       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
     | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
-    | Modèles préentraînés | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
+    | Modèles dont l’apprentissage a déjà été effectué | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
 
 1. Transfert de fichiers zip et CAB vers le serveur cible.
 

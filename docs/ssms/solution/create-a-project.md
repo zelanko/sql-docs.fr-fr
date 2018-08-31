@@ -20,12 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 617e0bb42882883a51f5da0bb22ae59eb18dae88
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7b9549bfce672b3ddf5c67ddb8a6a4968e87a5b7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064649"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776078"
 ---
 # <a name="create-a-project"></a>Créer un projet
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ Vous pouvez créer un ou plusieurs projets à l'intérieur d'une solution exista
     Dans la zone **Modèles** , sélectionnez un modèle. Une brève description du modèle de projet sélectionné apparaît sous la zone **Modèles** .  
   
     **Nom**  
-    Entrez le nom du projet de script que vous voulez créer. Un dossier avec un nom identique à celui du projet est également créé à l’emplacement indiqué dans le champ **Emplacement** . Pour certains projets, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] crée des fichiers sources et de prise en charge, qu'il place dans le dossier du nouveau projet.  
+    Entrez le nom du projet de script que vous voulez créer. Un dossier avec un nom identique à celui du projet est également créé à l’emplacement indiqué dans le champ **Emplacement** . Pour certains projets, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] crée des fichiers sources et de prise en charge, qu'il place dans le dossier du nouveau projet.  
   
     > [!NOTE]  
     > Pour certains types de projets, la zone de texte **Nom** n’est pas disponible car l’indication de l’emplacement définit le nom. Par exemple, les applications Web et les services Web sont situés sur un serveur Web et leur nom est dérivé du répertoire virtuel spécifié sur ce serveur.  
@@ -100,7 +100,7 @@ Vous pouvez créer un ou plusieurs projets à l'intérieur d'une solution exista
   
 4.  Cliquez sur **OK**.  
   
-Vous pouvez attribuer un nom au projet de script mais vous ne pouvez pas modifier les noms de dossiers qui sont attribués par [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] . Vous pouvez configurer la spécification de lecteur et de chemin d’accès pour l’ensemble commun des dossiers à l’aide de la boîte de dialogue **Ajouter un nouveau projet** . Cliquez avec le bouton droit sur l’icône de la solution dans **l’Explorateur de solutions**, puis cliquez sur **Ajouter**. L’emplacement par défaut pour les dossiers de projets de scripts est : C:\Documents and Settings\\*nom_utilisateur*\My Documents\SQL Server Management Studio\Projects\\.  
+Vous pouvez attribuer un nom au projet de script mais vous ne pouvez pas modifier les noms de dossiers qui sont attribués par [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Vous pouvez configurer la spécification de lecteur et de chemin d’accès pour l’ensemble commun des dossiers à l’aide de la boîte de dialogue **Ajouter un nouveau projet** . Cliquez avec le bouton droit sur l’icône de la solution dans **l’Explorateur de solutions**, puis cliquez sur **Ajouter**. L’emplacement par défaut pour les dossiers de projets de scripts est : C:\Documents and Settings\\*nom_utilisateur*\My Documents\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a> Voir aussi  
 [l’Explorateur de solutions](../../ssms/solution/solution-explorer.md)  

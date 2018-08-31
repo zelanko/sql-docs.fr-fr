@@ -1,6 +1,6 @@
 ---
-title: 'Leçon 4 : Marquer en tant que Table de dates | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Leçon 3 : Marquer en tant que Table de dates | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77f29250621485f5606a0bf33615e8d15eb7d80b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7cb63b6cb67303dd763263b7d9dbeea30cfc4e3b
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057807"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42791980"
 ---
-# <a name="lesson-3-mark-as-date-table"></a>Leçon 3 : Marquer en tant que Table de dates
+# <a name="lesson-3-mark-as-date-table"></a>Leçon 3 : Marquer en tant que table de dates
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Dans la lecon 2 : Ajouter des données, vous avez importé une table de dimension nommée DimDate. Alors que dans votre modèle cette table est nommée DimDate, elle peut également être appelée un *table de dates*, car il contient des données de date et d’heure.  

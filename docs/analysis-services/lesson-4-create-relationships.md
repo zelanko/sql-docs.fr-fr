@@ -1,6 +1,6 @@
 ---
-title: 'Leçon 5 : Créer des relations | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Leçon 4 : Créer des relations | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 36993a468a6997ff8de40da542deac00b25b18b4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bbddc0966729b93b2e9ac202966dff645c28c32c
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034767"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792029"
 ---
 # <a name="lesson-4-create-relationships"></a>Leçon 4 : Créer des relations
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-Dans cette leçon, vous vérifiez les relations qui ont été créées automatiquement lorsque vous avez importé des données et ajouter de nouvelles relations entre les différentes tables. Une relation est une connexion entre deux tables qui établit le mode de corrélation des données dans les deux tables. Par exemple, la table DimProduct et la table DimProductSubcategory ont une relation basée sur le fait que chaque produit appartient à une sous-catégorie. Pour plus d’informations, consultez [relations](../analysis-services/tabular-models/relationships-ssas-tabular.md).
+Dans cette leçon, vous allez vérifier les relations qui ont été créées automatiquement lorsque vous avez importé des données, et vous allez ajouter de nouvelles relations entre les tables. Une relation est une connexion entre deux tables qui établit le mode de corrélation des données dans les deux tables. Par exemple, la table DimProduct et la table DimProductSubcategory ont une relation basée sur le fait que chaque produit appartient à une sous-catégorie. Pour plus d’informations, consultez [relations](../analysis-services/tabular-models/relationships-ssas-tabular.md).
   
 Durée estimée pour effectuer cette leçon : **10 minutes**  
   
@@ -37,11 +37,11 @@ Lorsque vous avez importé des données à l’aide de l’Assistant Importation
     
     ![en tant que-tabulaire-lesson4-diagramme](../analysis-services/media/as-tabular-lesson4-diagram.png)
   
-    Utilisez les contrôles de la minicarte en bas à droite du concepteur de modèles pour ajuster la vue et inclure autant de tables que possible. Vous pouvez également cliquer et faire glisser des tables à différents emplacements, en rapprochant les tables autant que possible, ou en les plaçant dans un ordre précis. Le déplacement des tables n'affecte pas les relations qui existent déjà entre elles. Pour afficher toutes les colonnes d'une table donnée, cliquez et faites glisser le bord de la table pour l'agrandir ou la réduire.  
+    Utilisez les contrôles de la minicarte en bas à droite du concepteur de modèles pour ajuster la vue et inclure autant de tables que possible. Vous pouvez également cliquer sur et faites glisser les tables à différents emplacements, en rassemblant les tables de plus près, ou en les plaçant dans un ordre particulier. Le déplacement des tables n'affecte pas les relations qui existent déjà entre elles. Pour afficher toutes les colonnes dans une table particulière, cliquez et faites glisser sur un bord de la table pour développer ou réduire sa taille.  
   
 2.  Cliquez sur la ligne pleine entre la **DimCustomer** table et le **DimGeography** table. La ligne pleine entre ces deux tables indique que cette relation est active, c.-à-d. qu'elle est utilisée par défaut lors du calcul des formules DAX.  
   
-    Notez que le **GeographyKey** colonne dans le **DimCustomer** table et le **GeographyKey** colonne dans le **DimGeography** table maintenant à la fois chacun s’affichent dans une zone. Cela indique qu'il s'agit des colonnes utilisées dans la relation. Les propriétés de la relation apparaissent maintenant aussi dans la fenêtre **Propriétés** .  
+    Notez que le **GeographyKey** colonne dans le **DimCustomer** table et le **GeographyKey** colonne dans le **DimGeography** table maintenant à la fois chacun s’affichent dans une zone. Cette émission, qu'il s’agit des colonnes utilisées dans la relation. Les propriétés de la relation apparaissent maintenant aussi dans la fenêtre **Propriétés** .  
   
     > [!TIP]  
     > Outre l’utilisation du Générateur de modèles dans la vue de diagramme, vous pouvez également utiliser la boîte de dialogue Gérer les relations pour afficher les relations entre toutes les tables dans un format tabulaire. Avec le bouton droit **relations** dans l’Explorateur de modèles tabulaires, puis cliquez sur **gérer les relations**. La boîte de dialogue Gérer les relations affiche les relations qui ont été créées automatiquement lorsque vous avez importé des données.  
@@ -73,7 +73,7 @@ Dans certains cas, vous devrez peut-être créer des relations supplémentaires 
   
 #### <a name="to-add-new-relationships-between-tables"></a>Pour ajouter de nouvelles relations entre des tables  
   
-1.  Dans le Concepteur de modèles, dans le **FactInternetSales** table, cliquez et maintenez le **OrderDate** colonne, puis faites glisser le curseur vers le **Date** colonne dans la  **DimDate** de table et relâchez.  
+1.  Dans le Concepteur de modèles, dans le **FactInternetSales** table, cliquez et maintenez le doigt sur le **OrderDate** colonne, puis faites glisser le curseur vers le **Date** colonne dans la  **DimDate** de table et relâchez.  
 
     Une ligne pleine apparaît et indique que vous avez créé une relation active entre la **OrderDate** colonne dans le **Internet Sales** table et le **Date** colonne dans la **Date** table. 
   
@@ -82,11 +82,11 @@ Dans certains cas, vous devrez peut-être créer des relations supplémentaires 
     > [!NOTE]  
     > Lorsque vous créez des relations, la direction de la cardinalité et de filtre entre la table primaire et de la table de recherche associée est automatiquement sélectionnée.  
   
-2.  Dans le **FactInternetSales** table, cliquez et maintenez le **DueDate** colonne, puis faites glisser le curseur vers le **Date** colonne dans le **DimDate** table, puis relâchez.  
+2.  Dans le **FactInternetSales** table, cliquez et maintenez le doigt sur le **DueDate** colonne, puis faites glisser le curseur vers le **Date** colonne dans le **DimDate** table, puis relâchez.  
   
     Une ligne en pointillés apparaît et indique que vous avez créé une relation inactive entre la **DueDate** colonne dans le **FactInternetSales** table et le **Date** colonne dans la  **DimDate** table. Vous pouvez avoir plusieurs relations entre les tables, mais une seule relation peut être active à la fois.  
   
-3.  Enfin, créez une relation plus ; dans le **FactInternetSales** table, cliquez et maintenez le **ShipDate** colonne, puis faites glisser le curseur vers le **Date** colonne dans le **DimDate** table, puis relâchez.  
+3.  Enfin, créez une relation plus ; dans le **FactInternetSales** table, cliquez et maintenez le doigt sur le **ShipDate** colonne, puis faites glisser le curseur vers le **Date** colonne dans la **DimDate**de table et relâchez.  
     
      ![en tant que-tabulaire-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   

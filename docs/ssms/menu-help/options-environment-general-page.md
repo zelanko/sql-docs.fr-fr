@@ -19,20 +19,20 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7e8ba6dcb66fbf962e70cc5175b07095ffa2f5d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c24de46da06f069ce147907a18db1c7640713f5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043156"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776595"
 ---
 # <a name="options-environment---general-page"></a>Options (Environnement - Page Général)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Utilisez la boîte de dialogue **Options** pour configurer les actions de démarrage [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], les options de gestion des fenêtres générales ainsi que d'autres paramètres généraux. Dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Environnement** , puis cliquez sur **Général**.  
+Utilisez la boîte de dialogue **Options** pour configurer les actions de démarrage [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], les options de gestion des fenêtres générales ainsi que d'autres paramètres généraux. Dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Environnement** , puis cliquez sur **Général**.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
 **Au démarrage**  
-Sélectionnez l'action que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] doit exécuter au démarrage. Les options sont :  
+Sélectionnez l'action que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] doit exécuter au démarrage. Les options sont :  
   
 -   **Ouvrir l'Explorateur d'objets** : demande l'établissement d'une connexion, puis ouvre l'Explorateur d'objets.  
   
@@ -40,13 +40,13 @@ Sélectionnez l'action que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudio
   
 -   **Ouvrir l'Explorateur d'objets et la nouvelle requête** : demande l'établissement d'une connexion, puis ouvre l'Explorateur d'objets et l'Éditeur de requête SQL également.  
   
--   **Ouvrir l'environnement vide** : ouvre [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] sans la fenêtre de l'Éditeur de requête SQL et sans connecter l'Explorateur d'objets à un serveur.  
+-   **Ouvrir l'environnement vide** : ouvre [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sans la fenêtre de l'Éditeur de requête SQL et sans connecter l'Explorateur d'objets à un serveur.  
   
 **Masquer les objets système dans l'Explorateur d'objets**  
-Cocher cette case pour enlever les bases de données système, les tables système, les vues système et les procédures stockées système de l'arborescence de l'Explorateur d'objets. Les fonctions système et les types de données système ne sont pas masqués. Cette option s'applique uniquement aux instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] et n'affecte pas les serveurs déjà connectés à l'Explorateur d'objets.  
+Cocher cette case pour enlever les bases de données système, les tables système, les vues système et les procédures stockées système de l'arborescence de l'Explorateur d'objets. Les fonctions système et les types de données système ne sont pas masqués. Cette option s'applique uniquement aux instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et n'affecte pas les serveurs déjà connectés à l'Explorateur d'objets.  
   
 ## <a name="environment-layout"></a>Disposition d'environnement  
-Vous devez fermer, puis rouvrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] pour passer du mode d'environnement documents avec onglet au mode d'environnement MDI.  
+Vous devez fermer, puis rouvrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour passer du mode d'environnement documents avec onglet au mode d'environnement MDI.  
   
 **Documents avec onglet**  
 Activez cette option pour afficher des fenêtres de documents reliées sous la forme d'onglets dans les éditeurs. Les fenêtres de documents présentées sous la forme d'onglets s'avèrent utiles pour agencer plusieurs documents ouverts et pour passer d'un document à un autre.  

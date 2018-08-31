@@ -19,20 +19,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8784beb120a0d9bdfbe9e558984ff01fa3054a59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf1609438ec0306fa6b374db2d5ed6b921121062
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040666"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776199"
 ---
 # <a name="about-sql-server-management-studio"></a>À propos de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Utilisez cette boîte de dialogue pour afficher ou copier des informations relatives à votre installation de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Les éditions d'évaluation mentionnent le nombre de jours restant avant l'expiration du produit.  
+Utilisez cette boîte de dialogue pour afficher ou copier des informations relatives à votre installation de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Les éditions d'évaluation mentionnent le nombre de jours restant avant l'expiration du produit.  
   
 ## <a name="options"></a>Options  
 **Nom du composant**  
-Affiche une grille répertoriant les noms des composants installés de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] et du système d'exploitation :  
+Affiche une grille répertoriant les noms des composants installés de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et du système d'exploitation :  
   
 -   **Microsoft SQL Server Management Studio**  
   

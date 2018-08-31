@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecdcf360a7aad1b9468367cc706849d4da2f90c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3d3c8c92a78dd0548c115b9bdfa3baed3a396df
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053596"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775967"
 ---
 # <a name="query-properties-visual-database-tools"></a>Propriétés de la requête (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ Ces propriétés apparaissent dans la fenêtre Propriétés lorsque vous avez un
 Se développe pour afficher la propriété **Nom** .  
   
 **Nom**  
-Affiche le nom de la requête en cours. Ne peut pas être modifié dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Affiche le nom de la requête en cours. Ne peut pas être modifié dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 **Database Name**  
 Indique le nom de la source de données pour la table sélectionnée.  
@@ -60,7 +60,7 @@ Pour une requête MAKE TABLE, tapez le nom de la nouvelle table. Pour créer une
 Spécifie que la requête filtrera les doublons dans le jeu de résultats. Cette option est utile lorsque vous utilisez uniquement certaines colonnes de la table ou des tables et que ces colonnes peuvent contenir des valeurs dupliquées, ou encore lorsque le processus de jointure de plusieurs tables crée des lignes en double dans le jeu de résultats. Choisir cette option équivaut à insérer le mot DISTINCT dans l'instruction à l'intérieur du volet SQL.  
   
 **Extension GROUP BY**  
-Spécifie que d'autres options sont disponibles pour les requêtes basées sur des requêtes d'agrégation. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Spécifie que d'autres options sont disponibles pour les requêtes basées sur des requêtes d'agrégation. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Sélectionne toutes les colonnes**  
 Spécifie que l'ensemble des colonnes de toutes les tables dans la requête en cours figureront dans le jeu de résultats. Choisir cette option équivaut à spécifier un astérisque (*) à la place des noms de colonnes individuels après le mot clé SELECT dans l'instruction SQL.  
@@ -69,7 +69,7 @@ Spécifie que l'ensemble des colonnes de toutes les tables dans la requête en c
 Affiche les paramètres de la requête. Pour modifier les paramètres, cliquez sur la propriété, puis cliquez sur le bouton de sélection **(…)** situé à droite de la propriété. (S'applique uniquement aux bases de données OLE DB génériques.)  
   
 **Commentaire SQL**  
-Affiche une description des instructions SQL. Pour afficher l’intégralité de la description, ou la modifier, cliquez sur la description, puis sur le bouton de sélection **(…)** situé à droite de la propriété. Vos commentaires peuvent contenir les noms des utilisateurs de la requête et le moment d'utilisation. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] version 7.0 ou ultérieure.)  
+Affiche une description des instructions SQL. Pour afficher l’intégralité de la description, ou la modifier, cliquez sur la description, puis sur le bouton de sélection **(…)** situé à droite de la propriété. Vos commentaires peuvent contenir les noms des utilisateurs de la requête et le moment d'utilisation. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 ou ultérieure.)  
   
 **Catégorie Spécification Top**  
 Se développe pour afficher les propriétés **Haut**, **Pour cent**, **Expression**et **Avec liens** .  
@@ -77,16 +77,16 @@ Se développe pour afficher les propriétés **Haut**, **Pour cent**, **Expressi
 **(Top)**  
 Indique que la requête doit contenir une clause TOP, qui ne renvoie que les *n* premières lignes ou *n* pour cent des lignes du jeu de résultats (en commençant par les premières). Par défaut, la requête retourne les 10 premières lignes dans le jeu de résultats.  
   
-Utilisez cette zone pour modifier le nombre de lignes à retourner ou pour spécifier un autre pourcentage. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] version 7.0 ou ultérieure.)  
+Utilisez cette zone pour modifier le nombre de lignes à retourner ou pour spécifier un autre pourcentage. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 ou ultérieure.)  
   
 **Expression**  
-Spécifie le nombre ou le pourcentage de lignes que la requête doit retourner. Si vous affectez à **Pour cent** la valeur Oui, le nombre indique le pourcentage de lignes que la requête doit retourner ; si vous affectez à **Pour cent** la valeur Non, le nombre représente le nombre de lignes à retourner. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] version 7.0 ou ultérieure.)  
+Spécifie le nombre ou le pourcentage de lignes que la requête doit retourner. Si vous affectez à **Pour cent** la valeur Oui, le nombre indique le pourcentage de lignes que la requête doit retourner ; si vous affectez à **Pour cent** la valeur Non, le nombre représente le nombre de lignes à retourner. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 ou ultérieure.)  
   
 **Pour cent**  
-Spécifie que la requête doit retourner uniquement les *n* premiers pour cent de lignes dans le jeu de résultats. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] version 7.0 ou ultérieure.)  
+Spécifie que la requête doit retourner uniquement les *n* premiers pour cent de lignes dans le jeu de résultats. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 ou ultérieure.)  
   
 **Avec liens**  
-Spécifie que la vue inclura une clause WITH TIES. WITH TIES est utile si une vue inclut une clause ORDER BY et une clause TOP basée sur un pourcentage. Si cette option est activée et si le pourcentage s'arrête au milieu d'un groupe de lignes auxquelles correspondent des valeurs identiques dans la clause ORDER BY, la vue est agrandie de façon à inclure ces lignes. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] version 7.0 ou ultérieure.)  
+Spécifie que la vue inclura une clause WITH TIES. WITH TIES est utile si une vue inclut une clause ORDER BY et une clause TOP basée sur un pourcentage. Si cette option est activée et si le pourcentage s'arrête au milieu d'un groupe de lignes auxquelles correspondent des valeurs identiques dans la clause ORDER BY, la vue est agrandie de façon à inclure ces lignes. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 ou ultérieure.)  
   
 ## <a name="see-also"></a> Voir aussi  
 [Requête avec des paramètres &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

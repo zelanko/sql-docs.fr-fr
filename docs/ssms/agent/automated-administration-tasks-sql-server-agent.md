@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64cf56df3d9e7ff4f2cb82bf157226b9a8f33993
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 307253f2bf44c24872a4ba90e6b6132819071250
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984771"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776466"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>Tâches d'administration automatisée (Agent SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "37984771"
 > [!IMPORTANT]  
 > Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] vous permet d'automatiser les tâches administratives. À cet effet, vous pouvez définir les tâches administratives prévisibles, puis les conditions dans lesquelles elles doivent se produire. L'utilisation d'une administration automatisée pour gérer les tâches et les événements de routine permet de gagner du temps afin de le consacrer à d'autres fonctions d'administration.  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet d'automatiser les tâches administratives. À cet effet, vous pouvez définir les tâches administratives prévisibles, puis les conditions dans lesquelles elles doivent se produire. L'utilisation d'une administration automatisée pour gérer les tâches et les événements de routine permet de gagner du temps afin de le consacrer à d'autres fonctions d'administration.  
   
 ## <a name="in-this-section"></a>Dans cette section  
 [Implémenter la sécurité de l'Agent SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  

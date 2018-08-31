@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1947ca3301de74d1837633047a86dcf4460bfdaa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa285718d089457b70543fbd4d060c3a51ab3c9f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043796"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776103"
 ---
 # <a name="open-with-new-file"></a>Ouvrir avec (Nouveau fichier)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,11 +44,11 @@ Cliquez sur ce bouton pour ajouter un programme à la liste **Sélectionnez le p
 Pour supprimer un programme, sélectionnez-le, puis cliquez sur **Supprimer**.  
   
 **Par défaut**  
-Pour spécifier un éditeur par défaut (et, le cas échéant, des options d’encodage linguistique) pour le type de fichier sélectionné, choisissez un programme dans la liste **Sélectionnez le programme à ouvrir** , puis cliquez sur **Par défaut**. La prochaine fois que vous allez ouvrir ce type de fichier dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], le document s'ouvrira dans l'éditeur par défaut spécifié.  
+Pour spécifier un éditeur par défaut (et, le cas échéant, des options d’encodage linguistique) pour le type de fichier sélectionné, choisissez un programme dans la liste **Sélectionnez le programme à ouvrir** , puis cliquez sur **Par défaut**. La prochaine fois que vous allez ouvrir ce type de fichier dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], le document s'ouvrira dans l'éditeur par défaut spécifié.  
   
 > [!NOTE]  
 > Dans la liste de programmes figurant sous **Sélectionnez le programme à ouvrir**, le nom de l’éditeur par défaut pour le type de fichier sélectionné est suivi de **(Par défaut)**.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Association d’extensions de fichier à un éditeur de code](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[Association d’extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
