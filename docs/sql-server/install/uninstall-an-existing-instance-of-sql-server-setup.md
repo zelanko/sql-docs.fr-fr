@@ -18,17 +18,17 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5bea9587b92e1452891e24475cc33a8baeec437b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6e005a07716b0912526b11cf3100244a93dcc275
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049117"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348520"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Désinstaller une instance existante de SQL Server (programme d'installation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- > Pour obtenir du contenu relatif à des versions précédentes de SQL Server, consultez [Désinstaller une instance existante de SQL Server (programme d’installation)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx).
+ > Pour obtenir du contenu relatif à des versions précédentes de SQL Server, consultez [Désinstaller une instance existante de SQL Server (programme d’installation)](uninstall-an-existing-instance-of-sql-server-setup.md).
 
   Cet article explique comment désinstaller une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En suivant les étapes de cet article, vous préparez également le système afin de pouvoir réinstaller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
