@@ -1,31 +1,25 @@
 ---
 title: Générateur de rapports dans SQL Server 2016 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 482fc7069a480d41122535e139be2726df75f972
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 91b33f6aabc245bd79ff48b1202f20d71ae9293d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40410454"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269645"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Générateur de rapports dans SQL Server 2016
   Le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]est un outil de création de rapports paginés pour les utilisateurs professionnels qui préfèrent travailler dans un environnement autonome plutôt que d’utiliser le Concepteur de rapports dans Visual Studio.  Lorsque vous concevez un rapport paginé, vous créez une définition de rapport qui spécifie l’emplacement des données à obtenir, leur nature et leur mode d’affichage. Au moment de l’exécution du rapport, le processeur de rapports assimile la définition de rapport que vous avez spécifiée, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez afficher un aperçu de votre rapport dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] et le publier sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou intégré SharePoint, pour permettre à d’autres utilisateurs de l’exécuter.  
