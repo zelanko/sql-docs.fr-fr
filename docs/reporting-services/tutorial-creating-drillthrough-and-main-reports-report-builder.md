@@ -1,28 +1,22 @@
 ---
 title: 'Didacticiel : création d’un rapport principal et d’un rapport d’extraction (Générateur de rapports) | Microsoft Docs'
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: afecc0284d763cd96fd9d90ba54fc6df7d75217b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a5110a38c7e32597bd708f97baef0d25ebec7b63
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085101"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266489"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
 Ce didacticiel vous apprend comment créer deux types de rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un rapport d’extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. 

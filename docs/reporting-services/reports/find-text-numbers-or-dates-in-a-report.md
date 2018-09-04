@@ -1,28 +1,22 @@
 ---
 title: Rechercher du texte, des nombres ou des dates dans un rapport | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: fb71665a683c050aafcaf1df18c3cdeec6507b50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4bf57cb9eecbf0da8a2cf2bf4f4b17600afe4a00
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025526"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267691"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>Rechercher du texte, des nombres ou des dates dans un rapport
   Vous pouvez rechercher du contenu dans un rapport en tapant un mot ou une expression que vous souhaitez trouver (la longueur maximale de la chaîne de recherche est de 256 caractères). La recherche est une technique de navigation qui vous permet de trouver une valeur correspondante dans le rapport et de placer le focus sur la partie du rapport qui contient cette valeur.  

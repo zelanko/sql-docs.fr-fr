@@ -1,26 +1,20 @@
 ---
 title: Regrouper des données par colonnes ou par lignes dans un rapport mobile | Reporting Services | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 17f93e01d074b243e7b40c708ac65dd1609d8841
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08d4d39d6393ec413f5e72254cca1e82740bd51c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019326"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268216"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Regrouper des données par colonnes ou par lignes dans un rapport mobile | Reporting Services
 L’ [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]vous permet d’organiser vos données par colonnes ou par lignes dans de nombreux types de graphiques. La procédure détaillée qui suit vous indique la marche à suivre.

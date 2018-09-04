@@ -13,16 +13,16 @@ helpviewer_keywords:
 - permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 caps.latest.revision: 15
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3f0a52ba7d73d6f894fd31a2498902cdb6a6713
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 66ce336280f8370349adcd447301dd7910bde108
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071191"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118607"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Prise en main des autorisations du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,8 +44,7 @@ ms.locfileid: "43071191"
  Utilisateurs de base de données  
  Pour qu’une connexion puisse accéder à une base de données, un utilisateur de base de données doit être créé dans une base de données, puis mappé à la connexion. En général, le nom d’utilisateur de base de données est le même que le nom de connexion, mais ce n’est pas obligatoire. Chaque utilisateur de base de données est mappé à une seule connexion. Une connexion ne peut être mappée qu’à un seul utilisateur dans une base de données, mais peut être mappée comme utilisateur de base de données dans plusieurs bases de données.  
   
- En outre, les utilisateurs de base de données peuvent être créés sans avoir de connexion correspondante. Ils sont appelés *utilisateurs de base de données autonome*. 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourage l’utilisation de ces utilisateurs, car elle facilite le déplacement de votre base de données vers un autre serveur. Comme une connexion, un utilisateur de base de données autonome peut utiliser l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+ En outre, les utilisateurs de base de données peuvent être créés sans avoir de connexion correspondante. Ils sont appelés *utilisateurs de base de données autonome*. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourage l’utilisation de ces utilisateurs, car elle facilite le déplacement de votre base de données vers un autre serveur. Comme une connexion, un utilisateur de base de données autonome peut utiliser l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Il existe 12 types d’utilisateurs, qui varient légèrement selon la façon dont ils s’authentifient et qui ils représentent. Pour voir une liste d’utilisateurs, consultez [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   

@@ -1,14 +1,10 @@
 ---
 title: Publication de rapports sur un serveur de rapports | Microsoft Docs
-ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
@@ -24,16 +20,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9a69b67fcbc9d047526ff0c30883731543a826a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95427bd5ccb158ede439cb32aa7ebfcb24c61bf9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026666"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264436"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publication de rapports sur un serveur de rapports
   Après avoir conçu et testé un rapport ou ensemble de rapports, vous pouvez utiliser les fonctionnalités de déploiement de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour publier les rapports sur un serveur de rapports. Vous pouvez publier des rapports individuels ou un projet Report Server qui peut inclure plusieurs rapports et sources de données. La publication d'un projet Report Server est la méthode la plus simple pour publier plusieurs rapports. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise le terme *déployer*à la place du terme *publier*. Les deux termes sont interchangeables.  

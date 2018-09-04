@@ -1,30 +1,24 @@
 ---
 title: Cause et résolution des erreurs Reporting Services | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: troubleshooting
-ms.reviewer: ''
+ms.technology: troubleshooting
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
 - errors [Reporting Services]
 - troubleshooting [Reporting Services], errors
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 65ff0f27c5ee3cd5d1afcf73f6195181f8f3be24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ad3582039e225ca136118fc641c6f24e8a6e0f9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030767"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266899"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Cause et résolution des erreurs Reporting Services
   Cette rubrique contient des informations relatives à la cause et à la résolution de plusieurs erreurs concernant [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Les rubriques de message d'erreur dans cette section fournissent une explication du message d'erreur, des causes possibles et des actions que vous pouvez entreprendre pour corriger le problème.  

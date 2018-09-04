@@ -1,29 +1,23 @@
 ---
 title: Syntaxe du chemin à l’élément pour des données de rapport XML (SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e9ef6761a754f9f25dc47cb033ef491be544ee74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d756cca30be1b6bc74be577c0b5498cd34c11292
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022656"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265275"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntaxe du chemin d'accès à l'élément pour des données de rapport XML (SSRS)
   Dans le Concepteur de rapports, vous spécifiez les données à utiliser pour un rapport à partir d'une source de données XML en définissant un chemin d'accès à l'élément qui respecte la casse. Le chemin d'accès à l'élément indique comment parcourir les nœuds hiérarchiques XML et leurs attributs dans la source de données XML. Pour utiliser le chemin de l’élément par défaut, laissez vide la requête du dataset ou le **ElementPath** XML du **Query** XML. Lorsque les données sont extraites de la source de données XML, les nœuds d'élément possédant des valeurs de texte et des attributs de nœud d'élément deviennent des colonnes dans le jeu de résultats. Les valeurs des nœuds et les attributs deviennent les données de ligne lorsque vous exécutez la requête. Les colonnes apparaissent sous la forme de collection de champs de dataset dans le volet des données de rapport. Cette rubrique décrit la syntaxe du chemin d'accès à l'élément.  
@@ -101,8 +95,8 @@ XMLLocalName :: =
   
 |JSON|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6| 1|Bobby|Moore|11|http://www.adventure-works.com|  
-|Table de charge de travail| 1|2|Bobby|Moore|11|http://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
+|Table de charge de travail|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
 |Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
 |EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
   
@@ -127,7 +121,7 @@ XMLLocalName :: =
 |JSON|Qty|  
 |-----------|---------|  
 |Chair|6|  
-|Table de charge de travail| 1|  
+|Table de charge de travail|1|  
 |Sofa|2|  
 |EndTables|2|  
   
@@ -135,7 +129,7 @@ XMLLocalName :: =
   
 |Order.ID|FirstName|LastName|ID|  
 |--------------|---------------|--------------|--------|  
-| 1|Bobby|Moore|11|  
+|1|Bobby|Moore|11|  
 |2|Bobby|Moore|11|  
 |8|Crystal|Hu|20|  
 |15|Wyatt|Diaz|33|  

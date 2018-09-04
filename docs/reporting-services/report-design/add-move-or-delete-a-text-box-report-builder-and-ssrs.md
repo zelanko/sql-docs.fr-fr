@@ -1,26 +1,20 @@
 ---
 title: Ajouter, déplacer ou supprimer une zone de texte (Générateur de rapports et SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: c23de676d0bf312911176e8b759fcca6c31202f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 39bec0cbaacdc0bcedf88eb9ea188aac1773a101
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020376"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267119"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Ajouter, déplacer ou supprimer une zone de texte (Générateur de rapports et SSRS)
   Les zones de texte sont les éléments de rapport les plus couramment utilisés dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Vous pouvez ajouter une zone de texte au corps du rapport pour afficher des informations telles que les titres, les choix de paramètres, les champs prédéfinis et les dates.  

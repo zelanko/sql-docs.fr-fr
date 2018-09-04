@@ -1,14 +1,10 @@
 ---
 title: Se connecter à un serveur de rapports dans Management Studio | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.connecttors.connectionproperties.f1
@@ -21,15 +17,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], registering
 - Connect to Server dialog box, Reporting Services
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
-caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 96d62699a9745543973976c68bcf212f041deead
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40ee30be70b9f5e180a4d437d95a1eeb0bf9f576
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265607"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Se connecter à un serveur de rapports dans Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit l’Explorateur d’objets, qui vous permet de vous connecter à n’importe quel serveur de la famille [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de parcourir son contenu sous forme graphique. Pour Reporting Services, vous pouvez utiliser l'Explorateur d'objets pour effectuer les opérations suivantes :  
@@ -109,7 +104,7 @@ ms.lasthandoff: 05/03/2018
   
  Quand vous indiquez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en tant que type de serveur dans la boîte de dialogue **Se connecter au serveur** , vous pouvez spécifier un nom de serveur de rapports ou un point de terminaison au service web.  
   
-|Se connecter à|Tâches|Autorisations|  
+|Se connecter à|Tâches|Permissions|  
 |----------------|-----------|-----------------|  
 |Serveur de rapports en mode natif, connecté en tant qu'instance par défaut ou nommée :<br /><br /> \<nom du serveur>\<_instance><br /><br /> La connexion au serveur de rapports est établie à travers le fournisseur WMI de Report Server.|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez les planifications partagées.<br /><br /> Créez, modifiez ou supprimez les définitions de rôles.|Assignées au rôle Administrateur système.|  
 |Serveur de rapports en mode natif, connecté en tant qu'instance par défaut ou nommée, via le point de terminaison au service Web Report Server :<br /><br /> `http://<servername>/reportserver`<br /><br /> La spécification de l'URL du serveur de rapports offre un autre moyen de se connecter au serveur de rapports.|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez les planifications partagées.<br /><br /> Créez, modifiez ou supprimez les définitions de rôles.|Assignées au rôle Administrateur système.|  
