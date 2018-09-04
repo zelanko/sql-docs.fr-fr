@@ -1,7 +1,7 @@
 ---
 title: Source des objets blob Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
-ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
+ms.openlocfilehash: 5404b7bc7e7543f85890816973fdbd0c1e39022f
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964351"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40412742"
 ---
 # <a name="azure-blob-source"></a>Azure Blob Source
   Le composant **Azure Blob Source** permet à un package SSIS de lire les données provenant d’un blob Azure. Les formats de fichier pris en charge sont CSV et AVRO.
@@ -39,7 +39,9 @@ ms.locfileid: "36964351"
   
 4.  Dans le champ **Format de fichier blob**, sélectionnez le format blob à utiliser : **Texte** ou **Avro**.  
   
-5.  Si le format de fichier est **Texte**, vous devrez renseigner la valeur **Délimiteur de colonne**. Sélectionnez également l’option **Noms de colonne dans la première ligne de données** si la première ligne du fichier contient des noms de colonne.
+5.  Si le format de fichier est **Texte**, vous devrez renseigner la valeur **Délimiteur de colonne**. (Les délimiteurs multicaractères ne sont pas pris en charge.)
+
+    Sélectionnez également l’option **Noms de colonne dans la première ligne de données** si la première ligne du fichier contient des noms de colonne.
 
 6.  Si le fichier est compressé, sélectionnez **Décompresser le fichier**.
 

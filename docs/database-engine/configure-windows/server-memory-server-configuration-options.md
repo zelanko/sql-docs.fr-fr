@@ -25,12 +25,12 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3544a4530c1650d02952c750d82bb9d51e2d6d50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eabd43020196d312bb954f95e019b720b388410b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870234"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410034"
 ---
 # <a name="server-memory-server-configuration-options"></a>server memory (options de configuration du serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,8 @@ Pour désactiver l’option **Verrouiller les pages en mémoire** pour [!INCLUDE
 Cette option n’affecte pas la [gestion de la mémoire dynamique](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elle peut donc être augmentée ou réduite à la demande d’autres régisseurs de mémoire. Quand vous utilisez le droit d’utilisateur *Verrouiller les pages en mémoire*, il est recommandé de définir une limite supérieure pour **max server memory**, comme [indiqué ci-dessus](#max_server_memory).
 
 > [!IMPORTANT]
-> Cette option ne doit être utilisée qu’en cas de nécessité, à savoir s’il y a des raisons de penser que le processus sqlservr est hors page. Dans ce cas, l’erreur 17890, qui ressemble à l’exemple ci-dessous, est signalée dans le journal des erreurs : `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.` À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], Standard Edition n’a pas besoin de [l’indicateur de trace 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) pour utiliser les pages verrouillées. 
+> Cette option ne doit être utilisée qu’en cas de nécessité, à savoir s’il y a des raisons de penser que le processus sqlservr est hors page. Dans ce cas, l’erreur 17890, qui ressemble à l’exemple ci-dessous, est signalée dans le journal des erreurs : `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], l’[indicateur de trace 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) n’est pas nécessaire dans l’édition Standard pour utiliser Verrouiller les pages. 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>Pour activer Verrouiller les pages en mémoire  
 Pour activer l’option Verrouiller les pages en mémoire :  
@@ -122,7 +123,7 @@ Pour activer l’option Verrouiller les pages en mémoire :
  Comme vous pouvez modifier ces paramètres sans redémarrer les instances, vous pouvez sans peine procéder à des essais pour trouver les valeurs qui conviennent le mieux à votre modèle d'utilisation.  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Apport de la quantité maximale de mémoire à SQL Server  
-La mémoire peut être configurée jusqu’à la limite de l’espace d’adressage virtuel utilisé par le processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Limites de mémoire pour les versions de Windows et de Windows Server](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#physical_memory_limits_windows_server_2016).
+La mémoire peut être configurée jusqu’à la limite de l’espace d’adressage virtuel utilisé par le processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Limites de mémoire pour les versions de Windows et de Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016).
   
 ## <a name="examples"></a>Exemples  
   
@@ -168,5 +169,5 @@ FROM sys.dm_os_process_memory;
  [Éditions et fonctionnalités prises en charge de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Éditions et fonctionnalités prises en charge de SQL Server 2017 sur Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Limites de mémoire pour les versions de Windows et de Windows Server](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)
+ [Limites de mémoire pour les versions de Windows et de Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases)
  

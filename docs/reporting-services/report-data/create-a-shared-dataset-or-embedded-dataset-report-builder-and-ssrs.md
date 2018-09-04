@@ -15,17 +15,19 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 15bf16dc24c14855356083093d386a2c0a6b78af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7815346582774bf53034aa368ea6459fe7fcd75
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022676"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432582"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Créer un dataset partagé ou incorporé (Générateur de rapports et SSRS)
 Les jeux de données incorporés doivent être utilisés dans un seul rapport [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Les jeux de données partagés d’un serveur de rapports peuvent être utilisés par plusieurs rapports, mobiles et paginés. Pour créer un jeu de données, vous devez disposer d’une source de données incorporée ou partagée.  
   
- Utilisez le **Générateur de rapports** pour effectuer les tâches suivantes :  
+## <a name="report-builder-tasks"></a>Tâches du Générateur de rapports
+
+Utilisez le Générateur de rapports pour effectuer les tâches suivantes :  
   
 1.  Créez un dataset partagé en mode création de dataset. Les datasets partagés doivent utiliser des sources de données partagées publiées.  
   
@@ -33,7 +35,9 @@ Les jeux de données incorporés doivent être utilisés dans un seul rapport [!
   
 3.   Enregistrez le dataset directement sur le serveur de rapports ou le site SharePoint.  
   
- Dans **, utilisez le** Concepteur de rapports [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour effectuer les tâches suivantes :  
+## <a name="report-designer-tasks"></a>Tâches du Concepteur de rapports
+
+Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], utilisez le Concepteur de rapports pour effectuer les tâches suivantes :  
   
 1.  Créez un dataset partagé dans l'Explorateur de solutions. Les datasets partagés doivent utiliser les sources de données du dossier Sources de données partagées dans l'Explorateur de solutions.  
   
@@ -46,7 +50,7 @@ Les jeux de données incorporés doivent être utilisés dans un seul rapport [!
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>Pour ouvrir le Générateur de rapports et créer un dataset partagé  
+## <a name="to-create-a-shared-dataset-in-report-builder"></a>Pour créer un dataset partagé dans le Générateur de rapports
   
 1.  Ouvrez le Générateur de rapports. Le volet **Nouveau rapport ou dataset** s'ouvre, comme indiqué dans l'illustration suivante :  
   

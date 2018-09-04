@@ -15,12 +15,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14a58546faa866cb4508ce6481cf04bdf02a3618
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 7bd57d6e3d853ca38731f54c3de949618155105b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34321120"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405183"
 ---
 # <a name="mssqlserver5243"></a>MSSQLSERVER_5243
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,21 @@ ms.locfileid: "34321120"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a détecté une incohérence structurelle dans une structure de moteur de stockage en mémoire.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-[!INCLUDE[dbccBoilerPlate](../../includes/dbccboilerplate-md.md)]  
+Recherchez une défaillance matérielle. Exécutez les diagnostics matériels et corrigez les éventuels problèmes rencontrés. Examinez également les journaux système et des applications Windows, ainsi que le journal des erreurs de SQL Server, pour vérifier si l'erreur est due à une défaillance matérielle. Corrigez les éventuels problèmes matériels contenus dans les journaux.
+
+Si vous avez des problèmes persistants de données endommagées, tentez d'échanger votre ordinateur, vos contrôleurs et vos lecteurs de disque contre d'autres composants. Assurez-vous que la mise en cache des écritures n’est pas activée sur le contrôleur de disque de votre système. Si vous soupçonnez que c’est la cause du problème, contactez votre fournisseur de matériel.
+
+Enfin, il peut s'avérer bénéfique d'utiliser un matériel totalement nouveau, avec reformatage des lecteurs de disque et réinstallation du système d'exploitation.
+
+Restaurer à partir d’une sauvegarde : s’il ne s’agit pas d’un problème de matériel et qu’une sauvegarde propre est disponible, restaurez la base de données à partir de cette sauvegarde.
+
+Exécuter DBCC CHECKDB : si aucune sauvegarde propre n’est disponible, exécutez DBCC CHECKDB sans clause REPAIR pour déterminer l’étendue de l’altération. DBCC CHECKDB recommande une clause REPAIR à utiliser. Puis, exécutez DBCC CHECKDB avec la clause REPAIR adéquate afin de réparer les dommages.
+
+> **balise d’alerte non prise en charge !**
+> **balise tr non prise en charge !**
+> **balise tr non prise en charge !**
+
+Si l'exécution de DBCC CHECKDB avec une des clauses REPAIR ne résout pas le problème, contactez l’assistance technique.
   
 ## <a name="see-also"></a> Voir aussi  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  

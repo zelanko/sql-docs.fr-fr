@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3503952eb791c4423826626b98e8f8feb2bce0c7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 961f4e01d9a3a027f7b6cf065103a8076feac52b
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066667"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432510"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Dépanner des problèmes de récupération des données avec des rapports Reporting Services
 La première étape de traitement d'un rapport consiste à récupérer les données du rapport pour chaque dataset en exécutant la requête de dataset. Lorsque vous affichez l'aperçu d'un rapport localement, vos connexions à la source de données et vos informations d'identification doivent avoir des autorisations suffisantes pour récupérer les données sur votre ordinateur. Lorsque vous exécutez un rapport sur le serveur de rapports, les connexions à la source de données et les informations d'identification doivent avoir des autorisations suffisantes pour récupérer les données sur le serveur de rapports. Utilisez cette rubrique pour vous aider à résoudre des problèmes de récupération des données de rapport.   
@@ -47,7 +47,7 @@ Pour des sources de données avec des informations d'identification demandées o
 Vérifiez que le mot de passe ne contient pas de caractères spéciaux. Si le changement du mot de passe s'avère impossible, demandez à votre administrateur de base de données de stocker les informations d'identification appropriées localement et sur le serveur en tant que nom de source de données (DSN) ODBC. Pour en savoir plus, voir « OdbcConnection.ConnectionString » dans la documentation du Kit de développement logiciel (SDK) sur MSDN.   
   
 > [!NOTE]  
->Il est recommandé de ne pas ajouter d'informations de connexion, notamment des mots de passe, à la chaîne de connexion. Le Concepteur de rapports comprend une page **Informations d’identification** dans les boîtes de dialogue [Propriétés de la source de données](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) ou [Propriétés de la source de données partagée](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) où vous pouvez entrer des informations d’identification. Ces informations d'identification sont stockées de façon sécurisée sur l'ordinateur de création de rapports.  
+>Il est recommandé de ne pas ajouter d'informations de connexion, notamment des mots de passe, à la chaîne de connexion. Le Concepteur de rapports comprend une page **Informations d’identification** dans les boîtes de dialogue **Propriétés de la source de données** ou **Propriétés de la source de données partagée** où vous pouvez entrer des informations d’identification. Ces informations d'identification sont stockées de façon sécurisée sur l'ordinateur de création de rapports.  
   
 ## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>Pourquoi aucune donnée ne s'affiche lorsque j'exécute ma requête dans le concepteur de requêtes ?  
 Lorsque vous créez un dataset, la collection de champs de dataset apparaît dans le volet Données du rapport. Parfois, la collection de champs de dataset n'apparaît pas comme prévu.   
@@ -71,7 +71,7 @@ Pour remplir la collection de champs de dataset, procédez comme suit :
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 
 

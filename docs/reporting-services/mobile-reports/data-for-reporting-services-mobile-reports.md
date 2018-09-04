@@ -15,21 +15,21 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b505c769fc86dd62b738a54c20c98adafd69db60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f645d72cfc751aa302c7a4e4f4e13284b4197106
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018266"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406161"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
 Le modèle de données [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] est simple. Les données sont importées dans [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] comme une collection de datasets. Des relations formelles entre les datasets ne sont pas nécessaires. Les recherches entre deux datasets fonctionnent tant que les valeurs de clé correspondent. Les agrégations de date/heure sont traitées par le composant d’exécution de rapport mobile. Elles correspondent entre différents datasets, même si la granularité des données d’horodatage varie selon les datasets.   
   
 Vous pouvez importer les données de deux types de sources :   
   
-* **Fichiers Excel locaux**: sélectionnez un document Excel, puis la ou les feuilles de calcul à importer. Après l’importation, les données sont stockées dans la définition du rapport mobile. Pour actualiser les données provenant du fichier Excel d’origine, utilisez la commande **Actualiser les données** dans le coin supérieur droit de l’onglet [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. En savoir plus sur la [préparation des données Excel pour les rapports mobiles SSRS](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
+* **Fichiers Excel locaux**: sélectionnez un document Excel, puis la ou les feuilles de calcul à importer. Après l’importation, les données sont stockées dans la définition du rapport mobile. Pour actualiser les données provenant du fichier Excel d’origine, utilisez la commande **Actualiser les données** dans le coin supérieur droit de l’onglet [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data**. En savoir plus sur la [préparation des données Excel pour les rapports mobiles SSRS](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
   
-* **Jeux de données partagés [!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)]**  : parcourez la liste des jeux de données publiés sur le serveur et sélectionnez ceux à ajouter au rapport mobile. Les rapports mobiles basés sur les données du serveur restent toujours connectés aux jeux de données du serveur d’origine et reflètent l’état des données sur le serveur. Consultez la [liste des sources de données prises en charge](https://msdn.microsoft.com/library/ms159219.aspx).   
+* **Jeux de données partagés de l’Éditeur de rapports mobiles SQL Server** : parcourez la liste des jeux de données publiés sur le serveur et sélectionnez ceux à ajouter au rapport mobile. Les rapports mobiles basés sur les données du serveur restent toujours connectés aux jeux de données du serveur d’origine et reflètent l’état des données sur le serveur. Consultez la [liste des sources de données prises en charge](../report-data/data-sources-supported-by-reporting-services-ssrs.md).   
   
   Pour plus d’informations, consultez [Obtenir des données à partir de datasets partagés dans l’Éditeur de rapports mobiles](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md).  
   
@@ -37,7 +37,7 @@ Après avoir importé des données dans [!INCLUDE[PRODUCT_NAME](../../includes/s
   
 ## <a name="connect-mobile-report-elements-to-data"></a>Connecter des éléments de rapport mobile aux données ##  
   
-Chaque élément de l’ [!INCLUDE[PRODUCT_NAME](../../includes/short-product-name.md)] contient un ou plusieurs paramètres de données. Par exemple, l’élément Jauge radiale contient deux paramètres de données : Valeur principale et Valeur de comparaison. Chacun de ces paramètres pointe vers un champ (colonne) d’un dataset spécifique.   
+Chaque élément de l’Éditeur de rapports mobiles SQL Server contient un ou plusieurs paramètres de données. Par exemple, l’élément Jauge radiale contient deux paramètres de données : Valeur principale et Valeur de comparaison. Chacun de ces paramètres pointe vers un champ (colonne) d’un dataset spécifique.   
   
 Le composant d’exécution du rapport mobile fournit les valeurs agrégées de la jauge, selon les sélections de l’utilisateur. Notez que la valeur de comparaison de la même instance Jauge radiale peut être liée à un champ d’un autre dataset.   
   

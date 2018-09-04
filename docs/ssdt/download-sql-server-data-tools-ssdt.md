@@ -17,13 +17,13 @@ caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78eb769a8f37ca055628a89aeebe7dd444673434
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: 6989aaf0ccef6a9cb7656a23ffdc28062a33839b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988221"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43084928"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Télécharger et installer SQL Server Data Tools (SSDT) pour Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,10 +70,10 @@ SSDT pour Visual Studio 2017 nécessite la même [configuration](https://docs.mi
 
 Vous pouvez installer cette version de **SSDT pour VS 2017** dans les langues suivantes :  
 
-[chinois (République populaire de Chine)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
-[chinois (Taïwan)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
-[anglais (États-Unis)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x409) | 
-[français]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40c)  
+[Chinois (simplifié)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
+[Chinois (traditionnel)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
+[Anglais (États-Unis)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x409) | 
+[Français]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40c)  
 [allemand]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x407) | 
 [italien]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x410) | 
 [japonais]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x411) | 
@@ -100,10 +100,10 @@ Pour obtenir la liste complète des modifications, consultez le [journal des mod
   
 Vous pouvez installer cette version de **SSDT pour VS 2015** dans les langues suivantes :  
 
-[chinois (République populaire de Chine)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
-[chinois (Taïwan)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
-[anglais (États-Unis)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | 
-[français]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c)  
+[Chinois (simplifié)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
+[Chinois (traditionnel)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
+[Anglais (États-Unis)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | 
+[Français]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c)  
 [allemand]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | 
 [italien]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x410) | 
 [japonais]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x411) | 
@@ -119,10 +119,10 @@ Une image ISO de SSDT peut être utilisée comme alternative pour installer SSDT
 > [!NOTE]
 > SSDT pour les images ISO Visual Studio 2015 17.4 est maintenant disponible.
 
-[chinois (République populaire de Chine)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
-[chinois (Taïwan)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
-[anglais (États-Unis)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x409) |
-[français]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40c)  
+[Chinois (simplifié)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
+[Chinois (traditionnel)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
+[Anglais (États-Unis)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x409) |
+[Français]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40c)  
 [allemand]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x407) |
 [italien]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x410) |
 [japonais]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x411) |

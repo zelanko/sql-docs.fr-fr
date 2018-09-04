@@ -17,11 +17,12 @@ caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd93ead640b1e99ff1a3776cf0379c45aa9aff08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de8e4632223d81f8e49e78fee7ef14fb9983a268
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410999"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
 
@@ -312,7 +313,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Télécharger SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
-[Explorateur de solutions](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[Explorateur de solutions](../../ssms/solution/solution-explorer.md)   
 [Rapports Reporting Services](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [Langage de définition des rapports](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [Prise en charge du déploiement et de la version dans les outils de données de serveur SQL](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

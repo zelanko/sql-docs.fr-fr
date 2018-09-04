@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : chaînes de propriétés et changement de contexte | Microsoft Docs'
+title: 'Tutoriel : chaînes de propriétés et changement de contexte | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,10 +7,8 @@ ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.technology: ''
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -18,49 +16,52 @@ helpviewer_keywords:
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: fc70ec0b789ba0873b4e843b77132ec14bf4d7aa
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008801"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024462"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutoriel : chaînes de propriétés et changement de contexte
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Ce didacticiel explore en se fondant sur un scénario les concepts de sécurité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] impliquant les chaînes de propriétés et le changement de contexte utilisateur.  
+Ce tutoriel explore en se fondant sur un scénario les concepts de sécurité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] impliquant les chaînes de propriétés et le changement de contexte utilisateur.  
   
 > [!NOTE]  
-> Pour exécuter le code de ce didacticiel, vous devez à la fois configurer la sécurité en mode mixte et installer la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Pour plus d’informations sur la sécurité en mode mixte, consultez [Choisir un mode d’authentification](../relational-databases/security/choose-an-authentication-mode.md).  
+> Pour exécuter le code de ce tutoriel, vous devez à la fois configurer la sécurité en mode mixte et installer la base de données AdventureWorks2017. Pour plus d’informations sur la sécurité en mode mixte, consultez [Choisir un mode d’authentification](../relational-databases/security/choose-an-authentication-mode.md).  
   
 ## <a name="scenario"></a>Scénario  
-Dans ce scénario, deux utilisateurs ont besoin de comptes leur permettant d'accéder aux données des bons de commande stockées dans la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Les exigences requises sont les suivantes :  
+Dans ce scénario, deux utilisateurs ont besoin de comptes leur permettant d'accéder aux données des bons de commande stockées dans la base de données AdventureWorks2017. Les exigences requises sont les suivantes :  
   
 -   Le premier compte (TestManagerUser) doit être en mesure de dévoiler toutes les données détaillées dans chaque bon de commande.  
-  
 -   Le deuxième compte (TestEmployeeUser) doit afficher le numéro de bon de commande, la date de commande, la date d'expédition, les ID des produits et les articles commandés et reçus par bon de commande (par numéro de bon de commande) pour les articles pour lesquels des livraisons partielles ont été reçues.  
-  
--   Tous les autres comptes doivent conserver leurs autorisations actuelles.  
-  
+-   Tous les autres comptes doivent conserver leurs autorisations actuelles.   
 Pour répondre aux exigences de ce scénario, l'exemple est divisé en quatre parties décrivant les concepts relatifs aux chaînes de propriétés et au changement de contexte :  
   
-1.  Configuration de l'environnement  
-  
-2.  Création d'une procédure stockée pour l'accès aux données par bon de commande  
-  
+1.  Configuration de l'environnement   
+2.  Création d'une procédure stockée pour l'accès aux données par bon de commande   
 3.  Accès aux données par le biais de la procédure stockée  
-  
 4.  Réinitialisation de l'environnement  
   
-Chaque bloc de code dans cet exemple est présenté sous forme de lignes. Pour copier l'exemple tout entier, consultez la section [Exemple complet](#CompleteExample) à la fin de ce didacticiel.  
+Chaque bloc de code dans cet exemple est présenté sous forme de lignes. Pour copier l'exemple tout entier, consultez la section [Exemple complet](#CompleteExample) à la fin de ce didacticiel.
+
+## <a name="prerequisites"></a>Conditions préalables requises
+Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l’accès à un serveur qui exécute SQL Server et d’une base de données AdventureWorks.
+
+- Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Téléchargez les [exemples de bases de données AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+
+Pour obtenir des instructions sur la restauration d’une base de données dans SQL Server Management Studio, consultez [Restaurer une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Configurez l'environnement  
-Utilisez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et le code ci-dessous pour ouvrir la base de données `AdventureWorks2012` ; ensuite, à l'aide de l'instruction `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)], vérifiez que l'utilisateur dbo est affiché dans le contexte.  
+Utilisez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et le code ci-dessous pour ouvrir la base de données `AdventureWorks2017` ; ensuite, à l'aide de l'instruction `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)], vérifiez que l'utilisateur dbo est affiché dans le contexte.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  
@@ -68,7 +69,7 @@ GO
   
 Pour plus d’informations sur l’instruction CURRENT_USER, consultez [CURRENT_USER &#40;Transact-SQL&#41;](../t-sql/functions/current-user-transact-sql.md).  
   
-Utilisez ce code en tant qu'utilisateur dbo pour créer deux utilisateurs sur le serveur et dans la base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
+Utilisez ce code en tant qu'utilisateur dbo pour créer deux utilisateurs sur le serveur et dans la base de données AdventureWorks2017.  
   
 ```sql
 CREATE LOGIN TestManagerUser   
@@ -180,6 +181,12 @@ SELECT *
 FROM Purchasing.PurchaseOrderDetail;  
 GO  
 ```  
+
+Erreur retournée :
+```
+Msg 229, Level 14, State 5, Line 6
+The SELECT permission was denied on the object 'PurchaseOrderHeader', database 'AdventureWorks2017', schema 'Purchasing'.
+```
   
 Du fait que les objets référencés par la procédure stockée créée au cours de la dernière section appartiennent à `TestManagerUser` en raison de la propriété du schéma `Purchasing` , `TestEmployeeUser` peut accéder aux tables de base par le biais de la procédure stockée. Le code suivant qui utilise toujours le contexte `TestEmployeeUser` transmet le bon de commande 952 en guise de paramètre.  
   
@@ -223,7 +230,7 @@ Last Updated: Books Online
 Conditions:   Execute as DBO or sysadmin in the AdventureWorks database  
 Section 1:    Configure the Environment   
 */  
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  

@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae24a68e74b5c349c5c7a3ed732d8260064a31c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: cfd0cb735888be8e5869ed8f13cd66a981da375d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40184685"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42780760"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -253,8 +253,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Pack d'administration Microsoft System Center Operations Manager|Oui|Oui|Oui|non|non|  
 |Assistant Paramétrage de base de données (DTA)|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|non|non|      
   
- 
-  <sup>1</sup> SQL Server Web, SQL Server Express, SQL Server Express with Tools et SQL Server Express with Advanced Services peuvent être profilés à l’aide de SQL Server Standard et SQL Server Entreprise.  
+ <sup>1</sup> SQL Server Web, SQL Server Express, SQL Server Express with Tools et SQL Server Express with Advanced Services peuvent être profilés à l’aide de SQL Server Standard et SQL Server Entreprise.  
   
  <sup>2</sup> Paramétrage activé uniquement sur les fonctionnalités de l’édition Standard  
   
@@ -298,12 +297,12 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
   
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Intégration R de base|Oui|Oui|Oui|Oui|non|   
-|Intégration R avancée|Oui|non|non|non|non| 
+|Intégration R de base <sup>1</sup>|Oui|Oui|Oui|Oui|non|   
+|Intégration R avancée <sup>2</sup>|Oui|non|non|non|non| 
 |Intégration de Python de base|Oui|Oui|Oui|Oui|non|
 |Intégration de Python avancée|Oui|non|non|non|non| 
 |Machine Learning Server (autonome)|Oui|non|non|non|non|   
-|Nœud de calcul Polybase|Oui|Oui <sup>1</sup>|Oui <sup>1</sup>|Oui <sup>1</sup>|Oui <sup>1</sup> | 
+|Nœud de calcul Polybase|Oui|Oui <sup>3</sup>|Oui <sup>3</sup>|Oui <sup>3</sup>|Oui <sup>3</sup> | 
 |Nœud principal Polybase|Oui|non|non|non|non| 
 |JSON|Oui|Oui|Oui|Oui|Oui|   
 |Magasin de requêtes|Oui|Oui|Oui|Oui|Oui|   
@@ -323,7 +322,12 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Graphique|Oui|Oui|Oui|Oui|Oui|  
 
 
-<sup>1</sup> La montée en puissance parallèle avec plusieurs nœuds de calcul nécessite un nœud principal.
+<sup>1</sup> L’intégration de base est limitée à 2 cœurs et à des jeux de données en mémoire. 
+
+<sup>2</sup> L’intégration avancée peut utiliser tous les cœurs disponibles pour le traitement parallèle des jeux de données de toutes tailles soumis aux limites matérielles. 
+
+<sup>3</sup> La montée en puissance parallèle (scale out) avec plusieurs nœuds de calcul nécessite un nœud principal.
+
 
 ## <a name="IS"></a> Integration Services
 

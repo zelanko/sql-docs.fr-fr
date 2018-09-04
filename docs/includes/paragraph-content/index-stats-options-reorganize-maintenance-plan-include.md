@@ -11,7 +11,7 @@ Initially used in:
 -->
 
 
-Dans les versions antérieures de Microsoft SQL Server, réorganiser ou reconstruire un index de grande taille pouvait occasionner un ralentissement du système. SQL Server 2015 a apporté des améliorations de performances majeures à ces opérations d’index.
+Dans les versions antérieures de Microsoft SQL Server, réorganiser ou reconstruire un index de grande taille pouvait occasionner un ralentissement du système. SQL Server 2016 a apporté des améliorations de performances majeures à ces opérations d’index.
 
 En outre, dans les versions antérieures, la granularité du contrôle était moins perfectionnée. Il provoquait la réorganisation ou la reconstruction de certains index par le système, même lorsqu’ils n’étaient pas très fragmentés, ce qui était source de gaspillage. Les derniers contrôles de l’interface utilisateur (IU) du Plan de maintenance permettent d’exclure les index qui n’ont pas besoin d’être actualisés, selon des critères de statistiques d’index. Pour cela, les vues de gestion dynamique (DMV) suivantes de Transact-SQL sont utilisées en interne :
 

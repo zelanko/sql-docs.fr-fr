@@ -2,7 +2,7 @@
 title: Options SET d’ALTER DATABASE (Transact-SQL) | Microsoft Docs
 description: Découvrez comment définir des options de base de données telles que l’optimisation automatique, le chiffrement et le magasin des requêtes dans SQL Server et Azure SQL Database.
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -32,13 +32,13 @@ caps.latest.revision: 159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 16505ba07dcd1035ad260b68785eea763c050d1b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 84ee6c7ac1161f53d8878161580cc3fe0f68abd0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39560499"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067571"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL) 
 
@@ -46,9 +46,31 @@ Définissez les options de base de données dans [!INCLUDE[ssNoVersion](../../in
 
 Cliquez sur l’un des onglets suivants pour connaître la syntaxe, les arguments, les remarques, les autorisations et des exemples propres à la version de SQL que vous utilisez.
 
-Pour plus d’informations sur les conventions de la syntaxe, consultez [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+Pour plus d’informations sur les conventions de syntaxe, consultez [Conventions de syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-synt[Conventions de syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
+## <a name="click-a-product"></a>Cliquez sur un produit !
+
+Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le clic affiche un contenu différent ici dans cette page web, approprié pour le produit sur lequel vous cliquez.
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />Logical Server</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-server"></a>SQL Server
   
 La mise en miroir de bases de données, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] et les niveaux de compatibilité sont des options `SET` mais sont décrits dans des rubriques distinctes en raison de leur longueur. Pour plus d’informations, voir [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) et [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -89,7 +111,7 @@ SET
   | <service_broker_option>  
   | <snapshot_option>  
   | <sql_option>   
-  | <target_recovery_time_option>   
+  | <target_recovery_time_option> 
   | <termination>  
 }  
 ;
@@ -118,7 +140,7 @@ SET
    }  
 }  
   
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF }   
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -377,15 +399,15 @@ Active ou désactive l’option d’`FORCE_LAST_GOOD_PLAN` [optimisation automat
   
 FORCE_LAST_GOOD_PLAN = { ON | OFF }  
 ON  
-Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] force automatiquement le dernier plan correct connu sur les requêtes [!INCLUDE[tsql_md](../../includes/tsql_md.md)] où le nouveau plan SQL provoque des régressions des performances. Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] surveille en permanence les performances de la requête [!INCLUDE[tsql_md](../../includes/tsql_md.md)] avec le plan forcé. S’il existe des gains de performances, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continue à utiliser le dernier plan correct connu. Si aucun gain de performances n’est détecté, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] génère un nouveau plan SQL. L’instruction échoue si le magasin de requêtes n’est pas activé ou s’il n’est pas en mode *lecture-écriture*.   
+Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] force automatiquement le dernier plan correct connu sur les requêtes [!INCLUDE[tsql-md](../../includes/tsql-md.md)] où le nouveau plan SQL provoque des régressions des performances. Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] supervise en permanence les performances de la requête [!INCLUDE[tsql-md](../../includes/tsql-md.md)] avec le plan forcé. S’il existe des gains de performances, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continue à utiliser le dernier plan correct connu. Si aucun gain de performances n’est détecté, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] génère un nouveau plan SQL. L’instruction échoue si le magasin de requêtes n’est pas activé ou s’il n’est pas en mode *lecture-écriture*.   
 OFF  
-Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] signale les régressions des performances de requêtes potentielles dues à des changements de plan SQL dans la vue [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Toutefois, ces recommandations ne sont pas appliquées automatiquement. L’utilisateur peut surveiller les recommandations actives et résoudre les problèmes identifiés en appliquant les scripts [!INCLUDE[tsql_md](../../includes/tsql_md.md)] qui sont affichés dans la vue. Il s'agit de la valeur par défaut.
+Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] signale les régressions des performances de requêtes potentielles dues à des changements de plan SQL dans la vue [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Toutefois, ces recommandations ne sont pas appliquées automatiquement. L’utilisateur peut superviser les recommandations actives et résoudre les problèmes identifiés en appliquant les scripts [!INCLUDE[tsql-md](../../includes/tsql-md.md)] qui sont affichés dans la vue. Il s'agit de la valeur par défaut.
 
 **\<change_tracking_option> ::=**  
   
 **S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
-Contrôle les options de suivi des modifications. Vous pouvez activer le suivi des modifications, définir des options, modifier des options et désactiver le suivi des modifications. Pour consulter des exemples, reportez-vous à la section Exemples plus loin dans cette rubrique.  
+Contrôle les options de suivi des modifications. Vous pouvez activer le suivi des modifications, définir des options, modifier des options et désactiver le suivi des modifications. Vous trouverez des exemples dans la section Exemples plus loin dans cet article.  
   
 ON  
 Active le suivi des modifications pour la base de données Lorsque vous activez le suivi des modifications, vous pouvez également définir les options AUTO CLEANUP et CHANGE RETENTION.  
@@ -1086,7 +1108,7 @@ Pour plus d’informations sur les points de contrôle indirects, voir [Points d
 Spécifie le(s) cas où une transaction incomplète doit être restaurée lors d'un changement d'état de la base de données. Lorsque la clause de fin est omise, l'instruction ALTER DATABASE attend indéfiniment s'il existe un verrou quelconque sur la base de données. Une seule clause de fin peut être spécifiée, à la suite des clauses SET.  
   
 > [!NOTE]  
->  Toutes les options de base de données n’utilisent pas la clause WITH \<termination>. Pour plus d'informations, consultez le tableau du paragraphe «[Configuration des options](#SettingOptions) » de la section « Notes » de cette rubrique.  
+>  Toutes les options de base de données n’utilisent pas la clause WITH \<termination>. Pour plus d’informations, consultez le tableau sous « [Options de configuration](#SettingOptions) » dans la section « Remarques » de cet article.  
   
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE  
 Indique si la restauration intervient après le nombre de secondes spécifié ou immédiatement.  
@@ -1263,8 +1285,27 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [Bonnes pratiques relatives au Magasin des requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# <a name="sql-db-logical-servertabsqldbls"></a>[Serveur logique de base de données SQL](#tab/sqldbls)
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />Logical Server</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Azure SQL Database Logical Server
 Bien que les niveaux de compatibilité soient des options `SET`, ils sont décrits dans [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
@@ -1308,14 +1349,11 @@ SET
 }
 
 <automatic_tuning_option> ::=  
-{  AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
+{   AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
   | AUTOMATIC_TUNING ( CREATE_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( DROP_INDEX = { DEFAULT | ON | OFF } )
   | AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } )
-}  
-
-ALTER DATABASE current SET AUTOMATIC_TUNING = AUTO | INHERIT | CUSTOM
-ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_INDEX = DEFAULT, DROP_INDEX = OFF)
+}
 
 <change_tracking_option> ::=  
 {  
@@ -1327,7 +1365,7 @@ ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_I
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -1448,7 +1486,7 @@ Vous pouvez déterminer l'état de cette option en consultant la colonne is_auto
   
 > [!NOTE]  
 > L'option AUTO_SHRINK n'est pas disponible dans une base de données autonome.  
-  
+
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }  
 ON  
 Spécifie que l'optimiseur de requête met à jour les statistiques lorsqu'elles sont utilisées par une requête et lorsqu'elles sont peut-être obsolètes. Les statistiques deviennent obsolètes après que des opérations d'insertion, de mise à jour, de suppression ou de fusion ont modifié la distribution des données dans la table ou la vue indexée. L'optimiseur de requête détermine si les statistiques sont obsolètes en comptant le nombre de modifications de données depuis la dernière mise à jour des statistiques et en comparant le nombre de modifications à un seuil. Ce seuil est basé sur le nombre de lignes contenues dans la table ou la vue indexée.  
@@ -1485,35 +1523,57 @@ Vous pouvez déterminer l'état de cette option en consultant la colonne is_auto
   
 Pour plus d’informations sur l’utilisation des mises à jour de statistiques synchrones ou asynchrones, consultez la section « Utilisation des options de statistiques à l’échelle de la base de données » dans [Statistiques](../../relational-databases/statistics/statistics.md).  
 
-**\<automatic_tuning_option> ::=**  
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
 **S'applique à**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-
-Active ou désactive le [réglage automatique](../../relational-databases/automatic-tuning/automatic-tuning.md) des bases de données.
-
-AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } AUTO La définition du réglage automatique avec la valeur AUTO applique les paramètres de configuration Azure par défaut du réglage automatique.
-INHERIT L’utilisation de la valeur INHERIT permet d’hériter de la configuration par défaut du serveur parent. C’est particulièrement utile si vous souhaitez personnaliser la configuration du réglage automatique sur un serveur parent et avoir toutes les bases de données sur ce serveur qui HÉRITENT de ces paramètres personnalisés. Veuillez noter que pour que l’héritage fonctionne, les trois options de réglage FORCE_LAST_GOOD_PLAN, CREATE_INDEX et DROP_INDEX doivent avoir la valeur DEFAULT dans les bases de données.
-CUSTOM Avec la valeur CUSTOM, vous devez personnaliser manuellement la configuration de chaque option de réglage automatique disponibles sur les bases de données.
-
-Active ou désactive l’option `CREATE_INDEX` de gestion des index automatique du [réglage automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).
-
-CREATE_INDEX = { DEFAULT | ON | OFF } DEFALT Hérite des paramètres par défaut du serveur. Dans ce cas, les options d’activation ou de désactivation automatique des fonctionnalités du réglage automatique sont définies au niveau du serveur.
-ON Si activé, les index manquants sont automatiquement générés sur une base de données. Après la création des index, des gains de performances de la charge de travail se vérifient. Lorsque ces index créés ne fournissent plus d’avantages pour les performances de la charge de travail, ils sont automatiquement annulés. Les index créés automatiquement sont marqués comme index générés par le système.
-OFF Ne génère pas automatiquement les index manquants sur la base de données.
-
-Active ou désactive l’option `DROP_INDEX` de gestion des index automatique du [réglage automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).
-
-DROP_INDEX = { DEFAULT | ON | OFF } DEFALT Hérite des paramètres par défaut du serveur. Dans ce cas, les options d’activation ou de désactivation automatique des fonctionnalités du réglage automatique sont définies au niveau du serveur.
-ON Supprime automatiquement les index en double ou qui ne sont plus utiles de la charge de travail des performances. OFF Ne supprime pas automatiquement les index manquants sur la base de données.
-
-Active ou désactive l’option `FORCE_LAST_GOOD_PLAN` de correction de plan automatique du [réglage automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).
-
-FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
-DEFAULT Hérite des paramètres par défaut du serveur. Dans ce cas, les options d’activation ou de désactivation automatique des fonctionnalités du réglage automatique sont définies au niveau du serveur.
+  
+Contrôle les options automatiques pour le [réglage automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }  
+AUTO  
+La définition du réglage automatique avec la valeur AUTO applique les paramètres de configuration Azure par défaut du réglage automatique.  
+    
+INHERIT  
+L’utilisation de la valeur INHERIT permet d’hériter de la configuration par défaut du serveur parent. C’est particulièrement utile si vous souhaitez personnaliser la configuration du réglage automatique sur un serveur parent et avoir toutes les bases de données sur ce serveur qui HÉRITENT de ces paramètres personnalisés. Veuillez noter que pour que l’héritage fonctionne, les trois options de réglage FORCE_LAST_GOOD_PLAN, CREATE_INDEX et DROP_INDEX doivent avoir la valeur DEFAULT dans les bases de données.  
+  
+CUSTOM  
+Avec la valeur CUSTOM, vous devez personnaliser manuellement la configuration de chaque option de réglage automatique disponibles sur les bases de données.  
+  
+Active ou désactive l’option `CREATE_INDEX` de gestion des index automatique du [réglage automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+CREATE_INDEX = { DEFAULT | ON | OFF }  
+DEFAULT  
+Hérite des paramètres par défaut du serveur. Dans ce cas, les options d’activation ou de désactivation automatique des fonctionnalités du réglage automatique sont définies au niveau du serveur.  
+  
 ON  
-Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] force automatiquement le dernier plan correct connu sur les requêtes [!INCLUDE[tsql_md](../../includes/tsql_md.md)] où le nouveau plan SQL provoque des régressions des performances. Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] surveille en permanence les performances de la requête [!INCLUDE[tsql_md](../../includes/tsql_md.md)] avec le plan forcé. S’il existe des gains de performances, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continue à utiliser le dernier plan correct connu. Si aucun gain de performances n’est détecté, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] génère un nouveau plan SQL. L’instruction échoue si le magasin de requêtes n’est pas activé ou s’il n’est pas en mode *lecture-écriture*.   
+Si activé, les index manquants sont automatiquement générés sur une base de données. Après la création des index, des gains de performances de la charge de travail se vérifient. Lorsque ces index créés ne fournissent plus d’avantages pour les performances de la charge de travail, ils sont automatiquement annulés. Les index créés automatiquement sont marqués comme index générés par le système.  
+  
 OFF  
-Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] signale les régressions des performances de requêtes potentielles dues à des changements de plan SQL dans la vue [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Toutefois, ces recommandations ne sont pas appliquées automatiquement. L’utilisateur peut surveiller les recommandations actives et résoudre les problèmes identifiés en appliquant les scripts [!INCLUDE[tsql_md](../../includes/tsql_md.md)] qui sont affichés dans la vue. Il s'agit de la valeur par défaut.
-
+Ne génère pas automatiquement les index manquants sur la base de données.  
+  
+Active ou désactive l’option `DROP_INDEX` de gestion des index automatique du [réglage automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+DROP_INDEX = { DEFAULT | ON | OFF }  
+DEFAULT  
+Hérite des paramètres par défaut du serveur. Dans ce cas, les options d’activation ou de désactivation automatique des fonctionnalités du réglage automatique sont définies au niveau du serveur.  
+  
+ON  
+Supprime automatiquement les index en double ou qui ne sont plus utiles de la charge de travail des performances.   
+  
+OFF  
+Ne supprime pas automatiquement les index manquants sur la base de données.  
+  
+Active ou désactive l’option `FORCE_LAST_GOOD_PLAN` de correction de plan automatique du [réglage automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
+DEFAULT  
+Hérite des paramètres par défaut du serveur. Dans ce cas, les options d’activation ou de désactivation automatique des fonctionnalités du réglage automatique sont définies au niveau du serveur.  
+  
+ON  
+Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] force automatiquement le dernier plan correct connu sur les requêtes [!INCLUDE[tsql-md](../../includes/tsql-md.md)] où le nouveau plan SQL provoque des régressions des performances. Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] supervise en permanence les performances de la requête [!INCLUDE[tsql-md](../../includes/tsql-md.md)] avec le plan forcé. S’il existe des gains de performances, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continue à utiliser le dernier plan correct connu. Si aucun gain de performances n’est détecté, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] génère un nouveau plan SQL. L’instruction échoue si le magasin de requêtes n’est pas activé ou s’il n’est pas en mode *lecture-écriture*.   
+  
+OFF  
+Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] signale les régressions des performances de requêtes potentielles dues à des changements de plan SQL dans la vue [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Toutefois, ces recommandations ne sont pas appliquées automatiquement. L’utilisateur peut superviser les recommandations actives et résoudre les problèmes identifiés en appliquant les scripts [!INCLUDE[tsql-md](../../includes/tsql-md.md)] qui sont affichés dans la vue. Il s'agit de la valeur par défaut.  
+  
 **\<change_tracking_option> ::=**  
   
 Contrôle les options de suivi des modifications. Vous pouvez activer le suivi des modifications, définir des options, modifier des options et désactiver le suivi des modifications. Vous trouverez des exemples dans la section Exemples plus loin dans cet article.  
@@ -2021,7 +2081,26 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [Bonnes pratiques relatives au Magasin des requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[SQL DB Managed Instance](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />Logical Server</a></th>
+>   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
 
 Bien que les niveaux de compatibilité soient des options `SET`, ils sont décrits dans [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -2062,6 +2141,11 @@ SET
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
 }  
 
+<automatic_tuning_option> ::=  
+{  
+  AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { ON | OFF } )
+}  
+
 <change_tracking_option> ::=  
 {  
   CHANGE_TRACKING 
@@ -2072,7 +2156,7 @@ SET
    }  
 }  
 
-   <change_tracking_option_list> ::=  
+<change_tracking_option_list> ::=  
    {  
        AUTO_CLEANUP = { ON | OFF } 
      | CHANGE_RETENTION = retention_period { DAYS | HOURS | MINUTES }  
@@ -2217,6 +2301,17 @@ Vous pouvez déterminer l'état de cette option en consultant la colonne is_auto
   
 Pour plus d’informations sur l’utilisation des mises à jour de statistiques synchrones ou asynchrones, consultez la section « Utilisation des options de statistiques à l’échelle de la base de données » dans [Statistiques](../../relational-databases/statistics/statistics.md).  
   
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**  
+**S'applique à**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+
+Active ou désactive l’option d’`FORCE_LAST_GOOD_PLAN` [optimisation automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).  
+  
+FORCE_LAST_GOOD_PLAN = { ON | OFF }  
+ON  
+Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] force automatiquement le dernier plan correct connu sur les requêtes [!INCLUDE[tsql-md](../../includes/tsql-md.md)] où le nouveau plan SQL provoque des régressions des performances. Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] supervise en permanence les performances de la requête [!INCLUDE[tsql-md](../../includes/tsql-md.md)] avec le plan forcé. S’il existe des gains de performances, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continue à utiliser le dernier plan correct connu. Si aucun gain de performances n’est détecté, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] génère un nouveau plan SQL. L’instruction échoue si le magasin de requêtes n’est pas activé ou s’il n’est pas en mode *lecture-écriture*.   
+OFF  
+Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] signale les régressions des performances de requêtes potentielles dues à des changements de plan SQL dans la vue [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Toutefois, ces recommandations ne sont pas appliquées automatiquement. L’utilisateur peut superviser les recommandations actives et résoudre les problèmes identifiés en appliquant les scripts [!INCLUDE[tsql-md](../../includes/tsql-md.md)] qui sont affichés dans la vue. Il s'agit de la valeur par défaut.
+
 **\<change_tracking_option> ::=**  
   
 Contrôle les options de suivi des modifications. Vous pouvez activer le suivi des modifications, définir des options, modifier des options et désactiver le suivi des modifications. Vous trouverez des exemples dans la section Exemples plus loin dans cet article.  
@@ -2695,3 +2790,4 @@ SET QUERY_STORE = ON
 [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
 [Bonnes pratiques relatives au Magasin des requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md) 
   
+::: moniker-end

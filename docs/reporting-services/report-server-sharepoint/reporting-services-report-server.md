@@ -13,12 +13,12 @@ ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d8a8ee44c055d9679656ec5cf15b23096dc8c257
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053347"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409481"
 ---
 # <a name="reporting-services-report-server"></a>Serveur de rapports Reporting Services
 
@@ -85,7 +85,7 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
   
 ### <a name="native-mode-with-sharepoint-web-parts"></a>Mode natif avec composants WebPart SharePoint
 
- Reporting Services fournit deux composants WebPart que vous pouvez installer et inscrire sur une instance de [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 ou version ultérieure, ou sur une instance de [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 ou version ultérieure. À partir d’un site SharePoint, vous pouvez utiliser les composants WebPart pour rechercher et afficher les rapports stockés et traités sur un serveur de rapports qui s’exécute en mode natif. Ces composants WebPart ont été introduits dans des versions antérieures de Reporting Services.  
+ Reporting Services fournit deux composants WebPart que vous pouvez installer et inscrire sur une instance de [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 ou version ultérieure, ou sur une instance de SharePoint Portal Server 2003 ou ultérieure. À partir d’un site SharePoint, vous pouvez utiliser les composants WebPart pour rechercher et afficher les rapports stockés et traités sur un serveur de rapports qui s’exécute en mode natif. Ces composants WebPart ont été introduits dans des versions antérieures de Reporting Services.  
   
 ## <a name="sharepoint-mode"></a>Mode SharePoint
 

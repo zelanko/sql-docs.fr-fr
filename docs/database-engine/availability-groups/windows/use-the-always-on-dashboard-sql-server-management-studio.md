@@ -1,7 +1,7 @@
 ---
 title: Utiliser le tableau de bord du groupe de disponibilité Always On (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/30/2017
+ms.date: 08/09/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -18,59 +18,48 @@ caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4512fb251a34eaeb53bfdc18bb3bec98473f0cf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 19772eb3ac64f060288a82353fa4d2ea705d9880
+ms.sourcegitcommit: b91c0a7e981749758bd38e47a530d4e7bf1c5dd9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770555"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40409361"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Utiliser le tableau de bord du groupe de disponibilité Always On (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Les administrateurs de base de données utilisent le tableau de bord du groupe de disponibilité Always On pour obtenir un aperçu rapide de l’intégrité d’un groupe de disponibilité, de ses réplicas de disponibilité et de ses bases de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Voici quelques-unes des utilisations courantes du tableau de bord du groupe de disponibilité :  
   
--   Choix d'un réplica pour un basculement manuel.  
-  
+-   Choix d'un réplica pour un basculement manuel.    
 -   Estimation de la perte de données en cas de basculement forcé.  
-  
--   Évaluation des performances de synchronisation des données.  
-  
--   Évaluation de l'impact sur les performances d'un réplica secondaire avec validation synchrone  
-  
- Le tableau de bord fournit les états principaux et les indicateurs de performance du groupe de disponibilité, et vous permet ainsi de prendre facilement des décisions opérationnelles en matière de haute disponibilité sur la base des types d’informations suivants.  
-  
--   État de restauration de réplica  
-  
--   Mode et état de synchronisation  
-  
--   Estimer la perte de données  
-  
--   Durée estimée de récupération (rattrapage de la phase de restauration par progression)  
-  
--   Détails du réplica de base de données  
-  
--   Mode et état de synchronisation  
-  
+-   Évaluation des performances de synchronisation des données.   
+-   Évaluation de l'impact sur les performances d'un réplica secondaire avec validation synchrone 
+  -  Le tableau de bord fournit les états principaux et les indicateurs de performance du groupe de disponibilité, et vous permet ainsi de prendre facilement des décisions opérationnelles en matière de haute disponibilité sur la base des types d’informations suivants.  
+-   État de restauration de réplica    
+-   Mode et état de synchronisation   
+-   Estimer la perte de données    
+-   Durée estimée de récupération (rattrapage de la phase de restauration par progression)    
+-   Détails du réplica de base de données    
+-   Mode et état de synchronisation    
 -   Durée de restauration du journal  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
+##  <a name="before-you-begin"></a>Avant de commencer  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+### <a name="prerequisites"></a>Conditions préalables requises  
  Vous devez être connecté à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instance de serveur) qui héberge soit le réplica principal, soit un réplica secondaire d'un groupe de disponibilité.  
   
-###  <a name="Security"></a> Sécurité  
+### <a name="security"></a>Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+#### <a name="permissions"></a>Permissions  
  Requiert les autorisations CONNECT, VIEW SERVER STATE et VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a> Pour démarrer le tableau de bord Always On  
+##  <a name="to-start-the-always-on-dashboard"></a>Pour démarrer le tableau de bord Always On  
   
 1.  Dans l’Explorateur d’objets, connectez-vous à l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle vous souhaitez exécuter le tableau de bord Always On.  
   
 2.  Développez le nœud **Haute disponibilité Always On** , cliquez avec le bouton droit sur le nœud **Groupes de disponibilité** , puis cliquez sur **Afficher le tableau de bord**.  
   
-###  <a name="DashboardOptions"></a> Pour modifier les options du tableau de bord Always On  
+###  <a name="change-always-on-dashboard-options"></a>Changer les options du tableau de bord Always On  
  Vous pouvez utiliser la boîte de dialogue **Options de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]** pour configurer le comportement du tableau de bord [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On en ce qui concerne l’actualisation automatique et l’activation d’une stratégie Always On définie automatiquement.  
   
 1.  Dans le menu **Outils** , cliquez sur **Options**.  
@@ -79,7 +68,7 @@ ms.locfileid: "34770555"
   
 3.  Pour activer une stratégie définie par l’utilisateur, sélectionnez **Activer la stratégie Always On définie par l’utilisateur**.  
   
-##  <a name="AvGroupsView"></a> Résumé des groupes de disponibilité  
+##  <a name="availability-group-summary"></a>Résumé des groupes de disponibilité  
  L'écran de groupe de disponibilité affiche une ligne de résumé pour chaque groupe de disponibilité pour lequel l'instance de serveur connectée héberge un réplica. Ce volet inclut les colonnes suivantes.  
   
  **Nom du groupe de disponibilité**  
@@ -157,7 +146,7 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
  Énonce le nom du problème. Cette valeur est affichée par défaut. Pour obtenir la liste de tous les problèmes de stratégie Always On, consultez [Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Mode de disponibilité**  
- Indique que la propriété de réplica que vous définissez séparément pour chaque réplica de disponibilité. Cette valeur est masquée par défaut. Les valeurs possibles sont les suivantes :  
+ Indique la propriété de réplica que vous définissez séparément pour chaque réplica de disponibilité. Cette valeur est masquée par défaut. Les valeurs possibles sont les suivantes :  
   
 -   **Asynchrone**. Le réplica secondaire n'est jamais synchronisé avec le réplica principal.  
   
@@ -183,16 +172,11 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
  **État opérationnel**  
  Indique l'état opérationnel actuel du réplica secondaire. Cette valeur est masquée par défaut. Les valeurs possibles sont les suivantes :  
   
- **0**. Basculement en attente  
-  
- **1**. En attente  
-  
- **2**. En ligne  
-  
- **3**. Hors connexion  
-  
- **4**. Échec  
-  
+ **0**. Basculement en attente    
+ **1**. En attente    
+ **2**. En ligne    
+ **3**. Hors connexion   
+ **4**. Échec    
  **5**. Échec, pas de quorum  
   
  **NULL**. Le réplica n'est pas local  
@@ -209,17 +193,13 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
 > [!NOTE]  
 >  Pour plus d’informations sur les compteurs de performances pour les réplicas de disponibilité, consultez [SQL Server, réplica de disponibilité](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> Pour regrouper les informations de groupe de disponibilité  
+##  <a name="group-by-availability-group-information"></a>Regrouper les informations du groupe de disponibilité  
  Pour regrouper les informations, cliquez sur **Regrouper par**, puis sélectionnez l'une des commandes suivantes :  
   
--   **Réplicas de disponibilité**  
-  
--   **Bases de données de disponibilité**  
-  
+-   **Réplicas de disponibilité**    
+-   **Bases de données de disponibilité** 
 -   **Synchronization state**  
-  
--   **Disponibilité de basculement**  
-  
+-   **Disponibilité de basculement**   
 -   **Problèmes**  
   
  Le volet qui affiche les informations regroupées comporte les colonnes suivantes :  
@@ -233,27 +213,22 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
  **État de synchronisation**  
  Indique si la base de données de disponibilité est actuellement synchronisée avec le réplica principal. Cette valeur est affichée par défaut. Les états de synchronisation possibles sont les suivants :  
   
--   **Sans synchronisation**.  
-  
-    -   Pour le rôle principal, indique que la base de données n'est pas prête à synchroniser son journal des transactions avec les bases de données secondaires correspondantes.  
-  
+-   **Sans synchronisation** :  
+-   
+    -   Pour le rôle principal, indique que la base de données n'est pas prête à synchroniser son journal des transactions avec les bases de données secondaires correspondantes.   
     -   Pour une base de données secondaire, indique que la base de données n'a pas commencé la synchronisation du journal en raison d'un problème de connexion, est suspendue, ou passe par des états de transition pendant le démarrage ou lors d'un changement de rôle.  
   
--   **Synchronisation**.  
+-   **Avec synchronisation** :
+-   
+     Sur un réplica principal :   
+    - Sur une base de données primaire, indique que cette base de données est prête à recevoir une demande d’analyse d’une base de données secondaire.  
+    - Sur un réplica secondaire, indique qu'il existe un déplacement des données actif pour cette base de données secondaire. 
   
-     Sur un réplica principal :  
   
-    -   Pour une base de données primaire, indique que cette base de données est prête à recevoir une demande d'analyse d'une base de données secondaire.  
+-   **Synchronisé** : 
   
-    -   Sur un réplica secondaire, indique qu'il existe un déplacement des données actif pour cette base de données secondaire.  
-  
-     Sur un réplica secondaire, indique qu'il existe un déplacement des données actif pour ce réplica.  
-  
--   **Synchronisé**.  
-  
-     Pour une base de données primaire, indique qu'au moins une base de données secondaire est synchronisée.  
-  
-     Pour une base de données secondaire, indique que la base de données est synchronisée avec la base de données primaire correspondante.  
+    - Pour une base de données primaire, indique qu'au moins une base de données secondaire est synchronisée.
+    - Pour une base de données secondaire, indique que la base de données est synchronisée avec la base de données primaire correspondante.  
   
 -   **Rétablissement**.  
   
@@ -272,15 +247,13 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
  **Failover Readiness**  
  Indique le réplica de disponibilité qui peut basculer avec ou sans perte possible de données. Cette colonne est affichée par défaut. Les valeurs possibles sont les suivantes :  
   
--   **Perte de données**  
-  
+-   **Perte de données**   
 -   **Aucune perte de données**  
   
  **Problèmes**  
  Énonce le nom du problème. Cette colonne est affichée par défaut. Les valeurs possibles sont les suivantes :  
   
--   **Avertissements**. Cliquez pour afficher les problèmes d'avertissements et de seuils.  
-  
+-   **Avertissements**. Cliquez pour afficher les problèmes d'avertissements et de seuils.   
 -   **Critique**. Cliquez pour afficher les problèmes critiques.  
   
  Pour obtenir la liste de tous les problèmes de stratégie Always On, consultez [Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
@@ -301,13 +274,13 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
  Indique le temps (en secondes) nécessaire pour effectuer la synchronisation entre le réplica principal et le réplica secondaire. Cette valeur est masquée par défaut.  
   
  **Taille de la file d'attente d'envoi du journal (Ko)**  
- Indique la quantité d'enregistrements de journal dans les fichiers journaux de la base de données primaire qui n'ont pas été envoyés au réplica secondaire. Cette valeur est masquée par défaut.  
+ Indique le nombre d’enregistrements de journal dans les fichiers journaux de la base de données primaire qui n’ont pas été envoyés au réplica secondaire. Cette valeur est masquée par défaut.  
   
  **Débit d'envoi du journal (Ko/s)**  
  Indique le débit, en Ko par seconde, auquel les enregistrements de journal sont envoyés au réplica secondaire. Cette valeur est masquée par défaut.  
   
  **Taille de la file d'attente de restauration par progression (Ko)**  
- Indique la quantité d'enregistrements du journal dans les fichiers journaux du réplica secondaire qui n'ont pas encore été restaurés. Cette valeur est masquée par défaut.  
+ Indique le nombre d’enregistrements du journal dans les fichiers journaux du réplica secondaire qui n’ont pas encore été restaurés. Cette valeur est masquée par défaut.  
   
  **Débit de la restauration par progression (Ko/s)**  
  Indique le débit, en Ko par seconde, auquel les enregistrements de journal sont restaurés. Cette valeur est masquée par défaut.  
@@ -353,8 +326,16 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
   
  **Heure de dernière restauration par progression**  
  Indique l'heure à laquelle le dernier enregistrement du journal a été restauré sur la base de données secondaire. Cette valeur est masquée par défaut.  
-  
-##  <a name="RelatedTasks"></a> Tâches associées  
+ 
+
+## <a name="always-on-availability-group-latency-reports"></a>Rapports de latence du groupe de disponibilité Always On
+Le rapport de latence du groupe de disponibilité est un outil de rapport basé dans le tableau de bord du groupe de disponibilité et disponible dans la version [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md). Cette fonctionnalité fournit un rapport facile à comprendre qui détaille le temps passé dans les différentes phases du processus de transport de journal. Elle constitue un moyen de limiter la cause potentielle de la latence pendant le processus de synchronisation. 
+
+SQL Agent exécute la collecte de données et doit être activé sur le réplica principal et au moins sur l’un des réplicas secondaires. Affichez le rapport en cliquant avec le bouton droit sur le groupe de disponibilité > Rapports > Rapports standard dans l’**Explorateur d’objets** de SQL Server Management Studio.  
+
+Pour plus d’informations, consultez [Rapports de latence du groupe de disponibilité AlwaysOn (SQL Server)](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
+
+## <a name="related-tasks"></a>Tâches associées  
   
 -   [Utiliser les stratégies Always On pour afficher l’intégrité d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

@@ -15,19 +15,22 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b1aa5dfe6a501548a3a7e0914eacda93169a89c6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 75cf72c26c7a9baf1e4361b053325d655797c238
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310018"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42788850"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Nettoyer les données à l'aide de la connaissance des données de référence (externes)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Cette rubrique décrit comment nettoyer les données à l'aide de la connaissance des fournisseurs de données de référence. Toutes les étapes d’exécution du nettoyage restent les mêmes pour nettoyer vos données à l’aide de la connaissance des fournisseurs de données de référence, comme expliqué dans [Nettoyer des données à l’aide de la base de connaissance DQS &#40;interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md). Cette rubrique fournit des informations spécifiques sur le nettoyage des données à l’aide du service des données de référence dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
-  
+
+> [!IMPORTANT]
+> Cet article mentionne des services de données de référence tiers qui étaient disponibles dans Azure DataMarket. DataMarket et Data Services, notamment les données d’adresse Melissa par exemple, ont été supprimés après le 31/12/2016. Par conséquent, vous ne pouvez plus exécuter les exemples de cet article avec les services spécifiés de DataMarket. Vous pouvez quand même utiliser les services de données de référence directement disponibles en ligne des fournisseurs de données de référence tiers.
+ 
  Lorsque vous utilisez la fonction du service des données de référence dans DQS pour nettoyer vos données, le processus de nettoyage DQS envoie les valeurs du domaine mappé au fournisseur de services de données de référence sous forme de demande de traitement. Le service de données de référence répond avec les informations suivantes :  
   
 -   Correction suggérée  

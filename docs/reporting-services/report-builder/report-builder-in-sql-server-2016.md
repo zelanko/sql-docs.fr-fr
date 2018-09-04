@@ -20,15 +20,15 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7b0e65fda3c8aab492d45546428db43b8af7fc1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 482fc7069a480d41122535e139be2726df75f972
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022926"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410454"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Générateur de rapports dans SQL Server 2016
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] est un outil de création de rapports paginés pour les utilisateurs professionnels qui préfèrent travailler dans un environnement autonome plutôt que d’utiliser le Concepteur de rapports dans Visual Studio.  Lorsque vous concevez un rapport paginé, vous créez une définition de rapport qui spécifie l’emplacement des données à obtenir, leur nature et leur mode d’affichage. Au moment de l’exécution du rapport, le processeur de rapports assimile la définition de rapport que vous avez spécifiée, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez afficher un aperçu de votre rapport dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] et le publier sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou intégré SharePoint, pour permettre à d’autres utilisateurs de l’exécuter.  
+  Le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]est un outil de création de rapports paginés pour les utilisateurs professionnels qui préfèrent travailler dans un environnement autonome plutôt que d’utiliser le Concepteur de rapports dans Visual Studio.  Lorsque vous concevez un rapport paginé, vous créez une définition de rapport qui spécifie l’emplacement des données à obtenir, leur nature et leur mode d’affichage. Au moment de l’exécution du rapport, le processeur de rapports assimile la définition de rapport que vous avez spécifiée, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez afficher un aperçu de votre rapport dans [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] et le publier sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou intégré SharePoint, pour permettre à d’autres utilisateurs de l’exécuter.  
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33022926"
   
 -   **Créez des rapports à partir de diverses sources de données.** Générez des rapports à l’aide de données provenant de tout type de source de données ayant un fournisseur de données managées [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], un fournisseur OLE DB ou une source de données ODBC. Vous pouvez créer des rapports qui utilisent des données relationnelles et multidimensionnelles provenant de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hypérion, entre autres. Utilisez une extension pour le traitement des données XML et récupérez des données de n'importe quelle source XML. Vous pouvez utiliser des fonctions table pour concevoir des sources de données personnalisées.  
   
--   **Modifiez des rapports existants.** Grâce au [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], vous pouvez personnaliser et mettre à jour des rapports qui ont été créés dans le [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Concepteur de rapports.  
+-   **Modifiez des rapports existants.** Grâce au [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], vous pouvez personnaliser et mettre à jour des rapports qui ont été créés dans le [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Concepteur de rapports.  
   
 -   **Modifiez vos données** en filtrant, en regroupant et en triant ces dernières, ou en ajoutant des formules ou des expressions.  
   
@@ -79,15 +79,15 @@ ms.locfileid: "33022926"
   [Installer le générateur de rapports](../../reporting-services/install-windows/install-report-builder.md)
 
   [Nouveautés dans Reporting Services et le Générateur de rapports pour SQL Server 2016](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-  Décrit les nouvelles fonctionnalités de cette version de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].   
+  Décrit les nouvelles fonctionnalités de cette version de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].   
   [Didacticiel : création d'un rapport de graphique rapide en mode hors connexion](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
- Présente le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] et les Assistants disponibles pour vous permettre de créer des rapports. Il fournit un ensemble de données que vous pouvez utiliser pour vous éviter d'avoir à vous connecter à une source de données pour la mise en route.  
+ Présente le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] et les Assistants disponibles pour vous permettre de créer des rapports. Il fournit un ensemble de données que vous pouvez utiliser pour vous éviter d'avoir à vous connecter à une source de données pour la mise en route.  
   
  [Planification d’un rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Fournit des informations sur les éléments à prendre en considération avant de commencer à créer un rapport.  
   
  [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- Définit les concepts clés utilisés dans la documentation du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] .  
+ Définit les concepts clés utilisés dans la documentation du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
  [Mode Conception de rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  Explique les différents volets et régions du mode création de rapport.  
@@ -96,6 +96,6 @@ ms.locfileid: "33022926"
  Explique les différents volets et régions du mode création de dataset partagé.  
   
  [Raccourcis clavier &#40;Générateur de rapports &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
- Présente les touches de raccourci disponibles pour la navigation et la conception de rapports dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
+ Présente les touches de raccourci disponibles pour la navigation et la conception de rapports dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
   
 

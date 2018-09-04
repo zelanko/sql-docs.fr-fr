@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f77719ef5ea1dafa149a00a73ec470162b769f2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087191"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774073"
 ---
 # <a name="database-project-settings"></a>Paramètres du projet de base de données
 Vous utilisez des paramètres de projet de base de données pour contrôler des aspects de vos configurations de build, de débogage et de bases de données. Ces paramètres peuvent être répartis dans les catégories suivantes :  
@@ -108,7 +108,7 @@ Les paramètres du tableau suivant s'appliquent à toutes les configurations de 
 La vérification Transact-SQL étendue est une fonctionnalité du système de projet de base de données qui permet aux développeurs de soumettre leur projet de base de données à Transact-SQL Compiler Service, au moment de la génération, afin de valider le code par rapport à l'interpréteur et à l'analyseur du moteur SQL Server.  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
-Transact-SQL Compiler Service est un composant basé sur le moteur de base de données Microsoft SQL Server 2012. Ce service permet de valider la syntaxe et la sémantique des instructions DDL avec la même fidélité qu'un moteur de base de données Microsoft SQL Server 2012. Cela signifie, de manière intrinsèque, que le Compiler Service ne prend pas en charge la syntaxe ou les fonctionnalités qui ont été déconseillées dans Microsoft SQL Server 2012. Pour plus d'informations sur les fonctionnalités déconseillées, consultez [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2012](http://msdn.microsoft.com/en-us/library/ms144262%28v=sql.110%29.aspx).  
+Transact-SQL Compiler Service est un composant basé sur le moteur de base de données Microsoft SQL Server 2012. Ce service permet de valider la syntaxe et la sémantique des instructions DDL avec la même fidélité qu'un moteur de base de données Microsoft SQL Server 2012. Cela signifie, de manière intrinsèque, que le Compiler Service ne prend pas en charge la syntaxe ou les fonctionnalités qui ont été déconseillées dans Microsoft SQL Server 2012. Pour plus d’informations sur les fonctionnalités dépréciées, consultez [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
   
 Pour les besoins de la validation du projet de base de données, le Compiler Service crée une base de données partiellement autonome et simule l'exécution des instructions DDL sur cette base de données. Pour plus d'informations, consultez [Bases de données partiellement autonomes](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx).  
   

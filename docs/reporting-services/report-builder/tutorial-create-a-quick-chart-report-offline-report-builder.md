@@ -19,23 +19,23 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7ff4d216b7122e3500a99871834029d92d9aa072
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fb6a3891e7adb4c0159f2b98e78336c51196dac
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022416"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409994"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
 
-  Dans ce didacticiel, vous allez utiliser un assistant pour créer un graphique à secteurs dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Vous ajoutez ensuite des pourcentages et modifiez légèrement le graphique à secteurs. 
+  Dans ce tutoriel, vous allez utiliser un assistant pour créer un graphique à secteurs dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Vous ajoutez ensuite des pourcentages et modifiez légèrement le graphique à secteurs. 
   
 Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux méthodes aboutissent au même résultat, à savoir un graphique à secteurs semblable à celui de cette illustration :  
   
  ![Générateur de rapports - Graphique à secteurs rapide](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Générateur de rapports - Graphique à secteurs rapide")  
   
 ## <a name="prerequisites"></a>Conditions préalables requises  
- Que vous utilisiez des données XML ou une requête [!INCLUDE[tsql](../../includes/tsql-md.md)], vous devez avoir accès au Générateur de rapports. Vous pouvez démarrer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] d’un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou en mode intégré SharePoint, ou vous pouvez télécharger [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] à partir du Centre de téléchargement Microsoft. Pour plus d’informations, consultez [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
+ Que vous utilisiez des données XML ou une requête [!INCLUDE[tsql](../../includes/tsql-md.md)], vous devez avoir accès au Générateur de rapports. Vous pouvez démarrer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] d’un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou en mode intégré SharePoint, ou vous pouvez télécharger [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] à partir du Centre de téléchargement Microsoft. Pour plus d’informations, consultez [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md).  
   
 ##  <a name="TwoWays"></a> Deux façons de réaliser ce didacticiel  
   
@@ -51,7 +51,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
 ### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>Utilisation d’une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] qui contient les données de ce didacticiel  
  Vous pouvez copier une requête comprenant des données incluses à partir de cette rubrique et la coller dans l'Assistant. Vous avez besoin du nom d’une instance de SQL Server et d’informations d’identification suffisantes pour accéder en lecture seule aux bases de données. La requête de dataset du didacticiel utilise des données littérales, mais la requête doit être traitée par une instance de SQL Server pour retourner les métadonnées nécessaires à un dataset de rapport.  
   
- L’avantage lié à l’utilisation de la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] vient du fait que tous les autres didacticiels du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] utilisent la même méthode ; par conséquent, vous savez déjà quoi faire lorsque vous effectuez d’autres didacticiels.  
+ L’avantage lié à l’utilisation de la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] vient du fait que tous les autres didacticiels du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] utilisent la même méthode ; par conséquent, vous savez déjà quoi faire lorsque vous effectuez d’autres didacticiels.  
   
  La requête [!INCLUDE[tsql](../../includes/tsql-md.md)] requiert quelques conditions préalables supplémentaires. Pour plus d’informations, voir [Éléments requis pour les didacticiels (Générateur de rapports)](../../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
@@ -227,7 +227,7 @@ Notez que l’aire de conception s’agrandit lorsque vous faites glisser.
  Pour plus d’informations sur la personnalisation des étiquettes et légendes de graphique, voir [Afficher des valeurs en pourcentage dans un graphique à secteurs (Générateur de rapports et SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) et [Modifier le texte d’un élément de légende (Générateur de rapports et SSRS)](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md).  
   
 ##  <a name="WhatsNext"></a> Étape suivante  
- Maintenant que vous avez créé votre premier rapport dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], vous pouvez effectuer les autres didacticiels et commencer à créer des rapports à partir de vos propres données. Pour exécuter le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)], vous devez avoir l’autorisation d’accéder à vos sources de données, telles que les bases de données, avec une *chaîne de connexion*, qui vous permet de vous connecter à la source de données. Votre administrateur système sera en mesure de vous fournir les informations nécessaires.  
+ Maintenant que vous avez créé votre premier rapport dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], vous pouvez effectuer les autres didacticiels et commencer à créer des rapports à partir de vos propres données. Pour exécuter le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], vous devez avoir l’autorisation d’accéder à vos sources de données, telles que les bases de données, avec une *chaîne de connexion*, qui vous permet de vous connecter à la source de données. Votre administrateur système sera en mesure de vous fournir les informations nécessaires.  
   
  Pour utiliser les autres didacticiels, vous avez besoin du nom d’une instance de SQL Server et d’informations d’identification suffisantes pour accéder en lecture seule aux bases de données. Là encore, vous pouvez vous adresser à votre administrateur système.  
   

@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ffe4d95cd82864445ce3a8223c18664b65641f10
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7b94aa017c8e1fcfd46d86b254424c29d1c987c9
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980351"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405317"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Ajouter un serveur de rapports supplémentaire à une batterie (montée en puissance SSRS)
 
@@ -66,7 +66,7 @@ ms.locfileid: "38980351"
 |Étape|Description et lien|  
 |----------|--------------------------|  
 |Ajoutez un serveur SharePoint à une batterie de serveurs.|Vous devez installer SharePoint pour déployer une autre application Reporting Services.<br/><br/>Pour SharePoint 2013, consultez [Ajouter un serveur SharePoint à une batterie de serveurs dans SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx).<br/><br/>Pour SharePoint 2016, consultez [Ajouter un serveur SharePoint à une batterie de serveurs dans SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx).|  
-|Installez et configurez le mode SharePoint de Reporting Services.|Lancez l’installation de SQL Server. Pour plus d’informations sur l’installation du mode SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consultez [Installer le premier serveur de rapports en mode SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).<br /><br /> Si le serveur ne doit être utilisé qu’en tant que serveur d’applications et non en tant que serveur Web frontal, vous n’avez pas besoin de sélectionner **Complément Reporting Services pour les produits SharePoint**.<br /><br /> 1) Dans la page **Rôle d’installation** , sélectionnez **Installation de fonctionnalités SQL Server**.<br /><br /> 2) Dans la page **Sélection des fonctionnalités** , sélectionnez **Reporting Services - SharePoint**.<br /><br /> 3) Dans la page **Configuration de Reporting Services**  , vérifiez que l’option **Installer uniquement** est sélectionnée pour **Mode SharePoint de Reporting Services**.|  
+|Installez et configurez le mode SharePoint de Reporting Services.|Lancez l’installation de SQL Server. Pour plus d’informations sur l’installation du mode SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Installer le premier serveur de rapports en mode SharePoint](install-the-first-report-server-in-sharepoint-mode.md).<br /><br /> Si le serveur ne doit être utilisé qu’en tant que serveur d’applications et non en tant que serveur Web frontal, vous n’avez pas besoin de sélectionner **Complément Reporting Services pour les produits SharePoint**.<br /><br /> 1) Dans la page **Rôle d’installation** , sélectionnez **Installation de fonctionnalités SQL Server**.<br /><br /> 2) Dans la page **Sélection des fonctionnalités** , sélectionnez **Reporting Services - SharePoint**.<br /><br /> 3) Dans la page **Configuration de Reporting Services**  , vérifiez que l’option **Installer uniquement** est sélectionnée pour **Mode SharePoint de Reporting Services**.|  
 |Vérifiez que Reporting Services est opérationnel.|1) Dans l’Administration centrale de SharePoint, cliquez sur **Gérer les serveurs de cette batterie** dans le groupe **Paramètres système** .<br /><br /> 2) Vérifiez le service **SQL Server Reporting Services**.<br /><br />Pour plus d'informations, consultez [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  
   
 ##  <a name="bkmk_additional"></a> Configuration supplémentaire  

@@ -1,7 +1,7 @@
 ---
 title: Always Encrypted (développement client) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2016
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -14,13 +14,13 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3f2d372307528366248c5830626aee2b8fd14816
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 887603c4da7eb9a582d8068a98690116dc14128c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39547149"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43076466"
 ---
 # <a name="always-encrypted-client-development"></a>Always Encrypted (développement client)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,11 @@ Pour plus d’informations sur le développement d’applications qui utilisent 
 
 - [Utilisation d’Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Utilisation du chiffrement intégral avec le pilote JDBC](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
-- [Utilisation du chiffrement intégral avec le pilote ODBC de Windows](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [Utilisation d’Always Encrypted avec ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [Utilisation d’Always Encrypted avec les pilotes PHP](../../../connect/php/using-always-encrypted-php-drivers.md)
 
-
+> [!NOTE]
+> Actuellement, Always Encrypted n’est pas pris en charge dans [.NET CORE](https://docs.microsoft.com/dotnet/core/).
 
 ## <a name="see-also"></a> Voir aussi
 

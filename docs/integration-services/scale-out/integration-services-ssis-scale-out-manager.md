@@ -13,12 +13,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3023b3d2847e206aa5646a14aa8a5ee5eff68a9c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 31393f359faccf940178fd1d1a6b9d2e60d4b9e5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331253"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43082466"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out Manager
 
@@ -38,13 +38,13 @@ Dans l’Explorateur d’objets, cliquez avec le bouton droit sur **SSISDB** et 
 > [!NOTE]
 > Nous vous recommandons d’exécuter SSMS en tant qu’administrateur, car certaines opérations de gestion Scale Out telles que l’ajout d’un Scale Out Worker nécessitent un privilège administratif.
 
-### <a name="2-open-scale-out-manager-by-running-ismanagerexe"></a>2. Ouvrir Scale Out Manager en exécutant ISManager.exe
+### <a name="2-open-scale-out-manager-by-running-managementtoolexe"></a>2. Ouvrir Scale Out Manager en exécutant ManagementTool.exe
 
-Recherchez `ISManager.exe` sous `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\Management`. Cliquez avec le bouton droit sur **ISManager.exe** et sélectionnez **Exécuter en tant qu’administrateur**. 
+Recherchez `ManagementTool.exe` sous `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management`. Cliquez avec le bouton droit sur **ManagementTool.exe** et sélectionnez **Exécuter en tant qu’administrateur**. 
 
 Après l’ouverture de Scale Out Manager, vous devez entrer le nom de l’instance de SQL Server de Scale Out Master et vous y connecter pour gérer votre environnement Scale Out.
 
-![Connexion au portail](media/portal-connect.PNG)
+![Connexion au portail](media/portal-connect-new.png)
 
 ## <a name="tasks-available-in-scale-out-manager"></a>Tâches disponibles dans Scale Out Manager
 Dans Scale Out Manager, vous pouvez effectuer les opérations suivantes :
@@ -52,42 +52,42 @@ Dans Scale Out Manager, vous pouvez effectuer les opérations suivantes :
 ### <a name="enable-scale-out"></a>Activer Scale Out
 Après vous être connecté à SQL Server, si Scale Out n’est pas activé, vous pouvez sélectionner **Activer** pour l’activer.
 
-![Portail - Activer Scale Out](media/portal-enable-scale-out.PNG) 
+![Portail - Activer Scale Out](media/portal-enable-scale-out-new.PNG) 
 
 ### <a name="view-scale-out-master-status"></a>Afficher l’état de Scale Out Master
 L’état de Scale Out Master apparaît dans la page **Tableau de bord**.
 
-![Portail - Tableau de bord](media/portal-dashboard.PNG)
+![Portail - Tableau de bord](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>Afficher l’état de Scale Out Worker
 L’état de Scale Out Worker apparaît dans la page **Gestionnaire de workers**. Vous pouvez sélectionner chaque Worker pour connaître son état.
 
-![Portail - Gestionnaire de workers](media/portal-worker-manager.PNG)
+![Portail - Gestionnaire de workers](media/portal-worker-manager-new.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>Ajouter un Scale Out Worker
 Pour ajouter un Scale Out Worker, sélectionnez **+** au bas de la liste Scale Out Worker. 
 
 Entrez le nom de l’ordinateur du Scale Out Worker que vous souhaitez ajouter, puis cliquez sur **Valider**. Scale Out Manager vérifie si l’utilisateur actuel a accès aux magasins de certificats sur les ordinateurs Scale Out Master et Scale Out Worker
 
-![Connecter le nœud Worker](media/connect-worker.PNG)
+![Connecter le nœud Worker](media/connect-worker-new.PNG)
 
 Si la validation réussit, Scale Out Manager tente de lire le fichier de configuration du serveur Worker et d’obtenir l’empreinte du certificat de ce dernier. Pour plus d’informations, consultez [Scale Out Worker](integration-services-ssis-scale-out-worker.md). Si Scale Out Manager n’est pas en mesure de lire le fichier de configuration du service Worker, vous disposez de deux autres méthodes pour fournir le certificat Worker. 
 
-1.  Vous pouvez entrer l’empreinte du certificat Worker directement
+- Vous pouvez entrer l’empreinte du certificat Worker directement
 
-    ![Certificat Worker 1](media/portal-cert1.PNG)
+    ![Certificat Worker 1](media/portal-cert1-new.PNG)
 
-2.  ou fournir le fichier de certificat. 
+- ou fournir le fichier de certificat.
 
-    ![Certificat Worker 2](media/portal-cert2.PNG)
+    ![Certificat Worker 2](media/portal-cert2-new.PNG)
 
 Une fois les informations collectées, Scale Out Manager décrit les actions à effectuer. Généralement, ces actions incluent l’installation du certificat, la mise à jour du fichier de configuration du service Worker et le redémarrage du service Worker.
 
-![Portail - Ajouter, confirmer 1](media/portal-add-confirm1.PNG)
+![Portail - Ajouter, confirmer 1](media/portal-add-confirm1-new.PNG)
 
-Si le certificat Worker n’est pas accessible, vous devez le mettre à jour manuellement et redémarrer le service Worker.
+Si le paramètre Worker n’est pas accessible, vous devez le mettre à jour manuellement et redémarrer le service Worker.
 
-![Portail - Ajouter, confirmer 2](media/portal-add-confirm2.PNG)
+![Portail - Ajouter, confirmer 2](media/portal-add-confirm2-new.PNG)
 
 Cochez la case de **confirmation** , puis sélectionnez **OK** pour commencer la procédure d’ajout d’un Scale Out Worker.
 
@@ -100,7 +100,7 @@ Pour activer ou désactiver un Scale Out Worker, sélectionnez-le, puis cliquez 
 ## <a name="edit-a-scale-out-worker-description"></a>Modifier la description d’un Scale Out Worker
 Pour modifier la description d’un Scale Out Worker, sélectionnez-le, puis cliquez sur **Modifier**. Une fois que vous avez terminé, sélectionnez **Enregistrer**.
 
-![Portail - Enregistrer le Worker](media/portal-save-worker.PNG)
+![Portail - Enregistrer le Worker](media/portal-save-worker-new.PNG)
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations, consultez les articles suivants :

@@ -85,13 +85,14 @@ helpviewer_keywords:
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a12eab1a7ea003c1837c68f53eae33989ed884ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 509fd76b510df010e4dc3c7f8364dc2424e223d9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225149"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409374"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installer SQL Server à partir de l'invite de commandes
 
@@ -886,7 +887,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine, PolyBase|Installe le moteur PolyBase.|  
   
 ##  <a name="RoleParameters"></a> Paramètres de rôle  
- Le paramètre de rôle d'installation ou /Role est utilisé pour installer une sélection de fonctionnalités préconfigurées. Les rôles [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] installent une instance d' [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] dans une batterie de serveurs SharePoint existante ou une nouvelle batterie non configurée. Deux rôles d'installation sont fournis pour prendre en charge chaque scénario. Vous ne pouvez choisir d'utiliser qu'un seul rôle d'installation à la fois. Selon le rôle d'installation que vous choisissez, le programme d'installation installe les fonctionnalités et composants qui appartiennent à ce rôle. Vous ne pouvez pas modifier les fonctionnalités et composants désignés pour ce rôle. Pour plus d’informations sur l’utilisation du paramètre de rôle de fonctionnalité, consultez [Installer Power Pivot à partir de l’invite de commandes](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
+ Le paramètre de rôle d'installation ou /Role est utilisé pour installer une sélection de fonctionnalités préconfigurées. Les rôles SSAS installent une instance SSAS dans une batterie de serveurs SharePoint existante ou une nouvelle batterie non configurée. Deux rôles d'installation sont fournis pour prendre en charge chaque scénario. Vous ne pouvez choisir d'utiliser qu'un seul rôle d'installation à la fois. Selon le rôle d'installation que vous choisissez, le programme d'installation installe les fonctionnalités et composants qui appartiennent à ce rôle. Vous ne pouvez pas modifier les fonctionnalités et composants désignés pour ce rôle. Pour plus d’informations sur l’utilisation du paramètre de rôle de fonctionnalité, consultez [Installer Power Pivot à partir de l’invite de commandes](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
   
  Le rôle AllFeatures_WithDefaults correspond au comportement par défaut des éditions de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] et réduit le nombre de boîtes de dialogue présentées à l'utilisateur. Il peut être spécifié à partir de la ligne de commande pendant l’installation d’une édition de SQL Server qui n’est pas [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   

@@ -1,14 +1,14 @@
 ---
 title: Déployer des packages avec SSIS | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -24,12 +24,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f7abdad422347e140e230eac9b7f19a78d5ba47
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f7f28ae86cab01c86aa7360618b080ec4ff124e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328263"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028813"
 ---
 # <a name="deploy-packages-with-ssis"></a>Déployer des packages avec SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] propose des outils qui simplifient le déploiement des packages vers un autre ordinateur. Ces outils de déploiement gèrent aussi les dépendances, telles que les configurations et les fichiers dont les packages ont besoin. Dans ce didacticiel, vous allez apprendre à utiliser ces outils pour installer des packages et leurs dépendances sur un ordinateur cible.    
@@ -45,37 +45,49 @@ Vous allez copier ensuite l'application de déploiement sur l'ordinateur cible e
 Enfin, vous allez exécuter les packages dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] à l'aide de l'utilitaire d'exécution de package.    
     
 L'objectif de ce didacticiel est de simuler la complexité de problèmes de déploiement réels que vous pouvez rencontrer. Cependant, si vous ne pouvez pas déployer les packages sur un autre ordinateur, vous pouvez toujours effectuer ce didacticiel en installant les packages dans la base de données msdb d'une instance locale de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puis en exécutant les packages à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sur la même instance.    
-    
-## <a name="what-you-will-learn"></a>Contenu du didacticiel    
+
+**Durée estimée pour effectuer ce didacticiel :** 2 heures.
+
+## <a name="what-you-learn"></a>Contenu du didacticiel    
 Le meilleur moyen de se familiariser avec les nouveaux outils et les nouvelles commandes et fonctionnalités de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est de les utiliser. Ce didacticiel vous guide dans les étapes de création d'un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] puis d'ajout des packages et autres fichiers nécessaires au projet. Une fois le projet terminé, vous allez créer une application de déploiement, copier cette application sur l'ordinateur de destination, puis installer les packages sur l'ordinateur de destination.    
     
-## <a name="requirements"></a>Spécifications    
+## <a name="prerequisites"></a>Conditions préalables requises    
 Ce didacticiel s’adresse aux utilisateurs qui ont une connaissance des notions fondamentales liées aux opérations effectuées sur les systèmes de fichiers, mais une maîtrise limitée des nouvelles fonctionnalités disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour mieux comprendre les concepts [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de base que vous allez mettre en œuvre dans ce didacticiel, il est peut-être intéressant de terminer d’abord le didacticiel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suivant : [SSIS : comment créer un package ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
-**Ordinateur source.** Les composants suivants **doivent être installés**sur l’ordinateur sur lequel vous allez créer l’application de déploiement :
-- SQL Server  
-- Exemples de données, packages finalisés, configurations et fichier LisezMoi. Ces fichiers sont installés ensemble si vous téléchargez les [exemples de bases de données Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550).     
-> **Remarque** Vérifiez que vous êtes autorisé à créer et à supprimer des tables dans AdventureWorks ou d’autres données que vous utilisez.         
+### <a name="on-the-source-computer"></a>Sur l’ordinateur source
+
+Sur l’ordinateur sur lequel vous créez le bundle de déploiement, **les composants suivants doivent être installés :**
+
+- Serveur SQL Server. (Téléchargez une édition d’évaluation ou développeur gratuite de SQL Server à partir de [Téléchargements SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).)
+
+- Exemples de données, packages finalisés, configurations et fichier LisezMoi. Pour télécharger les exemples de données et les packages de leçons dans un fichier Zip, consultez [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827). La plupart des fichiers dans le fichier zip sont des fichiers en lecture seule afin d’empêcher des modifications par inadvertance. Pour écrire la sortie dans un fichier ou la modifier, vous devrez désactiver l’attribut en lecture seule dans les propriétés du fichier.
+
+-   Exemple de base de données **AdventureWorks2014**. Pour télécharger la base de données **AdventureWorks2014**, téléchargez `AdventureWorks2014.bak` à partir des [exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) et restaurez la sauvegarde.  
+
+-   Vous devez disposer des autorisations pour créer et supprimer des tables dans la base de données AdventureWorks.
     
 -   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
     
-**Ordinateur de destination.** Les composants suivants **doivent être installés**sur l’ordinateur vers lequel vous déployez des packages :    
+### <a name="on-the-destination-computer"></a>Sur l’ordinateur de destination
+
+Les composants suivants **doivent être installés**sur l’ordinateur vers lequel vous déployez des packages :    
     
-- SQL Server
-- Exemples de données, packages finalisés, configurations et fichier LisezMoi. Ces fichiers sont installés ensemble si vous téléchargez les [exemples de bases de données Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550). 
+- Serveur SQL Server. (Téléchargez une édition d’évaluation ou développeur gratuite de SQL Server à partir de [Téléchargements SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).)
+
+- Exemples de données, packages finalisés, configurations et fichier LisezMoi. Pour télécharger les exemples de données et les packages de leçons dans un fichier Zip, consultez [SQL Server Integration Services Tutorial Files](https://www.microsoft.com/download/details.aspx?id=56827). La plupart des fichiers dans le fichier zip sont des fichiers en lecture seule afin d’empêcher des modifications par inadvertance. Pour écrire la sortie dans un fichier ou la modifier, vous devrez désactiver l’attribut en lecture seule dans les propriétés du fichier.
+
+-   Exemple de base de données **AdventureWorks2014**. Pour télécharger la base de données **AdventureWorks2014**, téléchargez `AdventureWorks2014.bak` à partir des [exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) et restaurez la sauvegarde.  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour installer SSIS, consultez [Installer Integration Services](install-windows/install-integration-services.md).
     
--   Vous devez être autorisé à créer et à supprimer des tables dans AdventureWorks, et à exécuter des packages dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].    
+-   Vous devez disposer des autorisations pour créer et supprimer des tables dans la base de données AdventureWorks, ainsi que pour exécuter des packages SSIS dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].    
     
--   Vous devez disposer de l'autorisation d'accès en lecture et en écriture sur la table sysssispackages dans la base de données système msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .    
+-   Vous devez disposer de l'autorisation d'accès en lecture et en écriture sur la table `sysssispackages` dans la base de données système `msdb` de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].    
     
 Si vous envisagez de déployer les packages sur le même ordinateur que celui où vous créez l'application de déploiement, ce dernier doit avoir la configuration requise pour les ordinateurs source et de destination.    
-    
-**Durée estimée pour effectuer ce didacticiel :** 2 heures.    
-    
+        
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel    
 [Leçon 1 : Préparation à la création de l’application de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 Au cours de cette leçon, vous allez vous préparer à déployer une solution ETL en créant un nouveau projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et en ajoutant au projet les packages et les autres fichiers requis.    

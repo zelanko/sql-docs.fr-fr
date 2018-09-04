@@ -1,7 +1,7 @@
 ---
 title: Choisir un algorithme de chiffrement | Microsoft Docs
 ms.custom: ''
-ms.date: 01/08/2016
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,13 +18,13 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5056f8097b9fc96448f5a281a5a67d7d047389b3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549599"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096557"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Choisir un algorithme de chiffrement
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,11 +41,13 @@ ms.locfileid: "39549599"
   
 -   Les clés longues produisent en général un chiffrement plus fort que les clés courtes.  
   
--   À longueur de clé égale, le chiffrement asymétrique est plus faible que le chiffrement symétrique, mais il est relativement lent.  
+-   Le chiffrement asymétrique est plus lent que le chiffrement symétrique.  
   
 -   Le chiffrement par blocs avec des clés longues est plus fort que le chiffrement par flux.  
   
 -   Les mots de passe longs et complexes sont plus forts que les mots de passe courts.  
+
+-   Le chiffrement symétrique est généralement recommandé quand la clé est uniquement stockée localement, tandis que le chiffrement asymétrique est recommandé quand les clés doivent être partagées sur le réseau.
   
 -   Si vous chiffrez de grandes quantités de données, vous devez utiliser pour cela une clé symétrique, puis chiffrer cette clé avec une clé asymétrique.  
   

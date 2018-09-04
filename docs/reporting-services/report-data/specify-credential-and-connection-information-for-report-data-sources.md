@@ -1,7 +1,7 @@
 ---
 title: Spécifier des informations d’identification et de connexion pour les sources de données de rapport | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2018
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -33,12 +33,12 @@ caps.latest.revision: 61
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 30e9d5668ada3bbe6d231147b9930f6d079c6f29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e0a75286b8a4e3529202c5ef700d4157b85f2a8a
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550730"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42440064"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Spécifier des informations d'identification et de connexion pour les sources de données de rapport
   Un serveur de rapports utilise des informations d'identification pour se connecter à des sources de données externes qui fournissent du contenu aux rapports ou des informations de destinataire aux abonnements pilotés par les données. Vous pouvez spécifier des informations d'identification qui utilisent l'authentification Windows, l'authentification de base de données, aucune authentification ou une authentification personnalisée. Lors de l'envoi d'une demande de connexion sur le réseau, le serveur de rapports emprunte l'identité d'un compte d'utilisateur ou du compte d'exécution sans assistance. Pour plus d’informations sur le contexte de sécurité sous lequel une demande de connexion est émise, consultez [Configuration d’une source de données et connexions réseau](#DataSourceConfigurationConnections) plus loin dans cette rubrique.  
@@ -51,7 +51,7 @@ ms.locfileid: "34550730"
 ## <a name="when-credentials-are-used-in-report-builder"></a>Lorsque les informations d’identification sont utilisées dans le Générateur de rapports  
  Dans le Générateur de rapports, les informations d'identification sont souvent utilisées lorsque vous vous connectez à un serveur de rapports ou pour des tâches liées aux données, par exemple la création d'une source de données incorporée, l'exécution d'une requête de dataset ou l'affichage de l'aperçu d'un rapport. Les informations d'identification ne sont pas enregistrées dans le rapport. Elles sont gérées séparément sur le serveur de rapports ou sur le client local. La liste suivante décrit les types d'informations d'identification que vous devrez peut-être fournir, leur emplacement et leur utilisation :  
   
--   Informations d’identification du serveur de rapports que vous entrez dans la [boîte de dialogue Ouverture de session Reporting Services &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md).  
+-   Informations d’identification du serveur de rapports que vous entrez dans la boîte de dialogue Ouverture de session Reporting Services.  
   
      Lorsque vous enregistrez, publiez ou naviguez vers un serveur de rapports ou un site SharePoint pour la première fois, vous devez éventuellement entrer vos informations d'identification. Les informations d'identification que vous entrez sont utilisées jusqu'à la fin de la session du Générateur de rapports. Si vous choisissez d'enregistrer les informations d'identification, elles sont stockées de manière sécurisée avec vos paramètres utilisateur sur votre ordinateur. Dans les sessions ultérieures du Générateur de rapports, les informations d'identification enregistrées sont utilisées pour la connexion au même serveur de rapports ou site SharePoint. L'administrateur du serveur de rapports ou l'administrateur SharePoint spécifie le type des informations d'identification à utiliser.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34550730"
   
      Ces informations d'identification sont utilisées par le serveur de rapports pour établir une connexion de données à la source de données externe. Pour certains types de sources de données, les informations d'identification peuvent être stockées de manière sécurisée sur le serveur de rapports. Ces informations d'identification permettent à d'autres utilisateurs d'exécuter le rapport sans fournir d'informations d'identification pour la connexion de données sous-jacente.  
   
--   Informations d’identification de la source de données que vous entrez dans la [Boîte de dialogue Entrez les informations d’identification pour la source de données &#40;Générateur de rapports&#41;](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) quand vous exécutez une requête de dataset, actualisez des champs de dataset ou affichez un aperçu du rapport.  
+-   Informations d’identification de la source de données que vous entrez dans la **Boîte de dialogue Entrez les informations d’identification pour la source de données** quand vous exécutez une requête de dataset, actualisez des champs de dataset ou affichez un aperçu du rapport.  
   
      Ces informations d'identification sont utilisées pour établir une connexion de données entre le Générateur de rapports et la source de données externe, ou pour afficher l'aperçu d'un rapport configuré pour demander la saisie des informations d'identification. Les informations d'identification que vous entrez dans cette boîte de dialogue ne sont pas stockées sur le serveur de rapports et ne sont pas accessibles à d'autres utilisateurs. Le Générateur de rapports met en cache les informations d'identification pendant la session de modification du rapport afin que vous n'ayez pas besoin de les entrer chaque fois que vous exécutez la requête ou que vous affichez l'aperçu du rapport.  
   

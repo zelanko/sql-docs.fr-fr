@@ -1,13 +1,12 @@
 ---
-title: common criteria compliance enabled (option de configuration de serveur) | Microsoft Docs
+title: Configuration avec la conformité des critères communs activée | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/21/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - common criteria compliance
@@ -17,21 +16,20 @@ helpviewer_keywords:
 - Risidual Information Protection [Database Engine]
 - RIP (Residual Information Protection)
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
-caps.latest.revision: 24
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 320c81ef93d11e1ebd73c861617be322a99f2655
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 5f259daef42200f05fe3bc495559d1ed4292638f
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863704"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40427279"
 ---
-# <a name="common-criteria-compliance-enabled-server-configuration-option"></a>common criteria compliance enabled (option de configuration de serveur)
+# <a name="common-criteria-compliance-enabled-server-configuration"></a>Configuration serveur avec la conformité des critères communs activée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  L'option common criteria compliance enabled active les éléments suivants requis pour les critères communs.  
+L’option de conformité des critères communs active les éléments suivants qui sont nécessaires à l’évaluation [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org/).  
   
 |Critères|Description|  
 |--------------|-----------------|  
@@ -67,6 +65,4 @@ GO
 Redémarrez [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
   
 ## <a name="see-also"></a> Voir aussi  
- [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
-  
-  
+ [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)

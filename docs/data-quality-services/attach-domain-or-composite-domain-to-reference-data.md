@@ -18,19 +18,22 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d45174da7a0d8792229051a9f6cdb486b64e8343
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 074a799f9027fee4297332f47dbdbd064ab7593d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309818"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42790930"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Attacher un domaine ou un domaine composite à des données de référence
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Cette rubrique explique comment attacher des domaines/domaines composites dans une base de connaissances à un service de données de référence dans Windows Azure Marketplace pour générer des connaissances sur les données de référence de haute qualité. Chaque service de données de référence contient un schéma (colonnes de données). Après avoir attaché un domaine ou un domaine composite à un service de données de référence, vous devez mapper le domaine joint, ou chaque domaine au sein du domaine composite joint, aux colonnes appropriées du schéma de service des données de référence. L'attachement d'un domaine composite à un service de données de référence vous permet d'attacher un seul domaine à un service de données de référence, puis de mapper les différents domaines du domaine composite aux colonnes appropriées du schéma de service des données de référence.  
-  
+
+> [!IMPORTANT]
+> Cet article mentionne des services de données de référence tiers qui étaient disponibles dans Azure DataMarket. DataMarket et Data Services, notamment les données d’adresse Melissa par exemple, ont été supprimés après le 31/12/2016. Par conséquent, vous ne pouvez plus exécuter les exemples de cet article avec les services spécifiés de DataMarket. Vous pouvez quand même utiliser les services de données de référence directement disponibles en ligne des fournisseurs de données de référence tiers.
+
 > [!WARNING]  
 >  Le domaine composite associé à un service de données de référence est disponible dans la liste déroulante des domaines lors du mappage des domaines aux colonnes du schéma de service de données de référence. Ne mappez pas le domaine composite à une colonne dans le schéma de service de données de référence ; vous devez uniquement mapper les domaines individuels au sein d'un domaine composite aux colonnes appropriées dans le schéma de service de données de référence. Sinon, cela génère une erreur.  
   
@@ -45,7 +48,7 @@ ms.locfileid: "35309818"
   
 ###  <a name="Security"></a> Sécurité  
   
-#### <a name="permissions"></a>Autorisations  
+#### <a name="permissions"></a>Permissions  
  Vous devez disposer du rôle de dqs_kb_editor sur la base de données de DQS_MAIN pour mapper les domaines aux données de référence.  
   
 ##  <a name="Map"></a> Mapper les domaines aux données de référence de Melissa Data  

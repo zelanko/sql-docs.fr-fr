@@ -1,7 +1,7 @@
 ---
 title: Gestion de clés extensible de SQL server TDE avec Azure Key Vault - Étapes de configuration | Microsoft Docs
 ms.custom: ''
-ms.date: 06/11/2018
+ms.date: 08/24/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 34
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4f8581201f9303c87a848a7456849efa7a09396a
+ms.sourcegitcommit: 0ab652fd02039a014c9661f3c5ccf4281cfb025b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702980"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925989"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gestion de clés extensible de SQL server TDE avec Azure Key Vault - Étapes de configuration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,14 +153,14 @@ Version de SQL Server  |Lien d’installation du package redistribuable
     Dans le cas présent, utilisons le principal du service Azure Active Directory créé dans la partie I pour autoriser l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     > [!IMPORTANT]  
-    >  Le principal du service Azure Active Directory doit avoir au moins les autorisations `get`, `list`, `wrapKey`et `unwrapKey` pour le coffre de clés.  
+    >  Le principal du service Azure Active Directory doit avoir au moins les autorisations `get`, `wrapKey` et `unwrapKey` pour le coffre de clés.  
   
      Comme illustré ci-dessous, utilisez l’ **ID client** de la partie I pour le paramètre `ServicePrincipalName` . La commande `Set-AzureRmKeyVaultAccessPolicy` s’exécute en mode silencieux sans aucune sortie si son exécution réussit.  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, list, wrapKey, unwrapKey  
+      -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
      Appelez l’applet de commande `Get-AzureRmKeyVault` pour vérifier les autorisations. Dans la sortie de l’instruction, sous « Access Policies », vous devez voir le nom de votre application AAD répertorié en tant qu’autre client ayant accès à ce coffre de clés.  

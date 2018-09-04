@@ -15,16 +15,17 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3138ff1f34120234c47b826195e5102e44aa617
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a054f12d9581204eb6cb0fe66d9c206bc83a47d1
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899589"
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - Termes du contrat de licence
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>Langues disponibles :  
-[chinois (République populaire de Chine)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [chinois (Taïwan)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [anglais (États-Unis)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [français](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
+[Chinois (simplifié)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [Chinois (traditionnel)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [Anglais (États-Unis)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [Français](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
 [allemand](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [italien](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [japonais](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [coréen](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [portugais (Brésil)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [russe](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [espagnol](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
   
 ## <a name="microsoft-software-license-terms"></a>TERMES DU CONTRAT DE LICENCE LOGICIEL MICROSOFT  
