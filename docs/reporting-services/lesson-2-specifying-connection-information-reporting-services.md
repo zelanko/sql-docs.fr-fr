@@ -1,28 +1,22 @@
 ---
 title: 'Leçon 2 : Spécification des informations de connexion (Reporting Services) | Microsoft Docs'
-ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: e1c62880fd94706f9f034d86fecd587700019b6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ca21419e841482747410f50809d0d502f495f06
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015986"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274770"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Leçon 2 : Spécification des informations de connexion (Reporting Services)
 Après avoir ajouté un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] à votre projet de didacticiel dans la leçon 1, vous devez maintenant définir une *source de données*, qui constitue les informations de connexion que le rapport utilise pour accéder aux données à partir d’une base de données relationnelle, d’une base de données multidimensionnelle ou d’une autre source.  

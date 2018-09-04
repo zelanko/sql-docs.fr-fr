@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 273f04bfc6a75abb2e14da9031cbfeb17c6674c0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 64793249bab1d862d401e0c8b8d2d78a8392edbc
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410339"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348149"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sauvegarde et restauration des bases de données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ unité de**sauvegarde**
 -   les contraintes imposées aux ressources telles que : matériel, personnel, espace de stockage des supports de sauvegarde et leur sécurité physique, etc.  
 
 ### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>Impact du mode de récupération sur la sauvegarde et la restauration  
- Les opérations de sauvegarde et de restauration interviennent dans le cadre d'un mode de récupération. Un mode de récupération désigne une propriété de base de données qui contrôle le mode de gestion du journal des transactions. Également, le mode de récupération d'une base de données détermine les types de sauvegardes et les scénarios de restauration pris en charge pour la base de données. En règle générale, une base de données utilise le mode de récupération complète ou le mode de récupération simple. Le mode de récupération complète peut être complété en basculant provisoirement vers le mode de récupération utilisant les journaux de transactions avant d'effectuer les opérations en bloc. Pour obtenir une présentation de ces modes de récupération et leur impact sur la gestion du journal des transactions, consultez [Journal des transactions (SQL Server)](https://msdn.microsoft.com/library/ms190925(SQL.130).aspx)  
+ Les opérations de sauvegarde et de restauration interviennent dans le cadre d'un mode de récupération. Un mode de récupération désigne une propriété de base de données qui contrôle le mode de gestion du journal des transactions. Également, le mode de récupération d'une base de données détermine les types de sauvegardes et les scénarios de restauration pris en charge pour la base de données. En règle générale, une base de données utilise le mode de récupération complète ou le mode de récupération simple. Le mode de récupération complète peut être complété en basculant provisoirement vers le mode de récupération utilisant les journaux de transactions avant d'effectuer les opérations en bloc. Pour obtenir une présentation de ces modes de récupération et leur impact sur la gestion du journal des transactions, consultez [Journal des transactions (SQL Server)](../logs/the-transaction-log-sql-server.md)  
   
  Le meilleur choix du mode de récupération de la base de données dépend de vos exigences d'entreprise. Pour éviter la gestion du journal des transactions et simplifier la sauvegarde et la restauration, optez pour le mode de récupération simple. Pour minimiser les risques de perte de travail, mais avec un coût en termes de charges d'administration, choisissez le mode de récupération complète. Pour obtenir des informations sur l’impact des modes de récupération sur la sauvegarde et la restauration, consultez [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   

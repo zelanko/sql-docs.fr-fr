@@ -1,29 +1,23 @@
 ---
 title: Paramètres d’informations de périphérique XML | Microsoft Docs
-ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML [Reporting Services], rendering
 - device information settings [Reporting Services], PDF rendering
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9d7c8eff2db3715b24a41e6f529f32ac4a9f3d6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4d095fe3821bcb3376ee20b6c01a7f0edf69fe9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033296"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274068"
 ---
 # <a name="xml-device-information-settings"></a>Paramètres d'informations de périphérique XML
   Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu au format XML.  

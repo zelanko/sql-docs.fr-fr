@@ -1,26 +1,20 @@
 ---
 title: Afficher des datasets masqués pour les valeurs de paramètres - Données multidimensionnelles | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e95fd161dfadcab075a770e8e6ab6001da6c07e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69acae71d971915406b0e287d420043e2d36bae3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019146"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278890"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>Afficher des datasets masqués pour les valeurs de paramètres - Données multidimensionnelles
   Votre rapport peut inclure des datasets générés automatiquement (aussi appelés datasets masqués) qui n'apparaissent pas par défaut dans le volet des données de rapport. La création de ces datasets s'effectue de plusieurs façons :  

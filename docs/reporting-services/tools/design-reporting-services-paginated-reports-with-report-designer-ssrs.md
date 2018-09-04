@@ -1,27 +1,22 @@
 ---
 title: Concevoir des rapports à l’aide du Concepteur de rapports (SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-caps.latest.revision: 77
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 09311458bc7815a7a63d58ad19c8d8b0a3845da4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1607193731e20f4111d38da44ee21375dfff09e0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282791"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Concevoir des rapports paginés Reporting Services à l’aide du Concepteur de rapports (SSRS)
 
@@ -177,7 +172,7 @@ Les rapports paginés sont des fichiers qui sont stockés dans un projet de rapp
 |Niveau d'erreur|Description|  
 |-----------------|-----------------|  
 |0|Problèmes de génération les plus sévères et inévitables qui empêchent l'aperçu et le déploiement de rapports.|  
-| 1|Problèmes de génération sévères qui modifient la mise en page de rapport radicalement.|  
+|1|Problèmes de génération sévères qui modifient la mise en page de rapport radicalement.|  
 |2|Problèmes de génération moins sévères qui modifient la mise en page de rapport de façon significative.|  
 |3|Problèmes de génération mineurs qui modifient si peu la mise en page de rapport qu'ils peuvent passer inaperçus.|  
 |4|Utilisé uniquement pour la publication d'avertissements.|  

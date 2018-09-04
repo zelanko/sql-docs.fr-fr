@@ -17,12 +17,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39bc4afa05f9f72fcf2ec08cdfd85e65fa8bce04
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d5e99d7bfd140af1e26217118211da98a167a93
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145600"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348174"
 ---
 # <a name="data-collection"></a>Collecte de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ ms.locfileid: "33145600"
 |Gérer différents aspects de la collecte de données, tels que l’activation ou la désactivation de la collecte de données, la modification de la configuration d’un jeu d’éléments de collecte ou la consultation des données dans l’entrepôt de données de gestion.|[Gérer la collecte de données](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Utiliser des rapports pour obtenir des informations afin de contrôler la capacité système et de résoudre les problèmes de performances système.|[Rapports de jeux d’éléments de collecte de données système](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |Utiliser l’entrepôt de données de gestion pour collecter des données d’un serveur qui est une cible de collecte de données.|[entrepôt de données de gestion](../../relational-databases/data-collection/management-data-warehouse.md)| 
-|Exploiter les fonctions de trace côté serveur de SQL Server Profiler pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique.| [Utiliser SQL Server Profiler pour créer un jeu d’éléments de collecte Trace SQL (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
+|Exploiter les fonctions de trace côté serveur de SQL Server Profiler pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique.| [Utiliser SQL Server Profiler pour créer un jeu d’éléments de collecte Trace SQL (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
   
 
