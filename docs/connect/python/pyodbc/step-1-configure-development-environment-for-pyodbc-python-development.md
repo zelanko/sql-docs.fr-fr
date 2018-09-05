@@ -14,12 +14,12 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d591227354a950b36e085b350e207c4a8e89ff25
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: 7f588174ea80677066628cb3e756d7c38bd42fba
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890980"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42786884"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>Étape 1 : Configurer l’environnement de développement pour le développement Python pyodbc
 
@@ -29,7 +29,7 @@ Connectez-vous à la base de données SQL à l’aide de Python - pyodbc sur Win
 1. **Téléchargez le programme d’installation de Python**.  
   Si votre ordinateur ne dispose pas de Python, installez-le. Accédez à la [page de téléchargement de Python](https://www.python.org/downloads/windows/) et téléchargez le programme d’installation approprié. Par exemple, si vous êtes sur un ordinateur 64 bits, téléchargez le programme d’installation de Python 2.7 ou 3.7 (x64).  
   
-2. **Installez Python**.  Une fois le programme d’installation est téléchargé, procédez comme suit : un. Double-cliquez sur le fichier pour démarrer le programme d’installation. B. Sélectionnez votre langue, puis acceptez les termes du contrat. c. Suivez les instructions à l’écran et Python doit être installé sur votre ordinateur. d. Vous pouvez vérifier que Python est installé en accédant à `C:\Python27` ou `C:\Python37` et exécutez `python -v` ou `py -v` (pour 3.x) 
+2. **Installez Python**.  Une fois le programme d’installation est téléchargé, procédez comme suit : un. Double-cliquez sur le fichier pour démarrer le programme d’installation. B. Sélectionnez votre langue, puis acceptez les termes du contrat. c. Suivez les instructions à l’écran et Python doit être installé sur votre ordinateur. d. Vous pouvez vérifier que Python est installé en accédant à `C:\Python27` ou `C:\Python37` et exécutez `python -V` ou `py -V` (pour 3.x) 
       
 3. [**Installez Microsoft ODBC Driver for SQL Server sur Windows**](../../odbc/windows/system-requirements-installation-and-driver-files.md#installing-microsoft-odbc-driver-for-sql-server)
   
