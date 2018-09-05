@@ -2,7 +2,7 @@
 title: Notes de publication Microsoft SQL Operations Studio (version préliminaire) | Microsoft Docs
 description: Notes de publication Microsoft SQL Operations Studio (version préliminaire)
 ms.custom: tools|sos
-ms.date: 07/19/2018
+ms.date: 08/30/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,16 +13,71 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5c331fc8b9e95940e0aaca29efbada78083340f
-ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
+ms.openlocfilehash: 8d38e568aba12f8124035505b8ce1565f0c9b2cd
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39188955"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348419"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Notes de publication SQL Operations Studio (version préliminaire)
 
-**[Télécharger la version préliminaire publique de juillet](download.md)**
+**[Téléchargez la préversion publique d’août](download.md)**
+
+
+## <a name="august-2018-august-public-preview"></a>Août 2018 (préversion publique août)
+
+date de publication : 30 août 2018  
+version : 0.32.8
+
+*0.32.8 contient des correctifs pour quelques régression trouvée dans 0.32.7 ([#1971](https://github.com/Microsoft/sqlopsstudio/issues/1971), [#2372](https://github.com/Microsoft/sqlopsstudio/issues/2372)*)
+
+Le *version préliminaire publique d’août* se concentre sur les correctifs de bogues, stabilisation de produit et le remplissage des écarts dans les scénarios existants.  
+
+- Annonce de l’Extension d’importation SQL Server
+- Gestion des sessions de SQL Server Profiler
+- Prise en charge des modèles de session SQL Server Profiler
+- Améliorations de l’Agent SQL Server
+- Nouvelle extension de la Communauté : premier kit de répondeur
+- Améliorations de la qualité de vie : chaînes de connexion
+
+### <a name="bug-fixes"></a>Correctifs de bogues
+
+- Analyser SQL dans une fenêtre d’éditeur de requête à l’aide de la `Parse Syntax` commande.
+- Corriger [émettre #143](https://github.com/Microsoft/sqlopsstudio/issues/143): double-cliquez sur désélectionnez dans le nom de la variable.
+- Corriger [émettre #387](https://github.com/Microsoft/sqlopsstudio/issues/387): icône de base de données SQL onglet est rouge.
+- Corriger [émettre #825](https://github.com/Microsoft/sqlopsstudio/issues/825): demander : connexion automatique au serveur actuel après le Script en tant que... 
+- Corriger [émettre #1278](https://github.com/Microsoft/sqlopsstudio/issues/1278): sqlops.desktop [entrée du bureau] - valeur redondant pour nom & commentaire.
+- Corriger [émettre #1285](https://github.com/Microsoft/sqlopsstudio/issues/1285): la mise à jour entraîne l’icône d’application à être supprimé/remplacé dans Windows.
+- Corriger [émettre #1317](https://github.com/Microsoft/sqlopsstudio/issues/1317): corriger le séparateur décimal.
+- Corriger [émettre #1474](https://github.com/Microsoft/sqlopsstudio/issues/1474): Annuler Modifier la connexion déconnecte la connexion actuelle.
+- Corriger [émettre #1497](https://github.com/Microsoft/sqlopsstudio/issues/1497): vue en tant que graphique options sont tronquées en bas.
+- Corriger [émettre #1524](https://github.com/Microsoft/sqlopsstudio/issues/1524): Shell/tableau de bord : icônes de vues font Main sont déplaçables et peut se bloquer l’application.
+- Corriger [émettre #1578](https://github.com/Microsoft/sqlopsstudio/issues/1578): Impossible de développer/réduire le dossier de navigateur de fichier distant en cliquant sur le nom.
+- Corriger [émettre #1620](https://github.com/Microsoft/sqlopsstudio/issues/1620): Suggestion de fonctionnalité : obtenir la chaîne de connexion pour la connexion existante.
+- Corriger [émettre #1624](https://github.com/Microsoft/sqlopsstudio/issues/1624): SelectBox ne change pas lorsque désactivé.
+- Corriger [émettre #1728](https://github.com/Microsoft/sqlopsstudio/issues/1728): enregistrer en tant que JSON/EXCEL/CSV non professionnel.
+- Corriger [émettre #1744](https://github.com/Microsoft/sqlopsstudio/issues/1744): volet des résultats perd ses positions de défilement quand vous basculez entre les onglets.
+- Corriger [émettre #1748](https://github.com/Microsoft/sqlopsstudio/issues/1748): message d’erreur lors de l’enregistrement d’heure de fichier deuxième (et ultérieures) Excel.
+- Corriger [émettre #1782](https://github.com/Microsoft/sqlopsstudio/issues/1782): modifier des données : cellule ne revert à la valeur d’origine sur appuyant sur la touche ÉCHAP.
+- Corriger [émettre #1836](https://github.com/Microsoft/sqlopsstudio/issues/1836): fichiers .sql non associés à SQL Operations Studio.
+- Corriger [émettre #1850](https://github.com/Microsoft/sqlopsstudio/issues/1850): N en tapant « remplissage automatique des N'' '.
+- Corriger [émettre #1985](https://github.com/Microsoft/sqlopsstudio/issues/1985): copie à partir de la grille de résultats de requête est désactivée par la 1 colonne.
+- Corriger [émettre #1998](htpts://github.com/Microsoft/sqlopsstudio/pull/1998): version d’ajouter du Code Visual Studio à sur la boîte de dialogue.
+- Corriger [émettre #2042](https://github.com/Microsoft/sqlopsstudio/pull/2042): l’Agent : bouton activé pour importer des requêtes à partir de fichiers sql.
+- Corriger [émettre #2091](https://github.com/Microsoft/sqlopsstudio/issues/2091): Impossible d’utiliser le raccourci de Ctrl + C pour copier à partir du volet de résultats.
+- Corriger [émettre #2099](https://github.com/Microsoft/sqlopsstudio/pull/2099): ajout de plusieurs options saveAsCsv.
+- Corriger [émettre #2107](https://github.com/Microsoft/sqlopsstudio/issues/2107): icône de document de mise à jour pour les documents de tableau de bord et de Profiler.
+- Corriger [émettre #2129](https://github.com/Microsoft/sqlopsstudio/pull/2129): enregistrement des données de modifier la position de défilement lors du changement.
+- Corriger [émettre #2152](https://github.com/Microsoft/sqlopsstudio/issues/2152): résultats de grille ligne indicateur zéro basée.
+
+## <a name="known-issues"></a>Problèmes connus
+
+- [Problème #2371](https://github.com/Microsoft/sqlopsstudio/issues/2371) enregistrer comme Excel uniquement enregistre première ligne de données
+- [Problème #2150](https://github.com/Microsoft/sqlopsstudio/issues/2150): Impossible de se connecter sur Ubuntu 16.04 to SQL dans un conteneur
+
+Pour plus d’informations, consultez le [journal des modifications](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), et [versions](https://github.com/Microsoft/sqlopsstudio/releases).
+
 
 ## <a name="july-2018-july-public-preview"></a>Juillet 2018 (préversion publique de juillet)
 
@@ -61,10 +116,6 @@ Le *préliminaire de juillet* se concentre sur la version initiale des scénario
  - Corriger [émettre 1817](https://github.com/Microsoft/sqlopsstudio/issues/1817): erreur de Ortografia
  - Corriger [émettre 1830](https://github.com/Microsoft/sqlopsstudio/issues/1830): paramètre iconPath dans ButtonComponent après l’appel de component() ne change pas l’icône
  - Corriger [émettre 1843](https://github.com/Microsoft/sqlopsstudio/issues/1843): organisation d’une meilleure Table
-
-
-Pour plus d’informations, consultez le [journal des modifications](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), et [versions](https://github.com/Microsoft/sqlopsstudio/releases).
-
 
 
 ## <a name="june-2018-june-public-preview"></a>Juin 2018 (aperçu Public de juin)

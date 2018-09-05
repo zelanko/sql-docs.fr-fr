@@ -19,12 +19,12 @@ caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19512299b7eacf0e768ef2a53bd867f05d5cc6d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12c58fcc3e844e820dbea02e93b52854dc25f05f
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206539"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348360"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurer les comptes de service (Analysis Services)
   L’approvisionnement de comptes à l’échelle du produit est traité dans la rubrique [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md). Vous y trouverez des informations complètes sur les comptes de service pour tous les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y compris [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Reportez-vous à cette rubrique pour en savoir plus sur les types de comptes valides, les privilèges Windows assignés par le programme d'installation, les autorisations du système de fichiers, les autorisations de Registre et bien plus encore.  
@@ -60,7 +60,7 @@ ms.locfileid: "37206539"
  Le seul membre du groupe est le SID par service. Juste à côté se trouve le compte d'ouverture de session. Le nom de compte d'ouverture de session est symbolique, il permet de fournir du contexte au SID par service. Si vous modifiez ultérieurement le compte d'ouverture de session et que vous revenez ensuite à cette page, vous remarquerez que le groupe de sécurité et le SID par service ne changent pas, mais que l'étiquette du compte d'ouverture de session est différente.  
   
 ##  <a name="bkmk_winpriv"></a> Privilèges Windows affectés au compte de service Analysis Services  
- Analysis Services a besoin d'autorisations du système d'exploitation pour le démarrage du service et pour demander des ressources système. Les exigences varient en fonction du mode serveur et selon qu'il s'agit ou non d'une instance en cluster. Si vous souhaitez vous familiariser avec les privilèges Windows, consultez [Privileges](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) (Privilèges) et [Privilege Constants (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) [Constantes de privilèges (Windows)].  
+ Analysis Services a besoin d'autorisations du système d'exploitation pour le démarrage du service et pour demander des ressources système. Les exigences varient en fonction du mode serveur et selon qu'il s'agit ou non d'une instance en cluster. Si vous souhaitez vous familiariser avec les privilèges Windows, consultez [Privileges](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) (Privilèges) et [Privilege Constants (Windows)](/windows/desktop/SecAuthZ/privilege-constants) [Constantes de privilèges (Windows)].  
   
  Toutes les instances d’Analysis Services nécessitent le privilège **Ouvrir une session en tant que service** (SeServiceLogonRight). Le programme d'installation de SQL Server assigne automatiquement ce privilège sur le compte de service spécifié durant l'installation. Pour les serveurs qui s'exécutent en mode multidimensionnel et exploration de données, il s'agit du seul privilège Windows requis par le compte de service Analysis Services pour les installations serveur autonome et du seul privilège que le programme d'installation configure pour Analysis Services. Pour les instances tabulaires et en cluster, des privilèges Windows supplémentaires doivent être ajoutés manuellement.  
   
@@ -156,8 +156,8 @@ ms.locfileid: "37206539"
  [Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server Service Account and Per-Service SID (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server utilise un SID de service pour assurer l’isolation de service (Article de la base de connaissances)](http://support.microsoft.com/kb/2620201)   
- [Jeton d’accès (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [Identificateurs de sécurité (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [Jeton d’accès (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [Identificateurs de sécurité (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [Jeton d’accès (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [Listes de contrôle d’accès (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

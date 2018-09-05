@@ -1,5 +1,5 @@
 ---
-title: Règles d’affectation de noms (Analysis Services) de l’objet | Documents Microsoft
+title: Règles d’affectation de noms (Analysis Services) de l’objet | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0200c7bedb0d0dd7dd990ef8cbe9ed2114978b8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b10662d32952565ccf7b30a6615470d2557749f3
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025626"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348640"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Règles d'attribution de noms aux objets (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34025626"
   
 -   Il n'y a aucune spécification spéciale pour le premier caractère d'un identificateur. Le premier caractère peut être tout caractère valide.  
   
-##  <a name="bkmk_reserved"></a> Mots et caractères réservés  
+##  <a name="bkmk_reserved"></a> Mots réservés et des caractères  
  Les mots réservés sont en anglais et s'appliquent aux noms d'objet, pas aux légendes. Si vous utilisez accidentellement un mot réservé dans un nom d'objet, une erreur de validation se produit. Pour les modèles d'exploration de données et multidimensionnels, les mots réservés décrits ci-dessous ne peuvent jamais être utilisés dans un nom d'objet.  
   
  Pour les modèles tabulaires, où la compatibilité de la base de données est définie sur 1103, les règles de validation ont été assouplies pour certains objets et ne sont pas conformes aux critères de caractères étendus et de conventions d'attribution de noms de certaines applications clientes. Les bases de données qui répondent à ces critères sont soumises à des règles de validation moins rigoureuses. Dans ce cas, un nom d'objet peut éventuellement inclure un caractère restreint et néanmoins être validé.  
@@ -66,11 +66,11 @@ ms.locfileid: "34025626"
   
 |Objet|Caractères non valides|  
 |------------|------------------------|  
-|**Server**|Suivez les conventions d'attribution des noms de serveur Windows lorsque vous nommez un objet serveur. Pour plus d'informations, consultez [Conventions d'attribution des noms (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) .|  
-|**DataSource**|: / \ * &#124; ? « [] de () {} <>|  
+|**Server**|Suivez les conventions d'attribution des noms de serveur Windows lorsque vous nommez un objet serveur. Consultez [Conventions d’affectation de noms (Windows)](/windows/desktop/DNS/naming-conventions) pour plus d’informations.|  
+|**DataSource**|: / \ * &#124; ? « [] () {} <>|  
 |**Level** ou **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**Dimension** ou **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] de () {} \<, >|  
-|Tous les autres objets|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] de () {} < >|  
+|**Dimension** ou **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
+|Tous les autres objets|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} < >|  
   
  **Exceptions : Lorsque les caractères réservés sont autorisés**  
   

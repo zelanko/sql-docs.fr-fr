@@ -8,93 +8,50 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: bf8f9a6362b72efddccbf5c2b0e54096c6e86aa7
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 2f55962069c67fe7907968e024cdacb920b02d4e
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40395933"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348610"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Notation native à l’aide de la fonction de prédire le T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Une fois que vous avez un modèle préentraîné, vous pouvez passer les nouvelles données d’entrée à la fonction pour générer des valeurs de prédiction ou *scores*. Dans SQL Server 2017 Windows ou Linux, ou dans la base de données SQL Azure, vous pouvez utiliser la fonction PREDICT dans Transact-SQL pour prendre en charge la notation native. Elle nécessite uniquement que vous disposez d’un modèle déjà formé, que vous pouvez appeler à l’aide de T-SQL. 
+Notation native tire parti des fonctionnalités extension du C++ natives dans SQL Server 2017 pour générer des valeurs de prédiction ou *scores* pour les nouvelles entrées de données quasiment en temps réel. Cette méthodologie offre la vitesse de traitement plus rapide de prévision et prédiction des charges de travail, mais il est fourni avec les exigences de plate-forme et de la bibliothèque : seuls les fonctions RevoScaleR et revoscalepy ont des implémentations C++.
 
-+ What ' s native de notation et la notation en temps réel
-+ Fonctionnement
-+ Configuration requise et plates-formes prises en charge
-
-## <a name="what-is-native-scoring-and-how-is-it-different-from-real-time-scoring"></a>Quelle est la notation native et en quoi diffère de la notation en temps réel ?
-
-Dans SQL Server 2016, Microsoft a créé une infrastructure d’extensibilité qui permet aux scripts R doit être exécuté à partir de T-SQL. Cette infrastructure prend en charge toute opération que vous pouvez effectuer dans R, allant de fonctions simples de formation complexe modèles d’apprentissage. Toutefois, l’architecture du processus de double requiert appeler un processus R externe pour chaque appel, quel que soit la complexité de l’opération. Si vous chargez un modèle préentraîné à partir d’une table et la notation dont elle fait sur les données déjà présentes dans SQL Server, la surcharge de l’appel au processus R externe représente un coût de performances inutiles.
-
-_Calcul de score_ est un processus en deux étapes. Tout d’abord, vous spécifiez un modèle préentraîné à charger à partir d’une table. En second lieu, passez de nouveau les données à la fonction, pour générer des valeurs de prédiction d’entrée (ou _scores_). L’entrée peut être tabulaires ou uniques des lignes. Vous pouvez choisir de générer une valeur de colonne unique qui représente une probabilité ou vous pouvez générer plusieurs valeurs, comme un intervalle de confiance, erreur ou autres complément utile à la prédiction.
-
-Lorsque l’entrée inclut plusieurs lignes de données, il est généralement plus rapide pour insérer les valeurs de prédiction dans une table en tant que partie du processus de calcul de score.  Génération d’une seule note est plus courant dans un scénario où obtenir les valeurs d’entrée à partir d’une demande de formulaire ou d’utilisateur et retourner le score à une application cliente. Pour améliorer les performances lors de la génération de scores successives, SQL Server peut mettre en cache le modèle afin qu’il peut être rechargé en mémoire.
-
-Pour prendre en charge rapide de notation, SQL Server Machine Learning Services (et Microsoft Machine Learning Server) fournissent des bibliothèques de score intégrés qui fonctionnent dans R ou T-SQL. Il existe des options différentes selon la version dont vous disposez.
-
-**Calcul de score en natif**
-
-+ La fonction PREDICT dans Transact-SQL prend en charge _notation native_ dans n’importe quelle instance de SQL Server 2017. Elle nécessite uniquement que vous disposez d’un modèle déjà formé, que vous pouvez appeler à l’aide de T-SQL. Notation native à l’aide de T-SQL offre ces avantages :
-
-    + Aucune configuration supplémentaire n’est nécessaire.
-    + Le runtime R n’est pas appelé. Il est inutile d’installer R.
-
-**Calcul de score en temps réel**
-
-+ **sp_rxPredict** est une procédure stockée pour notation en temps réel qui peut être utilisé pour génère les scores à partir de n’importe quel type de modèle pris en charge, sans appeler le runtime R.
-
-  Cette procédure stockée est également disponible dans SQL Server 2016, si vous mettez à niveau les composants R à l’aide du programme d’installation autonome de Microsoft R Server. sp_rxPredict est également pris en charge dans SQL Server 2017. Par conséquent, vous pouvez utiliser cette fonction lors de la génération de scores avec un type de modèle non pris en charge par la fonction PREDICT.
-
-+ La fonction rxPredict peut être utilisée pour calculer les scores rapide dans du code R.
-
-Pour l’ensemble de ces méthodes, vous devez utiliser un modèle qui a été formé à l’aide d’un des algorithmes RevoScaleR ou MicrosoftML pris en charge.
-
-Pour obtenir un exemple de calcul de score en temps réel en action, consultez [fin à la fin prêt pertes sèches sur prédiction créé à l’aide de Azure HDInsight Clusters Spark et SQL Server 2016 R services](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
+Notation native nécessite que vous disposez d’un modèle déjà formé. Dans SQL Server 2017 Windows ou Linux, ou dans la base de données SQL Azure, vous pouvez utiliser la fonction PREDICT dans Transact-SQL pour appeler la notation native. La fonction PREDICT prend un modèle préformé et génère les scores sur les entrées de données que vous fournissez.
 
 ## <a name="how-native-scoring-works"></a>Comment native notation fonctionne
 
-Notation native utilise les bibliothèques C++ natives à partir de Microsoft qui peut lire le modèle à partir d’un format binaire spécial et générer des scores. Car un modèle peut être publié et utilisé pour calculer les scores sans avoir à appeler l’interpréteur R, la surcharge de plusieurs des interactions de processus est réduite. Par conséquent, notation native prend en charge les performances de prédiction beaucoup plus rapides dans les scénarios de production d’entreprise.
+Notation utilise native C++ bibliothèques natives à partir de Microsoft qui peut lire un modèle déjà formé, précédemment stockées dans un format binaire spécial ou enregistré sur le disque en tant que flux d’octets bruts et générer des scores pour nouvelles entrées de données que vous fournissez. Étant donné que le modèle est formé, publiées et stockées, il peut être utilisé pour calculer les scores sans avoir à appeler l’interpréteur R ou Python. Par conséquent, la surcharge de plusieurs des interactions de processus est réduite, ce qui entraîne des performances de prédiction beaucoup plus rapide dans les scénarios de production d’entreprise.
 
-Pour générer des scores à l’aide de cette bibliothèque, vous appelez la fonction de score et passez les entrées requises suivantes :
+Pour utiliser la notation native, appelez la fonction T-SQL prédire et passer les entrées requises suivantes :
 
-+ Un modèle compatible. Consultez le [exigences](#Requirements) section pour plus d’informations.
-+ Données d’entrée, généralement définies comme une requête SQL
++ Un modèle compatible basé sur un algorithme pris en charge.
++ Données d’entrée, généralement définies comme une requête SQL.
 
 La fonction renvoie des prédictions pour les données d’entrée, ainsi que toutes les colonnes de données source que vous souhaitez passer.
 
-Pour obtenir des exemples de code, ainsi que des instructions sur la façon de préparer les modèles dans le format binaire requis, consultez cet article :
+## <a name="prerequisites"></a>Prérequis
 
-+ [Comment exécuter une notation en temps réel](r/how-to-do-realtime-scoring.md)
+PRÉDIRE est disponible sur toutes les éditions du moteur de base de données SQL Server 2017 et activé par défaut, y compris SQL Server 2017 Machine Learning Services sur Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) ou base de données SQL Azure. Vous n’avez pas besoin installer R, Python, ou activer des fonctionnalités supplémentaires.
 
-Pour une solution complète qui inclut la notation native, consultez ces exemples à partir de l’équipe de développement SQL Server :
++ Le modèle doit être formé à l’avance à l’aide d’une des prises en charge **rx** algorithmes répertoriés ci-dessous.
 
-+ Déployer votre script ML : [à l’aide d’un modèle Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ Déployer votre script ML : [à l’aide d’un modèle R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ Sérialiser le modèle à l’aide [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) pour R, et [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) pour Python. Ces fonctions de sérialisation ont été optimisées pour prendre en charge rapide de notation.
 
-## <a name="requirements"></a>Spécifications
+<a name="bkmk_native_supported_algos"></a> 
 
-Plateformes prises en charge sont les suivantes :
+## <a name="supported-algorithms"></a>Algorithmes pris en charge
 
-+ SQL Server 2017 Machine Learning Services (inclut Microsoft R Server 9.1.0).)
-    
-    Notation native à l’aide de PREDICT nécessite SQL Server 2017.
-    Elle fonctionne sur n’importe quelle version de SQL Server 2017, y compris Linux.
++ modèles de revoscalepy
 
-    Vous pouvez également effectuer une notation à l’aide de sp_rxPredict en temps réel. Pour utiliser cette procédure stockée nécessite que vous activiez [intégration du CLR de SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
-
-+ SQL Server 2016
-
-   En temps réel à l’aide de la notation sp_rxPredict est possible avec SQL Server 2016 et peut également être exécuté sur Microsoft R Server. Cette option nécessite SQLCLR doit être activé et que vous installez la mise à niveau de Microsoft R Server.
-   Pour plus d’informations, consultez [de score en temps réel](Real-time-scoring.md)
-
-### <a name="model-preparation"></a>Préparation du modèle
-
-+ Le modèle doit être formé à l’avance à l’aide d’une des prises en charge **rx** algorithmes. Pour plus d’informations, consultez [pris en charge les algorithmes](#bkmk_native_supported_algos).
-+ Le modèle doit être enregistré à l’aide de la nouvelle fonction de sérialisation fournie dans Microsoft R Server 9.1.0). La fonction de sérialisation est optimisée pour prendre en charge rapide de notation.
-
-### <a name="bkmk_native_supported_algos"></a> Algorithmes qui prennent en charge la notation native
+  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
+  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) 
+  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) 
+  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
+  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
 
 + Modèles de RevoScaleR
 
@@ -104,18 +61,112 @@ Plateformes prises en charge sont les suivantes :
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-Si vous avez besoin d’utiliser des modèles à partir de MicrosoftML, utilisez la notation en temps réel avec sp_rxPredict.
+Si vous avez besoin d’utiliser des modèles à partir de MicrosoftML ou microsoftml, utilisez [notation en temps réel avec sp_rxPredict](real-time-scoring.md).
 
-### <a name="restrictions"></a>Restrictions
+Types de modèles non pris en charge sont les suivants :
 
-Les types de modèles suivants ne sont pas prises en charge :
-
-+ Modèles contenant d’autres types de transformations de R non pris en charge
-+ Modèles à l’aide de la `rxGlm` ou `rxNaiveBayes` algorithmes dans RevoScaleR
++ Modèles contenant d’autres transformations
++ Modèles à l’aide de la `rxGlm` ou `rxNaiveBayes` algorithmes dans RevoScaleR ou revoscalepy équivalents
 + Modèles PMML
-+ Modèles créés à l’aide d’autres bibliothèques R à partir de CRAN ou d’autres référentiels
-+ Modèles contenant toutes les transformations de R
++ Modèles créés à l’aide d’autres bibliothèques open source ou tierces
 
-## <a name="see-also"></a>Voir aussi
+## <a name="example-predict-t-sql"></a>Exemple : Prédire (T-SQL)
 
-[Notation dans l’apprentissage de SQL Server en temps réel ](real-time-scoring.md)
+Dans cet exemple, vous créez un modèle et puis appelez la fonction de prédiction en temps réel à partir de T-SQL.
+
+### <a name="step-1-prepare-and-save-the-model"></a>Étape 1. Préparer et enregistrer le modèle
+
+Exécutez le code suivant pour créer la base de données exemple et les tables requises.
+
+```SQL
+CREATE DATABASE NativeScoringTest;
+GO
+USE NativeScoringTest;
+GO
+DROP TABLE IF EXISTS iris_rx_data;
+GO
+CREATE TABLE iris_rx_data (
+  "Sepal.Length" float not null, "Sepal.Width" float not null
+  , "Petal.Length" float not null, "Petal.Width" float not null
+  , "Species" varchar(100) null
+);
+GO
+```
+
+Utilisez l’instruction suivante pour remplir la table de données avec des données à partir de la **iris** jeu de données.
+
+```SQL
+INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
+EXECUTE sp_execute_external_script
+  @language = N'R'
+  , @script = N'iris_data <- iris;'
+  , @input_data_1 = N''
+  , @output_data_1_name = N'iris_data';
+GO
+```
+
+Maintenant, créez une table pour stocker les modèles.
+
+```SQL
+DROP TABLE IF EXISTS ml_models;
+GO
+CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
+  , model_version nvarchar(100) not null
+  , native_model_object varbinary(max) not null);
+GO
+```
+
+Le code suivant crée un modèle basé sur le **iris** jeu de données et l’enregistre dans la table nommée **modèles**.
+
+```SQL
+DECLARE @model varbinary(max);
+EXECUTE sp_execute_external_script
+  @language = N'R'
+  , @script = N'
+    iris.sub <- c(sample(1:50, 25), sample(51:100, 25), sample(101:150, 25))
+    iris.dtree <- rxDTree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, data = iris[iris.sub, ])
+    model <- rxSerializeModel(iris.dtree, realtimeScoringOnly = TRUE)
+    '
+  , @params = N'@model varbinary(max) OUTPUT'
+  , @model = @model OUTPUT
+  INSERT [dbo].[ml_models]([model_name], [model_version], [native_model_object])
+  VALUES('iris.dtree','v1', @model) ;
+```
+
+> [!NOTE] 
+> Veillez à utiliser le [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) fonction à partir de RevoScaleR pour enregistrer le modèle. Le standard de R `serialize` fonction ne peut pas générer le format requis.
+
+Vous pouvez exécuter une instruction telle que la suivante pour afficher le modèle stocké au format binaire :
+
+```SQL
+SELECT *, datalength(native_model_object)/1024. as model_size_kb
+FROM ml_models;
+```
+
+### <a name="step-2-run-predict-on-the-model"></a>Étape 2. Exécutez PREDICT sur le modèle
+
+L’instruction PREDICT simple suivante obtient une classification du modèle d’arborescence de décision à l’aide du **notation native** (fonction). Il prévoit l’espèce iris en fonction des attributs fournis, la longueur des pétales et la largeur.
+
+```SQL
+DECLARE @model varbinary(max) = (
+  SELECT native_model_object
+  FROM ml_models
+  WHERE model_name = 'iris.dtree'
+  AND model_version = 'v1');
+SELECT d.*, p.*
+  FROM PREDICT(MODEL = @model, DATA = dbo.iris_rx_data as d)
+  WITH(setosa_Pred float, versicolor_Pred float, virginica_Pred float) as p;
+go
+```
+
+Si vous obtenez l’erreur, « erreur s’est produite pendant l’exécution de la fonction PREDICT. Modèle est endommagé ou non valide », cela signifie généralement que votre requête n’a pas retourné d’un modèle. Vérifiez si vous avez correctement tapé le nom du modèle, ou si la table de modèles est vide.
+
+> [!NOTE]
+> Étant donné que les colonnes et les valeurs retournées par **PREDICT** peut varier selon le type de modèle, vous devez définir le schéma des données retournées à l’aide un **WITH** clause.
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Pour une solution complète qui inclut la notation native, consultez ces exemples à partir de l’équipe de développement SQL Server :
+
++ Déployer votre script ML : [à l’aide d’un modèle Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Déployer votre script ML : [à l’aide d’un modèle R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)

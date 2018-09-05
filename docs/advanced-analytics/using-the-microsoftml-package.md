@@ -7,19 +7,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 51ffa33bef7ab880704c9c1391a69feb3e194202
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a75ed22e46576c701e281f495d5bc123ca489526
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984561"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348460"
 ---
 # <a name="using-the-microsoftml-package-with-sql-server"></a>À l’aide du package MicrosoftML avec SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Le [ **MicrosoftML** ](https://msdn.microsoft.com/microsoft-r/microsoftml-introduction) package qui est fourni avec Microsoft R Server et SQL Server 2017 comprend plusieurs algorithmes machine learning. Ces API ont été développées par Microsoft pour les applications d’apprentissage interne et ont été affinées au fil des années pour prendre en charge des performances élevées sur les big data, à l’aide de traitement multicœur et le streaming rapide des données. MicrosoftML inclut également de nombreuses transformations pour le traitement d’image et texte.
 
-Dans SQL Server 2017 CTP 2.0, la prise en charge a été ajoutée pour le langage Python. Le **microsoftml** package pour Python contient des fonctions équivalentes à celles dans le package MicrosoftML pour R. 
+Dans SQL Server 2017, la prise en charge a été ajoutée pour le langage Python. Le **microsoftml** package pour Python contient des fonctions équivalentes à celles dans le package MicrosoftML pour R. 
 
 + **MicrosoftML pour R**
 

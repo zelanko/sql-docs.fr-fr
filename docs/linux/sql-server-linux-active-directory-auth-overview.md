@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9d55275269ee09daf933521330b093a8d98411fd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c1d6116509a87fae2e91307f06f527910c204510
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087111"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381167"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Authentification Active Directory pour SQL Server sur Linux
 
@@ -52,7 +52,6 @@ Les détails pour savoir comment configurer l’authentification Active Director
 ## <a name="known-issues"></a>Problèmes connus
 
 - À ce stade, la seule méthode d’authentification prise en charge pour le point de terminaison de mise en miroir de base de données est le certificat. La méthode d’authentification WINDOWS sera activée dans une version ultérieure.
-- Outils de AD tiers comme Centrify, Powerbroker, et Vintela ne sont pas pris en charge.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

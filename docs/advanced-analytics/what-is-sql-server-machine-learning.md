@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fa0197d15869197bf61021d077a57dac399b1e58
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 6f29867351f0fa19817c7f39cbcca5da96a7e862
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118347"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240187"
 ---
 # <a name="machine-learning-services-in-sql-server-2017"></a>Machine Learning Services dans SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,11 +41,13 @@ SQL Server 2017 prend en charge R et Python. Le tableau suivant décrit les co
 | Scripts et des exemples Python | Comme avec R, Python inclut des jeux de données intégrés et des scripts.  |
 | Modèles préentraînés dans R et Python | Modèles préentraînés sont créés pour les cas d’usage spécifiques et gérés par l’équipe d’ingénierie science des données chez Microsoft. Vous pouvez utiliser les modèles préformés comme-consiste à noter les sentiments négatifs positif dans le texte, ou à détecter les fonctionnalités dans des images, à l’aide de nouvelles entrées de données que vous fournissez. Les modèles s’exécutent dans Machine Learning Services, mais ne peut pas être installés via le programme d’installation de SQL Server. Pour plus d’informations, consultez [installation préentraîné modèles d’apprentissage sur SQL Server](install/sql-pretrained-models-install.md). |
 
-## <a name="using-in-database-analytics"></a>À l’aide de la base de données analytique
+## <a name="using-sql-mls"></a>À l’aide de SQL MLS
 
-Analystes et les développeurs ont souvent le code qui s’exécute sur une instance de SQL Server locale. L’approche la plus courante pour la base de données analytique consiste à utiliser [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), en passant de script R ou Python comme paramètre d’entrée.
+Analystes et les développeurs ont souvent le code qui s’exécute sur une instance de SQL Server locale. En ajoutant des Services Machine Learning et l’activation de l’exécution du script externe, vous avez la possibilité d’exécuter du code R et Python dans les modalités de SQL Server : encapsulant le script dans les procédures stockées, stocker des modèles dans une table SQL Server ou combinaison de T-SQL et des fonctions R ou Python dans les requêtes.
 
-Interactions client-serveur classique sont un autre modalité. À partir de n’importe quel client station de travail avec un IDE, vous pouvez installer [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) ou [bibliothèques Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)et ensuite écrire du code qui exécute un push de l’exécution (appelé un *calcul à distance contexte*) aux données et aux opérations à un serveur SQL distant. 
+L’approche la plus courante pour la base de données analytique consiste à utiliser [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), en passant de script R ou Python comme paramètre d’entrée.
+
+Interactions client-serveur classique sont une autre approche. À partir de n’importe quel client station de travail avec un IDE, vous pouvez installer [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) ou [bibliothèques Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)et ensuite écrire du code qui exécute un push de l’exécution (appelé un *calcul à distance contexte*) aux données et aux opérations à un serveur SQL distant. 
 
 Enfin, si vous utilisez un [serveur autonome](r/r-server-standalone.md) et l’édition développeur, vous pouvez créer des solutions sur une station de travail cliente à l’aide de la même interpréteurs et des bibliothèques et déployer le code de production sur SQL Server Machine Learning Services (en base de données). 
 

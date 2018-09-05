@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 415de36195960c1a2fa60d3e5dd68168682028e0
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 84601b6a556df64d3708fd749af06be8e753048d
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152830"
+ms.locfileid: "43240147"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identifier la référence SKU à base de données SQL Azure appropriée pour votre base de données locale
 
@@ -34,17 +34,20 @@ Cet article se concentre essentiellement sur la fonctionnalité de recommandatio
 > [!NOTE] 
 > Cette fonctionnalité est actuellement disponible uniquement via l’Interface de ligne de commande (CLI). Prise en charge de cette fonctionnalité via l’interface utilisateur DMA figurera dans une prochaine version.
 
+> [!IMPORTANT]
+> Recommandations de référence (SKU) pour Azure SQL Database sont actuellement disponibles pour les migrations à partir de SQL Server 2016 ou version ultérieure.
+
 Les instructions suivantes vous permettent de déterminer les recommandations de référence de base de données SQL Azure et configurer les bases de données associées vers Azure, à l’aide de Data Migration Assistant.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Télécharger l’Assistant de Migration de base de données version 4.0 ou version ultérieure, puis installez-le. Si vous disposez déjà de l’outil est installé, fermez et rouvrez et vous serez invité à mettre à niveau de l’outil.
+Télécharger l’Assistant de Migration de base de données version 4.0 ou version ultérieure, puis installez-le. Si vous avez déjà l’outil installé, fermez et rouvrez, et vous êtes invité à mettre à niveau de l’outil.
 
 ## <a name="collect-performance-counters"></a>Collecter les compteurs de performances
 
 La première étape du processus consiste à collecter les compteurs de performances de vos bases de données. Vous pouvez collecter les compteurs de performances en exécutant une commande PowerShell sur l’ordinateur qui héberge vos bases de données. DMA vous fournit une copie de ce fichier de PowerShell, mais vous pouvez également utiliser votre propre méthode pour capturer les compteurs de performances de votre ordinateur.
 
-Il est inutile d’effectuer cette tâche pour chaque base de données individuellement. Les compteurs de performances collectées à partir d’un ordinateur peuvent être utilisés pour recommander la référence (SKU) pour toutes les bases de données hébergées sur l’ordinateur.
+Vous n’avez pas besoin effectuer cette tâche pour chaque base de données individuellement. Les compteurs de performances collectées à partir d’un ordinateur peuvent être utilisés pour recommander la référence (SKU) pour toutes les bases de données hébergées sur l’ordinateur.
 
 > [!IMPORTANT]
 > L’ordinateur à partir duquel vous exécutez cette commande requiert des autorisations d’administrateur sur l’ordinateur qui héberge vos bases de données.
@@ -144,7 +147,7 @@ Une description de chaque colonne suit.
 - **ExclusionReasons** -cette valeur est vide si un niveau est recommandé. Pour chaque niveau qui n’est pas recommandé, nous fournissons les raisons pourquoi il n’était pas récupéré.
 - **AppliedRules** -une notation courte des règles qui ont été appliquées.
 
-Notez que la valeur recommandée est la référence (SKU) minimale nécessaire pour vos requêtes à exécuter dans Azure avec un taux de réussite semblable à vos bases de données sur site. Par exemple, si la référence (SKU) minimale recommandée est S4 pour le niveau standard, puis en choisissant S3 ci-dessous sera provoquer l’expiration du délai des requêtes ou ne parviennent pas à exécuter.
+La valeur recommandée est la référence (SKU) minimale nécessaire pour vos requêtes à exécuter dans Azure avec un taux de réussite semblable à vos bases de données sur site. Par exemple, si la référence (SKU) minimale recommandée est S4 pour le niveau standard, puis en choisissant S3 ci-dessous sera provoquer l’expiration du délai des requêtes ou ne parviennent pas à exécuter.
 
 Le fichier HTML contient ces informations dans un format graphique. Vous pouvez utiliser le fichier HTML à l’entrée des informations d’abonnement Azure, choisissez le niveau tarifaire, niveau et la taille maximale des données de calcul pour vos bases de données et générer un script pour configurer vos bases de données. Ce script peut être exécuté à l’aide de PowerShell.
 
