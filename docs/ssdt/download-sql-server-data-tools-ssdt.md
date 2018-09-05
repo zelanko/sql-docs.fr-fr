@@ -1,7 +1,7 @@
 ---
 title: Télécharger SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 6989aaf0ccef6a9cb7656a23ffdc28062a33839b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e2a11a9b01f6c1f45ba6f10bda351441235f8247
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084928"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152610"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Télécharger et installer SQL Server Data Tools (SSDT) pour Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,53 +84,6 @@ Vous pouvez installer cette version de **SSDT pour VS 2017** dans les langues su
 
 
 
-## <a name="ssdt-for-vs-2015-standalone-installer"></a>SSDT pour Visual Studio 2015 (programme d’installation autonome)
-
-[![télécharger](../ssdt/media/download.png) Télécharger SSDT pour Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)
-
-**Informations sur la version**  
-  
-Numéro de version : 17.4
-
-Numéro de build de cette version : 14.0.61712.050
-  
-Pour obtenir la liste complète des modifications, consultez le [journal des modifications](changelog-for-sql-server-data-tools-ssdt.md).
-
-### <a name="available-languages---ssdt-for-vs-2015"></a>Langues disponibles : SSDT pour VS 2015
-  
-Vous pouvez installer cette version de **SSDT pour VS 2015** dans les langues suivantes :  
-
-[Chinois (simplifié)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
-[Chinois (traditionnel)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
-[Anglais (États-Unis)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | 
-[Français]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c)  
-[allemand]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | 
-[italien]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x410) | 
-[japonais]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x411) | 
-[coréen]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x412) | 
-[portugais (Brésil)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x416) | 
-[russe]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x419) | 
-[espagnol]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40a)  
-
-### <a name="iso-images---ssdt-for-vs-2015"></a>Images ISO - SSDT pour VS 2015
-
-Une image ISO de SSDT peut être utilisée comme alternative pour installer SSDT ou pour installer un point d'installation d'administration. L'image ISO est un fichier auto-extractible qui contient tous les composants nécessaires à SSDT et qui peut être téléchargée à l'aide d'un gestionnaire de téléchargement redémarrable, ce qui est utile en cas de bande passante réseau limitée ou peu fiable. Une fois téléchargée, l’image ISO peut être montée comme lecteur ou gravée sur un DVD.
-
-> [!NOTE]
-> SSDT pour les images ISO Visual Studio 2015 17.4 est maintenant disponible.
-
-[Chinois (simplifié)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
-[Chinois (traditionnel)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
-[Anglais (États-Unis)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x409) |
-[Français]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40c)  
-[allemand]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x407) |
-[italien]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x410) |
-[japonais]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x411) |
-[coréen]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x412) |
-[portugais (Brésil)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x416) |
-[russe]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x419) |
-[espagnol]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40a)
-
 
 
 ## <a name="supported-sql-versions"></a>Versions de SQL prises en charge
@@ -143,6 +96,11 @@ Bases de données relationnelles|  SQL Server 2005* - SQL Server 2017<br> (uti
   
 ## <a name="dacfx"></a>DacFx
 SSDT pour Visual Studio 2015 et SSDT pour Visual Studio 2017 utilisent tous deux DacFx 17.4.1 : [Télécharger l’infrastructure d’application de couche Données (DacFx) 17.4.1](https://www.microsoft.com/download/details.aspx?id=56508).
+
+## <a name="previous-versions"></a>Versions précédentes
+
+Pour télécharger et installer SSDT pour Visual Studio 2015 ou une version précédente de SSDT, consultez [Versions précédentes de SQL Server Data Tools (SSDT et SSDT-BI)](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md).
+
 
 
 ## <a name="next-steps"></a>Étapes suivantes  

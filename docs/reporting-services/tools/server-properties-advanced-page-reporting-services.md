@@ -2,25 +2,18 @@
 title: Propriétés du serveur (page Avancé) - Reporting Services | Microsoft Docs
 author: markingmyname
 ms.author: maghan
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
+ms.technology: tools
 ms.suite: reporting-services
 ms.topic: conceptual
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
-ms.custom: ''
-ms.reviewer: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.date: 08/16/2018
-ms.openlocfilehash: 2f1fe16e169fa26d0fec402a5b52306bc80e460a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c0fef28c07244e220aab90873dd80226f9a3cddd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406168"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266267"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
 
@@ -139,15 +132,15 @@ Spécifie le nombre de secondes jusqu'à l'expiration d'une session d'édition d
 
 **OfficeOnlineDiscoveryURL** ***(Power BI Report Server uniquement)*** Définissez l’adresse de votre instance Office Online Server pour voir les classeurs Excel.
 
-**RequireIntune** Définissez cette option pour demander à Intune d’accéder aux rapports de votre organisation via l’application mobile Power BI. *La valeur par défaut est False.*
+**RequireIntune** Demande à Intune d’accéder aux rapports de votre organisation via l’application mobile Power BI. *La valeur par défaut est False.*
 
 **ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server uniquement)*** Définissez la durée au terme de laquelle vous souhaitez que l’actualisation planifiée expire. *La valeur par défaut est 120.*
 
-**ShowDownloadMenu** Définissez cette option pour activer le menu de téléchargement des outils du client. *La valeur par défaut est true.*
+**ShowDownloadMenu** Active le menu de téléchargement des outils du client. *La valeur par défaut est true.*
 
 **TimeInitialDelaySeconds** Définissez la durée pendant laquelle vous souhaitez que l’heure initiale soit différée, en secondes. *La valeur par défaut est 60.*
 
-**TrustedFileFormat** Définissez tous les formats de fichiers externes qui peuvent être enregistrés. *La valeur par défaut est jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.*
+**TrustedFileFormat** Définissez tous les formats de fichiers externes qui s’ouvrent dans le navigateur sur le site du portail Reporting Services. Les formats de fichiers externes non répertoriés invitent l’utilisateur à télécharger l’option dans le navigateur. Les valeurs par défaut sont jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web, png.
 
 **EnablePowerBIReportExportData** ***(Power BI Report Server uniquement)***  
 Activez l’exportation des données Power BI Report Server à partir des visuels Power BI. Les valeurs sont True, False.  La valeur par défaut est True.  

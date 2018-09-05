@@ -1,7 +1,7 @@
 ---
 title: Versions antérieures de SQL Server Data Tools (SSDT et SSDT-BI) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 92b9f905726bc3fb1d7288b5cc2b69edbb828ca7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bb437b756c19ee9c995452295c36000296846851
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077551"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152678"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versions antérieures de SQL Server Data Tools (SSDT et SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ SSDT offre une compatibilité descendante, ce qui signifie que vous pouvez toujo
 
 ## <a name="recent-downloads"></a>Téléchargements récents
 
-Voici les derniers téléchargements au cas où vous rencontreriez des problèmes avec la [dernière version](download-sql-server-data-tools-ssdt.md), ce qui est peu probable. 
+Voici les derniers téléchargements au cas où vous rencontreriez des problèmes avec la dernière version, ce qui est peu probable.
 
 |Version de SSDT| Visual Studio 2017|
 |:---|:---|
@@ -43,10 +43,10 @@ Voici les derniers téléchargements au cas où vous rencontreriez des problème
 |15.5.2|[SSDT pour VS2017 15.5.2](https://go.microsoft.com/fwlink/?LinkId=866452)|
 <br>
 
-
 |Version de SSDT| Visual Studio 2015|
 |:---|:---|
-|17.3|[SSDT pour VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)| 
+|17.4|[SSDT pour VS2015 17.4](https://go.microsoft.com/fwlink/?linkid=863440)|
+|17.3|[SSDT pour VS2015 17.3](https://go.microsoft.com/fwlink/?linkid=858660)|
 |16.5|[SSDT pour VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
 <br>
 

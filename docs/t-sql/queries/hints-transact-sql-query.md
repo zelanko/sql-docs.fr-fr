@@ -1,7 +1,7 @@
 ---
 title: Indicateurs de requête (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 534251e03b3f2a76994a3138475dc0de35388fd4
-ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
+ms.openlocfilehash: 450812006d18f143ec2b6083bf2bd0701ea4c252
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39331595"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240287"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "39331595"
  Empêche la requête d’utiliser un index columnstore non-cluster à mémoire optimisée. Si la requête contient l'indicateur de requête pour éviter l'utilisation de l'index columnstore et un indicateur d'index pour utiliser un index columnstore, les indicateurs sont en conflit et la requête retourne une erreur.  
   
  MAX_GRANT_PERCENT = *percent*  
- Taille de l’allocation maximale de mémoire, en pourcentage. La requête ne peut pas dépasser cette limite. La limite réelle peut être inférieure si le paramètre de Resource Governor lui est inférieur. Les valeurs valides sont comprises entre 0,0 et 100,0.  
+ Taille de l’allocation maximale de mémoire, en pourcentage. La requête ne peut pas dépasser cette limite. La limite réelle peut être inférieure si le paramètre de Resource Governor est inférieur à la valeur spécifiée par cet indicateur. Les valeurs valides sont comprises entre 0,0 et 100,0.  
   
 **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -255,7 +255,7 @@ ms.locfileid: "39331595"
  Si un tel plan n'est pas possible, l'optimiseur de requête retourne une erreur au lieu de reporter la détection de l'erreur au moment de l'exécution de la requête. Les lignes peuvent contenir des colonnes de longueur variable. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] permet de définir des lignes d’une taille maximale potentielle que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est pas en mesure de traiter. En règle générale, en dépit de la taille maximale potentielle, une application stocke des lignes dont la taille réelle est comprise dans les limites gérées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] trouve une ligne trop longue, il retourne une erreur d'exécution.  
  
 <a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Fournit un ou plusieurs indicateurs supplémentaires au processeur de requêtes. Les noms d’indicateur sont indiqués **entre des guillemets simples**.   
 
@@ -285,11 +285,17 @@ ms.locfileid: "39331595"
  Désactive les retours d’allocation de mémoire en mode batch. Pour plus d’informations, consultez [Retour d’allocation de mémoire en mode batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  Désactive les jointures adaptatives en mode batch. Pour plus d’informations, consultez [Jointures adaptatives en mode batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+ Force le comportement de l’optimiseur de requête au niveau d’une requête, comme si la requête était compilée avec le niveau de compatibilité de base de données *n*, où *n* est un niveau de compatibilité de base de données pris en charge. Consultez [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) pour obtenir la liste des valeurs actuellement prises en charge pour *n*. **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].   
  
-> [!TIP]
-> Les noms d’indicateur respectent la casse.
+    > [!NOTE]
+    > L’indicateur QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n ne remplace pas le paramètre d’estimation de cardinalité héritée ou par défaut, s’il est forcé via la configuration délimitée à la base de données, l’indicateur de suivi ou un autre indicateur de requête comme QUERYTRACEON.   
+    > Cet indicateur affecte uniquement le comportement de l’optimiseur de requête. Il n’affecte pas les autres fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui peuvent dépendre du [niveau de compatibilité de base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), comme la disponibilité de certaines fonctionnalités de la base de données.   
   
   Vous pouvez obtenir la liste de tous les noms d’indicateur USE HINT pris en charge en effectuant une requête sur la vue de gestion dynamique [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
+
+> [!TIP]
+> Les noms d’indicateur respectent la casse.   
   
 > [!IMPORTANT] 
 > Certains indicateurs USE HINT peuvent être en conflit avec des indicateurs de trace activés au niveau global ou session, ou avec des paramètres de configuration au niveau base de données. Dans ce cas, l’indicateur de niveau requête (USE HINT) est toujours prioritaire. En présence d’un conflit entre l’indicateur USE HINT et un autre indicateur de requête ou un indicateur de trace activé au niveau requête (par exemple, par QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur quand vous tentez d’exécuter la requête. 

@@ -13,12 +13,12 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dd177d3094f50cd226ed5613ded8fc0d76e6891
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f71ca47b4927e2ea7c6e73d216c062c253387baa
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769065"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348200"
 ---
 # <a name="configure-distributed-availability-group"></a>Configurer un groupe de disponibilité distribué  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ GO
 ## <a name="create-first-availability-group"></a>Créer un premier groupe de disponibilité
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>Créer le groupe de disponibilité principal sur le premier cluster  
-Créez un groupe de disponibilité sur le premier cluster WSFC.   Dans cet exemple, le groupe de disponibilité est nommé `ag1` pour la base de données `db1`.      
+Créez un groupe de disponibilité sur le premier cluster WSFC.   Dans cet exemple, le groupe de disponibilité est nommé `ag1` pour la base de données `db1`. Le réplica principal du groupe de disponibilité principal est appelé **principal global** dans un groupe de disponibilité distribué. Dans cet exemple, Server1 est le principal global.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -114,7 +114,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>Créer un second groupe de disponibilité  
- Puis, sur le deuxième cluster WSFC, créez un deuxième groupe de disponibilité `ag2`. Dans ce cas, la base de données n’est pas spécifiée, car elle est amorcée automatiquement à partir du groupe de disponibilité principal.  
+ Puis, sur le deuxième cluster WSFC, créez un deuxième groupe de disponibilité `ag2`. Dans ce cas, la base de données n’est pas spécifiée, car elle est amorcée automatiquement à partir du groupe de disponibilité principal.  Le réplica principal du groupe de disponibilité secondaire est appelé **redirecteur** dans un groupe de disponibilité distribué. Dans cet exemple, server3 est le redirecteur. 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -217,33 +217,37 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 Seul le basculement manuel est pris en charge pour l’instant. L’instruction Transact-SQL suivante bascule le groupe de disponibilité distribué nommé `distributedag` :  
 
 
-1. Définissez le mode de disponibilité sur validation synchrone pour les deux groupes de disponibilité. 
+1. Définissez le groupe de disponibilité distribué sur la validation synchrone en exécutant le code suivant sur *à la fois* le principal global et le redirecteur.   
     
       ```sql  
-      ALTER AVAILABILITY GROUP [distributedag] 
-      MODIFY 
-      AVAILABILITY GROUP ON
-      'ag1' WITH 
-         ( 
-          LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-          FAILOVER_MODE = MANUAL, 
-          SEEDING_MODE = MANUAL 
-          ), 
-      'ag2' WITH  
+      -- sets the distributed availability group to synchronous commit 
+       ALTER AVAILABILITY GROUP [distributedag] 
+       MODIFY 
+       AVAILABILITY GROUP ON
+       'ag1' WITH 
         ( 
-        LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022', 
-        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-        FAILOVER_MODE = MANUAL, 
-        SEEDING_MODE = MANUAL 
-        );  
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        ), 
+        'ag2' WITH  
+        ( 
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        );
        
+       -- verifies the commit state of the distributed availability group
+       select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
+       ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
+       join sys.availability_replicas ar on ag.group_id=ar.group_id
+       left join sys.dm_hadr_availability_replica_states ars
+       on ars.replica_id=ar.replica_id
+       where ag.is_distributed=1
+       GO
+
       ```  
    >[!NOTE]
    >De même que pour les groupes de disponibilité normaux, l’état de synchronisation entre deux réplicas de groupe de disponibilité faisant partie d’un groupe de disponibilité distribué dépend du mode de disponibilité des deux réplicas. Par exemple, pour obtenir une validation synchrone, le groupe de disponibilité principal et le groupe de disponibilité secondaire doivent tous deux être configurés avec le mode de disponibilité synchronous_commit.  
 
 
-1. Attendez que l’état du groupe de disponibilité distribuée soit défini sur `SYNCHRONIZED`. Exécutez la requête suivante sur le serveur SQL Server qui héberge le réplica principal du groupe de disponibilité principal. 
+1. Attendez que l’état du groupe de disponibilité distribuée soit défini sur `SYNCHRONIZED`. Exécutez la requête suivante sur le principal global, qui héberge le réplica principal du groupe de disponibilité principal. 
     
       ```sql  
       SELECT ag.name
@@ -259,7 +263,7 @@ Seul le basculement manuel est pris en charge pour l’instant. L’instruction 
 
     Continuez une fois que le groupe de disponibilité **synchronization_state_desc** est `SYNCHRONIZED`. Si **synchronization_state_desc** n’est pas `SYNCHRONIZED`, exécutez la commande toutes les cinq secondes jusqu’à ce qu’il change. Ne continuez pas jusqu’à **synchronization_state_desc** = `SYNCHRONIZED`. 
 
-1. Sur le serveur SQL Server hébergeant le réplica principal pour le groupe de disponibilité principal, affectez la valeur `SECONDARY` au rôle du groupe de disponibilité distribué. 
+1. Sur le principal global, définissez le rôle du groupe de disponibilité distribué sur `SECONDARY`. 
 
     ```sql
     ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 
