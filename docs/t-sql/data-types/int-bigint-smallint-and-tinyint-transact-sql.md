@@ -46,7 +46,7 @@ Types de données représentant des valeurs numériques exactes qui utilisent de
   
 |Type de données|Plage|Stockage|  
 |---|---|---|
-|**bigint**|-2^63 (-9,223,372,036,854,775,808) à 2^63-1 (9,223,372,036,854,775,807)|Huit octets|  
+|**bigint**|-2^63 (-9 223 372 036 854 775 808) à 2^63-1 (9 223 372 036 854 775 807)|Huit octets|  
 |**Int**|-2^31 (-2 147 483 648) à 2^31-1 (2 147 483 647)|Quatre octets|  
 |**smallint**|-2^15 (-32 768) à 2^15-1 (32 767)|Deux octets|  
 |**tinyint**|0 à 255|Un octet|  
