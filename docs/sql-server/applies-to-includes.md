@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77366a4246ae1d14931157806312cc610dc596c8
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 2fb4947d8984f657b0ca48e70e7fa13445bca169
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775620"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171851"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>Fichiers include SQL Server pour la gestion des versions et applies-to
 
@@ -28,7 +28,7 @@ Cet article est destiné à être utilisé comme point de référence pour les d
 
 ## <a name="sql-server-version-includes"></a>Fichiers include de version SQL Server
 
-Les rédacteurs de contenu SQL ont souvent besoin d’inclure le nom du produit et de la version de SQL Server. De cette façon, si quelque chose change dans le nom, le fichier include est mis à jour au lieu de mettre à jour manuellement la valeur dans chacun des articles. Ces fichiers include sont utilisés comme espaces réservés pour les noms de produit, mais n’ont pas été utilisés de manière cohérente dans toute la documentation SQL. SQL Server vNext fait référence à une version future de SQL qui n’a pas encore de numéro de version et fait donc exception.  
+Les rédacteurs de contenu SQL ont souvent besoin d’inclure le nom du produit et de la version de SQL Server. De cette façon, si quelque chose change dans le nom, le fichier include est mis à jour au lieu de mettre à jour manuellement la valeur dans chacun des articles. Ces fichiers include sont utilisés comme espaces réservés pour les noms de produit, mais n’ont pas été utilisés de manière cohérente dans toute la documentation SQL. SQL Server vNext fait référence à une version future de SQL qui n’a pas encore d’un numéro de version et fait exception à cela.  
 
 |Version SQL| Nom de fichier| Exemple dans Markdown |Texte|
 | :------------  | :-------------| :----------| :-------------------|
@@ -76,7 +76,7 @@ Ces fichiers include applies-to indiquent les versions de SQL auxquelles s’app
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
 | tsql-appliesto-ss2008-asdb-asdw-xxx-md.md | `[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md.md](../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)] |
 | tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md | `[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)] |
-| tsql-appliesto-ss2008-asdbmi-xxxx-pwd-md.md | `[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-pwd-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pwd-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-pwd-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pwd-md.md)] |
+| tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)] |
 | tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md | `[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md](../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md](../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)] |
 | tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md | `[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] |
 | tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md | `[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md](../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md](../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)] |
