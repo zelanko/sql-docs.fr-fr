@@ -1,13 +1,8 @@
 ---
 title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
-caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 227a0215b4d5438ce10229e0a3e8398312f7ca1c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6a1c422dd7ae2c190f844b70c5a780c0390f86e7
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788440"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812285"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +99,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 Toutefois, en contresignant procSelectT1 avec le même certificat que celui utilisé pour signer ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve la signature sur la chaîne d’appel et autorise l’accès à T1. Si Alice essaie d'appeler procSelectT1 directement, elle ne peut pas accéder à T1, parce que la contre-signature n'accorde pas de droits. L'exemple C ci-dessous affiche le code [!INCLUDE[tsql](../../includes/tsql-md.md)] pour cet exemple.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation ALTER sur l'objet et l'autorisation CONTROL sur le certificat ou la clé asymétrique. Si une clé privée associée est protégée par un mot de passe, l'utilisateur doit également disposer de ce mot de passe.  
   
 ## <a name="examples"></a>Exemples  

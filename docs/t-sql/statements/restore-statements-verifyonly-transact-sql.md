@@ -27,19 +27,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1d7c5b5165b3e67956750203d31904a539469125
-ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
+ms.openlocfilehash: a38b641435f24ec07157b650877a5ac107948f75
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42441432"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171721"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE Statements - VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Vérifie la sauvegarde sans la restaurer, et s'assure que le jeu de sauvegarde est complet et que tous les volumes sont lisibles. En revanche, l'instruction RESTORE VERIFYONLY ne vérifie pas la structure des données contenues dans les volumes de sauvegarde. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’instruction RESTORE VERIFYONLY a été améliorée afin de pouvoir effectuer un contrôle supplémentaire sur les données en vue d’accroître la probabilité de détection des erreurs. Le but est d'être le plus proche possible d'une opération de restauration réelle. Pour plus d'informations, consultez la section Notes.  
-  
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  Si la sauvegarde est valide, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retourne un message de réussite.  
   

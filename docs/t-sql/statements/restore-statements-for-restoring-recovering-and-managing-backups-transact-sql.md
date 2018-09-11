@@ -26,20 +26,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9c5f4509735b763e6ea5752c9f6dd3c1e07a06e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 46930e648b72b03453a05f1a55da92a8325f9bda
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456993"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171711"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>Instructions RESTORE pour la restauration, la récupération et la gestion des sauvegardes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   Cette section détaille les instructions RESTORE pour les opérations de sauvegarde. Outre l'instruction principale RESTORE {DATABASE | LOG} destinée à la restauration et à la récupération des sauvegardes, plusieurs instructions RESTORE auxiliaires vous permettent de gérer des sauvegardes et de prévoir des séquences de restauration. Les commandes RESTORE auxiliaires sont les suivantes : RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY et RESTORE VERIFYONLY.  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 > [!IMPORTANT]  
 >  Dans les versions précédentes de SQL Server, tout utilisateur pouvait obtenir des informations sur les jeux de sauvegarde et les unités de sauvegarde en utilisant les instructions Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY et RESTORE VERIFYONLY. Comme elles révèlent des informations sur le contenu des fichiers de sauvegarde, dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures, ces instructions requièrent l'autorisation CREATE DATABASE. Cette nécessité sécurise vos fichiers de sauvegarde et protège vos informations de sauvegarde de façon plus complète que dans les versions précédentes. Pour plus d’informations sur cette autorisation, consultez [Autorisations de base de données GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
