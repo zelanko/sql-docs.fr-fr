@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e80ac60bddaf19fb42cb4e197cb9316d1f2ab2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f54908047eab75e80719d9afc51ca1d04a0c49c6
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269885"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813945"
 ---
 # <a name="add-solutions-to-source-control"></a>Ajouter des solutions au contrôle de code source
   Lorsque vous ajoutez une solution au contrôle de code source, vous souhaitez la plupart du temps ajouter l'ensemble de la solution avec tous les projets qu'elle comporte. Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour ajouter une solution au contrôle de code source.  

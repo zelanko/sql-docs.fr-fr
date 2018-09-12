@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88e5c7bdab59e9e2bbee4b924f145a8b8940b769
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0b673678337681a1ef5e2f727f684ae7eb7915e
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159720"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43806905"
 ---
 # <a name="visual-database-tools-f1-help"></a>Aide (F1) de Visual Database Tools
   Ces rubriques décrivent les commandes et options des boîtes de dialogue et fenêtres de propriétés pour les éléments Visual Database Tools, tels que la fenêtre Propriétés du tableau et l'onglet Propriétés des colonnes.  

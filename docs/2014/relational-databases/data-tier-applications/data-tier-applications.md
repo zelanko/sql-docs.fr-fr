@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], designing
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74e9a61fb053a1d861a6be732ae9a0ac0eb3060a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0e6ef62d46d8e597ad57450b7d121027c69adcb
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152500"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816695"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
   Une application de la couche Données (DAC) est une entité de gestion de base de données logique qui définit tous les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les tables, les vues et les objets d'instance, y compris les connexions, qui sont associés à une base de données utilisateur. Une application DAC est une unité autonome de déploiement de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet aux développeurs et aux administrateurs de base de données de la couche Données d'empaqueter les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un artefact portable appelé « package DAC », ou encore DACPAC.  
@@ -114,7 +112,7 @@ ms.locfileid: "37152500"
   
  Ces deux fonctionnalités sont prises en charge par les outils de gestion de bases de données : Server Management Studio, le portail de gestion de SQL Azure et l'API DACFx.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Vous devez être un membre de la `dbmanager` rôle ou affecté `CREATE DATABASE` autorisations pour créer une base de données, y compris la création d’une base de données en déployant un package DAC. Vous devez être un membre de la `dbmanager` rôle, ou ont été affectées `DROP DATABASE` autorisations pour supprimer une base de données.  
   
 ## <a name="data-tier-application-tasks"></a>Tâches de l'application de la couche Données  

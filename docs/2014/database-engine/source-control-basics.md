@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c70c039fd32643dc69c12e76109f5a7fc900379
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6ff97973a1e3d34d3e6601b9bb14f9edc4c4abd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217849"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816325"
 ---
 # <a name="source-control-basics"></a>Présentation du contrôle de code source
   Le contrôle de code source fait référence à un système dans lequel un logiciel serveur central stocke et effectue le suivi des versions de fichiers et contrôle l'accès aux fichiers. Un système de contrôle de code source comprend généralement un fournisseur de contrôle de code source et deux (voire plus) clients de contrôle de code source.  
@@ -51,7 +50,7 @@ ms.locfileid: "37217849"
 > [!NOTE]  
 >  Cette documentation implique que vous utilisiez [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe comme fournisseur de contrôle de code source. Si vous utilisez un autre fournisseur de contrôle de code source, vous devez distinguer des différences entre cette documentation et le logiciel que vous exécutez. Si vous constatez des différences, consultez la documentation pour connaître votre fournisseur de contrôle de code source.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |||  
 |-|-|  

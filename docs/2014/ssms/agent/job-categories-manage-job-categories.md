@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,14 +17,14 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3db326c0097a57997133ae93173d9da8c791844
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b394e4b8df108786043e9eddca92ce72a135729
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299589"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814055"
 ---
-# <a name="job-categories-manage-job-categories"></a>Les catégories de travaux : Gérer les catégories de travaux
+# <a name="job-categories-manage-job-categories"></a>Catégories de travaux : Gérer les catégories de travaux
   Utilisez la boîte de dialogue **Catégories de travaux** pour ajouter ou supprimer des catégories de travaux. Les catégories de travaux prédéfinies ne peuvent pas être supprimées.  
   
 ## <a name="options"></a>Options  

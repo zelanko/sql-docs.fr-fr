@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e15edf6e83edf97d39da4a20e99891c7b08a3a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5033a56981496455922967f2f1035dbd1245384
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204389"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807045"
 ---
 # <a name="options-environment-help-online-page"></a>Options (Environment-Help-Online Page)
   La boîte de dialogue **Options** vous permet de spécifier les sources d'aide à utiliser pour les recherches, y compris pour l'aide F1, dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Dans le menu **Outils** , cliquez sur **Options**, développez le dossier **Environnement** , sélectionnez **Aide**, puis cliquez sur **En ligne**. Si la page **En ligne** n'apparaît pas dans la liste, activez la case à cocher **Afficher tous les paramètres** dans la boîte de dialogue **Options** .  

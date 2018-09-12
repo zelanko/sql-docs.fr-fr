@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d65cce1e96cbf3bb8ec8e6d428074c89424c8636
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d04fcf3113aeed4c2cd1512375956921029c992f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314469"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819035"
 ---
 # <a name="compare-files"></a>Comparer des fichiers
   Vous pouvez comparer des fichiers afin de déterminer le mode de progression d'un fichier jusqu'à son état actuel. Par exemple, si vous décelez un défaut dans une version de votre projet de code suite à l'archivage d'une version de fichier source donnée, vous pouvez comparer la version du fichier actuelle à une version précédente, afin de localiser le code à l'origine du défaut.  

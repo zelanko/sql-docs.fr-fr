@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8374df1a73b68636ea22586dc44eea42ed8d89c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28d2dc6931f32b95bb318732a146b53d7bac5201
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314329"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807216"
 ---
 # <a name="create-history-and-status-reports"></a>Créer des rapports d'état et historiques
   Vous pouvez créer un rapport sur l'historique ou l'état en cours de fichiers dans la solution actuellement chargée. Vous pouvez également afficher un aperçu du rapport, puis l'envoyer vers une imprimante, un fichier ou le Presse-Papiers. Ces rapports ne sont pas générés par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. mais par [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  

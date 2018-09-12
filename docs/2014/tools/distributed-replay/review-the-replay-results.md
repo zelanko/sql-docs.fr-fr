@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
@@ -14,12 +13,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03149886d49a86656aca73f80685e711c3ca9b77
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d68dd4dfb9ac566d43bfa78f51809a53e12be34
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308959"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815247"
 ---
 # <a name="review-the-replay-results"></a>Examiner les résultats de la relecture
   Une fois que la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay a terminé une relecture distribuée, l'activité de relecture de chaque client peut être capturée et enregistrée dans des fichiers de trace de résultats sur chaque client. Pour capturer cette activité, vous devez utiliser le paramètre **-o** quand vous exécutez l’outil d’administration avec l’option **replay**. Pour plus d’informations sur l’option replay, consultez [Option replay &#40;outil d’administration Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -62,7 +61,7 @@ ms.locfileid: "37308959"
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|  
 |----------------------|---------------|-----------------|---------------|  
-|EventClass|`nvarchar`|Nom de la classe d'événement.| 1|  
+|EventClass|`nvarchar`|Nom de la classe d'événement.|1|  
 |EventSequence|`bigint`|Pour les erreurs de fournisseur, les erreurs internes et les avertissements, il s'agit de la séquence de l'événement de capture qui correspond à l'erreur ou à l'avertissement.<br /><br /> Pour toutes les autres classes d'événements, il s'agit de la séquence de l'événement dans les données de trace d'origine.|2|  
 |ReplaySequence|`bigint`|Pour les erreurs de fournisseur, les erreurs internes et les avertissements, il s'agit de la séquence de l'événement de relecture qui correspond à l'erreur ou à l'avertissement.<br /><br /> Pour toutes les autres classes d'événements, il s'agit de la séquence de l'événement affecté pendant la relecture.|3|  
 |TextData|`ntext`|Le contenu de TextData dépend de l'EventClass.<br /><br /> Pour Audit Login et ExistingConnection, il s'agit des options définies pour la connexion.<br /><br /> Pour SQL:BatchStarting, il s'agit du corps de la requête de lots.<br /><br /> Pour RPC:Starting, c'est la procédure stockée appelée.<br /><br /> Pour les événements de paramètres de relecture, cette colonne contient les paramètres définis dans le fichier de configuration de relecture.<br /><br /> Pour l'événement de statistiques de relecture, TexData contient les informations suivantes :<br />serveur SQL cible de la relecture ;<br />nombre total d'événements pouvant être relus ;<br />nombre d'erreurs de fournisseur ;<br />nombre d'erreurs internes ;<br />avertissements internes .<br />nombre total d'erreurs ;<br />taux global de réussite ;<br />heure de relecture (HH:MM:SS:MMM).<br /><br /> Pour l'événement de jeu de résultats de relecture, il affiche la liste des en-têtes de colonne de résultats retournés.<br /><br /> Pour l'événement de ligne de résultats de relecture, il affiche la valeur de retour de toutes les colonnes de cette ligne.<br /><br /> Pour l'avertissement interne de relecture et l'erreur de fournisseur de relecture, cette colonne contient les avertissements ou les erreurs de fournisseur.|4|  

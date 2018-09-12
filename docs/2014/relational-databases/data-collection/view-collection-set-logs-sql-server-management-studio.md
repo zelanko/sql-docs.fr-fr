@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4a51d69b65215cb60dc5e7cee62132d3a0374b7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6641bf65608e989c6bd74448b99686b76ec7ffce
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289035"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807405"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>Afficher les journaux de jeu d'éléments de collecte (SQL Server Management Studio)
   Vous pouvez afficher tous les journaux des jeux d'éléments de collecte, ensemble ou individuellement, à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

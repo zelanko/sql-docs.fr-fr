@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b254e3d03945f3a7c3641c036a54df18ba13f7bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89d4d09713717d74a5116b7295523be3f24e7cfa
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272095"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815215"
 ---
 # <a name="open-with-new-file"></a>Ouvrir avec (Nouveau fichier)
   Vous pouvez ouvrir un document dans un ou plusieurs éditeurs en cliquant sur **Ouvrir** dans le menu **Fichier**, puis en cliquant sur **Fichier**. Dans la boîte de dialogue **Ouvrir un fichier** , sélectionnez le fichier, cliquez sur la flèche **Ouvrir** , puis cliquez sur **Ouvrir avec**. Dans la boîte de dialogue **Ouvrir avec** , dans la liste **Sélectionnez le programme à ouvrir** , cliquez sur le programme de votre choix, puis cliquez sur **Ouvrir**.  

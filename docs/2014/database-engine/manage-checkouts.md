@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a64e2346479c95327c3f183331cc7971481521b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f2f1d25a1344f395779d084c659fc7a4579f098c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320709"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813045"
 ---
 # <a name="manage-checkouts"></a>Gérer les extractions
   Une fois un fichier ajouté au contrôle de code source, vous devez l'extraire avant de pouvoir le modifier. Lorsque vous procédez à l'extraction d'un fichier du contrôle de code source, le fournisseur de contrôle de code source copie la dernière version sur votre disque local et désactive l'attribut de lecture seule du fichier. Dans certains cas, il est possible que vous deviez modifier un fichier sans procéder à son extraction. Pour plus d’informations sur la modification d’un fichier sans vérifier le fichier de sortie, consultez [modifier de fichiers](../../2014/database-engine/edit-checked-in-files.md).  

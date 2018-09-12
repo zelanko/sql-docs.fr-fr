@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e17a8aafb263c58f2b6e729970884be8dea7fad1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6484d52f8cc996127d636942189de1eb7bc070f6
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274035"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820005"
 ---
-# <a name="job-categories-properties-and-new-job-category"></a>Propriétés des catégories de travail et de la nouvelle catégorie de travaux
+# <a name="job-categories-properties-and-new-job-category"></a>Propriétés des catégories de travaux et Nouvelle catégorie de travaux
   Affiche la liste des travaux contenus dans une catégorie de travaux ou dans l'ensemble des catégories de travaux, et vous permet d'ajouter une nouvelle catégorie de travaux.  
   
 ## <a name="options"></a>Options  

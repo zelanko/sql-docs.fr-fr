@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b0976f5c637c5fbecc064bb6cd57235e94602d71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7a125ae3057d3398f51034f9307d7dd62bcabec
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223323"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808535"
 ---
 # <a name="sql-server-user-settable-object"></a>Objet SQL Server User Settable
   L’objet **User Settable** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet de créer des instances de compteurs personnalisées. La création de vos propres instances de compteurs est utile pour surveiller les aspects du serveur qui ne le sont pas par les compteurs existants, comme les composants propres à votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, la détermination du nombre de commandes clients enregistrées ou l'inventaire des produits).  
@@ -70,7 +69,7 @@ GO
 > [!IMPORTANT]  
 >  Les requêtes définies dans les procédures stockées du compteur utilisateur doivent être aussi simples que possible. Les requêtes sollicitant beaucoup de mémoire, comme les requêtes de tri ou de hachage, ou celles qui impliquent des volumes importants d'E/S sont d'une exécution coûteuse en ressources et peuvent affecter les performances.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  **sp_user_counter** est disponible pour tous les utilisateurs, mais son utilisation peut être limitée pour chacun des compteurs de requêtes.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7625135e097627776eae7fc63222c578f9b535d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28ce0f53334ebca555d57284e0b6cad4065b1084
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172220"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817115"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Liste des colonnes, boîte de dialogue (Visual Database Tools)
   Si une table possède un schéma de partition associé, vous pouvez utiliser cette boîte de dialogue pour choisir la ou les colonnes auxquelles s'applique la fonction de partition. Cette fonction n'est utilisable que si le type de données de la colonne vers laquelle vous basculez est identique à celui de la colonne définie dans la fonction de partition.  

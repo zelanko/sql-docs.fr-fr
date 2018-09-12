@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40aa8462beaa64f1e30f23973165eac983176916
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0de7b600ddd01130df7876cab66e075b0cb176dc
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276495"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816355"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Fonctionnalités et tâches de l'utilitaire SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont de plus en plus besoin de gérer leur environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans son ensemble, ce à quoi répond cette version via le concept d'application et de gestion multiserveur de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -39,7 +38,7 @@ ms.locfileid: "37276495"
   
  Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et d'application de la couche Données gérée par l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être surveillée en fonction des définitions de stratégie globales ou des définitions de stratégie individuelles.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Utilisez les rubriques ci-dessous pour démarrer avec l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |||  

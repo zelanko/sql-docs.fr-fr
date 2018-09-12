@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d380156f10316696f953e7d68afaac8732e9ca8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0b39ee1b9ca487d00616e56a7c76b0070c634fc
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206309"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807145"
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>Utiliser des schémas de base de données (Visual Database Tools)
   Vous pouvez créer un schéma visuel de votre base de données à l'aide du Concepteur de bases de données. Les rubriques suivantes décrivent l'essentiel de l'utilisation du concepteur dans le cadre de l'exploitation des schémas de base de données.  
