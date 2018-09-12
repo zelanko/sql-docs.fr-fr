@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_latch_stats (Transact-SQL) | Documents Microsoft
+title: Sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72dabd38cbb974ead8a231b4da9569dee9441284
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 03e3a5a0497a1d2da15124287d557f6e27bc3e7e
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467905"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375682"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,17 +35,17 @@ ms.locfileid: "34467905"
   Retourne des informations sur toutes les attentes de verrou interne, organisées par classe.  
   
 > [!NOTE]  
->  Pour appeler cette de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_latch_stats**.  
+>  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_latch_stats**.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Nom de la classe de verrou interne.|  
 |waiting_requests_count|**bigint**|Nombre d'attentes pour les verrous internes de cette classe. Ce compteur est incrémenté au début d'une attente de verrou interne.|  
-|wait_time_ms|**bigint**|Temps d'attente total sur les verrous internes de cette classe, en millisecondes.<br /><br /> **Remarque :** cette colonne est mise à jour toutes les cinq minutes pendant une attente de verrou interne et à la fin de l’attente.|  
+|wait_time_ms|**bigint**|Temps d'attente total sur les verrous internes de cette classe, en millisecondes.<br /><br /> **Remarque :** cette colonne est mise à jour toutes les cinq minutes pendant une attente de verrou et à la fin de l’attente.|  
 |max_wait_time_ms|**bigint**|Durée maximum d'attente d'un objet de mémoire sur ce verrou interne. Si cette valeur est anormalement élevée, cela peut indiquer un blocage interne.|  
-|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
@@ -77,7 +77,7 @@ GO
   
  Le tableau suivant fournit une description succincte des différentes classes de verrous internes.  
   
-|Classe de verrou interne| Description|  
+|Classe de verrou interne|Description|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Verrous utilisés en interne par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour initialiser la synchronisation de la création d'un tampon d'allocation en anneau.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Verrous utilisés pour initialiser la synchronisation de caches d'espace libre internes pour les segments de mémoire.|  
@@ -105,7 +105,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|Verrous utilisés pour synchroniser les opérations de sauvegarde différentielle avec DBCC.|  
 |BACKUP_OPERATION|Verrous utilisés pour la synchronisation de la structure interne des données dans une opération de sauvegarde (de base de données, de journal ou de fichiers).|  
 |BACKUP_FILE_HANDLE|Verrous utilisés pour synchroniser les opérations d'ouverture de fichier pendant une opération de restauration.|  
-|BUFFER|Verrous utilisés pour synchroniser l'accès à court terme aux pages de base de données. Un verrou de mémoire tampon est nécessaire avant la lecture ou la modification d'une page de base de données. Une contention de verrou de ce type peut indiquer plusieurs problèmes, notamment des pages sensibles et des E/S lentes.<br /><br /> Cette classe de verrous englobe toutes les utilisations possibles des verrous de page. Sys.dm_os_wait_stats fait la distinction entre les attentes de verrous de page qui résultent d’opérations de lecture et d’e/s et d’opérations d’écriture sur la page.|  
+|BUFFER|Verrous utilisés pour synchroniser l'accès à court terme aux pages de base de données. Un verrou de mémoire tampon est nécessaire avant la lecture ou la modification d'une page de base de données. Une contention de verrou de ce type peut indiquer plusieurs problèmes, notamment des pages sensibles et des E/S lentes.<br /><br /> Cette classe de verrous englobe toutes les utilisations possibles des verrous de page. Sys.dm_os_wait_stats fait la distinction entre les attentes de verrou de page sont provoquées par les opérations de lecture et d’e/s et d’opérations d’écriture sur la page.|  
 |BUFFER_POOL_GROW|Verrous utilisés pour la synchronisation du gestionnaire de mémoires tampons interne pendant les opérations de développement du pool de mémoires tampons.|  
 |DATABASE_CHECKPOINT|Verrous utilisés pour sérialiser les points de contrôle dans une base de données.|  
 |CLR_PROCEDURE_HASHTABLE|À usage interne uniquement|  
@@ -126,7 +126,7 @@ GO
 |FCB|Verrous utilisés pour synchroniser l'accès au bloc de contrôle des fichiers.|  
 |FCB_REPLICA|À usage interne uniquement|  
 |FGCB_ALLOC|Verrous utilisés pour synchroniser l'accès aux informations d'allocation utilisant le mécanisme du tourniquet (round robin) au sein d'un groupe de fichiers.|  
-|FGCB_ADD_REMOVE|Verrous utilisés pour synchroniser l'accès aux groupes de fichiers pour les opérations ADD et DROP sur les fichiers.|  
+|FGCB_ADD_REMOVE|Utilisez cette option pour synchroniser l’accès aux groupes de fichiers pour ajouter, supprimer, augmenter et réduire les opérations de fichier.|  
 |FILEGROUP_MANAGER|À usage interne uniquement|  
 |FILE_MANAGER|À usage interne uniquement|  
 |FILESTREAM_FCB|À usage interne uniquement|  
@@ -169,7 +169,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|À usage interne uniquement|  
 |SERVICE_BROKER_HOST_NAME|À usage interne uniquement|  
 |SERVICE_BROKER_READ_CACHE|À usage interne uniquement|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Utilisé pour synchroniser un mappage au niveau d’instance des files d’attente du serveur. Il existe une file d’attente par tuple ID, Version de la base de données et les ID de file d’attente de base de données. La contention sur les verrous de cette classe peut se produire lorsque le nombre de connexions est : dans un WAITFOR(RECEIVE) attente état ; appel de WAITFOR(RECEIVE) ; dépassement du délai d’attente WAITFOR ; réception d’un message ; validation ou la restauration de la transaction qui contient le WAITFOR(RECEIVE) ; Vous pouvez réduire la contention en réduisant le nombre de threads en attente WAITFOR(RECEIVE). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Utilisé pour synchroniser un mappage au niveau d’instance des files d’attente waiter. Il existe une file d’attente par tuple d’ID, la Version de base de données et ID de file d’attente de base de données. Sur les verrous de cette classe peut y avoir contention lorsque plusieurs connexions sont : dans un WAITFOR(RECEIVE) attente état ; WAITFOR(RECEIVE) appelant ; dépassement du délai d’attente WAITFOR ; réception d’un message ; validation ou la restauration de la transaction qui contient le WAITFOR(RECEIVE) ; Vous pouvez réduire la contention en réduisant le nombre de threads dans un état d’attente WAITFOR(RECEIVE). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|À usage interne uniquement|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|À usage interne uniquement|  
 |SERVICE_BROKER_TRANSPORT|À usage interne uniquement|  

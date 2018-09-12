@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35f2a9ee4494805d9c451a0f03357acd3cc47dc4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21f7427138f4a4672e562867c94363e04ba4ce0f
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317999"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888655"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>Exemple : spécification de XSINIL avec la directive ELEMENTS
   La requête suivante spécifie la directive `ELEMENTS` pour générer des données XML centrées sur les éléments à partir du résultat de la requête.  

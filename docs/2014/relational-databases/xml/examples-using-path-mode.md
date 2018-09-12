@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e8f46405dab619292d057d854034ea989908846
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 68cfc33604bee9ed3e4b7d0c34c1ebfb6dec2454
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084011"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888555"
 ---
 # <a name="examples-using-path-mode"></a>Exemples : utilisation du mode PATH
   Les exemples suivants montrent comment utiliser le mode PATH pour générer un document XML à partir d'une requête SELECT. Nombre de ces requêtes sont spécifiées par rapport aux documents XML des instructions de fabrication de bicyclettes stockés dans la colonne Instructions de la table ProductModel.  
@@ -126,7 +125,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>Spécification de noms de colonnes de type XPath  
- Dans la requête suivante le `ProductModelID` nom de colonne spécifié commence par «\@» et ne contient pas une barre oblique (« / »). Par conséquent, un attribut de l'élément <`row`> ayant la valeur de colonne correspondante est créé dans le document XML obtenu.  
+ Dans la requête suivante, le nom de colonne `ProductModelID` spécifié commence par « \@ » et ne contient pas de barre oblique (« / »). Par conséquent, un attribut de l'élément <`row`> ayant la valeur de colonne correspondante est créé dans le document XML obtenu.  
   
 ```  
 USE AdventureWorks2012;  

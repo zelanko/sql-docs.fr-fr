@@ -10,20 +10,23 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: d9657b1433b0647d7165cb427da6333c0a325583
-ms.sourcegitcommit: 0cda14b1151d9bce1253d96dea038c038484f07a
+ms.openlocfilehash: 70eed88b1224a712dcb8d1c76085fffc839155a5
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39400922"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311639"
 ---
-#<a name="appliance-feature-switch"></a>Commutateur de fonctionnalité d’appliance
-Le **commutateur de fonctionnalité** page affiche des informations sur les commutateurs de deux fonctionnalité qui sont introduites dans le système 2016 AU7 Analytique Platform. Utilisez cette page pour mettre à jour ou activer/désactiver les fonctionnalités et les paramètres d’Analytique Platform System. Modification des valeurs de commutateur de fonctionnalité nécessite un redémarrage du service.
+#<a name="appliance-feature-switches"></a>Commutateurs de fonctionnalité d’appliance
+Le **commutateur de fonctionnalité** page affiche des informations sur les commutateurs de fonctionnalité ont été introduits dans Analytique Platform System AU7 et versions ultérieures. Utilisez cette page de configuration pour mettre à jour ou activer/désactiver les fonctionnalités et les paramètres d’Analytique Platform System. Modifications apportées aux valeurs de commutateur de fonctionnalité requièrent un redémarrage du service.
 
 ![Commutateur de fonctionnalité Appliance DWConig](media/feature-switch/SQL_Server_PDW_DWConfig_feature_switch.png "DWConig Appliance fonctionnalité commutateur") 
 
-##<a name="autostatsenabled-switch"></a>Commutateur de AutoStatsEnabled
+##<a name="autostatsenabled"></a>AutoStatsEnabled
 Contrôle la fonctionnalité de statistiques automatique. Cette fonctionnalité de commutateur est définie sur true par défaut après la mise à niveau vers AU7. Toute base de données créée après que la mise à niveau hérite de la création automatique et mise à jour asynchrone des statistiques. Pour les bases de données existantes, les administrateurs de base de données peuvent activer des automatique des statistiques avec [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw). Pour plus d’informations sur les statistiques, consultez [statistiques](../relational-databases/statistics/statistics.md).
 
-##<a name="dmsprocessstopmessagetimeoutinseconds-switch"></a>Commutateur de DmsProcessStopMessageTimeoutInSeconds
+##<a name="usecatalogqueries"></a>UseCatalogQueries
+À l’aide des objets de catalogue pour certains appels de métadonnées au lieu d’utiliser SMO a montré l’amélioration des performances. La valeur true par défaut dans CU7.1, ce commutateur contrôle ce comportement. 
+
+##<a name="dmsprocessstopmessagetimeoutinseconds"></a>DmsProcessStopMessageTimeoutInSeconds
 Contrôle le délai d’attente de Service de déplacement des données (DMS) pour synchroniser sur un système occupé lors de l’annulation d’une requête impliquant le déplacement des données. Mise à jour vers AU7 définit cette valeur à 900 secondes (15 minutes) par défaut. La plage valide est 0 et 3 600 secondes.

@@ -1,7 +1,7 @@
 ---
 title: Sys.Servers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-catalog-views
@@ -25,25 +25,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e8c70890bf8571621cd82aaab7e3d2796eb3bb0e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f192a8ba5a7ae18287c13c8c58c6a54f27d14778
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038812"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171751"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque serveur lié ou distant inscrit et une ligne pour le serveur local a **server_id** = 0.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
-  
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**Int**|ID local du serveur lié.|  
-|**nom**|**sysname**|Lorsque **server_id** = 0, il s’agit du nom du serveur.<br /><br /> Lorsque **server_id** > 0, il s’agit du nom local du serveur lié.|  
-|**product**|**sysname**|Nom de produit du serveur lié. « SQL Server » indique qu'il s'agit d'une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**nom**|**sysname**|Lorsque **server_id** = 0, la valeur retournée est le nom du serveur.<br /><br /> Lorsque **server_id** > 0, la valeur retournée est le nom local du serveur lié.|  
+|**product**|**sysname**|Nom de produit du serveur lié. La valeur de « SQL Server » indique une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Fournisseur**|**sysname**|Nom du fournisseur OLE DB permettant de se connecter au serveur lié.|  
 |**data_source**|**nvarchar(4000)**|Propriété de connexion à la source de données OLE DB.|  
 |**Emplacement**|**nvarchar(4000)**|Propriété de connexion de l'emplacement OLE DB. NULL si aucun.|  
@@ -72,13 +70,12 @@ ms.locfileid: "43038812"
   
  Autorisations ne sont pas requises pour afficher le serveur local (**server_id** = 0).  
   
- Lorsque vous créez un serveur lié ou distant, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un mappage de connexion par défaut pour le **public** rôle de serveur. Cela signifie que, par défaut, toutes les connexions peuvent accéder à l'ensemble des serveurs liés et distants. Pour restreindre la visibilité sur ces serveurs, supprimez le mappage de connexion par défaut en exécutant [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) et en spécifiant la valeur NULL pour le *locallogin* paramètre.  
+ Lorsque vous créez un serveur lié ou distant, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un mappage de connexion par défaut pour le **public** rôle de serveur. Mappage de connexion par défaut signifie que toutes les connexions peuvent afficher tous les serveurs liés et distants. Pour restreindre la visibilité sur ces serveurs, supprimez le mappage de connexion par défaut en exécutant [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) et en spécifiant la valeur NULL pour le *locallogin* paramètre.  
   
- Si le mappage de connexion par défaut est supprimé, seuls les utilisateurs ayant explicitement été ajoutés en tant que connexion liée ou connexion distante peuvent voir les serveurs liés ou distants pour lesquels ils disposent d'un nom de connexion. Pour pouvoir accéder à tous les serveurs liés et distants après la suppression du mappage de connexion par défaut, vous devez disposer des autorisations suivantes :  
+ Si le mappage de connexion par défaut est supprimé, seuls les utilisateurs ayant explicitement été ajoutés en tant que connexion liée ou connexion distante peuvent voir les serveurs liés ou distants pour lesquels ils disposent d'un nom de connexion.  Les autorisations suivantes sont requises pour afficher tous les serveurs liés et distants après le mappage de connexion par défaut :  
   
--   ALTER ANY LINKED SERVER ou ALTER ANY LOGIN ON SERVER  
-  
--   L’appartenance à la **setupadmin** ou **sysadmin** rôles serveur fixes  
+- `ALTER ANY LINKED SERVER` ou `ALTER ANY LOGIN ON SERVER`  
+- L’appartenance à la **setupadmin** ou **sysadmin** rôles serveur fixes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -1,28 +1,31 @@
 ---
 title: R Services dans SQL Server 2016 | Microsoft Docs
-description: Présentation de vue d’ensemble pour les Services SQL Server, R prend en charge pour la base de données analytique
+description: R dans SQL Server pour les tâches R intégrés sur les données relationnelles, y compris la science des données et modélisation statistique, analytique prédictive, visualisation des données et bien plus encore.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 09/10/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8874c7196e77e9df7fe710f1b02be49cee10e3c8
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 7871870b6fd708b4f06703754831a698002bb2f1
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240095"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343094"
 ---
 # <a name="r-services-in-sql-server-2016"></a>R Services dans SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2016 R Services est un module complémentaire à une instance du moteur de base de données, utilisé pour l’exécution de code R et des fonctions sur SQL Server. Code s’exécute dans une infrastructure d’extensibilité, isolé des processus de moteur de base, mais totalement disponibles pour les données relationnelles comme des procédures stockées, en tant que script T-SQL qui contient des instructions de R ou en tant que code R contenant de T-SQL. 
+R Services est un module complémentaire à une instance de moteur de base de données SQL Server 2016, utilisé pour l’exécution de code R et des fonctions sur SQL Server. Code s’exécute dans une infrastructure d’extensibilité, isolé des processus de moteur de base, mais totalement disponibles pour les données relationnelles comme des procédures stockées, en tant que script T-SQL qui contient des instructions de R ou en tant que code R contenant de T-SQL. 
 
 R Services inclut une distribution de base de R, superposée aux packages R d’entreprise à partir de Microsoft afin que vous pouvez charger et traiter de grandes quantités de données sur plusieurs cœurs et agréger les résultats en une seule sortie consolidée. Algorithmes et des fonctions R de Microsoft sont conçues pour la mise à l’échelle et utilitaire : garantissant une analytique prédictive, modélisation statistique, des visualisations de données et pointe algorithmes machine learning dans un produit commercial server conçu et prise en charge par Microsoft. 
 
 Les bibliothèques R incluent RevoScaleR, MicrosoftML et autres. Étant donné que R Services est intégré avec le moteur de base de données, vous pouvez conserver analytique proche des données et éliminer les coûts et les risques de sécurité associés au transfert de données.
+
+> [!Note]
+> R Services a été renommé dans SQL Server 2017 à [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md), qui reflète l’ajout de Python.
 
 ## <a name="components"></a>Components
 
@@ -41,7 +44,7 @@ SQL Server 2016 est R uniquement. Le tableau suivant décrit les fonctionnalité
 
 Analystes et les développeurs ont souvent le code qui s’exécute sur une instance de SQL Server locale. En ajoutant des Services Machine Learning et l’activation de l’exécution du script externe, vous avez la possibilité d’exécuter du code de R dans les modalités de SQL Server : encapsulant le script dans les procédures stockées, stocker des modèles dans une table SQL Server ou combinaison des fonctions T-SQL et R dans les requêtes.
 
-L’approche la plus courante pour la base de données analytique consiste à utiliser [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), en passant Rscript comme paramètre d’entrée.
+L’approche la plus courante pour la base de données analytique consiste à utiliser [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), en passant de script R comme un paramètre d’entrée.
 
 Interactions client-serveur classique sont une autre approche. À partir de n’importe quel client station de travail avec un IDE, vous pouvez installer [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)et ensuite écrire du code qui exécute un push de l’exécution (appelé un *contexte de calcul distant*) aux données et aux opérations à SQL à distance Serveur. 
 

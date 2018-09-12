@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ac7345e2e4f71db13801e2813ea77aa88f5cdc69
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084672"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343084"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Didacticiel : Les fonctions utilisent RevoScaleR R avec des données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ Vous devez également être familiarisé avec [!INCLUDE[tsql](../../includes/tsq
 
 Les développeurs de R utilisent généralement les IDE pour l’écriture et débogage du code R. Voici quelques suggestions :
 
-- **Outils R pour Visual Studio** (RTVS) est un plug-in qui fournit Intellisense, le débogage et prise en charge de Microsoft R. vous pouvez l’utiliser avec R Server et SQL Server Machine Learning Services. Pour télécharger, consultez [Outils R pour Visual Studio](https://www.visualstudio.com/vs/rtvs/).
+- **Outils R pour Visual Studio** (RTVS) est un plug-in qui fournit Intellisense, le débogage et le support pour Microsoft R. Vous pouvez l’utiliser avec R Server et SQL Server Machine Learning Services. Pour télécharger, consultez [Outils R pour Visual Studio](https://www.visualstudio.com/vs/rtvs/).
 
 - **RStudio** est un des environnements les plus populaires pour le développement R. Pour plus d’informations, consultez [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/).
 

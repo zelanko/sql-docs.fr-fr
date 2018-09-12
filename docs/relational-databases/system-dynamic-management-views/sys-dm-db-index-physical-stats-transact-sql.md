@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d42c55b62530a47332e4868c3080f3f21be9be8d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 59972833705c4d8ab7c054a1a7aac8d6ee9824f8
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085552"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375702"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|Nombre de pages compressées.<br /><br /> Pour les segments de mémoire, les pages allouées récemment ne sont pas compressées avec le mode PAGE. Un segment de mémoire est compressé avec le mode PAGE sous deux conditions spéciales : lorsque les données sont importées en bloc ou lorsqu'un segment de mémoire est reconstruit. Les opérations DML par défaut qui provoquent des allocations de page ne sont pas compressées avec le mode PAGE. Reconstruisez un segment de mémoire lorsque la valeur compressed_page_count dépasse le seuil que vous souhaitez.<br /><br /> Pour les tables qui ont un index cluster, la valeur compressed_page_count indique l'efficacité de la compression PAGE.|  
 |hobt_id|BIGINT|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Pour les index columnstore uniquement, il s’agit de l’ID pour un ensemble de lignes qui assure le suivi des données columnstore interne d’une partition. Les ensembles de lignes sont stockées comme données de segments de mémoire ou binaire arborescences. Ils ont le même ID d’index en tant que l’index columnstore de parent. Pour plus d’informations, consultez [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si|  
 |column_store_delete_buffer_state|TINYINT|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRAINAGE<br /><br /> 3 = VIDAGE<br /><br /> 4 = MISE HORS SERVICE<br /><br /> 5 = PRÊT|  
-|column_store_delete_buff_state_desc||**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE : l’index de parent n’est pas un index columnstore.<br /><br /> Ouvrez – deleters et utilisent scanneurs.<br /><br /> DRAINAGE – deleters sont drainage mais scanneurs toujours l’utiliser.<br /><br /> Le vidage – mémoire tampon est fermé et lignes dans la mémoire tampon sont écrits dans la bitmap de suppression.<br /><br /> Mise hors service – les lignes du tampon de suppression fermé ont été écrits dans la bitmap de suppression, mais la mémoire tampon n’a pas été tronquée, car les analyseurs sont toujours l’utiliser. Nouveaux analyseurs n’avez pas besoin d’utiliser la mémoire tampon de retraite, car la mémoire tampon open est suffisant.<br /><br /> PRÊTS – cette mémoire tampon de suppression est prêt à être utilisé.|  
+|column_store_delete_buff_state_desc||**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NON valide : l’index parent n’est pas un index columnstore.<br /><br /> Ouvrez – deleters et utilisent scanneurs.<br /><br /> DRAINAGE – deleters sont drainage mais scanneurs toujours l’utiliser.<br /><br /> Le vidage – mémoire tampon est fermé et lignes dans la mémoire tampon sont écrits dans la bitmap de suppression.<br /><br /> Mise hors service – les lignes du tampon de suppression fermé ont été écrits dans la bitmap de suppression, mais la mémoire tampon n’a pas été tronquée, car les analyseurs sont toujours l’utiliser. Nouveaux analyseurs n’avez pas besoin d’utiliser la mémoire tampon de retraite, car la mémoire tampon open est suffisant.<br /><br /> PRÊTS – cette mémoire tampon de suppression est prêt à être utilisé.|  
   
 ## <a name="remarks"></a>Notes  
  La fonction de gestion dynamique sys.dm_db_index_physical_stats remplace l'instruction DBCC SHOWCONTIG.  

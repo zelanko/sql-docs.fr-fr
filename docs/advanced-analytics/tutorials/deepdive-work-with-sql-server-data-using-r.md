@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084181"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375672"
 ---
 # <a name="lesson-1-create-a-database-and-permissions"></a>Leçon 1 : Créer une base de données et des autorisations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,7 +103,7 @@ Cette section répertorie quelques problèmes courants que vous pouvez rencontre
   
     Lorsque le schéma est associé à un nom d’utilisateur particulier, l’utilisateur est le _propriétaire du schéma_. Quand vous créez un objet, vous le créez toujours dans votre propre schéma, sauf si vous demandez spécifiquement qu’il soit créé dans un autre schéma.
   
-    Par exemple, si vous créez une table portant le nom `*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< nom_base_de_données > .db_datareader. TestData ».
+    Par exemple, si vous créez une table portant le nom **TestData**, et votre schéma par défaut est **db_datareader**, la table est créée avec le nom `<database_name>.db_datareader.TestData`.
   
     Pour cette raison, une base de données peut contenir plusieurs tables portant le même nom, tant que les tables appartiennent à des schémas différents.
    
