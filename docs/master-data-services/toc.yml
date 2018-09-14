@@ -21,7 +21,7 @@ items:
   href: master-data-services-installation-and-configuration.md
   items:
   - name: Install-windows
-    href: ../master-data-services/install-windows/install-master-data-services.md
+    href: install-windows/install-master-data-services.md
   - name: Livre blanc Installation sur AlwaysOn
     href: installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md
   - name: Page Configuration du serveur Master Data Services
@@ -119,6 +119,13 @@ items:
       href: change-an-attribute-group-name-master-data-services.md
     - name: Supprimer un groupe d'attributs
       href: delete-an-attribute-group-master-data-services.md
+    - name: Suivi des modifications (Master Data Services)
+      href: change-tracking-master-data-services.md
+      items:
+      - name: Ajouter des attributs à un groupe de suivi des modifications (Master Data Services)
+        href: add-attributes-to-a-change-tracking-group-master-data-services.md
+      - name: Initier des actions en fonction de modifications de valeurs d'attribut (Master Data Services)
+        href: initiate-actions-based-on-attribute-value-changes-master-data-services.md
   - name: 'Présentation : Importation de données à partir de tables (Master Data Services)'
     href: overview-importing-data-from-tables-master-data-services.md
     items:
@@ -405,10 +412,10 @@ items:
   - name: Suivi
     href: tracing-master-data-services.md
 - name: Articles liés au développement MDS
-  href: ../master-data-services/develop/categorized-web-service-operations-master-data-services.md
-ms.openlocfilehash: b4c218064d48143ae0d912fcc4db97da32fed033
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+  href: develop/categorized-web-service-operations-master-data-services.md
+ms.openlocfilehash: cef88543e87b2b0f99ee875f535d6cb16a31c34d
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899559"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45533931"
