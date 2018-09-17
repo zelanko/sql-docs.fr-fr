@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 35c0d964596afc1c072e4cdf191f84b9b9b978bf
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087561"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564205"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -1023,7 +1023,7 @@ Pour améliorer les performances des requêtes qui accèdent à une grande quant
 * Utilisez un serveur avec des processeurs rapides et autant de noyaux de processeur que^possible selon vos moyens pour tirer parti des capacités de traitement de requête parallèle.
 * Assurez-vous que le serveur possède une bande passante de contrôleur d'E/S suffisante. 
 * Créez un index cluster sur chaque grande table partitionnée pour tirer parti des optimisations d'analyse d'arbre B (B-tree).
-* Appliquez les recommandations mentionnées dans le livre blanc « [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx)» lors du chargement en masse des données dans des tables partitionnées.
+* Appliquez les recommandations mentionnées dans le livre blanc « [The Data Loading Performance Guide](http://msdn.microsoft.com/library/dd425070.aspx)» lors du chargement en masse des données dans des tables partitionnées.
 
 ### <a name="example"></a> Exemple
 

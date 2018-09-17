@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ddad036821e735f693a2e2dec031dcb07c76902
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3ccbb7da44967b7be3bb30b218a1b779215755db
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070892"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45533901"
 ---
 # <a name="view-collation-information"></a>Afficher des informations de classement
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
-##  <a name="Top"></a> Vous pouvez afficher le classement d'un serveur, d'une base de données ou d'une colonne dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à l'aide des options de menu de l'Explorateur d'objets ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+<a name="Top"></a> Vous pouvez afficher le classement d'un serveur, d'une base de données ou d'une colonne dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à l'aide des options de menu de l'Explorateur d'objets ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##  <a name="Procedures"></a> Comment afficher un paramètre de classement  
  Vous pouvez utiliser l'un des éléments suivants :  
@@ -65,13 +65,13 @@ ms.locfileid: "43070892"
   
 2.  Dans la fenêtre de requête, entrez l'instruction suivante qui utilise la fonction système SERVERPROPERTY.  
   
-    ```  
+    ```sql  
     SELECT CONVERT (varchar, SERVERPROPERTY('collation'));  
     ```  
   
 3.  Vous pouvez également utiliser la procédure stockée système sp_helpsort.  
   
-    ```  
+    ```sql  
     EXECUTE sp_helpsort;  
     ```  
   
@@ -81,7 +81,7 @@ ms.locfileid: "43070892"
   
 2.  Dans la fenêtre de requête, entrez l'instruction suivante qui utilise la fonction système SERVERPROPERTY.  
   
-    ```  
+    ```sql  
     SELECT name, description FROM sys.fn_helpcollations();  
     ```  
   
@@ -91,13 +91,13 @@ ms.locfileid: "43070892"
   
 2.  Dans la fenêtre de requête, entrez l'instruction suivante qui utilise l'affichage catalogue système sys.databases.  
   
-    ```  
+    ```sql  
     SELECT name, collation_name FROM sys.databases;  
     ```  
   
 3.  Vous pouvez également utiliser la fonction système DATABASEPROPERTYEX.  
   
-    ```  
+    ```sql  
     SELECT CONVERT (varchar, DATABASEPROPERTYEX('database_name','collation'));  
     ```  
   
@@ -107,7 +107,7 @@ ms.locfileid: "43070892"
   
 2.  Dans la fenêtre de requête, entrez l'instruction suivante qui utilise l'affichage catalogue système sys.columns.  
   
-    ```  
+    ```sql  
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
@@ -117,6 +117,7 @@ ms.locfileid: "43070892"
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [Priorité de classement &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)   
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)      
  [sp_helpsort &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsort-transact-sql.md)  
   
   

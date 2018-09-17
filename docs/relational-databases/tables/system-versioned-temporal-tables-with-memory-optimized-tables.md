@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38963e1953e707597ec98530687904c347b49582
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5be615c1f0e672bcd706380ae9adafa9bcbccded
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073522"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563818"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tables temporelles avec version gérée par le système avec tables optimisées en mémoire
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "43073522"
   
 -   La table d’historique de la table à système par version optimisée en mémoire doit être sur disque, qu’elle soit créée par l’utilisateur final ou le système.  
   
--   Les requêtes qui affectent uniquement la table active (en mémoire) peuvent être utilisées dans des [modules T-SQL compilés en mode natif](https://msdn.microsoft.com/en-us/library/dn133184.aspx). Les requêtes temporelles utilisant la clause FOR SYSTEM TIME ne sont pas prises en charge dans les modules compilés en mode natif. L’utilisation de la clause FOR SYSTEM TIME avec les tables optimisées en mémoire dans les requêtes ad hoc et les modules non natifs est prise en charge.  
+-   Les requêtes qui affectent uniquement la table active (en mémoire) peuvent être utilisées dans des [modules T-SQL compilés en mode natif](https://msdn.microsoft.com/library/dn133184.aspx). Les requêtes temporelles utilisant la clause FOR SYSTEM TIME ne sont pas prises en charge dans les modules compilés en mode natif. L’utilisation de la clause FOR SYSTEM TIME avec les tables optimisées en mémoire dans les requêtes ad hoc et les modules non natifs est prise en charge.  
   
 -   Quand **SYSTEM_VERSIONING = ON**, une table de mise en lots interne optimisée en mémoire est automatiquement créée pour accepter les dernières modifications apportées à la table à système par version qui résultent d’opérations de mise à jour et de suppression sur la table optimisée en mémoire actuelle.  
   

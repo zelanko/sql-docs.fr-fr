@@ -13,12 +13,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: b929409e034fb3305ed147ac912580d9e75ab1e4
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95fcaa2334c0d7909b1b03583c3d8cab5ea707ab
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084632"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563835"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Découverte et classification des données SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ Les métadonnées de classification des *types d’informations* et des *étique
 * sys_information_type_name
 * sys_sensitivity_label_name
 
-Les métadonnées sont accessibles à l’aide de l’affichage catalogue [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) dans les propriétés étendues.
+Les métadonnées sont accessibles à l’aide de l’affichage catalogue [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) dans les propriétés étendues.
 
 L’exemple de code suivant retourne toutes les colonnes classifiées avec leurs classifications correspondantes :
 
@@ -150,8 +150,8 @@ Pour Azure SQL Database, consultez [Découverte et classification des données A
 
 Protégez vos colonnes sensibles en appliquant des mécanismes de sécurité au niveau des colonnes :
 
-* [Dynamic Data Masking](https://docs.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking) pour masquer les colonnes sensibles en cours d’utilisation.
-* [Always Encrypted](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine) pour chiffrer les colonnes sensibles au repos.
+* [Dynamic Data Masking](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking) pour masquer les colonnes sensibles en cours d’utilisation.
+* [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) pour chiffrer les colonnes sensibles au repos.
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

@@ -20,12 +20,12 @@ caps.latest.revision: 80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5197fb00840296dc4ef05b478d0dd3f0cd37c46
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 972b7bffab1ff6b4bf0710078d5c64a299ffe793
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770055"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564143"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secondaires actifs : réplicas secondaires accessibles en lecture (groupes de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34770055"
   
 -   Les charges de travail en lecture seule pour les tables sur disque utilisent le contrôle de version de ligne pour supprimer la contention de blocage sur les bases de données secondaires. Toutes les requêtes exécutées sur les bases de données secondaires sont automatiquement mappées au niveau des transactions d'isolation d'instantané, même lorsque d'autres niveaux d'isolation des transactions sont définis de manière explicite. De plus, tous les indicateurs de verrouillage sont ignorés. Cela élimine la contention de lecture/écriture.  
   
--   Les charges de travail en lecture seule pour les tables durables optimisées en mémoire accèdent aux données de la même manière que sur la base de données primaire, à l’aide des procédures stockées natives ou de l’interopérabilité SQL présentant les mêmes limitations de niveau d’isolation des transactions (consultez [Niveaux d’isolation du moteur de base de données](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7)). La charge de travail de création de rapports ou les requêtes en lecture seule en cours d'exécution sur le réplica principal peuvent être exécutées sur le réplica secondaire sans procéder à la moindre modification. De la même manière, une charge de travail de création de rapports ou des requêtes en lecture seule en cours d'exécution sur un réplica secondaire peuvent être exécutées sur le réplica principal sans procéder à la moindre modification.  Similaires aux tables sur disque, toutes les requêtes exécutées sur les bases de données secondaires sont automatiquement mappées au niveau des transactions d'isolation d'instantané, même lorsque d'autres niveaux d'isolation des transactions sont définis de manière explicite.  
+-   Les charges de travail en lecture seule pour les tables durables optimisées en mémoire accèdent aux données de la même manière que sur la base de données primaire, à l’aide des procédures stockées natives ou de l’interopérabilité SQL présentant les mêmes limitations de niveau d’isolation des transactions (consultez [Niveaux d’isolation du moteur de base de données](http://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). La charge de travail de création de rapports ou les requêtes en lecture seule en cours d'exécution sur le réplica principal peuvent être exécutées sur le réplica secondaire sans procéder à la moindre modification. De la même manière, une charge de travail de création de rapports ou des requêtes en lecture seule en cours d'exécution sur un réplica secondaire peuvent être exécutées sur le réplica principal sans procéder à la moindre modification.  Similaires aux tables sur disque, toutes les requêtes exécutées sur les bases de données secondaires sont automatiquement mappées au niveau des transactions d'isolation d'instantané, même lorsque d'autres niveaux d'isolation des transactions sont définis de manière explicite.  
   
 -   Les opérations DML sont autorisées sur les variables de table pour les types de tables sur disque et optimisées en mémoire sur le réplica secondaire.  
   

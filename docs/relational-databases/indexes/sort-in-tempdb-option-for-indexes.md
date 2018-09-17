@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecbe8b1fb2540eff9334e7c68a7b5a8872decb2b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4171e4b8636759c3df4ebfa0dc5eb0ee7f90c31c
+ms.sourcegitcommit: a41bad24d0619753471d3c79f4e57b051914836f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084652"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44499325"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Option SORT_IN_TEMPDB pour les index
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,19 +60,19 @@ ms.locfileid: "43084652"
   
  Si l'option SORT_IN_TEMPDB n'est pas activée, l'espace libre disponible dans le groupe de fichiers de destination doit correspondre environ à la taille de l'index final. Pendant la première phase, les exécutions triées sont construites et nécessitent environ la même quantité d'espace que l'index final. Pendant la deuxième phase, chaque extension comportant une exécution triée est libérée après avoir été traitée. Cela signifie que les extensions de tri sont libérées à peu près à la même vitesse que des extensions sont acquises pour le stockage des pages de l'index final et, de ce fait, l'espace nécessaire global ne dépasse pas beaucoup la taille de l'index final. Ceci présente toutefois l'inconvénient suivant : si la quantité d'espace libre est très proche de la taille de l'index final, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] tend à réutiliser les extensions de tri très rapidement après leur libération. Puisque ces dernières sont libérées d'une façon quelque peu aléatoire, la continuité des extensions d'index dans ce scénario est réduite. Lorsque l'option SORT_IN_TEMPDB est désactivée, la continuité des extensions d'index est améliorée s'il y a, dans le groupe de fichiers de destination, suffisamment d'espace libre pour permettre l'allocation des extensions d'index à partir d'un pool contigu et non à partir des extensions de tri qui viennent d'être libérées.  
   
- Lorsque vous créez un index non-cluster, vous devez respecter les règles suivantes en matière d'espace libre :  
+Lorsque vous créez un index non-cluster, vous devez respecter les règles suivantes en matière d'espace libre :  
   
 -   Si l’option SORT_IN_TEMPDB est activée, il doit y avoir suffisamment d’espace libre dans **tempdb** pour stocker les tris, et suffisamment d’espace dans le groupe de fichiers de destination pour stocker la structure finale de l’index. Les exécutions triées contiennent les lignes feuilles de l'index.  
   
 -   Si l'option SORT_IN_TEMPDB n'est pas activée, l'espace libre dans le groupe de fichiers de destination doit être suffisamment grand pour stocker la structure finale de l'index. La continuité des extensions d'index peut être améliorée lorsque l'espace libre est important.  
   
- Lorsque vous créez un index cluster sur une table qui n'a pas d'index non-cluster, vous devez respecter les règles suivantes en matière d'espace libre :  
+Lorsque vous créez un index cluster sur une table qui n'a pas d'index non-cluster, vous devez respecter les règles suivantes en matière d'espace libre :  
   
 -   Si l’option SORT_IN_TEMPDB est activée, il doit y avoir suffisamment d’espace libre dans **tempdb** pour stocker les tris. Ceux-ci comprennent les lignes de données de la table. Il doit y avoir suffisamment d'espace libre dans le groupe de fichiers de destination pour stocker la structure de l'index final. Ceci comprend les lignes de données de la table et l'arborescence binaire de l'index. Il se peut que vous deviez ajuster l'estimation en fonction de facteurs tels que le fait d'avoir une taille de clé élevée ou un faible taux de remplissage.  
   
 -   Si l'option SORT_IN_TEMPDB n'est pas activée, l'espace libre dans le groupe de fichiers de destination doit être suffisamment grand pour stocker la table finale. Ceci comprend la structure de l'index. La continuité de la table et des extensions d'index peut être améliorée si l'espace libre disponible est plus important.  
   
- Lorsque vous créez un index cluster sur une table qui a des index non-cluster, vous devez respecter les règles suivantes en matière d'espace libre :  
+Lorsque vous créez un index cluster sur une table qui a des index non-cluster, vous devez respecter les règles suivantes en matière d'espace libre :  
   
 -   Si l’option SORT_IN_TEMPDB est activée, il doit y avoir suffisamment d’espace libre dans **tempdb** pour stocker la collection de tris pour le plus grand index, généralement l’index cluster, et suffisamment d’espace dans le groupe de fichiers de destination pour stocker les structures finales de tous les index. Ceci comprend l'index cluster qui contient les lignes de données de la table.  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d3ca27df3ccd68df1b5b3e10c67d7550742d236
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bcf0521ad8d6f32bd9c351c0f5f212c12dfebd57
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274738"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564185"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Fichier de configuration RSReportServer.config
 Le fichier [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** stocke les paramètres utilisés par le service Web Report Server et le traitement en arrière-plan. Toutes les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s'exécutent au sein d'un processus unique qui lit les paramètres de configuration stockés dans le fichier RSReportServer.config. Les serveurs de rapports en mode natif et en mode SharePoint utilisent le fichier RSReportServer.config. Toutefois, les deux modes n'utilisent pas les mêmes paramètres dans le fichier de configuration. La version en mode SharePoint du fichier est moins volumineuse car de nombreux paramètres du mode SharePoint sont stockés dans des bases de données de configuration SharePoint plutôt que dans le fichier. Cette rubrique décrit le fichier de configuration par défaut installé en mode natif ou en mode SharePoint, et certains paramètres et comportements importants qui sont contrôlés par le fichier de configuration.  
@@ -237,7 +237,7 @@ Pour plus d’informations sur la modification du fichier, consultez [Modifier u
 |**ExcludedRenderFormats**, **RenderingExtension**|Ces paramètres sont utilisés pour exclure volontairement les formats d'exportation qui ne fonctionnent pas correctement avec la remise par partage de fichiers. Ces formats sont utilisés en général pour la création de rapports interactifs, l'aperçu ou le préchargement du cache de rapports. Ils ne produisent pas de fichiers d'application qui peuvent être affichés facilement à partir d'une application bureautique.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> Paramètres de configuration de l'extension de messagerie électronique du serveur de rapports  
- La messagerie électronique Report Server utilise un périphérique réseau SMTP pour envoyer des rapports à des adresses de messagerie. Cette extension de remise doit être configurée avant de pouvoir être utilisée. Pour plus d’informations, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) et [Remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ La messagerie électronique Report Server utilise un périphérique réseau SMTP pour envoyer des rapports à des adresses de messagerie. Cette extension de remise doit être configurée avant de pouvoir être utilisée. Pour plus d’informations, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) et [Remise par courrier électronique dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Paramètre|Description|  
 |-------------|-----------------|  
