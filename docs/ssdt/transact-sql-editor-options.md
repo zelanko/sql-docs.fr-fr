@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dd9936b3b100ffc4509369a49cff767094152c97
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085941"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564015"
 ---
 # <a name="transact-sql-editor-options"></a>Options de l'Éditeur Transact-SQL
 Cette rubrique contient des informations sur certaines options de l'Éditeur Transact-SQL. Pour définir ces options, accédez à la boîte de dialogue **Option** depuis le menu **Outils\Options**.  
@@ -57,7 +57,7 @@ Cette rubrique contient des informations sur certaines options de l'Éditeur Tra
 |**SET NOEXEC**|Si la valeur définie est **ON**, Microsoft® SQL Server™ compile chaque lot d'instructions Transact-SQL sans les exécuter. Avec la valeur **OFF**, Microsoft® SQL Server™ doit exécuter tous les lots après la compilation. Pour plus d'informations, consultez [SET NOEXEC](http://go.microsoft.com/fwlink/?LinkId=238770).|  
 |**SET PARSEONLY**|Vérifie la syntaxe de chaque instruction Transact-SQL et renvoie tout message d'erreur éventuel sans compiler ni exécuter cette instruction. Pour plus d'informations, consultez [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734).|  
 |**SET CONCAT_NULL_YIELDS_NULL**|Détermine si les résultats de concaténation sont considérés comme des valeurs NULL ou des chaînes vides. Pour plus d'informations, consultez [SET CONCAT_NULL_YIELDS_NULL](http://go.microsoft.com/fwlink/?LinkId=238733).|  
-|**SET ARITHABORT**|Arrête une requête lorsqu'un dépassement de capacité ou une division par zéro se produit durant son exécution. Pour plus d'informations, consultez [SET ARITHABORT](http://msdn.microsoft.com/en-us/library/aa259212(v=SQL.80).aspx).|  
+|**SET ARITHABORT**|Arrête une requête lorsqu'un dépassement de capacité ou une division par zéro se produit durant son exécution. Pour plus d'informations, consultez [SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx).|  
 |**SET SHOWPLAN_TEXT**|Empêche Microsoft® SQL Server™ d'exécuter des instructions Transact-SQL. Au lieu de cela, SQL Server retourne des informations détaillées sur l'exécution des instructions. Pour plus d'informations, consultez [SET SHOWPLAN_TEXT](http://go.microsoft.com/fwlink/?LinkID=238737).|  
 |**SET STATISTICS TIME**|Affiche le nombre de millisecondes requises pour analyser, compiler et exécuter chaque instruction.|  
 |**SET STATISTICS IO**|Force Microsoft® SQL Server™ à afficher des informations sur la quantité d'activité générée sur le disque par les instructions Transact-SQL.|  

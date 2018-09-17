@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3aa41b2ae420f626b2749f55a07f4dfa9eefb926
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 92fdfd91cc3087e91169cd65f6c10f8b40e82848
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086451"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564087"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Procédure pas à pas : création d'un assembly de règle d'analyse statique du code personnalisée pour SQL Server
 Cette procédure pas à pas montre les étapes permettant de créer une règle d’analyse du code SQL Server. La règle créée lors de cette procédure pas à pas sert à éviter la présence d'instructions WAITFOR DELAY dans les procédures stockées, les déclencheurs et les fonctions.  
@@ -71,7 +71,7 @@ Ensuite, vous allez ajouter des classes de prise en charge qui seront utilisées
 ## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>Création des classes de prise en charge de la règle d'analyse du code personnalisée  
 Avant de créer la classe pour la règle proprement dite, vous allez ajouter une classe Visitor et une classe d'attributs au projet. Ces classes peuvent être utiles pour la création de règles personnalisées supplémentaires.  
   
-La première classe que vous devez définir est la classe WaitForDelayVisitor, dérivée de [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx). Cette classe fournit l'accès aux instructions WAITFOR DELAY dans le modèle. Les classes Visitor utilisent les API [ScriptDom](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx) fournies par SQL Server. Dans cette API, le code Transact\-SQL est représenté sous la forme d’une arborescence de syntaxe abstraite et les classes Visitor peuvent être utiles quand vous souhaitez rechercher des objets de syntaxe spécifiques, tels que des instructions WAITFORDELAY. Ceux-ci peuvent être difficiles à trouver à l’aide du modèle objet, car ils ne sont associés à aucune relation ou propriété d’objet spécifique, mais il est facile de les trouver à l’aide du modèle Visitor et de l’API [ScriptDom](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.aspx).  
+La première classe que vous devez définir est la classe WaitForDelayVisitor, dérivée de [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx). Cette classe fournit l'accès aux instructions WAITFOR DELAY dans le modèle. Les classes Visitor utilisent les API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx) fournies par SQL Server. Dans cette API, le code Transact\-SQL est représenté sous la forme d’une arborescence de syntaxe abstraite et les classes Visitor peuvent être utiles quand vous souhaitez rechercher des objets de syntaxe spécifiques, tels que des instructions WAITFORDELAY. Ceux-ci peuvent être difficiles à trouver à l’aide du modèle objet, car ils ne sont associés à aucune relation ou propriété d’objet spécifique, mais il est facile de les trouver à l’aide du modèle Visitor et de l’API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx).  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>Définition de la classe WaitForDelayVisitor  
   
@@ -121,7 +121,7 @@ La première classe que vous devez définir est la classe WaitForDelayVisitor, d
     }  
     ```  
   
-    Cette méthode visite les instructions WAITFOR dans le modèle et ajoute celles qui ont l'option DELAY spécifiée à la liste d'instructions WAITFOR DELAY. La principale classe référencée ici est [WaitForStatement](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx).  
+    Cette méthode visite les instructions WAITFOR dans le modèle et ajoute celles qui ont l'option DELAY spécifiée à la liste d'instructions WAITFOR DELAY. La principale classe référencée ici est [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx).  
   
 9. Dans le menu **Fichier** , cliquez sur **Enregistrer**.  
   
@@ -400,9 +400,9 @@ Maintenant que vous avez ajouté les classes d'assistance qui seront utilisées 
   
 9. Ajoutez une substitution pour la méthode Microsoft.SqlServer.Dac.CodeAnalysis.SqlAnalysisRule.Analyze(Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleExecutionContext), qui utilise Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleExecutionContext comme paramètres d’entrée. Cette méthode retourne une liste de problèmes potentiels.  
   
-    La méthode obtient Microsoft.SqlServer.Dac.Model.TSqlModel, Microsoft.SqlServer.Dac.Model.TSqlObject et [TSqlFragment](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.tsqlfragment.aspx) à partir du paramètre de contexte. La classe WaitForDelayVisitor est ensuite utilisée pour obtenir une liste de toutes les instructions WAITFOR DELAY dans le modèle.  
+    La méthode obtient Microsoft.SqlServer.Dac.Model.TSqlModel, Microsoft.SqlServer.Dac.Model.TSqlObject et [TSqlFragment](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlfragment.aspx) à partir du paramètre de contexte. La classe WaitForDelayVisitor est ensuite utilisée pour obtenir une liste de toutes les instructions WAITFOR DELAY dans le modèle.  
   
-    Pour chaque [WaitForStatement](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx) de cette liste, un Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleProblem est créé.  
+    Pour chaque [WaitForStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.waitforstatement.aspx) de cette liste, un Microsoft.SqlServer.Dac.CodeAnalysis.SqlRuleProblem est créé.  
   
     ```  
     /// <summary>  

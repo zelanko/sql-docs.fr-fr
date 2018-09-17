@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab996710a0c88d004b36f7bed1e6304a494bc9eb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b20a2432ae509923b2befd240a66de04c50502c4
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085071"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564125"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procédure : écrire un test unitaire SQL Server qui s'exécute dans l'étendue d'une seule transaction
 Modifiez les tests unitaires de façon à ce qu'ils s'exécutent dans l'étendue d'une transaction. Si vous adoptez cette approche, vous pouvez restaurer les modifications apportées par le test une fois le test terminé. Les procédures suivantes expliquent comment effectuer les tâches suivantes :  
@@ -60,7 +60,7 @@ Pour certaines procédures de cette rubrique, le service Distributed Transaction
     Pour plus d'informations sur le fonctionnement de l'instruction ROLLBACK TRANSACTION avec les procédures stockées et les déclencheurs, consultez cette page sur le site Web Microsoft : [ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927).  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>Pour créer une transaction pour une seule méthode de test  
-Dans cet exemple, vous utilisez une transaction ambiante lorsque vous utilisez le type [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope). Par défaut, les connexions d'exécution et privilégiées n'utilisent pas la transaction ambiante, car les connexions ont été créées avant que la méthode ne soit exécutée. SqlConnection possède une méthode [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction), qui associe une connexion active à une transaction. Lorsqu'une transaction ambiante est créée, elle est inscrite en tant que transaction active, et la propriété [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) vous permet d'y accéder. Dans cet exemple, la transaction est restaurée lorsque la transaction ambiante est supprimée. Si vous souhaitez valider toutes les modifications apportées lorsque vous avez exécuté le test unitaire, vous devez appeler la méthode [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete).  
+Dans cet exemple, vous utilisez une transaction ambiante lorsque vous utilisez le type [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope). Par défaut, les connexions d'exécution et privilégiées n'utilisent pas la transaction ambiante, car les connexions ont été créées avant que la méthode ne soit exécutée. SqlConnection possède une méthode [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction), qui associe une connexion active à une transaction. Lorsqu'une transaction ambiante est créée, elle est inscrite en tant que transaction active, et la propriété [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) vous permet d'y accéder. Dans cet exemple, la transaction est restaurée lorsque la transaction ambiante est supprimée. Si vous souhaitez valider toutes les modifications apportées lorsque vous avez exécuté le test unitaire, vous devez appeler la méthode [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete).  
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>Pour créer une transaction pour une seule méthode de test  
   

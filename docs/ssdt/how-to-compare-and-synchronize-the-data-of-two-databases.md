@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae6d78109eb4a6898efc9bc3e972c9f65503cf63
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 197e6130a33df4413d9c936fca9291c02557acb7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088521"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563873"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procédure : Comparer et synchroniser les données de deux bases de données
 Vous pouvez comparer les données contenues dans deux bases de données. Les bases de données que vous comparez sont appelées *source* et *cible*.  
@@ -86,7 +86,7 @@ Pour plus d'informations, consultez [Comparer et synchroniser des données d'une
   
     Remplacez les espaces réservés (*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword* et *tDisplayName*) par les valeurs de vos bases de données source et cible.  
   
-    Si vous ne spécifiez pas une source et une cible, la boîte de dialogue **Nouvelle comparaison de données** s'affiche. Pour plus d'informations sur les paramètres de la commande Sql.NewDataComparison, consultez [Référence des commandes Automation pour les fonctionnalités de base de données de Visual Studio Team System](https://msdn.microsoft.com/en-us/library/dd470565.aspx).  
+    Si vous ne spécifiez pas une source et une cible, la boîte de dialogue **Nouvelle comparaison de données** s'affiche. Pour plus d'informations sur les paramètres de la commande Sql.NewDataComparison, consultez [Référence des commandes Automation pour les fonctionnalités de base de données de Visual Studio Team System](https://msdn.microsoft.com/library/dd470565.aspx).  
   
     Les données des bases de données source et cibles spécifiées sont comparées. Les résultats s'affichent dans une session de comparaisons de données. Pour plus d'informations sur l'affichage des résultats ou la synchronisation des données, consultez [Afficher les différences entre les données](#ViewDifferences) et [Synchronisation des données d'une base de données](#Synchronize).  
   

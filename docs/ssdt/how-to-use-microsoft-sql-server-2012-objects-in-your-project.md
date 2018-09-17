@@ -14,17 +14,17 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 319abf02d87a12e8df96e6e22666da54ade16d1d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0a26f0ef02fbe9c6b1dd47c9ff0d111a89340469
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084501"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563877"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procédure : utiliser des objets Microsoft SQL Server 2012 dans votre projet
 Dans cet exemple, vous ajouterez un objet séquence à un projet de base de données ciblant Microsoft SQL Server 2012.  
   
-Des séquences sont introduites dans Microsoft SQL Server 2012. Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut effectuer un cycle (répétition) selon la demande.  Pour plus d'informations sur les objets séquence, consultez [Numéros de séquence](htttp://msdn.microsoft.com/en-us/library/ff878058(SQL.110).aspx). Pour plus d’informations sur les nouveautés concernant Microsoft SQL Server 2012, consultez [Nouveautés de SQL Server 2012 ](http://msdn.microsoft.com/en-us/library/bb500435(SQL.110).aspx).  
+Des séquences sont introduites dans Microsoft SQL Server 2012. Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut effectuer un cycle (répétition) selon la demande.  Pour plus d'informations sur les objets séquence, consultez [Numéros de séquence](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). Pour plus d’informations sur les nouveautés concernant Microsoft SQL Server 2012, consultez [Nouveautés de SQL Server 2012 ](http://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
   
 > [!WARNING]  
 > Les procédures suivantes utilisent les entités créées dans les procédures précédentes des sections [Développement de base de données connectée](../ssdt/connected-database-development.md) et [Développement de base de données hors connexion orienté projet](../ssdt/project-oriented-offline-database-development.md).  

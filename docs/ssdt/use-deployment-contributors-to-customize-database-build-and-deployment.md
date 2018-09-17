@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea94d533714f17cd251805c5c33ec886ebbfb989
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 37fdcf6fdce41cf69a81eaea0d3ca3c9bd5c0c67
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083781"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563765"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement
 Visual Studio fournit des points d'extensibilité que vous pouvez utiliser pour modifier le comportement des actions de génération et de déploiement pour les projets de base de données.  
@@ -36,11 +36,11 @@ Vous pouvez créer une extension pour les points d'extensibilité, comme indiqu�
 ### <a name="supported-extensibility-scenarios"></a>Scénarios d'extensibilité pris en charge  
 Vous pouvez implémenter des contributeurs de génération et de déploiement pour activer les scénarios d'exemple suivant :  
   
--   **Générer la documentation d'une schéma lors de la génération du projet** : pour prendre en charge ce scénario, vous implémentez un [BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) et remplacez la méthode OnExecute pour générer la documentation de schéma. Vous pouvez créer un fichier de cibles qui définit les arguments par défaut qui déterminent si l'extension est exécutée et qui spécifient le nom du fichier de sortie.  
+-   **Générer la documentation d'une schéma lors de la génération du projet** : pour prendre en charge ce scénario, vous implémentez un [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) et remplacez la méthode OnExecute pour générer la documentation de schéma. Vous pouvez créer un fichier de cibles qui définit les arguments par défaut qui déterminent si l'extension est exécutée et qui spécifient le nom du fichier de sortie.  
   
--   **Créer un rapport de différence lorsqu'un projet SQL est déployé** : pour prendre en charge ce scénario, vous implémentez un [DeploymentPlanExecutor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx), qui génère le fichier XML lorsque le projet SQL est déployé.  
+-   **Créer un rapport de différence lorsqu'un projet SQL est déployé** : pour prendre en charge ce scénario, vous implémentez un [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx), qui génère le fichier XML lorsque le projet SQL est déployé.  
   
--   **Modifier le plan de déploiement pour changer le moment du transfert des données** : pour prendre en charge ce scénario, vous implémentez un [DeploymentPlanModifier](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) et l'itérez sur le plan de déploiement. Pour chaque SqlTableMigrationStep dans ce plan, vous examinez le résultat de la comparaison pour déterminer si cette opération doit être effectuée ou ignorée.  
+-   **Modifier le plan de déploiement pour changer le moment du transfert des données** : pour prendre en charge ce scénario, vous implémentez un [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) et l'itérez sur le plan de déploiement. Pour chaque SqlTableMigrationStep dans ce plan, vous examinez le résultat de la comparaison pour déterminer si cette opération doit être effectuée ou ignorée.  
   
 -   **Copier les fichiers vers le dacpac généré lorsqu'un projet SQL est déployé** : pour prendre en charge ce scénario, vous implémentez un contributeur de déploiement et vous remplacez la méthode OnEstablishDeploymentConfiguration pour spécifier quels fichiers sont marqués comme DeploymentExtensionConfiguration par le système de projet. Ces fichiers doivent être copiés dans le dossier de sortie et ajouté dans le dacpac généré. Vous pouvez également modifier le contributeur pour qu'il fusionne plusieurs fichiers en un nouveau fichier qui est copié dans le dossier de sortie et ajouté au manifeste de déploiement. Lors du déploiement, vous pouvez appliquer la méthode OnApplyDeploymentConfiguration pour extraire ces fichiers du dacpac et les préparer pour les utiliser dans la méthode OnExecute.  
   
@@ -50,9 +50,9 @@ En outre, vous pouvez exposer des paires personnalisées d'arguments nom/valeurs
   
 |**Tâches courantes**|**Contenu de prise en charge**|  
 |--------------------|--------------------------|  
-|**En savoir plus sur les points d'extensibilité :** vous pouvez vous documenter au sujet des classes de base que vous utilisez pour implémenter des contributeurs de génération et de déploiement.|[BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**En savoir plus sur les points d'extensibilité :** vous pouvez vous documenter au sujet des classes de base que vous utilisez pour implémenter des contributeurs de génération et de déploiement.|[BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
 |**Créer des exemples de contributeurs :** apprenez les étapes nécessaires pour créer un contributeur de génération ou de déploiement. Si vous suivez ces procédures pas à pas, vous serez en mesure de :<br /><br />-   Créer un contributeur de génération qui génère un rapport répertoriant tous les éléments du modèle.<br />-   Créer un contributeur de déploiement qui modifie le plan de déploiement avant son exécution.<br />-   Créer un contributeur de déploiement qui génère un rapport de déploiement lorsque vous déployez un projet SQL.<br /><br />Vous pouvez créer tous les contributeurs dans un seul assembly ou sur plusieurs assemblys, selon la façon dont vous souhaitez qu'ils soient distribués à votre équipe.|[Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Procédure pas à pas : Étendre le déploiement du projet de base de données pour modifier le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Procédure pas à pas : Étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a> Voir aussi  
-[Définir des conditions personnalisées pour les tests unitaires SQL](http://msdn.microsoft.com/en-us/library/jj860449(v=vs.103).aspx)  
+[Définir des conditions personnalisées pour les tests unitaires SQL](http://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  
   

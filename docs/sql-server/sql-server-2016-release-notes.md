@@ -16,16 +16,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 413ee4cac6f8cb6ca60ad92165f50177e4801cf1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 93aec2aa71e4ab5bcbadd9eb4f7a1d6a400af216
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987941"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564102"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notes de publication de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-  Cet article décrit les limitations et les problèmes des versions SQL Server 2016, notamment les Service Packs. Pour plus d’informations sur les nouveautés, consultez [Nouveautés de SQL Server 2016](https://docs.microsoft.com/en-us/sql/sql-server/what-s-new-in-sql-server-2016).
+  Cet article décrit les limitations et les problèmes des versions SQL Server 2016, notamment les Service Packs. Pour plus d’informations sur les nouveautés, consultez [Nouveautés de SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
 
 - [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Télécharger SQL Server 2016 à partir du **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 - [![Machine virtuelle Azure de petite taille](../includes/media/azure-vm.png)](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** pour lancer une machine virtuelle avec SQL Server 2016 SP1 déjà installé.
@@ -122,7 +122,7 @@ Le tableau suivant récapitule les principales améliorations fournies dans SQL 
 
 De plus, notez les correctifs suivants :
 - En fonction des commentaires des administrateurs de base de données et de la Communauté SQL, à compter de SQL 2016 SP1, les messages de journalisation Hekaton sont réduits au minimum.
-- Passez en revue les nouveaux [indicateurs de trace](https://docs.microsoft.com/en-us/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
+- Passez en revue les nouveaux [indicateurs de trace](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
 - Les versions complètes des exemples de bases de données WideWorldImporters fonctionnent maintenant avec les éditions Standard et Express, à compter de SQL Server 2016 SP1, et sont disponibles sur [GitHub]( https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0). Aucun changement n’est nécessaire dans l’exemple. Les sauvegardes de base de données créées dans la version finale de l’édition Entreprise avec Standard et Express SP1. 
 
 Il peut s’avérer nécessaire de redémarrer le système après l’installation de SQL Server 2016 SP1. Nous vous recommandons de planifier et d’effectuer un redémarrage après l’installation de SQL Server 2016 SP1.
