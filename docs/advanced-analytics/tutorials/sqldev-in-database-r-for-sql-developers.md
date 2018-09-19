@@ -8,19 +8,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 16b3a19e8252e35fcefc817be2c8de11471b4eb3
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7adfda1c31bd1fc32dc4149a568cfdd2149ab0b3
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393187"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724303"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>: Didacticiel analytique en base de données à l’aide de R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans ce didacticiel pour les programmeurs SQL, vous acquérez une expérience pratique à l’aide du langage R pour générer et déployer une solution d’apprentissage en encapsulant le code R dans les procédures stockées.
 
-Ce didacticiel utilise un dataset public bien connu, selon les allers-retours dans les taxis de New York city. Pour exécuter l’exemple de code plus rapidement, nous avons créé un échantillon représentatif de 1 % des données. Vous utiliserez ces données pour générer un modèle de classification binaire qui prédit si un voyage en particulier est susceptible d’obtienne un pourboire ou non, selon les colonnes telles que l’heure de la journée, distance et l’emplacement de la prise en charge.
+Ce didacticiel utilise un dataset public bien connu, selon les allers-retours dans les taxis de New York City. Pour exécuter l’exemple de code plus rapidement, nous avons créé un échantillon représentatif de 1 % des données. Vous utiliserez ces données pour générer un modèle de classification binaire qui prédit si un voyage en particulier est susceptible d’obtienne un pourboire ou non, selon les colonnes telles que l’heure de la journée, distance et l’emplacement de la prise en charge.
 
 > [!NOTE]
 > 

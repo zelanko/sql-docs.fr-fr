@@ -1,6 +1,6 @@
 ---
 title: Rôles | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ebefae10d3c1cd4791cc38fd5b9d30e5e29838a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981531"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975688"
 ---
 # <a name="roles"></a>Rôles
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Les rôles, dans les modèles tabulaires, définissent des autorisations de membre pour un modèle. Les membres du rôle peuvent effectuer des actions sur le modèle, comme défini par l'autorisation du rôle. Les rôles définis avec des autorisations de lecture peuvent également fournir une sécurité supplémentaire au niveau de la ligne grâce à l'utilisation de filtres au niveau de la ligne. 
   
  Pour SQL Server Analysis Services, rôles contiennent des membres de l’utilisateur par nom d’utilisateur Windows ou par groupe de Windows et les autorisations (lecture, processus, administrateur). Pour Azure Analysis Services, les utilisateurs doivent être dans votre Azure Active Directory et les noms d’utilisateurs et groupes spécifiés doivent être par adresse de messagerie professionnelle ou UPN. 
-  
+
+> [!IMPORTANT]  
+>  Lorsque l’utilisation de SSDT pour créer des rôles et ajouter des utilisateurs de l’organisation à un modèle tabulaire de projet qui sera déployée sur Azure Analysis Services, utilisez [espace de travail intégré](workspace-database-ssas-tabular.md).
+
 > [!IMPORTANT]  
 >  Pour les utilisateurs pour se connecter à un modèle déployé à l’aide d’une application cliente de création de rapports, vous devez créer au moins un rôle au moins une autorisation à laquelle les utilisateurs sont membres de lecture.  
   
@@ -47,7 +50,7 @@ ms.locfileid: "38981531"
   
  Chaque rôle peut avoir l'une des autorisations suivantes définies :  
   
-|Autorisations|Description|Filtres de lignes à l'aide de DAX|  
+|Permissions|Description|Filtres de lignes à l'aide de DAX|  
 |-----------------|-----------------|----------------------------|  
 |None|Les membres ne peuvent pas apporter de modifications au schéma de la base de données model et ne peuvent pas interroger les données.|Les filtres de lignes ne s'appliquent pas. Aucune donnée n'est visible par les utilisateurs de ce rôle|  
 |Lire|Les membres sont autorisés à interroger des données (selon les filtres au niveau de la ligne), mais ils ne peuvent pas modifier la base de données model dans SSMS, apporter des modifications au schéma de la base de données model et l'utilisateur ne peut pas traiter le modèle.|Des filtres de lignes peuvent être appliqués. Seules les données spécifiées dans la formule DAX de filtre de lignes sont visibles par les utilisateurs.|  
@@ -105,7 +108,7 @@ ms.locfileid: "38981531"
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-| 1|Entreprise|  
+|1|Entreprise|  
 |2|Direction générale et administration|  
 |3|Gestion des stocks|  
 |4|Fabrication|  

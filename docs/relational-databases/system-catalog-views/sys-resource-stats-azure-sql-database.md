@@ -1,7 +1,7 @@
 ---
 title: Sys.resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,17 +27,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c2f8a0e0cebcf64bedac33861184e806f322d7d1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ea822937f8bdf6fe0a79c20a391976169d336610
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038848"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563985"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Retourne les données de stockage et d'utilisation de l'UC pour Azure SQL Database. Les données sont collectées et agrégées dans des intervalles de cinq minutes. Pour chaque base de données utilisateur, il existe une ligne pour chaque fenêtre de rapports toutes les cinq minutes dans laquelle a lieu une modification de la consommation des ressources. Les données retournées incluent l’utilisation processeur, la modification de taille de stockage ou base de données de modification de la référence. Bases de données inactives sans aucune modification ne peuvent pas avoir de lignes pour chaque intervalle de cinq minutes. Les données historiques sont conservées pendant environ 14 jours.  
+  Retourne les données de stockage et d'utilisation de l'UC pour Azure SQL Database. Les données sont collectées et agrégées dans des intervalles de cinq minutes. Pour chaque base de données utilisateur, il existe une ligne pour chaque fenêtre de rapports de cinq minutes au cours desquels survient une modification de la consommation de ressources. Les données retournées incluent l’utilisation du processeur, changement de taille de stockage et base de données de modification de la référence. Bases de données inactives sans aucune modification ne peuvent pas avoir de lignes pour chaque intervalle de cinq minutes. Les données historiques sont conservées pendant environ 14 jours.  
   
  Le **sys.resource_stats** vue a des définitions différentes selon la version du serveur de base de données SQL Azure qui est associé à la base de données. Tenez compte de ces différences et des modifications requises par votre application lors de la mise à niveau vers une nouvelle version de serveur.  
   
@@ -56,11 +56,12 @@ ms.locfileid: "38038848"
 |max_worker_percent|**décimale (5,2)**|Nombre maximal d’ouvriers simultanés (demandes) en pourcentage de la limite de niveau de service de la base de données.<br /><br /> Valeur maximale est actuellement calculée pour l’intervalle de cinq minutes basée sur les échantillons de 15 secondes des nombres de travail simultanés.|  
 |max_session_percent|**décimale (5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.<br /><br /> Valeur maximale est actuellement calculée pour l’intervalle de cinq minutes basée sur les échantillons de 15 secondes du nombre de sessions simultanées.|  
 |dtu_limit|**Int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. |  
+|allocated_storage_in_megabytes|**float**|La quantité de mise en forme d’espace de fichier en Mo mis à disposition pour stocker les données de la base de données. Espace du fichier de mise en forme est également appelée espace de données alloué.  Pour plus d’informations, consultez : [gestion de l’espace de fichier dans la base de données SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [niveaux de Service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  
     
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Cette vue est disponible pour tous les rôles d’utilisateur avec des autorisations pour se connecter à virtuel **master** base de données.  
   
 ## <a name="remarks"></a>Notes  
@@ -68,7 +69,7 @@ ms.locfileid: "38038848"
   
  Lorsqu’une base de données est membre d’un pool élastique, statistiques des ressources présentées sous forme de valeurs de pourcentage sont exprimées en tant que le pourcentage de la limite maximale pour les bases de données, comme défini dans la configuration de pool élastique.  
   
- Pour obtenir une vue plus granulaire de ces données, utilisez **sys.dm_db_resource_stats** vue de gestion dynamique dans une base de données utilisateur. Cette vue capture des données toutes les 15-secondes et conserve les données d’historique pour 1 heure.  Pour plus d’informations, consultez [sys.dm_db_resource_stats &#40;base de données SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
+ Pour obtenir une vue plus granulaire de ces données, utilisez **sys.dm_db_resource_stats** vue de gestion dynamique dans une base de données utilisateur. Cette vue capture des données toutes les 15 secondes et conserve 1 heure d'historique des données.  Pour plus d’informations, consultez [sys.dm_db_resource_stats &#40;base de données SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
 
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne toutes les bases de données dont la moyenne s'établit à au moins 80 % de l'utilisation du calcul au cours de la dernière semaine.  

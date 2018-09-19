@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 4aa45d7ee690d55672c86be256e66d454860c2b6
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343084"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563879"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Didacticiel : Les fonctions utilisent RevoScaleR R avec des données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +60,7 @@ Vous devez également être familiarisé avec [!INCLUDE[tsql](../../includes/tsq
   
     Pour basculer entre les contextes de calcul locaux et distants, vous avez besoin des deux systèmes. Locale est généralement une station de travail de développement grâce à une puissance suffisante pour les charges de travail de science des données. À distance dans ce cas est SQL Server 2017 ou SQL Server 2016 avec la fonctionnalité R activée. 
     
-    Basculement des contextes de calcul dépend ayant la même version RevoScaleR sur les systèmes locaux et distants. Sur une station de travail locale, vous pouvez obtenir les packages RevoScaleR et les fournisseurs associés par l’installation ou à l’aide de l’une des opérations suivantes : [machine virtuelle de science des données sur Azure](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview), [(gratuit) de Microsoft R Client](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client), ou [ Microsoft Machine Learning Server (autonome)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install). Pour l’option de serveur autonome, installez l’édition gratuite pour les développeurs, à l’aide de programmes d’installation de Linux ou Windows. Vous pouvez également utiliser le programme d’installation de SQL Server pour installer un serveur autonome.
+    Basculement des contextes de calcul dépend ayant la même version RevoScaleR sur les systèmes locaux et distants. Sur une station de travail locale, vous pouvez obtenir les packages RevoScaleR et les fournisseurs associés par l’installation ou à l’aide de l’une des opérations suivantes : [machine virtuelle de science des données sur Azure](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview), [(gratuit) de Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client), ou [ Microsoft Machine Learning Server (autonome)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install). Pour l’option de serveur autonome, installez l’édition gratuite pour les développeurs, à l’aide de programmes d’installation de Linux ou Windows. Vous pouvez également utiliser le programme d’installation de SQL Server pour installer un serveur autonome.
       
 -   **Packages R supplémentaires**
   

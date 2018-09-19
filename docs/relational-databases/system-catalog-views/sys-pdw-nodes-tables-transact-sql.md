@@ -18,12 +18,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 263e2edb61529a197815f95cc595dcb9b5949877
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c25a8486ebdaf81b868b6fedcc25c39e225048c3
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032114"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563545"
 ---
 # <a name="syspdwnodestables-transact-sql"></a>Sys.pdw_nodes_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "38032114"
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|\<héritée de colonnes >||Pour obtenir la liste des colonnes qui hérite de cette vue, consultez [sys.objects](http://msdn.microsoft.com/en-us/c36fa71e-549a-4533-a6cd-1314d26f533f).||  
+|\<héritée de colonnes >||Pour obtenir la liste des colonnes qui hérite de cette vue, consultez [sys.objects](http://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f).||  
 |lob_data_space_id|**Int**||Toujours 0.|  
 |filestream_data_space_id|**Int**|ID de l’espace de données pour un groupe de fichiers FILESTREAM ou [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**Int**|ID de colonne maximum utilisé par cette table.||  
 |lock_on_bulk_load|**bit**|La table est verrouillée pour le chargement en masse.|TBD|  
-|uses_ansi_nulls|**bit**|Lorsque la table a été créée, l'option de base de données SET ANSI_NULLS avait pour valeur ON.| 1|  
+|uses_ansi_nulls|**bit**|Lorsque la table a été créée, l'option de base de données SET ANSI_NULLS avait pour valeur ON.|1|  
 |is_replicated|**bit**|1 = table est publiée à l’aide de la réplication.|0 ; la réplication n’est pas pris en charge.|  
 |has_replication_filter|**bit**|1 = la table possède un filtre de réplication.|0|  
 |is_merge_published|**bit**|1 = la table est publiée à l'aide de la réplication de fusion.|0 ; non pris en charge.|  

@@ -24,12 +24,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 93bb9dd2e67879368522886013772196e08dc17e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a8f595c79a36581bb5a2ff1ce94591134fb546dd
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37095314"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563627"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Le **sys.server_resource_stats** vue a des définitions différentes selon la ve
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Heure UTC indiquant le début de l’intervalle de création de rapports de quinze secondes|  
 |end_time|**datetime**|Heure UTC indiquant la fin de l’intervalle de création de rapports de quinze secondes|
-|resource_type|Nvarchar (128)|Type de la ressource pour laquelle les métriques sont fournies|
+|resource_type|nvarchar (128)|Type de la ressource pour laquelle les métriques sont fournies|
 |resource_name|nvarchar (128)|Nom de la ressource.|
 |sku|nvarchar (128)|Managed Instance niveau de Service de l’Instance. Les valeurs possibles sont les suivantes : <br><ul><li>Usage général</li></ul><ul><li>Critique pour l’entreprise</li></ul>|
 |hardware_generation|nvarchar (128)|Identificateur de génération de matériel : comme Gen 4 ou Gen 5|
@@ -59,9 +59,9 @@ Le **sys.server_resource_stats** vue a des définitions différentes selon la ve
 
  
 > [!TIP]  
->  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [les niveaux de service de Managed Instance](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
+>  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [les niveaux de service de Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
     
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Cette vue est disponible pour tous les rôles d’utilisateur avec des autorisations pour se connecter à la **master** base de données.  
   
 ## <a name="remarks"></a>Notes  
@@ -83,4 +83,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>Voir aussi  
- [Gérés des niveaux de service d’Instance](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [Gérés des niveaux de service d’Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
