@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89c9e6aae99d94525cfdf809e952300a84721b2e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fa08c3b344b399e3219c390eecb16760d23d560e
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068746"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534001"
 ---
 # <a name="automatic-tuning"></a>Paramétrage automatique
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ Le réglage automatique dans [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.m
 
 ## <a name="why-automatic-tuning"></a>Pourquoi le réglage automatique ?
 
-Une des principales tâches d’administration de base de données classique est analyse la charge de travail, en identifiant critiques [!INCLUDE[tsql_md](../../includes/tsql-md.md)] les requêtes, les index qui doivent être ajoutés pour améliorer les performances et rarement utilisée index. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Fournit des informations détaillées sur les requêtes et les index que vous devez surveiller. Toutefois, le contrôle en permanence et la base de données est une tâche difficile et fastidieuse, en particulier lors du traitement de nombreuses bases de données. La gestion d’un très grand nombre de bases de données peut s’avérer impossible de faire de façon efficace. Au lieu de surveillance et de régler votre base de données manuellement, vous pouvez envisager de déléguer certaines de la surveillance et réglage des actions à [!INCLUDE[ssde_md](../../includes/ssde_md.md)] à l’aide de la fonctionnalité de réglage automatique.
+Trois des principales tâches d’administration de base de données classique analysez la charge de travail, en identifiant critiques [!INCLUDE[tsql_md](../../includes/tsql-md.md)] les requêtes, les index qui doivent être ajoutées pour améliorer les performances et identification rarement utilisés. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Fournit des informations détaillées sur les requêtes et les index que vous devez surveiller. Toutefois, le contrôle en permanence et une base de données est une tâche difficile et fastidieuse, en particulier lors du traitement de nombreuses bases de données. La gestion d’un très grand nombre de bases de données peut s’avérer impossible de faire de façon efficace. Au lieu de surveillance et de régler votre base de données manuellement, vous pouvez envisager de déléguer certaines de la surveillance et réglage des actions à [!INCLUDE[ssde_md](../../includes/ssde_md.md)] à l’aide de la fonctionnalité de réglage automatique.
 
-### <a name="how-does-automatic-tuning-works"></a>En quoi le fonctionnement du réglage automatique ?
+### <a name="how-does-automatic-tuning-work"></a>Comment est établie de réglage automatique ?
 
 Le réglage automatique est un processus d’analyse qui apprend en permanence sur les caractéristiques de votre charge de travail et de surveillance continue et identifier les problèmes et améliorations potentiels.
 
