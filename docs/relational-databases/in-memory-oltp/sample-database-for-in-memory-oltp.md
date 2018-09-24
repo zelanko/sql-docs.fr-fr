@@ -40,7 +40,7 @@ ms.locfileid: "43094800"
   
 -   [Configuration requise](#Prerequisites) pour installer l'exemple et exécuter la charge de travail de démonstration  
   
--   Instructions pour [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
+-   Instructions pour [Installation de l’exemple In-Memory OLTP basé sur AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
 -   [Description des exemples de tables et de procédures](#Descriptionofthesampletablesandprocedures) : inclut les descriptions des tables et des procédures ajoutées à AdventureWorks par l’exemple d’OLTP en mémoire, ainsi que les considérations relatives à la migration de certaines tables AdventureWorks d’origine vers des tables optimisées en mémoire  
   
@@ -54,7 +54,7 @@ ms.locfileid: "43094800"
   
 -   Pour tester les performances, un serveur avec des caractéristiques semblables dans votre environnement de production. Pour cet exemple spécifique, vous devez disposer d’au moins 16 Go de mémoire disponible sur SQL Server. Pour obtenir des conseils généraux sur le matériel pour l’OLTP en mémoire, consultez le billet de blog suivant : [http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
+##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installation de l’exemple In-Memory OLTP basé sur AdventureWorks  
  Procédez comme suit pour installer l'exemple :  
   
 1.  Téléchargez AdventureWorks2016CTP3.bak et SQLServer2016CTP3Samples.zip à partir de [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) et enregistrez ces fichiers dans un dossier local, par exemple « c:\temp ».  
