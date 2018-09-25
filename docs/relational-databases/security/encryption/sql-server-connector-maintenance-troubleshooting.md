@@ -3,7 +3,7 @@ title: Résolution des problèmes et maintenance du connecteur SQL Server | Micr
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 21
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9735b7d12bf8042436c6b554e6bb3c32fd5083b3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 88bcc9874dbbef707ac727111515a298033168b2
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695830"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013694"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,7 +208,7 @@ Pour en savoir plus sur Active Directory, lisez [Association des abonnements Azu
 Code d'erreur  |Symbole  |Description    
 ---------|---------|---------  
 0 | scp_err_Success | L'opération a réussi.    
- 1 | scp_err_Failure | L’opération a échoué.    
+1 | scp_err_Failure | L’opération a échoué.    
 2 | scp_err_InsufficientBuffer | Cette erreur indique au moteur d’allouer davantage de mémoire pour la mémoire tampon.    
 3 | scp_err_NotSupported | L'opération n'est pas prise en charge. Par exemple, le type ou l’algorithme de clé spécifié n’est pas pris en charge par le fournisseur EKM.    
 4 | scp_err_NotFound | Le type ou l’algorithme de clé spécifié n’a pas pu être trouvé par le fournisseur EKM.    
