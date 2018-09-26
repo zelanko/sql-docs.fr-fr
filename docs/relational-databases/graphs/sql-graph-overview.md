@@ -20,12 +20,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 276ef0d34d04f58b0b23b213dc52faf5b404693e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cbd74e51971e46eb26438333de419fa18dba5cd
+ms.sourcegitcommit: c3e233c13ebb6fbee60723590179da00802c3f3a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101809"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058898"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Traitement des graphes avec SQL Server et de la base de données SQL Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,11 +74,22 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Entièrement intégré dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur 
-Extensions graphiques entièrement intégrées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur. Nous utilisons le même moteur de stockage, les métadonnées, processeur de requêtes, etc. pour stocker et interroger des données de graphique. Cela permet aux utilisateurs d’interroger sur leurs graphique et les données relationnelles dans une requête unique. Les utilisateurs peuvent également tirer parti de la combinaison de fonctionnalités de graphique avec d’autres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies telles que columnstore, haute disponibilité, R services, etc. Base de données de graphique SQL prend également en charge toutes les les sécurité et conformité fonctionnalités disponibles avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Extensions graphiques entièrement intégrées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moteur. Utilisez le même moteur de stockage, les métadonnées, processeur de requêtes, etc. pour stocker et interroger des données de graphique. Requête sur le graphique et les données relationnelles dans une requête unique. Combinant des fonctionnalités de graphique avec d’autres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] technologies telles que columnstore, haute disponibilité, R services, etc. Base de données de graphique SQL prend également en charge toutes les les sécurité et conformité fonctionnalités disponibles avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
-### <a name="tooling-and-ecosystem"></a>Outils et l’écosystème  
-Les utilisateurs bénéficient d’outils existants et l’écosystème qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre. Outils tels que la sauvegarde et restauration, importer et exporter, fonctionnent BCP prêts à l’emploi. Autres outils ou des services tels que SSIS, SSRS ou Power BI fonctionnera avec les tables de graphique, la façon de travailler avec des tables relationnelles.
- 
+### <a name="tooling-and-ecosystem"></a>Outils et l’écosystème
+
+Tirer parti des outils existants et l’écosystème qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre. Outils tels que la sauvegarde et restauration, importer et exporter, fonctionnent BCP prêts à l’emploi. Autres outils ou des services tels que SSIS, SSRS ou Power BI fonctionnera avec les tables de graphique, la façon de travailler avec des tables relationnelles.
+
+## <a name="edge-constraints"></a>Contraintes d’arête
+Une contrainte d’arête est définie sur une table d’arêtes de graphe et une paire d’une ou plusieurs tables de nœud qui a un type de session donné peut se connecter. Cela offre aux utilisateurs un meilleur contrôle sur leur schéma de graphique. À l’aide de contraintes d’arête, les utilisateurs peuvent limiter le type de nœuds de qu'un bord donné est autorisé à se connecter. 
+
+Pour en savoir plus sur la façon de créer et utiliser les contraintes d’arête, consultez [les contraintes d’arête](../../relational-databases/tables/graph-edge-constraints.md)
+
+## <a name="merge-dml"></a>Fusion DML 
+Le [fusion](../../t-sql/statements/merge-transact-sql.md) instruction effectue la requête insert, update ou supprimer des opérations sur une table cible selon les résultats d’une jointure avec une table source. Par exemple, vous pouvez synchroniser deux tables en insérant, de la mise à jour ou de suppression de lignes dans une table cible selon les différences entre la table cible et la table source. À l’aide des prédicats de correspondance dans une instruction MERGE est maintenant pris en charge sur Azure SQL Database et SQL Server vNext. Autrement dit, il est désormais possible de fusionner vos données de graphique actuelle (tables de nœuds ou d’arêtes) avec de nouvelles données à l’aide des correspondance de prédicats pour spécifier les relations de graphique dans une seule instruction, au lieu des instructions INSERT/UPDATE/DELETE distinctes.
+
+Pour en savoir plus sur l’utilisation de la correspondance dans la fusion DML, consultez [instruction MERGE](../../t-sql/statements/merge-transact-sql.md)
+
  ## <a name="next-steps"></a>Étapes suivantes  
 Lire le [base de données SQL Graph - Architecture](./sql-graph-architecture.md)
    
