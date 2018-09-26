@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a2cb44cf4f6a3b6c689ea66a4d353d97ce8c8af2
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395484"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713141"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installer la recherche en texte intégral SQL Server sur Linux
 
@@ -88,7 +88,7 @@ Si vous avez besoin d’une installation hors connexion, recherchez le télécha
 
 ## <a name="supported-languages"></a>Langues prises en charge
 
-La recherche en texte intégral utilise [des analyseurs lexicaux](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) qui déterminent comment identifier les mots individuels en fonction de la langue. Vous pouvez obtenir une liste des analyseurs lexicaux inscrits en interrogeant la vue d'affichage catalogue **sys.fulltext_languages**. Les analyseurs lexicaux pour les langues suivantes sont installés avec SQL Server 2017 :
+La recherche en texte intégral utilise [des analyseurs lexicaux](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) qui déterminent comment identifier les mots individuels en fonction de la langue. Vous pouvez obtenir une liste des analyseurs lexicaux inscrits en interrogeant la vue d'affichage catalogue **sys.fulltext_languages**. Des analyseurs lexicaux pour les langues suivantes sont installés avec SQL Server :
 
 | Langue | ID de langue |
 |---|---|
@@ -150,7 +150,7 @@ La recherche en texte intégral utilise [des analyseurs lexicaux](../relational-
 
 La recherche en texte intégral fonctionne également avec le texte stocké dans des fichiers binaires. Mais dans ce cas, un filtre installé est nécessaire pour traiter le fichier. Pour plus d’informations sur les filtres, consultez [configurer et gérer des filtres pour la recherche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Vous pouvez afficher une liste des filtres installés en exécutant la procédure **sp_help_fulltext_system_components 'filter'**. Pour SQL Server 2017, les filtres suivants sont installés :
+Vous pouvez afficher une liste des filtres installés en exécutant la procédure **sp_help_fulltext_system_components 'filter'**. Pour SQL Server, les filtres suivants sont installés :
 
 | Nom du composant | ID de classe | Version |
 |---|---|---|

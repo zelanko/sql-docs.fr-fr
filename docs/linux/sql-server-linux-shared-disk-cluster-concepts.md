@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 0497e1894c60e251a9cfb0d6229f1ace65b2476e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a89ce0acb22bf60dd05372a9cc7f7d28bb7fa3b1
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086271"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712391"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Instances de Cluster de basculement, SQL Server sur Linux
 
@@ -72,7 +72,7 @@ Toutes les instances fci, qu’ils soient sur Linux ou Windows Server, nécessit
 Dans une configuration qui s’étend sur plusieurs emplacements, ce qui est stocké à un centre de données doit être synchronisé avec les autres. En cas de basculement, l’instance FCI sera mise en ligne et le stockage est visible à être identiques. Cela nécessitera une méthode externe pour la réplication de stockage, si elle est effectuée via le matériel de stockage sous-jacent ou un utilitaire basé sur logiciel. 
 
 >[!NOTE]
->Pour SQL Server 2017, les déploiements basés sur Linux à l’aide de disques présentés directement sur un serveur doivent être formatés avec XFS ou EXT4. Autres systèmes de fichiers ne sont actuellement pas pris en charge. Les modifications apparaîtront ici.
+>Pour SQL Server, les déploiements basés sur Linux à l’aide de disques présentés directement sur un serveur doivent être formatés avec XFS ou EXT4. Autres systèmes de fichiers ne sont actuellement pas pris en charge. Les modifications apparaîtront ici.
 
 Le processus pour présenter le stockage partagé est le même pour les différentes méthodes prises en charge :
 

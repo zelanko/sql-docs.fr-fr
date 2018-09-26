@@ -12,18 +12,18 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: d537c4ef2bb84833b4676acebdaf0906ee7a85c9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c87533096357117fda518794d961dfacca2ce481
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394666"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712911"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Choisir l’outil approprié pour gérer SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Il existe plusieurs façons de gérer SQL Server 2017 sur Linux. La section suivante fournit une vue d’ensemble rapide des outils d’administration différents et des techniques avec des pointeurs vers d’autres ressources.
+Il existe plusieurs façons de gérer SQL Server sur Linux. La section suivante fournit une vue d’ensemble rapide des outils d’administration différents et des techniques avec des pointeurs vers d’autres ressources.
 
 ## <a name="mssql-conf"></a>MSSQL-conf 
 
@@ -33,9 +33,9 @@ Le **mssql-conf** outil configure SQL Server sur Linux. Pour plus d’informatio
 
 Presque tout ce que vous pouvez faire dans un outil client également possible avec les instructions Transact-SQL. SQL Server fournit [des vues de gestion dynamique (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) qui interrogent l’état et la configuration de SQL Server. Il existe également [commandes Transact-SQL](../t-sql/language-reference.md) pour les tâches de gestion de base de données. Vous pouvez exécuter ces commandes dans n’importe quel outil client qui prend en charge la connexion à SQL Server et l’exécution des requêtes Transact-SQL, par exemple [sqlcmd](sql-server-linux-setup-tools.md) ou [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
-## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio (version préliminaire)
+## <a name="azure-data-studio-preview"></a>Azure Data Studio (version préliminaire)
 
-Nouveau Microsoft SQL Operations Studio (preview) est un outil d’inter-plateformes de gestion SQL Server. Pour plus d’informations, consultez [Microsoft SQL Operations Studio (preview)](../sql-operations-studio/what-is.md).
+Le nouveau Studio de données Azure (version préliminaire) est un outil multiplateforme pour la gestion de SQL Server. Pour plus d’informations, consultez [Studio de données Azure (aperçu)](../azure-data-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio sur Windows
 

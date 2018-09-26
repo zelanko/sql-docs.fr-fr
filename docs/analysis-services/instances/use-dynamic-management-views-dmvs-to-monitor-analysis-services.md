@@ -1,6 +1,6 @@
 ---
-title: Utilisez les vues de gestion dynamique (DMV) pour surveiller Analysis Services | Documents Microsoft
-ms.date: 05/02/2018
+title: Utiliser des vues de gestion dynamique (DMV) dans Analysis Services | Microsoft Docs
+ms.date: 09/25/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,45 +9,32 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 412923d24b4d48a0ebdfa11bcf60dc19d5b85368
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ce22aad16b8a789c1224adf3421e61ad113a0ccb
+ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017066"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47178325"
 ---
-# <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Utiliser des vues de gestion dynamique (DMV) pour surveiller Analysis Services
+# <a name="dynamic-management-views-dmvs"></a>Vues de gestion dynamique 
+
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Les vues de gestion dynamique (DMV) d'Analysis Services sont des structures de requête qui exposent des informations sur les opérations de serveur local et l'intégrité du serveur. La structure de requête est une interface vers des ensembles de lignes de schéma qui retournent des métadonnées et des informations d'analyse relatives à une instance Analysis Services.  
+
+Vues de gestion dynamique Analysis Services (DMV) sont des requêtes qui retournent des informations sur les objets de modèle, les opérations de serveur et l’intégrité du serveur. La requête, basée sur SQL, est une interface vers *ensembles de lignes de schéma*. Ensembles de lignes de schéma sont on tables qui contiennent des informations sur les objets Analysis Services et l’état du serveur, y compris le schéma de base de données, les sessions actives, les connexions, les commandes et les travaux qui s’exécutent sur le serveur.
+
+Les requêtes DMV sont une alternative à l'exécution des commandes Discover XML/A. Pour la plupart des administrateurs, écrire une requête DMV est plus simple, car la syntaxe est basée sur SQL. En outre, le résultat est retourné dans un format de table qui est plus facile à lire et à copier. 
   
- Pour la plupart des requêtes DMV, vous utilisez une instruction **SELECT** et le schéma **$System** avec un ensemble de lignes de schéma XML/A.  
+La plupart des DMV les requêtes utilisent un **sélectionnez** instruction et le **$System** schéma avec un ensemble de lignes de schéma XML/A, par exemple :  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
 ```  
   
- Les requêtes DMV retournent des informations sur l'état du serveur actif au moment de l'exécution de la requête. Pour surveiller les opérations en temps réel, utilisez plutôt le suivi. Pour plus d’informations, consultez [Utiliser SQL Server Profiler pour contrôler Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
+ Requêtes DMV retournent des informations sur l’état de serveur et l’objet au moment où la requête est exécutée. Pour surveiller les opérations en temps réel, utilisez plutôt le suivi. Pour plus d’informations en temps réel de surveillance à l’aide de traces, consultez [utilisez SQL Server Profiler pour surveiller Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
-##  <a name="bkmk_ben"></a> Avantages des requêtes à l’aide des DMV  
- Les requêtes DMV retournent des informations sur les opérations et la consommation des ressources qui ne sont pas accessibles par d'autres biais.  
-  
- Les requêtes DMV sont une alternative à l'exécution des commandes Discover XML/A. Pour la plupart des administrateurs, l'écriture d'une requête DMV est plus simple car la syntaxe de la requête est basée sur le langage SQL. En outre, le jeu de résultats est retourné dans un format tabulaire qui est plus facile à lire et à copier.  
-  
-##  <a name="bkmk_ex"></a> Exemples et scénarios  
- Une requête DMV peut vous aider à répondre à des questions sur les sessions et les connexions actives, ainsi que sur les objets qui consomment le plus d'UC ou de mémoire à un moment précis. Cette section fournit des exemples pour les scénarios d'utilisation de requêtes DMV les plus courants. Vous pouvez également consulter le [Guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) pour plus d’informations sur l’utilisation de requêtes DMV pour surveiller une instance de serveur.  
-  
- `Select * from $System.discover_object_activity` /** Cette requête rend compte de l’activité des objets depuis le dernier démarrage du service. Pour obtenir des exemples de requêtes basées sur cette vue DMV, consultez [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322).  
-  
- `Select * from $System.discover_object_memory_usage` /** Cette requête rend compte de la consommation de mémoire par objet.  
-  
- `Select * from $System.discover_sessions` /** Cette requête rend compte des sessions actives, notamment de la session utilisateur et de sa durée.  
-  
- `Select * from $System.discover_locks` /** Cette requête retourne un instantané des verrous utilisés à un moment précis.  
-  
-##  <a name="bkmk_syn"></a> Syntaxe de requête  
- Le moteur d'interrogation des vues DMV est l'analyseur d'exploration de données. La syntaxe de requête DMV repose sur l’instruction [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
-  
- Bien que la syntaxe de requête DMV soit basée sur une instruction SQL SELECT, elle ne prend pas en charge la syntaxe complète d'une instruction SELECT. Notez que JOIN, GROUP BY, LIKE, CAST et CONVERT ne sont pas pris en charge.  
+## <a name="query-syntax"></a>syntaxe de requête
+
+Le moteur d'interrogation des vues DMV est l'analyseur d'exploration de données. La syntaxe de requête DMV repose sur l’instruction SELECT &#40;DMX&#41; instruction. Bien que la syntaxe de requête DMV soit basée sur une instruction SQL SELECT, elle ne prend pas en charge la syntaxe complète d'une instruction SELECT. Notez que JOIN, GROUP BY, LIKE, CAST et CONVERT ne sont pas pris en charge.  
   
 ```  
 SELECT [DISTINCT] [TOP <n>] <select list>  
@@ -56,102 +43,171 @@ FROM $System.<schemaRowset>
 [ORDER BY <expression>[DESC|ASC]]  
 ```  
   
- L'exemple suivant pour DISCOVER_CALC_DEPENDENCY illustre l'utilisation de la clause WHERE pour la fourniture d'un paramètre à la requête :  
+L'exemple suivant pour DISCOVER_CALC_DEPENDENCY illustre l'utilisation de la clause WHERE pour la fourniture d'un paramètre à la requête :  
   
 ```  
 SELECT * FROM $System.DISCOVER_CALC_DEPENDENCY  
 WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'  
 ```  
   
- Sinon, pour les ensembles de lignes de schéma soumis à des restrictions, la requête doit inclure la fonction SYSTEMRESTRICTSCHEMA. L'exemple suivant retourne des métadonnées CSDL sur les modèles tabulaires exécutés sur un serveur en mode tabulaire. Notez que CATALOG_NAME respecte la casse :  
+Pour les ensembles de lignes de schéma qui comportent des restrictions, la requête doit inclure la fonction SYSTEMRESTRICTSCHEMA. L’exemple suivant retourne des métadonnées CSDL sur 1103 modèles tabulaires au niveau de compatibilité. Notez que CATALOG_NAME respecte la casse :  
   
 ```  
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
+
+## <a name="examples-and-scenarios"></a>Exemples et scénarios
+
+Une requête DMV peut vous aider à répondre à des questions sur les sessions et les connexions actives, ainsi que sur les objets qui consomment le plus d'UC ou de mémoire à un moment précis. Exemple :
   
-##  <a name="bkmk_tools"></a> Outils et autorisations  
- Vous devez disposer d'autorisations d'administrateur système sur l'instance Analysis Services pour interroger une vue DMV.  
+ `Select * from $System.discover_object_activity`  
+Cette requête rend sur l’activité de l’objet depuis le dernier démarrage de service. 
   
- Vous pouvez utiliser toute application cliente prenant en charge les requêtes MDX ou DMX, notamment SQL Server Management Studio, un rapport Reporting Services ou un tableau de bord PerformancePoint.  
+ `Select * from $System.discover_object_memory_usage`  
+Cette requête rend la consommation de mémoire par objet.  
   
- Pour exécuter une requête DMV à partir de Management Studio, connectez-vous à l’instance à interroger, puis cliquez sur **Nouvelle requête**. Vous pouvez exécuter une requête à partir d'une fenêtre de requête MDX ou DMX.  
+ `Select * from $System.discover_sessions`  
+Cette requête rend compte des sessions actives, y compris la durée et l’utilisateur de la session.  
   
-##  <a name="bkmk_ref"></a> Référence de la vue de gestion dynamique  
- Tous les ensembles de lignes de schéma n'ont pas d'interface DMV. Pour retourner la liste de tous les ensembles de lignes de schéma qui peuvent être interrogés à l'aide d'une vue de gestion dynamique, exécutez la requête suivante.  
+ `Select * from $System.discover_locks`   
+Cette requête retourne un instantané des verrous utilisés à un moment précis dans le temps.  
+
+
+## <a name="tools-and-permissions"></a>Outils et autorisations
+
+Vous pouvez utiliser toute application cliente qui prend en charge les requêtes MDX ou DMX. Dans la plupart des cas, il est préférable d’utiliser SQL Server Management Studio. Vous devez disposer des autorisations d’administrateur de serveur sur l’instance à interroger une vue DMV.  
   
+ **Pour exécuter une requête DMV à partir de SQL Server Management Studio**
+
+1. Se connecter au serveur et de l’objet de modèle que vous souhaitez interroger. 
+2. Cliquez sur l’objet serveur ou base de données > **nouvelle requête** > **MDX**.
+3. Tapez votre requête, puis cliquez sur **Execute**, ou appuyez sur F5.
+  
+## <a name="schema-rowsets"></a>Ensembles de lignes de schéma
+
+Tous les ensembles de lignes de schéma n'ont pas d'interface DMV. Pour retourner la liste de tous les ensembles de lignes de schéma qui peuvent être interrogés à l'aide d'une vue de gestion dynamique, exécutez la requête suivante.  
+ 
 ```  
 SELECT * FROM $System.DBSchema_Tables   
 WHERE TABLE_TYPE = 'SCHEMA'   
 ORDER BY TABLE_NAME ASC  
 ```  
   
-> [!NOTE]  
->  Si une vue DMV n’est pas disponible pour un ensemble de lignes donné, le serveur renvoie l’erreur suivante : « la \<schemarowset > type de demande n’est pas reconnu par le serveur ». Toutes les autres erreurs signalent des problèmes de syntaxe.  
-  
+Si une vue DMV n’est pas disponible pour un ensemble de lignes donné, le serveur retourne erreur : `The <schemarowset> request type was not recognized by the server.` toutes les autres erreurs indiquent des problèmes avec la syntaxe.  
+
+Ensembles de lignes de schéma sont décrites dans les deux protocoles de SQL Server Analysis Services :   
+
+[[MS-SSAS-T] : protocole tabulaire de SQL Server Analysis Services](https://msdn.microsoft.com/library/mt719260) -décrit les ensembles de lignes de schéma pour les modèles tabulaires aux niveaux de compatibilité 1200 et supérieur.
+
+[[MS-SSAS] : SQL Server Analysis Services protocole](https://msdn.microsoft.com/library/ee320606) -décrit les ensembles de lignes de schéma pour les modèles multidimensionnels et les modèles tabulaires aux niveaux de compatibilité 1100 et 1103.
+
+### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>Ensembles de lignes décrites dans le [MS-SSAS-T] : protocole tabulaire de SQL Server Analysis Services
+
+|Ensemble de lignes  |Description  |
+|---------|---------|
+|[TMSCHEMA_ANNOTATIONS](https://msdn.microsoft.com/library/mt704370)|Fournit des informations sur les objets Annotation dans le modèle.|
+|[TMSCHEMA_ATTRIBUTE_HIERARCHIES](https://msdn.microsoft.com/library/mt704362)     |   Fournit des informations sur les objets AttributeHierarchy pour une colonne.      |
+|[TMSCHEMA_COLUMNS](https://msdn.microsoft.com/library/mt704373)    |  Fournit des informations sur les objets de colonne dans chaque table.       |
+|[TMSCHEMA_COLUMN_PERMISSIONS](https://msdn.microsoft.com/library/mt842440)|Fournit des informations sur les objets ColumnPermission dans chaque autorisation de table.|
+|[TMSCHEMA_CULTURES](https://msdn.microsoft.com/library/mt719125)|Fournit des informations sur les objets de Culture dans le modèle.|
+|[TMSCHEMA_DATA_SOURCES](https://msdn.microsoft.com/library/mt719191)   |   Fournit des informations sur les objets de source de données dans le modèle.      |
+|[TMSCHEMA_DETAIL_ROWS_DEFINITIONS](https://msdn.microsoft.com/library/mt825017)|Fournit des informations sur les objets DetailRowsDefinition dans le modèle.|
+|[TMSCHEMA_EXPRESSIONS](https://msdn.microsoft.com/library/mt825015)|Fournit des informations sur les objets d’Expression dans le modèle.|
+|[TMSCHEMA_EXTENDED_PROPERTIES](https://msdn.microsoft.com/library/mt842451)|Fournit des informations sur les objets ExtendedProperty dans le modèle.|
+|[TMSCHEMA_HIERARCHIES](https://msdn.microsoft.com/library/mt719136)    |    Fournit des informations sur les objets de hiérarchie dans chaque table.     |
+|[TMSCHEMA_KPIS](https://msdn.microsoft.com/library/mt719002)     |    Fournit des informations sur les objets de l’indicateur de performance clé dans le modèle.     |
+|[TMSCHEMA_LEVELS](https://msdn.microsoft.com/library/mt719038)     |   Fournit des informations sur les objets au niveau de chaque hiérarchie.      |
+|[TMSCHEMA_LINGUISTIC_METADATA](https://msdn.microsoft.com/library/mt719169)|Fournit des informations sur les synonymes pour les objets dans le modèle pour une culture particulière|
+|[TMSCHEMA_MEASURES](https://msdn.microsoft.com/library/mt719218)     |    Fournit des informations sur les objets de mesure dans chaque table.     |
+|[TMSCHEMA_MODEL](https://msdn.microsoft.com/library/mt719042)    |  Spécifie un objet de modèle dans la base de données.       |
+|[TMSCHEMA_OBJECT_TRANSLATIONS](https://msdn.microsoft.com/library/mt719119)|Fournit des informations sur les traductions de différents objets pour une culture.|
+|[TMSCHEMA_PARTITIONS](https://msdn.microsoft.com/library/mt704375)     |     Fournit des informations sur les objets de Partition dans chaque table.    |
+|[TMSCHEMA_PERSPECTIVE_COLUMNS](https://msdn.microsoft.com/library/mt719164)     |   Fournit des informations sur les objets PerspectiveColumn dans chaque objet PerspectiveTable.      |
+|[TMSCHEMA_PERSPECTIVE_HIERARCHIES](https://msdn.microsoft.com/library/mt719104)     |  Fournit des informations sur les objets PerspectiveHierarchy dans chaque objet PerspectiveTable.       |
+|[TMSCHEMA_PERSPECTIVE_MEASURES](https://msdn.microsoft.com/library/mt719135)     |    Fournit des informations sur les objets PerspectiveMeasure dans chaque objet PerspectiveTable.     |
+|[TMSCHEMA_PERSPECTIVE_TABLES](https://msdn.microsoft.com/library/mt719272)     |    Fournit des informations sur les objets de Table dans une perspective.     |
+|[TMSCHEMA_PERSPECTIVES](https://msdn.microsoft.com/library/mt704340)     |     Fournit des informations sur les objets de Perspective dans le modèle.    |
+|[TMSCHEMA_RELATIONSHIPS](https://msdn.microsoft.com/library/mt704355)     |    Fournit des informations sur les objets de relation dans le modèle.     |
+|[TMSCHEMA_ROLE_MEMBERSHIPS](https://msdn.microsoft.com/library/mt704584)     |  Fournit des informations sur les objets RoleMembership dans chaque rôle.      |
+|[TMSCHEMA_ROLES](https://msdn.microsoft.com/library/mt719267)    |   Fournit des informations sur les objets de rôle dans le modèle.      |
+|[TMSCHEMA_TABLE_PERMISSIONS](https://msdn.microsoft.com/library/mt704347)    |    Fournit des informations sur les objets TablePermission dans chaque rôle.     |
+|[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   Fournit des informations sur les objets de Table dans le modèle.      |
+|[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|Fournit des informations sur les objets Variation dans chaque colonne.|
+
+### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>Ensembles de lignes décrit dans [MS-SSAS] : protocole de SQL Server Analysis Services
+
 |Ensemble de lignes|Description|  
 |------------|-----------------|  
-|[Ensemble de lignes DBSCHEMA_CATALOGS](../../analysis-services/schema-rowsets/ole-db/dbschema-catalogs-rowset.md)|Retourne la liste des bases de données Analysis Services sur la connexion actuelle.|  
-|[Ensemble de lignes DBSCHEMA_COLUMNS](../../analysis-services/schema-rowsets/ole-db/dbschema-columns-rowset.md)|Retourne la liste de toutes les colonnes dans la base de données active. Vous pouvez utiliser cette liste pour construire une requête DMV.|  
-|[Lignes de schéma DBSCHEMA_PROVIDER_TYPES](../../analysis-services/schema-rowsets/ole-db/dbschema-provider-types-rowset.md)|Retourne les propriétés relatives aux types de données de base pris en charge par le fournisseur de données OLE DB.|  
-|[Ensemble de lignes DBSCHEMA_TABLES](../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md)|Retourne la liste de toutes les tables dans la base de données active. Vous pouvez utiliser cette liste pour construire une requête DMV.|  
-|[Ensemble de lignes DISCOVER_CALC_DEPENDENCY](../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)|Retourne la liste des colonnes et des tables utilisées dans un modèle qui ont des dépendances sur d'autres colonnes et tables.|  
-|[Ensemble de lignes DISCOVER_COMMAND_OBJECTS](../../analysis-services/schema-rowsets/xml/discover-command-objects-rowset.md)|Fournit des informations sur l'activité et l'utilisation des ressources par les objets actuellement utilisés par la commande référencée.|  
-|[Ensemble de lignes DISCOVER_COMMANDS](../../analysis-services/schema-rowsets/xml/discover-commands-rowset.md)|Fournit des informations sur l'activité et l'utilisation des ressources relatives à la commande en cours d'exécution.|  
-|[Ensemble de lignes DISCOVER_CONNECTIONS](../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|Fournit à Analysis Services des informations sur l'activité et l'utilisation des ressources relatives aux connexions ouvertes.|  
-|[Ensemble de lignes DISCOVER_CSDL_METADATA](../../analysis-services/schema-rowsets/xml/discover-csdl-metadata-rowset.md)|Retourne des informations sur un modèle tabulaire.<br /><br /> Nécessite l'ajout de SYSTEMRESTRICTSCHEMA et de paramètres supplémentaires.|  
-|[Ensemble de lignes DISCOVER_DB_CONNECTIONS](../../analysis-services/schema-rowsets/xml/discover-db-connections-rowset.md)|Échange des informations sur l'activité et l'utilisation des ressources relatives aux connexions ouvertes entre Analysis Services et les sources de données externes, par exemple au cours des opérations de traitement et d'importation.|  
-|[Ensemble de lignes DISCOVER_DIMENSION_STAT](../../analysis-services/schema-rowsets/xml/discover-dimension-stat-rowset.md)|Retourne les attributs d'une dimension ou les colonnes d'une table, selon le type de modèle.|  
-|[Ensemble de lignes DISCOVER_ENUMERATORS](../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|Retourne des métadonnées sur les énumérateurs pris en charge pour une source de données spécifique.|  
-|[Ensemble de lignes DISCOVER_INSTANCES](../../analysis-services/schema-rowsets/ole-db-olap/discover-instances-rowset.md)|Retourne des informations sur l'instance spécifiée.<br /><br /> Nécessite l'ajout de SYSTEMRESTRICTSCHEMA et de paramètres supplémentaires.|  
-|[Ensemble de lignes DISCOVER_JOBS](../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|Retourne des informations sur les travaux en cours.|  
-|[Ensemble de lignes DISCOVER_KEYWORDS & #40 ; XMLA & #41 ;](../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|Retourne la liste des mots clés réservés.|  
-|[Ensemble de lignes DISCOVER_LITERALS](../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|Retourne la liste des littéraux pris en charge par XMLA, y compris les types de données et les valeurs.|  
-|[Ensemble de lignes DISCOVER_LOCKS](../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|Retourne un instantané des verrous utilisés à un instant précis.|  
-|[Ensemble de lignes DISCOVER_MEMORYGRANT](../../analysis-services/schema-rowsets/xml/discover-memorygrant-rowset.md)|Retourne des informations sur la mémoire allouée par Analysis Services au démarrage.|  
-|[Ensemble de lignes DISCOVER_MEMORYUSAGE](../../analysis-services/schema-rowsets/xml/discover-memoryusage-rowset.md)|Affiche l'utilisation de la mémoire par des objets spécifiques.|  
-|[Ensemble de lignes DISCOVER_OBJECT_ACTIVITY](../../analysis-services/schema-rowsets/xml/discover-object-activity-rowset.md)|Rend compte de l'activité des objets depuis le dernier démarrage du service.|  
-|[Ensemble de lignes DISCOVER_OBJECT_MEMORY_USAGE](../../analysis-services/schema-rowsets/xml/discover-object-memory-usage-rowset.md)|Rend compte de la consommation de mémoire par objet.|  
-|[Ensemble de lignes DISCOVER_PARTITION_DIMENSION_STAT](../../analysis-services/schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|Fournit des informations sur les attributs d'une dimension.<br /><br /> Nécessite l'ajout de SYSTEMRESTRICTSCHEMA et de paramètres supplémentaires.|  
-|[Ensemble de lignes DISCOVER_PARTITION_STAT](../../analysis-services/schema-rowsets/xml/discover-partition-stat-rowset.md)|Fournit des informations sur les partitions dans une dimension, une table ou un groupe de mesures.<br /><br /> Nécessite l'ajout de SYSTEMRESTRICTSCHEMA et de paramètres supplémentaires.|  
-|[Ensemble de lignes DISCOVER_PERFORMANCE_COUNTERS](../../analysis-services/schema-rowsets/xml/discover-performance-counters-rowset.md)|Répertorie les colonnes utilisées dans un compteur de performance.<br /><br /> Nécessite l'ajout de SYSTEMRESTRICTSCHEMA et de paramètres supplémentaires.|  
-|[Ensemble de lignes DISCOVER_PROPERTIES](../../analysis-services/schema-rowsets/xml/discover-properties-rowset.md)|Retourne des informations sur les propriétés prises en charge par XMLA pour la source de données spécifiée.|  
-|[Ensemble de lignes DISCOVER_SCHEMA_ROWSETS](../../analysis-services/schema-rowsets/xml/discover-schema-rowsets-rowset.md)|Retourne des noms, des restrictions, des descriptions et d'autres informations pour toutes les valeurs d'énumération prises en charge par XMLA.|  
-|[Ensemble de lignes DISCOVER_SESSIONS](../../analysis-services/schema-rowsets/xml/discover-sessions-rowset.md)|Rend compte des sessions actives, notamment l'utilisateur de la session et la durée.|  
-|[Ensemble de lignes DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](../../analysis-services/schema-rowsets/xml/discover-storage-table-column-segments-rowset.md)|Fournit des informations au niveau de la colonne et du segment concernant les tables de stockage utilisées par une base de données Analysis Services exécutée en mode tabulaire ou SharePoint.|  
-|[Ensemble de lignes DISCOVER_STORAGE_TABLE_COLUMNS](../../analysis-services/schema-rowsets/xml/discover-storage-table-columns-rowset.md)|Permet au client de déterminer l'affectation de colonnes aux tables de stockage utilisées par une base de données Analysis Services exécutée en mode tabulaire ou SharePoint.|  
-|[Ensemble de lignes DISCOVER_STORAGE_TABLES](../../analysis-services/schema-rowsets/xml/discover-storage-tables-rowset.md)|Retourne des informations sur les tables utilisées pour le stockage de modèles dans une base de données model tabulaire.|  
-|[Ensemble de lignes DISCOVER_TRACE_COLUMNS](../../analysis-services/schema-rowsets/xml/discover-trace-columns-rowset.md)|Retourne une description XML des colonnes disponibles dans une trace.|  
-|[Ensemble de lignes DISCOVER_TRACE_DEFINITION_PROVIDERINFO](../../analysis-services/schema-rowsets/xml/discover-trace-definition-providerinfo-rowset.md)|Retourne le nom et les informations de version du fournisseur.|  
-|[Ensemble de lignes DISCOVER_TRACE_EVENT_CATEGORIES](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|Retourne la liste des catégories disponibles.|  
-|[Ensemble de lignes DISCOVER_TRACES](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|Retourne la liste des traces actives sur la connexion actuelle.|  
-|[Ensemble de lignes DISCOVER_TRANSACTIONS](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|Retourne la liste des transactions actives sur la connexion actuelle.|  
-|[Ensemble de lignes DISCOVER_XEVENT_TRACE_DEFINITION](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|Retourne la liste des traces xevent actives sur la connexion actuelle.|  
-|[Ensemble de lignes DMSCHEMA_MINING_COLUMNS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|Répertorie les colonnes de tous les modèles d'exploration de données disponibles sur la connexion actuelle.|  
-|[Ensemble de lignes DMSCHEMA_MINING_FUNCTIONS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|Retourne la liste des fonctions prises en charge par les algorithmes d'exploration de données sur le serveur.|  
-|[Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|Retourne un ensemble de lignes composé de colonnes qui décrivent le modèle actuel.|  
-|[Ensemble de lignes DMSCHEMA_MINING_MODEL_CONTENT_PMML](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|Retourne un ensemble de lignes composé de colonnes qui décrivent le modèle actuel au format PMML.|  
-|[Ensemble de lignes DMSCHEMA_MINING_MODEL_XML](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-xml-rowset.md)|Retourne un ensemble de lignes composé de colonnes qui décrivent le modèle actuel au format PMML.|  
-|[Ensemble de lignes DMSCHEMA_MINING_MODELS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-models-rowset.md)|Retourne la liste des modèles d'exploration de données dans la base de données active.|  
-|[Ensemble de lignes DMSCHEMA_MINING_SERVICE_PARAMETERS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md)|Retourne la liste des paramètres des algorithmes sur le serveur.|  
-|[Ensemble de lignes DMSCHEMA_MINING_SERVICES](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)|Fournit la liste des algorithmes d'exploration de données disponibles sur le serveur.|  
-|[Ensemble de lignes DMSCHEMA_MINING_STRUCTURE_COLUMNS](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset.md)|Retourne la liste de toutes les colonnes de tous les modèles d'exploration de données disponibles dans la connexion actuelle.|  
-|[Ensemble de lignes DMSCHEMA_MINING_STRUCTURES](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-structures-rowset.md)|Répertorie les structures d'exploration de données disponibles dans la connexion actuelle.|  
-|[Ensemble de lignes MDSCHEMA_CUBES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-cubes-rowset.md)|Retourne des informations sur les cubes définis dans la base de données active.|  
-|[Ensemble de lignes MDSCHEMA_DIMENSIONS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset.md)|Retourne des informations sur les dimensions définies dans la base de données active.|  
-|[Ensemble de lignes MDSCHEMA_FUNCTIONS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-functions-rowset.md)|Retourne la liste des fonctions disponibles pour les applications clientes connectées à la base de données.|  
-|[Ensemble de lignes MDSCHEMA_HIERARCHIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)|Retourne des informations sur les hiérarchies définies dans la base de données active.|  
-|[Ensemble de lignes MDSCHEMA_INPUT_DATASOURCES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md)|Retourne des informations sur les objets source de données définis dans la base de données active.|  
-|[Ensemble de lignes MDSCHEMA_KPIS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-kpis-rowset.md)|Retourne des informations sur les indicateurs de performance clés (KPI) définis dans la base de données active.|  
-|[Ensemble de lignes MDSCHEMA_LEVELS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-levels-rowset.md)|Retourne des informations sur les niveaux au sein des hiérarchies définies dans la base de données active.|  
-|[Ensemble de lignes MDSCHEMA_MEASUREGROUP_DIMENSIONS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)|Répertorie la dimension des groupes de mesures.|  
-|[Ensemble de lignes MDSCHEMA_MEASUREGROUPS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset.md)|Retourne la liste de groupes de mesures dans la connexion actuelle.|  
-|[Ensemble de lignes MDSCHEMA_MEASURES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measures-rowset.md)|Retourne la liste des mesures dans la connexion actuelle.|  
-|[Ensemble de lignes MDSCHEMA_MEMBERS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|Retourne la liste de tous les membres de la connexion actuelle, répertoriés par base de données, cube et dimension.|  
-|[Ensemble de lignes MDSCHEMA_PROPERTIES](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|Retourne le nom complet de chaque propriété, avec le type de propriété, le type de données et d'autres métadonnées.|  
-|[Ensemble de lignes MDSCHEMA_SETS](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|Retourne la liste des ensembles qui sont définis dans la connexion actuelle.|  
-  
-## <a name="see-also"></a>Voir aussi   
- [New System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [Nouvelle fonction SYSTEMRESTRICTEDSCHEMA pour les ensembles de lignes restreints et les vues de gestion dynamique](http://go.microsoft.com/fwlink/?LinkId=231885)  
-  
-  
+|[DBSCHEMA_CATALOGS](https://msdn.microsoft.com/library/ee302115)|Décrit les catalogues qui sont accessibles sur le serveur.|  
+|[DBSCHEMA_COLUMNS](https://msdn.microsoft.com/library/ee301789)|Retourne une ligne pour chaque mesure, chaque attribut de dimension de cube et chaque colonne d’ensemble de lignes de schéma, exposées en tant que colonne.|  
+|[DBSCHEMA_PROVIDER_TYPES](https://msdn.microsoft.com/library/ee301696)|Identifie les types de données (base) pris en charge par le serveur.|  
+|[DBSCHEMA_TABLES](https://msdn.microsoft.com/library/ee320843)|Retourne les dimensions, les groupes de mesures ou les ensembles de lignes de schéma exposé en tant que tables.|  
+|[DISCOVER_CALC_DEPENDENCY](https://msdn.microsoft.com/library/hh770226)| Retourne des informations sur la dépendance de calcul pour un objet qui est spécifié dans une base de données tabulaire ou dans une requête DAX qui est exécutée sur une base de données tabulaire. |  
+|[DISCOVER_COMMAND_OBJECTS](https://msdn.microsoft.com/library/ee320662)|Fournit des informations sur l'activité et l'utilisation des ressources des objets actuellement utilisés par la commande référencée.|  
+|[DISCOVER_COMMANDS](https://msdn.microsoft.com/library/ee320715)|Fournit des informations sur l'activité et l'utilisation des ressources des dernières commandes exécutées ou des commandes en cours d'exécution sur les connexions ouvertes sur le serveur.|  
+|[DISCOVER_CONNECTIONS](https://msdn.microsoft.com/library/ee301889)|Fournit des informations sur l'activité et l'utilisation des ressources des connexions actuellement ouvertes sur le serveur.|  
+|[DISCOVER_CSDL_METADATA](https://msdn.microsoft.com/library/gg587670)|Retourne des informations sur les métadonnées de base de données pour les bases de données en mémoire.|  
+|[DISCOVER_DATASOURCES](https://msdn.microsoft.com/library/ee320285)|Retourne une liste des sources de données qui sont disponibles sur le serveur.|
+|[DISCOVER_DB_CONNECTIONS](https://msdn.microsoft.com/library/ee320467)|Fournit des informations sur l'activité et l'utilisation des ressources des connexions actuellement ouvertes du serveur à une base de données.|  
+|[DISCOVER_DIMENSION_STAT](https://msdn.microsoft.com/library/ee320284)|Retourne des statistiques sur la dimension spécifiée.|  
+|[DISCOVER_ENUMERATORS](https://msdn.microsoft.com/library/ee302012)|Retourne une liste des noms, types de données et valeurs d'énumération d'énumérateurs pris en charge par le fournisseur XMLA pour une source de données spécifique.|  
+|[DISCOVER_INSTANCES](https://msdn.microsoft.com/library/ee320541)|Décrit les instances sur le serveur.|  
+|[DISCOVER_JOBS](https://msdn.microsoft.com/library/ee320363)|Fournit des informations sur les travaux actifs exécutés sur le serveur. Un travail fait une partie d'une commande qui exécute une tâche spécifique pour le compte de la commande.|  
+|[DISCOVER_KEYWORDS &AMP;#40;XMLA&AMP;#41;](https://msdn.microsoft.com/library/ee301719)|Retourne des informations sur les mots clés réservés par le serveur XMLA.|  
+|[DISCOVER_LITERALS](https://msdn.microsoft.com/library/ee301320)|Retourne des informations sur les littéraux pris en charge par le serveur.|  
+|[DISCOVER_LOCATIONS](https://msdn.microsoft.com/library/ee302024)|Retourne des informations sur le contenu d'un fichier de sauvegarde. |
+|[DISCOVER_LOCKS](https://msdn.microsoft.com/library/ee320398)|Fournit des informations sur les verrous actuellement en place sur le serveur.|  
+|[DISCOVER_MASTER_KEY](https://msdn.microsoft.com/library/ee301825)|Retourne la clé de chiffrement principale du serveur.|
+|[DISCOVER_MEMORYGRANT](https://msdn.microsoft.com/library/ee320945)|Retourne la liste des allocations de quotas de mémoire interne qui sont prises par les travaux en cours d'exécution sur le serveur.|  
+|[DISCOVER_MEMORYUSAGE](https://msdn.microsoft.com/library/ee320910)|Retourne les statistiques DISCOVER_MEMORYUSAGE pour plusieurs objets alloués par le serveur.|  
+|[DISCOVER_OBJECT_ACTIVITY](https://msdn.microsoft.com/library/ee320661)|Fournit l'utilisation des ressources par objet depuis le démarrage du service.|  
+|[DISCOVER_OBJECT_MEMORY_USAGE](https://msdn.microsoft.com/library/ee320910)|Retourne les statistiques DISCOVER_MEMORYUSAGE pour plusieurs objets alloués par le serveur.|  
+|[DISCOVER_PARTITION_DIMENSION_STAT](https://msdn.microsoft.com/library/ee320268)|Retourne des statistiques sur la dimension associée à une partition.|  
+|[DISCOVER_PARTITION_STAT](https://msdn.microsoft.com/library/ee320483)|Retourne des statistiques sur les agrégations dans une partition particulière.|  
+|[DISCOVER_PERFORMANCE_COUNTERS](https://msdn.microsoft.com/library/ee320809)|Retourne la valeur d'un ou de plusieurs compteurs de performance spécifiés. |  
+|[DISCOVER_PROPERTIES](https://msdn.microsoft.com/library/ee320589)|Retourne une liste d’informations et des valeurs sur les propriétés qui sont prises en charge par le serveur pour la source de données spécifié.|  
+|[DISCOVER_RING_BUFFERS](https://msdn.microsoft.com/library/mt719204)|Retourne des informations sur les tampons en anneau XEvent actuels sur le serveur.|
+|[DISCOVER_SCHEMA_ROWSETS](https://msdn.microsoft.com/library/ee320478)|Retourne les noms, restrictions, description et autres informations pour toutes les demandes de découverte.|  
+|[DISCOVER_SESSIONS](https://msdn.microsoft.com/library/ee301962)|Fournit des informations sur l'activité et l'utilisation des ressources des sessions actuellement ouvertes sur le serveur.|  
+|[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|Retourne des informations sur les segments de colonne utilisé pour stocker des données pour les tables en mémoire.|  
+|[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|Contient des informations sur les colonnes utilisées pour représenter les colonnes d’une table en mémoire.|  
+|[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|Retourne des statistiques sur les tables en mémoire disponibles sur le serveur.|  
+|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|Contient l’ensemble de lignes de schéma DISCOVER_TRACE_COLUMNS.|  
+|[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|Contient l’ensemble de lignes de schéma DISCOVER_TRACE_EVENT_CATEGORIES.|  
+|[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|Contient l’ensemble de lignes du schéma DISCOVER_TRACES.|  
+|[DISCOVER_TRANSACTIONS](https://msdn.microsoft.com/library/ee301363)|Retourne l'ensemble actuel des transactions en attente sur le système.|  
+|[DISCOVER_XEVENT_TRACE_DEFINITION](https://msdn.microsoft.com/library/mt704568)|Fournit des informations sur les traces XEvent qui sont actuellement actives sur le serveur.|  
+|[DISCOVER_XEVENT_PACKAGES](https://msdn.microsoft.com/library/mt704569)|Fournit des informations sur les packages de XEvent qui sont décrites sur le serveur.|
+|[DISCOVER_XEVENT_OBJECTS](https://msdn.microsoft.com/library/mt704543)|Fournit des informations sur les objets de XEvent qui sont décrites sur le serveur.|
+|[DISCOVER_XEVENT_OBJECT_COLUMNS](https://msdn.microsoft.com/library/mt719352)|Fournit des informations sur le schéma des objets de XEvent qui sont décrites sur le serveur.|
+|[DISCOVER_XEVENT_SESSIONS](https://msdn.microsoft.com/library/mt704397)|Fournit des informations sur les sessions XEvent actives sur le serveur.|
+|[DISCOVER_XEVENT_SESSION_TARGETS](https://msdn.microsoft.com/library/mt704564)|Fournit des informations sur les cibles en cours de la session XEvent sur le serveur.|
+|[DISCOVER_XML_METADATA](https://msdn.microsoft.com/library/ee301560)|Retourne un ensemble de lignes avec une seule ligne et une colonne. |
+|[DMSCHEMA_MINING_COLUMNS](https://msdn.microsoft.com/library/ee301664)|Décrit les colonnes de tous les modèles d’exploration de données décrites qui sont déployés sur le serveur.|  
+|[DMSCHEMA_MINING_FUNCTIONS](https://msdn.microsoft.com/library/ee320415)|Décrit les fonctions d’exploration de données qui sont pris en charge par les algorithmes d’exploration de données qui sont disponibles sur un serveur qui exécute Analysis Services.|  
+|[DMSCHEMA_MINING_MODEL_CONTENT](https://msdn.microsoft.com/library/ee302124)|Permet à l’application cliente pour parcourir le contenu d’un modèle d’exploration de données d’apprentissage.|  
+|[DMSCHEMA_MINING_MODEL_CONTENT_PMML](https://msdn.microsoft.com/library/ee320692)|Retourne la structure XML du modèle d'exploration de données. Le format de la chaîne XML respecte la norme PMML 2.1.|  
+|[DMSCHEMA_MINING_MODEL_XML](https://msdn.microsoft.com/library/ee301916)|Retourne la structure XML du modèle d'exploration de données. Le format de la chaîne XML respecte la norme PMML 2.1.|  
+|[DMSCHEMA_MINING_MODELS](https://msdn.microsoft.com/library/ee320603)|Énumère les modèles d'exploration de données déployés sur le serveur.|  
+|[DMSCHEMA_MINING_SERVICE_PARAMETERS](https://msdn.microsoft.com/library/ee320378)|Fournit la liste des paramètres pouvant être utilisés pour configurer le comportement de chaque algorithme d'exploration de données installé sur le serveur.|  
+|[DMSCHEMA_MINING_SERVICES](https://msdn.microsoft.com/library/ee320487)|Fournit des informations sur chaque algorithme d’exploration de données qui prend en charge par le serveur.|  
+|[DMSCHEMA_MINING_STRUCTURE_COLUMNS](https://msdn.microsoft.com/library/ee320277)|Décrit les colonnes de toutes les structures d'exploration de données qui sont déployées sur le serveur.|  
+|[DMSCHEMA_MINING_STRUCTURES](https://msdn.microsoft.com/library/ee320704)|Fournit des informations sur les structures d'exploration de données contenues dans le catalogue actuel.|  
+|[MDSCHEMA_ACTIONS](https://msdn.microsoft.com/library/ee320890)|Décrit les actions qui peuvent être disponibles à l’application cliente.|
+|[MDSCHEMA_CUBES](https://msdn.microsoft.com/library/ee301304)|Décrit la structure des cubes d'une base de données. Les perspectives sont également retournés dans ce schéma.|
+|[MDSCHEMA_DIMENSIONS](https://msdn.microsoft.com/library/ee301366)|Décrit les dimensions dans une base de données.|  
+|[MDSCHEMA_FUNCTIONS](https://msdn.microsoft.com/library/mt719467)|Retourne des informations sur les fonctions qui sont actuellement disponibles pour une utilisation dans les langues DAX et MDX.|
+|[MDSCHEMA_HIERARCHIES](https://msdn.microsoft.com/library/ee320250)|Décrit chaque hiérarchie dans une dimension particulière.|  
+|[MDSCHEMA_INPUT_DATASOURCES](https://msdn.microsoft.com/library/ee301386)|Décrit les objets de source de données décrites dans la base de données.|  
+|[MDSCHEMA_KPIS](https://msdn.microsoft.com/library/ee320406)|Décrit les indicateurs de performance clés au sein d’une base de données.|  
+|[MDSCHEMA_LEVELS](https://msdn.microsoft.com/library/ee320746)|Décrit chaque niveau dans une hiérarchie particulière.|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://msdn.microsoft.com/library/ee320977)|Énumère les dimensions des groupes de mesures.|  
+|[MDSCHEMA_MEASUREGROUPS](https://msdn.microsoft.com/library/ee320601)|Décrit les groupes de mesures d'une base de données.|  
+|[MDSCHEMA_MEASURES](https://msdn.microsoft.com/library/ee301871)|Décrit chaque mesure.|  
+|[MDSCHEMA_MEMBERS](https://msdn.microsoft.com/library/ee320960)|Décrit les membres d'une base de données.|  
+|[MDSCHEMA_PROPERTIES](https://msdn.microsoft.com/library/ee320393)|Décrit les propriétés des membres et les propriétés de cellule.|  
+|[MDSCHEMA_SETS](https://msdn.microsoft.com/library/ee301356)|Décrit les ensembles actuellement décrits dans une base de données, y compris les jeux d’étendue de session.|  
+
+> [!NOTE]
+> STOCKAGES DMV n’ont pas d’un ensemble de lignes de schéma décrit dans le protocole.

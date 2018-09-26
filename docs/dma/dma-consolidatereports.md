@@ -2,7 +2,7 @@
 title: Évaluer une entreprise et consolider les rapports d’évaluation (SQL Server) | Microsoft Docs
 description: Découvrez comment utiliser le DMA pour évaluer une entreprise et consolider les rapports d’évaluation avant la mise à niveau de SQL Server ou la migration vers Azure SQL Database.
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 09/21/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 05c3df493c809132d6fbfad1d96cc84d4d873dd3
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 7cb08a66d0cc81268517b1ddf742bcdf0451d11b
+ms.sourcegitcommit: 9fe8964647a0d413304acfd2d3c0d87a79d70862
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152630"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493760"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation avec le DMA
 
@@ -88,7 +88,7 @@ Créer une base de données appelée **EstateInventory** et une table appelée *
 
 Si cette base de données n’est pas sur l’ordinateur d’outils, assurez-vous que l’ordinateur outils dispose d’une connectivité réseau à cette instance de SQL Server.
 
-L’avantage de l’utilisation d’une table SQL Server sur un fichier CSV est que vous pouvez utiliser la colonne d’indicateur évaluation pour contrôler l’instance / prélevés obtient pour l’évaluation, ce qui le rend plus facile de séparer les évaluations en plusieurs petits segments de base de données.  Vous pouvez, s’étendre sur plusieurs évaluations (voir la section sur l’exécution d’une évaluation plus loin dans cet article), (voir la section sur l’exécution d’une évaluation plus loin dans cet article), qui est plus facile que la conservation de plusieurs fichiers CSV.
+L’avantage de l’utilisation d’une table SQL Server sur un fichier CSV est que vous pouvez utiliser la colonne d’indicateur évaluation pour contrôler l’instance / prélevés obtient pour l’évaluation, ce qui le rend plus facile de séparer les évaluations en plusieurs petits segments de base de données.  Vous pouvez, s’étendre sur plusieurs évaluations (voir la section sur l’exécution d’une évaluation plus loin dans cet article), qui est plus facile que la conservation de plusieurs fichiers CSV.
 
 N’oubliez pas que selon le nombre d’objets et leur complexité, une évaluation peut prendre un temps exceptionnellement long (heures +), il est préférable de séparer l’évaluation en segments gérables.
 
@@ -102,7 +102,7 @@ Les paramètres associés à la fonction dmaDataCollector sont décrits dans le 
 |Paramètre  |Description
 |---------|---------|
 |**getServerListFrom** | Votre inventaire. Les valeurs possibles sont **SqlServer** et **CSV**. |
-|**Nom du serveur** | Le nom de l’instance SQL Server de l’inventaire lors de l’utilisation **SqlServer** dans le **getServerListFrom** paramètre. |
+|**serverName** | Le nom de l’instance SQL Server de l’inventaire lors de l’utilisation **SqlServer** dans le **getServerListFrom** paramètre. |
 |**DatabaseName** | La base de données qui héberge la table d’inventaire. |
 |**AssessmentName** | Le nom de l’évaluation DMA. |
 |**TargetPlatform** | Le type de cible d’évaluation que vous souhaitez effectuer.  Les valeurs possibles sont **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**,  **SQLServerLinux2017**, et **SQLServerWindows2017**. |
@@ -124,7 +124,7 @@ Les paramètres associés à la fonction dmaProcessor sont décrits dans le tabl
 |Paramètre  |Description
 |---------|---------|
 |**processTo**  | L’emplacement auquel le fichier JSON sera traité. Les valeurs possibles sont **SQLServer** et **AzureSQLDatabase**. |
-|**Nom du serveur** | L’instance de SQL Server à laquelle les données sont traitées.  Si vous spécifiez **AzureSQLDatabase** pour le **processTo** paramètre, puis inclure uniquement le nom de SQL Server (n’incluez pas. database.windows.net). Vous serez invité pour les deux connexions lors du ciblage de base de données SQL Azure ; la première est vos informations d’identification du client Azure, tandis que la deuxième est votre connexion d’administrateur pour le serveur SQL Azure. |
+|**serverName** | L’instance de SQL Server à laquelle les données sont traitées.  Si vous spécifiez **AzureSQLDatabase** pour le **processTo** paramètre, puis inclure uniquement le nom de SQL Server (n’incluez pas. database.windows.net). Vous serez invité pour les deux connexions lors du ciblage de base de données SQL Azure ; la première est vos informations d’identification du client Azure, tandis que la deuxième est votre connexion d’administrateur pour le serveur SQL Azure. |
 |**CreateDMAReporting** | La base de données intermédiaire à créer pour le traitement du fichier JSON.  Si la base de données que vous spécifiez existe et que vous définissez ce paramètre à une, puis objets ne pas créées.  Ce paramètre est utile pour recréer un objet unique qui a été supprimé. |
 |**CreateDataWarehouse** | Crée l’entrepôt de données qui sera utilisé par le rapport Power BI. |
 |**DatabaseName** | Le nom de la base de données DMAReporting. |

@@ -1,7 +1,7 @@
 ---
 title: Quelles sont les nouveautés de SSMA pour SAP ASE (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/14/2017
+ms.date: 09/22/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -16,15 +16,21 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d178cde4f921580c6c9953701d9e2101853400a2
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 3ade0baa7e970639769cf5bdba522e54d3843771
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393647"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362033"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Quelles sont les nouveautés de SSMA pour SAP ASE (SybaseToSQL)
 Cet article répertorie SSMA pour SAP ASE (anciennement SSMA pour Sybase) les modifications dans chaque version. 
+
+## <a name="ssma-v710"></a>SSMA v7.10
+La version v7.10 de SSMA pour SAP ASE a été améliorée avec des correctifs ciblés visant conçu pour fournir une sécurité supplémentaire et protections de la confidentialité pour répondre aux modifications apportées aux spécifications globales.
+
+> [!IMPORTANT]
+> Avec SSMA v7.4 et versions ultérieures, .net 4.5.2 est un préalable de l’installation.
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 La version v7.9 de SSMA pour SAP ASE contient les modifications suivantes :
@@ -87,7 +93,7 @@ La version v7.3 de SSMA pour Sybase contient les modifications suivantes :
   - Bibliothèques qui peuvent être consommées par SSMA pour effectuer des conversions personnalisées.
     - Vous pouvez désormais construire le code qui peut gérer les conversions de syntaxe personnalisée et les conversions qui n’ont pas été précédemment gérées par SSMA.
       - Obtenir des instructions sur la construction d’un convertisseur personnalisé sont disponibles dans ce billet de blog, [fonctions de conversion d’extension Assistant Migration SQL Server](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Exemple de projet pour la conversion peut être le télécharger [billet de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Télécharger un exemple de projet pour la conversion à partir de ce [billet de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## <a name="ssma-v72"></a>SSMA v7.2
 La version v7.2 de SSMA pour Sybase contient les modifications suivantes :
@@ -206,7 +212,7 @@ La version de mai 2007 de SSMA pour Sybase contient les modifications suivantes�
 -   Prise en charge pour les commentaires d’entré par l’utilisateur dans SQL Server mise en forme en mode SQL.  
 -   Ajout d’améliorations dans la conversion de l’objet.  
   
-Le fichier d’aide n’a pas mis à jour pour cette version. Pour plus d’informations, consultez la section Notes concernant la Documentation plus loin dans cet article.  
+Le fichier d’aide n’a pas été mis à jour pour cette version. Pour plus d’informations, consultez la section Notes concernant la Documentation plus loin dans cet article.  
   
 ## <a name="november-2006"></a>Novembre 2006  
 La version de novembre 2006 de SSMA pour Sybase contient les modifications suivantes :  

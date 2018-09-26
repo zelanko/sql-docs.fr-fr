@@ -1,6 +1,6 @@
 ---
-title: Configurer un conteneur de SQL Server dans Kubernetes pour la haute disponibilité | Microsoft Docs
-description: Ce didacticiel montre comment déployer une solution de haute disponibilité de SQL Server avec Kubernetes sur Azure Container Service.
+title: Déployer un conteneur de SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS) | Microsoft Docs
+description: Ce didacticiel montre comment déployer une solution de haute disponibilité de SQL Server avec Kubernetes sur Azure Kubernetes Service.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -11,20 +11,20 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 5c6e794fa2e76a0fec58d767d14e9ac73fb72534
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fba598abb0431d2e9a80b0cdc0976f72c6eadc15
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980121"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712681"
 ---
-# <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Configurer un conteneur de SQL Server dans Kubernetes pour la haute disponibilité
+# <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Déployer un conteneur de SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Découvrez comment configurer une instance de SQL Server sur Kubernetes dans Azure Container Service (AKS), avec le stockage persistant pour la haute disponibilité (HA). La solution fournit la résilience. Si l’instance de SQL Server échoue, Kubernetes automatiquement recrée dans un nouveau module. AKS fournit la résilience contre la défaillance d’un nœud de Kubernetes. 
+Découvrez comment configurer une instance de SQL Server sur Kubernetes dans Azure Kubernetes Service (ACS), avec le stockage persistant pour la haute disponibilité (HA). La solution fournit la résilience. Si l’instance de SQL Server échoue, Kubernetes automatiquement recrée dans un nouveau module. Kubernetes fournit également la résilience contre une défaillance de nœud.
 
-Ce didacticiel montre comment configurer une instance de SQL Server à haute disponibilité dans des conteneurs qui utilisent ACS. 
+Ce didacticiel montre comment configurer une instance de SQL Server hautement disponible dans un conteneur sur AKS. Vous pouvez également [créer un groupe de disponibilité de SQL Server sur Kubernetes](tutorial-sql-server-ag-kubernetes.md). Pour comparer les deux différentes solutions de Kubernetes, consultez [haute disponibilité pour les conteneurs de SQL Server](sql-server-linux-container-ha-overview.md).
 
 > [!div class="checklist"]
 > * Créer un mot de passe
@@ -33,7 +33,7 @@ Ce didacticiel montre comment configurer une instance de SQL Server à haute dis
 > * Se connecter avec SQL Server Management Studio (SSMS)
 > * Vérifiez que la défaillance et récupération
 
-## <a name="ha-solution-that-uses-kubernetes-running-in-azure-container-service"></a>Haute disponibilité solution qui utilise Kubernetes en cours d’exécution dans Azure Container Service
+## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>Solution de haute disponibilité sur Kubernetes s’exécutant dans Azure Kubernetes Service
 
 Kubernetes 1.6 et versions ultérieures prend en charge [classes de stockage](http://kubernetes.io/docs/concepts/storage/storage-classes/), [les revendications de volume persistant](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)et le [type de volume de disque Azure](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). Vous pouvez créer et gérer vos instances de SQL Server en mode natif dans Kubernetes. L’exemple dans cet article montre comment créer un [déploiement](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) pour obtenir une configuration de haute disponibilité similaire à une instance de cluster de basculement de disque partagé. Dans cette configuration, Kubernetes joue le rôle de l’orchestrateur de cluster. En cas d’échec d’une instance de SQL Server dans un conteneur, l’orchestrateur démarre une autre instance du conteneur qui s’attache à un même stockage persistant.
 
@@ -43,11 +43,11 @@ Dans le diagramme précédent, `mssql-server` est un conteneur dans un [pod](htt
 
 Dans le diagramme suivant, le `mssql-server` conteneur a échoué. Comme l’orchestrateur, Kubernetes garantit le nombre correct d’instances saines dans le réplica défini et crée un conteneur en fonction de la configuration. L’orchestrateur démarre un nouveau module sur le même nœud, et `mssql-server` se reconnecte à un même stockage persistant. Le service se connecte à la re-création `mssql-server`.
 
-![Diagramme du cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Diagramme du cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 Dans le diagramme suivant, le nœud qui héberge le `mssql-server` conteneur a échoué. L’orchestrateur démarre le pod de nouveau sur un autre nœud, et `mssql-server` se reconnecte à un même stockage persistant. Le service se connecte à la re-création `mssql-server`.
 
-![Diagramme du cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Diagramme du cluster Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -176,7 +176,7 @@ Dans cette étape, créez un manifeste pour décrire le conteneur basé sur le s
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: microsoft/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server/mssql-server-linux
            ports:
            - containerPort: 1433
            env:

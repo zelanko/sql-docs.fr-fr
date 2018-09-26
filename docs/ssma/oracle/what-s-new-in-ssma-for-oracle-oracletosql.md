@@ -2,7 +2,7 @@
 title: Quelles sont les nouveautés de SSMA pour Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -13,15 +13,23 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e5a819910b898c4527b5cad24edb62aa9142395e
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 78f1615e375dfeafbcf25a8b0466ed92fbcc16ea
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394655"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362043"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Quelles sont les nouveautés de SSMA pour Oracle (OracleToSQL)
 Cet article répertorie SSMA pour Oracle changements dans chaque version.  
+
+## <a name="ssma-v710"></a>SSMA v7.10
+La version v7.10 de SSMA pour Oracle contient les modifications suivantes :
+- Les correctifs ciblés visant conçu pour fournir une sécurité supplémentaire et protections de la confidentialité pour répondre aux modifications apportées aux spécifications globales.
+- Une amélioration de la conversion concernant les requêtes hiérarchiques.
+
+> [!IMPORTANT]
+> Avec SSMA v7.4 et versions ultérieures, .net 4.5.2 est un préalable de l’installation.
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 La version v7.9 de SSMA pour Oracle contient les modifications suivantes :
@@ -50,7 +58,7 @@ La version v7.8 de SSMA pour Oracle contient les modifications suivantes :
 La version v7.7 de SSMA pour Oracle contient les modifications suivantes :
 - SSMA pour Oracle a été amélioré avec des correctifs ciblés qui améliorent les métriques de qualité et de conversion.
 - Selon l’à la demande générale, la version 32 bits de SSMA pour Oracle est de retour. Par rapport à l’implémentation précédente (avant v7.4), il existe deux packages de programme d’installation, mais ils ne peuvent pas être installés côte à côte. Par conséquent, vous devez choisir la version la plus appropriée en fonction des composants de connectivité que vous disposez. Il est toujours préférable d’utiliser la version 64 bits, si possible.
-- Prise en charge de SQL Server 2017 est désormais officiel avec le Pack d’Extension Oracle sur Linux également pris en charge (nouvelle option d’installation à distance). Notez que les fonctionnalités du Pack d’Extension sont limitée lors de l’installation sur Linux, comme le testeur et les fonctionnalités de migration de données côté serveur ne sont pas pris en charge. 
+- Prise en charge de SQL Server 2017 est désormais officiel avec le Pack d’Extension Oracle sur Linux également pris en charge (nouvelle option d’installation à distance). Notez que les fonctionnalités du Pack d’Extension sont limitée lors de l’installation sur Linux, comme le testeur et fonctionnalités de migration de données côté serveur ne sont pas prises en charge.
 - SSMA pour Oracle permet d’effectuer une migration des vues matérialisées en tant que tables régulières (configurable via les paramètres au **paramètres du projet** -> **synchronisation**  ->  **Détecter des tables de stockage pour les vues matérialisées**).
 
 > [!IMPORTANT]
@@ -128,7 +136,7 @@ La version de mai 2016 de SSMA pour Oracle contient les modifications suivantes�
 - Prise en charge pour SQL Server 2016.
 - Conversion Ajout de tables d’archives Oracle flashback aux tables temporelles de SQL Server.
 
-    **Remarque** -SSMA ne copie pas les données d’historique à partir de tables d’archives de données Oracle Flashback. Par conséquent, les données d’historique doivent être copiées manuellement pendant le processus de migration. En outre, SSMA n’affiche pas la table d’historique dans l’Explorateur de métadonnées SQL Server, car elle est traitée comme une table système, vous pouvez consulter la table d’historique dans SQL Server Management Studio.
+    **Remarque** -SSMA ne copie pas les données de l’historique à partir de tables d’archives de données Oracle Flashback. Par conséquent, les données d’historique doivent être copiées manuellement pendant le processus de migration. En outre, SSMA n’affiche pas la table d’historique dans l’Explorateur de métadonnées SQL Server, car elle est traitée comme une table système, vous pouvez consulter la table d’historique dans SQL Server Management Studio.
     SQL Server 2016 ne prend pas en charge plusieurs fonctionnalités Oracle Flashback, notamment :
     - Requêtes de Transaction Oracle Flashback
     - Package DBMS_FLASHBACK

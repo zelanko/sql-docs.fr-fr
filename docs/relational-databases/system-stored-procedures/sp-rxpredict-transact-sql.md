@@ -20,23 +20,22 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8f46403afef0e2f6cf967561a8fd24ec6409fe93
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: a8b23fe592b7e7fc90f2e3229d71a805f7332f4d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434859"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713861"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-Génère une valeur prédite pour une entrée donnée selon un modèle stocké dans un format binaire dans une base de données SQL Server machine learning.
+Génère une valeur prédite pour une entrée donnée consistant en un modèle stocké dans un format binaire dans une base de données SQL Server machine learning.
 
 Fournit des modèles R et Python machine learning dans quasiment en temps réel de notation. `sp_rxPredict` est une procédure stockée fournie comme un wrapper pour le `rxPredict` fonction R au [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) et [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)et le [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) fonction Python dans [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) et [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Il est écrit en C++ et est spécialement optimisée pour les opérations de calcul de score.
 
-**Cet article s’applique à**:  
-- SQL Server 2017  
-- SQL Server 2016 R Services avec [mis à niveau les composants R](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server)
+Bien que le modèle doit être créé à l’aide de R ou Python, une fois qu’il est sérialisé et stocké dans un format binaire sur une instance du moteur de base de données cible, il peut être consommé à partir de cette instance du moteur de base de données même lors de l’intégration de R ou Python n’est pas installée. Pour plus d’informations, consultez [notation en temps réel avec sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
+
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,26 +63,73 @@ Autres colonnes, telles que de l’intervalle de confiance de score, peut être 
 Pour activer l’utilisation de la procédure stockée, SQLCLR doit être activé sur l’instance.
 
 > [!NOTE]
-> Prendre en compte les implications de sécurité avant d’activer cette option.
+> Voici les implications de sécurité à l’activation de cette option. Utiliser une autre implémentation, tel que le [Transact-SQL prédire](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017) fonction SQLCLR ne peut pas être activée sur votre serveur.
 
 L’utilisateur doit avoir `EXECUTE` autorisation sur la base de données.
 
-### <a name="supported-platforms"></a>Plateformes prises en charge
- 
-- SQL Server 2017 Machine Learning Services (inclut R Server 9.2)  
-- SQL Server 2017 Machine Learning Server (autonome) 
-- SQL Server R Services 2016, avec une mise à niveau de l’instance de R Services à R Server 9.1.0). ou version ultérieure  
 
 ### <a name="supported-algorithms"></a>Algorithmes pris en charge
 
-Pour une liste des algorithmes pris en charge, consultez [de score en temps réel](../../advanced-analytics/real-time-scoring.md).
+Pour créer et former le modèle, utilisez un des algorithmes pris en charge pour R ou Python, fourni par [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017), [SQL Server 2016 R Server (autonome)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016), [Machine SQL Server 2017 Learning Services (R ou Python)](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017), ou [SQL Server 2017 Server (autonome) (R ou Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017).
 
-Les types de modèle suivants sont **pas** pris en charge :  
-- Modèles contenant d’autres types de transformations de R non pris en charge  
-- Modèles à l’aide de la `rxGlm` ou `rxNaiveBayes` algorithmes dans RevoScaleR  
-- Modèles PMML  
-- Modèles créés à l’aide d’autres bibliothèques R à partir de CRAN ou d’autres référentiels  
-- Modèles contenant n’importe quel autre type de transformation R autres que ceux répertoriés ici  
+
+#### <a name="r-revoscaler-models"></a>R : RevoScaleR modèles
+
+  + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
+  + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
+  + [rxBTrees](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxbtrees)
+  + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
+  + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
+
+#### <a name="r-microsoftml-models"></a>R : MicrosoftML modèles
+
+  + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
+  + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
+  + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
+  + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
+
+#### <a name="r-transformations-supplied-by-microsoftml"></a>R : les transformations fournies par MicrosoftML
+
+  + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
+  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
+  + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
+
+#### <a name="python-revoscalepy-models"></a>Python : modèles de revoscalepy
+
+  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
+  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit)
+  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees)
+  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree)
+  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest)
+
+
+#### <a name="python-microsoftml-models"></a>Python : modèles de microsoftml
+
+  + [rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
+  + [rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
+  + [rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression)
+  + [rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm)
+  + [rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
+  + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
+
+#### <a name="python-transformations-supplied-by-microsoftml"></a>Python : Transformations fournies par microsoftml
+
+  + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
+  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-referencee/microsoftml/categorical-hash)
+  
+### <a name="unsupported-model-types"></a>Types de modèles non pris en charge
+
+Les types de modèles suivants ne sont pas prises en charge :
+
++ Modèles à l’aide de la `rxGlm` ou `rxNaiveBayes` algorithmes dans RevoScaleR
++ Modèles PMML dans R
++ Modèles créés à l’aide d’autres bibliothèques tierces 
 
 ## <a name="examples"></a>Exemples
 

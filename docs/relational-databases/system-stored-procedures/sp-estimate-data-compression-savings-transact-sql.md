@@ -23,17 +23,17 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1271953cc69e8302c2a36088fcea1bca3588a01e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 70efe047d1fae61f9755c2dbeecf9627de5b5a79
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027538"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713951"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne la taille actuelle de l'objet demandé et estime la taille de l'objet pour l'état de compression demandé. La compression peut être évaluée pour des tables entières ou des parties de tables. Cela inclut des segments de mémoire, des index cluster, des index non cluster, des vues indexées et des partitions de table et d'index. Les objets peuvent être compressés à l'aide de la compression de ligne ou de la compression de page. Si la table, l'index ou la partition sont déjà compressés, vous pouvez utiliser cette procédure pour estimer la taille de la table, de l'index ou de la partition s'ils sont décompressés.  
+  Retourne la taille actuelle de l'objet demandé et estime la taille de l'objet pour l'état de compression demandé. La compression peut être évaluée pour des tables entières ou des parties de tables. Cela inclut les segments de mémoire, les index ordonnés en clusters, index non cluster, index columnstore, indexées consulte, table et les partitions d’index. Les objets peuvent être compressées à l’aide de la compression d’archive ligne, page, columnstore ou columnstore. Si la table, l'index ou la partition sont déjà compressés, vous pouvez utiliser cette procédure pour estimer la taille de la table, de l'index ou de la partition s'ils sont décompressés.  
   
 > [!NOTE]  
 >  La compression et **sp_estimate_data_compression_savings** ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -76,7 +76,7 @@ sp_estimate_data_compression_savings
  Pour spécifier la partition, vous pouvez également spécifier le [$partition](../../t-sql/functions/partition-transact-sql.md) (fonction). Pour retourner des informations pour toutes les partitions de l'objet propriétaire, spécifiez NULL.  
   
  [ @data_compression=] '*data_compression*'  
- Type de compression à évaluer. *DATA_COMPRESSION* peut prendre l’une des valeurs suivantes : NONE, ROW ou PAGE.  
+ Type de compression à évaluer. *DATA_COMPRESSION* peut prendre l’une des valeurs suivantes : NONE, ROW, PAGE, COLUMNSTORE ou COLUMNSTORE_ARCHIVE.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -96,7 +96,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_requested_compression_setting (Ko)|**bigint**|Taille de l'échantillon créé à l'aide du paramètre de compression demandé et, le cas échéant, du facteur de remplissage existant, sans fragmentation.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez sp_estimate_data_compression_savings pour estimer les gains potentiels lorsque vous activez une table ou une partition pour la compression de ligne ou de page. Par exemple, si la taille moyenne de la ligne peut être réduite de 40 %, vous pouvez réduire la taille de l'objet de 40 %. Vous n'économiserez peut-être pas d'espace car cela dépend du facteur de remplissage et de la taille de la ligne. Par exemple, si vous disposez d'une ligne d'une longueur de 8 000 octets et que vous réduisez sa taille de 40 %, vous ne pouvez toujours pas intégrer plus d'une ligne dans une page de données. Vous ne bénéficiez d'aucun gain.  
+ Utilisez sp_estimate_data_compression_savings pour estimer les économies qui peuvent se produire lorsque vous activez une table ou une partition pour la ligne, page, columnstore ou la compression d’archivage columnstore. Par exemple, si la taille moyenne de la ligne peut être réduite de 40 %, vous pouvez réduire la taille de l'objet de 40 %. Vous n'économiserez peut-être pas d'espace car cela dépend du facteur de remplissage et de la taille de la ligne. Par exemple, si vous disposez d'une ligne d'une longueur de 8 000 octets et que vous réduisez sa taille de 40 %, vous ne pouvez toujours pas intégrer plus d'une ligne dans une page de données. Vous ne bénéficiez d'aucun gain.  
   
  Si les résultats de l'exécution de sp_estimate_data_compression_savings indiquent que la taille de la table augmentera, cela signifie que de nombreuses lignes de la table utilisent quasiment la précision complète des types de données, et l'ajout de la faible surcharge requise pour le format compressé dépasse les gains dérivés de la compression. Dans ce cas très peu fréquent, n'activez pas la compression.  
   
@@ -112,7 +112,31 @@ sp_estimate_data_compression_savings
  Nécessite l'autorisation SELECT sur la table.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
- Cette procédure ne s'applique pas aux tables columnstore et, par conséquent, n'accepte pas les paramètres de compression de données COLUMNSTORE et COLUMNSTORE_ARCHIVE.  
+ Avant SQL Server 2019, cette procédure n’a pas été appliqué aux index columnstore et par conséquent n’a pas accepté les paramètres de compression de données COLUMNSTORE et COLUMNSTORE_ARCHIVE.  À compter de SQL Server 2019, index columnstore peuvent servir à la fois en tant qu’objet source pour l’estimation et un type de compression demandé.
+
+## <a name="considerations-for-columnstore-indexes"></a>Considérations pour les index Columnstore
+ En commençant par SQL Server 2019, sp_estimate_compression_savings prend en charge l’estimation de columnstore et compression d’archive de columnstore. Contrairement à la compression de page et de ligne, application de la compression de columnstore pour un objet requiert la création d’un nouvel index columnstore. Pour cette raison, lorsque vous utilisez les options de COLUMNSTORE et COLUMNSTORE_ARCHIVE de cette procédure, le type de l’objet de source fourni à la procédure détermine le type d’index columnstore utilisée pour l’évaluation de la taille compressée. Le tableau suivant illustre la référence d’objets utilisés pour estimer les économies de compression pour chaque objet de source de type quand le @data_compression paramètre est défini sur COLUMNSTORE ou COLUMNSTORE_ARCHIVE.
+
+ |Objet source|Objet de référence|
+ |-----------------|---------------|
+ |Segment de mémoire (heap)|Index columnstore cluster|
+ |Index cluster|Index columnstore cluster|
+ |Index non cluster|Index columnstore non cluster (notamment les colonnes clés et colonnes incluses de l’index non cluster fourni, ainsi que la colonne de partition de la table, le cas échéant)|
+ |Index columnstore non cluster|Index columnstore non cluster (y compris les mêmes colonnes que l’index fourni columnstore non cluster)|
+ |Index columnstore cluster|Index columnstore cluster|
+
+> [!NOTE]  
+> Lors de l’estimation de la compression de columnstore d’un objet de source de rowstore (index cluster, index non cluster ou segment de mémoire), s’il existe des colonnes dans l’objet source qui ont un type de données qui n’est pas pris en charge dans un index columnstore, sp_estimate_compression_ économies échoue avec une erreur.
+
+ De même, lorsque le @data_compression paramètre est défini sur NONE, ROW ou PAGE et l’objet source est un index columnstore, le tableau suivant présente les objets de référence utilisés.
+
+ |Objet source|Objet de référence|
+ |-----------------|---------------|
+ |Index columnstore cluster|Segment de mémoire (heap)|
+ |Index columnstore non cluster|Index non cluster (y compris les colonnes contenues dans l’index columnstore non cluster en tant que colonnes clés et la colonne de partition de la table, le cas échéant, en tant que colonne incluse)|
+
+> [!NOTE]  
+> Lors de l’estimation de la compression de rowstore (NONE, ligne ou PAGE) à partir d’un objet de source de columnstore, n’oubliez pas que l’index de la source ne contienne pas plus de 32 colonnes car c’est la limite prise en charge dans un index (non cluster) de rowstore.
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous estime la taille de la table `Production.WorkOrderRouting` si elle est compressée à l'aide de la compression `ROW`.  

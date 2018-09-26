@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 09b94de43aaba54dced6d300587c0492b00c8f3d
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 8d1ff524a0f033c4e47d7fe7f4e366cb00f2f7b5
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348210"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712471"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Comment générer des prévisions et des prédictions à l’aide de modèles d’apprentissage automatique dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,9 +26,9 @@ Le tableau suivant récapitule les infrastructures de calcul de score pour les p
 
 | Méthodologie           | Interface         | Exigences de la bibliothèque | Vitesse de traitement |
 |-----------------------|-------------------|----------------------|----------------------|
-| Infrastructure d’extensibilité | R : [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>Python : [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Aucun. Les modèles peuvent être basées sur n’importe quelle fonction R ou Python | Centaines de millisecondes. <br/>Le chargement d’un environnement d’exécution présente un coût fixe, en moyenne trois à six cents millisecondes, avant toute nouvelle donnée est transformée en score. |
-| Extension CLR de notation en temps réel | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) sur un modèle sérialisé | R : RevoScaleR, MicrosoftML <br/>Python : revoscalepy, microsoftml | Dizaines de millisecondes, en moyenne. |
-| Notation d’extension C++ native| [Fonction T-SQL prédire](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) sur un modèle sérialisé | R : RevoScaleR <br/>Python : revoscalepy | Inférieur à 20 millisecondes, en moyenne. | 
+| Framework d’extensibilité | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Aucun. Les modèles peuvent être basées sur n’importe quelle fonction R ou Python | Centaines de millisecondes. <br/>Le chargement d’un environnement d’exécution présente un coût fixe, en moyenne trois à six cents millisecondes, avant toute nouvelle donnée est transformée en score. |
+| [Extension CLR de notation en temps réel](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) sur un modèle sérialisé | R : RevoScaleR, MicrosoftML <br/>Python : revoscalepy, microsoftml | Dizaines de millisecondes, en moyenne. |
+| [Notation d’extension C++ native](../sql-native-scoring.md) | [Fonction T-SQL prédire](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) sur un modèle sérialisé | R : RevoScaleR <br/>Python : revoscalepy | Inférieur à 20 millisecondes, en moyenne. | 
 
 Vitesse de traitement et non la substance de la sortie sont la fonctionnalité de différenciation. En supposant que les mêmes fonctions et les entrées, le résultat évalué ne doit pas varier selon l’approche que vous utilisez.
 
@@ -44,12 +44,13 @@ _Calcul de score_ est un processus en deux étapes. Tout d’abord, vous spécif
 
 Une étape sauvegarder, le processus de préparation du modèle et générer des scores peut se résumer ainsi :
 
-1. Créer un modèle à l’aide d’un algorithme pris en charge.
-2. Sérialisation du modèle à l’aide d’un format binaire spécial.
-3. Rendre disponible le modèle à SQL Server. En général, cela signifie stocker le modèle sérialisé dans une table SQL Server.
-4. Appelez la fonction ou procédure stockée, en spécifiant le modèle et les données d’entrée en tant que paramètres.
+1. Créer un modèle à l’aide d’un algorithme pris en charge. Prise en charge varie selon la méthodologie de notation que vous choisissez.
+2. Apprentissage du modèle.
+3. Sérialisation du modèle à l’aide d’un format binaire spécial.
+3. Enregistrer le modèle dans SQL Server. En général, cela signifie stocker le modèle sérialisé dans une table SQL Server.
+4. Appelez la fonction ou procédure stockée, en spécifiant les entrées de modèle et les données en tant que paramètres.
 
-Lorsque l’entrée inclut plusieurs lignes de données, il est généralement plus rapide pour insérer les valeurs de prédiction dans une table en tant que partie du processus de calcul de score.  Génération d’une seule note est plus courant dans un scénario où obtenir les valeurs d’entrée à partir d’une demande de formulaire ou d’utilisateur et retourner le score à une application cliente. Pour améliorer les performances lors de la génération de scores successives, SQL Server peut mettre en cache le modèle afin qu’il peut être rechargé en mémoire.
+Lorsque l’entrée inclut plusieurs lignes de données, il est généralement plus rapide pour insérer les valeurs de prédiction dans une table en tant que partie du processus de calcul de score. Génération d’une seule note est plus courant dans un scénario où obtenir les valeurs d’entrée à partir d’une demande de formulaire ou d’utilisateur et retourner le score à une application cliente. Pour améliorer les performances lors de la génération de scores successives, SQL Server peut mettre en cache le modèle afin qu’il peut être rechargé en mémoire.
 
 ## <a name="compare-methods"></a>Comparaison des méthodes
 

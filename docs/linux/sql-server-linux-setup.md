@@ -1,5 +1,5 @@
 ---
-title: Consignes d’installation de SQL Server 2017 sur Linux | Microsoft Docs
+title: Consignes d’installation pour SQL Server sur Linux | Microsoft Docs
 description: Installer, mettre à jour et désinstaller SQL Server sur Linux. Cet article traite des scénarios en ligne, hors connexion et sans assistance.
 author: rothja
 ms.author: jroth
@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 5157bd9bbadec02fe21c9b552f05c6f5635c31a4
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: ce9a2c9956ab4c40c2a5840f65bf8a630fb25065
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268747"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713001"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Consignes d’installation pour SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cette rubrique explique comment installer, mettre à jour et désinstaller SQL Server 2017 sur Linux.
+Cet article fournit des conseils pour l’installation, la mise à jour et la désinstallation de SQL Server 2017 et la version préliminaire de SQL Server 2019 sur Linux.
 
 > [!TIP]
 > Ce guide coves plusieurs scénarios de déploiement. Si vous recherchez seulement des instructions d’installation pas à pas, passez à un des Démarrages rapides :
@@ -71,20 +71,24 @@ Si vous utilisez les partages distants **NFS (Network File System)** en producti
 
 ## <a id="repositories"></a> Configurer des référentiels de code source
 
-Lorsque vous installez ou mettez à niveau de SQL Server, vous obtenez la dernière version de SQL Server 2017 à partir de votre référentiel Microsoft. Les Démarrages rapides utilisent le **mise à jour Cumulative (CU)** référentiel. Mais vous pouvez configurer à la place la **GDR** référentiel. Pour plus d’informations sur les référentiels et comment les configurer, consultez [configurer des référentiels pour SQL Server sur Linux](sql-server-linux-change-repo.md).
+Lorsque vous installez ou mettez à niveau de SQL Server, vous obtenez la dernière version de SQL Server à partir de votre référentiel Microsoft. Les Démarrages rapides pour utilisent la mise à jour Cumulative SQL Server 2017 **CU** référentiel. Mais vous pouvez configurer à la place la **GDR** référentiel ou **aperçu (vNext)** référentiel. Pour plus d’informations sur les référentiels et comment les configurer, consultez [configurer des référentiels pour SQL Server sur Linux](sql-server-linux-change-repo.md).
 
 > [!IMPORTANT]
 > Si vous avez installé précédemment un CTP ou la version RC de SQL Server 2017, vous devez supprimer le référentiel de la version préliminaire et inscrire une disponibilité générale un. Pour plus d’informations, consultez [configurer des référentiels pour SQL Server sur Linux](sql-server-linux-change-repo.md).
 
-## <a id="platforms"></a> Installation de SQL Server
+## <a id="platforms"></a> Installer SQL Server 2017
 
-Vous pouvez installer SQL Server sur Linux à partir de la ligne de commande. Pour obtenir des instructions, consultez un des Démarrages rapides suivants :
+Vous pouvez installer SQL Server 2017 sur Linux à partir de la ligne de commande. Pour obtenir des instructions pas à pas, consultez un des Démarrages rapides suivants :
 
 - [Installation sur Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installer sur Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Exécuter sur Docker](quickstart-install-connect-docker.md)
 - [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+
+## <a id="sqlvnext"></a> Installer la version préliminaire de SQL Server 2019
+
+Vous pouvez installer la version préliminaire de SQL Server 2019 sur Linux en utilisant les mêmes liaisons de démarrage rapide dans la section précédente. Toutefois, vous devez inscrire le **aperçu (vNext)** référentiel au lieu du **CU** référentiel. Les Démarrages rapides fournissent des instructions sur comment effectuer cette opération.  
 
 Après avoir installé, envisagez d’apporter des modifications de configuration supplémentaires pour des performances optimales. Pour plus d’informations, consultez [performances meilleures pratiques et des instructions de configuration de SQL Server sur Linux](sql-server-linux-performance-best-practices.md).
 
@@ -99,6 +103,9 @@ Pour mettre à jour le package **mssql-serveur** vers la dernière version, util
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
 Ces commandes téléchargent le package le plus récent et remplacent les fichiers binaires situés sous `/opt/mssql/`. Les bases de données généré par l’utilisateur et les bases de données système ne sont pas affectées par cette opération.
+
+> [!TIP]
+> Si vous première [modifier votre référentiel configuré](sql-server-linux-change-repo.md), il est possible pour le **mettre à jour** commande pour mettre à niveau votre version de SQL Server. Cela arrive uniquement si le chemin d’accès de mise à niveau est prise en charge entre les deux référentiels.
 
 ## <a id="rollback"></a> Restauration SQL Server
 

@@ -12,12 +12,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 1b01cfea93b2348d912b726bbad38f7e97dd0d94
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d01a53524bf03e0ea8318c41b05b9cc59499de33
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086841"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713221"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extraire, transformer et charger des données sur Linux avec SSIS
 
@@ -93,8 +93,8 @@ Pour obtenir des informations détaillées sur les limitations et problèmes con
 
 Pour plus d’informations à propos de SSIS sur Linux, consultez les billets de blog suivants :
 
--   [SSIS sur Linux est disponible dans SQL Server 2017 CTP2.1](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
--   [ODBC est prise en charge de SSIS sur Linux (actualisation de SQL Server 2017 CTP 2.1)](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
+-   [SSIS sur Linux est disponible dans SQL Server CTP2.1](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
+-   [ODBC est prise en charge de SSIS sur Linux (actualisation de SQL Server CTP 2.1)](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
 
 ## <a name="more-info-about-ssis"></a>Plus d’informations sur SSIS
 

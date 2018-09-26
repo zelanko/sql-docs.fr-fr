@@ -1,7 +1,7 @@
 ---
 title: Sys.column_master_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-catalog-views
@@ -32,12 +32,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4251ecafad275e64021729abe54fc243d9077f9f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e683a88fb9490a7041ac02edc02a8ba2f63b1382
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079722"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713541"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,6 +52,10 @@ ms.locfileid: "43079722"
 |**modify_date**|**datetime**|Date de que dernière modification de la clé principale de colonne.|  
 |**key_store_provider_name**|**sysname**|Nom du fournisseur pour le magasin de clés principales de colonne qui contient la clé CMK. Valeurs autorisées sont :<br /><br /> MSSQL_CERTIFICATE_STORE – si le magasin de clés principales de colonne est un Store de certificat.<br /><br /> Défini par l’utilisateur valeur, si le magasin de clés principales de colonne est d’un type personnalisé.|  
 |**key_path**|**nvarchar(4000)**|Un chemin de spécifiques aux magasins de clé principale de colonne de la clé. Le format du chemin d’accès varie selon le type de magasin de clé principale de colonne. Exemple :<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Pour un magasin de clés principales de colonne personnalisée, le développeur est chargé de définir un chemin de clé est pour le magasin de clés principales de colonne personnalisée.|  
+|**allow_enclave_computations**|**bit**|Indique si la clé principale de colonne est enclave compatibles, (si les clés de chiffrement de colonne, chiffrées avec cette clé principale, peuvent être utilisés pour effectuer des calculs à l’intérieur d’enclaves sécurisés côté serveur). Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisés](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**signature**|**varbinary(max)**|Une signature numérique du **key_path** et **allow_enclave_computations**, généré à l’aide de la clé principale de colonne, référencée par **key_path**.|
+
+
   
 ## <a name="permissions"></a>Permissions  
  Nécessite le **VIEW ANY COLUMN MASTER KEY** autorisation.  

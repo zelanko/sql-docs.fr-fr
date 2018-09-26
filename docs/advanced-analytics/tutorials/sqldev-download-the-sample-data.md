@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724333"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712752"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>Données de démonstration NYC Taxi pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -127,6 +127,14 @@ Le tableau suivant récapitule les objets créés dans la base de données de d�
 |**PredictTip**  |procédure stockée |Créé par le script PredictTip.sql. Appelle le modèle formé pour créer des prédictions à l’aide du modèle. La procédure stockée accepte une requête comme paramètre d’entrée et retourne une colonne de valeurs numériques qui contient les scores pour les lignes d’entrée. Cette procédure stockée est utilisée dans [Opérationnaliser le modèle R](sqldev-operationalize-the-model.md).|
 |**PredictTipSingleMode**  |procédure stockée| Créé par le script PredictTipSingleMode.sql. Appelle le modèle formé pour créer des prédictions à l’aide du modèle. Cette procédure stockée accepte une nouvelle observation comme entrée, avec des valeurs de caractéristiques passées comme paramètres inline, et retourne une valeur qui prédit l’issue de la nouvelle observation. Cette procédure stockée est utilisée dans [Opérationnaliser le modèle R](sqldev-operationalize-the-model.md).|
 |**TrainTipPredictionModel**  |procédure stockée|Créé par le script TrainTipPredictionModel.sql. Effectue l’apprentissage d’un modèle de régression logistique en appelant un package R. Le modèle prédit la valeur de la colonne tipped et est formé à l’aide d’un échantillon de 70 % des données sélectionné de façon aléatoire. La sortie de la procédure stockée représente le modèle formé, qui est enregistré dans la table nyc_taxi_models. Cette procédure stockée est utilisée dans [former et enregistrer un modèle](../r/sqldev-train-and-save-a-model-using-t-sql.md).|
+
+## <a name="query-data-for-verification"></a>Interroger des données pour la vérification
+
+Comme une étape de validation, exécutez une requête pour confirmer que le téléchargement de données.
+
+1. Dans l’Explorateur d’objets, des bases de données, développez le **NYCTaxi_Sample** base de données, puis ouvrez le dossier Tables.
+
+2. Cliquez sur le **dbo.nyctaxi_sample** et choisissez **sélectionner les 1000 premières lignes** pour retourner des données.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

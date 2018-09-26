@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f55962069c67fe7907968e024cdacb920b02d4e
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348610"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713151"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Notation native à l’aide de la fonction de prédire le T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Notation native tire parti des fonctionnalités extension du C++ natives dans SQL Server 2017 pour générer des valeurs de prédiction ou *scores* pour les nouvelles entrées de données quasiment en temps réel. Cette méthodologie offre la vitesse de traitement plus rapide de prévision et prédiction des charges de travail, mais il est fourni avec les exigences de plate-forme et de la bibliothèque : seuls les fonctions RevoScaleR et revoscalepy ont des implémentations C++.
+Natif notation utilise [fonction T-SQL prédire](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) et les fonctionnalités d’extension natifs C++ dans SQL Server 2017 pour générer des valeurs de prédiction ou *scores* pour les nouvelles entrées de données quasiment en temps réel. Cette méthodologie offre la plus rapide possible vitesse de traitement de prévision et de prédiction des charges de travail, mais il est fourni avec les exigences de plate-forme et de la bibliothèque : seuls les fonctions RevoScaleR et revoscalepy ont des implémentations C++.
 
-Notation native nécessite que vous disposez d’un modèle déjà formé. Dans SQL Server 2017 Windows ou Linux, ou dans la base de données SQL Azure, vous pouvez utiliser la fonction PREDICT dans Transact-SQL pour appeler la notation native. La fonction PREDICT prend un modèle préformé et génère les scores sur les entrées de données que vous fournissez.
+Notation native nécessite que vous disposez d’un modèle déjà formé. Dans SQL Server 2017 Windows ou Linux, ou dans la base de données SQL Azure, vous pouvez appeler la fonction PREDICT dans Transact-SQL pour appeler native de score à de nouvelles données que vous fournissez comme paramètre d’entrée. La fonction PREDICT retourne les scores sur les entrées de données que vous fournissez.
 
 ## <a name="how-native-scoring-works"></a>Comment native notation fonctionne
 
