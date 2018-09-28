@@ -18,12 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bb37f2598422d739be318eec79d6ddc3a9bfdb8f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410461"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811085"
 ---
 # <a name="create-an-entity-master-data-services"></a>Créer une entité (Master Data Services)
 
@@ -57,9 +57,11 @@ ms.locfileid: "35410461"
      Si vous ne renseignez pas ce champ, le nom de l’entité sera utilisé.  
   
     > [!TIP]  
-    >  Utilisez le nom du modèle dans le nom de la table de mise en lots, par exemple *NomModèle_NomEntité*. Cela facilite la recherche de tables dans la base de données. Pour plus d’informations sur les tables de mise en lots, consultez [Présentation : Importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+    >  Utilisez le nom du modèle dans le nom de la table de mise en lots, par exemple *NomModèle_NomEntité*. Cela facilite la recherche de tables dans la base de données. Pour plus d’informations sur les tables de mise en lots, consultez [Présentation : Importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
+    > [!TIP]  
+    >  Si vous utilisez le nom par défaut des tables de mise en lots, MDS y ajoute automatiquement un identificateur (par exemple, _1 ou _2) si une entité portant le même nom existe dans un autre modèle.
   
-7.  Pour le champ **Type de journal des transactions**, choisissez le type du journal des transactions dans la liste déroulante.  
+7.  Pour le champ **Type de journal des transactions** , choisissez le type du journal des transactions dans la liste déroulante.  
   
      Pour plus d’informations, consultez [Modifier le type du journal des transactions de l’entité &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md).  
   

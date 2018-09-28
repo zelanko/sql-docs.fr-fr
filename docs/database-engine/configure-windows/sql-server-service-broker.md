@@ -1,7 +1,7 @@
 ---
 title: SQL Server Service Broker | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6b637e685063d8b1ca81aebc0d020824df22b766
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 757ee407d0831734b7c55b9e1b8b5a20e91d042a
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509158"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171811"
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,8 +40,6 @@ ms.locfileid: "39509158"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] fournit la prise en charge native des applications de messagerie et de mise en file d’attente dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Cette opération permet aux développeurs de créer plus facilement des applications perfectionnées qui utilisent des composants de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la communication entre des bases de données disparates. Les développeurs peuvent utiliser [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour créer facilement des applications fiables et distribuées.  
   
  Les développeurs d'applications qui utilisent [!INCLUDE[ssSB](../../includes/sssb-md.md)] peuvent distribuer les charges de données sur plusieurs bases de données sans développer des mécanismes de messagerie et de communication complexes. Il est ainsi possible de réduire le travail de développement et de test puisque [!INCLUDE[ssSB](../../includes/sssb-md.md)] gère les chemins de communication dans le contexte d'une conversation. Les performances sont aussi meilleures. Par exemple, les bases de données frontales prenant en charge les sites Web peuvent enregistrer des informations et mettre des tâches intensives en file d'attente dans des bases de données principales. [!INCLUDE[ssSB](../../includes/sssb-md.md)] garantit que toutes les tâches sont gérées dans le contexte des transactions afin d’assurer une fiabilité et une cohérence techniques.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 ## <a name="where-is-the-documentation-for-service-broker"></a>Emplacement de la documentation de Service Broker  
  La documentation de référence pour [!INCLUDE[ssSB](../../includes/sssb-md.md)] est incluse dans la documentation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Cette documentation de référence comprend les sections suivantes :  
@@ -60,6 +58,13 @@ ms.locfileid: "39509158"
   
 ## <a name="whats-new-in-service-broker"></a>Nouveautés dans Service Broker  
  Aucune modification importante n'a été introduite dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  Les modifications suivantes ont été introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+
+### <a name="service-broker-and-azure-sql-database-managed-instance"></a>Service Broker et Azure SQL Database Managed Instance
+
+- Service Broker entre instances n’est pas pris en charge. 
+ - `sys.routes` – Prérequis : sélectionnez l’adresse à partir de sys.routes. L’adresse doit être LOCAL sur tous les itinéraires. Voir [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
+ - `CREATE ROUTE` – `CREATE ROUTE` n’est pas utilisable avec `ADDRESS` autre que `LOCAL`. Voir [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+ - `ALTER ROUTE` – `ALTER ROUTE` n’est pas utilisable avec `ADDRESS` autre que `LOCAL`. Voir [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>Les messages peuvent être envoyés à des services cibles (multidiffusion).  
  La syntaxe de l’instruction [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md) a été étendue pour permettre la multidiffusion au moyen de la prise en charge de plusieurs descripteurs de conversation.  

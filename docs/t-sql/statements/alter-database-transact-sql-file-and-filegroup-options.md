@@ -46,12 +46,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1970cea904788325e1da45e65633d52039aeeb21
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2cc06595f2827704009f96b4a7f7c047e5c27c28
+ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43095337"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44089999"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL) 
 
@@ -315,7 +315,10 @@ AUTOGROW_ALL_FILES
 
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
-Quand un fichier du groupe de fichiers atteint le seuil de croissance automatique, la taille de tous les fichiers augmente.  
+Quand un fichier du groupe de fichiers atteint le seuil de croissance automatique, la taille de tous les fichiers augmente. 
+
+> [!NOTE]
+> Il s’agit de la valeur par défaut pour tempdb.
   
 **\<filegroup_updatability_option>::=**  
   

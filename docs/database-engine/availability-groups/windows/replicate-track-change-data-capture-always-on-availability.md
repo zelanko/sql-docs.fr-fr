@@ -1,7 +1,7 @@
 ---
 title: Réplication, suivi des modifications et capture de données modifiées - groupes de disponibilité | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2018
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37070e0b036d109624048603b24464a2019ec69d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bc5f16247663591862c60dccd2e75975195b327c
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769375"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311669"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Réplication, suivi des modifications et capture de données modifiées - groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34769375"
 ###  <a name="Changes"></a> Modifications générales apportées aux agents de réplication pour prendre en charge les groupes de disponibilité  
  Trois agents de réplication ont été modifiés pour prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. L'agent de lecture du journal, ainsi que les agents d'instantané et de fusion ont été modifiés pour interroger la base de données de distribution pour le serveur de publication redirigé et pour utiliser le nom d'écouteur de groupe de disponibilité retourné, si un serveur de publication redirigé était déclaré, pour se connecter au serveur de publication de base de données.  
   
- Par défaut, lorsque les agents interrogent le serveur de distribution afin de déterminer si le serveur de publication d'origine a été redirigé, l'adéquation de la cible actuelle ou de la redirection est vérifiée avant de retourner l'hôte redirigé à l'agent. Il s'agit du comportement recommandé. Toutefois, si le démarrage de l'agent se produit très fréquemment, la surcharge liée à la procédure stockée de validation peut être considérée comme trop importante. Un nouveau commutateur de ligne de commande, *BypassPublisherValidation*, a été ajouté à l'agent de lecture du journal, ainsi qu'aux agents d'instantané et de fusion. Lorsque le commutateur est utilisé, le serveur de publication redirigé est retourné immédiatement à l'agent et l'exécution de la procédure stockée de validation est ignorée.  
+ Par défaut, lorsque les agents interrogent le serveur de distribution afin de déterminer si le serveur de publication d'origine a été redirigé, l'adéquation de la cible actuelle ou de la redirection est vérifiée avant de retourner l'hôte redirigé à l'agent. Il s'agit du comportement recommandé. Toutefois, si le démarrage de l’agent se produit très fréquemment, la surcharge liée à la procédure stockée de validation peut être considérée comme trop importante. Un nouveau commutateur de ligne de commande, *BypassPublisherValidation*, a été ajouté à l’Agent Lecture de journal, à l’Agent d’instantané et à l’Agent Fusion. Lorsque le commutateur est utilisé, le serveur de publication redirigé est retourné immédiatement à l'agent et l'exécution de la procédure stockée de validation est ignorée.  
   
  Les échecs retournés de la procédure stockée de validation sont consignés dans les journaux d'historique de l'agent. Les erreurs dont le niveau de gravité est supérieur ou égal à 16 entraîneront l'arrêt des agents. Certaines fonctions de reprise ont été intégrées aux agents afin de gérer la déconnexion attendue d'une base de données publiée en cas de basculement vers un nouveau principal.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34769375"
   
 -   **Indicateur de trace 1448**  
   
-     L'indicateur de trace 1448 permet à l'agent de lecture du journal de réplication d'avancer même si les réplicas secondaires asynchrones n'ont pas accusé réception d'une modification. Même si cet indicateur de trace est activé, l'agent de lecture de journal attend toujours les réplicas secondaires synchrones. L'agent de lecture du journal n'ira pas au delà de l'accusé réception minimum des réplicas secondaires synchrones. Cet indicateur de trace s'applique à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], et pas simplement à un groupe de disponibilité, à une base de données de disponibilité ou à une instance de l'agent de lecture de journal. Cet indicateur de trace prend effet immédiatement, sans redémarrage. Il peut être activé d'avance ou lorsque le réplica secondaire asynchrone échoue.  
+     L'indicateur de trace 1448 permet à l'agent de lecture du journal de réplication d'avancer même si les réplicas secondaires asynchrones n'ont pas accusé réception d'une modification. Même si cet indicateur de trace est activé, l’Agent Lecture de journal attend toujours les réplicas secondaires synchrones. L'agent de lecture du journal n'ira pas au delà de l'accusé réception minimum des réplicas secondaires synchrones. Cet indicateur de trace s'applique à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], et pas simplement à un groupe de disponibilité, à une base de données de disponibilité ou à une instance de l'agent de lecture de journal. Cet indicateur de trace prend effet immédiatement, sans redémarrage. Il peut être activé d'avance ou lorsque le réplica secondaire asynchrone échoue.  
   
 ###  <a name="StoredProcs"></a> Procédures stockées prenant en charge les groupes de disponibilité  
   
@@ -143,9 +143,9 @@ ms.locfileid: "34769375"
   
 -   **Redirection de la charge de requête vers un réplica secondaire accessible en lecture**  
   
-     Même si, dans de nombreux cas, une application cliente souhaite toujours se connecter au réplica principal actuel, il ne s'agit pas de la seule façon de tirer parti de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Si un groupe de disponibilité est configuré pour prendre en charge des réplicas secondaires accessibles en lecture, les données modifiées peuvent également être collectées à partir des nœuds secondaires.  
+     Même si, dans de nombreux cas, une application cliente souhaite toujours se connecter au réplica principal actuel, il ne s’agit pas de la seule façon de tirer parti de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Si un groupe de disponibilité est configuré pour prendre en charge des réplicas secondaires accessibles en lecture, les données modifiées peuvent également être collectées à partir des nœuds secondaires.  
   
-     Lorsqu'un groupe de disponibilité est configuré, l'attribut ALLOW_CONNECTIONS associé à SECONDARY_ROLE est utilisé pour spécifier le type d'accès secondaire pris en charge. Dans le cas d'une configuration de type ALL, toutes les connexions au serveur secondaire sont autorisées, mais seules celles nécessitant un accès en lecture seule aboutiront. Dans le cas d'une configuration de type READ_ONLY, il est nécessaire de spécifier l'intention en lecture seule lors de l'établissement de la connexion à la base de données secondaire pour que la connexion réussisse. Pour plus d’informations, consultez [Configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
+     Lorsqu'un groupe de disponibilité est configuré, l'attribut ALLOW_CONNECTIONS associé à SECONDARY_ROLE est utilisé pour spécifier le type d'accès secondaire pris en charge. Dans le cas d’une configuration de type ALL, toutes les connexions au réplica secondaire sont autorisées, mais seules celles qui exigent un accès en lecture seule aboutissent. Dans le cas d'une configuration de type READ_ONLY, il est nécessaire de spécifier l'intention en lecture seule lors de l'établissement de la connexion à la base de données secondaire pour que la connexion réussisse. Pour plus d’informations, consultez [Configurer l’accès en lecture seule sur un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
      La requête suivante peut être utilisée pour déterminer si l'intention en lecture seule est nécessaire pour se connecter à un réplica secondaire accessible en lecture.  
   
@@ -211,12 +211,10 @@ Si la capture des données modifiées doit être désactivé sur une base de don
 |||||  
 |-|-|-|-|  
 ||**Serveur de publication**|**Distributor***\*|**Abonné**|  
-|**Transactionnelle**|Oui<br /><br /> Remarque : n’inclut pas la prise en charge de la réplication transactionnelle bidirectionnelle et réciproque.|non|Oui|  
+|**Transactionnelle**|Oui<br /><br /> Remarque : n’inclut pas la prise en charge de la réplication transactionnelle bidirectionnelle et réciproque.|Oui|Oui| 
 |**P2P**|non|non|non|  
-|**Fusion**|Oui|non|Oui*|  
-|**Snapshot**|Oui|non|Oui*|  
-  
- *Le basculement vers la base de données de réplica est une procédure manuelle. Le basculement automatique n'est pas fourni.  
+|**Fusion**|Oui|non|non|  
+|**Snapshot**|Oui|non|Oui|
   
  **La base de données du serveur de distribution n’est pas prise pour une utilisation avec la mise en miroir de base de données.  
   

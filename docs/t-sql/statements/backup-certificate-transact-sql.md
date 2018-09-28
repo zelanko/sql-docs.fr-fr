@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -32,19 +32,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e324d8823176e8153a6536be7dcd0a1ca8baae77
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: acc945ee464ae143f5ae9b2fd9ce803a3045d1f0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105732"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171591"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-asdw-pdw-md.md)]
 
   Permet d'exporter un certificat dans un fichier.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône de lien](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,28 +74,32 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
 ## <a name="arguments"></a>Arguments  
  *path_to_file*  
- Spécifie le chemin d'accès complet, y compris le nom de fichier, du fichier dans lequel le certificat doit être enregistré. Cela peut être un chemin local ou un chemin UNC d’un emplacement réseau. La valeur par défaut est le chemin d'accès au dossier DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Spécifie le chemin d'accès complet, y compris le nom de fichier, du fichier dans lequel le certificat doit être enregistré. Il peut s’agir d’un chemin d’accès local ou d’un chemin d’accès UNC à un emplacement réseau. La valeur par défaut est le chemin d'accès au dossier DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *path_to_private_key_file*  
- Spécifie le chemin d'accès complet, y compris le nom de fichier, du fichier dans lequel la clé privée doit être enregistrée. Cela peut être un chemin local ou un chemin UNC d’un emplacement réseau. La valeur par défaut est le chemin d'accès au dossier DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Spécifie le chemin d'accès complet, y compris le nom de fichier, du fichier dans lequel la clé privée doit être enregistrée. Il peut s’agir d’un chemin d’accès local ou d’un chemin d’accès UNC à un emplacement réseau. La valeur par défaut est le chemin d'accès au dossier DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+
+> [!IMPORTANT]
+> Azure SQL Database ne prend pas en charge la sauvegarde d’un certificat dans un fichier.
+
   
  *encryption_password*  
  Mot de passe utilisé pour chiffrer la clé privée avant de l'enregistrer dans le fichier de sauvegarde. Le mot de passe est sujet à des vérifications de la complexité.  
   
  *decryption_password*  
- Mot de passe utilisé pour déchiffrer la clé privée avant de sauvegarder la clé. Cela n’est pas nécessaire si le certificat est chiffré par la clé principale. 
+ Mot de passe utilisé pour déchiffrer la clé privée avant de sauvegarder la clé. Cet argument n’est pas nécessaire si le certificat est chiffré par la clé principale. 
   
 ## <a name="remarks"></a>Notes   
  Si la clé privée est chiffrée au moyen d'un mot de passe dans la base de données, le mot de passe de déchiffrement doit être spécifié.  
   
- Lorsque vous sauvegardez la clé privée dans un fichier, un chiffrement est nécessaire. Le mot de passe utilisé pour protéger le certificat sauvegardé est différent de celui utilisé pour chiffrer la clé privée du certificat.  
+ Lorsque vous sauvegardez la clé privée dans un fichier, un chiffrement est nécessaire. Le mot de passe utilisé pour protéger le certificat est différent de celui qui sert à chiffrer la clé privée du certificat.  
   
  Pour restaurer un certificat sauvegardé, utilisez l’instruction [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
  
- Lors de l’exécution d’une sauvegarde, les fichiers seront mis sur une liste de contrôle d'accès du compte de service de l’instance SQL Server. Si vous devez restaurer le certificat sur un serveur en cours d’exécution sous un compte différent, vous devrez ajuster les autorisations sur les fichiers afin qu’ils puissent être lus par le nouveau compte. 
+ Lors de l’exécution d’une sauvegarde, les fichiers seront mis sur une liste de contrôle d’accès du compte de service de l’instance SQL Server. Si vous souhaitez restaurer le certificat sur un serveur en cours d’exécution sous un compte différent, vous devrez ajuster les autorisations sur les fichiers afin qu’ils puissent être lus par le nouveau compte. 
   
 ## <a name="permissions"></a>Permissions  
- Requiert l'autorisation CONTROL sur le certificat et la connaissance du mot de passe utilisé pour chiffrer la clé privée. Si seule la partie publique du certificat est sauvegardée, l'opération requiert une autorisation sur le certificat et l'autorisation VIEW sur le certificat ne doit pas avoir été refusée à l'appelant.  
+ Requiert l'autorisation CONTROL sur le certificat et la connaissance du mot de passe utilisé pour chiffrer la clé privée. Si seule la partie publique du certificat est sauvegardée, cette commande requiert quelques autorisations sur le certificat ; l’autorisation VIEW sur le certificat ne doit pas avoir été refusée à l’appelant.  
   
 ## <a name="examples"></a>Exemples  
   

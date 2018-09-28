@@ -1,7 +1,7 @@
 ---
 title: Journal des modifications de SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 09/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,41 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cf2952b907da3dc44046e57796de761e62336de
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
+ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096118"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743502"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Journal des modifications de SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Ce journal des modification est pour [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Pour des publications détaillées sur les nouveautés et les modifications, consultez [le blog de l’équipe SSDT](https://blogs.msdn.microsoft.com/ssdt/)
+
+## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT pour Visual Studio 2017 (15.8)
+Numéro de build : 14.0.16174.0  
+Date de publication : 5 septembre 2018  
+
+### <a name="whats-new"></a>Nouveautés
+
+**SSIS :**
+
+1. Correction d’une régression dans VS 15.8 : l’enregistrement du composant/de la tâche de script provoquait une erreur de compilation.
+1. Correction d’une régression dans VS 15.8 : l’Assistant Déploiement ne fonctionnait pas.
+1. Correction d’un problème : le gestionnaire de connexions ADO.NET ne prenait pas en charge le fournisseur ADO.NET tiers.
+
+**Programme d’installation :**
+
+- Implémentation du redémarrage en cours de route lors de l’installation de SSDT sur Windows 10.
+
+
+### <a name="known-issues"></a>Problèmes connus :
+
+- La tâche d’exécution de package SSIS ne prend pas en charge le débogage quand ExecuteOutOfProcess a la valeur True. Ce problème s’applique uniquement au débogage. L’enregistrement, le déploiement et l’exécution via DTExec.exe ou le catalogue SSIS ne sont pas impactés.
+
+
 
 
 ## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT pour Visual Studio 2017 (15.7.1)

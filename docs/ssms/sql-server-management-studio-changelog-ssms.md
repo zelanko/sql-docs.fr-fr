@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Journal des modifications (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 09/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,26 +15,107 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c45c55f72b6c864087a0df2d45d9da0ef3cfce1
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: edfb4248c5f5102742ab13d7a2615bb3c192481b
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899499"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889795"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Journal des modifications (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Cet article fournit des détails sur les mises à jour, les améliorations et les correctifs de bogues des versions actuelles et précédentes de SSMS. Téléchargez les [versions précédentes de SSMS ci-dessous](#previous-ssms-releases).
 
 
+## <a name="ssms-179download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.9](download-sql-server-management-studio-ssms.md)
 
 
-## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+Numéro de build : 14.0.17285.0<br>
+Date de publication : 4 septembre 2018
+
+### <a name="whats-new"></a>Nouveautés
+
+**SSMS général**
+
+
+Plan d’exécution de requêtes :
+
+- Le plan d’exécution de requêtes graphique affiche à présent les nouveaux attributs de rétroaction d’allocation de mémoire en mode ligne lorsque la fonctionnalité est activée pour un plan spécifique : IsMemoryGrantFeedbackAdjusted et LastRequestedMemory ajoutés à l’élément XML de plan de requête MemoryGrantInfo. Pour plus d’informations sur la rétroaction d’allocation de mémoire en mode ligne, voir [Traitement adaptatif des requêtes dans les bases de données SQL](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing).
+
+Azure SQL : 
+
+- Ajout de la prise en charge des références SKU vCore dans la création de bases de données Azure. Pour plus d’informations, voir [Modèle d’achat par vCore](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
+ 
+
+### <a name="bug-fixes"></a>Correctifs de bogues
+
+**SSMS général**
+    
+Moniteur de réplication :
+
+- Correction du problème qui empêchait le démarrage du moniteur de réplication (SqlMonitor.exe) (élément UserVoice : https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079). 
+
+Assistant Importation de fichier plat : 
+
+- Correction du lien vers la page d’aide dans la boîte de dialogue « Assistant Fichier plat ». 
+- Correction du problème selon lequel l’Assistant n’autorisait pas la modification de la table de destination lorsqu’elle existait déjà : les utilisateurs peuvent ainsi réessayer sans avoir à quitter l’Assistant, supprimer la table ayant échoué, puis entrer de nouveau les informations dans l’Assistant (élément UserVoice : https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). 
+
+Application de la couche Données d’importation/exportation :
+
+- Correction d’un problème (dans DacFx) qui pouvait provoquer l’échec de l’importation d’un fichier .bacpac avec un message du type « Error SQL72014: .Net SqlClient Data Provider: Msg 9108, Level 16, State 10, Line 1 This type of statistics is not supported to be incremental. » en cas de traitement de tables avec des partitions définies et aucun index. 
+
+IntelliSense :
+
+- Correction du problème selon lequel la saisie semi-automatique IntelliSense ne fonctionnait pas en cas d’utilisation d’AAD avec l’authentification multifacteur. 
+
+Explorateur d'objets : 
+
+- Correction du problème selon lequel la « boîte de dialogue Filtre » s’affichait sur des moniteurs aléatoire au lieu de celui sur lequel SSMS était en cours d’exécution (systèmes multimoniteurs).
+
+Azure SQL : 
+
+- Correction d’un problème lié à l’énumération des bases de données dans « Bases de données disponibles » : « master » ne s’affichait pas dans la liste déroulante en cas de connexion à une base de données spécifique. 
+- Correction du problème selon lequel la génération d’un script (« Données » ou « Schéma et données ») échouait en cas de connexion à la base de données SQL Azure à l’aide d’AAD avec l’authentification multifacteur. 
+- Correction d’un problème dans le concepteur de vues (Vues) : il n’était pas possible de sélectionner « Ajouter des tables » sur l’interface utilisateur en cas de connexion à une base de données SQL Azure. 
+- Correction du problème selon lequel l’éditeur de requête SSMS fermait et rouvrait des connexions pendant le renouvellement de jeton d’authentification multifacteur. Cela permettra d’éviter que des effets secondaires (comme la fermeture d’une transaction, qui ne sera jamais rouverte) ne se produisent à l’insu de l’utilisateur. La modification a pour effet d’ajouter l’heure d’expiration du jeton à la fenêtre Propriétés. 
+- Correction du problème selon lequel SSMS n’appliquait pas les invites de mot de passe aux comptes MSA importés pour AAD avec connexion par authentification multifacteur. 
+
+Moniteur d’activité : 
+
+- Correction d’un problème qui provoquait le blocage de « Statistiques des requêtes actives » lorsqu’il était lancé à partir du moniteur d’activité et que l’authentification SQL était utilisé. 
+
+Intégration de Microsoft Azure : 
+
+- Correction du problème selon lequel SSMS affichait seulement les 50 premiers abonnements (boîtes de dialogue Always Encrypted, Sauvegarder/restaurer à partir d’une URL, etc.). 
+- Correction du problème selon lequel SSMS levait une exception (« Index hors limites ») en cas de tentative de connexion à un compte Microsoft Azure sans compte de stockage (dans la boîte de dialogue Restaurer la sauvegarde à partir d’une URL). 
+
+Scripts d’objets : 
+
+- Avec des scripts « Annuler et créer », SSMS évite désormais de générer du code T-SQL dynamique.
+- Avec des scripts portant sur un objet de base de données, SSMS ne génère plus de script pour définir des configurations étendues à la base de données, si elles sont définies sur les valeurs par défaut.
+
+Help :
+
+- Correction du problème resté longtemps en suspens selon lequel « Aide sur l’aide » ne respectait pas le mode en ligne/hors ligne.
+- Lorsque l’on clique sur « Aide | Projets et exemples de la communauté », SSMS ouvre désormais le navigateur par défaut, qui pointe sur une page Git et ne montre aucune erreur ni aucun avertissement quant au fait d’utiliser un ancien navigateur.
+
+### <a name="known-issues"></a>Problèmes connus
+
+- Il n’existe actuellement aucun problème connu dans cette version.
+
+
+
+## <a name="previous-ssms-releases"></a>Versions précédentes de SSMS
+
+Téléchargez les versions précédentes de SSMS en cliquant sur le lien des titres dans les sections suivantes.
+
+## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![télécharger](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
 *Un bogue a été découvert dans la version 17.8 concernant l’approvisionnement des bases de données SQL. C’est pourquoi SSMS 17.8.1 remplace 17.8.*
-
 
 Numéro de build : 14.0.17277.0<br>
 Date de publication : 26 juin 2018
+
+[Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>Nouveautés
@@ -93,10 +174,6 @@ Always Encrypted :
 - Il peut se produire une latence dans l’observateur XEvents. Il s’agit d’un [problème connu de .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Veuillez passer à la version NetFx 4.7.2.
 
 
-
-## <a name="previous-ssms-releases"></a>Versions précédentes de SSMS
-
-Téléchargez les versions précédentes de SSMS en cliquant sur le lien des titres dans les sections suivantes.
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![télécharger](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)

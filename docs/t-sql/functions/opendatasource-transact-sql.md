@@ -1,7 +1,7 @@
 ---
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,21 +27,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 63619b21a6e82458a64128a4f892cac6c6220420
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58b37be191f9b3ce95d7442a4ba9d68f9fdc2339
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457963"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171564"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Fournit les informations de connexion appropriées pour un nom d'objet en quatre parties sans utiliser de nom de serveur lié.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône de lien](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +62,7 @@ OPENDATASOURCE ( provider_name, init_string )
 |Source de données|DBPROP_INIT_DATASOURCE|Nom de la source de données à laquelle la connexion doit être établie. Ceci est interprété différemment selon les fournisseurs. Pour le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB, cette propriété indique le nom du serveur. Pour le fournisseur Jet OLE DB, elle indique le chemin d'accès complet au fichier .mdb ou .xls.|  
 |Emplacement|DBPROP_INIT_LOCATION|Emplacement de la base de données à laquelle la connexion doit être établie|  
 |Extended Properties|DBPROP_INIT_PROVIDERSTRING|Chaîne de connexion spécifique au fournisseur|  
-|Connect timeout|DBPROP_INIT_TIMEOUT|Délai d'expiration au bout duquel la tentative de connexion échoue|  
+|Connect timeout|DBPROP_INIT_TIMEOUT|Délai d’expiration au bout duquel la tentative de connexion échoue|  
 |ID d'utilisateur|DBPROP_AUTH_USERID|ID utilisateur à utiliser pour la connexion|  
 |Mot de passe|DBPROP_AUTH_PASSWORD|Mot de passe à utiliser pour la connexion|  
 |Catalogue|DBPROP_INIT_CATALOG|Nom du catalogue initial ou par défaut lors de la connexion à la source de données|  
@@ -75,14 +73,14 @@ OPENDATASOURCE ( provider_name, init_string )
   
  La fonction OPENDATASOURCE peut être utilisée dans les mêmes emplacements de syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'un nom de serveur lié. OPENDATASOURCE peut donc constituer la première des quatre parties d'un nom qui fait référence à un nom de table ou de vue (dans une instruction SELECT, INSERT, UPDATE ou DELETE) ou à une procédure stockée distante (dans une instruction EXECUTE). Lors de l'exécution de procédures stockées distantes, OPENDATASOURCE doit faire référence à une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. OPENDATASOURCE n'accepte pas de variables pour ses arguments.  
   
- Comme la fonction OPENROWSET, OPENDATASOURCE doit uniquement faire référence à des sources de données OLE DB qui ne sont pas sollicitées fréquemment. Définissez un serveur lié pour toutes les sources de données qui font l'objet de nombreux accès. OPENDATASOURCE et OPENROWSET n'offrent pas toutes les fonctionnalités des définitions de serveur lié, en particulier en ce qui concerne la gestion de la sécurité et la consultation des informations du catalogue. Toutes les informations de connexion, y compris les mots de passe, doivent être fournies à chaque appel de OPENDATASOURCE.  
+ Comme la fonction OPENROWSET, OPENDATASOURCE doit uniquement faire référence à des sources de données OLE DB qui ne sont pas sollicitées fréquemment. Définissez un serveur lié pour toutes les sources de données qui font l'objet de nombreux accès. Ni OPENDATASOURCE ni OPENROWSET n’offrent toutes les fonctionnalités des définitions de serveur lié, notamment la gestion de la sécurité et la possibilité de consulter des informations du catalogue. Toutes les informations de connexion, y compris les mots de passe, doivent être fournies à chaque appel de OPENDATASOURCE.  
   
 > [!IMPORTANT]  
 >  L'authentification Windows est plus sûre que l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Veillez à utiliser l'authentification Windows chaque fois que c'est possible. OPENDATASOURCE ne doit pas être utilisé avec des mots de passe explicites dans la chaîne de connexion.  
   
- Les exigences de connexion pour chaque fournisseur sont semblables à celles de ces paramètres lors de la création de serveurs liés. Les détails relatifs à un grand nombre de fournisseurs courants sont répertoriés dans la rubrique [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ Les exigences de connexion pour chaque fournisseur sont semblables à celles de ces paramètres lors de la création de serveurs liés. Des informations relatives à de nombreux fournisseurs courants sont présentées dans l’article [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
- Tout appel à OPENDATASOURCE, OPENQUERY ou OPENROWSET dans la clause FROM est évalué séparément et indépendamment de tout appel à ces fonctions utilisé comme cible de la mise à jour, même si des arguments identiques sont fournis aux deux appels. En particulier, les conditions de filtre ou de jointure appliquées sur le résultat de l'un de ces appels n'ont aucun effet sur les résultats de l'autre.  
+ Tout appel à OPENDATASOURCE, OPENQUERY ou OPENROWSET dans la clause FROM est évalué séparément et indépendamment de tout appel à ces fonctions utilisé comme cible de la mise à jour, même si des arguments identiques sont fournis aux deux appels. En particulier, les conditions de filtre ou de jointure appliquées au résultat de l’un de ces appels n’ont aucun effet sur les résultats de l’autre.  
   
 ## <a name="permissions"></a>Permissions  
  Tous les utilisateurs peuvent exécuter OPENDATASOURCE. Les autorisations utilisées pour la connexion au serveur distant sont déterminées à partir de la chaîne de connexion.  

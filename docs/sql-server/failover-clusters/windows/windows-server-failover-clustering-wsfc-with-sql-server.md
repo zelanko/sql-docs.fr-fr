@@ -19,12 +19,12 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 43117124b43bf234f8d72c9e2974d6e42631d06c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d73bd46a4bf3073a84c600457df535ecd1a1307d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772465"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819415"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clustering de basculement Windows Server avec SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ ms.locfileid: "34772465"
  Les métadonnées et l'état de la configuration WSFC pour tous les nœuds sont stockés sur chaque nœud. Chaque serveur peut fournir des volumes de stockage ou de stockage partagé asymétriques (SAN) pour les bases de données utilisateur ou système. Chaque serveur possède au moins une interface réseau physique sur un ou plusieurs sous-réseaux IP.  
   
  Le cluster WSFC surveille l’intégrité et gère la configuration d’un groupe de serveurs.  
- Les mécanismes WSFC propagent les modifications apportées aux métadonnées et à l’état de la configuration WSFC à tous les nœuds du cluster. Si un témoin de disque est utilisé, les métadonnées y sont également stockées. Par défaut, chaque nœud du cluster WSFC obtient un vote pour constituer un quorum et un témoin est utilisé si nécessaire et configuré.
+ Les mécanismes WSFC propagent les modifications apportées aux métadonnées et à l’état de la configuration WSFC à tous les nœuds du cluster. Si un témoin de disque est utilisé, les métadonnées y sont également stockées. Par défaut, chaque nœud du cluster WSFC obtient un vote pour constituer un quorum ; un témoin est utilisé si nécessaire, et configuré.
  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sont des sous-clés du cluster WSFC.  
  Si vous supprimez et recréez un cluster WSFC, vous devez désactiver et réactiver la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur chaque instance de serveur activée pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur le cluster WSFC d’origine. Pour plus d’informations, consultez [Activer et désactiver les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).  

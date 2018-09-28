@@ -1,7 +1,7 @@
 ---
 title: Cibles des événements étendus SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: df5fc32aa7a6d42077e93d6b1dd4ca163404dc16
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d8a163b14cd44aab21a294fedee918b34fd95b0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533819"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171781"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Cibles des Événements étendus SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Les événements SQL Server peuvent interagir avec le suivi d’événements pou
 Cette cible ETW traite de manière *synchrone* les données qu’elle reçoit, tandis que la plupart des cibles procèdent de manière *asynchrone*.
 
 > [!NOTE]
-> Azure SQL Database ne prend pas en charge la cible ETW. Azure SQL Database Managed Instance ne la prend pas en charge non plus.
+> Azure SQL Database ne prend pas en charge `etw_classic_sync_target target`.
 
 <!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
@@ -157,7 +157,7 @@ La cible **event_file** écrit la sortie de session d’événements à partir d
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
 
 > [!NOTE]
-> Azure SQL Database prend en charge la cible **event_file**, mais uniquement en utilisant un objet blob dans le stockage Azure pour la sortie. SQL Database ne permet pas le stockage de la sortie des événements dans un fichier sur votre disque dur local.
+> Azure SQL Database ne prend en charge le stockage de fichiers `xel` que dans le Stockage Blob Azure. 
 >
 > Pour obtenir un exemple de code **event_file** utilisable avec SQL Database (et avec SQL Database Managed Instance), consultez [Code de la cible de fichier d’événements pour les événements étendus dans SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 

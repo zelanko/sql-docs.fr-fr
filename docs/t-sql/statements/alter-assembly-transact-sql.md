@@ -1,7 +1,7 @@
 ---
 title: ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2017
+ms.date: 09/07/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,15 +27,15 @@ caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 10e01507c7c33f272872ecf5022ad287ccaeafa6
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 32f8f0b6aaaa44dc42a52babae398845779961d3
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942925"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171801"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Modifie un assembly en changeant les propriétés de catalogue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'un assembly. ALTER ASSEMBLY le réactualise avec la dernière copie des modules [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui contiennent son implémentation, et ajoute ou supprime les fichiers qui lui sont associés. Les assemblys sont créés à l’aide de [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
@@ -79,6 +79,9 @@ ALTER ASSEMBLY assembly_name
  Met à jour un assembly avec la dernière copie des modules [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] qui contiennent sa mise en œuvre. Cette option ne peut être utilisée que s'il n'existe aucun fichier associé avec l'assembly spécifié.  
   
  \<client_assembly_specifier> spécifie l’emplacement réseau ou local où se trouve l’assembly actuellement réactualisé. L'emplacement réseau inclut le nom de l'ordinateur, le nom de partage et un chemin d'accès au sein de ce partage. *manifest_file_name* spécifie le nom du fichier qui contient le manifeste de l’assembly.  
+
+> [!IMPORTANT]
+> Azure SQL Database ne prend pas en charge le référencement d’un fichier.
   
  \<assembly_bits> est la valeur binaire de l’assembly.  
   
@@ -118,13 +121,13 @@ ALTER ASSEMBLY assembly_name
  Supprime le nom de fichier associé à l'assembly ou tous les fichiers associés à l'assembly, de la base de données. Si DROP FILE est utilisé avec ADD FILE qui suit, il s'exécute en premier. Cela vous permet de remplacer un fichier avec le même nom de fichier.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données autonome.  
+>  Cette option n’est disponible ni dans une base de données autonome, ni dans Azure SQL Database.  
   
  [ ADD FILE FROM { *client_file_specifier* [ AS *file_name*] | *file_bits*AS *file_name*}  
  Charge un fichier à associer à l’assembly, par exemple du code source, des fichiers de débogage ou d’autres informations apparentées, sur le serveur et l’affiche dans la vue de catalogue **sys.assembly_files**. *client_file_specifier* spécifie l’emplacement à partir duquel le fichier est chargé. *file_bits* peut être utilisé à la place pour spécifier la liste des valeurs binaires qui constituent le fichier. *file_name* spécifie le nom sous lequel le fichier doit être stocké dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *file_name* doit être spécifié si *file_bits* est spécifié, et est facultatif si *client_file_specifier* est spécifié. Si *file_name* n’est pas spécifié, la partie file_name de *client_file_specifier* est utilisée comme *file_name*.  
   
 > [!NOTE]  
->  Cette option n'est pas disponible dans une base de données autonome.  
+>  Cette option n’est disponible ni dans une base de données autonome, ni dans Azure SQL Database.  
   
 ## <a name="remarks"></a>Notes   
  ALTER ASSEMBLY n'interrompt pas les sessions en cours qui exécutent du code dans l'assembly modifié. Ces sessions se terminent en utilisant les bits non modifiés de l'assembly.  
@@ -168,7 +171,7 @@ ALTER ASSEMBLY assembly_name
   
  Si l'instruction ALTER ASSEMBLY est exécutée sans la clause de données UNCHECKED, des vérifications sont effectuées pour s'assurer que la nouvelle version de l'assembly n'affecte pas les données existantes dans les tables. Selon la quantité de données à vérifier, cela peut affecter les performances.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation ALTER sur l'assembly. Il y a d'autres exigences :  
   
 -   Pour modifier un assembly dont le jeu d’autorisations existant est EXTERNAL_ACCESS, vous devez avoir l’autorisation **EXTERNAL ACCESS ASSEMBLY** sur le serveur.  
@@ -205,6 +208,10 @@ Les autorisations suivantes sont nécessaires pour modifier un assembly CLR quan
  ALTER ASSEMBLY ComplexNumber 
  FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
   ```
+
+> [!IMPORTANT]
+> Azure SQL Database ne prend pas en charge le référencement d’un fichier.
+
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. Ajout d'un fichier à associer à un assembly  
  L'exemple suivant télécharge le fichier du code source `Class1.cs` à associer à l'assembly `MyClass`. Cet exemple suppose que l'assembly `MyClass` est déjà créé dans la base de données.  
   
@@ -212,7 +219,10 @@ Les autorisations suivantes sont nécessaires pour modifier un assembly CLR quan
 ALTER ASSEMBLY MyClass   
 ADD FILE FROM 'C:\MyClassProject\Class1.cs';  
 ```  
-  
+
+> [!IMPORTANT]
+> Azure SQL Database ne prend pas en charge le référencement d’un fichier.
+
 ### <a name="c-changing-the-permissions-of-an-assembly"></a>C. Modification des autorisations d'un assembly  
  L'exemple suivant change l'ensemble d'autorisations de l'assembly `ComplexNumber` pour passer de SAFE à `EXTERNAL ACCESS`.  
   

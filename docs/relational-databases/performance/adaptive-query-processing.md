@@ -2,7 +2,7 @@
 title: Traitement de requêtes adaptatif dans les bases de données Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Fonctionnalités de traitement de requêtes adaptatif pour améliorer les performances des requêtes dans SQL Server (2017 et versions ultérieures) et Azure SQL Database.
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 705f8115ff773668993dbbc408f97946e3c9b180
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2897b0bb371e68ab4e7cccaffe245191f21243ce
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087485"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171634"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Traitement de requêtes adaptatif dans les bases de données SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,6 +111,9 @@ Un indicateur de requête USE HINT est prioritaire par rapport à une configurat
 ## <a name="row-mode-memory-grant-feedback"></a>Rétroaction d’allocation de mémoire en mode ligne
 **S’applique à** : SQL Database (fonctionnalité en préversion publique)
 
+> [!NOTE]
+> La rétroaction d’allocation de mémoire en mode ligne est une fonctionnalité en préversion publique.  
+
 La rétroaction d’allocation de mémoire en mode ligne étend la fonctionnalité de rétroaction d’allocation de mémoire en mode batch en ajustant les tailles d’allocation de mémoire pour les opérateurs du mode batch et du mode ligne.  
 
 Pour activer la préversion publique de la rétroaction d’allocation de mémoire en mode ligne dans Azure SQL Database, fixez le niveau de compatibilité à 150 pour la base de données à laquelle vous vous connectez lors de l’exécution de la requête.
@@ -129,7 +132,8 @@ LastRequestedMemory indique la mémoire allouée en kilo-octets (Ko) à partir d
 | Oui : ajustement | La rétroaction d’allocation de mémoire a été appliquée et peut encore être ajustée pour l’exécution suivante. |
 | Oui : stable | La rétroaction d’allocation de mémoire a été appliquée et la mémoire allouée est maintenant stable ; en d’autres termes, ce qui a été alloué pour l’exécution précédente est identique à ce qui a été alloué pour l’exécution actuelle. |
 
-Les attributs du plan de rétroaction d’allocation de mémoire ne sont pas encore visibles dans les plans d’exécution de requêtes graphiques SQL Server Management Studio. Cependant, il est possible de les afficher avec SET STATISTICS XML ON ou le XEvent query_post_execution_showplan à des fins de tests préalables.  
+> [!NOTE]
+> Les attributs du plan de rétroaction d’allocation de mémoire en mode ligne en préversion publique sont visibles dans les plans d’exécution de requêtes graphique SQL Server Management Studio dans les versions 17.9 et ultérieures. 
 
 ## <a name="batch-mode-adaptive-joins"></a>Jointures adaptatives en mode batch
 La fonctionnalité des jointures adaptatives en mode batch permet de choisir de différer une méthode de [jointure hachée ou de jointure de boucles imbriquées](../../relational-databases/performance/joins.md) **tant que** la première entrée n’a pas été analysée. L’opérateur de jointure adaptative définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquées. Votre plan peut, par conséquent, passer dynamiquement à une meilleure stratégie de jointure pendant l’exécution.

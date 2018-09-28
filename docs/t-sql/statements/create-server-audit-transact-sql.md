@@ -1,7 +1,7 @@
 ---
 title: CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,19 +26,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7d16529308dc45fd64f6b16d7dec92f1fe8be8cc
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 85ee3b6a5f674a9d4ee63cb54ffca867abca1f04
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452113"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171741"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crée un objet d'audit de serveur à l'aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +45,7 @@ ms.locfileid: "39452113"
 ```  
 CREATE SERVER AUDIT audit_name  
 {  
-    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG }  
+    TO { [ FILE (<file_options> [ , ...n ] ) ] | APPLICATION_LOG | SECURITY_LOG | URL}  
     [ WITH ( <audit_options> [ , ...n ] ) ]   
     [ WHERE <predicate_expression> ]  
 }  
@@ -80,8 +78,11 @@ CREATE SERVER AUDIT audit_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- TO { FILE | APPLICATION_LOG | SECURITY_LOG }  
+ TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL  
  Détermine l'emplacement de la cible de l'audit. Les options sont un fichier binaire, le journal des applications Windows ou le journal de sécurité Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas écrire dans le journal de sécurité Windows sans configurer d'autres paramètres dans Windows. Pour plus d’informations, consultez [Écrire des événements d’audit SQL Server dans le journal de sécurité](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
+
+> [!IMPORTANT]
+> Dans Azure SQL Database Managed Instance, SQL Audit fonctionne au niveau du serveur et stocke des fichiers `.xel` dans le Stockage Blob Azure.
   
  FILEPATH ='*os_file_path*'  
  Chemin d'accès du journal d'audit. Le nom de fichier est généré en fonction du nom d'audit et du GUID d'audit.  

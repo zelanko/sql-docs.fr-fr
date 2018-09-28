@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 450812006d18f143ec2b6083bf2bd0701ea4c252
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 0e0840861f98a9d178bbee29d9c6b7e82433dd97
+ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240287"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44089989"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,6 @@ ms.locfileid: "43240287"
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
-  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -182,7 +180,7 @@ ms.locfileid: "43240287"
  IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Empêche la requête d’utiliser un index columnstore non-cluster à mémoire optimisée. Si la requête contient l'indicateur de requête pour éviter l'utilisation de l'index columnstore et un indicateur d'index pour utiliser un index columnstore, les indicateurs sont en conflit et la requête retourne une erreur.  
+ Empêche la requête d’utiliser un index columnstore non-cluster à mémoire optimisée. Si la requête contient l’indicateur de requête pour éviter l’utilisation de l’index columnstore et un indicateur d’index pour utiliser un index columnstore, les indicateurs sont en conflit et la requête retourne une erreur.  
   
  MAX_GRANT_PERCENT = *percent*  
  Taille de l’allocation maximale de mémoire, en pourcentage. La requête ne peut pas dépasser cette limite. La limite réelle peut être inférieure si le paramètre de Resource Governor est inférieur à la valeur spécifiée par cet indicateur. Les valeurs valides sont comprises entre 0,0 et 100,0.  
@@ -280,13 +278,13 @@ ms.locfileid: "43240287"
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  Force l’optimiseur de requête à utiliser le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) qui correspond au niveau de compatibilité de la base de données. Cet indicateur substitue [l’indicateur de trace](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 9481 ou le paramètre de [configuration au niveau base de données](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON.
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
- Désactive l’exécution entrelacée pour les fonctions table à instructions multiples. Pour plus d’informations, consultez [Exécution entrelacée pour les fonctions table à instructions multiples](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
+ Désactive l’exécution entrelacée pour les fonctions table à instructions multiples. Pour plus d’informations, voir [Exécution entrelacée pour les fonctions table à instructions multiples](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
  Désactive les retours d’allocation de mémoire en mode batch. Pour plus d’informations, consultez [Retour d’allocation de mémoire en mode batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback).
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  Désactive les jointures adaptatives en mode batch. Pour plus d’informations, consultez [Jointures adaptatives en mode batch](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins).
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
- Force le comportement de l’optimiseur de requête au niveau d’une requête, comme si la requête était compilée avec le niveau de compatibilité de base de données *n*, où *n* est un niveau de compatibilité de base de données pris en charge. Consultez [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) pour obtenir la liste des valeurs actuellement prises en charge pour *n*. **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].   
+ Force le comportement de l’optimiseur de requête au niveau d’une requête, comme si la requête était compilée avec le niveau de compatibilité de base de données *n*, où *n* est un niveau de compatibilité de base de données pris en charge. Consultez [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) pour obtenir la liste des valeurs actuellement prises en charge pour *n*. **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).   
  
     > [!NOTE]
     > L’indicateur QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n ne remplace pas le paramètre d’estimation de cardinalité héritée ou par défaut, s’il est forcé via la configuration délimitée à la base de données, l’indicateur de suivi ou un autre indicateur de requête comme QUERYTRACEON.   
@@ -564,6 +562,6 @@ GO
  [Indicateurs &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
- [Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-  
+ [Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
+ [Conventions syntaxiques de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
   

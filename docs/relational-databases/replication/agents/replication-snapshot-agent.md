@@ -1,7 +1,7 @@
 ---
 title: Agent d’instantané de réplication | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: replication
@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 45976c2d0e99303c9aba9aa3251a1ea65f610901
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e2839e7dfa8c0dd32eb4904f4dde43e5ce992e6e
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349991"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311659"
 ---
 # <a name="replication-snapshot-agent"></a>Agent d'instantané de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,6 +65,7 @@ snapshot [ -?]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
 [-PacketSize packet_size]  
+[-PrefetchTables [0|1] ]  
 [-ProfileName profile_name]  
 [-PublisherDB publisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -202,7 +203,15 @@ snapshot [ -?]
   
 > [!NOTE]  
 >  Ne modifiez pas la taille des paquets, sauf si vous êtes certain que cela permettra d'accroître les performances. Pour la plupart des applications, la taille de paquet par défaut représente la meilleure solution.  
+
+**-PrefetchTables** [ **0**| **1**]  
+ Paramètre facultatif qui spécifie si les objets de table sont prérécupérés et mis en cache.  Le comportement par défaut consiste à prérécupérer certaines propriétés de la table à l’aide du composant SMO suivant un calcul interne.  Ce paramètre peut être utile dans les scénarios où l’opération de prérécupération SMO est considérablement plus longue. S’il n’est pas utilisé, cette décision est prise à l’exécution en fonction du pourcentage de tables ajoutées comme articles à la publication.  
   
+|Valeur OutputVerboseLevel|Description|  
+|------------------------------|-----------------|  
+|**0**|L’appel de la méthode de prérécupération de composant SMO est désactivé.|  
+|**1**|L’Agent d’instantané appellera la méthode prérécupération pour mettre en cache certaines propriétés de la table à l’aide de SMO.|  
+
  **-ProfileName** *profile_name*  
  Spécifie un profil d'agent à utiliser pour les paramètres d'agent. Si **ProfileName** a la valeur NULL, le profil d'agent est désactivé. Si **ProfileName** n'est pas spécifié, le profil par défaut du type d'agent est utilisé. Pour plus d’informations, consultez [Profils de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

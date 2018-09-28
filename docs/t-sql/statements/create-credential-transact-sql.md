@@ -1,7 +1,7 @@
 ---
 title: CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,19 +28,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 87759a536e979600e7ff12d8ad932c4fcf4cd248
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58250bd30559b497d6e2ab841086f9e5bbb26ffd
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458073"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171611"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Crée des informations d’identification au niveau du serveur. Les informations d’identification sont un enregistrement qui contient les informations d’authentification requises pour la connexion à une ressource en dehors de SQL Server. La plupart des informations d'identification incluent un utilisateur et un mot de passe Windows. Par exemple, pour enregistrer une sauvegarde de base de données à un certain emplacement, il peut être nécessaire que SQL Server fournisse des informations d’identification spéciales afin d’accéder à cet emplacement. Pour plus d’informations, consultez [Informations d’identification (moteur de base de données)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
 > [!NOTE]  
 >  Pour créer les informations d’identification au niveau de la base de données, utilisez [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Utilisez des informations d’identification au niveau du serveur quand vous avez besoin d’utiliser les mêmes informations d’identification pour plusieurs bases de données sur le serveur. Utilisez des informations d’identification délimitées à la base de données afin d’accroître la portabilité de la base de données. Quand une base de données est déplacée vers un nouveau serveur, les informations d’identification délimitées à la base de données le sont également. Utilisez des informations d’identification délimitées à la base de données sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -63,7 +61,10 @@ WITH IDENTITY = 'identity_name'
   
  IDENTITY **='***identity_name***'**  
  Spécifie le nom du compte à utiliser lors d'une connexion en dehors du serveur. Quand les informations d’identification sont utilisées pour accéder à Azure Key Vault, **IDENTITY** est le nom du coffre de clés. Consultez l'exemple C ci-dessous. Quand les informations d’identification utilisent une signature d’accès partagé, **identité** est *SHARED ACCESS SIGNATURE*. Consultez l’exemple D ci-dessous.  
-  
+ 
+> [!IMPORTANT]
+> Azure SQL Database ne prend en charge que les identités de type signature d’accès partagé et Azure Key Vault. Les identités d’utilisateur Windows ne sont pas prises en charge.
+ 
  SECRET **='***secret***'**  
  Spécifie le secret requis pour l'authentification sortante.  
   

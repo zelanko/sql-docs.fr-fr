@@ -1,7 +1,7 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/19/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -31,19 +31,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f656953d814d53bf234ca890d56bf0ae0fa8eecb
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7d0714bfff3de11ad36373f3ef710368169966e6
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091691"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171541"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Permet d'ajouter un certificat à une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  Cette fonctionnalité est incompatible avec l'exportation de base de données à l'aide de l'infrastructure d'application de la couche Données. Vous devez supprimer tous les certificats avant l'exportation.  
   
@@ -127,6 +125,9 @@ CREATE CERTIFICATE certificate_name
   
  [ EXECUTABLE ] FILE ='*path_to_file*'  
  Spécifie le chemin d'accès complet, y compris le nom de fichier, d'un fichier encodé DER qui contient le certificat. Si l'option EXECUTABLE est utilisée, le fichier est une DLL signée par le certificat. *path_to_file* peut être un chemin local ou un chemin UNC d’un emplacement réseau. L’accès au fichier s’effectue dans le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce compte doit posséder les autorisations de système de fichiers requises.  
+
+> [!IMPORTANT]
+> Azure SQL Database ne prend pas en charge la création d’un certificat à partir d’un fichier ou à l’aide de fichiers de clé privée.
   
  WITH PRIVATE KEY  
  Spécifie que la clé privée du certificat est chargée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette clause est valide uniquement lorsque le certificat est créé à partir d'un fichier. Pour charger la clé privée d’un assembly, utilisez [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
@@ -134,8 +135,8 @@ CREATE CERTIFICATE certificate_name
  FILE ='*path_to_private_key*'  
  Spécifie le chemin d'accès complet, y compris le nom du fichier, à la clé privée. *path_to_private_key* peut être un chemin local ou un chemin UNC d’un emplacement réseau. L’accès au fichier s’effectue dans le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce compte doit posséder les autorisations de système de fichiers nécessaires.  
   
-> [!NOTE]  
->  Cette option n'est pas disponible dans une base de données autonome.  
+> [!IMPORTANT]  
+>  Cette option n’est pas disponible dans une base de données autonome, ni dans Azure SQL Database.  
   
  asn_encoded_certificate  
  Bits de certificat encodés par ASN spécifiés comme constante binaire.  
@@ -211,7 +212,10 @@ CREATE CERTIFICATE Shipping11
     DECRYPTION BY PASSWORD = 'sldkflk34et6gs%53#v00');  
 GO   
 ```  
-  
+
+> [!IMPORTANT]
+> Azure SQL Database ne prend pas en charge la création d’un certificat à partir d’un fichier.
+   
 ### <a name="c-creating-a-certificate-from-a-signed-executable-file"></a>C. Création d'un certificat à partir d'un fichier exécutable signé  
   
 ```  
@@ -230,7 +234,9 @@ GO
 CREATE CERTIFICATE Shipping19 FROM ASSEMBLY Shipping19;  
 GO  
 ```  
-  
+> [!IMPORTANT]
+> Azure SQL Database ne prend pas en charge la création d’un certificat à partir d’un fichier.
+   
 ### <a name="d-creating-a-self-signed-certificate"></a>D. Création d'un certificat auto-signé  
  L’exemple suivant crée un certificat nommé `Shipping04` sans spécifier de mot de passe de chiffrement. Il est utilisable avec [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
@@ -239,7 +245,6 @@ CREATE CERTIFICATE Shipping04
    WITH SUBJECT = 'Sammamish Shipping Records';  
 GO  
 ```  
-  
   
 ## <a name="see-also"></a> Voir aussi  
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
