@@ -38,7 +38,7 @@ ms.locfileid: "37238529"
   
  Les expressions dans une zone de texte peuvent contenir du texte littéral, pointer vers un champ de la base de données ou calculer des données. Toutes les expressions sont affichées sous la forme de texte d'espace réservé de sorte que vous pouvez mettre en forme des nombres, des couleurs et d'autres propriétés d'apparence. Vous pouvez également combiner des espaces réservés avec le texte littéral dans la même zone de texte.  
   
- Vous pouvez mettre en forme le texte dans toute zone de texte unique en utilisant plusieurs polices, couleurs, styles et actions. Pour plus d’informations, consultez [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+ Vous pouvez mettre en forme le texte dans toute zone de texte unique en utilisant plusieurs polices, couleurs, styles et actions. Pour plus d’informations, consultez [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

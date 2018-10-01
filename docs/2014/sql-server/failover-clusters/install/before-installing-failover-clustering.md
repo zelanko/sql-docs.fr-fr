@@ -43,7 +43,7 @@ ms.locfileid: "37268155"
   
 ##  <a name="BestPractices"></a> Bonnes pratiques  
   
--   Passez en revue les [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][](http://go.microsoft.com/fwlink/?LinkId=296445)  
+-   Passez en revue les [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][ Notes de publication](http://go.microsoft.com/fwlink/?LinkId=296445)  
   
 -   Installez les logiciels requis. Avant d'exécuter l'installation ou la mise à niveau vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], installez les composants requis suivants pour réduire la durée d'installation. Vous pouvez installer les logiciels requis sur chaque nœud de cluster de basculement, puis redémarrer les nœuds une fois avant d'exécuter le programme d'installation.  
   
