@@ -1,7 +1,7 @@
 ---
 title: Créer un schéma de base de données (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms-visual-db
@@ -18,15 +18,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a672bf8d0a05d928e9bc7101e5f1fb2860b8cd95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 44499867a37dfe590511ce2fdff719791a259e35
+ms.sourcegitcommit: e29ef5022653fe911b5fbf58fb8c7c8feb940398
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023706"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403286"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Créer un schéma de base de données (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Vous pouvez utiliser l'Explorateur d'objets pour créer de nouveaux schémas de base de données. Les schémas de base de données représentent, de manière graphique, la structure de la base de données. Grâce aux schémas de base de données, vous pouvez créer et modifier des tables, des colonnes, des relations et des clés. En outre, vous pouvez modifier des index et des contraintes.  
   
 ### <a name="to-create-a-new-database-diagram"></a>Pour créer un nouveau schéma de base de données  
@@ -45,5 +45,4 @@ Vous pouvez continuer à ajouter ou supprimer des tables, modifier des tables ex
   
 ## <a name="see-also"></a> Voir aussi  
 [Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Comprendre la propriété du schéma de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
-  
+[Comprendre la propriété du schéma de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)

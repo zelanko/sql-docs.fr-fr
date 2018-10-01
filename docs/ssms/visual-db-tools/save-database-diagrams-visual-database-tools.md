@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa10fd70f4202f659eaa41f58b40612b70d6987
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 829d8af7da228ab9fbd778fb59c68074cfaa502d
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999411"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47442753"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Enregistrer des schémas de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Lorsque vous enregistrez un schéma de base de données, vous pouvez enregistrer
   
 ### <a name="to-save-the-database-diagram"></a>Pour enregistrer le schéma de base de données  
   
-1.  Dans le menu **Fichier**, choisissez **Enregistrer \<***nom_table***>**.  
+1.  Dans le menu **Fichier** , choisissez **Enregistrer \<**_nom de la table_**>**.  
   
 2.  S’il s’agit d’un nouveau schéma que vous n’avez encore jamais enregistré, la boîte de dialogue **Enregistrer sous** apparaît. Tapez le nom que vous voulez attribuer au schéma.  
   

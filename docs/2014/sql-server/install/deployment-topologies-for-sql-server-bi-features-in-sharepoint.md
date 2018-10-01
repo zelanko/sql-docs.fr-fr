@@ -97,7 +97,7 @@ ms.locfileid: "37238230"
   
  [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] étend SharePoint Server 2013 afin d’ajouter l’actualisation des données côté serveur de traitement, fournisseurs de données, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] galerie et la prise en charge de la gestion de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeurs et des classeurs Excel avec des modèles de données avancés.  
   
- Le package d'installation est disponible dans le cadre du Feature Pack [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Le feature pack peut être téléchargé à partir la [!INCLUDE[msCoName](../../includes/msconame-md.md)] centre de téléchargement à [PowerPivot® Microsoft® SQL Server® 2014 pour Microsoft® SharePoint®](http://go.microsoft.com/fwlink/?LinkID=296473) (lien hypertexte «http://go.microsoft.com/fwlink/?LinkID=296473"\t « _blank » http://go.microsoft.com/fwlink/?LinkID=296473).  
+ Le package d'installation est disponible dans le cadre du Feature Pack [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Le feature pack peut être téléchargé à partir la [!INCLUDE[msCoName](../../includes/msconame-md.md)] centre de téléchargement à [PowerPivot® Microsoft® SQL Server® 2014 pour Microsoft® SharePoint®](http://go.microsoft.com/fwlink/?LinkID=296473) (lien hypertexte « http://go.microsoft.com/fwlink/?LinkID=296473 » \t «_blank» http://go.microsoft.com/fwlink/?LinkID=296473).  
   
  ![Déploiement de serveur SSAS PowerPivot Mode 2](../../../2014/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "déploiement de serveur SSAS PowerPivot Mode 2")  
   

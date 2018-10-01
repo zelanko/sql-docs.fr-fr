@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a08b1c5d3685a4d4193cc7f7b40b59af27ef878
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 160f1f169af02eb9ff75c3438eca810ca5ae0e4b
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42775593"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47443016"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Résoudre les problèmes liés aux travaux multiserveurs qui utilisent des proxys
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Les travaux distribués dont les étapes sont associées à un proxy s'exécuten
   
 -   « L'étape du travail nécessite un compte proxy, cependant la mise en correspondance de proxy est désactivée sur le serveur cible. »  
   
-    Pour résoudre cette erreur, définissez la sous-clé de registre **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.***\<n*>** \SQLServerAgent\AllowDownloadedJobsToMatchProxyName** sur **1 (true)**. Par défaut, la valeur de cette sous-clé est **0** (**false**). La valeur de **MSSQL.**\<*n*> est le nom de l’instance, par exemple, **MSSQL.1** ou **MSSQL.3**.  
+    Pour résoudre cette erreur, affectez la valeur **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName**_\<n\>_**\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** <n **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName**. Par défaut, la valeur de cette sous-clé est **0** (**false**). La valeur de **MSSQL.**\<*n*> est le nom de l’instance, par exemple, **MSSQL.1** ou **MSSQL.3**.  
   
 -   « Proxy introuvable. »  
   
