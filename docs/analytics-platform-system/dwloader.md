@@ -465,11 +465,11 @@ Avec **– m**, SQL Server PDW effectue et valide les charges en parallèle. Bea
   
 Sans **– m**, SQL Server PDW effectue et valide les charges en série sur les distributions dans chaque nœud de calcul et simultanément sur tous les nœuds de calcul. Cette méthode est plus lente que le mode de transaction multiples, mais il est sécurisé de la transaction.  
   
-**m -** est facultatif pour *ajouter*, *recharger*, et *upsert*.  
+**-m** est facultatif pour *ajouter*, *recharger*, et *upsert*.  
   
-**m -** est requis pour fastappend.  
+**-m** est requis pour fastappend.  
   
-**m -** ne peut pas être utilisé avec les tables répliquées.  
+**-m** ne peut pas être utilisé avec les tables répliquées.  
   
 **-m** s’applique uniquement à la deuxième phase de chargement. Il ne s’applique pas à la première phase de chargement ; chargement des données dans la table intermédiaire.  
   
@@ -677,7 +677,7 @@ Description des paramètres de ligne de commande :
   
 -   *E -* spécifie pour charger les chaînes vides comme NULL.  
   
--   *M - recharger* spécifie pour tronquer la table de destination avant d’insérer la source de données.  
+-   *-M recharger* spécifie pour tronquer la table de destination avant d’insérer la source de données.  
   
 -   *e - UTF16* indique le fichier source utilise le type de codage de caractères endian peu.  
   
