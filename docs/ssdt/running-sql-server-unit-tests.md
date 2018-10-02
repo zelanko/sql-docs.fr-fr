@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconfig
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 67f49ab119e43ed59fc6bee5f9f10ede55143618
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bca70724235f19c257dfb34fb9dab323fb4d7fc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088491"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840297"
 ---
 # <a name="running-sql-server-unit-tests"></a>Exécution de tests unitaires SQL Server
 Pour améliorer et gérer la qualité de votre code, créez et exécutez des tests unitaires SQL Server qui vérifient le comportement d'un objet de base de données, puis archivez ces tests dans le contrôle de version. Lorsque vous ou un membre de l'équipe modifiez le schéma de la base de données, vous exécutez des tests unitaires SQL Server et des tests unitaires de logiciel pour vérifier que les modifications n'empêchent pas l'exécution des fonctionnalités existantes. Exécutez des tests individuels ou des groupes de tests, appelés listes de tests. Pour plus d'informations, consultez [Utilisation de listes de tests (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182461(VS.100).aspx).  
