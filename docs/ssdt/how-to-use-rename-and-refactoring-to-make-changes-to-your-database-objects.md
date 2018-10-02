@@ -6,8 +6,6 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbrefactoring.previewdialog
@@ -16,16 +14,15 @@ f1_keywords:
 - sql.data.tools.dbrefactoring.moveschemadialog
 - sql.data.tools.dbrefactoring.renameserverdatabasedialog
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ba39da9c13a1a2051f249942de86b18963eade8
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 971df125a63ecdd1e46b6b884198886cccbcc378
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083361"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737667"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Procédure : utiliser Renommer et Refactorisation pour apporter des modifications à vos objets de base de données
 Le menu contextuel Refactoriser de l'Éditeur Transact\-SQL vous permet de renommer ou déplacer un objet vers un autre schéma, et d'afficher un aperçu de toutes les zones affectées avant de valider les modifications. Vous pouvez aussi utiliser le menu Refactoriser pour effectuer une qualification complète de toutes les références à des objets de base de données, ou pour développer les caractères génériques utilisés dans les instructions `SELECT` de votre projet de base de données.  

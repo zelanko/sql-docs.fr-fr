@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4febbc5a2a66fada8e83b4fb81ae35d6fdabcd15
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 23b3057a23737eb43206f9615ce2f83bad6f5610
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082913"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745107"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Comparer et synchroniser des données d'une ou plusieurs tables avec des données d'une base de données de référence
 Vous pouvez comparer les données d'une base de données *source* et d'une base de données *cible* et spécifier quelles tables doivent être comparées. Vous pouvez examiner les données et décider quels changements synchroniser. Vous pouvez ensuite soit mettre à jour la cible pour synchroniser les bases de données, soit exporter le script de mise à jour dans l'éditeur Transact\-SQL ou dans un fichier.  
