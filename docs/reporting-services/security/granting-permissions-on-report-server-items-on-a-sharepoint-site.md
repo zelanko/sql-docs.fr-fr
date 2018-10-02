@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 40622ae8099450acce3274937a46adc43c37fdb0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: dc2b972c797a6f78170eeeba4867f6f377793dac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631147"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit des fonctionnalités de sécurité intégrées qui vous permettent d’accéder aux éléments de serveur de rapports à partir des sites et des bibliothèques SharePoint. Si vous avez déjà affecté des autorisations aux utilisateurs, ces derniers auront accès aux éléments et opérations de serveur de rapport dès que vous aurez configuré les paramètres d'intégration entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] et un serveur de rapports. Les autorisations existantes vous permettent de télécharger des définitions de rapport et d'autres documents, d'afficher des rapports, de créer des abonnements et de gérer des éléments.  

@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - SSIS, Web service
 - Web service [Reporting Services]
@@ -19,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 114f50a4fe23fe04948863c0073a5641597fadab
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2442d32a2540a85b26a19e27b0fafec7b42e76f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274082"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631157"
 ---
 # <a name="report-server-web-service"></a>service Web Report Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permet d’accéder à toutes les fonctionnalités du serveur de rapports par le biais du service web Report Server. Le service Web Report Server est un service Web XML avec une API SOAP. Il utilise SOAP sur HTTP et agit comme une interface de communication entre les programmes clients et le serveur de rapports. Le service Web fournit deux points de terminaison (un pour l'exécution des rapports et l'autre pour la gestion des rapports) avec des méthodes qui exposent les fonctionnalités du serveur de rapports et qui vous permettent de créer des outils personnalisés pour n'importe quelle partie du cycle de vie du rapport.  

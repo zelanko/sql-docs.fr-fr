@@ -4,17 +4,16 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c84def6c-e8cf-43d9-9912-098171a7ce79
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cd5a2d961b31a4d4714f0c0c2bea1aa02fb2ce3d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7737d99d37959e9670fb2c7473b20b715d576da9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274920"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790037"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>Type de connexion SQL Azure (SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] est une base de données relationnelle hébergée basée sur le cloud qui repose sur les technologies [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour inclure des données de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Ce type de source de données intégré est basé sur l’extension de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Utilisez ce type de source de données pour vous connecter à et récupérer des données de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

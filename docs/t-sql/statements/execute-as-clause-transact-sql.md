@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AS
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - switching execution context
 - functions [SQL Server], execution context
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
-caps.latest.revision: 70
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d390f1ed3d607d7e8b5c0686004b856591960d6d
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 17d2a3ce8ff7fba2cc8e34472911287e25c61e08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942786"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761057"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Clause EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -191,7 +188,7 @@ GO
 ## <a name="best-practice"></a>Bonne pratique  
  Spécifiez une connexion ou un utilisateur qui possède les privilèges minimum requis pour effectuer les opérations définies dans le module. Par exemple, ne spécifiez pas le compte d'un propriétaire de base de données à moins que ces autorisations soient requises.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour exécuter un module spécifié avec la clause EXECUTE AS, l'appelant doit avoir les autorisations EXECUTE sur le module.  
   
  Pour exécuter un module CLR spécifié avec la clause EXECUTE AS et qui a accès aux ressources d'une autre base de données ou serveur, la base de données ou le serveur cible doit faire confiance à l'authentificateur de la base de données d'origine du module (base de données source).  

@@ -4,17 +4,16 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3981cd58a4675dbc6428903211d64a1badb22911
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 048d08d2be7df68a93898651e59e2ea81fd57a9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744717"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>Graphiques en courbes (Générateur de rapports et SSRS)
   Un graphique en courbes affiche une série sous la forme d'un ensemble de points reliés par une ligne. Les graphiques en courbes sont utilisés pour représenter de grands volumes de données qui se produisent sur une période de temps continue. Pour plus d’informations sur l’ajout de données à un graphique en courbes, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

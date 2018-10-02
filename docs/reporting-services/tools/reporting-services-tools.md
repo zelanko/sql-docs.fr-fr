@@ -4,7 +4,6 @@ ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
@@ -20,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d56edf40635907c4ba7a91deb358977fd70ed1e6
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fdde81c9e1fc044bef965695158bf3fcb8aa5dbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675517"
 ---
 # <a name="reporting-services-tools"></a>Outils de Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contient un ensemble d'outils de graphisme et de script qui prennent en charge le développement et l'utilisation de rapports complets dans un environnement géré. Le jeu d'outils comprend des outils de développement, des outils de configuration et d'administration, et des outils d'affichage des rapports. Cette rubrique donne une vue d'ensemble de chaque outil, ainsi que son mode d'accès, dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

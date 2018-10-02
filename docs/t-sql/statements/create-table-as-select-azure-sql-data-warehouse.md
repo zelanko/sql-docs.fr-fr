@@ -5,25 +5,20 @@ ms.date: 10/07/2016
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.service: sql-data-warehouse
-ms.suite: sql
-ms.component: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9270fa4799a92a1f2be3ef70e9246a7e8294dc2e
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 3e3e25cc061ab7b557047c962dc30f023769a9f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942417"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814667"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -120,7 +115,7 @@ L’instruction select représente la différence fondamentale entre CTAS et CRE
   
 <a name="permissions-bk"></a>  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 CTAS exige une autorisation `SELECT` sur les objets référencés dans *select_criteria*.
 
 Pour plus d’informations sur les autorisations permettant de créer une table, consultez [Autorisations](https://msdn.microsoft.com/library/mt203953/#Permissions) dans la rubrique CREATE TABLE. 

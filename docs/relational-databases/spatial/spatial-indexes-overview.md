@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6338a060ca3e5ab3f7e2f7a73b4a9a1fd9538c9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 40464a10cd58e870070636919f6f570efac97aa0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102981"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725167"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +103,7 @@ ms.locfileid: "43102981"
   
  Par exemple, considérez l'illustration précédente, qui montre un octogone qui s'adapte parfaitement à la cellule 15 de la grille de niveau 1. Dans l'illustration, la cellule 15 a été pavée, l'octogone ayant été disséqué en neuf cellules de niveau 2. Cette illustration suppose que la limite de cellules par objet est supérieure ou égale à 9. Si la limite de cellules par objet était inférieure ou égale à 8, la cellule 15 ne serait pas pavée et seule cette cellule 15 serait comptée pour l'objet.  
   
- Par défaut, la limite de cellules par objet est de 16, ce qui constitue un compromis satisfaisant entre l'espace et la précision pour la plupart des index spatiaux. Cependant, l’instruction [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] prend en charge une clause CELLS_PER_OBJECT**=***n* qui vous permet de spécifier une limite de cellules par objet comprise entre 1 et 8192 (inclusivement).  
+ Par défaut, la limite de cellules par objet est de 16, ce qui constitue un compromis satisfaisant entre l'espace et la précision pour la plupart des index spatiaux. Cependant, l’instruction [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] prend en charge une clause CELLS_PER_OBJECT**=**_n_ qui vous permet de spécifier une limite de cellules par objet comprise entre 1 et 8192 (inclus).  
   
 > [!NOTE]  
 >  Le paramètre **cells_per_object** d’un index spatial est visible dans l’affichage catalogue [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
@@ -136,7 +132,7 @@ ms.locfileid: "43102981"
 >  Vous pouvez spécifier explicitement ce schéma de pavage à l’aide de la clause USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de l’instruction [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>Cadre englobant  
- Les données géométriques occupent un plan qui peut être infini. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], toutefois, un index spatial requiert un espace fini. Pour établir un espace fini pour la décomposition, le schéma de pavage de grille géométrique requiert un *cadre englobant*rectangulaire. Le cadre englobant est défini par quatre coordonnées, **(***Min. X***,***Min. Y***)** et **(***Max. X***,***Max. Y***)**, qui sont stockées en tant que propriétés de l’index spatial. Ces coordonnées représentent les éléments suivants :  
+ Les données géométriques occupent un plan qui peut être infini. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], toutefois, un index spatial requiert un espace fini. Pour établir un espace fini pour la décomposition, le schéma de pavage de grille géométrique requiert un *cadre englobant*rectangulaire. Le cadre englobant est défini par quatre coordonnées, **(**_x-min_**,**_y-min_**)** et **(**_x-max_**,**_y-max_**)**, qui sont stockées en tant que propriétés de l’index spatial. Ces coordonnées représentent les éléments suivants :  
   
 -   *x-min* est la coordonnée x de l’angle inférieur gauche du cadre englobant.  
   
@@ -149,11 +145,11 @@ ms.locfileid: "43102981"
 > [!NOTE]  
 >  Ces coordonnées sont spécifiées par la clause BOUNDING_BOX de l’instruction [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- Les coordonnées **(***Min. X***,***Min. Y***)** et **(***Max. X***,***Max. Y***)** déterminent la position et les dimensions du cadre englobant. L'espace en dehors du cadre englobant est traité comme une cellule unique affectée du numéro 0.  
+ Les coordonnées **(**_x-min_**,**_y-min_**)** et **(**_x-max_**,**_y-max_**)** déterminent la position et les dimensions du cadre englobant. L'espace en dehors du cadre englobant est traité comme une cellule unique affectée du numéro 0.  
   
  L'index spatial décompose l'espace à l'intérieur du cadre englobant. La grille de niveau 1 de la hiérarchie de grille remplit le cadre englobant. Pour placer un objet géométrique dans la hiérarchie de grille, l'index spatial compare les coordonnées de l'objet à celles du cadre englobant.  
   
- L’illustration suivante montre les points définis par les coordonnées **(***Min. X***,***Min. Y***)** et **(***Max. X***,***Max. Y***)** du cadre englobant. Le niveau supérieur de la hiérarchie de grille est illustré comme une grille 4x4. À des fins d'illustration, les niveaux inférieurs sont omis. L'espace en dehors de la zone englobante est indiqué par un zéro (0). Notez que l'objet 'A' s'étend en partie au-delà du cadre et que l'objet 'B' se trouve complètement à l'extérieur du cadre dans la cellule 0.  
+ L’illustration suivante montre les points définis par les coordonnées **(**_x-min_**,**_y-min_**)** et **(**_x-max_**,**_y-max_**)** du cadre englobant. Le niveau supérieur de la hiérarchie de grille est illustré comme une grille 4x4. À des fins d'illustration, les niveaux inférieurs sont omis. L'espace en dehors de la zone englobante est indiqué par un zéro (0). Notez que l'objet 'A' s'étend en partie au-delà du cadre et que l'objet 'B' se trouve complètement à l'extérieur du cadre dans la cellule 0.  
   
  ![Rectangle englobant affichant les coordonnées et la cellule 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Rectangle englobant affichant les coordonnées et la cellule 0.")  
   

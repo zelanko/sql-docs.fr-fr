@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], report history
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 44de81b48604356761ed855f4b765af60cb75103
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e13765e67b1e14cd676d371fdeb0a3f8e6a896fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279261"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795187"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Rendre un instantané d'historique de rapport à l'aide de l'accès URL
   Vous pouvez effectuer le rendu d’un rapport reposant sur une capture instantanée d’historique de rapport en indiquant le paramètre *rs:Snapshot* et en définissant sa valeur sur un ID de capture instantanée valide. La valeur de ce paramètre doit être spécifiée au format AAAA-MM-JJTHH:MM:SS, conformément à la norme ISO 8601.  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Integration Services], tasks
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - data preparation tasks [Integration Services]
 - directory operations [Integration Services]
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b66a303e225f5bb6126ab226eba0ea254def519
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ccf893e78afdd01a001a513bd266f60c3b8b607c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332623"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788547"
 ---
 # <a name="integration-services-tasks"></a>Tâches Integration Services
   Les tâches sont des éléments de flux de contrôle qui définissent des unités de travail qui sont exécutées dans un flux de contrôle de package. Un package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est composé d’une ou plusieurs tâches. Si le package contient plusieurs tâches, elles sont connectées et organisées dans le flux de contrôle par des contraintes de priorité.  
@@ -85,7 +82,7 @@ ms.locfileid: "35332623"
   
  Les tâches peuvent être regroupées et exécutées en tant qu'unité de travail unique ou répétées dans une boucle. Pour plus d’informations, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md), [Conteneur de boucles For](../../integration-services/control-flow/for-loop-container.md)et [Conteneur de séquences](../../integration-services/control-flow/sequence-container.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

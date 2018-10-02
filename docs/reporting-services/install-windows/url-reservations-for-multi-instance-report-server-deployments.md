@@ -3,19 +3,18 @@ title: Réservations d’URL pour les déploiements de serveur de rapports multi
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c010283690674215150a29a9568c8e4ef9f7e51
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 26de643bf01e9ebffca01ff5b1f8aeecc38b7c5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267171"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741257"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Réservations d'URL pour les déploiements de serveur de rapports multi-instance
   Si vous installez plusieurs instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même ordinateur, vous devez considérer comment vous définirez les réservations d'URL pour chaque instance. Dans chaque instance, le service Web Report Server et le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] doivent avoir au moins une réservation d’URL chacun. L'ensemble entier de réservations doit être unique dans HTTP.SYS.  

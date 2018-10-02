@@ -5,23 +5,20 @@ ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01a0a1b7a12209643de8680b6c308c951d80a41d
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: b3e0a936d4898988dfeacfefe1bf00058b16fa5a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36903792"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757807"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilité de FileTable avec d'autres fonctionnalités SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,9 +115,7 @@ ms.locfileid: "36903792"
 ##  <a name="readsec"></a> Bases de données secondaires accessibles en lecture  
  Les mêmes remarques s'appliquent aux bases de données secondaires accessibles en lecture et aux instantanés, comme décrit dans la section précédente, [Isolement de capture instantanée et FileTables](#OtherSnapshots).  
   
-##  
-  <a name="CDB">
-  </a> Bases de données autonomes et FileTables  
+##  <a name="CDB"></a> Bases de données autonomes et FileTables  
  La fonctionnalité FILESTREAM, de laquelle la fonctionnalité FileTable dépend, requiert une configuration spécifique hors de la base de données. Par conséquent, une base de données qui utilise FILESTREAM ou FileTable n'est pas entièrement contenue.  
   
  Vous pouvez définir l’autonomie de la base de données sur PARTIAL si vous souhaitez utiliser certaines fonctionnalités des bases de données autonomes, telles que les utilisateurs autonomes. Dans ce cas, toutefois, vous devez savoir qu'une partie des paramètres de la base de données ne sont pas contenus dans la base de données et ne sont pas automatiquement déplacés avec celle-ci.  

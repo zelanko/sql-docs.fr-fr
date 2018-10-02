@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE VIEW
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-caps.latest.revision: 85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6d9ffdfee5a7347570fc6797d43dabc0beb9d4a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 25b196ffefd3319b96865ebef92bd778bf72ceb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102317"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808457"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,7 +148,7 @@ OR ALTER
  Chiffre les entrées de [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) qui contiennent le texte de l’instruction CREATE VIEW. L'utilisation de l'argument WITH ENCRYPTION évite la publication de la vue dans le cadre de la réplication SQL Server.  
   
  SCHEMABINDING  
- Lie la vue au schéma des tables sous-jacentes ou des autres tables. Si SCHEMABINDING est précisé, la table de base ou les tables ne peuvent alors pas être modifiées de façon à ne pas en affecter la définition de la vue. Cette dernière doit d'ailleurs être modifiée ou supprimée au préalable pour supprimer les dépendances par rapport à la table qui doit être modifiée. Quand vous utilisez l’argument SCHEMABINDING, *select_statement* doit comprendre les noms en deux parties (*schema ***.*** object*) des tables, des vues ou des fonctions définies par l’utilisateur référencées. Tous ces objets référencés doivent se trouver dans la même base de données.  
+ Lie la vue au schéma des tables sous-jacentes ou des autres tables. Si SCHEMABINDING est précisé, la table de base ou les tables ne peuvent alors pas être modifiées de façon à ne pas en affecter la définition de la vue. Cette dernière doit d'ailleurs être modifiée ou supprimée au préalable pour supprimer les dépendances par rapport à la table qui doit être modifiée. Quand vous utilisez l’argument SCHEMABINDING, *select_statement* doit comprendre les noms en deux parties (_schema_**.**_object_) des tables, des vues ou des fonctions définies par l’utilisateur référencées. Tous ces objets référencés doivent se trouver dans la même base de données.  
   
  Les vues ou les tables impliquées dans une vue créée avec la clause SCHEMABINDING ne peuvent pas être supprimées, sauf si cette vue perd, à la suite de sa suppression ou de sa modification, la liaison au schéma. Dans le cas contraire, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] génère une erreur. De plus, l’exécution d’instructions ALTER TABLE sur des tables impliquées dans des vues qui sont liées au schéma échoue quand ces instructions affectent la définition des vues.  
   

@@ -4,7 +4,6 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - images [Reporting Services], rendering
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3a805ba3dfecc03896af0cf0dbb28fa93e19151
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b59fcf947a283ef60f5dd34f60e2cf365092cfa7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274931"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738727"
 ---
 # <a name="image-device-information-settings"></a>Paramètres d'informations de périphérique pour l'image
   Le tableau suivant répertorie les paramètres des informations de périphérique qui permettent un rendu du rapport au format IMAGE.  

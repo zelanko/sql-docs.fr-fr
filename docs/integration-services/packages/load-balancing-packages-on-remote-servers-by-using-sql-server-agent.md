@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - load-balancing [Integration Services]
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a44c518c418e1714ee55614d7c897aa53ccb371b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5482768506042643a7878d1b2d86d69d7605054d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401051"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770607"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Équilibrage de charge de packages sur des serveurs distants à l'aide de l'Agent SQL Server
   Lorsque plusieurs packages doivent être exécutés, il convient d'utiliser d'autres serveurs disponibles. Cette méthode qui consiste à utiliser d'autres serveurs pour exécuter des packages lorsque les packages sont tous sous le contrôle d'un package parent est qualifiée d'équilibrage de charge. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'équilibrage de charge est une procédure manuelle qui doit être mise en œuvre par les propriétaires des packages. L'équilibrage de charge n'est pas exécuté automatiquement par les serveurs. En outre, les packages qui sont exécutés sur des serveurs distants doivent être des packages complets, et non des tâches individuelles contenues dans d'autres packages.  
@@ -130,7 +127,7 @@ ms.locfileid: "35401051"
   
  Pour plus d’informations sur l’activation de la journalisation dans un package, consultez [Journalisation d’Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
 
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Travaux de SQL Server Agent pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.slowlychangingdimtrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a8d50ca3c1b998bd564b4cdad967db3e28e3986
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: fcf04dc0eb2209afcd9dfc180d59e6452e5b52d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329683"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820067"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation de dimension à variation lente
   La transformation de dimension à variation lente coordonne la mise à jour et l'insertion d'enregistrements dans des tables de dimension d'entrepôts de données. Par exemple, vous pouvez utiliser cette transformation pour configurer les sorties de la transformation qui insèrent et mettent à jour des enregistrements dans la table DimProduct de la base de données [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] à l’aide des données de la table Production.Products de la base de données OLTP AdventureWorks.  
@@ -106,7 +103,7 @@ ms.locfileid: "35329683"
   
 -   L'Assistant Chargement de dimension, qui vous guide lors des étapes de configuration de la transformation de dimension à variation lente et de création du flux de données pour les sorties de transformation. Pour modifier la configuration des dimensions à variation lente, réexécutez l'Assistant Chargement de dimension. Pour plus d’informations, consultez [Configurer les sorties à l’aide de l’Assistant Dimension à variation lente](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenu associé  

@@ -5,28 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services], creating
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07d16c03ff2e4538c47350e1c975be95323f00b5
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9060f3b43f7a7973ffa1580643ef4d429269e48a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335453"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665448"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>Création d'un énumérateur Foreach personnalisé
   Les étapes de création d'un énumérateur Foreach personnalisé sont semblables aux étapes de création de tout autre objet personnalisé pour [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] :  

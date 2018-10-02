@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 75f67afd78dfe6b5c0165d9729bb4cae32f48b7f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 989eadf2607854a725855b136ebd58462740aeab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267911"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819577"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Ajouter ou supprimer un groupe dans une région de données (Générateur de rapports et SSRS)
 Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ajoutez un groupe à une région de données pour organiser les données selon une valeur spécifique ou un ensemble d’expressions à des fins d’affichage et de calculs. Un groupe porte un nom et possède une expression qui identifient les données d'un dataset qui appartient à ce groupe. Pour plus d’informations sur les groupes, consultez [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  

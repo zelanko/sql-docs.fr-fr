@@ -4,10 +4,7 @@ ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cb0b02deae636cf003938153ec6402deb070b9c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fa047ea7506c4fd9111345e0b5cbb6beca877356
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815403"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Créer un abonnement piloté par les données (didacticiel SSRS)
 Ce tutoriel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vous enseigne les concepts des abonnements pilotés par les données en décrivant un exemple simple qui crée un abonnement piloté par les données pour générer et enregistrer une sortie de rapport filtrée dans un partage de fichiers. 

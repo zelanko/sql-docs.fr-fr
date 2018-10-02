@@ -4,17 +4,16 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d08513ed76a211fe7a6e7b53ecbe04b73f875d45
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bd89bede228d7a54e0bbfe7cab967facdcbec563
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276871"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719897"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Collections intégrées - Références à des champs Globals et Users prédéfinis (Générateur de rapports)
   La collection de champs prédéfinis, qui inclut à la fois les collections **Globals** et **User** , représente les valeurs globales fournies par Reporting Services pendant le traitement d’un rapport. La collection **Globals** fournit des valeurs, telles que le nom du rapport, l'heure de début du traitement du rapport et les numéros des pages actuelles pour l'en-tête ou le pied de page du rapport. La collection **User** fournit les paramètres d'identificateur d'utilisateur et de langue. Ces valeurs peuvent être utilisées dans les expressions pour filtrer les résultats dans un rapport.  

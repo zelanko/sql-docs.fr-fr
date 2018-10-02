@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ff6d22f2ed031a64061b0adab3c19f85df706e74
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8ffbc6d38d8d63ea783c5b24534b4d1a34a16a5e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275791"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761008"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>Légende de graphique - Modifier le texte d’un élément (Générateur de rapports)
   Lorsqu'un champ est placé dans la zone Valeurs du graphique, un élément de légende contenant le nom de ce champ est automatiquement généré. Chaque élément de légende est relié à une série individuelle sur le graphique, à l’exception des graphiques à base de formes, pour lesquels la légende est reliée à des points de données individuels et non à des séries individuelles.  

@@ -4,19 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - data regions
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f639dd4df8a147835381c0be69dfe673dbe6ade2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e0eb7f32dc0a377b8f0ddf9eda7dd43ee04fe4df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268989"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759557"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Cartes et régions de données (Générateur de rapports et SSRS)
   Une région de données est un objet d'un rapport, affichant des données à partir du dataset d'un rapport. Les données de rapport peuvent s'afficher sous forme de nombres et de texte dans une table, une matrice ou une liste ; graphiquement dans un graphique ou une jauge ; et par rapport à l'arrière-plan géographique d'un plan. Les tables, matrices et listes sont toutes basées sur la région de données du *tableau matriciel* , lequel peut se développer autant que nécessaire pour afficher toutes les données du dataset. Une région de données de tableau matriciel prend en charge plusieurs groupes de lignes et de colonnes statiques et dynamiques. Un graphique affiche plusieurs séries et catégories de groupes sous divers formats graphiques. Une jauge affiche une valeur unique ou une valeur agrégée pour un dataset. Une carte affiche les données spatiales en tant qu'éléments cartographiques dont l'apparence peut varier selon les données agrégées d'un dataset.  

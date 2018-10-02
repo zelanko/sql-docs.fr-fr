@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8f95bd3da2aefb0fc98388231641d94b3442311
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 98acaa9f56b509a0894c9ec512f0df02c2cfd3c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282631"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762377"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Analyser les abonnements Reportions Services
   Vous pouvez surveiller les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir de l'interface utilisateur, de Windows PowerShell ou des fichiers journaux. Les options de surveillance à votre disposition dépendent du mode de serveur de rapports que vous exécutez.  

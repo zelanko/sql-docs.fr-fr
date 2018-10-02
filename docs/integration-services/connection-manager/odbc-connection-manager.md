@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.odbcconnection.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data sources [Integration Services], connections
 - connection managers [Integration Services], ODBC
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5738bb81defed287c9394b708487fac6a43e5ecd
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 84910634eb684335f42ed8c3c8c36d0b317f4e53
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333383"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829407"
 ---
 # <a name="odbc-connection-manager"></a>Gestionnaire de connexions ODBC
   Un gestionnaire de connexions ODBC permet à un package de se connecter à divers systèmes de gestion de base de données à l'aide de la spécification ODBC (Open Database Connectivity).  
@@ -48,7 +45,7 @@ ms.locfileid: "35333383"
   
  Pour plus d’informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l’une des rubriques suivantes :  
   
--   [Référence de l'interface utilisateur du gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
+-   [Informations de référence sur l’interface utilisateur du gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
   
  Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   

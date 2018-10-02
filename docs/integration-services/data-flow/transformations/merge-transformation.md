@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.mergetrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cadfce8fb92a6d297fad92e43b9d553d2ea910a4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d768351c318d46d0d82b3553f8d12bed7fb817ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795917"
 ---
 # <a name="merge-transformation"></a>transformation de fusion
   La transformation de fusion combine deux datasets triés en un seul datasets. Les lignes de chaque ensemble de données sont insérées dans la sortie en fonction des valeurs de leurs colonnes clés.  
@@ -67,7 +64,7 @@ ms.locfileid: "35402311"
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Pour plus d'informations sur la définition des propriétés, consultez les rubriques suivantes :  
   
 -   [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  

@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_SERVICE_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - CREATE SERVICE statement
 - contracts [Service Broker], service creation
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1230507e5c304ca111c50dc4dcfc591814be1ed3
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 1a4d4cbb310251bfe6abed7a44dfb5c8514c369c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739037"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +73,7 @@ CREATE SERVICE service_name
   
  Lorsque [!INCLUDE[ssSB](../../includes/sssb-md.md)] accepte une nouvelle conversation d'un service distant, le nom du service cible détermine la file d'attente où Service Broker place les messages dans la conversation.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L’autorisation de création d’un service est accordée par défaut aux membres du rôle de base de données fixe **db_ddladmin** ou **db_owner** et aux membres du rôle serveur fixe **sysadmin**. L'utilisateur exécutant l'instruction CREATE SERVICE doit disposer de l'autorisation REFERENCES pour la file d'attente et tous les contrats spécifiés.  
   
  L’autorisation REFERENCES pour un service est accordée par défaut au propriétaire du service, aux membres du rôle de base de données fixe **db_ddladmin** ou **db_owner** et aux membres du rôle serveur fixe **sysadmin**. Les autorisations SEND pour un service sont accordées par défaut au propriétaire du service, aux membres du rôle de base de données fixe **db_owner** et aux membres du rôle de serveur fixe **sysadmin**.  

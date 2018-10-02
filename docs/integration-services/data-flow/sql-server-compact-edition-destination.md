@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sqlservercompactdest.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Compact, destination
 - inserting data
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 544cbf03afa089311fb64b3b3ad093eabfad0031
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 0ba3b3494329be9575ffe237fda309f4a867a8fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403471"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765438"
 ---
 # <a name="sql-server-compact-edition-destination"></a>Destination SQL Server Compact Edition
   La destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact écrit des données dans des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
@@ -50,7 +47,7 @@ ms.locfileid: "35403471"
   
 -   [Propriétés personnalisées de la destination SQL Server](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur la définition des propriétés de ce composant, consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a> Voir aussi  

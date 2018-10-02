@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebaf0ab56245e66fb58e6e84532fa52f04bb2deb
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9653a40f5f7789e693041533e2706ee56bf8799a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279190"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856371"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Tri interactif, Explorateurs de documents et liens (Générateur de rapports et SSRS)
   Dans les environnements Web, vous pouvez ajouter un certain nombre de fonctionnalités qui permettent à vos utilisateurs d'intervenir sur les rapports. Vos utilisateurs peuvent modifier l'ordre de tri des valeurs dans votre rapport, afficher ou masquer des éléments du rapport ou cliquer sur les liens pointant vers d'autres rapports ou des pages Web. Vous pouvez également ajouter une table des matières ou un Explorateur de documents. Vos utilisateurs de rapport peuvent cliquer sur des éléments de la table des matières ou de l'Explorateur de documents pour accéder instantanément aux sections voulues du rapport.  

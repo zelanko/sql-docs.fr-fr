@@ -5,21 +5,18 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60b994027d5b135e3e1008992d159c3941ea970e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6465c5ccfc10847ac011274ed4b25cdb7f52b978
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863564"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625647"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>Configurer l’option de configuration de serveur remote data archive
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +28,7 @@ ms.locfileid: "32863564"
 |Valeur|Description|  
 |-----------|-----------------|  
 |0|Les bases de données et les tables du serveur ne peuvent pas être activées pour Stretch.|  
-| 1|Les bases de données et les tables du serveur peuvent être activées pour Stretch.|  
+|1|Les bases de données et les tables du serveur peuvent être activées pour Stretch.|  
   
  L’exécution de **sp_configure** pour définir la valeur de l’option **Archive de données distante** nécessite des autorisations sysadmin ou serveradmin.  
   

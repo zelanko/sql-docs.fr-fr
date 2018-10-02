@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa52f519d8a6599c1214a131619288e4dfe2b88b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5beae0009b881a9bfa801d5f94c4c76f755cc462
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400151"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849757"
 ---
 # <a name="catalogexplicitobjectpermissions-ssisdb-database"></a>catalog.explicit_object_permissions (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.locfileid: "35400151"
 |`103`|EXECUTE_OBJECTS|Permet au principal d'exécuter tous les packages de tous les projets dans le dossier.|Dossier|  
 |`104`|MANAGE_OBJECT_PERMISSIONS|Permet au principal de gérer des autorisations sur tous les objets dans le dossier.|Dossier|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Cette vue ne donne pas une vue complète des autorisations pour le principal actuel. L'utilisateur doit également vérifier si le principal est un membre de rôles et de groupes auxquels des autorisations sont affectées.  
   
   

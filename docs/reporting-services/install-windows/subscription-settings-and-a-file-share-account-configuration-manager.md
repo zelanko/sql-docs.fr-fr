@@ -3,19 +3,18 @@ title: Paramètres d’abonnement et compte de partage de fichiers (Gestionnaire
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5b43410d160261cc3b60d675829fd519d11e9ec7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9550a136d1720c5f7ee6ef9d5bd8eb2e39b5a246
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280487"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702617"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>Paramètres d'abonnement et compte de partage de fichiers (Gestionnaire de configuration)
   Utilisez la page **Paramètres d'abonnement** du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afin de configurer un compte de partage de fichiers pour les serveurs de rapports en mode natif et les abonnements de partage de fichiers. Le compte de partage de fichiers vous permet d'utiliser un jeu unique d'informations d'identification dans plusieurs abonnements qui fournissent des rapports à un partage de fichiers. Au moment de modifier les informations d'identification, vous configurez la modification pour le compte de partage de fichiers et vous n'avez pas besoin de mettre à jour chaque abonnement individuel.  

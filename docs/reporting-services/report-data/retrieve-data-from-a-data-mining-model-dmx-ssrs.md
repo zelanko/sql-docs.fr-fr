@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving report data
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1f3197adf10bfe47a623d83471a0c06004df256
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 26c2a900a8e8e39ed6f7d89555dd040945bc57b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265081"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629497"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>Récupérer des données d'un modèle d'exploration de données (DMX) (SSRS)
   Pour utiliser les données d’un modèle d’exploration de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans votre rapport, vous devez définir une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ainsi qu’un ou plusieurs datasets de rapport. Lorsque vous créez la définition de la source de données, vous devez spécifier une chaîne de connexion et des informations d'identification pour pouvoir accéder à la source de données à partir de l'ordinateur client.  

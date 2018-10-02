@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER FULLTEXT STOPLIST
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
-caps.latest.revision: 37
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 52ed53669eba8706a70cd4605d647b86be4652ca
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fb0a6c02a3211c029c311f07a91da9b26842fc4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783950"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666137"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +90,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
 ## <a name="remarks"></a>Notes   
  CREATE FULLTEXT STOPLIST est pris en charge uniquement pour un niveau de compatibilité de 100 et supérieur. Pour des niveaux de compatibilité de 80 et 90, la liste de mots vides système est toujours assignée à la base de données.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Désigner une liste de mots vides comme la liste de mots vides par défaut de la base de données requiert l'autorisation ALTER DATABASE. En outre, pour pouvoir modifier une liste de mots vides, il est obligatoire d’être le propriétaire de cette liste de mots vides ou d’appartenir au rôle de base de données fixe **db_owner** ou **db_ddladmin**.  
   
 ## <a name="examples"></a>Exemples  

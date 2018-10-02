@@ -4,17 +4,16 @@ ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3bcc1ef9a96baae8f0a98b0b57488b3fb4dcd76
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 412cb586d306da13791a956a01a1a217d5fc0d7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268356"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758654"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke les paramètres des applications dans un jeu de fichiers de configuration. Le programme d'installation crée les fichiers de configuration de chaque instance du serveur de rapports que vous installez. Dans chaque fichier, les valeurs sont définies soit pendant l'installation, soit lorsque vous utilisez des outils et des applications pour configurer un serveur. Dans certains cas, vous devez modifier directement un fichier pour ajouter ou configurer des paramètres avancés. Les paramètres de configuration sont spécifiés soit comme des éléments, soit comme des attributs XML. Si le langage XML et les fichiers de configuration vous sont familiers, vous pouvez modifier les paramètres définissables par l'utilisateur dans un éditeur de texte ou de code.  

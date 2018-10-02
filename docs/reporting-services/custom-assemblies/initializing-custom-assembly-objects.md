@@ -4,10 +4,7 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-assemblies
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - initializing custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], initializing
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f2b0db93d96c88fede36acba3b04999a08ca737
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b628a2d2ee2ca21cfb75abadce01293f536b8cbd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280316"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726887"
 ---
 # <a name="initializing-custom-assembly-objects"></a>Initialisation d'objets Assembly personnalisés
   Dans certains cas, vous pouvez être amené à initialiser des valeurs de propriété et de champ dans vos classes d'assembly personnalisées lorsque vous les instanciez. Vous aurez vraisemblablement besoin d'initialiser vos classes personnalisées avec des valeurs disponibles à partir des collections d'objets globales du rapport. Pour cela, substituez la méthode **OnInit** de l’objet **Code** d’un rapport. Pour accéder à **OnInit**, utilisez l’élément **Code** de la définition de rapport. Deux techniques vous permettent d’initialiser les valeurs de propriété ou de champ des classes dans un assembly personnalisé que vous projetez d’utiliser dans votre rapport : vous pouvez soit déclarer et créer une instance de votre classe à l’aide **d’OnInit**, soit appeler une méthode publiquement disponible à l’aide **d’OnInit**.  

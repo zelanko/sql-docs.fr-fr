@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85ebd0ec4668387609781e72becad43e9b52a4a8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0a76c8c745101a6327be13f6865bcbc392cc40c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273791"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808757"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
   Le journal des exécutions du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]contient des informations sur les rapports qui sont exécutés sur le serveur ou sur plusieurs serveurs dans le cadre d’un déploiement évolutif en mode natif ou sur une batterie de serveurs SharePoint. Vous pouvez l'utiliser pour connaître la fréquence de demande d'un rapport, les formats de sortie les plus utilisés et le nombre de millisecondes de traitement consacré à chaque phrase du traitement. Le journal contient des informations sur le temps passé pour l'exécution d'une requête de dataset dans un rapport et le temps passé pour le traitement des données. Si vous êtes administrateur de serveur de rapports, vous pouvez passer en revue les informations du journal, identifier les tâches longues et faire des suggestions aux auteurs de rapports pour améliorer des zones du rapport (dataset ou traitement).  

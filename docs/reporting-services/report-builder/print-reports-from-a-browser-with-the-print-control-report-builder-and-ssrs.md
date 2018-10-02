@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ba4c64e966d48c84515496dccf78cf8c7c9ece1c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f86e4f10b6f3315207eb378d4aca4cf32b2e9e91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743497"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimer des rapports à partir d'un navigateur à l'aide du contrôle d'impression (Générateur de rapports et SSRS)
   Bien qu'un navigateur soit l'application cliente la plus fréquemment utilisée pour afficher un rapport, la fonctionnalité d'impression du navigateur n'est pas le meilleur choix pour l'impression des rapports. La fonctionnalité d'impression d'un navigateur est conçue pour l'impression des pages Web. En règle générale, les pages que vous imprimez à partir d'un navigateur comprennent tous les éléments visuels présents sur une page Web, ainsi que des informations d'en-tête et de pied de page qui identifient la page ou le site Web. L'impression à partir d'un navigateur permet d'imprimer le contenu de la fenêtre actuelle. Pour un rapport de plusieurs pages, le navigateur imprime au mieux la première page et même moins encore, si la page de rapport dépasse les dimensions d'une page imprimée.  

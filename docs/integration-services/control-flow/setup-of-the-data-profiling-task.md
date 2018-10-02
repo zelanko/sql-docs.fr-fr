@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 483991212cd56bf587d562426357e1c940e61c1a
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 2e593351cd5ba5f0aa7efb1ced09af98cc40c3a2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652377"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuration de la tâche de profilage des données
   Avant de pouvoir examiner un profil des données sources, vous devez tout d'abord configurer et exécuter la tâche de profilage des données. Vous créez cette tâche dans un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour configurer la tâche de profilage des données, vous utilisez l'Éditeur de tâche de profilage de données. Cet éditeur vous permet de sélectionner l'emplacement de sortie des profils et les profils à calculer. Après avoir configuré la tâche, vous exécutez le package pour calculer les profils des données.  

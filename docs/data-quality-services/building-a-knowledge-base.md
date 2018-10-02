@@ -5,22 +5,19 @@ ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ffe9b8d85b73797ace32b38059eb9129ac72d9a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: fbf7c8cdba74c9aa3aae158ec172f5a559384214
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309808"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773217"
 ---
 # <a name="building-a-knowledge-base"></a>Construction d'une base de connaissances
 
@@ -39,7 +36,7 @@ ms.locfileid: "35309808"
 |Ajouter des connaissances à une base de connaissances via la découverte des connaissances, la gestion des valeurs de domaine, l'ajout d'une stratégie de correspondance, l'importation de connaissances, de domaines ou de valeurs, ou l'utilisation de la base de connaissances par défaut, DQS Data.|[Ajout de connaissances à une base de connaissances](../data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
 |Analyser un exemple de données pour les critères de qualité des données.|[Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8cb3ada19f24625ca87144ec28c2480371c89f3
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 8bad683dc5ad0b49ac464ab3efcb90a652d45aa9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329113"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760817"
 ---
 # <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Leçon 3-3 : Test du package du didacticiel de la leçon 3
 Dans cette tâche, vous allez exécuter le package Lesson 3.dtsx. Lors de l'exécution du package, la fenêtre Journaux d'événements répertorie les entrées inscrites dans le fichier journal. Une fois l'exécution du package terminée, vous allez vérifier le contenu du fichier journal qui a été généré par le fournisseur d'informations.  

@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.component: search
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-caps.latest.revision: 84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe04fa2462eed41ace5a8c70b0b3afd13848286c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 290008818b5cd486535e9b14f437729e4cab07e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182415"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731397"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +174,7 @@ Le paramètre de signes diacritiques d’un dictionnaire des synonymes est spéc
 |Paramètre de signes diacritiques|Valeur|XML|  
 |------------------------|-----------|---------|  
 |ne respectent pas les accents|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
-|respectent les accents| 1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
+|respectent les accents|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
   
 > [!NOTE]  
 >  Ce paramètre ne peut être appliqué qu'une seule fois dans le fichier et s'applique à tous les modèles de recherche au sein du fichier. Vous ne pouvez pas définir ce paramètre pour des modèles individuels.  

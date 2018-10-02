@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, proxies
 - proxies [Reporting Services]
@@ -17,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 319f34f50b4378f71b87b79978fadb011d310b7a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 766ae518aad577c4f8a700dbbdd433e1794e9c75
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280290"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842247"
 ---
 # <a name="creating-the-web-service-proxy"></a>Création du proxy de service Web
   Un client et un service Web peuvent communiquer à l'aide de messages SOAP qui encapsulent les paramètres d'entrée et de sortie au format XML. Une classe proxy mappe des paramètres aux éléments XML puis envoie les messages SOAP sur un réseau. De cette manière, la classe proxy vous évite de devoir communiquer avec le service Web au niveau SOAP et vous permet d'appeler des méthodes de service Web dans tout environnement de développement qui prend en charge les proxies de service Web et SOAP.  

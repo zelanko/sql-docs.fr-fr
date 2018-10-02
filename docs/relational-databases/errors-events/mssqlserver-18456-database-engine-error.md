@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5bb3731947cebbd5ff1fe2d0f5f1f1875867724
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: f42cd91466db5c3f1f5295447a506ab06db6de32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323730"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633977"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ Pour des raisons de sécurité, le message d'erreur retourné au client masque d
   
 |État|Description|  
 |---------|---------------|  
-| 1|Aucune information sur l'erreur n'est disponible. Cet état signifie généralement que vous n'avez pas l'autorisation de recevoir les informations d'erreur. Contactez votre administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour plus d'informations.|  
+|1|Aucune information sur l'erreur n'est disponible. Cet état signifie généralement que vous n'avez pas l'autorisation de recevoir les informations d'erreur. Contactez votre administrateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour plus d'informations.|  
 |2|ID utilisateur non valide.|  
 |5|ID utilisateur non valide.|  
 |6|Tentative d'utilisation d'un nom de connexion Windows avec l'authentification SQL Server.|  
@@ -116,7 +113,7 @@ Si votre erreur indique l'état 1, contactez votre administrateur [!INCLUDE[ssN
   
 Si vous essayez de vous connecter avec vos informations d’identification d’administrateur, démarrez votre application à l’aide de l’option **Exécuter en tant qu’administrateur**. Une fois connecté, ajoutez votre utilisateur Windows en tant que connexion individuelle.  
   
-Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge les bases de données à relation contenant-contenu, vérifiez que la connexion n’a pas été supprimée suite à la migration vers un utilisateur de base de données à relation contenant-contenu.  
+Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge les bases de données autonomes, vérifiez que la connexion n’a pas été supprimée suite à la migration vers un utilisateur de base de données autonome.  
   
 Lors de la connexion locale à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les connexions d’autres services qui s’exécutent également sous **NT AUTHORITY\NETWORK SERVICE** doivent s’authentifier à l’aide du nom de domaine complet des ordinateurs. Pour plus d’informations, consultez [Guide pratique pour utiliser le compte de service réseau pour accéder à des ressources dans ASP.NET](http://msdn.microsoft.com/library/ff647402.aspx)  
   

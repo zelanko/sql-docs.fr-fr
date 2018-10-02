@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c486b1e84e3a858a9f1c59631430515a31615fe1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 08391bc16552540005098e1a52cd96d1a30b021f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278965"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738657"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Modifier les icônes d'indicateur et jeux d'indicateurs (Générateur de rapports et SSRS)
   Les jeux d’indicateurs préconfigurés que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit pour les rapports paginés peuvent ne pas toujours représenter efficacement vos données ni fonctionner correctement dans le rapport remis. Cette rubrique fournit des procédures permettant de modifier l'apparence des icônes d'indicateur et les jeux d'indicateurs pour inclure plus ou moins d'icônes d'indicateur, ou d'autres icônes d'indicateur.  

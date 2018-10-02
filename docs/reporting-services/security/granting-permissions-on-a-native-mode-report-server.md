@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -21,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: adaabe453550990eb276132bfe2e1a62678c2192
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d5208bdb0924be66e392b0559547b0f65ed5bfa2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620237"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Octroi d'autorisations sur un serveur de rapports en mode natif
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise l'autorisation basée sur les rôles et un sous-système d'authentification pour déterminer qui est habilité à effectuer des opérations et à accéder aux éléments d'un serveur de rapports. L'autorisation basée sur les rôles catégorise en rôles l'ensemble des actions qu'un utilisateur ou groupe peut effectuer. L'authentification repose sur l'authentification Windows intégrée ou sur un module d'authentification personnalisé que vous fournissez. Vous pouvez utiliser des rôles prédéfinis ou personnalisés avec chacun de ces types d'authentifications.  

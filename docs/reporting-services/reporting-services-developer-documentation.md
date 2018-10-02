@@ -4,10 +4,7 @@ ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - developer's guide [Reporting Services]
 - Reporting Services, programming
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a8006a30f17af588fd954ea8c6638afa8baa724
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 89a5bcc19baead2f0ba8413635fe330048963cfd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835497"
 ---
 # <a name="reporting-services-developer-documentation"></a>Documentation du développeur Reporting Services
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre plusieurs interfaces de programmation dont vous pouvez tirer parti dans vos propres applications. Vous pouvez utiliser les fonctionnalités existantes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour créer des outils de génération de rapports et de gestion personnalisés dans des sites Web et des applications Windows, ou vous pouvez étendre la plateforme [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
