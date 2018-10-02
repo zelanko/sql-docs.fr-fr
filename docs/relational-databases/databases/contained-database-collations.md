@@ -1,34 +1,31 @@
 ---
-title: Classements de base de données à relation contenant-contenu | Microsoft Docs
+title: Classements de base de données autonome | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7bd7475ba942ccf1533f44bf40ed70aaf81ef6e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6664b0255d8f76956a18217b7476e03a2140eaf1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854457"
 ---
-# <a name="contained-database-collations"></a>Classements de base de données à relation contenant-contenu
+# <a name="contained-database-collations"></a>Classements de base de données autonome
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Diverses propriétés affectent l'ordre de tri et la sémantique d'égalité des données textuelles, notamment le respect de la casse, le respect des accents et la langue de base utilisée. Ces qualités sont exprimées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le choix du classement des données. Pour une explication plus approfondie des classements eux-mêmes, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- Les classements ne s'appliquent pas seulement aux données stockées dans les tables utilisateur, mais à tout le texte géré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les métadonnées, les objets temporaires, les noms de variable, etc. Leur gestion est différente dans une base de données à relation contenant-contenu et dans une base de données sans relation contenant-contenu. Cette modification n'affecte pas de nombreux utilisateurs, mais permet l'indépendance et l'uniformité des instances. Cependant, elle peut provoquer également quelques confusions, ainsi que des problèmes pour les sessions qui accèdent à la fois à des bases de données à relation contenant-contenu et à des bases de données sans relation contenant-contenu.  
+ Les classements ne s'appliquent pas seulement aux données stockées dans les tables utilisateur, mais à tout le texte géré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les métadonnées, les objets temporaires, les noms de variable, etc. Leur gestion est différente dans une base de données autonome et dans une base de données non autonome. Cette modification n'affecte pas de nombreux utilisateurs, mais permet l'indépendance et l'uniformité des instances. Cependant, elle peut provoquer également quelques confusions, ainsi que des problèmes pour les sessions qui accèdent à la fois à des bases de données autonomes et à des bases de données non autonomes.  
   
  Cette rubrique apporte des éclaircissements sur le contenu de la modification et indique où celle-ci peut entraîner des problèmes.  
   
@@ -119,20 +116,20 @@ END;
   
  C'est une fonction assez particulière. Dans un classement respectant la casse, le @i dans la clause return ne peut pas être lié un autre @I ni à @İ. Dans un classement Latin1_General sans respect de la casse, @i est lié à @I, et la fonction retourne 1. Mais dans un classement turc sans respect de la casse, @i est lié à @İ et la fonction retourne 2. Cela peut causer des dégâts dans une base de données qui se déplace entre des instances aux classements différents.  
   
-## <a name="contained-databases"></a>Bases de données à relation contenant-contenu  
- Comme un objectif de la conception de bases de données à relation contenant-contenu est de les rendre autonomes, la dépendance de l’instance et des classements de **tempdb** doit être supprimée. Pour cela, les bases de données à relation contenant-contenu présentent le concept de classement de catalogue. Le classement de catalogue est utilisé pour les métadonnées système et les objets transitoires. Des informations complémentaires sont fournies ci-dessous.  
+## <a name="contained-databases"></a>Bases de données autonomes  
+ Comme un objectif de la conception de bases de données autonomes est de les rendre autonomes, la dépendance de l’instance et des classements de **tempdb** doit être supprimée. Pour cela, les bases de données autonomes présentent le concept de classement de catalogue. Le classement de catalogue est utilisé pour les métadonnées système et les objets transitoires. Des informations complémentaires sont fournies ci-dessous.  
   
- Dans une base de données à relation contenant-contenu, le classement de catalogue est **Latin1_General_100_CI_AS_WS_KS_SC**. Ce classement est le même pour toutes les bases de données à relation contenant-contenu sur toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ne peut pas être changé.  
+ Dans une base de données autonome, le classement de catalogue est **Latin1_General_100_CI_AS_WS_KS_SC**. Ce classement est le même pour toutes les bases de données autonomes sur toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ne peut pas être changé.  
   
- Le classement de base de données est conservé, mais est utilisé uniquement comme classement par défaut des données utilisateur. Par défaut, le classement de base de données est égal au classement de base de données model, mais peut être modifié par l’utilisateur via une commande **CREATE** ou **ALTER DATABASE** comme avec les bases de données sans relation contenant-contenu.  
+ Le classement de base de données est conservé, mais est utilisé uniquement comme classement par défaut des données utilisateur. Par défaut, le classement de base de données est égal au classement de base de données model, mais peut être modifié par l’utilisateur via une commande **CREATE** ou **ALTER DATABASE** comme avec les bases de données non autonomes.  
   
- Un nouveau mot clé, **CATALOG_DEFAULT**, est disponible dans la clause **COLLATE** . Il est utilisé comme un raccourci du classement actuel de métadonnées à la fois dans les bases de données avec et sans relation contenant-contenu. Autrement dit, dans une base de données sans relation contenant-contenu, **CATALOG_DEFAULT** retourne le classement de base de données actuel, puisque les métadonnées sont assemblées dans le classement de base de données. Dans une base de données à relation contenant-contenu, ces deux valeurs peuvent être différentes, puisque l'utilisateur peut modifier le classement de base de données afin qu'il ne corresponde pas au classement de catalogue.  
+ Un nouveau mot clé, **CATALOG_DEFAULT**, est disponible dans la clause **COLLATE** . Il est utilisé comme un raccourci du classement actuel de métadonnées à la fois dans les bases de données autonomes et non autonomes. Autrement dit, dans une base de données non autonome, **CATALOG_DEFAULT** retourne le classement de base de données actuel, puisque les métadonnées sont assemblées dans le classement de base de données. Dans une base de données autonome, ces deux valeurs peuvent être différentes, puisque l'utilisateur peut modifier le classement de base de données afin qu'il ne corresponde pas au classement de catalogue.  
   
- Le comportement de différents objets dans les bases de données avec ou sans relation contenant-contenu est résumé dans ce tableau :  
+ Le comportement de différents objets dans les bases de données autonomes ou non autonomes est résumé dans ce tableau :  
   
 ||||  
 |-|-|-|  
-|**Élément**|**Base de données sans relation contenant-contenu**|**Base de données à relation contenant-contenu**|  
+|**Élément**|**Base de données non autonome**|**Base de données autonome**|  
 |Données utilisateur (valeur par défaut)|DATABASE_DEFAULT|DATABASE_DEFAULT|  
 |Données Temp (valeur par défaut)|Classement TempDB|DATABASE_DEFAULT|  
 |Métadonnées|DATABASE_DEFAULT / CATALOG_DEFAULT|CATALOG_DEFAULT|  
@@ -141,7 +138,7 @@ END;
 |Étiquettes goto|Classement d'instance|CATALOG_DEFAULT|  
 |Noms de curseur|Classement d'instance|CATALOG_DEFAULT|  
   
- Si nous examinons l’exemple de table temp décrit précédemment, nous pouvons voir que ce comportement de classement rend la clause **COLLATE** explicite inutile dans la plupart des utilisations de table temp. Dans une base de données à relation contenant-contenu, ce code s'exécute désormais sans erreur, même si les classements d'instance et de base de données diffèrent :  
+ Si nous examinons l’exemple de table temp décrit précédemment, nous pouvons voir que ce comportement de classement rend la clause **COLLATE** explicite inutile dans la plupart des utilisations de table temp. Dans une base de données autonome, ce code s'exécute désormais sans erreur, même si les classements d'instance et de base de données diffèrent :  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
@@ -154,14 +151,14 @@ JOIN #T2
     ON T1.T1_txt = #T2.T2_txt ;  
 ```  
   
- Cela fonctionne parce que `T1_txt` et `T2_txt` sont assemblés dans le classement de base de données de la base de données à relation contenant-contenu.  
+ Cela fonctionne parce que `T1_txt` et `T2_txt` sont assemblés dans le classement de base de données de la base de données autonome.  
   
 ## <a name="crossing-between-contained-and-uncontained-contexts"></a>Passer d'un contexte à relation contenant-contenu à un contexte sans relation contenant-contenu  
- Tant qu'une session dans une base de données à relation contenant-contenu reste contenue, elle doit rester dans la base de données à laquelle elle s'est connectée. Dans ce cas, le comportement est très simple. Mais si une session passe d'un contexte à relation contenant-contenu à un contexte sans relation contenant-contenu, le comportement devient plus complexe, puisque deux ensembles de règles doivent être liés. Cela peut arriver dans une base de données partiellement à relation contenant-contenu, puisqu’un utilisateur peut exécuter une opération **USE** sur une autre base de données. Dans ce cas, la différence des règles de classement est gérée selon le principe suivant.  
+ Tant qu'une session dans une base de données autonome reste contenue, elle doit rester dans la base de données à laquelle elle s'est connectée. Dans ce cas, le comportement est très simple. Mais si une session passe d'un contexte à relation contenant-contenu à un contexte sans relation contenant-contenu, le comportement devient plus complexe, puisque deux ensembles de règles doivent être liés. Cela peut arriver dans une base de données partiellement autonome, puisqu’un utilisateur peut exécuter une opération **USE** sur une autre base de données. Dans ce cas, la différence des règles de classement est gérée selon le principe suivant.  
   
 -   Le comportement du classement d'un lot est déterminé par la base de données dans laquelle commence le lot.  
   
- Notez que cette décision est prise avant l’émission d’une commande, notamment la commande **USE**initiale. Autrement dit, si un lot commence dans une base de données à relation contenant-contenu, mais que la première commande est une opération **USE** sur une base de données sans relation contenant-contenu, le comportement du classement à relation contenant-contenu sera toujours utilisé pour le lot. En conséquence, une référence à une variable, par exemple, peut donner plusieurs résultats possibles :  
+ Notez que cette décision est prise avant l’émission d’une commande, notamment la commande **USE**initiale. Autrement dit, si un lot commence dans une base de données autonome, mais que la première commande est une opération **USE** sur une base de données non autonome, le comportement du classement autonome sera toujours utilisé pour le lot. En conséquence, une référence à une variable, par exemple, peut donner plusieurs résultats possibles :  
   
 -   La référence peut trouver exactement une correspondance. Dans ce cas, la référence fonctionnera sans erreur.  
   
@@ -169,7 +166,7 @@ JOIN #T2
   
 -   La référence peut trouver plusieurs correspondances qui étaient distinctes à l'origine. Cela génère également une erreur.  
   
- Illustrons ceci par quelques exemples. Pour ces exemples, nous supposons une base de données partiellement à relation contenant-contenu, nommée `MyCDB` , dont le classement de base de données est défini sur le classement par défaut, **Latin1_General_100_CI_AS_WS_KS_SC**. Nous supposons que le classement d’instance est **Latin1_General_100_CS_AS_WS_KS_SC**. Les deux classements diffèrent uniquement en fonction du respect de la casse.  
+ Illustrons ceci par quelques exemples. Pour ces exemples, nous supposons une base de données partiellement autonome, nommée `MyCDB`, dont le classement de base de données est défini sur le classement par défaut, **Latin1_General_100_CI_AS_WS_KS_SC**. Nous supposons que le classement d’instance est **Latin1_General_100_CS_AS_WS_KS_SC**. Les deux classements diffèrent uniquement en fonction du respect de la casse.  
   
 ### <a name="example-1"></a>Exemple 1  
  L'exemple suivant illustre le cas où la référence trouve exactement une correspondance.  
@@ -266,7 +263,7 @@ GO
 (1 row(s) affected)  
 ```  
   
- Si nous nous déplaçons dans notre base de données à relation contenant-contenu, toutefois, nous constatons que nous ne pouvons plus créer de liaison avec ces tables.  
+ Si nous nous déplaçons dans notre base de données autonome, toutefois, nous constatons que nous ne pouvons plus créer de liaison avec ces tables.  
   
 ```  
 USE MyCDB;  
@@ -282,9 +279,9 @@ GO
  La référence au nom de table temporaire '#a' est ambiguë et ne peut pas être résolue. Les candidats possibles sont '#a' et '#A.'  
   
 ## <a name="conclusion"></a>Conclusion  
- Le comportement du classement des bases de données à relation contenant-contenu diffère légèrement de celui des bases de données sans relation contenant-contenu. Ce comportement est généralement bénéfique, car il apporte une indépendance par rapport à l'instance et de la simplicité. Certains utilisateurs peuvent avoir des problèmes, en particulier lorsqu'une session accède à la fois à des bases de données avec et sans relation contenant-contenu.  
+ Le comportement du classement des bases de données autonomes diffère légèrement de celui des bases de données non autonomes. Ce comportement est généralement bénéfique, car il apporte une indépendance par rapport à l'instance et de la simplicité. Certains utilisateurs peuvent avoir des problèmes, en particulier lorsqu'une session accède à la fois à des bases de données autonomes et non autonomes.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md)  
+ [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)  
   
   

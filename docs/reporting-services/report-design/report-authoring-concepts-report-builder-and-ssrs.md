@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - concepts
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b04181c8605dff46e0f744f6445bd61847b1b2c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a51c8ac3fce465e6742001eb884332d2eb1e4309
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274336"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800573"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Concepts de création de rapport (Générateur de rapports et SSRS)
   Cette section définit brièvement certains concepts clés utilisés pour décrire les rapports paginés dans la documentation du Générateur de rapports et du Concepteur de rapports. Pour obtenir des définitions de mots ou de termes spécifiques, consultez le [Glossaire &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  

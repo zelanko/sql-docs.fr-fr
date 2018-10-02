@@ -6,9 +6,7 @@ ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - auto_create_statistics
 - auto_update_statistics
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-caps.latest.revision: 159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84ee6c7ac1161f53d8878161580cc3fe0f68abd0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 34dfaa1d241c015ed94bc21997d9e6a3c8254339
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067571"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762627"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL) 
 
@@ -63,7 +60,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 > </tr>
 > <tr>
 >   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />Logical Server</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />de base de données SQL</a></th>
 >   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 > </tr>
 > </table>
@@ -1298,14 +1295,14 @@ SET QUERY_STORE = ON
 > <tr>
 >   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />Logical Server</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />de base de données SQL</a></th>
 >   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Azure SQL Database Logical Server
+# <a name="azure-sql-database-logical-server"></a>Serveur logique Azure SQL Database
 Bien que les niveaux de compatibilité soient des options `SET`, ils sont décrits dans [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
@@ -2093,7 +2090,7 @@ SET QUERY_STORE = ON
 > </tr>
 > <tr>
 >   <th><a href="alter-database-transact-sql-set-options.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />Logical Server</a></th>
+>   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">SQL Database<br />de base de données SQL</a></th>
 >   <th><strong><em>* SQL Database<br />Managed Instance *</em></strong></th>
 > </tr>
 > </table>

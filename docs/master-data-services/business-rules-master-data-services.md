@@ -5,25 +5,22 @@ ms.date: 03/18/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-caps.latest.revision: 16
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f16887f4ed7c5df24f331fbec71d978da1c2647c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 97c774afa437340e584a0b2f94e6170fe7ca94fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403871"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806513"
 ---
 # <a name="business-rules-master-data-services"></a>Règles d'entreprise (Master Data Services)
 
@@ -76,7 +73,7 @@ ms.locfileid: "35403871"
 ## <a name="system-settings"></a>Paramètres système  
  Il existe deux paramètres dans [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] qui affectent les règles d'entreprise. Vous pouvez ajuster ces paramètres dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] ou directement dans la table Paramètres système. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

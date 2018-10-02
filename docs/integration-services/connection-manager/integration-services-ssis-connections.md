@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.connectionmanager.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e9a42da365556c0936fdfe59d9c24851dafbedb
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 695e91fbc8ee3a99b4c203e208400069fb07dead
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333543"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820337"
 ---
 # <a name="integration-services-ssis-connections"></a>Connexions Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent des connexions pour effectuer différentes tâches et pour implémenter des fonctionnalités [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
@@ -181,7 +178,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
     |[Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|[Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[Gestionnaire de connexions HTTP](../../integration-services/connection-manager/http-connection-manager.md)|[Éditeur du gestionnaire de connexions HTTP &#40;page Serveur&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Éditeur du gestionnaire de connexions HTTP &#40;page Proxy&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Éditeur du gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Référence de l'interface utilisateur du gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
+    |[Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Informations de référence sur l’interface utilisateur du gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
     |[Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager.md)|[Éditeur du gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[Gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|[Éditeur du gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
@@ -217,7 +214,7 @@ Un gestionnaire de connexions peut être créé au niveau du package ou au nivea
     |[Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|[Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[Gestionnaire de connexions HTTP](../../integration-services/connection-manager/http-connection-manager.md)|[Éditeur du gestionnaire de connexions HTTP &#40;page Serveur&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Éditeur du gestionnaire de connexions HTTP &#40;page Proxy&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Éditeur du gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Référence de l'interface utilisateur du gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
+    |[Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Informations de référence sur l’interface utilisateur du gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
     |[Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager.md)|[Éditeur du gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[Gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|[Éditeur du gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
@@ -326,7 +323,7 @@ Tous les gestionnaires de connexions peuvent être configurés à l'aide de la f
     |[Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|[Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[Gestionnaire de connexions HTTP](../../integration-services/connection-manager/http-connection-manager.md)|[Éditeur du gestionnaire de connexions HTTP &#40;page Serveur&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Éditeur du gestionnaire de connexions HTTP &#40;page Proxy&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Éditeur du gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Référence de l'interface utilisateur du gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
+    |[Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Informations de référence sur l’interface utilisateur du gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
     |[Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager.md)|[Éditeur du gestionnaire de connexions SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[Gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|[Éditeur du gestionnaire de connexions SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
