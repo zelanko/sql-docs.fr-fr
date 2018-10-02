@@ -4,17 +4,16 @@ ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec098c92b77e317e87c4dd33d4e663f1b247db43
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7ee8ead2185908724b20fa690cabfe67044d15d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278600"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611477"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Parties de rapports et datasets dans le Générateur de rapports
   Dans le Générateur de rapports, la façon la plus simple d'inclure des données dans un rapport est d'ajouter des parties de rapports à partir de la bibliothèque de parties de rapports. Les parties de rapports contiennent les datasets desquels elles dépendent, appelés *datasets dépendants*. Les datasets dépendants sont basés sur les sources de données partagées et peuvent être des datasets incorporés ou partagés. En savoir plus sur les [Parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

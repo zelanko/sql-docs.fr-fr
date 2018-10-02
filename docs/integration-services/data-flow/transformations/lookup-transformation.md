@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.lookuptrans.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8a7f9c717006eec8d1ee7deb4e807709b124ced
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 4621685d69a2bedffd35e1de896712efa40a0335
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332863"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730927"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
   La transformation de recherche effectue des recherches en joignant des données de colonnes d'entrée à des colonnes d'un dataset de référence. Vous utilisez la recherche pour accéder à des informations supplémentaires dans une table associée se basant sur des valeurs dans des colonnes communes.  
@@ -121,7 +118,7 @@ ms.locfileid: "35332863"
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diffèrent par leur manière de comparer les chaînes. Si la transformation de recherche est configurée pour charger le dataset de référence dans le cache avant l’exécution de la transformation de recherche, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] effectue la comparaison de recherche dans le cache. Autrement, l’opération de recherche utilise une instruction SQL paramétrable et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue la comparaison de recherche. Cela signifie que la transformation de recherche peut retourner un nombre différent de correspondances à partir de la même table de recherche, selon le type de cache.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] ou par programmation. Pour plus d'informations, consultez les rubriques suivantes.  
   
 -   [Implémenter une recherche en mode Aucun cache ou Cache partiel](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  

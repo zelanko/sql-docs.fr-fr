@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.advanced.f1
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
-caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5776bd6e127c90555141826a0defa3a358f8934
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7ae58695fabc363a432f21d91a70ccc3a3f4dc6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869714"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619507"
 ---
 # <a name="server-properties---advanced-page"></a>Propriétés du serveur - page Avancé
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,8 +29,8 @@ ms.locfileid: "32869714"
 -   [Afficher ou modifier des propriétés de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)  
   
 ## <a name="containment"></a>Containment  
- Activer les bases de données à relation contenant-contenu  
- Indique si cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise les bases de données à relation contenant-contenu. Si la valeur est **True**, une base de données à relation contenant-contenu peut être créée, restaurée ou attachée. Si la valeur est **False**, une base de données à relation contenant-contenu ne peut pas être créée, restaurée ou attachée à cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fait de modifier la propriété de relation contenant-contenu peut avoir un impact sur la sécurité de la base de données. Le fait d'activer les bases de données à relation contenant-contenu permet aux propriétaires de base de données d'octroyer l'accès à cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L efait de désactiver les bases de données à relation contenant-contenu peut empêcher les utilisateurs de se connecter. Pour comprendre l’impact de la propriété de relation contenant-contenu, consultez [Bases de données à relation contenant-contenu](../../relational-databases/databases/contained-databases.md) et [Meilleures pratiques de sécurité recommandées avec les bases de données à relation contenant-contenu](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ Activer les bases de données autonomes  
+ Indique si cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise les bases de données autonomes. Si la valeur est **True**, une base de données autonome peut être créée, restaurée ou attachée. Si la valeur est **False**, une base de données autonome ne peut pas être créée, restaurée ou attachée à cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fait de modifier la propriété de relation contenant-contenu peut avoir un impact sur la sécurité de la base de données. Le fait d'activer les bases de données autonomes permet aux propriétaires de base de données d'octroyer l'accès à cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fait de désactiver les bases de données autonomes peut empêcher les utilisateurs de se connecter. Pour comprendre l’impact de la propriété d’autonomie, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md) et [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Niveau d'accès FILESTREAM**  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: 95
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4002e4c074e492d2f1f6d82569316be241eda0a4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: ac89758902c3df3f69eb7e82b4c2ba1fc320ef14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311588"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647975"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connecter des clients à une session de mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -180,7 +177,7 @@ Server=123.34.45.56,4724;
   
 |Arrondi|Calcul de*RetryTime* |Délai entre chaque tentative|  
 |-----------|-----------------------------|----------------------------|  
-| 1|0 **+(** 0,08 **\*** 15 **)**|1,2 secondes|  
+|1|0 **+(** 0,08 **\*** 15 **)**|1,2 secondes|  
 |2|1,2 **+(** 0,08 **\*** 15 **)**|2,4 secondes|  
 |3|2,4 **+(** 0,08 **\*** 15 **)**|3,6 secondes|  
 |4|3,6 **+(** 0,08 **\*** 15 **)**|4,8 secondes|  

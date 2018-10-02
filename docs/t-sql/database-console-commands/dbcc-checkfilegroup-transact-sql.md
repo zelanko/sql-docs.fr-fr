@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKFILEGROUP_TSQL
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 60
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 76189bd8ce8057d50671c93c09fbb7a5f0883544
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4ccb7299cd8bc1fc0d764499f783deb88dfdf005
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716837"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -138,7 +135,7 @@ Une fois la commande DBCC CHECKFILEGROUP exécutée, un message est consigné da
 |État|Description|  
 |-----------|-----------------|  
 |0|Erreur numéro 8930 générée. Ceci indique une corruption des métadonnées qui a provoqué l'arrêt de la commande DBCC.|  
-| 1|Erreur numéro 8967 générée. Une erreur DBCC interne s'est produite.|  
+|1|Erreur numéro 8967 générée. Une erreur DBCC interne s'est produite.|  
 |2|Une erreur s'est produite lors de la réparation de la base de données en mode urgence.|  
 |3|Ceci indique une corruption des métadonnées qui a provoqué l'arrêt de la commande DBCC.|  
 |4|Une assertion ou une violation d'accès a été détectée.|  
@@ -196,7 +193,7 @@ Estimated TEMPDB space needed for CHECKTABLES (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .
   
 ## <a name="examples"></a>Exemples  

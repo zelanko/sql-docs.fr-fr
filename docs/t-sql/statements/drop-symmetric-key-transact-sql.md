@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP SYMMETRIC KEY
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - cryptography [SQL Server], symmetric keys
 - DROP SYMMETRIC KEY statement
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
-caps.latest.revision: 22
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b4ae36d7a5e9f5433ed7a4bb1acbf007bb925935
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 57411cac88e2e2edd353230b254f37240cf1c143
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786050"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720157"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
   
  Si la clé asymétrique est mappée à une clé EKM (gestion de clés extensible) sur un appareil EKM et que l’option **REMOVE PROVIDER KEY** n’est pas spécifiée, la clé est supprimée de la base de données, mais pas de l’appareil, et un message d’avertissement est affiché.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation CONTROL sur la clé symétrique.  
   
 ## <a name="examples"></a>Exemples  

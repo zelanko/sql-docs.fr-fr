@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.messagequeuetask.f1
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da585aaf4894c1e37e8aa75585004818622eb8ce
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 260512d99817084b6a7cc4af1e39e6557f6fea37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332483"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720207"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   La tâche MSMQ vous permet d’utiliser Message Queuing (MSMQ) pour envoyer et recevoir des messages entre des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou pour envoyer des messages à une file d’attente d’application traitée par une application personnalisée. Ces messages peuvent être composés de texte brut, de fichiers ou de variables et leurs valeurs.  
@@ -100,7 +97,7 @@ ms.locfileid: "35332483"
   
  Pour plus d’informations sur la définition par programmation de ces propriétés, consultez la documentation relative à la classe **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** dans le Guide du développeur.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur la façon de définir ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Définir les propriétés d’une tâche ou d’un conteneur](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="message-queue-task-editor-general-page"></a>Éditeur de tâche MSMQ (page Général)

@@ -4,17 +4,16 @@ ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73b5fe3ae626076b6579671038c50ccc8cd87380
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 13a32ba9923a1655b6b8f44d6be2ad4617127edf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281934"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646607"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Résoudre les problèmes de rendu des rapports Reporting Services
 Une fois les données et les informations de mise en page du rapport combinées, le rapport compilé est envoyé à un convertisseur de rapport. Par exemple, lorsque vous affichez l'aperçu d'un rapport localement, vous utilisez le convertisseur HTML pour afficher le rapport compilé. Utilisez cette rubrique pour vous aider à résoudre les problèmes spécifiques au rendu de rapport.   

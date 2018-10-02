@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_DATABASE_AUDIT_SPECIFICATION_TSQL
@@ -19,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER DATABASE AUDIT SPECIFICATION statement
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
-caps.latest.revision: 22
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8c09b4c3c8099983304cd207ac5d5e4724dc2019
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 56fbd27b9e5e4d4e760743d94948540f0f6d87ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667127"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +87,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Notes   
  Les spécifications d'audit de base de données sont des objets non sécurisables qui résident dans une base de données spécifiée. Vous devez définir l’état d’une spécification d’audit sur OFF pour pouvoir modifier celle d’une base de données. Si ALTER DATABASE AUDIT SPECIFICATION est exécuté alors qu'un audit est activé avec des options autres que STATE=OFF, vous recevez un message d'erreur. Pour plus d'informations, consultez [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les utilisateurs disposant de l'autorisation ALTER ANY DATABASE AUDIT peuvent modifier des spécifications d'audit de la base de données et les lier à un audit quelconque.  
   
  Une fois qu’une spécification d’audit de la base de données est créée, elle est consultable par des principaux disposant des autorisations CONTROL SERVER ou ALTER ANY DATABASE AUDIT, le compte sysadmin ou des principaux ayant un accès explicite à l’audit.  

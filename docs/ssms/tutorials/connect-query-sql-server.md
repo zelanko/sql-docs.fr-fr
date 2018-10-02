@@ -6,18 +6,17 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: tutorial
-ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: e487537bd5051d396e5f24243a33ded4aa38daf7
-ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
+ms.openlocfilehash: 02aee760447f61867f5ec85bbe24266539a44a33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39367661"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738247"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutoriel : Se connecter à une instance SQL Server et l’interroger en utilisant SQL Server Management Studio
 Ce tutoriel vous apprend à utiliser SSMS (SQL Server Management Studio) pour vous connecter à votre instance SQL Server et exécuter des commandes T-SQL (Transact-SQL) de base. L’article explique comment effectuer les opérations suivantes :
