@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 05/31/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssdt
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: af9fc2f5eeeb65a14a227e52d2fe6e9380b6cafb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 94c198990d121d6f89ef92ad39fd52ad96188883
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037167"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764437"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Prise en charge d’Azure Active Directory dans SQL Server Data Tools (SSDT)
 
@@ -32,7 +30,7 @@ SQL Server Data Tools (SSDT) fournit plusieurs méthodes d’authentification [A
 Cet article aborde Azure AD pour la liste suivante de *produits SQL Azure* dans le [cloud Azure](https://azure.microsoft.com/) :
 
 - Azure SQL Database
-- Azure SQL Data Warehouse
+- Azure SQL Data Warehouse.
 
 ## <a name="active-directory-password-authentication"></a>Authentification par mot de passe Active Directory
 
