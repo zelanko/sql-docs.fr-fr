@@ -5,23 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 860f0f1d6dc774c7a009db193c2c84e940c6cc47
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 16801a8865260a1175fe4786869272774ed8b2c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332493"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596197"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Déterminer si les données modifiées sont prêtes
   Dans le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue une charge incrémentielle des données modifiées, la deuxième tâche consiste à s’assurer que les données modifiées pour l’intervalle sélectionné sont prêtes. Cette étape est nécessaire car le processus de capture asynchrone n'a peut-être pas encore pu traiter toutes les modifications jusqu'au point de terminaison sélectionné.  
@@ -93,7 +90,7 @@ ms.locfileid: "35332493"
 |Valeur retournée|Signification|Réponse|  
 |------------------|-------------|--------------|  
 |0|Indique que les données modifiées ne sont pas prêtes.<br /><br /> Il n'existe aucun enregistrement de capture de données modifiées postérieur au point de fin de l'intervalle sélectionné.|L'exécution se poursuit avec le composant qui implémente un délai. Le contrôle retourne ensuite au conteneur de boucles For qui continue à vérifier la tâche d'exécution SQL tant que la valeur retournée est 0.|  
-| 1|Peut indiquer que les données modifiées n'ont pas été capturées pour l'intervalle complet ou qu'elles ont été supprimées. Cela est traité comme une condition d'erreur.<br /><br /> Il n'existe aucun enregistrement de capture de données modifiées antérieur au point de départ de l'intervalle sélectionné.|L'exécution se poursuit avec le composant facultatif qui enregistre l'erreur.|  
+|1|Peut indiquer que les données modifiées n'ont pas été capturées pour l'intervalle complet ou qu'elles ont été supprimées. Cela est traité comme une condition d'erreur.<br /><br /> Il n'existe aucun enregistrement de capture de données modifiées antérieur au point de départ de l'intervalle sélectionné.|L'exécution se poursuit avec le composant facultatif qui enregistre l'erreur.|  
 |2|Indique que les données sont prêtes.<br /><br /> Il existe des enregistrements de capture de données modifiées qui sont antérieurs au point de départ et postérieurs au point de fin de l'intervalle sélectionné.|L'exécution sort du conteneur de boucles For et le chargement incrémentiel démarre.|  
 |3|Indique le chargement initial de toutes les données modifiées disponibles.<br /><br /> La logique conditionnelle obtient cette valeur à partir d'une variable de package spéciale qui est utilisée uniquement dans ce but.|L'exécution sort du conteneur de boucles For et le chargement incrémentiel démarre.|  
 |5|Indique que la variable TimeoutCeiling a été atteinte.<br /><br /> La boucle a testé les données le nombre spécifié de fois et les données ne sont toujours pas disponibles. Sans ce test ou un test semblable, le package peut s'exécuter indéfiniment.|L'exécution se poursuit avec le composant facultatif qui enregistre le délai d'attente.|  

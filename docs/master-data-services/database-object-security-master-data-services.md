@@ -5,25 +5,22 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 42f181035f2fffff06540d060ed4a179ab88f806
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 8ebd4835fe24846df21b887841813f7cac596f7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329103"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598163"
 ---
 # <a name="database-object-security-master-data-services"></a>Sécurité de l'objet de base de données (Master Data Services)
 
@@ -50,7 +47,7 @@ ms.locfileid: "35329103"
 ##  <a name="Staging"></a> Mise en lots de données  
  Dans le tableau suivant, le nom de chaque élément sécurisable comporte le terme « name ». Il indique le nom de la table de mise en lots spécifié lors de la création d'une entité. Pour plus d’informations, consultez [Présentation : Importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-|Action|Éléments sécurisables|Autorisations|  
+|Action|Éléments sécurisables|Permissions|  
 |------------|----------------|-----------------|  
 |Créer, mettre à jour et supprimer des membres feuille et leurs attributs.|stg.name_Leaf|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
 |Chargez les données de la table de mise en lots Feuille dans les tables de base de données MDS appropriées.|stg.udp_name_Leaf|Exécutez|  
@@ -64,7 +61,7 @@ ms.locfileid: "35329103"
   
 ##  <a name="rules"></a> Validation de données par rapport aux règles d’entreprise  
   
-|Action|Élément sécurisable|Autorisations|  
+|Action|Élément sécurisable|Permissions|  
 |------------|---------------|-----------------|  
 |Valider une version des données par rapport aux règles d'entreprise|mdm.udpValidateModel|Exécutez|  
   
@@ -72,7 +69,7 @@ ms.locfileid: "35329103"
   
 ##  <a name="Versions"></a> Suppression de versions  
   
-|Action|Éléments sécurisables|Autorisations|  
+|Action|Éléments sécurisables|Permissions|  
 |------------|----------------|-----------------|  
 |Déterminer l'ID de la version que vous souhaitez supprimer|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |Supprimer une version d'un modèle|mdm.udpVersionDelete|Exécutez|  
@@ -81,7 +78,7 @@ ms.locfileid: "35329103"
   
 ##  <a name="Hierarchy"></a> Application immédiate des autorisations des membres de la hiérarchie  
   
-|Action|Éléments sécurisables|Autorisations|  
+|Action|Éléments sécurisables|Permissions|  
 |------------|----------------|-----------------|  
 |Application immédiate d'autorisations de membre|mdm.udpSecurityMemberProcessRebuildModel|Exécutez|  
   

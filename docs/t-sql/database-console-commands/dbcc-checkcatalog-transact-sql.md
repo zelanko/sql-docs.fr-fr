@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_CHECKCATALOG_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - integrity [SQL Server], catalogs
 - consistency [SQL Server], catalogs
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
-caps.latest.revision: 51
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: b71c8011ebf2830409f886dc61a3b9e93a00df92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7427364996b5ce2fdc684823dc4b149733dc4660
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596560"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ Une fois la commande DBCC CATALOG terminée, un message est enregistré dans le 
 |État|Description|  
 |-----------|-----------------|  
 |0|Erreur numéro 8930 générée. Ceci indique une corruption des métadonnées qui a provoqué l'arrêt de la commande DBCC.|  
-| 1|Erreur numéro 8967 générée. Une erreur DBCC interne s'est produite.|  
+|1|Erreur numéro 8967 générée. Une erreur DBCC interne s'est produite.|  
 |2|Une erreur s'est produite lors de la réparation de la base de données en mode urgence.|  
 |3|Ceci indique une corruption des métadonnées qui a provoqué l'arrêt de la commande DBCC.|  
 |4|Une assertion ou une violation d'accès a été détectée.|  
@@ -96,7 +93,7 @@ Si [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est spéc
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’appartenance au rôle serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner**.  
   
 ## <a name="examples"></a>Exemples  

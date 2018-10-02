@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e691d352507bddb75ba6db0986cc05a75eb6d858
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b7d417f2887c58e88e1bbb52c7fc171eba24030c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710127"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Terminer l'Assistant (Assistant Importation et Exportation SQL Server)
 Une fois que vous spécifiez si vous souhaitez exécuter l’opération de copie immédiatement, et après l’enregistrement facultatif du package créé par l’Assistant, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Terminer l’Assistant**. Cette page vous permet de vérifier les choix effectués dans l’Assistant, puis de cliquer sur **Terminer** pour démarrer l’opération de copie.

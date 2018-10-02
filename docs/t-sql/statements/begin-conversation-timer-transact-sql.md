@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONVERSATION
@@ -32,16 +30,15 @@ helpviewer_keywords:
 - starting timers [Service Broker]
 - http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-caps.latest.revision: 28
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 94292f4a3b085f39e223f4b111c93959c5be8fd4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 40796cb658ba723e85a6d3e8c96a8eb531616493
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787920"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643979"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +72,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
   
  BEGIN CONVERSATION TIMER n'est pas valide dans une fonction définie par l'utilisateur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L’autorisation de définition d’un minuteur de conversation est octroyée par défaut aux utilisateurs qui disposent de l’autorisation SEND sur le service pour la conversation, aux membres du rôle serveur fixe **sysadmin** et aux membres du rôle de base de données fixe **db_owner**.  
   
 ## <a name="examples"></a>Exemples  
