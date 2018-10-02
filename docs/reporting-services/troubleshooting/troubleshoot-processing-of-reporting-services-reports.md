@@ -4,17 +4,16 @@ ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 70dbbaa44b18dec81ecad4f07905cb44ff65df1d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 02d4f890c3e2d5f74c49100c14e88fcb6a683a92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813597"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Résoudre les problèmes de traitement des rapports Reporting Services
 Une fois les données de rapport récupérées, le processeur de rapports combine les données et les informations de mise en page. Chaque propriété d'élément de rapport qui possède une expression est évaluée dans le contexte des données et de la mise en page combinées. Utilisez cette rubrique pour vous aider à résoudre ces problèmes.   

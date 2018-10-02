@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.packageprotectionlevel.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d629b6dd1157c44e4a1bee1bbc944d48b4caff5
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: f07ef01895957c839fd06a8dd02693e0c343c3f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020643"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739748"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Contrôle d'accès pour les données sensibles présentes dans les packages
   Pour protéger les données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous pouvez définir un niveau de protection qui permet de protéger uniquement les données sensibles ou toutes les données du package. En outre, vous pouvez chiffrer ces données avec un mot de passe ou une clé utilisateur ou vous fier à la base de données pour chiffrer les données. De plus, le niveau de protection que vous utilisez pour un package n'est pas nécessairement statique, mais change tout au long du cycle de vie du package. On définit souvent un niveau de protection pendant le développement et un autre dès le déploiement du package.  

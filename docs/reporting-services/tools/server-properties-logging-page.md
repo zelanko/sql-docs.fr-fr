@@ -4,19 +4,18 @@ ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.logging.f1
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df7e454a1e80250fae1a84ae2b658c7942a5d90b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a30f1087e30665287d37c26c5c36a2557b634669
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280869"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827015"
 ---
 # <a name="server-properties-logging-page"></a>Propriétés du serveur (page Enregistrement)
   Utilisez cette page [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] pour définir des limites sur les données d’exécution des rapports qui sont collectées par un serveur de rapports. Les données d'exécution sont stockées en interne dans la base de données du serveur de rapports. Vous pouvez effectuer le suivi de l'activité des rapports pour le serveur de rapports qui s'exécute en mode natif ou mode intégré SharePoint. Si le serveur de rapports fait partie d'un déploiement avec montée en puissance parallèle, le journal d'exécution des rapports gère un enregistrement de l'ensemble de l'activité des rapports pour tout le déploiement dans un seul fichier journal.  

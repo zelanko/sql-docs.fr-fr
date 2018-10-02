@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03fadd534280172b14b251d6b143335348a15911
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3d28fe017e3757b3f21d6d735911692708eb66c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330183"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726657"
 ---
 # <a name="lesson-3-2---adding-and-configuring-logging"></a>Leçon 3-2 : Ajout et configuration de la journalisation
 Dans cette tâche, vous allez activer la journalisation pour le flux de données dans le package Lesson 3.dtsx. Vous allez ensuite configurer un module fournisseur d'informations pour les fichiers texte, pour enregistrer les événements PipelineExecutionPlan et PipelineExecuteTrees. Le module fournisseur d'informations pour les fichiers texte crée des journaux faciles à créer et à déplacer. La simplicité de ces fichiers journaux les rend particulièrement utiles pendant la phase de test de base d'un package. Vous pouvez également consulter les entrées du journal dans la fenêtre Journaux d'événements du Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
@@ -63,5 +59,5 @@ Dans cette tâche, vous allez activer la journalisation pour le flux de données
 14. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Next Steps  
-[Étape 3 : Test de la leçon 3 du package du didacticiel](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+[Étape 3 : Test de la leçon 3 du package du tutoriel](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   

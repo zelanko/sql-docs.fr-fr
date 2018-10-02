@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd8856dce7d7671b075316cabfbbe697b79125a6
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d40b8179e008312752e6b1a90f83627fdcf88eea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280673"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826977"
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Effets de graphique - 3D, biseau et autres (Générateur de rapports)
   Des effets 3D (en trois dimensions) peuvent être utilisés pour donner de la profondeur et augmenter l’impact visuel des graphiques de vos rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par exemple, si vous voulez insister sur un secteur particulier d'un graphique à secteurs éclatés, vous pouvez faire pivoter le graphique et changer sa perspective pour que les lecteurs remarquent ce secteur en premier. Lorsque des effets 3D sont appliqués à votre graphique, les couleurs de dégradé et les styles de hachurage sont désactivés.  

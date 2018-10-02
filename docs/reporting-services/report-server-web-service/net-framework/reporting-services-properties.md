@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 - properties [Reporting Services], about properties
@@ -20,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5970c78650137871a62bf95d82223f604421cb70
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e2b7495edef06da522112932c75d5f35684313f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269283"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742617"
 ---
 # <a name="reporting-services-properties"></a>Propriétés de Reporting Services
   Le serveur de rapports définit un jeu de propriétés système qui sont communes au serveur de rapports et un jeu de propriétés des éléments associées à un élément individuel stocké dans la base de données du serveur de rapports. Les propriétés définies par le serveur de rapports ne peuvent pas être supprimées, et sont dans certains cas en lecture seule. Une application peut étendre des propriétés système et des propriétés des éléments en ajoutant aux propriétés système et des éléments d'autres propriétés définies par l'utilisateur.  

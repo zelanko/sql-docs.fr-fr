@@ -5,12 +5,8 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,16 +19,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b2d98a184415fe0cf4cc3dd1d13b66db1dd5c27
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 8c25471732d4be4f241689c6c2abb3d4dc4d0672
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332253"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789627"
 ---
 # <a name="validating-a-data-flow-component"></a>Validation d'un composant de flux de données
   La méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> de la classe de base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> est fournie pour empêcher l'exécution d'un composant qui n'est pas configuré correctement. Cette méthode vous permet de vérifier qu'un composant dispose du nombre d'objets d'entrée et de sortie attendu, que les valeurs des propriétés personnalisées du composant sont acceptables et que toutes les connexions nécessaires sont spécifiées. Elle vous permet également de vérifier que les colonnes dans les collections d'entrée et de sortie contiennent des types de données corrects et que le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> de chaque colonne est défini de manière appropriée pour le composant. L'implémentation de la classe de base contribue au processus de validation en contrôlant la collection de colonnes d'entrée du composant et en vérifiant que chaque colonne de la collection fait référence à une colonne dans le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> du composant en amont.  

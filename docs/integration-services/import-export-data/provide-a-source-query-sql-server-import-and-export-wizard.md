@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32fb093347ba11fb145ce96e85cba31f75400886
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 7f7d24e9bdfbe1b749a3a990d6cf72921ff2fecb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332113"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824747"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Fournir une requête source (Assistant Importation et Exportation SQL Server)
 Si vous avez indiqué que vous souhaitez fournir une requête pour sélectionner les données à copier, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Fournir une requête source**. Dans cette page, vous écrivez et testez la requête SQL qui sélectionne les données à copier de la source de données vers la destination. Vous pouvez également coller le texte d’une requête enregistrée, ou le charger à partir d’un fichier.

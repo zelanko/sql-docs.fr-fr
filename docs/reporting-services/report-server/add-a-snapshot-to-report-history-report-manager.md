@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], adding snapshots
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1fc968838e00f73400cd5a564d49035680553273
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 70d50b16173cab61a5b1688c66b460f17d60fd76
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281251"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797427"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>ajout d'un instantané à un historique de rapport (Gestionnaire de rapports)
   L'historique de rapport est un ensemble d'instantanés de rapport que vous créez au fil du temps. Un instantané de rapport est un rapport contenant des informations de mise en page et des résultats de requêtes récupérés à un moment précis. Contrairement aux rapports à la demande, qui récupèrent les résultats des requêtes récentes lorsque vous les sélectionnez, les instantanés de rapport sont traités par planification, puis enregistrés sur un serveur de rapports. Lorsque vous sélectionnez un instantané de rapport pour le visualiser, le serveur de rapports récupère le rapport stocké dans la base de données du serveur de rapports, puis affiche les données et la mise en page telles qu'elles étaient lors de la création de l'instantané.  

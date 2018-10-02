@@ -5,22 +5,19 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 85ba2c314ec273926321e4964bd5eeceaaa84fc9
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5d52335f4b80a4cd1ff06e9fe8084d46a8d0d089
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400641"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854997"
 ---
 # <a name="custom-index-master-data-services"></a>Index personnalisé (Master Data Services)
 
@@ -61,7 +58,7 @@ ms.locfileid: "35400641"
   
 -   Le type d’un attribut inclus dans un index personnalisé n’est pas modifiable.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

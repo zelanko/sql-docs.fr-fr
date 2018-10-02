@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DecryptByCert_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - decryption [SQL Server], certificates
 - DECRYPTBYCERT function
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d94bc1ba7a11f9d934118ba649bff58e84b9fb3
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: ff7cd9e82f2e70e39b02f10726acbae657ad670c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787090"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741197"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +64,7 @@ Variable de type **nchar** ou **nvarchar** contenant le mot de passe utilisé po
 ## <a name="remarks"></a>Notes   
 Cette fonction déchiffre les données à l'aide de la clé privée d'un certificat. Les opérations de chiffrement/déchiffrement qui utilisent des clés asymétriques consomment une grande quantité de ressources. Nous recommandons donc aux développeurs d’éviter d’utiliser [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) et DECRYPTBYCERT pour les opérations de chiffrement/déchiffrement de routine des données utilisateur.  
 
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 `DECRYPTBYCERT` nécessite l’autorisation CONTROL sur le certificat.  
   
 ## <a name="examples"></a>Exemples  

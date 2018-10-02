@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 01/10/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9ed204382cf962e82fc6418a57343909515afaca
-ms.sourcegitcommit: 5e7f347b48b7d0400fb680645c28e781f2921141
+ms.openlocfilehash: cff08e85cb8235567dd2ce7e8f8294f465892b47
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39496708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838867"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ Consultez les instructions suivantes pour effectuer la mise à niveau/mise à jo
   
 - Avant de procéder à la mise à niveau propagée :  
   
-    - Procédez à un essai de basculement manuel sur au moins l’une de vos instances de réplica en validation synchrone.  
+    - Procédez à un essai de basculement manuel sur au moins l’une de vos instances de réplica avec validation synchrone.  
   
     - Protégez vos données en effectuant une sauvegarde complète de chaque base de données de disponibilité.  
   
@@ -61,11 +58,11 @@ Consultez les instructions suivantes pour effectuer la mise à niveau/mise à jo
   
 -   Pendant une mise à niveau de version, les instances de réplica secondaire accessibles en écriture ne peuvent pas être lues après une mise à niveau d’un réplica secondaire et avant que le réplica principal ne soit basculé vers un réplica secondaire mis à niveau ou que le réplica principal ne soit mis à niveau.  
   
--   Pour éviter les basculements involontaires des groupes de disponibilité pendant le processus de mise à niveau, supprimez le basculement des groupes de disponibilité dans tous les réplicas en validation synchrone avant de commencer.  
+-   Pour éviter les basculements involontaires des groupes de disponibilité pendant le processus de mise à niveau, supprimez le basculement des groupes de disponibilité dans tous les réplicas avec validation synchrone avant de commencer.  
   
 -   Ne mettez à pas à niveau l’instance du réplica principal avant de basculer le groupe de disponibilité sur une instance mise à niveau qui a un réplica secondaire. Sinon, les applications clientes risquent de connaître des temps morts prolongés lors de la mise à niveau sur l’instance de réplica principal.  
   
--   Basculez toujours le groupe de disponibilité sur une instance de réplica secondaire en validation synchrone. Si vous basculez le groupe de disponibilité sur une instance de réplica secondaire en validation asynchrone, les bases de données sont exposées à une perte de données, et le déplacement des données est automatiquement suspendu jusqu’à ce que vous le repreniez manuellement.  
+-   Basculez toujours le groupe de disponibilité sur une instance de réplica secondaire avec validation synchrone. Si vous basculez le groupe de disponibilité sur une instance de réplica secondaire en validation asynchrone, les bases de données sont exposées à une perte de données, et le déplacement des données est automatiquement suspendu jusqu’à ce que vous le repreniez manuellement.  
   
 -   Ne procédez pas à la mise à niveau de l’instance de réplica principal avant la mise à niveau ou à jour des instances nœuds de réplica secondaire. Un réplica principal mis à niveau n'envoie plus les journaux à un réplica secondaire dont l’instance [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] n'a pas encore été mise à niveau à la même version. Lorsque le déplacement des données vers un réplica secondaire est suspendu, aucun basculement automatique ne se produit pour ce réplica, et vos bases de données de disponibilité sont vulnérables à une perte de données.  
   
@@ -76,13 +73,13 @@ Consultez les instructions suivantes pour effectuer la mise à niveau/mise à jo
   
  ![Mise à niveau de groupe de disponibilité dans un scénario HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Mise à niveau de groupe de disponibilité dans un scénario HADR")  
   
-1.  Supprimer le basculement automatique sur tous les réplicas en validation synchrone  
+1.  Supprimer le basculement automatique sur tous les réplicas avec validation synchrone  
   
-2.  Mettre à niveau toutes les instances de réplica secondaire distant exécutant les réplicas secondaires en validation asynchrone  
+2.  Mettre à niveau toutes les instances de réplica secondaire distant exécutant les réplicas secondaires avec validation asynchrone  
   
 3.  Mettre à niveau instances de réplica secondaire local qui n'exécutent pas le réplica principal  
   
-4.  Basculer manuellement le groupe de disponibilité sur un réplica secondaire local en validation synchrone  
+4.  Basculer manuellement le groupe de disponibilité sur un réplica secondaire local avec validation synchrone  
   
 5.  Mettre à niveau ou mettre à jour l'instance de réplica local qui hébergeait précédemment le réplica principal  
   
@@ -91,11 +88,11 @@ Consultez les instructions suivantes pour effectuer la mise à niveau/mise à jo
  Si nécessaire, effectuez un basculement manuel supplémentaire pour rétablir la configuration d’origine du groupe de disponibilité.  
   
 ## <a name="ag-with-one-remote-secondary-replica"></a>Groupe de disponibilité avec un réplica secondaire distant  
- Si vous avez déployé un groupe de disponibilité uniquement pour la récupération d’urgence, vous devez peut-être le basculer sur un réplica secondaire en validation asynchrone. Cette configuration est illustrée dans la figure ci-dessous :  
+ Si vous avez déployé un groupe de disponibilité uniquement pour la récupération d’urgence, vous devez peut-être le basculer sur un réplica secondaire avec validation asynchrone. Cette configuration est illustrée dans la figure ci-dessous :  
   
  ![Mise à niveau de groupe de disponibilité dans un scénario de récupération d’urgence](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Mise à niveau de groupe de disponibilité dans un scénario de récupération d’urgence")  
   
- Dans ce cas, vous devez basculer le groupe de disponibilité sur le réplica secondaire en validation asynchrone pendant la mise à niveau propagée. Pour éviter la perte de données, changez le mode de validation en validation synchrone et attendez que le réplica secondaire soit synchronisé avant de basculer le groupe de disponibilité. Par conséquent, le processus de mise à niveau à jour peut ressembler à ce qui suit :  
+ Dans ce cas, vous devez basculer le groupe de disponibilité sur le réplica secondaire avec validation asynchrone pendant la mise à niveau propagée. Pour éviter la perte de données, changez le mode de validation en validation synchrone et attendez que le réplica secondaire soit synchronisé avant de basculer le groupe de disponibilité. Par conséquent, le processus de mise à niveau à jour peut ressembler à ce qui suit :  
   
 1.  Mise à niveau l’instance de réplica secondaire sur le site distant  
   
@@ -122,50 +119,50 @@ Consultez les instructions suivantes pour effectuer la mise à niveau/mise à jo
   
  ![Mise à niveau de groupe de disponibilité avec des instances de cluster de basculement](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Mise à niveau de groupe de disponibilité avec des instances de cluster de basculement")  
   
-1.  Mettre à niveau ou à jour DISTANT2  
+1.  Mettre à niveau ou à jour REMOTE2  
   
-2.  Basculer ICF2 sur DISTANT2  
+2.  Basculer FCI2 sur REMOTE2  
   
-3.  Mettre à niveau ou à jour DISTANT1  
+3.  Mettre à niveau ou à jour REMOTE1  
   
-4.  Mettre à niveau ou à jour PRINCIPAL2  
+4.  Mettre à niveau ou à jour PRIMARY2  
   
-5.  Basculer ICF1 sur PRINCIPAL2  
+5.  Basculer FCI1 sur PRIMARY2  
   
-6.  Mettre à niveau ou à jour PRINCIPAL1  
+6.  Mettre à niveau ou à jour PRIMARY1  
   
 ## <a name="upgrade-or-update-sql-server-instances-with-multiple-ags"></a>Mettre à niveau ou à jour des instances SQL Server avec plusieurs groupes de disponibilité  
  Si vous exécutez plusieurs groupes de disponibilité avec des réplicas principaux sur des nœuds de serveur distincts (configuration active/active), le chemin de mise à niveau implique des étapes de basculement supplémentaires pour assurer la haute disponibilité dans le processus. Supposons que vous exécutez trois groupes de disponibilité sur trois nœuds de serveur et que tous les réplicas s’exécutent en mode de validation synchrone, comme l’illustre le tableau suivant :  
   
-|Groupe de disponibilité|Nœud1|Nœud2|Nœud3|  
+|Groupe de disponibilité|Nœud1|Nœud2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|GD1|Principal|||  
-|GD2||Principal||  
-|GD3|||Principal|  
+|AG1|Principal|||  
+|AG2||Principal||  
+|AG3|||Principal|  
   
- Il peut s’avérer nécessaire d’effectuer une mise à niveau propagée à charge équilibrée dans l’ordre suivant :  
+ Il peut s'avérer nécessaire d'effectuer une mise à niveau/ propagée à charge équilibrée dans l'ordre suivant :  
   
-1.  Basculer GD2 sur Nœud3 (pour libérer Nœud2)  
+1.  Basculer AG2 sur Nœud3 (pour libérer Nœud2)  
   
 2.  Mettre à niveau ou à jour Nœud2  
   
-3.  Basculer GD1 sur Nœud2 (pour libérer Nœud1)  
+3.  Basculer AG1 sur Nœud2 (pour libérer Nœud1)  
   
 4.  Mettre à niveau ou à jour Nœud1  
   
-5.  Basculer GD2 et GD3 sur Nœud1 (pour libérer Nœud3)  
+5.  Basculer AG2 et AG3 sur Nœud1 (pour libérer Nœud3)  
   
 6.  Mettre à niveau ou à jour Nœud3  
   
-7.  Basculer GD3 sur Nœud3  
+7.  Basculer AG3 sur Nœud3  
   
  Cette séquence de mise à niveau a un temps d’arrêt moyen de moins de deux basculements par groupe de disponibilité. La configuration obtenue est illustrée dans le tableau suivant.  
   
-|Groupe de disponibilité|Nœud1|Nœud2|Nœud3|  
+|Groupe de disponibilité|Nœud1|Nœud2|Node3|  
 |------------------------|-----------|-----------|-----------|  
-|GD1||Principal||  
-|GD2|Principal|||  
-|GD3|||Principal|  
+|AG1||Principal||  
+|AG2|Principal|||  
+|AG3|||Principal|  
   
  Le chemin d'accès de la mise à niveau varie selon votre implémentation. Le temps mort que les applications clientes peuvent rencontrer varie également.  
   
@@ -201,8 +198,8 @@ Pour effectuer une mise à niveau propagée d’un groupe de disponibilité dist
 
 | Groupe de disponibilité | Réplica principal | Réplica secondaire|
 | :------ | :----------------------------- |  :------ |
-| GD1 | NŒUD1\GDSQL | NŒUD2\GDSQL|
-| GD2 | NŒUD3\GDSQL | NŒUD4\GDSQL|
+| AG1 | NŒUD1\GDSQL | NŒUD2\GDSQL|
+| AG2 | NŒUD3\GDSQL | NŒUD4\GDSQL|
 | GDDistribué| GD1 (global) | GD2 (redirecteur) |
 | &nbsp; | &nbsp; | &nbsp; |
 

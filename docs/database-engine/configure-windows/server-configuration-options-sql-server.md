@@ -5,9 +5,7 @@ ms.date: 04/13/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - configuration du serveur (SQL Server)
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 - administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
-caps.latest.revision: 128
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: af328924116f1409fa6507c30353c74dca93504f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7388c5c768c9ffe6865a46f4513090cc1716c59e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409507"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837433"
 ---
 # <a name="server-configuration-options-sql-server"></a>Options de configuration du serveur (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,8 +89,7 @@ Les options à configuration automatique correspondent aux options que [!INCLUDE
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
     |[Sécurité CLR stricte](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|0|1|0|  
     |[common criteria compliance enabled](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A, RR)|0|1|0|  
-    |
-  [authentification de la base de données autonome](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|1|0|  
+    |[authentification de la base de données autonome](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|1|0|  
     |[cost threshold for parallelism](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
     |[cross db ownership chaining](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)|0|1|0|  
     |[cursor threshold](../../database-engine/configure-windows/configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - read-only routing
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc35cf1a3ea48140dbb1b055d9020909ac8214a7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b2b6b343389c7ce12e7909ddbfe08882a85730a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794307"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Configurer le routage en lecture seule pour un groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ Le routage en lecture seule est disponible dans [!INCLUDE[sssql15](../../../incl
   
 ####  <a name="Permissions"></a> Permissions  
   
-|Tâche|Autorisations|  
+|Tâche|Permissions|  
 |----------|-----------------|  
 |Pour configurer des réplicas lors de la création d'un groupe de disponibilité|Requiert le rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.|  
 |Pour modifier un réplica de disponibilité :|Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.|  

@@ -4,19 +4,16 @@ ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08632bb104904a20a730b0e4439d0bdef71441fb
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e956658d0a831835aa4c6067b17f3169de405da1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274471"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772633"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Leçon 4 : Ajout d'une table au rapport (Reporting Services)
 Une fois le dataset défini, vous pouvez commencer à concevoir le rapport. Pour créer une mise en page de rapport, faites glisser les régions de données, les zones de texte, les images et autres éléments que vous souhaitez inclure dans un rapport vers l'aire de conception.  

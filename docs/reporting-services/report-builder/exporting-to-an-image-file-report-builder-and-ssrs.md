@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3d815aa9e20f16ff9ee8a0198a9d6c076097a741
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1c46de7c1515d605dbe88d939ab9de2b161d7689
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747267"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>Exportation vers un fichier image (Générateur de rapports et SSRS)
   L’extension de rendu de type image effectue le rendu d’un rapport paginé dans un fichier bitmap ou un métafichier. Par défaut, l'extension de rendu de type image génère un fichier TIFF du rapport, qui peut être présenté dans plusieurs pages. Lorsque le client reçoit l'image, il peut l'afficher dans une visionneuse d'images et l'imprimer. Cette rubrique fournit des informations spécifiques au rendu de l'image et décrit les exceptions aux règles de rendu.  

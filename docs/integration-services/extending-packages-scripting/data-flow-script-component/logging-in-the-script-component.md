@@ -4,27 +4,21 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Script component [Integration Services], logging
 ms.assetid: 17c19787-379e-43fe-9107-e36e17ecda53
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 25110d292f1208f9d70fbdf04ede09e88d2a2597
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9a45bb6728637d087063d4e90c51734396e98c06
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785907"
 ---
 # <a name="logging-in-the-script-component"></a>Journalisation dans le composant Script
   La journalisation dans des packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] vous permet d'enregistrer des informations détaillées sur l'avancement, les résultats et les problèmes d'exécution en enregistrant des événements prédéfinis ou des messages définis par l'utilisateur en vue d'une analyse ultérieure. Le composant Script peut utiliser la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> de la classe **ScriptMain** pour enregistrer des données définies par l’utilisateur. Si la journalisation est activée et que l’événement **ScriptComponentLogEntry** est sélectionné pour la journalisation sous l’onglet **Détails** de la boîte de dialogue **Configurer les journaux SSIS**, un seul appel à la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> stocke les informations sur l’événement dans tous les modules fournisseurs d’informations configurés pour la tâche de flux de données.  

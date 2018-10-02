@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 381d7b5d80281832081a7a08defbd0b3cb76dda5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 115a6ebf263555e98a321cbe582a663d4fcf7019
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408861"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843113"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Leçon 4 : Ajouter une redirection de flux d’erreurs avec SSIS
 Pour traiter les erreurs qui risquent de se produire dans le processus de transformation, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous permet de décider par composant et par colonne comment traiter les données qui ne peuvent pas être transformées. Vous pouvez choisir d'ignorer une erreur dans certaines colonnes, de rediriger dans sa totalité la ligne qui a échoué ou simplement de faire échouer le composant. Par défaut, tous les composants de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sont configurés pour échouer lorsque des erreurs se produisent. Le fait de faire échouer un composant entraîne l'échec du package et l'arrêt de tous les traitements ultérieurs.  
@@ -41,11 +37,11 @@ Cette leçon contient les tâches suivantes :
   
 -   [Étape 1 : Copie du package de la leçon 3](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [Étape 2 : Création d'un fichier corrompu](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
+-   [Étape 2 : Création d’un fichier corrompu](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
--   [Étape 3 : Ajout de redirection de flux d'erreurs](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
+-   [Étape 3 : Ajout de la redirection de flux d’erreurs](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
--   [Étape 4 : Ajout d'une destination de fichier plat](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
+-   [Étape 4 : Ajout d’une destination de fichier plat](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
 -   [Étape 5 : Test de la leçon 4 du Package du didacticiel](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   

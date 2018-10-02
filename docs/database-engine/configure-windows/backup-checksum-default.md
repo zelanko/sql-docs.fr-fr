@@ -5,21 +5,18 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
-caps.latest.revision: 5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d0804183f12f9afbc2debcbd39c3b838ec5fd060
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78ec9caa60a5291ecd5b968a9ac7d979e04599da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795387"
 ---
 # <a name="backup-checksum-default"></a>paramètre par défaut de la somme de contrôle de sauvegarde
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +29,7 @@ ms.locfileid: "32863164"
 |-|-|  
 |**Value**|**Signification**|  
 |0|Désactivé. Il s'agit du paramètre par défaut.|  
-| 1|Activé|  
+|1|Activé|  
   
  Ce paramètre prend effet immédiatement.  
   

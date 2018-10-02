@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a15a323bdffeac0671cf04c3fd91df120c8b31f6
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 158e149e79ead95e31cc4e04b598a51effabc38a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279350"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816577"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>Créer une matrice (Générateur de rapports et SSRS)
   Utilisez une matrice pour afficher des données groupées et des informations récapitulatives. Vous pouvez regrouper des données en fonction de plusieurs champs ou expressions dans des groupes de lignes et de colonnes. Une matrice fournit des fonctionnalités similaires à celles des analyses croisées et des tableaux croisés dynamiques. À l'exécution, lorsque les données de rapport sont associées aux régions de données, une matrice se développe horizontalement et verticalement sur la page. Les valeurs des cellules de matrice sont des valeurs d'agrégat limitées à l'intersection des groupes de lignes et de colonnes auxquels la cellule appartient. Vous pouvez mettre en forme les lignes et les colonnes afin de mettre en surbrillance les données que vous souhaitez mettre en évidence. Vous pouvez également inclure des bascules d'extraction qui permettent initialement de masquer les données de détail ; l'utilisateur peut ensuite cliquer sur ces bascules pour afficher plus ou moins de détails, en fonction de ses besoins.  

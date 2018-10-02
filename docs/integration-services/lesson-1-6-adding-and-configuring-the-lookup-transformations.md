@@ -5,23 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57cadee90ac69a76942c6b3c763ffb9900c4f8d8
-ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
+ms.openlocfilehash: 8356a7ff8ee0cdb0e55bcd313a01a8ce1fe045ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297405"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765567"
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>Leçon 1-6 : Ajout et configuration des transformations de recherche
 Une fois que vous avez configuré la source de fichier plat pour extraire les données du fichier source, la tâche suivante consiste à définir les transformations de recherche nécessaires pour obtenir les valeurs de **CurrencyKey** et **DateKey**. Une transformation de recherche effectue une recherche en joignant les données dans la colonne d'entrée spécifiée à une colonne dans un dataset de référence. Le dataset de référence peut être une table ou une vue existante, une nouvelle table ou le résultat d'une instruction SQL. Dans ce didacticiel, la transformation de recherche utilise un gestionnaire de connexions OLE DB pour se connecter à la base de données qui contient les données servant de source au jeu de données de référence.  

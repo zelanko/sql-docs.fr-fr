@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - OpenSqlFilestream
@@ -17,16 +15,15 @@ apitype: DLLExport
 helpviewer_keywords:
 - OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79d223aeceedd1fcfd596f1e0bdad92569eeb3d1
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 7cf761fe98c7450578314f0f60b7d05c51407269
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36848737"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818547"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accéder à des données FILESTREAM avec OpenSqlFilestream
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ HANDLE OpenSqlFilestream (
 |Nom   |Valeur|Signification|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|Les données peuvent être lues à partir du fichier.|  
-|SQL_FILESTREAM_WRITE| 1|Les données peuvent être écrites dans le fichier.|  
+|SQL_FILESTREAM_WRITE|1|Les données peuvent être écrites dans le fichier.|  
 |SQL_FILESTREAM_READWRITE|2|Les données peuvent être écrites dans le fichier et lues à partir de celui-ci.|  
   
 > [!NOTE]  

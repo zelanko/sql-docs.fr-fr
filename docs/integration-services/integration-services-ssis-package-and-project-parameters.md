@@ -5,24 +5,21 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.paramterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7063c3b5aabc396fc35f05b5a1d271d0a12d7204
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8205582caebddb941d3c5dc512a3952fbf9f8f3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404371"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750357"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Paramètres de projet et de package Integration Services (SSIS)
   Les paramètres[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) vous permettent d'affecter des valeurs aux propriétés dans des packages au moment de l'exécution du package. Vous pouvez créer des *paramètres de projet* au niveau du projet et des *paramètres de package* au niveau du package. Les paramètres du projet sont utilisés pour fournir une entrée externe que le projet reçoit à un ou plusieurs packages du projet. L'utilisation de paramètres de package vous permet de modifier l'exécution du package sans avoir à modifier et à redéployer le package.  
@@ -43,7 +40,7 @@ ms.locfileid: "35404371"
   
 -   [Boîte de dialogue Configurer](../integration-services/service/configure-dialog-box.md)  
   
--   [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+-   [Exécuter le package, boîte de dialogue](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
 ### <a name="parameter-values"></a>Valeurs des paramètres  
  Attribuez au plus trois types différents de valeurs à un paramètre. Lorsque l'exécution d'un package démarre, une valeur unique est utilisée pour le paramètre, et le paramètre est résolu à sa valeur littérale finale.  

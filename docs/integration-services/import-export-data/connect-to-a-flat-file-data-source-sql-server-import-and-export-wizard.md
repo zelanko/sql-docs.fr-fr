@@ -5,21 +5,18 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ffe74a41067f146ed94289f04f81fe5681933b87
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1c893a38541d6e79380b25f0e8e5414a6ee0d2b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404421"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853367"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server)
 Cette rubrique vous montre comment se connecter à une source de données de **fichier plat** (fichier texte) à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server. Ces deux pages de l’Assistant présentent des jeux d’options différents pour les fichiers plats, ainsi cette rubrique décrit la source de fichier plat et la destination de fichier plat séparément.

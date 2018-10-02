@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2da753a4961db972d14e997db9ef5b0682fdb3c5
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6b4d864f2d9f29e24fc8502a1e0f1c53c096cb61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270342"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783977"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Mettre en forme du texte dans une zone de texte (Générateur de rapports et SSRS)
   Vous pouvez mettre en forme indépendamment toute partie du texte dans une zone de texte, et mélanger le texte de l'espace réservé à du texte statique dans une zone de texte. Cette possibilité de mélanger les formats et d'ajouter le texte d'espace réservé vous permet de créer des publipostages ou des modèles de texte dans votre rapport. Toute expression peut être définie et mise en forme séparément à l'aide d'un espace réservé.  

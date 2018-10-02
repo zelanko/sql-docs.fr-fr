@@ -5,23 +5,20 @@ ms.date: 01/11/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9416662ecd61636bd39f64f529575b2be30d70d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f1a48018175dd7c0a92a83fdc68d6451324cd2fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328503"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738187"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Exécution de l'opération (Assistant Importation et Exportation SQL Server)
 Une fois que vous avez vérifié les choix que vous avez effectués dans l’Assistant et cliqué sur **Terminer** dans la page **Terminer l’Assistant** , l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Exécution de l’opération**. Cette page indique la progression et le résultat de l’opération que vous avez configurée dans les pages précédentes. Vous n’avez aucune action à effectuer dans cette page.

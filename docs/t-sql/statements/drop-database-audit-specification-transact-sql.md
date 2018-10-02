@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_DATABASE_AUDIT_SPECIFICATION_TSQL
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - database audit specification
 - DROP DATABASE AUDIT SPECIFICATION statement
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3feb0b24e1a92a0e681ece96db0d615c7ce5ee3b
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 63a88b1b389f9e3e3df5de3634ead91a3f757a18
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782780"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742077"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Notes   
  DROP DATABASE AUDIT SPECIFICATION supprime les métadonnées pour la spécification d'audit, mais pas les données d'audit recueillies avant l'exécution de la commande DROP. Vous devez définir l’état d’une spécification d’audit de base de données sur OFF à l’aide de `ALTER DATABASE AUDIT SPECIFICATION` pour que cette spécification puisse être supprimée.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les utilisateurs disposant de l’autorisation **ALTER ANY DATABASE AUDIT** peuvent supprimer des spécifications d’audit de base de données.  
   
 ## <a name="examples"></a>Exemples  

@@ -4,7 +4,6 @@ ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, components
@@ -17,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5b08d882e1e44b7afc43b16042d877996136a81e
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 5751b3b8c6a2c709a2793374c4a81f6224a7ea61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774147"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Configurer et administrer un serveur de rapports (SSRS en mode natif)
   Cette rubrique récapitule les approches que vous pouvez utiliser pour configurer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Elle inclut également une liste de rubriques qui expliquent comment configurer des composants, des fonctions ou des fonctionnalités de serveur spécifiques. Pour configurer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez :  

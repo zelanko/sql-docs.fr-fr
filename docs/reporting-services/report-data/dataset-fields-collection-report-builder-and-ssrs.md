@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d0986f432f2d94bcc81bdf2112ebe19c589767ae
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1acafd612881dfc107d72239c1e521a4edead043
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273601"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853381"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Collection de champs de dataset (Générateur de rapports et SSRS)
   Les champs de dataset représentent les données d'une connexion de données. Un champ peut représenter des données numériques ou non numériques. À titre d'exemples, citons des chiffres d'affaires, des totaux de ventes, des noms de client, des identificateurs de base de données, des URL, des images, des données spatiales et des adresses de messagerie. Sur l'aire de conception, les champs s'affichent sous la forme d'expressions dans les éléments de rapport tels que les zones de texte, les tables et les graphiques.  

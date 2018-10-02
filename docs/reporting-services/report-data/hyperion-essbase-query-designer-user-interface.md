@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10013"
@@ -18,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bc91b422-c6ab-4062-a300-8290fae6191b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 99390236fdd666bbd8dc01af1608016b898e750b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: be5b953ee57a235a9178ce343808a0e298b61786
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271347"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799687"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes Hyperion Essbase
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique permettant de générer des requêtes MDX (Multidimensional Expression) pour une source de données [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres d'un cube défini sur la source de données pour créer une requête MDX qui récupère des données lors du traitement du rapport.  

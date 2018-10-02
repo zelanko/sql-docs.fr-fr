@@ -4,19 +4,18 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - renaming report servers
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bfa856c392dd133ff94c4079faceea95f5c422b0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7acbbbd6ef840ae088f57fe42afe6b66329f1c90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270601"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763337"
 ---
 # <a name="rename-a-report-server-computer"></a>Changement de nom d'un ordinateur serveur de rapports
   Le renommage d’un ordinateur entraîne une modification équivalente du nom pour le serveur web et l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (si elle se trouve sur le même ordinateur). Dans certains cas, il est possible que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne soit pas accessible après la modification du nom d'un ordinateur. Suivez les instructions de cette rubrique pour reconfigurer un serveur de rapports après un changement de nom d'ordinateur.  

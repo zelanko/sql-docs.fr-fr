@@ -5,9 +5,7 @@ ms.date: 10/12/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - UNIQUE_TSQL
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - constraints [SQL Server], creating
 - constraints [SQL Server], unique
 ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dea4ba8f06c7ee40cf8584ea223ccd31e1f1df6f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 651a397a199f2d42aa2b0dab33d2864a0711a492
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073811"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756637"
 ---
 # <a name="create-unique-constraints"></a>Créer des contraintes uniques
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -64,7 +61,7 @@ ms.locfileid: "43073811"
   
 4.  Dans la grille sous **Général**, cliquez sur **Type** et choisissez **Clé unique** dans la zone de liste déroulante située à droite de la propriété.  
   
-5.  Dans le menu **Fichier**, cliquez sur **Enregistrer***nom de la table*.  
+5.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

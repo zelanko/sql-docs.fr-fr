@@ -5,21 +5,18 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d3963a3908fe50ddf0a00ac0263009f033abe1a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5b47a0f007ce94e432ee85f5547a0d290b028888
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408891"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853277"
 ---
 # <a name="catalogexecutablestatistics"></a>catalog.executable_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +37,7 @@ ms.locfileid: "35408891"
 |Execution_result|SMALLINT|Les valeurs possibles sont les suivantes :<br /><br /> 0 (réussite)<br /><br /> 1 (échec)<br /><br /> 2 (achèvement)<br /><br /> 3 (annulé)|  
 |Execution_value|sql_variant|Valeur retournée par l'exécution. Il s'agit d'une valeur définie par l'utilisateur.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  La vue requiert l'une des autorisations suivantes :  
   
 -   Autorisation READ sur l'instance de l'exécution.  

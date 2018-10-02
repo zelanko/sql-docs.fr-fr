@@ -5,9 +5,7 @@ ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTPTR_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 699df374b814c1332fa32a16b42974355e569e7a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4eb65f9b2d0c19ed2e32e6466beec715790f81c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971111"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755143"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Fonctions texte et image - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +63,10 @@ TEXTPTR ( column )
   
 |Fonction ou instruction|Description|  
 |---------------------------|-----------------|  
-|PATINDEX **('***%pattern%***' ,** *expression***)**|Retourne la position d’un caractère dans la chaîne de caractères spécifiée dans les colonnes **text** et **ntext**.|  
-|DATALENGTH **(***expression***)**|Retourne la longueur des données dans les colonnes de type **text**, **ntext** et **image**.|  
+|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|Retourne la position d’un caractère dans la chaîne de caractères spécifiée dans les colonnes **text** et **ntext**.|  
+|DATALENGTH<b>(</b>_expression_**)**|Retourne la longueur des données dans les colonnes de type **text**, **ntext** et **image**.|  
 |SET TEXTSIZE|Retourne la limite, en octets, des données **text**, **ntext** ou **image** à retourner avec une instruction SELECT.|  
-|SUBSTRING**(***text_column*, *start*, *length***)**|Retourne une chaîne **varchar** spécifiée par le décalage *start* et par la longueur *length*. La longueur doit être inférieure à 8 Ko.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|Retourne une chaîne **varchar** spécifiée par le décalage *start* et par la longueur *length*. La longueur doit être inférieure à 8 Ko.|  
   
 ## <a name="examples"></a>Exemples  
   

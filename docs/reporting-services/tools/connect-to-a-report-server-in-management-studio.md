@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.connecttors.connectionproperties.f1
@@ -19,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 40ee30be70b9f5e180a4d437d95a1eeb0bf9f576
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 5c580efe78572b757fc92f591ba4569d595fb4fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737297"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Se connecter à un serveur de rapports dans Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit l’Explorateur d’objets, qui vous permet de vous connecter à n’importe quel serveur de la famille [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de parcourir son contenu sous forme graphique. Pour Reporting Services, vous pouvez utiliser l'Explorateur d'objets pour effectuer les opérations suivantes :  

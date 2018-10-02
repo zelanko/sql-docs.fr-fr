@@ -5,9 +5,7 @@ ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.executesqltask.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab20db9fedc4585e8d1011fa7cc29a60056fefe5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 2400595e7e32cf2eb9e4adee010c844145aac959
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084481"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721767"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
   La tâche d'exécution SQL exécute des instructions ou des procédures stockées SQL à partir d'un package. La tâche peut contenir une seule ou plusieurs instructions SQL s'exécutant de façon séquentielle. Vous pouvez utiliser la tâche d'exécution SQL aux fins suivantes :  

@@ -4,7 +4,6 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10508"
@@ -16,12 +15,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 823c0a7dfc18ffc7504c65a8967c0f203ade596c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 851451b025b28db88b7939511778c259b337dfd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267391"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785697"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Cartes (Générateur de rapports et SSRS)
   Pour visualiser des données métier sur un arrière-plan géographique, vous pouvez ajouter une carte à votre rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Le type de carte que vous sélectionnez dépend des informations que vous souhaitez communiquer dans votre rapport. Vous pouvez ajouter une carte qui affiche uniquement des emplacements géographiques, ou une carte à bulles dans laquelle la taille des bulles varie en fonction du nombre de ménages habitant dans une zone, ou une carte à marqueurs faisant varier le style de marqueur en fonction du produit ayant le plus gros chiffre d'affaires pour chaque magasin, ou encore une carte linéaire pour afficher des itinéraires entre des magasins.  

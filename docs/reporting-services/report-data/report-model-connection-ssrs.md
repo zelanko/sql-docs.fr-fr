@@ -4,17 +4,16 @@ ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f82c17407e6b7861e597a34d92ee16751e8ad980
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6fb1b5f810af0385195ad1f2f6bec048152887e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264631"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856803"
 ---
 # <a name="report-model-connection-ssrs"></a>Connexion à un modèle de rapport (SSRS)
   Pour inclure les données d'un modèle de rapport, vous devez avoir un dataset basé sur un modèle de rapport en tant que source de données. Contrairement aux autres sources de données de rapport, il n'y a aucune extension de données pour un modèle de rapport. Dans le Générateur de rapports, vous recherchez et sélectionnez le modèle directement à partir du serveur de rapports. Dans le Concepteur de rapports, vous spécifiez l'URL au modèle de rapport.  
