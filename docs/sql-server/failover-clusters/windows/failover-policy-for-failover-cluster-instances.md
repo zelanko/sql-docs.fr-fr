@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
@@ -14,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6132834fccf80bad897fbc272f9e86a95540523e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f3448583d07f73c23f19c2eec68eb59b71fd06af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772565"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709047"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Stratégie de basculement pour les instances de cluster de basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +96,7 @@ ms.locfileid: "34772565"
 |Niveau|Condition|Description|  
 |-----------|---------------|-----------------|  
 |0|Aucun basculement ou redémarrage automatique|Indique qu'aucun basculement ou redémarrage ne sera déclenché automatiquement sur n'importe quelle condition d'échec. Ce niveau existe uniquement à des fins de maintenance système.|  
-| 1|Basculement ou redémarrage sur arrêt du serveur|Indique qu'un redémarrage ou basculement de serveur sera déclenché en fonction de la condition suivante :<br /><br /> Le service SQL Server est fermé.|  
+|1|Basculement ou redémarrage sur arrêt du serveur|Indique qu'un redémarrage ou basculement de serveur sera déclenché en fonction de la condition suivante :<br /><br /> Le service SQL Server est fermé.|  
 |2|Basculement ou redémarrage sur non-réponse du serveur|Indique qu'un redémarrage ou basculement de serveur sera déclenché si l'une des conditions suivantes est rencontrée :<br /><br /> Le service SQL Server est fermé.<br /><br /> L'instance SQL Server ne répond pas (la DLL de ressource ne reçoit pas des données de sp_server_diagnostics dans les paramètres HealthCheckTimeout).|  
 |3|Basculement ou redémarrage sur des erreurs de serveur critiques|Indique qu'un redémarrage ou basculement de serveur sera déclenché si l'une des conditions suivantes est rencontrée :<br /><br /> Le service SQL Server est fermé.<br /><br /> L'instance SQL Server ne répond pas (la DLL de ressource ne reçoit pas des données de sp_server_diagnostics dans les paramètres HealthCheckTimeout).<br /><br /> La procédure stockée système sp_server_diagnostics retourne une « erreur système ».|  
 |4|Basculement ou redémarrage sur des erreurs de serveur modérées|Indique qu'un redémarrage ou basculement de serveur sera déclenché si l'une des conditions suivantes est rencontrée :<br /><br /> Le service SQL Server est fermé.<br /><br /> L'instance SQL Server ne répond pas (la DLL de ressource ne reçoit pas des données de sp_server_diagnostics dans les paramètres HealthCheckTimeout).<br /><br /> La procédure stockée système sp_server_diagnostics retourne une « erreur système ».<br /><br /> La procédure stockée système sp_server_diagnostics retourne une « erreur de ressource ».|  

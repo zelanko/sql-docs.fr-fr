@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a9da9c532e20375581a425e8072280cf892ce67
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: ef93616fb6f96911d08a56326e014305b4e818b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701527"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>Procédure : mettre à jour une base de données connectée avec Power Buffer
 La technologie SQL Server Data Tools Power Buffer facilite l'application de modifications à votre base de données connectée en stockant toutes vos modifications dans la session active. Les erreurs dues à la modification dans la fenêtre Power Buffer (dans l'Éditeur Transact\-SQL ou le Concepteur de tables) s'affichent immédiatement dans le volet **Liste d'erreurs**, ce qui vous permet de suivre les erreurs identifiées pour la résolution. Vous pouvez vérifier vos modifications en attente jusqu'à ce que vous soyez prêt à les appliquer dans votre base de données. Au cours du processus de mise à jour, SSDT crée automatiquement un script ALTER basé sur vos modifications, et vous avertit de tout problème potentiel. Vous pouvez ensuite appliquer toutes les modifications accumulées dans les fenêtres Power Buffer ouvertes à la même base de données, ou enregistrer le script ALTER à déployer ultérieurement.  
