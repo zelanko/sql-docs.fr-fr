@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90e82370a658109ae6a8ccc653affc5e15614a55
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c0fe82226d1c4de82883498ba92893ec98fc7b05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087171"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681967"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procédure : créer des conditions de test pour le Concepteur de test unitaire SQL Server
 Utilisez la classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) extensible pour créer des conditions de test. Vous pouvez, par exemple, créer une condition de test qui vérifie le nombre de colonnes ou valeurs dans un jeu de résultats.  
