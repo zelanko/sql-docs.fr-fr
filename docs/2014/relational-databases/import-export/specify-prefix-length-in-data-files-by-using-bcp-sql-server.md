@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], prefix length
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0924e829729039aec7221a8faeeff37a9e830310
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1f480c361c465f17fa50d2a13df29f44a56d131
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212899"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058759"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Spécifier une longueur de préfixe dans des fichiers de données à l'aide de bcp (SQL Server)
   Pour un stockage de fichier plus compact lors de l’exportation en bloc de données au format natif vers un fichier de données, la commande **bcp** ajoute devant chaque champ un ou plusieurs caractères indiquant la longueur du champ. Ces caractères portent le nom de *caractères de préfixe de longueur*.  
@@ -64,21 +61,21 @@ ms.locfileid: "37212899"
 |`binary`|2|2|2|2|  
 |`varbinary`|2|2|2|2|  
 |`image` <sup>1</sup>|4|4|4|4|  
-|`datetime`|0| 1|0| 1|  
-|`smalldatetime`|0| 1|0| 1|  
-|`decimal`| 1| 1| 1| 1|  
-|`numeric`| 1| 1| 1| 1|  
-|`float`|0| 1|0| 1|  
-|`real`|0| 1|0| 1|  
-|`int`|0| 1|0| 1|  
-|`bigint`|0| 1|0| 1|  
-|`smallint`|0| 1|0| 1|  
-|`tinyint`|0| 1|0| 1|  
-|`money`|0| 1|0| 1|  
-|`smallmoney`|0| 1|0| 1|  
-|`bit`|0| 1|0| 1|  
-|`uniqueidentifier`| 1| 1|0| 1|  
-|`timestamp`| 1| 1| 1| 1|  
+|`datetime`|0|1|0|1|  
+|`smalldatetime`|0|1|0|1|  
+|`decimal`|1|1|1|1|  
+|`numeric`|1|1|1|1|  
+|`float`|0|1|0|1|  
+|`real`|0|1|0|1|  
+|`int`|0|1|0|1|  
+|`bigint`|0|1|0|1|  
+|`smallint`|0|1|0|1|  
+|`tinyint`|0|1|0|1|  
+|`money`|0|1|0|1|  
+|`smallmoney`|0|1|0|1|  
+|`bit`|0|1|0|1|  
+|`uniqueidentifier`|1|1|0|1|  
+|`timestamp`|1|1|1|1|  
 |`varchar(max)`|8|8|8|8|  
 |`varbinary(max)`|8|8|8|8|  
 |UDT (type de données défini par l'utilisateur)|8|8|8|8|  

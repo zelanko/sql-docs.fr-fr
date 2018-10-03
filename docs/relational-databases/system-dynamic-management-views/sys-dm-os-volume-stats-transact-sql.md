@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_os_volume_stats (Transact-SQL) | Documents Microsoft
+title: Sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_volume_stats_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5fcc94554408ed68988ddbdf34422078ca31dd4
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0f599084d70903ae3d74c04795ddb60d473b6002
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468305"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670487"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,9 +50,9 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ||||  
 |-|-|-|  
-|**Colonne**|**Type de données**|**Description**|  
-|**database_id**|**int**|ID de la base de données. Ne peut pas avoir la valeur null.|  
-|**file_id**|**int**|ID du fichier. Ne peut pas avoir la valeur null.|  
+|**Colonne**|**Data type**|**Description**|  
+|**database_id**|**Int**|ID de la base de données. Ne peut pas avoir la valeur null.|  
+|**file_id**|**Int**|ID du fichier. Ne peut pas avoir la valeur null.|  
 |**volume_mount_point**|**nvarchar(512)**|Point de montage à la racine duquel le volume est attaché. Peut retourner une chaîne vide.|  
 |**volume_id**|**nvarchar(512)**|Identificateur du volume du système d'exploitation. Peut retourner une chaîne vide|  
 |**logical_volume_name**|**nvarchar(512)**|Nom du volume logique. Peut retourner une chaîne vide|  
@@ -70,7 +67,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
  Requiert l'autorisation VIEW SERVER STATE.  
   
 ## <a name="examples"></a>Exemples  

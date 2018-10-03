@@ -1,32 +1,29 @@
 ---
-title: Exemple de propriété Count (VB) | Documents Microsoft
+title: Exemple de propriété Count (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5e462bef0846b71a963c1e510fac1e23d00e010
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 902d077cfb46926ce9eade6ea9a99c2df0730916
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277258"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747217"
 ---
-# <a name="count-property-example-vb"></a>Exemple de propriété Count (VB)
-Cet exemple illustre la [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété avec deux collections dans le ***employé*** base de données. La propriété obtient le nombre d’objets de chaque collection et définit la limite supérieure pour les boucles qui énumèrent ces collections. Une autre méthode pour énumérer ces collections sans utiliser le **nombre** propriété serait d’utiliser `For Each...Next` instructions.  
+# <a name="count-property-example-vb"></a>Count, exemple de propriétés (VB)
+Cet exemple montre la [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété avec deux collections dans le ***employé*** base de données. La propriété obtient le nombre d’objets dans chaque collection et définit la limite supérieure pour les boucles qui énumèrent ces collections. Une autre façon d’énumérer ces collections sans utiliser le **nombre** propriété consisterait à utiliser `For Each...Next` instructions.  
   
 ```  
 'BeginCountVB  

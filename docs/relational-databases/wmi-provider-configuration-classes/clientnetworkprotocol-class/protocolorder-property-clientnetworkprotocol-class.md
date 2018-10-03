@@ -1,15 +1,12 @@
 ---
-title: Protocolorder, propriété (classe ClientNetworkProtocol) | Documents Microsoft
+title: Protocolorder, propriété (classe ClientNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ProtocolOrder Property (ClientNetworkProtocol Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProtocolOrder property
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4b6a2fb3bfb3236d9a7ee9c0dcb83838f5a583fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cda765a9a9eedb581bf8340478b97e527601147
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33009316"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717077"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>Propriété ProtocolOrder (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.ProtocolOrder [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  A [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) qui représente le protocole réseau utilisé par le client [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

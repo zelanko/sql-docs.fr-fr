@@ -1,34 +1,31 @@
 ---
-title: onReadyStateChange, événement (RDS) | Documents Microsoft
+title: onReadyStateChange, événement (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - onReadyStateChange event [ADO]
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66de98fbc8c78b194ce41f0f26bb5f1ed6c351c2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 57cd3092eebaac19b953da5bbcf39b5d3ccfdcd5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288119"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828757"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange, événement (RDS)
-Le **onReadyStateChange** événement est appelé chaque fois que la valeur de la [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) de propriété est modifiée.  
+Le **onReadyStateChange** événement est appelé chaque fois que la valeur de la [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) modifications apportées aux propriétés.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +38,7 @@ onReadyStateChange
  Aucun.  
   
 ## <a name="remarks"></a>Notes  
- Le **ReadyState** propriété reflète la progression d’une [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) de l’objet qu’il récupère de manière asynchrone des données dans son [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet. Utilisez le **onReadyStateChange** événement pour surveiller les modifications dans le **ReadyState** propriété chaque fois qu’ils se produisent. Cela est plus efficace que de vérifier régulièrement la valeur de propriété.  
+ Le **ReadyState** propriété reflète la progression d’un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet comme il récupère de manière asynchrone des données dans son [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet. Utilisez le **onReadyStateChange** événement pour surveiller les modifications dans le **ReadyState** propriété chaque fois qu’ils se produisent. Cela est plus efficace que de manière périodique et vérifiant la valeur de propriété.  
   
 ## <a name="applies-to"></a>S'applique à  
  [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

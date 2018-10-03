@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 801009112dffaa83bd1c938194a27934e4bbbdaa
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082711"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621077"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurer SQL Server groupe de disponibilité AlwaysOn pour la haute disponibilité sur Linux
 
@@ -68,6 +66,8 @@ Les étapes pour créer un groupe de disponibilité sur des serveurs Linux pour 
 [!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## <a name="create-the-ag"></a>Créer le groupe de disponibilité
+
+Les exemples de cette section expliquent comment créer le groupe de disponibilité à l’aide de Transact-SQL. Vous pouvez également utiliser l’Assistant de groupe de disponibilité SQL Server Management Studio. Lorsque vous créez un groupe de disponibilité avec l’Assistant, elle retournera une erreur lorsque vous joignez les réplicas pour le groupe de disponibilité. Pour résoudre ce problème, accordez `ALTER`, `CONTROL`, et `VIEW DEFINITIONS` pour le pacemaker sur le groupe de disponibilité sur tous les réplicas. Une fois que les autorisations sont accordées sur le réplica principal, joignez les nœuds au groupe de disponibilité via l’Assistant, mais pour la haute disponibilité fonctionner correctement, accordez l’autorisation sur tous les réplicas.
 
 Pour une configuration de haute disponibilité qui garantit que le basculement automatique, le groupe de disponibilité requiert au moins trois réplicas. Une des configurations suivantes peut prendre en charge une haute disponibilité :
 
@@ -192,6 +192,13 @@ Vous pouvez également configurer un groupe de disponibilité avec `CLUSTER_TYPE
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>Joindre les réplicas secondaires au groupe de disponibilité
 
+L’utilisateur pacemaker nécessite `ALTER`, `CONTROL`, et `VIEW DEFINITION` autorisations sur le groupe de disponibilité sur tous les réplicas. Pour accorder des autorisations, exécutez le script Transact-SQL suivant une fois le groupe de disponibilité est créé sur le réplica principal et chaque réplica secondaire immédiatement après leur ajout au groupe de disponibilité. Avant d’exécuter le script, remplacez `<pacemakerLogin>` par le nom du compte d’utilisateur pacemaker.
+
+```Transact-SQL
+GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
+GRANT VIEW SERVER STATE TO <pacemakerLogin>
+```
+
 Le script Transact-SQL suivant joint une instance de SQL Server à un groupe de disponibilité nommé `ag1`. Mettez à jour le script en fonction de votre environnement. Sur chaque instance de SQL Server qui héberge un réplica secondaire, exécutez Transact-SQL suivante pour joindre le groupe de disponibilité.
 
 ```Transact-SQL
@@ -213,7 +220,7 @@ Si vous avez suivi les étapes décrites dans ce document, vous avez un groupe d
 >Après avoir configuré le cluster et ajouter le groupe de disponibilité en tant que ressource de cluster, vous ne pouvez pas utiliser Transact-SQL pour basculer les ressources du groupe de disponibilité. Ressources de cluster de SQL Server sur Linux sont couplés pas aussi étroitement avec le système d’exploitation tels qu’ils sont sur un Cluster de basculement du serveur Windows (WSFC). Service SQL Server n’est pas informé de la présence du cluster. Tous les orchestration s’effectue via les outils de gestion de cluster. Dans RHEL ou Ubuntu utiliser `pcs`. Dans SLES utiliser `crm`. 
 
 >[!IMPORTANT]
->Si le groupe de disponibilité est une ressource de cluster, il existe un problème connu dans la version actuelle, le basculement forcé avec perte de données vers un réplica asynchrone ne fonctionne pas. Ce problème sera résolu dans la version à venir. Basculement manuel ou automatique pour un réplica synchrone réussit. 
+>Si le groupe de disponibilité est une ressource de cluster, il existe un problème connu dans la version actuelle, le basculement forcé avec perte de données vers un réplica asynchrone ne fonctionne pas. Ce problème sera résolu dans la version à venir. Basculement manuel ou automatique pour un réplica synchrone réussit.
 
 
 ## <a name="next-steps"></a>Étapes suivantes

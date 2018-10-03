@@ -1,13 +1,11 @@
 ---
-title: ParentURL, propriété (ADO) | Documents Microsoft
+title: ParentURL, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - ParentURL property [ADO]
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4a0217d4f2e79dc5876af9518a06d73d2ac924d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fdbff500a90ab4456b3e9ef252be4407c636cdec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280666"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822107"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL, propriété (ADO)
-Indique une chaîne URL absolue qui pointe vers le parent [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) actuelles **enregistrement** objet.  
+Indique l’URL absolue qui pointe vers le parent [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) d’actuel **enregistrement** objet.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un **chaîne** valeur qui indique l’URL du parent **enregistrement**.  
@@ -42,9 +39,9 @@ record.ActiveConnection = "http://first"
 record.Open "second"  
 ```  
   
- À présent, la valeur de `the` **ParentURL** propriété est `"http://first"`, le même que **ActiveConnection**.  
+ À présent, la valeur de `the` **ParentURL** propriété est `"http://first"`, la même en tant que **ActiveConnection**.  
   
- La source peut également être une URL absolue, telles que `"http://first/second"`. Le **ParentURL** propriété est ensuite `"http://first"`, du niveau supérieur `"second"`.  
+ La source peut également être une URL absolue, telle que, `"http://first/second"`. Le **ParentURL** propriété est alors `"http://first"`, du niveau supérieur `"second"`.  
   
  Cette propriété peut être une valeur null si :  
   
@@ -55,13 +52,13 @@ record.Open "second"
  Cette propriété est en lecture seule.  
   
 > [!NOTE]
->  Cette propriété est uniquement prise en charge par les fournisseurs de source de document, tels que les [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [enregistrements et champs spécifiques au fournisseur](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
+>  Cette propriété est uniquement prise en charge par les fournisseurs de source de document, telles que la [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [enregistrements et champs spécifiques au fournisseur](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
   
 > [!NOTE]
 >  URL à l’aide du modèle http appellent automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 > [!NOTE]
->  Si l’enregistrement actuel contient un enregistrement de données à partir d’ADO **Recordset**, l’accès à la **ParentURL** propriété provoque une erreur d’exécution, indiquant qu’aucune URL n’est possible.  
+>  Si l’enregistrement actuel contient un enregistrement de données à partir d’un ADO **Recordset**, l’accès à la **ParentURL** propriété provoque une erreur d’exécution, indiquant qu’aucune URL n’est possible.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_update_collection_set (Transact-SQL) | Documents Microsoft
+title: sp_syscollector_update_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62867f22c044a42c40499e0a1143557621931db8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261425"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702737"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +63,7 @@ sp_syscollector_update_collection_set
  Est le nom de l’ensemble de la collection. *nom* est **sysname** et doit avoir une valeur si *collection_set_id* a la valeur NULL.  
   
  [  **@new_name =** ] '*nouveau_nom*'  
- Nouveau nom pour le jeu d'éléments de collecte. *nouveau_nom* est **sysname**, et si utilisé, ne peut pas être une chaîne vide. *nouveau_nom* doit être unique. Pour obtenir une liste de noms de jeux d'éléments de collecte actuels, interrogez la vue système syscollector_collection_sets.  
+ Nouveau nom pour le jeu d'éléments de collecte. *new_name* est **sysname**, et si utilisé, ne peut pas être une chaîne vide. *new_name* doit être unique. Pour obtenir une liste de noms de jeux d'éléments de collecte actuels, interrogez la vue système syscollector_collection_sets.  
   
  [  **@target =** ] '*cible*'  
  Réservé pour un usage ultérieur.  
@@ -79,7 +75,7 @@ sp_syscollector_update_collection_set
   
  1 - Mode non mis en cache. Collecte de données et le téléchargement est sur la même planification. Spécifiez le mode non mis en cache pour une collecte ad hoc ou par instantané.  
   
- Si le changement de mode non mis en cache en mode mis en cache (0), vous devez également spécifier *schedule_uid* ou *nom_de_la_planification*.  
+ Lorsque vous passez du mode non mis en cache en mode mis en cache (0), vous devez également spécifier *schedule_uid* ou *nom_de_la_planification*.  
   
  [  **@days_until_expiration=** ] *days_until_expiration*  
  Est le nombre de jours pendant lesquels les données collectées sont enregistrées dans l’entrepôt de données de gestion. *days_until_expiration* est **smallint**. *days_until_expiration* doit être 0 ou un entier positif.  
@@ -88,17 +84,17 @@ sp_syscollector_update_collection_set
  Identificateur unique pour un compte d'Agent proxy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* est **int**.  
   
  [  **@proxy_name =** ] '*proxy_name*'  
- Nouveau nom du proxy. *proxy_name* est **sysname** et accepte les valeurs NULL.  
+ Nouveau nom du proxy. *proxy_name* est **sysname** et autorise la valeur null.  
   
  [ **@schedule_uid** =] '*schedule_uid*'  
  GUID qui pointe vers une planification. *schedule_uid* est **uniqueidentifier**.  
   
- Pour obtenir des *schedule_uid*, interrogez la table système sysschedules.  
+ Pour obtenir *schedule_uid*, interrogez la table système sysschedules.  
   
- Lorsque *collection_mode* est définie sur 0, *schedule_uid* ou *nom_de_la_planification* doit être spécifié. Lorsque *collection_mode* est définie sur 1, *schedule_uid* ou *nom_de_la_planification* est ignoré s’il est spécifié.  
+ Lorsque *collection_mode* est définie sur 0, *schedule_uid* ou *nom_de_la_planification* doit être spécifié. Lorsque *collection_mode* est défini sur 1, *schedule_uid* ou *nom_de_la_planification* est ignoré si spécifié.  
   
  [  **@schedule_name =** ] '*nom_de_la_planification*'  
- Est le nom de la planification. *nom_de_la_planification* est **sysname** et accepte les valeurs NULL. Si spécifié, *schedule_uid* doit être NULL. Pour obtenir des *nom_de_la_planification*, interrogez la table système sysschedules.  
+ Est le nom de la planification. *nom_de_la_planification* est **sysname** et autorise la valeur null. Si spécifié, *schedule_uid* doit être NULL. Pour obtenir *nom_de_la_planification*, interrogez la table système sysschedules.  
   
  [  **@logging_level =** ] *logging_level*  
  Niveau de journalisation. *logging_level* est **smallint** avec l’une des valeurs suivantes :  
@@ -136,7 +132,7 @@ sp_syscollector_update_collection_set
   
  Si l’ensemble de la collection est en cours d’exécution, vous pouvez uniquement mettre à jour *schedule_uid* et *description*. Pour arrêter l’ensemble de la collection, utilisez [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'appartenance au rôle de base de données fixe dc_admin ou dc_operator (avec autorisation EXECUTE) pour exécuter cette procédure. Même si dc_operator peut exécuter cette procédure stockée, les membres de ce rôle sont limités en ce qui concerne les propriétés qu'ils peuvent modifier. Les propriétés suivantes peuvent être modifiées uniquement par dc_admin :  
   
 -   @new_name  

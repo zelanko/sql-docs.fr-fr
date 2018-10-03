@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.GENERAL.F1
@@ -25,12 +23,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6ea43a226b7f390abbf551cdb73818d5f3daea8d
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2fba39e592835f3c5e6dbffc6c8b6d384c5c837a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030651"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057309"
 ---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
   Cette rubrique décrit comment créer un utilisateur de base de données mappé à une connexion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'utilisateur de base de données est l'identité du compte de connexion lorsqu'il est connecté à la base de données. Il peut utiliser le même nom que celui du compte de connexion, mais cela n'est pas obligatoire. Cette rubrique part du principe qu'il existe déjà un compte de connexion dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la création d’un compte de connexion, consultez [créer une connexion](create-a-login.md).  

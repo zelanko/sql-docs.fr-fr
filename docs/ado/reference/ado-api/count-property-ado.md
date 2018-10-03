@@ -1,13 +1,11 @@
 ---
-title: Count, propriété (ADO) | Documents Microsoft
+title: Count, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bccb2760b124040973baa7ba889d2110ec5efe95
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 988ee3dc6cb4b394ee1da170cb902b88fcb0f1ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759327"
 ---
 # <a name="count-property-ado"></a>Count, propriété (ADO)
 Indique le nombre d’objets dans une collection.  
@@ -35,9 +32,9 @@ Indique le nombre d’objets dans une collection.
 ## <a name="remarks"></a>Notes  
  Utilisez le **nombre** propriété pour déterminer le nombre d’objets dans une collection donnée.  
   
- Étant donné que la numérotation des membres d’une collection commence à zéro, vous devez toujours coder les boucles en commençant par le membre zéro et en terminant par la valeur de la **nombre** propriété moins 1. Si vous utilisez Microsoft Visual Basic et que vous souhaitez parcourir les membres d’une collection sans vérifier le **nombre** propriété, utilisez la **For Each... Suivant** commande.  
+ Numérotation des membres d’une collection commence à zéro, vous devez toujours coder les boucles en commençant par le membre zéro et en terminant par la valeur de la **nombre** propriété moins 1. Si vous utilisez Microsoft Visual Basic et que vous souhaitez parcourir les membres d’une collection sans vérifier le **nombre** propriété, utilisez le **pour chaque... Suivant** commande.  
   
- Si le **nombre** propriété est zéro, il y a aucun objet dans la collection.  
+ Si le **nombre** est égale à zéro, il y a aucun objet dans la collection.  
   
 ## <a name="applies-to"></a>S'applique à  
   
@@ -53,5 +50,5 @@ Indique le nombre d’objets dans une collection.
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété Count (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
- [Exemple de propriété Count (VC ++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
+ [Exemple de comptage de propriété (VC ++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Refresh, méthode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

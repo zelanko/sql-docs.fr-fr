@@ -1,13 +1,11 @@
 ---
-title: NumericScale et Precision, propriétés, exemple (VB) | Documents Microsoft
+title: NumericScale et Precision, propriétés, exemple (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - NumericScale property [ADO], Visual Basic example
 - Precision property [ADO], Visual Basic example
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4372b056913299b0f6daadc6f5567123ecfb6bc6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fc8f2ee894416d8e290fe9e1a54b6123664b3c7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279968"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612397"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale et Precision, propriétés, exemple (VB)
 Cet exemple utilise le [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) et [précision](../../../ado/reference/ado-api/precision-property-ado.md) propriétés pour afficher l’échelle numérique et la précision des champs dans le ***remises*** table de la  ***Pubs*** base de données.  
@@ -78,7 +75,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Field](../../../ado/reference/ado-api/field-object.md)   
+ [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
  [NumericScale, propriété (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Objet de paramètre](../../../ado/reference/ado-api/parameter-object.md)   
  [Precision, propriété (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

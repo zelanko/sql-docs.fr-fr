@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calculations [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - calculations [Analysis Services], about calculations
 - cubes [Analysis Services], calculations
 ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ef953f375269917a7cab7d00a15def6acfb375e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 587aad74e5a29810d645aad401243cceb9ca6193
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222189"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051319"
 ---
 # <a name="calculations"></a>Calculs
   Un calcul est une expression de MDX (Multidimensional Expressions) ou un script qui est utilisé pour définir un membre calculé, un jeu nommé ou une attribution d’étendue dans un cube dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les calculs vous permettent d'ajouter des objets définis non pas par les données du cube, mais par des expressions qui peuvent référencer d'autres parties du cube, d'autres cubes voire des informations à l'extérieur de la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les calculs vous permettent d'étendre les capacités d'un cube, en renforçant la flexibilité et la puissance des applications de décisionnel. Pour plus d’informations sur les calculs de script, consultez [Introduction aux scripts MDX dans Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Pour plus d’informations sur les problèmes de performances liés aux calculs et des requêtes MDX, consultez le [Guide des performances SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  

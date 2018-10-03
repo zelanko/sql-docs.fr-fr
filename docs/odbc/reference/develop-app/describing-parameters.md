@@ -1,32 +1,29 @@
 ---
-title: Décrivant les paramètres | Documents Microsoft
+title: Décrivant les paramètres | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLBindParameter function [ODBC], describing parameters
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c9892111808a975dbf2cb0bc167a1d653f2297a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bc752afc0cb5214e629a343c35464e612b57c36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909544"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808967"
 ---
-# <a name="describing-parameters"></a>Décrivant les paramètres
-**SQLBindParameter** a des arguments qui décrivent le paramètre : son type SQL, la précision et l’échelle. Le pilote utilise ces informations, ou *métadonnées,* pour convertir la valeur du paramètre du type requis par la source de données. À première vue, il peut sembler que le pilote est en mesure de mieux connaître les métadonnées de paramètre que l’application ; Après tout, le pilote peut découvrir facilement les métadonnées de colonne du jeu de résultats. En fait, cela n’est pas le cas. Tout d’abord, la plupart des sources de données ne fournissent pas un moyen pour le pilote découvrir les métadonnées de paramètre. Ensuite, la plupart des applications connaissez déjà les métadonnées.  
+# <a name="describing-parameters"></a>Description des paramètres
+**SQLBindParameter** a des arguments qui décrivent le paramètre : son type SQL, la précision et l’échelle. Le pilote utilise ces informations, ou *métadonnées,* pour convertir la valeur du paramètre du type requis par la source de données. À première vue, il peut sembler que le pilote est mieux connaître les métadonnées de paramètre que l’application ; Après tout, le pilote peut découvrir facilement les métadonnées pour un résultat de jeu de colonnes. En fait, cela n’est pas le cas. Tout d’abord, la plupart des sources de données ne fournissent pas un moyen pour le pilote découvrir les métadonnées de paramètre. Ensuite, la plupart des applications connaissez déjà les métadonnées.  
   
- Si une instruction SQL est codée en dur dans l’application, le writer d’application connaît déjà le type de chaque paramètre. Si une instruction SQL est générée par l’application au moment de l’exécution, l’application peut déterminer les métadonnées, car elle génère l’instruction. Par exemple, lorsque l’application construit la clause  
+ Si une instruction SQL est codé en dur dans l’application, le rédacteur d’application connaît déjà le type de chaque paramètre. Si une instruction SQL est générée par l’application au moment de l’exécution, l’application peut déterminer les métadonnées, car elle génère l’instruction. Par exemple, lorsque l’application construit la clause  
   
 ```  
 WHERE OrderID = ?  

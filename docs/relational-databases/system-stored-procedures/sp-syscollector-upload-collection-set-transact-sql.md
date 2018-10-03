@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_upload_collection_set (Transact-SQL) | Documents Microsoft
+title: sp_syscollector_upload_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_upload_collection_set
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_upload_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 081a5eccfdec4ea8582efb00f6c5f2e74e7f510e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9017209ef2e4b500ee6a90e14830b520ed2a588d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249651"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780898"
 ---
 # <a name="spsyscollectoruploadcollectionset-transact-sql"></a>sp_syscollector_upload_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,12 +55,12 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- Soit *collection_set_id* ou *nom* doit avoir une valeur, les deux ne peut pas être NULL.  
+ Soit *collection_set_id* ou *nom* doit avoir une valeur ; les deux ne peut pas être NULL.  
   
  Cette procédure peut être utilisée pour démarrer un téléchargement à la demande pour un jeu d'éléments de collecte en cours d'exécution. Elle peut être uniquement utilisée pour les jeux d'éléments de collecte configurés pour la collecte et le téléchargement de données en mode mis en cache. Cela permet à un utilisateur d'obtenir des données à analyser sans devoir attendre un téléchargement planifié.  
   
-## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **dc_operator** (avec autorisation EXECUTE) rôle de base de données fixe pour exécuter cette procédure.  
+## <a name="permissions"></a>Permissions  
+ Nécessite l’appartenance dans le **dc_operator** (avec autorisation EXECUTE) rôle fixe de base de données pour exécuter cette procédure.  
   
 ## <a name="example"></a>Exemple  
  Exécute un téléchargement à la demande d'un jeu d'éléments de collecte nommé `Simple Collection Set`.  

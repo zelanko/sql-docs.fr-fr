@@ -1,30 +1,27 @@
 ---
-title: Paramètres de l’objet de commande | Documents Microsoft
+title: Paramètres de l’objet de commande | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87854c3e048fc7fc5730ad8c1c475a32554fbab5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f4fb4128333f1fdc5865186a202188fc64b6109f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270518"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701737"
 ---
-# <a name="command-object-parameters"></a>Paramètres de l’objet de commande
-La rubrique précédente présentée [création et exécution d’une commande Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Une utilisation plus intéressante pour la [commande](../../../ado/reference/ado-api/command-object-ado.md) objet est indiqué dans l’exemple suivant, dans lequel la commande SQL a été paramétrée. Cette modification permet de réutiliser la commande, en passant une valeur différente pour le paramètre chaque fois. Étant donné que la [préparé la propriété](../../../ado/reference/ado-api/prepared-property-ado.md) propriété sur le **commande** objet a la valeur **true**, ADO nécessitera le fournisseur compiler la commande spécifiée dans [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) avant de l’exécuter pour la première fois. Il sera également conserver la commande compilée en mémoire. Cela ralentit l’exécution de la commande légèrement la première fois qu’elle est exécutée en raison de la surcharge requise pour préparer, mais entraîne un gain de performances chaque fois que la commande est appelée par la suite. Par conséquent, les commandes doivent être préparées uniquement si elles seront utilisées plusieurs fois.  
+# <a name="command-object-parameters"></a>Paramètres de l’objet Command
+La rubrique précédente abordée [création et exécution d’une commande Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Une utilisation plus intéressante pour les [commande](../../../ado/reference/ado-api/command-object-ado.md) objet est indiqué dans l’exemple suivant, dans lequel la commande SQL a été paramétrée. Cette modification rend possible la réutilisation de la commande, en passant une valeur différente pour le paramètre chaque fois. Étant donné que le [propriété préparé](../../../ado/reference/ado-api/prepared-property-ado.md) propriété sur le **commande** objet est défini sur **true**, ADO nécessitera le fournisseur compiler la commande spécifiée dans [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) avant l’exécution pour la première fois. Il sera également conserver la commande compilée en mémoire. Cela ralentit l’exécution de la commande légèrement la première fois qu’elle est exécutée en raison de la surcharge requise pour préparer, mais entraîne un gain de performances chaque fois que la commande est appelée par la suite. Par conséquent, les commandes doivent être préparés uniquement si elles sont utilisées plusieurs fois.  
   
 ```  
 'BeginManualParamCmd  
@@ -122,4 +119,4 @@ End Function
 'EndNewConnection  
 ```  
   
- Tous les fournisseurs prennent en charge les commandes préparées. Si le fournisseur ne prend pas en charge la préparation des commandes, il peut retourner une erreur dès que cette propriété est définie sur **True**. Si elle ne retourne pas d’erreur, il ignore la demande de préparation de la commande et le définit le **Prepared** propriété **false**.
+ Tous les fournisseurs prennent en charge les commandes préparées. Si le fournisseur ne prend pas en charge la préparation de la commande, il peut retourner une erreur dès que cette propriété est définie sur **True**. Si elle ne retourne pas d’erreur, il ignore la demande de préparation de la commande et les affecte le **Prepared** propriété **false**.

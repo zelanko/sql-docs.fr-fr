@@ -1,14 +1,11 @@
 ---
-title: sysmail_mailattachments (Transact-SQL) | Documents Microsoft
+title: sysmail_mailattachments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_mailattachments_TSQL
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_mailattachments database mail view
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36c5433f51191004a994b1afb3486db89a317acb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c263f7e3df69b6eb3d9517b2dc973a1cb4102f7d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33220690"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627307"
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient une ligne pour chaque pièce jointe soumise à la messagerie de base de données. Utilisez cette vue lorsque vous voulez des informations sur les pièces jointes de la messagerie de base de données. Pour passer en revue tous les messages électroniques traités à l’aide de la messagerie de base de données [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md).  
+  Contient une ligne pour chaque pièce jointe soumise à la messagerie de base de données. Utilisez cette vue lorsque vous voulez des informations sur les pièces jointes de la messagerie de base de données. Pour passer en revue tous les messages électroniques traités par la messagerie de base de données, utilisez [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md).  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,9 +43,9 @@ ms.locfileid: "33220690"
 ## <a name="remarks"></a>Notes  
  En cas de résolution des problèmes de la messagerie de base de données, utilisez cette vue pour voir les propriétés des pièces jointes.  
   
- Les pièces jointes stockées dans les tables système peuvent entraîner la **msdb** base de données augmente. Utilisez **sysmail_delete_mailitems_sp** pour supprimer des éléments de messagerie et les pièces jointes associées. Pour plus d’informations, consultez [créer un travail de l’Agent SQL Server pour archiver les Messages de messagerie de base de données et les journaux des événements](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
+ Les pièces jointes stockées dans les tables système peuvent entraîner la **msdb** base de données augmente. Utilisez **sysmail_delete_mailitems_sp** pour supprimer les éléments de messagerie et les pièces jointes associées. Pour plus d’informations, consultez [créer un travail SQL Server Agent pour archiver les Messages de messagerie de base de données et journaux des événements](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Accordées à la **sysadmin** rôle serveur fixe et le **DatabaseMailUserRole** rôle de base de données. Lors de l’exécution par un membre de la **sysadmin** rôle serveur fixe, cette vue affiche toutes les pièces jointes. Les autres utilisateurs voient uniquement les pièces jointes des messages qu'ils ont essayé d'envoyer.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
-caps.latest.revision: 30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1ff4dd56ea104d32a2821bc826ad8919712aea1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25f917dc3831f0915b87c4a93dbb4197a3d25df0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217559"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053365"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Ensembles de résultats dans la tâche d’exécution SQL
   Dans un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , le retour d'un jeu de résultats à la tâche d'exécution SQL dépend du type de commande SQL que la tâche utilise. Par exemple, une instruction SELECT retourne généralement un ensemble de résultats, contrairement à une instruction INSERT.  
@@ -93,7 +90,7 @@ ms.locfileid: "37217559"
   
 -   [Définir les propriétés d’une tâche ou d’un conteneur](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL](control-flow/execute-sql-task.md)  
   
 ## <a name="related-content"></a>Contenu associé  

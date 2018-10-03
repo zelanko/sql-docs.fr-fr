@@ -1,34 +1,31 @@
 ---
-title: Exemple de Code de bibliothèque de curseurs | Documents Microsoft
+title: Exemple de Code de bibliothèque de curseurs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 054cd6d20ff72e69e01defbba3834602fdf2bf47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5dd87cbf93ff2acd7c2c3753e85b1d6f7d110cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691698"
 ---
-# <a name="cursor-library-code-example"></a>Exemple de Code de bibliothèque de curseurs
+# <a name="cursor-library-code-example"></a>Exemple de code de la bibliothèque de curseurs
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d’utiliser cette fonctionnalité dans tout nouveau développement et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Microsoft recommande d’utiliser les fonctionnalités de curseur du pilote.  
   
- L’exemple suivant utilise la bibliothèque de curseurs pour récupérer les ID de chaque commande, ouvrez date et l’état de la table ORDERS. Il affiche ensuite les 20 lignes de données. Si l’utilisateur met à jour ces données, le code met à jour les mémoires tampons de lignes et exécute une instruction de mise à jour positionnée. Enfin, il invite l’utilisateur à la direction pour faire défiler et répète le processus.  
+ L’exemple suivant utilise la bibliothèque de curseurs pour récupérer les ID de chaque commande, ouvrez date et état de la table ORDERS. Il affiche ensuite les 20 lignes de données. Si l’utilisateur met à jour ces données, le code met à jour les mémoires tampons d’ensemble de lignes et exécute une instruction de mise à jour positionnée. Enfin, il invite l’utilisateur pour la direction pour faire défiler et répète le processus.  
   
 ```  
 #define ROWS 20  

@@ -1,36 +1,33 @@
 ---
-title: Prise en charge de fournisseur pour ADOX (ADO) | Documents Microsoft
+title: Prise en charge de fournisseur pour ADOX (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADOX provider support [ADO]
 ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac3d27c685cba755635f3ab9d111fe69b7d2067e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6f346779d3a4c8cb43e2b30347ebf6b198d9015
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273478"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803277"
 ---
 # <a name="provider-support-for-adox-ado"></a>Prise en charge de fournisseur pour ADOX (ADO)
-Certaines fonctionnalités d’ADOX ne sont pas pris en charge, en fonction de votre fournisseur de données OLE DB. ADOX est entièrement compatible avec le [fournisseur OLE DB pour Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). Les fonctionnalités non prises en charge avec la [fournisseur Microsoft OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), le [fournisseur Microsoft OLE DB pour ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md), ou [fournisseur Microsoft OLE DB pour Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) sont répertoriées dans les tableaux suivants. ADOX n’est pas pris en charge par tous les autres fournisseurs OLE DB de Microsoft.  
+Certaines fonctionnalités d’ADOX ne sont pas pris en charge, en fonction de votre fournisseur de données OLE DB. ADOX est entièrement pris en charge avec le [fournisseur OLE DB pour Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). Les fonctionnalités non prises en charge avec le [fournisseur Microsoft OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), le [fournisseur Microsoft OLE DB pour ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md), ou le [fournisseur Microsoft OLE DB pour Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) sont répertoriées dans les tableaux suivants. ADOX n’est pas pris en charge par tous les autres fournisseurs OLE DB de Microsoft.  
   
 ## <a name="microsoft-ole-db-provider-for-sql-server"></a>Fournisseur Microsoft OLE DB pour SQL Server  
   
-|Objet ou la Collection|Restriction d’utilisation|  
+|Objet ou une Collection|Restriction d’utilisation|  
 |--------------------------|-----------------------|  
-|**Tables** collection|Propriétés sont en lecture/écriture avant de créer un objet et en lecture seule lors du référencement d’un objet existant.|  
+|**Tables** collection|Propriétés sont en lecture/écriture avant la création d’objets et en lecture seule lors du référencement d’un objet existant.|  
 |**Vues** collection|**Vues** n’est pas pris en charge.|  
 |**Procédures** collection|Le **Append** et **supprimer** méthodes ne sont pas prises en charge.|  
 |**Procédure** objet|Le **commande** propriété n’est pas prise en charge.|  
@@ -40,10 +37,10 @@ Certaines fonctionnalités d’ADOX ne sont pas pris en charge, en fonction de v
   
 ## <a name="microsoft-ole-db-provider-for-odbc"></a>Fournisseur Microsoft OLE DB pour ODBC  
   
-|Objet ou la Collection|Restriction d’utilisation|  
+|Objet ou une Collection|Restriction d’utilisation|  
 |--------------------------|-----------------------|  
 |**Catalogue** objet|Le **créer** méthode n’est pas prise en charge.|  
-|**Tables** collection|Le **Append** et **supprimer** méthodes ne sont pas prises en charge. Propriétés sont en lecture/écriture avant de créer un objet et en lecture seule lors du référencement d’un objet existant.|  
+|**Tables** collection|Le **Append** et **supprimer** méthodes ne sont pas prises en charge. Propriétés sont en lecture/écriture avant la création d’objets et en lecture seule lors du référencement d’un objet existant.|  
 |**Procédures** collection|Le **Append** et **supprimer** méthodes ne sont pas prises en charge.|  
 |**Procédure** objet|Le **commande** propriété n’est pas prise en charge.|  
 |**Index** collection|Le **Append** et **supprimer** méthodes ne sont pas prises en charge.|  
@@ -53,10 +50,10 @@ Certaines fonctionnalités d’ADOX ne sont pas pris en charge, en fonction de v
   
 ## <a name="microsoft-ole-db-provider-for-oracle"></a>Fournisseur Microsoft OLE DB pour Oracle  
   
-|Objet ou la Collection|Restriction d’utilisation|  
+|Objet ou une Collection|Restriction d’utilisation|  
 |--------------------------|-----------------------|  
 |**Catalogue** objet|Le **créer** méthode n’est pas prise en charge.|  
-|**Tables** collection|Le **Append** et **supprimer** méthodes ne sont pas prises en charge. Propriétés sont en lecture/écriture avant de créer un objet et en lecture seule lors du référencement d’un objet existant.|  
+|**Tables** collection|Le **Append** et **supprimer** méthodes ne sont pas prises en charge. Propriétés sont en lecture/écriture avant la création d’objets et en lecture seule lors du référencement d’un objet existant.|  
 |**Vues** collection|Le **Append** et **supprimer** méthodes ne sont pas prises en charge.|  
 |**Vue** objet|Le **commande** propriété n’est pas prise en charge.|  
 |**Procédures** objet|Le **Append** et **supprimer** méthodes ne sont pas prises en charge.|  

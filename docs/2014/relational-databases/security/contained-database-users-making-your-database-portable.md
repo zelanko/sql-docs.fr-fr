@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, users
@@ -15,16 +13,15 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 84395743cd55b0229b7e97310559fa593331126c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1eb00a83a33bea0f45a31ed157ea0b8c39ee4566
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024746"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066962"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utilisateurs de base de données autonome - Rendre votre base de données portable
-  Faites appel à des utilisateurs de base de données autonome pour authentifier les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] au niveau de la base de données. Une base de données autonome est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données autonome pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous utilisez [!INCLUDE[ssSDS](../../includes/sssds-md.md)], associez les utilisateurs de base de données autonome à des règles de pare-feu au niveau de la base de données. Cette rubrique examine les avantages liés à l'utilisation du modèle de base de données autonome et les différences qu'il présente par rapport au modèle traditionnel de connexion/utilisateur et aux règles de pare-feu Windows ou au niveau du serveur. Le recours au modèle traditionnel de connexion/utilisateur et aux règles de pare-feu au niveau du serveur peut encore s'avérer nécessaire pour mettre en œuvre une logique métier d'application, des critères de facilité de gestion ou des scénarios spécifiques.  
+  Faites appel à des utilisateurs de base de données autonome pour authentifier les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] au niveau de la base de données. Une base de données autonome est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données autonome pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous utilisez [!INCLUDE[ssSDS](../../includes/sssds-md.md)], associez les utilisateurs de base de données autonome à des règles de pare-feu au niveau de la base de données. Cette rubrique examine les avantages liés à l'utilisation du modèle de base de données autonome et les différences qu'il présente par rapport au modèle traditionnel de connexion/utilisateur et aux règles de pare-feu Windows ou au niveau du serveur. Le recours au modèle traditionnel de connexion/utilisateur et aux règles de pare-feu au niveau du serveur peut encore s'avérer nécessaire pour mettre en œuvre une logique métier d'application, des critères de facilité de gestion ou des scénarios spécifiques.  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] travaille actuellement à faire évoluer le service [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et à améliorer les contrats de niveau de service garantis. À l'avenir, vous devrez peut-être basculer vers le modèle d'utilisateurs de base de données autonome et vers les règles de pare-feu étendues à la base de données pour bénéficier d'un contrat de niveau de service offrant une meilleure disponibilité et d'une fréquence de connexion maximale plus élevée pour une base de données particulière. [!INCLUDE[msCoName](../../includes/msconame-md.md)] vous invite à prendre en compte ces changements dès aujourd'hui.  
@@ -48,8 +45,7 @@ ms.locfileid: "43024746"
  Les règles de pare-feu Windows s'appliquent à toutes les connexions et ont les mêmes effets sur les connexions (connexions de modèle traditionnel) et les utilisateurs de base de données autonome. Pour plus d'informations sur le pare-feu Windows, consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Pare-feux  
- 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] permet des règles de pare-feu distinctes pour les connexions au niveau serveur (connexions) et pour les connexions au niveau base de données (utilisateurs de base de données autonome). Quand vous vous connectez à une base de données utilisateur, les règles de pare-feu au niveau de la base de données sont contrôlées en premier. Si aucune règle n'autorise l'accès à la base de données, les règles de pare-feu au niveau serveur sont contrôlées, ce qui nécessite un accès à la base de données MASTER du serveur logique. L'association de règles de pare-feu au niveau de la base de données et d'utilisateurs de base de données autonome peut éliminer la nécessité d'accéder à la base de données MASTER du serveur pendant la connexion, d'où un avantage potentiel en matière d'extensibilité de la connexion.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] permet des règles de pare-feu distinctes pour les connexions au niveau serveur (connexions) et pour les connexions au niveau base de données (utilisateurs de base de données autonome). Quand vous vous connectez à une base de données utilisateur, les règles de pare-feu au niveau de la base de données sont contrôlées en premier. Si aucune règle n'autorise l'accès à la base de données, les règles de pare-feu au niveau serveur sont contrôlées, ce qui nécessite un accès à la base de données MASTER du serveur logique. L'association de règles de pare-feu au niveau de la base de données et d'utilisateurs de base de données autonome peut éliminer la nécessité d'accéder à la base de données MASTER du serveur pendant la connexion, d'où un avantage potentiel en matière d'extensibilité de la connexion.  
   
  Pour plus d'informations sur les règles de pare-feu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , consultez les rubriques suivantes :  
   
@@ -88,10 +84,8 @@ ms.locfileid: "43024746"
 -   Définissez des mots de passe avec un niveau de force semblable à celui des mots de passe utilisés normalement pour les connexions.  
   
 ## <a name="see-also"></a>Voir aussi  
- 
-  [Bases de données autonomes](../databases/contained-databases.md)   
- 
-  [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../databases/security-best-practices-with-contained-databases.md)   
+ [Bases de données autonomes](../databases/contained-databases.md)   
+ [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)  
   
   

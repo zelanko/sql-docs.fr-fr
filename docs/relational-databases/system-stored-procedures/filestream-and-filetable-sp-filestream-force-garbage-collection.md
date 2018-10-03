@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cd74006b394f7412f7ec2d3c6bfacb36f701cf1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 350c007c8a0153f2dfd0f84d596110b3dea29500
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063747"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733417"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +58,7 @@ sp_filestream_force_garbage_collection
 |-|-|  
 |Valeur|Description|  
 |0|Réussite de l'opération|  
-| 1|Échec de l'opération|  
+|1|Échec de l'opération|  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -87,7 +83,7 @@ En raison d’opérations de la phase 2, la procédure stockée doit être exéc
 Garbage Collection (GC) s’appuie sur la troncation du journal. Si les fichiers ont été récemment supprimés sur une base de données à l’aide du mode de récupération complète, elles ne sont donc GC-ed uniquement après une sauvegarde de journal de ces parties de journaux de transaction est effectuée et la partie du journal est marqué comme inactive. Sur une base de données à l’aide du mode de récupération Simple, une troncation de journal se produit après un `CHECKPOINT` a été émis par rapport à la base de données.  
 
 
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle de base de données db_owner.  
   
 ## <a name="examples"></a>Exemples  

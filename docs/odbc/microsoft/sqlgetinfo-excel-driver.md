@@ -1,42 +1,39 @@
 ---
-title: SQLGetInfo (pilote Excel) | Documents Microsoft
+title: SQLGetInfo (pilote Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Excel Driver
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14f6ade916baecc37e80e7a5eeea458ad89d0a20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee95aa0b47e18ac1409858da03d5972baa7ec951
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904174"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802357"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (pilote Excel)
 > [!NOTE]  
->  Cette rubrique fournit des informations spécifiques au pilote Excel. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [référence de l’API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique fournit des informations spécifiques au pilote Excel. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** prend en charge le type d’informations SQL_FILE_USAGE. La valeur retournée est un entier 16 bits qui indique comment le pilote traite directement les fichiers dans une source de données :  
+ **SQLGetInfo** prend en charge le type d’information SQL_FILE_USAGE. La valeur retournée est un entier 16 bits qui indique comment le pilote traite directement les fichiers dans une source de données :  
   
 -   SQL_FILE_NOT_SUPPORTED : Le pilote n’est pas un pilote de niveau unique.  
   
--   SQL_FILE_TABLE : Un pilote de niveau unique traite les fichiers dans une source de données en tant que tables.  
+-   SQL_FILE_TABLE — Un pilote monocouches et traite les fichiers dans une source de données en tant que tables.  
   
--   SQL_FILE_QUALIFIER : Un pilote de niveau unique traite les fichiers dans une source de données en tant que qualificateur.  
+-   SQL_FILE_QUALIFIER — Un pilote à un niveau traite des fichiers dans une source de données en tant que qualificateur.  
   
- Le pilote ODBC retourne SQL_FILE_TABLE Microsoft Exceldriver puisque chaque fichier est une table.  
+ Le pilote ODBC retourne SQL_FILE_TABLE pour Microsoft Exceldriver, car chaque fichier est une table.  
   
 ## <a name="sqldbmsver"></a>SQL_DBMS_VER  
   

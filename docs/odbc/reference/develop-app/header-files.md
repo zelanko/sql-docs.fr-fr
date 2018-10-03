@@ -1,37 +1,35 @@
 ---
-title: Fichiers d’en-tête | Documents Microsoft
+title: Fichiers d’en-tête | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - header files [ODBC]
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d31cdda9e97ba72374c60c551f37ecfeccd71c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656737"
 ---
 # <a name="header-files"></a>Fichiers d’en-tête
-Le fichier d’en-tête Sql.h contient des prototypes pour les fonctions et fonctionnalités dans le niveau de conformité de l’Interface ODBC Core. Le fichier d’en-tête Sqlext.h contient des prototypes pour les fonctions et fonctionnalités dans le niveau 1 et les niveaux de conformité au niveau 2 d’API. Le fichier d’en-tête Sqltypes.h contient les définitions de type et d’indicateurs pour les types de données SQL.  
+Le fichier d’en-tête Sql.h contient des prototypes pour les fonctions et fonctionnalités dans le niveau de conformité Interface ODBC de base. Le fichier d’en-tête Sqlext.h contient des prototypes pour les fonctions et fonctionnalités dans le niveau 1 et les niveaux de conformité des API de niveau 2. Le fichier d’en-tête Sqltypes.h contient les définitions de type et des indicateurs pour les types de données SQL.  
   
- Les fichiers d’en-tête contiennent tous un **#define**, ODBCVER, une application ou un pilote pouvant définies pour être compilé pour différentes versions d’ODBC.  
+ Les fichiers d’en-tête contiennent tous un **#define**, ODBCVER, qui une application ou le pilote peut définie pour être compilé pour différentes versions d’ODBC.  
   
- Pour s’aligner avec la CLI de ISO et groupe ouvert, les fichiers d’en-tête contiennent des alias pour les types d’informations utilisés dans les appels à **SQLGetInfo**. Dans le tableau suivant, la colonne « Nom ODBC » indique le nom ODBC pour le type d’informations dans [référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md). La colonne « Alias dans le fichier d’en-tête » indique le nom qui est utilisé dans le CLI ISO et le groupe ouvert. La valeur numérique réelle de ces noms de manifeste est identique dans ODBC et les interfaces CLI standard. Ces alias activer une application conforme aux normes ou le pilote à compiler avec ODBC 3 *.x* fichiers d’en-tête.  
+ Pour s’aligner avec la CLI d’ISO et groupe ouvert, les fichiers d’en-tête contiennent des alias pour les types d’informations utilisés dans les appels à **SQLGetInfo**. Dans le tableau suivant, la colonne « Nom ODBC » indique le nom ODBC pour le type d’informations dans [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md). La colonne « Alias dans le fichier d’en-tête » indique le nom qui est utilisé dans la CLI ISO et le groupe ouvert. La valeur numérique réelle de ces noms de manifeste est la même dans ODBC et les interfaces CLI standards. Ces alias activer une application conforme aux normes ou à un pilote pour compiler à l’aide ODBC 3 *.x* fichiers d’en-tête.  
   
- Ces alias incluent expansions des abréviations dans les noms ODBC afin que les noms sont plus faciles à comprendre. « MAX » est développé à « MAXIMUM », « Long » pour « Longueur », « MULT » à « Plusieurs », « JO » à « OUTER_JOIN » et « TXN » à « TRANSACTION ».  
+ Ces alias sont expansions d’abréviations dans les noms ODBC afin que les noms sont plus compréhensibles. « MAX » est développé pour « MAXIMUM », « Long » à « Longueur », « MULT » à « Plusieurs », « JO » à « OUTER_JOIN » et « Transaction » pour « TRANSACTION ».  
   
-|Nom de ODBC.|Alias dans le fichier d’en-tête|  
+|Nom d’ODBC|Alias dans le fichier d’en-tête|  
 |---------------|--------------------------|  
 |SQL_MAX_CATALOG_NAME_LEN|SQL_MAXIMUM_CATALOG_NAME_LENGTH|  
 |SQL_MAX_COLUMN_NAME_LEN|SQL_MAXIMUM_COLUMN_NAME_LENGTH|  

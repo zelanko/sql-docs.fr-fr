@@ -1,33 +1,31 @@
 ---
-title: Prise en charge des Types de données (le pilote ODBC pour Oracle) | Documents Microsoft
+title: Prise en charge des Types de données (pilote ODBC pour Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f6e80b887659679992091a32faf2763d71d9f6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 219a6d2e837280ca3220382bea56d2ab610ce87a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620457"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Types de données pris en charge (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
   
- Le pilote ODBC pour Oracle prend en charge tous les types de données Oracle 7.3 ; Toutefois, il ne prend pas en charge les nouveaux types de données Oracle8 répertoriées ici.  
+ Le pilote ODBC pour Oracle prend en charge tous les types de données Oracle 7.3 ; Toutefois, il ne prend pas en charge des nouveaux types de données Oracle8 répertoriées ici.  
   
 |Type de données|Oracle 7.3|Oracle8|  
 |---------------|----------------|-------------|  

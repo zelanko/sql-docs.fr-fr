@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a9d7415b22013a0afe8f953a4246aa74a2147a35
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 2cc49bbd3d2927431da2c16debbe0f35dbf4bb79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393141"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632017"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Paramètres globaux (journalisation) (AccessToSQL)
 Utilisez le **paramètres globaux** boîte de dialogue pour spécifier les paramètres de journalisation pour SSMA. En règle générale, vous modifieriez ces paramètres uniquement lorsque vous travaillez avec le support technique.  
@@ -32,7 +26,7 @@ Pour accéder à cette boîte de dialogue, dans le **outils** menu, sélectionne
 **Niveau de messages**  
 Les options suivantes sont disponibles sous **au niveau des Messages**:  
   
-|Option| Description|  
+|Option|Description|  
 |----------|---------------|  
 |**[toutes les catégories]**|Utilisé pour définir le niveau de journalisation pour toutes les options suivantes.|  
 |**Collecteur**|Collecte des métadonnées sur le schéma source et l’enregistre dans le projet.|  

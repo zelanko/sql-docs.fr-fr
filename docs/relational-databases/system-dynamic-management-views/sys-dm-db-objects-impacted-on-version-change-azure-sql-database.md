@@ -5,10 +5,7 @@ ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_objects_impacted_on_version_change_TSQL
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ae5daae796ba134c883cb074ffd4130c67e0aba1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 11445fefd94925f32e40173491f27b8ea0837218
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051287"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645357"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,7 +42,7 @@ ms.locfileid: "38051287"
 |minor_id|**int** NULL|**NULL** pour les contraintes<br /><br /> Index_id pour les index et les segments|  
 |dependency|**nvarchar (60)** pas NULL|Description de la dépendance qui provoque l'impact sur une contrainte ou un index. La valeur est également utilisée pour les avertissements générés pendant la mise à niveau.<br /><br /> Exemples :<br /><br /> **espace** (pour intrinsèque)<br /><br /> **géométrie** (pour système UDT)<br /><br /> **Geography::Parse** (pour système de méthode UDT)|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation VIEW DATABASE STATE.  
   
 ## <a name="example"></a>Exemple  
@@ -73,7 +69,7 @@ class  class_desc        major_id    minor_id    dependency
   
 |JSON|Objet affecté|Action corrective|  
 |-----------|---------------------|-----------------------|  
-| 1|**Index**|Reconstruisez tout index identifié par **sys.dm_db_objects_impacted_on_version_change** par exemple :  `ALTER INDEX ALL ON <table> REBUILD`<br />ou Gestionnaire de configuration<br />`ALTER TABLE <table> REBUILD`|  
+|1|**Index**|Reconstruisez tout index identifié par **sys.dm_db_objects_impacted_on_version_change** par exemple :  `ALTER INDEX ALL ON <table> REBUILD`<br />ou Gestionnaire de configuration<br />`ALTER TABLE <table> REBUILD`|  
 |2|**Objet**|Toutes les contraintes identifiées par **sys.dm_db_objects_impacted_on_version_change** doivent être revalidées après que les données de géométrie et géographie dans la table sous-jacente sont recalculées. Pour les contraintes, revalidez l'aide de ALTER TABLE. <br />Exemple : <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />ou Gestionnaire de configuration<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

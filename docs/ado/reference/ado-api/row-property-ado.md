@@ -1,13 +1,11 @@
 ---
-title: Row, propriété (ADO) | Documents Microsoft
+title: Row, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - Row property [ADO]
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4de19beeb853abb0a6bdc4d517332a812fa43c0e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 041356f05daaaef50e6e81d995209ab5379fc901
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281318"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747407"
 ---
-# <a name="row-property-ado"></a>Propriété de ligne (ADO)
-Obtient ou définit un OLE DB **ligne** objet à partir d’ou sur un [ADORecordConstruction Interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md) objet. Lorsque vous utilisez **put Row** pour définir un **ligne** de l’objet, une ligne est transformée en ADO **enregistrement** objet.  
+# <a name="row-property-ado"></a>Row, propriété (ADO)
+Obtient ou définit un OLE DB **ligne** objet à partir d’ou sur un [ADORecordConstruction, Interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md) objet. Lorsque vous utilisez **put Row** pour définir un **ligne** de l’objet, une ligne est transformée en ADO **enregistrement** objet.  
   
 ## <a name="readwritesyntax"></a>Read/write.Syntax  
   
@@ -44,11 +41,11 @@ HRESULT put_Row([in] IUnknown* pRow);
  *ppRow*  
  Pointeur vers un OLE DB **ligne** objet.  
   
- *PRow*  
+ *pRow*  
  OLE DB **ligne** objet.  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Cette méthode de propriété renvoie les valeurs HRESULT standards, notamment S_OK et E_FAIL.  
+ Cette méthode de propriété renvoie les valeurs HRESULT standard, notamment S_OK et E_FAIL.  
   
 ## <a name="applies-to"></a>S'applique à  
  [ADORecordConstruction, interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md)

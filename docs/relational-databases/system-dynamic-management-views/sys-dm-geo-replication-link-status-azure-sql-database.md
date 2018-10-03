@@ -5,10 +5,7 @@ ms.date: 10/13/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - dm_geo_replication_link_status
@@ -19,19 +16,18 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ac416ef7d48655e25002646b6e364d04982688b2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 57212bc80087e3f2227f90ab6fa16678df37517e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809077"
 ---
-# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>Sys.dm_geo_replication_link_status (base de données Azure SQL)
+# <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque lien de réplication entre les bases de données primaires et secondaires dans un partenariat de géo-réplication. Cela inclut les bases de données primaires et secondaire. S’il existe plusieurs liens de réplication continue pour une base de données primaire donnée, cette table contient une ligne pour chacune des relations. La vue est créée dans toutes les bases de données, y compris la logique principale. Cependant, l'interrogation de cette vue dans la base de données master logique retourne un ensemble vide.  
@@ -54,7 +50,7 @@ ms.locfileid: "38046047"
 > [!NOTE]  
 >  Si la relation de réplication est arrêtée en supprimant la base de données secondaire (section 4.2), la ligne pour cette base de données dans le **sys.dm_geo_replication_link_status** disparaît de la vue.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  N’importe quel compte avec l’autorisation de view_database_state peut interroger **sys.dm_geo_replication_link_status**.  
   
 ## <a name="example"></a>Exemple  

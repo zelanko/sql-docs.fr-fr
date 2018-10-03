@@ -1,14 +1,11 @@
 ---
-title: semanticsimilaritytable (Transact-SQL) | Documents Microsoft
+title: semanticsimilaritytable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b6b4b36580c35aead16780f4ada0f461dd58754
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bca3fe143308bb7bf3d8a8e7754c018c749786cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232794"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791177"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -74,15 +70,15 @@ SEMANTICSIMILARITYTABLE
   
  Les documents correspondants sont retournés colonne par colonne si les résultats sont demandés pour plusieurs colonnes.  
   
-|Column_name|Type| Description|  
+|Column_name|Type|Description|  
 |------------------|----------|-----------------|  
-|**source_column_id**|**int**|ID de la colonne depuis laquelle un document source a été utilisé pour rechercher des documents similaires.<br /><br /> Consultez les fonctions COL_NAME et COLUMNPROPERTY pour plus d'informations sur la récupération d'un nom de colonne à partir de column_id et inversement.|  
-|**matched_column_id**|**int**|ID de la colonne depuis laquelle un document similaire a été trouvé.<br /><br /> Consultez les fonctions COL_NAME et COLUMNPROPERTY pour plus d'informations sur la récupération d'un nom de colonne à partir de column_id et inversement.|  
+|**source_column_id**|**Int**|ID de la colonne depuis laquelle un document source a été utilisé pour rechercher des documents similaires.<br /><br /> Consultez les fonctions COL_NAME et COLUMNPROPERTY pour plus d'informations sur la récupération d'un nom de colonne à partir de column_id et inversement.|  
+|**matched_column_id**|**Int**|ID de la colonne depuis laquelle un document similaire a été trouvé.<br /><br /> Consultez les fonctions COL_NAME et COLUMNPROPERTY pour plus d'informations sur la récupération d'un nom de colonne à partir de column_id et inversement.|  
 |**matched_document_key**|**\***<br /><br /> Cette clé correspond au type de la clé unique dans la table source.|Valeur de la clé unique de l'extraction sémantique et de recherche en texte intégral du document ou de la ligne considéré(e) comme similaire au document spécifié dans la requête.|  
-|**Score**|**REAL**|Valeur relative de ressemblance pour ce document dans sa relation à tous les autres documents similaires.<br /><br /> La valeur est une valeur décimale fractionnaire dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une correspondance plus proche, 1.0 étant un score parfait.|  
+|**score**|**REAL**|Valeur relative de ressemblance pour ce document dans sa relation à tous les autres documents similaires.<br /><br /> La valeur est une valeur décimale fractionnaire dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une correspondance plus proche, 1.0 étant un score parfait.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Pour plus d’informations, consultez [rechercher Documents similaires ou connexes avec la recherche sémantique](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+ Pour plus d’informations, consultez [trouver Documents similaires ou connexes avec la recherche sémantique](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Vous ne pouvez pas rechercher des documents similaires dans plusieurs colonnes. Le **SEMANTICSIMILARITYTABLE** fonction récupère uniquement les documents similaires provenant de la même colonne que la colonne source, qui est identifiée par le **source_key** argument.  
@@ -96,7 +92,7 @@ SEMANTICSIMILARITYTABLE
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
  Requiert des autorisations SELECT sur la table de base sur laquelle les index sémantiques et de recherche en texte intégral ont été créés.  
   
 ## <a name="examples"></a>Exemples  
