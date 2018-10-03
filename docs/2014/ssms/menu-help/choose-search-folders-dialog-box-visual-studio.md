@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4658d8bc6ec0733673f9cc4087e44da962c7733
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 0010ab5333237eac6504986f0ac8a042d861e712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820255"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095149"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Boîte de dialogue Choisir des dossiers de recherche (Visual Studio)
   Cette boîte de dialogue vous permet d'assembler, d'enregistrer et de réviser vos propres jeux de dossiers de recherche nommés et de spécifier l'ordre de la recherche. Pour afficher cette boîte de dialogue, cliquez sur le bouton **Parcourir (...)** en regard de la liste déroulante **Regarder dans** sous les onglets Rechercher dans les fichiers ou Remplacer dans les fichiers de la fenêtre Rechercher et remplacer.  

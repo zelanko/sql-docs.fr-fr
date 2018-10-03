@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 099d9f8ccb24e2675f61c89f277d82984901cd4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b2d11854134eb7b83182b35b113b591687f2775
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168150"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095109"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Références à des collections DataSources et DataSets (Générateur de rapports et SSRS)
   La collection `DataSources` représente toutes les sources de données utilisées dans un rapport. De même, le `DataSets` collection représente tous les jeux de données pour toutes les sources de données dans un rapport. Utilisez le volet **Données du rapport** pour une vue hiérarchique des datasets du rapport organisés sous la source de données à laquelle ils font référence. Si vous incluez des références à ces collections, vous ne verrez pas de valeurs lors de l'aperçu de votre rapport. Ces collections sont disponibles uniquement après la publication du rapport sur un serveur de rapports.  
@@ -32,7 +29,7 @@ ms.locfileid: "37168150"
   
 |**Variable**|`Type`|**Description**|  
 |------------------|--------------|---------------------|  
-|`DataSourceReference`|`String`|Chemin d'accès complet de la définition de source de données sur le serveur de rapports. Par exemple, vous pouvez inclure une liste de toutes les sources de données qu'un rapport a utilisées dans le cadre d'un historique de rapport. L'exemple suivant affiche le chemin d'accès complet de la source de données nommée AdventureWorks2012 :<br /><br /> `/DataSources/AdventureWorks2012`.|  
+|`DataSourceReference`|`String`|Chemin d'accès complet de la définition de source de données sur le serveur de rapports. Par exemple, vous pouvez inclure une liste de toutes les sources de données qu'un rapport a utilisées dans le cadre d'un historique de rapport. L'exemple suivant affiche le chemin d'accès complet de la source de données nommée AdventureWorks2012 :<br /><br /> `/DataSources/AdventureWorks2012` .|  
 |`Type`|`String`|Type du fournisseur de données pour la source de données. Par exemple, `SQL`.|  
   
 ## <a name="datasets"></a>DataSets  

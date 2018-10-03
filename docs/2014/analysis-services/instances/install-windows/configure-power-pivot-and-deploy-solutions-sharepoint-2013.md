@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb76491d121921f4e5b826ecf760923ba9e2238e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f06745f47bd78df8d9464c090afb46116594e8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104799"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurer PowerPivot et déployer des solutions (SharePoint 2013)
   Cette rubrique décrit le déploiement et la configuration des améliorations de niveau intermédiaire apportées aux fonctionnalités de PowerPivot dans [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] notamment la galerie PowerPivot, planifier des fournisseurs de données, tableau de bord de gestion et l’actualisation des données. Exécutez l'outil **Configuration de PowerPivot pour SharePoint 2013** pour effectuer les opérations suivantes :  

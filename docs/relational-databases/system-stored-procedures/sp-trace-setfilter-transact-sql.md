@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc23abf114ce4458f40051db3d2bb86b667efca5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 436b4d5b9a4c0a539ccc4ff9ac7e62572883dfad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758617"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +87,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |Code de retour|Description|  
 |-----------------|-----------------|  
 |0|Aucune erreur.|  
-| 1|Erreur inconnue.|  
+|1|Erreur inconnue.|  
 |2|La trace est en cours d'exécution. La modification de la Trace à cet instant précis entraîne une erreur.|  
 |4|La colonne spécifiée n’est pas valide.|  
 |5|La colonne spécifiée n'est pas autorisée pour le filtrage. Cette valeur est retournée uniquement à partir de **sp_trace_setfilter**.|  
@@ -108,7 +104,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
  Paramètres de Trace de SQL toutes les procédures stockées (**sp_trace_xx**) sont strictement typés. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L'utilisateur doit disposer de l'autorisation ALTER TRACE.  
   
 ## <a name="examples"></a>Exemples  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Broker:Message Drop event class
 - Broker:Message Undeliverable event class
 ms.assetid: f532b7c9-ca34-4bac-8dc3-53f9895fd6af
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75838c8eb38e21eb82f6a57278ebe13310a3f53a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03885ddd91a5c0c99516ee692f50626c1f0b5b3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168670"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132669"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Classe d’événements Broker:Message Undeliverable
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **Broker:Message Undeliverable** si le Service Broker ne peut pas conserver un message reçu censé avoir été livré à un service de cette instance. Dans le cas de messages censés avoir été transmis, consultez [Classe d’événements Broker:Forwarded Message Dropped](broker-forwarded-message-dropped-event-class.md).  
@@ -58,7 +55,7 @@ ms.locfileid: "37168670"
 |**SPID**|`int`|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
 |**StartTime**|`datetime`|Heure de début de l'événement, le cas échéant.|14|Oui|  
 |**État**|`int`|Indique l'emplacement dans le code source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a produit l'événement. Chaque emplacement susceptible de générer cet événement possède un code d'état spécifique. Un spécialiste de l'assistance technique Microsoft peut se servir de ce code d'état afin de déterminer où l'événement s'est produit.|30|non|  
-|**TextData**|`ntext`|Raison pour laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu remettre le message.| 1|Oui|  
+|**TextData**|`ntext`|Raison pour laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu remettre le message.|1|Oui|  
 |**TransactionID**|`bigint`|ID affecté à la transaction par le système.|4|non|  
   
 ## <a name="see-also"></a>Voir aussi  

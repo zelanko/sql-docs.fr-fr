@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rpt.rptdesigner.projectpropertypages.general.f1
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b4125342c0c85f053d3f7e85124be79766a06c3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79eb8344ef875aa76cde5b0ffcc34aa0bf23e1b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238379"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122369"
 ---
 # <a name="project-property-pages-dialog-box"></a>Pages de propriétés du projet, boîte de dialogue
   Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **Projet**, cliquez sur *\<Nom du projet de rapport>***Propriétés**.  

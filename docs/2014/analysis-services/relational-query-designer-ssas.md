@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.relquerydesginer.f1
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 386ac327689aa74028d28dc688dee28257568cae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5e0c556930dc843f9a512f09f26ae9187dcd0c84
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259655"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132509"
 ---
 # <a name="relational-query-designer-ssas"></a>Concepteur de requêtes relationnelles (SSAS)
   Le Concepteur de requêtes relationnelles vous aide à créer une requête qui spécifie les données à récupérer à partir de bases de données relationnelles [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], ainsi que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées, créer la requête de manière interactive et afficher les résultats de votre requête.  Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique ou pour modifier une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  

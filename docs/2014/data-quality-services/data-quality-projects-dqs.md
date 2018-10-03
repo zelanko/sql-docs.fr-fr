@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e83826d17c1e7ac7ad5840626d3d61aa5224a60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 05cf27ec51a18bb1a1644ba733bf6ed1051b770e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192609"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107849"
 ---
 # <a name="data-quality-projects-dqs"></a>Projets de qualité des données (DQS)
   Un projet de qualité des données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) est un moyen d'utiliser une base de connaissances pour améliorer la qualité des données sources en effectuant des activités de *nettoyage des données* et de *correspondance de données* , puis en exportant les données résultantes dans une base de données SQL Server ou un fichier .csv. Vous pouvez créer un projet de qualité des données comme un projet de nettoyage ou un projet de correspondance pour effectuer les activités respectives. Les projets de nettoyage et de correspondance peuvent être exécutés avec la même base de connaissances, car la connaissance pour le nettoyage et la correspondance des données peut être générée dans la même base de connaissances.  
@@ -55,7 +52,7 @@ ms.locfileid: "37192609"
 ##  <a name="ProfilingNotification"></a> Profilage des données et notifications  
  Tout en exécutant les activités de nettoyage et de correspondance dans un projet de qualité de données, vous pouvez afficher des statistiques et des informations en temps réel sur les données que DQS est en train de traiter. Le profilage des données vous permet d'évaluer l'efficacité des processus de nettoyage et de correspondance, et vous pouvez éventuellement déterminer jusqu'à quel point le nettoyage ou la correspondance des données peuvent améliorer la qualité des données. Le profilage DQS fournit deux dimensions de qualité des données : l' *exhaustivité* (dans quelle mesure les données sont présentes) et la *précision* (dans quelle mesure les données peuvent être utilisées pour l'usage prévu). De plus, selon les informations de profilage des données, les notifications sont affichées à l'utilisateur sur les mesures qui peuvent être prises pour améliorer les opérations de nettoyage et de correspondance des données. Pour plus d'informations sur le profilage des données et les notifications, consultez [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

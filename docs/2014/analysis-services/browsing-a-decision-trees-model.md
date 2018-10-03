@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - decision tree [data mining]
 - dependency network
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 077a392ff2374c89c5056e71c24fc6969b742a18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9e1ccaf9e000779485be93e476f9114817529a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255091"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137049"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Exploration d'un modèle Arbre de décision
   Lorsque vous ouvrez un modèle de classification avec **Parcourir**, le modèle est affiché dans une visionneuse d’arbre de décision interactive semblable à la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse d’arbres de décision dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse affiche les résultats de la classification sous la forme d'un graphique qui est conçu pour mettre en évidence les critères qui différencient un groupe de données d'un autre. Vous pouvez également explorer des sous-ensembles individuels de l'arborescence et récupérer les données sous-jacentes.  

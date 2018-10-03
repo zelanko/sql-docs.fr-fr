@@ -1,41 +1,35 @@
 ---
-title: Paramètres (Type de mappage) du projet (MySQLToSQL) | Documents Microsoft
+title: Paramètres du projet (mappage de Type) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9bf1d1c219b8673345d5f2074fe8885b5c58223f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776765"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713247"
 ---
-# <a name="project-settings-type-mapping-mysqltosql"></a>Paramètres (Type de mappage) du projet (MySQLToSQL)
+# <a name="project-settings-type-mapping-mysqltosql"></a>Paramètres du projet (Mappage de type) (MySQLToSQL)
 Les paramètres de mappage de Type de projet vous permettent de définir des mappages de type par défaut pour le projet SSMA.  
 
 Mappage de type est disponible dans les boîtes de dialogue Paramètres du projet et les paramètres de projet par défaut :  
   
 -   Utilisez la boîte de dialogue Paramètres du projet pour définir les options de configuration pour le projet actuel. Pour accéder aux paramètres de mappage de type, dans le menu Outils, sélectionnez les paramètres du projet, puis cliquez sur le mappage de Type dans le volet gauche.  
   
--   Utilisez la boîte de dialogue Paramètres du projet par défaut pour définir les options de configuration pour tous les projets. Pour accéder au mappage des types de paramètres, dans le menu Outils, sélectionnez Paramètres par défaut d’un projet, type de projet de migration select pour lequel les paramètres sont requis pour être affichés / a été remplacée par **Version cible de la Migration** liste déroulante et puis cliquez sur le mappage de Type dans le volet gauche.  
+-   Utilisez la boîte de dialogue Paramètres du projet par défaut pour définir les options de configuration pour tous les projets. Pour accéder au mappage de type paramètres, dans le menu Outils, sélectionnez les paramètres de projet par défaut, type de projet de migration Sélectionnez pour lequel les paramètres sont requis pour être affiché / a été remplacée par **Version cible de Migration** liste déroulante, puis cliquez sur Type Mappage dans le volet gauche.  
   
 ## <a name="options"></a>Options  
   
 ##### <a name="source-type"></a>Type de source  
-Il est le type de données MySQL, qui doit être mappée vers le type de données de base de données cible.  
+Il est le type de données MySQL, qui doit être mappé au type de données de base de données cible.  
   
 ##### <a name="target-type"></a>Type de cible  
 Type de la base de données cible pour le type de données MySQL spécifié.  
@@ -47,7 +41,7 @@ Cliquez pour ajouter un type de données à la liste de mappage.
 Cliquez pour modifier le type de données sélectionné dans la liste de mappage.  
   
 ##### <a name="remove"></a>Supprimer  
-Cliquez pour supprimer le mappage de type de données sélectionnées à partir de la liste de mappage.  
+Cliquez pour supprimer le mappage de type de données sélectionnée dans la liste de mappage.  
   
 ##### <a name="reset-to-default"></a>Rétablir les valeurs par défaut  
 Cliquez pour réinitialiser la liste de mappage de type pour les valeurs par défaut SSMA.  
@@ -57,7 +51,7 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
   
 |||  
 |-|-|  
-|**Type de données MySQL**|**Type de données SQL Server**|  
+|**Type de données de MySQL**|**Type de données SQL Server**|  
 |BIGINT|BIGINT|  
 |bigint [*.. 255]|BIGINT|  
 |binary|binaire [1]|  
@@ -93,18 +87,18 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |DATETIME|datetime2[0]|  
 |dec|Décimal|  
 |DEC [*.. 65]|Decimal [*] [0]|  
-|DEC [*.. 65][\*.. 30]|Decimal [*] [\*]|  
+|DEC [*.. 65] [\*... 30]|Decimal [*] [\*]|  
 |Décimal|Décimal|  
 |Decimal [*.. 65]|Decimal [*] [0]|  
-|Decimal [*.. 65][\*.. 30]|Decimal [*] [\*]|  
+|Decimal [*.. 65] [\*... 30]|Decimal [*] [\*]|  
 |double|float [53]|  
 |double précision|float [53]|  
-|double précision [*.. 255][\*.. 30]|numérique [*] [\*]|  
-|double [*.. 255][\*.. 30]|numérique [*] [\*]|  
+|double précision [*.. 255] [\*... 30]|numérique [*] [\*]|  
+|double [*.. 255] [\*... 30]|numérique [*] [\*]|  
 |fixe|NUMERIC|  
-|fixe [*.. 65][\*.. 30]|numérique [*] [\*]|  
+|fixe [*.. 65] [\*... 30]|numérique [*] [\*]|  
 |FLOAT|float [24]|  
-|float [*.. 255][\*.. 30]|numérique [*] [\*]|  
+|float [*.. 255] [\*... 30]|numérique [*] [\*]|  
 |float [*.. 53]|float [53]|  
 |INT|INT|  
 |int [*.. 255]|INT|  
@@ -121,13 +115,13 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |national char [2..255]|NCHAR [*]|  
 |caractères nationaux|NCHAR [1]|  
 |variable de caractères nationaux|nvarchar [1]|  
-|caractères nationaux faisant varier la [valeur 0.. 1]|nvarchar [1]|  
+|caractères nationaux faire varier la [valeur 0.. 1]|nvarchar [1]|  
 |caractères nationaux varying [2..4000]|nvarchar [*]|  
 |variable de caractères nationaux [4001.. *]|nvarchar(max)|  
 |caractères nationaux [valeur 0.. 1]|NCHAR [1]|  
 |caractères nationaux [2..255]|NCHAR [*]|  
 |national varchar|nvarchar [1]|  
-|varchar national [valeur 0.. 1]|nvarchar [1]|  
+|national varchar [valeur 0.. 1]|nvarchar [1]|  
 |national varchar [2..4000]|nvarchar [*]|  
 |national varchar [4001.. *]|nvarchar(max)|  
 |NCHAR|NCHAR [1]|  
@@ -139,18 +133,18 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |NCHAR [2..255]|NCHAR [*]|  
 |NUMERIC|NUMERIC|  
 |numérique [*.. 65]|numérique [*] [0]|  
-|numérique [*.. 65][\*.. 30]|numérique [*] [\*]|  
+|numérique [*.. 65] [\*... 30]|numérique [*] [\*]|  
 |NVARCHAR|nvarchar [1]|  
 |nvarchar [valeur 0.. 1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
 |REAL|float [53]|  
-|Real [*.. 255][\*.. 30]|numérique [*] [\*]|  
-|Série|BIGINT|  
+|réel [*.. 255] [\*... 30]|numérique [*] [\*]|  
+|série|BIGINT|  
 |SMALLINT|SMALLINT|  
 |smallint [*.. 255]|SMALLINT|  
 |texte|nvarchar(max)|  
-|texte de [valeur 0.. 1]|nvarchar [1]|  
+|texte [valeur 0.. 1]|nvarchar [1]|  
 |texte [2..4000]|nvarchar [*]|  
 |texte [4001.. *]|nvarchar(max)|  
 |time|time|  
@@ -159,34 +153,34 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |TINYINT|SMALLINT|  
 |tinyint [*.. 255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
-|bigint non signé|BIGINT|  
-|bigint non signé [*.. 255]|BIGINT|  
+|valeurs bigint non signées|BIGINT|  
+|valeurs bigint non signées [*.. 255]|BIGINT|  
 |dec non signé|Décimal|  
 |non signé dec [*.. 65]|Decimal [*] [0]|  
-|non signé dec [*.. 65][\*.. 30]|Decimal [*] [\*]|  
+|non signé dec [*.. 65] [\*... 30]|Decimal [*] [\*]|  
 |décimal non signé|Décimal|  
 |décimal non signé [*.. 65]|Decimal [*] [0]|  
-|décimal non signé [*.. 65][\*.. 30]|Decimal [*] [\*]|  
+|décimal non signé [*.. 65] [\*... 30]|Decimal [*] [\*]|  
 |double non signé|float [53]|  
-|non signée double précision|float [53]|  
-|non signé double précision [*.. 255][\*.. 30]|numérique [*] [\*]|  
-|non signé double [*.. 255][\*.. 30]|numérique [*] [\*]|  
-|non signé fixe|NUMERIC|  
-|non signé fixe [*.. 65][\*.. 30]|numérique [*] [\*]|  
+|double précision non signée|float [53]|  
+|unsigned double précision [*.. 255] [\*... 30]|numérique [*] [\*]|  
+|unsigned double [*.. 255] [\*... 30]|numérique [*] [\*]|  
+|unsigned fixe|NUMERIC|  
+|unsigned fixe [*.. 65] [\*... 30]|numérique [*] [\*]|  
 |float non signé|float [24]|  
-|non signé float [*.. 255][\*.. 30]|numérique [*] [\*]|  
+|non signé float [*.. 255] [\*... 30]|numérique [*] [\*]|  
 |non signé float [*.. 53]|float [53]|  
 |nombre entier non signé|BIGINT|  
-|entier [*.. 255]|BIGINT|  
+|unsigned int [*.. 255]|BIGINT|  
 |entier non signé|BIGINT|  
 |entier non signé [*.. 255]|BIGINT|  
 |mediumint non signé|INT|  
-|non signé mediumint [*.. 255]|INT|  
+|mediumint non signé [*.. 255]|INT|  
 |numérique non signé|NUMERIC|  
-|non signé numérique [*.. 65]|numérique [*] [0]|  
-|non signé numérique [*.. 65][\*.. 30]|numérique [*] [\*]|  
+|numérique non signée [*.. 65]|numérique [*] [0]|  
+|numérique non signée [*.. 65] [\*... 30]|numérique [*] [\*]|  
 |non signé réel|float [53]|  
-|non signé réel [*.. 255[[\*.. 30]|numérique [*] [\*]|  
+|unsigned réel [*.. 255 [[\*... 30]|numérique [*] [\*]|  
 |smallint non signé|INT|  
 |smallint non signé [*.. 255]|INT|  
 |tinyint non signé|TINYINT|  
@@ -208,7 +202,7 @@ Cliquez pour ajouter un type de données à la liste de mappage.
 Cliquez pour modifier un type de données dans la liste de mappage.  
   
 ##### <a name="remove"></a>Supprimer  
-Cliquez pour supprimer le mappage de type de données sélectionnées à partir de la liste de mappage.  
+Cliquez pour supprimer le mappage de type de données sélectionnée dans la liste de mappage.  
   
 ##### <a name="reset-to-default"></a>Rétablir les valeurs par défaut  
 Cliquez pour réinitialiser tous les mappages de type de données pour les valeurs par défaut SSMA.  

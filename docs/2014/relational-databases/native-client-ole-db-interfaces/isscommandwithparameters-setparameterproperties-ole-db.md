@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dafc28244a94a3738b91c454f75bc8bb26d0b391
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096979"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
   Définit les propriétés de paramètre pour chaque paramètre par ordinal ou définit des propriétés de paramètre en bloc en spécifiant un tableau de structures SSPARAMPROPS.  
@@ -40,7 +37,7 @@ SSPARAMPROPS rgParamProperties[]);
   
 ## <a name="arguments"></a>Arguments  
  *cParams*[in]  
- Le nombre de structures SSPARAMPROPS dans le *rgParamProperties* tableau. Si ce nombre est égal à zéro, `ISSCommandWithParameters::SetParameterProperties` supprimera toutes les propriétés qui ont peuvent être spécifiées pour tous les paramètres dans la commande.  
+ Nombre de structures SSPARAMPROPS dans le tableau *rgParamProperties*. Si ce nombre est égal à zéro, `ISSCommandWithParameters::SetParameterProperties` supprimera toutes les propriétés qui ont peuvent être spécifiées pour tous les paramètres dans la commande.  
   
  *rgParamProperties*[in]  
  Tableau de structures SSPARAMPROPS à définir.  
@@ -73,12 +70,12 @@ SSPARAMPROPS rgParamProperties[]);
   
  `};`  
   
- Améliorations du moteur de base de données en commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] autoriser ISSCommandWithParameters::SetParameterProperties obtenir des descriptions plus exactes des résultats attendus. Ces résultats plus exacts peuvent différer des valeurs retournées par ISSCommandWithParameters::SetParameterProperties dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [découverte des métadonnées](../native-client/features/metadata-discovery.md).  
+ Améliorations du moteur de base de données en commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] autoriser ISSCommandWithParameters::SetParameterProperties obtenir des descriptions plus exactes des résultats attendus. Ces résultats plus exacts peuvent différer des valeurs retournées par ISSCommandWithParameters::SetParameterProperties dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Découverte des métadonnées](../native-client/features/metadata-discovery.md).  
   
 |Membre|Description|  
 |------------|-----------------|  
 |*iOrdinal*|Position ordinale du paramètre transmis.|  
-|*cPropertySets*|Le nombre de structures DBPROPSET dans *rgPropertySets*.|  
+|*cPropertySets*|Nombre de structures DBPROPSET dans *rgPropertySets*.|  
 |*rgPropertySets*|Pointeur vers la mémoire dans lequel retourner un tableau de structures DBPROPSET.|  
   
 ## <a name="see-also"></a>Voir aussi  

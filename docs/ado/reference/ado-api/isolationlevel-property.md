@@ -1,13 +1,11 @@
 ---
-title: Propriété IsolationLevel | Documents Microsoft
+title: IsolationLevel, propriété | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,30 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevel property
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e6de8da487352fe0a26d3524317ced061370771
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c2557c5859f10c7651cfc97fc3c849c00c26e985
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786837"
 ---
-# <a name="isolationlevel-property"></a>Propriété IsolationLevel
-Indique le niveau d’isolement d’une [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
+# <a name="isolationlevel-property"></a>IsolationLevel, propriété
+Indique le niveau d’isolation pour un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md) valeur. La valeur par défaut est **adXactReadCommitted**.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **IsolationLevel** propriété à définir l’isolation au niveau d’un **connexion** objet. Le paramètre ne prendre effet qu’après la prochaine fois que vous appelez le [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) (méthode). Si le niveau d’isolation demandé n’est pas disponible, le fournisseur peut renvoyer le niveau d’isolation supérieur suivant sans mettre à jour le **IsolationLevel** propriété.  
+ Utilisez le **IsolationLevel** propriété à définir l’isolation au niveau d’un **connexion** objet. Le paramètre n’entre pas en vigueur jusqu'à ce que la prochaine fois que vous appelez le [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) (méthode). Si le niveau d’isolation demandé n’est pas disponible, le fournisseur peut renvoyer le niveau d’isolation supérieur suivant sans mettre à jour le **IsolationLevel** propriété.  
   
  Le **IsolationLevel** propriété est en lecture/écriture.  
   
 > [!NOTE]
->  **Utilisation du Service de données à distance** lorsqu’il est utilisé sur un côté client **connexion** objet, le **IsolationLevel** propriété peut être définie uniquement sur **: adXactUnspecified**. Étant donné que les utilisateurs travaillent avec déconnecté **Recordset** d’objets dans un cache côté client, il peut y avoir des problèmes multi-utilisateur. Par exemple, lorsque deux utilisateurs différents tentent de mettre à jour le même enregistrement, Remote Data Service simplement permet à l’utilisateur qui met à jour l’enregistrement de tout d’abord « win ». Demande de mise à jour du second utilisateur échoue avec une erreur.  
+>  **Utilisation de Service de données à distance** lorsqu’il est utilisé sur une côté client **connexion** objet, le **IsolationLevel** propriété peut être définie uniquement au **: adXactUnspecified**. Étant donné que les utilisateurs travaillent avec déconnecté **Recordset** objets sur un cache côté client, il peut y avoir des problèmes multi-utilisateur. Par exemple, lorsque deux utilisateurs différents tentent de mettre à jour le même enregistrement, Remote Data Service simplement permet à l’utilisateur qui met à jour l’enregistrement de tout d’abord « win ». Demande de mise à jour du second utilisateur échoue avec une erreur.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)  

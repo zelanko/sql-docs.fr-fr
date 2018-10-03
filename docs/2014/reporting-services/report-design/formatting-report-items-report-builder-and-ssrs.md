@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f0443443f4863ed788aa22a4aeb1ca717ee891d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 85ebc0b57f5bd87bf12726fb9abe091f8c16b25a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200739"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131949"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Mise en forme des éléments de rapport (Générateur de rapports et SSRS)
   La mise en forme des éléments du rapport rend celui-ci plus attrayant et améliore sa lisibilité. Vous pouvez mettre en forme les zones de texte et des éléments individuels dans les zones de texte, les images, les expressions et les données en mode création de rapport.  

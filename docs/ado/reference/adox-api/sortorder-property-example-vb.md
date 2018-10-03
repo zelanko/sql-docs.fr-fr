@@ -1,32 +1,29 @@
 ---
-title: Exemple de propriété SortOrder (VB) | Documents Microsoft
+title: Propriété SortOrder, exemple (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22dc816e9f4343d2873f169837d028babbfa111c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a324c96fcfb4f1e23157bf7a80506cdee209548a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770927"
 ---
-# <a name="sortorder-property-example-vb"></a>Exemple de propriété SortOrder (VB)
-Cet exemple montre la [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md) qui a été ajouté à la [colonnes](../../../ado/reference/adox-api/columns-collection-adox.md) collection d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Le code ajoute un index croissant à la colonne « pays » dans le **employés** tableau, puis affiche les enregistrements. Ensuite, le code ajoute un index décroissant à la colonne « pays » dans le **employés** de table et affiche les enregistrements à nouveau. La différence entre croissant et décroissant d’index s’affiche.  
+# <a name="sortorder-property-example-vb"></a>SortOrder, exemple de propriété (VB)
+Cet exemple montre la [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md) qui a été ajouté à la [colonnes](../../../ado/reference/adox-api/columns-collection-adox.md) collection d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Le code ajoute un index croissant à la colonne de pays dans le **employés** table, puis affiche les enregistrements. Puis le code ajoute un index décroissant à la colonne de pays dans le **employés** de table et affiche les enregistrements à nouveau. La différence entre croissant et décroissant d’index s’affiche.  
   
 ```  
 ' BeginSortOrderVB  
@@ -142,6 +139,6 @@ End Sub
   
 ## <a name="see-also"></a>Voir aussi  
  [Objet de colonne (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Collection de colonnes (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Objet index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Columns, Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [SortOrder, propriété (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)

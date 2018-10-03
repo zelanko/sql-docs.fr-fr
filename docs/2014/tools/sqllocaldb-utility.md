@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SqlLocalDB utility [SQL Server]
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a3c83dfc8e7282ea67c3aff783ad4ec50826865
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41bdf706a4834ffb2f4e5d5df1b5b7633a20d603
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330909"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100509"
 ---
 # <a name="sqllocaldb-utility"></a>Utilitaire SqlLocalDB
   Utilisez le `SqlLocalDB` utilitaire pour créer une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. Le `SqlLocalDB` utilitaire (SqlLocalDB.exe) est un outil de ligne de commande simple pour permettre aux utilisateurs et aux développeurs de créer et gérer une instance de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**. Pour plus d’informations sur l’utilisation **LocalDB**, consultez [SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
@@ -48,7 +45,7 @@ SqlLocalDB.exe
   
 ## <a name="arguments"></a>Arguments  
  [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
- Crée une instance de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. `SqlLocalDB` utilise la version de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] binaires spécifiés par * \<version_instance >* argument. Le numéro de version est spécifié au format numérique avec au moins une décimale. Les numéros de version secondaire (Service Packs) sont facultatifs. Par exemple, les deux numéros de version suivants sont acceptables : 11.0 et 11.0.1186. La version spécifiée doit être installée sur l'ordinateur. Si non spécifié, le numéro de version par défaut est la version de la `SqlLocalDB` utilitaire. L’ajout de **–s** permet de démarrer la nouvelle instance de **LocalDB**.  
+ Crée une instance de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. `SqlLocalDB` utilise la version de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] binaires spécifiés par  *\<version_instance >* argument. Le numéro de version est spécifié au format numérique avec au moins une décimale. Les numéros de version secondaire (Service Packs) sont facultatifs. Par exemple, les deux numéros de version suivants sont acceptables : 11.0 et 11.0.1186. La version spécifiée doit être installée sur l'ordinateur. Si non spécifié, le numéro de version par défaut est la version de la `SqlLocalDB` utilitaire. L’ajout de **–s** permet de démarrer la nouvelle instance de **LocalDB**.  
   
  [ **share** | **h** ]  
  Partage l’instance privée spécifiée de **LocalDB** à l’aide du nom partagé spécifié. Si le SID ou le nom de compte de l'utilisateur est omis, il prend par défaut la valeur de l'utilisateur actuel.  

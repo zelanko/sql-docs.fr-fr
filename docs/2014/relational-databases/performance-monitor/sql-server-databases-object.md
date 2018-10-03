@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQLServer:Databases
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 71344f6e5a1e9ebb1f13cede4c71b933a8c6a893
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 029d59328bf13991cd98c4d5ed5fa186abbd4453
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818225"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111563"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objet Databases
   L’objet **SQLServer:Databases** dans SQL Server fournit des compteurs pour analyser les opérations de copie en bloc, le débit des sauvegardes et des restaurations, ainsi que l’activité des journaux des transactions. Surveillez les transactions et le journal des transactions pour déterminer l'intensité de l'activité de l'utilisateur dans la base de données et le taux de remplissage du journal des transactions. Le volume d'activité de l'utilisateur peut déterminer les performances de la base de données et affecter la taille du journal, le verrouillage et la réplication. La surveillance de l'activité du journal de bas niveau afin de mesurer l'activité de l'utilisateur et l'exploitation des ressources peut permettre d'identifier les goulots d'étranglement des performances.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - support [data mining]
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a701907535b7c0f5103cf1e98276f5573e9678f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db6b49c10441e08bb66256860550fc2447f6dcf3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282425"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120899"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenu du modèle d’exploration de données (Analysis Services - Exploration de données)
   Après avoir conçu et traité un modèle d'exploration de données à l'aide de données provenant de la structure d'exploration de données sous-jacente, celui-ci est complet et présente un *contenu de modèle d'exploration de données*. Vous pouvez utiliser ce contenu pour faire des prédictions ou analyser vos données.  
@@ -80,7 +77,7 @@ ms.locfileid: "37282425"
   
 |NODE_TYPE ID|Étiquette de nœud|Contenu de nœud|  
 |-------------------|----------------|-------------------|  
-| 1|Modèle|Nœud de métadonnées et de contenu racine. S'applique à tous les types de modèle.|  
+|1|Modèle|Nœud de métadonnées et de contenu racine. S'applique à tous les types de modèle.|  
 |2|trEE|Nœud racine d'un arbre de classification. S'applique aux modèles d'arbre de décision|  
 |3|Intérieur|Nœud fractionné intérieur dans une arborescence. S'applique aux modèles d'arbre de décision|  
 |4|Distribution|Nœud de terminaison d'une arborescence. S'applique aux modèles d'arbre de décision|  
@@ -217,7 +214,7 @@ ms.locfileid: "37282425"
   
 |ID VALUE_TYPE|Étiquette de valeur|Nom de type de valeur|  
 |--------------------|-----------------|---------------------|  
-| 1|Missing|Indique que les données de cas ne contenaient pas de valeur pour cet attribut. Le `Missing` état est calculé séparément des attributs qui ont des valeurs.|  
+|1|Missing|Indique que les données de cas ne contenaient pas de valeur pour cet attribut. Le `Missing` état est calculé séparément des attributs qui ont des valeurs.|  
 |2|Existing|Indique que les données de cas contiennent une valeur pour cet attribut.|  
 |3|Continu|Indique que la valeur de l'attribut est une valeur numérique continue et par conséquent peut être représentée par une moyenne ainsi que la variance et l'écart type.|  
 |4|Discret|Indique une valeur, soit numérique, soit texte, traitée comme discrète.<br /><br /> **Remarque** Les valeurs discrètes peuvent être aussi manquantes ; toutefois, elles sont traitées différemment durant les calculs. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).|  
@@ -256,7 +253,7 @@ ms.locfileid: "37282425"
   
 |Niveau de nœud/attribut et valeur|Probabilité marginale|probabilité du nœud|  
 |----------------------------------------|--------------------------|----------------------|  
-|Racine du modèle<br /><br /> Tous les clients cibles| 1| 1|  
+|Racine du modèle<br /><br /> Tous les clients cibles|1|1|  
 |Clients cibles répartis par sexe|.5|.5|  
 |Clients cibles répartis par sexe, et répartis de nouveau en trois directions selon le revenu|.33|.5 * .33 = .165|  
   

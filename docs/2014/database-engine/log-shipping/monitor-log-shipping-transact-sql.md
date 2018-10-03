@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], status
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9fb5c435f46788f7b3d703da16ccddab80d81d32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160916"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127611"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Surveiller la copie des journaux de transaction (Transact-SQL)
   Une fois l'envoi de journaux configuré, vous pouvez contrôler les informations d'état de l'ensemble des serveurs d'envoi de journaux. L'historique et l'état des opérations d'envoi de journaux sont toujours enregistrés localement par les travaux d'envoi de journaux. L'historique et l'état de l'opération de sauvegarde sont stockés sur le serveur principal, tandis que l'historique et l'état des opérations de copie et de restauration sont stockés sur le serveur secondaire. Si vous avez implémenté un serveur moniteur distant, ces informations sont également stockées sur le serveur moniteur.  

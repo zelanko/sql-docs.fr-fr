@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC]
 - ODBC, date/time improvements
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 034c0957d4214b24fd9903b7b5ebb4e4a700bb4e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d56689bb045a6540bfdfbb9c7147dc34db110bde
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413419"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123621"
 ---
-# <a name="date-and-time-improvements-odbc"></a>Améliorations date / heure (ODBC)
+# <a name="date-and-time-improvements-odbc"></a>Améliorations de la date et de l’heure (ODBC)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a introduit de nouveaux types de données de date et d'heure. Cette section décrit comment ces nouveaux types sont exposés en tant qu’extensions dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Pour une vue d’ensemble de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge les nouveaux types date et heure données, consultez [améliorations Date / heure](../native-client/features/date-and-time-improvements.md). Pour un exemple illustrant la prise en charge de la date/heure ODBC, consultez [utilisez Types de Date et heure](../native-client-odbc-how-to/use-date-and-time-types.md).  
   
  Pour obtenir des informations plus générales sur les types de données date et d’heure, consultez [datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql).  

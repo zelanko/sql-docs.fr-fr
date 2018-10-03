@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backup compression [SQL Server], Resource Governor
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - backups [SQL Server], compression
 - Resource Governor, backup compression
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bc9e5e2f75d253e45a11d88fe9fbf6c527b71d03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b28b574dcbe26796b6fc561b209425f023f0178f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283485"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108159"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Utiliser le gouverneur de ressources pour limiter l'utilisation de l'UC par compression de sauvegarde (Transact-SQL)
   Par défaut, sauvegarder en utilisant la compression augmente considérablement l'utilisation de l'UC et l'UC supplémentaire consommée par le processus de compression peut nuire aux opérations simultanées. Ainsi, il peut être préférable, dans une session où l’utilisation du processeur est limitée, de créer une sauvegarde compressée de priorité basse à l’aide de[Resource Governor](../resource-governor/resource-governor.md) en cas de contention du processeur. Cette rubrique présente un scénario qui classifie les sessions d'un utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] particulier en les mappant à un groupe de charge de travail de Resource Governor qui limite l'utilisation de l'UC dans de tels cas.  

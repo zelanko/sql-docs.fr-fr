@@ -1,34 +1,31 @@
 ---
-title: Exemple de propriété (VC ++) d’élément | Documents Microsoft
+title: Exemple de propriété (VC ++) d’élément | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Item property [ADO], VC++ example
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae9d63a532a54ed7f1c163685a39542ce8b2d53a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2b228ad46c89766475e8a74e26a0aaf389130acd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279270"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771347"
 ---
-# <a name="item-property-example-vc"></a>Exemple de propriété d’élément (VC ++)
+# <a name="item-property-example-vc"></a>Item, exemple de propriété (VC++)
 Cet exemple montre comment la [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété accède aux membres d’une collection. L’exemple ouvre le ***auteurs*** table de la ***Pubs*** base de données avec une commande paramétrée.  
   
- Le paramètre de la commande émise sur la base de données est accessible à partir de la [commande](../../../ado/reference/ado-api/command-object-ado.md) l’objet [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection par index et par nom. Champs de retourné [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sont accessibles à partir de cet objet [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection par index et par nom.  
+ Le paramètre de la commande émise par rapport à la base de données est accessible à partir de la [commande](../../../ado/reference/ado-api/command-object-ado.md) l’objet [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection par index et par nom. Champs de retourné [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sont accessibles à partir de l’objet [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection par index et le nom.  
   
 ```  
 // BeginItemCpp.cpp  
@@ -236,7 +233,7 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet de commande (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Objet Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Élément propriété (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
  [Collection de paramètres (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

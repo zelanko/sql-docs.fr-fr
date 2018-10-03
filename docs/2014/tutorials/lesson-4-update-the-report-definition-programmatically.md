@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
-caps.latest.revision: 20
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18fc88beee15b995c3f705e9b6582d695d94d703
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b1b996e2135953e862b27d992d22c6a7666904c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286495"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137129"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>Leçon 4 : Mise à jour par programme de la définition du rapport
   Maintenant que la définition du rapport a été chargée depuis le serveur de rapports et que vous pouvez y faire référence à l'aide du champ du rapport, vous devez la mettre à jour. Pour cet exemple, vous allez mettre à jour la propriété `Description` du rapport.  

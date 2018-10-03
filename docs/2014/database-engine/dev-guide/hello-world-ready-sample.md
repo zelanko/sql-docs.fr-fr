@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d94ed99238f6e4a38b92059ad7cd5571abd47e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc2ba0e196fa2440152fe1bd7415feeeb6f4e079
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235599"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079639"
 ---
 # <a name="hello-world-ready-sample"></a>Exemple HelloWorldReady
   L'exemple HelloWorldReady présente les opérations de base à effectuer pour créer, déployer et tester une procédure stockée simple basée sur l'intégration du CLR (Common Language Runtime) et adaptée pour un usage international. Un composant est dit adapté pour un usage international lorsqu'il est possible de le localiser facilement, sans changer son code source, en différentes langues pour divers marchés dans le monde entier. Cet exemple montre également comment retourner des données via un paramètre de sortie et via un enregistrement, qui est construit de manière dynamique par la procédure stockée et est retourné au client. Cet exemple est presque identique à l'exemple Hello World, mais il est beaucoup plus facile et sécurisé de localiser cette application. La modification du texte localisé nécessite les opérations suivantes :  

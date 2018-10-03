@@ -1,14 +1,11 @@
 ---
-title: dbo.sysdownloadlist (Transact-SQL) | Documents Microsoft
+title: dbo.sysdownloadlist (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysdownloadlist
@@ -20,25 +17,24 @@ dev_langs:
 helpviewer_keywords:
 - sysdownloadlist system table
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4390fe628a879b36b42ffd1a3c3209e910eb125c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0568403cb7f5bdf48d9be33e1b40f0be3fc1c33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745082"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient la file d'attente des instructions de téléchargement pour l'ensemble des serveurs cibles.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**instance_id**|**int**|Colonne d'identité indiquant la séquence naturelle d'insertion des lignes|  
+|**instance_id**|**Int**|Colonne d'identité indiquant la séquence naturelle d'insertion des lignes|  
 |**source_server**|**sysname**|Nom du serveur source|  
 |**operation_code**|**tinyint**|Code d'opération pour le travail :<br /><br /> **1** = INS (INSERTION)<br /><br /> **2** = UPD (MISE À JOUR)<br /><br /> **3** = SUPPR (SUPPRESSION)<br /><br /> **4** = DÉMARRAGE<br /><br /> **5** = ARRÊTER|  
 |**object_type**|**tinyint**|Code du type d'objet.|  
@@ -50,6 +46,6 @@ ms.locfileid: "33257211"
 |**status**|**tinyint**|État du travail :<br /><br /> **0** ne = pas encore téléchargé<br /><br /> **1** = téléchargé avec succès|  
 |**deleted_object_name**|**sysname**|Nom de l'objet supprimé.|  
   
- <sup>1</sup> le **object_id** colonne peut être une valeur de **-1**, qui correspond à la valeur ALL si la **operation_code** colonne est une valeur de suppression.  
+ <sup>1</sup> le **object_id** colonne peut être une valeur de **-1**, qui correspond à une valeur ALL si la **operation_code** colonne est une valeur de suppression.  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_gettypename
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 489980d88e5f49d2c350fa3a3784d3603deab5e0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086809"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   Retourne le nom de type de SQL pour un jeton de type BCP spécifié.  
@@ -46,7 +43,7 @@ fIsMaxType
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *jeton*  
+ *Jeton*  
  Valeur indiquant un jeton de type BCP.  
   
  *field*  
@@ -79,8 +76,8 @@ fIsMaxType
 |`SQLTEXT`|Avant ou après|**texte**|  
 |`SQLBIGBINARY`|non|**binaire**|  
 |`SQLBINARY`|non|**Binaire**|  
-|`SQLBIGVARBINARY`|non|**Varbinary**|  
-|`SQLVARBINARY`|non|**Varbinary**|  
+|`SQLBIGVARBINARY`|non|**varbinary**|  
+|`SQLVARBINARY`|non|**varbinary**|  
 |`SQLIMAGE`|Avant ou après|**Image**|  
 |`SQLINTN`|Avant ou après|**int null**|  
 |`SQLDATETIMN`|Avant ou après|**datetime-null**|  
@@ -92,12 +89,12 @@ fIsMaxType
 |`SQLAOPMIN`|Avant ou après|**Min**|  
 |`SQLAOPMAX`|Avant ou après|**Max**|  
 |`SQLDATETIM4`|Avant ou après|**smalldatetime**|  
-|`SQLMONEY4`|Avant ou après|**Smallmoney**|  
-|`SQLFLT4`|Avant ou après|**Réel**|  
+|`SQLMONEY4`|Avant ou après|**smallmoney**|  
+|`SQLFLT4`|Avant ou après|**réel**|  
 |`SQLUNIQUEID`|Avant ou après|**uniqueidentifier**|  
 |`SQLNCHAR`|non|**NCHAR**|  
 |`SQLNVARCHAR`|non|**Nvarchar**|  
-|`SQLNTEXT`|Avant ou après|**Ntext**|  
+|`SQLNTEXT`|Avant ou après|**ntext**|  
 |`SQLVARIANT`|Avant ou après|**sql_variant**|  
 |`SQLINT8`|Avant ou après|**Bigint**|  
 |`SQLCHARACTER`|Oui|**varchar(max)**|  

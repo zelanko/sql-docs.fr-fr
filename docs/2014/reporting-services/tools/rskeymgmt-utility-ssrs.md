@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e39e1bd9772ea1e05e4e2c0dbb951cba721caaa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28ce36cbd728787e69fcf00963aa024896d60750
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116879"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitaire rskeymgmt (SSRS)
   Extrait, restaure, crée et supprime la clé symétrique utilisée pour protéger les données sensibles de serveur de rapports contre un accès non autorisé. Cet utilitaire sert également à joindre des instances de serveur de rapports dans un déploiement évolutif. Un *déploiement évolutif de serveurs de rapports* correspond à plusieurs instances de serveur de rapports qui partagent une base de données de serveur de rapports unique.  
@@ -82,7 +79,7 @@ ms.locfileid: "37214829"
  **-r**  *installationID*  
  Supprime les informations de clé symétrique pour une instance de serveur de rapports spécifique, supprimant de ce fait le serveur de rapports d'un déploiement évolutif. *installationID* est une valeur GUID se trouvant dans le fichier RSReportserver.config.  
   
- `-f`  *fichier*  
+ `-f`  *Fichier*  
  Définit un chemin d'accès complet au fichier qui stocke une copie de sauvegarde des clés symétriques.  
   
  Pour **rskeymgmt -e**, la clé symétrique est écrite dans le fichier que vous spécifiez.  
@@ -110,7 +107,7 @@ ms.locfileid: "37214829"
  **-t**  *trace*  
  Envoie des messages d'erreur au journal de suivi. Cet argument ne prend pas de valeur. Pour plus d’informations, consultez [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Vous devez être un administrateur local pour pouvoir exécuter cet outil et vous devez l'exécuter localement sur l'ordinateur qui héberge le serveur de rapports. L'utilitaire rskeymgmt fonctionne avec l'instance locale de Windows Report Server (l'utilitaire ne peut pas se connecter à des instances distantes du service Windows Report Server, il ne peut donc pas être utilisé pour gérer les clés de chiffrement d'une instance distante de serveur de rapports).  
   
 > [!NOTE]  

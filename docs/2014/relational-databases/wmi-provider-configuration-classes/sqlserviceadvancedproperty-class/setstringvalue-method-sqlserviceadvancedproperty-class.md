@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetStringValue Method (SqlServiceAdvancedProperty Class )
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetStringValue method
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be05ab6bccb772ef4f2bb0a65eed716f9633edff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f02ab6929e21c2d4f0d73bfdf55f0cdf18cc67e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166720"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076829"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>Méthode SetStringValue (classe SqlServiceAdvancedProperty)
   Définit la valeur de chaîne d'une propriété.  
@@ -52,7 +49,7 @@ StrValue
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*StrValue*|Valeur de chaîne qui spécifie la valeur de la propriété avancée.|  
+|*strValue*|Valeur de chaîne qui spécifie la valeur de la propriété avancée.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32`, égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

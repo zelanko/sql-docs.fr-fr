@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Translations Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Translations element
 ms.assetid: 86fd2119-9bea-4306-829e-cc439da05566
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 64dcf6e45cd70270ca0a5160b777044082c1c27d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f216a564f715efbbaa2af2f094d1e4181f8bdbe9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205649"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126749"
 ---
 # <a name="translations-element-xmla"></a>Élément Translations (XMLA)
   Contient une collection d'éléments [Translation](translation-element-xmla.md) utilisés pour identifier les clés de membre du membre d'attribut représenté par l'élément [Attribute](attribute-element-xmla.md) parent.  
@@ -63,7 +60,7 @@ ms.locfileid: "37205649"
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|[Attribute](attribute-element-xmla.md)|  
-|Éléments enfants|[Traduction](translation-element-xmla.md)|  
+|Éléments enfants|[traduction](translation-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
   

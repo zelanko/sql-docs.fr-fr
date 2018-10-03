@@ -1,15 +1,12 @@
 ---
-title: Fonction LocalDBGetInstanceInfo | Documents Microsoft
+title: Fonction LocalDBGetInstanceInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetInstanceInfo
@@ -17,15 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5bb8e123f084b20fb16e3fd4e0e52bd482a2760b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 239dfd78fd2f1ce4721953c53efeb47cb29da4cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740329"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Fonction LocalDBGetInstanceInfo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,9 +129,9 @@ HRESULT LocalDBGetInstanceInfo(
  Une erreur inattendue s'est produite. Pour plus d'informations, consultez le journal des événements.  
   
 ## <a name="details"></a>Détails  
- Les raisons qui justifient l’introduction de la **struct** argument de taille (*lpInstanceInfoSize*) consiste à activer l’API doit retourner différentes versions de la **LocalDBInstanceInfostruct**, activant ainsi la compatibilité descendante et ascendante.  
+ Le raisonnement derrière l’introduction de la **struct** argument de taille (*lpInstanceInfoSize*) consiste à activer l’API doit retourner différentes versions de la **LocalDBInstanceInfostruct**, efficacement l’activation de compatibilité descendante et ascendante.  
   
- Si le **struct** argument de taille (*lpInstanceInfoSize*) correspond à la taille d’une version connue de le **LocalDBInstanceInfostruct**, cette version de la **struct** est retourné. Sinon, LOCALDB_ERROR_INVALID_PARAMETER est retourné.  
+ Si le **struct** argument de taille (*lpInstanceInfoSize*) correspond à la taille d’une version connue de la **LocalDBInstanceInfostruct**, cette version de la  **struct** est retourné. Sinon, LOCALDB_ERROR_INVALID_PARAMETER est retourné.  
   
  Un exemple typique de **LocalDBGetInstanceInfo** utilisation de l’API se présente comme suit :  
   

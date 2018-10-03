@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - association rules
 - content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ccd88cf081949cfad9c3d032598af9b96707fd0f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad20cca3b87a3d3b94bef48dcdf94c55cf30a282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173610"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117380"
 ---
 # <a name="association-model-query-examples"></a>Exemples de requêtes de modèle d'association
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu qui fournit des détails sur les règles et les jeux d'éléments découverts au cours de l'analyse, soit créer une requête de prédiction qui utilise les associations découvertes dans les données pour faire des prédictions. En général, pour un modèle d'association, les prédictions sont basées sur des règles et peuvent être utilisées pour faire des recommandations, tandis que les interrogations sur du contenu explorent la relation entre les jeux d'éléments. Vous pouvez aussi récupérer des métadonnées sur le modèle.  

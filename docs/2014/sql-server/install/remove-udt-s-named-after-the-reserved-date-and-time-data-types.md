@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time data type [SQL Server], UDTs
 - date data type [SQL Server], UDTs
 ms.assetid: 48f109af-b1d1-4f03-a7e3-8a0b05ed94e8
-caps.latest.revision: 6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f48e2b38dedd30f06c022054b06aafbef1ca74e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5471788d3e730c9694ea6394b7e3d1fc659eda96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198199"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078449"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>Supprimez les UDT&#39;s nommé d’après les types de données DATE et d’heure réservés
   Le Conseiller de mise à niveau a détecté un type défini par l'utilisateur (UDT) nommé d'après un terme a réservé pour les types de donnée `date` ou `time`.  

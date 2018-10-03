@@ -1,34 +1,31 @@
 ---
-title: Positionner des propriétés de l’objet, méthodes et événements | Documents Microsoft
+title: Positionner des propriétés des objets, méthodes et événements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Position object [ADO MD], members
 ms.assetid: c3e824b1-30c7-4afa-9a27-213c407453e8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7090f68a0f6d92ed3fe43df0e86a9a75a406e11
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0b7759de493ab82f0558f6a7fd754473c4bfd2eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284620"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836037"
 ---
-# <a name="position-object-properties-methods-and-events"></a>Propriétés de l’objet position, méthodes et événements
-## <a name="propertiescollections"></a>Propriétés et de Collections  
+# <a name="position-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Position
+## <a name="propertiescollections"></a>Propriétés et des Collections  
  [Collection de membres](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
   
- [Propriété ordinal (Position)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)  
+ [Ordinal, propriété (Position)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)  
   
 ## <a name="methods"></a>Méthodes  
  Aucun.  

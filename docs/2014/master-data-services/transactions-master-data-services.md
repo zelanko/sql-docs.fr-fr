@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7697fba2cadf0f7199b047ce7e84656b838cedb5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 33b5bab2bb9d812686b6afbc65e0a8292247634b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283355"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129049"
 ---
 # <a name="transactions-master-data-services"></a>Transactions (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], une transaction est enregistrée à chaque fois qu'une action est effectuée sur un membre. Les transactions peuvent être affichées par tous les utilisateurs et être inversées par les administrateurs. Les transactions affichent la date, l'heure et l'utilisateur qui a effectué l'action, ainsi que d'autres détails. Les utilisateurs peuvent ajouter une annotation à une transaction, pour indiquer pourquoi une transaction a eu lieu.  
@@ -56,7 +53,7 @@ ms.locfileid: "37283355"
   
  Plusieurs utilisateurs peuvent mettre à jour les mêmes valeurs d'entité sans erreur malgré les transactions activées. En général, la dernière modification de la valeur dans un même intervalle de temps prévaut. Les conflits de modifications en double peuvent être observés dans l'historique des transactions et peuvent être corrigés manuellement par l'administrateur. L'historique des transactions affiche les transactions individuelles pour **Valeur précédente** et **Nouvelle valeur** pour l'attribut en question dans chaque session, mais ne corrige pas automatiquement le conflit lorsque plusieurs **Nouvelles valeurs** existent pour la même valeur de départ.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

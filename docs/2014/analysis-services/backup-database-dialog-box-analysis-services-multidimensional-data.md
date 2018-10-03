@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Backup.f1
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d325d1cb634f1fb7548ff0a1030c97e866681b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 741f3b761e4c6645cee7c43c3e8f593dbad13219
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234439"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067319"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Sauvegarder la base de données (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour sauvegarder une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans un fichier de sauvegarde en utilisant le format de fichier de sauvegarde .abf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

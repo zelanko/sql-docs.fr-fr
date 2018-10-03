@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes creation, columnstore
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - columnstore index, described
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
-caps.latest.revision: 50
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8dd4fdcc7031f56850cded09b098356d2fbad195
-ms.sourcegitcommit: 4a9c89d72d91158832e89d96eb88cda616d36452
+ms.openlocfilehash: 58bf23c84914d7df4b9f2637cc7682de2021bf08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42802529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109802"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *les index columnstore en mémoire* stocke et gère les données à l’aide de stockage de données en colonnes et de traitement de requête fondée sur une colonne. Les index columnstore fonctionnent bien pour les charges de travail de stockage de données qui effectuent principalement des chargements en masse et des requêtes en lecture seule. Utilisez l'index columnstore pour atteindre des gains de **performances des requêtes** pouvant être multipliés par 10 par rapport au stockage orienté lignes traditionnel, et une **compression de données** multipliée par 7 par rapport à la taille des données non compressées.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, database schema
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - staging area schema options [Analysis Services]
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef75cf2773781f94bd02a26c5c94958b9f4dfe3f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 554f226c3b6ca1fa3a753947b08a3fea3d6946c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282245"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133429"
 ---
 # <a name="understanding-the-database-schemas"></a>Présentation des schémas de base de données
   L'Assistant Génération de schéma crée pour la base de données de la zone de sujet un schéma relationnel dénormalisé basé sur les dimensions et les groupes de mesures définis dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'Assistant génère pour chaque dimension une table relationnelle appelée table de dimension, destinée à stocker les données de dimension, et pour chaque groupe de mesures une table relationnelle appelée table de faits, servant à stocker les données de faits. Lorsqu'il génère ces tables relationnelles, l'Assistant ignore les dimensions liées, les groupes de mesures liés et les dimensions de temps de serveur.  
@@ -96,7 +93,7 @@ ms.locfileid: "37282245"
 |NameColumn|50|  
 |CustomRollupColumn|3000|  
 |CustomRollupPropertiesColumn|500|  
-|UnaryOperatorColumn| 1|  
+|UnaryOperatorColumn|1|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation de la génération incrémentielle](understanding-incremental-generation.md)   

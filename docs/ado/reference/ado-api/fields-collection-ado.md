@@ -1,13 +1,11 @@
 ---
-title: Champs de la Collection (ADO) | Documents Microsoft
+title: Fields, Collection (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,33 +15,32 @@ f1_keywords:
 helpviewer_keywords:
 - Fields collection [ADO]
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2641f21c0726d010990964d84f89148814e866c9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 74e6deb0caba88e6bbcf2897dcfa4aaaa22f04d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278488"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762597"
 ---
-# <a name="fields-collection-ado"></a>Collection de champs (ADO)
-Contient tous les [champ](../../../ado/reference/ado-api/field-object.md) les objets d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet.  
+# <a name="fields-collection-ado"></a>Fields, collection (ADO)
+Contient tous les [champ](../../../ado/reference/ado-api/field-object.md) objets d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet.  
   
 ## <a name="remarks"></a>Notes  
- A **Recordset** objet a un **champs** collection composée de **champ** objets. Chaque **champ** objet correspond à une colonne dans la **Recordset**. Vous pouvez remplir le **champs** collection avant d’ouvrir le **Recordset** en appelant le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) méthode sur la collection.  
+ Un **Recordset** objet possède un **champs** collection composée de **champ** objets. Chaque **champ** objet correspond à une colonne dans la **Recordset**. Vous pouvez remplir le **champs** collection avant d’ouvrir le **Recordset** en appelant le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) méthode sur la collection.  
   
 > [!NOTE]
 >  Consultez le **champ** rubrique d’objet pour une explication plus détaillée de l’utilisation de **champ** objets.  
   
- Le **champs** comporte une [Append](../../../ado/reference/ado-api/append-method-ado.md) (méthode), qui crée et ajoute provisoirement un **champ** objet à la collection et un **demettreàjour**(méthode), qui finalise les ajouts et les suppressions.  
+ Le **champs** collection a un [Append](../../../ado/reference/ado-api/append-method-ado.md) (méthode), qui crée et ajoute provisoirement un **champ** objet à la collection et un **mettre à jour**(méthode), qui finalise les ajouts et les suppressions.  
   
- A **enregistrement** objet possède deux champs spéciaux qui peuvent être indexés avec [FieldEnum](../../../ado/reference/ado-api/fieldenum.md) constantes. Une des constantes accède à un champ qui contient le flux de valeur par défaut pour le **enregistrement**, et l’autre accède à un champ qui contient la chaîne d’URL absolue pour le **enregistrement**.  
+ Un **enregistrement** objet comporte deux champs spéciaux qui peuvent être indexées avec [FieldEnum](../../../ado/reference/ado-api/fieldenum.md) constantes. Une seule constante accède à un champ contenant le flux par défaut pour le **enregistrement**, et l’autre accède à un champ contenant la chaîne d’URL absolue pour le **enregistrement**.  
   
- Certains fournisseurs (par exemple, le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) peut remplir le **champs** collection avec un sous-ensemble des champs disponibles pour le **enregistrement** ou **Recordset**. Autres champs ne seront pas ajoutés à la collection jusqu'à ce qu’ils sont tout d’abord référencées par son nom ou indexés par votre code.  
+ Certains fournisseurs (par exemple, le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) peut remplir le **champs** collection avec un sous-ensemble des champs disponibles pour le **enregistrement** ou **Recordset**. Autres champs ne seront pas ajoutés à la collection jusqu'à ce qu’ils sont tout d’abord référencés par nom ou indexés par votre code.  
   
- Si vous tentez de référencer un champ inexistant par son nom, un nouveau **champ** objet sera ajouté à la **champs** collection avec une [état](../../../ado/reference/ado-api/status-property-ado-field.md) de  **adFieldPendingInsert**. Lorsque vous appelez [mise à jour](../../../ado/reference/ado-api/update-method.md), ADO crée un nouveau champ dans votre source de données si autorisé par votre fournisseur.  
+ Si vous essayez de référencer un champ inexistant par son nom, un nouveau **champ** objet sera ajouté à la **champs** collection avec un [état](../../../ado/reference/ado-api/status-property-ado-field.md) de  **adFieldPendingInsert**. Lorsque vous appelez [mise à jour](../../../ado/reference/ado-api/update-method.md), ADO crée un nouveau champ dans votre source de données si autorisé par votre fournisseur.  
   
  Cette section contient les rubriques suivantes.  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06dfd95c82aab8e3fed336863c75112728150247
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12943c96c64c1a5d20ee94c76a9701fc7a983d85
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149751"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083819"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurer la collecte des données d'utilisation (PowerPivot pour SharePoint)
   La collecte des données d'utilisation est une fonctionnalité SharePoint au niveau de la batterie de serveurs. Le service PowerPivot pour SharePoint utilise et étend ce système pour fournir des rapports intégrés dans le tableau de bord de gestion PowerPivot qui indiquent la manière dont les données et services PowerPivot sont utilisés. Selon la façon dont vous avez installé votre serveur SharePoint, la collecte des données d'utilisation peut être désactivée pour la batterie de serveurs. Un administrateur de batterie doit activer la journalisation de l'utilisation pour créer les données d'utilisation qui s'affichent dans le tableau de bord de gestion PowerPivot.  

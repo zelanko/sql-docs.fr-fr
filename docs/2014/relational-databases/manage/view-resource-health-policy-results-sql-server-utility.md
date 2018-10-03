@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e58e63bd8a5c7180bd4282b4aaf91092cefee293
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 707381c336aaea9f91ba6b37404bcb07950cc272
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817245"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108719"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>Consulter les résultats d'une stratégie de contrôle d'intégrité des ressources (Utilitaire SQL Server)
   Utilisez le tableau de bord de l’utilitaire dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour consulter les paramètres des ressources de l’utilitaire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les instances managées de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les applications de la couche Données. Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](sql-server-utility-features-and-tasks.md).  

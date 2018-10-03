@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 f1_keywords:
 - sql12.rtp.rptdesigner.subreportproperties.parameters.f1
 - sql12.rtp.rptdesigner.reportparameters.general.f1
@@ -19,16 +15,15 @@ f1_keywords:
 - "10070"
 - sql12.rtp.rptdesigner.reportparameters.advanced.f1
 ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 26fdc20f897d904319c9080120aa5770b53145bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e429badf8d6ad656f0ba5f0944a7d6bdf21553c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168290"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107331"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Paramètres de rapport (Générateur de rapports et Concepteur de rapports)
   Cette rubrique décrit les utilisations courantes des paramètres de rapport SSRS, les propriétés pouvant être définies et bien d'autres paramètres. Les paramètres de rapport vous permettent de contrôler les données du rapport, d'interconnecter les rapports associés et de varier la présentation des rapports.  
@@ -136,7 +131,7 @@ ms.locfileid: "37168290"
 |--------------|-----------------|  
 |Nom   |Tapez un nom de paramètre qui respecte la casse. Le nom doit commencer par une lettre et contenir des lettres, des chiffres, un trait de soulignement (_). Le nom ne peut pas contenir d'espace. Les noms des paramètres générés automatiquement correspondent au paramètre dans la requête du dataset. Par défaut, les paramètres créés manuellement sont similaires à ReportParameter1.|  
 |Demander|Texte qui apparaît en regard du paramètre dans la barre d'outils de la visionneuse de rapports.|  
-|Type de données|Lorsque les valeurs disponibles sont définies pour un paramètre, l’utilisateur choisit des valeurs dans une liste déroulante, même lorsque le type de données est `DateTime`. Un paramètre de rapport doit avoir l'un des types de données suivants :<br /><br /> `Boolean`. L'utilisateur sélectionne True ou False à l'aide d'une case d'option.<br /><br /> `DateTime`. L'utilisateur sélectionne une date à l'aide d'un contrôle calendrier.<br /><br /> **Entier**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> **Float**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> `Text`. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> Pour plus d’informations sur les types de données de rapport, consultez [les Types de données RDL](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
+|Type de données|Lorsque les valeurs disponibles sont définies pour un paramètre, l’utilisateur choisit des valeurs dans une liste déroulante, même lorsque le type de données est `DateTime`. Un paramètre de rapport doit avoir l'un des types de données suivants :<br /><br /> `Boolean` . L'utilisateur sélectionne True ou False à l'aide d'une case d'option.<br /><br /> `DateTime` . L'utilisateur sélectionne une date à l'aide d'un contrôle calendrier.<br /><br /> **Entier**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> **Float**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> `Text` . L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> Pour plus d’informations sur les types de données de rapport, consultez [les Types de données RDL](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Autoriser une valeur vide|Sélectionnez cette option si la valeur du paramètre peut être une chaîne ou une valeur vide.<br /><br /> Si vous spécifiez les valeurs valides d'un paramètre et si vous souhaitez qu'une valeur vide soit l'une des valeurs valides, vous devez l'inclure dans les valeurs que vous spécifiez. La sélection de cette option n'inclut pas automatiquement une valeur vide dans les valeurs disponibles.|  
 |Autoriser les valeurs de type NULL|Sélectionnez cette option si la valeur du paramètre peut être Null.<br /><br /> Si vous spécifiez les valeurs valides d'un paramètre et si vous souhaitez qu'une valeur Null soit l'une des valeurs valides, vous devez l'inclure dans les valeurs que vous spécifiez. La sélection de cette option n'inclut pas automatiquement une valeur Null dans les valeurs disponibles.|  
 |Autoriser les valeurs multiples|Fournissez les valeurs disponibles pour la création d'une liste déroulante dans laquelle vos utilisateurs peuvent effectuer des choix. Cela constitue une bonne méthode pour s'assurer que seules les valeurs valides sont envoyées dans la requête de dataset.<br /><br /> Sélectionnez cette option si la valeur pour le paramètre peut être plusieurs valeurs affichées dans une liste déroulante. Les valeurs NULL ne sont pas autorisées. Lorsque cette option est sélectionnée, les cases à cocher sont ajoutées à la liste de valeurs disponibles dans une liste déroulante de paramètre. Le haut de la liste comporte une case à cocher pour **Sélectionner tout**. Les utilisateurs peuvent activer les valeurs qu'ils souhaitent.<br /><br /> Si les données qui fournissent des valeurs changent rapidement, il est possible que la liste visible par l'utilisateur ne soit pas actualisée.|  

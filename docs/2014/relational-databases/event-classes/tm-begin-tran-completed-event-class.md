@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Begin Tran Completed event class'
 ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7039e0b3d829daebd2af39c6cf279c7e4c4645e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca4f86e8309e9872682488bc37ecc15c8accb460
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182346"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125989"
 ---
 # <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed, classe d'événements
   La classe d'événements TM: Begin Tran Completed indique qu'une demande BEGIN TRANSACTION a été effectuée. La demande a été envoyée à partir du client via l'interface de gestion des transactions.  
@@ -52,7 +49,7 @@ ms.locfileid: "37182346"
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si disponible.|14|Oui|  
 |Réussi|`int`|1 = réussite. 0 = échec (1 signifie la réussite de la vérification d'autorisations et 0 l'échec de cette vérification, par exemple).|23|Oui|  
-|TextData|`ntext`|Valeur texte qui dépend de la classe d'événements capturée dans la trace.| 1|Oui|  
+|TextData|`ntext`|Valeur texte qui dépend de la classe d'événements capturée dans la trace.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  
   

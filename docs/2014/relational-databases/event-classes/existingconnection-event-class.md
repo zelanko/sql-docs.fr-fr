@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - ExistingConnection event class
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 845f94a258b237dc571276001647321f505b3708
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f57bf8b1a40783eccbb75cd27edf5eb390b1cdc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329539"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078159"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection, classe d’événements
   La classe d'événements ExistingConnection indique les propriétés des connexions utilisateur existantes au moment du démarrage de la trace. Le serveur déclenche un événement ExistingConnection par connexion utilisateur existante.  
@@ -52,7 +49,7 @@ ms.locfileid: "37329539"
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle l'utilisateur a ouvert cette connexion (heure de connexion).|14|Oui|  
-|TextData|`ntext`|Options définies spécifiques à la connexion.| 1|Oui|  
+|TextData|`ntext`|Options définies spécifiques à la connexion.|1|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

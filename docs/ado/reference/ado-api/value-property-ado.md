@@ -1,13 +1,11 @@
 ---
-title: Valeur de propriété (ADO) | Documents Microsoft
+title: Valeur de propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,18 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Value property [ADO]
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45f028bf6aaa1273f7220519fc5dfa76c1365437
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8c7e4d42bc58321c5b650df5e8e842290094fcf4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282828"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715018"
 ---
-# <a name="value-property-ado"></a>Value (propriété) (ADO)
+# <a name="value-property-ado"></a>Value, propriété (ADO)
 
 Indique la valeur assignée à un [champ](../../../ado/reference/ado-api/field-object.md), [paramètre](../../../ado/reference/ado-api/parameter-object.md), ou [propriété](../../../ado/reference/ado-api/property-object-ado.md) objet.
   
@@ -37,14 +34,14 @@ Définit ou retourne un **Variant** valeur qui indique la valeur de l’objet. V
   
 ## <a name="remarks"></a>Notes
 
-Utilisez le **valeur** propriété pour définir ou retourner les données à partir de **champ** pour définir ou retourner les valeurs de paramètres avec les objets **paramètre** objets, ou pour définir ou retourner les paramètres de propriété avec **Propriété** objets. Si le **valeur** propriété est en lecture/écriture ou en lecture seule dépend de nombreux facteurs. consultez les rubriques de l’objet respectifs pour plus d’informations.
+Utilisez le **valeur** propriété pour définir ou retourner des données à partir de **champ** objets, pour définir ou retourner des valeurs de paramètre avec **paramètre** objets, ou pour définir ou retourner les paramètres de propriété avec **Propriété** objets. Si le **valeur** propriété est en lecture/écriture ou en lecture seule dépend de nombreux facteurs. Consultez les rubriques de l’objet respectifs pour plus d’informations.
 
-ADO permet de définir et retourner des données binaires longues avec la **valeur** propriété.
+ADO permet de définir et retourner des données binaires longues avec le **valeur** propriété.
   
 > [!NOTE]
-> Pour **paramètre** objets, ADO lit la **valeur** propriété qu’une seule fois à partir du fournisseur. Si une commande contient un **paramètre** dont **valeur** propriété est vide, et vous créez un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) à partir de la commande, vérifiez tout d’abord fermer le  **Jeu d’enregistrements** avant de récupérer le **valeur** propriété. Sinon, pour certains fournisseurs, le **valeur** propriété peut être vide et ne contient pas la valeur correcte.
+> Pour **paramètre** objets, les lectures ADO le **valeur** propriété qu’une seule fois à partir du fournisseur. Si une commande contient un **paramètre** dont **valeur** propriété est vide et que vous créez un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) à partir de la commande, vérifiez tout d’abord fermer le  **Jeu d’enregistrements** avant d’extraire le **valeur** propriété. Sinon, pour certains fournisseurs, le **valeur** propriété peut être vide et ne contient pas la valeur correcte.
 > 
-> Pour les nouveaux **champ** les objets qui ont été ajoutées à la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet, le **valeur** propriété doit être définie avant toute autre **champ** propriétés peuvent être spécifiées. Tout d’abord, une valeur spécifique pour le **valeur** propriété doit avoir été affectée et [mise à jour](../../../ado/reference/ado-api/update-method.md) sur la **champs** collection appelée. Ensuite, d’autres propriétés, telles que [Type](../../../ado/reference/ado-api/type-property-ado.md) ou [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) est accessible.
+> Pour les nouveaux **champ** les objets qui ont été ajoutées à la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet, le **valeur** propriété doit être définie avant toute autre **champ** propriétés peuvent être spécifiées. Tout d’abord, une valeur spécifique pour le **valeur** propriété doit avoir été affectée et [mise à jour](../../../ado/reference/ado-api/update-method.md) sur le **champs** collection appelée. Ensuite, d’autres propriétés, telles que [Type](../../../ado/reference/ado-api/type-property-ado.md) ou [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) sont accessibles.
   
 ## <a name="applies-to"></a>S'applique à
   
@@ -54,5 +51,5 @@ ADO permet de définir et retourner des données binaires longues avec la **vale
   
 ## <a name="see-also"></a>Voir aussi
 
-[Valeur de propriété Exemple (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)
-[valeur de propriété-Exemple (VC ++)](../../../ado/reference/ado-api/value-property-example-vc.md) 
+[Valeur de propriété, exemple (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)
+[valeur exemple de propriété (VC ++)](../../../ado/reference/ado-api/value-property-example-vc.md) 

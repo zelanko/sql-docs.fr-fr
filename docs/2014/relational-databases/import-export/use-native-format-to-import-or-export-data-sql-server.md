@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f71b4d7955c874fcff2efdd69ed14c12745dea3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2dee0f6a337cab7713862e662e06bb94a0b34a5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300409"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124299"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utiliser le format natif pour importer ou exporter des données (SQL Server)
   Il est recommandé d'utiliser le format natif lorsque vous transférez des données en bloc entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen d'un fichier de données qui ne contient pas de caractères appartenant à un jeu de caractères étendus/codés sur deux octets (DBCS).  
@@ -65,7 +62,7 @@ ms.locfileid: "37300409"
     > [!IMPORTANT]  
     >  Lorsque le mode natif est utilisé, par défaut, le **bcp** convertit les caractères à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en caractères OEM avant de les copier dans un fichier de données. Le **bcp** convertit les caractères à partir d’un fichier de données en caractères ANSI avant de les importer en bloc dans une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. Au cours de ces conversions, il est possible que des données caractères étendus soient perdues. Dans le cas de caractères étendus, vous devez soit utiliser le format natif Unicode, soit spécifier une page de codes.  
   
--   `sql_variant` données  
+-   `sql_variant` Données  
   
      Si `sql_variant` données sont stockées en tant que SQLVARIANT dans un fichier de données au format natif, elles conservent l’ensemble de ses caractéristiques. Les métadonnées qui enregistrent le type de données de chaque valeur de données sont stockées en même temps que celle-ci. Ces métadonnées sont utilisée pour recréer la valeur de données avec le même type de données dans une destination `sql_variant` colonne.  
   

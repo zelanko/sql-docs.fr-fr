@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-caps.latest.revision: 43
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9855c21e19e4e2ef0e9f9d7ab88d6d12fdadda16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d561840bfe2c10d7b269bb952b934d22dd957d32
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173170"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135199"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriétés du flux de données pouvant être définies à l’aide d’expressions
   Les valeurs de certaines propriétés d'objets de flux de données peuvent être spécifiées à l'aide d'expressions de propriété disponibles sur le conteneur de tâche de flux de données.  
@@ -77,7 +74,7 @@ ms.locfileid: "37173170"
 |Destination [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Propriété TableName|  
 |Destination [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Propriété BulkInsertTableName<br /><br /> Propriété BulkInsertFirstRow<br /><br /> Propriété BulkInsertLastRow<br /><br /> Propriété BulkInsertOrder<br /><br /> Propriété Timeout|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 -   [Ajouter ou modifier une expression de propriété](expressions/add-or-change-a-property-expression.md)  
   

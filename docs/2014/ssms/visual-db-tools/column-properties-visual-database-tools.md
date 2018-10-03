@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
@@ -15,16 +13,15 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnComputedColumnSpec
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0d778299c253eb1ef8282c1621ae2948d17e491
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ef49a4bee27339849cd7b2ec0f5d64701804284a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120301"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriétés de la colonne (Visual Database Tools)
   Il existe deux ensembles de propriétés pour les colonnes : un jeu complet que vous pouvez consulter sous l’onglet **Propriétés de la colonne** dans le Concepteur de tables (disponible uniquement pour les bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) et un sous-ensemble que vous pouvez consulter dans la fenêtre Propriétés à l’aide de l’Explorateur de serveurs.  

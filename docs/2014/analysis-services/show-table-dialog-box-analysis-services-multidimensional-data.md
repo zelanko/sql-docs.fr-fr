@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.showtabledialog.f1
 helpviewer_keywords:
 - Show Table dialog box
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90ee18b4b16650337255393a392c0b85744aeb3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7148ac75da5ec7184c771c2411750749c15fa192
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284075"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113662"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Afficher la table (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Afficher la table** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour inclure des tables depuis la vue de source de données associée à une dimension, un cube ou une structure d'exploration de données. Vous pouvez afficher cette boîte de dialogue dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en :  

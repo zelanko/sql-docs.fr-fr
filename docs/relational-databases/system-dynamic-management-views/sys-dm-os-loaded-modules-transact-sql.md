@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_os_loaded_modules (Transact-SQL) | Documents Microsoft
+title: Sys.dm_os_loaded_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_loaded_modules
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1888f39f6024a0b299834217c2f8b69052761b65
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467165"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794317"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +32,9 @@ ms.locfileid: "34467165"
   Retourne une ligne pour chaque module chargé dans l'espace d'adressage du serveur.  
   
 > [!NOTE]  
->  Pour appeler cette de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_loaded_modules**.  
+>  À appeler à partir [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_loaded_modules**.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**base_address**|**varbinary(8)**|Adresse du module dans le processus.|  
 |**file_version**|**varchar(23)**|Version du fichier. Apparaît sous le format suivant :<br /><br /> x.x:x.x|  
@@ -47,13 +44,13 @@ ms.locfileid: "34467165"
 |**version préliminaire**|**bit**|1 = le module est une version préliminaire du module chargé.|  
 |**private_build**|**bit**|1 = le module est une version privée du module chargé.|  
 |**special_build**|**bit**|1 = le module est une version spéciale du module chargé.|  
-|**Langage**|**int**|Langue des informations de version du module.|  
-|**Société**|**nvarchar (256)**|Nom de la société qui a créé le module.|  
+|**Langage**|**Int**|Langue des informations de version du module.|  
+|**Entreprise**|**nvarchar (256)**|Nom de la société qui a créé le module.|  
 |**description**|**nvarchar (256)**|Description du module.|  
 |**nom**|**nvarchar(255)**|Nom du module. Inclut le chemin d'accès complet du module.|  
-|**pdw_node_id**|**int**|**S’applique à** : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur du nœud qui se trouve sur cette distribution.|  
+|**pdw_node_id**|**Int**|**S’applique à** : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

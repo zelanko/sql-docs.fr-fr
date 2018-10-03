@@ -4,24 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 63c244c74ac6039867834b7c289fd02de2e03b17
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: baca8a9c339ff55ad25f390ac73a2957fdd26447
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083621"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119369"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Page Nouveau rapport lié (Gestionnaire de rapports)
   La page Nouveau rapport lié vous permet de créer un rapport lié. Un rapport lié est un rapport qui possède ses propres paramètres et propriétés, mais qui est lié à la définition de rapport d'un autre rapport. Les rapports liés sont utiles lorsque vous possédez un rapport de base que vous souhaitez modifier pour des groupes ou des utilisateurs spécifiques (par exemple, un rapport régional qui retourne des données différentes selon le code de région que vous spécifiez en tant que paramètre). Un rapport lié est généralement créé à partir d'un rapport paramétrable lorsque vous souhaitez modifier puis enregistrer des valeurs de paramètres différentes avec chaque instance du rapport. Toutefois, vous pouvez créer un rapport lié à partir de n'importe quel rapport auquel vous avez accès.  

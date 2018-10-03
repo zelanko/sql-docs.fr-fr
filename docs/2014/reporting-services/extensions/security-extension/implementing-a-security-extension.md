@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], extensions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 - extensions [Reporting Services], custom security
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
-caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27707a7736c10794aec6c80679728988528665ba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d97b570ca00251e7beaf39b104d254bf3363e8ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216769"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119323"
 ---
 # <a name="implementing-a-security-extension"></a>Implémentation d'une extension de sécurité
   L’authentification Windows de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] constitue le principal système permettant de sécuriser des rapports dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Dans certains cas, en revanche, vous pouvez avoir besoin d'étendre le système de sécurité [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour personnaliser la sécurité dans votre entreprise. Pour cela, vous pouvez utiliser la plate-forme de développement fournie par l'API [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Cette section présente une vue d'ensemble des extensions de sécurité dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

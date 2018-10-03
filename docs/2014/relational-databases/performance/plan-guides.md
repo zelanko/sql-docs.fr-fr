@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TEMPLATE plan guide
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - plan guides [SQL Server]
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1741595891ebc04a70d70c006a3871c7f39ec07e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430398"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085708"
 ---
 # <a name="plan-guides"></a>Repères de plan
   Les repères de plan vous permettent d'optimiser les performances des requêtes lorsque vous ne pouvez pas ou ne souhaitez pas modifier directement le texte de la requête réelle dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les repères de plan influencent l'optimisation des requêtes en attachant des indicateurs de requête ou un plan fixe de requête à celles-ci. Les repères de plan s'avèrent utiles lorsqu'un petit sous-ensemble de requêtes d'une application de base de données fournie par un tiers ne fonctionne pas comme prévu. Dans le repère de plan, vous spécifiez l'instruction Transact-SQL que vous voulez optimiser et une clause OPTION contenant les indicateurs de requête ou un plan de requête spécifique à utiliser pour optimiser la requête. Lorsque la requête s'exécute, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait correspondre l'instruction Transact-SQL au repère de plan et attache la clause OPTION à la requête au moment de l'exécution ou fait appel au plan de requête spécifié.  
@@ -138,7 +135,7 @@ sp_create_plan_guide
 ## <a name="plan-guide-effect-on-the-plan-cache"></a>Effet du repère de plan sur le cache du plan  
  La création d'un repère de plan sur un module supprime le plan de requête pour ce module du cache du plan. La création d'un repère de plan de type OBJET ou SQL sur un lot supprime le plan de requête pour un lot qui a la même valeur de hachage. La création d'un repère de plan de type TEMPLATE supprime tous les lots comprenant une instruction unique du cache du plan dans cette base de données.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Tâche|Rubrique|  
 |----------|-----------|  

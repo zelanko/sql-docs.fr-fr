@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
-caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b6e44a34ed1262d6e7e5a9db67e3fc61ab7ba998
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b809b633bb040755ac3d211b33804fd469fcb0a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268415"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104589"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Didacticiels sur Reporting Services (SSRS)
   Cette section contient des didacticiels pour [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -45,6 +42,6 @@ ms.locfileid: "37268415"
  [Adventure Works pour SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=245471)   
  [Exemples Reporting Services sur CodePlex (http://go.microsoft.com/fwlink/?LinkId=198283)](http://go.microsoft.com/fwlink/?LinkId=198283)   
  [WIKI TechNet : SQL Server 2012 Samples ()http://go.microsoft.com/fwlink/?linkID=220734)](http://go.microsoft.com/fwlink/?linkID=220734)   
- [(Le jeu de données (exemples de données) de pique-niquehttp://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
+ [(Le jeu de données (exemples de données) de pique-nique http://go.microsoft.com/fwlink/?linkID=219108)](http://go.microsoft.com/fwlink/?linkID=219108)  
   
   

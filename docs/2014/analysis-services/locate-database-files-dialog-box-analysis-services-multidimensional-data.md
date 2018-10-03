@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.localdbfilesdialog.f1
 ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92c2f181638b9c995b01d9a5434e7b004241d6fd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192839"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117990"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Rechercher les fichiers de base de données (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Rechercher les fichiers de base de données** affiche la liste des fichiers disponibles dans le journal ainsi que les dossiers de données définis pour une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez sélectionner un des fichiers répertoriés ou spécifier un dossier et un fichier manuellement. Pour afficher la boîte de dialogue **Rechercher les fichiers de base de données** , utilisez l’une des méthodes suivantes :  

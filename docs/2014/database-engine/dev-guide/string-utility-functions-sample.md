@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 892a950795569b87f5a09d4b30aa5b171b26321e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5fa9fa472541b764a046e418f99b15028b81b56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275095"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089209"
 ---
 # <a name="string-utility-functions-sample"></a>Exemple de fonctions d'utilitaire de chaîne
   L'exemple String Utilities contient une fonction table en continu écrite en Visual C# et Visual Basic qui fractionne une chaîne séparée par des virgules en une table avec une colonne. Il contient également une fonction d'agrégation qui convertit une colonne de chaîne en une chaîne séparée par des virgules.  Une fonction scalaire et une fonction table sont également implémentées ; elles fournissent des fonctionnalités de recherche et de remplacement d'expressions régulières.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:FullTextQuery event class
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ff02ac00761e21e9611a523dcdb863b22c3759d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 102e99638cb9cec84a77b37adf0f3b368c408032
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208939"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109969"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery, classe d'événements
   La classe d'événements SQL:FullTextQuery se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une requête de texte intégral. Incluez cette classe d'événements dans les traces qui surveillent les problèmes associés aux catalogues de texte intégral.  
@@ -56,7 +53,7 @@ ms.locfileid: "37208939"
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`nvarchar`|Partie de texte intégral de la requête envoyée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].| 1|non|  
+|TextData|`nvarchar`|Partie de texte intégral de la requête envoyée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|1|non|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  
   

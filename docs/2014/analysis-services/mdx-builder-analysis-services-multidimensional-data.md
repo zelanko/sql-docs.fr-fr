@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.mdxbuilderdialof.f1
 helpviewer_keywords:
 - MDX Builder dialog box
 ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26bc55eb874f0d404c1d4f330e0c0841a8183157
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9a023065ad0e2a72036fe5fbdebd72682ceb6546
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308539"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121464"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>Générateur MDX (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Générateur MDX** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour créer une expression MDX (Multidimensional Expressions). Pour afficher la boîte de dialogue **Générateur MDX** , cliquez sur le bouton d’exploration **Modifier MDX** (**…**) de l’option **Autoriser la lecture du contenu du cube** , **Autoriser la lecture du contingent de contenu des cellules selon la sécurité des cellules** ou **Autoriser la lecture et l’écriture du contenu du cube** de la page **Données des cellules** du **Concepteur de rôle**.  
