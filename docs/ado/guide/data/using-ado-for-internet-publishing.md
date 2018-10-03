@@ -1,13 +1,11 @@
 ---
-title: À l’aide d’ADO pour la publication Internet | Documents Microsoft
+title: Utilisation d’ADO pour la publication Internet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, Internet publishing
@@ -15,30 +13,29 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - urls [ADO]
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3261fc8eb910fb0b7b627b11a3bc89bb682f01bb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d779204046b9bca2591fbdc9459d7c6b53061ff4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778997"
 ---
-# <a name="using-ado-for-internet-publishing"></a>À l’aide d’ADO pour la publication Internet
-[Le fournisseur OLE DB pour Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) montre un exemple spécifique d’accès aux données hétérogènes avec ADO. Même si les exemples de cette section sont spécifiques à l’aide du fournisseur de publication Internet, les principes illustrés doivent être similaires lors de l’utilisation d’ADO avec d’autres fournisseurs de données hétérogènes, tel qu’un fournisseur à un magasin de courrier électronique.  
+# <a name="using-ado-for-internet-publishing"></a>Utilisation d’ADO pour la publication Internet
+[Le fournisseur OLE DB pour la publication Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) montre un exemple spécifique de l’accès aux données hétérogènes avec ADO. Même si les exemples de cette section sont spécifiques à l’aide du fournisseur de publication Internet, les principes illustrés doivent être similaires lors de l’utilisation d’ADO avec d’autres fournisseurs de données hétérogènes, tel qu’un fournisseur à un magasin de courrier électronique.  
   
 ## <a name="urls"></a>URL  
- Uniform Resource Locator (URL) peut être utilisé comme alternative aux chaînes de connexion et le texte de la commande pour spécifier les sources de données et l’emplacement des fichiers et répertoires. Vous pouvez utiliser l’URL avec le [connexion](../../../ado/reference/ado-api/connection-object-ado.md) et **Recordset** objets et avec le **enregistrement** et **flux** objets.  
+ Uniform Resource Locator (URL) peut être utilisé comme alternative à des chaînes de connexion et le texte de la commande pour spécifier les sources de données et l’emplacement des fichiers et répertoires. Vous pouvez utiliser des URL avec le [connexion](../../../ado/reference/ado-api/connection-object-ado.md) et **Recordset** objets et avec le **enregistrement** et **Stream** objets.  
   
- Pour plus d’informations sur la façon d’utiliser des URL, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
+ Pour plus d’informations sur l’utilisation des URL, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="record-fields"></a>Champs d’enregistrement  
- La différence qui distingue les données hétérogènes des données homogènes est que dans le premier cas, chaque ligne de données, ou **enregistrement**, peut avoir un ensemble différent de colonnes, ou **champs**. Pour les données homogènes, chaque ligne a le même jeu de colonnes. Pour plus d’informations sur les champs spécifiques au fournisseur de publication Internet, consultez [enregistrements et champs supplémentaires spécifiques au fournisseur](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
+ La différence qui distingue les données hétérogènes des données homogènes est que dans le premier cas, chaque ligne de données, ou **enregistrement**, peut avoir un autre ensemble de colonnes, ou **champs**. Pour les données homogènes, chaque ligne a le même ensemble de colonnes. Pour plus d’informations sur les champs spécifiques au fournisseur de publication Internet, consultez [enregistrements et champs supplémentaires spécifiques au fournisseur](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
   
 ### <a name="appending-new-fields"></a>Ajout de nouveaux champs  
- Plusieurs objets ADO ont été améliorés pour fonctionner avec **enregistrement** et **flux** objets.  
+ Plusieurs objets ADO ont été améliorées pour fonctionner conjointement avec **enregistrement** et **Stream** objets.  
   
 -   Le [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection [Append](../../../ado/reference/ado-api/append-method-ado.md) (méthode), qui crée et ajoute un [champ](../../../ado/reference/ado-api/field-object.md) de l’objet à la collection, peuvent également spécifier la valeur de la **champ**.  
   
@@ -57,6 +54,6 @@ ms.locfileid: "35273208"
 -   [Enregistrements et champs fournis par le fournisseur](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet d’enregistrement (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Objet de flux de données (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
+ [Enregistrement objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Historique d’ADO](../../../ado/guide/ado-history.md)

@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ad6b241db1b5bc11c24343607f6932c3bf4f01a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ec30904cc7c434d5450de025feb0cb7698a2e128
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275427"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836953"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Obtenir des données à partir de datasets partagés dans l’Éditeur de rapports mobiles
 Outre le [chargement de données à partir de fichiers Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), l’Éditeur de rapports mobiles SQL Server peut également accéder à des données depuis pratiquement n’importe quelle source. L’accès aux données requiert une source de données partagée, configurée sur un portail web Reporting Services. En savoir plus sur la [création de sources de données partagées](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) et sur la [création de jeux de données partagés](../../reporting-services/report-data/manage-shared-datasets.md).  

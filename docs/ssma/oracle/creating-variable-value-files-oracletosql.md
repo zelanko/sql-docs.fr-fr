@@ -1,35 +1,32 @@
 ---
-title: Création de fichiers de la valeur de la Variable (OracleToSQL) | Documents Microsoft
+title: Création de fichiers de la valeur de la Variable (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Variable Value File Creation
 - Variable Value File, Variable Value File Validation
 ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
-caps.latest.revision: 26
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: fa6a3dc1b89b11b2231980b38f0cdd7ab5c9a1e1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 1e69780efa7342175e0cf9b63484a08af522e4c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840237"
 ---
-# <a name="creating-variable-value-files-oracletosql"></a>Création de fichiers de la valeur de la Variable (OracleToSQL)
-Fichier de la valeur de variable est un fichier XML contenant les valeurs de paramètre de commandes, comme le nom du serveur source ou de destination qui changent fréquemment à partir de la migration d’un serveur vers un autre. En cas d’un grand nombre de migrations de la base de données, plusieurs fichiers de variables pour stocker la valeur de chaque serveur source seront créés et référencés dans un fichier de script principal avec le **– v** passer à la ligne de commande. Cela permet de conserver des valeurs statiques dans plusieurs fichiers de script avec les valeurs des variables dans plusieurs fichiers de variable.  
+# <a name="creating-variable-value-files-oracletosql"></a>Création de fichiers de valeurs de variables (OracleToSQL)
+Fichier de valeurs variable est un fichier XML contenant les valeurs de paramètre des commandes telles que : le nom du serveur source ou de destination qui changent fréquemment à partir de la migration d’un serveur vers un autre. En cas d’un grand nombre de migrations de base de données, plusieurs fichiers de variables pour stocker la valeur de chaque serveur source seront créés et référencés dans un fichier de script principal avec la **– v** passer à la ligne de commande. Cela permet de conserver des valeurs statiques dans quelques fichiers de script avec les valeurs des variables dans plusieurs fichiers de variables.  
   
 > [!NOTE]  
-> 1.  Les noms de variables ont le préfixe et suffixe avec un symbole $ (dollar). Si les variables ne sont pas attribués une valeur dans le fichier de la valeur de la variable, vous rencontrerez une erreur lors de l’analyse du fichier de script résultant de bloquer le processus d’exécution de console.  
-> 2.  The escape character for **$** is **$$**. Si la valeur d’une valeur d’un paramètre de variable ou statique contient **$** symbole (dollar), puis **$$** doit être spécifié pour le traiter comme un caractère au lieu d’une variable.  
-> 3.  À des fins de facilité de maintenance, les variables peuvent être déclarées à l’intérieur de `‘variable-group’` variables définies par des éléments pour une séparation logique de l’utilisateur.  L’utilisation de cet élément n’est pas obligatoire.  
+> 1.  Les noms de variables ont le préfixe et suffixe avec le symbole $ (dollar). Si les variables ne sont pas attribués une valeur dans le fichier de la valeur de la variable, vous rencontrerez une erreur lors de l’analyse du fichier de script résultant dans bloquées le processus d’exécution de console.  
+> 2.  Le caractère d’échappement **$** est **$$**. Si la valeur d’une valeur d’un paramètre de variable ou statique contient **$** symbole (dollar), puis **$$** doit être spécifié pour le traiter comme un caractère au lieu d’une variable.  
+> 3.  À des fins de facilité de maintenance, les variables peuvent être déclarées à l’intérieur de `‘variable-group’` variables définies par des éléments pour une séparation logique de l’utilisateur.  Utilisation de cet élément n’est pas obligatoire.  
   
 **Exemples :**  
   
@@ -91,7 +88,7 @@ Fichier de la valeur de variable est un fichier XML contenant les valeurs de par
 ```  
   
 ## <a name="next-step"></a>Étape suivante  
-L’étape suivante d’exploitation de la console est [création des fichiers de connexion serveur &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+L’étape suivante de d’exploitation de la console est [création des fichiers de connexion de serveur &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Création des fichiers de serveur (Oracle)](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  

@@ -1,13 +1,11 @@
 ---
-title: Catalog, objet (ADO MD) | Documents Microsoft
+title: Catalog, objet (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADO MD]
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3cda7947458e9183323de5c3879dd27bf2d1f131
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 903610da6a4907271b895b15728d58dde9172010
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283378"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827657"
 ---
-# <a name="catalog-object-ado-md"></a>Objet de catalogue (ADO MD)
+# <a name="catalog-object-ado-md"></a>Catalog, objet (ADO MD)
 Contient des informations de schéma multidimensionnel (autrement dit, les cubes et sous-jacent dimensions, hiérarchies, niveaux et membres) spécifiques à un fournisseur de données multidimensionnelles (MDP).  
   
 ## <a name="remarks"></a>Notes  
  Les collections et les propriétés d’un **catalogue** de l’objet, vous pouvez procédez comme suit :  
   
--   Ouvrir le catalogue en définissant le [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) propriété un ADO standard [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet ou une chaîne de connexion valide.  
+-   Ouvrir le catalogue en définissant le [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) propriété à un standard ADO [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet ou une chaîne de connexion valide.  
   
--   Identifier les **catalogue** avec la [nom](../../../ado/reference/ado-md-api/name-property-ado-md.md) propriété.  
+-   Identifier le **catalogue** avec la [nom](../../../ado/reference/ado-md-api/name-property-ado-md.md) propriété.  
   
--   Parcourir les cubes dans un catalogue à l’aide de la [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) collection.  
+-   Parcourir les cubes dans un catalogue utilisant la [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) collection.  
   
  Cette section contient les rubriques suivantes.  
   
@@ -44,5 +41,5 @@ Contient des informations de schéma multidimensionnel (autrement dit, les cubes
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de catalogue (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [CubeDefs, collection (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

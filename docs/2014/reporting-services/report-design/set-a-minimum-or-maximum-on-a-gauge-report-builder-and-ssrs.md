@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4bb8b841b4835d74eb37ff531f21b4942cc32738
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa4ebcd0b13b2c2e8035eedc77902001a61b7884
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053749"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Définir un minimum ou un maximum sur une jauge (Générateur de rapports et SSRS)
   Contrairement au graphique sur lequel plusieurs groupes sont définis, la jauge affiche seulement une valeur. Étant donné que le Générateur de rapports et le Concepteur de rapports détermine le contexte ou la précision relative de la valeur que vous essayez d'afficher sur la jauge, vous devez définir les valeurs minimale et maximale de l'échelle. Par exemple, si vos valeurs de données sont comprises entre 0 et 10, vous pouvez définir le minimum sur 0 et le maximum sur 10. Les intervalles sont calculés automatiquement en fonction des valeurs spécifiées pour le minimum et le maximum. Par défaut, le minimum et le maximum sont définis sur 0 et 100, mais il s'agit d'une valeur arbitraire que vous devez modifier. L'application ne calcule pas votre valeur sous la forme d'un pourcentage.  

@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1db05f55799f606877312d70f9e2848491188e91
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 20ef203c4fbb377c62eede7186cecf811aa942ed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845727"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Extraction, exploration, sous-rapports et régions de données imbriquées
   Vous pouvez organiser les données de plusieurs façons pour montrer une relation du général au particulier.  Vous pouvez placer toutes les données dans le rapport et les masquer jusqu'à ce qu'un utilisateur clique pour afficher des détails ; il s'agit d'une action d' *exploration* . Vous pouvez afficher les données dans une région de données, telle qu'un tableau ou un graphique, *imbriquée* à l'intérieur d'une autre région de données, telle qu'un tableau ou une matrice. Vous pouvez afficher les données dans un *sous-rapport* intégralement contenu dans un rapport principal. Sinon, vous pouvez placer les données de détail dans des rapports d' *extraction* , des rapports distincts qui s'affichent lorsqu'un utilisateur clique sur un lien.  

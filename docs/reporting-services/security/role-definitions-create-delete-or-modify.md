@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -17,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d28f0b423e8e06c192510ef6874b5cf451112a5
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3727a1d7df04d4d46ca7058e1fd254c76f78afda
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278161"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795057"
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>Définitions de rôles - créer, supprimer ou modifier
   Reporting Services fournit des rôles prédéfinis qui établissent un niveau d'accès à un serveur de rapports. Chaque utilisateur ou groupe qui requiert l'accès au serveur de rapports se voit attribuer un rôle qui décrit les tâches pouvant être effectuées. Les rôles sont définis pour l'ensemble du serveur de rapports. Vous ne pouvez pas modifier une définition de rôle pour des parties spécifiques du serveur de rapports, ni spécifier qu'un rôle soit utilisé différemment selon les circonstances.  

@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 34db3b2fe4d33fd7680fe22ecca31f5885742916
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e983bc2bbf7efe42d479dea90e8cf1f212adc15
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868204"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807937"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instances du moteur de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +27,7 @@ ms.locfileid: "32868204"
   
  Vous pouvez exécuter plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un même ordinateur. Une instance peut être l'instance par défaut. L'instance par défaut n'a pas de nom. Si une demande de connexion spécifie uniquement le nom de l'ordinateur, la connexion est établie à l'instance par défaut. Une instance nommée se caractérise par la spécification d'un nom d'instance au moment de son installation. Une demande de connexion doit spécifier le nom de l'ordinateur et le nom de l'instance pour pouvoir se connecter à l'instance. L'installation d'une instance par défaut n'est soumise à aucune condition particulière ; toutes les instances s'exécutant sur un ordinateur peuvent être des instances nommées.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

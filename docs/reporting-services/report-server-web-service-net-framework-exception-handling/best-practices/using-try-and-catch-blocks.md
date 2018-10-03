@@ -4,22 +4,19 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-exception-handling
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - exceptions [Reporting Services], try/catch blocks
 - try/catch blocks [Reporting Services]
 ms.assetid: a7a9ef53-e3b6-4bf7-81f3-d85615954e6f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ac2acf49654425aede1347e4307161835214e3c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: dff79ed04f48a74ff892230e4a8cdb0480b0af79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281410"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782037"
 ---
 # <a name="using-try-and-catch-blocks"></a>Utilisation des blocs Try et Catch
   Après avoir limité les demandes non valides au serveur de rapports en ajoutant des instructions conditionnelles à votre code, vous devez fournir une gestion adéquate des exceptions à l'aide des blocs try/catch. Cette technique fournit une autre couche de protection contre les demandes qui ne sont pas valides. Si une demande faite au serveur de rapports est incluse dans un bloc try et que cette demande entraîne la levée d'une exception par le serveur de rapports, l'exception est interceptée dans le bloc catch, empêchant ainsi votre application de se terminer de façon inattendue. Une fois l'exception interceptée, vous pouvez l'utiliser soit pour instruire l'utilisateur de modifier son action, soit pour l'informer, de façon amicale, qu'une erreur s'est produite. Vous pouvez utiliser ensuite un bloc finally pour nettoyer les ressources. D'une manière idéale, vous devez élaborer un plan général de gestion des exceptions afin d'éviter une duplication inutile des blocs try/catch.  

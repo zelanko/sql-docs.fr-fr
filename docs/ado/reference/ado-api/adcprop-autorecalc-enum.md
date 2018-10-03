@@ -1,13 +1,11 @@
 ---
-title: ADCPROP_AUTORECALC_ENUM | Documents Microsoft
+title: ADCPROP_AUTORECALC_ENUM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_AUTORECALC_ENUM [ADO]
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 760332da1c922c553d326ef583143ba6ac99fde1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bb10b3f4fb563275a8f27a92e41c265336c3cb55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275178"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815717"
 ---
 # <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
-Spécifie à quel moment le [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) fournisseur recalcule les colonnes regroupées et calculées dans un objet Recordset hiérarchique.  
+Spécifie à quel moment le [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) fournisseur recalcule les colonnes calculées et agrégées dans un Recordset hiérarchique.  
   
- Ces constantes sont utilisées uniquement avec la **MSDataShape** fournisseur et le **Recordset** »**le de recalcul automatique**« propriété dynamique, qui est référencée dans le [ADO Index des propriétés dynamiques](../../../ado/reference/ado-api/ado-dynamic-property-index.md) et documenté dans le [le Service de curseur Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) ou [Service de mise en forme des données Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) documentation.  
+ Ces constantes sont utilisées uniquement avec la **MSDataShape** fournisseur et le **Recordset** »**le recalcul automatique**« propriété dynamique, qui est référencée dans le [ADO Index des propriétés dynamiques](../../../ado/reference/ado-api/ado-dynamic-property-index.md) et documenté dans le [Service de curseur Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) ou [Microsoft Data Shaping Service pour OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) documentation.  
   
 |Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adRecalcAlways**| 1|Valeur par défaut. Recalcule chaque fois que le **MSDataShape** fournisseur détermine des valeurs modifiées dont dépendent les colonnes calculées.|  
-|**adRecalcUpFront**|0|Calcule uniquement lors de la génération initialement le hiérarchique **Recordset**.|  
+|**adRecalcAlways**|1|Valeur par défaut. Recalcule chaque fois que le **MSDataShape** fournisseur détermine les valeurs dépendent les colonnes calculées ont changé.|  
+|**adRecalcUpFront**|0|Calcule uniquement à la première construction le hiérarchique **Recordset**.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
+## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
  Ces constantes n’ont pas d’équivalents ADO/WFC.

@@ -1,13 +1,11 @@
 ---
-title: Filter et RecordCount, propriétés-exemple (VC ++) | Documents Microsoft
+title: Filter et RecordCount propriétés exemple (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72b9edbc322403e49a4938bf541220bde43ce4b9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3aef01723a9682907ac20be42d04bb02773557e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278618"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772827"
 ---
-# <a name="filter-and-recordcount-properties-example-vc"></a>Filter et RecordCount, propriétés-exemple (VC ++)
-Cet exemple utilise le [filtre](../../../ado/reference/ado-api/filter-property.md) pour ouvrir une nouvelle propriété [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) selon une condition spécifiée est appliquée à un **Recordset**. Elle utilise le [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propriété pour afficher le nombre d’enregistrements dans les deux **jeux d’enregistrements**. La fonction du champ de filtre est requise pour exécuter cette procédure.  
+# <a name="filter-and-recordcount-properties-example-vc"></a>Filter et RecordCount propriétés exemple (VC ++)
+Cet exemple utilise le [filtre](../../../ado/reference/ado-api/filter-property.md) propriété pour ouvrir une nouvelle [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) selon une condition spécifiée est appliquée à un existant **Recordset**. Il utilise le [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propriété pour afficher le nombre d’enregistrements dans les deux **Recordsets**. La fonction du champ de filtre est requise pour exécuter cette procédure.  
   
 ## <a name="example"></a>Exemple  
   
@@ -307,6 +304,6 @@ Scootney Books, USA
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filter, propriété](../../../ado/reference/ado-api/filter-property.md)   
+ [Propriété de filtre](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount, propriété (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

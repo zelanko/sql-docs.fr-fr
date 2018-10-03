@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ed59907caecb5921f7dc72cba16f009269c02b6
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a21d053818991c19e8b57ce60c11f4766973b6ec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839557"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Exemples d’URL pour les éléments sur un serveur de rapports (mode SharePoint)
   Pour publier des rapports et des éléments associés dans une bibliothèque SharePoint, vous pouvez soit publier le contenu à l’aide des outils de création de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tels que le Concepteur de rapports, soit télécharger le contenu à l’aide des actions de site SharePoint.  

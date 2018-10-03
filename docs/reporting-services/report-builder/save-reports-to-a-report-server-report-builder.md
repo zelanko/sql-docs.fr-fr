@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 242673ee9d0a17ae38ceb0b59addc88a7de5a094
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8978a5ad1429890861c96238317b38189c144409
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266099"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826717"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Enregistrer des rapports sur un serveur de rapports (Générateur de rapports)
   Dans le Générateur de rapports, vous pouvez enregistrer une définition de rapport sur un serveur de rapports (on parle également de publier un rapport). Le fait d'enregistrer un rapport sur un serveur de rapports permet aux autres utilisateurs de le consulter. Chaque fois que vous exécutez le rapport publié, vous récupérez les données les plus récentes. Pour enregistrer une copie statique d'un rapport rendu, exportez le rapport sous un format de fichier différent et enregistrez-le ou utilisez la fonctionnalité d'historique de rapport pour enregistrer des versions de rapports rendus.  

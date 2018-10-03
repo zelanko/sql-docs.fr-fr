@@ -5,9 +5,7 @@ ms.date: 11/21/2016
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - audit
@@ -19,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d5bca5957618d53438f8a10be02ceb9b4e7fb28b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: fce1dd4e7f8773d4fb7e80619d9511cc9680c244
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022848"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796907"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,7 +111,7 @@ ms.locfileid: "43022848"
   
 4.  Lisez les événements d’audit à l’aide de l’ **Observateur d’événements**Windows, de la **Visionneuse du fichier journal**ou de la fonction fn_get_audit_file.  
   
- Pour plus d'informations, consultez [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) et [Create a Server Audit and Database Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Pour plus d'informations, consultez [Créer un audit du serveur et une spécification d’audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) et [Créer une spécification de l’audit du serveur et de la base de données](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Observations  
  En cas d'échec pendant le lancement de l'audit, le serveur ne démarre pas. Dans ce cas, vous pouvez démarrer le serveur en saisissant l’option **–f** sur la ligne de commande.  

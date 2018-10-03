@@ -5,10 +5,8 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f9cc64ceaec15d9d79845b5eca82d773dbd0aaba
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 7b2f5408d55fabe452a67bad2909dd0c6f42b201
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335753"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828799"
 ---
 # <a name="versions-master-data-services"></a>Versions (Master Data Services)
 
@@ -73,7 +70,7 @@ ms.locfileid: "35335753"
     > [!NOTE]  
     >  Un paramètre dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] détermine si vous pouvez ou non copier toutes les versions ou uniquement celles qui sont activées. Pour créer des versions simultanées vous devez configurer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour vous permettre de copier toutes les versions. Ce paramètre est également disponible dans la table Paramètres système. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

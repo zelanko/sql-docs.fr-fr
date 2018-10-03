@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a693979c-0564-4d6d-b35d-cbbc8f350469
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec32e6f46f63c6de342b6b4cab63bb8e6556bfb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e12e4c4bcde1887de25e3ed75479da8b4eb5433
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053040"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Utilisation de l'extraction sur les données de structure (Didacticiel sur l'exploration de données de base)
   Dans le cadre de leur campagne de publicité, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] envoie un courrier de publipostage à des clients potentiels dans l’âge 34-40 démographiques. Le service marketing a décidé qu’il souhaite également adresser ce courrier aux clients ayant acheté des vélos dans [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] il y a plus de cinq ans. Dans cette leçon vous allez identifier les clients ayant des vélos anciens et extraire leurs informations de contact. Ces informations ne sont pas incluses dans le modèle, mais sont incluses dans la structure. Pour extraire les informations de contact, vous allez d'abord vérifier que l'extraction est activée pour la structure puis vous utiliserez l'extraction pour extraire les noms et adresses des clients ciblés.  

@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - deactivated My Reports folder
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 999af84b4ad09d0c3bbf6f7dedc76fa182390e07
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8d294c717f0d30b612a68dcc3bce3053ac55d1d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279531"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824637"
 ---
 # <a name="enable-and-disable-my-reports"></a>Activer et désactiver Mes rapports
   La fonctionnalité Mes rapports alloue un espace de stockage personnel dans la base de données du serveur de rapports afin que les utilisateurs puissent enregistrer les rapports qu'ils possèdent dans un dossier privé. En tant qu'administrateur du serveur de rapports, vous pouvez activer ou désactiver cette fonctionnalité, ou modifier la façon dont elle opère en modifiant les paramètres de sécurité qui déterminent ce que les utilisateurs sont autorisés à faire avec cet espace de travail.  

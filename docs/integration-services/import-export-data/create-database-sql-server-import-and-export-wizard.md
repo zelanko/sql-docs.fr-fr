@@ -5,23 +5,20 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef0a0e2e2abf0f871e8d7a4e61e7f5c5457dda36
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3456afaeff6d8eda0ee54bac846fab00c7e35488
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328283"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47807287"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Créer la base de données (Assistant Importation et Exportation SQL Server)
 Si vous sélectionnez **Nouveau** dans la page **Choisir une destination** pour créer une base de données de destination SQL Server, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] présente la boîte de dialogue **Créer une base de données** . Dans cette page, spécifiez un nom pour la nouvelle base de données. Vous pouvez éventuellement modifier les paramètres de la taille initiale et la croissance automatique de la nouvelle base de données et de son fichier journal. 

@@ -1,27 +1,24 @@
 ---
-title: 'Étape 3 : Remplir la zone de liste de champs | Documents Microsoft'
+title: 'Étape 3 : Remplir la zone de liste de champs | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e88957f03b821ee350a575080bd4f0fd40ce466b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9bf639f5b624c222ca115b443ec327b45b836b82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784007"
 ---
-# <a name="step-3-populate-the-fields-list-box"></a>Étape 3 : Remplir la zone de liste de champs
+# <a name="step-3-populate-the-fields-list-box"></a>Étape 3 : Remplir la zone de liste des champs
 Pour remplir la zone de liste de champs, insérez le code suivant dans le Gestionnaire d’événements Click de `lstMain`:  
   
 ```  
@@ -50,11 +47,11 @@ Private Sub lstMain_Click()
 End Sub  
 ```  
   
- Ce code déclare et instancie les objets Record et Recordset locaux, `rec` et `rs`, respectivement.  
+ Ce code déclare et instancie les objets d’enregistrement et le jeu d’enregistrements locales, `rec` et `rs`, respectivement.  
   
- La ligne correspondant à la ressource sélectionnée dans `lstMain` devient la ligne actuelle de `grs`. Ensuite, la zone de liste de détails est désactivée et `rec` est ouvert avec la ligne actuelle de `grs` comme source.  
+ La ligne correspondant à la ressource sélectionnée dans `lstMain` est effectuée à la ligne actuelle de `grs`. Puis la zone de liste de détails est désactivée et `rec` est ouvert avec la ligne actuelle de `grs` comme source.  
   
- Si la ressource est un enregistrement de la collection, tel que spécifié par [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), l’objet Recordset local `rs` est ouvert sur les enfants de l’enregistrement. Puis `lstDetails` est rempli avec les valeurs des lignes de `rs`.  
+ Si la ressource est un enregistrement de la collection, tel que spécifié par [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), le jeu d’enregistrements local `rs` est ouvert sur les enfants de rec. Puis `lstDetails` est rempli avec les valeurs des lignes de `rs`.  
   
  Si la ressource est un enregistrement simple, `recFields` est appelée. Pour plus d’informations sur `recFields`, consultez l’étape suivante.  
   

@@ -4,10 +4,7 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, application building
 - .NET Framework [Reporting Services]
@@ -21,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bf2813dcc9df58e9ddebe46d2e726c71a196011
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 73a2d5ec43cbde8c130b346072774edcf94f44f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270891"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798147"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Génération d'applications à l'aide du service Web et du .NET Framework
   Grâce au [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous pouvez utiliser des constructions de programmation familières, telles que des méthodes, des types primitifs et des types complexes définis par l’utilisateur pour utiliser des services web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contient une infrastructure et des outils qui vous permettent de créer des clients de service Web qui peuvent appeler des services Web conformes aux normes du World Wide Web Consortium (W3C).  

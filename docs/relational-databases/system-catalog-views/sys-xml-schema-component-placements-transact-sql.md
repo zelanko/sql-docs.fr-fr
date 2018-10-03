@@ -1,14 +1,11 @@
 ---
-title: Sys.xml_schema_component_placements (Transact-SQL) | Documents Microsoft
+title: Sys.xml_schema_component_placements (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.xml_schema_component_placements
@@ -20,33 +17,32 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_component_placements catalog view
 ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f45959897408779385e598353fb900b0403af80b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 78403dd04dc4fb1e531032c9f80639134f58b6ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818277"
 ---
 # <a name="sysxmlschemacomponentplacements-transact-sql"></a>sys.xml_schema_component_placements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne par emplacement pour les composants de schéma XML.  
    
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**xml_component_id**|**int**|ID du composant de schéma XML propriétaire de l'emplacement.|  
-|**placement_id**|**int**|ID de l'emplacement. Cet identificateur est unique au sein du composant de schéma XML propriétaire.|  
-|**placed_xml_component_id**|**int**|ID du composant de schéma XML placé.|  
+|**xml_component_id**|**Int**|ID du composant de schéma XML propriétaire de l'emplacement.|  
+|**placement_id**|**Int**|ID de l'emplacement. Cet identificateur est unique au sein du composant de schéma XML propriétaire.|  
+|**placed_xml_component_id**|**Int**|ID du composant de schéma XML placé.|  
 |**is_default_fixed**|**bit**|1 = La valeur par défaut est une valeur fixe. Cette valeur ne peut pas être substituée dans une instance XML.<br /><br /> 0 = la valeur peut être remplacée (option par défaut).|  
-|**min_occurrences**|**int**|Le nombre minimal d'occurrences du composant placé est utilisé.|  
-|**max_occurrences**|**int**|Le nombre maximal d'occurrences du composant placé est utilisé.|  
+|**min_occurrences**|**Int**|Le nombre minimal d'occurrences du composant placé est utilisé.|  
+|**max_occurrences**|**Int**|Le nombre maximal d'occurrences du composant placé est utilisé.|  
 |**default_value**|**nvarchar (4000)**|Valeur par défaut si elle est fournie. NULL si une valeur par défaut n'est pas fournie.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

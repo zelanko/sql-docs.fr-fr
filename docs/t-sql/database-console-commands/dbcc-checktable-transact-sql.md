@@ -4,10 +4,8 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKTABLE_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 89
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 148fcb3dd5970d84be7a0380c97ab0be7bd8ca92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7d846878ae012a82f7ff8f6662b8a6095d664cb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831937"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -187,7 +184,7 @@ Une fois la commande DBCC CHECKTABLE exécutée, un message est consigné dans l
 |État|Description|    
 |-----------|-----------------|    
 |0|Erreur numéro 8930 générée. Ceci indique une corruption des métadonnées qui a provoqué l'arrêt de la commande DBCC.|    
-| 1|Erreur numéro 8967 générée. Une erreur DBCC interne s'est produite.|    
+|1|Erreur numéro 8967 générée. Une erreur DBCC interne s'est produite.|    
 |2|Une erreur s'est produite lors de la réparation de la base de données en mode urgence.|    
 |3|Ceci indique une corruption des métadonnées qui a provoqué l'arrêt de la commande DBCC.|    
 |4|Une assertion ou une violation d'accès a été détectée.|    
@@ -220,7 +217,7 @@ Estimated TEMPDB space needed for CHECKTABLES (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.    
 ```    
     
-## <a name="permissions"></a>Autorisations    
+## <a name="permissions"></a>Permissions    
 L’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe sysadmin, du rôle de base de données fixe db_owner ou du rôle de base de données fixe db_ddladmin.    
     
 ## <a name="examples"></a>Exemples    

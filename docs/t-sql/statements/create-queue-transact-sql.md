@@ -5,9 +5,7 @@ ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - QUEUE_TSQL
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
-caps.latest.revision: 67
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 50df822ad62216897cbcf13526646782938dc71f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: fc12318b9d19ec7d14d1d97e5c83276fedfe6c98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777467"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -171,7 +168,7 @@ CREATE QUEUE <object>
 |message_body|**varbinary(max)**|Contenu du message.|  
 |message_id|**uniqueidentifier**|Identificateur unique du message.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L'autorisation de création d'une file d'attente est accordée aux membres du rôle de base de données fixe db_ddladmin ou db_owner et aux membres du rôle serveur fixe sysadmin.  
   
  L'autorisation REFERENCES pour une file d'attente est accordée par défaut au propriétaire de la file d'attente, aux membres du rôle de base de données fixe db_ddladmin ou db_owner et aux membres du rôle serveur fixe sysadmin.  
