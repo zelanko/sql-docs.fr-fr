@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.termextractiontrans.f1
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7e734e0492d677b166b862836f3c3785d8d74c3
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bd42fe5402c9da251464cfedf670478c4b0d6358
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401571"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730247"
 ---
 # <a name="term-extraction-transformation"></a>Transformation d'extraction de terme
   La transformation d'extraction de terme extrait des termes à partir de texte d'une colonne d'entrée de transformation, puis écrit les termes dans une colonne de sortie de transformation. La transformation fonctionne uniquement avec du texte en langue anglaise et utilise uniquement son propre dictionnaire d'anglais et ses propres informations linguistiques.  
@@ -199,7 +196,7 @@ ms.locfileid: "35401571"
  **Score**  
  Fournissez un nom pour la colonne de sortie qui contiendra le score de chaque terme extrait.  
   
- **Configurer la sortie d'erreur**  
+ **Configurer la sortie d’erreur**  
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>Éditeur de transformation d'extraction de terme (onglet Exclusion)
@@ -221,7 +218,7 @@ ms.locfileid: "35401571"
  **Colonne**  
  Sélectionnez la colonne de la table ou de la vue qui contient les termes d'exclusion.  
   
- **Configurer la sortie d'erreur**  
+ **Configurer la sortie d’erreur**  
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>Éditeur de transformation d'extraction de terme (onglet Avancé)

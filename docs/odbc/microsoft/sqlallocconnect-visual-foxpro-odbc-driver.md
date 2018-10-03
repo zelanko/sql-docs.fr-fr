@@ -1,36 +1,33 @@
 ---
-title: SQLAllocConnect (le pilote ODBC Visual FoxPro) | Documents Microsoft
+title: SQLAllocConnect (pilote ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocConnect function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 70d48b12-def5-475c-b8e1-654a55fdfe0f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78a26df870c7cc7791b529a30190be0949a7a986
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc05bae8e67098bb89345b1cf0333abae68397d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902874"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655927"
 ---
-# <a name="sqlallocconnect-visual-foxpro-odbc-driver"></a>SQLAllocConnect (le pilote ODBC Visual FoxPro)
+# <a name="sqlallocconnect-visual-foxpro-odbc-driver"></a>SQLAllocConnect (pilote ODBC Visual FoxPro)
 > [!NOTE]  
->  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [référence de l’API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Prise en charge : complet  
+ Prise en charge : complète  
   
  Conformité d’API ODBC : Niveau principal  
   
- Alloue de la mémoire pour un handle de connexion, *pas*, dans l’environnement identifié par *henv*. Le Gestionnaire de pilotes traite cet appel et appelle du pilote **SQLAllocConnect** chaque fois que [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), **SQLBrowseConnect**, ou [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) est appelée.  
+ Alloue la mémoire pour un handle de connexion, *pas*, au sein de l’environnement identifié par *henv*. Le Gestionnaire de pilotes traite cet appel et appelle le pilote **SQLAllocConnect** chaque fois que [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), **SQLBrowseConnect**, ou [SQLDriverConnect ](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) est appelée.  
   
- Pour plus d’informations, consultez [SQLAllocConnect](../../odbc/reference/syntax/sqlallocconnect-function.md) dans les *de référence du programmeur ODBC*.
+ Pour plus d’informations, consultez [SQLAllocConnect](../../odbc/reference/syntax/sqlallocconnect-function.md) dans le *de référence du programmeur ODBC*.

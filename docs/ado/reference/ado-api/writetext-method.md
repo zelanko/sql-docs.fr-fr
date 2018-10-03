@@ -1,13 +1,11 @@
 ---
-title: Méthode WriteText | Documents Microsoft
+title: WriteText, méthode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c38b1e8573e59d4446ff0a4dbfebf1cc627b3863
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a3b50db388151de1f5b99d8d9a3f48904e6d7c2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283188"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679887"
 ---
 # <a name="writetext-method"></a>WriteText, méthode
-Écrit une chaîne de texte spécifiée dans un [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
+Écrit une chaîne de texte spécifié dans un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,17 +36,17 @@ Stream.WriteText Data, Options
   
 #### <a name="parameters"></a>Paramètres  
  *Données*  
- A **chaîne** valeur qui contient le texte de caractères à écrire.  
+ Un **chaîne** valeur qui contient le texte en caractères à écrire.  
   
  *Options*  
- Facultatif. A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) valeur qui spécifie si un caractère séparateur de ligne doit être écrit à la fin de la chaîne spécifiée.  
+ Facultatif. Un [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) valeur qui spécifie si un caractère de séparation de ligne doit être écrit à la fin de la chaîne spécifiée.  
   
 ## <a name="remarks"></a>Notes  
- Les chaînes spécifiées sont écrites dans le **flux** objet sans espaces insérés ni caractères entre chaque chaîne.  
+ Chaînes spécifiées sont écrites dans le **Stream** objet sans espaces insérés ni caractères entre chaque chaîne.  
   
- En cours [Position](../../../ado/reference/ado-api/position-property-ado.md) est définie sur le caractère suivant les données écrites. Le **WriteText** méthode ne tronque pas le reste des données dans un flux de données. Si vous voulez tronquer ces caractères, appelez [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ Actuel [Position](../../../ado/reference/ado-api/position-property-ado.md) est définie sur le caractère qui suit les données écrites. Le **WriteText** méthode ne tronque pas le reste des données dans un flux de données. Si vous souhaitez tronquer ces caractères, appelez [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
- Si vous écrivez après actuel [fin du support](../../../ado/reference/ado-api/eos-property.md) position, la [taille](../../../ado/reference/ado-api/size-property-ado-stream.md) de la **flux** augmente pour contenir les nouveaux caractères, et **fin du support** déplace vers le nouveau dernier octet de la **flux**.  
+ Si vous écrivez après actuel [EOS](../../../ado/reference/ado-api/eos-property.md) position, la [taille](../../../ado/reference/ado-api/size-property-ado-stream.md) de la **Stream** augmente pour contenir les nouveaux caractères, et **EOS** déplace vers le nouveau dernier octet de la **Stream**.  
   
 > [!NOTE]
 >  Le **WriteText** méthode est utilisée avec des flux de texte ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) est **adTypeText**). Pour les flux binaires (**Type** est **adTypeBinary**), utilisez [écrire](../../../ado/reference/ado-api/write-method.md).  

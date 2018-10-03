@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_disable_collector (Transact-SQL) | Documents Microsoft
+title: sp_syscollector_disable_collector (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_disable_collector_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_disable_collector
 ms.assetid: 9ef4c85d-cca6-452d-94be-2be6f616c3d8
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3473e1bd962510960202c4b1c80dc7222fdc62c8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e0e699b0bfd8eb5916ac4be913530659249f3b98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658717"
 ---
 # <a name="spsyscollectordisablecollector-transact-sql"></a>sp_syscollector_disable_collector (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ dbo.sp_syscollector_disable_collector
 ```  
   
 ## <a name="arguments"></a>Arguments  
- Aucun  
+ None  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -53,7 +49,7 @@ dbo.sp_syscollector_disable_collector
 ## <a name="remarks"></a>Notes  
  Prend pour valeur par défaut le collecteur de données sur le serveur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’appartenance au rôle de base de données fixe **dc_admin** ou **dc_operator** (avec l’autorisation EXECUTE) pour exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

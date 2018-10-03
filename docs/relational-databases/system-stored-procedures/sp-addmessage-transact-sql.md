@@ -1,14 +1,11 @@
 ---
-title: sp_addmessage (Transact-SQL) | Documents Microsoft
+title: sp_addmessage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addmessage
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 964f0909c136eddc86571ce776b559083c8ce3e1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0a8b3f01c833e725fc807de11c15e39142509626
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239179"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668327"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Stocke un nouveau message d’erreur définis par l’utilisateur dans une instance de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Les messages stockés à l’aide de **sp_addmessage** peuvent être affichés à l’aide de la **sys.messages** affichage catalogue.  
+  Stocke un nouveau message d’erreur définis par l’utilisateur dans une instance de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Messages stockés à l’aide de **sp_addmessage** peuvent être affichés à l’aide de la **sys.messages** vue de catalogue.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,19 +56,19 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  Langue du message. *langage* est **sysname** avec NULL comme valeur par défaut. Étant donné que plusieurs langues peuvent être installés sur le même serveur, *langage* spécifie la langue dans laquelle chaque message est écrit. Lorsque *langage* est omis, la langue est la langue par défaut pour la session.  
   
  [  **@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
- Argument utilisé lorsque le message doit être consigné dans le journal des applications Windows. **@with_log** est **varchar (5)** avec la valeur FALSE par défaut. Si sa valeur est TRUE, l'erreur est automatiquement écrite dans le journal des applications Windows. Si sa valeur est FALSE, l'erreur n'est pas automatiquement écrite dans le journal des applications Windows ; c'est la façon dont elle a été déclenchée qui détermine si l'erreur sera ou non écrite dans le journal. Seuls les membres de la **sysadmin** rôle de serveur peut utiliser cette option.  
+ Argument utilisé lorsque le message doit être consigné dans le journal des applications Windows. **@with_log** est **varchar (5)** avec FALSE comme valeur par défaut. Si sa valeur est TRUE, l'erreur est automatiquement écrite dans le journal des applications Windows. Si sa valeur est FALSE, l'erreur n'est pas automatiquement écrite dans le journal des applications Windows ; c'est la façon dont elle a été déclenchée qui détermine si l'erreur sera ou non écrite dans le journal. Seuls les membres de la **sysadmin** rôle de serveur peut utiliser cette option.  
   
 > [!NOTE]  
->  Si un message est écrit dans le journal des applications Windows, il est également écrit dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fichier journal des erreurs.  
+>  Si un message est écrit dans le journal des applications Windows, il est également écrite dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fichier journal des erreurs.  
   
  [ **@replace** *=* ] **'***remplacer***'**  
- S’il est spécifié comme chaîne *remplacer*, un message d’erreur existant est remplacé par le nouveau niveau de texte et la gravité de message. *Remplacez* est **varchar(7)** avec NULL comme valeur par défaut. Cette option doit être spécifiée si *msg_id* existe déjà. Si vous remplacez un message en anglais, Message en anglais, le niveau de gravité est remplacé pour tous les messages dans tous les autres langages qui ont le même *msg_id*.  
+ Si spécifié comme chaîne *remplacer*, un message d’erreur existant est remplacé par le nouveau niveau de texte et la gravité de message. *Remplacez* est **varchar(7)** avec NULL comme valeur par défaut. Cette option doit être spécifiée si *msg_id* existe déjà. Si vous remplacez un message en anglais, Message en anglais, le niveau de gravité est remplacé pour tous les messages dans tous les autres langages qui ont le même *msg_id*.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Pour les versions non anglaises de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la version anglaise d'un message doit exister préalablement à l'ajout d'un message dans une autre langue. Le degré de gravité des deux versions du message doit correspondre.  
@@ -85,7 +81,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
  La syntaxe pouvant différer d'une langue à l'autre, il se peut que les numéros de paramètres apparaissent dans un ordre différent par rapport au message d'origine.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Nécessite l’appartenance dans le **sysadmin** ou **serveradmin** rôles serveur fixes.  
   
 ## <a name="examples"></a>Exemples  

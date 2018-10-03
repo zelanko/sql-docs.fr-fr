@@ -6,20 +6,17 @@ ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 6d2fa1e69ada0fe5e4ef66e01cd5322efbf38516
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4bbb7d1fff70060ec0d3cf5878710177a231896e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406581"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727857"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Changer le compte pour la journalisation Scale Out
 Quand vous exécutez des packages SSIS dans Scale Out, les messages d’événement sont journalisés dans la base de données SSISDB avec un compte d’utilisateur créé automatiquement et nommé **##MS_SSISLogDBWorkerAgentLogin##**. La connexion pour cet utilisateur utilise l’authentification SQL Server.

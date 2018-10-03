@@ -1,57 +1,51 @@
 ---
-title: Avancé de sélection d’un objet (MySQLToSQL) | Documents Microsoft
+title: Sélection d’objet (MySQLToSQL) avancée | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 390ef0c2-107c-4443-9495-80f35f22d168
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3e71f671e49bc78f7739cc76c47eb535d76f6e31
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c7c3d1f4ccc6b6a7fc9f398c528dcab79ffbd426
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775535"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743537"
 ---
-# <a name="advanced-object-selection--mysqltosql"></a>Sélection d’objet avancé (MySQLToSQL)
-Le **Section avancé de l’objet** boîte de dialogue vous permet de filtrer les objets de base de données à l’aide de chaînes et les sous-chaînes dans le nom d’objet, puis sélectionnez ou désélectionnez ces objets. SSMA effectue des opérations de conversion et la migration sur les objets sélectionnés.  
+# <a name="advanced-object-selection--mysqltosql"></a>Sélection d’objet avancée (MySQLToSQL)
+Le **Section avancé de l’objet** boîte de dialogue vous permet de filtrer les objets de base de données à l’aide de chaînes et des sous-chaînes dans le nom d’objet, puis sélectionnez ou désélectionnez ces objets. SSMA effectue des opérations de conversion et la migration sur les objets sélectionnés.  
   
-Pour accéder à cette boîte de dialogue, avec le bouton droit dans l’Explorateur de métadonnées, puis **sélection avancée de l’objet**.  
+Pour accéder à cette boîte de dialogue, avec le bouton droit dans l’Explorateur de métadonnées, puis sélectionnez **sélection avancée de l’objet**.  
   
-Lorsque vous ouvrez la boîte de dialogue, cliquez sur **afficher les éléments de sous-catégories** pour afficher tous les objets qui ont des métadonnées chargées dans le projet. Vous pouvez entrer ensuite des chaînes pour filtrer les éléments. Par exemple, entrez la chaîne « company » pour afficher tous les éléments avec des noms qui incluent cette chaîne.  
+Lorsque vous ouvrez la boîte de dialogue, cliquez sur **afficher les éléments de sous-catégories** pour afficher tous les objets qui ont des métadonnées chargées dans le projet. Vous pouvez ensuite entrer des chaînes pour filtrer les éléments. Par exemple, entrez la chaîne « company » pour afficher tous les éléments avec des noms qui incluent cette chaîne.  
   
-Avant d’utiliser cette boîte de dialogue, vous souhaiterez forcer SSMA pour charger toutes les métadonnées par conversion de schémas ou de l’enregistrement du projet.  
+Avant d’utiliser cette boîte de dialogue, vous souhaiterez forcer SSMA pour charger toutes les métadonnées par la conversion de schémas ou de l’enregistrement du projet.  
   
 ## <a name="options"></a>Options  
-**Vérifiez tous les éléments**  
+**Activer tous les éléments**  
 Ajoute une case à cocher en regard de tous les éléments. Ces éléments sont immédiatement sélectionnés dans l’Explorateur de métadonnées.  
   
-**Désactivez tous les éléments**  
-Supprime la case à cocher en regard de tous les éléments. Ces éléments seront effacées immédiatement dans l’Explorateur de métadonnées.  
+**Désactiver tous les éléments**  
+Supprime la case à cocher en regard de tous les éléments. Ces éléments seront effacés immédiatement dans l’Explorateur de métadonnées.  
   
-**Mode liste**  
+**Mode d’affichage de liste**  
 Affiche les éléments dans une liste filtrés.  
   
-**Mode d’affichage de tableau**  
+**Mode d’affichage de table**  
 Affiche les éléments dans une table filtrés.  
   
 **Affiche les éléments chargés uniquement**  
-Active/désactive l’affichage des catégories ou des éléments. Lorsque cette option est sélectionnée, SSMA montre tous les éléments qui correspondent aux critères de filtre et ceux qui ont été précédemment chargée. Lorsque ce bouton n’est pas sélectionné, SSMA montre les dossiers de catégorie.  
+Active ou désactive l’affichage des catégories ou des éléments. Lorsque cette case est activée, SSMA montre tous les éléments qui correspondent aux critères de filtre et ceux qui ont été précédemment chargée. Lorsque cette case n’est pas activée, SSMA montre les dossiers de catégorie.  
   
 **Filter**  
-Entrez la chaîne que vous souhaitez utiliser pour filtrer les éléments. Par exemple, pour rechercher tous les éléments qui contiennent la chaîne « ID » dans le nom de l’élément, entrez la chaîne « ID » dans le **filtre** boîte.  
+Entrez la chaîne que vous souhaitez utiliser pour filtrer les éléments. Par exemple, pour rechercher des éléments disponibles qui contiennent la chaîne « ID » dans le nom d’élément, entrez la chaîne « ID » dans le **filtre** boîte.  
   
-Si les éléments correspondent aux critères de filtre, les catégories ou éléments seront affiche lorsque vous tapez la chaîne. Pour afficher les éléments correspondants, nous vous recommandons de cliquer sur le **affiche uniquement les éléments chargés** bouton.  
+Si les éléments correspondent au critère de filtre, les catégories ou les éléments apparaîtront à mesure que vous tapez la chaîne. Pour afficher les éléments correspondants, nous recommandons que vous cliquez sur le **affiche uniquement les éléments chargés** bouton.  
   
 **Effacer le filtre**  
 Efface le **filtre** boîte.  

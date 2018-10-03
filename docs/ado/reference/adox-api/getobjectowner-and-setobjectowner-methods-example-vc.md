@@ -1,13 +1,11 @@
 ---
-title: GetObjectOwner et SetObjectOwner, méthodes-exemple (VC ++) | Documents Microsoft
+title: GetObjectOwner et SetObjectOwner, méthodes (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - SetObjectOwner method [ADOX], VC++ example
 - GetObjectOwner method [ADOX], VC++ example
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ea1e53e6a9259633a353e8eb0988b0fddc74a4e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 176105cafaccafab2fc2a85a716db6dee958d31e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285868"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735077"
 ---
-# <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner et SetObjectOwner, méthodes-exemple (VC ++)
-Cet exemple illustre la [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) et [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) méthodes. Ce code suppose l’existence du groupe Accounting (consultez la [groupes et ajouter des utilisateurs, ChangePassword, méthodes-exemple (VC ++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) pour savoir comment ajouter ce groupe au système). Le propriétaire de la table de catégories est défini sur la gestion des comptes.  
+# <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner et SetObjectOwner, exemples de méthodes (VC++)
+Cet exemple montre la [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) et [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) méthodes. Ce code suppose l’existence du groupe Accounting (consultez la [groupes et utilisateurs Append, ChangePassword, méthodes exemple (VC ++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) pour voir comment ajouter ce groupe au système). Le propriétaire de la table Categories est défini sur comptabilité.  
   
 ```  
 // BeginOwnersCpp.cpp  

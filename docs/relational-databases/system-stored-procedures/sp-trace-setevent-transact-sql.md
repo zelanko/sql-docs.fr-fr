@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setevent_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 352d406b2c8735cb09787e9cd1554a4df7dd1bc0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005771"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739907"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -250,7 +246,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 |Numéro de colonne|Nom de colonne|Description|  
 |-------------------|-----------------|-----------------|  
-| 1|**TextData**|Valeur de texte dépendant de la classe d'événements capturée dans la trace.|  
+|1|**TextData**|Valeur de texte dépendant de la classe d'événements capturée dans la trace.|  
 |2|**BinaryData**|Valeur binaire dépendante de la classe d'événements capturés dans la trace.|  
 |3|**DatabaseID**|ID de la base de données spécifiée par l’utilisation *base de données* instruction ou la base de données par défaut si aucune utilisation *base de données* instruction est émise pour une connexion donnée.<br /><br /> La valeur pour une base de données peut être déterminée à l'aide de la fonction DB_ID.|  
 |4|**TransactionID**|ID affecté par le système à la transaction.|  
@@ -337,7 +333,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |Code de retour|Description|  
 |-----------------|-----------------|  
 |0|Aucune erreur.|  
-| 1|Erreur inconnue.|  
+|1|Erreur inconnue.|  
 |2|La trace est en cours d'exécution. La modification de la trace à cet instant précis entraîne une erreur.|  
 |3|L'événement spécifié n'est pas valide. L'événement peut ne pas exister ou être inapproprié pour la procédure stockée.|  
 |4|La colonne spécifiée n'est pas valide.|  
@@ -361,7 +357,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Pour obtenir un exemple d’utilisation de procédures stockées de trace, consultez [Créer une trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L'utilisateur doit disposer de l'autorisation ALTER TRACE.  
   
 ## <a name="see-also"></a>Voir aussi  

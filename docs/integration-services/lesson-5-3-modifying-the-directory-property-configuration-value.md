@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 63233be39af3f6edfa46102d56446bd42cc185b1
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a144bbde1537e167c82b63389be83c72f55a6346
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328513"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742407"
 ---
 # <a name="lesson-5-3---modifying-the-directory-property-configuration-value"></a>Leçon 5-3 : Modification de la valeur de configuration de la propriété Directory
 Dans cette tâche, vous modifiez le paramètre de configuration (stocké dans le fichier SSISTutorial.dtsConfig) pour la propriété Value de la variable de niveau package `User::varFolderName`. Cette variable met à jour la propriété Directory du conteneur de boucles Foreach. La valeur modifiée pointe sur le dossier **New Sample Data** que vous avez créé dans la tâche précédente. Une fois le paramètre de configuration modifié et le package exécuté, la propriété Directory est mise à jour par la variable, en utilisant la valeur récupérée dans le fichier de configuration au lieu de la valeur de la propriété Directory configurée au départ dans le package.  
@@ -38,7 +34,7 @@ Dans cette tâche, vous modifiez le paramètre de configuration (stocké dans le
 3.  Enregistrez les modifications, puis fermez l'éditeur de texte.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 4 : Test de la leçon 5 du Package du didacticiel](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+[Étape 4 : Test de la leçon 5 du Package du tutoriel](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
   
   

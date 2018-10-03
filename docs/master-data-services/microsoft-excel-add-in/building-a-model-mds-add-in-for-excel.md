@@ -5,21 +5,18 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ac99d1e032fc2e674696926c426c3477e15a7fef
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 61fe8cbe7335584feb925879572cddcc368b33d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408281"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721317"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Génération d'un modèle (Complément MDS pour Excel)
 
@@ -35,7 +32,7 @@ ms.locfileid: "35408281"
   
  En tant qu'administrateur, vous devez créer le modèle à l'aide du service Web ou de l'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . Vous pouvez utiliser [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] pour créer des entités et des attributs dans le modèle. Pour plus d’informations sur les objets de modèle, consultez [Modèles &#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  La plupart des tâches d'administration doivent toujours être effectuées dans l'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ou à l'aide du service Web. Le tableau suivant montre les outils que les administrateurs peuvent utiliser pour exécuter des tâches dans MDS.  
   
 |Description de la tâche|Outil|Rubrique|  
