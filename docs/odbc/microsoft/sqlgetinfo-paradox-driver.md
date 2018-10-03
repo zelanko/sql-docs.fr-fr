@@ -1,39 +1,37 @@
 ---
-title: SQLGetInfo (pilote Paradox) | Documents Microsoft
+title: SQLGetInfo (pilote Paradox) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Paradox driver [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], Paradox Driver
 ms.assetid: 43aab762-68f4-4128-b8f5-8878ea5f1258
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a8ebf4cd02266fc5cc467a4d998eb4516bee782c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1e8025af41a876926273c3134deebf46766fb9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752889"
 ---
 # <a name="sqlgetinfo-paradox-driver"></a>SQLGetInfo (pilote Paradox)
 > [!NOTE]  
->  Cette rubrique fournit des informations spécifiques au pilote de Corel. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [référence de l’API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique fournit des informations spécifiques au pilote Paradox. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** prend en charge le type d’informations SQL_FILE_USAGE. La valeur retournée est un entier 16 bits qui indique comment le pilote traite directement les fichiers dans une source de données :  
+ **SQLGetInfo** prend en charge le type d’information SQL_FILE_USAGE. La valeur retournée est un entier 16 bits qui indique comment le pilote traite directement les fichiers dans une source de données :  
   
 -   SQL_FILE_NOT_SUPPORTED : Le pilote n’est pas un pilote de niveau unique.  
   
--   SQL_FILE_TABLE : Un pilote de niveau unique traite les fichiers dans une source de données en tant que tables.  
+-   SQL_FILE_TABLE — Un pilote monocouches et traite les fichiers dans une source de données en tant que tables.  
   
--   SQL_FILE_QUALIFIER : Un pilote de niveau unique traite les fichiers dans une source de données en tant que qualificateur.  
+-   SQL_FILE_QUALIFIER — Un pilote à un niveau traite des fichiers dans une source de données en tant que qualificateur.  
   
  Le pilote ODBC retourne SQL_FILE_TABLE, car chaque fichier est une table.  
   

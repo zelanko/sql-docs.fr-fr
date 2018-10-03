@@ -1,32 +1,30 @@
 ---
-title: SQLGetTypeInfo (le pilote ODBC Visual FoxPro) | Documents Microsoft
+title: SQLGetTypeInfo (pilote ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bbf3983ccdeb2c320f4776d608b73e362f0a479
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733057"
 ---
-# <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (le pilote ODBC Visual FoxPro)
+# <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (pilote ODBC Visual FoxPro)
 > [!NOTE]  
->  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [référence de l’API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Prise en charge : complet  
+ Prise en charge : complète  
   
  Conformité d’API ODBC : Niveau 1  
   
@@ -34,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 |Type ODBC|Type de Visual FoxPro|  
 |---------------|------------------------|  
-|SQL_BIGINT|Non pris en charge. Aucun type de Visual FoxPro 64 bits est.|  
+|SQL_BIGINT|Non pris en charge. Il n’existe aucun type de Visual FoxPro 64 bits.|  
 |SQL_BIT|Logical|  
 |SQL_CHAR|Caractère|  
 |SQL_DATE|Date|  
@@ -55,4 +53,4 @@ ms.lasthandoff: 05/03/2018
   
  * Type par défaut  
   
- Pour plus d’informations sur les types de données Visual FoxPro, consultez [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Pour plus d’informations sur cette fonction, consultez [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) dans les *de référence du programmeur ODBC*.
+ Pour plus d’informations sur les types de données Visual FoxPro, consultez [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Pour plus d’informations sur cette fonction, consultez [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) dans le *de référence du programmeur ODBC*.

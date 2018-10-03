@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE PARTITION FUNCTION
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], functions
 - CREATE PARTITION FUNCTION statement
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
-caps.latest.revision: 57
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 547075818327bb7c53733b8f3ce7510a2b31a10c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: ac8e31a6f918b79dbc43294e3f617630fa79ba50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790850"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755357"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +79,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
  Toutes les lignes dont la colonne de partitionnement possède des valeurs NULL sont placées dans la partition située le plus à gauche, sauf si NULL est spécifié comme valeur limite et que RIGHT est indiqué. Dans ce cas, la partition située le plus à gauche est une partition vide et les valeurs NULL sont placées dans la partition suivante.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  N'importe laquelle des autorisations suivantes permet d'exécuter CREATE PARTITION FUNCTION :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
@@ -103,7 +100,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
   
  Le tableau suivant illustre le partitionnement d’une table dans laquelle cette fonction de partition est appliquée à la colonne de partitionnement **col1**.  
   
-|Partition| 1|2|3|4|  
+|Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**Valeurs**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
@@ -117,7 +114,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
   
  Le tableau suivant illustre le partitionnement d’une table dans laquelle cette fonction de partition est appliquée à la colonne de partitionnement **col1**.  
   
-|Partition| 1|2|3|4|  
+|Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**Valeurs**|**col1** \< `1`|**col1** >= `1` AND **col1** \< `100`|**col1** >= `100` AND **col1** \< `1000`|**col1** >= `1000`| 
   
@@ -133,7 +130,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
  Le tableau suivant illustre le partitionnement d’une table ou d’un index dans lequel cette fonction de partition est appliquée à la colonne de partitionnement **datecol**.  
   
-|Partition| 1|2|...|11|12|  
+|Partition|1|2|...|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
 |**Valeurs**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
@@ -147,7 +144,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
   
  Le tableau suivant illustre le partitionnement d’une table dans laquelle cette fonction de partition est appliquée à la colonne de partitionnement **col1**.  
   
-|Partition| 1|2|3|4|  
+|Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**Valeurs**|**col1** \< `EX`...|**col1** >= `EX` AND **col1** \< `RXE`...|**col1** >= `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
   

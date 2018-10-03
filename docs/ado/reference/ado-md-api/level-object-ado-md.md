@@ -1,13 +1,11 @@
 ---
-title: Level, objet (ADO MD) | Documents Microsoft
+title: Level, objet (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35263c640b1446397776a4365349afdd522d78f4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 27e789c4eb34ed275d6f18f62325287febb73422
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283988"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734557"
 ---
-# <a name="level-object-ado-md"></a>Objet de niveau (ADO MD)
+# <a name="level-object-ado-md"></a>Level, objet (ADO MD)
 Contient un jeu de membres, chacun d'entre eux ayant le même rang dans une hiérarchie.  
   
 ## <a name="remarks"></a>Notes  
  Les collections et les propriétés d’un **niveau** de l’objet, vous pouvez procédez comme suit :  
   
--   Identifier les **niveau** avec la [nom](../../../ado/reference/ado-md-api/name-property-ado-md.md) et [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propriétés.  
+-   Identifier le **niveau** avec la [nom](../../../ado/reference/ado-md-api/name-property-ado-md.md) et [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) propriétés.  
   
--   Renvoyer une chaîne à utiliser lors de l’affichage du **niveau** avec la [légende](../../../ado/reference/ado-md-api/caption-property-ado-md.md) propriété.  
+-   Retourner une chaîne à utiliser lors de l’affichage le **niveau** avec la [légende](../../../ado/reference/ado-md-api/caption-property-ado-md.md) propriété.  
   
 -   Retourne une chaîne explicite qui décrit le **niveau** avec la [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) propriété.  
   
@@ -42,9 +39,9 @@ Contient un jeu de membres, chacun d'entre eux ayant le même rang dans une hié
   
 -   Retourner le nombre de niveaux à partir de la racine de la **niveau** avec la [profondeur](../../../ado/reference/ado-md-api/depth-property-ado-md.md) propriété.  
   
--   Utiliser ADO standard [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection pour obtenir des informations supplémentaires sur le **niveau** objet.  
+-   Utiliser le ADO standard [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection pour obtenir des informations supplémentaires sur le **niveau** objet.  
   
- Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste réelle des propriétés peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
+ Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste de propriétés réelle peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
 |Nom   |Description|  
 |----------|-----------------|  
@@ -67,8 +64,8 @@ Contient un jeu de membres, chacun d'entre eux ayant le même rang dans une hié
 -   [Propriétés, méthodes et événements](../../../ado/reference/ado-md-api/level-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [CubeDef, exemple (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Objet de hiérarchie (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
- [Collection de niveaux (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
- [Collection de membres (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
+ [Exemple avec CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
+ [Hierarchy, objet (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
+ [Levels, Collection (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
+ [Members, Collection (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
