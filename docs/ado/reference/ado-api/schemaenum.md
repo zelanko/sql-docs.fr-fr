@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e28e750ad7a3521150dabdbf6b2771f3372bb0b3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4dd7edb2f5969f7ec8ded931c5e562c0c1992768
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984321"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749227"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Spécifie le type de schéma **Recordset** qui le [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) récupère de la méthode.  
@@ -41,7 +38,7 @@ Spécifie le type de schéma **Recordset** qui le [OpenSchema](../../../ado/refe
 |Constante|Valeur|Description|Colonnes de contrainte|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Retourne les assertions définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes ASSERTIONS)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
-|**adSchemaCatalogs**| 1|Retourne les attributs physiques associés aux catalogues accessibles à partir du SGBD.<br /><br /> (Ensemble de lignes de catalogues)|CATALOG_NAME|  
+|**adSchemaCatalogs**|1|Retourne les attributs physiques associés aux catalogues accessibles à partir du SGBD.<br /><br /> (Ensemble de lignes de catalogues)|CATALOG_NAME|  
 |**adSchemaCharacterSets**|2|Retourne les jeux de caractères définies dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes CHARACTER_SETS)|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
 |**adSchemaCheckConstraints**|5|Retourne les contraintes check définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (CHECK_CONSTRAINTS) Ensemble de lignes)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCollations**|3|Retourne les classements de caractères définies dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes de classements)|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed6c149a48d3658c607a3cefb0424f7636232954
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41a52cbbcfd898b60255779b91e4dd68fb326749
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320429"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067119"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Classe d'événement Audit Broker Conversation
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un événement **Audit Broker Conversation** pour renvoyer des messages d’audit relatifs à la sécurité du dialogue de Service Broker.  
@@ -52,13 +49,13 @@ ms.locfileid: "37320429"
 |**SPID**|**Int**|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
 |**StartTime**|**datetime**|Heure de début de l'événement, le cas échéant.|14|Oui|  
 |**État**|**Int**|Indique l'emplacement dans le code source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a produit l'événement. Chaque emplacement susceptible de générer cet événement possède un code d'état spécifique. Un spécialiste de l'assistance technique Microsoft peut se servir de ce code d'état afin de déterminer où l'événement s'est produit.|30|non|  
-|**TextData**|**ntext**|En cas d'erreurs, contient un message qui décrit la raison de l'échec. Une des valeurs suivantes :<br /><br /> **Le certificat est introuvable**. L'utilisateur spécifié pour la sécurité du protocole du dialogue n'a pas de certificat.<br /><br /> **Période non valide**. L'utilisateur spécifié pour la sécurité du protocole de dialogue a un certificat, mais ce dernier est arrivé à expiration.<br /><br /> **Le certificat est trop volumineux pour une allocation de mémoire**. L'utilisateur spécifié pour la sécurité du protocole de dialogue a un certificat, mais ce dernier est trop volumineux. La taille maximale que Service Broker prend en charge pour les certificats est de 32 768 octets.<br /><br /> **Clé privée introuvable**. L'utilisateur spécifié pour la sécurité du protocole de dialogue a un certificat, mais ce dernier n'est associé à aucune clé privée.<br /><br /> **La taille de la clé privée du certificat est incompatible avec le fournisseur de services de chiffrement**. Du fait de sa taille, la clé privée qui accompagne le certificat rend le traitement impossible. La taille d'une clé privée doit être un multiple de 64 octets.<br /><br /> **La taille de la clé publique du certificat est incompatible avec le fournisseur de services de chiffrement**. Du fait de sa taille, la clé publique qui accompagne le certificat rend le traitement impossible. La taille d'une clé publique doit être un multiple de 64 octets.<br /><br /> **La taille de la clé privée du certificat est incompatible avec la clé d’échange de clés chiffrées**. La taille de la clé spécifiée dans la clé d'échange de clés ne correspond pas à la taille de la clé privée définie pour le certificat. Cela indique généralement que le certificat sur l'ordinateur distant ne correspond pas au certificat figurant dans la base de données.<br /><br /> **La taille de la clé publique du certificat est incompatible avec la signature de l’en-tête de sécurité**. L'en-tête de sécurité contient une signature qu'il est impossible de valider par rapport à la clé publique du certificat. Cela indique généralement que le certificat sur l'ordinateur distant ne correspond pas au certificat figurant dans la base de données.| 1|Oui|  
+|**TextData**|**ntext**|En cas d'erreurs, contient un message qui décrit la raison de l'échec. Une des valeurs suivantes :<br /><br /> **Le certificat est introuvable**. L'utilisateur spécifié pour la sécurité du protocole du dialogue n'a pas de certificat.<br /><br /> **Période non valide**. L'utilisateur spécifié pour la sécurité du protocole de dialogue a un certificat, mais ce dernier est arrivé à expiration.<br /><br /> **Le certificat est trop volumineux pour une allocation de mémoire**. L'utilisateur spécifié pour la sécurité du protocole de dialogue a un certificat, mais ce dernier est trop volumineux. La taille maximale que Service Broker prend en charge pour les certificats est de 32 768 octets.<br /><br /> **Clé privée introuvable**. L'utilisateur spécifié pour la sécurité du protocole de dialogue a un certificat, mais ce dernier n'est associé à aucune clé privée.<br /><br /> **La taille de la clé privée du certificat est incompatible avec le fournisseur de services de chiffrement**. Du fait de sa taille, la clé privée qui accompagne le certificat rend le traitement impossible. La taille d'une clé privée doit être un multiple de 64 octets.<br /><br /> **La taille de la clé publique du certificat est incompatible avec le fournisseur de services de chiffrement**. Du fait de sa taille, la clé publique qui accompagne le certificat rend le traitement impossible. La taille d'une clé publique doit être un multiple de 64 octets.<br /><br /> **La taille de la clé privée du certificat est incompatible avec la clé d’échange de clés chiffrées**. La taille de la clé spécifiée dans la clé d'échange de clés ne correspond pas à la taille de la clé privée définie pour le certificat. Cela indique généralement que le certificat sur l'ordinateur distant ne correspond pas au certificat figurant dans la base de données.<br /><br /> **La taille de la clé publique du certificat est incompatible avec la signature de l’en-tête de sécurité**. L'en-tête de sécurité contient une signature qu'il est impossible de valider par rapport à la clé publique du certificat. Cela indique généralement que le certificat sur l'ordinateur distant ne correspond pas au certificat figurant dans la base de données.|1|Oui|  
   
  Le tableau suivant répertorie les valeurs des sous-classes pour cette classe d'événements.  
   
 |ID|Sous-classe|Description|  
 |--------|--------------|-----------------|  
-| 1|Aucun en-tête de sécurité|Au cours d'une conversation sécurisée, Service Broker a reçu un message sans clé de session. Une fois la conversation sécurisée établie, le protocole de dialogue requiert que tous les messages de la conversation comportent une clé de session.|  
+|1|Aucun en-tête de sécurité|Au cours d'une conversation sécurisée, Service Broker a reçu un message sans clé de session. Une fois la conversation sécurisée établie, le protocole de dialogue requiert que tous les messages de la conversation comportent une clé de session.|  
 |2|Aucun certificat|Service Broker n'a pas pu trouver un certificat valide pour l'un des participants à la conversation. Pour sécuriser une conversation, la base de données doit contenir un certificat pour l'émetteur et le destinataire de la conversation.|  
 |3|Signature incorrecte|Service Broker n'a pas pu vérifier la signature du message fournie par l'émetteur à l'aide de la clé publique figurant dans son certificat. Cela peut indiquer que le message est corrompu ou endommagé, que les services distants et locaux ne sont pas configurés avec le même certificat d'utilisateur ou que le certificat est arrivé à expiration.|  
 |4|Échec de l'exécution en tant que cible|L'utilisateur de destination ne dispose pas des autorisations de réception voulues sur la file d'attente de destination. Pour empêcher les utilisateurs non habilités de recevoir des messages, Service Broker n'empile pas les messages à destination d'un utilisateur ne disposant pas des autorisations appropriées sur la file d'attente, que l'initiateur ait ou non le droit d'empiler les messages.|  
