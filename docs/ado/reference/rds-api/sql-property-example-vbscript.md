@@ -1,35 +1,32 @@
 ---
-title: Exemple de propriété SQL (VBScript) | Documents Microsoft
+title: Exemple de propriété SQL (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SQL property [ADO], VBScript example
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be02b86efe2aa2c741507d1cfdb93aa9187062f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b76b4bfc372c688101882a7250c54a4d4c0c536c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288868"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673529"
 ---
-# <a name="sql-property-example-vbscript"></a>Exemple de propriété SQL (VBScript)
+# <a name="sql-property-example-vbscript"></a>SQL, exemple de propriété (VBScript)
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Le code suivant montre comment définir le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) paramètre SQL au moment du design et le lier à un contrôle prenant en charge les données à l’aide de la base de données appelé *Pubs*, qui est fourni avec Microsoft SQL Server. Pour tester l’exemple, copiez le code suivant dans un document ASP normal nommé **SQLDesignVBS.asp** sur votre serveur Web.  
+ Le code suivant montre comment définir le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) paramètre SQL au moment du design et de la liaison à un contrôle prenant en charge les données à l’aide de la base de données appelé *Pubs*, qui est livré avec Microsoft SQL Server. Pour tester l’exemple, copiez le code suivant dans un document ASP normal nommé **SQLDesignVBS.asp** sur votre serveur Web.  
   
 ```  
 <!-- BeginSQLDesignVBS -->  
@@ -92,7 +89,7 @@ body {
 <!-- EndSQLDesignVBS -->  
 ```  
   
- L’exemple suivant montre comment définir les paramètres nécessaires de **RDS. DataControl** au moment de l’exécution. Pour tester cet exemple, coupez et collez le code suivant dans un document ASP normal et nommez-le **SQLRuntimeVBS.asp**. Le script ASP identifie votre serveur.  
+ L’exemple suivant montre comment définir les paramètres nécessaires de **RDS. DataControl** en cours d’exécution. Pour tester cet exemple, coupez et collez le code suivant dans un document ASP normal et nommez-le **SQLRuntimeVBS.asp**. Le script ASP identifie votre serveur.  
   
 ```  
 <!-- BeginSQLRuntimeVBS -->  

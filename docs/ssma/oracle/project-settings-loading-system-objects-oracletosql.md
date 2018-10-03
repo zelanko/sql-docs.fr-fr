@@ -4,21 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: af52d18e2978f8645bce689481f68121a164c160
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: f1497b40fbf3462228af6b0ef9ce964c7212df64
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664238"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>Paramètres du projet (Chargement d’objets système) (OracleToSQL)
 La page de chargement des objets de système de la **paramètres du projet** boîte de dialogue vous permet de spécifier les objets de système Oracle SSMA convertit et les charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

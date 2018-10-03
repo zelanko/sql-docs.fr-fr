@@ -1,34 +1,31 @@
 ---
-title: Champs de descripteur | Documents Microsoft
+title: Champs de descripteur | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], fields
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cddf01c0ef40b582410773ba109c2d1c23ee1e7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b512ff83d0002ef4a7c79b48cd8829fc2dbb9ba3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912574"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696578"
 ---
 # <a name="descriptor-fields"></a>Champs de descripteur
-Les descripteurs contiennent *en-tête* et *enregistrement* champs qui décrivent complètement les colonnes ou des paramètres.  
+Les descripteurs contiennent *en-tête* et *enregistrement* champs qui décrivent complètement les colonnes ou paramètres.  
   
- Un descripteur contient une seule copie des champs d’en-tête suivant. Modification d’un champ d’en-tête affecte toutes les colonnes ou des paramètres.  
+ Un descripteur contient une seule copie des champs d’en-tête suivants. Modification d’un champ d’en-tête affecte toutes les colonnes ou paramètres.  
   
 |||  
 |-|-|  
@@ -37,7 +34,7 @@ Les descripteurs contiennent *en-tête* et *enregistrement* champs qui décriven
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- Un descripteur contient zéro ou plusieurs enregistrements de descripteurs. Chaque enregistrement décrit une colonne ou un paramètre, selon le type du descripteur. Lorsqu’une nouvelle colonne ou un paramètre est liée, un nouvel enregistrement est ajouté au descripteur. Une colonne ou un paramètre est indépendant, un enregistrement est supprimé à partir du descripteur. Chaque enregistrement contient une seule copie des champs suivants :  
+ Un descripteur contient zéro ou plusieurs enregistrements de descripteurs. Chaque enregistrement décrit une colonne ou un paramètre, selon le type de descripteur. Lorsqu’une nouvelle colonne ou un paramètre est lié, un nouvel enregistrement est ajouté au descripteur. Une colonne ou un paramètre est indépendant, un enregistrement est supprimé à partir du descripteur. Chaque enregistrement contient une seule copie des champs suivants :  
   
 |||  
 |-|-|  
@@ -58,9 +55,9 @@ Les descripteurs contiennent *en-tête* et *enregistrement* champs qui décriven
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- Plusieurs attributs d’instruction correspondant au champ d’en-tête d’un descripteur. Si ces attributs via un appel à **SQLSetStmtAttr** et en définissant le champ d’en-tête de descripteur correspondant en appelant **SQLSetDescField** ont le même effet. Est de même pour **SQLGetStmtAttr** et **SQLGetDescField**, de récupérer les mêmes informations. Appeler les fonctions de l’instruction à la place les fonctions de descripteur a l’avantage qu’un handle de descripteur n’est pas à récupérer.  
+ Plusieurs attributs d’instruction correspondant au champ d’en-tête d’un descripteur. Définition de ces attributs via un appel à **SQLSetStmtAttr** et en définissant le champ d’en-tête de descripteur correspondant en appelant **SQLSetDescField** ont le même effet. Vaut également pour **SQLGetStmtAttr** et **SQLGetDescField**, lesquels récupérer les mêmes informations. Appel des fonctions d’instruction au lieu des fonctions de descripteur a l’avantage qu’un handle de descripteur n’est pas à récupérer.  
   
- Les champs d’en-tête suivantes peuvent être définies en définissant les attributs d’instruction :  
+ Les champs d’en-tête suivant peuvent être définis en définissant les attributs d’instruction :  
   
 |||  
 |-|-|  

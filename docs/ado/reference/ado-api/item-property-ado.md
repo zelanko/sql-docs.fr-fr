@@ -1,13 +1,11 @@
 ---
-title: Item, propriété (ADO) | Documents Microsoft
+title: Item, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -45,18 +43,17 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81c6ebc6b7dc0346a2d703c2969f1b114dd72039
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 776a74422941118e2091c9240d14edbf8c1f0fec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655649"
 ---
-# <a name="item-property-ado"></a>Élément propriété (ADO)
+# <a name="item-property-ado"></a>Item, propriété (ADO)
 Indique un membre spécifique d’une collection, par nom ou un nombre ordinal.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -70,10 +67,10 @@ Set object = collection.Item ( Index )
   
 ## <a name="parameters"></a>Paramètres  
  *Index*  
- A **Variant** expression qui correspond au nom ou au nombre ordinal d’un objet dans une collection.  
+ Un **Variant** expression qui correspond au nom ou au nombre ordinal d’un objet dans une collection.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **élément** propriété pour retourner un objet spécifique dans une collection. Si **élément** Impossible de trouver un objet dans la collection correspondant à la *Index* argument, une erreur se produit. En outre, certaines collections ne prennent en charge les objets nommés ; pour ces collections, vous devez utiliser des références d’un nombre ordinal.  
+ Utilisez le **élément** propriété à retourner un objet spécifique dans une collection. Si **élément** Impossible de trouver un objet dans la collection qui correspond à la *Index* argument, une erreur se produit. En outre, certaines collections ne prennent en charge les objets nommés ; pour ces collections, vous devez utiliser des références de nombre ordinal.  
   
  Le **élément** propriété est la propriété par défaut pour toutes les collections ; par conséquent, les formes de syntaxe suivantes sont interchangeables :  
   
@@ -95,5 +92,5 @@ collection (Index)
 |[Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de propriété d’élément (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
+ [Item, propriété-Exemple (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item, exemple de propriété (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

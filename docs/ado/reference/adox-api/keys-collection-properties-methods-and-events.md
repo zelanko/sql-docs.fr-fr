@@ -1,36 +1,33 @@
 ---
-title: Clés de Collection Propriétés, méthodes et événements | Documents Microsoft
+title: Touches de Collection Propriétés, méthodes et événements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Keys collection [ADOX], members
 ms.assetid: eeb3746d-1c75-4bb0-97b5-2c2d073c8c0e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8e95e41d13770e464c5cecf3922d784a75d968e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 63ed2ae07b4180daba40a5333ddc8f3321f876dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666549"
 ---
-# <a name="keys-collection-properties-methods-and-events"></a>Propriétés de Collection de clés, méthodes et événements
-## <a name="properties"></a>Propriétés  
- [Propriété Count](../../../ado/reference/ado-api/count-property-ado.md)  
+# <a name="keys-collection-properties-methods-and-events"></a>Propriétés, méthodes et événements de la collection Keys
+## <a name="properties"></a>Properties  
+ [Count, propriété](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Propriété Item](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Méthodes  
- [Append (méthode) (clés)](../../../ado/reference/adox-api/append-method-adox-keys.md)  
+ [Append, méthode (clés)](../../../ado/reference/adox-api/append-method-adox-keys.md)  
   
  [DELETE, méthode (Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   

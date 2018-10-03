@@ -1,13 +1,11 @@
 ---
-title: Position, propriété (ADO) | Documents Microsoft
+title: Position, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,34 +13,33 @@ f1_keywords:
 helpviewer_keywords:
 - Position property [ADO]
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 407ef25ebc55685436f61acaa42cbdf964619b09
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 333b06ef76ae6407ca8a5605f1917dc0bb609aca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280688"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615887"
 ---
 # <a name="position-property-ado"></a>Position, propriété (ADO)
-Indique la position actuelle dans un [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
+Indique la position actuelle dans un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **Long** valeur qui spécifie le décalage, en octets, de la position actuelle à partir du début du flux de données. La valeur par défaut est 0, qui représente le premier octet dans le flux de données.  
+ Définit ou retourne un **Long** valeur qui indique l’offset, en octets, de la position actuelle à partir du début du flux. La valeur par défaut est 0, ce qui représente le premier octet dans le flux.  
   
 ## <a name="remarks"></a>Notes  
- La position actuelle peut être déplacée vers un point après la fin du flux de données. Si vous spécifiez la position actuelle au-delà de la fin du flux, le [taille](../../../ado/reference/ado-api/size-property-ado-stream.md) de la **flux** objet augmente en conséquence. Les nouveaux octets ajoutés de cette façon est null.  
+ La position actuelle peut être déplacée vers un point après la fin du flux. Si vous spécifiez la position actuelle après la fin du flux, le [taille](../../../ado/reference/ado-api/size-property-ado-stream.md) de la **Stream** objet augmente en conséquence. Les nouveaux octets ajoutés de cette façon sera null.  
   
 > [!NOTE]
->  **Position** mesure toujours des octets. Pour les flux de texte à l’aide de jeux de caractères multioctets, multipliez la position par la taille de caractères pour déterminer le nombre de caractères. Par exemple, pour un jeu de caractères codés sur deux, le premier caractère est à la position 0, le deuxième caractère à la position 2, le troisième caractère à la position 4 et ainsi de suite.  
+>  **Position** mesure toujours des octets. Pour les flux de texte à l’aide de jeux de caractères multioctets, multipliez la position par la taille des caractères pour déterminer le nombre de caractères. Par exemple, pour un jeu de caractères de deux octets, le premier caractère est à la position 0, le deuxième caractère à la position 2, le troisième caractère à la position 4 et ainsi de suite.  
   
 > [!NOTE]
->  Les valeurs négatives ne peut pas être utilisés pour modifier la position actuelle dans un **flux**. Seuls les nombres positifs peuvent être utilisés pour **Position**.  
+>  Les valeurs négatives ne peut pas être utilisés pour modifier la position actuelle dans un **Stream**. Seuls les nombres positifs peuvent être utilisés pour **Position**.  
   
 > [!NOTE]
->  Pour en lecture seule **flux** ADO ne renvoie pas une erreur si des objets **Position** est défini sur une valeur supérieure à la **taille** de la **flux**. Cela ne modifie pas la taille de la **flux**, ou modifiez la **flux** contenu. Toutefois, cela doit être évité, car il en résulte un sans signification **Position**valeur.  
+>  Pour en lecture seule **Stream** ADO ne renvoie pas une erreur si des objets **Position** a une valeur supérieure à la **taille** de la **Stream**. Cela ne modifie pas la taille de la **Stream**, ou modifiez la **Stream** contenu en aucune façon. Toutefois, cela doit être évité, car il en résulte un sans signification **Position**valeur.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

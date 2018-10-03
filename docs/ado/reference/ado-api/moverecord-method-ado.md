@@ -1,13 +1,11 @@
 ---
-title: MoveRecord, méthode (ADO) | Documents Microsoft
+title: MoveRecord, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecord method [ADO]
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5171b0399614e266ff5ecfa974921f7bdef7646
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a2deba8c745b29b5bd69432060debad2c585e31b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279618"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616497"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord, méthode (ADO)
 Déplace l’entité représentée par un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) vers un autre emplacement.  
@@ -39,37 +36,37 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Facultatif. A **chaîne** valeur qui contient une URL identifiant le **enregistrement** à déplacer. Si *Source* est omis ou spécifie une chaîne vide, l’objet représenté par ce **enregistrement** est déplacé. Par exemple, si le **enregistrement** représente un fichier, le contenu du fichier est déplacés vers l’emplacement spécifié par *Destination*.  
+ Facultatif. Un **chaîne** valeur qui contient une URL qui identifie le **enregistrement** à déplacer. Si *Source* est omis ou spécifie une chaîne vide, l’objet représenté par ce **enregistrement** est déplacé. Par exemple, si le **enregistrement** représente un fichier, le contenu du fichier est déplacés vers l’emplacement spécifié par *Destination*.  
   
  *Destination*  
- Facultatif. A **chaîne** valeur qui contient une URL spécifiant l’emplacement où *Source* sera déplacé.  
+ Facultatif. Un **chaîne** valeur qui contient une URL en spécifiant l’emplacement où *Source* sera déplacé.  
   
  *UserName*  
- Facultatif. A **chaîne** valeur qui contient l’ID utilisateur, si nécessaire, autorise l’accès aux *Destination*.  
+ Facultatif. Un **chaîne** valeur qui contient l’ID utilisateur, si nécessaire, autorise l’accès *Destination*.  
   
  *Mot de passe*  
- Facultatif. A **chaîne** qui contient le mot de passe, si nécessaire, vérifie *nom d’utilisateur*.  
+ Facultatif. Un **chaîne** qui contient le mot de passe, si nécessaire, vérifie *nom d’utilisateur*.  
   
  *Options*  
- Facultatif. A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) valeur dont la valeur par défaut est **adMoveUnspecified**. Spécifie le comportement de cette méthode.  
+ Facultatif. Un [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) valeur dont la valeur par défaut est **adMoveUnspecified**. Spécifie le comportement de cette méthode.  
   
  *Async*  
- Facultatif. A **booléenne** valeur lorsque **True**, indique cette opération doit être asynchrone.  
+ Facultatif. Un **booléenne** valeur qui, lorsque **True**, indique cette opération doit être asynchrone.  
   
 ## <a name="return-value"></a>Valeur de retour  
- A **chaîne** valeur. En règle générale, la valeur de *Destination* est retourné. Toutefois, la valeur exacte retournée dépend du fournisseur.  
+ Valeur de **chaîne**. En règle générale, la valeur de *Destination* est retourné. Toutefois, la valeur exacte retournée dépend du fournisseur.  
   
 ## <a name="remarks"></a>Notes  
  Les valeurs de *Source* et *Destination* ne doit pas être identiques ; sinon, une erreur d’exécution se produit. Au moins les noms de serveur, chemin d’accès et des ressources doivent être différents.  
   
- Pour les fichiers déplacés à l’aide du fournisseur de publication Internet, cette méthode met à jour tous les liens hypertexte dans les fichiers déplacés sauf spécification contraire par *Options*. Cette méthode échoue si *Destination* identifie un objet existant (par exemple, un fichier ou répertoire), sauf si **adMoveOverWrite** est spécifié.  
+ Pour les fichiers déplacés à l’aide du fournisseur de publication Internet, cette méthode met à jour tous les liens hypertexte dans les fichiers déplacés, sauf indication contraire par *Options*. Cette méthode échoue si *Destination* identifie un objet existant (par exemple, un fichier ou répertoire), sauf si **adMoveOverWrite** est spécifié.  
   
 > [!NOTE]
->  Utilisez le **adMoveOverWrite** option judicieusement. Par exemple, la spécification de cette option lorsque vous déplacez un fichier dans un répertoire sera supprimer le répertoire et le remplacer par le fichier.  
+>  Utilisez le **adMoveOverWrite** option judicieusement. Par exemple, la spécification de cette option lorsque vous déplacez un fichier dans un répertoire sera supprimer le répertoire et remplacez-le par le fichier.  
   
- Certains attributs de la **enregistrement** de l’objet, telles que la [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) propriété, ne sera pas mis à jour une fois cette opération terminée. Actualiser le **enregistrement** propriétés de l’objet en fermant le **enregistrement**, puis rouvrir avec l’URL de l’emplacement où le fichier ou répertoire a été déplacé.  
+ Certains attributs de la **enregistrement** l’objet, tel que le [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) propriété, ne sera pas mis à jour une fois cette opération terminée. Actualiser le **enregistrement** des propriétés de l’objet en fermant le **enregistrement**, puis rouvrir avec l’URL de l’emplacement où le fichier ou répertoire a été déplacé.  
   
- Si cette **enregistrement** a été obtenu à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), le nouvel emplacement du fichier déplacé ou du répertoire n’est pas reflété immédiatement dans le **Recordset**. Actualiser le **Recordset** en fermant et en rouvrant.  
+ Si cette **enregistrement** a été obtenu à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), le nouvel emplacement du fichier déplacé ou du répertoire est répercutée immédiatement dans le **Recordset**. Actualiser le **Recordset** en fermant et en rouvrant.  
   
 > [!NOTE]
 >  URL à l’aide du modèle http appellent automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  

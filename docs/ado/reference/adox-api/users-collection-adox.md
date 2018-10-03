@@ -1,13 +1,11 @@
 ---
-title: Collection d’utilisateurs (ADOX) | Documents Microsoft
+title: Les utilisateurs, Collection (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,28 +15,27 @@ f1_keywords:
 helpviewer_keywords:
 - Users collection [ADOX]
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7a075a12efcf401a5ba2458a90f410b3eb2586b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8dc465261748c1efd340e78ddc2f3e12d601e931
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678567"
 ---
-# <a name="users-collection-adox"></a>Collection d’utilisateurs (ADOX)
-Contient tous les stockées [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) les objets d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) ou [groupe](../../../ado/reference/adox-api/group-object-adox.md).  
+# <a name="users-collection-adox"></a>Users, collection (ADOX)
+Contient tous les stockées [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) objets d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) ou [groupe](../../../ado/reference/adox-api/group-object-adox.md).  
   
 ## <a name="remarks"></a>Notes  
- Le **utilisateurs** collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les utilisateurs du catalogue. Le **utilisateurs** collection pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) représente uniquement les utilisateurs qui appartiennent à ce groupe.  
+ Le **utilisateurs** collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les utilisateurs du catalogue. Le **utilisateurs** collection pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) représente uniquement les utilisateurs qui ont une appartenance au groupe spécifique.  
   
  Le [Append](../../../ado/reference/adox-api/append-method-adox-users.md) méthode pour un **utilisateurs** collection est unique pour ADOX. Vous pouvez :  
   
 -   Ajouter un nouvel utilisateur à la collection à l’aide de la **Append** (méthode).  
   
- Les autres propriétés et méthodes sont des collections ADO standard. Vous pouvez :  
+ Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
   
 -   Accéder à un utilisateur dans la collection avec le [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété.  
   
@@ -46,16 +43,16 @@ Contient tous les stockées [utilisateur](../../../ado/reference/adox-api/user-o
   
 -   Supprimer un utilisateur de la collection avec le [supprimer](../../../ado/reference/adox-api/delete-method-adox-collections.md) (méthode).  
   
--   Mettre à jour les objets dans la collection pour refléter le schéma de la base de données en cours avec le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) (méthode).  
+-   Mettre à jour les objets dans la collection afin de refléter le schéma de la base de données actuelle avec le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) (méthode).  
   
 > [!NOTE]
->  Avant d’ajouter un **utilisateur** de l’objet à la **utilisateurs** collection d’un **groupe** objet, un **utilisateur** objet avec le même [nom](../../../ado/reference/adox-api/name-property-adox.md) que celui à ajouter doit déjà exister dans le **utilisateurs** collection de la **catalogue**.  
+>  Avant d’ajouter un **utilisateur** de l’objet à la **utilisateurs** collection d’un **groupe** objet, un **utilisateur** objet comportant le même [nom ](../../../ado/reference/adox-api/name-property-adox.md) que celui à ajouter doit déjà exister dans le **utilisateurs** collection de la **catalogue**.  
   
  Cette section contient les rubriques suivantes.  
   
 -   [Propriétés, méthodes et événements de la collection Users](../../../ado/reference/adox-api/users-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [GetPermissions et SetPermissions, méthodes-exemple (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [Objet catalogue (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [GetPermissions et SetPermissions, exemples de méthodes (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
+ [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [User, objet (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)

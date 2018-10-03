@@ -1,13 +1,11 @@
 ---
-title: Fonctions numériques (le pilote ODBC Visual FoxPro) | Documents Microsoft
+title: Fonctions numériques (pilote ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC numeric functions [ODBC]
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - numeric functions [ODBC]
 - FoxPro ODBC driver [ODBC], numeric functions
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f577938577be95c7e2c506dbb542a2224f5929e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73379b769da61fe14ba18815446337d0172c2805
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654401"
 ---
-# <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Fonctions numériques (le pilote ODBC Visual FoxPro)
-Le tableau suivant décrit les fonctions numériques ODBC pris en charge par le pilote ODBC Visual FoxPro ; lors de la grammaire Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, le Visual FoxPro équivalent est répertorié.  
+# <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Fonctions numériques (pilote ODBC Visual FoxPro)
+Le tableau suivant décrit les fonctions numériques ODBC pris en charge par le pilote ODBC Visual FoxPro ; lors de la grammaire de Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, le Visual FoxPro équivalent est répertorié.  
   
 |Grammaire ODBC|Grammaire de Visual FoxPro|  
 |------------------|---------------------------|  
@@ -34,8 +32,8 @@ Le tableau suivant décrit les fonctions numériques ODBC pris en charge par le 
 |ACOS *(exp_float)*||  
 |ASIN *(exp_float)*||  
 |ATAN *(exp_float)*||  
-|ATAN2 *(exp_float1 exp_float2)*|ATN2 (*exp_float1, exp_float2*)|  
-|PLAFOND *(positions numeric_exp)*||  
+|ATAN2 *(exp_float1, exp_float2)*|ATN2 (*exp_float1, exp_float2*)|  
+|CEILING *(positions numeric_exp)*||  
 |COS *(exp_float)*||  
 |COT *(exp_float)*||  
 |DEGRÉS *(positions numeric_exp)*|RTOD *(positions numeric_exp)*|  
@@ -43,12 +41,12 @@ Le tableau suivant décrit les fonctions numériques ODBC pris en charge par le 
 |FLOOR *(positions numeric_exp)*||  
 |JOURNAL *(exp_float)*||  
 |LOG10 *(exp_float)*||  
-|MOD *(exp_entier1 exp_entier2)*||  
+|MOD *(exp_entier1, exp_entier2)*||  
 |PI *)*||  
 |RADIANS *(positions numeric_exp)*|DTOR *(positions numeric_exp)*|  
 |RAND *([integer_exp])*||  
 |ROUND *(positions numeric_exp integer_exp)*||  
-|SIGNE *(positions numeric_exp)*||  
+|CONNEXION *(positions numeric_exp)*||  
 |SIN *(exp_float)*||  
 |SQRT *(exp_float)*||  
 |TAN *(exp_float)*||  
