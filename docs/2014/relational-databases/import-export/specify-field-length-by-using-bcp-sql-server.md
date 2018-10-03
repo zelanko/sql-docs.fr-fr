@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3d4be0ba5a6b24174134fbef6f5dc2e87fa3af9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5ed900eae974eb768223d534e6ac43025e9718c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158570"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202869"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Spécifier la longueur des champs au moyen de bcp (SQL Server)
   La longueur de champ indique le nombre maximal de caractères nécessaires pour représenter les données au format caractères. La longueur de champ est déjà connue si les données sont enregistrées au format natif. Par exemple, les données de type `int` occupent 4 octets. Si vous indiquez 0 pour la longueur de préfixe, le **bcp** des invites de commandes vous longueur des champs, les longueurs de champ par défaut et l’impact de la longueur de champ sur le stockage de données dans les fichiers de données qui contiennent des `char` données.  
@@ -66,7 +63,7 @@ ms.locfileid: "37158570"
 |`nvarchar`|Le double de la longueur définie pour la colonne|  
 |`Text`|0|  
 |`ntext`|0|  
-|`bit`| 1|  
+|`bit`|1|  
 |`binary`|Le double de la longueur définie pour la colonne + 1|  
 |`varbinary`|Le double de la longueur définie pour la colonne + 1|  
 |`image`|0|  
@@ -100,7 +97,7 @@ ms.locfileid: "37158570"
   
 |Type de données|Longueur par défaut (en caractères)|  
 |---------------|-----------------------------------|  
-|`bit`| 1|  
+|`bit`|1|  
 |`binary`|Longueur définie pour la colonne|  
 |`varbinary`|Longueur définie pour la colonne|  
 |`image`|0|  
@@ -111,7 +108,7 @@ ms.locfileid: "37158570"
 |`int`|4|  
 |`bigint`|8|  
 |`smallint`|2|  
-|`tinyint`| 1|  
+|`tinyint`|1|  
 |`money`|8|  
 |`smallmoney`|4|  
 |`decimal` <sup>1</sup>|<sup>*</sup>|  

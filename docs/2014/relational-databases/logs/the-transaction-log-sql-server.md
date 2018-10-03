@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdaae11d21d1018e0c855036c4c82221c57a905d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f22f0ea25b141cf7ee5a3130153837dcf4a1132
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072889"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
   Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chacune d’entre elles. Le journal des transactions doit être vidé régulièrement pour éviter qu'il ne soit saturé. Toutefois, certains facteurs peuvent retarder la troncation du journal. Par conséquent, il est important de surveiller la taille du journal. Certaines opérations peuvent faire l'objet d'une journalisation minimale afin de réduire leur impact sur la taille des journaux de transactions.  
@@ -82,7 +79,7 @@ ms.locfileid: "37223327"
 |Valeur log_reuse_wait|Valeur log_reuse_wait_desc|Description|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Il existe actuellement un ou plusieurs fichiers journaux virtuels réutilisables.|  
-| 1|CHECKPOINT|Aucun point de contrôle n'est apparu depuis la dernière troncation du journal ou le début du journal n'est pas encore allé au-delà d'un fichier journal virtuel. (Tous les modes de récupération)<br /><br /> Il s'agit d'une raison courante de retarder la troncation du journal. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
+|1|CHECKPOINT|Aucun point de contrôle n'est apparu depuis la dernière troncation du journal ou le début du journal n'est pas encore allé au-delà d'un fichier journal virtuel. (Tous les modes de récupération)<br /><br /> Il s'agit d'une raison courante de retarder la troncation du journal. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Une sauvegarde du journal est requise avant que le journal des transactions puisse être tronqué. (Mode de récupération complète ou mode de récupération utilisant les journaux de transactions uniquement)<br /><br /> Lorsque la sauvegarde de journal suivante est terminée, l'espace du journal peut devenir réutilisable.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Une sauvegarde de données ou une restauration est en cours (tous les modes de récupération).<br /><br /> Si une sauvegarde des données empêche la troncation du journal, l'annulation de l'opération de sauvegarde peut résoudre le problème immédiat.|  
 |4|ACTIVE_TRANSACTION|Une transaction est active (tous les modes de récupération).<br /><br /> Une transaction longue peut exister au démarrage de la sauvegarde du fichier journal. Dans ce cas, libérer l'espace peut requérir une autre sauvegarde du fichier journal. Notez qu’un transactions longues empêchent la troncation de journal dans tous les modes de récupération, notamment le mode de récupération simple, sous lequel le journal des transactions est généralement tronqué sur chaque point de contrôle automatique.<br /><br /> Une transaction est différée. Une *transaction différée* est en fait une transaction active dont la restauration est bloquée à cause d'une ressource indisponible. Pour plus d’informations sur les causes des transactions différées et la manière de les faire sortir de l’état différé, consultez [Transactions différées &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md). <br /><br />Les transactions à long terme peuvent également remplir le journal des transactions de tempdb. La base de données tempdb est implicitement utilisée par les transactions utilisateur pour les objets internes tels que les tables de travail pour le tri, les fichiers de travail pour le hachage, les tables de travail de curseur et la gestion de version de ligne. Même si la transaction utilisateur inclut la lecture seule des données (requêtes SELECT), les objets internes peuvent être créés et utilisés dans des transactions utilisateur. Ensuite, le journal des transactions tempdb peut être rempli.|  

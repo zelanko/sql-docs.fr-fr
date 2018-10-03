@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.welcome.f1
 helpviewer_keywords:
 - Mining Model Wizard
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6782013eab9b190efe2f6756c1ee409598eb1619
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d90f2a1504daecf80901157b34dcaffa4220261b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291675"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087759"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Aide de l'Assistant Exploration de données accessible par la touche F1 (Analysis Services - Exploration de données)
   Utilisez **l’Assistant Exploration de données** pour créer une structure d’exploration de données et son éventuel modèle d’exploration de données associé.  

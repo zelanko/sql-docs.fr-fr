@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffbf7857c83f9be53c8747c210736f242f04dd48
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395712"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192679"
 ---
 # <a name="implementing-an-outer-join"></a>Implémentation d'une jointure externe
   La jointure externe n'est pas prise en charge avec les procédures stockées compilées en mode natif. L'exemple suivant illustre une méthode permettant d'implémenter les fonctionnalités d'une jointure externe gauche dans une procédure stockée compilée en mode natif.  

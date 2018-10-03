@@ -1,34 +1,31 @@
 ---
-title: Exemple de propriété StayInSync (VB) | Documents Microsoft
+title: StayInSync, propriété-Exemple (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - StayInSync property [ADO], Visual Basic example
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3c5ec82ff3481ab8e6adf11a41f61aa149fe604
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4ff9e4c7f1903a187869f15573893d9f7d0c2fe7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281898"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851687"
 ---
-# <a name="stayinsync-property-example-vb"></a>Exemple de propriété StayInSync (VB)
+# <a name="stayinsync-property-example-vb"></a>StayInSync, exemple de propriété (VB)
 Cet exemple montre comment la [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriété facilite l’accès aux lignes dans une liste hiérarchique [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- La boucle externe affiche le nom et prénom de chaque auteur, l’état et identification. Ajouté **Recordset** pour chaque ligne est récupérée à partir de la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection et attribué automatiquement aux **affectation** par la **StayInSync**  propriété chaque fois que le parent **Recordset** se déplace vers une nouvelle ligne. La boucle interne affiche quatre champs de chaque ligne dans le jeu d’enregistrements ajouté.  
+ La boucle externe affiche le nom et prénom de chaque auteur, l’état et identification. Ajouté **Recordset** pour chaque ligne est récupérée à partir de la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection et attribué automatiquement aux **affectation** par le **StayInSync**  propriété chaque fois que le parent **Recordset** se déplace vers une nouvelle ligne. La boucle interne affiche quatre champs de chaque ligne dans l’objet recordset ajouté.  
   
 ```  
 'BeginStayInSyncVB  

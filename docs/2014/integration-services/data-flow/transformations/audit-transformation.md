@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.audittrans.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4cbe349fb83fea587874271c340853f8f38d2197
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b6609cda18e6fc0f2942bb37e6939af6123b213
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176126"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156899"
 ---
 # <a name="audit-transformation"></a>transformation d'audit
   La transformation d'audit permet au flux de données d'un package de contenir des données relatives à l'environnement d'exécution du package. Par exemple, le nom du package, de l'ordinateur et de l'opérateur peuvent être ajoutés au flux de données. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] comprend des variables système qui fournissent ces informations.  
@@ -35,7 +32,7 @@ ms.locfileid: "37176126"
 |Variable système|Index|Description|  
 |---------------------|-----------|-----------------|  
 |`ExecutionInstanceGUID`|0|GUID identifiant l'instance d'exécution du package.|  
-|`PackageID`| 1|Identificateur unique du package.|  
+|`PackageID`|1|Identificateur unique du package.|  
 |`PackageName`|2|Nom du package.|  
 |`VersionID`|3|Version du package.|  
 |`ExecutionStartTime`|4|Heure à laquelle l'exécution du package a commencé.|  

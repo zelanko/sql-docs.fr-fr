@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 08997fa0dd4fe66b4e3c22fd6447105d11991c29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a766dcae2ac4e5fdba3fad3390c2a805177e1c17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296039"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077579"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications des capacités maximales pour SQL Server
   Les tableaux suivants présentent la taille maximale et le nombre maximal des différents objets définis dans les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour naviguer jusqu'à la table d'une technologie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , cliquez sur son lien :  
@@ -59,7 +56,7 @@ ms.locfileid: "37296039"
 |Octets dans le texte source d'une procédure stockée|Taille de lot inférieure ou 250 Mo|Taille de lot inférieure ou 250 Mo|  
 |Octets par colonne `varchar(max)`, `varbinary(max)`, `xml`, `text` ou `image`|2^31-1|2^31-1|  
 |Caractères par colonne `ntext` ou `nvarchar(max)`|2^30-1|2^30-1|  
-|Index cluster par table| 1| 1|  
+|Index cluster par table|1|1|  
 |Colonnes dans les clauses GROUP BY, ORDER BY|Limité uniquement par le nombre d'octets|Limité uniquement par le nombre d'octets|  
 |Colonnes ou expressions dans une instruction GROUP BY WITH CUBE ou WITH ROLLUP|10|10|  
 |Colonnes par clé d’index<br /><br /> Remarque : Si la table contient un ou plusieurs index XML, la clé de clustering de la table utilisateur est limitée à 15 colonnes, car la colonne XML est ajoutée à la clé de clustering de l’index XML primaire. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous pouvez inclure des colonnes non-clés dans un index non cluster pour éviter la limitation à un maximum de 16 colonnes clés. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](../relational-databases/indexes/create-indexes-with-included-columns.md).|16|16|  
@@ -73,12 +70,12 @@ ms.locfileid: "37296039"
 |Taille de la base de données|524 272 téraoctets|524 272 téraoctets|  
 |Bases de données par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|32,767|32,767|  
 |Groupes de fichiers par base de données|32,767|32,767|  
-|Groupes de fichiers par base de données pour les données optimisées en mémoire|Non pris en charge| 1|  
+|Groupes de fichiers par base de données pour les données optimisées en mémoire|Non pris en charge|1|  
 |Fichiers par base de données|32,767|32,767|  
 |Taille de fichier (données)|16 téraoctets|16 téraoctets|  
 |Taille de fichier (journal)|2 téraoctets|2 téraoctets|  
 |Fichiers de données pour les données optimisées en mémoire par base de données|Non pris en charge|4.096|  
-|Fichier delta par fichier de données pour les données optimisées en mémoire|Non pris en charge| 1|  
+|Fichier delta par fichier de données pour les données optimisées en mémoire|Non pris en charge|1|  
 |Références de table de clé étrangère par table<br /><br /> Remarque : Bien qu’une table peut contenir un nombre illimité de contraintes FOREIGN KEY, le maximum recommandé est 253. Selon la configuration matérielle qui héberge [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la spécification de contraintes FOREIGN KEY supplémentaires peut représenter un coût de traitement élevé pour l'optimiseur de requête.|253|253|  
 |Longueur d'identificateur (en caractères)|128|128|  
 |Instances par ordinateur|50 instances sur un serveur autonome pour toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge 25 instances sur un basculement de cluster lorsque vous utilisez un disque de cluster partagé comme l’option stockée installation de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] partages de fichiers prend en charge 50 instances sur un basculement de cluster si vous choisissez SMB comme option de stockage pour votre installation de cluster Pour plus d’informations, consultez [Hardware and Software Requirements for Installing SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md).|50 instances sur un serveur autonome.<br /><br /> 25 instances sur un cluster de basculement si vous utilisez un disque de cluster partagé, car l'option stockée pour votre installation de cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge 50 instances sur un cluster de basculement si vous choisissez les partages SMB comme option de stockage de votre installation de cluster.|  
@@ -97,7 +94,7 @@ ms.locfileid: "37296039"
 |REFERENCES par table|253|253|  
 |Lignes par table|Limité par le stockage disponible|Limité par le stockage disponible|  
 |Tables par base de données<br /><br /> Remarque : Les objets de base de données incluent des objets tels que des tables, vues, procédures stockées, fonctions définies par l’utilisateur, les déclencheurs, règles, valeurs par défaut et les contraintes. Au total, le nombre de tous les objets d'une base de données ne peut pas dépasser 2 147 483 647.|Limité par le nombre d'objets dans une base de données|Limité par le nombre d'objets dans une base de données|  
-|Partitions par table ou index partitionné|1,000<br /><br /> **\*\* Important \* \* ** création d’une table ou un index avec plus de 1 000 partitions est possible sur un système 32 bits, mais n’est pas pris en charge.|15,000|  
+|Partitions par table ou index partitionné|1,000<br /><br /> **\*\* Important \* \***  création d’une table ou un index avec plus de 1 000 partitions est possible sur un système 32 bits, mais n’est pas pris en charge.|15,000|  
 |Statistiques sur les colonnes non indexées|30,000|30,000|  
 |Tables par instruction SELECT|Limité uniquement par les ressources disponibles|Limité uniquement par les ressources disponibles|  
 |Déclencheurs par table<br /><br /> Remarque : Les objets de base de données incluent des objets tels que des tables, vues, procédures stockées, fonctions définies par l’utilisateur, les déclencheurs, règles, valeurs par défaut et les contraintes. Au total, le nombre de tous les objets d'une base de données ne peut pas dépasser 2 147 483 647.|Limité par le nombre d'objets dans une base de données|Limité par le nombre d'objets dans une base de données|  
@@ -115,9 +112,9 @@ ms.locfileid: "37296039"
 |Nombre total d'instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|200*|200*|  
 |Bases de données utilisateur par instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], notamment les applications de la couche Données|50|50|  
 |Nombre total de bases de données utilisateur par utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|1,000|1,000|  
-|Groupes de fichiers par base de données| 1| 1|  
-|Fichiers de données par groupe de fichiers| 1| 1|  
-|Fichiers journaux par base de données| 1| 1|  
+|Groupes de fichiers par base de données|1|1|  
+|Fichiers de données par groupe de fichiers|1|1|  
+|Fichiers journaux par base de données|1|1|  
 |Volumes par ordinateur|3|3|  
   
  * Le nombre maximal d’instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pris en charge par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilitaire peut varier en fonction de la configuration matérielle du serveur. Pour obtenir des informations de prise en main, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). Le point de contrôle de l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'est pas disponible dans toutes les éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -127,7 +124,7 @@ ms.locfileid: "37296039"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Object DAC|Tailles maximales/nombres [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32 bits)|Tailles maximales/nombres maximaux [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|  
 |------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
-|Bases de données par DAC| 1| 1|  
+|Bases de données par DAC|1|1|  
 |Objets par DAC*|Limité par le nombre d'objets dans une base de données ou la mémoire disponible.|Limité par le nombre d'objets dans une base de données ou la mémoire disponible.|  
   
  * Les types d’objets inclus dans la limite sont des utilisateurs, des tables, des vues, des procédures stockées, des fonctions définies par l’utilisateur, des types de données définis par l’utilisateur, des rôles de base de données, des schémas et des types de table définis par l’utilisateur.  

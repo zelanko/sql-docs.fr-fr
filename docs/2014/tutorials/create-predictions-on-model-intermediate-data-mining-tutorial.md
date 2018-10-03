@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 006418a07f393fd50334a2ea9c122cdd92353cda
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfbce4b8128d7278349539cedf73a87e498b1bae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092829"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Création de prédictions sur un modèle Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
   Une fois que vous comprenez le modèle sequence clustering mieux parcouru dans la visionneuse, vous pouvez créer des requêtes de prédiction à l’aide du Générateur de requêtes de prédiction sur le **prévision de modèle d’exploration de données** onglet dans le Concepteur d’exploration de données. Pour créer une prédiction, commencez par sélectionner le modèle Sequence Clustering, puis sélectionnez les données d'entrée. Pour les entrées, vous pouvez utiliser une source de données externe, ou vous pouvez générer une requête singleton et fournir des valeurs dans une boîte de dialogue.  
@@ -58,7 +55,7 @@ ms.locfileid: "37198299"
   
 |$SEQUENCE|Numéro de ligne|Modèle|  
 |---------------|-----------------|-----------|  
-| 1||Mountain-200|  
+|1||Mountain-200|  
   
  Que signifient ces résultats ? N'oubliez pas que vous n'avez pas spécifié d'entrées. Par conséquent, la prédiction est élaborée par rapport à la population globale de cas, et Analysis Services retourne la prédiction la plus probable en général.  
   
@@ -163,7 +160,7 @@ NATURAL PREDICTION JOIN
   
 |$SEQUENCE|Numéro de ligne|Modèle|  
 |---------------|-----------------|-----------|  
-| 1||Touring Tire Tube (Pneu pour vélo de tourisme)|  
+|1||Touring Tire Tube (Pneu pour vélo de tourisme)|  
 |2||Sport-100|  
 |3||Long-Sleeve Logo Jersey (Pull-over à manches longues)|  
   

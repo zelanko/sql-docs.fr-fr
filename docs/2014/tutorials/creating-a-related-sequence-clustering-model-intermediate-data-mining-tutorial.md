@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1fb4f5bc-1756-45ca-9cd7-411a8c5992a9
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2fe714a808a7b5e8b31b674027e00814a9632f58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4dfbb3d917be60ced676882895d70247e4a5f8d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234405"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202658"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Création d'un modèle Sequence Clustering associé (Didacticiel sur l'exploration de données intermédiaire)
   Au cours de votre exploration du modèle Sequence Clustering, vous avez appris que d'autres attributs tels que Region ou Income ont de fortes répercussions sur les modèles ; par conséquent, pour mieux comprendre les séquences, vous allez créer un modèle Sequence Clustering associé et supprimer les attributs en rapport avec les caractéristiques démographiques des clients.  

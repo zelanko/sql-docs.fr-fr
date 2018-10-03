@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql12.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-caps.latest.revision: 13
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d28d430ee7401fcdf248d6a5d13da558519a71ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fcc0962d0d810b79a788e86aa987f3b54534a41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192899"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196809"
 ---
-# Référence du développeur pour SQL Server 2014
+# <a name="developer-reference-for-sql-server-2014"></a>Référence du développeur pour SQL Server 2014
   Les fonctionnalités et technologies suivantes vous permettent de développer des applications qui accèdent aux données d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## Sections du Guide de référence de programmation  
+## <a name="programming-reference-sections"></a>Sections du Guide de référence de programmation  
  ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [Common Language Runtime &#40;CLR&#41; Concepts de programmation d’intégration](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
  ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [XML natifs](http://technet.microsoft.com/library/ms191274.aspx)  
@@ -62,7 +59,7 @@ ms.locfileid: "37192899"
   
  ![Icône de dossier petit fichier](../integration-services/media/filefolder-small.gif "icône dossier de petits fichiers") [Guide du développeur de Reporting Services](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
-## Autres ressources de programmation  
+## <a name="other-programming-resources"></a>Autres ressources de programmation  
  Le développement d'une application d'accès aux données peut nécessiter l'utilisation d'une ou de plusieurs des technologies suivantes :  
   
  [L’accès aux données dans Visual Studio](http://go.microsoft.com/fwlink/?LinkId=129902)  

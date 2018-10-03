@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2772db639b664724ee6d594d061f6c9ccdc847cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c69e1d2021e4c92dc87bd866ec851d0a3349fe1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262005"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139459"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nouvelle planification : Modifier la Page de planification (Gestionnaire de rapports)
   La page Nouvelle planification / Modifier la planification permet de créer une planification pour un rapport. Les planifications sont utilisées avec des abonnements. Elles permettent en outre d'actualiser des rapports mis en cache et de créer des instantanés en tant qu'éléments autonomes ou dans un historique de rapport.  
