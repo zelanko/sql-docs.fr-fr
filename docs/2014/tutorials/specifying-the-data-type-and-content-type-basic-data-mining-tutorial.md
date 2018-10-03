@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 578d47783f22e857bb2fb84949e9d22dd6ad0e85
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b97cec782c7f95de42ee64d7db0ce56ffa916c3e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37174951"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176605"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Spécification du type de données et du type de contenu (Didacticiel sur l'exploration de données de base)
   Maintenant que vous avez sélectionné les colonnes à utiliser pour la génération de votre structure et l'apprentissage de vos modèles, apportez les modifications nécessaires aux données et aux types de contenu par défaut définis par l'Assistant.  
@@ -36,11 +33,11 @@ ms.locfileid: "37174951"
     |------------|------------------|---------------|  
     |**Adresse ligne1**|**Discrètes**|**Texte**|  
     |**Adresse ligne2**|**Discrètes**|**Texte**|  
-    |**Âge**|**Continue**|**Long**|  
+    |**Âge**|**continue**|**Long**|  
     |**Bike Buyer**|**Discrètes**|**Long**|  
     |**Commute Distance**|**Discrètes**|**Texte**|  
     |**CustomerKey**|**Clé**|**Long**|  
-    |**DateLastPurchase**|**Continue**|**Date**|  
+    |**DateLastPurchase**|**continue**|**Date**|  
     |**Email Address**|**Discrètes**|**Texte**|  
     |**English Education**|**Discrètes**|**Texte**|  
     |**English Occupation**|**Discrètes**|**Texte**|  
@@ -54,7 +51,7 @@ ms.locfileid: "37174951"
     |**Number Children At Home**|**Discrètes**|**Long**|  
     |**Région**|**Discrètes**|**Texte**|  
     |**Total Children**|**Discrètes**|**Long**|  
-    |**Yearly Income**|**Continue**|**Double**|  
+    |**Yearly Income**|**continue**|**Double**|  
   
 3.  Cliquez sur **Suivant**.  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0147922c6b52d83cde9dc9a3724e82a5e4f30a3a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3618f3bef198a4ad92f8fd92f48911ee0c935c13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393442"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106879"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Créer un rapport d'extraction (RDLC) avec des paramètres à l'aide de ReportViewer (didacticiel SSRS)
-  Un rapport [d’extraction](http://technet.microsoft.com/library/ff519554.aspx) est un rapport que l’utilisateur ouvre en cliquant sur un lien situé dans un autre rapport. Il contient en général des détails sur un élément figurant dans le rapport de synthèse d'origine. Ce didacticiel vous guidera dans les leçons suivantes de création d’un rapport d’extraction avec des paramètres et une requête, dans [création de rapports en mode local](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
+  Un rapport [d’extraction](http://technet.microsoft.com/library/ff519554.aspx) est un rapport que l’utilisateur ouvre en cliquant sur un lien situé dans un autre rapport. Il contient en général des détails sur un élément figurant dans le rapport de synthèse d'origine. Ce tutoriel vous guide tout au long des leçons suivantes pour créer un rapport d’extraction avec des paramètres et une requête, en [mode local](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
   
 ## <a name="requirements"></a>Spécifications  
  Pour utiliser cette procédure pas à pas, vous devez avoir accès à la **AdventureWorks2008** base de données exemple. La requête utilisée dans cette procédure pas à pas fonctionne également avec **AdventureWorks2012** base de données. Pour plus d’informations sur la façon d’obtenir le **AdventureWorks2008** exemple de base de données, consultez [procédure pas à pas : installation de la base de données AdventureWorks](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) pour Microsoft Visual Studio 2010.  

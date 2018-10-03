@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], hierarchies
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-caps.latest.revision: 40
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 292ac985db70fc280185b6f240565857055a8b83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164130"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093140"
 ---
 # <a name="encryption-hierarchy"></a>Hiérarchie de chiffrement
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] chiffre les données avec un chiffrement hiérarchique et une infrastructure de gestion des clés. Chaque couche chiffre la couche qui se trouve en dessous d'elle à l'aide d'une combinaison de certificats, de clés asymétriques et de clés symétriques. Les clés asymétriques et les clés symétriques peuvent être stockées hors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans un module de gestion de clés extensible (EKM, Extensible Key Management).  
   
  L'illustration suivante montre que chaque couche de la hiérarchie de chiffrement chiffre la couche qui se trouve en dessous d'elle, et affiche les configurations de chiffrement les plus communes. L'accès au sommet de la hiérarchie est généralement protégé par un mot de passe.  
   
- ![Affiche des combinaisons de chiffrement dans une pile.] (../../../database-engine/media/encryption-hierarchy-stack.gif "Affiche des combinaisons de chiffrement dans une pile.")  
+ ![Affiche des combinaisons de chiffrement dans une pile.](../../../database-engine/media/encryption-hierarchy-stack.gif "Affiche des combinaisons de chiffrement dans une pile.")  
   
  Gardez en mémoire les concepts suivants :  
   

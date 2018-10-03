@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: beeecbb80ff375bdb13f2a91bff84dbb34a9a4f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 29af878e4e0173b6c926ae2bbbb29fe39ee2ca55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074807"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Graphiques sparkline et barres de données (Générateur de rapports et SSRS)
   Les graphiques sparkline et les barres de données sont des graphiques simples de petite taille qui communiquent beaucoup d'informations dans un petit espace, souvent intégré au texte. Ils sont souvent utilisés dans les tables et les matrices. Ils tirent leur impact de l'affichage d'un grand nombre d'entre eux en même temps et de la possibilité de les comparer rapidement par superposition, au lieu de les examiner séparément. Les valeurs hors norme, les lignes qui ne sont pas exécutées comme les autres, sont ainsi plus visibles. Malgré sa petite taille, chaque graphique sparkline représente fréquemment plusieurs points de données, souvent dans le temps. Les barres de données peuvent représenter plusieurs points de données, mais en général n'en illustrent qu'un seul. Chaque graphique sparkline présente en général une série unique. Vous ne pouvez pas ajouter de graphique sparkline à un groupe de détails dans une table. Étant donné que les graphiques sparkline affichent des données agrégées, ils doivent entrer dans une cellule associée à un groupe. Les graphiques sparkline et les barres de données ont les mêmes éléments de graphique de base de catégories, séries et valeurs, mais ils n'ont aucune légende, ligne d'axe, étiquette ni graduation.  

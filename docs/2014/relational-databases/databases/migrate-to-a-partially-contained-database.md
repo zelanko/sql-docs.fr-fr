@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db28ae09342bd5acdd7ae21f594a320b0bf7b013
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7cf0720e920c11270ff2ca6c3c016fc853c2749c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171060"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176449"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrer vers une base de données partiellement autonome
   Cette rubrique explique comment se préparer à passer au modèle de base de données partiellement autonome, puis indique la procédure de migration.  
@@ -30,13 +27,11 @@ ms.locfileid: "37171060"
   
 -   [Préparation de la migration d'une base de données](#prepare)  
   
--   
-  [Activer les bases de données autonomes](#enable)  
+-   [Activer les bases de données autonomes](#enable)  
   
 -   [Conversion d'une base de données au modèle partiellement à relation contenant-contenu](#convert)  
   
--   
-  [Migration des utilisateurs vers des utilisateurs de base de données autonome](#users)  
+-   [Migration des utilisateurs vers des utilisateurs de base de données autonome](#users)  
   
 ##  <a name="prepare"></a> Préparation de la migration d'une base de données  
  Passez en revue les éléments suivants lorsque vous envisagez de migrer une base de données vers le modèle de base de données partiellement autonome.  
@@ -53,9 +48,7 @@ ms.locfileid: "37171060"
   
 -   Surveillez le XEvent **database_uncontained_usage** pour voir quand des fonctionnalités sans relation contenant-contenu sont utilisées.  
   
-##  
-  <a name="enable">
-  </a> Activer les bases de données autonomes  
+##  <a name="enable"></a> Activer les bases de données autonomes  
  Les bases de données autonomes doivent être activées sur l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], avant que les bases de données autonomes puissent être créées.  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Activation de bases de données autonomes à l'aide de Transact-SQL  
@@ -99,9 +92,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  
-  <a name="users">
-  </a> Migration des utilisateurs vers des utilisateurs de base de données autonome  
+##  <a name="users"></a> Migration des utilisateurs vers des utilisateurs de base de données autonome  
  L'exemple suivant migre tous les utilisateurs basés sur des comptes de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers des utilisateurs de base de données autonome avec mots de passe. L'exemple exclut les comptes de connexion qui ne sont pas activés. L'exemple doit être exécuté dans la base de données autonome.  
   
 ```tsql  
@@ -128,8 +119,7 @@ DEALLOCATE user_cursor ;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- 
-  [Bases de données autonomes](contained-databases.md)   
+ [Bases de données autonomes](contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql)  
   

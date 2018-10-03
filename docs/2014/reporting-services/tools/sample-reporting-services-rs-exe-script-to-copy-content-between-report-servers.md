@@ -4,24 +4,19 @@ ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 51008a07a327a9601de1bd52795e19eee44af016
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5fb51019ffa016e76f4801d35578ffca0b2b6a11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290295"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116818"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>Exemple de script Reporting Services rs.exe pour migrer le contenu entre des serveurs de rapports
   Cette rubrique inclut et décrit un exemple [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] script RSS qui copie les éléments de contenu et les paramètres à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] serveur de rapports sur un autre serveur de rapports à l’aide de la **RS.exe** utilitaire. RS.exe est installé avec [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], en mode natif et SharePoint. Le script copie les éléments de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], par exemple les rapports et les abonnements, de serveur à serveur. Il prend en charge le mode SharePoint et les serveurs de rapports en mode natif.  

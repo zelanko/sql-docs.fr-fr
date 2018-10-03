@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
-caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: adef011389ce41bb01b508f7d4d050bbffa0642f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 031efcdc80028e8366a2e19827f180b78a21af0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813635"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124029"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utiliser l'Explorateur de l'utilitaire pour gérer l'Utilitaire SQL Server
   L'Explorateur de l'utilitaire, un composant de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se connecte aux instances de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour fournir une arborescence de tous les objets dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le volet Contenu de l'Explorateur de l'utilitaire offre plusieurs moyens de consulter les données de synthèse et détaillées sur l'état d'intégrité des instances gérées de SQL Server. L'Explorateur de l'utilitaire fournit également une interface utilisateur pour afficher et gérer des définitions des stratégies. Les fonctions de l'Explorateur de l'utilitaire varient légèrement en fonction des objets dans l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais elles comprennent en général des objets, des données et des stratégies gérés par l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](sql-server-utility-features-and-tasks.md).  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.indexcolumns
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87c6b1c72273a9ca0185de4274cfbbcbd31982df
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2cecd9aced6b4135c581910e5cbfb3a23d2aefd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815665"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168619"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Boîte de dialogue Colonnes d'index (Visual Database Tools)
   Utilisez cette boîte de dialogue pour sélectionner les colonnes pour un index et définir leurs ordres de tri. Un index peut utiliser une ou plusieurs colonnes et chaque colonne peut être triée par ordre croissant ou décroissant. Pour accéder à cette boîte de dialogue, dans la boîte de dialogue **Index/clés** , cliquez sur le bouton d’ellipse pour la ligne **Colonnes** dans la section **Général** .  

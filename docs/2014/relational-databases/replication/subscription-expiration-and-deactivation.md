@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Distributors [SQL Server replication], distribution retention period
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], deactivation
 - deactivating subscriptions
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8ffb9785ae609d72e49fed4c91e7c983bbff35d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d4841078f3b32c2fb3303cc7922eb01a2e4030d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227199"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079579"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Expiration et désactivation des abonnements
   Les abonnements peuvent expirer ou être désactivés s'ils ne sont pas synchronisés durant une certaine *période de rétention*. L'action qui se produit dépend du type de réplication et de période de rétention qui est dépassée.  

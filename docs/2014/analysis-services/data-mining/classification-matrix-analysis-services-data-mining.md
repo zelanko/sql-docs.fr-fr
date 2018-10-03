@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], validating
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - classification matrix [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: adcbb1472464bbad29125eead495cd0408d723d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bb84f3ba798ba8d1af4132f6553e6428365ca9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171299"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matrice de classification (Analysis Services - Exploration de données)
   Une *matrice de classification* trie tous les cas du modèle en catégories, en déterminant si la valeur prédite correspondait à la valeur réelle. Tous les cas dans chaque catégorie sont ensuite comptés et les totaux sont affichés dans la matrice. La matrice de classification est un outil standard d’évaluation des modèles statistiques et est parfois appelée *matrice de confusion*.  
@@ -67,7 +64,7 @@ ms.locfileid: "37216079"
 |Prédite|0 (Réel)|1 (Réel)|2 (Réel)|  
 |---------------|------------------|------------------|------------------|  
 |0|111|3|5|  
-| 1|2|123|17|  
+|1|2|123|17|  
 |2|19|0|20|  
   
  Bien que l'ajout de plusieurs colonnes rende la disposition du rapport plus complexe, les détails supplémentaires peuvent être très utiles lorsque vous voulez évaluer le coût cumulé d'une prédiction incorrecte. Pour créer des sommes sur les diagonales ou comparer les résultats de différentes combinaisons de lignes, vous pouvez cliquer sur le bouton **Copier** sous l’onglet **Matrice de classification** et coller le rapport dans Excel. Vous pouvez aussi utiliser un client tel que le Client d’exploration de données pour Excel, qui prend en charge [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures, pour créer, directement dans Excel, un rapport de classification qui inclut des nombres et des pourcentages. Pour plus d’informations, consultez [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733)(en anglais).  

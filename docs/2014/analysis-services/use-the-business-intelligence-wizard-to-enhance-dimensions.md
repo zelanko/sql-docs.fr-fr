@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services]
 ms.assetid: 12d995d1-75ca-4890-bf4b-a2656910b8d0
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e898e768379e96c45020a6b64f4fc090b6afcb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3da3588c59dfe98ee92baf6a34274696bffc9d5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277575"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173779"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>Utiliser l'Assistant Business Intelligence pour améliorer des dimensions
   Outre la modification directe d'une dimension et des propriétés des objets de dimension, l'Assistant Business Intelligence permet également de configurer et d'améliorer les dimensions.  

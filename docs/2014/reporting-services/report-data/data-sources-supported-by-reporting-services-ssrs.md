@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server data processing extension [Reporting Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ODBC data processing extension
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-caps.latest.revision: 92
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 41c5bf1d39603f1fb0de8dfe6133258f312eab02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 037ab45c3d9afdb9f76f4c4988c2d2657e01b844
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266295"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112191"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Sources de données prises en charge par Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] récupère des données de rapport dans des sources de données par l’intermédiaire d’une couche de données extensibles et modulaire qui utilise des extensions pour le traitement des données. Pour récupérer des données de rapport à partir d’une source de données, vous devez sélectionner une extension pour le traitement des données qui prend en charge le type de source de données, la version du logiciel s’exécutant sur la source de données ainsi que la plateforme de la source de données ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]32 bits ou 64 bits).  
@@ -164,7 +161,7 @@ ms.locfileid: "37266295"
   
  Dans [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], le concepteur de requêtes graphique associé à cette extension de données est [l’interface utilisateur du Concepteur de requêtes relationnelles](../relational-query-designer-user-interface.md), pas le [Concepteur Visual Database Tools](../../ssms/visual-db-tools/visual-database-tool-designers.md) que vous utilisez avec le type de source de données **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] différencie automatiquement ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** et **Microsoft SQL Server** types de source de données et ouvre le Concepteur de requêtes graphique associé au type de source de données.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] différencie automatiquement **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** et **Microsoft SQL Server** types de source de données et ouvre le Concepteur de requêtes graphique associé au type de source de données.  
   
  Si vous utilisez le concepteur de requêtes en mode graphique, la requête est analysée, voire réécrite. Un concepteur de requêtes textuel est également disponible pour l'écriture de requêtes. Utilisez le concepteur de requêtes textuel pour contrôler la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] exacte utilisée pour une requête. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel](../text-based-query-designer-user-interface.md).  
   

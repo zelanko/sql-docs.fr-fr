@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d066eaa1702d096e7e1d0919c988e6ea6e6bdbc0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174699"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Dépanner le traitement des données (SSAS Tabulaire)
   Cette rubrique fournit des informations à propos du traitement (actualisation) des données de modèle lors de la création d'un modèle à l'aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Cette rubrique ne fournit pas d'informations sur le traitement des données dans les modèles qui ont été déployés vers une instance de serveur Analysis Services. Pour plus d’informations sur le traitement des données dans un modèle déployé, consultez [Tâches d’administration à l’aide de scripts dans Analysis Services](script-administrative-tasks-in-analysis-services.md).  

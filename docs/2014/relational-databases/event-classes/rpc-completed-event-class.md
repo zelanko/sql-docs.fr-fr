@@ -4,28 +4,23 @@ ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
-applies_to:
-- SQL Server (starting with 2008)
 helpviewer_keywords:
 - RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4a5de8fea73ee5eddf8c9b5eae8eea996a53629
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac6f4fe956c63edb217467b06f5c03f0d43368b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145469"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed (classe d'événements)
   La classe d'événements RPC:Completed indique qu'un appel de procédure distante a été réglé.  
@@ -60,7 +55,7 @@ ms.locfileid: "37290975"
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|Texte de l’appel de procédure distante| 1|Oui|  
+|TextData|`ntext`|Texte de l’appel de procédure distante|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |Writes|`bigint`|Nombre d'écritures de page émises par l'appel de procédure distante.|17|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  

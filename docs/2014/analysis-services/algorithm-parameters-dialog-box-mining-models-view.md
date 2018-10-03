@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.models.algorithmparameters.f1
 helpviewer_keywords:
 - Algorithm Parameters dialog box
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 491605a58b6a30f0f8b86afd0a2354e3c9b81ed9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc3d863889f7e5cb8ca1e79f78e920aedd79f979
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172999"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>Boîte de dialogue Paramètres d'algorithme (Vue Modèles d'exploration de données)
   Utilisez la boîte de dialogue **Paramètres d’algorithme** pour ajuster les paramètres d’algorithme spécifiques du modèle sélectionné. Lorsque vous modifiez un paramètre d'algorithme, vous modifiez habituellement les résultats du modèle d'exploration de données. L'influence de chaque paramètre sur les résultats dépend de l'algorithme que vous utilisez et de vos données. Pour plus d’informations, consultez [Personnaliser les modèles et les structures d’exploration de données](data-mining/customize-mining-models-and-structure.md).  
@@ -37,9 +34,9 @@ ms.locfileid: "37178956"
 |colonne|Description|  
 |------------|-----------------|  
 |**Paramètre**|Liste le nom du paramètre.|  
-|**Value**|Vous ne devez entrer une valeur que si vous souhaitez remplacer la valeur par défaut du paramètre.|  
+|**Valeur**|Vous ne devez entrer une valeur que si vous souhaitez remplacer la valeur par défaut du paramètre.|  
 |**Default**|Donne la valeur par défaut du paramètre, qui sera utilisée par l’algorithme si vous n’entrez pas de valeur dans la colonne **Valeur** .|  
-|**Plage**|Répertorie l’intervalle des valeurs possibles que vous pouvez entrer dans la colonne **Valeur** . Les plages peuvent prendre une des opérations suivantes :<br /><br /> Une liste de valeurs discrètes, telles que 1, 2, 3<br /><br /> Un intervalle inclusif, tel que [0, 100]<br /><br /> Un intervalle exclusif, tel que (0,...)<br /><br /> Une combinaison, telle que [0,...)|  
+|**plage**|Répertorie l’intervalle des valeurs possibles que vous pouvez entrer dans la colonne **Valeur** . Les plages peuvent prendre une des opérations suivantes :<br /><br /> Une liste de valeurs discrètes, telles que 1, 2, 3<br /><br /> Un intervalle inclusif, tel que [0, 100]<br /><br /> Un intervalle exclusif, tel que (0,...)<br /><br /> Une combinaison, telle que [0,...)|  
   
  **Description**  
  Décrit le paramètre sélectionné dans la liste **Paramètres** .  

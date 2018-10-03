@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB QueryInterface event class
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a6fcacac48a6f32cbdd7744566400936decc51e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54459f4c31854c11a2285c072b8e5d20ca510807
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223439"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174989"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface (classe d'événements)
   La classe d’événements **OLEDB QueryInterface** se produit quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] émet un appel vers **QueryInterface** du fournisseur OLE DB, provenant de requêtes distribuées et de procédures stockées distantes. Ajoutez cette classe d'événements dans les traces servant à effectuer un suivi des problèmes relatifs aux requêtes distribuées et aux procédures stockées distantes.  
@@ -58,7 +55,7 @@ ms.locfileid: "37223439"
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et exécutez une instruction en tant que connexion2, `SessionLoginName` affiche Login1 et `LoginName` affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`nvarchar`|Paramètres envoyés et reçus au sein de l'appel OLE DB.| 1|non|  
+|TextData|`nvarchar`|Paramètres envoyés et reçus au sein de l'appel OLE DB.|1|non|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6e9f17e76dca1f5f3266908ed8f009161cf1d829
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393439"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178255"
 ---
-# Guide de conception d'index SQL Server
+# <a name="sql-server-index-design-guide"></a>Guide de conception d'index SQL Server
   L'engorgement des applications de base de données est souvent imputable à des index mal conçus ou en nombre insuffisant. La conception d'index efficaces est primordiale pour le bon fonctionnement des bases de données et des applications. Ce guide de conception d'index SQL Server contient les informations et les meilleures pratiques nécessaires à la création d'index efficaces pour répondre aux besoins de votre application.  
   
 **S’applique aux**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] via [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , sauf indication contraire.  
@@ -51,7 +48,7 @@ ms.locfileid: "40393439"
   
  L'utilisation d'index n'est pas forcément synonyme de bonnes performances, et inversement, de bonnes performances ne sauraient être nécessairement attribuables à l'utilisation d'index efficaces. Si l'utilisation d'un index contribuait toujours à produire les meilleurs résultats, le travail de l'optimiseur de requête en serait simplifié. En réalité, le choix d'un index inapproprié peut aboutir à des performances moins que satisfaisantes. La tâche de l'optimiseur de requête est donc de ne sélectionner un index, ou une combinaison d'index, que dans les cas où cette sélection est susceptible d'améliorer les performances et d'éviter la récupération par index si elle doit les détériorer.  
   
-### Tâches de conception d'index  
+### <a name="index-design-tasks"></a>Tâches de conception d'index  
  La stratégie de conception d'index que nous recommandons est constituée des tâches suivantes :  
   
 1.  Comprendre les caractéristiques de la base de données elle-même. Par exemple, s'agit-il d'une base de données de traitement transactionnel en ligne (OLTP) dont les données sont souvent modifiées, ou d'une base de données d'aide à la décision (DSS) ou d'entreposage de données (OLAP) contenant essentiellement des données en lecture seule et devant traiter des jeux de données volumineux rapidement ? Dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], les index *columnstore optimisés en mémoire xVelocity* sont particulièrement adaptés aux jeux de données d'entrepôts de données classiques. Les index columnstore peuvent transformer l'expérience utilisateur des entrepôts de données en améliorant considérablement les performances des requêtes communes liées aux entrepôts de données, par exemple en matière de filtrage, d'agrégation, de regroupement et de jointure en étoile. Pour plus d’informations, consultez [index Columnstore décrits](../relational-databases/indexes/columnstore-indexes-described.md).  
@@ -69,7 +66,7 @@ ms.locfileid: "40393439"
 ##  <a name="General_Design"></a> Consignes générales pour la création d'index  
  Les administrateurs de bases de données expérimentés peuvent concevoir de bons ensembles d'index, mais cette tâche est très complexe, sujette à erreurs et demande beaucoup de temps, même dans le cas de bases de données et de charges de travail peu complexes. La compréhension des caractéristiques de votre base de données, de vos requêtes et de vos colonnes de données peut vous aider à créer des index optimaux.  
   
-### Remarques sur la base de données  
+### <a name="database-considerations"></a>Remarques sur la base de données  
  Lorsque vous créez un index, prenez en compte les directives suivantes relatives aux bases de données :  
   
 -   La définition de nombreux index sur une table affecte les performances des instructions INSERT, UPDATE, DELETE et MERGE, car tous les index doivent être mis à jour en conséquence à mesure que les données de la table changent. Par exemple, si une colonne est utilisée dans plusieurs index et vous exécutez une instruction UPDATE qui modifie les données de cette colonne, chaque index contenant cette colonne doit être mis à jour, ainsi que la colonne de la table de base sous-jacente (segment de mémoire ou index cluster).  
@@ -84,7 +81,7 @@ ms.locfileid: "40393439"
   
 -   Servez-vous de l'Assistant Paramétrage du moteur de base de données pour analyser votre base de données et obtenir des recommandations sur les index. Pour plus d'informations, consultez [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md).  
   
-### Remarques sur les requêtes  
+### <a name="query-considerations"></a>Remarques sur les requêtes  
  Lorsque vous créez un index, prenez en compte les directives suivantes relatives aux requêtes :  
   
 -   Créez des index non cluster sur les colonnes fréquemment utilisées dans des prédicats et des conditions de jointure dans des requêtes. Toutefois, évitez d'ajouter des colonnes superflues. L'ajout d'un trop grand nombre de colonnes d'index peut avoir une influence négative sur les performances de gestion des index et de l'espace disque.  
@@ -95,7 +92,7 @@ ms.locfileid: "40393439"
   
 -   Évaluez le type de requête et la manière dont les colonnes sont utilisées dans la requête. Par exemple, une colonne utilisée dans un type de requête de correspondance exacte constitue un candidat valable à un index non-cluster ou cluster.  
   
-### Remarques sur les colonnes  
+### <a name="column-considerations"></a>Remarques sur les colonnes  
  Lorsque vous créez un index, prenez en compte les directives suivantes relatives aux colonnes :  
   
 -   Veillez à ce que la clé d'index des index cluster soit courte. En outre, les index cluster bénéficient du fait d'être créés sur des colonnes uniques ou non NULL.  
@@ -116,7 +113,7 @@ ms.locfileid: "40393439"
   
 -   Pensez à indexer les colonnes calculées. Pour plus d'informations, consultez [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
-### Caractéristiques des index  
+### <a name="index-characteristics"></a>Caractéristiques des index  
  Après avoir déterminé qu'un index est approprié pour une requête, vous pouvez sélectionner le type d'index qui convient le mieux à la situation. Un index doit posséder les caractéristiques suivantes :  
   
 -   être cluster ou non-cluster ;  
@@ -146,7 +143,7 @@ ms.locfileid: "40393439"
   
  Comme vous ne pouvez pas prévoir le type d'accès qui se met en place ni le moment de cette mise en place, il peut s'avérer plus judicieux de répartir vos tables et vos index sur tous les groupes de fichiers. Ceci garantit l'accès à tous les disques, car toutes les données et tous les index sont répartis uniformément sur tous les disques, quel que soit le mode d'accès aux données. Cette approche est également plus simple pour les administrateurs système.  
   
-#### Partitions sur plusieurs groupes de fichiers  
+#### <a name="partitions-across-multiple-filegroups"></a>Partitions sur plusieurs groupes de fichiers  
  Vous pouvez également envisager de partitionner des index cluster et non-cluster sur plusieurs groupes de fichiers. Les index partitionnés sont partitionnés horizontalement ou par ligne, selon la fonction de partition. La fonction de partition définit le mode de mappage de chaque ligne sur un ensemble de partitions basé sur les valeurs de certaines colonnes, nommées colonnes de partition. Un schéma de partition spécifie le mappage des partitions sur un ensemble de groupe de fichiers.  
   
  Le partitionnement d'un index peut présenter les avantages suivants :  
@@ -205,7 +202,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Si l'index cluster n'est pas créé avec la propriété UNIQUE, le [!INCLUDE[ssDE](../includes/ssde-md.md)] ajoute automatiquement une colonne d'indicateur d'unicité de 4 octets à la table. Si nécessaire, le [!INCLUDE[ssDE](../includes/ssde-md.md)] ajoute automatiquement une valeur d'indicateur d'unicité une ligne pour que chaque clé soit unique. Cette colonne et ses valeurs sont utilisées en interne et ne sont ni affichables, ni accessibles par les utilisateurs.  
   
-### Architecture des index cluster  
+### <a name="clustered-index-architecture"></a>Architecture des index cluster  
  Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les index sont organisés en arborescences binaires. Chaque page d'une arborescence binaire d'index s'appelle un nœud d'index. Le nœud supérieur d'une arborescence binaire est le nœud racine. Les nœuds du niveau inférieur de l'index sont appelés les nœuds feuille. Tous les niveaux d'index situés entre la racine et les nœuds feuille s'appellent des niveaux intermédiaires. Dans un index cluster, les nœuds feuille contiennent les pages de données de la table sous-jacente. Les nœuds racine et de niveau intermédiaire contiennent les pages d'index dans lesquelles se trouvent les lignes d'index. Chaque ligne d'index contient une valeur de clé et un pointeur vers une page de niveau intermédiaire dans l'arborescence binaire ou vers une ligne de données dans le niveau feuille de l'index. Les pages de chaque niveau de l'index sont liées dans une liste à double liaison.  
   
  Un index cluster a une ligne dans [sys.partitions](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql), où **index_id** = 1 pour chaque partition utilisée par celui-ci. Par défaut, un index cluster possède une seule partition. Lorsqu'un index cluster détient plusieurs partitions, chacune d'elles possède une structure d'arborescence binaire qui contient ses données. Par exemple, si un index cluster possède quatre partitions, il existe quatre structures d'arborescence binaire, à raison d'une dans chaque partition.  
@@ -218,7 +215,7 @@ ON Purchasing.PurchaseOrderDetail
   
  ![Niveaux d’un index cluster](media/bokind2.gif "niveaux d’un index cluster")  
   
-### Remarques sur les requêtes  
+### <a name="query-considerations"></a>Remarques sur les requêtes  
  Avant de créer des index cluster, il est important de comprendre le mode d'accès aux données. Envisagez l'emploi d'un index cluster pour les requêtes qui :  
   
 -   retournent une plage de valeurs en utilisant des opérateurs tels que BETWEEN, >, >=, < et <=.  
@@ -233,7 +230,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Si un index est présent sur les colonnes spécifiées dans la clause ORDER BY ou GROUP BY, le [!INCLUDE[ssDE](../includes/ssde-md.md)] n'a plus besoin de trier les données car les lignes le sont déjà. Les requêtes présentent dès lors des performances accrues.  
   
-### Remarques sur les colonnes  
+### <a name="column-considerations"></a>Remarques sur les colonnes  
  En général, vous devez définir la clé d'index cluster avec le moins de colonnes possible. Envisagez les colonnes présentant un ou plusieurs des attributs suivants :  
   
 -   Colonnes uniques ou qui contiennent de nombreuses valeurs distinctes  
@@ -267,7 +264,7 @@ ON Purchasing.PurchaseOrderDetail
   
  De la même manière que vous utilisez un index dans un livre, l'optimiseur de requête recherche une valeur de données en examinant l'index non-cluster afin de trouver l'emplacement qu'occupe la valeur dans la table, puis récupère directement les données à partir de cet emplacement. C'est pour cette raison que les index non cluster constituent une solution idéale pour les requêtes à correspondance exacte ; l'index contient en effet des entrées décrivant l'emplacement exact qu'occupent dans la table les valeurs de données recherchées dans les requêtes. Par exemple, pour interroger la table `HumanResources. Employee` pour tous les employés qui réfèrent à un responsable spécifique, l'optimiseur de requête peut utiliser l'index non cluster `IX_Employee_ManagerID`; sa colonne clé est `ManagerID` . L'optimiseur de requête recherche rapidement toutes les entrées de l'index qui correspondent à la valeur `ManagerID`spécifiée. Chaque entrée d'index pointe vers la page et la ligne exactes de la table ou de l'index cluster contenant les données correspondantes. Après avoir trouvé toutes les entrées dans l'index, l'optimiseur de requête peut accéder directement à la page et à la ligne exactes pour récupérer les données.  
   
-### Architecture des index non cluster  
+### <a name="nonclustered-index-architecture"></a>Architecture des index non cluster  
  Les index non-cluster possèdent la même structure arborescente binaire que les index cluster, à ces différences près :  
   
 -   Les lignes de données de la table sous-jacente ne sont pas triées et stockées dans l'ordre des clés non cluster.  
@@ -288,7 +285,7 @@ ON Purchasing.PurchaseOrderDetail
   
  ![Niveaux d’un index non-cluster](media/bokind1.gif "niveaux d’un index non-cluster")  
   
-### Remarques sur la base de données  
+### <a name="database-considerations"></a>Remarques sur la base de données  
  Les caractéristiques de la base de données sont importantes lors de la conception d'index non-cluster.  
   
 -   Les bases de données ou les tables dont les mises à jour sont faibles, mais qui contiennent des volumes importants de données peuvent tirer parti de nombreux index non-cluster en vue d'améliorer les performances des requêtes. Envisagez de créer des index filtrés pour les sous-ensembles de données bien définis afin d'améliorer les performances des requêtes, réduire les coûts de stockage d'index et réduire les coûts de maintenance d'index par rapport aux index non cluster de table entière.  
@@ -299,7 +296,7 @@ ON Purchasing.PurchaseOrderDetail
   
      La définition de nombreux index sur une table affecte les performances des instructions INSERT, UPDATE, DELETE et MERGE , car à mesure que les données de la table changent, tous les index doivent être mis à jour en conséquence.  
   
-### Remarques sur les requêtes  
+### <a name="query-considerations"></a>Remarques sur les requêtes  
  Avant de créer des index non-cluster, vous devez comprendre comment se déroulera l'accès aux données. Il est conseillé d'utiliser un index non-cluster pour les requêtes avec les attributs suivants :  
   
 -   Requêtes qui utilisent des clauses JOIN ou GROUP BY.  
@@ -312,7 +309,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Requêtes qui contiennent des colonnes souvent impliquées dans les conditions de recherche d'une requête (clause WHERE) qui retournent des correspondances exactes.  
   
-### Remarques sur les colonnes  
+### <a name="column-considerations"></a>Remarques sur les colonnes  
  Il est conseillé d'utiliser des colonnes qui possèdent un ou plusieurs de ces attributs :  
   
 -   Couvrent la requête.  
@@ -339,7 +336,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Alors que les colonnes clés sont stockées à tous les niveaux de l'index, les colonnes non-clés sont stockées uniquement au niveau feuille.  
   
-##### Utilisation de colonnes incluses pour éviter les limites de taille  
+##### <a name="using-included-columns-to-avoid-size-limits"></a>Utilisation de colonnes incluses pour éviter les limites de taille  
  Vous pouvez inclure des colonnes non-clés dans un index non cluster pour éviter de dépasser les limitations actuelles de taille d'index, établies à 16 colonnes clés au maximum et une taille de clé d'index de 900 octets au maximum. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] ne tient pas compte des colonnes non-clés lors du calcul du nombre de colonnes clés d'index ou de la taille de la clé d'index.  
   
  Par exemple, supposons que vous voulez indexer les colonnes suivantes de la table `Document` :  
@@ -358,7 +355,7 @@ ON Production.Document (Title, Revision)
 INCLUDE (FileName);   
 ```  
   
-##### Directives sur les index contenant des colonnes incluses  
+##### <a name="index-with-included-columns-guidelines"></a>Directives sur les index contenant des colonnes incluses  
  Lors de la conception d'index non-cluster contenant des colonnes incluses, tenez compte des directives suivantes :  
   
 -   Les colonnes non-clés sont définies dans la clause INCLUDE de l'instruction CREATE INDEX.  
@@ -375,7 +372,7 @@ INCLUDE (FileName);
   
 -   Les noms des colonnes ne peuvent pas être répétés dans la liste INCLUDE.  
   
-##### Directives sur la taille des colonnes  
+##### <a name="column-size-guidelines"></a>Directives sur la taille des colonnes  
   
 -   Vous devez spécifier au moins une colonne clé. Le nombre maximal de colonnes non-clés est de 1023. Il équivaut au nombre maximal de colonnes de table moins 1.  
   
@@ -383,7 +380,7 @@ INCLUDE (FileName);
   
 -   La taille totale de toutes les colonnes non-clés est limitée uniquement par la taille des colonnes spécifiées dans la clause INCLUDE ; par exemple, les colonnes `varchar(max)` sont limitées à 2 Go.  
   
-##### Directives sur la modification des colonnes  
+##### <a name="column-modification-guidelines"></a>Directives sur la modification des colonnes  
  Lors de la définition d'une colonne de table définie en tant que colonne incluse, les restrictions suivantes s'appliquent :  
   
 -   Les colonnes non-clés ne peuvent pas être supprimées de la table, sauf si l'index est d'abord supprimé.  
@@ -397,7 +394,7 @@ INCLUDE (FileName);
         > [!NOTE]  
         >  Ces restrictions sur la modification des colonnes s'appliquent également aux colonnes de clés d'index.  
   
-##### Recommandations relatives à la conception  
+##### <a name="design-recommendations"></a>Recommandations relatives à la conception  
  La conception d'index non-cluster doit être réalisée avec une clé d'index de grande taille, de sorte que seules les colonnes utilisées pour la recherche sont les colonnes clés. Toutes les autres colonnes qui couvrent la requête doivent être des colonnes non-clés incluses. De cette manière, vous disposez de toutes les colonnes nécessaires pour couvrir la requête, mais la clé d'index elle-même est petite et efficace.  
   
  Par exemple, supposons que vous voulez concevoir un index qui couvre la requête ci-dessous.  
@@ -418,7 +415,7 @@ ON Person.Address (PostalCode)
 INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
 ```  
   
-##### Considérations relatives aux performances  
+##### <a name="performance-considerations"></a>Considérations relatives aux performances  
  Évitez d'ajouter des colonnes superflues. L'ajout de trop nombreuses colonnes d'index, clés et non-clés, peut avoir les conséquences suivantes sur les performances :  
   
 -   Le nombre de lignes d'index contenues sur une page sera moindre. Ceci pourrait augmenter les E/S et réduire l'efficacité de la mémoire cache.  
@@ -446,7 +443,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Lorsque vous créez une contrainte PRIMARY KEY ou UNIQUE, vous créez automatiquement un index unique sur les colonnes spécifiées. Il n'y a pas de différences significatives entre la création d'une contrainte UNIQUE et la création d'un index unique indépendant d'une contrainte. La validation des données se produit de la même manière et l'optimiseur de requête considère un index unique de la même façon, qu'il soit créé par une contrainte or manuellement. Toutefois, vous devez créer une contrainte UNIQUE ou PRIMARY KEY sur la colonne lorsque votre objectif est de préserver l'intégrité des données. Cette opération met en évidence la finalité de l'index.  
   
-### Observations  
+### <a name="considerations"></a>Observations  
   
 -   Un index unique, une contrainte UNIQUE ou une contrainte PRIMARY KEY ne peuvent pas être créés si les données comportent des valeurs de clé dupliquées.  
   
@@ -491,10 +488,10 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Les index filtrés sont définis sur une seule table et ne prennent en charge que les opérateurs de comparaison simples. Si vous avez besoin d'une expression de filtre qui référence plusieurs tables ou présente une logique complexe, vous devez créer une vue.  
   
-### Remarques sur la conception  
+### <a name="design-considerations"></a>Remarques sur la conception  
  Pour concevoir des index filtrés efficaces, il est important de comprendre les requêtes utilisées par votre application et leurs relations avec les sous-ensembles de données. Les colonnes contenant principalement des valeurs NULL, les colonnes contenant des catégories hétérogènes de valeurs et les colonnes contenant des plages de valeurs distinctes sont autant d'exemples de données avec des sous-ensembles bien définis. Les considérations suivantes relatives à la conception présentent divers scénarios dans lesquels un index filtré peut présenter des avantages par rapport à des index de table entière.  
   
-#### Index filtrés pour des sous-ensembles de données  
+#### <a name="filtered-indexes-for-subsets-of-data"></a>Index filtrés pour des sous-ensembles de données  
  Lorsqu'une colonne contient seulement un petit nombre de valeurs pertinentes pour les requêtes, vous pouvez créer un index filtré sur ce sous-ensemble de valeurs. Ainsi, lorsque les valeurs d'une colonne sont principalement NULL et que la requête effectue uniquement des sélections dans les valeurs non NULL, vous pouvez créer un index filtré pour les lignes de données non NULL. L'index ainsi créé sera plus petit et coûtera moins cher en maintenance qu'un index non cluster de table entière défini sur les mêmes colonnes clés.  
   
  Par exemple, la base de données `AdventureWorks2012` a une table `Production.BillOfMaterials` avec 2679 lignes. Seules 199 lignes de la colonne `EndDate` contiennent une valeur non NULL ; les 2480 autres contiennent des valeurs NULL. L'index filtré suivant couvre les requêtes qui retournent les colonnes définies dans l'index et qui sélectionnent uniquement les lignes avec une valeur non NULL pour `EndDate`.  
@@ -518,7 +515,7 @@ WHERE EndDate IS NOT NULL
   
  Pour plus d'informations sur la création d'index filtrés et la définition de l'expression de prédicat d'index filtré, consultez [Create Filtered Indexes](../relational-databases/indexes/create-filtered-indexes.md).  
   
-#### Index filtrés pour les données hétérogènes  
+#### <a name="filtered-indexes-for-heterogeneous-data"></a>Index filtrés pour les données hétérogènes  
  Lorsqu'une table contient des lignes des données hétérogènes, vous pouvez créer un index filtré pour une ou plusieurs catégories de données.  
   
  Par exemple, chacun des produits répertoriés dans la table `Production.Product` est affecté à un `ProductSubcategoryID`, qui est à son tour associé à une catégorie de produits (Bikes, Components, Clothing ou Accessories). Ces catégories sont hétérogènes car leurs valeurs de colonne dans la table `Production.Product` ne sont pas étroitement corrélées. Par exemple, les colonnes `Color`, `ReorderPoint`, `ListPrice`, `Weight`, `Class`et `Style` ont des caractéristiques uniques pour chaque catégorie de produit. Supposons que des requêtes portent fréquemment sur la catégorie Accessories qui comporte les sous-catégories 27-36. Améliorez les performances des requêtes portant sur Accessories en créant un index filtré sur les sous-catégories de la catégorie Accessories, tel que l'illustre l'exemple suivant.  
@@ -540,7 +537,7 @@ FROM Production.Product
 WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;  
 ```  
   
-#### Colonnes clés  
+#### <a name="key-columns"></a>Colonnes clés  
  Il est recommandé d'inclure un petit nombre de colonnes clés ou incluses dans une définition d'index filtré, et d'incorporer uniquement les colonnes qui sont nécessaires à l'optimiseur de requête pour choisir l'index filtré pour le plan d'exécution de la requête. L'optimiseur de requête peut choisir un index filtré pour la requête, qu'il couvre ou non la requête. Toutefois, l'optimiseur de requête choisira plus probablement un index filtré s'il couvre la requête.  
   
  Dans certains cas, un index filtré couvre la requête sans inclure les colonnes de l'expression d'index filtré en tant que colonnes clés ou incluses dans la définition de l'index filtré. Les règles suivantes expliquent dans quels cas une colonne de l'expression d'index filtré doit être une colonne clé ou incluse dans la définition de l'index filtré. Les exemples font référence à l'index filtré `FIBillOfMaterialsWithEndDate` qui a été créé précédemment.  
@@ -568,7 +565,7 @@ WHERE EndDate IS NOT NULL;
   
  Il n'est pas nécessaire que la clé de l'index cluster de la table soit une colonne clé ou incluse dans la définition de l'index filtré. La clé de l'index cluster est automatiquement incluse dans tous les index non cluster, y compris les index filtrés.  
   
-#### Opérateurs de conversion de données dans le prédicat du filtre  
+#### <a name="data-conversion-operators-in-the-filter-predicate"></a>Opérateurs de conversion de données dans le prédicat du filtre  
  Si l'opérateur de comparaison spécifié dans l'expression d'index filtré de l'index filtré provoque une conversion de données implicite ou explicite, une erreur se produit si cette conversion se produit du côté gauche d'un opérateur de comparaison. Une solution consiste à écrire l'expression d'index filtré avec l'opérateur de conversion de données (CAST ou CONVERT) à droite de l'opérateur de comparaison.  
   
  L'exemple suivant crée une table avec différents types de données.  

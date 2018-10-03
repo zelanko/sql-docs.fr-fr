@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - global default for all users [SQL Server]
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a746b087259d5159f693198a3cf60a1ce98ce6e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9c418de267940942c99aae21bcf00118bb1ac36e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257065"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172669"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurer l'option de configuration de serveur user options
   Cette rubrique explique comment configurer l'option de configuration de serveur **user options** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **user options** spécifie des valeurs par défaut globales pour tous les utilisateurs. Une liste d'options de traitement des requêtes par défaut est générée pour la durée d'une session de travail d'un utilisateur. L’option **user options** permet de modifier les valeurs par défaut des options SET (si les paramètres par défaut du serveur ne sont pas appropriés).  
@@ -54,7 +51,7 @@ ms.locfileid: "37257065"
   
     |Valeur|Configuration|Description|  
     |-----------|-------------------|-----------------|  
-    | 1|DISABLE_DEF_CNST_CHK|Contrôle les opérations de vérification des contraintes provisoires ou différées.|  
+    |1|DISABLE_DEF_CNST_CHK|Contrôle les opérations de vérification des contraintes provisoires ou différées.|  
     |2|IMPLICIT_TRANSACTIONS|Pour les connexions à la bibliothèque réseau dblib, contrôle si une transaction est lancée implicitement lors de l'exécution d'une instruction. Le paramètre IMPLICIT_TRANSACTIONS n'a aucun effet sur les connexions ODBC ou OLEDB.|  
     |4|CURSOR_CLOSE_ON_COMMIT|Contrôle le comportement des curseurs après une opération de validation.|  
     |8|ANSI_WARNINGS|Contrôle la troncature et la valeur NULL dans les avertissements relatifs aux fonctions d'agrégat.|  

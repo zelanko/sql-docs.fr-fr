@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.replacetable.f1
 helpviewer_keywords:
 - Replace Table with Other Table dialog box
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e442c06763be7c357835a1f82148cbbb61095725
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173759"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Boîte de dialogue Remplacer la table par une autre table
   Utilisez la boîte de dialogue **Remplacer la table par une autre table** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour remplacer dans une vue de source de données une table existante par une table de la source de données sous-jacente qui n'est pas encore incluse dans la vue de source de données. Vous pouvez afficher la boîte de dialogue **Remplacer la table par une autre table** en cliquant avec le bouton droit sur le nom d’une table dans le volet **Diagramme** ou **Tables** du **Concepteur de vue de source de données** et en sélectionnant **Avec une autre table** dans **Remplacer la table**.  
