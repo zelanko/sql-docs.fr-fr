@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpibrowserpane.f1
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 520024140f0406f897e897cd2d41eff065923aa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d399ec2f3388f61b8b8fdcd7f81cb0deeeaa8081
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257375"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174599"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Navigateur d'indicateur de performance clé (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Le volet **Navigateur d’indicateur de performance clé** de l’onglet **Indicateurs de performance clés** du Concepteur de cube permet d’afficher et de tester les résultats des indicateurs de performance clés (KPI). Vous devez d'abord déployer les indicateurs de performance clés sur une instance [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avant d'exécuter le navigateur.  
@@ -44,7 +41,7 @@ ms.locfileid: "37257375"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**Égal à**|Les résultats se limitent à l'ensemble défini dans **Expression de filtre**.|  
+|**égal**|Les résultats se limitent à l'ensemble défini dans **Expression de filtre**.|  
 |**Non égal**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble défini dans **Expression de filtre**.|  
 |**Dans**|Les résultats se limitent à l'ensemble nommé choisi dans **Expression de filtre**.|  
 |**Pas dans**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble nommé choisi dans **Expression de filtre**.|  
@@ -66,7 +63,7 @@ ms.locfileid: "37257375"
  **Structure d’affichage**  
  Affiche les indicateurs de performance clés contenus dans le cube. Ils sont organisés hiérarchiquement en fonction des valeurs **Afficher le dossier** ou **Indicateur de performance clé parent** pour chaque KPI.  
   
- **Value**  
+ **Valeur**  
  Affiche la valeur de l'indicateur de performance clé.  
   
  **Objectif**  

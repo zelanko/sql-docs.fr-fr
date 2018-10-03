@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextindex
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a481a3ea989ec31ea6d3e207633f102e81514940
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: aac010a0dc1d9d6cd23b6ccdfbff5358455cddd6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809775"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080429"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Boîte de dialogue Index de texte intégral (Visual Database Tools)
   Cette boîte de dialogue permet de créer un index de texte intégral si vous souhaitez effectuer des recherches en texte intégral sur les colonnes de type texte de vos tables de base de données. Un index de texte intégral se base sur un index normal ; vous devez donc d'abord le créer. L'index normal doit être créé sur une colonne unique, non null ; il est conseillé de choisir une colonne contenant des petites valeurs plutôt que des grandes.  

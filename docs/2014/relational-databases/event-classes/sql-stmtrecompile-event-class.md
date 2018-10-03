@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24630824594621499fcc1c3fc70fca74ed5562e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 288e086f164199ae372ccca2ffb482855bb3c2d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292809"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211889"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, classe d'événements
   La classe d’événements SQL:StmtRecompile indique des recompilations au niveau de l’instruction provoquées par tous les types de lots : procédures stockées, déclencheurs, lots ad hoc et requêtes. Les requêtes peuvent être envoyées avec sp_executesql, SQL dynamique, des méthodes Prepare, des méthodes Execute ou des interfaces analogues. La classe d’événements SQL:StmtRecompile doit être utilisée à la place de la classe d’événements SP:Recompile.  
@@ -58,7 +55,7 @@ ms.locfileid: "37292809"
 |SPID|`int`|ID du processus serveur de la connexion.|12|Oui|  
 |SqlHandle|`varbinary`|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être passée à sys.dm_exec_sql_text pour récupérer le texte SQL associé.|63|non|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|Texte de l'instruction Transact-SQL qui a été recompilée.| 1|Oui|  
+|TextData|`ntext`|Texte de l'instruction Transact-SQL qui a été recompilée.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.previewview.f1
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3114b56007619d54d0a9aea95e136d65fe0f725b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89bea23ea4add737dbd9edf9a02d147abb35adbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206769"
 ---
 # <a name="preview-view"></a>Vue Aperçu
   Utilisez la vue **Aperçu** pour afficher le rapport rendu. Lors de l'aperçu d'un rapport, le Générateur de rapports exécute le rapport localement et l'affiche dans la vue Aperçu. Dans le mode Aperçu, le rapport est traité dans sa totalité. Si le rapport contient une requête complexe ou une grande quantité de données, l'aperçu peut prendre plusieurs minutes à apparaître la première fois que vous l'affichez. Pour les modifications ultérieures apportées exclusivement à la mise en forme du rapport, l'aperçu utilise les données mises en cache.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Principal Impersonation event class
 ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2568e51da07142fede418230f3608a612844e870
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0529a710a1cbdb5fc856e596d7a676172bd13abb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207125"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119589"
 ---
 # <a name="audit-database-principal-impersonation-event-class"></a>Audit Database Principal Impersonation (classe d'événements)
   La classe d’événements **Audit Database Principal Impersonation** se produit lors d’un emprunt d’identité dans l’étendue de la base de données (par exemple, EXECUTE AS \<*utilisateur*> ou SETUSER).  
@@ -54,7 +51,7 @@ ms.locfileid: "37207125"
 |**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |**Réussi**|**Int**|1 = réussite. 0 = échec. Par exemple, la valeur 1 indique la réussite d'une vérification d'autorisations tandis que la valeur 0 indique son échec.|23|Oui|  
-|**TextData**|**ntext**|Valeur texte qui dépend de la classe d'événements capturée dans la trace.| 1|Oui|  
+|**TextData**|**ntext**|Valeur texte qui dépend de la classe d'événements capturée dans la trace.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |**XactSequence**|**bigint**|Jeton utilisé pour décrire la transaction en cours.|50|Oui|  
   

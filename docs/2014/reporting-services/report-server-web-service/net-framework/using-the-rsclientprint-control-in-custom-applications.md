@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - RSPrintClient control
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5c8d0419dc923fc8fc7e6f2cb58d74ee70d46f68
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f3299b67ffb55723a59326ec884d9ad30617e24
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181556"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212659"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilisation du contrôle RSClientPrint dans les applications personnalisées
   Le contrôle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** permet une impression côté client des rapports affichés dans la Visionneuse HTML. À partir de la boîte de dialogue **Imprimer** de ce contrôle, un utilisateur peut démarrer un travail d’impression, afficher l’aperçu d’un rapport, spécifier les pages à imprimer et modifier les marges. Lors d'une impression côté client, le serveur de rapports génère le rendu du rapport dans l'extension de rendu (EMF) d'image, puis utilise les fonctionnalités d'impression du système d'exploitation afin de créer le travail d'impression et de l'envoyer à une imprimante.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db35f89f79f6dcd5aeb4416dde78fa6308ceef7d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80969bdf87a0d4b6b53273b2e20bd9ef175e9ff2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264925"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114423"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Plan d'exécution et allocation de mémoire tampon
   Avant l'exécution, la tâche de flux de données examine ses composants et génère un plan d'exécution pour chaque séquence de composants. Cette section fournit des détails sur le plan d'exécution et son mode d'affichage, ainsi que sur l'allocation de mémoires tampons d'entrée et de sortie en fonction du plan d'exécution.  
@@ -89,6 +86,6 @@ End WorkThread1
   
  Comme la mémoire tampon fournie à un composant est susceptible de contenir un nombre de colonnes supérieur à celui que possède le composant dans ses collections de colonnes d'entrée et de sortie, les développeurs de composants peuvent appeler la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> pour rechercher une colonne dans la mémoire tampon en spécifiant son `LineageID`.  
   
-![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services  **<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
+![Icône Integration Services (petite)](../../media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services** <br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   
   

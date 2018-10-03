@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining algorithms
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data mining models
 - data mining structures
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9817f7e8906d9e75f7c2b5d55db679d77e7cc47e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4cbde25ffc504e2e2c41bcf6b46cde9d464daa7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273885"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113289"
 ---
 # <a name="choosing-a-model"></a>Choix d'un modèle
   **Algorithme d’exploration de données :** l’exploration de données *algorithme* est un mécanisme qui crée des modèles de données. L'algorithme définit la façon dont les données sont comptées, les relations dérivées et les séquences stockées. La sélection d'un algorithme dépend en partie du type de données à analyser. Par exemple, certains algorithmes peuvent uniquement utiliser des nombres continus, tandis que d'autres peuvent être plus efficaces avec un nombre limité de valeurs distinctes.  

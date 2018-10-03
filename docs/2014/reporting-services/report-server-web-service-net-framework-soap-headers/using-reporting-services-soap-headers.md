@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Web service [Reporting Services], SOAP
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SOAP [Reporting Services], headers
 - XML Web service [Reporting Services], SOAP
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7a8a563b9265fa53e55c8625fd5123aa90cda23b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 247233e90e5fa35cbaacd905d208f07f15e850bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303639"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083859"
 ---
 # <a name="using-reporting-services-soap-headers"></a>Utilisation des en-têtes SOAP de Reporting Services
   La communication avec une méthode Web Service à l'aide de SOAP suit un format standard. Ce format est constitué en partie des données encodées dans un document XML. Le document XML consiste en un élément **Envelope** racine, composé lui-même d’un élément **Body** obligatoire et d’un élément **Header** facultatif. L’élément **Body** contient les données propres au message. L’élément **Header** facultatif peut contenir des informations supplémentaires qui ne sont pas directement liées au message. Chaque élément enfant de l’élément **Header** est appelé « en-tête SOAP ».  

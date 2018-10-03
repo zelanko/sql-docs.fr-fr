@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - minimal logging [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server]
 - bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 956b1af15c2356225d9429bccad6a8d1f4f515e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 858789f7954d21c59db3d7221f23d1f429e1c5dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072219"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prérequis pour une journalisation minimale dans l’importation en bloc
   Pour une base de données en mode de récupération complète, toutes les opérations d'insertion de lignes effectuées par importation en bloc sont entièrement enregistrées dans le journal des transactions. Les importations de données de grande taille peuvent entraîner un remplissage rapide du journal des transactions si le mode de récupération complète est utilisé. Par opposition, en mode de récupération simple ou en mode de récupération utilisant les journaux de transactions, la journalisation minimale des opérations d'importation en bloc réduit la possibilité qu'une importation en bloc remplira l'espace de journal. La journalisation minimale est également plus efficace qu'une journalisation complète.  

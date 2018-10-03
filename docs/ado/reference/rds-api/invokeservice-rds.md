@@ -1,34 +1,31 @@
 ---
-title: InvokeService (RDS) | Documents Microsoft
+title: InvokeService (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - InvokeService [RDS]
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92927a240c0501196c1b9bf0c1643f6cb0f708d4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c7affc174f6d369f4527dd145538627e1a78c02f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288288"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836057"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Retourne un pointeur vers l’interface demandée sur une version plus performante de l’objet.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +37,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 #### <a name="parameters"></a>Paramètres  
  *riid*  
   
- [in] Identificateur de l’interface demandée.  
+ [in] L’identificateur de l’interface demandée.  
   
  *punkNotSoFunctionalInterface*  
   
@@ -48,13 +45,13 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
   
  *ppunkMoreFunctionalInterface*  
   
- [out] L’adresse de la variable pointeur qui reçoit le pointeur d’interface demandé dans *riid*. Lors d’un retour, le *ppunkMoreFunctionalInterface* paramètre contient le pointeur d’interface demandé à l’objet. Si l’objet ne prend pas en charge l’interface spécifiée dans *riid*, *ppunkMoreFunctionalInterface* a la valeur NULL.  
+ [out] L’adresse de la variable pointeur qui reçoit le pointeur d’interface demandé dans *riid*. En cas de renvoi, le *ppunkMoreFunctionalInterface* paramètre contient le pointeur d’interface demandé à l’objet. Si l’objet ne prend pas en charge l’interface spécifiée dans *riid*, *ppunkMoreFunctionalInterface* est définie sur NULL.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Une valeur HRESULT qui indique si l’appel à la **InvokeService** méthode a réussi.  
   
 ## <a name="remarks"></a>Notes  
- L’implémentation du moteur de curseur RDS de **InvokeService** prend l’ensemble de lignes d’entrée (ou de plusieurs objets de résultats), remplit le moteur de curseur à partir de l’ensemble de lignes d’entrée, puis retourne un pointeur sur lui-même.  
+ L’implémentation du moteur de curseur RDS de **InvokeService** prend l’ensemble de lignes d’entrée (ou plusieurs objets de résultats), remplit le moteur de curseur à partir de l’ensemble de lignes d’entrée et renvoie un pointeur sur lui-même.  
   
 ## <a name="applies-to"></a>S'applique à  
  [IRDSService, interface (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  

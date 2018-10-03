@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 42d4a6aa9601c7b49cc69a2406550c76134ed6dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d096f978b138de32c9aae7cdadd1480484dd095f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162030"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206119"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Tri interactif (Générateur de rapports et SSRS)
   Vous pouvez ajouter des boutons de tri interactifs pour permettre à un utilisateur de basculer entre l'ordre croissant et l'ordre décroissant pour les lignes d'une table ou pour les lignes et les colonnes d'une matrice. L'utilisation la plus courante du tri interactif consiste à ajouter un bouton de tri à chaque en-tête de colonne. L'utilisateur peut alors choisir la colonne en fonction de laquelle trier le contenu.  
