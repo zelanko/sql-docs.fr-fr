@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - namespaces [Reporting Services]
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 21e89ee1790e7db8c9e163c93262ba0cb2a76f7d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d0c2b65f24b76f875b8fa11896cc70f62bb0902b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272281"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668757"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Syntaxe de requête XML pour les données de rapport XML (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]vous permet de créer des datasets pour des sources de données XML. Après avoir défini une source de données, vous devez créer une requête pour le dataset. Selon le type de données XML sur lesquelles pointent la source de données, vous pouvez créer la requête du dataset en incluant une **requête** XML ou un chemin d’élément. Une **requête** XML commence par une balise **\<Query>** et comprend des espaces de noms et des éléments XML variant selon la source de données. Un chemin d'accès à un élément opère indépendamment des espaces de noms ; il précise les nœuds et les attributs de nœud à utiliser à partir des données XML sous-jacentes avec une syntaxe similaire à la syntaxe XPath. Pour plus d’informations sur les chemins d’éléments, consultez [Syntaxe du chemin vers l’élément pour des données de rapport XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  

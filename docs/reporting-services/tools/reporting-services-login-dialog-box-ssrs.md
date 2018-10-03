@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: reference
 f1_keywords:
 - sql13.rtp.rptdesigner.reportservicelogin.f1
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 98673cc6302868199f4c3781f6ff5b451b41c964
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2beb59a4cd0b1fefc8ff6ef9fafc376614cf0f3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273251"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706197"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Ouverture de session Reporting Services, boîte de dialogue (SSRS)
   Utilisez la boîte de dialogue **Ouverture de session Reporting Services** pour fournir les informations d'identification nécessaires à la publication de rapports sur le serveur de rapports.  

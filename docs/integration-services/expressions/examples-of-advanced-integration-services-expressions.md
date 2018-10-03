@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - expressions [Integration Services], examples
 - examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1476a0ec94f733983bffb9dee36bed6efd0e4b59
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: d2fcf0678fdfb78a5866a06306d3dc057fc6622a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334133"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670767"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Exemples d'expressions Integration Services avancées
   Cette section donne des exemples d'expressions avancées qui combinent plusieurs opérateurs et fonctions. Si une expression est utilisée dans une contrainte de priorité ou dans la transformation de fractionnement conditionnel, elle doit renvoyer une valeur booléenne. Toutefois, cette restriction ne s'applique pas aux expressions utilisées dans les expressions de propriété, les variables, la transformation de colonne dérivée ou le conteneur de boucles For.  
@@ -103,7 +100,7 @@ ms.locfileid: "35334133"
     ROUND(ListPrice / StandardCost,2) * 100  
     ```  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Utiliser une expression dans un composant de flux de données](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenu associé  

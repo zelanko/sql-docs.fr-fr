@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssdqs.designer.cleansing.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data correction
 - correct data
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d5107d7e559a37a6eac3030ef3f3995a9e749e55
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a0fa7d262017938578162594257deee2a0e79694
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331133"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692927"
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformation de nettoyage DQS
   La transformation de nettoyage DQS utilise les services Data Quality Services (DQS) pour corriger des données provenant d'une source de données connectée en appliquant des règles approuvées créées pour la source de données connectée ou une source de données similaire. Pour plus d'informations sur les règles de correction des données, consultez [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md). Pour plus d'informations sur DQS, consultez [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
@@ -45,7 +42,7 @@ ms.locfileid: "35331133"
 ## <a name="data-quality-projects-and-values"></a>Projets de qualité des données et valeurs  
  Lorsque vous traitez des données avec la transformation de nettoyage DQS, un projet de nettoyage est créé sur le serveur de qualité des données. Vous utilisez le client de qualité des données pour gérer le projet. En outre, vous pouvez utiliser le client de qualité des données pour importer les valeurs du projet dans un domaine de base de connaissances DQS. Vous pouvez importer les valeurs uniquement vers un domaine (ou un domaine lié) configuré pour être utilisé par la transformation de nettoyage DQS.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 -   [Ouvrir des projets Integration Services dans Data Quality Client](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
@@ -100,7 +97,7 @@ ms.locfileid: "35331133"
   
  Pour plus d’informations sur les domaines, consultez [Bases de connaissances et domaines DQS](../../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Configurer la sortie d'erreur**  
+ **Configurer la sortie d’erreur**  
  Spécifiez le mode de gestion des erreurs au niveau des lignes. Des erreurs peuvent se produire lorsque la transformation corrige des données de la source de données connectée, en raison de valeurs de données ou de contraintes de validation inattendues.  
   
  Les valeurs suivantes sont valides :  

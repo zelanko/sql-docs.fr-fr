@@ -3,7 +3,6 @@ title: Ajouter et supprimer des clés de chiffrement pour un déploiement évolu
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 288e4a4fab078a7b4d8afb7544416ee8a7429340
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: be584371ef8cb2e1f8594ee9156ea05b7aee85fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281595"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695947"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif
   Vous pouvez exécuter [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un modèle de déploiement avec montée en puissance parallèle si vous configurez plusieurs serveurs de rapports pour qu'ils utilisent une base de données de serveur de rapports partagée. L'appartenance d'un serveur de rapports au déploiement évolutif dépend si ce serveur a déposé ou non une clé de chiffrement dans la base de données de serveurs de rapports. Vous pouvez contrôler un déploiement évolutif en ajoutant et en supprimant des clés de chiffrement pour des instances de serveurs de rapports spécifiques. Si vous supprimez des nœuds du déploiement, vous pouvez les supprimer dans n'importe quel ordre. Si vous ajoutez des nœuds à un déploiement, vous devez joindre toutes les nouvelles instances à partir d'un serveur de rapports faisant déjà partie du déploiement.  
