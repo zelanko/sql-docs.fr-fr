@@ -1,14 +1,11 @@
 ---
-title: Sys.fn_my_permissions (Transact-SQL) | Documents Microsoft
+title: Sys.fn_my_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_my_permissions_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - fn_my_permissions function
 - sys.fn_my_permissions function
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b837943f16a7c8882b4e35aef3f769a3d731cd38
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239809"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659247"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +46,13 @@ fn_my_permissions ( securable , 'securable_class' )
  *securable*  
  Indique le nom de l'élément sécurisable. Si l'élément sécurisable est le serveur ou une base de données, cette valeur doit être définie sur NULL. *securable* est une expression scalaire de type **sysname**. *élément sécurisable* peut être un nom en plusieurs parties.  
   
- '*securable_class*'  
- Nom de la classe de l'élément sécurisable pour lequel les autorisations sont affichées. *securable_class* est un **sysname**. *securable_class* doit être une des opérations suivantes : rôle d’APPLICATION, ASSEMBLY, une clé asymétrique, certificat, contrat, de base de données, point de terminaison, FULLTEXT CATALOG, LOGIN, MESSAGE TYPE, objet, REMOTE SERVICE BINDING, rôle, itinéraire, schéma, serveur, SERVICE , CLÉ SYMÉTRIQUE, TYPE, UTILISATEUR, COLLECTION DE SCHÉMAS XML.  
+ «*securable_class*»  
+ Nom de la classe de l'élément sécurisable pour lequel les autorisations sont affichées. *securable_class* est un **sysname**. *securable_class* doit être un des éléments suivants : rôle d’APPLICATION, ASSEMBLY, une clé asymétrique, certificat, contrat, base de données, point de terminaison, FULLTEXT CATALOG, LOGIN, MESSAGE TYPE, objet, REMOTE SERVICE BINDING, rôle, itinéraire, schéma, serveur, SERVICE , CLÉ SYMÉTRIQUE, TYPE, UTILISATEUR, COLLECTION DE SCHÉMAS XML.  
   
 ## <a name="columns-returned"></a>Colonnes retournées  
  Le tableau suivant répertorie les colonnes qui **fn_my_permissions** retourne. Chaque ligne renvoyée décrit une autorisation détenue par le contexte de sécurité actuel sur l'élément sécurisable. Renvoie NULL si la requête échoue.  
   
-|Nom de colonne|Type| Description|  
+|Nom de colonne|Type|Description|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|Nom de l'élément sécurisable pour lequel les autorisations affichées sont effectivement accordées.|  
 |subentity_name|**sysname**|Nom de colonne si l'élément sécurisable contient des colonnes, sinon NULL.|  
@@ -75,7 +71,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  L'évaluation des autorisations a toujours lieu dans le contexte de sécurité de l'appelant. Pour déterminer si un autre principal dispose d'une autorisation effective, l'appelant doit disposer de l'autorisation IMPERSONATE sur ce principal.  
   
- Pour les entités au niveau schéma, les noms non NULL en une, deux ou trois parties sont acceptés. Pour les entités de niveau base de données, un nom en une partie est accepté, avec une valeur null signifie «*base de données actuelle*». Pour le serveur lui-même, la valeur NULL (« serveur actif ») est exigée. **fn_my_permissions** ne peut pas vérifier les autorisations sur un serveur lié.  
+ Pour les entités au niveau schéma, les noms non NULL en une, deux ou trois parties sont acceptés. Pour les entités de niveau de base de données, un nom en une partie est accepté, avec une valeur null signifie «*base de données actuelle*». Pour le serveur lui-même, la valeur NULL (« serveur actif ») est exigée. **fn_my_permissions** ne peut pas vérifier les autorisations sur un serveur lié.  
   
  La requête suivante renvoie la liste des classes intégrées des éléments sécurisables :  
   
@@ -85,7 +81,7 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- Si la valeur par défaut est fourni en tant que la valeur de *sécurisable* ou *securable_class*, la valeur sera interprétée comme NULL.  
+ Si la valeur par défaut est fourni comme valeur de *sécurisable* ou *securable_class*, la valeur sera interprétée comme NULL.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -136,7 +132,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. Affichage des autorisations effectives sur une collection de schémas XML  
- L’exemple suivant retourne une liste des autorisations effectives de l’appelant sur une Collection de schémas XML nommée `ProductDescriptionSchemaCollection` dans les [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données.  
+ L’exemple suivant retourne une liste des autorisations effectives de l’appelant sur une Collection de schémas XML nommée `ProductDescriptionSchemaCollection` dans le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données.  
   
 ```  
 USE AdventureWorks2012;  
@@ -168,7 +164,7 @@ GO
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
- [Hiérarchie des autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Hiérarchie des autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  

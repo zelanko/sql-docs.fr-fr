@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f60d8849c32aa52ac2dba616a17d0e1e6fc4734b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038480"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745317"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +165,23 @@ ms.locfileid: "38038480"
     </OutputOptions>  
 </Options>  
 ```  
-  
+
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Problème possible lors de l’exécution avec la synchronisation en Mode de séquencement
+ Vous pouvez rencontrer un problème dans lequel la fonctionnalité de relecture semble se « blocage », ou les événements de relectures très lentement. Ce phénomène peut se produire si la cours de relecture de trace s’appuie sur les données et/ou les événements qui n’existent pas dans la base de données restaurée. 
+ 
+ Par exemple, une charge de travail capturée utilise WAITFOR, comme dans l’instruction WAITFOR de réception de Service service Broker. Lorsque vous utilisez le mode de séquencement de synchronisation, les lots sont relus en série. Si une instruction INSERT portant sur la base de données source après la sauvegarde de base de données, mais avant la capture de la relecture de trace est démarrée, la réception WAITFOR émis lors de la relecture peut devoir attendre la durée totale de WAITFOR. Événements configurés pour être relus après que la réception de WAITFOR sera bloquée. Cela peut entraîner le compteur de moniteur de performances de requêtes Batch/s pour la relecture de base de données cible quand vous avez déposé à zéro jusqu'à ce que WAITFOR soit terminée. 
+ 
+ Si vous avez besoin d’utiliser le mode de synchronisation et souhaits afin d’éviter ce comportement, vous devez procédez comme suit :
+ 
+1.  Suspendre les bases de données que vous utiliserez en tant que cibles de la relecture.
+
+2.  Autoriser tous les en attente de l’activité à terminer.
+
+3.  Sauvegarder les bases de données et autoriser les sauvegardes à terminer.
+
+4.  Démarrez la capture de trace de relecture distribuée et reprendre la charge de travail normal. 
+ 
+ 
 ## <a name="see-also"></a> Voir aussi  
  [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   

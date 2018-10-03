@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3b2398732bc920b926a3db3352eacca6e39f7399
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 65f9070aabc6f64e1fc327abe67e595696c04423
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395878"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761733"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Paramètres (chargement d’objets système) du projet (DB2ToSQL)
 La page de chargement des objets de système de la **paramètres du projet** boîte de dialogue vous permet de spécifier les objets de système DB2 SSMA convertit et les charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -1,13 +1,11 @@
 ---
-title: AppendChunk et GetChunk, méthodes-exemple (VC ++) | Documents Microsoft
+title: AppendChunk et GetChunk, exemple de méthodes (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - GetChunk method [ADO], VC++ example
 - AppendChunk method [ADO], VC++ example
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da52a78a8614e230f2e4b26ec4603458a7ada084
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45853fc31ef6e18c3d64afacf9d5e998e6fc7855
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275858"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714607"
 ---
-# <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk et GetChunk, méthodes-exemple (VC ++)
+# <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk et GetChunk, exemple de méthodes (VC++)
 Cet exemple utilise le [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) et [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) méthodes pour remplir un champ d’image de données à partir d’un autre enregistrement.  
   
 ```  
@@ -271,5 +268,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
   
 ## <a name="see-also"></a>Voir aussi  
  [AppendChunk, méthode (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Objet Field](../../../ado/reference/ado-api/field-object.md)   
+ [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk, méthode (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

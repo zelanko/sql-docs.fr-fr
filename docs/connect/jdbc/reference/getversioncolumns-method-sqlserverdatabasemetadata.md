@@ -1,13 +1,11 @@
 ---
-title: Méthode getVersionColumns (SQLServerDatabaseMetaData) | Documents Microsoft
+title: Méthode getVersionColumns (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getVersionColumns
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 722fd20c9210b14cb503ab3a0189815fa3cc83dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 938cf980a4035684b2e77435d5ab4df9522b4407
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604007"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>Méthode getVersionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,43 +40,43 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- A **chaîne** qui contient le nom du catalogue.  
+ Un **chaîne** qui contient le nom du catalogue.  
   
  *schema*  
   
- A **chaîne** qui contient le modèle de nom de schéma.  
+ **Chaîne** contenant le modèle de nom du schéma.  
   
  *table*  
   
- A **chaîne** qui contient le nom de table.  
+ **Chaîne** qui contient le nom de la table.  
   
 ## <a name="return-value"></a>Valeur retournée  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objet.  
+ Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getVersionColumns est spécifiée par la méthode getVersionColumns dans l’interface java.sql.DatabaseMetaData.  
   
- Le jeu de résultats retourné par la méthode getVersionColumns contient les informations suivantes :  
+ Le jeu de résultats retourné par la méthode getVersionColumns contient les informations suivantes :  
   
-|Nom|Type| Description|  
+|Nom   |Type|Description|  
 |----------|----------|-----------------|  
-|SCOPE|**courte**|Non pris en charge par le pilote JDBC.|  
+|SCOPE|**short**|Non pris en charge par le pilote JDBC.|  
 |COLUMN_NAME|**String**|Nom de la colonne.|  
-|DATA_TYPE|**courte**|Type de données SQL de java.sql.Types.|  
+|DATA_TYPE|**short**|Type de données SQL de java.sql.Types.|  
 |TYPE_NAME|**String**|Nom du type de données.|  
-|COLUMN_SIZE|**int**|La précision de la colonne.|  
-|BUFFER_LENGTH|**int**|Longueur de la colonne en octets.|  
-|DECIMAL_DIGITS|**courte**|L’échelle de la colonne.|  
-|PSEUDO_COLUMN|**courte**|Indique si la colonne est une pseudo-colonne. Il peut prendre l’une des valeurs suivantes :<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
+|COLUMN_SIZE|**Int**|Précision de la colonne.|  
+|BUFFER_LENGTH|**Int**|Longueur de la colonne en octets.|  
+|DECIMAL_DIGITS|**short**|Échelle de la colonne.|  
+|PSEUDO_COLUMN|**short**|Indique si la colonne est une pseudo-colonne. Il peut avoir une des valeurs suivantes :<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
 > [!NOTE]  
->  Pour plus d’informations sur les données retournées par la méthode getVersionColumns, consultez la rubrique « sp_datatype_info (Transact-SQL) » dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] la documentation en ligne.  
+>  Pour plus d’informations sur les données retournées par la méthode getVersionColumns, consultez la rubrique « sp_datatype_info (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser la méthode getVersionColumns pour renvoyer des informations sur les colonnes qui sont automatiquement mis à jour dans la table Person.Contact dans le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] base de données exemple.  
+## <a name="example"></a> Exemple  
+ L’exemple suivant montre comment utiliser la méthode getVersionColumns pour retourner des informations sur les colonnes qui sont mises à jour automatiquement dans la table Person.Contact de l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetVersionColumns(Connection con) {  
@@ -104,9 +101,9 @@ public static void executeGetVersionColumns(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Membres de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
+ [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

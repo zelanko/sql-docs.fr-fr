@@ -1,13 +1,11 @@
 ---
-title: Propriété de source de données (ADO) | Documents Microsoft
+title: DataSource, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,22 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - DataSource property [ADO]
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5fa4df4252d9970d4ec8ec36500dc5782466c675
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ad42ea14e58e28bf5eee0e5aac66c5a8fc309f2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277468"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801277"
 ---
-# <a name="datasource-property-ado"></a>Propriété de source de données (ADO)
-Indique un objet qui contient des données pour être représentée comme un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
+# <a name="datasource-property-ado"></a>DataSource, propriété (ADO)
+Indique un objet qui contient les données pour être représentée comme un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété est utilisée pour créer des contrôles liés aux données avec l’environnement de données. L’environnement de données conserve des collections de données (sources de données) contenant des objets nommés (données membres) qui seront représentées comme un **Recordset** objet *.*  
+ Cette propriété est utilisée pour créer des contrôles liés aux données avec l’environnement de données. L’environnement de données conserve des collections de données (sources de données) contenant des objets nommés (données membres) qui seront représentés comme un **Recordset** objet *.*  
   
  Le [DataMember](../../../ado/reference/ado-api/datamember-property.md) et **DataSource** propriétés doivent être utilisées conjointement.  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 37a22721-546c-453d-bc6f-238c13d7505d
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7996f92639e3bdc6bf759b3f223dff4907752acb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ddea53ac070e23d687e79644379538076a6854e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244581"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056670"
 ---
 # <a name="getting-started-in-visual-c-net"></a>Mise en route avec Visual C# .NET
   [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET est un des langages de programmation managés pris en charge par le common language runtime (CLR) dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Pour plus d’informations sur le langage c#, consultez le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation .NET. Vous pouvez utiliser aussi bien [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] que [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] pour développer des applications SMO.  

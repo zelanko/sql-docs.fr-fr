@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Schema Object Access event class
 ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 982c9736da979ee303c0ca4d564bdfb8ce0e22a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79324c99ead473c2212a30def597d88e0e408a18
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240769"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050440"
 ---
 # <a name="audit-schema-object-access-event-class"></a>Audit Schema Object Access (classe d'événements)
   La classe d’événements **Audit Schema Object Access** se produit quand une autorisation pour un objet (par exemple, SELECT) est utilisée.  
@@ -57,7 +54,7 @@ ms.locfileid: "37240769"
 |**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |**Réussi**|**Int**|1 = réussite. 0 = échec. Par exemple, la valeur 1 signifie la réussite d'une vérification des autorisations alors que la valeur 0 signifie un échec de cette vérification.|23|Oui|  
-|**TextData**|**ntext**|Texte SQL de l'instruction.| 1|Oui|  
+|**TextData**|**ntext**|Texte SQL de l'instruction.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |**XactSequence**|**bigint**|Jeton utilisé pour décrire la transaction en cours.|50|Oui|  
   

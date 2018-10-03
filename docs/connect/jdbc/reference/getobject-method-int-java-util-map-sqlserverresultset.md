@@ -1,13 +1,11 @@
 ---
-title: Méthode getObject (int, java.util.Map) (SQLServerResultSet) | Documents Microsoft
+title: getObject, méthode (int, java.util.Map) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getObject (int, java.util.Map)
@@ -15,24 +13,23 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: df85a514-ab43-4bf6-98dd-f7f37fad1850
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c30aa2a4e2a414f575b5654ad4d318f0a7addeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5cbed2006e259b25d484e98b77b68b33f383de2d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726907"
 ---
 # <a name="getobject-method-int-javautilmap-sqlserverresultset"></a>Méthode getObject (int, java.util.Map) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Obtient la valeur de l’index de colonne désigné dans la ligne actuelle de ce [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objet comme un objet dans le langage de programmation, à l’aide de l’objet donné de la carte.  
+  Obtient la valeur de l’index de la colonne désignée dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant qu’objet dans le langage de programmation Java, en utilisant l’objet Map donné.  
   
 > [!NOTE]  
->  Cette méthode n’est pas actuellement pris en charge par le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Lorsqu'elle est utilisée, cette méthode retourne toujours le mappage par défaut.  
+>  Actuellement, cette méthode n’est pas prise en charge par le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Lorsqu'elle est utilisée, cette méthode retourne toujours le mappage par défaut.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,28 +40,28 @@ public java.lang.Object getObject(int i,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *J’ai*  
+ *i*  
   
  Un **int** qui indique l’index de colonne.  
   
- *carte*  
+ *map*  
   
  Un objet de mappage.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **objet** valeur.  
+ Valeur **Object**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getObject est spécifiée par la méthode getObject dans l’interface java.sql.ResultSet.  
   
  Cette méthode retourne la valeur de la colonne fournie en tant qu'objet Java. Le type de l'objet Java sera le type d'objet Java par défaut correspondant au type SQL de la colonne, en suivant le mappage pour les types intégrés indiqué dans la spécification JDBC. Si la valeur est SQL NULL, le pilote retourne une valeur Java NULL.  
   
- Cette méthode peut aussi servir à lire des types de données abstraits spécifiques à une base de données. Dans l’API JDBC 2.0, le comportement de la méthode getObject est étendu afin de matérialiser les données de types SQL définis par l’utilisateur. Lorsqu’une colonne contient une valeur structurée ou distincte, le comportement de cette méthode est comme s’il s’agissait d’un appel à `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
+ Cette méthode peut aussi servir à lire des types de données abstraits spécifiques à une base de données. Dans l’API JDBC 2.0, le comportement de la méthode getObject est étendu afin de matérialiser les données des types SQL définis par l’utilisateur. Quand une colonne contient une valeur structurée ou distincte, le comportement de cette méthode s’apparente à celui d’un appel de `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`.  
   
- À compter de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] le pilote JDBC version 3.0 :  
+ À compter de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 :  
   
 -   Une valeur de type date est retournée en tant qu'objet java.sql.Date.  
   
@@ -74,9 +71,9 @@ public java.lang.Object getObject(int i,
   
 -   Une valeur de type datetimeoffset est retournée en tant qu'objet microsoft.sql.DateTimeOffset.  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthode getObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)   
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [getObject, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)   
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

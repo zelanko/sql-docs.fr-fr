@@ -5,10 +5,7 @@ ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_continuous_copy_status_TSQL
@@ -21,19 +18,18 @@ helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 478e5ed025fb371d7b615e39580865346413d4b6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 407af081f09fb773a8a3a4ee7ccc7e3c42ee3229
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061797"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655937"
 ---
-# <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>Sys.dm_continuous_copy_status (Azure SQL Database)
+# <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque base de données utilisateur (V11) qui est actuellement engagée dans une relation de copie continue de géo-réplication. Si plusieurs relations de copie continue sont initialisées pour une base de données primaire donnée, cette table contient une ligne pour chaque base de données secondaire active.  
@@ -54,7 +50,7 @@ Si vous utilisez SQL Database V12, vous devez utiliser [sys.dm_geo_replication_l
 |**is_target_role**|**bit**|0 = Source de la relation de copie<br /><br /> 1 = Cible de la relation de copie|  
 |**is_interlink_connected**|**bit**|1 = L'interlien est connecté.<br /><br /> 0 = L'interlien est déconnecté.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour récupérer des données, nécessite l’appartenance dans le **db_owner** rôle de base de données. L’utilisateur dbo, les membres de la **dbmanager** rôle de base de données et la connexion sa peuvent interroger cette vue ainsi.  
   
 ## <a name="remarks"></a>Notes  

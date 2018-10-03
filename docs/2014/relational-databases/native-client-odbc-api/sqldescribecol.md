@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLDescribeCol function
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb0ae64b7a34dc06814d94bbdeafd90f3b4af4cc
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4def24dac95db8cf86d0a23bd1e0f7a951d4e9e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410448"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054989"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   Pour les instructions exécutées, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client n’a pas besoin d’interroger le serveur pour décrire les colonnes dans un jeu de résultats. Dans ce cas, `SQLDescribeCol` n’entraîne pas un aller-retour sur le serveur. Comme [SQLColAttribute](sqlnumresultcols.md), l’appel `SQLDescribeCol` sur préparées mais les instructions non exécutées génère un aller-retour sur le serveur.  
@@ -33,7 +30,7 @@ ms.locfileid: "37410448"
   
  Pour les types de données de valeur élevée, la valeur retournée dans *DataTypePtr* est SQL_VARCHAR, SQL_VARBINARY ou SQL_NVARCHAR. Une valeur sql_ss_length_unlimited dans *ColumnSizePtr* indique que la taille est « illimitée ».  
   
- Améliorations du moteur de base de données en commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] autoriser SQLDescribeCol obtenir des descriptions plus exactes des résultats attendus. Ces résultats plus exacts peuvent différer des valeurs retournées par SQLDescribeCol dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [découverte des métadonnées](../native-client/features/metadata-discovery.md).  
+ Améliorations du moteur de base de données en commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] autoriser SQLDescribeCol obtenir des descriptions plus exactes des résultats attendus. Ces résultats plus exacts peuvent différer des valeurs retournées par SQLDescribeCol dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Découverte des métadonnées](../native-client/features/metadata-discovery.md).  
   
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>Prise en charge par SQLDescribeCol des fonctionnalités de date et heure améliorées  
  Les valeurs retournées pour les types date/heure sont les suivantes :  

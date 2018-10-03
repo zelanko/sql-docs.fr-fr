@@ -1,14 +1,11 @@
 ---
-title: Suppression d’une étendue de procédure à partir de SQL Server | Documents Microsoft
+title: Suppression d’une étendue de procédure à partir de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - deleting extended stored procedures
@@ -16,15 +13,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], removing
 - dropping extended stored procedures
 ms.assetid: 7827e574-3f59-4279-9a9b-532582e041cb
-caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dc3d3c686c4f3d0f81dc2f2bb17eb3ba29090319
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f04a0baa52eff0ac5742769e9eb6bfd7bfc246c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717527"
 ---
 # <a name="removing-an-extended-stored-procedure-from-sql-server"></a>Suppression d'une procédure stockée étendue de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Utilisez l’intégration CLR à la place.  
   
- Pour supprimer chaque fonction de la procédure stockée étendue dans un défini par l’utilisateur étendue DLL de procédure stockée, un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrateur système doit exécuter la **sp_dropextendedproc** système procédure stockée, en spécifiant le nom de la fonction et le nom de la DLL dans laquelle cette fonction réside. Par exemple, cette commande supprime la fonction **xp_hello**, qui se trouve dans une DLL nommée xp_hello.dll, de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Pour supprimer chaque fonction de la procédure stockée étendue dans un défini par l’utilisateur étendu DLL de procédure stockée, un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrateur système doit exécuter la **sp_dropextendedproc** système procédure stockée, en spécifiant le nom de la fonction et le nom de la DLL dans laquelle cette fonction réside. Par exemple, cette commande supprime la fonction **xp_hello**, qui se trouve dans une DLL nommée xp_hello.dll, à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 ```  
 sp_dropextendedproc 'xp_hello'  

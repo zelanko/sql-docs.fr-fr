@@ -1,34 +1,31 @@
 ---
-title: Clone, méthode-exemple (VBScript) | Documents Microsoft
+title: Clone, exemple de méthode (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83bc13a4f86c888a819b2c7dc39ea971f4ffcda7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b259eaf019bc3ac173bfd1a4c282b517b41b1394
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276388"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783667"
 ---
-# <a name="clone-method-example-vbscript"></a>Clone, méthode-exemple (VBScript)
+# <a name="clone-method-example-vbscript"></a>Clone, exemple de méthode (VBScript)
 Cet exemple utilise le [Clone](../../../ado/reference/ado-api/clone-method-ado.md) méthode pour créer des copies d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) puis permet à l’utilisateur de positionner le pointeur d’enregistrement de chaque copie indépendamment.  
   
- Utilisez l’exemple suivant dans une Page ASP (Active Server). Cet exemple utilise le **Northwind** base de données distribuée avec Microsoft Access. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous le nom CloneVBS.asp. Vous pouvez afficher le résultat dans un navigateur client.  
+ Utilisez l’exemple suivant dans une Page ASP (Active Server). Cet exemple utilise le **Northwind** base de données distribuée avec Microsoft Access. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous le nom CloneVBS.asp. Vous pouvez afficher le résultat dans n’importe quel navigateur client.  
   
  Pour tester l’exemple, remplacez la ligne `RsCustomerList.Source = "Customers"` à `RsCustomerList.Source = "Products"` à compter d’une table plus volumineuse.  
   

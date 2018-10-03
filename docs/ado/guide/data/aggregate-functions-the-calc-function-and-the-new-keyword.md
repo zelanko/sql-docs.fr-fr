@@ -1,13 +1,11 @@
 ---
-title: Agréger des fonctions, la fonction de calcul et le mot clé NEW | Documents Microsoft
+title: Agréger des fonctions, la fonction CALC et le mot clé NEW | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], functions
@@ -15,43 +13,42 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba6aae19a559dd1e475809339281c8b65c282517
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271548"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625927"
 ---
-# <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Fonctions d’agrégation, la fonction de calcul et le mot clé NEW
-Mise en forme des données prend en charge les fonctions suivantes. Le nom attribué au chapitre contenant la colonne à traiter est le *alias-chapitre*.  
+# <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Fonctions d’agrégation, fonction CALC et mot clé NEW
+Mise en forme des données prend en charge les fonctions suivantes. Est le nom attribué au chapitre contenant la colonne doit être utilisée dans le *alias-chapitre*.  
   
- Un alias-chapitre peut être complet, constitué de chaque nom de colonne de chapitre menant au chapitre contenant le *-nom de la colonne,* séparés par des points. Par exemple, si le chapitre parent, chap1, contient un chapitre enfant, chap2, qui possède une colonne de montant, amt, puis le nom qualifié serait Chap1.Chap2.mnt.  
+ Un alias-chapitre peut être complet, constitué de chaque nom de colonne de chapitre menant au chapitre contenant le *nom de colonne,* toutes séparées par des points. Par exemple, si le chapitre parent, chap1, contient un chapitre enfant, chap2, qui possède une colonne de quantité, amt, puis le nom qualifié serait Chap1.Chap2.mnt.  
   
 |Fonctions d'agrégation|Description|  
 |-------------------------|-----------------|  
-|SUM (*alias-chapitre*. *nom de la colonne*)|Calcule la somme de toutes les valeurs dans la colonne spécifiée.|  
+|Somme (*alias-chapitre*. *nom de la colonne*)|Calcule la somme de toutes les valeurs dans la colonne spécifiée.|  
 |AVG (*alias-chapitre*. *nom de la colonne*)|Calcule la moyenne de toutes les valeurs dans la colonne spécifiée.|  
-|MAX (*alias-chapitre*. *nom de la colonne*)|Calcule la valeur maximale dans la colonne spécifiée.|  
+|MAX (*alias-chapitre*. *nom de la colonne*)|Calcule la valeur maximale de la colonne spécifiée.|  
 |MIN (*alias-chapitre*. *nom de la colonne*)|Calcule la valeur minimale de la colonne spécifiée.|  
-|NOMBRE (*alias-chapitre*[. *nom de la colonne*])|Compte le nombre de lignes dans l’alias spécifié. Si une colonne est spécifiée, seules les lignes pour lesquelles cette colonne n’est pas nulle sont inclus dans le nombre.|  
-|STDEV (*alias-chapitre*. *nom de la colonne*)|Calcule l’écart type de la colonne spécifiée.|  
-|N’importe quel (*alias-chapitre*. *nom de la colonne*)|Valeur de la colonne spécifiée. UNE a une valeur prévisible uniquement lorsque la valeur de la colonne est la même pour toutes les lignes dans le chapitre.<br /><br /> **Remarque** si la colonne ne contient pas la même valeur pour toutes les lignes dans le chapitre, la commande SHAPE retourne arbitrairement l’une des valeurs pour la valeur de la fonction de n’importe quel.|  
+|NOMBRE (*alias-chapitre*[. *nom de la colonne*])|Compte le nombre de lignes dans l’alias spécifié. Si une colonne est spécifiée, seules les lignes pour lesquelles cette colonne n’est pas Null sont inclus dans le nombre.|  
+|STDEV (*alias-chapitre*. *nom de la colonne*)|Calcule l’écart type dans la colonne spécifiée.|  
+|N’importe quel (*alias-chapitre*. *nom de la colonne*)|Une valeur de la colonne spécifiée. UNE a une valeur prévisible uniquement lorsque la valeur de la colonne est le même pour toutes les lignes dans le chapitre.<br /><br /> **Remarque** si la colonne ne contient pas la même valeur pour toutes les lignes dans le chapitre, la commande SHAPE retourne arbitrairement l’une des valeurs à la valeur de la fonction de n’importe quel.|  
   
-|Expression calculée|Description|  
+|expression calculée|Description|  
 |---------------------------|-----------------|  
-|CALCUL (*expression*)|Calcule une expression arbitraire, mais uniquement sur la ligne de la **Recordset** contenant la fonction de calcul. Toute expression utilisant ces [Visual Basic pour Applications (VBA) fonctions](../../../ado/guide/data/visual-basic-for-applications-functions.md) est autorisée.|  
+|CALC (*expression*)|Calcule une expression arbitraire, mais uniquement sur la ligne de la **Recordset** contenant la fonction CALC. Toute expression utilisant ces [Visual Basic pour Applications (VBA) fonctions](../../../ado/guide/data/visual-basic-for-applications-functions.md) est autorisée.|  
   
 |NOUVEAU mot clé|Description|  
 |-----------------|-----------------|  
-|NOUVELLE *type de champ* [(*largeur* &#124; *échelle* &#124; *précision* &#124; *erreur*[, *échelle* &#124; *erreur*])]|Ajoute une colonne vide du type spécifié à la **Recordset**.|  
+|NOUVELLE *type de champ* [(*largeur* &#124; *mise à l’échelle* &#124; *précision* &#124; *erreur*[, *mise à l’échelle* &#124; *erreur*])]|Ajoute une colonne vide du type spécifié à la **Recordset**.|  
   
  Le *type de champ* passé avec le mot clé NEW peut être un des types de données suivants.  
   
-|Types de données OLE DB|Type (s) données ADO|  
+|Types de données OLE DB|Données ADO type (s)|  
 |-----------------------|-----------------------------------|  
 |DBTYPE_BSTR|adBSTR|  
 |DBTYPE_BOOL|adBoolean|  
@@ -74,9 +71,9 @@ Mise en forme des données prend en charge les fonctions suivantes. Le nom attri
 |DBTYPE_FILETIME|adFileTime|  
 |DBTYPE_ERROR|adError|  
   
- Lorsque le nouveau champ est de type decimal (OLE DB, DBTYPE_DECIMAL ou dans ADO, adDecimal), vous devez spécifier les valeurs de précision et l’échelle.  
+ Lorsque le nouveau champ est de type decimal (dans OLE DB, DBTYPE_DECIMAL ou dans ADO, adDecimal), vous devez spécifier les valeurs de précision et l’échelle.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)   
- [Grammaire de mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Grammaire de la mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
  [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)

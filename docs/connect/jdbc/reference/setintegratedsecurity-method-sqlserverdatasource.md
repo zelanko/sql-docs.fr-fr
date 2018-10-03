@@ -1,13 +1,11 @@
 ---
-title: Méthode setIntegratedSecurity (SQLServerDataSource) | Documents Microsoft
+title: Méthode setIntegratedSecurity (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.setIntegratedSecurity
@@ -15,20 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4c968ee4-b041-424a-bf69-cc2c4a4f51c6
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2dca7a3c3cb2f6ac80fd9901c05e03135a42dc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b5919545e08b2de0578080e7dbc538ea2581f587
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690907"
 ---
 # <a name="setintegratedsecurity-method-sqlserverdatasource"></a>Méthode setIntegratedSecurity (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Définit un **booléenne** valeur qui indique si la propriété integratedSecurity est activée.  
+  Définit une valeur **booléenne** qui indique si la propriété integratedSecurity est activée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,15 +40,15 @@ public void setIntegratedSecurity(boolean enable)
   
  **true** si integratedSecurity est activée. Dans le cas contraire, la valeur est **false**.  
   
-## <a name="remarks"></a>Notes  
- La valeur «**true**» pour indiquer que les informations d’identification Windows seront utilisées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] pour authentifier l’utilisateur de l’application. Si «**true**», le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] recherche le cache des informations d’identification qui ont déjà été fournis à l’ouverture de session d’ordinateur ou réseau ordinateur local. Si «**false**», le nom d’utilisateur et un mot de passe doivent être fournis.  
+## <a name="remarks"></a>Notes   
+ Définissez sa valeur sur **true** pour indiquer que les informations d’identification Windows seront utilisées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour authentifier l’utilisateur de l’application. Si la valeur est **true**, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] recherche les informations d’identification déjà fournies lors de la connexion à l’ordinateur ou au réseau dans le cache des informations d’identification de l’ordinateur local. Si la valeur est **false**, le nom d’utilisateur et le mot de passe doivent être fournis.  
   
 > [!NOTE]  
->  Cette propriété est uniquement prise en charge sur [!INCLUDE[msCoName](../../../includes/msconame_md.md)] systèmes d’exploitation Windows.  
+>  Cette propriété de connexion est prise en charge seulement sur les systèmes d’exploitation [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Windows.  
   
- Pour plus d’informations sur l’utilisation de l’authentification intégrée, consultez [générer l’URL de connexion](../../../connect/jdbc/building-the-connection-url.md).  
+ Pour plus d’informations sur l’utilisation de l’authentification intégrée, consultez [Building the Connection URL](../../../connect/jdbc/building-the-connection-url.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

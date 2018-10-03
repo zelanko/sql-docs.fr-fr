@@ -1,13 +1,11 @@
 ---
-title: ChangePassword, méthode (ADOX) | Documents Microsoft
+title: ChangePassword, méthode (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - ChangePassword method [ADOX]
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 224dd233d774781e5d902a952848587a543baee4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 96268fac4b81230fcb63db6b48ef4ef794abb9c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285190"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788707"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword, méthode (ADOX)
 Modifie le mot de passe pour un [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) compte.  
@@ -39,10 +36,10 @@ User.ChangePassword OldPassword, NewPassword
   
 #### <a name="parameters"></a>Paramètres  
  *OldPassword*  
- A **chaîne** valeur qui spécifie le mot de passe existant. Si l’utilisateur ne possède pas un mot de passe, utilisez une chaîne vide (« ») pour *OldPassword*.  
+ Un **chaîne** valeur qui spécifie le mot de passe existant. Si l’utilisateur ne dispose actuellement d’un mot de passe, utilisez une chaîne vide (" ») pour *OldPassword*.  
   
  *NewPassword*  
- A **chaîne** valeur qui spécifie le nouveau mot de passe.  
+ Un **chaîne** valeur qui spécifie le nouveau mot de passe.  
   
 ## <a name="remarks"></a>Notes  
  Pour des raisons de sécurité, l’ancien mot de passe doit être spécifié en plus du nouveau mot de passe.  

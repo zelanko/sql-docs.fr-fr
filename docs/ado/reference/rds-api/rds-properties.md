@@ -1,32 +1,29 @@
 ---
-title: Propriétés des services Bureau à distance | Documents Microsoft
+title: Propriétés des services Bureau à distance | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f56675c6a797362cc90b0739824fa44095ff43b6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 42f3c54649d3618f2f6e492e1c965ded491e3dbe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288468"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811957"
 ---
-# <a name="rds-properties"></a>Propriétés des services Bureau à distance
+# <a name="rds-properties"></a>Propriétés RDS
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 |||  
 |-|-|  
@@ -38,7 +35,7 @@ ms.locfileid: "35288468"
 |[FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|Indique la valeur à filtrer les enregistrements.|  
 |[Gestionnaire (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Indique le nom d’un programme de personnalisation côté serveur (*gestionnaire*) qui étend les fonctionnalités de la **RDSServer.DataFactory**et tous les paramètres utilisés par le *gestionnaire*.|  
 |[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|Indique le nombre de millisecondes à attendre avant l’expiration d’une requête.|  
-|[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|Indique la progression d’un **DataControl** de l’objet qu’il extrait les données dans son **Recordset** objet.|  
+|[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|Indique la progression d’un **DataControl** objet comme il extrait les données dans son **Recordset** objet.|  
 |[Recordset et SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|Indique le **Recordset** objet retourné à partir d’un objet métier personnalisé.|  
 |[Serveur (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|Indique le protocole de nom et la communication Internet Information Services (IIS).|  
 |[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|Indique la colonne selon laquelle trier les enregistrements.|  

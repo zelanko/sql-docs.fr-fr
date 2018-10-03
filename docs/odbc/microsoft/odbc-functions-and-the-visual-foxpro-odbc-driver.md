@@ -1,13 +1,11 @@
 ---
-title: Fonctions ODBC et le pilote ODBC Visual FoxPro | Documents Microsoft
+title: Fonctions ODBC et le pilote ODBC Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC level 2 API functions [ODBC]
@@ -20,30 +18,29 @@ helpviewer_keywords:
 - level 2 API functions [ODBC]
 - ODBC core level API functions [ODBC]
 ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdbd0f2c54fb84f21d0a2448dcab07f22a47ae32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b83edd4ce5bfafcd8413683abad50918cc47d3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905074"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782677"
 ---
-# <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Fonctions ODBC et le pilote ODBC Visual FoxPro
+# <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>Fonctions ODBC et pilote ODBC Visual FoxPro
 Les rubriques de cette section fournissent un bref résumé des fonctions API ODBC et des détails spécifiques à Visual FoxPro.  
   
 > [!NOTE]  
->  Pour obtenir des informations générales sur les fonctions ODBC, consultez [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md) dans le « Guide du programmeur ODBC ».  
+>  Pour obtenir des informations générales sur les fonctions ODBC, consultez [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md) dans « Guide du programmeur ODBC ».  
   
- Les fonctions API ODBC ont été divisées en trois catégories principales : les fonctions API de niveau de base, les fonctions de l’API de niveau 1 et les fonctions API de niveau 2.  
+ Les fonctions API ODBC ont été divisées en trois catégories principales : les fonctions API de niveau de base, les fonctions API de niveau 1 et API de niveau 2.  
   
 > [!NOTE]  
->  Plusieurs fonctions se comportent différemment selon que la source de données est définie en tant qu’une connexion à un répertoire de [libre tables](../../odbc/microsoft/visual-foxpro-terminology.md) (fichiers .dbf) ou à un Visual FoxPro [base de données](../../odbc/microsoft/visual-foxpro-terminology.md) (fichier .dbc). Certaines opérations sont prises en charge uniquement pour les connexions de base de données.  
+>  Plusieurs fonctions se comportent différemment selon que la source de données est définie en tant que connexion dans le répertoire de [gratuit tables](../../odbc/microsoft/visual-foxpro-terminology.md) (fichiers .dbf) ou à un Visual FoxPro [base de données](../../odbc/microsoft/visual-foxpro-terminology.md) (fichier .dbc). Certaines opérations sont prises en charge uniquement pour les connexions de base de données.  
   
 ## <a name="core-level-api-support"></a>La prise en charge API au niveau de base  
- Les fonctions API de niveau principal ODBC sont répertoriées dans le tableau suivant. Toutes ces fonctions sont prises en charge par le pilote ODBC de Visual FoxPro.  
+ Les fonctions API de niveau principal ODBC sont répertoriées dans le tableau suivant. Toutes ces fonctions sont prises en charge par le pilote ODBC Visual FoxPro.  
   
 |||  
 |-|-|  
@@ -60,7 +57,7 @@ Les rubriques de cette section fournissent un bref résumé des fonctions API OD
 |[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)|[SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)|  
   
 ## <a name="level-1-api-support"></a>Prise en charge des API de niveau 1  
- Les fonctions API de ODBC niveau 1 sont répertoriées dans le tableau suivant. Toutes ces fonctions sont complètement ou partiellement prises en charge par le pilote ODBC de Visual FoxPro.  
+ Les fonctions API de ODBC niveau 1 sont répertoriées dans le tableau suivant. Toutes ces fonctions sont entièrement ou partiellement prises en charge par le pilote ODBC Visual FoxPro.  
   
 |||  
 |-|-|  
@@ -74,7 +71,7 @@ Les rubriques de cette section fournissent un bref résumé des fonctions API OD
 |[SQLGetStmtOption](../../odbc/microsoft/sqlgetstmtoption-visual-foxpro-odbc-driver.md)|[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)|  
   
 ## <a name="level-2-api-support"></a>Prise en charge des API de niveau 2  
- Les fonctions ODBC niveau 2 d’API suivantes sont prises en charge entièrement ou partiellement :  
+ Les fonctions ODBC niveau 2 API suivantes sont entièrement ou partiellement pris en charge :  
   
 -   [SQLDataSources](../../odbc/microsoft/sqldatasources-visual-foxpro-odbc-driver.md)  
   
@@ -94,7 +91,7 @@ Les rubriques de cette section fournissent un bref résumé des fonctions API OD
   
 -   [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) (prise en charge partielle)  
   
- Les fonctions de niveau 2 d’API suivantes ne sont pas prises en charge :  
+ Les fonctions API de niveau 2 suivantes ne sont pas prises en charge :  
   
 -   SQLBrowseConnect  
   

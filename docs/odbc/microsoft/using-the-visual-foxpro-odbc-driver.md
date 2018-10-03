@@ -1,30 +1,27 @@
 ---
-title: Le pilote ODBC Visual FoxPro | Documents Microsoft
+title: À l’aide du pilote ODBC Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver
 - FoxPro ODBC driver [ODBC], using Visual FoxPro ODBC driver
 ms.assetid: c50371a0-b1b2-406c-a4e5-d5191d519f5b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cdb31cdc04536981fe2c91e4cd2b4274b1585c15
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7c433de56ff5e171a817e8a25b9d850c0ecefa0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905367"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825677"
 ---
-# <a name="using-the-visual-foxpro-odbc-driver"></a>Le pilote ODBC Visual FoxPro
+# <a name="using-the-visual-foxpro-odbc-driver"></a>Utilisation du pilote ODBC Visual FoxPro
 Dans cette section, les rubriques suivantes expliquent comment utiliser le pilote ODBC de Microsoft® Visual FoxPro® :  
   
 -   [Ajout d’une source de données Visual FoxPro](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)  

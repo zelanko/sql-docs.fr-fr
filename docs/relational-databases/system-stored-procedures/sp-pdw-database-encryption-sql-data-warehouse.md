@@ -5,10 +5,6 @@ ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.service: sql-data-warehouse
-ms.component: system-objects
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6508d150df663a6e95437d0b6b3bfd0c8f65906f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eeb1263c02b9b06ffe747b78f8dae5691b7f92fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052227"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846617"
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption pour (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -53,7 +49,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="remarks"></a>Notes  
  Lorsque la chiffrement transparent des données sont activée à l’aide de **sp_pdw_database_encryption pour**, la base de données tempdb est supprimé, recréé et chiffré. Pour cette raison, la chiffrement transparent des données ne peut pas être activée sur une appliance tandis que les autres sessions sont actives à l’aide de tempdb. L’activation ou désactivation de TDE sur une appliance est une action qui modifie l’état de l’appliance, dans la plupart des cas doit être effectuée qu’une seule fois dans la durée de vie du matériel et doit être exécutée lorsqu’il n’existe aucun trafic sur l’appliance.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l’appartenance dans le **sysadmin** rôle de base de données fixe ou **CONTROL SERVER** autorisation.  
   
 ## <a name="example"></a>Exemple  

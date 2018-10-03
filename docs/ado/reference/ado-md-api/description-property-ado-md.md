@@ -1,13 +1,11 @@
 ---
-title: Description, propriété (ADO MD) | Documents Microsoft
+title: Description, propriété (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -20,27 +18,26 @@ f1_keywords:
 helpviewer_keywords:
 - Description property [ADO MD]
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b073b4719de6554159947502a525d242f37e6707
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 643bcfef67b1f3c5434d7beaac46da2d46bbdd14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655542"
 ---
 # <a name="description-property-ado-md"></a>Description, propriété (ADO MD)
-Retourne une description de texte de l’objet actuel.  
+Retourne une explication textuelle de l’objet actuel.  
   
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un **chaîne** et est en lecture seule.  
   
 ## <a name="remarks"></a>Notes  
- Pour [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md) objets, **Description** s’applique uniquement aux membres de formule et de mesure. **Description** retourne une chaîne vide (« ») pour tous les autres types de membres. Pour plus d’informations sur les différents types de membres, consultez la [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) propriété.  
+ Pour [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md) objets, **Description** s’applique uniquement aux membres de formule et de mesure. **Description** retourne une chaîne vide (" ») pour tous les autres types de membres. Pour plus d’informations sur les différents types de membres, consultez la [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) propriété.  
   
- Cette propriété est uniquement prise en charge sur **membre** les objets qui appartiennent à un [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) objet. Une erreur se produit lorsque cette propriété est référencée à partir de **membre** objets appartenant à un [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) objet.  
+ Cette propriété est uniquement pris en charge **membre** objets qui appartiennent à un [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) objet. Une erreur se produit lorsque cette propriété est référencée à partir de **membre** objets appartenant à un [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) objet.  
   
 ## <a name="applies-to"></a>S'applique à  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e21a1085758cc5442d2839dac679cd092875b8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d92673f3b551076eea675e9a5d909acd5f293337
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060899"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile, classe d'événements
   La classe d'événements SP:Recompile indique qu'une procédure stockée, un déclencheur ou une fonction définie par l'utilisateur a été compilé. Les recompilations signalées par cette classe d'événements se produisent au niveau de l'instruction.  
@@ -60,7 +57,7 @@ ms.locfileid: "37326079"
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|`varbinary`|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être passée à sys.dm_exec_sql_text pour récupérer le texte SQL associé.|63|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|Texte de l'instruction Transact-SQL qui a entraîné la recompilation de niveau instruction.| 1|Oui|  
+|TextData|`ntext`|Texte de l'instruction Transact-SQL qui a entraîné la recompilation de niveau instruction.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|`bigint`|Jeton utilisé pour décrire la transaction en cours.|50|Oui|  
   

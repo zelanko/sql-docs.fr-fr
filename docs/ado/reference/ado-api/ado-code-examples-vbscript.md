@@ -1,13 +1,11 @@
 ---
-title: VBScript exemples de Code ADO | Documents Microsoft
+title: VBScript exemples de Code ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,38 +13,37 @@ helpviewer_keywords:
 - VBScript code examples [ADO], about VBScript code examples
 - VBScript code examples [ADO]
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64157839cb3f33bceea08eaf07f4f6e70ac9a7a2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0db3b07328e4b528ed923ea10e0b74550345b0d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601807"
 ---
-# <a name="ado-code-examples-vbscript"></a>VBScript exemples de Code ADO
-Utilisez les exemples de code suivants pour en savoir plus sur la façon d’utiliser les méthodes ADO lors de l’écriture dans Microsoft® Visual Basic® Scripting Edition (VBScript).  
+# <a name="ado-code-examples-vbscript"></a>Exemples de code ADO dans VBScript
+Utilisez les exemples de code suivants pour en savoir plus sur comment utiliser les méthodes ADO lors de l’écriture dans Microsoft® Visual Basic® Scripting Edition (VBScript).  
   
 > [!NOTE]
->  Collez l’exemple de code entier du début à la fin dans votre éditeur de code. L’exemple de ne pas fonctionner correctement si les exemples partielles sont utilisés ou si la mise en forme est perdue.  
+>  Collez l’exemple de code complet, du début à la fin dans votre éditeur de code. L’exemple ne pas fonctionne correctement si les exemples partielles sont utilisés ou si la mise en forme du paragraphe est perdue.  
   
 ## <a name="methods"></a>Méthodes  
   
--   [Exemple de AddNew (méthode)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)  
+-   [Exemple de méthode AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)  
   
--   [Exemple de méthode clone](../../../ado/reference/ado-api/clone-method-example-vbscript.md)  
+-   [Clone, exemple de méthode](../../../ado/reference/ado-api/clone-method-example-vbscript.md)  
   
 -   [Exemple de méthode Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md)  
   
--   [Execute, Requery et Clear, méthodes-exemple](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)  
+-   [Execute, Requery et Clear, exemple de méthodes](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)  
   
--   [Exemple de méthode Move](../../../ado/reference/ado-api/move-method-example-vbscript.md)  
+-   [Move, exemple de méthode](../../../ado/reference/ado-api/move-method-example-vbscript.md)  
   
--   [MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes, exemple](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)  
+-   [MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes-exemple](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)  
   
--   [Exemple de méthodes d’ouverture et de clôture](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)  
+-   [Exemple de méthodes d’ouverture et de fermeture](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemples de Code ADO dans Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   

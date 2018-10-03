@@ -1,27 +1,23 @@
 ---
-title: Passez en revue les résultats de relecture | Documents Microsoft
+title: Passez en revue les résultats de relecture | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bf4c08dee623e659e04e3be97f8e015daa57aa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0f1eaad7a68501abac2d6b8a890b8b56b1f2dcb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33073956"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822207"
 ---
 # <a name="review-the-replay-results"></a>Examiner les résultats de la relecture
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ ms.locfileid: "33073956"
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|  
 |----------------------|---------------|-----------------|---------------|  
-|EventClass|**nvarchar**|Nom de la classe d'événement.| 1|  
+|EventClass|**nvarchar**|Nom de la classe d'événement.|1|  
 |EventSequence|**bigint**|Pour les erreurs de fournisseur, les erreurs internes et les avertissements, il s'agit de la séquence de l'événement de capture qui correspond à l'erreur ou à l'avertissement.<br /><br /> Pour toutes les autres classes d'événements, il s'agit de la séquence de l'événement dans les données de trace d'origine.|2|  
 |ReplaySequence|**bigint**|Pour les erreurs de fournisseur, les erreurs internes et les avertissements, il s'agit de la séquence de l'événement de relecture qui correspond à l'erreur ou à l'avertissement.<br /><br /> Pour toutes les autres classes d'événements, il s'agit de la séquence de l'événement affecté pendant la relecture.|3|  
 |TextData|**ntext**|Le contenu de TextData dépend de l'EventClass.<br /><br /> Pour Audit Login et ExistingConnection, il s'agit des options définies pour la connexion.<br /><br /> Pour SQL:BatchStarting, il s'agit du corps de la requête de lots.<br /><br /> Pour RPC:Starting, c'est la procédure stockée appelée.<br /><br /> Pour les événements de paramètres de relecture, cette colonne contient les paramètres définis dans le fichier de configuration de relecture.<br /><br /> Pour l'événement de statistiques de relecture, TexData contient les informations suivantes :<br /><br /> -serveur SQL cible de la relecture ;<br /><br /> -nombre total d’événements pouvant être relus ;<br /><br /> -nombre d’erreurs de fournisseur ;<br /><br /> -nombre d’erreurs internes ;<br /><br /> -avertissements internes ;<br /><br /> -nombre total d’erreurs ;<br /><br /> -taux global de réussite ;<br /><br /> -heure de relecture (HH:MM:SS:MMM).<br /><br /> Pour l'événement de jeu de résultats de relecture, il affiche la liste des en-têtes de colonne de résultats retournés.<br /><br /> Pour l'événement de ligne de résultats de relecture, il affiche la valeur de retour de toutes les colonnes de cette ligne.<br /><br /> Pour l'avertissement interne de relecture et l'erreur de fournisseur de relecture, cette colonne contient les avertissements ou les erreurs de fournisseur.|4|  

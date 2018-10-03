@@ -1,13 +1,11 @@
 ---
-title: Positionnement de Recordset | Documents Microsoft
+title: Positionnement dans un Recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - record positioning [ADO]
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - repositioning record [ADO]
 - AbsolutePosition property [ADO]
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d8b53039bc978ae7ffabdd378ac3ca86daf66c9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f37f69b64e4a1a7fd55fb24a0c85d515971d4e72
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272378"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772457"
 ---
-# <a name="recordset-positioning"></a>Positionnement du jeu d’enregistrements
+# <a name="recordset-positioning"></a>Positionnement dans un recordset
 Utilisez le **AbsolutePosition** propriété pour accéder à un enregistrement, en fonction de sa position ordinale dans la **Recordset** objet, ou pour déterminer la position ordinale de l’enregistrement actif. Le fournisseur doit prendre en charge les fonctionnalités requises pour cette propriété doit être disponible.  
   
- **AbsolutePosition** basé sur 1 et est égale à 1 lorsque l’enregistrement actif est le premier enregistrement de la **Recordset**. Comme mentionné précédemment, vous pouvez obtenir le nombre total d’enregistrements dans la **Recordset** de l’objet à partir de la **RecordCount** propriété.  
+ **AbsolutePosition** basé sur 1 et est égale à 1 lors de l’enregistrement actif est le premier enregistrement dans le **Recordset**. Comme mentionné précédemment, vous pouvez obtenir le nombre total d’enregistrements dans le **Recordset** de l’objet à partir de la **RecordCount** propriété.  
   
- Lorsque vous définissez la **AbsolutePosition** propriété, même si elle est à un enregistrement dans le cache actif, ADO recharge le cache avec un nouveau groupe d’enregistrements en commençant par l’enregistrement que vous avez spécifié. Le **CacheSize** propriété détermine la taille de ce groupe.  
+ Lorsque vous définissez la **AbsolutePosition** propriété, même si elle est à un enregistrement dans le cache actuel, ADO recharge le cache avec un nouveau groupe d’enregistrements en commençant par l’enregistrement que vous avez spécifié. Le **CacheSize** propriété détermine la taille de ce groupe.  
   
 > [!NOTE]
->  Vous ne devez pas utiliser le **AbsolutePosition** propriété en tant que numéro d’enregistrement de substitution. La position d’un enregistrement donné change lorsque vous supprimez un enregistrement précédent. Il n’existe également aucune assurance qu’un enregistrement donné auront le même **AbsolutePosition** si le **Recordset** objet est actualisé ou rouvert. Les signets sont le moyen recommandé de conserver et revenir à une position donnée et constituent la seule manière de se positionner dans tous les types de **Recordset** objets.
+>  Vous ne devez pas utiliser le **AbsolutePosition** propriété en tant que numéro d’enregistrement de substitution. La position d’un enregistrement donné change lorsque vous supprimez un enregistrement précédent. Il n’existe également aucune assurance qu’un enregistrement donné auront le même **AbsolutePosition** si le **Recordset** objet est actualisé ou rouvert. La méthode recommandée de conserver et revenir à une position donnée, ils constituent le seul moyen de se positionner dans tous les types de **Recordset** objets.

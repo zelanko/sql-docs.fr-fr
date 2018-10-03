@@ -1,13 +1,11 @@
 ---
-title: La clé d’objet (ADOX) | Documents Microsoft
+title: Clé d’objet (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - Key object [ADOX]
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05863d8227f2f0dddc6b7a44c60951fe3f8471be
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7365b3ac33f215840a112089523f23e88697a433
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286833"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626727"
 ---
-# <a name="key-object-adox"></a>Objet clé (ADOX)
-Représente un champ de clé unique, primaire ou étrangère d’une table de base de données.  
+# <a name="key-object-adox"></a>Key, objet (ADOX)
+Représente un champ de clé primaire, étrangère ou unique à partir d’une table de base de données.  
   
 ## <a name="remarks"></a>Notes  
  Le code suivant crée un nouveau **clé**:  
@@ -44,15 +41,15 @@ Dim obj As New Key
   
 -   Accéder aux colonnes de base de données de la clé avec la [colonnes](../../../ado/reference/adox-api/columns-collection-adox.md) collection.  
   
--   Spécifiez le nom de la table en relation avec la [RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md) propriété.  
+-   Spécifiez le nom de la table associée avec le [RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md) propriété.  
   
--   Déterminer l’action effectuée sur la suppression ou la mise à jour d’une clé primaire avec les [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) et [UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md) propriétés.  
+-   Déterminer l’action effectuée sur la suppression ou de mise à jour d’une clé primaire et la [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) et [UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md) propriétés.  
   
  Cette section contient les rubriques suivantes.  
   
 -   [Propriétés, méthodes et événements de l’objet Key](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule exemple (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Collection de colonnes (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Columns, Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Keys, collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

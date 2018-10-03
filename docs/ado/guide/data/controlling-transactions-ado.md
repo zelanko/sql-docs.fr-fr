@@ -1,30 +1,27 @@
 ---
-title: Contrôle des Transactions (ADO) | Documents Microsoft
+title: Contrôle des Transactions (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ADO]
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b036998fba22c19e47e9e5ced581aabeec9b07b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270978"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603618"
 ---
-# <a name="controlling-transactions-ado"></a>Contrôle des Transactions (ADO)
-ADO prend en charge le traitement des transactions dans une connexion à l’aide de la **BeginTrans**, **CommitTrans**, et **RollbackTrans** méthodes sur un  **Connexion** objet. L’idée générale de l’implémentation du traitement des transactions dans ADO est illustrée dans l’extrait de code simple suivant.  
+# <a name="controlling-transactions-ado"></a>Contrôle des transactions (ADO)
+ADO prend en charge le traitement des transactions dans une connexion à l’aide de la **BeginTrans**, **CommitTrans**, et **RollbackTrans** méthodes sur un  **Connexion** objet. L’idée générale de l’implémentation de traitement des transactions dans ADO est illustrée dans l’extrait de code simple suivant.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -81,6 +78,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- Ici, le traitement de transaction est utilisé pour garantir que les deux enregistrements sont mis à jour comme une unité de l’opération, et que les noms de deux produits sont interchangeables ou ne changent pas.  
+ Ici le traitement des transactions est utilisé pour garantir que les deux enregistrements sont mis à jour en une seule unité d’opération, et que les noms de deux produits sont échangés ou pas changent du tout.  
   
- Pour des descriptions détaillées du traitement des transactions, consultez [mise à jour et persistance des données](../../../ado/guide/data/updating-and-persisting-data.md).
+ Pour des discussions détaillées du traitement des transactions, consultez [mise à jour et persistance des données](../../../ado/guide/data/updating-and-persisting-data.md).

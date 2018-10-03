@@ -1,14 +1,11 @@
 ---
-title: Sys.fn_validate_plan_guide (Transact-SQL) | Documents Microsoft
+title: Sys.fn_validate_plan_guide (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_validate_plan_guide
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - fn_validate_plan_guide function
 - sys.fn_validate_plan_guide function
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b941fabfd4ebbd3ca41375622bf682f12b0fc26
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 844a6de4bd0ee770cd8406d3024a6a7f3bec3e4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236193"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798307"
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,18 +45,18 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>Arguments  
  *plan_guide_id*  
- Est l’ID du repère de plan tel qu’indiqué dans le [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) affichage catalogue. *plan_guide_id* est **int** sans valeur par défaut.  
+ Est l’ID du repère de plan tel qu’indiqué dans le [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) vue de catalogue. *plan_guide_id* est **int** sans valeur par défaut.  
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|msgnum|**int**|ID du message d'erreur.|  
+|msgnum|**Int**|ID du message d'erreur.|  
 |severity|**tinyint**|Niveau de gravité du message, entre 1 et 25.|  
 |state|**smallint**|Numéro d'état de l'erreur indiquant le point dans le code au niveau duquel l'erreur s'est produite.|  
 |message|**nvarchar(2048)**|Texte du message de l'erreur.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les repères de plan de portée OBJECT requièrent une autorisation VIEW DEFINITION ou ALTER sur l'objet et les autorisations référencés pour compiler la requête ou le lot fourni dans le repère de plan. Par exemple, si un lot contient des instructions SELECT, des autorisations SELECT sont requises sur les objets référencés.  
   
  Les repères de plan de portée SQL ou TEMPLATE requièrent une autorisation ALTER sur la base de données et les autorisations pour compiler la requête ou le lot fourni dans le repère de plan. Par exemple, si un lot contient des instructions SELECT, des autorisations SELECT sont requises sur les objets référencés.  

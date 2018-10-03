@@ -1,40 +1,37 @@
 ---
-title: SQLGetInfo (pilote Access) | Documents Microsoft
+title: SQLGetInfo (pilote Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a761fe38b7d162d7e43ae2f9148626dadff57e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e559bcf9f66980c6c4ecd7a753e49e21819da54d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904847"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696277"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (pilote Access)
 > [!NOTE]  
->  Cette rubrique fournit des informations spécifiques au pilote Access. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [référence de l’API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique fournit des informations d’accès spécifiques au pilote. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** prend en charge le type d’informations SQL_FILE_USAGE. La valeur retournée est un entier 16 bits qui indique comment le pilote traite directement les fichiers dans une source de données :  
+ **SQLGetInfo** prend en charge le type d’information SQL_FILE_USAGE. La valeur retournée est un entier 16 bits qui indique comment le pilote traite directement les fichiers dans une source de données :  
   
 -   SQL_FILE_NOT_SUPPORTED : Le pilote n’est pas un pilote de niveau unique.  
   
--   SQL_FILE_TABLE : Un pilote de niveau unique traite les fichiers dans une source de données en tant que tables.  
+-   SQL_FILE_TABLE — Un pilote monocouches et traite les fichiers dans une source de données en tant que tables.  
   
--   SQL_FILE_QUALIFIER : Un pilote de niveau unique traite les fichiers dans une source de données en tant que qualificateur.  
+-   SQL_FILE_QUALIFIER — Un pilote à un niveau traite des fichiers dans une source de données en tant que qualificateur.  
   
  Le pilote ODBC retourne SQL_FILE_QUALIFIER, car chaque fichier est une base de données complète.  
   
@@ -191,7 +188,7 @@ ms.locfileid: "32904847"
   
  PIVOT  
   
- COURTE  
+ COURT  
   
  UNIQUE  
   

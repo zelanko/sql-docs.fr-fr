@@ -1,34 +1,31 @@
 ---
-title: Synchronize (méthode) (RDS) | Documents Microsoft
+title: Synchronize, méthode (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 705b1ef1cad19886848cd383fecb20e46074f5d1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 39e5aef4700212c30d3e75d95ff2eaf40b2ed439
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288838"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815797"
 ---
-# <a name="synchronize-method-rds"></a>Synchronize (méthode) (RDS)
+# <a name="synchronize-method-rds"></a>Synchronize, méthode (RDS)
 Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion pour une utilisation dans ADO 2.5 et versions ultérieur.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +35,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *connectionString*  
+ *ConnectionString*  
  Chaîne utilisée pour se connecter au fournisseur OLE DB où la demande va être envoyée. Si un gestionnaire est utilisé, le gestionnaire peut modifier ou remplacer la chaîne de connexion.  
   
  *HandlerString*  
@@ -47,22 +44,22 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *lSynchronizeOptions*  
  Un masque de bits des options de synchronisation.  
   
- 1 =*UpdateTransact* mises à jour de la base de données sont encapsulés dans une transaction. La transaction est abandonnée si des mises à jour échouent.  
+ 1 =*UpdateTransact* mises à jour de la base de données sont encapsulées dans une transaction. La transaction est abandonnée en cas d’échec des mises à jour.  
   
- 2 =*RefreshWithUpdate* Causes de lignes à retourner lorsque aucune des deux états *Actualiser* ni *RefreshConflicts* est défini.  
+ 2 =*RefreshWithUpdate* Causes ligne États à retourner lorsque ni *Actualiser* ni *RefreshConflicts* est défini.  
   
- 4 =*Actualiser* le jeu d’enregistrements est actualisée avec les données actuelles de la base de données. En attente de mises à jour ne sont pas envoyées à la base de données. Si ce bit n’est pas défini, le jeu d’enregistrements n’est pas actualisé et les mises à jour en attente sont envoyées à la base de données.  
+ 4 =*Actualiser* le jeu d’enregistrements est actualisée avec les données actuelles de la base de données. En attente de mises à jour ne sont pas envoyés à la base de données. Si ce bit n’est pas défini, le jeu d’enregistrements n’est pas actualisé et les mises à jour en attente sont envoyés à la base de données.  
   
- 8 =*RefreshConflicts* échouent de toutes les lignes avec des modifications en attente mettre à jour. Les lignes qui n’a pas pu mettre à jour sont actualisées avec des données actuelles de la base de données.  
+ 8 =*RefreshConflicts* toutes les lignes avec des modifications en attente ne parviennent pas à mettre à jour. Les lignes qui n’a pas pu mettre à jour sont actualisées avec des données actuelles de la base de données.  
   
  *ppRecordset*  
  Pointeur vers le jeu d’enregistrements à synchroniser.  
   
  *pStatusArray*  
- Permet de retourner un tableau sécurisé de statuts de ligne pour les lignes affectées par une variante de synchroniser. Ne pas définie si aucune des options de synchronisation suivantes sont définies : *RefreshWithUpdate*, *Actualiser* et *RefreshConflicts*.  
+ Un variant utilisé pour retourner un tableau sécurisé de statuts de ligne pour les lignes affectées par synchroniser. Ne pas définie si aucune des options de synchronisation suivantes sont définies : *RefreshWithUpdate*, *Actualiser* et *RefreshConflicts*.  
   
  *lcid*  
- Le LCID est utilisé pour générer des erreurs qui sont retournées dans *pInformation*.  
+ Le LCID utilisé pour générer des erreurs sont retournées dans *pInformation*.  
   
  *pInformation*  
  Un pointeur vers les informations d’erreur par **Execute**. Si NULL, aucune information d’erreur n’est retournée.  

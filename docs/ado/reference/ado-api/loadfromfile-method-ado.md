@@ -1,13 +1,11 @@
 ---
-title: LoadFromFile, méthode (ADO) | Documents Microsoft
+title: LoadFromFile, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - LoadFromFile method [ADO]
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 859c4cd31c3a2da8ff42fed470e5651ac568619b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ed02b621b79ebf46dbb0dc6e66a2e5366610a19d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279274"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761237"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile, méthode (ADO)
-Charge le contenu d’un fichier existant dans un [flux](../../../ado/reference/ado-api/stream-object-ado.md).  
+Charge le contenu d’un fichier existant dans un [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,18 +35,18 @@ Stream.LoadFromFileFileName
   
 #### <a name="parameters"></a>Paramètres  
  *FileName*  
- A **chaîne** valeur qui contient le nom d’un fichier doit être chargé dans le **flux**. *Nom de fichier* peut contenir un chemin d’accès valide et un nom au format UNC. Si le fichier spécifié n’existe pas, une erreur d’exécution se produit.  
+ Un **chaîne** valeur qui contient le nom d’un fichier à charger dans le **Stream**. *Nom de fichier* peut contenir n’importe quel chemin d’accès valide et un nom au format UNC. Si le fichier spécifié n’existe pas, une erreur d’exécution se produit.  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode peut être utilisée pour charger le contenu d’un fichier local dans un **flux** objet. Cela permet de télécharger le contenu d’un fichier local sur un serveur.  
+ Cette méthode peut être utilisée pour charger le contenu d’un fichier local dans un **Stream** objet. Cela peut servir à charger le contenu d’un fichier local sur un serveur.  
   
- Le **flux** objet doit être déjà ouvert avant d’appeler **LoadFromFile**. Cette méthode ne modifie pas la liaison de la **flux** de l’objet ; il sera toujours lié à l’objet spécifié par l’URL ou **enregistrement** avec lequel le **flux** était à l’origine ouvert.  
+ Le **Stream** objet doit être déjà ouvert avant d’appeler **LoadFromFile**. Cette méthode ne modifie pas la liaison de la **Stream** objet ; il sera toujours lié à l’objet spécifié par l’URL ou **enregistrement** avec lequel le **Stream** était à l’origine ouvert.  
   
- **LoadFromFile** remplace le contenu actuel de la **flux** objet avec les données lues à partir du fichier. Tous les octets dans le **flux** sont remplacés par le contenu du fichier. Tous les octets restants et précédemment existants suivant le [fin du support](../../../ado/reference/ado-api/eos-property.md) créé par **LoadFromFile**, sont tronqués.  
+ **LoadFromFile** remplace le contenu actuel de la **Stream** objet avec les données lues à partir du fichier. Tous les octets dans le **Stream** sont remplacés par le contenu du fichier. Tous les octets restants et précédemment existants suivant le [EOS](../../../ado/reference/ado-api/eos-property.md) créé par **LoadFromFile**, sont tronqués.  
   
- Après un appel à **LoadFromFile**, la position actuelle est définie au début de la **flux** ([Position](../../../ado/reference/ado-api/position-property-ado.md) est 0).  
+ Après un appel à **LoadFromFile**, la position actuelle est définie au début de la **Stream** ([Position](../../../ado/reference/ado-api/position-property-ado.md) est 0).  
   
- Étant donné que les 2 octets peuvent être ajoutés au début du flux de données pour l’encodage, la taille du flux de données peut différer la taille du fichier à partir duquel il a été chargé.  
+ Étant donné que les 2 octets peut être ajoutés au début du flux de données pour l’encodage, la taille du flux de données peut différer la taille du fichier à partir duquel il a été chargé.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

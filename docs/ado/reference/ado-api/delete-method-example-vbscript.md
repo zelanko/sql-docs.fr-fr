@@ -1,38 +1,35 @@
 ---
-title: Exemple (VBScript) de la méthode Delete | Documents Microsoft
+title: Exemple de méthode (VBScript) Delete | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADO], VBScript example
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 148baaf84c8025d23b78f01bd098fb4a37634257
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e9c059a003d263a61f1e224e0187fc6e5a80b9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277588"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787457"
 ---
-# <a name="delete-method-example-vbscript"></a>DELETE, méthode-exemple (VBScript)
-Cet exemple utilise le [supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md) méthode pour supprimer un enregistrement spécifié d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+# <a name="delete-method-example-vbscript"></a>Delete, exemple de méthode (VBScript)
+Cet exemple utilise le [supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md) méthode pour supprimer un enregistrement spécifié à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Utilisez l’exemple suivant dans une Page ASP (Active Server). Pour afficher cet exemple entièrement fonctionnels, vous devez disposer les données source AdvWorks.mdb (installé avec le Kit de développement), situé dans C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou modifier le chemin d’accès dans l’exemple de code pour refléter l’emplacement réel de ce fichier. Il s’agit d’un fichier de base de données Microsoft Access.  
+ Utilisez l’exemple suivant dans une Page ASP (Active Server). Pour afficher cet exemple entièrement fonctionnel, vous devez disposer les données source AdvWorks.mdb (installé avec le Kit de développement), situé dans C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou modifier le chemin d’accès dans l’exemple de code afin de refléter l’emplacement réel de ce fichier. Il s’agit d’un fichier de base de données Microsoft Access.  
   
- Utilisez **trouver** pour localiser le fichier Adovbs.inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Couper et coller le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous **DeleteVBS.asp**. Vous pouvez afficher le résultat dans un navigateur client.  
+ Utilisez **trouver** pour localiser le fichier Adovbs.inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **DeleteVBS.asp**. Vous pouvez afficher le résultat dans n’importe quel navigateur client.  
   
- Pour tester l’exemple, essayez d’utiliser le [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md) pour ajouter des enregistrements. Ensuite, vous pouvez essayer de les supprimer. Afficher le résultat dans un navigateur client.  
+ Pour tester l’exemple, essayez d’utiliser le [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md) pour ajouter des enregistrements. Ensuite, vous pouvez essayer de les supprimer. Afficher le résultat dans n’importe quel navigateur client.  
   
 ```  
 <!-- BeginDeleteVBS -->  
@@ -174,5 +171,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DELETE, méthode (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [DELETE, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,34 +1,31 @@
 ---
-title: Appel d’une procédure stockée en tant que méthode sur un objet de connexion | Documents Microsoft
+title: Appel d’une procédure stockée en tant que méthode sur un objet de connexion | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - calling stored procedures [ADO]
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2445ce0a213f4e36ec775cf804ee69b43c2f9dc8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3202b607f3971dd1fcad2c3ae5e0ed83a667e923
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270398"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758817"
 ---
-# <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Appel d’une procédure stockée en tant que méthode sur un objet de connexion
-Vous pouvez appeler une procédure stockée comme s’il s’agissait d’une méthode native à l’ouverture associé **connexion** objet. Cela revient à appeler une commande nommée sur le **connexion** objet.  
+# <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Appel d’une procédure stockée en tant que méthode sur un objet Connection
+Vous pouvez appeler une procédure stockée comme s’il s’agissait d’une méthode native sur l’open associé **connexion** objet. Cela revient à appeler une commande nommée sur le **connexion** objet.  
   
- L’exemple de code Visual Basic suivant appelle une procédure stockée dans la base de données Northwind, appelée CustOrdersOrders, qui est répertorié ici à nouveau pour votre commodité.  
+ L’exemple de code Visual Basic suivant appelle une procédure stockée dans la base de données Northwind, appelée CustOrdersOrders, qui est repris ici par commodité.  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -38,7 +35,7 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- L’exemple de code suivant montre comment appeler une procédure stockée comme s’il s’agissait d’une méthode native sur open associée **connexion** objet.  
+ L’exemple de code suivant montre comment appeler une procédure stockée comme s’il s’agissait d’une méthode native sur une ouverte associée **connexion** objet.  
   
 ```  
 Const DS = "MySQLServer"  

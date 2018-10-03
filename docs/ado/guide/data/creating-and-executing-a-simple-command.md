@@ -1,31 +1,28 @@
 ---
-title: Création et exécution d’une Simple commande | Documents Microsoft
+title: Création et exécution d’une commande Simple | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], creating and executing
 - commands [ADO], creating and executing
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ea6ec81992ba286d589f83bcd1c23f751249f89
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 644ee0c1ca4baee72a5fd33aeb16843dc7c59795
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270908"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811347"
 ---
-# <a name="creating-and-executing-a-simple-command"></a>Création et exécution d’une commande Simple
-Une commande simple est celle qui n’est pas paramétrable et ne nécessite d’aucune persistance. Il existe trois façons de créer et exécuter une commande simple.  
+# <a name="creating-and-executing-a-simple-command"></a>Création et exécution d’une commande simple
+Une commande simple est celui qui n’est pas paramétrable et ne nécessite d’aucune persistance. Il existe trois façons de créer et exécuter une commande simple.  
   
 -   À l’aide un **commande** objet  
   
@@ -34,9 +31,9 @@ Une commande simple est celle qui n’est pas paramétrable et ne nécessite d�
 -   À l’aide un **Recordset** objet  
   
 ## <a name="using-a-command-object"></a>À l’aide d’un objet de commande  
- Pour créer une simple commande à l’aide un **commande** de l’objet, vous devez affecter à l’instruction à la **CommandText** propriété d’un **commande** et définissez la valeur appropriée pour le **CommandType** propriété. L’exécution de la commande nécessite qu’une connexion ouverte est affectée à la **ActiveConnection** propriété de la **commande** objet, suivie d’un appel à la **Execute** (méthode) sur le **commande** objet.  
+ Pour créer une commande simple à l’aide un **commande** de l’objet, vous devez affecter les instructions pour le **CommandText** propriété d’un **commande** et définissez la valeur appropriée pour le **CommandType** propriété. L’exécution de la commande nécessite qu’une connexion ouverte est affectée à la **ActiveConnection** propriété de la **commande** objet, suivie d’un appel à la **Execute** (méthode) sur le **commande** objet.  
   
- L’extrait de code suivant montre la méthode de base de l’utilisation de la **commande** objet à exécuter une commande sur une source de données. Cet exemple utilise une commande retourne des lignes et retourne les résultats de l’exécution de la commande en tant qu’un **Recordset** objet.  
+ L’extrait de code suivant illustre la méthode de base de l’utilisation de la **commande** objet pour exécuter une commande sur une source de données. Cet exemple utilise une commande retourne des lignes et retourne les résultats de l’exécution de commande comme un **Recordset** objet.  
   
 ```  
     'BeginBasicCmd  
@@ -112,7 +109,7 @@ End Function
 ```  
   
 ## <a name="using-a-recordset-object"></a>À l’aide d’un objet Recordset  
- Vous pouvez également créer une commande en tant que chaîne de texte et pas à la **ouvrir** méthode sur un **Recordset** de l’objet, ainsi que le type de commande (adCmdText), pour l’exécution. L’extrait de code suivants illustrent cela.  
+ Vous pouvez également créer une commande en tant que chaîne de texte et pas à la **Open** méthode sur un **Recordset** de l’objet, ainsi que le type de commande (adCmdText), pour l’exécution. L’extrait de code suivants illustrent cela.  
   
 ```  
   
@@ -151,7 +148,7 @@ Set objRs = Nothing
 ```  
   
 ## <a name="using-a-connection-object"></a>À l’aide d’un objet de connexion  
- Vous pouvez également exécuter une commande sur un objet de connexion ouvert. L’exemple de code précédent devient cela :  
+ Vous pouvez également exécuter une commande sur un objet de connexion ouvert. L’exemple de code précédent devient alors cela :  
   
 ```  
 Const DS = "MySqlServer"  

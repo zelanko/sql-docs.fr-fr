@@ -1,13 +1,11 @@
 ---
-title: DateCreated et DateModified, propriétés-exemple (VB) | Documents Microsoft
+title: DateCreated et DateModified, exemples de propriétés (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - DateCreated property [ADOX], Visual Basic example
 - DateModified property [ADOX], Visual Basic example
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cbaf7c7384a015bb98213ad25fc2125de808e08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 59a54320cd3b1a90e832b474d5308086f018cc38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285548"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639297"
 ---
-# <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated et DateModified, propriétés-exemple (VB)
-Cet exemple illustre la [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) et [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) propriétés en ajoutant un nouvel [colonne](../../../ado/reference/adox-api/column-object-adox.md) à un [Table](../../../ado/reference/adox-api/table-object-adox.md) et en créant un **Table**. La procédure DateOutput est requise pour exécuter cet exemple.  
+# <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated et DateModified, exemples de propriétés (VB)
+Cet exemple montre la [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) et [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) propriétés en ajoutant une nouvelle [colonne](../../../ado/reference/adox-api/column-object-adox.md) à un existant [Table](../../../ado/reference/adox-api/table-object-adox.md) et par Création d’un nouveau **Table**. La procédure DateOutput est requise pour exécuter cet exemple.  
   
 ```  
 ' BeginDateCreatedVB  
@@ -101,7 +98,7 @@ End Sub
 ## <a name="see-also"></a>Voir aussi  
  [DateCreated, propriété (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified, propriété (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Objet Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Collection de procédures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+ [Objet de procédure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Procedures, Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Objet de vue (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

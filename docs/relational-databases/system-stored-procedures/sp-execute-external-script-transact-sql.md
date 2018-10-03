@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -20,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f49cf4c10ccd16fe229b1d6a5f4089b8d9094f67
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 4421ac28e3ee8914cf016f5df23e5f163bacfd9b
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712842"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864397"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -102,8 +98,8 @@ sp_execute_external_script
  Spécifie le nom de la variable dans le script externe qui contient les données à renvoyer au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’achèvement de l’appel de procédure stockée. Le type de données de la variable dans le script externe dépend de la langue. Pour R, la sortie doit être une trame de données. Pour Python, la sortie doit être une trame de données pandas. *output_data_1_name* est **sysname**.  Valeur par défaut est *OutputDataSet*.  
 
  [ **@parallel** = 0 | 1]  
- Activer l’exécution parallèle de scripts R en définissant le `@parallel` paramètre 1. La valeur par défaut pour ce paramètre est 0 (Aucun parallélisme). Si `@parallel = 1` et la sortie est en cours de diffusion directement à l’ordinateur client, puis le `WITH RESULTS SETS` clause est requise et un schéma de sortie doit être spécifié.  
-  
+ Activer l’exécution parallèle de scripts R en définissant le `@parallel` paramètre 1. La valeur par défaut pour ce paramètre est 0 (Aucun parallélisme). Si `@parallel = 1` et la sortie est en cours de diffusion directement à l’ordinateur client, puis le `WITH RESULT SETS` clause est requise et un schéma de sortie doit être spécifié.  
+
  + Pour les scripts R qui n’utilisent pas de fonctions RevoScaleR, à l’aide de le `@parallel` paramètre peut être utile pour le traitement des jeux de données volumineux, en supposant que le script peut être parallélisé de manière simple. Par exemple, lors de l’utilisation de R `predict` fonction avec un modèle pour générer de nouvelles prédictions, définissez `@parallel = 1` en tant qu’indicateur pour le moteur de requête. Si la requête peut être parallélisée, les lignes sont distribuées en fonction de la **MAXDOP** paramètre.  
   
  + Pour les scripts R qui utilisent les fonctions RevoScaleR, le traitement parallèle est géré automatiquement et vous ne devez pas spécifier `@parallel = 1` à la **sp_execute_external_script** appeler.  
@@ -121,7 +117,7 @@ sp_execute_external_script
 
 Utilisez **sp_execute_external_script** pour exécuter des scripts écrits dans un langage pris en charge. Actuellement, les langues prises en charge sont R pour SQL Server 2016 R Services et Python et R pour SQL Server 2017 Machine Learning Services. 
 
-Par défaut, les jeux de résultats retournés par cette procédure stockée s’affichent avec des colonnes sans nom. Noms de colonnes utilisés dans un script locaux de l’environnement de script et ne sont pas répercutées dans le jeu de résultats obtenus. Pour nommer des colonnes du jeu de résultats, utilisez le `WITH RESULTS SET` clause de [ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md).
+Par défaut, les jeux de résultats retournés par cette procédure stockée s’affichent avec des colonnes sans nom. Noms de colonnes utilisés dans un script locaux de l’environnement de script et ne sont pas répercutées dans le jeu de résultats obtenus. Pour nommer des colonnes du jeu de résultats, utilisez le `WITH RESULT SET` clause de [ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md).
   
  En plus de retourner un jeu de résultats, vous pouvez retourner des valeurs scalaires à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide des paramètres de sortie. L’exemple suivant illustre l’utilisation du paramètre de sortie pour retourner le modèle sérialisé R qui a été utilisé comme entrée pour le script :  
   
@@ -281,7 +277,7 @@ END;
 GO
 ```
 
-Les en-têtes de colonne utilisés dans le code Python ne sont pas sortis dans SQL Server. Par conséquent, vous devez utiliser l’instruction WITH RESULTS pour spécifier les noms de colonnes et les types de données que SQL doit utiliser.
+En-têtes de colonne utilisés dans le code Python ne sont pas sortis dans SQL Server ; Par conséquent, utilisez l’instruction avec résultat pour spécifier les noms de colonnes et les types de données SQL doit utiliser.
 
 Pour calculer les scores, vous pouvez également utiliser la fonction [PREDICT](../../t-sql/queries/predict-transact-sql.md) native, qui est généralement plus rapide car elle évite d’appeler le runtime Python ou R.
 

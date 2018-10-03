@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_qn_subscriptions (Transact-SQL) | Documents Microsoft
+title: Sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_qn_subscriptions
@@ -18,31 +16,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3f6886a16b8b1d87c2864ed93fd8be764700dc5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465265"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834707"
 ---
-# <a name="query-notifications---sysdmqnsubscriptions"></a>-Les Notifications de requête sys.dm_qn_subscriptions
+# <a name="query-notifications---sysdmqnsubscriptions"></a>Interroger des Notifications - sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne des informations sur les abonnements aux notifications de requêtes actifs dans le serveur. Vous pouvez utiliser cette vue pour vérifier les abonnements actifs dans le serveur ou une base de données spécifiée, ou pour vérifier un principal de serveur.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|ID d'un abonnement.|  
-|**database_id**|**int**|ID de la base de données dans laquelle la requête de notification a été exécutée. Cette base de données stocke les informations relatives à cet abonnement.|  
+|**id**|**Int**|ID d'un abonnement.|  
+|**database_id**|**Int**|ID de la base de données dans laquelle la requête de notification a été exécutée. Cette base de données stocke les informations relatives à cet abonnement.|  
 |**sid**|**varbinary(85)**|ID de sécurité du principal du serveur qui a créé cet abonnement et qui en est propriétaire.|  
-|**object_id**|**int**|ID de la table interne qui stocke les informations sur les paramètres de l'abonnement.|  
-|**created**|**datetime**|Date et heure de création de l’abonnement.|  
-|**Délai d’attente**|**int**|Délai d'expiration de l'abonnement, en secondes. La notification est marquée pour se déclencher après ce délai.<br /><br /> Remarque : L’heure de déclenchement réel peut dépasser le délai d’attente spécifié. Cependant, si une modification qui invalide l'abonnement a lieu après le délai d'expiration, mais avant le déclenchement de l'abonnement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait en sorte que le déclenchement ait lieu au moment de la modification.|  
-|**status**|**int**|Indique l'état de l'abonnement. Consultez le tableau sous la section Remarques pour obtenir la liste de codes.|  
+|**object_id**|**Int**|ID de la table interne qui stocke les informations sur les paramètres de l'abonnement.|  
+|**created**|**datetime**|Date et heure à laquelle l’abonnement a été créé.|  
+|**Délai d’attente**|**Int**|Délai d'expiration de l'abonnement, en secondes. La notification est marquée pour se déclencher après ce délai.<br /><br /> Remarque : L’heure de déclenchement réel peut être supérieur au délai d’attente spécifié. Cependant, si une modification qui invalide l'abonnement a lieu après le délai d'expiration, mais avant le déclenchement de l'abonnement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fait en sorte que le déclenchement ait lieu au moment de la modification.|  
+|**status**|**Int**|Indique l'état de l'abonnement. Consultez le tableau sous la section Remarques pour obtenir la liste de codes.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
@@ -59,7 +56,7 @@ ms.locfileid: "34465265"
 |Code|État secondaire|Info|  
 |----------|------------------|----------|  
 |65798|L'abonnement a été déclenché parce que les données ont été modifiées|Abonnement déclenché par insertion|  
-|65799|L'abonnement a été déclenché parce que les données ont été modifiées|Supprimer|  
+|65799|L'abonnement a été déclenché parce que les données ont été modifiées|DELETE|  
 |65800|L'abonnement a été déclenché parce que les données ont été modifiées|Update|  
 |65801|L'abonnement a été déclenché parce que les données ont été modifiées|Fusion|  
 |65802|L'abonnement a été déclenché parce que les données ont été modifiées|Troncation de la table|  
@@ -94,7 +91,7 @@ ms.locfileid: "34465265"
 |199168|L'abonnement est actif|Mode d'information indéfini|  
 |199424|L'abonnement a été initialisé, mais n'est pas encore actif|Mode d'information indéfini|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation VIEW SERVER STATE sur le serveur.  
   
 > [!NOTE]  

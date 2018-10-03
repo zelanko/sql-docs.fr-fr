@@ -1,14 +1,11 @@
 ---
-title: log_shipping_monitor_error_detail (Transact-SQL) | Documents Microsoft
+title: log_shipping_monitor_error_detail (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_error_detail_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_error_detail system table
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7c41916a3ce32eacc974debb2a82e6c24a2c41a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5e0228072bee91f96e816a1d0f369f85fa486728
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261598"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770327"
 ---
 # <a name="logshippingmonitorerrordetail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +32,13 @@ ms.locfileid: "33261598"
   
  Les tables liées à l'historique et à la surveillance sont également utilisées au niveau du serveur principal et des serveurs secondaires.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**uniqueidentifier**|ID principal pour la sauvegarde ou ID secondaire pour la copie ou la restauration.|  
 |**agent_type**|**tinyint**|Type d'opération de copie des journaux de transaction.<br /><br /> 0 = Sauvegarde.<br /><br /> 1 = Copie.<br /><br /> 2 = Restauration.|  
-|**session_id**|**int**|ID de session pour le travail de sauvegarde/copie/restauration.|  
+|**session_id**|**Int**|ID de session pour le travail de sauvegarde/copie/restauration.|  
 |**database_name**|**sysname**|Nom de la base de données associée à cet enregistrement d'erreur. Base de données primaire pour la sauvegarde, base de données secondaire pour la restauration ou vide pour la copie.|  
-|**sequence_number**|**int**|Numéro incrémentiel indiquant l'ordre correct des informations dans le cas d'erreurs qui s'étendent sur plusieurs enregistrements.|  
+|**sequence_number**|**Int**|Numéro incrémentiel indiquant l'ordre correct des informations dans le cas d'erreurs qui s'étendent sur plusieurs enregistrements.|  
 |**log_time**|**datetime**|Date et heure de création de l'enregistrement.|  
 |**log_time_utc**|**datetime**|Date et heure de création de l'enregistrement, exprimée en heure UTC.|  
 |**message**|**nvarchar**|Texte du message.|  
@@ -52,12 +48,12 @@ ms.locfileid: "33261598"
 ## <a name="remarks"></a>Notes  
  Cette table contient le détail des erreurs des agents de copie des journaux de transaction. Chaque erreur est enregistrée sous la forme d'une séquence d'exceptions. Il peut y avoir plusieurs erreurs (séquences) pour chaque session d'agent.  
   
- En plus d’êtres stockées sur le serveur moniteur distant, les informations relatives au serveur principal sont stockées sur le serveur principal dans son **log_shipping_monitor_error_detail** table et les informations relatives à un serveur secondaire est également stockée sur le serveur secondaire dans son **log_shipping_monitor_error_detail** table.  
+ En plus d’êtres stockées sur le serveur moniteur distant, les informations relatives au serveur principal sont stockées sur le serveur principal dans son **log_shipping_monitor_error_detail** table et les informations relatives à un serveur secondaire est également stocké sur le serveur secondaire dans son **log_shipping_monitor_error_detail** table.  
   
- Pour identifier une session d’agent, utilisez les colonnes **agent_id**, **agent_type**, et **session_id**. Trier par **log_time** pour voir les erreurs dans l’ordre dans lequel elles ont été consignées.  
+ Pour identifier une session d’agent, utilisez les colonnes **agent_id**, **agent_type**, et **session_id**. Trier par **log_time** pour voir les erreurs dans l’ordre dans lequel ils ont été consignés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [À propos de journaux de transaction & #40 ; SQL Server & #41 ;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_monitor_history_detail &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
  [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   

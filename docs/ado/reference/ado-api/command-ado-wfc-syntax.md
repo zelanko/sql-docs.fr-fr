@@ -1,30 +1,27 @@
 ---
-title: Commande (ADO - syntaxe WFC) | Documents Microsoft
+title: Commande (ADO - syntaxe WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Command collection [ADO], ADO/WFC syntax
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c57cd9a65cdbf3662f7ed7499d979753d9ecd0b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d6866423ba07ed79992ebd098b7b4f5e5eff91ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276608"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770817"
 ---
-# <a name="command-ado---wfc-syntax"></a>Commande (ADO - syntaxe WFC)
+# <a name="command-ado---wfc-syntax"></a>Command (ADO - syntaxe WFC)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="constructor"></a>Constructeur  
@@ -48,9 +45,9 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- Le **executeUpdate** méthode est une méthode spéciale qui appelle le ADO sous-jacent **exécuter** méthode avec certains paramètres. Le **executeUpdate** méthode ne prend pas en charge le retour d’un **Recordset** objet, donc la **exécuter** la méthode *options* paramètre est modifié avec **AdoEnums.ExecuteOptions.NORECORDS**. Après le **exécuter** méthode se termine, sa mise à jour *RecordsAffected* paramètre est passé à la **executeUpdate** méthode, qui est renvoyée en tant qu’un **int**.  
+ Le **executeUpdate** méthode est une méthode spéciale qui appelle le ADO sous-jacent **exécuter** méthode avec certains paramètres. Le **executeUpdate** méthode ne prend pas en charge le retour d’un **Recordset** objet, donc le **exécuter** la méthode *options* paramètre est modifié avec **AdoEnums.ExecuteOptions.NORECORDS**. Après le **exécuter** méthode se termine, sa mise à jour *RecordsAffected* paramètre est passé à la **executeUpdate** (méthode), qui retourne finalement un **int**.  
   
-### <a name="properties"></a>Propriétés  
+### <a name="properties"></a>Properties  
   
 ```  
 public com.ms.wfc.data.Connection getActiveConnection()  

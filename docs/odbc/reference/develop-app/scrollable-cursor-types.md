@@ -1,45 +1,42 @@
 ---
-title: Les Types de curseur de défilement | Documents Microsoft
+title: Types de curseur de défilement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54acbd1010d546649b1ad92a34289fa4d04da162
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6290d18ec26fcfa6e2960c3a2c1c408938d9e0e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912414"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720497"
 ---
-# <a name="scrollable-cursor-types"></a>Types de curseur de défilement
-Les quatre types de curseurs de défilement sont statiques, dynamiques, pilotés par jeu de clés et mixte. Les curseurs statiques détectent peu ou pas de modifications, mais sont relativement peu coûteux à implémenter. Les curseurs dynamiques détectent toutes les modifications mais sont coûteux à implémenter. Les curseurs pilotés par jeu de clés et mixtes se situent entre la plupart des modifications mais utilisent moins de ressources que les curseurs dynamiques.  
+# <a name="scrollable-cursor-types"></a>Types de curseurs avec défilement
+Les quatre types de curseurs avec défilement sont statiques, dynamiques, pilotés par jeu de clés et mixte. Curseurs statiques détectent peu ou aucune modification, mais sont relativement peu coûteuses à implémenter. Les curseurs dynamiques détectent toutes les modifications, mais sont coûteux à implémenter. Les curseurs pilotés par jeu de clés et mixtes se situent entre la détection de la plupart des modifications mais utilisent moins de ressources que les curseurs dynamiques.  
   
  Les termes suivants sont utilisés pour définir les caractéristiques de chaque type de curseur de défilement :  
   
--   **Propriétaire des mises à jour, suppressions et insertions.** Les mises à jour, suppressions et insertions effectuées via le curseur, soit par un appel à **SQLBulkOperations** ou **SQLSetPos** ou avec une position mettre à jour ou supprimer l’instruction.  
+-   **Propres mises à jour, suppressions et insertions.** Mises à jour, suppressions et insertions effectuées via le curseur, soit avec un appel à **SQLBulkOperations** ou **SQLSetPos** ou avec un texte positionné mettre à jour ou supprimer l’instruction.  
   
--   **Autres mises à jour, supprime et insère.** Les mises à jour, suppressions et insertions ne pas effectuées par le curseur, y compris celles effectuées par d’autres opérations dans la même transaction, celles effectuées par d’autres transactions et celles effectuées par d’autres applications.  
+-   **Autres mises à jour, supprime et insère.** Mises à jour, suppressions et insertions ne pas effectuées par le curseur, y compris celles effectuées par d’autres opérations dans la même transaction, celles effectuées dans les autres transactions et celles effectuées par d’autres applications.  
   
--   **Appartenance au groupe.** L’ensemble de lignes du jeu de résultats.  
+-   **Appartenance.** L’ensemble de lignes du jeu de résultats.  
   
--   **Commande.** L’ordre dans lequel les lignes sont renvoyées par le curseur.  
+-   **Ordre.** L’ordre dans lequel les lignes sont retournées par le curseur.  
   
 -   **valeurs.** Les valeurs dans chaque ligne du jeu de résultats.  
   
- Pour plus d’informations sur la façon de mettre à jour, supprimer et insérer des données, consultez [mise à jour la vue d’ensemble des données](../../../odbc/reference/develop-app/updating-data-overview.md).  
+ Pour plus d’informations sur la façon de mettre à jour, supprimer et insérer des données, consultez [la mise à jour la vue d’ensemble des données](../../../odbc/reference/develop-app/updating-data-overview.md).  
   
  Cette section contient les rubriques suivantes.  
   

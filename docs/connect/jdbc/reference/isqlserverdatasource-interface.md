@@ -1,34 +1,31 @@
 ---
-title: Interface ISQLServerDataSource | Documents Microsoft
+title: Isqlserverdatasource, Interface | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9106cd417574d1e29d974236544116e2e0530fb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b6d0ecf55c23d693b03fc289db5b8c6f3e7dd3d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843134"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697386"
 ---
 # <a name="isqlserverdatasource-interface"></a>Interface ISQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Fabrique permettant de créer des connexions à la source de données représentée par cet objet. Cette interface a été ajoutée dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] version 3.0 du pilote JDBC.  
+  Fabrique permettant de créer des connexions à la source de données représentée par cet objet. Cette interface a été ajoutée dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  **Package :** com.microsoft.sqlserver.jdbc  
   
- **Étend :** java.sql.CommonDataSource  
+ **Étend :** java.sql.CommonDataSource  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +34,10 @@ ms.locfileid: "32843134"
 public interface ISQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette interface est implémentée par [classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Cette interface expose les éléments suivants [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-des méthodes spécifiques :  
+ Cette interface expose les méthodes spécifiques au [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] suivantes :  
   
 |Méthode|Pour plus d'informations, consultez|  
 |------------|-------------------------------|  
@@ -95,7 +92,7 @@ public interface ISQLServerDataSource
 |public void setWorkstationID(String)|[setWorkstationID](../../../connect/jdbc/reference/setworkstationid-method-sqlserverdatasource.md)|  
 |public void setXopenStates(boolean)|[setXopenStates](../../../connect/jdbc/reference/setxopenstates-method-sqlserverdatasource.md)|  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence d’API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Informations de référence sur l'API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

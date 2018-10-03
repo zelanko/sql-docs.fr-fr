@@ -6,24 +6,21 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e04067cda6fad31ebd07f5d887e387139c7739b1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 729d6d0713e70e2d628a08c2ce5008772d6a005d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979771"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710148"
 ---
-# <a name="using-a-connection-object"></a>À l’aide d’un objet de connexion
+# <a name="using-a-connection-object"></a>Utilisation d’un objet Connection
 Avant d’ouvrir un **connexion** de l’objet, vous devez définir certaines informations sur la source de données et le type de connexion. La plupart de ces informations est détenue par le *ConnectionString* paramètre de la [Open, méthode](../../../ado/reference/ado-api/open-method-ado-connection.md) sur le **connexion** objet, ou par le [ConnectionString propriété](../../../ado/reference/ado-api/connectionstring-property-ado.md) sur le **connexion** objet. Une chaîne de connexion se compose d’une liste de paires argument/valeur séparées par des points-virgules, avec les valeurs encadrées de guillemets simples. Exemple :  
   
 ```  

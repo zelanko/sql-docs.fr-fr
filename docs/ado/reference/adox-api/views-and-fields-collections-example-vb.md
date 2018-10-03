@@ -1,13 +1,11 @@
 ---
-title: Des vues et des champs de l’exemple de Collections (VB) | Documents Microsoft
+title: Views et Fields, Collections, exemple (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - Views collection [ADOX], Visual Basic example
 - Fields collection [ADOX]
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7f9e8223c51cbd1a15e1e2e1dd2070a316c879b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d221287fc0a945b0325ef9bbb92c89888e130c7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287314"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836187"
 ---
-# <a name="views-and-fields-collections-example-vb"></a>Vues et exemple de Collections de champs (VB)
+# <a name="views-and-fields-collections-example-vb"></a>Views et Fields, exemples de collections (VB)
 Le code suivant montre comment utiliser le [commande](../../../ado/reference/adox-api/command-property-adox.md) propriété et la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet à récupérer les informations de champ pour la vue.  
   
 ```  
@@ -83,7 +80,7 @@ End Sub
   
 ## <a name="see-also"></a>Voir aussi  
  [ActiveConnection, propriété (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Objet catalogue (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Commande, propriété (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
+ [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Command, propriété (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Objet de vue (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

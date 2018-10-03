@@ -1,15 +1,12 @@
 ---
-title: Propriété ProtocolDisplayName (classe ServerNetworkProtocol) | Documents Microsoft
+title: Protocoldisplayname, propriété (classe ServerNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ProtocolDisplayName Property (ServerNetworkProtocol Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProtocolDisplayName property
 ms.assetid: ff51a836-7cff-4ddc-a92a-893f86e637cb
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 05464769ab8601e775b7f5ae870b0ecb87a2c28b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c2afbefad076ec47a6ecdf6735763627975f8a79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33009716"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853927"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>Propriété ProtocolDisplayName (classe ServerNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.ProtocolDisplayName [= value]
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  A [classe ServerNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) qui représente le protocole réseau utilisé par l'instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  

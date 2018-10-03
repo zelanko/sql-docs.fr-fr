@@ -1,35 +1,32 @@
 ---
-title: Administrateur de sources de données ODBC | Documents Microsoft
+title: Administrateur de sources de données ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e529ab5d321625f8e6bf795a70d0e0143499df7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c718595d0912e4d87bb190788a6357453a8a0ee5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34706947"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677277"
 ---
 # <a name="odbc-data-source-administrator"></a>Administrateur des sources de données ODBC
-Administrateur de sources de données Microsoft® ODBC gère les sources de données et les pilotes de base de données. Cette application se trouve dans le panneau de configuration Windows sous **outils d’administration**. À compter de Windows 8, l’icône est nommé **des Sources de données ODBC**, et sur les systèmes d’exploitation 64 bits, il existe une version 32 bits et 64 bits.  
+Administrateur de sources de données Microsoft® ODBC gère les sources de données et les pilotes de base de données. Cette application se trouve dans le panneau de configuration Windows sous **outils d’administration**. À compter de Windows 8, l’icône est nommée **Sources de données ODBC**, et sur les systèmes d’exploitation 64 bits, il existe une version 32 bits et 64 bits.  
   
- Pour plus d’informations sur les modalités de l’administrateur ODBC, ouvrir le [administrateur de sources de données ODBC](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) boîte de dialogue et cliquez sur **aide**.  
+ Pour plus d’informations sur les procédures détaillées de l’administrateur ODBC, ouvrez le [administrateur de sources de données ODBC](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) boîte de dialogue et cliquez sur **aide**.  
   
- Vous pouvez utiliser des commandes PowerShell pour gérer les pilotes et les sources de données. Pour plus d’informations sur ces commandes PowerShell, consultez [les commandes Windows PowerShell pour les composants l’accès données](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+ Vous pouvez utiliser les commandes PowerShell pour gérer les pilotes et les sources de données. Pour plus d’informations sur ces commandes PowerShell, consultez [les commandes PowerShell pour les composants Windows Data Access](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
  Cette section contient les rubriques suivantes.  
   

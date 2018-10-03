@@ -1,13 +1,11 @@
 ---
-title: Méthode getNumericFunctions (SQLServerDatabaseMetaData) | Documents Microsoft
+title: Méthode getNumericFunctions (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getNumericFunctions
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8d1c3848-bdb7-452a-862f-6421e1a7ce8b
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 329b2b125b12f300cafe157524f87d3fb1b1ba3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e12aeded73e7534a72f85cdb0a609ad0ab1ac52e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835984"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672477"
 ---
 # <a name="getnumericfunctions-method-sqlserverdatabasemetadata"></a>Méthode getNumericFunctions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +36,17 @@ public java.lang.String getNumericFunctions()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- A **chaîne** qui contient les fonctions mathématiques disponibles.  
+ Un **chaîne** qui contient les fonctions mathématiques disponibles.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getNumericFunctions est spécifiée par la méthode getNumericFunctions dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Membres de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
+ [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

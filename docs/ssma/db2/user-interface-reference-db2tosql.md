@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: db926dc3bfa43450f4a483aec551513567dac52b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 481429d65f587cdbeb7ed977cafd4553f697c59c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392518"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771441"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Référence de l’Interface utilisateur (DB2ToSQL)
 Cette section inclut des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour DB2.  
@@ -31,7 +25,7 @@ Le tableau suivant répertorie les boîtes de dialogue SSMA :
   
 |||  
 |-|-|  
-|Rubrique| Description|  
+|Rubrique|Description|  
 |[Sélection d’objet avancée &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Utilisez le **avancé le sélectionnez objet** boîte de dialogue pour rechercher des objets de base de données à l’aide de critères de filtre, puis sélectionnez ou désactivez ces objets.|  
 |[Rapport d’évaluation &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Le rapport d’évaluation permet d’afficher les résultats de la conversion d’objets DB2 à [!INCLUDE[tsql](../../includes/tsql-md.md)] syntaxe et pour estimer le temps et la complexité d’une migration vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Connexion à la base de données DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Utilisez le **se connecter à DB2** boîte de dialogue pour vous connecter à la base de données DB2 que vous souhaitez migrer.|  

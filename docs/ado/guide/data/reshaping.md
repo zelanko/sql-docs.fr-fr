@@ -1,31 +1,28 @@
 ---
-title: La mise en forme | Documents Microsoft
+title: La mise en forme | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reshaping previously shaped Recordset [ADO]
 - data shaping [ADO], reshaping
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82b2b66d691f94ce79795b7a11002ba88f7ac74a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272468"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714527"
 ---
-# <a name="reshaping"></a>La mise en forme
-A **Recordset** créé par une clause d’une forme de commande peut avoir un *alias* nom (généralement avec le mot clé AS). L’alias d’une forme **Recordset** peut être référencée dans une commande totalement différente. Autrement dit, vous pouvez réutiliser ou *remodeler*, un préalablement mis en forme **Recordset** dans une nouvelle commande de forme. Pour prendre en charge cette fonctionnalité, ADO fournit une propriété, [nom de remodeler](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  
+# <a name="reshaping"></a>Remise en forme
+Un **Recordset** créé par une clause d’une forme commande peut-être être affectée un *alias* nom (généralement avec le mot clé AS). L’alias d’une forme **Recordset** peut être référencée dans une commande totalement différente. Autrement dit, vous pouvez réutiliser ou *remodeler*, un préalablement mis en forme **Recordset** dans une nouvelle commande de forme. Pour prendre en charge cette fonctionnalité, ADO fournit une propriété, [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  
   
  La mise en forme a deux fonctions principales. La première consiste à associer un existant **Recordset** avec un nouveau parent **Recordset**.  
   
@@ -40,10 +37,10 @@ rs2.Open "SHAPE {select * from Employees} " & _
          "APPEND (chapOrders RELATE EmployeeID to EmployeeID)", cn  
 ```  
   
- La deuxième fonction consiste à activer l’accès non chapitre enfant existant **Recordset** des objets, à l’aide de la syntaxe « forme \<recordset remodeler nom > ».  
+ La deuxième fonction consiste à activer l’accès à chapitre à enfant existant **Recordset** objets, à l’aide de la syntaxe « forme \<recordset remodeler nom > ».  
   
 > [!NOTE]
->  Ne peut pas ajouter des colonnes à une **Recordset**, remodeler un paramétrable **Recordset** ou **Recordset** des objets dans une clause COMPUTE intermédiaire, ou effectuer regrouper des opérations sur n’importe quel **Recordset** descendants à partir de la **Recordset** est redessinée. Le **Recordset** en cours reformé et la nouvelle forme de commande doivent tous deux utiliser le même [connexion](../../../ado/reference/ado-api/connection-object-ado.md).  
+>  Impossible d’ajouter des colonnes à une **Recordset**, remodeler un paramétrable **Recordset** ou **Recordset** des objets d’une clause COMPUTE intermédiaire, ou effectuer agréger des opérations sur n’importe quel **Recordset** descendants à partir de la **Recordset** en cours reformé. Le **Recordset** en cours reformé et la nouvelle forme de commande doivent tous deux utiliser le même [connexion](../../../ado/reference/ado-api/connection-object-ado.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)

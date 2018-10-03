@@ -1,28 +1,25 @@
 ---
-title: Les Interfaces et les objets ADO | Documents Microsoft
+title: Les Interfaces et les objets ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, objects and interfaces
 - objects [ADO]
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4251e50ad3f31ccf79b66e4ae4d302723fd6e840
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f0bba8402bb49d481886e4c81071443873834c8c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275608"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660647"
 ---
 # <a name="ado-objects-and-interfaces"></a>Objets et interfaces ADO
 Les relations entre ces objets sont représentées dans le [modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -31,23 +28,23 @@ Les relations entre ces objets sont représentées dans le [modèle objet ADO](.
   
 |||  
 |-|-|  
-|[IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|Utilisé pour récupérer la commande OLEDB sous-jacente à partir d’un objet ADOCommand.|  
-|[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Construit un ADO **enregistrement** objet OLE DB **ligne** objet dans une application C/C++.|  
-|[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|Construit un ADO **Recordset** objet OLE DB **ensemble de lignes** objet dans une application C/C++.|  
-|[ADOStreamConstruction, interface](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|Construit un ADO **flux** objet OLE DB **IStream** objet dans une application C/C++.|  
-|[Commandee](../../../ado/reference/ado-api/command-object-ado.md)|Définit une commande spécifique que vous avez l’intention d’exécuter par rapport à une source de données.<br /><br /> Le **commande** l’objet n’est pas sécurisé pour le script.|  
+|[IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|Utilisé pour récupérer la commande OLE DB sous-jacent à partir d’un objet ADOCommand.|  
+|[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Construit un ADO **enregistrement** objet à partir d’un OLE DB **ligne** objet dans une application C/C++.|  
+|[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|Construit un ADO **Recordset** objet à partir d’un OLE DB **ensemble de lignes** objet dans une application C/C++.|  
+|[ADOStreamConstruction, interface](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|Construit un ADO **Stream** objet à partir d’un OLE DB **IStream** objet dans une application C/C++.|  
+|[Commandee](../../../ado/reference/ado-api/command-object-ado.md)|Définit une commande spécifique que vous avez l’intention d’exécuter par rapport à une source de données.<br /><br /> Le **commande** objet n’est pas sécurisé pour le script.|  
 |[Connexion](../../../ado/reference/ado-api/connection-object-ado.md)|Représente une connexion ouverte à une source de données.<br /><br /> Le **connexion** objet est sécurisé pour le script.|  
-|[IDSOShapeExtensions, interface](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|Obtient l’objet sous-jacent de la Source de données OLE DB pour le fournisseur SHAPE.|  
+|[IDSOShapeExtensions, interface](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|Obtient l’objet de Source de données OLE DB sous-jacent pour le fournisseur SHAPE.|  
 |[Erreur](../../../ado/reference/ado-api/error-object.md)|Contient des détails sur les erreurs d’accès aux données qui se rapportent à une seule opération impliquant le fournisseur.<br /><br /> Le **erreur** objet n’est pas sécurisé pour le script.|  
 |[Field](../../../ado/reference/ado-api/field-object.md)|Représente une colonne de données avec un type de données commun.|  
 |[Paramètre](../../../ado/reference/ado-api/parameter-object.md)|Représente un paramètre ou un argument associé à un **commande** objet basé sur une procédure stockée ou une requête paramétrable.<br /><br /> Le **paramètre** objet n’est pas sécurisé pour le script.|  
-|[Propriété](../../../ado/reference/ado-api/property-object-ado.md)|Représente une caractéristique dynamique d’un objet ADO qui est défini par le fournisseur.|  
+|[Propriété](../../../ado/reference/ado-api/property-object-ado.md)|Représente une caractéristique dynamique d’un objet ADO qui est définie par le fournisseur.|  
 |[Enregistrement](../../../ado/reference/ado-api/record-object-ado.md)|Représente une ligne d’un **Recordset**, ou un répertoire ou un fichier dans un système de fichiers. Le **enregistrement** objet est sécurisé pour le script.|  
-|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Représente le jeu d’enregistrements à partir d’une table de base ou les résultats d’une commande exécutée. À tout moment, le **Recordset** objet fait référence à un seul enregistrement dans le jeu en tant que l’enregistrement actif.<br /><br /> Le **Recordset** objet est sécurisé pour le script.|  
-|[Flux de données](../../../ado/reference/ado-api/stream-object-ado.md)|Représente un flux de données binaire.<br /><br /> Le **flux** objet est sécurisé pour le script.|  
+|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Représente le jeu d’enregistrements à partir d’une table de base ou les résultats d’une commande exécutée. À tout moment, le **Recordset** objet fait référence à un seul enregistrement dans le jeu en tant que l’enregistrement en cours.<br /><br /> Le **Recordset** objet est sécurisé pour le script.|  
+|[flux de données](../../../ado/reference/ado-api/stream-object-ado.md)|Représente un flux binaire de données.<br /><br /> Le **Stream** objet est sécurisé pour le script.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
+ [Référence de l’API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Collections ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes énumérées ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

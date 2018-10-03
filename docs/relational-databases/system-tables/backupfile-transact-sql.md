@@ -1,14 +1,11 @@
 ---
-title: backupfile (Transact-SQL) | Documents Microsoft
+title: backupfile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfile
@@ -19,30 +16,29 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a667986dbf546672c368179a1e23e6b82b7373c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262008"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842977"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient une ligne pour chaque fichier de données ou fichier journal d'une base de données. Les colonnes décrivent la configuration des fichiers au moment où la sauvegarde a été effectuée. Indique si le fichier est inclus dans la sauvegarde sont déterminé par le **is_present** colonne. Cette table est stockée dans le **msdb** base de données.  
+  Contient une ligne pour chaque fichier de données ou fichier journal d'une base de données. Les colonnes décrivent la configuration des fichiers au moment où la sauvegarde a été effectuée. Si le fichier est inclus dans la sauvegarde sont déterminé par le **is_present** colonne. Cette table est stockée dans le **msdb** base de données.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|Numéro d'identification unique du fichier contenant le jeu de sauvegarde. Références **backupset (backup_set_id)**.|  
+|**backup_set_id**|**Int**|Numéro d'identification unique du fichier contenant le jeu de sauvegarde. Références **backupset (backup_set_id)**.|  
 |**first_family_number**|**tinyint**|Numéro de famille du premier support contenant ce fichier de sauvegarde Sa valeur peut être NULL.|  
 |**first_media_number**|**smallint**|Numéro de support du premier support contenant ce fichier de sauvegarde. Sa valeur peut être NULL.|  
 |**filegroup_name**|**nvarchar(128)**|Nom du groupe de fichiers contenant un fichier de base de données sauvegardée. Sa valeur peut être NULL.|  
-|**page_size**|**int**|Taille de la page en octets.|  
-|**file_number**|**NUMERIC(10,0)**|Numéro d’identification de fichier unique dans une base de données (correspond à **sys.database_files**. **FILE_ID**).|  
+|**page_size**|**Int**|Taille de la page en octets.|  
+|**file_number**|**NUMERIC(10,0)**|Numéro d’identification de fichier unique au sein d’une base de données (correspond à **sys.database_files**. **FILE_ID**).|  
 |**backed_up_page_count**|**NUMERIC(10,0)**|Nombre de pages sauvegardées. Sa valeur peut être NULL.|  
 |**file_type**|**char(1)**|Fichier sauvegardé, avec une des valeurs suivantes :<br /><br /> D = Fichier de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = Journal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = Catalogue de texte intégral.<br /><br /> Sa valeur peut être NULL.|  
 |**source_file_block_size**|**NUMERIC(10,0)**|Unité sur laquelle le fichier de données ou le fichier journal d'origine se trouvaient au moment de la sauvegarde. Sa valeur peut être NULL.|  
@@ -60,12 +56,12 @@ ms.locfileid: "33262008"
 |**differential_base_lsn**|**numeric(25,0)**|Numéro de séquence d'enregistrement de base pour les sauvegardes différentielles. Une sauvegarde différentielle inclut uniquement les extensions de données ayant une séquence de journal numéro supérieur ou égal à **differential_base_lsn**.<br /><br /> Pour les autres types de sauvegarde, la valeur est NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|Pour une sauvegarde différentielle, il s'agit de l'identificateur unique de la sauvegarde de données la plus récente qui compose la base différentielle du fichier ; si la valeur est NULL, le fichier a été inclus dans la sauvegarde différentielle, mais il a été ajouté après la création de la base.<br /><br /> Pour les autres types de sauvegarde, la valeur est NULL.|  
 |**backup_size**|**numeric(20,0)**|Taille de la sauvegarde en octets pour ce fichier.|  
-|**filegroup_guid**|**uniqueidentifier**|Identificateur du groupe de fichiers. Pour trouver les informations de groupe de fichiers dans la table backupfilegroup, utilisez **filegroup_guid** avec **backup_set_id**.|  
+|**filegroup_guid**|**uniqueidentifier**|Identificateur du groupe de fichiers. Pour localiser les informations de groupe de fichiers dans la table backupfilegroup, utilisez **filegroup_guid** avec **backup_set_id**.|  
 |**is_readonly**|**bit**|1 = Le fichier est en lecture seule.|  
 |**is_present**|**bit**|1 = Le fichier est contenu dans le jeu de sauvegarde.|  
   
 ## <a name="remarks"></a>Notes  
- RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY remplit les colonnes de la **backupmediaset** table avec les valeurs appropriées de l’en-tête du support de sauvegarde.  
+ RESTORE VERIFYONLY FROM *backup_device* avec LOADHISTORY remplit les colonnes de la **backupmediaset** table avec les valeurs appropriées de l’en-tête de support de sauvegarde.  
   
  Pour réduire le nombre de lignes dans cette table et dans d’autres tables d’historique de sauvegarde et, exécutez le [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procédure stockée.  
   

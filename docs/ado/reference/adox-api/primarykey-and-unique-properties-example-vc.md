@@ -1,13 +1,11 @@
 ---
-title: PrimaryKey et exemple de propriétés uniques (VC ++) | Documents Microsoft
+title: PrimaryKey et Unique exemple (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Unique property [ADOX], VC++ example
 - PrimaryKey property [ADOX], VC++ example
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bacde66d71826f40eb86cb31c92c1f8663ccac74
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b7d8943249f6780de448e4eb22dcd3088dbc55bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286768"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613317"
 ---
-# <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey et exemple de propriétés uniques (VC ++)
-Cet exemple illustre la [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) et [Unique](../../../ado/reference/adox-api/unique-property-adox.md) propriétés d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Le code crée une nouvelle table avec deux colonnes. Le **PrimaryKey** et **Unique** propriétés sont utilisées pour définir une colonne clé primaire pour laquelle les valeurs en double ne sont pas autorisées.  
+# <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey et Unique, exemples de propriétés (VC++)
+Cet exemple montre la [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) et [Unique](../../../ado/reference/adox-api/unique-property-adox.md) propriétés d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Le code crée une nouvelle table avec deux colonnes. Le **PrimaryKey** et **Unique** propriétés sont utilisées pour définir une colonne clé primaire pour laquelle les valeurs en double ne sont pas autorisées.  
   
 ```  
 // BeginPrimaryKeyCpp.cpp  

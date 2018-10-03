@@ -1,31 +1,28 @@
 ---
-title: Créer un exemple de méthode (VB) | Documents Microsoft
+title: Créer l’exemple de méthode (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Create method [ADOX], Visual Basic example
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ceaa8da952df38091b9ddfeb7b02ba1acee55e75
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7532cc78f05271b6a3b3db8f6e74040b9ac50535
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285588"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601938"
 ---
-# <a name="create-method-example-vb"></a>Créer un exemple de méthode (VB)
+# <a name="create-method-example-vb"></a>Create, exemple de méthode (VB)
 Le code suivant montre comment créer une nouvelle base de données Microsoft Jet avec le [créer](../../../ado/reference/adox-api/create-method-adox.md) (méthode).  
   
 ```  
@@ -54,5 +51,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet catalogue (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Create, méthode (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

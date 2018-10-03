@@ -1,25 +1,22 @@
 ---
-title: Méthode getFunctions (SQLServerDatabaseMetaData) | Documents Microsoft
+title: Méthode getFunctions (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bf039e2104a7ac2fbbcce8a5a9fbd8bade8589d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d6032cd14cf93d75714d46bfc825d53ecc68d39b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836024"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622437"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>Méthode getFunctions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,23 +35,23 @@ public ResultSet getFunctions(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- Nom d'un catalogue dans la base de données. Si la chaîne est vide « », le résultat inclut les fonctions sans catalogue. S’il s’agit **null**, le nom du catalogue n’est pas utilisé pour la recherche.  
+ Nom d'un catalogue dans la base de données. Si la chaîne est vide « », le résultat inclut les fonctions sans catalogue. Si elle est **null**, le nom du catalogue n’est pas utilisé pour la recherche.  
   
  *schemaPattern*  
   
- Nom d'un schéma. Si la chaîne est vide « », le résultat inclut les fonctions sans schéma. S’il s’agit **null**, le nom de schéma n’est pas utilisé pour la recherche.  
+ Nom d'un schéma. Si la chaîne est vide « », le résultat inclut les fonctions sans schéma. Si elle est **null**, le nom du schéma n’est pas utilisé pour la recherche.  
   
  *functionNamePattern*  
   
  Nom d'une fonction.  
   
 ## <a name="return-value"></a>Valeur retournée  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objet.  
+ Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getFunctions est spécifiée par la méthode getFunctions dans l’interface java.sql.DatabaseMetaData.  
   
  Cette méthode retourne uniquement les fonctions système et utilisateur qui correspondent au nom de schéma et de fonction spécifié.  
@@ -64,21 +61,21 @@ public ResultSet getFunctions(java.lang.String catalog,
   
  Chaque description de fonction inclut les colonnes suivantes :  
   
-|Nom|Type| Description|  
+|Nom   |Type|Description|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|Nom de la base de données qui contient la fonction.|  
 |FUNCTION_SCHEM|**String**|Nom du schéma qui contient la fonction.|  
 |FUNCTION_NAME|**String**|Nom de la fonction.|  
-|NUM_INPUT_PARAMS|**int**|Réservé pour un usage ultérieur, retourne actuellement la valeur -1.|  
-|NUM_OUTPUT_PARAMS|**int**|Réservé pour un usage ultérieur, retourne actuellement la valeur -1.|  
-|NUM_RESULT_SETS|**int**|Réservé pour un usage ultérieur, retourne actuellement la valeur -1.|  
+|NUM_INPUT_PARAMS|**Int**|Réservé pour un usage ultérieur, retourne actuellement la valeur -1.|  
+|NUM_OUTPUT_PARAMS|**Int**|Réservé pour un usage ultérieur, retourne actuellement la valeur -1.|  
+|NUM_RESULT_SETS|**Int**|Réservé pour un usage ultérieur, retourne actuellement la valeur -1.|  
 |REMARKS|**String**|Commentaires sur la fonction.|  
-|FUNCTION_TYPE|**courte**|Type de la fonction. Il peut prendre l’une des valeurs suivantes :<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
+|FUNCTION_TYPE|**short**|Type de la fonction. Il peut avoir une des valeurs suivantes :<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
  Toutes les descriptions dans le jeu de résultats retourné sont classées par FUNCTION_CAT, FUNCTION_SCHEM, FUNCTION_NAME et SPECIFIC_NAME.  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

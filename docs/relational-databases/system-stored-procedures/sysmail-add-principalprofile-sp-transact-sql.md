@@ -1,14 +1,11 @@
 ---
-title: sysmail_add_principalprofile_sp (Transact-SQL) | Documents Microsoft
+title: sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_principalprofile_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_principalprofile_sp
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d5eda99649aa5f27cc199a2a4676c0f79d36c80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 794a7c9013fff188500c26232a597a7dd4c6283d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261488"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756270"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +43,16 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
   
 ## <a name="arguments"></a>Arguments  
  [ **@principal_id** =] *principal_id*  
- L’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association. *principal_id* est **int**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* doit être spécifié. A *principal_id* de **0** rend ce profil est public, accorder l’accès à tous les principaux dans la base de données.  
+ L’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association. *principal_id* est **int**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* doit être spécifié. Un *principal_id* de **0** cela, le profil est public, accordant l’accès à tous les principaux dans la base de données.  
   
  [ **@principal_name** =] **'***principal_name***'**  
- Le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* doit être spécifié. A *principal_name* de **'public'** rend ce profil est public, accorder l’accès à tous les principaux dans la base de données.  
+ Le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* doit être spécifié. Un *principal_name* de **'public'** cela, le profil est public, accordant l’accès à tous les principaux dans la base de données.  
   
  [ **@profile_id** =] *profile_id*  
  Identificateur du profil pour l'association. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- Nom du profil pour l'association. *profile_name* est **sysname**, sans valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
+ Nom du profil pour l'association. *nom_profil* est **sysname**, sans valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
   
  [ **@is_default** =] *is_default*  
  Indique si ce profil représente le profil par défaut pour le principal. Un principal ne peut avoir qu'un seul profil par défaut. *is_default* est **bits**, sans valeur par défaut.  
@@ -65,19 +61,19 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- Pour rendre un profil public, vous devez spécifier un **@principal_id** de **0** ou un **@principal_name** de **public**. Un profil public est disponible pour tous les utilisateurs dans le **msdb** de base de données, bien que les utilisateurs doivent être également membre du **DatabaseMailUserRole** à exécuter **sp_send_dbmail**.  
+ Pour rendre un profil public, spécifiez un **@principal_id** de **0** ou un **@principal_name** de **public**. Un profil public est disponible pour tous les utilisateurs dans le **msdb** de base de données, bien que les utilisateurs doivent également être membre de **DatabaseMailUserRole** pour exécuter **sp_send_dbmail**.  
   
- Un utilisateur de base de données ne peut avoir plus d'un seul profil par défaut. Lorsque **@is_default** est '**1**' et l’utilisateur est déjà associé à un ou plusieurs profils, le profil spécifié devient le profil par défaut pour l’utilisateur. L'ancien profil par défaut est toujours associé à l'utilisateur, mais n'est plus le profil par défaut.  
+ Un utilisateur de base de données ne peut avoir plus d'un seul profil par défaut. Lorsque **@is_default** est «**1**» et l’utilisateur est déjà associé à un ou plusieurs profils, le profil spécifié devient le profil par défaut pour l’utilisateur. L'ancien profil par défaut est toujours associé à l'utilisateur, mais n'est plus le profil par défaut.  
   
- Lorsque **@is_default** est '**0**' et aucune autre association n’existe, la procédure stockée renvoie une erreur.  
+ Lorsque **@is_default** est «**0**' et aucune autre association n’existe, la procédure stockée retourne une erreur.  
   
  La procédure stockée **sysmail_add_principalprofile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
- **A. Création d’une association, la définition du profil par défaut**  
+ **A. Création d’une association et définition du profil par défaut**  
   
  L’exemple suivant crée une association entre le profil nommé `AdventureWorks Administrator Profile` et **msdb** utilisateur de base de données `ApplicationUser`. Le profil est le profil par défaut de l'utilisateur.  
   
@@ -90,7 +86,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
  **B. Modification d’un profil le profil public par défaut**  
   
- L’exemple suivant montre le profil `AdventureWorks Public Profile` le profil public par défaut pour les utilisateurs dans le **msdb** base de données.  
+ L’exemple suivant fait du profil `AdventureWorks Public Profile` le profil public par défaut pour les utilisateurs dans le **msdb** base de données.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  

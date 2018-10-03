@@ -1,32 +1,29 @@
 ---
-title: Limitations d’instruction DELETE | Documents Microsoft
+title: DELETE, instruction-Limitations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DELETE statement limitations [ODBC]
 - ODBC SQL grammar, DELETE statement limitations
 ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: caa4855c83815c8876c4674bf01de3f9c4bd4231
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 98bd56051c724186d7308eff669263d29b82ecd5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32898854"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813827"
 ---
-# <a name="delete-statement-limitations"></a>SUPPRIMER les Limitations de l’instruction
-L’instruction DELETE n’est pas prise en charge pour le pilote Microsoft Excel ou texte. Notez que l’instruction INSERT est pris en charge pour le pilote de texte.  
+# <a name="delete-statement-limitations"></a>DELETE, instruction - limitations
+L’instruction DELETE n’est pas pris en charge pour le pilote Microsoft Excel ou texte. Notez que l’instruction INSERT est prise en charge pour le pilote de texte.  
   
- Le pilote dBASE ne prend pas en charge la compression d’une table pour supprimer les valeurs de « supprimé ».  
+ Le pilote dBASE ne prend pas en charge la compression d’une table pour supprimer les valeurs « supprimé ».  
   
  Pour le pilote Paradox supprimer une ligne d’une table, la table doit avoir un index unique (clé primaire).

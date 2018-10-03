@@ -1,13 +1,11 @@
 ---
-title: Exécuter SQL Server Profiler | Documents Microsoft
+title: Exécuter SQL Server Profiler | Microsoft Docs
 ms.custom: ''
 ms.date: 7/7/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: profiler
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 250ea8227a4bd045883322ba2fec3e923336a5e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcfe2b2f594eebef121ec56d43ca6eac4cdcb293
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824127"
 ---
 # <a name="run-sql-server-profiler"></a>Exécuter SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +31,13 @@ ms.locfileid: "33076820"
   
 Quand vous démarrez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour la première fois et que vous sélectionnez **Nouvelle trace** dans le menu **Fichier**, l’application affiche la boîte de dialogue **Se connecter au serveur**, où vous pouvez spécifier l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous voulez vous connecter.  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Pour démarrer le SQL Server Profiler à partir du menu Démarrer de Windows 10  
--  Cliquez sur les fenêtres **Démarrer** ou appuyez sur les fenêtres de clé et commencent à taper « SQL Server Profiler 17 ». Lorsque le **SQL Server Profiler 17** vignette s’affiche, cliquez dessus.   
+-  Cliquez sur le Windows **Démarrer** icône et appuyez sur les Windows et commencent à taper « SQL Server Profiler 17 ». Lorsque le **SQL Server Profiler 17** vignette s’affiche, cliquez dessus.   
 
 ## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>Pour démarrer le Générateur de profils SQL Server dans l'Assistant Paramétrage du moteur de base de données  
 -  Dans le menu [!INCLUDE[ssDE](../../includes/ssde-md.md)] Outils **de l’Assistant Paramétrage du** , cliquez sur **SQL Server Profiler**.  
 
-## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>Pour démarrer le Générateur de profils SQL Server dans SQL Server Management Studio  
- Vous pouvez démarrer [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] depuis plusieurs emplacements dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Quand [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] démarre, il charge le contexte de connexion, le modèle de trace et le contexte du filtre de son point de lancement. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] démarre chaque session de SQL Server Profiler dans sa propre instance et Profiler continue de s’exécuter si vous arrêtez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>Pour démarrer SQL Server Profiler dans SQL Server Management Studio  
+ Vous pouvez démarrer [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] depuis plusieurs emplacements dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Quand [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] démarre, il charge le contexte de connexion, le modèle de trace et le contexte du filtre de son point de lancement. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] démarre chaque session de SQL Server Profiler dans sa propre instance et Profiler continue à s’exécuter si vous arrêtez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>Pour démarrer le Générateur de profils SQL Server à partir du menu Outils  
 -  Dans le menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Tools** menu, click **SQL Server Profiler**.  
 
