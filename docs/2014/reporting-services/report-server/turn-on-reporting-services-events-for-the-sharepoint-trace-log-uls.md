@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b278a5e71b3954e8d296fd9dc7644b33b99aae9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9170643f3d0a96facb68709ad59bc4c8e90dc9a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244329"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117249"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activer des événements Reporting Services pour le journal des traces SharePoint (ULS)
   À partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], les serveurs d' [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en mode SharePoint peuvent écrire des événements [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans le journal des traces su service de journalisation unifiée SharePoint (ULS). [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sont disponibles sur la page de supervision de l'Administration centrale de SharePoint.  

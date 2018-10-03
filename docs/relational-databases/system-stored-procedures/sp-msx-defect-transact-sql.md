@@ -1,14 +1,11 @@
 ---
-title: sp_msx_defect (Transact-SQL) | Documents Microsoft
+title: sp_msx_defect (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_defect
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_defect
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffce49260f39c04665ec570e92a37e1783077dbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b811fd8b1bb6be9c63794006888db253a8c341e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252265"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843347"
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +44,9 @@ sp_msx_defect [@forced_defection =] forced_defection
   
 ## <a name="arguments"></a>Arguments  
  [  **@forced_defection =**] *défection_forcée*  
- Spécifie s’il faut ou non forcer la désinscription lorsque le SQLServerAgent principal a été définitivement perdu en raison d’une détérioration **msdb** base de données, ou sur non **msdb** sauvegarde de base de données. *défection_forcée*est **bits**, avec une valeur par défaut **0**, ce qui signifie qu’aucune forcer la désinscription. La valeur **1** force la désinscription.  
+ Spécifie s’il faut forcer la désinscription de se produire si le SQLServerAgent principal a été définitivement perdu en raison d’une détérioration irréversible endommagé **msdb** base de données, ou sur non **msdb** sauvegarde de base de données. *défection_forcée*est **bits**, avec une valeur par défaut **0**, ce qui indique qu’aucun forcer la désinscription. La valeur **1** force la désinscription.  
   
- Après avoir forcé une désinscription par l’exécution de **sp_msx_defect**, un membre de la **sysadmin** rôle serveur fixe auprès du SQLServerAgent principal doit exécuter la commande suivante pour terminer l’opération :  
+ Après avoir forcé une désinscription par l’exécution de **sp_msx_defect**, un membre de la **sysadmin** rôle serveur fixe sur le SQLServerAgent principal doit exécuter la commande suivante pour terminer l’opération :  
   
 ```  
 EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defection =  0;  
@@ -60,12 +56,12 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  Lorsque **sp_msx_defect** se termine correctement, un message est retourné.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour exécuter cette procédure stockée, l'utilisateur doit être membre du rôle de serveur fixe **sysadmin** .  
   
 ## <a name="see-also"></a>Voir aussi  

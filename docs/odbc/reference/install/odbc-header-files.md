@@ -1,33 +1,30 @@
 ---
-title: Fichiers d’en-tête ODBC | Documents Microsoft
+title: Fichiers d’en-tête ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing ODBC components [ODBC], application files
 - header files [ODBC]
 - application files [ODBC]
 ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a48cc2c8b214f7ead8819e3ce6c8b39ad716b61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8092f220d95847328e1cf37c2ca815f67f539b5b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915534"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722427"
 ---
 # <a name="odbc-header-files"></a>Fichiers d’en-tête ODBC
 > [!NOTE]  
->  Redistribution des fichiers d’en-tête ODBC n’est pas nécessaire. Aucun sont considérées comme « Core ».  
+>  Redistribution des fichiers d’en-tête ODBC n’est pas nécessaire. Aucun sont considérés comme « Core ».  
   
  **Fichiers d’en-tête**  
   
@@ -45,4 +42,4 @@ ms.locfileid: "32915534"
   
  Msdadc.h  
   
- Sqlspi.h (utilisé pour le développement du pilote, consultez [référence de l’Interface de fournisseur de Service ODBC (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) pour plus d’informations) disponible à partir du Kit de développement logiciel Windows 8.
+ Sqlspi.h (utilisé pour le développement de pilotes, consultez [référence de l’Interface de fournisseur de Service ODBC (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) pour plus d’informations) disponible à partir du Kit de développement logiciel Windows 8.

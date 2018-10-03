@@ -1,33 +1,30 @@
 ---
-title: Utilisation d’ADO avec des langages de script | Documents Microsoft
+title: Utilisation d’ADO avec les langages de script | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa90243680a59676f64f00cc4fd2b0c182c3d674
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600387"
 ---
-# <a name="using-ado-with-scripting-languages"></a>Utilisation d’ADO avec des langages de script
-Dans un environnement de script, ADO vous permet d’exposer des données par le biais de script côté serveur. Dans ce scénario, ADO, le fournisseur OLE DB sous-jacent qu’il utilise, et tous les autres composants nécessaires pour faire référence à un magasin de données installées sur un serveur exécutant Internet Information Services (IIS). À l’aide d’Active Server Pages (ASP), ADO est un composant référencé dans un script qui peut générer du code HTML, par exemple. Ce contenu peut être passé via le protocole HTTP pour un navigateur Web client. À l’aide de scripts, la page Web peut renvoyer des actions au script côté serveur, ce qui vous permet de mettre à jour, de traverser ou afficher des données spécifiques.  
+# <a name="using-ado-with-scripting-languages"></a>Utilisation d’ADO avec les langages de script
+Dans un environnement de script, ADO vous permet d’exposer les données par le biais de scripts côté serveur. Dans ce scénario, ADO, le fournisseur OLE DB sous-jacent qui il utilise, et tous les composants nécessaires pour faire référence à un magasin de données donné sont installés sur un serveur exécutant Internet Information Services (IIS). À l’aide de Active Server Pages (ASP), ADO est un composant référencé dans un script qui peut générer du code HTML, par exemple. Ce contenu HTML peut être passé via HTTP à un navigateur Web client. À l’aide de scripts, la page Web peut renvoyer des actions au script côté serveur, ce qui vous permet de mettre à jour, de traverser ou afficher des données spécifiques.  
   
- Avant d’utiliser un objet ActiveX dans une page Web, il est important de savoir si l’objet est sécurisé pour le script. Lorsqu’un objet est considéré comme sécurisé pour le script, cela signifie que le contrôle ne peut pas prendre toute action néfaste sur l’ordinateur de l’utilisateur et par conséquent, peut être exécuté sans demander l’approbation de l’utilisateur. Le tableau suivant répertorie les objets ADO et indique s’ils sont sécurisés pour les scripts.  
+ Avant d’utiliser un objet ActiveX dans une page Web, il est important de savoir si l’objet est sécurisé pour le script. Lorsqu’un objet est considéré comme sécurisé pour le script, cela signifie que le contrôle ne peut pas intervenir dangereux sur l’ordinateur de l’utilisateur et par conséquent, peut être exécuté sans demander l’approbation de l’utilisateur. Le tableau suivant répertorie les objets ADO et indique s’ils sont sécurisés pour les scripts.  
   
 |Object|Sécurisée pour le script ?|  
 |------------|-------------------------|  
@@ -35,8 +32,8 @@ Dans un environnement de script, ADO vous permet d’exposer des données par le
 |Commande ADO|non|  
 |Paramètre ADO|non|  
 |Jeu d’enregistrements ADO|Oui|  
-|Enregistrement ADO|Oui|  
-|Flux de données ADO|Oui|  
+|Objet Record ADO|Oui|  
+|ADO Stream|Oui|  
 |Erreur ADO|non|  
 |Catalogue ADOX|non|  
 |Ensemble de cellules ADOX|non|  
@@ -55,15 +52,15 @@ Dans un environnement de script, ADO vous permet d’exposer des données par le
 |Fournisseur OLE DB pour ODBC (MSDASQL)|non|  
   
 ## <a name="odbc-data-sources"></a>Sources de données ODBC  
- Une différence notable entre du code ADO script et non le script est la Source de données ODBC si utilisé. Pour les applications sans script, vous pouvez créer un DSN utilisateur dans l’administrateur de Source de données ODBC. Pour les scripts qui sont exécutent sous IIS, vous devez créer une source de données système ; Sinon, vos scripts ne reconnaîtront pas la source de données que vous avez créé. Cela s’applique à toutes les applications de script ADO à l’aide du fournisseur Microsoft OLE DB pour ODBC via Microsoft IIS.  
+ Une différence notable entre du code ADO script et le script est la Source de données ODBC si utilisé. Pour les applications sans script, vous pouvez créer un DSN utilisateur dans l’administrateur de sources de données ODBC. Pour les scripts qui sont exécutent sous IIS, vous devez créer une source de données système ; sinon vos scripts ne reconnaîtront pas la source de données que vous avez créé. Cela s’applique à n’importe quelle application de script de ADO à l’aide du fournisseur Microsoft OLE DB pour ODBC via Microsoft IIS.  
   
 ## <a name="referencing-the-ado-library"></a>Fait référence à la bibliothèque ADO  
  Non applicable avec les langages de script.  
   
-## <a name="handling-events"></a>La gestion des événements  
+## <a name="handling-events"></a>Gestion des événements  
  Non applicable avec les langages de script.  
   
- Les rubriques suivantes contiennent des informations plus spécifiques sur l’utilisation d’ADO avec des langages de script :  
+ Les rubriques suivantes contiennent des informations plus spécifiques sur l’utilisation d’ADO avec les langages de script :  
   
 -   [Programmation ADO VBScript](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
   
@@ -71,5 +68,5 @@ Dans un environnement de script, ADO vous permet d’exposer des données par le
   
 ## <a name="see-also"></a>Voir aussi  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [À l’aide d’ADO avec Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
+ [Utilisation d’ADO avec Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Utilisation d’ADO avec Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d0191085ac2a294d1dce8a30b9292a1cd7cf8ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 506a577aaec5eb3713a646fa152530e255b79867
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171170"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176286"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics (classe d'événements)
   La classe d'événements Performance Statistics permet de surveiller les performances des requêtes, des procédures stockées et des déclencheurs en cours d'exécution. Chacune des six sous-classes d'événements indique un événement dans la durée de vie des requêtes, des procédures stockées et des déclencheurs au sein du système. En combinant ces sous-classes d'événements aux vues de gestion dynamique sys.dm_exec_query_stats, sys.dm_exec_procedure_statset sys.dm_exec_trigger_stats correspondantes, vous pouvez reconstituer l'historique des performances d'une requête, d'une procédure stockée ou d'un déclencheur donnés.  
@@ -48,7 +45,7 @@ ms.locfileid: "37171170"
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|`image`|Handle SQL permettant d'obtenir le texte SQL du lot à l'aide de la vue de gestion dynamique sys.dm_exec_sql_text.|63|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|Texte SQL du traitement.| 1|Oui|  
+|TextData|`ntext`|Texte SQL du traitement.|1|Oui|  
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
@@ -66,7 +63,7 @@ ms.locfileid: "37171170"
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|`image`|Handle SQL permettant d'obtenir le texte SQL de la procédure stockée à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|NULL| 1|Oui|  
+|TextData|`ntext`|NULL|1|Oui|  
 |PlanHandle|`image`|Handle de plan du plan compilé pour la procédure stockée. Il peut servir à obtenir le plan XML à l'aide de la vue de gestion dynamique sys.dm_exec_query_plan.|65|Oui|  
 |ObjectType|`int`|Valeur représentant le type de l'objet qui intervient dans l'événement.<br /><br /> 8272 = procédure stockée|28|Oui|  
 |BigintData2|`bigint`|Mémoire totale, en kilo-octets, utilisée au cours de la compilation.|53|Oui|  
@@ -90,7 +87,7 @@ ms.locfileid: "37171170"
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|`image`|Handle SQL. Peut être utilisé pour obtenir le texte SQL du lot à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|NULL| 1|Oui|  
+|TextData|`ntext`|NULL|1|Oui|  
 |PlanHandle|`image`|Descripteur de plan du plan compilé pour le traitement. Il peut servir à obtenir le plan XML du lot à l'aide de la vue de gestion dynamique dm_exec_query_plan.|65|Oui|  
 |BigintData2|`bigint`|Mémoire totale, en kilo-octets, utilisée au cours de la compilation.|53|Oui|  
 |Unité centrale|`int`|Durée UC totale, en microsecondes, passée au cours de la compilation.|18|Oui|  
@@ -113,7 +110,7 @@ ms.locfileid: "37171170"
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|`image`|Handle SQL permettant d'obtenir le texte SQL de la procédure stockée ou du lot à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|QueryExecutionStats| 1|Oui|  
+|TextData|`ntext`|QueryExecutionStats|1|Oui|  
 |PlanHandle|`image`|Descripteur de plan du plan compilé pour la procédure stockée ou du traitement. Il peut servir à obtenir le plan XML à l'aide de la vue de gestion dynamique dm_exec_query_plan.|65|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
   
@@ -133,7 +130,7 @@ ms.locfileid: "37171170"
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|`image`|Handle SQL permettant d'obtenir le texte SQL de la procédure stockée qui a été exécutée à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|ProcedureExecutionStats| 1|Oui|  
+|TextData|`ntext`|ProcedureExecutionStats|1|Oui|  
 |PlanHandle|`image`|Handle de plan du plan compilé pour la procédure stockée. Il peut servir à obtenir le plan XML à l'aide de la vue de gestion dynamique dm_exec_query_plan.|65|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
   
@@ -153,7 +150,7 @@ ms.locfileid: "37171170"
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |SqlHandle|`image`|Handle SQL permettant d'obtenir le texte SQL du déclencheur à l'aide de la vue de gestion dynamique dm_exec_sql_text.|63|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|TriggerExecutionStats| 1|Oui|  
+|TextData|`ntext`|TriggerExecutionStats|1|Oui|  
 |PlanHandle|`image`|Handle de plan du plan compilé pour le déclencheur. Il peut servir à obtenir le plan XML à l'aide de la vue de gestion dynamique dm_exec_query_plan.|65|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
   

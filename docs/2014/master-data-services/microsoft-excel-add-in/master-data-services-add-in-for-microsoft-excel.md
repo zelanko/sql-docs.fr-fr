@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a5d6efd6aa45886aa87fdd5db5f51ae3682e45ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: faf49ce16cdf76af644944a2a3cc21700863ade9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273085"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198369"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Complément Master Data Services pour Microsoft Excel
   Avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], listes de données de référence de référence peuvent être distribués à tous les utilisateurs de votre organisation qui utilise Excel. La sécurité détermine quels utilisateurs peuvent afficher et mettre à jour les données.  
@@ -48,7 +45,7 @@ ms.locfileid: "37273085"
   
 -   Un *attribut* est une colonne de données. Chaque membre possède des attributs. Par exemple, l’attribut **Code** pour le membre **Bleu** est **B**. Pour plus d’informations sur les attributs, consultez [Attributs &#40;Master Data Services&#41;](../attributes-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

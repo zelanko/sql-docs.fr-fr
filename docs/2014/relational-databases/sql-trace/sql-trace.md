@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5e75f62bc6d0b5d8da6a0ce244dfde1939155e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0a1091e56ee505731fb9ce0d683975caa9c3d29
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188336"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193189"
 ---
 # <a name="sql-trace"></a>Trace SQL
   Dans la trace SQL, les événements sont collectés si ce sont des instances de classes d'événements répertoriées dans la définition de la trace. Ces événements peuvent être extraits de la trace par filtrage ou placés dans la file d'attente de leur destination. La destination peut être un fichier ou des objets SMO ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Object), qui peuvent utiliser les informations de la trace dans les applications gérant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -135,7 +132,7 @@ ms.locfileid: "37188336"
 |**TargetLoginName**|42|Pour les actions qui ciblent une connexion, nom de la connexion ciblée, par exemple pour ajouter une nouvelle connexion.|  
 |**TargetLoginSid**|43|Pour les actions qui ciblent une connexion, SID de la connexion ciblée, par exemple pour ajouter une nouvelle connexion.|  
 |**TargetUserName**|39|Pour les actions qui ciblent un utilisateur de base de données, nom de cet utilisateur, par exemple pour accorder une autorisation à un utilisateur.|  
-|**TextData**| 1|Valeur de texte qui dépend de la classe d'événements capturée dans la trace. Néanmoins, si vous tracez une requête paramétrable, les variables ne sont pas affichées avec les valeurs de données dans la colonne **TextData** .|  
+|**TextData**|1|Valeur de texte qui dépend de la classe d'événements capturée dans la trace. Néanmoins, si vous tracez une requête paramétrable, les variables ne sont pas affichées avec les valeurs de données dans la colonne **TextData** .|  
 |**ID de transaction**|4|ID affecté à la transaction par le système.|  
 |**Type**|57|Valeur entière qui dépend de la classe d'événements capturée dans la trace.|  
 |**Writes**|17|Nombre d'opérations d'écriture sur le disque physique effectuées par le serveur pour l'événement.|  

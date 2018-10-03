@@ -1,17 +1,12 @@
 ---
-title: Sys.fn_cdc_get_column_ordinal (Transact-SQL) | Documents Microsoft
+title: Sys.fn_cdc_get_column_ordinal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_column_ordinal
 - fn_cdc_get_column_ordinal_TSQL
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_cdc_get_column_ordinal
 - sys.fn_cdc_get_column_ordinal
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 70ca20e98ba1330482fd19265b7f54f07d9711e4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b82aac8f856c1e057f389ac0af7d06dfee549fa5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229846"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624207"
 ---
 # <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +46,16 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
  **'** *capture_instance* **'**  
  Nom de l'instance de capture dans laquelle la colonne spécifiée est identifiée comme une colonne capturée. *capture_instance* est **sysname**.  
   
- **'** *column_name* **'**  
+ **«** *column_name* **»**  
  Colonne sur laquelle des rapports doivent être effectués. *column_name* est **sysname**.  
   
 ## <a name="return-type"></a>Type de retour  
- **int**  
+ **Int**  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction est utilisée pour identifier la position ordinale d'une colonne capturée dans le masque de mise à jour de capture des données modifiées. Il est principalement utilisé conjointement avec la fonction [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) pour extraire des informations du masque de mise à jour lors de l’interrogation des données modifiées.  
+ Cette fonction est utilisée pour identifier la position ordinale d'une colonne capturée dans le masque de mise à jour de capture des données modifiées. Il est principalement utilisé conjointement avec la fonction [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) pour extraire des informations à partir du masque de mise à jour lors de l’interrogation des données modifiées.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation SELECT sur toutes les colonnes capturées de la table source. Si un rôle de base de données pour le composant de capture des données modifiées est spécifié pour l'instance de capture, l'appartenance à ce rôle est également requise.  
   
 ## <a name="examples"></a>Exemples  

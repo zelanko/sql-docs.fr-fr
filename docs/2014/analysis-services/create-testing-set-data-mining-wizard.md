@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f9f671a0980d979436e4780579d99122cb9e669
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326879"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096349"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Créer un jeu de test (Assistant Exploration de données)
   Utilisez la page **Créer un jeu de test** pour spécifier la quantité des données à utiliser pour l’apprentissage et celle à réserver au jeu de test. La séparation des données dans un jeu d'apprentissage et de test lorsque vous créez une structure d'exploration de données facilite énormément l'évaluation de l'exactitude des modèles d'exploration de données que vous créez ultérieurement.  
@@ -38,7 +35,7 @@ ms.locfileid: "37326879"
   
 -   Vous ne pouvez pas partitionner des données si vous essayez de prédire une valeur qui est stockée dans une table imbriquée.  
   
- **Pour plus d’informations, consultez ** [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md) et [Didacticiel sur l’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Pour plus d’informations, consultez**  [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md) et [Didacticiel sur l’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Options  
  **Pourcentage des données de test**  

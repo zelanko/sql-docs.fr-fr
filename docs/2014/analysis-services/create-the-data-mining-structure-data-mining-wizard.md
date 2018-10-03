@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectminingtechnique.f1
 ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 638fa1cef33676b35415d29c1ff47602d3e1e56b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 06aa74bed451075f0b6749870fa25275703c3181
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184059"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Créer la structure d'exploration de données (Assistant Exploration de données)
   Utilisez la page **Créer la structure d’exploration de données** pour créer une structure d’exploration de données et créer éventuellement un modèle d’exploration de données associé.  

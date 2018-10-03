@@ -1,32 +1,29 @@
 ---
-title: Préparé, propriété-Exemple (VB) | Documents Microsoft
+title: Préparé, propriété-Exemple (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Prepared property [ADO], Visual Basic example
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66efabdcbd3475a873dea67aa8540f9c36a560a7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2339cb94af5140bab96fe78add90b163e84ced60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280598"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813027"
 ---
-# <a name="prepared-property-example-vb"></a>Exemple de propriété préparé (VB)
-Cet exemple illustre la [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) propriété en ouvrant deux [commande](../../../ado/reference/ado-api/command-object-ado.md) objets : un préparé et l’autre non préparé.  
+# <a name="prepared-property-example-vb"></a>Prepared, exemple de propriété (VB)
+Cet exemple montre la [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) propriété en ouvrant deux [commande](../../../ado/reference/ado-api/command-object-ado.md) objets : un préparé et l’autre non préparé.  
   
 ```  
 'BeginPreparedVB  
@@ -119,5 +116,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet de commande (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Objet Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared, propriété (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

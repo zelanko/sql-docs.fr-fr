@@ -1,34 +1,31 @@
 ---
-title: L’exemple CompareBookmarks, méthode (VB) | Documents Microsoft
+title: CompareBookmarks, méthode-exemple (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CompareBookmarks method [ADO], Visual Basic example
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff4e2c8c1e66ac7240e188e06ede5bb1295814de
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 99aadf2d532c6e42b2638aab34d19289617e7d38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276958"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705170"
 ---
-# <a name="comparebookmarks-method-example-vb"></a>Exemple CompareBookmarks, méthode (VB)
-Cet exemple illustre la [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) (méthode). La valeur relative des signets est rarement nécessaire, sauf si un signet particulier présente une caractéristique spécial.  
+# <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks, exemple de méthode (VB)
+Cet exemple montre la [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) (méthode). La valeur relative de signets est rarement nécessaire, sauf si un signet particulier présente une caractéristique spécial.  
   
- Désignez une ligne aléatoire d’une [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dérivés de la ***auteurs*** table comme cible d’une recherche. Affichez ensuite la position de chaque ligne par rapport à cette cible.  
+ Désignez une ligne aléatoire d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dérivées de la ***auteurs*** table comme cible d’une recherche. Affichez ensuite la position de chaque ligne par rapport à cette cible.  
   
 ```  
 'BeginCompareBookmarksVB  

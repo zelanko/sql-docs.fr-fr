@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - secondary databases [SQL Server], Availability Groups
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09b6d19aad9b0095029405a5e0e4ddb1f7597b61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6940e9e40a09e5bd0c7afc591b34c17129350d74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289545"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188120"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-alwayson-availability-groups"></a>Résoudre une opération d'ajout de fichier ayant échoué (groupes de disponibilité AlwaysOn)
   Pour certains déploiements de groupes de disponibilité AlwaysOn, les chemins d'accès aux fichiers varient entre le système qui héberge le réplica principal et les systèmes qui hébergent un réplica secondaire. Si le chemin d'accès aux fichiers d'une opération d'ajout de fichier n'existe pas sur le réplica secondaire, l'opération d'ajout de fichier réussit sur la base de données principale. Cependant, l'opération d'ajout e fichier entraîne l'interruption de la base de données secondaire. Par voie de conséquence, le réplica secondaire passe à l'état NOT SYNCHRONIZING.  

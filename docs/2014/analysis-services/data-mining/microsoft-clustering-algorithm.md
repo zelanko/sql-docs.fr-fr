@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - datasets [Analysis Services]
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
-caps.latest.revision: 61
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6d42992680de6772d305c425d1f921fea44cd584
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b3b9d48c6bcdfd07599ded1b4a92955cc45abfec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308789"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195099"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algorithme de clustering Microsoft
   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de Clustering est un algorithme de segmentation fourni par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'algorithme utilise des techniques itératives pour grouper les cas d'un jeu de données en clusters contenant des caractéristiques similaires. Ces regroupements sont utiles pour l'exploration des données, l'identification d'anomalies dans les données et la création de prédictions.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 40d1a247b8d6efeb39b0c0f311a014ef76b55db4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5003667b952e927454e5674538d0b40fab577aa9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190912"
 ---
 # <a name="versions-master-data-services"></a>Versions (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez créer plusieurs versions des données de référence dans un modèle. Les versions peuvent être verrouillées pendant que vous validez vos données et activées une fois les données validées. Les versions activées constituent un enregistrement des modifications pouvant être audité. Chaque version que vous créez contient l'ensemble des membres, valeurs d'attribut, membres de hiérarchie, relations de hiérarchie et collections pour le modèle.  
@@ -69,7 +66,7 @@ ms.locfileid: "37217679"
     > [!NOTE]  
     >  Un paramètre dans le [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] détermine si vous pouvez ou non copier toutes les versions ou uniquement celles qui sont activées. Pour créer des versions simultanées vous devez configurer [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour vous permettre de copier toutes les versions. Ce paramètre est également disponible dans la table Paramètres système. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

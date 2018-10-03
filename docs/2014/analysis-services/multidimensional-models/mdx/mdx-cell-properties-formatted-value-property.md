@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319269"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052351"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE et FORMAT_STRING sur FORMATED_VALUE
   La propriété FORMATTED_VALUE est basée sur les interactions des propriétés VALUE, FORMAT_STRING et LANGUAGE de la cellule. Cette rubrique explique comment ces propriétés interagissent pour générer la propriété FORMATTED_VALUE.  
@@ -82,7 +79,7 @@ ms.locfileid: "37319269"
   
 |Membre|FORMATTED_VALUE|Explication|  
 |------------|----------------------|-----------------|  
-|Un|$5,040.00|FORMAT_STRING a pour valeur `Currency` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système.|  
+|A|$5,040.00|FORMAT_STRING a pour valeur `Currency` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système.|  
 |B|€5.040,00|FORMAT_STRING a pour valeur `Currency` (hérité de A) et LANGUAGE a pour valeur explicite `1034` (Espagne), ce qui explique le symbole de l’euro, le séparateur décimal différent et le séparateur des milliers différent.|  
 |C|$5.040,00|FORMAT_STRING a pour valeur `$#,##0.00` en remplacement de la devise héritée de A, et LANGUAGE a pour valeur explicite `1034` (Espagne). Étant donné que la propriété FORMAT_STRING a pour valeur explicite le symbole monétaire $, FORMATTED_VALUE est présenté avec le signe $. Toutefois, étant donné que `.` (point) et `,` (virgule) sont respectivement des espaces réservés pour le séparateur décimal et le séparateur des milliers, la spécification de langue les affecte et une sortie localisée pour les séparateurs décimal et des milliers est générée.|  
 |D|5.04E+03|FORMAT_STRING a pour valeur `Scientific` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système. Le signe `.` (point) est donc utilisé comme séparateur décimal.|  

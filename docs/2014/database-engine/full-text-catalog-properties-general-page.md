@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
-caps.latest.revision: 34
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: cc0d0c6e287d978b0a10979843a50f40f906872b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 374ba32b5cc79a503333b691b4708921f507004a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169321"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182769"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriétés du catalogue de texte intégral (page Général)
   Cette section présente les options et fonctions disponibles dans la page **Général** de la boîte de dialogue **Propriétés du catalogue de texte intégral** .  
@@ -30,7 +27,7 @@ ms.locfileid: "37169321"
   
 ## <a name="options"></a>Options  
   
-### <a name="properties"></a>Propriétés  
+### <a name="properties"></a>Properties  
  **Catalogue par défaut**  
  Indique si le catalogue est le catalogue par défaut de la base de données.  
   

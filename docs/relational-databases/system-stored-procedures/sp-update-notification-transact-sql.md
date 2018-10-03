@@ -1,14 +1,11 @@
 ---
-title: sp_update_notification (Transact-SQL) | Documents Microsoft
+title: sp_update_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc08790ad08ce6bb4e94e61a8c3bdfc58615edf9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260202"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817541"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +66,10 @@ sp_update_notification
 ## <a name="remarks"></a>Notes  
  **sp_update_notification** doit être exécuté à partir de la **msdb** base de données.  
   
- Vous pouvez mettre à jour une notification destinée à un opérateur qui ne dispose pas d’informations d’adresse nécessaires à l’aide de la *méthode_de_notification*. En cas d'échec de l'envoi d'une notification par courrier électronique ou par radiomessagerie, l'échec est consigné dans le journal des erreurs de l'Agent Microsoft SQL Server.  
+ Vous pouvez mettre à jour une notification pour un opérateur qui ne dispose pas d’informations d’adresse nécessaires à l’aide de la *méthode_de_notification*. En cas d'échec de l'envoi d'une notification par courrier électronique ou par radiomessagerie, l'échec est consigné dans le journal des erreurs de l'Agent Microsoft SQL Server.  
   
-## <a name="permissions"></a>Autorisations  
- Pour exécuter cette procédure stockée, les utilisateurs doivent disposer du **sysadmin** rôle serveur fixe.  
+## <a name="permissions"></a>Permissions  
+ Pour exécuter cette procédure stockée, les utilisateurs doivent avoir le **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant modifie la méthode de notification pour les notifications envoyées à `François Ajenstat`pour l’alerte `Test Alert`.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f16ab06ab21f266c4993a3148668effadbee2175
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25054c92124930d2d33b9f35eb43a1945d4a22bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149870"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197119"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Instructions d'utilisation des fonctionnalités BI de SQL Server dans une batterie de serveurs SharePoint 2010
   Cette rubrique récapitule la disponibilité des fonctionnalités selon les versions et les éditions du logiciel utilisé. Elle décrit également la configuration requise pour l'installation de SharePoint 2010 avec des fonctionnalités spécifiques de SQL Server. Pour plus d’informations sur SharePoint 2013, consultez [Deployment Topologies for SQL Server BI Features in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
@@ -49,8 +46,8 @@ ms.locfileid: "37149870"
   
 |Fonctionnalités prises en charge|Produit SharePoint|  
 |------------------------|------------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], une fonctionnalité de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complément pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Alertes de données.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.|  
-|Affichage du rapport général [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et intégration des fonctionnalités avec SharePoint.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Éditions Standard et Enterprise.<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], une fonctionnalité de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complément pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Alertes de données.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.|  
+|Affichage du rapport général [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et intégration des fonctionnalités avec SharePoint.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Éditions Standard et Enterprise.<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] .|  
   
  Pour plus d’informations, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473).  
   

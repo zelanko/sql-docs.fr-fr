@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b716b3854ec2fbf931facf3aa224a04055e9f73e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200629"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087489"
 ---
 # <a name="clustering-model-query-examples"></a>Exemples de requêtes de modèle de clustering
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez récupérer les métadonnées sur le modèle ou créer une requête de contenu qui fournit des détails sur les séquences découvertes dans l'analyse. Une autre solution consiste à créer une requête de prédiction qui utilise les séquences dans le modèle pour faire des prédictions pour les nouvelles données. Chaque type de requête fournit des informations différentes. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur les clusters identifiés, tandis qu'une requête de prédiction peut vous dire à quel cluster un nouveau point de données est le plus susceptible d'appartenir.  
@@ -167,13 +164,13 @@ WHERE NODE_TYPE = 5
 |NODE_NAME|T.ATTRIBUTE_VALUE|T.PROBABILITY|  
 |----------------|------------------------|-------------------|  
 |001|2|0.829207754|  
-|001| 1|0.109354156|  
+|001|1|0.109354156|  
 |001|3|0.034481552|  
 |001|4|0.013503302|  
 |001|0|0.013453236|  
 |001|Manquant|0|  
 |002|0|0.576980023|  
-|002| 1|0.406623939|  
+|002|1|0.406623939|  
 |002|2|0.016380082|  
 |002|3|1.60E-05|  
 |002|4|0|  
@@ -279,13 +276,13 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|Expression|  
 |----------------|----------------|  
-| 1|0.592924735740338|  
+|1|0.592924735740338|  
   
  Exemple de résultats lorsque l'utilisation a pour valeur `PredictOnly` et que le modèle est retraité :  
   
 |Bike Buyer|Expression|  
 |----------------|----------------|  
-| 1|0.55843544003102|  
+|1|0.55843544003102|  
   
  Dans cet exemple, la différence dans le modèle n'est pas significative. Toutefois, il peut parfois être important de détecter les différences entre la distribution réelle de valeurs et ce que le modèle prédit. L’onglet [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) est utile dans ce scénario, car elle indique la probabilité qu’un cas ce produise pour un modèle donné.  
   
@@ -360,7 +357,7 @@ NATURAL PREDICTION JOIN
 |Cluster 7|0.979081275926724|0.0209187240732763|  
 |Cluster 1|0.999169044818624|0.000830955181376364|  
 |Cluster 9|0.999831227795894|0.000168772204105754|  
-|Cluster 8| 1|0|  
+|Cluster 8|1|0|  
   
  Par défaut, les résultats sont classés par probabilité. Les résultats indiquent que le Cluster 2, bien que sa probabilité soit assez faible, est toujours le mieux adapté au nouveau point de données.  
   

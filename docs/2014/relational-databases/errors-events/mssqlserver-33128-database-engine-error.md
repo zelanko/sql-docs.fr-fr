@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 33128 (Database Engine error)
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 918ffa93e65fc4b553d979103e40cd7b34d98c2c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a995a68849ed55dbf136191a061ac6f855703a66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057790"
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
     
@@ -47,7 +44,7 @@ ms.locfileid: "37430328"
   
 |État|Description|  
 |-----------|-----------------|  
-| 1|Une clé RC4 est utilisée dans la fonction intégrée encryptbykey(). La fonction intégrée retourne NULL. Ce message apparaît uniquement dans la mémoire tampon en anneau.|  
+|1|Une clé RC4 est utilisée dans la fonction intégrée encryptbykey(). La fonction intégrée retourne NULL. Ce message apparaît uniquement dans la mémoire tampon en anneau.|  
 |2|Une clé RC4 est utilisée par la fonction intégrée decryptbykey(). Ce message apparaît uniquement dans la mémoire tampon en anneau.|  
 |3|Une clé RC4 déconseillée est chiffrée par une clé symétrique. Message visible pour les utilisateurs et dans la mémoire tampon en anneau. Impossible de modifier les clés symétriques RC4 déconseillées avec un niveau de compatibilité de 110. Essayez d'utiliser des clés non-RC4 pour les opérations de chiffrement. Si nécessaire, définissez le niveau de compatibilité descendante à 90 ou 100.|  
 |4|Une clé non-RC4 est chiffrée par une clé symétrique RC4 déconseillée. Message visible pour les utilisateurs et dans la mémoire tampon en anneau. Modifiez l'application de façon à utiliser des clés symétriques non-RC4 ou définissez le niveau de compatibilité descendante à 90 ou 100.|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BLOBs, OLE objects
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 743873bce06d995b21c6d72e028a221f93d86868
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180319"
 ---
 # <a name="blobs-and-ole-objects"></a>Objets BLOB et OLE
-  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client expose la **ISequentialStream** interface pour prendre en charge d’accès du consommateur à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **texte**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, et les types de données xml comme objets (objets BLOB ). Le **en lecture** méthode sur **ISequentialStream** permet au consommateur de récupérer le volume de données en segments gérables.  
+  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client expose la **ISequentialStream** interface pour prendre en charge d’accès du consommateur à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **texte**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, et les types de données xml comme objets (objets BLOB ). La méthode **Read** sur **ISequentialStream** permet au consommateur de récupérer un grand nombre de données en blocs maniables.  
   
  Pour obtenir un exemple illustrant cette fonctionnalité, consultez [définir les données volumineuses &#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md).  
   
@@ -49,7 +46,7 @@ ms.locfileid: "37428668"
   
 ## <a name="storage-object-limitations"></a>Limitations des objets de stockage  
   
--   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB Native peut prendre en charge uniquement un objet de stockage ouvert unique. Tente d’ouvrir plusieurs objets de stockage (pour obtenir une référence sur plusieurs **ISequentialStream** pointeur d’interface) retournent DBSTATUS_E_CANTCREATE.  
+-   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB Native peut prendre en charge uniquement un objet de stockage ouvert unique. Les tentatives d’ouverture de plusieurs objets de stockage (pour obtenir une référence sur plusieurs pointeurs d’interface **ISequentialStream**) retournent DBSTATUS_E_CANTCREATE.  
   
 -   Dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, la valeur par défaut de la propriété en lecture seule de DBPROP_BLOCKINGSTORAGEOBJECTS est VARIANT_TRUE. Cela signifie que si un objet de stockage est actif, certaines méthodes (autres que celles sur les objets de stockage) échouent avec E_UNEXPECTED.  
   

@@ -1,13 +1,11 @@
 ---
-title: Architecture d’accès de base de données | Documents Microsoft
+title: Architecture d’accès de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC]
 ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69217d94191a51c6b413699337278480a4d4f6a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42fc1d3880e01c435e7991fb5781d0f815a83db5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612288"
 ---
-# <a name="database-access-architecture"></a>Architecture d’accès de base de données
-L’une des questions dans le développement d’ODBC a été quelle partie de l’architecture d’accès de base de données afin de normaliser. Le SQL programming interfaces décrites dans la section précédente : embedded SQL, SQL modules et CLI, sont uniquement une partie de cette architecture. En fait, étant donné que ODBC a été principalement utilisée pour se connecter les applications basées sur les ordinateur personnel et ses macroordinateur SGBD, il ont également un nombre de composants réseau, certains d'entre eux peuvent être normalisé.  
+# <a name="database-access-architecture"></a>Architecture de l’accès aux bases de données
+L’une des questions dans le développement d’ODBC a été quelle partie de l’architecture d’accès de base de données afin de normaliser. Le code SQL décrits dans la section précédente des interfaces de programmation — embedded SQL, SQL modules et CLI — sont uniquement une partie de cette architecture. En fait, étant donné que ODBC a été principalement destiné à se connecter les applications basées sur les ordinateur personnel et ses grands systèmes SGBD, comportait également un nombre de composants réseau, certains d'entre eux peuvent être normalisé.  
   
  Cette section contient les rubriques suivantes.  
   

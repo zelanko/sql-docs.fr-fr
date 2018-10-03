@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DMSCHEMA_MINING_COLUMNS
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DMSCHEMA_MINING_COLUMNS rowset
 ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 60dc2e773b93f27fe96489bcb55fdfe22c3168d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f7d19a29ceb67f83742e19615d9086315b600b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232059"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200699"
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>Ensemble de lignes DMSCHEMA_MINING_COLUMNS
   Décrit les colonnes de tous les modèles d’exploration de données de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Cet ensemble de lignes est limité au catalogue actuel.  
@@ -44,7 +41,7 @@ ms.locfileid: "37232059"
 |`COLUMN_PROPID`|`DBTYPE_UI4`||ID de propriété de la colonne. Cette colonne n'est pas prise en charge par [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ; elle contient systématiquement `NULL`.|  
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||La position ordinale de la colonne. Les colonnes sont numérotées à partir de 1. Cette colonne contient `NULL` s'il n'existe aucune valeur ordinale stable pour la colonne.|  
 |`COLUMN_HAS_DEFAULT`|`DBTYPE_BOOL`||Valeur booléenne qui indique si la colonne possède une valeur par défaut.<br /><br /> `TRUE` si la colonne possède une valeur par défaut ; `FALSE` dans le cas contraire.|  
-|`COLUMN_DEFAULT`|`DBTYPE_WSTR`||La valeur par défaut de la colonne.<br /><br /> Si la valeur par défaut est la valeur `NULL`, `COLUMN_HASDEFAULT` contient `TRUE` et cette colonne contient `NULL`.|  
+|`COLUMN_DEFAULT`|`DBTYPE_WSTR`||Valeur par défaut de la colonne.<br /><br /> Si la valeur par défaut est la valeur `NULL`, `COLUMN_HASDEFAULT` contient `TRUE` et cette colonne contient `NULL`.|  
 |`COLUMN_FLAGS`|`DBTYPE_UI4`||Masque de bits qui décrit les caractéristiques de la colonne. Le type énuméré `DBCOLUMNFLAGS` spécifie les bits du masque de bits. Cette colonne n'est jamais vide.|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||Valeur booléenne qui indique si la colonne autorise la valeur Null.<br /><br /> `FALSE` si la colonne est connue pour ne pas autoriser la valeur Null ; `TRUE` dans le cas contraire.|  
 |`DATA_TYPE`|`DBTYPE_UI2`||Indicateur du type de données de la colonne. La liste suivante contient des exemples de types d'indicateurs retournés :<br /><br /> « `TABLE` » retourne `DBTYPE_HCHAPTER`.<br /><br /> « `TEXT` » retourne `DBTYPE_WCHAR`.<br /><br /> « `LONG` » retourne `DBTYPE_I8`.<br /><br /> « `DOUBLE` » retourne `DBTYPE_R8`.<br /><br /> « `DATE` » retourne `DBTYPE_DATE`.|  

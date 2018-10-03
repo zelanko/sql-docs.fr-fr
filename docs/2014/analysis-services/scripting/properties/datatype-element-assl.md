@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataType Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataType element
 ms.assetid: efe6f717-8288-4ca2-85ed-9b63d27c02d8
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16bc234f74aa8d6eb80607c7d03d63da8130e8ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92c3981344d0425c46ef283fa8792de942d6193b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231869"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191039"
 ---
 # <a name="datatype-element-assl"></a>Élément DataType (ASSL)
   Définit le type de données de l'élément associé.  
@@ -76,7 +73,7 @@ ms.locfileid: "37231869"
 |*SmallInt*|Entier signé 16 bits. Ce type de données est mappé sur le type de données `Int16` dans .NET Framework et sur le type de données DBTYPE_I4 dans OLE DB.|  
 |*TinyInt*|Entier signé 8 bits. Ce type de données est mappé sur le type de données `SByte` dans .NET Framework et sur le type de données DBTYPE_I1 dans OLE DB.|  
 |*UnsignedBigInt*|Entier non signé 64 bits. Ce type de données est mappé sur le type de données `UInt64` dans .NET Framework et sur le type de données DBTYPE_UI8 dans OLE DB.|  
-|*Entier non signé*|Entier non signé 32 bits. Ce type de données est mappé à la `UInt32` type de données dans le .NET Framework et le type de données DBTYPE_UI4 dans OLE DB.|  
+|*entier non signé*|Entier non signé 32 bits. Ce type de données est mappé à la `UInt32` type de données dans le .NET Framework et le type de données DBTYPE_UI4 dans OLE DB.|  
 |*UnsignedSmallInt*|Entier non signé 16 bits. Ce type de données est mappé sur le type de données `UInt16` dans .NET Framework et sur le type de données DBTYPE_UI4 dans OLE DB.|  
 |*WChar*|Flux de caractères Unicode terminé par le caractère NULL. Ce type de données est mappé sur le type de données `String` dans .NET Framework et sur le type de données DBTYPE_WSTR dans OLE DB.|  
 |*Héritée*|Le type de données de la `DataItem` contenus dans le [Source](source-element-measure-assl.md) élément de la `Measure` élément. **Remarque :** s’applique uniquement aux `Measure` éléments.|  

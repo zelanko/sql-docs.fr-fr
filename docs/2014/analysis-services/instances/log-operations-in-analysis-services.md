@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89a99ed7f3f38abba8eeaaf8b2f420106dbbe790
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228369"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198429"
 ---
 # <a name="log-operations-in-analysis-services"></a>Enregistrer les opérations dans Analysis Services
   Une instance Analysis Services enregistre les notifications, erreurs et avertissements du serveur dans le fichier msmdsrv.log (un pour chaque instance que vous installez). Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](http://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  
@@ -159,7 +156,7 @@ ms.locfileid: "37228369"
 |Valeur|Description|  
 |-----------|-----------------|  
 |0|Désactive le fichier de vidage de la mémoire. Tous les autres paramètres dans la section Exceptions sont ignorés.|  
-| 1|(Par défaut) Active mais n'envoie pas le fichier de vidage de la mémoire.|  
+|1|(Par défaut) Active mais n'envoie pas le fichier de vidage de la mémoire.|  
 |2|Active et envoie automatiquement un rapport d'erreurs à Microsoft.|  
   
  `CrashReportsFolder` est l'emplacement des fichiers de vidage. Par défaut, un fichier .mdmp et les enregistrements de journaux associés se trouvent dans le dossier \Olap\Log.  

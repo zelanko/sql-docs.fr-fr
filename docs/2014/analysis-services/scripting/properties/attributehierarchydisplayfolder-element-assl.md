@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributeHierarchyDisplayFolder Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributeHierarchyDisplayFolder element
 ms.assetid: d4a3aff7-553e-416c-9c42-819a96ae264d
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8893e107502b2dff47f54c4d8bbd0b0989111608
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9f566c4f8b47d7238addbf663e0fe37126ffda8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215859"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123299"
 ---
 # <a name="attributehierarchydisplayfolder-element-assl"></a>Élément AttributeHierarchyDisplayFolder (ASSL)
   Identifie le dossier dans lequel la hiérarchie d'attribut associée est à afficher.  

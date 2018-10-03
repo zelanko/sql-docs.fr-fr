@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Surface Area Configuration Tool
@@ -25,23 +23,22 @@ helpviewer_keywords:
 - compatibility [Reporting Services]
 - earlier versions [SQL Server], (See also backward compatibility)
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
-caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8bf37ee58a365fdd2135e91d4d71e1818c407d1
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: f112bc1a9928185fa5ecf15b953df8c982ff36f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40392510"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156729"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   Les sections suivantes présentent des informations sur la compatibilité descendante pour les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ces informations concernent les fonctionnalités déconseillées, les fonctionnalités supprimées, les dernières modifications et les modifications de comportement.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Compatibilité descendante de SQL Server](../../2014/getting-started/sql-server-backward-compatibility.md)|Contient des rubriques qui décrivent les modifications de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos applications. Les fonctionnalités incluses dans cette rubrique incluent la programmabilité des données, les outils de configuration de la surface d'exposition, le programme d'installation, les services [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et autres modifications de fonctionnalités générales.|  
 |[Compatibilité descendante du moteur de base de données SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)|Contient des rubriques qui décrivent les modifications de [!INCLUDE[ssDE](../includes/ssde-md.md)] dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui peuvent nécessiter que vous modifiiez vos applications.|  

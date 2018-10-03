@@ -1,13 +1,11 @@
 ---
-title: FormattedValue, propriété (ADO MD) | Documents Microsoft
+title: FormattedValue, propriété (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - FormattedValue property [ADO MD]
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63f198df0787f408eaf5a8eead8d8e7dc6344140
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 49c5772404e212629a97c89bf23475ab893bd069
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283948"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616617"
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue, propriété (ADO MD)
-Indique l’affichage mis en forme d’un [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md) valeur.  
+Indique l’affichage de mise en forme d’un [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md) valeur.  
   
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un **chaîne** et est en lecture seule.  
@@ -40,5 +37,5 @@ Indique l’affichage mis en forme d’un [cellule](../../../ado/reference/ado-m
  [Cell, objet (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple d’ensemble de cellules (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [Exemple avec Cellset (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Value, propriété (ADO MD)](../../../ado/reference/ado-md-api/value-property-ado-md.md)

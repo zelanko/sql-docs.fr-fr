@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Cancel event class
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f9c82becfb066b6eb7da70d9e0524e0837be680
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9a2ef095189ca4505248865a6b9a8a99c86243d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242709"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200865"
 ---
 # <a name="lockcancel-event-class"></a>Classe d'événements Lock:Cancel
   La classe d’événements **Lock:Cancel** indique que l’acquisition d’un verrou sur une ressource a été annulée, par exemple à cause de l’annulation d’une requête.  
@@ -58,7 +55,7 @@ ms.locfileid: "37242709"
 |**SessionLoginName**|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |**SPID**|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|`datetime`|Heure à laquelle a débuté l'événement, si disponible.|14|Oui|  
-|**TextData**|`ntext`|Valeur de texte dépendant du type de verrou acquis. Il s’agit de la même valeur que la colonne **resource_description** dans **sys.dm_tran_locks**.| 1|Oui|  
+|**TextData**|`ntext`|Valeur de texte dépendant du type de verrou acquis. Il s’agit de la même valeur que la colonne **resource_description** dans **sys.dm_tran_locks**.|1|Oui|  
 |**TransactionID**|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |**Type**|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Oui|  
   

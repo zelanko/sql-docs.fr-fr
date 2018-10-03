@@ -1,41 +1,38 @@
 ---
-title: Personnalisation de DataFactory | Documents Microsoft
+title: Personnalisation de DataFactory | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory customization in RDS [ADO]
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3233dd3d94513a4555c74e1ca1460dbc3f612a35
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f1054596c74c00169f9a043acc3fdf47269c5b4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273908"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825207"
 ---
-# <a name="datafactory-customization"></a>DataFactory, personnalisation
-Service de données à distance (RDS) permet de facilement accéder aux données dans un système à trois niveaux client/serveur. Un contrôle des données client spécifie des paramètres de chaîne de connexion et de commande pour effectuer une requête sur une source de données distante ou une chaîne de connexion et [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) paramètres nécessaires pour effectuer une mise à jour de l’objet.  
+# <a name="datafactory-customization"></a>Personnalisation de DataFactory
+Service de données à distance (RDS) fournit un moyen d’effectuer facilement accès aux données dans un système à trois niveaux client/serveur. Un contrôle de données client spécifie des paramètres de chaîne de connexion et de commande pour effectuer une requête sur une source de données distante ou une chaîne de connexion et [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) paramètres nécessaires pour effectuer une mise à jour de l’objet.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Les paramètres sont transmis à un programme de serveur qui effectue l’opération d’accès aux données sur la source de données distante. RDS fournit un programme serveur par défaut le [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objet. Le **RDSServer.DataFactory** objet renvoie aucune **Recordset** objet produit par une requête au client.  
+ Les paramètres sont passés à un programme de serveur qui exécute l’opération d’accès aux données sur la source de données distante. Services Bureau à distance fournit un programme serveur par défaut le [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objet. Le **RDSServer.DataFactory** objet renvoie aucune **Recordset** objet produit par une requête au client.  
   
- Toutefois, le **RDSServer.DataFactory** est limitée à l’exécution des requêtes et des mises à jour. Il ne peut effectuer la validation ou le traitement sur les chaînes de connexion ou de commande.  
+ Toutefois, le **RDSServer.DataFactory** est limité à la réalisation des requêtes et des mises à jour. Elle ne peut pas effectuer de valider ou d’un traitement sur les chaînes de connexion ou de commande.  
   
- Avec ADO, vous pouvez spécifier que le **DataFactory** fonctionnent conjointement avec un autre type de programme serveur appelé un *gestionnaire*. Le gestionnaire peut modifier les chaînes de commande et de connexion du client avant d’être utilisées pour accéder à la source de données. En outre, le gestionnaire peut appliquer des droits d’accès qui régissent la capacité du client pour lire et écrire des données dans la source de données.  
+ Avec ADO, vous pouvez spécifier que le **DataFactory** fonctionnent conjointement avec un autre type de programme serveur appelé un *gestionnaire*. Le gestionnaire peut modifier les chaînes de commande et de connexion du client avant d’être utilisés pour accéder à la source de données. En outre, le gestionnaire peut appliquer des droits d’accès qui régissent la capacité du client pour lire et écrire des données dans la source de données.  
   
- Les paramètres utilisés par le gestionnaire pour modifier les paramètres du client et les droits d’accès sont spécifiés dans les sections d’un fichier de personnalisation.  
+ Les paramètres que le Gestionnaire utilise pour modifier les paramètres de client et les droits d’accès sont spécifiés dans les sections d’un fichier de personnalisation.  
   
  Les rubriques suivantes fournissent plus d’informations sur la personnalisation de la **DataFactory** objet.  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 44bb65b09d081ba43aef2de6991bb09b9f6ecf4f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73bcce5c157ad412fabb677302eeddbd40a8b54e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228889"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075849"
 ---
 # <a name="tutorial-introducing-expressions"></a>Didacticiel : introduction aux expressions
   Les expressions vous permettent de créer des rapports puissants et flexibles. Ce didacticiel vous apprend à créer et implémenter des expressions qui utilisent des fonctions et des opérateurs communs. Vous utiliserez le **Expression** boîte de dialogue pour écrire des expressions qui concatènent des valeurs de nom, recherchent des valeurs dans un dataset distinct, afficher des images différentes en fonction des valeurs de champ et ainsi de suite.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-caps.latest.revision: 18
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51b10976652d366f1c9016e3e9fb51c47735695b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 43218f87bb8a19fc35b3191603e9324e94145a64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106409"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Éditeur de source Excel (page Sortie d'erreur)
   La page **Sortie d’erreur** de la boîte de dialogue **Éditeur de source Excel** vous permet de sélectionner les options de gestion des erreurs et de définir les propriétés sur les colonnes de sortie d’erreur.  

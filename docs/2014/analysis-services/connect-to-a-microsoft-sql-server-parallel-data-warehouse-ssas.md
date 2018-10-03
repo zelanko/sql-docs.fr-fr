@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlparadatawh.f1
 ms.assetid: 98c879ee-7257-40c9-bc85-6766bd3b4885
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4bc82bc4ed9e90305a8ca78adc9ee643fabf9800
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b13e56895a9880a8bffc319c247769b4f5b2911
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208159"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191069"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>Connexion à un entrepôt de données Microsoft SQL Server Parallel Data Warehouse (SSAS)
   Cette page de **l’Assistant Importation de table** vous permet de spécifier des paramètres pour vous connecter à un entrepôt de données Microsoft SQL Server Parallel Data Warehouse (PDW). Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  

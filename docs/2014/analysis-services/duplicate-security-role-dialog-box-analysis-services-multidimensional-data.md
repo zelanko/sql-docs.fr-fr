@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.duplicaterole.f1
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02aaae2b8f2b067f8c728220522294e93f295a2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1787687db39fe4a9d9516c3753d59f59907dce47
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202149"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194549"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Rôle de sécurité dupliqué dans Analysis Services (Analysis Services - Données multidimensionnelles)
   Utilisez le **Analysis Services de rôle de sécurité dupliqué - \<nom de la base de données >- \<copie du nom du rôle >** boîte de dialogue dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour dupliquer un rôle existant dans un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Pour afficher la boîte de dialogue **Dupliquer un rôle**, cliquez avec le bouton droit sur un rôle dans l’Explorateur d’objets, puis sélectionnez **Dupliquer**.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - issue element
 - XML output file format [ssbdiagnose], issue element
 - ssbdiagnose
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39b279a22da8c75573aa0cad2dc50d7f85e46a74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54109bc479d06833aeee6af803c39e8ac7873ec7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175201"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195179"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Élément Issue (ssbdiagnose)
   Signale un problème identifié par l’utilitaire **ssbdiagnose** . Le fichier de sortie XML de **ssbdiagnose** comporte un élément Issue par problème signalé.  
@@ -57,7 +54,7 @@ ms.locfileid: "37175201"
 |Caractéristique|Description|  
 |--------------------|-----------------|  
 |**Type de données et longueur**|`string`, longueur est illimitée.|  
-|**Value**|Retourne le texte du message d'erreur.|  
+|**Valeur**|Retourne le texte du message d'erreur.|  
 |**Occurrence**|Une fois par erreur signalée.|  
   
 ## <a name="element-relationships"></a>Relations entre les éléments  

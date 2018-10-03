@@ -1,13 +1,11 @@
 ---
-title: Mappage des fonctions déconseillées | Documents Microsoft
+title: Mappage des fonctions dépréciées | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], about mapping deprecated functions
@@ -17,23 +15,22 @@ helpviewer_keywords:
 - functions [ODBC], mapping deprecated functions
 - mapping deprecated functions [ODBC]
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b61a53eed35919f3ecd0422b376e029ee7ab232
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914104"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818364"
 ---
-# <a name="mapping-deprecated-functions"></a>Mappage des fonctions déconseillées
-Cette section décrit les fonctions déconseillées comment sont mappés par les 3 ODBC *.x* du Gestionnaire de pilotes pour garantir la compatibilité descendante des ODBC 3 *.x* pilotes qui sont utilisés avec ODBC 2. *x* applications. Le Gestionnaire de pilotes effectue ce mappage, quelle que soit la version de l’application. Étant donné que chaque ODBC 2. *x* fonctions dans la liste suivante est mappée à la 3 ODBC correspondants *.x* fonction lorsqu’elle est appelée dans un ODBC 3 *.x* pilote, la version 3 ODBC *.x* pilote n’a pas d’implémenter ODBC 2. *x* fonctions.  
+# <a name="mapping-deprecated-functions"></a>Mappage des fonctions dépréciées
+Cette section décrit les fonctions déconseillées comment sont mappés par le ODBC 3 *.x* Gestionnaire de pilotes afin de garantir la compatibilité descendante de ODBC 3 *.x* pilotes qui sont utilisés avec ODBC 2. *x* applications. Le Gestionnaire de pilotes effectue ce mappage, quel que soit la version de l’application. Étant donné que chacun des ODBC 2. *x* fonctions dans la liste suivante est mappée à le correspondantes ODBC 3 *.x* fonction lorsqu’elle est appelée dans un ODBC 3 *.x* pilote, le 3 ODBC *.x*pilote ne doit pas implémenter d’ODBC 2. *x* fonctions.  
   
  Le mappage dans la liste est déclenché lorsque le pilote est un ODBC 3 *.x* pilote et le pilote ne prend pas en charge la fonction qui est mappée.  
   
- Le tableau suivant répertorie les fonctionnalités tout en double a été introduite dans ODBC 3 *.x*.  
+ Le tableau suivant répertorie les fonctionnalités tout en double qui a été introduite dans ODBC 3 *.x*.  
   
 |ODBC 2. *x* (fonction)|ODBC 3 *.x* (fonction)|  
 |-------------------------|-------------------------|  
@@ -55,9 +52,9 @@ Cette section décrit les fonctions déconseillées comment sont mappés par les
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] même si cette fonction n’existait pas dans ODBC 2 *.x*, il se trouve dans les normes Open Group et ISO.  
+ [1] bien que cette fonction n’existait pas dans ODBC 2 *.x*, il se trouve dans les normes Open Group et ISO.  
   
- [2]. il s’agit d’une fonction ODBC version 1.0.  
+ [2] Il s’agit d’une fonction ODBC 1.0.  
   
  Cette section contient les rubriques suivantes.  
   

@@ -1,13 +1,11 @@
 ---
-title: 'Collections (Index de la syntaxe Visual C++ avec #import) | Documents Microsoft'
+title: 'Collections (Index de la syntaxe Visual C++ avec #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3378f8e44d8d667933fe41a7164ba4c56acc20ce
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276528"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662657"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Collections (Index de la syntaxe Visual C++ avec #import)
 Il est utile de savoir que les collections héritent certaines méthodes et propriétés communes.  
   
- Toutes les collections héritent la **nombre** propriété et **Actualiser** (méthode) et toutes les collections ajoutent la **élément** propriété. Le **erreurs** collection ajoute le **clair** (méthode). Le **paramètres** hérite de la collection le **Append** et **supprimer** méthodes, tandis que la **champs** collection ajoute la **Append**, **supprimer**, et **mise à jour** méthodes.  
+ Toutes les collections héritent le **nombre** propriété et **Actualiser** (méthode) et toutes les collections ajoutent le **élément** propriété. Le **erreurs** collection ajoute le **clair** (méthode). Le **paramètres** hérite de la collection le **Append** et **supprimer** méthodes, tandis que le **champs** collection ajoute la **Append**, **supprimer**, et **mise à jour** méthodes.  
   
 ## <a name="properties-collection"></a>Collection Properties  
   
@@ -42,7 +39,7 @@ Il est utile de savoir que les collections héritent certaines méthodes et prop
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>Propriétés  
+### <a name="properties"></a>Properties  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -58,7 +55,7 @@ HRESULT Clear( );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>Propriétés  
+### <a name="properties"></a>Properties  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -75,7 +72,7 @@ HRESULT Delete( const _variant_t & Index );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>Propriétés  
+### <a name="properties"></a>Properties  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -93,7 +90,7 @@ HRESULT Refresh( );
 HRESULT Update( );  
 ```  
   
-### <a name="properties"></a>Propriétés  
+### <a name="properties"></a>Properties  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  

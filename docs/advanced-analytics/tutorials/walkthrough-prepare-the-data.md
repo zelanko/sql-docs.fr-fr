@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 416df50128170da643f3a6c3e4fabf8cfe9d3b42
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085051"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142089"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Préparer les données à l’aide de PowerShell (procédure pas à pas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -265,9 +265,9 @@ Lorsque vous téléchargez les fichiers à partir du référentiel GitHub, vous 
 
 Les données sont un échantillon représentatif du jeu de données sur les taxis de la ville de New York, qui contient les enregistrements de plus de 173 millions de trajets en 2013, y compris les tarifs et le montant des pourboires versés pour chaque trajet. Pour rendre les données plus faciles à manipuler, l’équipe de science des données Microsoft a effectué un sous-échantillonnage pour obtenir seulement 1 % des données.  Ces données a été partagées dans un conteneur de stockage d’objets blob public dans Azure, au format .CSV. La source de données est un fichier non compressé, juste en dessous de 350 Mo.
 
-+ Jeu de données public : () [NYC Taxi and Limousines Commission]http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Jeu de données public : [NYC Taxi et Limousines Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [Création de modèles Azure ML sur le jeu de données NYC Taxi] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [Création de modèles Azure ML sur le jeu de données NYC Taxi](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/).
 
 ### <a name="powershell-and-r-script-files"></a>Fichiers de script PowerShell et R
 

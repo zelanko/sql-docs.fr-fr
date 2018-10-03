@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], reports
 - Visual SourceSafe, reports
 ms.assetid: 3017f5d0-ef53-4522-b42f-bdf637e7d75e
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 28d2dc6931f32b95bb318732a146b53d7bac5201
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807216"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192369"
 ---
 # <a name="create-history-and-status-reports"></a>Créer des rapports d'état et historiques
   Vous pouvez créer un rapport sur l'historique ou l'état en cours de fichiers dans la solution actuellement chargée. Vous pouvez également afficher un aperçu du rapport, puis l'envoyer vers une imprimante, un fichier ou le Presse-Papiers. Ces rapports ne sont pas générés par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. mais par [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  

@@ -1,14 +1,11 @@
 ---
-title: sp_delete_alert (Transact-SQL) | Documents Microsoft
+title: sp_delete_alert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_alert_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_alert
 ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8babe7d632f43a490a123470a8dc8d7cc5c07b4f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e912c8d849ec30554e4213979e626d1710f9a9df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243845"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718927"
 ---
 # <a name="spdeletealert-transact-sql"></a>sp_delete_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +47,12 @@ sp_delete_alert [ @name = ] 'name'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
 ## <a name="remarks"></a>Notes  
  En supprimant une alerte, vous supprimez également toute notification associée à celle-ci.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  
