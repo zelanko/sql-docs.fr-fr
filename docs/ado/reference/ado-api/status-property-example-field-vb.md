@@ -1,32 +1,29 @@
 ---
-title: Exemple de propriété d’état (champ) (VB) | Documents Microsoft
+title: Status, exemple de propriété (objet Field) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58c71c4f69cdd25de960eacba7370aa64b67bfb7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f6554e76488cd83452c0ab1617c9bd65e9196c11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282038"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816367"
 ---
-# <a name="status-property-example-field-vb"></a>Exemple de propriété d’état (champ) (VB)
-L’exemple suivant ouvre un document à partir d’un dossier en lecture/écriture à l’aide du [fournisseur de publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Le [état](../../../ado/reference/ado-api/status-property-ado-field.md) propriété d’un [champ](../../../ado/reference/ado-api/field-object.md) objet de la [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) d’abord la valeur **adFieldPendingInsert**, puis être mis à jour vers **adFieldOk**.  
+# <a name="status-property-example-field-vb"></a>Status, exemple de propriété (objet Field) (VB)
+L’exemple suivant ouvre un document à partir d’un dossier en lecture/écriture à l’aide du [fournisseur de publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Le [état](../../../ado/reference/ado-api/status-property-ado-field.md) propriété d’un [champ](../../../ado/reference/ado-api/field-object.md) objet de la [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) sera tout d’abord être définie sur **adFieldPendingInsert**, puis de mettre à jour **adFieldOk**.  
   
 ```  
 'BeginStatusFieldVB  
@@ -83,19 +80,19 @@ End Sub
 'EndStatusFieldVB  
 ```  
   
- L’exemple suivant supprime un connu **champ** d’un **enregistrement** ouvert à partir d’un document. Le **état** propriété sera tout d’abord être définie sur **adFieldOK**, puis **adFieldPendingUnknown**.  
+ L’exemple suivant supprime un connu **champ** à partir d’un **enregistrement** ouvert à partir d’un document. Le **état** propriété sera tout d’abord être définie sur **adFieldOK**, puis **adFieldPendingUnknown**.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
- Le code suivant supprime un **champ** d’un **enregistrement** ouvert sur un document en lecture seule. **État** a la valeur **adFieldPendingDelete**. À [mise à jour](../../../ado/reference/ado-api/update-method.md), la suppression échouera et **état** sera **adFieldPendingDelete** plus **adFieldPermissionDenied**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) efface l’attente **état** paramètre.  
+ Le code ci-dessous supprime une **champ** à partir d’un **enregistrement** ouvert sur un document en lecture seule. **État** sera défini sur **adFieldPendingDelete**. À [mise à jour](../../../ado/reference/ado-api/update-method.md), la suppression échoue et **état** sera **adFieldPendingDelete** plus **adFieldPermissionDenied**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) efface l’en attente **état** paramètre.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Field](../../../ado/reference/ado-api/field-object.md)   
- [Objet d’enregistrement (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
+ [Enregistrement objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Status, propriété (objet Field ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)

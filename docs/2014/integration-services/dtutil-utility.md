@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - verifying packages
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 111
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e565c0750db83191273c66978ae1b1816d1c1d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d21a944b037affb71700bf49cf665331acb60e1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219709"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149169"
 ---
 # <a name="dtutil-utility"></a>dtutil (utilitaire)
   Le **dtutil** utilitaire p1ompt de commande est utilisé pour gérer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. Cet utilitaire peut copier, déplacer ou supprimer un package, ou en vérifier l'existence. Ces actions peuvent être effectuées sur n'importe quel package [!INCLUDE[ssIS](../includes/ssis-md.md)] stocké à l'un des trois emplacements suivants : une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] et le système de fichiers. Si l'utilitaire accède à un package stocké dans **msdb**, il peut être nécessaire d'indiquer un nom d'utilisateur et un mot de passe à l'invite de commandes. Si l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , il est nécessaire d'indiquer un nom d'utilisateur et un mot de passe à l'invite de commandes. Si le nom d'utilisateur est manquant, **dtutil** essaie de se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en utilisant l'authentification Windows. Le type de stockage du package est identifié par les options `/SQL`, `/FILE` et `/DTS`.  
@@ -124,7 +121,7 @@ dtutil /option [value] [/option [value]]...
 |Valeur|Description|  
 |-----------|-----------------|  
 |0|L'utilitaire s'est exécuté avec succès.|  
-| 1|L'utilitaire a échoué.|  
+|1|L'utilitaire a échoué.|  
 |4|L'utilitaire ne peut pas localiser le package demandé.|  
 |5|L'utilitaire ne peut pas charger le package demandé.|  
 |6|L'utilitaire ne peut pas résoudre la ligne de commande car elle comporte des erreurs syntaxiques ou sémantiques.|  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e0b0e8d5d18b45d15feb0f1af8f7ef2671053ab1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b4bf77cc626f78014ab139d3e27377c8f139e0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155700"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162239"
 ---
 # <a name="data-alert-designer"></a>Concepteur d’alertes de données
   Vous pouvez créer et modifier les définitions d'alerte de données dans le Concepteur d'alertes de données. Une définition d'alerte est une collection de métadonnées, comprenant les données de rapport qui vous intéressent, les règles que les données de rapport doivent satisfaire pour créer des instances d'alerte de données et pour envoyer des messages d'alerte de données, les destinataires du message d'alerte, etc.  

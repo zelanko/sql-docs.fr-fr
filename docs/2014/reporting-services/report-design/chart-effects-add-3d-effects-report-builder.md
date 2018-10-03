@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ebbdf3a5f3f4402cca8da92295d5f9632d1e1e8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b554ec2044e95304c995a0dde7d67c444fa2dc05
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166119"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>Ajouter des effets 3D à un graphique (Générateur de rapports et SSRS)
   Des effets 3D (en trois dimensions) peuvent être utilisés pour donner de la profondeur et augmenter l'impact visuel d'un graphique. Par exemple, si vous voulez insister sur un secteur particulier d'un graphique à secteurs éclatés, vous pouvez faire pivoter le graphique et changer sa perspective pour que les lecteurs remarquent ce secteur en premier. Lorsque des effets 3D sont appliqués à votre graphique, les couleurs de dégradé et les styles de hachurage sont désactivés.  

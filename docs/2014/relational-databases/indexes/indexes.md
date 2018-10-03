@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 007728b4f429cd0857a2131fb25c9de53b2258db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177746"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101159"
 ---
 # <a name="indexes"></a>Index
   La table suivante répertorie les types d'index disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et propose des liens correspondants pour plus d'informations.  
@@ -40,7 +37,7 @@ ms.locfileid: "37177746"
 |XML|Une représentation fragmentée et permanente, des objets binaires XML volumineux (BLOB) dans le `xml` colonne de type de données.|[Index XML &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
 |Texte intégral|Type spécial d'index fonctionnel par jeton qui est construit et géré par le Moteur d'indexation et de recherche en texte intégral Microsoft pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il permet de prendre en charge efficacement toute recherche de mot sophistiqué dans des chaînes de données caractères.|[Alimenter des index de recherche en texte intégral](../search/populate-full-text-indexes.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 ## <a name="related-content"></a>Contenu associé  
  [Option SORT_IN_TEMPDB pour les index](sort-in-tempdb-option-for-indexes.md)  

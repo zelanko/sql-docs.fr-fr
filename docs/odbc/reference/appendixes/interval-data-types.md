@@ -1,13 +1,11 @@
 ---
-title: Types de données Interval | Documents Microsoft
+title: Types de données Interval | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - second intervals [ODBC]
@@ -25,41 +23,40 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebc6b5d2a8e2277c3bb427053f43ebed4983e0b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909564"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622217"
 ---
-# <a name="interval-data-types"></a>Types de données Interval
-Un intervalle est défini comme la différence entre deux dates et heures. Intervalles sont exprimés dans un des deux façons différentes. Un est un *année-mois* intervalle qui exprime les intervalles en termes d’années et un nombre entier d’un mois. L’autre est un *-de la journée* intervalle qui exprime les intervalles en termes de jours, les minutes et secondes. Ces deux types d’intervalles sont distincts et ne peut pas être combinés, étant donné que les mois peuvent avoir différents nombres de jours.  
+# <a name="interval-data-types"></a>Types de données d’intervalle
+Un intervalle est défini comme la différence entre deux dates et heures. Intervalles sont exprimées dans un des deux manières différentes. Un est un *année-mois* intervalle qui exprime les intervalles en termes d’années et un nombre entier d’un mois. L’autre est un *jours-heures* intervalle qui exprime les intervalles en termes de jours, les minutes et secondes. Ces deux types d’intervalles sont distincts et ne peut pas être combinés, étant donné que les mois peuvent avoir différents nombres de jours.  
   
- Un intervalle se compose d’un ensemble de champs. Il existe un classement implicite entre les champs. Par exemple, dans un intervalle de l’année en mois, l’année se produit en premier, suivie du mois. De même, dans un intervalle de jours à la minute, les champs sont dans le jour de la commande, heure et minutes. Le premier champ de type d’intervalle est appelé la *début* champ, ou la *-poids* champ. Le dernier champ est appelé le *fin* champ.  
+ Un intervalle se compose d’un ensemble de champs. Il existe un classement implicite entre les champs. Par exemple, dans un intervalle année-mois, l’année en premier, suivie du mois. De même, dans un intervalle de jours à la minute, les champs sont dans l’ordre jour, heure et à la minute. Le premier champ dans un type d’intervalle est appelé le *début* champ, ou le *poids* champ. Le dernier champ est appelé le *fin* champ.  
   
- Dans tous les intervalles, le champ de début n’est pas contraint par les règles du calendrier grégorien. Par exemple, dans un intervalle de l’heure à la minute, le champ d’heure n’est pas contraint à être comprise entre 0 et 23 inclus, car il s’agit normalement. Les champs de fin après le champ Début suivent les contraintes habituelles du calendrier grégorien. Pour plus d’informations, consultez [contraintes du calendrier grégorien](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), plus loin dans cette annexe.  
+ Dans tous les intervalles, le champ de début n’est pas limité par les règles du calendrier grégorien. Par exemple, dans un intervalle heure-minute, le champ d’heure n’est pas limité à être comprise entre 0 et 23 inclus, car il s’agit normalement. Les champs de fin après le début du champ suivent les contraintes habituelles du calendrier grégorien. Pour plus d’informations, consultez [contraintes du calendrier grégorien](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), plus loin dans cette annexe.  
   
- Il existe 13 types de données SQL intervalle et 13 types de données C intervalle. Chacun des types de données intervalle C utilise la même structure, SQL_INTERVAL_STRUCT, pour contenir les données de l’intervalle. (Pour plus d’informations, consultez la section suivante, [Structure d’intervalle C](../../../odbc/reference/appendixes/c-interval-structure.md).) Pour plus d’informations sur les types de données SQL, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md); pour plus d’informations sur les types de données C, consultez [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md).  
+ Il existe 13 types de données SQL intervalle et les types de données C intervalle 13. Chacun des types de données d’intervalle C utilise la même structure, SQL_INTERVAL_STRUCT, pour contenir les données d’intervalle. (Pour plus d’informations, consultez la section suivante, [Structure d’intervalle C](../../../odbc/reference/appendixes/c-interval-structure.md).) Pour plus d’informations sur les types de données SQL, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md); pour plus d’informations sur les types de données C, consultez [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Identificateur de type|Classe| Description|  
+|Identificateur de type|Classe|Description|  
 |---------------------|-----------|-----------------|  
 |MONTH|Année-mois|Nombre de mois entre deux dates.|  
 |YEAR|Année-mois|Nombre d’années entre deux dates.|  
-|YEAR_TO_MONTH|Année-mois|Nombre d’années et les mois entre deux dates.|  
-|DAY|Heure de la journée|Nombre de jours entre deux dates.|  
-|HOUR|Heure de la journée|Nombre d’heures entre deux dates et des heures.|  
-|MINUTE|Heure de la journée|Nombre de minutes entre deux dates et des heures.|  
-|SECOND|Heure de la journée|Nombre de secondes entre deux dates et des heures.|  
-|DAY_TO_HOUR|Heure de la journée|Nombre de jours/heures entre deux dates et des heures.|  
-|DAY_TO_MINUTE|Heure de la journée|Nombre de jours/heures/minutes entre deux dates et des heures.|  
-|DAY_TO_SECOND|Heure de la journée|Nombre de jours/heures/minutes/secondes entre deux dates et des heures.|  
-|HOUR_TO_MINUTE|Heure de la journée|Nombre d’heures/minutes entre deux dates et des heures.|  
-|HOUR_TO_SECOND|Heure de la journée|Nombre d’heures/minutes/secondes entre deux dates et des heures.|  
-|MINUTE_TO_SECOND|Heure de la journée|Nombre de minutes/secondes entre deux dates et des heures.|  
+|YEAR_TO_MONTH|Année-mois|Nombre d’années et mois entre deux dates.|  
+|DAY|Jours-heures|Nombre de jours entre deux dates.|  
+|HOUR|Jours-heures|Nombre d’heures entre deux dates/heures.|  
+|MINUTE|Jours-heures|Nombre de minutes entre deux dates/heures.|  
+|SECOND|Jours-heures|Nombre de secondes entre deux dates/heures.|  
+|DAY_TO_HOUR|Jours-heures|Nombre de jours/heures entre deux dates/heures.|  
+|DAY_TO_MINUTE|Jours-heures|Nombre de jours/heures/minutes entre deux dates/heures.|  
+|DAY_TO_SECOND|Jours-heures|Nombre de jours/heures/minutes/secondes entre deux dates/heures.|  
+|HOUR_TO_MINUTE|Jours-heures|Nombre d’heures/minutes entre deux dates/heures.|  
+|HOUR_TO_SECOND|Jours-heures|Nombre d’heures/minutes/secondes entre deux dates/heures.|  
+|MINUTE_TO_SECOND|Jours-heures|Nombre de minutes/secondes entre deux dates/heures.|  
   
  Cette section contient les rubriques suivantes.  
   

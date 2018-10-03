@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e86268cb83887027159629069195fee60b5e85fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e17ad0f4f73ccec1875a57fc3263c4320c0625a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160220"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076723"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Leçon 2 : Création et gestion de données dans une table hiérarchique
   Dans la leçon 1, vous avez modifié une table existante afin d'utiliser le type de données `hierarchyid` et vous avez rempli la colonne `hierarchyid` avec la représentation des données existantes. Dans cette leçon, vous allez utiliser les méthodes hiérarchiques pour créer une nouvelle table et y insérer des données. Puis, toujours à l'aide de méthodes hiérarchiques, vous interrogerez et manipulerez ces données.  

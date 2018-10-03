@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d992cdc8536fc0c8e8b93322de191c614b7c51
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c1ec005ab299a8be40e977ccf6a3a8f318591b86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430858"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167195"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversions de serveur à client
   Cette rubrique décrit les conversions date/heure effectuées entre [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure) et une application cliente écrite avec OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -30,7 +27,7 @@ ms.locfileid: "37430858"
   
 |Vers -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|Date|1,7|OK|-|-| 1|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Date|1,7|OK|-|-|1|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Time|5,6,7|-|9|OK|6|3,6|5,6|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Smalldatetime|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
 |DATETIME|5,7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
@@ -39,7 +36,7 @@ ms.locfileid: "37430858"
 |Char, Varchar,<br /><br /> NVARCHAR2, NCHAR|7, 13|12|12,9|12|12|12|7,13|Néant|Néant|Néant|Néant|Néant|Néant|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|OK|3|7|-|7(VT_DATE)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (date)|1,7|OK|2|2| 1|1,3|1,7|-|OK(VT_BSTR)|OK|OK|4|4|  
+|Sql_variant<br /><br /> (date)|1,7|OK|2|2|1|1,3|1,7|-|OK(VT_BSTR)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (time)|5,6,7|2|6|OK|6|3,6|5,6|-|OK(VT_BSTR)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (datetime2)|5,7|8|9,10|10|OK|3|5,7|-|OK(VT_BSTR)|OK|OK|4|4|  
 |Sql_variant<br /><br /> (datetimeoffset)|5,7,11|8,11|9,10,11|10,11|7,11|OK|5,7,11|-|OK(VT_BSTR)|OK|OK|4|4|  
@@ -50,7 +47,7 @@ ms.locfileid: "37430858"
 |------------|-------------|  
 |OK|Aucune conversion nécessaire.|  
 |-|Aucune conversion n'est prise en charge. Si la liaison est validée lorsque IAccessor::CreateAccessor est appelée, DBBINDSTATUS_UPSUPPORTEDCONVERSION est retourné dans *rgStatus*. Lorsque la validation pour l'accesseur est différée, DBSTATUS_E_BADACCESSOR est défini.|  
-| 1|Les champs heure sont définis avec la valeur zéro.|  
+|1|Les champs heure sont définis avec la valeur zéro.|  
 |2|DBSTATUS_E_CANTCONVERTVALUE est défini.|  
 |3|Le décalage est défini avec la valeur zéro.|  
 |4|Si la mémoire tampon du client n'est pas assez grande, DBSTATUS_S_TRUNCATED est défini. Lorsque le type de serveur inclut des fractions de seconde, le nombre de chiffres de la chaîne de résultats correspond exactement à l'échelle du type de serveur.|  
@@ -65,6 +62,6 @@ ms.locfileid: "37430858"
 |13|La chaîne est analysée comme littéral ISO et convertie dans le type cible. En cas d'échec, la chaîne est analysée comme littéral de date OLE (qui possède aussi des composants heure) et convertie d'une date OLE (DBTYPE_DATE) en type cible. La chaîne doit se conformer à la syntaxe des littéraux datetime, à moins que la destination ne soit DBTYPE_DATE ou DBTYPE_DBTIMESTAMP. Si tel est le cas, un littéral datetime ou time est autorisé pour que l'analyse de format ISO réussisse. Pour que l'analyse OLE réussisse, la chaîne doit se conformer à la syntaxe reconnue par OLE. Si la chaîne ne peut pas être analysée, DBSTATUS_E_CANTCONVERTVALUE est défini. Si les valeurs d'un composant sont hors limites, DBSTATUS_E_DATAOVERFLOW est défini.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Liaisons et Conversions &#40;OLE DB&#41;](conversions-ole-db.md)  
+ [Liaisons et conversions &#40;OLE DB&#41;](conversions-ole-db.md)  
   
   

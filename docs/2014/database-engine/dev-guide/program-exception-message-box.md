@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - exception message box [SQL Server]
 - displaying exception message box
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52a24c53fcb7efa367b089b4cf5baa0731d7ad5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8cf02e2759c36ae6408beed0d72b677e130e105a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151330"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164109"
 ---
 # <a name="program-exception-message-box"></a>Programmer la boîte de message d'exceptions
   Vous pouvez utiliser la boîte de message d’exception dans vos applications pour fournir un contrôle nettement supérieur sur les messages que celui fourni par le <xref:System.Windows.Forms.MessageBox> classe. Pour plus d’informations, consultez [programmation de boîte de Message d’Exception](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Pour plus d’informations sur la façon d’obtenir et de déployer la .dll de boîte de message exception, consultez [déploiement d’une Application de boîte de Message d’Exception](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  

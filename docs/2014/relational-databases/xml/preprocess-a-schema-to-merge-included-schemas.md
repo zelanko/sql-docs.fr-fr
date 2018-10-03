@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - testing preprocessor tool
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f97cb2b7887da1ed6f15f4edb46572cf1730065e
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 78405d434ee32270363821077ca436702cb7c797
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889375"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161249"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Prétraiter un schéma pour fusionner des schémas inclus
   L’élément W3C XSD **include** assure la prise en charge de la modularité des schémas, selon laquelle un schéma XML peut être partitionné en plusieurs fichiers physiques. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge cet élément. Les schémas XML incluant cet élément seront rejetés par le serveur.  

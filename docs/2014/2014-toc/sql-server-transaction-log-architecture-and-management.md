@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
-caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 799b6a05850abb88c97c8e2a27214055eb20d976
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164869"
 ---
-# Architecture et gestion du journal des transactions SQL Server
+# <a name="sql-server-transaction-log-architecture-and-management"></a>Architecture et gestion du journal des transactions SQL Server
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Chaque base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] possède un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chacune d'entre elles. Le journal des transactions est un composant essentiel de la base de données et, en cas de défaillance du système, vous pouvez en avoir besoin pour rétablir la cohérence de la base de données. Ce guide contient des informations sur l'architecture physique et logique du journal des transactions. Ces informations pourront vous aider à gérer plus efficacement les journaux des transactions.  
@@ -82,7 +79,7 @@ ms.locfileid: "37301339"
   
  Si le journal contient plusieurs fichiers journaux physiques, le journal logique va se déplacer dans tous les fichiers journaux physiques avant de revenir au début du premier fichier journal physique.  
   
-### Troncation de journal  
+### <a name="log-truncation"></a>Troncation de journal  
  La troncation du journal est essentielle pour empêcher que le journal se remplisse. La troncation du journal supprime les fichiers journaux virtuels inactifs du journal des transactions logique d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , ce qui libère de l'espace dans le journal logique de façon à ce qu'il soit réutilisé par le journal des transactions physique. Si un journal des transactions n'était jamais tronqué, il finirait par occuper tout l'espace disque alloué à ses fichiers journaux physiques. Toutefois, une opération de point de contrôle est requise avant que le journal des transactions puisse être tronqué. Un point de contrôle écrit les pages modifiées en mémoire actuelles (appelées pages de modifications) et les informations du journal des transactions de la mémoire vers le disque. Lorsque le point de contrôle est créé, la partie inactive du journal des transactions est marquée comme réutilisable. Après cela, elle peut être libérée par troncation du journal. Pour plus d’informations sur les points de contrôle, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
  Les illustrations suivantes montrent un journal des transactions avant et après une troncation. La première illustration montre un journal des transactions qui n'a jamais été tronqué. Actuellement, quatre fichiers journaux virtuels sont utilisés par le journal logique. Le journal logique commence avant le premier fichier journal virtuel et se termine au journal virtuel 4. L'enregistrement NSEmin se trouve dans le journal virtuel 3. Les journaux virtuels 1 et 2 contiennent uniquement des enregistrements de journal inactifs. Ces enregistrements peuvent être tronqués. Le journal virtuel 5 est encore inutilisé et ne fait pas partie du journal logique actuel.  
@@ -117,15 +114,15 @@ ms.locfileid: "37301339"
   
  Pour limiter le nombre des sauvegardes de fichiers journaux à restaurer, il est essentiel de sauvegarder vos données régulièrement. Vous pouvez, par exemple, planifier une sauvegarde complète hebdomadaire et des sauvegardes différentielles quotidiennes de la base de données.  
   
-### Séquence de journaux de transactions consécutifs  
+### <a name="the-log-chain"></a>Séquence de journaux de transactions consécutifs  
  Une séquence continue de sauvegardes de journaux s’appelle une *séquence de journaux de transactions consécutifs*. Une séquence de journaux de transactions consécutifs commence par une sauvegarde complète de la base de données. Généralement, une nouvelle séquence de journaux de transactions consécutifs ne démarre que lorsque la base de données est sauvegardée pour la première fois ou après que le mode de récupération simple est remplacé par le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions. Si vous ne choisissez pas de remplacer les jeux de sauvegarde existants lors de la création d'une sauvegarde complète de base de données, la séquence de journaux de transactions consécutifs existante reste intacte. Grâce à la séquence de journaux de transactions consécutifs intacte, vous pouvez restaurer votre base de données à partir d'une sauvegarde complète de base de données du support de sauvegarde, suivie de toutes les sauvegardes de fichiers journaux suivantes jusqu'à votre point de récupération. Le point de récupération peut être la fin de la dernière sauvegarde de fichier journal ou un point de récupération spécifique dans chacune des sauvegardes de fichiers journaux. Pour plus d’informations, consultez [Sauvegardes du journal des transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Pour restaurer une base de données jusqu'au point d'échec, la séquence de journaux de transactions consécutifs doit être intacte. Autrement dit, la séquence ininterrompue des sauvegardes des journaux de transactions doit aller jusqu'au point de défaillance. Le point de commencement de cette séquence du journal dépend du type des sauvegardes de données que vous restaurez : base de données, partielle ou fichiers. Pour une sauvegarde partielle ou de base de données, la séquence des sauvegardes des journaux doit s'étendre à partir de la fin d'une sauvegarde partielle ou de base de données. Pour un jeu de sauvegardes de fichiers, la séquence des sauvegardes des journaux doit s'étendre à partir du début d'un jeu complet de sauvegardes de fichiers. Pour plus d’informations, consultez [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-### Restaurer des sauvegardes du journal  
+### <a name="restore-log-backups"></a>Restaurer des sauvegardes du journal  
  La restauration d'une sauvegarde de journal restaure par progression les modifications enregistrées dans le journal des transactions, afin de recréer l'état exact de la base de données qui existait au début de la sauvegarde du journal. Lorsque vous restaurez une base de données, vous devez restaurer les sauvegardes des journaux créées à la suite de la sauvegarde complète de base de données que vous restaurez ou à partir de la première sauvegarde de fichiers que vous restaurez. En règle générale, vous devez restaurer une série de sauvegardes de journaux jusqu'au point de récupération, après avoir restauré les données les plus récentes ou une sauvegarde différentielle. Ensuite, vous récupérez la base de données. Cette opération restaure toutes les transactions qui n'étaient pas terminées au début de la récupération et place la base de données en ligne. Une fois la base de données récupérée, vous ne pouvez plus restaurer des sauvegardes. Pour plus d’informations, consultez [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-## Lecture supplémentaire  
+## <a name="additional-reading"></a>Lecture supplémentaire  
  Pour plus d'informations sur le journal des transactions, nous vous recommandons de lire les articles et les ouvrages suivants.  
   
  [Fonctionnement de la journalisation et de la récupération dans SQL Server de Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  

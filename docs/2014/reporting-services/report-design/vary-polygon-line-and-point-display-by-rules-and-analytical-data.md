@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpolygonlayerproperties.general.f1
@@ -20,16 +18,15 @@ f1_keywords:
 - "10531"
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5ee62f82416bcac56211bd29548070926abff1bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5c6ca9ae7bca2b9c6dc55f65cbbb95917fd96db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149770"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158909"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Modifier l'affichage des polygones, des lignes et des points à l'aide de règles et de données analytiques (Générateur de rapports et SSRS)
   Les options d'affichage pour les polygones, les lignes et les points d'une couche sont contrôlées en définissant des options pour la couche, en établissant des règles pour les éléments cartographiques de la couche ou en remplaçant des options pour des éléments cartographiques incorporés spécifiques sur une couche.  

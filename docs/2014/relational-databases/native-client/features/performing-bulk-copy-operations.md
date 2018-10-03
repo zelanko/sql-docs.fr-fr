@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [SQL Server Native Client]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client, bulk copy operations
 - SQLNCLI, bulk copy operations
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d6eb857c3bd21bbbd1c98a2c5a19806a253df6b
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: d9635a55fbf36aacabb6c24512d5afd7219f8476
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394480"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079859"
 ---
 # <a name="performing-bulk-copy-operations"></a>Exécution d'opérations de copie en bloc
   La fonction de copie en bloc de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge le transfert de quantités importantes de données vers ou depuis une table ou une vue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les données peuvent également être transférées en spécifiant une instruction SELECT. Les données peuvent être déplacées entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et un fichier de données du système d'exploitation, par exemple un fichier ASCII. Le fichier de données peut avoir différents formats ; le format est défini pour effectuer la copie en bloc dans un fichier de format. Facultativement, les données peuvent être chargées dans des variables de programme et transférées vers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide de fonctions et de méthodes de copie en bloc.  

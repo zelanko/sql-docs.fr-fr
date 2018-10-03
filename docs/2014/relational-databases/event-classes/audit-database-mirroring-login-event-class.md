@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Audit Database Mirroring Login event class
 - database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a91244c7e4ef93c9a5e34b7edb74eeb94bf75370
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d2c920a2b7341b75f85c2c9cf46bc381d607e1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128859"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, classe d'événements
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un événement **Audit Database Mirroring Login** pour retourner les messages d’audit relatifs à la sécurité du transport de la mise en miroir de bases de données.  
@@ -61,7 +58,7 @@ ms.locfileid: "37288975"
   
 |ID|Sous-classe|Description|  
 |--------|--------------|-----------------|  
-| 1|Login Success|Un événement Login Success indique que le processus de connexion de la mise en miroir de bases de données adjacentes s'est terminé avec succès.|  
+|1|Login Success|Un événement Login Success indique que le processus de connexion de la mise en miroir de bases de données adjacentes s'est terminé avec succès.|  
 |2|Login Protocol Error|Un événement Login Protocol Error indique que la connexion de mise en miroir des bases de données reçoit un message qui a un format correct mais n'est pas valide pour l'état du processus de connexion en cours. Le message a peut-être été perdu ou envoyé hors séquence.|  
 |3|Message Format Error|Un événement Message Format Error indique qu'une connexion de mise en miroir de bases de données a reçu un message qui ne correspond pas au format attendu. Le message a peut-être été corrompu ou un programme autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envoie peut-être des messages au port que la mise en miroir des bases de données utilise.|  
 |4|Negotiate Failure|Un événement Negotiate Failure indique que le point de terminaison de la mise en miroir de bases de données locales et le point de terminaison de la mise en miroir de bases de données distantes prennent mutuellement en charge des niveaux d'authentification exclusifs.|  

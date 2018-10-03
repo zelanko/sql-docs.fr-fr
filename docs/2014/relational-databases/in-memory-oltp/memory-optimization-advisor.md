@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.memoryoptimizationwizard.f1
 - swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f5f45037ec9c988a2c7b95df37fd338d98ce7db
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: d616312ffec682ad7c37da62c23c4ada1eb98f00
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392781"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140989"
 ---
 # <a name="memory-optimization-advisor"></a>Conseiller d'optimisation de la mémoire
   L’outil de génération de rapports sur les performances des transactions (voir [Déterminer si un tableau ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) indiquent quelles tables de votre base de données tireront parti de l’utilisation de la fonctionnalité OLTP en mémoire. Après avoir identifié une table que vous souhaitez déplacer pour utiliser l'OLTP en mémoire, utilisez le Conseiller d'optimisation de la mémoire pour vous aider à migrer la table de base de données sur disque vers l'OLTP en mémoire.  

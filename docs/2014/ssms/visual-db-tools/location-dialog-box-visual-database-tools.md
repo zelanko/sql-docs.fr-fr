@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.getdirectoryname
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75c8b90fde2ce956600f4935007bc6800030586a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5fd239a71c551c9fc3d5be3dd5fe0ae5aa772308
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814485"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144709"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Boîte de dialogue Emplacement (Visual Database Tools)
   Cette boîte de dialogue permet de localiser et de sélectionner le dossier contenant les fichiers qui vous intéressent. Cette boîte de dialogue renvoie le chemin du dossier sélectionné à la boîte de dialogue appelante. Vous pouvez accéder à cette boîte de dialogue en procédant comme suit :  

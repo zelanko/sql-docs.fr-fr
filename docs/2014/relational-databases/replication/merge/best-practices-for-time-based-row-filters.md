@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8dd38a60a64738535d65931d40aac5182e331e41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70fb66a1b61dbbdec0fd8443ac150b32c3770818
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145523"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Bonnes pratiques en matière de filtres de lignes basés sur le temps
   Les utilisateurs d'applications ont souvent besoin d'un sous-ensemble de données d'une table basé sur le temps. Par exemple, un vendeur peut avoir besoin des données sur les commandes passées au cours de la dernière semaine tandis qu'un planificateur d'événements peut avoir besoin des données sur les événements qui auront lieu au cours de la semaine à venir. Dans de nombreux cas, pour accomplir cette tâche, les applications utilisent des requêtes qui contiennent la fonction `GETDATE()`. Considérons l'instruction de filtre de lignes suivante :  
@@ -63,7 +60,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Répliquer**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-| 1|Réception|112|2006-10-04| 1|  
+|1|Réception|112|2006-10-04|1|  
 |2|Dîner|112|2006-10-10|0|  
 |3|Soirée|112|2006-10-11|0|  
 |4|Mariage|112|2006-10-12|0|  
@@ -87,10 +84,10 @@ GO
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Répliquer**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-| 1|Réception|112|2006-10-04|0|  
-|2|Dîner|112|2006-10-10| 1|  
-|3|Soirée|112|2006-10-11| 1|  
-|4|Mariage|112|2006-10-12| 1|  
+|1|Réception|112|2006-10-04|0|  
+|2|Dîner|112|2006-10-10|1|  
+|3|Soirée|112|2006-10-11|1|  
+|4|Mariage|112|2006-10-12|1|  
   
  Les événements relatifs à la semaine à venir sont désormais signalés comme étant prêts à être répliqués. La prochaine fois que l'Agent de fusion s'exécutera pour l'abonnement utilisé par le coordinateur d'événements 112, les lignes 2, 3 et 4 seront téléchargées vers l'Abonné tandis que la ligne 1 sera supprimée de celui-ci.  
   

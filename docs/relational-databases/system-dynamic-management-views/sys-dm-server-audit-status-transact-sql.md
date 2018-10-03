@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_server_audit_status (Transact-SQL) | Documents Microsoft
+title: Sys.dm_server_audit_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_audit_status_TSQL
@@ -18,34 +16,33 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_audit_status dynamic management view
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4797a4e81a0fabd169111e979d661d17517ce3f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3f2be7711a7e495608d2a35d42e617663e11bc3c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467466"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712509"
 ---
 # <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque audit du serveur qui indique l'état actuel de l'audit. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|ID de l'audit. Mappe à la **audit_id** champ dans le **sys.audits** affichage catalogue.|  
-|**nom**|**sysname**|Nom de l’audit. Identique à la **nom** champ dans le **sys.server_audits** affichage catalogue.|  
-|**status**|**smallint**|État numérique de l'audit du serveur :<br /><br /> 0 = non démarré<br /><br /> 1 =<br />        Démarré<br /><br /> 2 =<br />      Échec de l’exécution<br /><br /> 3 = cible créer échouent<br /><br /> 4 = arrêt|  
+|**audit_id**|**Int**|ID de l'audit. Mappe à la **audit_id** champ dans le **sys.audits** vue de catalogue.|  
+|**nom**|**sysname**|Nom de l’audit. Identique à la **nom** champ dans le **sys.server_audits** vue de catalogue.|  
+|**status**|**smallint**|État numérique de l'audit du serveur :<br /><br /> 0 = non démarré<br /><br /> 1 =<br />        Démarré<br /><br /> 2 =<br />      Échec de l’exécution<br /><br /> 3 = target créer échouent<br /><br /> 4 = en cours d’arrêt|  
 |**status_desc**|**nvarchar (256)**|Chaîne qui indique l'état de l'audit du serveur :<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Horodateur (en temps UTC) de la dernière modification d'état de l'audit.|  
-|**event_session_address**|**varbinary(8)**|Adresse de la session d'événements étendus associée à l'audit. Liés à la **sys.db_xe_sessions.address** affichage catalogue.|  
+|**event_session_address**|**varbinary(8)**|Adresse de la session d'événements étendus associée à l'audit. Liés à la **sys.db_xe_sessions.address** vue de catalogue.|  
 |**audit_file_path**|**nvarchar (256)**|Chemin d'accès complet et nom de fichier de la cible de fichier d'audit utilisée actuellement. Rempli uniquement pour les fichiers d'audit.|  
 |**audit_file_size**|**bigint**|Taille approximative du fichier d'audit, en octets. Rempli uniquement pour les fichiers d'audit.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les principaux doivent avoir **VIEW SERVER STATE** et **sélectionnez** autorisations.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-caps.latest.revision: 74
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 109ba047a24211c5a41aebf96ccb373a546c26c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218949"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145889"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Concevoir des rapports à l'aide du Concepteur de rapports (SSRS)
   Utilisez le Concepteur de rapports pour créer des rapports et des solutions de création de rapports complets de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le Concepteur de rapports fournit une interface graphique dans laquelle vous pouvez définir les sources de données, les datasets et les requêtes, les positions de mise en page des rapports pour les régions de données et les champs, ainsi que des fonctionnalités interactives telles que les paramètres et les jeux de rapports qui fonctionnent ensemble.  
@@ -181,7 +178,7 @@ ms.locfileid: "37218949"
 |Niveau d'erreur|Description|  
 |-----------------|-----------------|  
 |0|Problèmes de génération les plus sévères et inévitables qui empêchent l'aperçu et le déploiement de rapports.|  
-| 1|Problèmes de génération sévères qui modifient la mise en page de rapport radicalement.|  
+|1|Problèmes de génération sévères qui modifient la mise en page de rapport radicalement.|  
 |2|Problèmes de génération moins sévères qui modifient la mise en page de rapport de façon significative.|  
 |3|Problèmes de génération mineurs qui modifient si peu la mise en page de rapport qu'ils peuvent passer inaperçus.|  
 |4|Utilisé uniquement pour la publication d'avertissements.|  

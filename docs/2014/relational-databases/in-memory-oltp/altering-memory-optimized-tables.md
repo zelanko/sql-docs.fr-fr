@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea556bf0bf0f7b1df112443cb7620fa0cb2350ae
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3dfd0d92f5dcf82cbfdd5786fed26e3b41048f8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136479"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modification des tables à mémoire optimisée
   L'exécution d'opérations ALTER sur les tables mémoire optimisées n'est pas prise en charge. Cela comprend les opérations telles que la modification du nombre de compartiments, l'ajout ou la suppression d'un index et l'ajout ou la suppression d'une colonne. Cette rubrique fournit des instructions pour mettre à jour des tables mémoire optimisées.  

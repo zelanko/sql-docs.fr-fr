@@ -1,14 +1,11 @@
 ---
-title: Accès au fournisseur WMI pour la gestion de la Configuration à l’aide de WQL | Documents Microsoft
+title: Accéder au fournisseur WMI pour la gestion de Configuration à l’aide de WQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - query language [WMI]
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Configuration Management, WQL
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cece73ebb5402fe2f725fedbcdf7cdc833d08265
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e05bbb4a9d41f88c4c2981aff9a3565bbc14bb92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692827"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Accéder au fournisseur WMI pour Gestion de l'ordinateur à l'aide de WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +37,7 @@ ms.locfileid: "33013176"
   
 3.  Dans le premier champ de texte, tapez l'espace de noms de fournisseur WMI pour Gestion de l'ordinateur : root\Microsoft\SqlServer\ComputerManagement11. Cliquez sur **Se connecter**.  
   
-4.  Cliquez sur **requête**. Tapez une requête qui renvoie les services actuels, en cours d’exécution sur l’ordinateur local : **sélectionnez \* de SqlService.** Cliquez sur **Appliquer**.  
+4.  Cliquez sur **requête**. Tapez une requête qui retourne les services actuels en cours d’exécution sur l’ordinateur local : **sélectionnez \* à partir de SqlService.** Cliquez sur **Appliquer**.  
   
 5.  Affiner la requête en ajoutant **où ServiceName = « MSSQLSERVER »**.  
   

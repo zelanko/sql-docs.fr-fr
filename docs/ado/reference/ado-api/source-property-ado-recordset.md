@@ -1,13 +1,11 @@
 ---
-title: Source, propriété (jeu d’enregistrements ADO) | Documents Microsoft
+title: Source, propriété (objet Recordset ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -21,36 +19,35 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Recordset]
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ee46e4f0af37fd28a6e45f48e31bab7e868821f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 718124fce3c2ce7a1adf9e6dbdb1d54e8a834fca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281870"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655607"
 ---
-# <a name="source-property-ado-recordset"></a>Source, propriété (jeu d’enregistrements ADO)
+# <a name="source-property-ado-recordset"></a>Source, propriété (objet Recordset ADO)
 Indique la source de données pour un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit un **chaîne** valeur ou [commande](../../../ado/reference/ado-api/command-object-ado.md) objet référence ; retourne uniquement un **chaîne** valeur qui indique la source de la **Recordset**.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **Source** propriété pour spécifier une source de données pour un **Recordset** en utilisant l’une des opérations suivantes : une **commande** de l’objet variable, une instruction SQL, une procédure stockée, ou un nom de table.  
+ Utilisez le **Source** propriété pour spécifier une source de données pour un **Recordset** en utilisant l’une des opérations suivantes : une **commande** variable, une instruction SQL, une procédure stockée, l’objet ou un nom de table.  
   
- Si vous définissez la **Source** propriété un **commande** objet, le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriété de la **Recordset** objet hérite les valeur de la **ActiveConnection** propriété spécifié **commande** objet. Toutefois, lors de la lecture le **Source** propriété ne retourne pas une **commande** de l’objet ; au lieu de cela, elle retourne le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété de la **commande** de l’objet à laquelle vous avez défini le **Source** propriété.  
+ Si vous définissez le **Source** propriété un **commande** objet, le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriété de la **Recordset** objet hérite les valeur de la **ActiveConnection** propriété spécifié **commande** objet. Toutefois, la lecture la **Source** propriété ne retourne pas une **commande** objet ; au lieu de cela, elle retourne le [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété de la **commande** de l’objet à laquelle vous avez défini le **Source** propriété.  
   
  Si le **Source** propriété est une instruction SQL, une procédure stockée ou un nom de table, vous pouvez optimiser les performances en passant approprié *Options* argument avec le [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)appel de méthode.  
   
- Le **Source** propriété est en lecture/écriture pour fermé **Recordset** objets et en lecture seule pour ouvrir **Recordset** objets.  
+ Le **Source** propriété est en lecture/écriture pour fermé **Recordset** objets et en lecture seule pour open **Recordset** objets.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété source (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
- [Source, propriété (erreur ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
+ [Source, propriété (objet Error ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source, propriété (objet Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)

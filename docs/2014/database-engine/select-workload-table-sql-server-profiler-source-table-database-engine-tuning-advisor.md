@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.sourcetable.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Select Workload Table dialog box
 - Source Table dialog box
 ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c371644630c24946b4acc50d77916fb8d0fd4a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b2e277313ac2da5c8a92d69985344d3cc646dbf7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285685"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161685"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>Table SQL Server Profiler - moteur de base de données de la Table Source l’Assistant Paramétrage - sélectionnez la charge de travail
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] et l'Assistant Paramétrage de [!INCLUDE[ssDE](../includes/ssde-md.md)] utilisent cette boîte de dialogue pour sélectionner des tables.  

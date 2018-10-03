@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2621f9a8e69cc27d5012e0c6a6f90946bec07dc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270275"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161929"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   Le [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] journal de trace de serveur de rapports est un fichier texte ASCII qui contient des informations détaillées pour les opérations de service de serveur de rapports, y compris celles effectuées par le Web de serveur de rapports de service, le Gestionnaire de rapports et le traitement en arrière-plan. Le fichier journal des traces comprend des informations redondantes qui sont consignées dans d'autres fichiers journaux, ainsi que des informations qui ne se trouvent nulle part ailleurs. Les informations du journal des traces sont utiles si vous déboguez une application qui comprend un serveur de rapports, ou si vous essayez de déterminer l'origine d'un problème consigné dans le journal des événements ou le journal des exécutions.  
@@ -56,7 +53,7 @@ ms.locfileid: "37270275"
 ##  <a name="bkmk_trace_configuration_settings"></a> Paramètres de configuration des traces  
  Le comportement du journal des traces est géré dans le fichier de configuration **ReportingServicesrService.exe.config**. Le fichier de configuration se trouve dans le chemin d'accès de dossier suivant :  
   
- `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`.  
+ `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin` .  
   
  L'exemple suivant illustre la structure XML des paramètres de `RStrace`. La valeur de `DefaultTraceSwitch` détermine le type d’information qui est ajouté au journal. À l’exception de la `Components` d’attribut, les valeurs de `RStrace` sont les mêmes pour les fichiers de configuration.  
   

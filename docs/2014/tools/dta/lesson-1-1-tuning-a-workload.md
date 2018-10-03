@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02c10662607423a5dba423977572876f18394e22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82d3b33b8c41885d3fa92d1363af6c98443c9deb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172090"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073779"
 ---
 # <a name="tuning-a-workload"></a>Paramétrage d'une charge de travail
   L'Assistant Paramétrage du moteur de base de données peut servir à trouver la conception de base de données physique qui permet d'obtenir les meilleures performances des requêtes sur les bases de données et les tables que vous avez sélectionnées pour le paramétrage.  
@@ -30,7 +27,7 @@ ms.locfileid: "37172090"
   
 ### <a name="tune-a-workload-transact-sql-script-file"></a>Pour paramétrer le fichier de script Transact-SQL d'une charge de travail  
   
-1.  Copiez une ou plusieurs instructions SELECT exemple à partir de « A. Utilisation de SELECT pour extraire des lignes et des colonnes » dans [SELECT Examples &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql), puis collez les instructions dans l’Éditeur de requête de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Enregistrez le fichier sous **MyScript.sql** dans un répertoire dans lequel vous pouvez facilement retrouver.  
+1.  Copiez une ou plusieurs instructions SELECT exemple à partir de « A. Utilisation de SELECT pour extraire des lignes et des colonnes » dans [SELECT Examples &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql), puis collez les instructions dans l’Éditeur de requête de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Enregistrez le fichier sous le nom **MyScript.sql** dans un répertoire où il est facile de le retrouver.  
   
 2.  Démarrez l'Assistant Paramétrage du moteur de base de données. Voir [Lancement de l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
