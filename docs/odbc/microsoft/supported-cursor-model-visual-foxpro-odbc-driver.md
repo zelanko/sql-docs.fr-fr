@@ -1,13 +1,11 @@
 ---
-title: Prise en charge du modèle de curseur (le pilote ODBC Visual FoxPro) | Documents Microsoft
+title: Prise en charge le modèle de curseur (pilote ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], cursors
@@ -17,32 +15,31 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - rowset cursors [ODBC]
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f12ee1bae3ae4b10b546801bf35ebbf370e1eaba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 875348a501c292e55b267ece769f16dd6bc9dbdd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792659"
 ---
-# <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modèle de curseur prises en charge (le pilote ODBC Visual FoxPro)
-Le pilote ODBC Visual FoxPro prend en charge les deux *bloc* (*ensemble de lignes*) et *statique* les curseurs. Les curseurs statiques sont prises en charge pour un pilote qui est conforme à la conformité de niveau 1 ODBC. Le pilote ne prend pas en charge dynamique, commandé par keyset ou mixte (keyset et dynamic) les curseurs.  
+# <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modèle de curseur pris en charge (pilote ODBC Visual FoxPro)
+Le pilote ODBC Visual FoxPro prend en charge les deux *bloc* (*ensemble de lignes*) et *statique* les curseurs. Les curseurs statiques sont prises en charge pour n’importe quel pilote est conforme à la conformité de niveau 1 ODBC. Le pilote ne prend pas en charge dynamiques, pilotés par jeu de clés ou mixte (keyset et dynamic) les curseurs.  
   
- Votre application peut appeler [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) avec une option de SQL_CURSOR_TYPE de SQL_CURSOR_FORWARD_ONLY (curseur de bloc) ou SQL_CURSOR_STATIC (curseur statique).  
+ Votre application peut appeler [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) avec une option SQL_CURSOR_TYPE de SQL_CURSOR_FORWARD_ONLY (curseur de bloc) ou SQL_CURSOR_STATIC (curseur statique).  
   
 > [!NOTE]  
->  Si vous appelez **SQLSetStmtOption** avec une option SQL_CURSOR_TYPE autre que SQL_CURSOR_FORWARD_ONLY ou SQL_CURSOR_STATIC, la fonction retourne SQL_SUCCESS_WITH_INFO avec une valeur SQLSTATE 01 s 02 (Option la valeur modifiée). Le pilote affecte tous les modes de curseur non pris en charge SQL_CURSOR_STATIC.  
+>  Si vous appelez **SQLSetStmtOption** avec une option SQL_CURSOR_TYPE autre que SQL_CURSOR_FORWARD_ONLY ou SQL_CURSOR_STATIC, la fonction retourne SQL_SUCCESS_WITH_INFO avec une valeur SQLSTATE de 01 s 02 (valeur d’Option modifiée). Le pilote affecte tous les modes de curseur non pris en charge SQL_CURSOR_STATIC.  
   
- Pour plus d’informations sur les types de curseurs et sur **SQLSetStmtOption**, consultez la [de référence du programmeur ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
+ Pour plus d’informations sur les types de curseur et environ **SQLSetStmtOption**, consultez le [de référence du programmeur ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
   
 ## <a name="block-cursor"></a>curseur de bloc  
- Un jeu de résultats de défilement avant, en lecture seule retourné au client, qui est chargé de gérer le stockage des données.  
+ Un jeu de résultats de défilement avant, en lecture seule retourné au client, qui est responsable de la maintenance du stockage pour les données.  
   
 ## <a name="static-cursor"></a>curseur statique  
- Un instantané d’un jeu de données défini par la requête. Les curseurs statiques ne reflètent pas les modifications en temps réel des données sous-jacentes par d’autres utilisateurs. Mémoire tampon de mémoire du curseur est conservée par la bibliothèque de curseurs ODBC, qui permet le défilement vers l’avant et vers l’arrière.  
+ Une capture instantanée d’un jeu de données défini par la requête. Les curseurs statiques ne reflètent pas les modifications en temps réel des données sous-jacentes par d’autres utilisateurs. Mémoire tampon de mémoire du curseur est maintenu par la bibliothèque de curseurs ODBC, ce qui permet le défilement vers l’avant et vers l’arrière.  
   
 ## <a name="rowset"></a>ensemble de lignes  
  Blocs de données stockées dans un curseur, représentant les lignes récupérées à partir d’une source de données.

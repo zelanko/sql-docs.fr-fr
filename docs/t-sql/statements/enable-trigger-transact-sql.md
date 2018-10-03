@@ -5,9 +5,7 @@ ms.date: 05/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENABLE TRIGGER
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - DML triggers, enabling
 - ENABLE TRIGGER statement
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
-caps.latest.revision: 39
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6d1f7ab7c0f0cb9f6fb5195be1409bb5109c13b4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: a92ebf725860db4537b03d4d5eb917475774201a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599437"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +71,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ## <a name="remarks"></a>Notes   
  Un déclencheur n'est pas recréé par son activation. Un déclencheur désactivé continue d'exister en tant qu'objet de la base de données active, mais il ne s'exécute pas. Une fois activé, un déclencheur s'exécute dès lors qu'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] dans laquelle il était initialement programmé est exécuté. Les déclencheurs sont désactivés à l’aide de [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Il est également possible d’activer ou de désactiver les déclencheurs DML définis sur des tables au moyen de la commande [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour activer un déclencheur DML, un utilisateur doit disposer au minimum d'une autorisation ALTER sur la table ou sur la vue sur laquelle le déclencheur a été créé.  
   
  L'activation d'un déclencheur DDL avec une étendue de serveur (ON ALL SERVER) ou d'un déclencheur de connexion défini nécessite l'autorisation CONTROL SERVER sur le serveur. Pour activer un déclencheur DDL dans l'étendue de la base de données (ON DATABASE), un utilisateur doit au minimum disposer d'une autorisation ALTER ANY DATABASE DDL TRIGGER dans la base de données active.  

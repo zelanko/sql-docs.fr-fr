@@ -4,24 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e1c2b325e10223cf30d233facb3de3e3282eaa7b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393643"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782067"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Bien démarrer avec SSMA pour Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour Oracle vous permet de rapidement convertir des schémas de base de données Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas, charger les schémas qui en résulte dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et migrer les données d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -97,7 +94,7 @@ Le tableau suivant présente la migration des commandes de barre d’outils :
 ### <a name="menus"></a>Menus  
 Le tableau suivant présente les menus SSMA.  
   
-|Menu| Description|  
+|Menu|Description|  
 |----|-----------|  
 |**Fichier**|Contient des commandes pour travailler avec des projets, la connexion à Oracle et la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Modifier**|Contient des commandes pour la recherche et de travailler avec du texte dans les pages de détails, telles que la copie [!INCLUDE[tsql](../../includes/tsql-md.md)] depuis le volet de détails SQL. Contient également le **gérer les signets** option, où vous serez en mesure de voir une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  

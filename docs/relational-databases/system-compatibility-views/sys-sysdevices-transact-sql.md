@@ -1,14 +1,11 @@
 ---
-title: Sys.sysdevices (Transact-SQL) | Documents Microsoft
+title: Sys.sysdevices (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdevices
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sys.sysdevices compatibility view
 - sysdevices system table
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
-caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bf1a22fae1c4c8f69edf843c1a126844abdd1190
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: be4c586e3a3bdf4387601d1221bd7afeab852677
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219980"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595297"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,12 +36,12 @@ ms.locfileid: "33219980"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom logique du fichier de sauvegarde ou du fichier de base de données.|  
-|**size**|**int**|Taille du fichier en pages de 2 kilo-octets (Ko).|  
-|**Faible**|**int**|Conservé pour compatibilité descendante uniquement.|  
-|**Haute**|**int**|Conservé pour compatibilité descendante uniquement.|  
+|**size**|**Int**|Taille du fichier en pages de 2 kilo-octets (Ko).|  
+|**Faible**|**Int**|Conservé pour compatibilité descendante uniquement.|  
+|**Haute**|**Int**|Conservé pour compatibilité descendante uniquement.|  
 |**status**|**smallint**|Bitmap indiquant le type de périphérique :<br /><br /> 1 = Disque par défaut<br /><br /> 2 = Disque physique<br /><br /> 4 = Disque logique<br /><br /> 8 = Omettre en-tête<br /><br /> 16 = Fichier de sauvegarde<br /><br /> 32 = Écritures en série<br /><br /> 4096 = Lecture seule|  
 |**cntrltype**|**smallint**|Type de contrôleur :<br /><br /> 0 = Fichier de base de données non CD-ROM<br /><br /> 2 = Fichier de sauvegarde sur disque<br /><br /> 3 - 4 = Fichier de sauvegarde sur disquette<br /><br /> 5 = Fichier de sauvegarde sur bande<br /><br /> 6 = Fichier de canal nommé|  
 |**phyname**|**nvarchar(260)**|Nom du fichier physique.|  

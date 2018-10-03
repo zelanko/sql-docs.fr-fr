@@ -1,13 +1,11 @@
 ---
-title: DataSpace et la méthode CreateObject exemple (VBScript) | Documents Microsoft
+title: DataSpace et la méthode CreateObject, exemple (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - DataSpace object [RDS], VBScript example
 - CreateObject method [ADO], VBScript example
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fd9d098362f45d4ff2d0e7a3bc24d67130a0be9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 196641267bfedaff0de657d842b75a38c7cac75a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287638"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753357"
 ---
-# <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace et la méthode CreateObject exemple (VBScript)
+# <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace (exemple d’objet) et CreateObject (exemple de méthode) (VBScript)
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- L’exemple suivant montre comment utiliser le [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) méthode de la [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) avec l’objet métier par défaut, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Pour tester cet exemple, coupez et collez ce code entre les \<corps > et \</corps > balises dans un code HTML normal de document et nommez-le **DataSpaceVBS.asp**. Le script ASP identifie votre serveur.  
+ L’exemple suivant montre comment utiliser le [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) méthode de la [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) avec l’objet métier par défaut, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Pour tester cet exemple, coupez et collez ce code entre les \<corps > et \</corps > balises dans un HTML normal de document et nommez-le **DataSpaceVBS.asp**. Le script ASP identifie votre serveur.  
   
 ```  
 <!-- BeginDataSpaceVBS -->  
@@ -136,10 +133,10 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
   
  L’exemple suivant montre comment utiliser le **CreateObject** méthode pour créer une instance d’un objet métier personnalisé, VbBusObj.VbBusObjCls. Il utilise également le script pour identifier le nom du serveur Web Active Server Pages.  
   
- Pour voir un exemple complet, ouvrez le sélecteur d’applications exemple. Dans le **couche cliente** colonne, sélectionnez **VBScript dans Internet Explorer**. Dans le **intermédiaire** colonne, sélectionnez **Custom Visual Basic Business Object**.  
+ Pour voir un exemple complet, ouvrez le sélecteur d’applications exemples. Dans le **couche cliente** colonne, sélectionnez **VBScript dans Internet Explorer**. Dans le **intermédiaire** colonne, sélectionnez **Custom Visual Basic Business Object**.  
   
 > [!NOTE]
->  Si vous vous connectez à un fournisseur de source de données qui prend en charge l’authentification Windows, vous devez spécifier **Trusted_Connection = yes** ou **Integrated Security = SSPI** au lieu des informations d’ID et mot de passe utilisateur dans la chaîne de connexion.  
+>  Si vous vous connectez à un fournisseur de source de données qui prend en charge l’authentification Windows, vous devez spécifier **Trusted_Connection = yes** ou **Integrated Security = SSPI** au lieu des ID d’utilisateur et mot de passe informations dans la chaîne de connexion.  
   
 ```  
 Sub Window_OnLoad()  
@@ -151,7 +148,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [CreateObject (méthode) (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
+ [CreateObject, méthode (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataSpace, objet (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 
 
