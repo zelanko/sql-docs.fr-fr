@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b8b08d19493528f1c93cea4752f548040fb47322
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5f6d37f88044d9888c82b5770ea1bca366423459
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286695"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123250"
 ---
 # <a name="managing-report-parts"></a>Gestion de parties de rapport
   À partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], parties de rapports peuvent être publiés sur les serveurs de rapports et réutilisées dans d’autres rapports et par d’autres utilisateurs s’ils ont les autorisations appropriées.  
@@ -35,7 +32,7 @@ ms.locfileid: "37286695"
  Lorsque les parties de rapports sont publiées à partir d'une application de création de rapports telle que le Générateur de rapports, sur un serveur de rapports en mode intégré SharePoint, le catalogue du serveur de rapports est également mis à jour et les recherches à partir de la bibliothèque reflètent précisément la partie de rapport nouvelle ou mise à jour.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Téléchargement direct de parties de rapports dans un dossier SharePoint  
- Si une partie de rapport est téléchargée directement dans un dossier de documents SharePoint plutôt que publiée à partir d'une application de création de rapports, le catalogue du serveur de rapports n'est pas mis à jour. Les recherches de la bibliothèque de parties de rapports ne trouveront pas la partie de rapport téléchargée. Pour aider à garder vos dossiers SharePoint et votre catalogue du serveur de rapports synchronisés, vous pouvez activer la fonctionnalité de synchronisation des fichiers de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le serveur SharePoint. Pour plus d’informations, consultez [activer la fonctionnalité de synchronisation de fichier de serveur de rapports dans Administration centrale de SharePoint](../activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
+ Si une partie de rapport est téléchargée directement dans un dossier de documents SharePoint plutôt que publiée à partir d'une application de création de rapports, le catalogue du serveur de rapports n'est pas mis à jour. Les recherches de la bibliothèque de parties de rapports ne trouveront pas la partie de rapport téléchargée. Pour aider à garder vos dossiers SharePoint et votre catalogue du serveur de rapports synchronisés, vous pouvez activer la fonctionnalité de synchronisation des fichiers de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le serveur SharePoint. Pour plus d'informations, consultez [Activer la fonctionnalité Synchronisation de fichiers de serveur de rapports dans l'Administration centrale de SharePoint](../activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
  Les fichiers peuvent également être synchronisés en appelant certaines API d'administration Reporting Services telles que GetProperties et SetProperties.  
   

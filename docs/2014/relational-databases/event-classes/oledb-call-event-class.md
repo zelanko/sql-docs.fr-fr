@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB Call event class
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a068ccc8c24d8dc75fd0ec35b7b99adb4d6d875a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 954ba93ab5c32a9fa957133a6b8b10682ed7d019
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133402"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call (classe d'événements)
   La classe d’événements **OLEDB Call** se produit quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle un fournisseur OLE DB pour les requêtes distribuées et les procédures stockées distantes.  
@@ -58,7 +55,7 @@ ms.locfileid: "37203529"
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et exécutez une instruction en tant que connexion2, `SessionLoginName` affiche Login1 et `LoginName` affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`Int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`nvarchar`|Paramètres envoyés et reçus au sein de l'appel OLE DB.| 1|non|  
+|TextData|`nvarchar`|Paramètres envoyés et reçus au sein de l'appel OLE DB.|1|non|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  

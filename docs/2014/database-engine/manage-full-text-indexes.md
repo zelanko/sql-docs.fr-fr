@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
-caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9f9dc86071bbed98e835b9b7849c4a1fd4c58f43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d55a1a8bef5e3d4a74aa2bb09c27e3f7c2a8dc82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243109"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066805"
 ---
 # <a name="manage-full-text-indexes"></a>Gérer les index de recherche en texte intégral
      
@@ -40,7 +37,7 @@ ms.locfileid: "37243109"
     |----------|-----------------|  
     |**Général**|Affiche les propriétés de base de l'index de recherche en texte intégral. Il s'agit de plusieurs propriétés modifiables et non modifiables telles que le nom de la base de données, le nom de la table et le nom de la colonne clé de recherche en texte intégral. Les propriétés modifiables sont les suivantes :<br /><br /> **Liste de mots vides de l’index de recherche en texte intégral**<br /><br /> **Indexation de texte intégral activée**<br /><br /> **Suivi des modifications**<br /><br /> **Liste de propriétés de recherche**<br /><br /> <br /><br /> Pour plus d’informations, consultez [propriétés d’Index de recherche en texte intégral &#40;Général Page&#41;](full-text-index-properties-general-page.md).|  
     |**Colonnes**|Affiche les colonnes de table qui sont disponibles pour l'indexation de texte intégral. La ou les colonnes sélectionnées sont indexées en texte intégral. Vous pouvez sélectionner autant de colonnes disponibles que vous souhaitez inclure dans l'index de recherche en texte intégral. Pour plus d’informations, consultez [propriétés d’Index de recherche en texte intégral &#40;Page colonnes&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
-    |**Planifications**|Utilisez cette page afin de créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre un remplissage incrémentiel de la table pour remplir l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../relational-databases/indexes/indexes.md).<br /><br /> **\*\* Important \* \* ** après avoir quitté le **propriétés d’Index de recherche en texte intégral** boîte de dialogue, n’importe quelle planification nouvellement créée est associée à un travail de l’Agent SQL Server (Démarrer alimentation de Table incrémentielle sur *database_name*.* table_name*).|  
+    |**Planifications**|Utilisez cette page afin de créer ou gérer des planifications pour un travail de l'Agent SQL Server qui démarre un remplissage incrémentiel de la table pour remplir l'index de recherche en texte intégral. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](../relational-databases/indexes/indexes.md).<br /><br /> **\*\* Important \* \***  après avoir quitté le **propriétés d’Index de recherche en texte intégral** boîte de dialogue, n’importe quelle planification nouvellement créée est associée à un travail de l’Agent SQL Server (Démarrer alimentation de Table incrémentielle sur *database_name*. *table_name*).|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] pour enregistrer vos modifications et fermer la boîte de dialogue **Propriétés d’index de recherche en texte intégral**.  
   

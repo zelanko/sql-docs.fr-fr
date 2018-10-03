@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a9408351a786192be62ca9c7c5e0cd8305effc3e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c54fd3944d41e1522e792d649ea3d9fbcd331b95
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092855"
 ---
 # <a name="handling-large-objects-using-clr"></a>Gestion d'objets volumineux à l'aide de CLR
   L'exemple `HandlingLOBUsingCLR` pour SQL Server illustre le transfert d'objets LOB (Large Objects) entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un système de fichiers qui est disponible pour le serveur au moyen de procédures stockées CLR (Common Language Runtime). Cet exemple montre comment accéder à des fichiers dans du code côté serveur et comment appeler ensuite des requêtes dynamiques et des procédures stockées à partir de procédures stockées CLR. Il montre également comment inscrire et désinscrire des méthodes et des assemblys CLR à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].  

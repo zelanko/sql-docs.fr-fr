@@ -1,13 +1,11 @@
 ---
-title: Début de fichier EOF, propriétés (ADO) | Documents Microsoft
+title: BOF, EOF, propriétés (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36399bf938371a464426b3092dcc95b0ceaa9e09
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 72954cb199976f05eacd7c79ba0e89cab0a45bbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276148"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748117"
 ---
-# <a name="bof-eof-properties-ado"></a>Début de fichier EOF, propriétés (ADO)
--   **BOF** indique que la position actuelle se trouve avant le premier enregistrement dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
+# <a name="bof-eof-properties-ado"></a>BOF, EOF, propriétés (ADO)
+-   **BOF** indique que la position actuelle est avant le premier enregistrement dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
   
 -   **EOF** indique que la position actuelle se trouve après le dernier enregistrement dans un **Recordset** objet.  
   
@@ -37,30 +34,30 @@ ms.locfileid: "35276148"
  Le **BOF** et **EOF** propriétés retour **booléenne** valeurs.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **BOF** et **EOF** propriétés afin de déterminer si un **Recordset** objet contient des enregistrements ou si vous avez dépassé les limites d’un **Recordset**  lorsque vous déplacez d’un enregistrement à l’objet.  
+ Utilisez le **BOF** et **EOF** propriétés pour déterminer si un **Recordset** objet contient des enregistrements ou si vous avez dépassé les limites d’un **Recordset**  de l’objet lorsque vous déplacez d’un enregistrement à l’autre.  
   
- Le **BOF** propriété renvoie **True** (-1) si la position actuelle est avant le premier enregistrement et **False** (0) si la position actuelle est l’ou après le premier enregistrement.  
+ Le **BOF** retourne de la propriété **True** (-1) si la position actuelle est avant le premier enregistrement et **False** (0) si la position actuelle est sur ou après le premier enregistrement.  
   
- Le **EOF** propriété renvoie **True** si la position actuelle est après le dernier enregistrement et **False** si la position actuelle est l’ou avant le dernier enregistrement.  
+ Le **EOF** retourne de la propriété **True** si la position actuelle est après le dernier enregistrement et **False** si la position actuelle est l’ou avant le dernier enregistrement.  
   
- Si le **BOF** ou **EOF** propriété **True**, il n’existe aucun enregistrement actif.  
+ Si le **BOF** ou **EOF** propriété est **True**, il n’existe aucun enregistrement actif.  
   
- Si vous ouvrez un **Recordset** objet ne contenant aucun enregistrement, la **BOF** et **EOF** propriétés sont définies sur **True** (voir la [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propriété pour plus d’informations sur cet état d’un **Recordset**). Lorsque vous ouvrez un **Recordset** objet qui contient au moins un enregistrement, le premier enregistrement est l’enregistrement actif et la **BOF** et **EOF** propriétés sont **False** .  
+ Si vous ouvrez un **Recordset** objet ne contenant aucun enregistrement, la **BOF** et **EOF** propriétés sont définies sur **True** (voir la [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propriété pour plus d’informations sur cet état d’un **Recordset**). Lorsque vous ouvrez un **Recordset** objet qui contient au moins un enregistrement, le premier enregistrement est l’enregistrement actif et le **BOF** et **EOF** propriétés sont **False** .  
   
  Si vous supprimez le dernier enregistrement restant dans le **Recordset** objet, le **BOF** et **EOF** propriétés peuvent rester **False** jusqu'à ce que vous tentative d’enregistrement.  
   
- Le tableau ci-dessous montre ce qui **déplacer** les méthodes sont autorisées avec les différentes combinaisons de le **BOF** et **EOF** propriétés.  
+ Ce tableau montre qui **déplacer** les méthodes sont autorisées avec les différentes combinaisons de le **BOF** et **EOF** propriétés.  
   
-||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Déplacer < 0|Déplacer 0|MoveNext,<br /><br /> Déplacer > 0|  
+||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Déplacer < 0|Déplacer le 0|MoveNext,<br /><br /> Déplacer > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
 |**BOF**=**True**, **EOF**=**False**|Autorisé|Error|Error|Autorisé|  
 |**BOF**=**False**, **EOF**=**True**|Autorisé|Autorisé|Error|Error|  
 |Les deux **True**|Error|Error|Error|Error|  
 |Les deux **False**|Autorisé|Autorisé|Autorisé|Autorisé|  
   
- Ce qui permet une **déplacer** méthode ne garantit pas que la méthode parviendra à localiser un enregistrement ; cela signifie uniquement que l’appel spécifié **déplacer** méthode ne génère pas d’une erreur.  
+ Ce qui permet un **déplacer** méthode ne garantit pas que la méthode parviendra à localiser un enregistrement ; cela signifie simplement que l’appel spécifié **déplacer** méthode ne générera pas d’une erreur.  
   
- Le tableau suivant montre ce qui arrive à la **BOF** et **EOF** les paramètres de propriété lorsque vous appelez différentes **déplacer** méthodes sont mais Impossible de trouver un enregistrement.  
+ Le tableau suivant montre ce qui se passe à la **BOF** et **EOF** les paramètres de propriété lorsque vous appelez différentes **déplacer** méthodes, mais ne parvenez pas à trouver un enregistrement.  
   
 ||BOF|EOF|  
 |------|---------|---------|  
@@ -73,5 +70,5 @@ ms.locfileid: "35276148"
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [BOF, EOF et Bookmark, propriétés-exemple (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
+ [BOF, EOF et Bookmark, exemple de propriétés (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [BOF, EOF et Bookmark, propriétés-exemple (VC ++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   

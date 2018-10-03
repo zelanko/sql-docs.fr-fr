@@ -1,34 +1,31 @@
 ---
-title: Configuration système requise pour l’adresse du carnet d’Application | Documents Microsoft
+title: Configuration système requise pour l’adresse du carnet d’Application | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 063a8d6dd6001c612bb52efa2773deafa546fd86
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9af5257d5714e391d31415758d1b4ab66d7b9da2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274538"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636017"
 ---
-# <a name="system-requirements-for-the-address-book-application"></a>Configuration système requise pour l’Application de carnet d’adresses
-Pour configurer l’exemple d’application de carnet d’adresses, vous devez remplir les conditions de logiciels et de la base de données suivantes :  
+# <a name="system-requirements-for-the-address-book-application"></a>Configuration système exigée pour l’application Carnet d’adresses
+Pour configurer l’exemple d’application Carnet d’adresses, vous devez remplir les conditions de logiciels et de la base de données suivantes :  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="software-requirements"></a>Configuration logicielle  
  La configuration logicielle requise de l’ordinateur serveur pour l’exécution de cette application Web est les suivantes :  
@@ -44,18 +41,18 @@ Pour configurer l’exemple d’application de carnet d’adresses, vous devez r
 -   Microsoft Windows NT 4.0 Workstation ou Server, Windows 2000 ou Microsoft Windows 98.  
   
 ## <a name="database-requirements"></a>Configuration requise pour la base de données  
- Pour utiliser cet exemple, vous devez :  
+ Pour utiliser cet exemple, vous devez disposer de :  
   
--   Un fonctionnement Microsoft® SQL Server version 6.5 ou ultérieure de base de données de serveur.  
+-   Un serveur de version 6.5 ou ultérieure de la base de données de la version de Microsoft® SQL Server opérationnel.  
   
 -   Privilèges pour créer la base de données et le remplir avec les exemples de données.  
   
 -   Vérification des données remplies via Enterprise Manager ou les utilitaires ISQL (appelé analyseur de requêtes dans SQL Server 7.0).  
   
- Si vous ne disposez pas de privilèges, votre administrateur de base de données devrez peut-être configurer le système et donner accès à la base de données ou de configurer la base de données pour vous.  
+ Si vous n’avez pas de privilèges, votre administrateur de base de données peut avoir besoin configurer le système et donnent accès à la base de données ou de configurer la base de données pour vous.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Script SQL de carnet d’adresses en cours d’exécution](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
+ [Le Script SQL carnet d’adresse en cours d’exécution](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
  [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Exécution de l’exemple d’application Carnet d’adresses](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
 

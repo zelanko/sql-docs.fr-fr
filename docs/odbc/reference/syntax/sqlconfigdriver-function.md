@@ -1,13 +1,11 @@
 ---
-title: Fonction de SQLConfigDriver | Documents Microsoft
+title: Sqlconfigdriver, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLConfigDriver
@@ -19,25 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - SQLConfigDriver function [ODBC]
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a5fc4ac9aebbabf0181d42ae9d026aa697e8b58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 90c1c31e6b4b33d662636d34fcebbd17393f69a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919614"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608247"
 ---
-# <a name="sqlconfigdriver-function"></a>SQLConfigDriver (fonction)
-**Mise en conformité**  
+# <a name="sqlconfigdriver-function"></a>SQLConfigDriver, fonction
+**Conformité**  
  Version introduite : ODBC 2.5  
   
  **Résumé**  
  **SQLConfigDriver** charge la DLL d’installation du pilote approprié et appelle le **ConfigDriver** (fonction).  
   
- La fonctionnalité de **SQLConfigDriver** sont également accessibles avec [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
+ La fonctionnalité de **SQLConfigDriver** est également accessible avec [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,60 +57,60 @@ BOOL SQLConfigDriver(
  *fréquents*  
  [Entrée] Type de requête. *fréquents* doit contenir l’une des valeurs suivantes :  
   
- ODBC_CONFIG_DRIVER : Modifie le délai de connexion multiple utilisé par le pilote.  
+ ODBC_CONFIG_DRIVER : Modifie la délai d’expiration utilisé par le pilote de regroupement de connexions.  
   
  ODBC_INSTALL_DRIVER : Installe un nouveau pilote.  
   
  ODBC_REMOVE_DRIVER : Supprime un pilote existant.  
   
- Cette option peut également être spécifique au pilote, auquel cas la *fréquents* pour la première option doit démarrer à partir de ODBC_CONFIG_DRIVER_MAX + 1. Le *fréquents* pour toute autre option doit également démarrer à partir d’une valeur supérieure à ODBC_CONFIG_DRIVER_MAX + 1.  
+ Cette option peut également être spécifiques au pilote, auquel cas la *fréquents* pour la première option doit commencer à partir de ODBC_CONFIG_DRIVER_MAX + 1. Le *fréquents* pour toute option supplémentaire doit également démarrer à partir d’une valeur supérieure à ODBC_CONFIG_DRIVER_MAX + 1.  
   
  *lpszDriver*  
- [Entrée] Le nom du pilote tel qu’enregistré dans les informations système.  
+ [Entrée] Le nom du pilote comme inscrit dans les informations système.  
   
  *lpszArgs*  
- [Entrée] Une chaîne terminée par le caractère null qui contient des arguments pour un pilote spécifique *fréquents*.  
+ [Entrée] Chaîne se terminant par null qui contient les arguments pour un spécifiques au pilote *fréquents*.  
   
  *lpszMsg*  
- [Sortie] Chaîne terminée par le caractère null qui contient un message de sortie à partir de l’installation du pilote.  
+ [Sortie] Chaîne se terminant par null qui contient un message de sortie à partir de la configuration du pilote.  
   
  *cbMsgMax*  
  [Entrée] Longueur de *lpszMsg.*  
   
  *pcbMsgOut*  
- [Sortie] Nombre total d’octets disponibles à renvoyer dans *lpszMsg*. Si le nombre d’octets à retourner est supérieur ou égal à *cbMsgMax*, le message de sortie dans *lpszMsg* est tronqué à *cbMsgMax* moins le caractère de fin de la valeur null. Le *pcbMsgOut* argument peut être un pointeur null.  
+ [Sortie] Nombre total d’octets à retourner dans *lpszMsg*. Si le nombre d’octets à retourner est supérieur ou égal à *cbMsgMax*, le message de sortie dans *lpszMsg* est tronqué à *cbMsgMax* moins le caractère nul de terminaison caractère. Le *pcbMsgOut* argument peut être un pointeur null.  
   
 ## <a name="returns"></a>Valeur renvoyée  
- La fonction retourne TRUE si l’opération a réussi, FALSE en cas d’échec.  
+ La fonction retourne la valeur TRUE si elle réussit, FALSE en cas d’échec.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLConfigDriver** renvoie la valeur FALSE, associé à un  *\*pfErrorCode* valeur peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les  *\*pfErrorCode* les valeurs qui peuvent être retournées par **SQLInstallerError** et explique chacune d’elles dans le contexte de cette fonction.  
+ Lorsque **SQLConfigDriver** retourne FALSE, associé à un  *\*pfErrorCode* valeur peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les  *\*pfErrorCode* les valeurs qui peuvent être retournés par **SQLInstallerError** et explique chacune dans le contexte de cette fonction.  
   
-|*\*pfErrorCode*|Erreur| Description|  
+|*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Erreur du programme d’installation générales|Une erreur s’est produite pour lequel aucune erreur d’installation spécifique s’est produite.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Longueur de la mémoire tampon non valide|Le *lpszMsg* argument n’était pas valide.|  
-|ODBC_ERROR_INVALID_HWND|Handle de fenêtre non valide|Le *hwndParent* argument n’était pas valide.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Type de demande non valide|Le *fréquents* argument n’est pas une des opérations suivantes :<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> Le *fréquents* argument a une option spécifique au pilote qui était inférieur ou égal à ODBC_CONFIG_DRIVER_MAX.|  
-|ODBC_ERROR_INVALID_NAME|Nom de pilote ou de convertisseur non valide|Le *lpszDriver* argument n’était pas valide. Il est introuvable dans le Registre.|  
+|ODBC_ERROR_GENERAL_ERR|Erreur du programme d’installation générale|Une erreur s’est produite pour lequel aucune erreur d’installation spécifique s’est produite.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Longueur de la mémoire tampon non valide|Le *lpszMsg* argument n’est pas valide.|  
+|ODBC_ERROR_INVALID_HWND|Handle de fenêtre non valide|Le *hwndParent* argument n’est pas valide.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Type de demande non valide|Le *fréquents* argument n’est pas une des opérations suivantes :<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> Le *fréquents* argument était une option spécifique au pilote qui était inférieur ou égal à ODBC_CONFIG_DRIVER_MAX.|  
+|ODBC_ERROR_INVALID_NAME|Nom de pilote ou de convertisseur non valide|Le *lpszDriver* argument n’est pas valide. Il est introuvable dans le Registre.|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|Paires mot clé-valeur non valide|Le *lpszArgs* argument contenait une erreur de syntaxe.|  
 |ODBC_ERROR_REQUEST_FAILED|*Demande* a échoué|Le programme d’installation n’a pas pu effectuer l’opération demandée par le *fréquents* argument. L’appel à **ConfigDriver** a échoué.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|Impossible de charger la bibliothèque le programme d’installation de pilote ou de convertisseur|La bibliothèque d’installation du pilote n’a pas pu être chargée.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|Impossible de charger la bibliothèque le programme d’installation de pilote ou de convertisseur|La bibliothèque d’installation de pilote n’a pas pu être chargée.|  
 |ODBC_ERROR_OUT_OF_MEM|Mémoire insuffisante|Le programme d’installation n’a pas pu effectuer la fonction en raison d’un manque de mémoire.|  
   
 ## <a name="comments"></a>Commentaires  
- **SQLConfigDriver** permet à une application d’appeler d’un pilote **ConfigDriver** routine sans avoir à connaître le nom et de charger la DLL d’installation spécifiques au pilote. Un programme d’installation appelle cette fonction après l’installation du pilote que DLL a été installé. Le programme appelant doit être conscient que cette fonction n’est peut-être pas disponible pour tous les pilotes. Dans ce cas, le programme appelant doit continuer sans erreur.  
+ **SQLConfigDriver** permet à une application appeler un chauffeur **ConfigDriver** routine sans avoir à connaître le nom et de charger la DLL d’installation spécifiques au pilote. Un programme d’installation appelle cette fonction après l’installation du pilote que DLL a été installé. Le programme appelant doit être conscient que cette fonction n’est peut-être pas disponible pour tous les pilotes. Dans ce cas, le programme appelant doit continuer sans erreur.  
   
 ## <a name="driver-specific-options"></a>Options spécifiques au pilote  
- Une application peut demander des fonctionnalités spécifiques au pilote exposées par le pilote à l’aide de la *fréquents* argument. Le *fréquents* pour la première option est ODBC_CONFIG_DRIVER_MAX + 1, et des options supplémentaires seront incrémentées de 1 à partir de cette valeur. Tous les arguments requis par le pilote pour cette fonction doit être fournie dans une chaîne se terminant par null passé dans le *lpszArgs* argument. Ces fonctionnalités de pilotes doivent gérer une table des options spécifiques au pilote. Les options doivent être entièrement documentées dans la documentation du pilote. Les auteurs d’applications qui utilisent des options spécifiques au pilote doivent être conscients que cette utilisation permettront à l’application moins interopérable.  
+ Une application peut demander des fonctionnalités spécifiques au pilote exposées par le pilote à l’aide de la *fréquents* argument. Le *fréquents* pour la première option ODBC_CONFIG_DRIVER_MAX + 1, et pour des options supplémentaires seront incrémentées de 1 à partir de cette valeur. Tous les arguments requis par le pilote pour cette fonction doit être fournie dans une chaîne se terminant par null passé dans le *lpszArgs* argument. Les pilotes en fournissant une telle fonctionnalité doivent gérer une table des options spécifiques au pilote. Les options doivent être entièrement documentées dans la documentation du pilote. Les créateurs d’applications qui utilisent les options spécifiques au pilote doivent être conscients que cette utilisation rendre l’application moins interopérable.  
   
-## <a name="setting-connection-pooling-timeout"></a>Paramètre de délai d’attente de regroupement de connexions  
- Les propriétés de délai d’attente de regroupement de connexions peuvent être définie lorsque vous définissez la configuration du pilote. **SQLConfigDriver** est appelée avec un *fréquents* de ODBC_CONFIG_DRIVER et *lpszArgs* la valeur **CPTimeout**. **CPTimeout** détermine la durée pendant laquelle une connexion peut rester dans le pool de connexions sans être utilisées. Lorsque le délai d’attente expire, la connexion est fermée et supprimée du pool. Le délai d’attente par défaut est 60 secondes.  
+## <a name="setting-connection-pooling-timeout"></a>Paramètre délai de connexion multiple  
+ Propriétés de délai d’expiration de regroupement de connexions peuvent être définie lorsque vous définissez la configuration du pilote. **SQLConfigDriver** est appelée avec un *fréquents* de ODBC_CONFIG_DRIVER et *lpszArgs* définie sur **CPTimeout**. **CPTimeout** détermine la durée pendant laquelle une connexion peut rester dans le pool de connexions sans être utilisé. Lorsque le délai expire, la connexion est fermée et supprimée du pool. Le délai d’expiration par défaut est de 60 secondes.  
   
- Lorsque **SQLConfigDriver** est appelée avec *fréquents* valeur ODBC_INSTALL_DRIVER ou ODBC_REMOVE_DRIVER, le Gestionnaire de pilotes charge la DLL d’installation du pilote approprié et appelle le **ConfigDriver** (fonction). Lorsque **SQLConfigDriver** est appelée avec un *fréquents* de ODBC_CONFIG_DRIVER, tout le traitement est effectué dans le programme d’installation ODBC, afin que le programme d’installation du pilote DLL n’ait pas à charger.  
+ Lorsque **SQLConfigDriver** est appelée avec *fréquents* défini sur ODBC_INSTALL_DRIVER ou ODBC_REMOVE_DRIVER, le Gestionnaire de pilotes charge la DLL d’installation du pilote approprié et appelle le  **ConfigDriver** (fonction). Lorsque **SQLConfigDriver** est appelée avec un *fréquents* de ODBC_CONFIG_DRIVER, tout le traitement est effectué dans le programme d’installation ODBC, afin que la DLL d’installation du pilote ne devra pas être chargé.  
   
 ## <a name="messages"></a>Messages  
- Une routine d’installation de pilote peut envoyer un message texte à une application en tant que chaînes se terminant par null le *lpszMsg* mémoire tampon. Le message est tronqué à *cbMsgMax* moins le caractère de fin de la valeur null par le **ConfigDriver** fonctionner s’il est supérieur ou égal à *cbMsgMax* caractères.  
+ Une routine de configuration de pilote peut envoyer un message texte à une application en tant que chaînes se terminant par null le *lpszMsg* mémoire tampon. Le message est tronqué à *cbMsgMax* moins le caractère de fin de la valeur null par le **ConfigDriver** fonctionner s’il est supérieur ou égal à *cbMsgMax* caractères.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   

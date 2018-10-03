@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2c305f6a4b4188e05f67bc8ac8ffd8cd66cdbb5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8da6fab7797154cdb59ee83993499607f515550a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328982"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098859"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Types de graphiques (Générateur de rapports et SSRS)
   Il est important de choisir un type de graphique approprié au type des données que vous présentez. Cela déterminera l'interprétation des données lorsqu'elles sont transformées en graphique. Par exemple, si votre dataset contient de nombreux points de données relatifs à la taille du graphique, il être préférable d'utiliser un graphique en aires, en courbes ou en nuage de points. Pour plus d’informations sur comment préparer vos données selon le type de graphique sélectionné, consultez [graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  

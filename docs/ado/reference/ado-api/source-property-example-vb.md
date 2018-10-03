@@ -1,32 +1,29 @@
 ---
-title: Source de l’exemple de propriété (VB) | Documents Microsoft
+title: Source de l’exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Source property [ADO], Visual Basic example
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc97f27fd4ac2ce65368946fdb8d386b959ffc27
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7b86baa47a755b52e99025a4a2fecc0922c80a08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674187"
 ---
-# <a name="source-property-example-vb"></a>Exemple de propriété source (VB)
-Cet exemple illustre la [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) propriété en ouvrant trois [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objets basés sur les différentes sources de données.  
+# <a name="source-property-example-vb"></a>Source, exemple de propriété (VB)
+Cet exemple montre la [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) propriété en ouvrant trois [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objets basés sur différentes sources de données.  
   
 ```  
 'BeginSourceVB  

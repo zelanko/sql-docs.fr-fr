@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68b99702f3b3832db9c3912626deb9442862f74d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b346d265c0aafc2eae9e379d813ef2f46dcd4112
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153760"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059409"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domaines d'application des applications du serveur de rapports
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le serveur de rapports est implémenté comme un service unique qui contient le service Web Report Server, le Gestionnaire de rapports et une application de traitement en arrière-plan. Chaque application s'exécute dans son propre domaine d'application au sein du processus unique du serveur de rapports. Pour la plupart, les domaines d'application sont créés, configurés et gérés de façon interne. Toutefois, il peut s'avérer utile de savoir comment les opérations de recyclage se produisent pour les domaines d'application du serveur de rapports, si vous cherchez à résoudre des problèmes de performances ou de mémoire, ou si vous dépannez des interruptions de service.  

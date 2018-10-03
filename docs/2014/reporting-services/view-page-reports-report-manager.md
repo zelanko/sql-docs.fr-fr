@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ff8af0b8badf1bc1bbee5e864f825af9d0ab03c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a2697af9ede2b6b72e7f08efd88822101c51d53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311229"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102799"
 ---
 # <a name="view-page-reports-report-manager"></a>Page Vue, Rapports (Gestionnaire de rapports)
   La page Afficher des rapports vous permet d'afficher un rapport. Lorsque vous ouvrez pour la première fois un rapport dans le Gestionnaire de rapports, il est au format HTML. Les rapports HTML incluent une barre d'outils Rapport qui s'affiche en haut du rapport et vous permet de parcourir les pages du rapport, d'effectuer une recherche dans un rapport et d'exporter le rapport dans un format différent. L'illustration suivante représente la barre d'outils Rapport :  

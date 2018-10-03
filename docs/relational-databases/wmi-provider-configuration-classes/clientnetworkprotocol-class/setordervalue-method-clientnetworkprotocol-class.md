@@ -1,15 +1,12 @@
 ---
-title: Méthode SetOrderValue (classe ClientNetworkProtocol) | Documents Microsoft
+title: Méthode SetOrderValue (classe ClientNetworkProtocol) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetOrderValue Method (ClientNetworkProtocol Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetOrderValue method
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7dc2eb5f9c08731406d2dfce9bfab38599b21801
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5ca80a39e5e7359b0120a364ebe7046078e8e84
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012926"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620197"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>Méthode SetOrderValue (classe ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +38,12 @@ object.SetOrderValue(OrderValue)
 ```  
   
 ## <a name="parts"></a>Éléments  
- *objet*  
+ *object*  
  Objet de [classe ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) qui représente le protocole réseau utilisé par le client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Paramètres  
   
-|Paramètre| Description|  
+|Paramètre|Description|  
 |---------------|-----------------|  
 |*OrderValue*|Valeur u**int32** qui définit la valeur d'ordre.|  
   
@@ -57,6 +53,6 @@ object.SetOrderValue(OrderValue)
 ## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés de protocoles clients (onglet ordre)](http://technet.microsoft.com/library/ms187884.aspx)  
+ [Propriétés de protocoles clients (onglet Ordre)](http://technet.microsoft.com/library/ms187884.aspx)  
   
   

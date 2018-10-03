@@ -1,13 +1,11 @@
 ---
-title: Propriété DataMember | Documents Microsoft
+title: DataMember, propriété | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - DataMember property
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d194cea2dd1a7bbabf8acd2e9d89945772eddd31
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b7a1bb2d55fbf4e8d2030c612a1d000b93ca1110
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277408"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603707"
 ---
-# <a name="datamember-property"></a>Propriété DataMember
+# <a name="datamember-property"></a>DataMember, propriété
 Indique le nom du membre de données qui est récupérée à partir de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) référencé par le [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) propriété.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne un **chaîne** valeur. Le nom n’est pas respecter la casse.  
+ Définit ou retourne un **chaîne** valeur. Le nom n’est pas sensible à la casse.  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété est utilisée pour créer des contrôles liés aux données avec l’environnement de données. L’environnement de données conserve des collections de données (sources de données) contenant des objets nommés (données membres) qui seront représentées comme un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
+ Cette propriété est utilisée pour créer des contrôles liés aux données avec l’environnement de données. L’environnement de données conserve des collections de données (sources de données) contenant des objets nommés (données membres) qui seront représentés comme un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
   
  Le **DataMember** et **DataSource** propriétés doivent être utilisées ensemble.  
   
- Le **DataMember** propriété détermine quel objet spécifié par le **source de données** propriété est représentée comme un **Recordset** objet. Le **Recordset** objet doit être fermé avant que cette propriété est définie. Une erreur est générée si le **DataMember** propriété n’est pas définie avant la **DataSource** propriété, ou si le **DataMember** nom n’est pas reconnu par l’objet spécifié dans le **DataSource** propriété.  
+ Le **DataMember** propriété détermine quel objet spécifié par le **DataSource** propriété est représentée comme un **Recordset** objet. Le **Recordset** objet doit être fermé avant que cette propriété est définie. Une erreur est générée si le **DataMember** propriété n’est pas définie avant la **DataSource** propriété, ou si le **DataMember** nom n’est pas reconnu par l’objet spécifié dans le **DataSource** propriété.  
   
 ## <a name="usage"></a>Utilisation  
   

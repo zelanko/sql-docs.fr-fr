@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - availability_read_only_routing_lists_TSQL
@@ -25,16 +22,15 @@ helpviewer_keywords:
 - readable secondary replicas
 - sys.availability_read_only_routing_lists dynamic management view
 ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88289a4d8ec82c2b61d7a2f751ba4b835f890f2e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 48e497c41cc542e54ec4fffa1f97dac5635e0039
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031121"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603147"
 ---
 # <a name="sysavailabilityreadonlyroutinglists-transact-sql"></a>sys.availability_read_only_routing_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ ms.locfileid: "38031121"
 |**routing_priority**|**Int**|Ordre de priorité du routage (1 est le premier, 2 est le second et ainsi de suite).|  
 |**read_only_replica_id**|**uniqueidentifier**|Identificateur unique du réplica de disponibilité sur lequel une charge de travail en lecture seule est routée.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - upgrading mirrored database systems
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
-caps.latest.revision: 13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6f654292e1d756cd655766851e0bc056e41ce3f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296919"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053009"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installer un Service Pack sur un système avec un temps mort minimal pour les bases de données mises en miroir
   Cette rubrique décrit comment réduire le temps mort pour les bases de données mises en miroir lorsque vous installez des Service Packs et des correctifs. Ce processus implique la mise à niveau séquentielle des instances de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] qui participent à la mise en miroir de bases de données. Cette forme de mise à jour, ce qui est appelé un *mise à jour propagée*, réduit le temps mort que pour un seul basculement. Notez que pour les sessions en mode hautes performances dans lequel le serveur miroir est géographiquement distant du serveur principal, une mise à jour propagée peut être inappropriée.  

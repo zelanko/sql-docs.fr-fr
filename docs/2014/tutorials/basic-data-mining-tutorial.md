@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
 - tutorials [Data Mining]
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5711bc105432b0d23f5fd2fd2b429449c2549258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db5b4fcded48a711fc1c8e8c8ffdebdd36562282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314969"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150299"
 ---
 # <a name="basic-data-mining-tutorial"></a>Didacticiel d’exploration de données de base
   Bienvenue dans le [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] didacticiel d’exploration de données de base de données. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournit un environnement intégré pour la création des modèles d’exploration de données et élaborer des prédictions. Dans ce didacticiel, vous allez réaliser un scénario pour une campagne de publipostage ciblé dans laquelle vous allez utiliser l'apprentissage automatique pour analyser et prédire le comportement d'achat des clients. Le didacticiel montre comment utiliser trois des algorithmes d'exploration de données les plus importants : clustering, arbres de décision et Naive Bayes. Vous allez également apprendre à analyser vos résultats à l’aide des visionneuses de modèle d’exploration de données et à créer des prédictions et des graphiques de précision en utilisant les outils d’exploration de données qui sont inclus dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La société fictive, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], est utilisée pour tous les exemples.  

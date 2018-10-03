@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerators [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d000c77263a0448ff838bff42a5020b86a299a72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb882f13b7f4fd19cab5f9b44885647aaafa65d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089658"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes énumérées dans des expressions de propriété
   Si des expressions de propriété incluent des valeurs d'une liste de membres d'énumérateur, l'expression doit utiliser la valeur numérique du membre énumérateur et non le nom convivial du membre. Par exemple, si une expression définit la `LoggingMode` propriété, vous devez utiliser la valeur numérique 2 au lieu du nom convivial désactivé.  
@@ -55,7 +52,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSPackageType|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |Par défaut|0|  
-|DTSWizard| 1|  
+|DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
 |DTSDesigner100|5|  
@@ -66,7 +63,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSCheckpointUsage|Valeur numérique|  
 |-----------------------------------------|-------------------|  
 |Never|0|  
-|IfExists| 1|  
+|IfExists|1|  
 |Always|2|  
   
  `PackagePriorityClass` propriété, définie à l’aide de valeurs à partir de la `DTSPriorityClass` énumération.  
@@ -74,7 +71,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSPriorityClass|Valeur numérique|  
 |---------------------------------------|-------------------|  
 |Par défaut|0|  
-|AboveNormal| 1|  
+|AboveNormal|1|  
 |Normale|2|  
 |BelowNormal|3|  
 |Idle|4|  
@@ -84,7 +81,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSProtectionLevel|Valeur numérique|  
 |-----------------------------------------|-------------------|  
 |DontSaveSensitive|0|  
-|EncryptSensitiveWithUserKey| 1|  
+|EncryptSensitiveWithUserKey|1|  
 |EncryptSensitiveWithPassword|2|  
 |EncryptAllWithPassword|3|  
 |EncryptAllWithUserKey|4|  
@@ -95,7 +92,7 @@ ms.locfileid: "37221829"
   
 |Nom convivial dans DTSPrecedenceEvalOp|Valeur numérique|  
 |------------------------------------------|-------------------|  
-|Expression| 1|  
+|Expression|1|  
 |Contrainte|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
@@ -105,7 +102,7 @@ ms.locfileid: "37221829"
 |Nom convivial|Valeur numérique|  
 |-------------------|-------------------|  
 |Réussi|0|  
-|Failure| 1|  
+|Failure|1|  
 |Completion|2|  
 |Opération annulée|3|  
   
@@ -118,7 +115,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans ADOEnumerationType|Valeur numérique|  
 |-----------------------------------------|-------------------|  
 |EnumerateTables|0|  
-|EnumerateAllRows| 1|  
+|EnumerateAllRows|1|  
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Énumérateur Foreach Nodelist  
@@ -127,7 +124,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans SourceType|Valeur numérique|  
 |---------------------------------|-------------------|  
 |FileConnection|0|  
-|Variable| 1|  
+|Variable|1|  
 |DirectInput|2|  
   
  `EnumerationType` propriété, définie à l’aide de valeurs à partir de la `EnumerationType` énumération.  
@@ -135,7 +132,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans EnumerationType|Valeur numérique|  
 |--------------------------------------|-------------------|  
 |Navigator|0|  
-|Nœud| 1|  
+|Nœud|1|  
 |NodeText|2|  
 |ElementCollection|3|  
   
@@ -144,7 +141,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans InnerElementType|Valeur numérique|  
 |---------------------------------------|-------------------|  
 |Navigator|0|  
-|Nœud| 1|  
+|Nœud|1|  
 |NodeText|2|  
   
 ##  <a name="Tasks"></a> Tâches  
@@ -156,7 +153,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DDLSourceType|Valeur numérique|  
 |------------------------------------|-------------------|  
 |DirectInput|0|  
-|FileConnection| 1|  
+|FileConnection|1|  
 |Variable|2|  
   
 ### <a name="bulk-insert-task"></a>tâche d'insertion en bloc  
@@ -165,7 +162,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSBulkInsert_DataFileType|Valeur numérique|  
 |--------------------------------------------------|-------------------|  
 |DTSBulkInsert_DataFileType_Char|0|  
-|DTSBulkInsert_DataFileType_Native| 1|  
+|DTSBulkInsert_DataFileType_Native|1|  
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
@@ -174,7 +171,7 @@ ms.locfileid: "37221829"
   
 |Nom convivial dans ResultSetType|Valeur numérique|  
 |------------------------------------|-------------------|  
-|ResultSetType_None| 1|  
+|ResultSetType_None|1|  
 |ResultSetType_SingleRow|2|  
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
@@ -183,7 +180,7 @@ ms.locfileid: "37221829"
   
 |Nom convivial dans SqlStatementSourceType|Valeur numérique|  
 |---------------------------------------------|-------------------|  
-|DirectInput| 1|  
+|DirectInput|1|  
 |FileConnection|2|  
 |Variable|3|  
   
@@ -193,7 +190,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSFileSystemOperation|Valeur numérique|  
 |---------------------------------------------|-------------------|  
 |CopyFile|0|  
-|MoveFile| 1|  
+|MoveFile|1|  
 |DeleteFile|2|  
 |RenameFile|3|  
 |SetAttributes|4|  
@@ -208,7 +205,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSFileSystemAttributes|Valeur numérique|  
 |----------------------------------------------|-------------------|  
 |Normale|0|  
-|Archive| 1|  
+|Archive|1|  
 |Hidden|2|  
 |En lecture seule|4|  
 |Système|8|  
@@ -219,7 +216,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSFTPOp|Valeur numérique|  
 |-------------------------------|-------------------|  
 |Send|0|  
-|Recevoir| 1|  
+|Recevoir|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -233,7 +230,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans MQMessageType|Valeur numérique|  
 |------------------------------------|-------------------|  
 |DTSMQMessageType_String|0|  
-|DTSMQMessageType_DataFile| 1|  
+|DTSMQMessageType_DataFile|1|  
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
@@ -242,7 +239,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans MQStringMessageCompare|Valeur numérique|  
 |---------------------------------------------|-------------------|  
 |DTSMQStringMessageCompare_None|0|  
-|DTSMQStringMessageCompare_Exact| 1|  
+|DTSMQStringMessageCompare_Exact|1|  
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
@@ -251,7 +248,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans MQType|Valeur numérique|  
 |-----------------------------|-------------------|  
 |DTSMQType_Sender|0|  
-|DTSMQType_Receiver| 1|  
+|DTSMQType_Receiver|1|  
   
 ### <a name="send-mail-task"></a>tache Envoyer un message  
  `MessageSourceType` propriété, définie à l’aide de valeurs à partir de la `SendMailMessageSourceType` énumération.  
@@ -259,14 +256,14 @@ ms.locfileid: "37221829"
 |Nom convivial dans SendMailMessageSourceType|Valeur numérique|  
 |------------------------------------------------|-------------------|  
 |DirectInput|0|  
-|FileConnection| 1|  
+|FileConnection|1|  
 |Variable|2|  
   
  `Priority` propriété, définie à l’aide de valeurs à partir de la `MailPriority` énumération.  
   
 |Nom convivial dans MailPriority|Valeur numérique|  
 |-----------------------------------|-------------------|  
-|Élevée| 1|  
+|Élevée|1|  
 |Normale|3|  
 |Faible|5|  
   
@@ -276,14 +273,14 @@ ms.locfileid: "37221829"
 |Nom convivial dans TransferAction|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |Copier|0|  
-|Déplacer| 1|  
+|Déplacer|1|  
   
  `Method` propriété, définie à l’aide de valeurs à partir de la `TransferMethod` énumération.  
   
 |Nom convivial dans TransferMethod|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |DatabaseOffline|0|  
-|DatabaseOnline| 1|  
+|DatabaseOnline|1|  
   
 ### <a name="transfer-error-messages-task"></a>Tâche de transfert de messages d'erreur  
  `IfObjectExists` propriété, définie à l’aide de valeurs à partir de la `IfObjectExists` énumération.  
@@ -291,7 +288,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans IfObjectExists|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Remplacer| 1|  
+|Remplacer|1|  
 |Ignorer|2|  
   
 ### <a name="transfer-jobs-task"></a>Tâche de transfert de travaux  
@@ -300,7 +297,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans IfObjectExists|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Remplacer| 1|  
+|Remplacer|1|  
 |Ignorer|2|  
   
 ### <a name="transfer-logins-task"></a>Tâche de transfert de connexions  
@@ -309,7 +306,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans IfObjectExists|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Remplacer| 1|  
+|Remplacer|1|  
 |Ignorer|2|  
   
  `LoginsToTransfer` propriété, définie à l’aide de valeurs à partir de la `LoginsToTransfer` énumération.  
@@ -317,7 +314,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans LoginsToTransfer|Valeur numérique|  
 |---------------------------------------|-------------------|  
 |AllLogins|0|  
-|SelectedLogins| 1|  
+|SelectedLogins|1|  
 |AllLoginsFromSelectedDatabases|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>Tâche de transfert de procédures stockées de master  
@@ -326,7 +323,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans IfObjectExists|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Remplacer| 1|  
+|Remplacer|1|  
 |Ignorer|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>Tâche de transfert d'objets SQL Server  
@@ -335,7 +332,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans ExistingData|Valeur numérique|  
 |-----------------------------------|-------------------|  
 |Remplacer|0|  
-|Append| 1|  
+|Append|1|  
   
 ### <a name="web-service-task"></a>Tâche de service Web  
  `OutputType` propriété, définie à l’aide de valeurs à partir de la `DTSOutputType` énumération.  
@@ -343,7 +340,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSOutputType|Valeur numérique|  
 |------------------------------------|-------------------|  
 |Fichier|0|  
-|Variable| 1|  
+|Variable|1|  
   
 ### <a name="wmi-data-reader-task"></a>Tâche Lecteur de données WMI  
  `OverwriteDestination` propriété, définie à l’aide de valeurs à partir de la `OverwriteDestination` énumération.  
@@ -351,7 +348,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans OverwriteDestination|Valeur numérique|  
 |-------------------------------------------|-------------------|  
 |OverwriteDestination|0|  
-|AppendToDestination| 1|  
+|AppendToDestination|1|  
 |KeepOriginal|2|  
   
  `OutputType` propriété, définie à l’aide de valeurs à partir de la `OutputType` énumération.  
@@ -359,7 +356,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans OutputType|Valeur numérique|  
 |---------------------------------|-------------------|  
 |DataTable|0|  
-|PropertyValue| 1|  
+|PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
  `DestinationType` propriété, définie à l’aide de valeurs à partir de la `DestinationType` énumération.  
@@ -367,14 +364,14 @@ ms.locfileid: "37221829"
 |Nom convivial dans DestinationType|Valeur numérique|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
-|Variable| 1|  
+|Variable|1|  
   
  `WqlQuerySourceType` propriété, définie à l’aide de valeurs à partir de la `QuerySourceType` énumération.  
   
 |Nom convivial dans QuerySourceType|Valeur numérique|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
-|DirectInput| 1|  
+|DirectInput|1|  
 |Variable|2|  
   
  Propriété `ActionAtEvent` de l'Observateur d'événement WMI - définie à l'aide de valeurs provenant de l'énumération `ActionAtEvent`.  
@@ -382,21 +379,21 @@ ms.locfileid: "37221829"
 |Nom convivial dans ActionAtEvent|Valeur numérique|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
-|LogTheEvent| 1|  
+|LogTheEvent|1|  
   
  `ActionAtTimeout` propriété, définie à l’aide de valeurs à partir de la `ActionAtTimeout` énumération.  
   
 |Nom convivial dans ActionAtTimeout|Valeur numérique|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
-|LogTimeout| 1|  
+|LogTimeout|1|  
   
  `AfterEvent` propriété, définie à l’aide de valeurs à partir de la `AfterEvent` énumération.  
   
 |Nom convivial dans AfterEvent|Valeur numérique|  
 |---------------------------------|-------------------|  
 |ReturnWithSuccess|0|  
-|ReturnWithFailure| 1|  
+|ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
  `AfterTimeout` propriété, définie à l’aide de valeurs à partir de la `AfterTimeout` énumération.  
@@ -404,7 +401,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans AfterTimeout|Valeur numérique|  
 |-----------------------------------|-------------------|  
 |ReturnWithSuccess|0|  
-|ReturnWithFailure| 1|  
+|ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
  `WqlQuerySourceType` propriété, définie à l’aide de valeurs à partir de la `QuerySourceType` énumération.  
@@ -412,7 +409,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans QuerySourceType|Valeur numérique|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
-|DirectInput| 1|  
+|DirectInput|1|  
 |Variable|2|  
   
 ### <a name="xml-task"></a>Tâche XML  
@@ -421,7 +418,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSXMLOperation|Valeur numérique|  
 |--------------------------------------|-------------------|  
 |Valider|0|  
-|XSLT| 1|  
+|XSLT|1|  
 |XPATH|2|  
 |Fusion|3|  
 |Diff|4|  
@@ -432,7 +429,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSXMLSourceType|Valeur numérique|  
 |---------------------------------------|-------------------|  
 |FileConnection|0|  
-|Variable| 1|  
+|Variable|1|  
 |DirectInput|2|  
   
  `DestinationType` et **DiffGramDestinationType** propriétés — définie à l’aide de valeurs à partir de la `DTSXMLSaveResultTo` énumération.  
@@ -440,21 +437,21 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSXMLSaveResultTo|Valeur numérique|  
 |-----------------------------------------|-------------------|  
 |FileConnection|0|  
-|Variable| 1|  
+|Variable|1|  
   
  `ValidationType` propriété, définie à l’aide de valeurs à partir de la `DTSXMLValidationType` énumération.  
   
 |Nom convivial dans DTSXMLValidationType|Valeur numérique|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
-|XSD| 1|  
+|XSD|1|  
   
  `XPathOperation` propriété, définie à l’aide de valeurs à partir de la `DTSXMLXPathOperation` énumération.  
   
 |Nom convivial dans DTSXMLXPathOperation|Valeur numérique|  
 |-------------------------------------------|-------------------|  
 |Evaluation|0|  
-|Valeurs| 1|  
+|Valeurs|1|  
 |NodeList|2|  
   
  `DiffOptions` propriété, définie à l’aide de valeurs à partir de la `DTSXMLDiffOptions` énumération. Les options dans cet énumérateur ne sont pas mutuellement exclusives. Pour utiliser plusieurs options, fournissez une liste des options à appliquer, séparées par des virgules.  
@@ -462,7 +459,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSXMLDiffOptions|Valeur numérique|  
 |----------------------------------------|-------------------|  
 |None|0|  
-|IgnoreChildOrder| 1|  
+|IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
 |IgnoreWhitespace|8|  
@@ -476,7 +473,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSXMLDiffAlgorithm|Valeur numérique|  
 |------------------------------------------|-------------------|  
 |Auto|0|  
-|Rapide| 1|  
+|Rapide|1|  
 |Précise|2|  
   
 ##  <a name="MaintenancePlanTasks"></a> Tâches du plan de maintenance  
@@ -492,7 +489,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DatabaseSelection|Valeur numérique|  
 |----------------------------------------|-------------------|  
 |None|0|  
-|All| 1|  
+|All|1|  
 |Système|2|  
 |Utilisateur|3|  
 |Specific|4|  
@@ -502,7 +499,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans TableSelection|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |None|0|  
-|All| 1|  
+|All|1|  
 |Specific|2|  
   
  `ObjectTypeSelection` propriété, définie à l’aide de valeurs à partir de la `ObjectType` énumération.  
@@ -510,7 +507,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans ObjectType|Valeur numérique|  
 |---------------------------------|-------------------|  
 |Table de charge de travail|0|  
-|Affichage| 1|  
+|Affichage|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Tâche Sauvegarder la base de données  
@@ -519,21 +516,21 @@ ms.locfileid: "37221829"
 |Nom convivial dans DestinationType|Valeur numérique|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
-|Manuel| 1|  
+|Manuel|1|  
   
  `ExistingBackupsAction` propriété, définie à l’aide de valeurs à partir de la `ActionForExistingBackups` énumération.  
   
 |Nom convivial dans ActionForExistingBackups|Valeur numérique|  
 |-----------------------------------------------|-------------------|  
 |Ajouter|0|  
-|Remplacer| 1|  
+|Remplacer|1|  
   
  `BackupAction` propriété, définie à l’aide de valeurs à partir de la `BackupTaskType` énumération. Cette propriété fonctionne avec la `BackupIsIncremental` propriété pour définir le type de sauvegarde que la tâche effectue.  
   
 |Nom convivial dans BackupTaskType|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |Base de données|0|  
-|Fichiers| 1|  
+|Fichiers|1|  
 |Journal|2|  
   
  Propriété `BackupDevice` : définie à l'aide de valeurs provenant de l'énumération SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) `DeviceType`.  
@@ -541,7 +538,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DeviceType|Valeur numérique|  
 |---------------------------------|-------------------|  
 |LogicalDevice|0|  
-|Bande| 1|  
+|Bande|1|  
 |Fichier|2|  
 |Pipe|3|  
 |VirtualDevice|4|  
@@ -552,14 +549,14 @@ ms.locfileid: "37221829"
 |Nom convivial dans FileType|Valeur numérique|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
-|FileReport| 1|  
+|FileReport|1|  
   
  `OlderThanTimeUnitType` propriété, définie à l’aide de valeurs à partir de la `TimeUnitType` énumération.  
   
 |Nom convivial dans TimeUnitType|Valeur numérique|  
 |-----------------------------------|-------------------|  
 |Jour|0|  
-|Week| 1|  
+|Week|1|  
 |Month|2|  
 |Année|3|  
   
@@ -568,7 +565,7 @@ ms.locfileid: "37221829"
   
 |Nom convivial dans StatisticsTarget|Valeur numérique|  
 |---------------------------------------|-------------------|  
-|colonne| 1|  
+|colonne|1|  
 |Index|2|  
 |All|3|  
   
@@ -581,7 +578,7 @@ ms.locfileid: "37221829"
 |------------------------------------------|-------------------|  
 |None|-1|  
 |Réussi|0|  
-|Failure| 1|  
+|Failure|1|  
 |Completion|2|  
   
  Propriété `IsolationLevel` - définie à l'aide de valeurs provenant de l'énumération `IsolationLevel` .NET Framework. Pour plus d’informations, consultez la bibliothèque de classes .NET Framework dans [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313).  
@@ -591,7 +588,7 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSLoggingMode|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|Activé| 1|  
+|Activé|1|  
 |Désactivé|2|  
   
  `TransactionOption` propriété, définie à l’aide de valeurs à partir de la `DTSTransactionOption` énumération.  
@@ -599,10 +596,10 @@ ms.locfileid: "37221829"
 |Nom convivial dans DTSTransactionOption|Valeur numérique|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|Pris en charge| 1|  
+|Pris en charge|1|  
 |Requis|2|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Ajouter ou modifier une expression de propriété](add-or-change-a-property-expression.md)  
   
 ## <a name="see-also"></a>Voir aussi  

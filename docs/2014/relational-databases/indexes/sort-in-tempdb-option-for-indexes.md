@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SORT_IN_TEMPDB option
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - indexes [SQL Server], tempdb database
 - index creation [SQL Server], tempdb database
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d8ec82b43cdfd215254c3f16577b1c82af52b47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164730"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145256"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Option SORT_IN_TEMPDB pour les index
   Quand vous créez ou reconstruisez un index, vous pouvez, en affectant la valeur ON à l’option SORT_IN_TEMPDB, demander au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d’utiliser la base de données **tempdb** pour stocker les résultats de tri intermédiaires qui sont utilisés pour générer l’index. Bien que cette option augmente la quantité d’espace disque temporaire utilisé pour la création d’un index, elle peut réduire le temps nécessaire à la création ou à la reconstruction d’un index lorsque la base de données **tempdb** ne se trouve pas sur le même ensemble de disques que la base de données utilisateur. Pour plus d’informations sur **tempdb**, consultez [Configurer l’option de configuration Création d’index en mémoire](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
@@ -74,7 +71,7 @@ ms.locfileid: "37164730"
   
 -   Si l'option SORT_IN_TEMPDB n'est pas activée, l'espace libre dans le groupe de fichiers de destination doit être suffisamment grand pour stocker la table finale. Ceci comprend les structures de tous les index. La continuité de la table et des extensions d'index peut être améliorée si l'espace libre disponible est plus important.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
  [Réorganiser et reconstruire des index](indexes.md)  

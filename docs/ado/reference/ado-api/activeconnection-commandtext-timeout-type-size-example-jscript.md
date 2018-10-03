@@ -1,13 +1,11 @@
 ---
-title: Stockées exemple de propriétés de procédure (JScript) | Documents Microsoft
+title: Stockées procédure propriétés exemple (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -18,19 +16,18 @@ helpviewer_keywords:
 - Direction property [ADO], JScript example
 - CommandTimeout property [ADO], JScript example
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c22bf12eb688212fb8541f32080442dcdcb9d4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 204b39f91e12970d3e853f21926e9dc34de0a0f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758857"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (JScript)
-Cet exemple utilise le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), et [Direction](../../../ado/reference/ado-api/direction-property.md) propriétés pour exécuter une procédure stockée. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous **ActiveConnectionJS.asp**.  
+Cet exemple utilise le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), et [Direction](../../../ado/reference/ado-api/direction-property.md) propriétés pour exécuter une procédure stockée. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **ActiveConnectionJS.asp**.  
   
 ```  
 <!-- BeginActiveConnectionJS -->  
@@ -178,13 +175,13 @@ BODY {
   
 ## <a name="see-also"></a>Voir aussi  
  [ActiveCommand, propriété (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Objet de commande (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Objet Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [CommandText, propriété (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandTimeout, propriété (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
  [CommandType, propriété (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Propriété direction](../../../ado/reference/ado-api/direction-property.md)   
  [Objet de paramètre](../../../ado/reference/ado-api/parameter-object.md)   
- [Objet d’enregistrement (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Enregistrement objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Size, propriété (paramètre ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

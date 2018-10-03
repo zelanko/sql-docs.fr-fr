@@ -1,13 +1,11 @@
 ---
-title: Connexion (syntaxe ADO pour Visual C++) | Documents Microsoft
+title: Connexion (syntaxe ADO pour Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,18 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - Connection collection [ADO], ADO for Visual C++ syntax
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 661fc6283829948ac8c7186df5653d7ca35fd289
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 356713d24cd4e37014884cf39aa903267d5378b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276928"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603917"
 ---
-# <a name="connection-ado-for-visual-c-syntax"></a>Connexion (syntaxe ADO pour Visual C++)
+# <a name="connection-ado-for-visual-c-syntax"></a>Connection (syntaxe ADO pour Visual C++)
 ## <a name="methods"></a>Méthodes  
   
 ```  
@@ -40,7 +37,7 @@ Open(BSTR ConnectionString, BSTR UserID, BSTR Password, long Options)
 OpenSchema(SchemaEnum Schema, VARIANT Restrictions, VARIANT SchemaID, _ADORecordset **pprset)  
 ```  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
   
 ```  
 get_Attributes(long *plAttr)  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ba88d7a078889de09af4bd33e484ae69519721c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5980f2f1213b0f74422cdac773e4dfa9c806fd5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246190"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056439"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
   Un histogramme affiche une série sous la forme d'un ensemble de barres verticales regroupées par catégorie. Les histogrammes sont utiles pour montrer des modifications de données sur une période ou pour illustrer des comparaisons entre éléments. L'histogramme ordinaire est étroitement lié au graphique à barres, qui affiche une série sous la forme d'un ensemble de barres horizontales, ainsi qu'au graphique d'étendue en colonnes, qui affiche une série sous la forme d'un ensemble de barres verticales avec des points de départ et de fin variables. Pour plus d’informations, consultez [graphiques à barres &#40;Générateur de rapports et SSRS&#41; ](charts-report-builder-and-ssrs.md) et [graphiques d’étendue &#40;Générateur de rapports et SSRS&#41;](range-charts-report-builder-and-ssrs.md).  
@@ -39,9 +36,9 @@ ms.locfileid: "37246190"
   
 -   **Cylindre 3D**. Histogramme dont les barres ont la forme de cylindres sur un graphique 3D.  
   
--   `Histogram`. Histogramme que le graphique calcule afin que ses barres soient ordonnées en distribution normale.  
+-   `Histogram` . Histogramme que le graphique calcule afin que ses barres soient ordonnées en distribution normale.  
   
--   `Pareto`. Histogramme dont les barres sont ordonnées de la plus haute à la plus basse.  
+-   `Pareto` . Histogramme dont les barres sont ordonnées de la plus haute à la plus basse.  
   
 ## <a name="data-considerations-for-a-column-chart"></a>Considérations relatives aux données pour un histogramme  
   

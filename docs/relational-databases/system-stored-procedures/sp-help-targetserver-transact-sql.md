@@ -1,14 +1,11 @@
 ---
-title: sp_help_targetserver (Transact-SQL) | Documents Microsoft
+title: sp_help_targetserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_targetserver_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_targetserver
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 236a10fd52508781e503cc2844a49315fe57422e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: aacb30e4c809f965635b9d8640d8fcd690cd340f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252219"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747427"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,21 +50,21 @@ sp_help_targetserver
 ## <a name="result-sets"></a>Jeux de résultats  
  Si *nom_serveur* n’est pas spécifié, **sp_help_targetserver** retourne ce jeu de résultats.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**int**|Numéro d’identification du serveur.|  
+|**server_id**|**Int**|Numéro d’identification du serveur.|  
 |**server_name**|**nvarchar(30)**|Nom du serveur.|  
 |**Emplacement**|**nvarchar(200)**|Emplacement du serveur spécifié.|  
-|**TIME_ZONE_ADJUSTMENT**|**int**|Définition du fuseau horaire, en heures, par rapport à l'heure de Greenwich (GMT).|  
+|**TIME_ZONE_ADJUSTMENT**|**Int**|Définition du fuseau horaire, en heures, par rapport à l'heure de Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Date d'inscription du serveur spécifié.|  
 |**last_poll_date**|**datetime**|Date à laquelle le serveur a été interrogé pour la dernière fois pour des travaux.|  
-|**status**|**int**|État du serveur spécifié.|  
-|**unread_instructions**|**int**|Indique si le serveur a des instructions non lues. Si toutes les lignes ont été téléchargées, cette colonne est **0**.|  
+|**status**|**Int**|État du serveur spécifié.|  
+|**unread_instructions**|**Int**|Indique si le serveur a des instructions non lues. Si toutes les lignes ont été téléchargés, cette colonne est **0**.|  
 |**local_time**|**datetime**|Heure et date locales sur le serveur cible, qui sont fonction de l'heure locale du serveur cible lors de la dernière interrogation du serveur maître.|  
 |**enlisted_by_nt_user**|**nvarchar(100)**|Utilisateur Microsoft Windows ayant inscrit le serveur cible.|  
-|**poll_interval**|**int**|Fréquence (en secondes) à laquelle le serveur cible interroge le service SQLServerAgent principal afin de télécharger des travaux et charger des états de travaux.|  
+|**poll_interval**|**Int**|Fréquence (en secondes) à laquelle le serveur cible interroge le service SQLServerAgent principal afin de télécharger des travaux et charger des états de travaux.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour exécuter cette procédure stockée, l'utilisateur doit être membre du rôle de serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

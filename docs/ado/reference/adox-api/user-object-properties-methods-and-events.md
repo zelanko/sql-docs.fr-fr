@@ -1,30 +1,27 @@
 ---
-title: Propriétés de l’objet utilisateur, méthodes et événements | Documents Microsoft
+title: Propriétés de l’objet utilisateur, méthodes et événements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - User object [ADOX], members
 ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d1024dc15b69cd233e88586371c3e9406c7be7a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 225ec15308a29a2e10a223b1ec3474712d96a652
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287258"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827557"
 ---
-# <a name="user-object-properties-methods-and-events"></a>Propriétés de l’objet utilisateur, méthodes et événements
-## <a name="propertiescollections"></a>Propriétés et de Collections  
+# <a name="user-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet User
+## <a name="propertiescollections"></a>Propriétés et des Collections  
  [Propriété Name](../../../ado/reference/adox-api/name-property-adox.md)  
   
  [ParentCatalog, propriété (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  

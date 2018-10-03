@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34cb8f45c8380cffdfd58c99078f05fd5c8bd2e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f88a82a1d59e9d41f9816b8fbc4e335ab2ad8c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187316"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119299"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Boîte de dialogue Filtre de jeu de données ou Filtre de modèle
   Cette boîte de dialogue vous permet de générer les filtres que vous pouvez appliquer à un jeu de données.  Le jeu de données peut être un jeu de données externes utilisé pour le test ou il peut s'agir des données de cas d'un modèle d'exploration de données. Le nom de la boîte de dialogue change selon que le filtre concerne un jeu de données externes ou un modèle d'exploration de données.  
@@ -46,7 +43,7 @@ ms.locfileid: "37187316"
 |**et/ou**|Choisissez un opérateur pour joindre plusieurs conditions.|  
 |**Colonne de Structure d’exploration de données**|Cliquez pour sélectionner une source de données, puis cliquez sur des lignes consécutives dans la grille pour ajouter des colonnes de la source de données.<br /><br /> La première ligne de la grille spécifie la vue de source de données. Une fois que vous avez sélectionné une vue de source de données, la zone **Colonne de la structure d’exploration de données** affiche une icône de table et le champ **Valeur** affiche la combinaison de tous les critères que vous avez définis pour cette source de données.<br /><br /> Une fois que vous avez sélectionné une source de données, la zone **Colonne de la structure d’exploration de données** propose une liste déroulante de colonnes individuelles contenues dans la source de données.|  
 |**Opérateur**|Sélectionnez un opérateur dans la liste.|  
-|**Value**|Pour les tables, le champ **Valeur** affiche la combinaison de tous les filtres appliqués à la source de données. Vous pouvez également cliquer sur le bouton de génération **(…)** situé à droite de la zone de texte pour ouvrir la boîte de dialogue **Filtre** et générer une condition.|  
+|**Valeur**|Pour les tables, le champ **Valeur** affiche la combinaison de tous les filtres appliqués à la source de données. Vous pouvez également cliquer sur le bouton de génération **(…)** situé à droite de la zone de texte pour ouvrir la boîte de dialogue **Filtre** et générer une condition.|  
   
  **Expression**  
  Affiche l'ensemble de critères que vous avez définis à l'aide de la grille.  

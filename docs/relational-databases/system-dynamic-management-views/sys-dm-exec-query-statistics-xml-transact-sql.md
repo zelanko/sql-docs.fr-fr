@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sys.dm_exec_query_statistics_xml
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_query_statistics_xml management view
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-caps.latest.revision: 6
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ba01e7876c174cc73697628c3b46219ff674f9a7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9fdcbb6bec46043f030172d794cb5238d99a151e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987241"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784659"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +75,7 @@ Cette fonction système fonctionne dans les répertoires **standard** et **lége
 > [!IMPORTANT]
 > Dans TPC-C comme tests de charge de travail, l’activation de l’infrastructure de profilage légère de statistiques ajoute une surcharge de 1,5 à 2 %. En revanche, l’infrastructure de profilage de statistiques standard peut ajouter jusqu'à 90 % de surcharge pour le même scénario de charge de travail.
 
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  
 
 ## <a name="examples"></a>Exemples  

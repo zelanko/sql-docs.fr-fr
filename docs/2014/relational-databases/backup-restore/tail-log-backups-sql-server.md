@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up [SQL Server], tail of log
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-caps.latest.revision: 55
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92e636b8fb7cc5001833f8d3b99cd761dddcf228
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf259a06d99b06e431d735e6194e17ae9bb19180
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207199"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135605"
 ---
 # <a name="tail-log-backups-sql-server"></a>Sauvegardes de la fin du journal (SQL Server)
   Cette rubrique s'applique uniquement à la sauvegarde et la restauration des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] employant le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
@@ -52,7 +49,7 @@ ms.locfileid: "37207199"
   
 |Option BACKUP LOG|Commentaires|  
 |-----------------------|--------------|  
-|NORECOVERY|Utilisez NORECOVERY chaque fois que vous envisagez de poursuivre une opération de restauration sur la base de données. NORECOVERY fait passer la base de données en état de restauration. Ceci permet d'éviter des modifications dans la base de données après la sauvegarde de la fin du journal.  Le journal est tronqué sauf si l'option NO_TRUNCATE ou COPY_ONLY est aussi spécifiée.<br /><br /> **\*\* Important \* \* ** nous recommandons d’éviter d’utiliser NO_TRUNCATE, sauf si la base de données est endommagée.|  
+|NORECOVERY|Utilisez NORECOVERY chaque fois que vous envisagez de poursuivre une opération de restauration sur la base de données. NORECOVERY fait passer la base de données en état de restauration. Ceci permet d'éviter des modifications dans la base de données après la sauvegarde de la fin du journal.  Le journal est tronqué sauf si l'option NO_TRUNCATE ou COPY_ONLY est aussi spécifiée.<br /><br /> **\*\* Important \* \***  nous recommandons d’éviter d’utiliser NO_TRUNCATE, sauf si la base de données est endommagée.|  
 |CONTINUE_AFTER_ERROR|Utilisez CONTINUE_AFTER_ERROR uniquement si vous sauvegardez la fin d'une base de données endommagée.<br /><br /> Remarque : Lorsque vous utilisez sauvegardez la fin du journal sur une base de données endommagée, certaines métadonnées capturées normalement dans les sauvegardes du journal peuvent être indisponible. Pour plus d’informations, consultez [Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes](#IncompleteMetadata), plus loin dans cette rubrique.|  
   
 ##  <a name="IncompleteMetadata"></a> Sauvegardes de la fin du journal avec des métadonnées de sauvegarde incomplètes  

@@ -1,13 +1,11 @@
 ---
-title: L’objet utilisateur (ADOX) | Documents Microsoft
+title: L’objet utilisateur (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,18 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - User object [ADOX]
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 206d8fb122b9c2f28370a56f3a4acaeabebf111b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3acdea5ae284b2e9a0ac9c28fe8430a11de8fbd4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823631"
 ---
-# <a name="user-object-adox"></a>Objet utilisateur (ADOX)
+# <a name="user-object-adox"></a>User, objet (ADOX)
 Représente un compte d’utilisateur qui dispose des autorisations d’accès au sein d’une base de données sécurisée.  
   
 ## <a name="remarks"></a>Notes  
@@ -38,7 +35,7 @@ Représente un compte d’utilisateur qui dispose des autorisations d’accès a
   
 -   Modifier le mot de passe pour un utilisateur avec le [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) (méthode).  
   
--   Déterminer si un utilisateur a lire, écrire ou supprimer des autorisations avec la [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) et [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) méthodes.  
+-   Déterminer si un utilisateur a lire, écrire ou supprimer des autorisations avec le [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) et [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) méthodes.  
   
 -   Accéder aux groupes auxquels appartient un utilisateur avec le [groupes](../../../ado/reference/adox-api/groups-collection-adox.md) collection.  
   
@@ -51,6 +48,6 @@ Représente un compte d’utilisateur qui dispose des autorisations d’accès a
 -   [Propriétés, méthodes et événements de l’objet User](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [GetPermissions et SetPermissions, méthodes-exemple (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
+ [GetPermissions et SetPermissions, exemples de méthodes (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Collection de groupes (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users, collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

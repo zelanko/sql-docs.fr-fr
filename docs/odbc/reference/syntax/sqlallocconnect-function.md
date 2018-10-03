@@ -1,13 +1,11 @@
 ---
-title: Fonction de SQLAllocConnect | Documents Microsoft
+title: SQLAllocConnect, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLAllocConnect
@@ -19,26 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLAllocConnect function [ODBC]
 ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b47e7aa1050d7d7b0f245ec6ef0bcfaed0aeccf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71ee58c89ba29e61e1a5e0db595f7b791a21fd46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916314"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776277"
 ---
-# <a name="sqlallocconnect-function"></a>SQLAllocConnect (fonction)
-**Mise en conformité**  
- Version introduite : Conformité de normes 1.0 ODBC : déconseillé  
+# <a name="sqlallocconnect-function"></a>SQLAllocConnect, fonction
+**Conformité**  
+ Version introduite : La mise en conformité des normes 1.0 ODBC : déconseillé  
   
  **Résumé**  
  Dans ODBC 3. *x*, ODBC 2. *x* fonction **SQLAllocConnect** a été remplacé par **SQLAllocHandle**. Pour plus d’informations, consultez [SQLAllocHandle, fonction](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Pour plus d’informations sur les le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2. *x* application fonctionne avec un ODBC 3. *x* pilote, consultez [mappage des fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) dans l’annexe g : pilote recommandations pour la compatibilité descendante.  
+>  Pour plus d’informations sur quelles le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2. *x* application fonctionne avec un ODBC 3. *x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) dans la section annexe g : pilote instructions pour la compatibilité descendante.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LowMemoryLimit property
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - HighMemoryPrice property
 - HeapTypeForObjects property
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77902cfe21cf2f486007f802c0556bd410f46d4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94fa7654af0494d7d6bfec8396212634afade30f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286375"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091649"
 ---
 # <a name="memory-properties"></a>Propriétés de mémoire
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de mémoire du serveur répertoriées dans le tableau suivant. Pour obtenir des conseils sur la définition de ces propriétés, consultez le [guide des opérations de SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
@@ -41,7 +38,7 @@ ms.locfileid: "37286375"
   
  **S'applique à :** mode serveur multidimensionnel et tabulaire, sauf indication contraire.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  `LowMemoryLimit`  
  Une propriété de nombre signé 64 bits à virgule flottante double précision qui définit le point auquel le serveur manque de mémoire, exprimée en pourcentage de mémoire physique totale. Lorsque cette limite est atteinte, l'instance commence lentement à nettoyer la mémoire des caches en fermant les sessions expirées et en déchargeant les calculs non utilisés. Le serveur ne libère pas la mémoire en dessous de cette limite. La valeur par défaut est 65, ce qui indique que la limite de mémoire inférieure correspond à 65 % de la mémoire physique ou de l'espace d'adressage virtuel, la valeur inférieure étant applicable.  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6b883e43-209d-489a-8dc3-9349f88acae8
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: afcc3fad2a1d8e9acd4859e51b3b8df78b338bd3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 83aa949e71977971b69f93f0e04b0c74ff99a226
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161630"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143889"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Leçon 4 : Création de prédictions de série chronologique à l'aide d'extensions DMX
   Dans cette leçon et la leçon suivante, vous allez utiliser des Extensions DMX (Data Mining) pour créer différents types de prédictions basées sur les modèles de série chronologique que vous avez créé dans [leçon 1 : création d’un modèle d’exploration de données de série chronologique et de la Structure d’exploration de données](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)et [leçon 2 : ajout des modèles d’exploration de données à la Structure d’exploration de données de série chronologique](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  

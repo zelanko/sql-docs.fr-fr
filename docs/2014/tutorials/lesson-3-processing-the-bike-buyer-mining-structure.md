@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e748c2cd-339d-4e82-82f1-be2d0fc41b61
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4fdf27dce12915a8cf0f26f976543c00ad70725a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77c49a7b1616d1a54c652efee05ff1e827d07caf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306629"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053829"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Leçon 3 : traitement de la structure d'exploration de données Bike Buyer
   Dans cette leçon, vous allez utiliser l’insertion dans l’instruction et la vue vTargetMail de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données exemple pour traiter les structures d’exploration de données et les modèles d’exploration de données que vous avez créé dans [leçon 1 : création de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) et [leçon 2 : ajout des modèles d’exploration de données à la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  

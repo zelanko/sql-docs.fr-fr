@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ed4731450111c49bfe3936ecda2e1400a09d173
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4cb5529ad750a72fa2572edd62b6b63c20867e7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083961"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135739"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressions de requête et noms URN
   Les modèles SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent deux types de chaînes d’expression semblables aux expressions XPath. Les expressions de requête sont des chaînes qui spécifient un jeu de critères permettant d'énumérer un ou plusieurs objets dans une hiérarchie de modèle objet. Un nom de ressource unique (URN) est un type spécifique de chaîne d'expression de requête qui identifie de façon unique un objet particulier.  
@@ -68,7 +65,7 @@ ms.locfileid: "39083961"
  Par exemple, spécifiez Server pour la classe **ServerCollection** et Database pour la classe **DatabaseCollection** .  
   
  \@*PropertyName*  
- Spécifie le nom de l’une des propriétés de la classe associée à l’objet spécifié dans *Object*. Le nom de la propriété doit être précédé du \@ caractère. Par exemple, spécifier \@IsAnsiNull pour le **base de données** propriété de classe **IsAnsiNull**.  
+ Spécifie le nom de l’une des propriétés de la classe associée à l’objet spécifié dans *Object*. Le nom de la propriété doit avoir pour préfixe le caractère \@. Par exemple, spécifiez \@IsAnsiNull pour la propriété de classe **Database** **IsAnsiNull**.  
   
  \@*BooleanPropertyName*=true()  
  Énumère tous les objets où la propriété booléenne spécifiée a la valeur TRUE.  
@@ -76,7 +73,7 @@ ms.locfileid: "39083961"
  \@*BooleanPropertyName*=false()  
  Énumère tous les objets où la propriété booléenne spécifiée a la valeur FALSE.  
   
- contient (\@*Nompropriétéchaîne*, «*PatternString*»)  
+ contains(\@*StringPropertyName*, '*PatternString*')  
  Énumère tous les objets où la propriété de chaîne spécifiée contient au moins une occurrence du jeu de caractères spécifié dans '*PatternString*'.  
   
  \@*StringPropertyName*='*PatternString*'  
@@ -97,11 +94,11 @@ ms.locfileid: "39083961"
   
  Les dates spécifiées dans ce format peuvent être évaluées par rapport à tout format de date stocké dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- is_Null (\@*PropertyName*)  
+ is_null(\@*PropertyName*)  
  Énumère tous les objets où la propriété spécifiée a la valeur NULL.  
   
  not(\<*PropertyExpression*>)  
- Inverse la valeur d’évaluation de *PropertyExpression*, énumérant tous les objets qui ne correspondent pas à la condition spécifiée dans *PropertyExpression*. Par exemple, pas (contient (\@nom, 'xyz')) énumère tous les objets qui n’ont pas la chaîne xyz dans leurs noms.  
+ Inverse la valeur d’évaluation de *PropertyExpression*, énumérant tous les objets qui ne correspondent pas à la condition spécifiée dans *PropertyExpression*. Par exemple, not(contains(\@Name, 'xyz')) énumère tous les objets dont le nom ne contient pas la chaîne xyz.  
   
 ## <a name="remarks"></a>Notes  
  Les expressions de requête sont des chaînes qui énumèrent les nœuds dans une hiérarchie de modèle SMO. Chaque nœud possède une expression de filtre qui spécifie les critères pour déterminer les objets qui sont énumérés au niveau de ce nœud. Les expressions de requête sont modélisées sur le langage d'expression XPath. Les expressions de requête implémentent un petit sous-ensemble des expressions qui sont prises en charge par XPath, et possèdent également quelques extensions qui ne sont pas présentes dans XPath. Les expressions XPath sont des chaînes qui spécifient un jeu de critères utilisé pour énumérer une ou plusieurs balises dans un document XML. Pour plus d'informations sur XPath, consultez [W3C XPath Language](http://www.w3.org/TR/xpath20/)(en anglais).  

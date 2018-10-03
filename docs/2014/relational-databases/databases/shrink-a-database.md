@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.shrinkdatabase.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - database shrinking [SQL Server]
 - reducing database size
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b77c674ed92b315452a0f7343fccdf09a49bf7b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 414ffe69977f0e50779c26fc62dcddcee8e06bcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258895"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123479"
 ---
 # <a name="shrink-a-database"></a>Réduire une base de données
   Cette rubrique explique comment réduire une base de données au moyen de l'Explorateur d'objets dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +45,7 @@ ms.locfileid: "37258895"
   
 ###  <a name="Recommendations"></a> Recommandations  
   
--   Pour visualiser la quantité d'espace actuellement libre (non allouée) dans la base de données. Pour plus d'informations, consultez [Display Data and Log Space Information for a Database](display-data-and-log-space-information-for-a-database.md)  
+-   Pour visualiser la quantité d'espace actuellement libre (non allouée) dans la base de données. Pour plus d'informations, consultez [Afficher les informations sur l'espace occupé par les données et par le journal d'une base de données](display-data-and-log-space-information-for-a-database.md)  
   
 -   Prenez en compte les informations suivantes lorsque vous envisagez de réduire une base de données :  
   

@@ -1,13 +1,11 @@
 ---
-title: Groupes de Collection (ADOX) | Documents Microsoft
+title: Collection (ADOX) des groupes | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,19 +15,18 @@ f1_keywords:
 helpviewer_keywords:
 - Groups collection [ADOX]
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 253cf76adf8f32734b4bd878cb2f623e79489ccb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6b8aea077af67c882830220da9ce24b802e25e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285968"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801429"
 ---
-# <a name="groups-collection-adox"></a>Collection de groupes (ADOX)
-Contient tous les stockées [groupe](../../../ado/reference/adox-api/group-object-adox.md) objets d’un catalogue ou d’un utilisateur.  
+# <a name="groups-collection-adox"></a>Groups, collection (ADOX)
+Contient tous les stockées [groupe](../../../ado/reference/adox-api/group-object-adox.md) objets d’un catalogue ou d’utilisateur.  
   
 ## <a name="remarks"></a>Notes  
  Le **groupes** collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les comptes de groupe du catalogue. Le **groupes** collection pour un [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) représente uniquement le groupe auquel appartient l’utilisateur.  
@@ -38,23 +35,23 @@ Contient tous les stockées [groupe](../../../ado/reference/adox-api/group-objec
   
 -   Ajouter un nouveau groupe de sécurité à la collection avec le **Append** (méthode).  
   
- Les autres propriétés et méthodes sont des collections ADO standard. Vous pouvez :  
+ Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
   
 -   Accéder à un groupe dans la collection avec le [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété.  
   
 -   Retourner le nombre de groupes contenus dans la collection avec le [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété.  
   
--   Supprimer un groupe à partir de la collection avec le [supprimer](../../../ado/reference/adox-api/delete-method-adox-collections.md) (méthode).  
+-   Supprimer un groupe de la collection avec le [supprimer](../../../ado/reference/adox-api/delete-method-adox-collections.md) (méthode).  
   
--   Mettre à jour les objets dans la collection pour refléter le schéma actuel de la base de données avec le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) (méthode).  
+-   Mettre à jour les objets dans la collection afin de refléter le schéma actuel de la base de données avec le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) (méthode).  
   
 > [!NOTE]
->  Avant d’ajouter un **groupe** de l’objet à la **groupes** collection d’un **utilisateur** objet, un **groupe** objet avec le même [nom](../../../ado/reference/adox-api/name-property-adox.md) que celui à ajouter doit déjà exister dans le **groupes** collection de la **catalogue**.  
+>  Avant d’ajouter un **groupe** de l’objet à la **groupes** collection d’un **utilisateur** objet, un **groupe** objet comportant le même [ Nom](../../../ado/reference/adox-api/name-property-adox.md) que celui à ajouter doit déjà exister dans le **groupes** collection de la **catalogue**.  
   
  Cette section contient les rubriques suivantes.  
   
 -   [Propriétés, méthodes et événements de la collection Groups](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet catalogue (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Group, objet (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 86ac24e1c67d062a0b9d0c2b9d2963bd9b8a479d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147999"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Création de prédictions pour les modèles de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
   Maintenant que vous en savez plus sur les interactions entre les équipes, le nombre d'opérateurs, les appels et le niveau de service, vous êtes prêt à créer des requêtes de prédiction qui peuvent être utilisées dans l'analyse commerciale et la planification. Vous allez d'abord créer des prédictions sur le modèle exploratoire afin de tester des hypothèses. Ensuite, vous allez créer des prédictions en bloc en utilisant le modèle de régression logistique.  

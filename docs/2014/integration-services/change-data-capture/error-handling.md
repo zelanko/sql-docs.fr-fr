@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f2c47fee88ba536c084649669ac5cd5f53cf6d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c93e226ea61d9d427b236a31247d01346c8d5cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077349"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
   Une instance Oracle CDC exploite les modifications d'une base de données source Oracle (un cluster Oracle RAC est considéré comme une seule base de données) et écrit les modifications validées dans les tables de modifications dans une base de données CDC de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible.  
@@ -40,11 +37,11 @@ ms.locfileid: "37318819"
   
 |État|Code d'état actif|Code d'état d'erreur|Descriptions|  
 |------------|------------------------|-----------------------|------------------|  
-|ABORTED|0| 1|L'instance Oracle CDC ne s'exécute pas. Le sous-état ABORTED indique que l'instance Oracle CDC était ACTIVE, puis s'est arrêtée de façon inattendue.<br /><br /> Le sous-état ABORTED est établi par l'instance principale de service de capture de données modifiées Oracle lorsqu'elle détecte que l'instance Oracle CDC ne s'exécute pas alors que son état est ACTIVE.|  
-|d’erreur|0| 1|L'instance Oracle CDC ne s'exécute pas. L'état ERROR indique que l'instance de capture de données modifiées était ACTIVE, mais a rencontré une erreur qui n'est pas récupérable et s'est désactivée elle-même. L'état ERROR contient les codes de sous-état suivants :<br /><br /> MISCONFIGUED : une erreur de configuration irrécupérable a été détectée.<br /><br /> PASSWORD-REQUIRED : il n'existe aucun mot de passe défini pour le concepteur de capture de données modifiées pour Oracle par Attunity ou le mot de passe configuré n'est pas valide. Cela peut être dû à une modification apportée au mot de passe de la clé asymétrique du service.|  
-|RUNNING| 1|0|L'instance de capture de données modifiées s'exécute et traite les enregistrements de modification. L'état RUNNING contient les codes de sous-état suivants :<br /><br /> IDLE : tous les enregistrements de modification ont été traités et stockés dans les tables de contrôle cibles (**_CT**). Aucune transaction n'est active avec les tables de contrôle.<br /><br /> PROCESSING : il existe des enregistrements de modification en cours de traitement qui ne sont pas encore écrits dans les tables de contrôle (**_CT**).|  
+|ABORTED|0|1|L'instance Oracle CDC ne s'exécute pas. Le sous-état ABORTED indique que l'instance Oracle CDC était ACTIVE, puis s'est arrêtée de façon inattendue.<br /><br /> Le sous-état ABORTED est établi par l'instance principale de service de capture de données modifiées Oracle lorsqu'elle détecte que l'instance Oracle CDC ne s'exécute pas alors que son état est ACTIVE.|  
+|d’erreur|0|1|L'instance Oracle CDC ne s'exécute pas. L'état ERROR indique que l'instance de capture de données modifiées était ACTIVE, mais a rencontré une erreur qui n'est pas récupérable et s'est désactivée elle-même. L'état ERROR contient les codes de sous-état suivants :<br /><br /> MISCONFIGUED : une erreur de configuration irrécupérable a été détectée.<br /><br /> PASSWORD-REQUIRED : il n'existe aucun mot de passe défini pour le concepteur de capture de données modifiées pour Oracle par Attunity ou le mot de passe configuré n'est pas valide. Cela peut être dû à une modification apportée au mot de passe de la clé asymétrique du service.|  
+|RUNNING|1|0|L'instance de capture de données modifiées s'exécute et traite les enregistrements de modification. L'état RUNNING contient les codes de sous-état suivants :<br /><br /> IDLE : tous les enregistrements de modification ont été traités et stockés dans les tables de contrôle cibles (**_CT**). Aucune transaction n'est active avec les tables de contrôle.<br /><br /> PROCESSING : il existe des enregistrements de modification en cours de traitement qui ne sont pas encore écrits dans les tables de contrôle (**_CT**).|  
 |STOPPED|0|0|L'instance CDC n'est pas en cours d'exécution. Le sous-état STOP indique que l'instance de capture de données modifiées était ACTIVE et a été arrêtée correctement.|  
-|SUSPENDED| 1| 1|L'instance de capture de données modifiées s'exécute, mais le traitement est interrompu en raison d'une erreur récupérable. L'état SUSPENDED contient les codes de sous-état suivants :<br /><br /> DISCONNECTED : il est impossible d'établir la connexion à la base de données Oracle source. Le traitement se poursuit une fois la connexion restaurée.<br /><br /> STORAGE : le stockage est saturé. Le traitement se poursuit une fois le stockage disponible. Dans certains cas, cet état n'apparaît pas, car il est impossible de mettre à jour la table d'état.<br /><br /> LOGGER : le journal est connecté à Oracle, mais il ne peut pas lire les journaux des transactions Oracle en raison d'un problème temporaire.|  
+|SUSPENDED|1|1|L'instance de capture de données modifiées s'exécute, mais le traitement est interrompu en raison d'une erreur récupérable. L'état SUSPENDED contient les codes de sous-état suivants :<br /><br /> DISCONNECTED : il est impossible d'établir la connexion à la base de données Oracle source. Le traitement se poursuit une fois la connexion restaurée.<br /><br /> STORAGE : le stockage est saturé. Le traitement se poursuit une fois le stockage disponible. Dans certains cas, cet état n'apparaît pas, car il est impossible de mettre à jour la table d'état.<br /><br /> LOGGER : le journal est connecté à Oracle, mais il ne peut pas lire les journaux des transactions Oracle en raison d'un problème temporaire.|  
 |DATAERROR|x|x|Ce code d’état est utilisé uniquement pour la table **xdbcdc_trace** . Il n’apparaît pas dans la table **xdbcdc_state** . Les enregistrements de trace avec cet état indiquent un problème avec un enregistrement de journal Oracle. L’enregistrement de journal incorrect est stocké dans la colonne **data** en tant que BLOB. L'état DATAERROR contient les codes de sous-état suivants :<br /><br /> BADRECORD : impossible d'analyser l'enregistrement du journal joint.<br /><br /> CONVERT-ERROR : impossible de convertir les données de certaines colonnes en colonnes cibles dans la table de capture. Cet état apparaît uniquement si la configuration spécifie que les erreurs de conversion doivent produire des enregistrements de trace.|  
   
  Étant donné que l'état du service de capture de données modifiées Oracle est stocké dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il peut y avoir des cas où la valeur d'état dans la base de données ne reflète pas l'état réel du service. Le scénario le plus courant est lorsque le service perd sa connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ne peut pas la rétablir (pour une raison quelconque). Dans ce cas, l’état stocké dans **cdc.xdbcdc_state** devient obsolète. Si la valeur de l'horodateur de dernière mise à jour (UTC) date de plus d'une minute, l'état est probablement obsolète. Dans ce cas, utilisez l'Observateur d'événements Windows pour rechercher des informations supplémentaires sur l'état du service.  

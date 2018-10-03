@@ -1,13 +1,11 @@
 ---
-title: Gestion des erreurs dans VBScript | Documents Microsoft
+title: Gestion des erreurs dans VBScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - VBScript error handling [ADO]
 - errors [ADO], VBScript
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b819e09976e71d0650e942bfa378de2ef58f5f39
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e2ab1fd1fc3bdac98cc8fc23e710ee4067bc46f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271938"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803907"
 ---
 # <a name="handling-errors-in-vbscript"></a>Gestion des erreurs dans VBScript
-Il existe peu de différence entre les méthodes utilisées dans Visual Basic et ceux utilisés avec VBScript. La principale différence est que VBScript ne prend pas en charge le concept de gestion des erreurs en continuant l’exécution à une étiquette. En d’autres termes, vous ne pouvez pas utiliser `On Error GoTo` dans VBScript. Au lieu de cela, utilisez `On Error Resume Next` , puis vérifiez les deux **Err.Number** et **nombre** propriété de la **erreurs** collection, comme indiqué dans l’exemple suivant :  
+Il existe peu de différence entre les méthodes utilisées dans Visual Basic et ceux utilisés avec VBScript. La principale différence est que VBScript ne prend pas en charge le concept de gestion des erreurs en continuant l’exécution à une étiquette. En d’autres termes, vous ne pouvez pas utiliser `On Error GoTo` dans VBScript. Au lieu de cela, utilisez `On Error Resume Next` , puis vérifiez les deux **Err.Number** et **nombre** propriété de la **erreurs** collection, comme illustré dans l’exemple suivant :  
   
 ```  
 <!-- BeginErrorExampleVBS -->  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.chart.f1
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd1c2cf7ecc6a4cc734197a55365fb4a661b1b36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d4fd0da06ec6e0cbdc578fe55e2549cefdc2794
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146009"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Onglet Graphique (Visionneuses de modèle d'exploration de données)
   Utilisez le volet **Graphique** pour afficher les données d’historique utilisées dans l’apprentissage d’un modèle de série chronologique, avec les valeurs prédites. L'axe vertical du graphique représente la valeur de la série et l'axe horizontal le temps. Les prévisions sont représentées par une ligne en pointillé.  

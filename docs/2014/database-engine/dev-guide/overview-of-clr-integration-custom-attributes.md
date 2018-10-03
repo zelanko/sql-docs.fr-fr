@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes [CLR integration]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - database objects [CLR integration], custom attributes
 - building database objects [CLR integration], custom attributes
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
-caps.latest.revision: 39
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2153277cbb0592b808fde3e0a8bec3a8ca582455
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dbc881f565d48510c55af8f9887bdb05cbef7b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324939"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063184"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Vue d'ensemble des attributs personnalisés de l'intégration du CLR
   Le CLR (Common Language Runtime) du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] autorise l'utilisation de mots clés descriptifs, appelés attributs. Ces attributs fournissent des informations supplémentaires sur de nombreux éléments, comme les méthodes et les classes. Ils sont enregistrés dans l'assembly avec les métadonnées de l'objet et peuvent être utilisés pour décrire votre code à d'autres outils de développement ou pour affecter le comportement au moment de l'exécution au sein de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

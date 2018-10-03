@@ -1,13 +1,11 @@
 ---
-title: CubeDef, objet (ADO MD) | Documents Microsoft
+title: CubeDef, objet (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc529ed3ab408d70e6bcc0881a9a62d86029e35e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d1027fc76cb09f7b846e1b8edad52a3cb5dbf2bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283598"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694058"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef, objet (ADO MD)
 Représente un cube à partir d’un schéma multidimensionnel, contenant un ensemble de dimensions associées.  
@@ -40,7 +37,7 @@ Représente un cube à partir d’un schéma multidimensionnel, contenant un ens
   
 -   Obtenir des informations supplémentaires sur le **CubeDef** avec ADO standard [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
   
- Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste réelle des propriétés peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
+ Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste de propriétés réelle peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
 |Nom   |Description|  
 |----------|-----------------|  
@@ -60,8 +57,8 @@ Représente un cube à partir d’un schéma multidimensionnel, contenant un ens
 -   [Propriétés, méthodes et événements](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [CubeDef, exemple (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Objet de catalogue (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
- [Collection de CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
- [Collection de dimensions (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
+ [Exemple avec CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
+ [Catalog, objet (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
+ [CubeDefs, Collection (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
+ [Dimensions, Collection (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

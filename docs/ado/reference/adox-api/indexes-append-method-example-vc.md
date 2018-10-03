@@ -1,32 +1,29 @@
 ---
-title: Indexes Append, méthode-exemple (VC ++) | Documents Microsoft
+title: Indexes, exemple de méthode (VC ++) Append | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Indexes Append method [ADOX], VC++ example
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e11ab17b03988ca30842e66c9d1ebcf0c0bd3958
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cf72b40a6a1e4caf5f630298dd57cc4055fe41f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661037"
 ---
-# <a name="indexes-append-method-example-vc"></a>Indexes Append, méthode-exemple (VC ++)
-Le code suivant montre comment créer un nouvel index. L’index est de deux colonnes dans la table.  
+# <a name="indexes-append-method-example-vc"></a>Indexes, exemple de méthode Append (VC++)
+Le code suivant montre comment créer un nouvel index. L’index est sur deux colonnes de la table.  
   
 ```  
 // BeginCreateIndexCpp.cpp  

@@ -1,13 +1,11 @@
 ---
-title: Positionné les instructions Update et Delete | Documents Microsoft
+title: Mise à jour et des instructions Delete positionnées | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -15,20 +13,20 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d1f01ea9009e516d3962c1fbb175dff4f90f5d10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777739"
 ---
-# <a name="positioned-update-and-delete-statements"></a>Mise à jour positionnée et les instructions Delete
-Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un jeu de résultats avec une mise à jour positionnée ou instruction. Positionné mise à jour et supprimer les instructions sont pris en charge par certaines sources de données, mais pas toutes. Pour déterminer si un prend en charge de source de données positionné instructions update et delete, une application appelle **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1, ou SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (selon le type du curseur). Notez que la bibliothèque de curseurs ODBC simule la mise à jour positionnée et supprimer les instructions.  
+# <a name="positioned-update-and-delete-statements"></a>Instructions de mise à jour et de suppression positionnées
+Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un jeu de résultats avec une mise à jour positionnée ou instruction. Mise à jour et delete positionnées instructions sont prises en charge par certaines sources de données, mais pas tous. Pour déterminer si un prend en charge de source de données positionné instructions update et delete, une application appelle **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 ou SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (selon le type du curseur). Notez que la bibliothèque de curseurs ODBC simule la mise à jour positionnée et supprimer des instructions.  
   
- Pour utiliser une mise à jour positionnée ou l’instruction delete, l’application doit créer un jeu de résultats avec un **sélectionner pour la mise à jour** instruction. La syntaxe de cette instruction est la suivante :  
+ Pour utiliser une mise à jour positionnée ou l’instruction delete, l’application doit créer un jeu de résultats avec un **Sélectionnez pour mettre à jour** instruction. La syntaxe de cette instruction est :  
   
  **Sélectionnez** [**tous les** &#124; **DISTINCT**] *liste de sélection*  
   
@@ -36,23 +34,23 @@ Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un j
   
  [**Où** *condition de recherche*]  
   
- **POUR la mise à jour de** [*-nom de la colonne* [**,** *-nom de la colonne*]...]  
+ **POUR la mise à jour de** [*nom-colonne* [**,** *nom-colonne*]...]  
   
- L’application puis place le curseur sur la ligne doit être mis à jour ou supprimé. Il peut le faire en appelant **SQLFetchScroll** pour récupérer un ensemble de lignes contenant la ligne requise et l’appel **SQLSetPos** pour positionner le curseur de l’ensemble de lignes sur cette ligne. L’application exécute ensuite la mise à jour positionnée ou une instruction delete sur une instruction autre que l’instruction utilisée par le jeu de résultats. La syntaxe de ces instructions est :  
+ L’application puis place le curseur sur la ligne d’être mis à jour ou supprimées. Il peut le faire en appelant **SQLFetchScroll** pour récupérer un ensemble de lignes contenant la ligne requise et l’appel **SQLSetPos** pour positionner le curseur de jeu de lignes sur cette ligne. L’application exécute ensuite la mise à jour positionnée ou une instruction delete sur une autre instruction que l’instruction utilisée par le jeu de résultats. La syntaxe de ces instructions est :  
   
- **Mise à jour** *-nom de la table*  
+ **Mise à jour** *nom de la table*  
   
- **Définissez** *identificateur de la colonne* **=** {*expression* &#124; **NULL**}  
+ **Définissez** *identificateur de colonne* **=** {*expression* &#124; **NULL**}  
   
- [**,** *identificateur de la colonne* **=** {*expression* &#124; **NULL**}]...  
+ [**,** *identificateur de colonne* **=** {*expression* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *nom de curseur*  
   
- **DELETE FROM** *-nom de la table* **WHERE CURRENT OF** *nom de curseur*  
+ **DELETE FROM** *nom de la table* **WHERE CURRENT OF** *nom de curseur*  
   
- Notez que ces instructions nécessitent un nom de curseur. L’application peut spécifier un nom de curseur avec **SQLSetCursorName** avant l’exécution de l’instruction qui crée le résultat de définie ou de peut permettre la source de données automatiquement générer un nom de curseur lorsque le curseur est créé. Dans ce cas, l’application récupère ce nom de curseur pour une utilisation dans des instructions de suppression et de mise à jour positionnée en appelant **SQLGetCursorName**.  
+ Notez que ces instructions requièrent un nom de curseur. L’application peut spécifier un nom de curseur avec **SQLSetCursorName** avant l’exécution de l’instruction qui crée le résultat de définie ou pouvez laisser la source de données automatiquement générer un nom de curseur lorsque le curseur est créé. Dans ce cas, l’application récupère ce nom de curseur pour une utilisation dans les instructions de suppression et de mise à jour positionnée en appelant **SQLGetCursorName**.  
   
- Par exemple, le code suivant permet à un utilisateur à faire défiler la table Customers et supprimer des enregistrements de client ou mettre à jour leurs adresses et les numéros de téléphone. Il appelle **SQLSetCursorName** pour spécifier un nom de curseur avant qu’il crée le jeu de résultats de clients et utilise trois descripteurs d’instruction : *hstmtCust* pour le jeu de résultats, *hstmtUpdate* pour une instruction de mise à jour positionnée, et *hstmtDelete* pour un positionnée delete (instruction). Bien que le code peut lier des variables distinctes pour les paramètres dans l’instruction de mise à jour positionnée, il met à jour les mémoires tampons de lignes et lie les éléments de ces mémoires tampons. Cela permet de conserver les tampons de l’ensemble de lignes synchronisées avec les données mises à jour.  
+ Par exemple, le code suivant permet à un utilisateur à faire défiler la table Customers et supprimer des enregistrements de client ou mettre à jour leurs adresses et les numéros de téléphone. Il appelle **SQLSetCursorName** pour spécifier un nom de curseur avant qu’il crée le jeu de résultats de clients et utilise trois descripteurs d’instruction : *hstmtCust* du jeu de résultats, *hstmtUpdate* pour une instruction de mise à jour positionnée, et *hstmtDelete* pour un texte positionné instruction delete. Bien que le code peut lier des variables distinctes pour les paramètres dans l’instruction de mise à jour positionnée, il met à jour les mémoires tampons d’ensemble de lignes et lie les éléments de ces mémoires tampons. Cela permet de conserver les tampons de l’ensemble de lignes synchronisées avec les données mises à jour.  
   
 ```  
 #define POSITIONED_UPDATE 100  

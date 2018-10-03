@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35cbe12526fbd8ead78132f8560368b62e50aa61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153380"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147769"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Exploration du modèle de clustering (Didacticiel sur l'exploration de données de base)
   Le [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme de Clustering regroupe des cas dans des clusters qui présentent des caractéristiques similaires. Ces regroupements sont utiles pour l'exploration des données, l'identification d'anomalies dans les données et la création de prédictions.  
@@ -109,7 +106,7 @@ ms.locfileid: "37153380"
   
      Certaines des différences plus significatives parmi les clients dans le **Bike Buyers Low** et **Bike Buyers High** clusters incluent l’âge, la propriété de voiture, le nombre d’enfants et la région.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Voir les rubriques qui suivent pour explorer les autres modèles d'exploration de données.  
   
 -   [Exploration du modèle Decision Tree &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  

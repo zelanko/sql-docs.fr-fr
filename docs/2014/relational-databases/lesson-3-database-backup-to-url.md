@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d31f0d1eabe73a681b1932b2826ef38ad9b5456
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327839"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063009"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Leçon 4 : Créer une base de données dans le Stockage Microsoft Azure
   Dans cette leçon, vous allez apprendre comment créer une base de données à l'aide de la fonctionnalité Fichiers de données SQL Server dans Microsoft Azure. Notez que vous devez avoir terminé les leçons 1, 2 et 3 avant d'effectuer les tâches de cette leçon. La leçon 3 est une étape très importante, car vous devez supprimer les informations sur votre conteneur de stockage Windows Azure et le nom de stratégie associée, ainsi que la clé SAS dans le magasin d'informations d'identification SQL Server avant de passer à la leçon 4.  

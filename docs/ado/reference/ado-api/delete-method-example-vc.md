@@ -1,32 +1,29 @@
 ---
-title: Exemple de méthode (VC ++) Delete | Documents Microsoft
+title: Exemple de méthode (VC ++) Delete | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Delete method [ADO], VC++ example
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a49f9bd940a1a5fb28cfd913366d8a7352ac8462
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 975140d00a0566f1776e7a3743d82fc3077b43ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277618"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835397"
 ---
-# <a name="delete-method-example-vc"></a>Supprimer l’exemple de méthode (VC ++)
-Cet exemple utilise le [supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md) méthode pour supprimer un enregistrement spécifié d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+# <a name="delete-method-example-vc"></a>Delete, exemple de méthode (VC++)
+Cet exemple utilise le [supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md) méthode pour supprimer un enregistrement spécifié à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="example"></a>Exemple  
   
@@ -298,5 +295,5 @@ BU7832
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DELETE, méthode (jeu d’enregistrements ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+ [DELETE, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

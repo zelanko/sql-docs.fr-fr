@@ -1,45 +1,42 @@
 ---
-title: Visual FoxPro terminologie | Documents Microsoft
+title: Terminologie Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], glossary
 - FoxPro ODBC driver [ODBC], glossary
 ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 606b57b363956a27ec7ff9d627316c660c87f70d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8aeb7db6f844b5182165146905f6cc9de928726
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905464"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800627"
 ---
-# <a name="visual-foxpro-terminology"></a>Terminologie de Visual FoxPro
+# <a name="visual-foxpro-terminology"></a>Terminologie Visual FoxPro
 **database**  
  Dans Visual FoxPro, un fichier de base de données possède une extension de .dbc et peut contenir un ou plusieurs **tables**.  
   
  **table de base de données**  
- Dans Visual FoxPro, une table qui est associé à une base de données. Contraste **table libre**.  
+ Dans Visual FoxPro, une table qui est associé à une base de données. Contraste **table gratuit**.  
   
- **table libre**  
+ **table gratuit**  
  Dans Visual FoxPro, une table qui n’est pas associée à une base de données.  
   
- Un fichier .dbf créé dans FoxPro version 2.x est une table indépendante, sauf si elle est convertie en table Visual FoxPro et ajouté à une base de données Visual FoxPro. Contraste **table de base de données**.  
+ Un fichier .dbf créé dans FoxPro version 2.x est une table gratuite, sauf si elle est convertie en une table Visual FoxPro et ajouté à une base de données Visual FoxPro. Contraste **table de base de données**.  
   
  **instruction SQL préliminaire**  
- Une instruction SQL qui n’a pas déjà été traitée par le **SQLPrepare** (fonction). Pour plus d’informations sur cette fonction avec le pilote ODBC Visual FoxPro, consultez [SQLPrepare (Visual FoxPro ODBC Driver)](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md).  
+ Une instruction SQL qui n’a pas déjà été traitée par le **SQLPrepare** (fonction). Pour plus d’informations sur cette fonction avec le pilote ODBC Visual FoxPro, consultez [SQLPrepare (pilote de ODBC Visual FoxPro)](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md).  
   
  **table**  
- Dans Visual FoxPro, les enregistrements sont stockés dans une table. Chaque ligne d’une table représente un enregistrement, et les colonnes du tableau représentent les champs de l’enregistrement. Chaque table de Visual FoxPro est stockée dans son propre fichier portant une extension .dbf. Tables Visual FoxPro peuvent être associés à une base de données.  
+ Dans Visual FoxPro, les enregistrements sont stockés dans une table. Chaque ligne d’une table représente un enregistrement, et les colonnes de la table représentent les champs de l’enregistrement. Chaque table Visual FoxPro est stockée dans son propre fichier portant une extension .dbf. Tables Visual FoxPro peuvent être associés à une base de données.  
   
- FoxPro version 2. *x* tables ne sont pas associées à une base de données.
+ FoxPro version 2. *x* tables ne sont pas associés à une base de données.

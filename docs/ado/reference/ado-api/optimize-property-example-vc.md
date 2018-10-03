@@ -1,32 +1,29 @@
 ---
-title: Optimiser l’exemple de propriété (VC ++) | Documents Microsoft
+title: Optimize, exemple de propriété (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90d3234b54c4dd0c0c8e51cbade0199b4d67ade1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3cb58d24675c414cefc3e2d19dc306986aa8b440
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279987"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601797"
 ---
-# <a name="optimize-property-example-vc"></a>Optimiser l’exemple de propriété (VC ++)
-Cet exemple illustre la [champ](../../../ado/reference/ado-api/field-object.md) objet dynamique **optimiser** propriété. Le **zip** champ le **auteurs** de table dans le **Pubs** base de données n’est pas indexée. Définissant le [optimiser](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriété **True** sur la **zip** champ autorise ADO pour créer un index qui améliore les performances de la [trouver](../../../ado/reference/ado-api/find-method-ado.md)(méthode).  
+# <a name="optimize-property-example-vc"></a>Optimize, exemple de propriété (VC++)
+Cet exemple montre la [champ](../../../ado/reference/ado-api/field-object.md) objet dynamique **optimiser** propriété. Le **zip** champ la **auteurs** table dans le **Pubs** base de données n’est pas indexée. Définissant le [optimiser](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriété **True** sur le **zip** champ autorise ADO pour créer un index qui améliore les performances de la [trouver](../../../ado/reference/ado-api/find-method-ado.md)(méthode).  
   
 ## <a name="example"></a>Exemple  
   
@@ -136,7 +133,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto 3 Silver CT Autorité de certification Walnut Creek**   
+ **Akiko Yokomoto 3 Silver TR Autorité de certification de Walnut Creek**   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Field](../../../ado/reference/ado-api/field-object.md)   
+ [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
  [Optimize, propriété dynamique (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

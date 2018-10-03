@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
-caps.latest.revision: 12
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be0f2ca66b0d2efaf07e394c5912cbaa13518c88
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4bad6da6de694d9b835a6d3fe23fbc68d8642f50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393652"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124099"
 ---
 # <a name="atomic-blocks"></a>Blocs Atomic
   `BEGIN ATOMIC` fait partie de la norme SQL ANSI. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les blocs Atomic au niveau supérieur des procédures stockées compilées en mode natif.  
@@ -133,14 +130,14 @@ GO
   
  Les options suivantes sont requises avec `BEGIN ATOMIC` :  
   
-|Paramètre obligatoire| Description|  
+|Paramètre obligatoire|Description|  
 |----------------------|-----------------|  
 |`TRANSACTION ISOLATION LEVEL`|Valeurs prises en charge sont `SNAPSHOT`, `REPEATABLEREAD`, et `SERIALIZABLE`.|  
 |`LANGUAGE`|Détermine les formats de date et d'heure, et les messages système. Tous les langages et les alias dans [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) sont pris en charge.|  
   
  Les paramètres suivants sont facultatifs :  
   
-|Paramètre facultatif| Description|  
+|Paramètre facultatif|Description|  
 |----------------------|-----------------|  
 |`DATEFORMAT`|Tous les formats de date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont pris en charge. Si spécifié, `DATEFORMAT` remplace le format de date par défaut associé `LANGUAGE`.|  
 |`DATEFIRST`|Lorsqu'il est spécifié, `DATEFIRST` remplace la valeur par défaut associée à `LANGUAGE`.|  

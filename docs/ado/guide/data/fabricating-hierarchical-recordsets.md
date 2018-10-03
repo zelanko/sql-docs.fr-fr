@@ -1,13 +1,11 @@
 ---
-title: Fabrication de jeux d’enregistrements | Documents Microsoft
+title: Fabrication de Recordsets hiérarchiques | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset fabrication [ADO]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37e2ffd58c7dbf9e142c2525b7348cbc88cc6823
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271528"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770887"
 ---
-# <a name="fabricating-hierarchical-recordsets"></a>Fabrication de jeux d’enregistrements
-L’exemple suivant montre comment créer un jeu d’enregistrements hiérarchique sans source de données sous-jacente en utilisant les données de mise en forme pour définir les colonnes pour les parents, enfants et petits-enfants **jeux d’enregistrements**.  
+# <a name="fabricating-hierarchical-recordsets"></a>Fabrication de recordsets hiérarchiques
+L’exemple suivant montre comment créer un objet Recordset hiérarchique sans source de données sous-jacente en utilisant les données de mise en forme pour définir les colonnes pour le parent, enfants et petits-enfants **Recordsets**.  
   
- Pour créer une liste hiérarchique **Recordset**, vous devez spécifier le [Service de mise en forme des données Microsoft pour OLE DB (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape), et vous pouvez spécifier une valeur de fournisseur de données None dans le paramètre de chaîne de connexion de la [ouvrir](../../../ado/reference/ado-api/open-method-ado-connection.md) méthode de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet. Pour plus d’informations, consultez [fournisseur de mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Pour créer une liste hiérarchique **Recordset**, vous devez spécifier le [Microsoft Data Shaping Service pour OLE DB (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape), et vous pouvez spécifier une valeur de fournisseur de données None dans le paramètre de chaîne de connexion de la [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) méthode de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet. Pour plus d’informations, consultez [fournisseur de mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -59,8 +56,8 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
  Dès que le **Recordset** a été créé, il peut être rempli, manipulé ou conservé dans un fichier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’accès aux lignes dans un jeu d’enregistrements hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Grammaire de mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Accès aux lignes dans un Recordset hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [Grammaire de la mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
  [Fournisseurs requis pour la mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Clause APPEND de forme](../../../ado/guide/data/shape-append-clause.md)   
  [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)

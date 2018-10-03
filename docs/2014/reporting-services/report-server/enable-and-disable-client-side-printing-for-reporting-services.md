@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1271756e0a8caf036872e03aa1f55fa1da259860
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e723602973828fe5a213bb211872e7ef8b2f1ebb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067440"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Activer et désactiver l'impression côté client pour Reporting Services
   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] contrôle ActiveX, **RSClientPrint**, permet une impression côté client pour les rapports affichés dans un navigateur. Le contrôle affiche une boîte de dialogue d'impression personnalisée qui prend en charge des fonctionnalités communes à d'autres boîtes de dialogue d'impression. Les fonctionnalités incluent l'aperçu avant impression, les sélections de page pour spécifier des pages et des plages spécifiques, les marges des pages, et l'orientation. Bien que l'impression côté client soit activée par défaut, vous pouvez désactiver cette fonctionnalité pour l'empêcher d'être utilisée.  

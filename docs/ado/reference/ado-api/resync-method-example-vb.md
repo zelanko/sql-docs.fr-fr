@@ -1,31 +1,28 @@
 ---
-title: Resync, méthode-exemple (VB) | Documents Microsoft
+title: Resync, exemple de méthode (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Resync method [ADO], Visual Basic example
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 735692ba4b769c65b20daed2c12761447ec46389
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0ddcc484c389025a8c4a22ef43d0a46c4f53cdba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281398"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630807"
 ---
-# <a name="resync-method-example-vb"></a>Resync, méthode-exemple (VB)
+# <a name="resync-method-example-vb"></a>Resync, exemple de méthode (VB)
 Cet exemple montre comment utiliser le [Resync](../../../ado/reference/ado-api/resync-method.md) méthode pour actualiser les données dans un jeu d’enregistrements statique.  
   
 ```  

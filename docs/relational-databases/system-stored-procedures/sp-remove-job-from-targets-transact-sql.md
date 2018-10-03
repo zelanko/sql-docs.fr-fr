@@ -1,14 +1,11 @@
 ---
-title: sp_remove_job_from_targets (Transact-SQL) | Documents Microsoft
+title: sp_remove_job_from_targets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_remove_job_from_targets_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_remove_job_from_targets
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b74ba0fee691ba80ac62181b108c8d1047479817
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5223c0d48d1baacdd8660a4fcc006d13115f1f4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255039"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732217"
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +44,10 @@ sp_remove_job_from_targets [ @job_id = ] job_id
   
 ## <a name="arguments"></a>Arguments  
  [  **@job_id =**] *job_id*  
- Numéro d'identification de tâche du travail à partir duquel doivent être supprimés les serveurs cibles ou les groupes de serveurs cibles spécifiés. Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+ Numéro d'identification de tâche du travail à partir duquel doivent être supprimés les serveurs cibles ou les groupes de serveurs cibles spécifiés. Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =**] **'***job_name***'**  
- Nom du travail à partir duquel doivent être supprimés les serveurs cibles ou les groupes de serveurs cibles spécifiés. Soit *job_id* ou *job_name* doit être spécifié, mais ne peut pas être spécifiés. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
+ [  **@job_name =**] **'***nom_travail***'**  
+ Nom du travail à partir duquel doivent être supprimés les serveurs cibles ou les groupes de serveurs cibles spécifiés. Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
  [ **@target_server_groups =**] **'***target_server_groups***'**  
  Liste séparée par des virgules de groupes de serveurs cibles à supprimer du travail spécifié. *groupes_serveurs_cibles* est **nvarchar (1024)**, avec NULL comme valeur par défaut.  
@@ -62,7 +58,7 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les autorisations d'exécution de cette procédure sont accordées par défaut aux membres du rôle de serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

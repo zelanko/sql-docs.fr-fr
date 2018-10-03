@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], solutions
 - source controls [SQL Server Management Studio], projects
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b307be56b6711f4c51b6bf7b96d03d946296e57
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807425"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061259"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Ouvrir des solutions et des projets à partir du contrôle de code source
   Vous pouvez utiliser [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour ouvrir une solution ou un projet directement à partir de contrôle de code source. Lorsque vous ouvrez une solution à partir du contrôle de code source, l'environnement [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] récupère automatiquement la dernière version de la solution en question et la copie à l'emplacement que vous avez spécifié.  

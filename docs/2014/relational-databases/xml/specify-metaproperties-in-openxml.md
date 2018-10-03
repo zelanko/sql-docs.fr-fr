@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - overflow in XML document [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55dad5adeafa9689f8d3a0910f1b345ee575ffbe
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 15c3a98ad0e74ba7a1d5ee6d683f6de2e7353984
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889925"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107619"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Spécifier des métapropriétés dans OPENXML
   Les attributs de métapropriétés dans un document XML décrivent les propriétés d'un élément XML (élément, attribut ou tout autre nœud DOM). Ces attributs n'existent pas physiquement dans le texte du document XML. Toutefois, OPENXML fournit ces métapropriétés pour tous les éléments XML. Ces métapropriétés vous permettent d'extraire des informations (par exemple des informations de positionnement local et d'espace de noms) sur les nœuds XML. Ces informations vous procurent davantage de détails que ceux apparents dans la représentation textuelle.  

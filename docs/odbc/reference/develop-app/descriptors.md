@@ -1,13 +1,11 @@
 ---
-title: Descripteurs | Documents Microsoft
+title: Descripteurs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC]
@@ -15,26 +13,25 @@ helpviewer_keywords:
 - descriptor handles [ODBC]
 - handles [ODBC], descriptor
 ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e02316233f7e0c9722da90f4c2562282ce19bce9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d50ce0c2023e187d63d08aa862398d18dc188fd1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908814"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818717"
 ---
 # <a name="descriptors"></a>Descripteurs
-Un handle de descripteur fait référence à une structure de données qui conserve des informations sur des colonnes ou des paramètres dynamiques.  
+Un handle de descripteur fait référence à une structure de données qui conserve des informations sur les colonnes ou les paramètres dynamiques.  
   
- Fonctions ODBC qui opèrent sur des données de colonnes et de paramètres implicitement définir et récupérer des champs de descripteur. Par exemple, lorsque **SQLBindCol** est appelée pour lier les données de la colonne, il définit les champs de descripteur qui décrivent complètement la liaison. Lorsque **SQLColAttribute** est appelée pour décrire les données de la colonne, elle retourne des données stockées dans les champs de descripteur.  
+ Fonctions ODBC qui opèrent sur des données de colonnes et de paramètres implicitement définir et récupérer des champs de descripteur. Par exemple, lorsque **SQLBindCol** est appelée pour lier des données de colonne, il définit les champs de descripteur qui décrivent complètement la liaison. Lorsque **SQLColAttribute** est appelée pour décrire les données de la colonne, elle retourne des données stockées dans les champs de descripteur.  
   
- Une application appelant les fonctions ODBC pas concerner les lui-même avec des descripteurs. Aucune opération de base de données ne requiert que l’application accéder directement aux descripteurs. Toutefois, pour certaines applications, l’accès direct aux descripteurs simplifie de nombreuses opérations. Par exemple, indiquer à l’accès aux descripteurs de permet de lier de nouveau les données de colonne, qui peuvent être plus efficaces que l’appel **SQLBindCol** à nouveau.  
+ Une application appelant les fonctions ODBC pas concerner les lui-même avec descripteurs. Aucune opération de base de données ne nécessite que l’application accéder directement aux descripteurs. Toutefois, pour certaines applications, l’accès direct aux descripteurs simplifie de nombreuses opérations. Par exemple diriger les accès aux descripteurs de permet de relier les données de la colonne, qui peuvent être plus efficaces que l’appel **SQLBindCol** à nouveau.  
   
 > [!NOTE]  
->  La représentation physique du descripteur n’est pas définie. Applications obtenir un accès direct à un descripteur uniquement par la manipulation de ses champs en appelant les fonctions ODBC avec le handle du descripteur.  
+>  La représentation physique du descripteur n’est pas définie. Applications obtenir un accès direct à un descripteur uniquement en manipulant des ses champs en appelant les fonctions ODBC avec le handle du descripteur.  
   
  Cette section contient les rubriques suivantes.  
   

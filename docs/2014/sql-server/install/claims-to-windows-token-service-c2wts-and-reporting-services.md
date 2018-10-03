@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - C2WTS
 - WSS_WPG
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e3a44f0beff9bd3351265caca0ee9490a7c6aeeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02ca28f49468adced97c918521a685894bc9e9ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278185"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123079"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Service d'émission de jetons Revendications vers Windows (C2WTS) et Reporting Services
   Les revendications SharePoint vers Windows Token Service (c2WTS) est nécessaire avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint si vous souhaitez utiliser l’authentification windows pour les Sources de données qui sont en dehors de la batterie de serveurs SharePoint. Ceci s'applique même si les utilisateurs accèdent aux sources de données à l'aide de l'authentification Windows, car la communication entre le serveur Web frontal (WFE) et le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se fera toujours via l'authentification basée sur les revendications.  
@@ -103,7 +100,7 @@ ms.locfileid: "37278185"
 4.  Démarrer les revendications SharePoint vers Windows Token Service : Démarrez les revendications SharePoint vers Windows Token Service via l'Administration centrale de SharePoint sur la page **Gérer les ervices sur le serveur** . Le service doit être démarré sur le serveur qui effectuera l'action. Par exemple si vous avez un serveur Web frontal et un serveur d’applications exécutant le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il vous suffit de démarrer C2WTS sur le serveur d’applications. C2WTS n’est pas nécessaire sur le serveur Web frontal.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Revendications au Service de jeton Windows (c2WTS) () vue d’ensemblehttp://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
+ [Revendications au Service de jeton Windows (c2WTS) () vue d’ensemble http://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
  [Vue d’ensemble de l’authentification Kerberos pour les produits Microsoft SharePoint 2010)http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
   
   

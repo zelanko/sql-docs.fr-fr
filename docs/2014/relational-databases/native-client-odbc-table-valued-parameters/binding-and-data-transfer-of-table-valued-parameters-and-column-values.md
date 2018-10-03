@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e16e44a7e695754742f58729600c42d0a5e5b84
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4ff7549e5a892f6048d6f737382f489dd0bf2ab2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131611"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Liaison et transfert de données de paramètres table et de valeurs de colonnes
   Les paramètres table, comme d'autres paramètres, doivent être liés avant d'être passés au serveur. L’application lie les paramètres table de la même façon, il lie les autres paramètres : à l’aide de SQLBindParameter ou des appels équivalents à SQLSetDescField ou SQLSetDescRec. Le type de données serveur pour un paramètre table est SQL_SS_TABLE. Le type C peut être spécifié comme SQL_C_DEFAULT ou SQL_C_BINARY.  

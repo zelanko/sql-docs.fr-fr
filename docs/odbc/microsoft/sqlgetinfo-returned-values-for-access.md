@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo les valeurs renvoyées pour l’accès | Documents Microsoft
+title: Valeurs de retournées par SQLGetInfo pour Access | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
@@ -16,29 +14,28 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbebc3569c35020b54f2d516d4fde99f14fbd69f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a79e97721f246d47f8fab413be8074836f753cbe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904644"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826257"
 ---
-# <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo les valeurs renvoyées pour l’accès
-Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes est retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant la liste en langage C# defines **SQLGetInfo** dans les *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez la *de référence du programmeur ODBC*.  
+# <a name="sqlgetinfo-returned-values-for-access"></a>Valeurs retournées par SQLGetInfo pour Access
+Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant le répertoriés en langage C# defines à **SQLGetInfo** dans le *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez le *de référence du programmeur ODBC*.  
   
 > [!NOTE]  
 >  Où **SQLGetInfo** retourne un masque de bits 32 bits, une barre verticale (&#124;) représente une opération OR au niveau du bit.  
   
-|InfoType|Valeur retournée|  
+|infoType|Valeur retournée|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Jeu de toutes les|  
+|SQL_AGGREGATE_FUNCTIONS|Ensemble de tous les|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -48,7 +45,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"."|  
-|SQL_CATALOG_TERM|« Base de données »|  
+|SQL_CATALOG_TERM|« Database »|  
 |SQL_CATALOG_USAGE|Valeurs multiples|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -89,7 +86,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
 |SQL_DATABASE_NAME|Nom de fichier|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|« ACCESS »|  
+|SQL_DBMS_NAME|« ACCÈS »|  
 |SQL_DBMS_VER|Valeurs multiples|  
 |SQL_DDL_INDEX|Valeurs multiples|  
 |SQL_DEFAULT_TXN_ISOLATION|SQL_TXN_READ_COMMITTED|  
@@ -100,7 +97,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_DRIVER_HSTMT|Gérée par le Gestionnaire de pilotes.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|« 4.00.*nnnn*» (*nnnn* spécifie la date de la build)|  
+|SQL_DRIVER_VER|« 4.00.*nnnn*» (*nnnn* spécifie la date de génération)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -159,7 +156,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Valeurs multiples|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|« ACCESS »|  
+|SQL_SERVER_NAME|« ACCÈS »|  
 |SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Valeurs multiples|  
 |SQL_SUBQUERIES|Valeurs multiples|  

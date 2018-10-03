@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 638f3acea8ba4d9925851a26bd84ab20f76c38c9
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8f1f44e37b212c973a59fbead2618bfbb477370e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109499"
 ---
 # <a name="conversions-from-c-to-sql"></a>Conversions de C en SQL
   Cette rubrique répertorie les problèmes à prendre en compte lorsque vous effectuez une conversion à partir de types C en types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types date/heure.  
@@ -30,8 +27,8 @@ ms.locfileid: "37410077"
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 ||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE| 1|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-| 1| 1|1,7|1,5,7|1,13|1,13|  
+|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
+|SQL_C_TIME|-|1|1|1,7|1,5,7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1,5,7|1,13|1,13|  
 |SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|Néant|Néant|1,10,11|Néant|Néant|Néant|Néant|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
@@ -50,7 +47,7 @@ ms.locfileid: "37410077"
 |Symbole|Signification|  
 |------------|-------------|  
 |-|Aucune conversion n'est prise en charge. Un enregistrement de diagnostic est généré avec SQLSTATE 07006 et le message « Violation de l'attribut de type de données restreint ».|  
-| 1|Si les données fournies ne sont pas valides, un enregistrement de diagnostic est généré avec SQLSTATE 22007 et le message « Format datetime non valide ».|  
+|1|Si les données fournies ne sont pas valides, un enregistrement de diagnostic est généré avec SQLSTATE 22007 et le message « Format datetime non valide ».|  
 |2|Les champs d'heure doivent être nuls ou un enregistrement de diagnostic est généré avec SQLSTATE 22008 et le message « Troncation fractionnelle ».|  
 |3|Les fractions de secondes doivent être nulles ou un enregistrement de diagnostic est généré avec SQLSTATE 22008 et le message « Troncation fractionnelle ».|  
 |4|Le composant date est ignoré.|  

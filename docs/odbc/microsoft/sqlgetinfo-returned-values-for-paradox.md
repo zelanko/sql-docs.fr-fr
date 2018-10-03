@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo les valeurs renvoyées pour Paradox | Documents Microsoft
+title: Valeurs de retournées par SQLGetInfo pour Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
@@ -16,28 +14,28 @@ helpviewer_keywords:
 - Paradox driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c24935a0409d2d29c82c46ab8c0910c68598d38b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a06cfce6ca1afb23f0257c64c5acdd8695cac68b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813167"
 ---
-# <a name="sqlgetinfo-returned-values-for-paradox"></a>SQLGetInfo les valeurs renvoyées pour Paradox
-Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes est retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant la liste en langage C# defines **SQLGetInfo** dans les *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez la *de référence du programmeur ODBC*.  
+# <a name="sqlgetinfo-returned-values-for-paradox"></a>Valeurs retournées par SQLGetInfo pour Paradox
+Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant le répertoriés en langage C# defines à **SQLGetInfo** dans le *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez le *de référence du programmeur ODBC*.  
   
 > [!NOTE]  
 >  Où **SQLGetInfo** retourne un masque de bits 32 bits, une barre verticale (&#124;) représente une opération OR au niveau du bit.  
   
-|InfoType|Valeur renvoyée|  
+|infoType|Valeur renvoyée|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Jeu de toutes les|  
+|SQL_AGGREGATE_FUNCTIONS|Ensemble de tous les|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|Valeurs multiples|  
 |SQL_ASYNC_MODE|0|  
@@ -99,7 +97,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_DRIVER_HSTMT|Gérée par le Gestionnaire de pilotes.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|« 4.00.*nnnn*» (*nnnn* spécifie la date de la build)|  
+|SQL_DRIVER_VER|« 4.00.*nnnn*» (*nnnn* spécifie la date de génération)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  

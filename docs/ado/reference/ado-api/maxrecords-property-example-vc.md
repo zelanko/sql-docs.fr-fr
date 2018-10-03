@@ -1,32 +1,29 @@
 ---
-title: Exemple de propriété MaxRecords (VC ++) | Documents Microsoft
+title: Propriété MaxRecords, exemple (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91c3a9d2016b0ec99ee4deee8ebcac16c9befa83
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279328"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636907"
 ---
-# <a name="maxrecords-property-example-vc"></a>Exemple de propriété MaxRecords (VC ++)
-Cet exemple utilise le [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propriété pour ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenant les 10 titres les plus coûteuses dans le ***titres*** table.  
+# <a name="maxrecords-property-example-vc"></a>MaxRecords, exemple de propriété (VC++)
+Cet exemple utilise le [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propriété pour ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenant les 10 plus chers dans le ***titres*** table.  
   
 ## <a name="example"></a>Exemple  
   
@@ -169,17 +166,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Titres des dix premières par prix :**  
-**Mais il est convivial ? ---22,95**  
-**Ordinateur des personnes Phobic et Non-Phobic : Variations de comportement---21,59**  
-**Ail Oignons et Leeks : cuisine Secrets de Méditerranée---20.95**  
-**Secrets de Silicon Valley---20,00**  
-**Guide de base de données du cadre---(19,99 dollars)**  
+ **Titres des dix principaux par prix :**  
+**Mais elle est adaptée à l’utilisateur ? ---22,95**  
+**Ordinateur des personnes Phobic et Non allergiques au : Variations de comportement---21,59**  
+**Ail Oignons et Leeks : cuire les Secrets de la Méditerranée---20.95**  
+**Secrets de la Silicon Valley---20,00**  
+**Guide de base de données de l’exécutif occupé---(19,99 dollars)**  
 **Une discussion sur les ordinateurs---(19,99 dollars)**  
 **Traite de la Silicon Valley gastronomique---(19,99 dollars)**  
 **Privation de données prolongée : Quatre études de cas---(19,99 dollars)**  
-**Sushi, toute personne ? ---14,99**  
-**50 ans dans Buckingham Palace cuisines---11.95**   
+**Sushi, tout le monde ? ---14,99**  
+**Cinquante années dans Buckingham Palace cuisines---11.95**   
 ## <a name="see-also"></a>Voir aussi  
  [MaxRecords, propriété (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

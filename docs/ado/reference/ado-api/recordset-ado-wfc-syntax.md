@@ -1,30 +1,27 @@
 ---
-title: Jeu d’enregistrements (ADO - syntaxe WFC) | Documents Microsoft
+title: Recordset (ADO - syntaxe WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Recordset collection [ADO], ADO/WFX syntax
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e65765bea5be30fe41f341d743af1669be94731
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e97cc3c5e758cd105fb01a471124fee4cd46665e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787517"
 ---
-# <a name="recordset-ado---wfc-syntax"></a>Jeu d’enregistrements (ADO - syntaxe WFC)
+# <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO - syntaxe WFC)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="constructors"></a>Constructeurs  
@@ -85,7 +82,7 @@ public void updateBatch()
 public void updateBatch(int affectRecords)  
 ```  
   
-### <a name="properties"></a>Propriétés  
+### <a name="properties"></a>Properties  
   
 ```  
 public int getAbsolutePage()  

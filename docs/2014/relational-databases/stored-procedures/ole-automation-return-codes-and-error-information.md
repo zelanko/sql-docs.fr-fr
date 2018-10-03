@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - return codes [SQL Server]
@@ -16,12 +14,12 @@ ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57614db23c50236c6af783d7f913c897fda3e8df
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414018"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132929"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Codes de retour OLE Automation et informations sur les erreurs
   Procédures stockées du système OLE Automation retournent un `int` code de retour qui équivaut au HRESULT retourné par l’opération OLE Automation sous-jacente. Une valeur HRESULT égale à 0 indique que l'opération a réussi. Une valeur HRESULT différente de zéro est un code d’erreur OLE de forme hexadécimale 0 x 800*nnnnn*, qui est retourné comme un `int` valeur dans un code de retour de procédure stockée, HRESULT est au format 214*nnnnnnn*.  
