@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5280503f66c70f5d9fe2955d376a71c139e27e27
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f6e0e9e862590fc7a0dce63e71340c922e82a80e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329333"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599507"
 ---
 # <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>Leçon 1-7 : Ajout et configuration de la destination OLE DB
 Votre package peut maintenant extraire des données à partir de la source de fichier plat pour les transformer dans un format compatible avec la destination. La tâche suivante consiste à charger les données transformées dans la destination. Pour charger les données, vous devez ajouter une destination OLE DB au flux de données. La destination OLE DB peut utiliser une table de base de données, un affichage ou une commande SQL pour charger les données dans plusieurs bases de données compatibles OLE DB.  

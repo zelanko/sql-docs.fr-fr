@@ -4,29 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server]
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ba4b3db83dd88dfebf540fb85cdfdff20fabbf4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bc14368f5fc6e2c9b168fd17f31a103a22f46b4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059308"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617887"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Créer, construire et interroger des instances geography
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -181,13 +177,13 @@ ms.locfileid: "43059308"
  [STArea &#40;type de données geography&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a> Vide  
- Une instance *vide***geography** n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon, CurvePolygon** et **MultiPolygon** vides est nulle.  
+ Une instance **geography** _vide_ n’a aucun point. La longueur des instances **LineString, CircularString**, **CompoundCurve**et **MultiLineString** vides est nulle. La surface des instances **Polygon, CurvePolygon** et **MultiPolygon** vides est nulle.  
   
  **Pour déterminer si une instance est vide**  
  [STIsEmpty &#40;type de données geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a> Fermeture  
- Une instance *fermée***geography** est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
+ Une instance **geography** _fermée_ est un graphique dont les points de début et de fin sont identiques. Les instances**Polygon** sont considérées comme fermées. Les instances**Point** ne sont pas fermées.  
   
  Un anneau est une instance **LineString** simple et fermée.  
   

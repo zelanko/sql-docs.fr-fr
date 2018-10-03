@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], PowerShell cmdlets
 - Availability Groups [SQL Server], about
 - PowerShell [SQL Server], cmdlets
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 21ec89f0a33e3170eed83f3a1ed0333a5bc67dac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f4491943f13e515bda4d46285b1a1e0dd52dfd9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769215"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597868"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Vue d’ensemble des applets de commande PowerShell pour les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "34769215"
 > [!NOTE]  
 >  Pour obtenir la liste des rubriques de la documentation en ligne [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] qui expliquent comment utiliser les applets de commande pour effectuer des tâches [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , consultez la section « Tâches associées » de l’article [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="ConfiguringServerInstance"></a>Configuration d’une instance de serveur pour les groupes de disponibilité Always On  
+##  <a name="ConfiguringServerInstance"></a> Configuration d’une instance de serveur pour les groupes de disponibilité Always On  
   
 |Applets de commande|Description|Prise en charge sur|  
 |-------------|-----------------|------------------|

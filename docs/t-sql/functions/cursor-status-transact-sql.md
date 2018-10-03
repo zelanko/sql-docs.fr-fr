@@ -5,9 +5,7 @@ ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CURSOR_STATUS
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - CURSOR_STATUS function
 - cursors [SQL Server], status information
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a9fa9ea228f5fdf872e1ec10a4ccdc9ee5b7b53
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 2543cb82826957ecf596b05adb352fa05d1ab2d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788180"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599962"
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +66,7 @@ Nom de la variable de curseur. Une variable de curseur doit être définie à l�
   
 |Valeur retournée|Nom du curseur|Variable du curseur|  
 |---|---|---|
-| 1|Le jeu de résultats de curseur comprend au moins une ligne.<br /><br /> Pour les curseurs INSENSITIVE et pilotés par jeux de clés, l'ensemble de résultats comprend au moins une ligne.<br /><br /> Pour les curseurs dynamiques, l'ensemble de résultats peut être vide, ou contenir une ou plusieurs lignes.|Le curseur affecté à cette variable est ouvert.<br /><br /> Pour les curseurs INSENSITIVE et pilotés par jeux de clés, l'ensemble de résultats comprend au moins une ligne.<br /><br /> Pour les curseurs dynamiques, l'ensemble de résultats peut être vide, ou contenir une ou plusieurs lignes.|  
+|1|Le jeu de résultats de curseur comprend au moins une ligne.<br /><br /> Pour les curseurs INSENSITIVE et pilotés par jeux de clés, l'ensemble de résultats comprend au moins une ligne.<br /><br /> Pour les curseurs dynamiques, l'ensemble de résultats peut être vide, ou contenir une ou plusieurs lignes.|Le curseur affecté à cette variable est ouvert.<br /><br /> Pour les curseurs INSENSITIVE et pilotés par jeux de clés, l'ensemble de résultats comprend au moins une ligne.<br /><br /> Pour les curseurs dynamiques, l'ensemble de résultats peut être vide, ou contenir une ou plusieurs lignes.|  
 |0|Le jeu de résultats de curseur est vide.*|Le curseur affecté à cette variable est ouvert mais l'ensemble de résultats est vide.*|  
 |-1|Le curseur est fermé.|Le curseur affecté à cette variable est fermé.|  
 |-2|Non applicable.|Présente l’une de ces possibilités :<br /><br /> La procédure appelée précédemment n’affectait pas de curseur à cette variable OUTPUT.<br /><br /> La procédure appelée précédemment affectait un curseur à cette variable OUTPUT, mais le curseur était à l’état fermé quand la procédure s’est terminée. C’est la raison pour laquelle le curseur est désaffecté et qu’il n’est pas retourné à la procédure d’appel.<br /><br /> Aucun curseur n’est affecté à la variable de curseur déclarée.|  

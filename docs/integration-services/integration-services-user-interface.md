@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SSIS, SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4feb5d83ff4d149e16fc6ad7538b76f5275bdf3b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: afcf64474e58e0e34226506bed10c78fd810e0ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401441"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595937"
 ---
 # <a name="integration-services-user-interface"></a>Interface utilisateur d'Integration Services
   En plus des surfaces de dessin disponibles sous les onglets du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , l'interface utilisateur donne accès aux fenêtres et boîtes de dialogue suivantes permettant d'ajouter des fonctionnalités aux packages et de configurer les propriétés d'objets de packages.  
@@ -117,7 +114,7 @@ ms.locfileid: "35401441"
   
  Pour plus d'informations sur les fenêtres et menus supplémentaires, consultez la documentation de Visual Studio.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur la création de packages dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], consultez [Créer des packages dans les outils de données SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md).  
   
 ## <a name="see-also"></a> Voir aussi  
