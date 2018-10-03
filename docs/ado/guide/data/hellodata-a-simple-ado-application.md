@@ -1,31 +1,28 @@
 ---
-title: 'HelloData : Une Application ADO Simple | Documents Microsoft'
+title: 'HelloData : Une Application ADO Simple | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe8a5f0cd56c50441a44ab59da234791438876a7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271698"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624677"
 ---
-# <a name="hellodata-a-simple-ado-application"></a>HelloData : Une Application ADO Simple
-Cette application simple passe en revue chacune des quatre principales opérations ADO : mise en route, d’examiner, de modification et de mise à jour des données. Ces opérations sont effectuées sur la base de données Northwind fournie avec Microsoft® SQL Server. Pour vous concentrer sur les notions de base de l’objet ADO et éviter l’encombrement du code, la gestion des erreurs dans l’exemple est minime.  
+# <a name="hellodata-a-simple-ado-application"></a>HelloData : une application ADO simple
+Les étapes de cette application simple à travers chacune des quatre principales opérations ADO : obtention, examen, la modification et la mise à jour des données. Ces opérations sont exécutées sur la base de données Northwind fournie avec Microsoft® SQL Server. Pour vous concentrer sur les notions de base d’ADO et éviter l’encombrement du code, la gestion des erreurs dans l’exemple est minime.  
   
 ### <a name="to-run-hellodata"></a>Pour exécuter HelloData  
   
@@ -33,18 +30,18 @@ Cette application simple passe en revue chacune des quatre principales opératio
   
 2.  Créez quatre boutons de commande en haut du formulaire, en définissant le **nom** et **légende** propriétés avec les valeurs indiquées dans le tableau à la fin de cette rubrique.  
   
-3.  Sous les boutons, ajoutez un **Microsoft contrôle DataGrid** (Msdatgrd.ocx). Ce fichier est inclus avec Visual Basic et se trouve dans votre répertoire \windows\system32 ou \winnt\system32. Pour ajouter le contrôle DataGrid à votre boîte à outils Visual Basic, sélectionnez **composants...**  à partir de la **projet** menu. Puis activez la case à côté « Microsoft DataGrid Control 6.0 (SP3) (OLEDB) », puis **OK**. Pour ajouter le contrôle au projet, faites glisser le contrôle de grille de données à partir de la boîte à outils vers le formulaire Visual Basic.  
+3.  Sous les boutons, ajoutez un **Microsoft contrôle DataGrid** (Msdatgrd.ocx). Ce fichier est inclus avec Visual Basic et se trouve dans votre répertoire \windows\system32 ou \winnt\system32. Pour ajouter le contrôle DataGrid à la boîte à outils Visual Basic, sélectionnez **composants...**  à partir de la **projet** menu. Puis la case à cocher à côté « Microsoft contrôle DataGrid 6.0 (SP3) (OLEDB) » puis cliquez sur **OK**. Pour ajouter le contrôle au projet, faites glisser le contrôle DataGrid de la boîte à outils vers le formulaire Visual Basic.  
   
 4.  Créer un **zone de texte** sur le formulaire sous la grille et définissez ses propriétés comme indiqué dans le tableau. Le formulaire doit ressembler à la figure suivante lorsque vous avez terminé.  
   
-5.  Pour finir, copiez le code répertorié dans [HelloData Code](../../../ado/guide/data/hellodata-code.md)et le coller dans la fenêtre d’éditeur de code du formulaire. Appuyez sur **F5** pour exécuter le code.  
+5.  Pour finir, copiez le code répertorié dans [HelloData Code](../../../ado/guide/data/hellodata-code.md)et collez-le dans la fenêtre d’éditeur de code du formulaire. Appuyez sur **F5** pour exécuter le code.  
   
 > [!NOTE]
->  Dans l’exemple suivant et dans ce guide, l’id de l’utilisateur « MonID » avec un mot de passe de « 123aBc » est utilisé pour l’authentification auprès du serveur. Vous devez vous servir de ces valeurs avec les informations d’identification d’ouverture de session valide pour votre serveur. Remplacez également la valeur « MySQLServer » par le nom de votre serveur.  
+>  Dans l’exemple suivant et dans ce guide, l’id d’utilisateur « MonID » avec un mot de passe de « 123aBc » est utilisé pour s’authentifier auprès du serveur. Vous devez remplacer ces valeurs avec les informations d’identification d’ouverture de session valide pour votre serveur. Remplacez également la valeur « MySQLServer » par le nom de votre serveur.  
   
  Pour obtenir une description détaillée du code, consultez [commentaires sur HelloData](../../../ado/guide/data/comments-on-hellodata.md).  
   
- ![Affiche Formulaire1 pour l’application HelloData VB](../../../ado/guide/data/media/hellodata.gif "HelloData")  
+ ![Affiche le Formulaire1 de l’application HelloData VB](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
 |Type de contrôle|Propriété|Valeur|  
 |------------------|--------------|-----------|  
@@ -53,7 +50,7 @@ Cette application simple passe en revue chacune des quatre principales opératio
 ||Largeur|6500|  
 |MS DataGrid|Nom   |grdDisplay1|  
 |TextBox|Nom   |txtDisplay1|  
-||Propriété MultiLine|true|  
+||Multiligne|true|  
 |Bouton de commande|Nom   |cmdGetData|  
 ||Légende|Get Data|  
 |Bouton de commande|Nom   |cmdExamineData|  

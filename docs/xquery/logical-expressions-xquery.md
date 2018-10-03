@@ -1,18 +1,13 @@
 ---
-title: Expressions logiques (XQuery) | Documents Microsoft
+title: Expressions logiques (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -22,21 +17,20 @@ helpviewer_keywords:
 - EBV
 - expressions [XQuery], logical
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 20579cbbc8fc16fad2ab33c033fa8c73fbeadf1d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f30b9673ac7ba59e54544e00aaeecbf501c7500b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076766"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627897"
 ---
 # <a name="logical-expressions-xquery"></a>Expressions logiques (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery prend en charge la logique **et** et **ou** opérateurs.  
+  XQuery prend en charge l’opérateur logique **et** et **ou** opérateurs.  
   
 ```  
 expression1 and expression2  
@@ -53,7 +47,7 @@ expression1 or expression2
   
 -   Sinon, une erreur statique est générée.  
   
- La logique **et** et **ou** opérateur est ensuite appliqué aux valeurs booléennes qui en résulte des expressions avec la sémantique de la logique standard.  
+ L’opérateur logique **et** et **ou** opérateur est ensuite appliqué aux valeurs booléennes qui en résulte des expressions avec la sémantique de la logique standard.  
   
  La requête suivante récupère, à partir du catalogue de produits, les illustrations de face et de petit format, soit l'élément <`Picture`>, pour un modèle de produit spécifique. Notez que pour chaque document de description de produit, le catalogue peut stocker une ou plusieurs illustrations avec différents attributs tels que taille et angle de prise de vue.  
   
@@ -69,7 +63,7 @@ FROM  Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <PD:Picture   

@@ -1,37 +1,34 @@
 ---
-title: Exemple de propriété de gestionnaire (VB) | Documents Microsoft
+title: Handler, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Handler property [ADO], Visual Basic example
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b03652c4105c62235af9a34bdae17148b4dd575
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d719050da7878f8f5421e632943868fe4b1f75ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288234"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615838"
 ---
-# <a name="handler-property-example-vb"></a>Exemple de propriété de gestionnaire (VB)
+# <a name="handler-property-example-vb"></a>Handler, exemple de propriété (VB)
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Cet exemple illustre la [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet [gestionnaire](../../../ado/reference/rds-api/handler-property-rds.md) propriété. (Consultez [DataFactory personnalisation](../../../ado/guide/remote-data-service/datafactory-customization.md) pour plus d’informations.)  
+ Cet exemple montre la [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet [gestionnaire](../../../ado/reference/rds-api/handler-property-rds.md) propriété. (Consultez [personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) pour plus d’informations.)  
   
- Supposons que les sections suivantes dans le fichier de paramètres Msdfmap.ini sont trouvent sur le serveur :  
+ Partons du principe que les sections suivantes dans le fichier de paramètres Msdfmap.ini sont trouvent sur le serveur :  
   
 ```  
 [connect AuthorDataBase]  
@@ -41,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Votre code ressemble à ceci. La commande associée à la [SQL](../../../ado/reference/rds-api/sql-property.md) propriété correspondra à la ***AuthorById*** identificateur et récupère une ligne pour l’auteur Michael O'Leary. Le **DataControl** objet **Recordset** est affectée à un déconnecté [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet purement commodité de codage.  
+ Votre code ressemble à ceci. La commande associée à la [SQL](../../../ado/reference/rds-api/sql-property.md) propriété correspond à la ***AuthorById*** identificateur et récupère une ligne pour l’auteur Michael O'Leary. Le **DataControl** objet **Recordset** propriété est affectée à un déconnecté [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet purement commodité de codage.  
   
 ```  
 'BeginHandlerVB  

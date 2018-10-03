@@ -1,13 +1,11 @@
 ---
-title: OriginalValue et UnderlyingValue, propriétés-exemple (VC ++) | Documents Microsoft
+title: OriginalValue et UnderlyingValue, exemple de propriétés (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fa7e2dbf687c9d07bad1e9052b7fd2eeede1e4f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623727"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue et UnderlyingValue, propriétés-exemple (VC ++)
-Cet exemple illustre la [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) et [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propriétés en affichant un message si les données sous-jacentes d’un enregistrement a changé pendant un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mise à jour du lot.  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue et UnderlyingValue, exemple de propriétés (VC ++)
+Cet exemple montre la [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) et [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propriétés en affichant un message si les données sous-jacentes d’un enregistrement a changé pendant un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mise à jour par lots.  
   
 ## <a name="example"></a>Exemple  
   
@@ -198,31 +195,31 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Modification des données !**  
-**ID de titre : PS1372**  
+ **Données a changé !**  
+**ID du titre : PS1372**  
 **Valeur actuelle : self_help**   
-**Valeur d’origine : traitant de psychologie**   
-**Valeur sous-jacente : sociologie**   
-**Modification des données !**  
-**ID de titre : PS2091**  
+**Valeur d’origine : psychologie**   
+**Valeur sous-jacente : la sociologie**   
+**Données a changé !**  
+**ID du titre : PS2091**  
 **Valeur actuelle : self_help**   
-**Valeur d’origine : traitant de psychologie**   
-**Valeur sous-jacente : sociologie**   
-**Modification des données !**  
-**ID de titre : PS2106**  
+**Valeur d’origine : psychologie**   
+**Valeur sous-jacente : la sociologie**   
+**Données a changé !**  
+**ID du titre : PS2106**  
 **Valeur actuelle : self_help**   
-**Valeur d’origine : traitant de psychologie**   
-**Valeur sous-jacente : sociologie**   
-**Modification des données !**  
-**ID de titre : PS3333**  
+**Valeur d’origine : psychologie**   
+**Valeur sous-jacente : la sociologie**   
+**Données a changé !**  
+**ID du titre : PS3333**  
 **Valeur actuelle : self_help**   
-**Valeur d’origine : traitant de psychologie**   
-**Valeur sous-jacente : sociologie**   
-**Modification des données !**  
-**ID de titre : PS7777**  
+**Valeur d’origine : psychologie**   
+**Valeur sous-jacente : la sociologie**   
+**Données a changé !**  
+**ID du titre : PS7777**  
 **Valeur actuelle : self_help**   
-**Valeur d’origine : traitant de psychologie**   
-**Valeur sous-jacente : sociologie**    
+**Valeur d’origine : psychologie**   
+**Valeur sous-jacente : la sociologie**    
 ## <a name="see-also"></a>Voir aussi  
  [OriginalValue, propriété (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   

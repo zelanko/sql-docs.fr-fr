@@ -1,32 +1,26 @@
 ---
-title: Se connecter à la base de données SQL Azure (SybaseToSQL) | Documents Microsoft
+title: Se connecter à Azure SQL DB (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bb6a49072e16f00ba12dd32f1ccd4b6cab8a3620
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 057a39fd393be6cce9232d787b0d110a4be2035a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640906"
 ---
-# <a name="connect-to-azure-sql-db--sybasetosql"></a>Se connecter à la base de données SQL Azure (SybaseToSQL)
-Utilisez la connexion à la boîte de dialogue base de données SQL Azure pour se connecter à la base de données de la base de données SQL Azure que vous souhaitez migrer.  
+# <a name="connect-to-azure-sql-db--sybasetosql"></a>Se connecter à Azure SQL DB (SybaseToSQL)
+Utilisez la connexion à la boîte de dialogue base de données SQL Azure pour se connecter à la base de données de base de données SQL Azure que vous souhaitez migrer.  
   
-Pour accéder à cette boîte de dialogue, dans le **fichier** menu, sélectionnez **se connecter à la base de données SQL Azure**. Si vous êtes déjà connecté, la commande est **se reconnecter à la base de données SQL Azure.**  
+Pour accéder à cette boîte de dialogue, dans le **fichier** menu, sélectionnez **se connecter à Azure SQL DB**. Si vous êtes déjà connecté, la commande est **se reconnecter à la base de données SQL Azure.**  
   
 ## <a name="options"></a>Options  
 **Nom de serveur**  
@@ -42,13 +36,13 @@ Sélectionnez, entrez ou **Parcourir** le nom de la base de données.
   
 **Nom d'utilisateur**  
   
-Entrez le nom d’utilisateur SSMA utilisera pour se connecter à la base de données de la base de données SQL Azure  
+Entrez le nom d’utilisateur SSMA utilisera pour se connecter à la base de données de base de données SQL Azure  
   
 **Mot de passe**  
   
 Entrez le mot de passe correspondant au nom d'utilisateur indiqué.  
   
-**Chiffrer**  
+**Encrypt**  
   
 SSMA recommande une connexion chiffrée à la base de données SQL Azure.  
   
@@ -57,17 +51,17 @@ S’il n’y a aucune base de données dans le compte de base de données SQL Az
   
 Pour créer une nouvelle base de données pour la première fois, suivez les étapes suivantes  
   
-1.  Cliquez sur le bouton Parcourir qui est présent dans la connexion à la boîte de dialogue base de données SQL Azure  
+1.  Cliquez sur le bouton Parcourir qui n’est présent dans la connexion à la boîte de dialogue base de données SQL Azure  
   
-2.  S’il n’y a aucune base de données, les deux options suivantes s’affichent.  
+2.  S’il n’y a aucune base de données, les éléments de deux menus suivants apparaissent.  
   
-    1.  **(bases de données introuvables)**  qui est désactivé et grisé tout le temps  
+    1.  **(aucune base)**  qui est désactivé et grisé de tout le temps  
   
-    2.  **Créer la nouvelle base de données** qui est activé uniquement lorsqu’il n’y aucune base de données sur le compte de base de données SQL Azure. Lorsque vous cliquez sur cet élément de menu, la boîte de dialogue Créer une base de données Azure est présent avec la taille et le nom de la base de données.  
+    2.  **Créer la nouvelle base de données** qui est activé uniquement lorsqu’il n’existe aucune base de données sur le compte de base de données SQL Azure. Lorsque vous cliquez sur cet élément de menu, la boîte de dialogue Créer une base de données Azure est présent avec la taille et le nom de la base de données.  
   
-3.  Au moment de la création de la base de données, les deux paramètres suivants figurent en tant qu’entrée :  
+3.  Au moment de la création de base de données, les deux paramètres suivants sont fournis comme entrée :  
   
     1.  **Nom de la base de données :** Entrez le nom de la base de données.  
   
-    2.  **Taille de la base de données :** sélectionner la taille de la base de données dont vous avez besoin pour créer le compte de base de données SQL Azure.  
+    2.  **Taille de la base de données :** sélectionner la taille de la base de données dont vous avez besoin pour créer de compte de base de données SQL Azure.  
   
