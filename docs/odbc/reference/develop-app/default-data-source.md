@@ -1,13 +1,11 @@
 ---
-title: Valeur par défaut de la Source de données | Documents Microsoft
+title: Valeur par défaut de la Source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -21,22 +19,21 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b756f9b553c622028266d1fc591596bf58ddf45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 909f9b3e7c8087add8eb66ca2f5c15253026304c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908134"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619567"
 ---
 # <a name="default-data-source"></a>Source de données par défaut
 Le pilote peut sélectionner une source de données, appelée la source de données par défaut, dans certains cas où l’application ne spécifie pas explicitement une :  
   
 -   Dans un appel à **SQLConnect** où le *nom_serveur* argument est une chaîne de longueur nulle, un pointeur null ou par défaut.  
   
--   Dans un appel à **SQLDriverConnect** où *InConnectionString* soit spécifie **DSN**= valeur par défaut ou spécifie avec la **DSN** mot-clé une source de données qui ne figure pas dans les informations système.  
+-   Dans un appel à **SQLDriverConnect** où *InConnectionString* soit spécifie **DSN**= valeur par défaut ou spécifie avec le **DSN** mot clé un source de données qui n’est pas contenue dans les informations système.  
   
- Elle est définie par le pilote comment la source de données par défaut est spécifiée. Cela peut impliquer l’action d’administration et peut dépendre de l’utilisateur.
+ Elle est définie par le pilote comment la source de données par défaut est spécifiée. Cela peut impliquer l’action administrative et peut dépendre de l’utilisateur.

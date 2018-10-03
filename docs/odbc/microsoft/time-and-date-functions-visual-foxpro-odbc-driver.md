@@ -1,13 +1,11 @@
 ---
-title: Fonctions d’heure et Date (le pilote ODBC Visual FoxPro) | Documents Microsoft
+title: Fonctions d’heure et Date (pilote ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC date functions [ODBC]
@@ -17,31 +15,30 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f795e12cb2a88bfa1b7e17371745a841a3e6f854
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908704"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644327"
 ---
-# <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Fonctions d’heure et Date (le pilote ODBC Visual FoxPro)
-Le tableau suivant répertorie les fonctions de date et heure ODBC pris en charge par le pilote ODBC Visual FoxPro ; lors de la grammaire Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, le Visual FoxPro équivalent est répertorié.  
+# <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Fonctions d’heure et de date (pilote ODBC Visual FoxPro)
+Le tableau suivant répertorie les fonctions de date et heure ODBC pris en charge par le pilote ODBC Visual FoxPro ; lors de la grammaire de Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, le Visual FoxPro équivalent est répertorié.  
   
 |Grammaire ODBC|Grammaire de Visual FoxPro|  
 |------------------|---------------------------|  
 |CURDATE *)*|DATE *)*|  
 |CURTIME *)*|TEMPS *)*|  
-|HEUREDAYNAME *(date_exp)*|CDOW *(date_exp)*|  
+|DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
 |DAYOFMONTH (*date_exp)*|JOUR *)*|  
 |HEURE *(time_exp)*||  
 |MINUTE *(time_exp)*||  
 |MOIS *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|MAINTENANT *)*|DATETIME *)*|  
+|MAINTENANT *)*|DATE/HEURE *)*|  
 |DEUXIÈME *(time_exp)*|S *(time_exp)*|  
 |SEMAINE *(date_exp)*||  
 |ANNÉE *(date_exp)*||  
@@ -57,21 +54,21 @@ Le tableau suivant répertorie les fonctions de date et heure ODBC pris en charg
  TIMESTAMPDIFF *(intervalle, timestamp_exp1, timestamp_exp2)*  
   
 ## <a name="odbc-escape-sequences"></a>Séquences d’échappement ODBC  
- Le pilote prend également en charge la séquence d’échappement ODBC pour les données de date et l’horodatage. La syntaxe de la clause d’échappement est comme suit :  
+ Le pilote prend également en charge la séquence d’échappement ODBC pour les données de date et d’horodatage. La syntaxe de clause d’échappement est comme suit :  
   
 ```  
 --(*vendor(Microsoft),product(ODBC) d 'value' *)—  
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- Dans cette syntaxe, **d** indique que *valeur* est une date dans le *aaaa-mm-jj* format et **ts** indique que *valeur* est un horodateur dans le *aaaa-mm-jj hh : mm :*[.*f...*] format. La syntaxe raccourcie pour les données de date et l’horodatage est la suivante :  
+ Dans cette syntaxe, **d** indique que *valeur* est une date dans le *aaaa-mm-jj* format et **ts** indique que *valeur*  est un horodateur dans le *aaaa-mm-jj hh : mm :*[.*f...*] format. La syntaxe raccourcie pour les données de date et l’horodatage est comme suit :  
   
 ```  
 {d 'value'}  
 {ts 'value'}  
 ```  
   
- Par exemple, chacune des instructions suivantes met à jour la table ALLTYPES à l’aide de la syntaxe abrégée de date et l’horodatage dans une commande de mise à jour de SQL pris en charge :  
+ Par exemple, chacune des instructions suivantes met à jour la table ALLTYPES à l’aide de la syntaxe sténo date et l’horodatage dans une commande de mise à jour de SQL pris en charge :  
   
 ```  
 UPDATE alltypes  
@@ -84,4 +81,4 @@ UPDATE alltypes
 ```  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur les séquences d’échappement, consultez [les séquences d’échappement dans ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) dans les *de référence du programmeur ODBC*.
+ Pour plus d’informations sur les séquences d’échappement, consultez [les séquences d’échappement dans ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) dans le *de référence du programmeur ODBC*.

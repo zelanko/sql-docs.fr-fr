@@ -1,32 +1,29 @@
 ---
-title: Exemple de propriété (VC ++) des attributs | Documents Microsoft
+title: Exemple de propriété (VC ++) des attributs | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0372befbf0c69beaf036228d97e217766f99d480
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4aab3372068a621235da9e26461df29240928440
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285348"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633507"
 ---
-# <a name="attributes-property-example-vc"></a>Exemple de propriété Attributes (VC ++)
-Cet exemple illustre la [attributs](../../../ado/reference/adox-api/attributes-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md). La valeur **adColNullable** permet à l’utilisateur définir la valeur d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [champ](../../../ado/reference/ado-api/field-object.md) sur une chaîne vide. Dans ce cas, l’utilisateur peut faire la distinction entre un enregistrement dont les données sont inconnues et un enregistrement où les données ne s’applique pas.  
+# <a name="attributes-property-example-vc"></a>Attributes, exemple de propriété (VC++)
+Cet exemple montre la [attributs](../../../ado/reference/adox-api/attributes-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md). La valeur **adColNullable** permet à l’utilisateur définir la valeur d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [champ](../../../ado/reference/ado-api/field-object.md) sur une chaîne vide. Dans ce cas, l’utilisateur peut faire la distinction entre un enregistrement dont les données sont inconnues et un enregistrement où les données ne s’applique pas.  
   
 ```  
 // Attributes_Property_Sample.cpp  
@@ -207,5 +204,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs, propriété (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
+ [Attributes, propriété (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

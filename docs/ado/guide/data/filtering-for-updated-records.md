@@ -1,33 +1,30 @@
 ---
-title: Filtrage des enregistrements mis à jour | Documents Microsoft
+title: Filtrage de mise à jour des enregistrements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtering for updated records [ADO]
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 529845297ff3c4264cc152c652b31c0bd12f5441
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 74ea4a208cad079933b27a7305a5ce0462e08515
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270878"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639197"
 ---
 # <a name="filtering-for-updated-records"></a>Filtrage des enregistrements mis à jour
-Avant d’invoquer UpdateBatch, vous pouvez utiliser la propriété de filtre de jeu d’enregistrements à afficher uniquement les enregistrements qui ont été modifiés depuis le jeu d’enregistrements a été ouvert ou le dernier appel à la méthode UpdateBatch. Pour ce faire, définissez Filter sur adFilterPendingRecords pour déterminer le nombre d’enregistrements sera mise à jour, comme illustré dans l’exemple de code dans la section suivante.  
+Avant d’appeler UpdateBatch, vous pouvez utiliser la propriété de filtre de jeu d’enregistrements à afficher uniquement les enregistrements qui ont été modifiés depuis le jeu d’enregistrements a été ouvert ou le dernier appel à la méthode UpdateBatch. Pour ce faire, définissez Filter sur adFilterPendingRecords pour déterminer combien d’enregistrements est actualisés, comme indiqué dans l’exemple de code dans la section suivante.  
   
 ## <a name="remarks"></a>Notes  
- Cet exemple étend l’exemple UpdateBatch précédent en filtrant le jeu d’enregistrements juste avant d’appeler la méthode UpdateBatch, montrant les enregistrements seront modifiés à l’utilisateur lui permettant d’annuler la mise à jour (à l’aide de la méthode CancelBatch).  
+ Cet exemple étend l’exemple UpdateBatch précédent en filtrant le jeu d’enregistrements juste avant qu’elle appelle la méthode UpdateBatch, en montrant que l’utilisateur changent les enregistrements et en lui permettant d’annuler la mise à jour (à l’aide de la méthode CancelBatch).  
   
 ```  
 'BeginFilterPend  

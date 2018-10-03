@@ -1,28 +1,25 @@
 ---
-title: Méthodes ADOX | Documents Microsoft
+title: Méthodes ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ced2fbeb94aacd1035b28b56a46b10535f17c192
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7df30f8e277985e16dc0066d80906a2a3694e310
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284798"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631337"
 ---
 # <a name="adox-methods"></a>Méthodes ADOX
 |||  

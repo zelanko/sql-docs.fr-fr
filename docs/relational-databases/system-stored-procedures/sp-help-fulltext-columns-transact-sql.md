@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_columns
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_columns
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6179297a3634479ebd090395d4cbb5cb48f0e441
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0ad479171b0fc2bf252b9f12a8b993fa7b69baa6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630560"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +66,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 |**FULLTEXT_BLOBTP_COLID**|**Int**|Identification de la colonne du type de document. Cette valeur s’applique uniquement lorsque la colonne indexée en texte intégral est un **varbinary (max)** ou **image** colonne.|  
 |**FULLTEXT_LANGUAGE**|**sysname**|Langue utilisée pour la recherche en texte intégral sur la colonne.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Les autorisations d'exécution reviennent par défaut aux membres du rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

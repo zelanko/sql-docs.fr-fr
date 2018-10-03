@@ -1,13 +1,11 @@
 ---
-title: Fonction de SQLCopyDesc | Documents Microsoft
+title: Sqlcopydesc, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLCopyDesc
@@ -19,22 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLCopyDesc function [ODBC]
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b87ee611e74cc9adc0015ce0f9b6b0c15c3bc7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e165ca48af3b634f1dcbe80c05c83f2c872d1b01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642777"
 ---
-# <a name="sqlcopydesc-function"></a>SQLCopyDesc (fonction)
-**Mise en conformité**  
+# <a name="sqlcopydesc-function"></a>SQLCopyDesc, fonction
+**Conformité**  
  Version introduite : Conformité des normes 3.0 de ODBC : ISO 92  
   
  **Résumé**  
- **SQLCopyDesc** copie les informations de descripteur à partir d’un descripteur handle vers un autre.  
+ **SQLCopyDesc** copie les informations du descripteur à partir d’un descripteur handle vers un autre.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,63 +48,63 @@ SQLRETURN SQLCopyDesc(
  [Entrée] Handle de descripteur de source.  
   
  *TargetDescHandle*  
- [Entrée] Handle de descripteur de cible. Le *TargetDescHandle* argument peut être un handle de descripteur d’une application ou un IPD. *TargetDescHandle* ne peut pas être définie pour un handle vers un IRD, ou **SQLCopyDesc** retournera HY016 SQLSTATE (Impossible de modifier un descripteur de ligne d’implémentation).  
+ [Entrée] Handle de descripteur de cible. Le *TargetDescHandle* argument peut être un handle vers un descripteur d’application ou une infrastructure ou IPD. *TargetDescHandle* ne peut pas être définie pour un handle vers un IRD, ou **SQLCopyDesc** retournera HY016 SQLSTATE (Impossible de modifier un descripteur de ligne d’implémentation).  
   
 ## <a name="returns"></a>Valeur renvoyée  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLCopyDesc** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_DESC et un *gérer* de *TargetDescHandle*. Si non valide *SourceDescHandle* a été passé dans l’appel, SQL_INVALID_HANDLE sera retourné mais aucune SQLSTATE n’est retourné. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLCopyDesc** et explique chacune d’elles dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
+ Lorsque **SQLCopyDesc** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_ HANDLE_DESC et un *gérer* de *TargetDescHandle*. Si non valide *SourceDescHandle* a été passé dans l’appel, SQL_INVALID_HANDLE sera retourné mais aucune SQLSTATE ne sera retourné. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLCopyDesc** et explique chacune dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
  Lorsqu’une erreur est retournée, l’appel à **SQLCopyDesc** est immédiatement abandonnée et le contenu des champs dans le *TargetDescHandle* descripteur ne sont pas définis.  
   
  Étant donné que **SQLCopyDesc** peut être implémentée en appelant **SQLGetDescField** et **SQLSetDescField**, **SQLCopyDesc** peut retourner SQLSTATE retournée par **SQLGetDescField** ou **SQLSetDescField**.  
   
-|SQLSTATE|Erreur| Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|Avertissement général|Message d’information de spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO).|  
-|08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifique à l’implémentation a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans les  *\*MessageText* tampon décrit l’erreur et sa cause.|  
+|01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et de la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifiques à l’implémentation a été défini. Le message d’erreur retourné par **SQLGetDiagRec** dans le  *\*MessageText* tampon décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
-|HY007|L’instruction associée n’est pas préparée.|*SourceDescHandle* a été associé à un IRD, et le handle d’instruction associée n’était pas dans l’état préparée ou exécutée.|  
-|HY010|Erreur de séquence de fonction|(DM) le descripteur de gérer dans *SourceDescHandle* ou *TargetDescHandle* a été associé à un *au paramètre StatementHandle* pour une fonction de façon asynchrone en cours d’exécution (pas celui-ci) qui a été appelée et toujours en cours d’exécution lorsque cette fonction a été appelée.<br /><br /> (DM) le descripteur de gérer dans *SourceDescHandle* ou *TargetDescHandle* a été associé à un *au paramètre StatementHandle* pour lequel **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelée et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi de données pour tous les paramètres de data-at-execution ou les colonnes.<br /><br /> (DM), une fonction de façon asynchrone en cours d’exécution a été appelée pour le handle de connexion qui est associé à la *SourceDescHandle* ou *TargetDescHandle*. Cette fonction asynchrone toujours en cours d’exécution lorsque le **SQLCopyDesc** fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** a été appelé pour une des poignées d’instruction associées à la *SourceDescHandle* ou *TargetDescHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant la récupération des données pour tous les paramètres transmis en continu.|  
-|HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, éventuellement en raison d’une mémoire insuffisante.|  
+|HY007|L’instruction associée n’est pas préparée.|*SourceDescHandle* a été associé à un IRD et le descripteur d’instruction associée n’était pas dans un état préparé ou exécuté.|  
+|HY010|Erreur de séquence de fonction|(DM) le descripteur de gérer dans *SourceDescHandle* ou *TargetDescHandle* a été associé un *au paramètre StatementHandle* pour laquelle une fonction d’exécution asynchrone (not celle-ci) a été appelée et l’exécution quand cette fonction a été appelée.<br /><br /> (DM) le descripteur de gérer dans *SourceDescHandle* ou *TargetDescHandle* a été associé à un *au paramètre StatementHandle* pour lequel **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelée et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi de données pour tous les paramètres de data-at-execution ou les colonnes.<br /><br /> (DM) une fonction de façon asynchrone en cours d’exécution a été appelée pour le handle de connexion qui est associé à la *SourceDescHandle* ou *TargetDescHandle*. Cette fonction asynchrone était en cours d’exécution lorsque le **SQLCopyDesc** fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** a été appelée pour l’une des descripteurs d’instruction associés à la *SourceDescHandle* ou *TargetDescHandle* et retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ont été récupérées pour tous les paramètres transmis en continu.|  
+|HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, probablement en raison de conditions de mémoire insuffisante.|  
 |HY016|Impossible de modifier un descripteur de ligne d’implémentation|*TargetDescHandle* a été associé à un IRD.|  
 |HY021|Informations de descripteur incohérentes|Les informations de descripteur vérifiées pendant une vérification de cohérence n’étaient pas cohérentes. Pour plus d’informations, consultez « Vérifications de cohérence » dans **SQLSetDescField**.|  
-|HY092|Identificateur d’attribut/option non valide|L’appel à **SQLCopyDesc** vous y êtes invité à un appel à **SQLSetDescField**, mais  *\*ValuePtr* n’était pas valide pour le *FieldIdentifier* argument sur *TargetDescHandle*.|  
-|HY117|Connexion est interrompue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Délai de connexion a expiré.|Le délai d’expiration de connexion a expiré avant que la source de données a répondu à la demande. Le délai d’expiration de connexion est défini par le **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Pilote ne prend pas en charge cette fonction|(DM) le pilote associé à la *SourceDescHandle* ou *TargetDescHandle* ne prend pas en charge la fonction.|  
+|HY092|Identificateur d’option/attribut non valide|L’appel à **SQLCopyDesc** vous y êtes invité à un appel à **SQLSetDescField**, mais  *\*ValuePtr* n’était pas valide pour le *FieldIdentifier* argument sur *TargetDescHandle*.|  
+|HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Délai de connexion expiré|Le délai de connexion a expiré avant que la source de données a répondu à la demande. Le délai de connexion est défini via **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Pilote ne prend pas en charge cette fonction|Le pilote (DM) associé le *SourceDescHandle* ou *TargetDescHandle* ne prend pas en charge la fonction.|  
   
 ## <a name="comments"></a>Commentaires  
- Un appel à **SQLCopyDesc** copie les champs du descripteur de source de gérer le handle de descripteur cible. Les champs peuvent être copiés qu’à un descripteur de l’application ou un IPD, mais pas à un IRD. Les champs peuvent être copiés à partir d’une application ou d’un descripteur d’implémentation.  
+ Un appel à **SQLCopyDesc** copies les champs du descripteur de source de handle sur le handle de descripteur de cible. Les champs peuvent être copiés uniquement à un descripteur d’application ou un périphérique intégré, mais pas à un IRD. Les champs peuvent être copiés à partir d’une application ou un descripteur d’implémentation.  
   
- Les champs peuvent être copiés depuis un IRD uniquement si le handle d’instruction est dans l’état préparée ou exécutée ; Sinon, la fonction retourne SQLSTATE HY007 (instruction d’associé n’est pas préparée).  
+ Champs peuvent être copiés à partir d’un IRD uniquement si le handle d’instruction se trouve dans l’état préparée ou exécutée ; Sinon, la fonction retourne SQLSTATE HY007 (instruction d’associé n’est pas préparée).  
   
- Les champs peuvent être copiés à partir d’un IPD ou non une instruction a été préparée. Si une instruction SQL avec des paramètres dynamiques a été préparée et que le remplissage automatique de l’IPD est pris en charge et activé, l’IPD est remplie par le pilote. Lorsque **SQLCopyDesc** est appelée avec l’IPD comme le *SourceDescHandle*, les champs remplis sont copiés. Si le périphérique intégré n’est pas rempli par le pilote, le contenu des champs à l’origine de l’IPD est copié.  
+ Les champs peuvent être copiés à partir d’une infrastructure ou IPD ou non une instruction a été préparée. Si une instruction SQL avec des paramètres dynamiques a été préparée et le remplissage automatique de l’IPD est pris en charge et activé, l’IPD est remplie par le pilote. Lorsque **SQLCopyDesc** est appelée avec l’IPD comme le *SourceDescHandle*, les champs remplis sont copiés. Si l’IPD n’est pas remplie par le pilote, le contenu des champs à l’origine de l’IPD est copié.  
   
- Tous les champs du descripteur, à l’exception de SQL_DESC_ALLOC_TYPE (qui spécifie si le handle de descripteur a été automatiquement ou explicitement alloué), sont copiés, le champ est défini pour le descripteur de destination ou non. Champs copiés remplacement les champs existants.  
+ Tous les champs du descripteur, à l’exception SQL_DESC_ALLOC_TYPE (qui spécifie si le handle de descripteur a été automatiquement ou explicitement alloué), sont copiés, si le champ est défini pour le descripteur de destination. Champs copiés remplacent les champs existants.  
   
- Le pilote copie tous les champs de descripteur si le *SourceDescHandle* et *TargetDescHandle* arguments associés à la même pilote, même si les pilotes se trouvent sur deux connexions différentes ou des environnements. Si le *SourceDescHandle* et *TargetDescHandle* arguments sont associés à différents pilotes, le Gestionnaire de pilotes copie des champs définis par ODBC, mais ne copie pas les champs définis par le pilote ou des champs qui ne sont pas définis par ODBC pour le type du descripteur.  
+ Le pilote copie tous les champs de descripteur si le *SourceDescHandle* et *TargetDescHandle* arguments associés à la même pilote, même si les pilotes se trouvent sur deux connexions différentes ou environnements. Si le *SourceDescHandle* et *TargetDescHandle* arguments sont associés à différents pilotes, le Gestionnaire de pilote copie les champs définis par ODBC, mais ne copie pas les champs définis par le pilote ou des champs qui ne sont pas définies par ODBC pour le type de descripteur.  
   
- L’appel à **SQLCopyDesc** est abandonné immédiatement si une erreur se produit.  
+ L’appel à **SQLCopyDesc** est abandonnée immédiatement si une erreur se produit.  
   
- Lorsque le champ SQL_DESC_DATA_PTR est copié, une vérification de cohérence est effectuée sur le descripteur de la cible. Si la vérification de cohérence échoue, SQLSTATE HY021 (informations de descripteur incohérentes) sont retournées et l’appel à **SQLCopyDesc** est immédiatement abandonnée. Pour plus d’informations sur les vérifications de cohérence, voir « Vérifications de cohérence » dans [SQLSetDescRec, fonction](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
+ Quand le champ SQL_DESC_DATA_PTR est copié, une vérification de cohérence est effectuée sur le descripteur de la cible. Si la vérification de cohérence échoue, SQLSTATE HY021 (informations de descripteur incohérentes) sont retournées et l’appel à **SQLCopyDesc** est immédiatement abandonnée. Pour plus d’informations sur les vérifications de cohérence, voir « Vérifications de cohérence » dans [SQLSetDescRec, fonction](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
   
- Poignées de descripteur peuvent être copiées sur des connexions, même si les connexions sont sous différents environnements. Si le Gestionnaire de pilote détecte que la source et le descripteur de destination handles n’appartiennent pas à la même connexion et les deux connexions appartiennent pour séparer les pilotes, il implémente **SQLCopyDesc** en effectuant une copie de champ par champ à l’aide de **SQLGetDescField** et **SQLSetDescField**.  
+ Handles de descripteur peuvent être copiés sur les connexions, même si les connexions sont sous différents environnements. Si le Gestionnaire de pilote détecte que la source et le descripteur de destination handles n’appartiennent pas à la même connexion et les deux connexions appartiennent pour séparer les pilotes, il implémente **SQLCopyDesc** en effectuant un champ par champ Copier à l’aide **SQLGetDescField** et **SQLSetDescField**.  
   
- Lorsque **SQLCopyDesc** est appelée avec un *SourceDescHandle* sur un pilote et un *TargetDescHandle* sur un autre pilote, la file d’attente de l’erreur de la *SourceDescHandle* est désactivée. Cela se produit car **SQLCopyDesc** dans ce cas est implémentée par les appels à **SQLGetDescField** et **SQLSetDescField**.  
+ Lorsque **SQLCopyDesc** est appelée avec un *SourceDescHandle* sur un seul pilote et une *TargetDescHandle* sur un autre pilote, la file d’attente de l’erreur de la  *SourceDescHandle* est désactivée. Cela se produit car **SQLCopyDesc** dans ce cas est implémentée par les appels à **SQLGetDescField** et **SQLSetDescField**.  
   
 > [!NOTE]  
->  Une application peut être en mesure d’associer un handle de descripteur alloué explicitement avec une *au paramètre StatementHandle*, au lieu d’appeler **SQLCopyDesc** pour copier les champs à partir d’un descripteur vers un autre. Un descripteur explicitement alloué peut être associé à un autre *au paramètre StatementHandle* sur le même *handle de connexion* en définissant l’attribut d’instruction SQL_ATTR_APP_ROW_DESC ou SQL_ATTR_APP_PARAM_DESC pour le handle du descripteur alloué de manière explicite. Dans ce cas, **SQLCopyDesc** n’a pas à être appelée pour copier les valeurs de champ de descripteur à partir d’un descripteur vers une autre. Un handle de descripteur ne peut pas être associé un *au paramètre StatementHandle* sur un autre *handle de connexion*, toutefois, pour utiliser les mêmes valeurs de champ de descripteur sur *StatementHandles* sur différents *ConnectionHandles*, **SQLCopyDesc** doit être appelée.  
+>  Une application peut être en mesure d’associer un handle de descripteur alloué explicitement avec une *au paramètre StatementHandle*, au lieu d’appeler **SQLCopyDesc** de copier les champs à partir d’un descripteur vers un autre. Un descripteur alloué explicitement peut être associé à un autre *au paramètre StatementHandle* sur le même *ConnectionHandle* en définissant l’instruction SQL_ATTR_APP_ROW_DESC ou SQL_ATTR_APP_PARAM_DESC l’attribut vers le handle du descripteur alloué de manière explicite. Dans ce cas, **SQLCopyDesc** ne doit pas être appelée pour copier les valeurs de champ de descripteur à partir d’un descripteur vers un autre. Un handle de descripteur ne peut pas être associé à un *au paramètre StatementHandle* sur un autre *ConnectionHandle*, toutefois, pour utiliser les mêmes valeurs de champ de descripteur sur *StatementHandles*sur différents *ConnectionHandles*, **SQLCopyDesc** doit être appelée.  
   
  Pour obtenir une description des champs dans un en-tête de descripteur ou un enregistrement, consultez [SQLSetDescField, fonction](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Pour plus d’informations sur les descripteurs, consultez [descripteurs](../../../odbc/reference/develop-app/descriptors.md).  
   
 ## <a name="copying-rows-between-tables"></a>Copie de lignes entre les Tables  
- Une application peut copier des données d’une table à l’autre sans copier les données au niveau de l’application. Pour ce faire, l’application lie les mémoires tampons de données même et les informations de descripteur à une instruction qui extrait les données et l’instruction qui insère les données dans une copie. Cela peut être accompli en partageant un descripteur de l’application (liaison d’un descripteur explicitement alloué à la fois le ARD à une seule instruction et le descripteur APD dans un autre) ou à l’aide de **SQLCopyDesc** pour copier les liaisons entre le ARD et le descripteur APD des deux instructions. Si les instructions se trouvent sur des connexions différentes, **SQLCopyDesc** doit être utilisé. En outre, **SQLCopyDesc** doit être appelée pour copier les liaisons entre l’IRD et l’IPD des deux instructions. Lors de la copie entre des instructions sur la même connexion, le type d’informations SQL_ACTIVE_STATEMENTS retournée par le pilote pour un appel à **SQLGetInfo** doit être supérieure à 1 pour cette opération réussisse. (Cela n’est pas le cas lors de la copie sur des connexions.)  
+ Une application peut copier les données d’une table vers un autre sans copier les données au niveau de l’application. Pour ce faire, l’application lie les mémoires tampons de données même et les informations de descripteur pour une instruction qui extrait les données et l’instruction qui insère les données dans une copie. Cela peut être accompli en partageant un descripteur d’application (liaison d’un descripteur alloué explicitement en tant que le ARD à une seule instruction et le descripteur APD dans un autre) ou à l’aide de **SQLCopyDesc** pour copier les liaisons entre le ARD et le descripteur APD des deux instructions. Si les instructions se trouvent sur différentes connexions, **SQLCopyDesc** doit être utilisé. En outre, **SQLCopyDesc** doit être appelée pour copier les liaisons entre l’IRD et l’IPD des deux instructions. Lors de la copie entre des instructions sur la même connexion, le type d’information SQL_ACTIVE_STATEMENTS retournée par le pilote pour un appel à **SQLGetInfo** doit être supérieure à 1 pour cette opération réussisse. (Cela n’est pas le cas lors de la copie sur les connexions.)  
   
 ### <a name="code-example"></a>Exemple de code  
- Dans l’exemple suivant, les opérations de descripteur sont utilisées pour copier les champs de la table PartsSource dans la table PartsCopy. Le contenu de la table PartsSource est lues dans les tampons de l’ensemble de lignes dans *hstmt0*. Ces valeurs sont utilisées en tant que paramètres d’une instruction INSERT sur *hstmt1* pour remplir les colonnes de la table PartsCopy. Pour ce faire, les champs de l’IRD de *hstmt0* sont copiés dans les champs de l’IPD de *hstmt1*et les champs de la ARD de *hstmt0* sont copiés dans les champs de l’APD de *hstmt1*. Utilisez **SQLSetDescField** pour définir l’attribut SQL_DESC_PARAMETER_TYPE de l’IPD pour SQL_PARAM_INPUT lorsque vous copiez des champs IRD à partir d’une instruction avec des paramètres de sortie dans les champs IPD qui doivent être des paramètres d’entrée.  
+ Dans l’exemple suivant, les opérations de descripteur sont utilisées pour copier les champs de la table PartsSource dans la table PartsCopy. Le contenu de la table PartsSource est lues dans l’ensemble de lignes des tampons dans *hstmt0*. Ces valeurs sont utilisées en tant que paramètres d’une instruction INSERT sur *hstmt1* pour remplir les colonnes de la table PartsCopy. Pour ce faire, les champs de l’IRD de *hstmt0* sont copiés dans les champs de l’IPD de *hstmt1*et les champs de la ARD de *hstmt0* sont copiés dans les champs de l’APD de *hstmt1*. Utilisez **SQLSetDescField** pour définir l’attribut SQL_DESC_PARAMETER_TYPE de l’IPD à SQL_PARAM_INPUT lorsque vous copiez les champs IRD à partir d’une instruction avec des paramètres de sortie dans les champs IPD qui doivent être des paramètres d’entrée.  
   
 ```  
 #define ROWS 100  

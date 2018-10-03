@@ -1,13 +1,11 @@
 ---
-title: GetRowsOptionEnum | Documents Microsoft
+title: GetRowsOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,25 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - GetRowsOptionEnum enumeration [ADO]
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3008d37e09a35966764f0d5803090c790aeffdc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 20c2f0027d82f55d1a8fc9bc58cf3331b92da116
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278808"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617317"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
-Spécifie le nombre d’enregistrements à récupérer un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Spécifie le nombre d’enregistrements à récupérer à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 |Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adGetRowsRest**|-1|Récupère le reste des enregistrements dans la **Recordset**, à partir de la position actuelle ou sur un signet spécifié par le *Démarrer* paramètre de la [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) (méthode).|  
+|**adGetRowsRest**|-1|Récupère le reste des enregistrements dans la **Recordset**, à partir de la position actuelle ou d’un signet spécifié par le *Démarrer* paramètre de la [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) (méthode).|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
+## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
  Package : **com.ms.wfc.data**  
   
 |Constante|  

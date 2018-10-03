@@ -1,13 +1,11 @@
 ---
-title: CreateParameter, méthode (ADO) | Documents Microsoft
+title: CreateParameter, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 865b2b0b8009b03e33e24f72ab4f336910a17ace
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631347"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter, méthode (ADO)
-Crée un nouveau [paramètre](../../../ado/reference/ado-api/parameter-object.md) objet avec les propriétés spécifiées.  
+Crée un [paramètre](../../../ado/reference/ado-api/parameter-object.md) objet avec les propriétés spécifiées.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,35 +39,35 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Paramètres  
  *Nom*  
- Facultatif. A **chaîne** valeur qui contient le nom de la **paramètre** objet.  
+ Facultatif. Un **chaîne** valeur qui contienne le nom de la **paramètre** objet.  
   
  *Type*  
- Facultatif. A [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valeur qui spécifie le type de données de la **paramètre** objet.  
+ Facultatif. Un [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valeur qui spécifie le type de données de la **paramètre** objet.  
   
  *Sens*  
- Facultatif. A [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) valeur qui spécifie le type de **paramètre** objet.  
+ Facultatif. Un [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) valeur qui spécifie le type de **paramètre** objet.  
   
  *Taille*  
- Facultatif. A **Long** valeur qui spécifie la longueur maximale de la valeur du paramètre en caractères ou en octets.  
+ Facultatif. Un **Long** valeur qui spécifie la longueur maximale de la valeur du paramètre en caractères ou octets.  
   
  *Value*  
- Facultatif. A **Variant** qui spécifie la valeur pour le **paramètre** objet.  
+ Facultatif. Un **Variant** qui spécifie la valeur pour le **paramètre** objet.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **CreateParameter** pour créer une nouvelle méthode **paramètre** objet avec le nom spécifié, direction, taille, valeur et un type. Toutes les valeurs passées dans les arguments sont écrites correspondant **paramètre** propriétés.  
+ Utilisez le **CreateParameter** pour créer une nouvelle méthode **paramètre** objet avec un nom spécifié, le type, la direction, la taille et le valeur. Toutes les valeurs passées dans les arguments sont écrits correspondant **paramètre** propriétés.  
   
- Cette méthode n’ajoute pas automatiquement le **paramètre** de l’objet à la **paramètres** collection d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet. Cela vous permet de définir des propriétés supplémentaires dont ADO de valeurs valide lorsque vous ajoutez le **paramètre** objet à la collection.  
+ Cette méthode n’ajoute pas automatiquement le **paramètre** de l’objet à la **paramètres** collection d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet. Cela vous permet de définir des propriétés supplémentaires dont ADO valeurs validera lorsque vous ajoutez le **paramètre** objet à la collection.  
   
- Si vous spécifiez un type de données de longueur variable dans la *Type* argument, vous devez soit passer un *taille* argument ou un jeu le [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md) propriété de le **paramètre**  objet avant de l’ajouter à la **paramètres** collection ; sinon, une erreur se produit.  
+ Si vous spécifiez un type de données de longueur variable dans la *Type* argument, vous devez soit passer un *taille* argument ou un ensemble la [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md) propriété de le **paramètre**  objet avant de l’ajouter à la **paramètres** collection ; sinon, une erreur se produit.  
   
- Si vous spécifiez un type de données numérique (**adNumeric** ou **adDecimal**) dans le *Type* argument, alors vous devez également définir le [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) et [Précision](../../../ado/reference/ado-api/precision-property-ado.md) propriétés.  
+ Si vous spécifiez un type de données numériques (**adNumeric** ou **adDecimal**) dans le *Type* argument, vous devez également définir le [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) et [Précision](../../../ado/reference/ado-api/precision-property-ado.md) propriétés.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Append et CreateParameter, méthodes-exemple (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
- [Append et CreateParameter, méthodes-exemple (VC ++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
- [Append (méthode) (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+ [Append et CreateParameter, exemple de méthodes (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
+ [Append et CreateParameter, exemple de méthodes (VC ++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
+ [Append, méthode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Objet de paramètre](../../../ado/reference/ado-api/parameter-object.md)   
  [Parameters, collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

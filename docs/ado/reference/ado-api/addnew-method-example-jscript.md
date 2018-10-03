@@ -1,32 +1,29 @@
 ---
-title: L’exemple AddNew (méthode) (JScript) | Documents Microsoft
+title: Méthode AddNew, exemple (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - AddNew method [ADO], JScript example
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc30b40f64dac9ff3cb06d51d420eb787803070b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 13e0fc40945e6cd8c68591a8f94cd9a052cda76e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275298"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631249"
 ---
-# <a name="addnew-method-example-jscript"></a>Exemple AddNew (méthode) (JScript)
-Cet exemple utilise le [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) méthode pour créer un nouvel enregistrement avec le nom spécifié. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous **nom AddNewJS.asp**.  
+# <a name="addnew-method-example-jscript"></a>AddNew, exemple de méthode (JScript)
+Cet exemple utilise le [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) méthode pour créer un nouvel enregistrement avec le nom spécifié. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **nom AddNewJS.asp**.  
   
 ```  
 <!-- BeginAddNewJS -->  
@@ -139,5 +136,5 @@ body {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [AddNew (méthode) (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
+ [AddNew, méthode (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

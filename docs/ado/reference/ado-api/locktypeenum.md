@@ -1,13 +1,11 @@
 ---
-title: LockTypeEnum | Documents Microsoft
+title: LockTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - LockTypeEnum enumeration [ADO]
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4137ced62a083bb355a685222a044fdd9efacdf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bcd2e4d2a3b84ef913954c1a1a2d7fa76393040c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279218"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625937"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Spécifie le type de verrou placé sur les enregistrements pendant la modification.  
@@ -32,12 +29,12 @@ Spécifie le type de verrou placé sur les enregistrements pendant la modificati
 |Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|Indique les mises à jour par lot optimiste. Requis pour le mode de mise à jour par lots.|  
-|**adLockOptimistic**|3|Indique un verrouillage optimiste, enregistrement par enregistrement. Le fournisseur utilise le verrouillage optimiste, verrouiller des enregistrements uniquement quand vous appelez le [mise à jour](../../../ado/reference/ado-api/update-method.md) (méthode).|  
-|**adLockPessimistic**|2|Indique un verrouillage pessimiste, enregistrement par enregistrement. Le fournisseur effectue ce qui est nécessaire pour garantir la réussite l’édition des enregistrements, généralement par un verrouillage des enregistrements de la source de données immédiatement après la modification.|  
-|**adLockReadOnly**| 1|Indique les enregistrements en lecture seule. Vous ne pouvez pas modifier les données.|  
+|**adLockOptimistic**|3|Indique le verrouillage optimiste, enregistrement par enregistrement. Le fournisseur utilise le verrouillage optimiste, verrouillage lorsque vous appelez le [mise à jour](../../../ado/reference/ado-api/update-method.md) (méthode).|  
+|**adLockPessimistic**|2|Indique un verrouillage pessimiste, enregistrement par enregistrement. Le fournisseur effectue ce qui est nécessaire pour garantir la réussite l’édition des enregistrements, généralement par un verrouillage d’enregistrements à la source de données immédiatement après la modification.|  
+|**adLockReadOnly**|1|Indique les enregistrements en lecture seule. Vous ne pouvez pas modifier les données.|  
 |**adLockUnspecified**|-1|Ne spécifie pas un type de verrou. Pour les clones, le clone est créé avec le même type de verrou que l’original.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
+## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
  Package : **com.ms.wfc.data**  
   
 |Constante|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -32,16 +30,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], registering
 - ADD FILE clause
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
-caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cb3c8321be447d839242ebd8dae18871d0a6c17f
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7f60ff110646eebb9424c992efba2ca7e3ab1ac4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352201"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625067"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Inscription des types définis par l'utilisateur dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +178,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  Numéro identifiant chaque objet, le premier objet associé à une donnée **assembly_id** possède la valeur 1. S’il existe plusieurs objets associés au même **assembly_id**, chaque **file_id** valeur est incrémentée de 1.  
   
- **contenu**  
+ **Contenu**  
  Représentation hexadécimale de l'assembly ou du fichier.  
   
  Vous pouvez utiliser la fonction CAST ou CONVERT pour convertir le contenu de la **contenu** colonne en texte lisible. La requête suivante convertit le contenu du fichier Point.cs en texte lisible, en utilisant le nom indiqué dans la clause WHERE pour limiter le jeu de résultats à une ligne unique.  
