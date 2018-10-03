@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f6a3c90fe0df58b27f99df2f1e37d66c1ff523b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4636dd2c129a6efad2bb9349082e5bcfe40fd9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268627"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076721"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriétés de champ étendues pour une base de données Analysis Services (SSRS)
   L’extension pour le traitement des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ étendues. Les propriétés de champs étendues sont des propriétés complémentaires aux propriétés `Value` et `IsMissing` qui sont disponibles sur la source de données et prises en charge par l'extension pour le traitement des données. Les propriétés étendues ne figurent pas dans le volet des données de rapport dans le cadre de la collection de champs pour un dataset de rapport. Vous pouvez inclure des valeurs de propriété de champ étendues dans votre rapport en écrivant des expressions qui en spécifient le nom à l’aide intégrée `Fields` collection.  
@@ -101,7 +98,7 @@ FROM [Adventure Works]
 |DateCaption|DateUniqueName|DateDayName|DateValueinOriginalDatatype|DateParentUniqueName|DateMemberKeyinOriginalDatatype|  
 |-----------------|--------------------|-----------------|---------------------------------|--------------------------|-------------------------------------|  
 |All Periods|[Date].[Date].[All Periods]|(Null)|(Null)|(Null)|0|  
-|1-juil-01|[Date].[Date].&[1]|Dimanche|7/1/2001|[Date].[Date].[All Periods]| 1|  
+|1-juil-01|[Date].[Date].&[1]|Dimanche|7/1/2001|[Date].[Date].[All Periods]|1|  
 |2-juil-01|[Date].[Date].&[2]|Lundi|7/2/2001|[Date].[Date].[All Periods]|2|  
 |3-juil-01|[Date].[Date].&[3]|Mardi|7/3/2001|[Date].[Date].[All Periods]|3|  
   

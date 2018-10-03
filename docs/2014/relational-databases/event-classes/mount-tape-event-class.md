@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Mount Tape event class
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0d6b7726e2a9bdeeb378df45b998bcd6d8e5187
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa4b3409cba18044e437e119ab3f47870ef854bc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271365"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075529"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape (classe d'événements)
   La classe d'événements Mount Tape intervient lors de la réception d'une demande de montage de bande. Cette classe d'événements permet de surveiller les demandes de montage de bande, tout comme leur succès ou leur échec.  
@@ -51,7 +48,7 @@ ms.locfileid: "37271365"
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|*nom du périphérique physique* [ ( *nom d’unité logique* ) ]. Le nom de l'unité logique ne s'affiche que s'il est défini dans l'affichage catalogue sys.backup_devices.| 1|Oui|  
+|TextData|`ntext`|*nom du périphérique physique* [ ( *nom d’unité logique* ) ]. Le nom de l'unité logique ne s'affiche que s'il est défini dans l'affichage catalogue sys.backup_devices.|1|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
