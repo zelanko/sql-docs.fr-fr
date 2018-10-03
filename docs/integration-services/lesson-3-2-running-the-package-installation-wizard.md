@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0674745116b0d861961aa5f41179ba355df46292
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a884d0faf7f3f688e00ed83e2c7eeab770791f7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646796"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Leçon 3-2 : Exécution de l’Assistant Installation de package
 Au cours de cette tâche, vous allez exécuter l'Assistant Installation de package pour déployer les packages du projet Didacticiel de déploiement dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Seuls des packages peuvent être installés dans la table sysssispackages de la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, les fichiers de support inclus dans l'application de déploiement seront déployés dans le système de fichiers.  
