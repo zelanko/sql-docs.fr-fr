@@ -1,14 +1,11 @@
 ---
-title: Core.sp_create_snapshot (Transact-SQL) | Documents Microsoft
+title: Core.sp_create_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33ba9d69763a9d07cc9907aef60397b6c5b37eee
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 271c8baf01825baa9ee88e7c8ee365019b6bca66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33238566"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780967"
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,8 +80,8 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
  Si l'une des vérifications précédentes échoue, la procédure échoue et retourne une erreur.  
   
-## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **mdw_writer** (avec autorisation EXECUTE) rôle de base de données fixe.  
+## <a name="permissions"></a>Permissions  
+ Nécessite l’appartenance dans le **mdw_writer** (avec autorisation EXECUTE) rôle fixe de base de données.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée un instantané pour le jeu d'éléments de collecte Utilisation du disque, l'ajoute à l'entrepôt de données de gestion, puis retourne l'identificateur de l'instantané. Dans l'exemple, l'instance par défaut est utilisée.  

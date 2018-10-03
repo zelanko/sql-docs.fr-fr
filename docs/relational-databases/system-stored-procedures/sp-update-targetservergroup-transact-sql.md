@@ -1,14 +1,11 @@
 ---
-title: sp_update_targetservergroup (Transact-SQL) | Documents Microsoft
+title: sp_update_targetservergroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_targetservergroup_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_targetservergroup
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b6ba9e9e079c201c1f322b58aae861a0c30ae53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d38c9727995b20cd23087a0f944ccbfa28bf019d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260825"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788087"
 ---
 # <a name="spupdatetargetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +43,16 @@ sp_update_targetservergroup
   
 ## <a name="arguments"></a>Arguments  
  [  **@name =**] **'***nom_actuel***'**  
- Nom du groupe de serveurs cibles. *l’argument nom_actuel* est **sysname**, sans valeur par défaut.  
+ Nom du groupe de serveurs cibles. *nom_actuel* est **sysname**, sans valeur par défaut.  
   
  [  **@new_name =**] **'***nouveau_nom***'**  
- Nouveau nom du groupe de serveurs cibles. *nouveau_nom* est **sysname**, sans valeur par défaut.  
+ Nouveau nom du groupe de serveurs cibles. *new_name* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
-## <a name="permissions"></a>Autorisations  
- Pour exécuter cette procédure stockée, les utilisateurs doivent disposer du **sysadmin** rôle serveur fixe.  
+## <a name="permissions"></a>Permissions  
+ Pour exécuter cette procédure stockée, les utilisateurs doivent avoir le **sysadmin** rôle serveur fixe.  
   
 ## <a name="remarks"></a>Notes  
  **sp_update_targetservergroup** doit être exécuté à partir de la **msdb** base de données.  

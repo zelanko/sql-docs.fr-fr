@@ -1,17 +1,12 @@
 ---
-title: Sys.fn_cdc_get_min_lsn (Transact-SQL) | Documents Microsoft
+title: Sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_cdc_get_min_lsn
 - sys.fn_cdc_get_min_lsn
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c4c6a9bf83e83628891104f0c95a6baefa08234
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230440"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825233"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +43,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **'** *capture_instance_name* **'**  
+ **«** *capture_instance_name* **»**  
  Est le nom de l’instance de capture. *capture_instance_name* est **sysname**.  
   
 ## <a name="return-types"></a>Types de retour  
@@ -60,7 +54,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
  Cette fonction est utilisée en général pour identifier le point de terminaison inférieur de la chronologie de capture des données modifiées associé à une instance de capture. Vous pouvez également utiliser cette fonction pour valider que les points de terminaison d'une plage de requêtes se situent dans la chronologie de l'instance de capture avant de demander les données de modification. Il est important d'effectuer de tels contrôles, car le point de terminaison inférieur d'une instance de capture change lorsque le nettoyage est effectué sur les tables de modifications. Si l'intervalle entre les demandes de données de modification est significatif, même un point de terminaison inférieur qui a pour valeur le point de terminaison supérieur de la demande de données de modification précédente peut se trouver à l'extérieur de la chronologie actuelle.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner. Pour tous les autres utilisateurs, requiert l'autorisation SELECT sur toutes les colonnes capturées dans la table source et, si un rôle de régulation pour l'instance de capture a été défini, l'appartenance à ce rôle de base de données.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,14 +1,11 @@
 ---
-title: Core.sp_update_data_source (Transact-SQL) | Documents Microsoft
+title: Core.sp_update_data_source (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3156ef5a6d4d1af2298222b660e6483eb109cddd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8bdbab374f7f6fa182ea344f442b23e2dec2a15b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237957"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766468"
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +57,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
  Nom de l'instance pour le jeu d'éléments de collecte. *instance_nommée* est **sysname**, sans valeur par défaut.  
   
 > [!NOTE]  
->  *instance_nommée* doit être le nom d’instance complet, constitué du nom de l’ordinateur et le nom d’instance sous la forme *Nom_Ordinateur*\\*instancename*.  
+>  *instance_nommée* doit être le nom d’instance complet, qui se compose du nom de l’ordinateur et le nom d’instance sous la forme *computername*\\*instancename*.  
   
  [ @days_until_expiration =] *days_until_expiration*  
  Nombre de jours restants dans la période de rétention des données d'instantanés. *days_until_expiration* est **smallint**.  
@@ -79,8 +75,8 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
   
 -   La valeur de days_until_expiration a changé.  
   
-## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **mdw_writer** (avec autorisation EXECUTE) rôle de base de données fixe.  
+## <a name="permissions"></a>Permissions  
+ Nécessite l’appartenance dans le **mdw_writer** (avec autorisation EXECUTE) rôle fixe de base de données.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant met à jour la source de données (dans le cas présent, le jeu d'éléments de collecte Utilisation du disque), définit le nombre de jours avant l'expiration et retourne l'identificateur de la source. Dans l'exemple, l'instance par défaut est utilisée.  

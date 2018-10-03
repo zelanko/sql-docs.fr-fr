@@ -1,13 +1,11 @@
 ---
-title: isLast (méthode) (SQLServerResultSet) | Documents Microsoft
+title: IsLast, méthode (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.isLast
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 881ad06c799e043fc4702174d99977054bd994e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b9030898e71ec13a75da9b91e41f9792d31cce82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839384"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798020"
 ---
-# <a name="islast-method-sqlserverresultset"></a>isLast (méthode) (SQLServerResultSet)
+# <a name="islast-method-sqlserverresultset"></a>isLast, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère si le curseur se trouve sur la dernière ligne de ce [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objet.  
+  Récupère l’information indiquant si le curseur se trouve sur la dernière ligne de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,18 +36,18 @@ public boolean isLast()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- **true** si le curseur se trouve sur la dernière ligne. **false** si le curseur se trouve à toute autre position ou si le jeu de résultats ne contient aucune ligne.  
+ **true** si le curseur se trouve sur la dernière ligne. **false** si le curseur se trouve à un emplacement quelconque ou si le jeu de résultats ne contient aucune ligne.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode isLast est spécifiée par la méthode isLast dans l’interface java.sql.ResultSet.  
   
  Si cette méthode est utilisée avec les curseurs avant et dynamiques, une exception est levée.  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

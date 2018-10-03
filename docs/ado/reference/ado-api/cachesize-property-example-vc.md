@@ -1,31 +1,28 @@
 ---
-title: Exemple de propriété CacheSize (VC ++) | Documents Microsoft
+title: Propriété CacheSize, exemple (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CacheSize property [ADO], VC++ example
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d388e259545c86dfa5ad700de1b192ec071d132f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1ab5188ec0854eb52c5edf736ee94e67d50cadcf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276218"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802907"
 ---
-# <a name="cachesize-property-example-vc"></a>Exemple de propriété CacheSize (VC ++)
+# <a name="cachesize-property-example-vc"></a>CacheSize, exemple de propriété (VC++)
 Cet exemple utilise le [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriété pour afficher la différence de performances pour une opération effectuée avec et sans cache de 30 enregistrements.  
   
 ```  

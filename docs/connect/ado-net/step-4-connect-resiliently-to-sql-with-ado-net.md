@@ -1,74 +1,71 @@
 ---
-title: 'Étape 4 : Connexion élastique à SQL avec ADO.NET | Documents Microsoft'
+title: 'Étape 4 : Connexion résiliente à SQL avec ADO.NET | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - CSharp
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0803a976c2b9e02918937d7e08a617ed73fe28d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 9a812aacbbbd87ba8fc38479be7d62a0fc9401b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288948"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731367"
 ---
-# <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Étape 4 : Connexion élastique à SQL avec ADO.NET
+# <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Étape 4 : Connexion résiliente à SQL avec ADO.NET
 
-- Article précédent :&nbsp;&nbsp;&nbsp;[étape 3 : preuve de concept pour la connexion à SQL à l’aide d’ADO.NET](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  
+- Article précédent : &nbsp;&nbsp;&nbsp;[Étape 3 : Preuve de concept pour la connexion à SQL à l’aide d’ADO.NET](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  
 
   
-Cette rubrique fournit un exemple de code c# qui illustre la logique de nouvelle tentative personnalisée. La logique de nouvelle tentative assure la fiabilité. La logique de nouvelle tentative est conçue pour traiter correctement les erreurs temporaires ou *transitoires* qui tendent à disparaître si le programme attend plusieurs secondes avant de réessayer.  
+Cette rubrique fournit un exemple de code c# qui illustre la logique de nouvelle tentative personnalisée. La logique de nouvelle tentative assure la fiabilité. La logique de nouvelle tentative est conçue pour traiter correctement les erreurs temporaires ou *transitoires* qui tendent à disparaître si le programme attend quelques secondes et les nouvelles tentatives.  
   
-Sources d’erreurs transitoires sont les suivantes :  
+Sources d’erreurs temporaires sont les suivantes :  
   
-- Échec de la mise en réseau qui prend en charge Internet brève.  
-- Un système de cloud peut être équilibrage ses ressources au moment où que vous interrogez envoyé.  
+- Un brève Échec de la connexion de réseau qui prend en charge d’Internet.  
+- Un système cloud peut être l’équilibrage de charge ses ressources à l’instant, que votre requête a été envoyée.  
   
   
-Les classes ADO.NET pour se connecter à Microsoft SQL Server locale peuvent également se connecter à la base de données SQL Azure. Toutefois, eux-mêmes ADO.NET classes ne peut pas fournir toutes les la robustesse et la fiabilité nécessaire dans l’environnement de production. Votre programme client peut rencontrer des erreurs temporaires à partir de laquelle il doit normalement et en mode silencieux récupérer et continuer sur son propre.  
+Les classes ADO.NET pour se connecter à votre serveur Microsoft SQL Server local peuvent également se connecter à la base de données SQL Azure. Toutefois, par eux-mêmes ADO.NET classes ne peut pas fournir toute la robustesse et la fiabilité nécessaire à la production. Votre programme client peut rencontrer des erreurs temporaires à partir de laquelle il doit normalement et en mode silencieux récupérer et continuer sur son propre.  
   
-## <a name="step-1-identify-transient-errors"></a>Étape 1 : Identifier les erreurs transitoires  
+## <a name="step-1-identify-transient-errors"></a>Étape 1 : Identifier les erreurs temporaires  
   
-Votre programme doit faire la distinction entre les erreurs temporaires et les erreurs persistantes. Erreurs transitoires sont des conditions d’erreur qui peuvent résoudre sur une courte période de temps, telles que des problèmes réseau temporaires.  Un exemple d’une erreur permanente serait, si votre programme comporte une faute d’orthographe du nom de base de données cible - dans ce cas, l’erreur « Aucun telle base de données trouvée » soit persistant et ne risque pas d’effacer les sur une courte période de temps.  
+Votre programme doit faire la distinction entre les erreurs temporaires et les erreurs persistantes. Erreurs temporaires sont des conditions d’erreur qui peuvent résoudre sur une courte période de temps, telles que des problèmes réseau temporaires.  Un exemple d’une erreur permanente lors serait, si votre programme a mal orthographié le nom de la base de données cible, dans ce cas, l’erreur « Aucune base de données trouvée » soit persistant et ne risque pas d’effacer les sur une courte période de temps.  
   
-La liste des numéros d’erreur qui sont considérées comme des erreurs temporaires est disponible à [les messages d’erreur pour les applications clientes de base de données SQL](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+La liste des numéros d’erreur qui sont classés comme des erreurs temporaires est disponible à l’adresse à [messages d’erreur pour les applications clientes SQL Database](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Étape 2 : Créer et exécuter l’exemple d’application  
   
-Cet exemple suppose que .NET Framework 4.5.1 ou version ultérieure est installé.  L’exemple de code c# se compose d’un fichier nommé Program.cs. Son code est fourni dans la section suivante.  
+Cet exemple part du principe que .NET Framework 4.5.1 ou version ultérieure est installé.  L’exemple de code c# se compose d’un fichier nommé Program.cs. Son code est fourni dans la section suivante.  
   
 ### <a name="step-2a-capture-and-compile-the-code-sample"></a>Étape 2.a : capturer et compiler l’exemple de code  
   
 Vous pouvez compiler l’exemple en procédant comme suit :  
   
-1. Dans le [édition gratuite Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs), créez un nouveau projet à partir du modèle d’Application Console c#.  
+1. Dans le [édition gratuite Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs), créez un projet à partir du modèle d’Application Console c#.  
     - Fichier > Nouveau > projet > installé > Modèles > Visual c# > Windows > Bureau classique > Application Console  
     - Nommez le projet **RetryAdo2**.  
 2. Ouvrez le volet Explorateur de solutions.  
     - Afficher le nom de votre projet.  
     - Voir le nom du fichier Program.cs.  
 3. Ouvrez le fichier Program.cs.  
-4. Entièrement remplacer le contenu du fichier Program.cs par le code dans le bloc de code suivant.  
-5. Cliquez sur le menu Build > Générer la Solution.  
+4. Remplacez entièrement le contenu du fichier Program.cs par le code dans le bloc de code suivant.  
+5. Cliquez sur le menu Générer > Générer la Solution.  
   
 ### <a name="step-2b-copy-and-paste-sample-code"></a>Étape 2.b : copier et coller des exemples de code  
   
 Collez ce code dans votre **Program.cs** fichier.  
   
-Ensuite, vous devez modifier les chaînes de nom de serveur, un mot de passe et ainsi de suite. Vous pouvez trouver ces chaînes dans la méthode nommée **GetSqlConnectionStringBuilder**.  
+Ensuite, vous devez modifier les chaînes de nom de serveur, mot de passe et ainsi de suite. Vous pouvez trouver ces chaînes dans la méthode nommée **GetSqlConnectionStringBuilder**.  
   
-Remarque : La chaîne de connexion pour le nom du serveur est axée sur la base de données SQL Azure, car il inclut le préfixe de quatre caractères de **tcp :**. Mais vous pouvez ajuster la chaîne de serveur pour se connecter à Microsoft SQL Server.  
+Remarque : La chaîne de connexion pour le nom du serveur est axée sur la base de données SQL Azure, car il inclut le préfixe de quatre caractères de **tcp :**. Mais vous pouvez ajuster la chaîne de serveur pour vous connecter à votre serveur Microsoft SQL Server.  
   
   
 ```CSharp  
@@ -245,10 +242,10 @@ Remarque : La chaîne de connexion pour le nom du serveur est axée sur la base
     }  
 ```  
   
-###  <a name="step-2c-run-the-program"></a>Étape 2.c : exécuter le programme  
+###  <a name="step-2c-run-the-program"></a>Étape 2.c : exécutez le programme  
   
   
-Le **RetryAdo2.exe** exécutable entrées sans paramètres. Pour exécuter le .exe :  
+Le **RetryAdo2.exe** exécutable entre aucun paramètre. Pour exécuter le fichier .exe :  
   
 1. Ouvrez une fenêtre de console où vous avez compilé le fichier binaire RetryAdo2.exe.  
 2. Exécutez RetryAdo2.exe, sans paramètres d’entrée.  
@@ -268,14 +265,14 @@ Le **RetryAdo2.exe** exécutable entrées sans paramètres. Pour exécuter le .e
 Il existe une multitude de façons, vous pouvez simuler une erreur temporaire pour tester votre logique de nouvelle tentative.  
   
   
-###  <a name="step-3a-throw-a-test-exception"></a>L’étape3.a : lever une exception de test  
+###  <a name="step-3a-throw-a-test-exception"></a>Étape 3 : lever une exception de test  
   
 L’exemple de code inclut :  
   
-- Une petite classe seconde nommée **TestSqlException**, qui a une propriété nommée **nombre**.  
-- `//throw new TestSqlException(4060);` , qui vous pouvez supprimer les commentaires.  
+- Une petite seconde classe nommée **TestSqlException**, avec une propriété nommée **nombre**.  
+- `//throw new TestSqlException(4060);` , qui vous pouvez ne pas commenter.  
   
-Si vous supprimez l’instruction throw et la recompiler, la prochaine exécution de **RetryAdo2.exe** génère quelque chose de similaire à ce qui suit.  
+Si vous supprimez les commentaires de l’instruction throw et une recompilation, la prochaine exécution de **RetryAdo2.exe** génère un résultat semblable à ce qui suit.  
   
 ```  
     [C:\VS15\RetryAdo2\RetryAdo2\bin\Debug\]  
@@ -293,31 +290,31 @@ Si vous supprimez l’instruction throw et la recompiler, la prochaine exécutio
     >>  
 ```  
   
-###  <a name="step-3b-retest-with-a-persistent-error"></a>L’étape 3.b : Testez à nouveau avec une erreur permanente  
+###  <a name="step-3b-retest-with-a-persistent-error"></a>L’étape 3.b : Testez à nouveau avec une erreur persistante  
   
-Pour prouver que le code gère les erreurs persistantes correctement, exécutez à nouveau le test précédent, à l’exception n’utilisez pas le numéro d’erreur transitoire réelle comme 4060. Au lieu de cela, utilisez le nombre sans aucun sens 7654321. Le programme doit considérer ceci comme une erreur permanente et doit ignorer toute nouvelle tentative.  
+Pour prouver que le code gère des erreurs persistantes correctement, exécutez à nouveau le test précédent, n’utilisez pas le nombre d’une erreur temporaire réelle comme 4060. Utilisez plutôt un nombre 7654321. Le programme doit traiter ceci comme une erreur persistante et doit ignorer toute nouvelle tentative.  
   
-###  <a name="step-3c-disconnect-from-the-network"></a>Étape 3 c : se déconnecter du réseau  
+###  <a name="step-3c-disconnect-from-the-network"></a>Étape 3.c : déconnecter du réseau  
   
 1. Déconnecter votre ordinateur client à partir du réseau.  
-    - Pour un ordinateur de bureau, déconnectez le câble réseau.  
-    - Pour un ordinateur portable, appuyez sur la combinaison de la fonction de clés pour désactiver la carte réseau.  
+    - Pour un ordinateur de bureau, débranchez le câble réseau.  
+    - Pour un ordinateur portable, appuyez sur la combinaison de touches pour désactiver la carte réseau.  
 2. Démarrez RetryAdo2.exe et attendez que la console afficher la première erreur temporaire, probablement 11001.  
-3. Reconnectez-vous au réseau, tandis que RetryAdo2.exe continue à s’exécuter.  
-4. Surveiller la réussite du rapport de console sur une nouvelle tentative ultérieure.  
+3. Se reconnecter au réseau, RetryAdo2.exe continue à s’exécuter.  
+4. Regardez la réussite du rapport de console sur une nouvelle tentative ultérieure.  
   
   
-###  <a name="step-2d-temporarily-misspell-the-server-name"></a>Étape 2.d : temporairement mal orthographié le nom du serveur  
+###  <a name="step-2d-temporarily-misspell-the-server-name"></a>Étape 2.d : mal orthographier temporairement le nom du serveur  
   
-1. Ajouter temporairement 40615 en tant qu’un autre numéro d’erreur à **TransientErrorNumbers**, puis recompilez.  
+1. Ajoutez temporairement 40615 comme autre numéro d’erreur à **TransientErrorNumbers**, puis recompilez.  
 2. Définissez un point d’arrêt sur la ligne : `new QC.SqlConnectionStringBuilder()`.  
-3. Utilisez le *Modifier & Continuer* fonctionnalité volontairement mal orthographié le nom du serveur, à quelques lignes ci-dessous.  
-    - Laisser le programme exécuté et revenir à votre point d’arrêt.  
+3. Utilisez le *Modifier & Continuer* fonctionnalité pour mal orthographier volontairement le nom du serveur, deux lignes ci-dessous.  
+    - Laissez le programme s’exécuter et revenez à votre point d’arrêt.  
     - L’erreur 40615 se produit.  
-4. Corrigez la faute d’orthographe.  
-5. Laisser le programme s’exécuter et se terminer correctement.  
+4. Corriger les fautes d’orthographe.  
+5. Laissez le programme s’exécuter et se terminent correctement.  
 6. Supprimez 40615 et recompilez.  
   
-## <a name="next-steps"></a>Étapes suivantes  
+## <a name="next-steps"></a>Next Steps  
   
-Pour Explorer d’autres meilleures practicies et les règles de conception, visitez [la connexion à la base de données SQL : des liens, les meilleures pratiques et les règles de conception](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+Pour découvrir d’autres meilleures practicies et les règles de conception, visitez [connexion à SQL Database : liens, les meilleures pratiques et les règles de conception](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

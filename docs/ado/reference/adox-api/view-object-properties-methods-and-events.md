@@ -1,35 +1,32 @@
 ---
-title: Afficher les propriétés de l’objet, méthodes et événements | Documents Microsoft
+title: Afficher les propriétés des objets, méthodes et événements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - View object [ADOX], members
 ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ff0d1596b8296576a001339f4cc7cc09f9f8c9a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6b0281821ff073b09de1158b9c88ec126702b5db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287408"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822118"
 ---
-# <a name="view-object-properties-methods-and-events"></a>Afficher les propriétés de l’objet, méthodes et événements
-## <a name="properties"></a>Propriétés  
- [Propriété de commande](../../../ado/reference/adox-api/command-property-adox.md)  
+# <a name="view-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet View
+## <a name="properties"></a>Properties  
+ [Command, propriété](../../../ado/reference/adox-api/command-property-adox.md)  
   
- [Propriété DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)  
+ [DateCreated, propriété](../../../ado/reference/adox-api/datecreated-property-adox.md)  
   
- [Propriété DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)  
+ [DateModified, propriété](../../../ado/reference/adox-api/datemodified-property-adox.md)  
   
  [Propriété Name](../../../ado/reference/adox-api/name-property-adox.md)  
   

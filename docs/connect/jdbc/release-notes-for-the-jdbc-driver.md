@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 344a2aabb3601761d250d18725d11ebc4585fa3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662461"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737257"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notes de publication pour le pilote JDBC
 
@@ -114,7 +111,8 @@ Le pilote prend désormais en charge les types de données DATETIME et SMALLDATE
 
 Le pilote JDBC prend désormais en charge les types de données sql_variant à utiliser avec SQL Server. Sql_variant est également prise en charge des fonctionnalités telles que les paramètres table (TVP) et BulkCopy avec ci-dessous limitations :
 
-1. Pour les valeurs de Date : lorsque vous utilisez TVP pour remplir une table qui contient les valeurs datetime/smalldatetime/date stockées dans la colonne sql_variant, appel de méthodes de getDateTime()/getSmallDateTime()/getDate() sur le jeu de résultats ne fonctionne pas et lève l’exception suivante :  `java java.lang.String cannot be cast to java.sql.Timestamp` Solution de contournement : utilisez les méthodes « getString() » ou « getObject() » à la place.
+1. Pour les valeurs de Date : lorsque vous utilisez TVP pour remplir une table qui contient les valeurs datetime/smalldatetime/date stockées dans la colonne sql_variant, appel de méthodes de getDateTime()/getSmallDateTime()/getDate() sur le jeu de résultats ne fonctionne pas et lève l’exception suivante : `java java.lang.String cannot be cast to java.sql.Timestamp`
+    Solution de contournement : utilisez plutôt la méthode « getString() » ou « getObject() ».
 
 2. Utilisation de paramètres table avec SQL Variant pour les valeurs null
 

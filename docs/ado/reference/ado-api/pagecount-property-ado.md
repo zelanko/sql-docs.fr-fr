@@ -1,13 +1,11 @@
 ---
-title: PageCount, propriété (ADO) | Documents Microsoft
+title: PageCount, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - PageCount property [ADO]
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51e970138985ae28bcad6ff9340bad40a886932c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d7785ad6c1ad97af1517a01888816c76ade42e0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280048"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602477"
 ---
 # <a name="pagecount-property-ado"></a>PageCount, propriété (ADO)
 Indique le nombre de pages de données le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet contient.  
@@ -33,7 +30,7 @@ Indique le nombre de pages de données le [Recordset](../../../ado/reference/ado
  Retourne un **Long** valeur qui indique le nombre de pages dans le **Recordset**.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **PageCount** propriété pour déterminer le nombre de pages de données dans le **Recordset** objet. *Pages* sont des groupes d’enregistrements dont la taille est égale à la [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) paramètre de propriété. Même si la dernière page est incomplète, car il existe moins d’enregistrements que le **PageSize** valeur, elle est considérée comme une page supplémentaire dans le **PageCount** valeur. Si le **Recordset** objet ne prend pas en charge cette propriété, la valeur sera -1 pour indiquer que le **PageCount** est indéterminable.  
+ Utilisez le **PageCount** propriété afin de déterminer le nombre de pages de données est dans le **Recordset** objet. *Pages* sont des groupes d’enregistrements dont la taille est égale à la [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) paramètre de propriété. Même si la dernière page est incomplète, car il existe moins d’enregistrements que le **PageSize** valeur, elle est considérée comme une page supplémentaire dans le **PageCount** valeur. Si le **Recordset** objet ne prend pas en charge cette propriété, la valeur sera -1 pour indiquer que le **PageCount** est indéterminable.  
   
  Consultez le **PageSize** et [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) plus sur les fonctionnalités page Propriétés.  
   
@@ -41,7 +38,7 @@ Indique le nombre de pages de données le [Recordset](../../../ado/reference/ado
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [AbsolutePage, PageCount et PageSize, propriétés-exemple (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
+ [AbsolutePage, PageCount et PageSize, exemple de propriétés (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
  [AbsolutePage, PageCount et PageSize, propriétés-exemple (VC ++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [AbsolutePage, propriété (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageSize, propriété (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

@@ -1,14 +1,11 @@
 ---
-title: sp_certify_removable (Transact-SQL) | Documents Microsoft
+title: sp_certify_removable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_certify_removable_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba9ff14bc26b18eaf80dff000f141502a01fcc7b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238729"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691407"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +54,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Si la base de données est correctement configurée, **sp_certify_removable** exécute les actions suivantes :  
+ Si la base de données est correctement configuré, **sp_certify_removable** effectue les opérations suivantes :  
   
 -   Elle met la base de données hors ligne pour permettre la copie des fichiers.  
   
@@ -66,9 +62,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   Elle marque également les groupes de fichiers de données en lecture seule pour que ces fichiers puissent être copiés sur des supports en lecture seule.  
   
- L'administrateur système doit être le propriétaire de la base de données et de tous les objets de la base de données. L’administrateur système est un utilisateur connu qui existe sur tous les serveurs qui exécutent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et peut être augmentée à exister lors de la base de données de distribution ultérieurement et installé.  
+ L'administrateur système doit être le propriétaire de la base de données et de tous les objets de la base de données. L’administrateur système est un utilisateur connu qui existe sur tous les serveurs qui exécutent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et peut être est censé exister lorsque la base de données est plus tard distribué et installé.  
   
- Si vous exécutez **sp_certify_removable** sans le **automatique** valeur et il retourne des informations sur une des conditions suivantes :  
+ Si vous exécutez **sp_certify_removable** sans le **automatique** valeur et retourne des informations sur une des conditions suivantes :  
   
 -   L'administrateur système n'est pas le propriétaire de la base de données.  
   
@@ -80,14 +76,14 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  Vous pouvez y remédier des deux manières suivantes :  
   
--   Utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outils et procédures, puis exécutez **sp_certify_removable** à nouveau.  
+-   Utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outils et procédures et puis exécutez **sp_certify_removable** à nouveau.  
   
 -   Il suffit d’exécuter **sp_certify_removable** avec la **automatique** valeur.  
   
  Remarquez que cette procédure stockée ne recherche que les utilisateurs et les autorisations des utilisateurs. Vous pouvez ajouter des groupes à la base de données et leur accorder des autorisations. Pour plus d’informations, consultez [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
- Exécuter les autorisations sont limitées aux membres de la **sysadmin** rôle serveur fixe.  
+## <a name="permissions"></a>Permissions  
+ Exécuter autorisations sont limitent aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple certifie que la base de données `inventory` est prête à être supprimée.  

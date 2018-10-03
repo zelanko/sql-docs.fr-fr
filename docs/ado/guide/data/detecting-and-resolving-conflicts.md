@@ -1,40 +1,37 @@
 ---
-title: Détection et résolution des conflits | Documents Microsoft
+title: Détection et résolution des conflits | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bca0eb3d528c1f7572745e1b6f8d8e59e9749f36
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a27a8ff70a995ab24dcf762d0ada731e0de6fa92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270608"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625283"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Détection et résolution des conflits
-Si vous êtes confronté à votre jeu d’enregistrements en mode exécution, il est beaucoup moins le risque de problèmes d’accès concurrentiel se produise. En revanche, si votre application utilise le mode de traitement par lots mise à jour, il peut être une bonne chance qu’un utilisateur modifie un enregistrement avant l’enregistrement des modifications apportées par un autre utilisateur, ce même enregistrement. Dans ce cas, vous préférerez votre application de façon à gérer le conflit. Il peut être votre souhait de la dernière personne à envoyer une mise à jour sur le serveur « remporte ». Ou vous pouvez souhaiter permettre à l’utilisateur la plus récente afin de déterminer la mise à jour est prioritaire en lui offrant un choix entre les deux valeurs en conflit.  
+Si vous êtes confronté à votre jeu d’enregistrements en mode exécution, il est beaucoup moins le risque de problèmes d’accès concurrentiel se produise. En revanche, si votre application utilise la mise à jour du mode de traitement par lots, il peut y avoir une bonne chance qu’un utilisateur modifie un enregistrement avant l’enregistrement des modifications apportées par un autre utilisateur, ce même enregistrement. Dans ce cas, vous souhaiterez votre application de façon à gérer le conflit. Il peut être votre souhait de la dernière personne à envoyer une mise à jour au serveur « remporte ». Ou vous pouvez laisser l’utilisateur la plus récente pour déterminer quelle mise à jour doit être prioritaire en lui offrant un choix entre les deux valeurs en conflit.  
   
- Quel que soit le cas, ADO fournit les propriétés invoquez de l’objet de champ à gérer ces types de conflits. Utilisez ces propriétés en combinaison avec la méthode Resync et la propriété Filter de l’objet Recordset.  
+ Quel que soit le cas, ADO fournit les propriétés OriginalValue et UnderlyingValue de l’objet de champ à gérer ces types de conflits. Utilisez ces propriétés en combinaison avec la méthode Resync et la propriété de filtre de l’objet Recordset.  
   
 ## <a name="remarks"></a>Notes  
- Lorsque ADO rencontre un conflit pendant une mise à jour par lots, un avertissement sera ajouté à la collection d’erreurs. Par conséquent, vous devez toujours vérifier les erreurs immédiatement après que vous appelez BatchUpdate et si vous en trouvez, commencez le test de l’hypothèse que vous avez rencontré un conflit. La première étape consiste à définir la propriété Filter sur l’objet Recordset la valeur adFilterConflictingRecords. Cela limite la vue sur le jeu d’enregistrements, seuls les enregistrements qui sont en conflit. Si la propriété RecordCount est égale à zéro après cette étape, vous savez que l’erreur a été levée par autre chose qu’un conflit.  
+ Un conflit de cas de ADO pendant une mise à jour par lots, un avertissement sera ajouté à la collection d’erreurs. Par conséquent, vous devez toujours vérifier les erreurs immédiatement une fois que vous appelez BatchUpdate et si vous en trouvez, commencez le test de l’hypothèse que vous avez rencontré un conflit. La première étape consiste à définir la propriété de filtre sur l’objet Recordset la valeur adFilterConflictingRecords. Cela limite la vue sur le jeu d’enregistrements, seuls les enregistrements qui sont en conflit. Si la propriété RecordCount est égale à zéro après cette étape, vous savez que l’erreur a été émise par autre chose qu’un conflit.  
   
- Lorsque vous appelez BatchUpdate, ADO et le fournisseur génèrent des instructions SQL pour effectuer des mises à jour sur la source de données. N’oubliez pas que certaines sources de données ont des limitations sur lequel les types de colonnes peuvent être utilisés dans une clause WHERE.  
+ Lorsque vous appelez BatchUpdate, ADO et le fournisseur génèrent des instructions SQL pour effectuer des mises à jour sur la source de données. N’oubliez pas que certaines sources de données présentent des limitations sur lequel les types de colonnes peuvent être utilisés dans une clause WHERE.  
   
- Ensuite, appelez la méthode Resync sur l’ensemble d’enregistrements avec l’argument AffectRecords égal à adAffectGroup et l’argument ResyncValues égal à adResyncUnderlyingValues. La méthode Resync met à jour les données dans l’objet de jeu d’enregistrements actuel à partir de la base de données sous-jacente. À l’aide d’adAffectGroup, vous vous assurez que seuls les enregistrements visibles avec le filtre actuel définissant, autrement dit, seuls les enregistrements en conflit, sont resynchronisés avec la base de données. Cela permet d’améliorer considérablement les performances si vous êtes confronté à un jeu d’enregistrements volumineux. En définissant l’argument ResyncValues adResyncUnderlyingValues lors de l’appel de resynchronisation, vous assurez que la propriété UnderlyingValue contiendra la valeur (conflictuelle) à partir de la base de données, que la propriété de valeur met à jour la valeur entrée par l’utilisateur, et que la propriété OriginalValue contiendra la valeur d’origine pour le champ (la valeur qu’elle avait avant le dernier appel réussi de UpdateBatch). Vous pouvez ensuite utiliser ces valeurs pour résoudre le conflit par programme ou oblige l’utilisateur à sélectionner la valeur qui sera utilisée.  
+ Ensuite, appelez la méthode Resync sur le jeu d’enregistrements avec l’argument AffectRecords égal à adAffectGroup et l’argument ResyncValues égal à adResyncUnderlyingValues. La méthode Resync met à jour les données dans l’objet de jeu d’enregistrements actuel à partir de la base de données sous-jacente. À l’aide d’adAffectGroup, vous garantissez que seuls les enregistrements visibles avec le filtre en cours de définition, autrement dit, seuls les enregistrements en conflit, sont resynchronisés avec la base de données. Cela permet d’améliorer considérablement les performances si vous êtes confronté à un jeu d’enregistrements volumineux. En définissant l’argument ResyncValues adResyncUnderlyingValues lors de l’appel de resynchronisation, vous vous assurer que la propriété UnderlyingValue contiendra la valeur (en conflit) à partir de la base de données, que la valeur de propriété met à jour la valeur entrée par l’utilisateur, et que la propriété OriginalValue contiendra la valeur d’origine pour le champ (la valeur qu’elle avait avant le dernier appel réussi de UpdateBatch a été effectué). Vous pouvez ensuite utiliser ces valeurs pour résoudre le conflit par programme ou demander à l’utilisateur sélectionner la valeur qui sera utilisée.  
   
  Cette technique est illustrée dans l’exemple de code suivant. L’exemple crée artificiellement un conflit à l’aide d’un objet Recordset distinct pour modifier une valeur dans la table sous-jacente avant l’appel de UpdateBatch.  
   
@@ -115,9 +112,9 @@ Si vous êtes confronté à votre jeu d’enregistrements en mode exécution, il
 'EndConflicts  
 ```  
   
- Vous pouvez utiliser la propriété Status de l’enregistrement actif ou d’un champ spécifique pour déterminer quel type d’un conflit s’est produite.  
+ Vous pouvez utiliser la propriété Status de l’enregistrement en cours ou d’un champ spécifique pour déterminer quel type d’un conflit s’est produite.  
   
- Pour plus d’informations sur la gestion des erreurs, consultez [gestion des erreurs](../../../ado/guide/data/error-handling.md).  
+ Pour obtenir des informations détaillées sur la gestion des erreurs, consultez [gestion des erreurs](../../../ado/guide/data/error-handling.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode batch](../../../ado/guide/data/batch-mode.md)

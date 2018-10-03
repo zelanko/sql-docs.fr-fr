@@ -1,13 +1,11 @@
 ---
-title: Le champ TYPE_SS_SCROLL_DYNAMIC (SQLServerResultSet) | Documents Microsoft
+title: Type_ss_scroll_dynamic, champ (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.TYPE_SS_SCROLL_DYNAMIC
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d87afd89-3e75-402c-b844-1b434eb258df
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d324e5e1cdf3ef2f2dd409f2624a2c243bce07e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3fa3c86a89ad249238ba4460f33e7eae82f7af02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848224"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669477"
 ---
-# <a name="typessscrolldynamic-field-sqlserverresultset"></a>Champ TYPE_SS_SCROLL_DYNAMIC (SQLServerResultSet)
+# <a name="typessscrolldynamic-field-sqlserverresultset"></a>TYPE_SS_SCROLL_DYNAMIC, champ (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Permet de spécifier un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] type de curseur dynamique.  
+  Utilisé pour spécifier un type de curseur dynamique [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,8 +38,8 @@ public static final int TYPE_SS_SCROLL_DYNAMIC
 ## <a name="field-value"></a>Valeur de champ  
  Un **int** valeur 1006.  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

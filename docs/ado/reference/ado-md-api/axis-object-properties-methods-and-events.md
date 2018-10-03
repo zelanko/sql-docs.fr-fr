@@ -1,31 +1,28 @@
 ---
-title: Propriétés de l’objet axe, méthodes et événements | Documents Microsoft
+title: Axe objet propriétés, méthodes et événements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Axis object [ADO MD], members
 ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b94a08bde1a37bd9774e5fc4a34f2058f544c2d0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e0dac54b808bac4b9928d2ab2a4e8fcd50f970d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283318"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760417"
 ---
-# <a name="axis-object-properties-methods-and-events"></a>Propriétés de l’objet axe, méthodes et événements
-## <a name="propertiescollections"></a>Propriétés et de Collections  
+# <a name="axis-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Axis
+## <a name="propertiescollections"></a>Propriétés et des Collections  
  [DimensionCount, propriété](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)  
   
  [Propriété Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  

@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 1
 author: v-nisidh
 ms.author: v-nisidh
 manager: andrela
-ms.openlocfilehash: 792d843a2c11c7bde016aec513df9c8724b366b4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: cc13455e6f56950d6988909b53aa7664c7fd77f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278850"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723827"
 ---
 # <a name="fips-mode"></a>Mode FIPS
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -89,8 +86,8 @@ Pour exécuter le pilote JDBC en mode compatible FIPS, configurez les propriét�
 
 |Propriété|Type|Valeur par défaut|Description|Remarques|
 |---|---|---|---|---|
-|encrypt|booléen [« true / false »]|"false"|Pour FIPS activé JVM chiffrer la propriété doit être **true**||
-|TrustServerCertificate|booléen [« true / false »]|"false"|Pour que FIPS, l’utilisateur doit valider la chaîne de certificats, afin que l’utilisateur doit utiliser **« false »** valeur de cette propriété. ||
+|encrypt|Booléen [« true / false »]|"false"|Pour FIPS activé JVM chiffrer la propriété doit être **true**||
+|TrustServerCertificate|Booléen [« true / false »]|"false"|Pour que FIPS, l’utilisateur doit valider la chaîne de certificats, afin que l’utilisateur doit utiliser **« false »** valeur de cette propriété. ||
 |trustStore|String|Null|Votre magasin de clés Java chemin d’accès où vous avez importé votre certificat. Si vous installez le certificat sur votre système, puis pas nécessaire de transmettre quoi que ce soit. Pilote utilise les fichiers cacerts ou jssecacerts.||
 |trustStorePassword|String|Null|Mot de passe utilisé pour vérifier l'intégrité des données trustStore.||
 |fips|Booléen [« true / false »]|"false"|Pour FIPS activé JVM cette propriété doit être **true**|Ajouté dans 6.1.4 (Stable mise en production 6.2.2)||
