@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining models, creating
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - estimation
 - classification [data mining]
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2bb6c2b6ada95816cc45288c68bc784eb0ef2a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239919"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134790"
 ---
 # <a name="creating-a-data-mining-model"></a>Création d'un modèle d'exploration de données
   Modélisation des données est l’étape d’exploration de données où vous générez des modèles et les tendances en appliquant *algorithmes* aux données. Ultérieurement, utilisez ces séquences pour l'analyse, ou pour faire des prédictions.  
@@ -40,7 +37,7 @@ ms.locfileid: "37239919"
 ## <a name="advanced-data-mining"></a>Avancés (Exploration de données)  
  Les Assistants avancés vous permettent de créer de nouveaux modèles d’exploration de données, en fonction des données stockées dans Excel, à l’aide d’un des algorithmes d’exploration de données dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-### <a name="create-mining-structure"></a>Créer la Structure d’exploration de données  
+### <a name="create-mining-structure"></a>Créer une structure d’exploration de données  
  L'Assistant Création d'une structure d'exploration de données vous aide à générer une nouvelle structure d'exploration de données, que vous pouvez utiliser comme base pour plusieurs modèles d'exploration de données. L'Assistant vous permet de mettre de côté une partie des données à utiliser comme un jeu de test, afin que vous puissiez évaluer tous les modèles qui utilisent les mêmes données selon un standard de test cohérent.  
   
  [Créer la Structure d’exploration de &#40;compléments d’exploration de données SQL Server&#41;](create-mining-structure-sql-server-data-mining-add-ins.md)  

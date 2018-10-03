@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e483d24a2b7e9463c5fb43b9bc2f00fd41a3a070
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f43168d9085ba513094f9cce05c16a173c260e68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164110"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197583"
 ---
 # <a name="dependent-items-page-report-manager"></a>Page Éléments dépendants (Gestionnaire de rapports)
   La page Éléments dépendants vous permet d'afficher la liste des rapports et modèles qui font référence à une source de données partagée. L'icône de chaque type d'élément indique s'il s'agit d'un rapport ou d'un modèle. Cette page peut être affichée en mode Liste ou Détails. Utilisez le mode Détails pour afficher plus d'informations sur chaque élément. Des options de page supplémentaires sont disponibles en mode Détails. Pour vous aider à gérer la source de données partagée, cette page fournit des liens vers les rapports et modèles qui utilisent la source de données, des métriques sur la dernière exécution ou modification du rapport ou modèle, des boutons Supprimer et Déplacer afin que vous puissiez supprimer facilement les rapports et modèles qui ne sont plus utilisés, ou les déplacer vers un emplacement différent pendant que vous déterminez s'ils sont toujours nécessaires.  

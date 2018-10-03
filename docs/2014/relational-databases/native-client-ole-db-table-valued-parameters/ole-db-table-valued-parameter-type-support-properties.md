@@ -1,32 +1,29 @@
 ---
-title: Support de Type paramètre table OLE DB (propriétés) | Microsoft Docs
+title: Prise en charge des types de paramètre table OLE DB (propriétés) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bc75c4ebdbbbe4d38f18692ae8c9588957e32e3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 024e6fb62da2038c19faad0919413e9f2c52fe0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408418"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189099"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Prise en charge du type de paramètre table OLE DB (Propriétés)
   Cette rubrique fournit des informations sur les propriétés et les jeux de propriétés OLE DB associés aux objets d'ensemble de lignes de paramètre table.  
   
-## <a name="properties"></a>Propriétés  
- Voici la liste des propriétés exposées via la méthode IRowsetInfo::GetPropeties sur les objets d’ensemble de lignes de paramètre table. Notez que toutes les propriétés de l'ensemble de lignes de paramètre table sont en lecture seule. Par conséquent, tentez de définir une de leurs propriétés via IOpenRowset::OpenRowset ou ITableDefinitionWithConstraints::CreateTableWithConstraints méthodes à leurs valeurs par défaut provoque une erreur et aucun objet ne sera créé.  
+## <a name="properties"></a>Properties  
+ La liste qui suit répertorie les propriétés dévoilées via la méthode IRowsetInfo::GetPropeties dans les objets d’ensemble de lignes de paramètre table. Notez que toutes les propriétés de l'ensemble de lignes de paramètre table sont en lecture seule. Par conséquent, tentez de définir une de leurs propriétés via IOpenRowset::OpenRowset ou ITableDefinitionWithConstraints::CreateTableWithConstraints méthodes à leurs valeurs par défaut provoque une erreur et aucun objet ne sera créé.  
   
  Les propriétés non implémentées dans l'objet d'ensemble de lignes de paramètre table n'apparaissent pas dans cette liste. Pour obtenir une liste complète des propriétés, consultez la documentation OLE DB dans Windows Data Access Components.  
   
@@ -35,7 +32,7 @@ ms.locfileid: "37408418"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/w : Read-only<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : les signets ne sont pas autorisés dans les objets d'ensemble de lignes de paramètre table.|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|Lecture/Écriture : lecture seule<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : les signets ne sont pas autorisés dans les objets d'ensemble de lignes de paramètre table.|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -47,7 +44,7 @@ ms.locfileid: "37408418"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate.<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Remarque : L’objet d’ensemble de lignes de paramètre table prend en charge les interfaces IRowsetChange.<br /><br /> Un ensemble de lignes créé en utilisant DBPROP_IRowsetChange avec la valeur VARIANT_TRUE dévoile les comportements du mode de mise à jour immédiate.<br /><br /> Toutefois, si les colonnes BLOB sont liées en tant qu’objets d’ISequentialStream, le consommateur est censé les conserver pendant la durée de vie de l’objet d’ensemble de lignes de paramètre table.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Remarque : L’objet d’ensemble de lignes de paramètre table prend en charge les interfaces IRowsetChange.<br /><br /> Un ensemble de lignes créé en utilisant DBPROP_IRowsetChange avec la valeur VARIANT_TRUE dévoile les comportements du mode de mise à jour immédiate.<br /><br /> Toutefois, si des colonnes BLOB sont liées en tant qu’objets ISequentialStream, le consommateur doit normalement les conserver pendant toute la durée de vie de l’objet d’ensemble de lignes de paramètre table.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -97,7 +94,7 @@ ms.locfileid: "37408418"
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_UI2 &#124; VT_ARRAY<br /><br /> Description : cette propriété est utilisée par le consommateur pour indiquer au serveur l'ordre de tri des données des colonnes. Le fournisseur n'effectue aucune validation et part du principe que le consommateur agit conformément à la spécification fournie. Le serveur utilise cette propriété pour procéder à des optimisations.<br /><br /> Les informations d'ordre des colonnes pour chaque colonne sont représentées par une paire d'éléments dans le tableau. Le premier élément dans la paire correspond au numéro de la colonne. Le deuxième élément dans la paire sera 1 pour l'ordre croissant ou 2 pour l'ordre décroissant.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge de Type de paramètre table OLE DB](ole-db-table-valued-parameter-type-support.md)   
- [Utiliser des paramètres table &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)  
+ [Prise en charge des types de paramètre table OLE DB](ole-db-table-valued-parameter-type-support.md)   
+ [Utiliser les paramètres table &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)  
   
   

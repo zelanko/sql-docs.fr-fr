@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 57c22c0f39b411510fb70c5a5068ce4930674555
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74a48d913a5222ee566843eff85d71aaec194bd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280385"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073732"
 ---
 # <a name="new-data-source-page-report-manager"></a>Page Nouvelle source de données (Gestionnaire de rapports)
   La page Nouvelle source de données vous permet de créer un élément de source de données partagée. Une source de données partagée définit une connexion à une source de données externe. À l'aide d'une source de données partagée, vous pouvez créer et gérer les paramètres de connexion à la source de données séparément des rapports, modèles et abonnements pilotés par les données qui utilisent la source de données.  
@@ -49,7 +46,7 @@ ms.locfileid: "37280385"
  **Type de source de données**  
  Spécifiez l'extension pour le traitement des données utilisée pour traiter les données de la source de données. Serveur de rapports contient des extensions de traitement des données pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], SAP, XML, ODBC et OLE DB. Des extensions supplémentaires peuvent être disponibles auprès d'éditeurs tiers.  
   
- Pour plus d’informations sur le support de source de données distantes et non-SQL, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (lien hypertexte «http://go.microsoft.com/fwlink/?linkid=232473» http://go.microsoft.com/fwlink/?linkid=232473) et [Sources de données prises en charge par la création de rapports Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ Pour plus d’informations sur le support de source de données distantes et non-SQL, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (lien hypertexte « http://go.microsoft.com/fwlink/?linkid=232473» http://go.microsoft.com/fwlink/?linkid=232473) et [Sources de données prises en charge par la création de rapports Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
  **Chaîne de connexion**  
  Spécifiez la chaîne de connexion utilisée par le serveur de rapports pour se connecter à la source de données. Le type de connexion détermine la syntaxe à utiliser. Par exemple, une chaîne de connexion pour une extension pour le traitement des données XML est une URL vers un document XML. Dans la plupart des cas, une chaîne de connexion type spécifie le serveur de bases de données et un fichier de données.  

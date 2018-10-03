@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service [Integration Services], events
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a784b1ae955d66db9cccae24b6ccaa543fa9597
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 52cb18c5828a2d72ef8a36082554425e7e3afb82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164850"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187089"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Événements consignés par le service Integration Services
   Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consigne différents messages dans le journal des événements des applications Windows. Le service enregistre ces messages lorsque le service démarre, lorsqu'il s'arrête et lorsque certains problèmes se produisent.  
@@ -58,7 +55,7 @@ ms.locfileid: "37164850"
 |--------------|-------------------|----------|-----------|  
 |336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Service : arrêt de l’exécution du package.%nID d’instance du package : %1%nID du package : %2%nNom : %3%nDescription : %4%nPackage|Le service essaie d'arrêter un package en cours d'exécution. Vous pouvez analyser et arrêter des packages en cours d'exécution dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour plus d’informations sur la gestion des packages dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], consultez [Gestion de packages &#40;Service SSIS&#41;](package-management-ssis-service.md).|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur l’affichage des entrées de journal, consultez [Afficher les entrées de journal dans la fenêtre Journaux d’événements](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="see-also"></a>Voir aussi  

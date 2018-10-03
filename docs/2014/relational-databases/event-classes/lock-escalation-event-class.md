@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Escalation event class
 - lock escalation [SQL Server], event class
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ad2b7025a97d4f5d3ec585531b786c437b8e453
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf72cd4c22003fef09805789b7ac9b70fbc42227
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280165"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190869"
 ---
 # <a name="lockescalation-event-class"></a>Classe d'événements Lock:Escalation
   La classe d’événements **Lock:Escalation** indique qu’un verrouillage spécifique s’est transformé en verrouillage de plus grande ampleur, comme par exemple un verrou de ligne transformé en verrou d’objet. La classe d'événements Escalation est l'ID d'événement 60.  
@@ -60,7 +57,7 @@ ms.locfileid: "37280165"
 |**SessionLoginName**|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |**SPID**|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|**TextData**|`ntext`|Texte de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui a provoqué l'escalade de verrous.| 1|Oui|  
+|**TextData**|`ntext`|Texte de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui a provoqué l'escalade de verrous.|1|Oui|  
 |**TransactionID**|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |**Type**|`int`|Granularité de l'escalade de verrous :<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT (niveau table)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|Oui|  
   

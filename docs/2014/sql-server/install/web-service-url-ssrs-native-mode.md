@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.reportservervirtualdirectory.F1
 helpviewer_keywords:
 - Reporting Services, Web service
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 21a9ede5ef83169d312bb59e84bfd3f33619dafb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abb2e425df70a3425a6dfc7eef278f6bd6aa6cc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099029"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>URL de service Web (SSRS en mode natif)
   Utilisez la page URL du service Web pour configurer ou modifier l'URL permettant d'accéder au serveur de rapports. Une *réservation d'URL* est créée en fonction de l'URL que vous spécifiez. La réservation d'URL définit la syntaxe et les règles de toutes les URL qui peuvent être utilisées par la suite pour accéder au service Web Report Server. Elle spécifie le préfixe, l'hôte, le port et le répertoire virtuel pour le service Web Report Server. Selon la façon dont vous spécifiez l'hôte, plusieurs URL peuvent être possibles pour une réservation unique. La valeur par défaut pour l'hôte spécifie un caractère générique fort. Un caractère générique fort vous permet de spécifier dans une URL un nom d'hôte qui peut être résolu sur l'ordinateur qui héberge le serveur de rapports. Pour plus d’informations sur la configuration de l’URL et les réservations, consultez [configurer une URL &#40;Gestionnaire de Configuration de SSRS&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) et [configurer l’URL de Report Server &#40;Gestionnaire de Configuration de SSRS&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  

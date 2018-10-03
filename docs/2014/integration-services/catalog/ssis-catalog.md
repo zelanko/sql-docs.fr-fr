@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084081"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201339"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
   Le `SSISDB` catalogue est le point central pour travailler avec [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projets (SSIS) que vous avez déployés sur le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -64,7 +61,7 @@ ms.locfileid: "39084081"
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
--   \@ n’est pas autorisé comme premier caractère, mais les caractères suivants peuvent utiliser \@.  
+-   \@ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite \@.  
   
 -   La longueur du nom doit être supérieure à 0 et inférieure ou égale à 128.  
   
@@ -82,7 +79,7 @@ ms.locfileid: "39084081"
   
 -   Le nom ne peut pas contenir d'espaces de début ni de fin.  
   
--   \@ n’est pas autorisé comme premier caractère, mais les caractères suivants peuvent utiliser \@.  
+-   \@ ne doit pas être utilisé comme premier caractère, mais il peut l’être par la suite \@.  
   
 -   La longueur du nom doit être supérieure à 0 et inférieure ou égale à 128.  
   

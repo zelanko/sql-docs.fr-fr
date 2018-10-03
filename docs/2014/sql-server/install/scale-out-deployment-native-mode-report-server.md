@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099939"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Déploiement avec montée en puissance parallèle (serveur de rapports en mode natif)
   Utilisez le **déploiement évolutif** page [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager pour afficher l’état d’initialisation pour un déploiement évolutif ou pour joindre un serveur de rapports à un déploiement avec montée en puissance. Un *déploiement avec montée en puissance* fait référence à deux ou plusieurs instances de serveurs de rapports qui partagent une même base de données de serveur de rapports.  
@@ -67,7 +64,7 @@ ms.locfileid: "37151800"
   
      Pour un serveur de rapports qui fait déjà partie d'un déploiement avec montée en puissance parallèle, vous pouvez utiliser cette page pour ajouter ou supprimer des nœuds.  
   
- **Initialiser**  
+ **initialiser**  
  Cliquez sur **Initialiser** pour ajouter un serveur de rapports au déploiement avec montée en puissance parallèle. Cette étape configure un serveur de rapports de telle sorte qu'il utilise une clé symétrique dans une base de données de serveur de rapports partagée. Vous pouvez utiliser **Initialiser** pour ajouter une instance de serveur de rapports à un déploiement avec montée en puissance parallèle ou pour résoudre un problème de migration ou d'installation.  
   
  Une instance de serveur de rapports est disponible uniquement si vous avez précédemment configuré une connexion à une base de données de serveur de rapports partagée. De plus, vous devez effectuer l'initialisation à partir d'un serveur de rapports qui est déjà initialisé pour utiliser la base de données du serveur de rapports.  

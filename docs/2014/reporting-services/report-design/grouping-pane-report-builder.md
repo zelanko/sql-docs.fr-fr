@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10033"
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
-caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 922ffe08cfff03a1f3347136d2b809ae5b9926c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acb003df07b23f47e3cb5bb78e04f92b35029ea9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153820"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127579"
 ---
 # <a name="grouping-pane-report-builder"></a>Volet de regroupement (Générateur de rapports)
   Le volet de regroupement affiche les groupes de lignes et les groupes de colonnes de la région de données de tableau matriciel actuellement sélectionnée. Le volet de regroupement n'est pas disponible pour les régions de données Graphique et Jauge. Le volet de regroupement contient un volet Groupes de lignes et un volet Groupes de colonnes. Le volet de regroupement comporte deux modes : par défaut et avancé. Le mode par défaut affiche une vue hiérarchique des membres dynamiques pour les groupes de lignes et de colonnes. Le mode avancé affiche à la fois les membres statiques et dynamiques pour les groupes de lignes et de colonnes. Un groupe est un jeu de données nommé extrait d'un dataset de rapport qui est affiché sur une région de données. Les groupes sont organisés en hiérarchies qui incluent des membres statiques et dynamiques. Pour plus d’informations, consultez [Fonctionnement des groupes&#40;Générateur de rapports et SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  
@@ -66,11 +63,11 @@ ms.locfileid: "37153820"
   
 -   **KeepTogether**: Propriété booléenne. Indique que l'intégralité du membre du tableau matriciel et tous les membres imbriqués doivent tenir sur une seule page, dans la mesure du possible.  
   
--   `KeepWithGroup`. Propriété booléenne. Pour les membres de lignes statiques uniquement. Conserve, dans la mesure du possible, cette ligne avec le membre dynamique frère précédent ou suivant, s'il n'est pas masqué. Pour conserver un en-tête de ligne avec son groupe associé, attribuez à KeepWithGroup la valeur **After**.  
+-   `KeepWithGroup` . Propriété booléenne. Pour les membres de lignes statiques uniquement. Conserve, dans la mesure du possible, cette ligne avec le membre dynamique frère précédent ou suivant, s'il n'est pas masqué. Pour conserver un en-tête de ligne avec son groupe associé, attribuez à KeepWithGroup la valeur **After**.  
   
--   `RepeatOnNewPage`. Propriété booléenne. Pour les membres de lignes statiques uniquement et quand KeepWithGroup n’a pas la valeur None. Répète, dans la mesure du possible, cette ligne statique sur chaque page qui comporte au moins une instance du membre dynamique spécifiée par KeepWithGroup. Pour conserver un en-tête de ligne avec son groupe associé, attribuez à RepeatOnNewPage la valeur **True**.  
+-   `RepeatOnNewPage` . Propriété booléenne. Pour les membres de lignes statiques uniquement et quand KeepWithGroup n’a pas la valeur None. Répète, dans la mesure du possible, cette ligne statique sur chaque page qui comporte au moins une instance du membre dynamique spécifiée par KeepWithGroup. Pour conserver un en-tête de ligne avec son groupe associé, attribuez à RepeatOnNewPage la valeur **True**.  
   
--   `Hidden`. Propriété booléenne. Indique si la ligne ou la colonne doit être masquée initialement.  
+-   `Hidden` . Propriété booléenne. Indique si la ligne ou la colonne doit être masquée initialement.  
   
 -   **ToggleItem.** Chaîne. Nom de la zone de texte à laquelle ajouter l'image bascule. Cette zone de texte doit être située dans la même étendue de groupe ou dans une étendue contenante.  
   

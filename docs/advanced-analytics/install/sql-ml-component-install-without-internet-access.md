@@ -3,17 +3,17 @@ title: Installer les composants R et Python sans accès à internet d’apprenti
 description: En mode hors connexion ou déconnecté Machine Learning R et Python le programme d’installation sur l’instance de SQL Server isolé.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/02/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437649"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150545"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installer SQL Server d’apprentissage R et Python sur des ordinateurs sans accès à internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,6 +97,34 @@ Lorsque vous exécutez le programme d’installation de SQL Server sur un ordina
 
 5. Continuer suivant les invites à l’écran pour terminer l’installation.
 
+<a name="apply-cu"></a>
+
+## <a name="apply-cumulative-updates"></a>Appliquer des mises à jour cumulatives
+
+Nous vous recommandons d’appliquer la mise à jour cumulative la plus récente pour le moteur de base de données et les composants d’apprentissage. Mises à jour cumulatives sont installées via le programme d’installation. 
+
+1. Démarrez avec une instance de la ligne de base. Vous pouvez uniquement appliquer des mises à jour cumulatives aux installations existantes de SQL Server :
+
+  + Version initiale de SQL Server 2017
+  + Version initiale de SQL Server 2016, SQL Server 2016 Service Pack 1 ou SQL Server 2016 Service Pack 2
+
+2. Sur un dispositif connecté à internet, accédez à la liste de mise à jour cumulative pour votre version de SQL Server :
+
+  + [Mises à jour de SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [Mises à jour de SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. Sélectionnez la mise à jour cumulative la plus récente pour télécharger le fichier exécutable.
+
+4. Obtenir les fichiers CAB correspondants pour R et Python. Pour obtenir des liens de téléchargement, consultez [CAB télécharge les mises à jour cumulatives sur analytique en base de données de SQL Server instances](sql-ml-cab-downloads.md).
+
+5. Transférer tous les fichiers, fichier exécutable et les fichiers CAB, dans le même dossier sur l’ordinateur hors connexion.
+
+6. Exécutez le programme d'installation. Acceptez les termes du contrat de licence et sur la page de sélection de fonctionnalités, passez en revue les fonctionnalités pour lesquelles les mises à jour cumulatives sont appliquées. Vous devez voir toutes les fonctionnalités installées pour l’instance actuelle, y compris les fonctionnalités d’apprentissage automatique.
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. Suivez les instructions de l’Assistant en acceptant les termes du contrat de licence pour les distributions de R et Python. Pendant l’installation, vous êtes invité à choisir l’emplacement du dossier contenant les fichiers CAB mis à jour.
+
 ## <a name="post-install-configuration"></a>Configuration de post-installation
 
 Une fois l’installation est terminée, redémarrez le service et puis configurez le serveur pour permettre l’exécution du script :
@@ -108,30 +136,6 @@ Une installation hors connexion initiale de SQL Server 2017 Machine Learning Ser
 
 + [Vérifier l’installation](sql-machine-learning-services-windows-install.md#verify-installation) (pour SQL Server 2016, cliquez sur [ici](sql-r-services-windows-install.md#verify-installation)).
 + [Une configuration supplémentaire si nécessaire](sql-machine-learning-services-windows-install.md#additional-configuration) (pour SQL Server 2016, cliquez sur [ici](sql-r-services-windows-install.md#bkmk_FollowUp)).
-
-<a name="slipstream-upgrades"></a>
-
-## <a name="slipstream-upgrades"></a>Mises à niveau de l’installation intégrée
-
-Une installation intégrée renvoie à la possibilité d’appliquer un correctif ou une mise à jour à une installation d’instance défaillante dans le but de corriger les problèmes existants. L’avantage de cette méthode est que SQL Server est mis à jour en même temps que vous effectuez l’installation, ce qui évite d’avoir à effectuer par la suite un redémarrage séparé.
-
-Lorsqu’un serveur n’a pas accès à Internet, les mises à jour de service sont appliquées en téléchargeant une mise à jour SQL Server programme d’installation et les versions correspondantes des fichiers CAB de spécifique à la langue. 
-
-1. Démarrez avec une instance de la ligne de base. Mises à niveau de l’installation intégrée sont pris en charge sur ces versions de SQL Server :
-
-  + Version initiale de SQL Server 2017
-  + Version initiale de SQL Server 2016
-  + SQL Server 2016 Service Pack 1
-  + SQL Server 2016 Service Pack 2
-
-2. Obtenir une version mise à jour du programme d’installation de SQL Server pour une mise à jour cumulative donné. Toute mise à jour les fonctionnalités d’apprentissage (R et Python) de machine est en tandem avec une mise à jour cumulative de l’instance du moteur de base de données sous-jacente.
-
-  + [Mises à jour de SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
-  + [Mises à jour de SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
-
-3. Obtenir les fichiers CAB correspondants pour R et Python. Pour obtenir des liens de téléchargement, consultez [CAB télécharge les mises à jour cumulatives sur analytique en base de données de SQL Server instances](sql-ml-cab-downloads.md).
-
-4. Placez tous les fichiers dans le même dossier, exécutez le programme d’installation. Pendant l’installation, vous êtes invité à choisir l’emplacement du dossier pour les fichiers CAB mis à jour.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

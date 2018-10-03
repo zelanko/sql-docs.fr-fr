@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b375399adc201e3b67018101b8be6fbe26eb9ba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8dfcf89c2130426e0c1cfb3c86f88f5f9d74cead
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106109"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Tâche 3 : Nettoyage des données dans la base de connaissances Fournisseurs
   Dans cette tâche, vous allez exécuter le processus de nettoyage assisté par ordinateur. DQS utilise des algorithmes avancés et des niveaux de confiance basés sur les valeurs de seuil spécifiées pour analyser vos données par rapport à la base de connaissances sélectionnée, puis les nettoyer. Consultez [les connaissances de nettoyage des données à l’aide de DQS (interne)](http://msdn.microsoft.com/library/hh213061.aspx) pour plus d’informations.  

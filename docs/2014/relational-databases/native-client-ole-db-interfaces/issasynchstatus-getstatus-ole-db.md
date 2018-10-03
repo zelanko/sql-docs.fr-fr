@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSAsynchStatus::GetStatus (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9b12653f05171514c3a311edd42b2a3af9f58da
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d17a75b7bd6021e908200b7a4be5bc800ec81283
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050239"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
   Retourne l'état d'une opération s'exécutant de manière asynchrone.  
@@ -110,7 +107,7 @@ HRESULT GetStatus(
  Une erreur spécifique au fournisseur s'est produite.  
   
 ## <a name="remarks"></a>Notes  
- Le **ISSAsynchStatus::GetStatus** méthode se comporte exactement comme le **IDBAsynchStatus::GetStatus** (méthode), sauf que si l’objet de source de l’initialisation de données est abandonnée, E_UNEXPECTED est retourné au lieu de cela que DB_E_CANCELED (bien que [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) retourne DB_E_CANCELED). Cela est dû au fait que l'objet source de données ne reste pas dans l'état zombie habituel après un abandon, et ce pour autoriser d'autres tentatives d'initialisation.  
+ La méthode **ISSAsynchStatus::GetStatus** se comporte exactement comme la méthode **IDBAsynchStatus::GetStatus**, à la différence près que si l’initialisation d’un objet source de données est abandonnée, E_UNEXPECTED est retourné au lieu de DB_E_CANCELED (pourtant, [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) retourne DB_E_CANCELED). Cela est dû au fait que l'objet source de données ne reste pas dans l'état zombie habituel après un abandon, et ce pour autoriser d'autres tentatives d'initialisation.  
   
  Si l'ensemble de lignes est initialisé ou rempli de manière asynchrone, il doit prendre en charge cette méthode.  
   

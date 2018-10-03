@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b90318de4420df1776c01e5e881740d9d44ea20
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278755"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148549"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Accorder des autorisations sur des procédures stockées (Analysis Services)
   Les procédures stockées ou des assemblys, dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sont des routines externes, écrites un [!INCLUDE[msCoName](../includes/msconame-md.md)] langage de programmation .NET, qui étendent les fonctionnalités de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Les assemblys permettent au développeur de tirer parti de l'intégration interlangage, de la gestion des exceptions, ainsi que de la prise en charge du contrôle de version, du déploiement et du débogage.  

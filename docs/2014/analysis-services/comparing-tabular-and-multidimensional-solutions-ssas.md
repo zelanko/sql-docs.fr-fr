@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbd022ac0771fd862909761b1d4f1abd6e0acf90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36238b6cc481e58161b67442d8f5fdbf0e663e52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138477"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparaison des solutions tabulaires et multidimensionnelles (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit deux méthodes distinctes pour la modélisation de données : tabulaire et multidimensionnelle. Bien qu'elles présentent de nombreux points communs, elles ont aussi d'importantes différences qui guideront votre choix. Dans cette rubrique, nous comparons les fonctionnalités et décrivons la façon dont chaque approche répond aux besoins communs des projets. Par exemple, si la prise en charge d'une source de données spécifique est prioritaire, la section sur les sources de données peut vous aider à choisir l'approche de modélisation qui convient.  

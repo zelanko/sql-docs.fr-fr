@@ -1,12 +1,10 @@
 ---
-title: Extraction de données BLOB avec IRow::Open et ISequentialStream | Microsoft Docs
+title: Récupération de données BLOB avec IRow::Open et ISequentialStream | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching BLOB data
@@ -14,21 +12,20 @@ helpviewer_keywords:
 - ISequentialStream interface
 - BLOBs, fetching
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7604022093a63dd536648fd43a3370ac21c05fcb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c67e606b0f74d3886f0b5890d5061406d0d7f3fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211359"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Extraction de données BLOB à l'aide d'IRow::Open et ISequentialStream
-  **IRow::Open** prend en charge le seul type DBGUID_STREAM et DBGUID_NULL d’objets à ouvrir.  
+  **IRow::Open** prend uniquement en charge l’ouverture des types d’objets DBGUID_STREAM et DBGUID_NULL.  
   
- La fonction suivante utilise **IRow::Open** et **ISequentialStream** pour extraire des données volumineuses.  
+ La fonction suivante utilise **IRow::Open** et **ISequentialStream** pour récupérer (fetch) des données volumineuses.  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -79,7 +76,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- Données volumineuses peuvent être liées ou récupérées à l’aide de la **ISequentialStream** interface. Pour les colonnes dépendantes, l'indicateur d'état indique si les données sont tronquées en définissant DBSTATUS_S_TRUNCATED.  
+ Les données volumineuses peuvent être liées ou récupérées à l’aide de l’interface **ISequentialStream**. Pour les colonnes dépendantes, l'indicateur d'état indique si les données sont tronquées en définissant DBSTATUS_S_TRUNCATED.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Extraction de données Blob à l’aide d’IRow](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  

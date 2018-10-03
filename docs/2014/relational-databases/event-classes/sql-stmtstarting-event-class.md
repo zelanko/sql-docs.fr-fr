@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:StmtStarting event class
 ms.assetid: ae97386c-9dbf-456d-bcbc-391931775fa3
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56243e1f3b0038811cfaf877a3e45d714e2ee817
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 189674f09d0f56b481bcf0577b998f8f8f77b64a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292739"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062599"
 ---
 # <a name="sqlstmtstarting-event-class"></a>SQL:StmtStarting (classe d'événements)
   La classe d'événements SQL:StmtStarting indique qu'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] a démarré.  
@@ -55,7 +52,7 @@ ms.locfileid: "37292739"
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |État|`int`|Indique si l'instruction est exécutée après une recompilation.<br /><br /> 1=Recompilé|30|Oui|  
-|TextData|`ntext`|Texte de l'instruction sur le point d'être exécutée.| 1|Oui|  
+|TextData|`ntext`|Texte de l'instruction sur le point d'être exécutée.|1|Oui|  
 |TransactionID|`bigint`|ID de la transaction si l'instruction a été exécutée dans une transaction.|4|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  
   

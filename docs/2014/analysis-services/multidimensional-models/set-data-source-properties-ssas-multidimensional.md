@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.datasourceproperties.f1
 helpviewer_keywords:
 - Data Source Properties dialog box
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cb4fcd1e2945e01b5e81d38542b0b8c7950c1fcc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 42a1ace1db816760fc6c889491fa264ec2a55008
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208289"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082949"
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Définir les propriétés de la source de données (SSAS Multidimensionnel)
   Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un objet de source de données représente une connexion à un entrepôt de données externe ou à une base de données relationnelle qui fournit des données à un modèle multidimensionnel. Les propriétés sur la source de données déterminent la chaîne de connexion, le délai d'attente, le nombre maximal de connexions et le niveau d'isolation de la transaction.  
