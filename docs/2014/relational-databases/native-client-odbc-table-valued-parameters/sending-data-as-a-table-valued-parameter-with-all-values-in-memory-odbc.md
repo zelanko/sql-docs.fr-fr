@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2e154cbbba13ac1eb017a90fbb6abd7b0532b50
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214449"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Envoi de données comme paramètre table avec toutes les valeurs en mémoire (ODBC)
   Cette rubrique décrit comment envoyer des données à une procédure stockée comme paramètre table lorsque toutes les valeurs sont en mémoire. Pour un autre exemple illustrant des paramètres table, consultez [utiliser les paramètres &#40;ODBC&#41;](table-valued-parameters-odbc.md).  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tablediff utility
 - comparing replicated tables
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d7c9f726c85c7b1334eaedd8c7c331872497e28b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3748c28fe790000dc01b73fddea01e00e9ef1b54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206949"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216059"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>Comparer des tables répliquées pour identifier les différences (programmation de réplication)
   La validation d'article est utilisée pour déterminer si les données publiées pour les articles de table sur le serveur de publication et sur l'Abonné ne sont pas identiques, ce qui peut indiquer une non-convergence. Pour plus d’informations, consultez [Valider des données répliquées](../validate-replicated-data.md). Toutefois, la validation retourne uniquement des informations de succès ou d'échec et ne fournit pas d'informations sur les différences entre les tables sources et les tables cibles. L’utilitaire d’invite de commandes **tablediff** retourne des informations détaillées sur les différences entre les deux tables et peut même générer un script [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour établir la convergence de l’abonnement avec les données sur le serveur de publication.  

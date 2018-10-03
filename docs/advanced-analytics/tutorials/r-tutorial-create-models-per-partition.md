@@ -1,20 +1,21 @@
 ---
 title: Didacticiel sur la création, formation et évaluation des modèles en fonction de partition dans R (SQL Server Machine Learning Services) | Microsoft Docs
+description: Apprenez à modéliser, former et utiliser des données partitionnées qui sont créées dynamiquement lorsque vous utilisez les capacités de modélisation basées sur une partition de l’apprentissage de SQL Server.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51fd17b10ed2fde9d8412c6c47f868458edf7d5c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232563"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Didacticiel : Créer des modèles basés sur une partition dans R sur SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -29,7 +30,7 @@ En fonction de partition de modélisation est activée via deux nouveaux paramè
 Dans ce didacticiel, découvrez basé sur partition de modélisation à l’aide des données taxi NYC classiques et un script R. La colonne de partition est la méthode de paiement.
 
 > [!div class="checklist"]
-> * Partition basée sur une colonne payment_type. Valeurs dans ces données de segment de colonne, une seule partition pour chaque type de paiement.
+> * Les partitions sont basées sur les types de paiement (5).
 > * Créer et former des modèles sur chaque partition et stocker les objets dans la base de données.
 > * Prédire la probabilité des résultats de l’info-bulle sur chaque modèle de partition, à l’aide d’exemples de données réservés à cet effet.
 
@@ -37,21 +38,17 @@ Dans ce didacticiel, découvrez basé sur partition de modélisation à l’aide
  
 Pour suivre ce didacticiel, vous devez disposer des éléments suivants :
 
-+ Instance du moteur de base de données SQL Server 2019 avec Machine Learning Services et la fonctionnalité R
-+ Exemples de données
-+ Un outil pour l’exécution de requête T-SQL, tels que SQL Server Management Studio
++ Suffisamment de ressources système. Le jeu de données est volumineux et les opérations d’apprentissage sont gourmandes en ressources. Si possible, utilisez un système ayant au moins 8 Go de RAM. Ou bien, vous pouvez utiliser les petits jeux de données à contourner les contraintes de ressources. Instructions pour réduire le jeu de données sont en ligne. 
 
-### <a name="system-resources"></a>Ressources système
++ Un outil pour T-SQL de requête d’exécution, comme [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Le jeu de données est volumineux et les opérations d’apprentissage sont gourmandes en ressources. Si possible, utilisez un système ayant au moins 8 Go de RAM. Ou bien, vous pouvez utiliser les petits jeux de données à contourner les contraintes de ressources. Instructions pour réduire le jeu de données sont en ligne. 
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), que vous pouvez [Téléchargez et restaurez](sqldev-download-the-sample-data.md) à votre instance du moteur de base de données locale. Taille du fichier est d’environ 90 Mo.
 
-### <a name="sql-server-database-engine-with-machine-learning-services"></a>Moteur de base de données SQL Server avec Machine Learning Services
++ SQL Server 2019 preview de base de données instance du moteur, avec l’intégration de Machine Learning Services et R.
 
-2019 CTP de SQL Server 2.0 ou version ultérieur, avec Machine Learning Services installé et configuré, est requis. Vous pouvez vérifier la version du serveur dans Management Studio en exécutant `SELECT @@Version` comme une requête T-SQL. Sortie doit être « Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x ».
+Vérifier la version en exécutant **`SELECT @@Version`** comme une requête T-SQL dans un outil de requête. Sortie doit être « Microsoft SQL Server 2019 (CTP 2.0) - 15.0.x ».
 
-### <a name="r-packages"></a>Packages R
-
-Ce didacticiel utilise R installé avec les Services Machine Learning. Vous pouvez vérifier l’installation de R en renvoyant une liste correctement mise en forme de tous les packages R sont actuellement installés avec votre instance du moteur de base de données :
+Vérifiez la disponibilité de packages R en renvoyant une liste correctement mise en forme de tous les packages R sont actuellement installés avec votre instance du moteur de base de données :
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -64,18 +61,6 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
-
-### <a name="tools-for-query-execution"></a>Outils pour l’exécution des requêtes
-
-Vous pouvez [télécharger et installer SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), ou utilisez n’importe quel outil qui se connecte à une base de données relationnelle et exécute le script T-SQL. Assurez-vous que vous pouvez vous connecter à une instance du moteur de base de données qui a des Services Machine Learning.
-
-### <a name="sample-data"></a>Exemples de données
-
-Les données proviennent du [NYC Taxi et Limousines Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) jeu de données public. 
-
-+ Téléchargez le [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak ) fichier de sauvegarde de base de données et restaurez-la sur l’instance du moteur de base de données.
-
-Le nom de fichier de base de données doit être **NYCTaxi_sample** si vous souhaitez exécuter les scripts suivants sans modification.
 
 ## <a name="connect-to-the-database"></a>Se connecter à la base de données
 

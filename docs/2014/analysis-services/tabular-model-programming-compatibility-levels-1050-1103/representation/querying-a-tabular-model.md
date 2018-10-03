@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5936ef813b8533d72c8ebdd3d801f1ccfb6d3a7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56308532b157828746db911e60240638826b988f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188816"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217382"
 ---
 # <a name="querying-a-tabular-model"></a>Interrogation d'un modèle tabulaire
   En tant que développeur, l'interrogation d'un modèle tabulaire revient à récupérer des données de la base de données tabulaire ; vous avez deux options pour atteindre cet objectif : utilisez des requêtes de table dans DAX ou utilisez MDX et récupérez les données comme si elles provenaient d'un cube. Toutefois, selon le mode sous-jacent de votre modèle tabulaire, vous pouvez être limité à utiliser uniquement des requêtes de table DAX ; le mode DirectQuery requiert l'utilisation des requêtes de table DAX.  
@@ -108,7 +105,7 @@ DEFINE
 |Product Category Id|Product Category Alternate Id|Product Category Name|Internet Sales|Reseller Sales|  
 |-------------------------|-----------------------------------|---------------------------|--------------------|--------------------|  
 |4|4|Accessories|$        700,759.96|$        571,297.93|  
-| 1| 1|Bikes|$  28,318,144.65|$  66,302,381.56|  
+|1|1|Bikes|$  28,318,144.65|$  66,302,381.56|  
 |3|3|Clothing|$        339,772.61|$    1,777,840.84|  
 |2|2|Components||$  11,799,076.66|  
   

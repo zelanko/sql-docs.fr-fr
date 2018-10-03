@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Login event class
 ms.assetid: ad0bdb48-7f9f-4335-805d-7769d6df89b2
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 903325359173b8d3da0a17754d871c75d58997a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11ddf57e8ed1c1a57b1eb610d5a722677112da08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205389"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228399"
 ---
 # <a name="audit-login-event-class"></a>Audit Login (classe d'événements)
   La classe d’événements **Audit Login** indique qu’un utilisateur s’est connecté avec succès à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les événements de cette classe sont déclenchés par de nouvelles connexions ou par des connexions réutilisées depuis un groupement de connexions.  
@@ -53,7 +50,7 @@ ms.locfileid: "37205389"
 |**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |**Réussi**|**Int**|1 = réussite. 0 = échec. Cet événement indique toujours une réussite.|23|Oui|  
-|**TextData**|**ntext**|Liste délimitée par des points-virgules contenant toutes les options définies.| 1|Oui|  
+|**TextData**|**ntext**|Liste délimitée par des points-virgules contenant toutes les options définies.|1|Oui|  
 |**GroupID**|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  

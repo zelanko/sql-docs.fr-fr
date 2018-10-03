@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-caps.latest.revision: 82
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19ca1d323f2b0e53e458aa808f791936b823eef7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164260"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220339"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les requêtes de recherche en texte intégral peuvent rechercher des synonymes des termes de contrat spécifié par l’utilisateur via l’utilisation d’un dictionnaire des synonymes. Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *dictionnaire des synonymes* définit un jeu de synonymes pour une langue spécifique. Les administrateurs système peuvent définir deux formes de synonymes : les jeux d'expansion et les jeux de remplacement. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données. Mise en correspondance du dictionnaire des synonymes intervient pour toutes les [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) et [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) requêtes et pour les [CONTAINS](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) qui interroge Spécifiez la clause FORMSOF THESAURUS.  
@@ -119,7 +116,7 @@ ms.locfileid: "37164260"
     |Paramètre de signes diacritiques|Valeur|XML|  
     |------------------------|-----------|---------|  
     |ne respectent pas les accents|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
-    |respectent les accents| 1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
+    |respectent les accents|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
   
     > [!NOTE]  
     >  Ce paramètre ne peut être appliqué qu'une seule fois dans le fichier et s'applique à tous les modèles de recherche au sein du fichier. Vous ne pouvez pas définir ce paramètre pour des modèles individuels.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - designing DACs
@@ -17,12 +15,12 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0e6ef62d46d8e597ad57450b7d121027c69adcb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 4b3fd46b767b41e442621d7554daee713bd98abd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816695"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214729"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
   Une application de la couche Données (DAC) est une entité de gestion de base de données logique qui définit tous les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les tables, les vues et les objets d'instance, y compris les connexions, qui sont associés à une base de données utilisateur. Une application DAC est une unité autonome de déploiement de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet aux développeurs et aux administrateurs de base de données de la couche Données d'empaqueter les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un artefact portable appelé « package DAC », ou encore DACPAC.  

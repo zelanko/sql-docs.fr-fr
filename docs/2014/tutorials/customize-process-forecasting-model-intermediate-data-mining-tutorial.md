@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5440574013fe2d15a833fb9758e896d361060050
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3d83e8034885d83056ea6258ede86072239f6e74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239989"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224475"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Personnalisation et traitement du modèle de prévision (Didacticiel sur l'exploration de données intermédiaire)
   L'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)]) fournit des paramètres qui affectent la façon dont un modèle est créé et la façon dont les données chronologiques sont analysées. La modification de ces propriétés peuvent affecter de manière importante la manière dont le modèle d'exploration de données élabore des prédictions.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7cf9ccd921ecdef56560e712415604355b97b2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172000"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227699"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tâche 1 (Condition préalable) : Supprimer des données de fournisseur dans MDS
   Dans cette tâche, vous allez supprimer les données des fournisseurs stockées dans MDS. Vous avez téléchargé les données manuellement à l’aide **complément MDS pour Excel** dans la leçon précédente. Le package SSIS que vous créez dans cette leçon téléchargera automatiquement les données dans MDS pour vous. Par conséquent, avant de tester le package SSIS, vous devez supprimer les données des fournisseurs dans MDS, ainsi que la hiérarchie dérivée, les entités Fournisseur et État, et créer l'entité Fournisseur sans données.  

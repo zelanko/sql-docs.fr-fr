@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d9a048a70beb3fa22ab250316b6e630b845e7ca7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303629"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220081"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Restaurer la clé de chiffrement (SSRS en mode natif)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise une clé de chiffrement pour sécuriser les données sensibles stockées dans la base de données de serveur de rapports. Pour garantir un accès ininterrompu aux données chiffrées, il importe que vous créiez une sauvegarde de la clé de chiffrement au cas où vous devriez la restaurer ultérieurement en raison de modifications dans le compte de service ou dans le cadre d'une migration planifiée. Cette rubrique est une vue d’ensemble de l’utilisation de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager pour restaurer les clés.  

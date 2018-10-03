@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 519d65684224496608ce8ffbaf8130b3f7884967
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220659"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Activer et désactiver sandboxing RDL
   La fonctionnalité Sandboxing RDL (Report Definition Language) vous permet de détecter et restreindre l'utilisation de types spécifiques de ressources, par les locataires individuels, dans un environnement où plusieurs locataires utilisent une batterie de serveurs Web unique de serveurs de rapports. Citons pour exemple un scénario de services d'hébergement où vous pouvez maintenir une batterie de serveurs Web uniques de serveurs de rapports utilisés par plusieurs locataires, et peut-être différentes sociétés. En tant qu'administrateur de serveur de rapports, vous pouvez activer cette fonctionnalité pour aider à accomplir les objectifs suivants :  
@@ -73,7 +70,7 @@ ms.locfileid: "37311349"
 |**Allow**|Type ou jeu de types à autoriser dans les expressions RDL.|  
 |**Espace de noms**|Attribut pour **Allow** qui est l’espace de noms contenant un ou plusieurs types qui s’appliquent à Valeur. Cette propriété n'est pas sensible à la casse.|  
 |`AllowNew`|Attribut booléen pour **Allow** qui contrôle si la création de nouvelles instances du type est autorisée dans les expressions RDL ou dans un élément **\<Class>** RDL.<br /><br /> Remarque : Lorsque `RDLSandboxing` est activé, nouveaux tableaux ne peuvent pas être créés dans les expressions RDL, indépendamment du paramètre de `AllowNew`.|  
-|**Value**|Valeur pour **Allow** qui est le nom du type à autoriser dans les expressions RDL. La valeur **\*** indique que tous les types dans l’espace de noms sont autorisés. Cette propriété n'est pas sensible à la casse.|  
+|**Valeur**|Valeur pour **Allow** qui est le nom du type à autoriser dans les expressions RDL. La valeur **\*** indique que tous les types dans l’espace de noms sont autorisés. Cette propriété n'est pas sensible à la casse.|  
 |**Membres**|Pour la liste des types qui sont inclus dans l’élément **\<Types>**, la liste des noms de membres qui ne sont pas autorisés dans les expressions RDL.|  
 |**Refuser**|Nom d'un membre qui n'est pas autorisé dans les expressions RDL. Cette propriété n'est pas sensible à la casse.<br /><br /> Remarque : Quand **Deny** est spécifié pour un membre, tous les membres portant ce nom pour tous les types ne sont pas autorisés.|  
   

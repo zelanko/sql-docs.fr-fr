@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10040"
 helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
-caps.latest.revision: 16
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 130d436ceb8080e6e7d70adc41196f3e76b07edb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6df6a544e02eeef685234fad0ca11d0bc898e617
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220899"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Boîte de dialogue Expression (Générateur de rapports)
   Utilisez le **Expression** boîte de dialogue pour écrire [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] propriétés d’un élément expressions pour les rapports. Vous pouvez utiliser des expressions pour définir un grand nombre de propriétés, notamment la couleur, la police et les bordures. Au moment de l'exécution, le processeur de rapports évalue les expressions et remplace le résultat de la valeur de la propriété.  
@@ -33,7 +30,7 @@ ms.locfileid: "37244499"
 ## <a name="expression-constructs"></a>Composants d'une expression  
  Les expressions commencent par un signe égal (=) et peuvent inclure des constantes, des littéraux, des opérateurs, ainsi que des références à des champs prédéfinis, à des collections intégrées, à des fonctions intégrées, à des fonctions de la bibliothèque d'exécutables [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], à des classes Common Language Runtime (CLR) [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] et à des fonctions personnalisées. La liste suivante décrit les catégories et les valeurs que vous pouvez ajouter à une expression.  
   
- **Définir l’expression pour :***\<PropertyName >  *  
+ **Définir l’expression pour :***\<PropertyName >*   
  Nom de la propriété pour laquelle vous définissez une expression. Vous pouvez également définir cette propriété, par son nom, dans le volet Propriétés.  
   
  **Constantes**  
@@ -47,7 +44,7 @@ ms.locfileid: "37244499"
  **Paramètres**  
  Fournit la liste des paramètres de rapport.  
   
- **Champs (** * \<dataset_sélectionné >* **)**  
+ **Champs (**  *\<dataset_sélectionné >* **)**  
  Affiche la liste des champs du dataset sélectionné dans la catégorie Datasets. Double-cliquez sur un champ pour le copier dans la zone **Expression** .  
   
  **Jeux de données**  

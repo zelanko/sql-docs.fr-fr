@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DimensionPermission Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DimensionPermission element
 ms.assetid: e06efbda-64fd-4dca-a2b5-c8ffbf21512c
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 058a86c54c714dd2244fc45f26cfa53fe503327d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 416755e486ce7acadb1ff43926aeeb4b50a56c04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322799"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225969"
 ---
 # <a name="dimensionpermission-element-assl"></a>Élément DimensionPermission (ASSL)
   Définit les autorisations qui appartiennent à un particulier [rôle](role-element-assl.md) élément pour une dimension de base de données spécifique ou d’une dimension de cube.  
