@@ -1,13 +1,11 @@
 ---
-title: Exemple de propriétés d’objet erreur (VC ++) | Documents Microsoft
+title: Erreur objet-exemple (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -20,19 +18,18 @@ helpviewer_keywords:
 - HelpFile property [ADO], VC++ example
 - Description property [ADO], VC++ example
 ms.assetid: 5321fc0f-cd0c-4e2a-a5bc-0008fba86b59
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bde620b9b8460061777b1019a5a35256a9179a2b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1ccbfb4a7d4fa40fc4c905beca8d24ac49bc78ec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277858"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616257"
 ---
-# <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vc"></a>Description, HelpContext, HelpFile, Native Error, nombre, Source et SQLState, propriétés-exemple (VC ++)
-Cet exemple déclenche une erreur, elle intercepte et affiche le [Description](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [Native Error](../../../ado/reference/ado-api/nativeerror-property-ado.md), [ Nombre](../../../ado/reference/ado-api/number-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-error.md), et [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) propriétés des résultats de [erreur](../../../ado/reference/ado-api/error-object.md) objet.  
+# <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vc"></a>Description, HelpContext, HelpFile, NativeError, nombre, Source et SQLState, propriétés-exemple (VC ++)
+Cet exemple déclenche une erreur, il intercepte et affiche le [Description](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [ Nombre](../../../ado/reference/ado-api/number-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-error.md), et [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) propriétés des résultats de [erreur](../../../ado/reference/ado-api/error-object.md) objet.  
   
 ```  
 // BeginDescriptionCpp.cpp  
@@ -128,11 +125,11 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Description (propriété)](../../../ado/reference/ado-api/description-property.md)   
- [Objet Error](../../../ado/reference/ado-api/error-object.md)   
+ [Propriété Description](../../../ado/reference/ado-api/description-property.md)   
+ [Objet d’erreur](../../../ado/reference/ado-api/error-object.md)   
  [HelpContext, HelpFile, propriétés](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [HelpContext, HelpFile, propriétés](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [Native Error, propriété (ADO)](../../../ado/reference/ado-api/nativeerror-property-ado.md)   
+ [NativeError, propriété (ADO)](../../../ado/reference/ado-api/nativeerror-property-ado.md)   
  [Number, propriété (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [Source, propriété (erreur ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
+ [Source, propriété (objet Error ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [SQLState, propriété](../../../ado/reference/ado-api/sqlstate-property.md)

@@ -1,14 +1,11 @@
 ---
-title: Sys.fn_translate_permissions (Transact-SQL) | Documents Microsoft
+title: Sys.fn_translate_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_translate_permissions
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - sys.fn_translate_permissions function
 - fn_translate_permissions function
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 56fe5c1054bdf41af5708981e6377ae7175e4210
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b098dafc5764db96bdf3dc9e604f3e69a687ab94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700497"
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +54,9 @@ sys.fn_translate_permissions ( level , perms )
  **table**  
   
 ## <a name="remarks"></a>Notes  
- La valeur retournée dans le **autorisations** colonne d’une Trace SQL est une représentation entière du masque de bits utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour calculer les autorisations effectives. Chacun des 25 types d'éléments sécurisables possède son propre jeu d'autorisations avec des valeurs numériques correspondantes. **Sys.fn_translate_permissions** ce masque de bits se traduit par une table de noms d’autorisations.  
+ La valeur retournée dans le **autorisations** colonne d’une Trace SQL est une représentation entière du masque de bits utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour calculer les autorisations effectives. Chacun des 25 types d'éléments sécurisables possède son propre jeu d'autorisations avec des valeurs numériques correspondantes. **Sys.fn_translate_permissions** convertit ce masque de bits dans une table de noms d’autorisations.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="example"></a>Exemple  

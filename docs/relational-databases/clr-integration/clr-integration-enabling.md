@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - clr enabled option
 - common language runtime [SQL Server], enabling
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cf4d327ecc82f047d80eba8da709fea1fd7e82dd
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 0e39d3805ea89f6f8bbf7a48488fc536796312b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653347"
 ---
-# <a name="clr-integration---enabling"></a>Intégration du CLR - activation
+# <a name="clr-integration---enabling"></a>Intégration du CLR - Activation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La fonctionnalité d'intégration du Common Language Runtime (CLR) est désactivée par défaut et doit être activée pour pouvoir utiliser des objets implémentés à l'aide de l'intégration du CLR. Pour activer l’intégration du CLR, utilisez le **clr activé** possibilité du **sp_configure** procédure stockée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   

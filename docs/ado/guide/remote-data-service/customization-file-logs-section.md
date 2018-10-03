@@ -1,34 +1,31 @@
 ---
-title: Section Logs du fichier de personnalisation | Documents Microsoft
+title: Section Logs du fichier de personnalisation | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b80034b1d2668960aa918b1c66df878eb75ca86
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 64512857af5ed42e9c91a52e5a00f9a7f642520a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274008"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726467"
 ---
-# <a name="customization-file-logs-section"></a>Section de personnalisation de fichiers journaux
-Le **journaux** section contient une entrée de fichier journal, qui spécifie le nom d’un fichier qui enregistre les erreurs pendant l’opération de le **DataFactory**.  
+# <a name="customization-file-logs-section"></a>Fichier de personnalisation, section Logs
+Le **journaux** section contient une entrée de fichier journal, qui spécifie le nom d’un fichier qui enregistre les erreurs pendant l’opération de la **DataFactory**.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Syntaxe  
  Une entrée de fichier journal est au format :  
@@ -45,15 +42,15 @@ FileName
 |Élément|Description|  
 |----------|-----------------|  
 |**Err**|Une chaîne littérale qui indique qu’il est une entrée de fichier journal.|  
-|*FileName*|Un nom de fichier et le chemin complet. Le nom de fichier par défaut est **c:\msdfmap.log**.|  
+|*FileName*|Un nom de chemin d’accès et de fichier complet. Le nom de fichier standard est **c:\msdfmap.log**.|  
   
  Le fichier journal contient le nom d’utilisateur, un HRESULT, une date et une heure de chaque erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Section Connect du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Section de personnalisation de fichier SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Section du fichier de personnalisation UserList](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory, personnalisation](../../../ado/guide/remote-data-service/datafactory-customization.md)   
+ [Fichier de personnalisation, Section Connect](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Fichier de personnalisation, Section SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [Fichier de personnalisation, Section UserList](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Paramètres Client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Présentation du fichier de personnalisation](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [Écriture d’un gestionnaire personnalisé](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)

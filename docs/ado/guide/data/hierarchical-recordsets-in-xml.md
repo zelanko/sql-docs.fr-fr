@@ -1,30 +1,27 @@
 ---
-title: Jeux d’enregistrements hiérarchiques dans XML | Documents Microsoft
+title: Recordsets hiérarchiques dans XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 697305c34e1906c95b20a2f33866bc57c1a1d019
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 06725d50662500000921c541b2066302a4de918a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272058"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615957"
 ---
-# <a name="hierarchical-recordsets-in-xml"></a>Jeux d’enregistrements hiérarchiques dans XML
-ADO autorise la persistance d’objets Recordset hiérarchiques en XML. Avec de tels objets, la valeur d’un champ dans l’objet Recordset parent est un autre objet Recordset. Ces champs sont représentés en tant qu’éléments enfants dans le flux XML plutôt que d’un attribut.  
+# <a name="hierarchical-recordsets-in-xml"></a>Recordsets hiérarchiques dans XML
+ADO autorise la persistance d’objets Recordset hiérarchiques dans XML. Avec de tels objets, la valeur d’un champ dans le jeu d’enregistrements parent est un autre jeu d’enregistrements. Ces champs sont représentés en tant qu’éléments enfants dans le flux XML plutôt que d’un attribut.  
   
 ## <a name="remarks"></a>Notes  
  L’exemple suivant illustre ce cas :  
@@ -108,25 +105,25 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 </xml>   
 ```  
   
- L’ordre exact des colonnes dans le jeu d’enregistrements parent n’est pas évidente lorsqu’il est conservé de cette manière. Tout champ du parent peut contenir un objet Recordset. Le fournisseur de persistance conserve toutes les colonnes scalaires tout d’abord en tant qu’attributs, puis toutes les « colonnes » du jeu d’enregistrements enfant en tant qu’éléments enfants de la ligne parente. La position ordinale du champ dans le parent Recordset peut être obtenu en examinant la définition de schéma de l’objet Recordset. Chaque champ a une propriété OLE DB, rs : number, définie dans l’espace de noms du schéma Recordset qui contient le nombre ordinal de ce champ.  
+ L’ordre exact des colonnes dans le jeu d’enregistrements parent n’est pas évident lorsqu’il est conservé de cette manière. N’importe quel champ de la page parente peut contenir un objet Recordset. Le fournisseur de persistance conserve toutes les colonnes scalaires tout d’abord en tant qu’attributs, puis toutes les « colonnes » du jeu d’enregistrements enfant en tant qu’éléments enfants de la ligne parente. La position ordinale du champ dans le parent du jeu d’enregistrements peut être obtenu en examinant la définition de schéma de l’objet Recordset. Chaque champ a une propriété OLE DB, rs : number, définie dans l’espace de noms du schéma Recordset qui contient le nombre ordinal de ce champ.  
   
- Les noms de tous les champs dans le jeu d’enregistrements enfant sont concaténés avec le nom du champ dans le jeu d’enregistrements qui contient cet enfant du parent. Il s’agit pour vous assurer qu’il n’y a aucune collision de nom dans les cas où le parent et enfant jeux d’enregistrements à la fois contiennent un champ qui est obtenu à partir de deux tables différentes mais portant le même nom.  
+ Les noms de tous les champs dans le jeu d’enregistrements enfant sont concaténés avec le nom du champ dans le jeu d’enregistrements qui contient cet enfant du parent. Il s’agit pour vous assurer qu’il n’y a aucune collisions de noms dans les cas où le parent et enfant Recordsets les deux contiennent un champ qui est obtenu à partir de deux tables différentes mais portant le même nom.  
   
- Lors de l’enregistrement des jeux d’enregistrements hiérarchiques en XML, vous devez connaître les restrictions suivantes dans ADO :  
+ Lors de l’enregistrement des Recordsets hiérarchiques en XML, vous devez connaître les restrictions suivantes dans ADO :  
   
--   Un jeu d’enregistrements hiérarchique avec en attente de mises à jour ne peut pas être conservé au format XML.  
+-   Un objet Recordset hiérarchique avec en attente de mises à jour ne peut pas être conservé au format XML.  
   
 -   Un jeu d’enregistrements hiérarchique créé avec une commande de mise en forme paramétrée ne peut pas être persistante (au format XML ou ADTG).  
   
--   ADO enregistre actuellement la relation entre le parent et les jeux d’enregistrements enfants sous la forme d’un objet binaire volumineux (BLOB). Balises XML pour décrire cette relation n’ont pas encore été définies dans l’espace de noms de schéma d’ensemble de lignes.  
+-   ADO enregistre actuellement la relation entre le parent et les jeux d’enregistrements enfants sous la forme d’un objet binaire volumineux (BLOB). Les balises XML pour décrire cette relation n’ont pas encore été définies dans l’espace de noms de schéma d’ensemble de lignes.  
   
--   Lorsqu’un objet Recordset hiérarchique est enregistré, enfant de tous les jeux d’enregistrements est enregistrés en même temps. Si le jeu d’enregistrements actuel est un enfant d’un autre objet Recordset, son parent n’est pas enregistré. Jeux d’enregistrements qui forment la sous-arborescence de l’ensemble d’enregistrements en cours de tous les enfants est enregistrés.  
+-   Lors de l’enregistrée d’un objet Recordset hiérarchique, enfant de tous les jeux d’enregistrements est enregistrés en même temps. Si le jeu d’enregistrements actuel est un enfant d’un autre jeu d’enregistrements, son parent n’est pas enregistré. Jeux d’enregistrements qui forment la sous-arborescence de l’ensemble d’enregistrements actuel de tous les enfants est enregistrés.  
   
- Lorsqu’un objet Recordset hiérarchique est rouvert à partir de son format de persistance XML, vous devez prendre en compte les limitations suivantes :  
+ Quand un objet Recordset hiérarchique est rouvert à partir de son format de persistance XML, vous devez être conscient des limitations suivantes :  
   
--   Si l’enregistrement enfant contient des enregistrements pour lesquels il n’existe aucun enregistrement parent correspondant, ces lignes ne sont pas écrits dans la représentation XML de l’objet Recordset hiérarchique. Par conséquent, ces lignes seront perdues lors de la réouverture de l’ensemble d’enregistrements à partir de son emplacement de persistance.  
+-   Si l’enregistrement enfant contient des enregistrements pour lesquels il n’existe aucun enregistrement parent correspondant, ces lignes ne sont pas écrites dans la représentation XML de l’objet Recordset hiérarchique. Par conséquent, ces lignes seront perdues lorsque le Recordset est rouvert à partir de son emplacement de persistance.  
   
--   Si un enregistrement enfant possède des références à plusieurs enregistrements parents, puis rouvrir le jeu d’enregistrements, l’objet Recordset enfant peut contenir des enregistrements en double. Toutefois, ces doublons seront visibles que si l’utilisateur fonctionne directement avec l’ensemble de lignes enfant sous-jacent. Si un chapitre est utilisé pour naviguer dans l’objet Recordset (qui est la seule façon de naviguer dans ADO), les doublons ne sont pas visibles.  
+-   Si un enregistrement enfant est lié à plusieurs enregistrements de parent, puis rouvrir le jeu d’enregistrements, le jeu d’enregistrements enfants peut contenir des enregistrements en double. Toutefois, ces doublons sera uniquement visibles si l’utilisateur travaille directement avec l’ensemble de lignes enfant sous-jacent. Si un chapitre est utilisé pour naviguer de l’objet Recordset (qui est la seule façon de naviguer dans ADO), les doublons ne sont pas visibles.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

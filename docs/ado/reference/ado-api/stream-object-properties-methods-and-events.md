@@ -1,39 +1,36 @@
 ---
-title: Flux d’événements, méthodes et propriétés de l’objet | Documents Microsoft
+title: Stream, objet-propriétés, méthodes et événements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Stream object [ADO], members
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 309dc7655ed7d586deace8869b2ebc245312ec6b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7f775bf1d77ed23e153610f7b6d6cbf5c17ce544
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282715"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697194"
 ---
-# <a name="stream-object-properties-methods-and-events"></a>Propriétés de l’objet stream, méthodes et événements
-## <a name="properties"></a>Propriétés  
+# <a name="stream-object-properties-methods-and-events"></a>Propriétés de l’objet Stream, méthodes et événements
+## <a name="properties"></a>Properties  
  [Propriété de jeu de caractères](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [EOS, propriété](../../../ado/reference/ado-api/eos-property.md)  
   
  [LineSeparator, propriété](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
   
- [Propriété mode](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Propriété de mode](../../../ado/reference/ado-api/mode-property-ado.md)  
   
- [Propriété position](../../../ado/reference/ado-api/position-property-ado.md)  
+ [Propriété de position](../../../ado/reference/ado-api/position-property-ado.md)  
   
  [Size, propriété (objet Stream ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
   
@@ -44,13 +41,13 @@ ms.locfileid: "35282715"
 ## <a name="methods"></a>Méthodes  
  [Cancel (méthode)](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
- [Close (méthode)](../../../ado/reference/ado-api/close-method-ado.md)  
+ [Close, méthode](../../../ado/reference/ado-api/close-method-ado.md)  
   
  [CopyTo (méthode)](../../../ado/reference/ado-api/copyto-method-ado.md)  
   
  [Flush (méthode)](../../../ado/reference/ado-api/flush-method-ado.md)  
   
- [LoadFromFile (méthode)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
+ [LoadFromFile, méthode](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
   
  [Open, méthode (objet Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
   

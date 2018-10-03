@@ -1,14 +1,11 @@
 ---
-title: Sys.database_recovery_status (Transact-SQL) | Documents Microsoft
+title: Sys.database_recovery_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_recovery_status_TSQL
@@ -20,22 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_recovery_status catalog view
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2cdefec3d2f5ffd6a8ce326c4d3afd78df47de44
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 72a292724a08917b18baedd6a3adbb8dfd00f739
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707347"
 ---
 # <a name="sysdatabaserecoverystatus-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne par base de données. Si la base de données n'est pas ouverte, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] tente de la démarrer.  
   
- Pour afficher la ligne pour une base de données autre que **master** ou **tempdb**, une des options suivantes doit s’appliquer :  
+ Pour afficher la ligne d’une base de données autre que **master** ou **tempdb**, l’une des opérations suivantes doit s’appliquer :  
   
 -   Être le propriétaire de la base de données.  
   
@@ -43,17 +40,17 @@ ms.lasthandoff: 05/04/2018
   
 -   Avoir l’autorisation CREATE DATABASE dans le **master** base de données.    
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|ID de la base de données, unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**database_id**|**Int**|ID de la base de données, unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**database_guid**|**uniqueidentifier**|Utilisé pour associer ensemble tous les fichiers de base de données d'une base de données. Tous les fichiers possèdent ce GUID dans leur page d'en-tête afin que la base de données démarre comme prévu. Une seule base de données doit posséder ce GUID, mais des doublons peuvent être créés en copiant et en joignant des bases de données. RESTORE génère toujours un nouveau GUID lorsque vous restaurez une base de données qui n'existe pas encore.<br /><br /> NULL= Base de données hors connexion, ou la base de données ne démarrera pas.|  
 |**family_guid**|**uniqueidentifier**|Identificateur de la « famille de sauvegarde » de la base de données pour détecter les états de restauration correspondants.<br /><br /> NULL = base de données est hors connexion ou de la base de données ne démarrera pas.|  
-|**last_log_backup_lsn**|**numeric(25,0)**|Numéro de séquence journal début de la prochaine sauvegarde du journal.<br /><br /> Si NULL, un sauvegarde du journal des transactions jusqu'à ne peut pas être effectué, car il n’existe aucune sauvegarde de base de données ou la base de données est en mode de récupération SIMPLE.|  
+|**last_log_backup_lsn**|**numeric(25,0)**|Numéro de la séquence de journal à partir de la prochaine sauvegarde du journal.<br /><br /> Si NULL, un sauvegarde du journal des transactions jusqu'à n’est pas possible, car il n’existe aucune sauvegarde de base de données actuelle ou la base de données est de récupération SIMPLE.|  
 |**recovery_fork_guid**|**uniqueidentifier**|Identifie la fourchette de récupération en cours sur laquelle la base de données est actuellement active.<br /><br /> NULL= Base de données hors connexion, ou la base de données ne démarrera pas.|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|Identificateur de la fourchette de récupération de début.<br /><br /> NULL= Base de données hors connexion, ou la base de données ne démarrera pas.|  
-|**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** n’est pas égal ( ! =) pour **recovery_fork_guid**, **fork_point_lsn** est le numéro de séquence de journal du point de branchement actuel. Dans le cas contraire, la valeur est NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** n’est pas égal ( ! =) pour **recovery_fork_guid**, **fork_point_lsn** est le numéro de séquence de journal du point du branchement actuel. Dans le cas contraire, la valeur est NULL.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

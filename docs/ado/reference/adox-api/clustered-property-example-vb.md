@@ -1,32 +1,29 @@
 ---
-title: Clustered, propriété-Exemple (VB) | Documents Microsoft
+title: Clustered, propriété-Exemple (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clustered property [ADOX], Visual Basic example
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44b80c7eba15937835e066fd09990b23b5f5f2cb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d6268c1eb31565a781929b235fd72f4c27091476
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701577"
 ---
-# <a name="clustered-property-example-vb"></a>Exemple de propriété Clustered (VB)
-Cet exemple illustre la [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) propriété d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Notez que les bases de données Microsoft Jet ne prennent pas charge les index ordonnés en clusters, cet exemple retourne **False** pour le **Clustered** propriété de tous les index dans le **Northwind** base de données.  
+# <a name="clustered-property-example-vb"></a>Clustered, exemple de propriété (VB)
+Cet exemple montre la [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) propriété d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Notez que les bases de données Microsoft Jet ne gèrent pas les index ordonnés en clusters, cet exemple retournera **False** pour le **Clustered** propriété de tous les index dans le **Northwind** base de données.  
   
 ```  
 ' BeginClusteredVB  
@@ -77,7 +74,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet catalogue (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Clustered, propriété (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [Objet index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Table, objet (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

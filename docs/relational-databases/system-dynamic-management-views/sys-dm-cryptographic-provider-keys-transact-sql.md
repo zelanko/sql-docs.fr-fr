@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_cryptographic_provider_keys (Transact-SQL) | Documents Microsoft
+title: Sys.dm_cryptographic_provider_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_cryptographic_provider_keys_TSQL
@@ -18,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_keys dynamic management function
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26d789882ec717a2d69796a90284c22a3ad2aa44
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: d83a1a60162ba0124b8ff379f241b6bd64e89675
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627417"
 ---
 # <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,17 +46,17 @@ dm_cryptographic_provider_keys ( provider_id )
   
 ## <a name="tables-returned"></a>Tables retournées  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**key_id**|**int**|Numéro d'identification de la clé sur le fournisseur.|  
+|**key_id**|**Int**|Numéro d'identification de la clé sur le fournisseur.|  
 |**key_name**|**nvarchar(512)**|Nom de la clé sur le fournisseur.|  
 |**key_thumbprint**|**varbinary(32)**|Empreinte numérique du fournisseur de la clé.|  
-|**algorithm_id**|**int**|Numéro d'identification de l'algorithme sur le fournisseur.|  
-|**algorithm_tag**|**int**|Balise de l'algorithme sur le fournisseur.|  
+|**algorithm_id**|**Int**|Numéro d'identification de l'algorithme sur le fournisseur.|  
+|**algorithm_tag**|**Int**|Balise de l'algorithme sur le fournisseur.|  
 |**key_type**|**nchar(256)**|Type de clé sur le fournisseur.|  
-|**key_length**|**int**|Longueur de la clé sur le fournisseur.|  
+|**key_length**|**Int**|Longueur de la clé sur le fournisseur.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Lorsque cette vue est interrogée, elle authentifie le contexte utilisateur auprès du fournisseur et énumère toutes les clés visibles à l'utilisateur.  
   
  Si l'utilisateur ne peut pas s'authentifier auprès du fournisseur EKM, aucune information de clé n'est retournée.  

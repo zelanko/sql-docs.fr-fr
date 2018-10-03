@@ -1,13 +1,11 @@
 ---
-title: CompareBookmarks, méthode (ADO) | Documents Microsoft
+title: CompareBookmarks, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 592a1e06580aca5990bf5ec6b7d28a6a1ecc5abc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276798"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649747"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks, méthode (ADO)
 Compare deux signets et retourne une indication de leurs valeurs relatives.  
@@ -49,20 +46,20 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  Le signet de la deuxième ligne.  
   
 ## <a name="remarks"></a>Notes  
- Les signets doivent s’appliquer à la même [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet, ou un **Recordset** objet et ses [clone](../../../ado/reference/ado-api/clone-method-ado.md). Vous ne pouvez pas comparer correctement signets à partir de différents **Recordset** des objets, même si elles ont été créées à partir de la même source ou commande. Ni vous pouvez comparer des signets d’un **Recordset** objet dont le fournisseur sous-jacent ne prend pas en charge les comparaisons.  
+ Les signets doivent s’appliquer à la même [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet, ou un **Recordset** objet et ses [clone](../../../ado/reference/ado-api/clone-method-ado.md). Vous ne pouvez pas comparer correctement des signets à partir de différents **Recordset** objets, même si elles ont été créées à partir de la même source ou commande. Ni vous pouvez comparer des signets d’un **Recordset** objet dont le fournisseur sous-jacent ne prend pas en charge les comparaisons.  
   
  Un signet identifie de façon unique une ligne dans un **Recordset** objet. Utilisez le [signet](../../../ado/reference/ado-api/bookmark-property-ado.md) propriété de la ligne actuelle pour obtenir son signet.  
   
- Étant donné que le type de données d’un signet est spécifique à chaque fournisseur, ADO expose comme un **variante**. Par exemple, les signets SQL Server sont de type DBTYPE_R8 (**Double**). ADO expose ce type comme un **Variant** avec un sous-type de **Double**.  
+ Étant donné que le type de données d’un signet est spécifique à chaque fournisseur, ADO expose en tant qu’un **Variant**. Par exemple, les signets de SQL Server sont de type DBTYPE_R8 (**Double**). ADO expose ce type comme un **Variant** avec un sous-type de **Double**.  
   
- Lorsque vous comparez des signets, ADO ne tente pas de n’importe quel type de contrainte. Les valeurs sont simplement transmises au fournisseur où la comparaison se produit. Si les signets passés à la **CompareBookmarks** sont stockés dans des variables de types différents, il peut générer l’erreur d’incompatibilité de type suivant : « Arguments sont de type incorrect, sont hors des limites autorisées ou sont en conflit entre eux. »  
+ Lorsque vous comparez des signets, ADO ne tente pas de n’importe quel type de contrainte. Les valeurs sont simplement transmises au fournisseur où la comparaison se produit. Si les signets passés à la **CompareBookmarks** méthode sont stockées dans des variables de types différents, il peut générer l’erreur d’incompatibilité de type suivante : « Arguments sont de type incorrect, sont en dehors des limites acceptables ou sont en conflit entre eux. »  
   
- Un signet qui n’est pas valide ou mal formée provoque une erreur.  
+ Signet qui n’est pas valide ou mal formée provoque une erreur.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple CompareBookmarks, méthode (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
- [Exemple de CompareBookmarks, méthode (VC ++)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
+ [CompareBookmarks, méthode-exemple (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
+ [CompareBookmarks, méthode-exemple (VC ++)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
  [Bookmark, propriété (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)
