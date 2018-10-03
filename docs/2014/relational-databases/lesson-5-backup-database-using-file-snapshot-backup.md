@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0412dad97550d5a9aaf601488559ef7c91e1880a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78674b36b395aa50677e17fa4344690c988f5715
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207059"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215129"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Leçon 6 : Migrer une base de données d'une machine source locale vers une machine de destination dans Windows Azure
   Cette leçon suppose que vous avez déjà une autre instance SQL Server, pouvant résider sur un autre ordinateur local ou dans une machine virtuelle Windows Azure. Pour plus d’informations sur la création d’une machine virtuelle SQL Server dans Windows Azure, consultez [approvisionnement d’une Machine virtuelle de SQL Server sur Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Après avoir déployé une machine virtuelle SQL Server dans Windows Azure, assurez-vous que vous pouvez vous connecter à une instance de SQL Server dans cette machine virtuelle via SQL Server Management Studio sur un autre ordinateur.  

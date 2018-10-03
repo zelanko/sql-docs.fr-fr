@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 207f6141338c4d9e44c4fc7763177276ea623686
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bfa1c59fb47a859bb680970617a81add871908e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167766"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061749"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tâche 4 (Facultatif) : Combiner, mettre en correspondance et publier un nouvel ensemble de données
   Au fil du temps, vous souhaiterez ajouter des données au référentiel MDS. Avant d’ajouter des données, il peut être utile pour comparer les nouvelles données aux données qui sont déjà managées dans MDS, pour vous assurer que vous n’ajoutez pas de données dupliquées ou incorrectes. Dans le complément Master Data Services pour Excel, vous pouvez combiner les données de deux feuilles de calcul et les comparer afin d'identifier et supprimer les doublons, avant de les publier dans MDS. La fonctionnalité de correspondance dans le complément MDS pour Excel utilise la fonctionnalité de correspondance de DQS pour identifier les correspondances de données. Dans cette tâche, vous allez combiner les données de deux feuilles de calcul dans une seule feuille, puis vous allez exercer l'activité de correspondance pour identifier et supprimer les doublons avant la publication dans MDS. Consultez [correspondance de qualité de données dans le complément MDS pour Excel](http://msdn.microsoft.com/library/hh548681.aspx) et [combiner des données](http://msdn.microsoft.com/library/hh548680.aspx) rubriques pour plus d’informations.  

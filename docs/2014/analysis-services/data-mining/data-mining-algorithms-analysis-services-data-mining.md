@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], algorithms
 - machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
-caps.latest.revision: 72
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bba1521f808be45dabb89f1fe025ae1b9aa461bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 490857f9a8c95853d3f89bc8b0cfb85a165f1fd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243749"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218569"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algorithmes d'exploration de données (Analysis Services - Exploration de données)
   Un *algorithme d’exploration de données* est un ensemble d’heuristiques et de calculs qui crée un modèle d’exploration de données à partir des données. Pour créer un modèle, l'algorithme analyse d'abord les données que vous fournissez, à la recherche de types spécifiques de modèles ou de tendances. L'algorithme utilise les résultats de cette analyse afin de définir les paramètres optimaux pour la création du modèle d'exploration de données. Ensuite, ces paramètres sont appliqués au jeu de données entier pour extraire des modèles utilisables et des statistiques détaillées.  
@@ -92,7 +89,7 @@ ms.locfileid: "37243749"
 |**Requêtes d’exploration de données**|Fournit plusieurs requêtes que vous pouvez utiliser avec chaque type de modèle. Les exemples incluent des requêtes de contenu qui vous permettent d'en savoir plus sur les schémas du modèle, ainsi que des requêtes de prédiction pour vous aider à établir des prédictions en fonction de ces schémas.|  
 ||[Exemples de requêtes de modèle d’association](association-model-query-examples.md)<br /><br /> [Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)<br /><br /> [Exemples de requêtes de modèle d’arbre de décision](decision-trees-model-query-examples.md)<br /><br /> [Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)<br /><br /> [Exemples de requêtes de modèle de régression logistique](logistic-regression-model-query-examples.md)<br /><br /> [Exemples de requêtes de modèle Naive Bayes](naive-bayes-model-query-examples.md)<br /><br /> [Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)<br /><br /> [Exemples de requêtes de modèle Sequence Clustering](sequence-clustering-model-query-examples.md)<br /><br /> [Exemples de requêtes de modèle de séries chronologiques](time-series-model-query-examples.md)|  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |**Rubrique**|**Description**|  
 |---------------|---------------------|  

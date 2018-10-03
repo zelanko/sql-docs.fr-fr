@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79a86a9b589fc5118f3418d0898117c7482dda6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8309a4d66fbcf36aca4e5e4d817c2bb34722bc08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285635"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072969"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuration de la tâche de profilage des données
   Avant de pouvoir examiner un profil des données sources, vous devez tout d'abord configurer et exécuter la tâche de profilage des données. Vous créez cette tâche dans un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour configurer la tâche de profilage des données, vous utilisez l'Éditeur de tâche de profilage de données. Cet éditeur vous permet de sélectionner l'emplacement de sortie des profils et les profils à calculer. Après avoir configuré la tâche, vous exécutez le package pour calculer les profils des données.  
@@ -58,7 +55,7 @@ ms.locfileid: "37285635"
 |Pour calculer|Afin d'identifier|Utilisez ce profil|  
 |----------------|-------------------------|----------------------|  
 |Toutes les longueurs distinctes des valeurs de chaîne dans la colonne sélectionnée, ainsi que le pourcentage de lignes dans la table que chaque longueur représente.|**Les valeurs de chaîne qui ne sont pas valides.** Par exemple, vous profilez une colonne supposée utiliser deux caractères pour les codes des États américains et découvrez des valeurs qui comportent plus de deux caractères.|**Distribution de longueurs de colonne :** valide pour une colonne avec l’un de ces types de données :<br /><br /> Types de données de caractères : `char`, `nchar`, `varchar` et `nvarchar`|  
-|Un ensemble d'expressions régulières qui reflètent le pourcentage spécifié de valeurs dans une colonne de chaîne.<br /><br /> Mais aussi pour rechercher des expressions régulières qui peuvent être utilisées dans le futur pour valider de nouvelles valeurs.|**Les valeurs de chaîne qui ne sont pas valides ou dont le format est incorrect. **Par exemple, un profil de modèle d’une colonne de codes zip/postaux peut produire les expressions régulières : \d{5}-\d{4}, \d{5} et \d{9}. Si la sortie contient d'autres expressions régulières, les données contiennent des valeurs qui ne sont pas valides ou dont le format est incorrect.|**Profil de modèle de colonne :** valide pour une colonne avec l’un de ces types de données :<br /><br /> Types de données de caractères : `char`, `nchar`, `varchar` et `nvarchar`|  
+|Un ensemble d'expressions régulières qui reflètent le pourcentage spécifié de valeurs dans une colonne de chaîne.<br /><br /> Mais aussi pour rechercher des expressions régulières qui peuvent être utilisées dans le futur pour valider de nouvelles valeurs.|**Les valeurs de chaîne qui ne sont pas valides ou dont le format est incorrect.** Par exemple, un profil de modèle d’une colonne de codes zip/postaux peut produire les expressions régulières : \d{5}-\d{4}, \d{5} et \d{9}. Si la sortie contient d'autres expressions régulières, les données contiennent des valeurs qui ne sont pas valides ou dont le format est incorrect.|**Profil de modèle de colonne :** valide pour une colonne avec l’un de ces types de données :<br /><br /> Types de données de caractères : `char`, `nchar`, `varchar` et `nvarchar`|  
 |Le pourcentage de valeurs Null dans la colonne sélectionnée.|**Un ratio élevé inattendu de valeurs Null dans une colonne.** Par exemple, vous profilez une colonne supposée contenir des codes postaux américains et découvrez un pourcentage élevé et inacceptable de codes manquants.|**Ratio de colonne Null —** valide pour une colonne avec ces types de données :<br /><br /> N'importe quel type de données. Cela inclut les types `image`, `text`, `xml`, les types définis par l'utilisateur et les types variant.|  
 |Des statistiques, telles que la valeur minimale, la valeur maximale, la moyenne et l'écart type pour des colonnes numériques, ainsi que la valeur minimale et la valeur maximale pour des colonnes `datetime`.|**Les valeurs numériques et les dates qui ne sont pas valides.** Par exemple, vous profilez une colonne de dates historiques et découvrez une date maximale qui n'est pas encore passée.|**Profil de statistiques de colonne :** valide pour une colonne avec l’un de ces types de données :<br /><br /> Types de donnés numériques : types integer (sauf `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` et `numeric`.<br /><br /> Types de données de date et d'heure : `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` et `datetimeoffset`.<br />Remarque : pour une colonne comportant un type de données de date et d’heure, le profil calcule uniquement le minimum et le maximum.|  
 |Toutes les valeurs distinctes dans la colonne sélectionnée, ainsi que le pourcentage de lignes dans la table que chaque valeur représente. Ou les valeurs qui représentent plus qu'un pourcentage spécifié dans la table.|**Un nombre incorrect de valeurs distinctes dans une colonne.** Par exemple, vous profilez une colonne qui contient les États américains et découvrez plus de 50 valeurs distinctes.|**Distribution de valeurs de colonne :** valide pour une colonne avec l’un de ces types de données :<br /><br /> Types de donnés numériques : types integer (sauf `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` et `numeric`.<br /><br /> Types de données de caractères : `char`, `nchar`, `varchar` et `nvarchar`<br /><br /> Types de données de date et d'heure : `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` et `datetimeoffset`.|  

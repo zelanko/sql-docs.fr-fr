@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d341f0b04b73c3edfa636e1e059a375965f7481d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c9ff2e1adad233d7bee51194858d1cca530bdfdd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258725"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155279"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login, classe d'événements
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un événement **Audit Broker Login** pour renvoyer des messages d'audit relatifs à la sécurité du transport de Service Broker.  
@@ -59,7 +56,7 @@ ms.locfileid: "37258725"
   
 |ID|Sous-classe|Description|  
 |--------|--------------|-----------------|  
-| 1|Login Success|Un événement Login Success indique que le processus de connexion du Broker adjacent s'est correctement terminé.|  
+|1|Login Success|Un événement Login Success indique que le processus de connexion du Broker adjacent s'est correctement terminé.|  
 |2|Login Protocol Error|Un événement Login Protocol Error indique que le Broker reçoit un message correct mais non valide pour l'état actuel du processus de connexion. Le message a peut-être été perdu ou envoyé hors séquence.|  
 |3|Message Format Error|Un événement Message Format Error indique que le Broker a reçu un message qui ne correspond pas au format attendu. Il est possible que le message ait été endommagé ou qu'un programme autre que SQL Server envoie les messages au port utilisé par Service Broker.|  
 |4|Negotiate Failure|Un événement Negotiate Failure indique que le Broker local et le Broker distant prennent en charge des niveaux d'authentification qui s'excluent mutuellement.|  

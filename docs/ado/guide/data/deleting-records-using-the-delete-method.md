@@ -1,13 +1,11 @@
 ---
-title: Suppression d’enregistrements à l’aide de la méthode Delete | Documents Microsoft
+title: Suppression d’enregistrements à l’aide de la méthode Delete | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, deleting records
@@ -15,37 +13,36 @@ helpviewer_keywords:
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a708b3ed5d709be7a05e50a0511f29e3f1430e89
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1a099b033422e7c10214371772edd090f0cc15fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270338"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718167"
 ---
-# <a name="deleting-records-using-the-delete-method"></a>Suppression d’enregistrements à l’aide de la méthode de suppression
-À l’aide de la **supprimer** méthode marque l’enregistrement actif ou un groupe d’enregistrements dans une **Recordset** objet pour la suppression. Si le **Recordset** objet n’autorise pas de suppression de l’enregistrement, une erreur se produit. Si vous êtes en mode de mise à jour immédiate, suppressions se produisent immédiatement dans la base de données. Si un enregistrement ne peut pas être supprimé avec succès (en raison de violations d’intégrité de base de données, par exemple), l’enregistrement reste en mode édition après l’appel à **mise à jour.** Cela signifie que vous devez annuler la mise à jour à l’aide de [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) avant de quitter l’enregistrement actif (par exemple, à l’aide de [fermer](../../../ado/reference/ado-api/close-method-ado.md), [déplacer](../../../ado/reference/ado-api/move-method-ado.md), ou [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
+# <a name="deleting-records-using-the-delete-method"></a>Suppression d’enregistrements avec la méthode Delete
+À l’aide de la **supprimer** méthode marque l’enregistrement actif ou un groupe d’enregistrements dans une **Recordset** objet pour la suppression. Si le **Recordset** objet n’autorise pas de suppression de l’enregistrement, une erreur se produit. Si vous êtes en mode de mise à jour immédiate, suppressions se produisent immédiatement dans la base de données. Si un enregistrement ne peut pas être supprimé avec succès (en raison de violations d’intégrité de base de données, par exemple), l’enregistrement reste en mode édition après l’appel à **mise à jour.** Cela signifie que vous devez annuler la mise à jour à l’aide [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) avant de déplacer l’enregistrement en cours (par exemple, à l’aide de [fermer](../../../ado/reference/ado-api/close-method-ado.md), [déplacer](../../../ado/reference/ado-api/move-method-ado.md), ou [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
- Si vous êtes en mode de mise à jour par lot, les enregistrements sont marqués pour suppression à partir du cache et la suppression effective intervient lorsque vous appelez le **UpdateBatch** (méthode). (Pour afficher les enregistrements supprimés, définissez la **filtre** propriété **adFilterAffectedRecords** après **supprimer** est appelée.)  
+ Si vous êtes en mode de mise à jour par lot, les enregistrements marqués pour suppression à partir du cache et la suppression se produit lorsque vous appelez le **UpdateBatch** (méthode). (Pour afficher les enregistrements supprimés, définissez le **filtre** propriété **adFilterAffectedRecords** après **supprimer** est appelée.)  
   
- Tente de récupérer les valeurs de champ de l’enregistrement supprimé génère une erreur. Après la suppression de l’enregistrement en cours, l’enregistrement supprimé reste actif jusqu'à ce que vous déplacez vers un autre enregistrement. Une fois vous déplacer hors de l’enregistrement supprimé, il n’est plus accessible.  
+ Tente de récupérer les valeurs de champ à partir de l’enregistrement supprimé génère une erreur. Après avoir supprimé l’enregistrement en cours, l’enregistrement supprimé reste actif jusqu'à ce que vous déplacez vers un autre enregistrement. Une fois que vous vous éloignez de l’enregistrement supprimé, il n’est plus accessible.  
   
- Si vous imbriquez des suppressions dans une transaction, vous pouvez récupérer des enregistrements supprimés à l’aide de la **RollbackTrans** (méthode). Si vous êtes en mode de mise à jour par lot, vous pouvez annuler une suppression en attente ou un groupe de suppressions en attente à l’aide de la **CancelBatch** (méthode).  
+ Si vous imbriquez des suppressions dans une transaction, vous pouvez récupérer les enregistrements supprimés à l’aide de la **RollbackTrans** (méthode). Si vous êtes en mode de mise à jour par lot, vous pouvez annuler une suppression en attente ou un groupe de suppressions en attente à l’aide de la **CancelBatch** (méthode).  
   
- Si la tentative de suppression des enregistrements échoue en raison d’un conflit avec les données sous-jacentes (par exemple, lorsqu’un enregistrement a déjà été supprimé par un autre utilisateur), le fournisseur retourne des avertissements dans le **erreurs** collection mais n’interrompt ne pas le programme exécution. Une erreur d’exécution se produit uniquement en cas de conflit sur tous les enregistrements demandés.  
+ Si la tentative de suppression des enregistrements échoue en raison d’un conflit avec les données sous-jacentes (par exemple, un enregistrement déjà supprimé par un autre utilisateur), le fournisseur retourne des avertissements dans le **erreurs** collection mais n’interrompt ne pas le programme exécution. Une erreur d’exécution se produit uniquement en cas de conflits sur tous les enregistrements demandés.  
   
- Si le **Unique Table** propriété dynamique est définie et la **Recordset** est le résultat de l’exécution d’une opération de jointure sur plusieurs tables, les **supprimer** méthode supprime uniquement les lignes à partir de la table nommée dans la **Unique Table** propriété.  
+ Si le **Unique Table** propriété dynamique a la valeur et le **Recordset** est le résultat de l’exécution d’une opération de jointure sur plusieurs tables, le **supprimer** méthode supprimer les lignes uniquement à partir de la table nommée dans le **Unique Table** propriété.  
   
  Le **supprimer** méthode prend un argument facultatif qui vous permet de spécifier les enregistrements affectés par la **supprimer** opération. Les seules valeurs valides pour cet argument sont une des suivante ADO **AffectEnum** constantes énumérées :  
   
 -   **adAffectCurrent** affecte uniquement l’enregistrement actif.  
   
--   **adAffectGroup** affecte uniquement les enregistrements qui répondent aux actuel **filtre** paramètre de propriété. Le **filtre** propriété doit être définie sur une **FilterGroupEnum** valeur ou un tableau de **signets** pour utiliser cette option.  
+-   **adAffectGroup** affecte uniquement les enregistrements qui répondent à des cours **filtre** paramètre de propriété. Le **filtre** propriété doit être définie sur une **FilterGroupEnum** valeur ou un tableau de **signets** pour utiliser cette option.  
   
- Le code suivant montre un exemple de spécification **adAffectGroup** lors de l’appel du **supprimer** (méthode). Cet exemple ajoute des enregistrements à l’exemple **Recordset** et met à jour la base de données. Ensuite elle filtre le **Recordset** à l’aide de la **adFilterAffectedRecords** constante énumérée de filtre, ce qui laisse uniquement les enregistrements récemment ajoutés visible dans le **Recordset.** Enfin, il appelle la **supprimer** (méthode) et spécifie que tous les enregistrements qui répondent aux actuel **filtre** paramètre (les nouveaux enregistrements) de la propriété doit être supprimé.  
+ Le code suivant montre un exemple de spécification **adAffectGroup** lors de l’appel le **supprimer** (méthode). Cet exemple ajoute des enregistrements à l’exemple **Recordset** et met à jour de la base de données. Ensuite il filtre le **Recordset** à l’aide de la **adFilterAffectedRecords** constante énumérée de filtre, ce qui laisse uniquement les enregistrements qui vient d’être ajoutés soit visible dans le **Recordset.** Enfin, il appelle le **supprimer** (méthode) et spécifie que tous les enregistrements qui répondent à des cours **filtre** le paramètre de propriété (les nouveaux enregistrements) doit être supprimé.  
   
 ```  
 'BeginDeleteGroup  

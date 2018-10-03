@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 653b15db-a984-4b4b-b224-81b0285b099b
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a14e6c82ac731bed6fe5097a27d9be01fc04f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 998ff700a63274c2a57f7e3dc9d6981b2e43bb53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257795"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193106"
 ---
 # <a name="feature-rules-upgrade"></a>Règles de fonctionnalité (mise à niveau)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d’installation valide la configuration de votre ordinateur avant la fin de l’opération d’installation. Pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le système analyse l'ordinateur où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sera installé et vérifie les conditions qui empêchent une installation réussie de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avant que le programme d'installation ne démarre l'Assistant Mise à niveau, il extrait l'état de chaque élément. Puis, il compare le résultat avec les conditions requises et fournit une aide pour la suppression des problèmes importants.  

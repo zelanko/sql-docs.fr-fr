@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 18cf646a29f6a6c0d8e0c80a283e9920a3da7888
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56720ad795fb6df4de3c4cca72b9634d6fb6cf96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192426"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213209"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Moniteur de mise en miroir de bases de données (Page Avertissements)
   Affiche une liste, accessible en lecture seule, d'avertissements pris en charge lors d'événements de mise en miroir de bases de données, ainsi que les valeurs de seuil spécifiées pour les avertissements, si disponible.  
@@ -71,7 +68,7 @@ ms.locfileid: "37192426"
 |**Avertir si la durée de vie de la plus ancienne transaction non envoyée dépasse le seuil**|Transaction non envoyée la plus ancienne|32044|  
 |**Avertir si le temps de traitement de validation de miroir dépasse le seuil**|Charge de validation par le serveur miroir|32045|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Pour un accès complet, nécessite l’appartenance au rôle serveur fixe **sysadmin** . Seuls les membres de **sysadmin** peuvent configurer et afficher des seuils d’avertissement pour les mesures de performances clés.  
   
  L’appartenance au rôle **dbm_monitor** vous permet de consulter uniquement la ligne d’état la plus récente dans la page **Avertissements** .  

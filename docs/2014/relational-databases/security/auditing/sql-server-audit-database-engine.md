@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - audit
@@ -17,12 +15,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8debb182069b7294f1fb8027c072a3fb720b62c8
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 36aeb6f1b8b2b90dce737e3e815b3385429e84f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022067"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175349"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
   L'*audit* d'une instance de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] ou d'une base de données individuelle implique le suivi et la journalisation des événements qui se produisent sur le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. L'audit[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet de créer des audits de serveur, qui peuvent contenir des spécifications d'audit de serveur pour les événements de niveau serveur, ainsi que des spécifications d'audit de base de données pour les événements de niveau base de données. Les événements audités peuvent être écrits dans des journaux d'événements ou des fichiers d'audit.  
@@ -104,7 +102,7 @@ ms.locfileid: "43022067"
   
 4.  Lisez les événements d’audit à l’aide de l’ **Observateur d’événements**Windows, de la **Visionneuse du fichier journal**ou de la fonction fn_get_audit_file.  
   
- Pour plus d'informations, consultez [Create a Server Audit and Server Audit Specification](create-a-server-audit-and-server-audit-specification.md) et [Create a Server Audit and Database Audit Specification](create-a-server-audit-and-database-audit-specification.md).  
+ Pour plus d'informations, consultez [Créer un audit du serveur et une spécification d’audit du serveur](create-a-server-audit-and-server-audit-specification.md) et [Créer une spécification de l’audit du serveur et de la base de données](create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Observations  
  En cas d'échec pendant le lancement de l'audit, le serveur ne démarre pas. Dans ce cas, vous pouvez démarrer le serveur en saisissant l’option **–f** sur la ligne de commande.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorPrepare event class
 ms.assetid: 990e50fb-b3ee-4366-8613-2c40d4a456f7
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fd67318165bbbabab52ea9028b3267b406c4211
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c40d64bceec4c05929b808a85908b882705dbbe6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160380"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145389"
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare (classe d'événements)
   La classe d’événements **CursorPrepare** décrit les événements de préparation des curseurs qui se produisent dans les curseurs d’API. Les événements de préparation de curseurs se produisent lorsque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] compile une instruction SELECT associée à un curseur dans un plan d’exécution, mais ne crée pas le curseur.  

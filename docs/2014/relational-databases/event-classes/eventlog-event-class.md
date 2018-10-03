@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - EventLog event class
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ebc86cca5e9c0f42e158f38f494ff462c3ee700
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c2e5fa5cf405a4e1af0c024c48ef797a7a044c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316509"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229289"
 ---
 # <a name="eventlog-event-class"></a>EventLog (classe d'événements)
   La classe d’événements EventLog indique que des événements ont été consignés dans le journal des événements [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
@@ -52,7 +49,7 @@ ms.locfileid: "37316509"
 |Severity|`int`|Niveau de gravité d'une exception.|20|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|Texte du message d'erreur, si disponible.| 1|Oui|  
+|TextData|`ntext`|Texte du message d'erreur, si disponible.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  

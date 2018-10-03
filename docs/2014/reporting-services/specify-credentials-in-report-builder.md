@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bfa96110c521386cf6e7697f6f395f845ae6a83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280325"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154099"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Spécifier des informations d’identification dans le Générateur de rapports
   Les informations d'identification permettent d'authentifier l'utilisateur qui tente de récupérer des données à partir d'une source de données. Le propriétaire de la source de données détermine le type d'informations d'identification à utiliser. Par exemple, un administrateur de base de données peut spécifier que l'utilisateur doit fournir un nom d'utilisateur et un mot de passe Windows.  

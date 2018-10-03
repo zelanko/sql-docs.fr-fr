@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 31bf54cf103a269900ce9edc6caf9ec192a4f4b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1b0c51cd8750cb83ebeccbd0520c0ace32198ff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216019"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement
   En commençant par [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vous pouvez transférer par programmation la propriété d’un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] abonnement à partir d’un seul utilisateur à un autre. Cette rubrique fournit plusieurs scripts Windows PowerShell que vous pouvez utiliser pour modifier ou simplement dresser la liste des appartenances aux abonnements. Chaque exemple comprend un exemple de syntaxe pour le mode Natif et le mode SharePoint. Une fois que vous avez modifié le propriétaire d'un abonnement, celui-ci s'exécute dans le contexte de sécurité du nouveau propriétaire et le champ User!UserID du rapport affiche la valeur du nouveau propriétaire. Pour plus d’informations sur le modèle objet appelé par les exemples PowerShell, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
@@ -48,7 +45,7 @@ ms.locfileid: "37323819"
   
 ##  <a name="bkmk_how_to"></a> Pour utiliser les scripts  
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
  Cette section récapitule les niveaux d'autorisation requis pour utiliser chacune des méthodes pour le mode Natif et le mode SharePoint [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Les scripts de cette rubrique utilisent les méthodes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] suivantes :  
   
 -   [Méthode ReportingService2010.ListSubscriptions](http://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
@@ -61,7 +58,7 @@ ms.locfileid: "37323819"
   
  **Mode natif :**  
   
--   Liste des abonnements : (lien hypertexte «http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx» ReadSubscription sur le rapport et l’utilisateur est propriétaire de l’abonnement) ou ReadAnySubscription  
+-   Liste des abonnements : (lien hypertexte « http://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx» ReadSubscription sur le rapport et l’utilisateur est propriétaire de l’abonnement) ou ReadAnySubscription  
   
 -   Modifier les abonnements : l'utilisateur doit être membre du groupe BUILTIN\\Administrateurs  
   
@@ -71,7 +68,7 @@ ms.locfileid: "37323819"
   
  **Mode SharePoint :**  
   
--   Liste des abonnements : ManageAlerts ou (lien hypertexte «http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx» CreateAlerts sur le rapport et l’utilisateur est propriétaire de l’abonnement et l’abonnement est un abonnement planifié).  
+-   Liste des abonnements : ManageAlerts ou (lien hypertexte « http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx» CreateAlerts sur le rapport et l’utilisateur est propriétaire de l’abonnement et l’abonnement est un abonnement planifié).  
   
 -   Modifier des abonnements : ManageWeb  
   

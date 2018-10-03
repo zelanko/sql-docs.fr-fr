@@ -1,32 +1,29 @@
 ---
-title: Fonctionnalités à la fenêtre Espion pour | Documents Microsoft
+title: Fonctionnalités à considérer avec attention | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 704fc0c45706e80408218d185146a438099da829
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911364"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770617"
 ---
-# <a name="features-to-watch-for"></a>Fonctionnalités à surveiller
-Cette section décrit un nombre de fonctions qui les développeurs d’applications utilisent souvent pour reçoivent. En fait, ces fonctionnalités varient largement dans prise en charge et les modalités de prise en charge entre des SGBD ; Échec de code pour les est susceptible de causer des problèmes dans les applications interopérables.  
+# <a name="features-to-watch-for"></a>Fonctionnalités à considérer avec attention
+Cette section décrit un certain nombre de fonctionnalités qui application adoptent souvent les développeurs pour reçoivent. En fait, ces fonctionnalités varient largement prise en charge et la manière de prise en charge entre les SGBD ; Échec pour qu’il est susceptible de causer des problèmes dans les applications interopérables.  
   
- Cette section ne répertorie pas toutes les fonctionnalités qui doivent prendre en compte les développeurs d’applications. Pour obtenir cette information, consultez le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), et [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) fonction descriptions, [annexe c : SQL grammaire](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)et les sections de ce manuel qui décrivent chaque fonctionnalité.  
+ Cette section ne répertorie pas toutes les fonctionnalités dont les développeurs d’applications ont besoin à prendre en compte. Pour plus d’informations, consultez le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), et [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) fonction descriptions, [annexe c : grammaire de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)et les sections de ce manuel qui décrivent chaque fonction.  
   
  Cette section contient les rubriques suivantes.  
   

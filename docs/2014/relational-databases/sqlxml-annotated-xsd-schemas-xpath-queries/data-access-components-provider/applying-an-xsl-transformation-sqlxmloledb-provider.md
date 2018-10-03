@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, applying XSL transformations
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Base Path property
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0631033305d05252eb9253fb24614485a5ebccbf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11f7ce945dcf4b89c6b76ba14e0383bc38ca3c39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268485"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224039"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Application d'une transformation XSL (fournisseur SQLXMLOLEDB)
   Dans cet exemple d'application ADO, une requête SQL est exécutée et le langage XSLT est appliqué au résultat. La définition de la propriété ClientSideXML sur True applique le traitement de l’ensemble de lignes du côté client. Le dialecte de commande a pour valeur {5d531cb2-e6ed-11d2-b252-00c04f681b71} car la requête SQL est spécifiée dans un modèle et que ce dialecte doit être spécifié lors de l'exécution d'un modèle. La propriété xsl Spécifie le fichier XSL à utiliser pour appliquer la transformation. La valeur de propriété de chemin d’accès de Base est utilisée pour rechercher le fichier XSL. Si vous spécifiez un chemin d’accès dans la valeur de la propriété xsl, le chemin d’accès est relatif le chemin d’accès qui est spécifié dans la propriété de chemin d’accès de Base.  

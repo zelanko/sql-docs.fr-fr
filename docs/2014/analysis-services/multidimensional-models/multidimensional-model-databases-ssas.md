@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [Analysis Services], databases
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, databases [Analysis Services]
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
-caps.latest.revision: 55
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08a5d383d9c46b01c52e1fc888c8d692470fd619
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adba97ff78d22ef2e82bb53065952a716f71a1d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082799"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bases de données de modèle multidimensionnel (SSAS)
   Une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est une collection de sources de données, de vues de source de données, de cubes, de dimensions et de rôles. Éventuellement, une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut inclure des structures pour l'exploration de données et des assemblys personnalisés qui permettent d'ajouter des fonctions définies par l'utilisateur à la base de données.  
@@ -42,7 +39,7 @@ ms.locfileid: "37241679"
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise l'intégration avec le logiciel de contrôle de code source pour prendre en charge plusieurs développeurs qui utilisent différents objets simultanément dans un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Un développeur peut également interagir directement avec une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , plutôt que dans un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cependant, les objets d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peuvent devenir désynchronisés avec le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui a été utilisé pour son déploiement. Une fois le déploiement effectué, vous pouvez administrer une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez également apporter certaines modifications à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], notamment aux partitions et aux rôles. Cela peut également entraîner la désynchronisation des objets d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui a été utilisé pour son déploiement.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Attacher et détacher des bases de données Analysis Services](attach-and-detach-analysis-services-databases.md)  
   
  [Sauvegarde et restauration de bases de données Analysis Services](backup-and-restore-of-analysis-services-databases.md)  

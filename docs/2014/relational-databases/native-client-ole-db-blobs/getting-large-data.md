@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BLOBs, OLE objects
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b211984732a3ed571e29e4c7117fe0aab21bd033
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428878"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120271"
 ---
 # <a name="getting-large-data"></a>Obtention de données volumineuses
   En règle générale, les consommateurs doivent isoler le code qui crée un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objet de stockage de fournisseur OLE DB Native Client à partir de tout autre code qui gère les données non référencées via un **ISequentialStream** pointeur d’interface.  

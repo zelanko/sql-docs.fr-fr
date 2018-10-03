@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Recommendation element
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6bd7c8b2315f853166e4172030aa191748506b27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60bc8c4cbd2166a302a0f61176fa198787575f88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260061"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107056"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation, élément (Assistant Paramétrage de base de données)
   Contient des informations sur les index hypothétiques qui font partie d'une configuration spécifiée par l'utilisateur.  

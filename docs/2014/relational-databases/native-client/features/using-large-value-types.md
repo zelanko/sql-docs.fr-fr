@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large value data types
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, large value data types
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1f76fef29f1e90e1759c039bafaccad23a61bba
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c9553eb4a9993186e3864a9ae0014ce702b7a8f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396117"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136189"
 ---
 # <a name="using-large-value-types"></a>Utilisation de types de valeur élevée
   Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], l'utilisation de types de données de valeur élevée nécessitait une gestion particulière. Les types de données à valeur élevée sont ceux dont la taille de ligne maximale dépasse 8 Ko. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un **max** spécificateur pour **varchar**, **nvarchar** et **varbinary** des types de données pour permettre le stockage des valeurs aussi grand que 2 ^ 31 -1 octets. Colonnes de la table et [!INCLUDE[tsql](../../../includes/tsql-md.md)] variables peuvent spécifier **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** des types de données.  

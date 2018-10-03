@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7c1259e38a50ad11d3a0f074dd3c911f89f776d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2968561d90f1bc45f50f040d7d303b969cc3c3b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320639"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103019"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implémenter une stratégie de signature en définissant une valeur du Registre
   Vous pouvez utiliser une valeur du Registre facultative pour gérer la stratégie d'une organisation pour charger des packages signés ou non signés. Si vous utilisez cette valeur du Registre, vous devez créer cette valeur du Registre sur tous les ordinateurs sur lesquels les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s'exécuteront et sur lesquels vous souhaitez appliquer la stratégie. Une fois la valeur du Registre définie, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vérifiera les signatures avant de charger les packages.  
@@ -41,7 +38,7 @@ ms.locfileid: "37320639"
 |Valeur|Description|  
 |-----------|-----------------|  
 |0|Pas de restriction administrative.|  
-| 1|Bloquer les signatures non valides.<br /><br /> Ce paramètre ne bloque pas les packages non signés.|  
+|1|Bloquer les signatures non valides.<br /><br /> Ce paramètre ne bloque pas les packages non signés.|  
 |2|Bloquer les signatures non valides et non approuvées.<br /><br /> Ce paramètre ne bloque pas les packages non signés mais bloque les signatures générées automatiquement.|  
 |3|Bloquer les signatures non valides et non approuvées et les packages non signés.<br /><br /> Ce paramètre bloque lui aussi les signatures générées automatiquement.|  
   

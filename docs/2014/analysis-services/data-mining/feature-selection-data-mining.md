@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb4a3282137aa76db08b1d6084db27d1a476140f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295999"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067919"
 ---
 # <a name="feature-selection-data-mining"></a>Sélection des fonctionnalités (exploration de données)
   *Sélection des fonctionnalités* est un terme couramment utilisé dans l’exploration de données pour décrire les outils et techniques disponibles pour réduire les entrées à une taille gérable pour le traitement et l’analyse. Sélection de fonctionnalités implique non seulement *la réduction de cardinalité*, ce qui signifie que d’imposer une coupure aléatoire ou prédéfinie sur le nombre d’attributs pouvant être pris en compte lors de la création d’un modèle, mais également le choix des attributs, ce qui signifie que que l’analyste ou l’outil de modélisation activement sélectionne ou ignore les attributs en fonction de leur utilité pour l’analyse.  

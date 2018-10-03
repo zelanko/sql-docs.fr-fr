@@ -1,13 +1,11 @@
 ---
-title: Type de propriété (ADO MD) | Documents Microsoft
+title: Type, propriété (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO MD]
 ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49124ade1481364fd0b7144eb4ade92746b9108d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b1b88a0128af77a046f7c5c2352c709da30bd623
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284678"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605897"
 ---
 # <a name="type-property-ado-md"></a>Type, propriété (ADO MD)
-Indique le type d’actuel [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+Indique le type de cours [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
   
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un [MemberTypeEnum](../../../ado/reference/ado-md-api/membertypeenum.md) valeur et est en lecture seule.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheHit event class
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 466caff52f0b715cc5a0d9ee491abc1ae095f9d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 24e6ee2cfdf337090d7080a5b5de866a3933f6fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162800"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175319"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit, classe d'événements
   La classe d'événements SP:CacheHit indique qu'une procédure stockée se trouve dans le cache du plan.  
@@ -54,7 +51,7 @@ ms.locfileid: "37162800"
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|Texte du code SQL trouvé dans le cache. Si TextData est renseigné, ObjectName ne le sera pas.| 1|Oui|  
+|TextData|`ntext`|Texte du code SQL trouvé dans le cache. Si TextData est renseigné, ObjectName ne le sera pas.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  
   

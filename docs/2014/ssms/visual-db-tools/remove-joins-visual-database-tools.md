@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing joins
 - joins [SQL Server], removing
 - deleting joins
 ms.assetid: ccc212a1-fd13-48d6-85e5-5ff310c34bbd
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a9bcc6fa9915635b2bc7c7bffb98e85a4f021de
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5a6440922c0257d87ad9fe07f7a5d037df4891bc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212869"
 ---
 # <a name="remove-joins-visual-database-tools"></a>Supprimer des jointures (Visual Database Tools)
   Si vous ne souhaitez pas que les tables soient liées par une jointure interne ou externe, vous pouvez supprimer celle-ci. Vous pouvez par exemple supprimer une jointure créée automatiquement entre deux tables par le [Concepteur de requêtes et de vues](visual-database-tools.md) .  

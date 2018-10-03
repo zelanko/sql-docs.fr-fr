@@ -1,36 +1,33 @@
 ---
-title: Move, méthode-exemple (VBScript) | Documents Microsoft
+title: Move, exemple de méthode (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93f06ddfa78d0054ec08882b30f16047a842c833
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6054953ba980be5c8c2c12b6a309f64ddaae4e01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279458"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602517"
 ---
-# <a name="move-method-example-vbscript"></a>Exemple de méthode Move (VBScript)
-Cet exemple utilise le [déplacer](../../../ado/reference/ado-api/move-method-ado.md) méthode pour positionner le pointeur d’enregistrement, en fonction de l’entrée d’utilisateur.  
+# <a name="move-method-example-vbscript"></a>Move, exemple de méthode (VBScript)
+Cet exemple utilise le [déplacer](../../../ado/reference/ado-api/move-method-ado.md) méthode pour positionner le pointeur d’enregistrement, basée sur l’entrée d’utilisateur.  
   
- Utilisez l’exemple suivant dans une Page ASP (Active Server). Pour afficher cet exemple entièrement fonctionnels, vous devez disposer les données source AdvWorks.mdb (installé avec le Kit de développement), situé dans C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou modifier le chemin d’accès dans l’exemple de code pour refléter l’emplacement réel de ce fichier. Il s’agit d’un fichier de base de données Microsoft Access.  
+ Utilisez l’exemple suivant dans une Page ASP (Active Server). Pour afficher cet exemple entièrement fonctionnel, vous devez disposer les données source AdvWorks.mdb (installé avec le Kit de développement), situé dans C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou modifier le chemin d’accès dans l’exemple de code afin de refléter l’emplacement réel de ce fichier. Il s’agit d’un fichier de base de données Microsoft Access.  
   
- Utilisez **trouver** pour localiser le fichier Adovbs.inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous **MoveVBS.asp**. Vous pouvez afficher le résultat dans n’importe quel navigateur.  
+ Utilisez **trouver** pour localiser le fichier Adovbs.inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **MoveVBS.asp**. Vous pouvez afficher le résultat dans n’importe quel navigateur.  
   
  Essayez d’entrer une lettre ou un type non entier pour afficher le travail de gestion des erreurs.  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c34c0764e0dd8b8eb64c9bf776a8ed071310fae3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37620b099bf07d8c38472dc211040d9efb252992
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290225"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182039"
 ---
 # <a name="saving-reports-report-builder"></a>Enregistrement des rapports (Générateur de rapports)
   Dans le Générateur de rapports vous avez la possibilité d'enregistrer un rapport sur un serveur de rapports, une bibliothèque SharePoint, un partage de fichiers sur lequel vous disposez d'une autorisation d'écriture, ou sur votre ordinateur. Vous pouvez enregistrer un rapport au même emplacement que celui où vous l'avez ouvert, l'enregistrer à un emplacement différent ou avec un nouveau nom au même emplacement ou à un emplacement différent. Par défaut, un rapport est réenregistré à l'emplacement où vous l'avez ouvert. Lorsque vous enregistrez le rapport, vous enregistrez en fait la définition de rapport, laquelle décrit la disposition du rapport. Les données ne sont pas enregistrées. Chaque fois que vous exécutez le rapport, les données de rapport sont actualisées et peuvent être différentes de celles obtenues lors de la dernière exécution du rapport.  

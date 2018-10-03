@@ -1,42 +1,39 @@
 ---
-title: Syntaxe de littéral numérique | Documents Microsoft
+title: Syntaxe littérale numérique | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC literals [ODBC], numeric
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95fd850239c0ad3894105c94e3f8ff05459394ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907264"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601537"
 ---
-# <a name="numeric-literal-syntax"></a>Syntaxe de littéral numérique
+# <a name="numeric-literal-syntax"></a>Syntaxe des littéraux numériques
 La syntaxe suivante est utilisée pour les littéraux numériques dans ODBC :  
   
  *littéral numérique* :: = *littéral numérique signé &#124; littéral numérique non signé*  
   
- *littéral numérique signé* :: = [*signe*] *littéral numérique non signé*  
+ *littéral numérique signé* :: = [*connexion*] *littéral numérique non signé*  
   
- *littéral numérique non signée* :: = *littéral numérique exact &#124; littéral numérique approximative*  
+ *littéral numérique non signé* :: = *littéral numérique exacte &#124; littéral numérique approximatif*  
   
- *littéral numérique exact* :: = *entier non signé* [*période*[*entier non signé*]]  *&#124;période en entier non signé*  
+ *littéral numérique exacte* :: = *entier non signé* [*période*[*entier non signé*]]  *&#124;entier non signé période*  
   
- *signe* :: = *signe &#124; -signe moins*  
+ *connexion* :: = *signe &#124; -signe moins*  
   
  *littéral numérique approximatif* :: = *exposant de la mantisse E*  
   
@@ -44,13 +41,13 @@ La syntaxe suivante est utilisée pour les littéraux numériques dans ODBC :
   
  *exposant* :: = *entier signé*  
   
- *entier signé* :: = [*signe*] *entier non signé*  
+ *entier signé* :: = [*connexion*] *entier non signé*  
   
  *entier non signé* :: = *chiffre...*  
   
  *signe* :: = *+*  
   
- *signe moins-* :: = -  
+ *signe* :: = -  
   
  *chiffre* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   

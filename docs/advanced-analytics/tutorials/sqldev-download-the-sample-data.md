@@ -3,118 +3,60 @@ title: Télécharger des données de démonstration NYC Taxi et de scripts pour 
 description: Instructions de téléchargement des exemples de données New York City taxi et de création d’une base de données. Données sont utilisées dans les didacticiels de SQL Server montrant comment incorporer R et Python dans SQL Server des procédures stockées et fonctions T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/22/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 700720f7538467dc3edc38414544eb2c402437a6
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232573"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>Données de démonstration NYC Taxi pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article vous prépare votre système pour des didacticiels sur l’utilisation de R et Python pour l’analytique en base de données dans SQL Server.
+Cet article explique comment obtenir des exemples de données pour R et Python didacticiels pour l’analytique en base de données dans SQL Server.
 
-Dans cet exercice, vous allez télécharger les exemples de données, un script PowerShell pour la préparation de l’environnement, et [!INCLUDE[tsql](../../includes/tsql-md.md)] fichiers de script utilisés dans plusieurs didacticiels. Lorsque vous avez terminé, un **NYCTaxi_Sample** base de données est disponible sur votre instance locale, en fournissant des données de démonstration pratique. 
+Les données proviennent du [NYC Taxi et Limousines Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) jeu de données public. Nous avons pris un instantané du jeu de données et capturé un pour cent des données disponibles pour notre base de données de démonstration. Sur votre système, le fichier de sauvegarde de base de données est légèrement supérieure 90 Mo, fournissant des millions de 1.7 de lignes dans la table de données primaire.
+
+Lorsque vous avez terminé avec les étapes décrites dans cet article, le **NYCTaxi_Sample** base de données est disponible sur votre instance locale, en fournissant des données de démonstration pratique. Le nom de la base de données doit être **NYCTaxi_Sample** si vous souhaitez exécuter les scripts de démonstration sans modification.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Vous avez besoin une connexion internet, PowerShell et les droits d’administrateur local sur l’ordinateur. Vous devez avoir [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou un autre outil pour vérifier la création d’objets.
+Vous avez besoin d’une connexion internet, des droits d’administrateur local sur l’ordinateur et une instance du moteur de base de données.
 
-## <a name="download-nyc-taxi-demo-data-and-scripts-from-github"></a>Télécharger des données de démonstration NYC Taxi et les scripts à partir de Github
+Vous pour devez avoir [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou un autre outil pour vérifier la création d’objets.
 
-1.  Ouvrez une console de commande Windows PowerShell.
-  
-    Utilisez le **exécuter en tant qu’administrateur** option pour créer le répertoire de destination ou pour écrire des fichiers vers la destination spécifiée.
-  
-2.  Exécutez les commandes PowerShell suivantes, en définissant la valeur du paramètre *DestDir* sur un répertoire local. La valeur par défaut que nous avons utilisée ici est **TempRSQL**.
-  
-    ```ps
-    $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
-    $ps1_dest = “$pwd\Download_Scripts_SQL_Walkthrough.ps1”
-    $wc = New-Object System.Net.WebClient
-    $wc.DownloadFile($source, $ps1_dest)
-    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir ‘C:\tempRSQL’
-    ```
-  
-    Si le dossier que vous spécifiez dans *DestDir* n’existe pas, il est créé par le script PowerShell.
-  
-    > [!TIP]
-    > Si vous obtenez une erreur, vous pouvez temporairement définir la stratégie d’exécution des scripts PowerShell à **sans restriction** uniquement pour cette procédure pas à pas à l’aide de l’argument Bypass et les modifications apportées à la session active de portée.
-    >   
-    >````
-    > Set\-ExecutionPolicy Bypass \-Scope Process
-    >````
-    > L’exécution de cette commande n’a pas d’incidence sur la configuration.
-  
-    Selon votre connexion Internet, le téléchargement peut prendre un certain temps.
-  
-3.  Lorsque tous les fichiers ont été téléchargées, le script PowerShell s’ouvre à la *DestDir* dossier. Dans l’invite de commandes PowerShell, exécutez la commande suivante et examinez les fichiers qui ont été téléchargés.
-  
-    ```
-    ls
-    ```
-  
-    **Résultats :**
-  
-    ![liste des fichiers téléchargés par le script PowerShell](media/rsql-devtut-filelist.png "liste des fichiers téléchargés par le script PowerShell")
+## <a name="download-demo-database"></a>Télécharger la base de données de démonstration
 
-## <a name="create-nyctaxisample-database"></a>Créer la base de données NYCTaxi_Sample
+La base de données est un fichier de sauvegarde hébergé par Microsoft. Téléchargement de fichiers commence immédiatement lorsque vous cliquez sur le lien. 
 
-Parmi les fichiers téléchargés, vous devez voir un script PowerShell (**RunSQL_SQL_Walkthrough.ps1**) qui crée une base de données et de chargement en masse des données. Les actions effectuées par le script sont les suivantes :
+Taille du fichier est d’environ 90 Mo.
 
-+ Installe les utilitaires de ligne de commande SQL, SQL Native Client si pas déjà installé. Ces utilitaires sont nécessaires pour le chargement en bloc des données sur la base de données à l’aide de **bcp**.
+1. Cliquez sur [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) pour télécharger le fichier de sauvegarde de base de données.
 
-+ Créer une base de données et les tables sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’instance et l’insérer en bloc des données provenance d’un fichier .csv.
+2. Copiez le fichier à C:\Program files\Microsoft SQL Server\MSSQL-instance-name\MSSQL\Backup dossier.
 
-+ Créer plusieurs fonctions SQL et les procédures stockées utilisées dans plusieurs didacticiels.
+3. Dans Management Studio, cliquez sur **bases de données** et sélectionnez **restaurer les fichiers et groupes de fichiers**.
 
-### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>Modifiez le script pour utiliser une identité Windows approuvée
+4. Entrez *NYCTaxi_Sample* en tant que le nom de la base de données.
 
-Par défaut, le script suppose une connexion utilisateur de base de données SQL Server et le mot de passe. Si vous êtes db_owner sous votre compte d’utilisateur Windows, vous pouvez utiliser votre identité Windows pour créer les objets. Pour ce faire, ouvrez `RunSQL_SQL_Walkthrough.ps1` dans un éditeur de code et ajoutez **`-T`** insertion de commande (ligne 238) à l’utilitaire bcp en bloc :
+5. Cliquez sur **à partir de l’appareil** , puis ouvrez la page de sélection de fichier pour sélectionner le fichier de sauvegarde. Cliquez sur **ajouter** pour sélectionner NYCTaxi_Sample.bak.
 
-```text
-bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
-```
-
-### <a name="run-the-script-to-create-objects"></a>Exécutez le script pour créer des objets
-
-À l’aide d’une invite de commandes administrateur PowerShell à C:\tempRSQL, exécutez la commande suivante.
-  
-```ps
-.\RunSQL_SQL_Walkthrough.ps1
-```
-Vous êtes invité à entrer les informations suivantes :
-
-- Instance de serveur où [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] a été installé. Sur une instance par défaut, cela peut être aussi simple que le nom de l’ordinateur.
-
-- Nom de la base de données. Pour ce didacticiel, les scripts supposent `NYCTaxi_Sample`.
-
-- Nom d’utilisateur et mot de passe utilisateur. Entrez une connexion de base de données SQL Server pour ces valeurs. Ou bien, si vous avez modifié le script pour qu’il accepte une identité Windows approuvés, appuyez sur ENTRÉE pour laisser ces valeurs vide. Votre identité Windows est utilisée sur la connexion.
-
-- Nom de fichier qualifié complet pour les exemples de données téléchargées dans la leçon précédente. Par exemple : `C:\tempRSQL\nyctaxi1pct.csv`
-
-Une fois que vous fournissez ces valeurs, le script s’exécute immédiatement. Pendant l’exécution du script, tous les noms d’espace réservé dans le [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts sont mis à jour pour utiliser les entrées que vous fournissez.
+6. Sélectionnez le **restaurer** case à cocher et cliquez sur **OK** pour restaurer la base de données.
 
 ## <a name="review-database-objects"></a>Passez en revue les objets de base de données
    
-Lorsque l’exécution du script est terminée, vérifiez les objets de base de données existent sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’instance [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous devez voir la base de données, les tables, les fonctions et les procédures stockées.
+Vérifiez les objets de base de données existent sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’instance [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous devez voir la base de données, les tables, les fonctions et les procédures stockées.
   
    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
 
-> [!NOTE]
-> Si les objets de base de données existent déjà, ils ne peuvent pas être recréés.
->   
-> Si la table existe déjà, les données sont ajoutées, pas remplacées. Ainsi, pensez à supprimer tout objet avant d’exécuter le script.
-
 ### <a name="objects-in-nyctaxisample-database"></a>Objets de base de données NYCTaxi_Sample
 
-Le tableau suivant récapitule les objets créés dans la base de données de démonstration NYC Taxi. Bien que vous exécutez uniquement un script PowerShell (`RunSQL_SQL_Walkthrough.ps1`), ce script appelle les autres scripts SQL pour créer les objets dans votre base de données. Les scripts utilisés pour créer chaque objet sont mentionnées dans la description.
+Le tableau suivant récapitule les objets créés dans la base de données de démonstration NYC Taxi.
 
 |**Nom de l'objet**|**Type d'objet**|**Description**|
 |----------|------------------------|---------------|
@@ -132,9 +74,9 @@ Le tableau suivant récapitule les objets créés dans la base de données de d�
 
 Comme une étape de validation, exécutez une requête pour confirmer que le téléchargement de données.
 
-1. Dans l’Explorateur d’objets, des bases de données, développez le **NYCTaxi_Sample** base de données, puis ouvrez le dossier Tables.
+1. Dans l’Explorateur d’objets, des bases de données, cliquez sur le **NYCTaxi_Sample** de base de données et démarrer une nouvelle requête.
 
-2. Cliquez sur le **dbo.nyctaxi_sample** et choisissez **sélectionner les 1000 premières lignes** pour retourner des données.
+2. Exécutez **`select * from dbo.nyctaxi_sample`** renvoie toutes les lignes 1.7 millions.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3022c5d802da527dc1c1bfb062f8a5dca267f50e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62923987b3214a319268291b1349cb32f5bd0bd7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157740"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147455"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Fonction Multilookup (Générateur de rapports et SSRS)
   Retourne le jeu de valeurs de première correspondance pour le jeu de noms spécifié d'un dataset contenant des paires nom/valeur.  
@@ -96,7 +93,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 |ID|Nom   |  
 |--------|----------|  
-| 1|Accessories|  
+|1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
 |4|Components|  
@@ -116,7 +113,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 |ColorID|Couleur|  
 |-------------|-----------|  
-| 1|Rouge|  
+|1|Rouge|  
 |2|Bleu|  
 |3|Vert|  
   

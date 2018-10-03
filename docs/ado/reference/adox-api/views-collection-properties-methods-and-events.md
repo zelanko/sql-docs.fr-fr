@@ -1,36 +1,33 @@
 ---
-title: Affiche les propriétés de la Collection, méthodes et événements | Documents Microsoft
+title: Vues de Collection Propriétés, méthodes et événements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Views collection [ADOX], members
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1cfd32e16bf0aee91066924dcf04b0af7ee4b492
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6e61ce5aa6ed5cc5ad07d51b93cef0b62b3feeef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611549"
 ---
-# <a name="views-collection-properties-methods-and-events"></a>Propriétés de Collection de vues, méthodes et événements
-## <a name="properties"></a>Propriétés  
- [Propriété Count](../../../ado/reference/ado-api/count-property-ado.md)  
+# <a name="views-collection-properties-methods-and-events"></a>Propriétés, méthodes et événements de la collection Views
+## <a name="properties"></a>Properties  
+ [Count, propriété](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Propriété Item](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Méthodes  
- [Append (méthode) (vues)](../../../ado/reference/adox-api/append-method-adox-views.md)  
+ [Append, méthode (vues)](../../../ado/reference/adox-api/append-method-adox-views.md)  
   
  [DELETE, méthode (Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 105
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 963104ee755daba6514403ddd7f5dca76507cf5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f95a4d3cc6903121c3c46d926e9d66b2d81f866a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070583"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ignore le paramètre de SQL_ATTR_CONNECTION_TIMEOUT.  
@@ -170,7 +167,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  Après avoir établi la connexion, l’application peut interroger cet attribut à l’aide [SQLGetConnectAttr](sqlgetconnectattr.md) pour déterminer l’identité du partenaire de basculement. Si le serveur principal n'a pas de partenaire de basculement, cette propriété retourne une chaîne vide. Cela permet à une application intelligente de mettre en cache le serveur de sauvegarde le plus récent ; toutefois, de telles applications doivent prendre en compte le fait que les informations sont mises à jour uniquement lorsque la connexion est établie au préalable, ou réinitialisée en cas de regroupement, et que ces informations peuvent devenir obsolètes dans le cas de connexions à long terme.  
   
- Pour plus d’informations, consultez [à l’aide de la mise en miroir de la base de données](../native-client/features/using-database-mirroring.md).  
+ Pour plus d’informations, consultez [Utilisation de la mise en miroir de bases de données](../native-client/features/using-database-mirroring.md).  
   
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY force l'utilisation de l'authentification Windows pour la validation de l'accès sur la connexion au serveur. Lorsque l’authentification Windows est utilisée, le pilote ignore les valeurs d’identificateur et le mot de passe utilisateur fournis dans le cadre de **SQLConnect**, [SQLDriverConnect](sqldriverconnect.md), ou [SQLBrowseConnect](sqlbrowseconnect.md)de traitement.  

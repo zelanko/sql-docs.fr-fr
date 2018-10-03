@@ -1,28 +1,25 @@
 ---
-title: Les objets ADOX | Documents Microsoft
+title: Objets ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [ADOX]
 - ADOX, objects
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5665c90c4dd1935f529c275d2feccb68e67cafea
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: dab1a748eeda5f1b192010203bd59760942b3611
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284868"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772296"
 ---
 # <a name="adox-objects"></a>Objets ADOX
 ## <a name="adox-object-summary"></a>Liste des objets ADOX  
@@ -30,10 +27,10 @@ ms.locfileid: "35284868"
 |Object|Description|  
 |------------|-----------------|  
 |[Catalogue](../../../ado/reference/adox-api/catalog-object-adox.md)|Contient des collections qui décrivent le catalogue de schémas d’une source de données.|  
-|[Colonne](../../../ado/reference/adox-api/column-object-adox.md)|Représente une colonne d’une table, un index ou une clé.|  
+|[Colonne](../../../ado/reference/adox-api/column-object-adox.md)|Représente une colonne de table, d’index ou de clé.|  
 |[Grouper](../../../ado/reference/adox-api/group-object-adox.md)|Représente un compte de groupe qui dispose des autorisations d’accès au sein d’une base de données sécurisée.|  
 |[Index](../../../ado/reference/adox-api/index-object-adox.md)|Représente un index à partir d’une table de base de données.|  
-|[Clé](../../../ado/reference/adox-api/key-object-adox.md)|Représente un champ de clé unique, primaire ou étrangère d’une table de base de données.|  
+|[Clé](../../../ado/reference/adox-api/key-object-adox.md)|Représente un champ de clé primaire, étrangère ou unique à partir d’une table de base de données.|  
 |[Procédure](../../../ado/reference/adox-api/procedure-object-adox.md)|Représente une procédure stockée.|  
 |[Table](../../../ado/reference/adox-api/table-object-adox.md)|Représente une table de base de données, y compris les colonnes, les index et les clés.|  
 |[Utilisateur](../../../ado/reference/adox-api/user-object-adox.md)|Représente un compte d’utilisateur qui dispose des autorisations d’accès au sein d’une base de données sécurisée.|  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cf610ad76b4ccc4e30e5f1e4f55c5dcd293a8bc9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45a1af97868260d103890c13ce7c7446dd8f01d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257305"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098139"
 ---
 # <a name="csdlbi-concepts"></a>Concepts CSDLBI
   Le langage CSDL (Conceptual Schema Definition Language) avec annotations Business Intelligence (CSDLBI) est basé sur l'infrastructure de données d'entités (Entity Data Framework), qui est une abstraction pour représenter différents types de données de façon à activer les jeux de données disparates pour qu'ils soient accessibles, interrogés ou exportés par programme. CSDLBI est utilisé pour représenter les modèles de données créés à l'aide d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], car il prend en charge les applications et la création de rapports complets pilotée par les données.  

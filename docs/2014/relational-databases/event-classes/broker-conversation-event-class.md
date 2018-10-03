@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18b73246733a64d7250cf42c3814ba3f492e6bd7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51e98ef765b230cf9f304473854b48deccabd170
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275285"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072879"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation, classe d'événements
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **Broker:Conversation** pour indiquer la progression d'une conversation Service Broker.  
@@ -52,14 +49,14 @@ ms.locfileid: "37275285"
 |**Severity**|`int`|Gravité de l'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] éventuellement indiquée par cet événement.|29|non|  
 |**SPID**|`int`|ID de processus serveur qui est affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
 |**StartTime**|`datetime`|Heure de début de l'événement, si disponible.|14|Oui|  
-|**TextData**|`ntext`|État actuel de la conversation. Il peut s'agir :<br /><br /> **SO**. Démarrée en sortie. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a traité une instruction BEGIN CONVERSATION pour cette conversation, mais aucun message n'a été envoyé.<br /><br /> **SI**. Démarré en entrée. Une autre instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] a démarré une nouvelle conversation avec l’instance actuelle, mais cette dernière n’a pas fini de recevoir le premier message. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer la conversation dans cet état si le premier message est fragmenté ou si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reçoit les messages dans le désordre. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer la conversation dans l'état CO si la première transmission reçue pour cette conversation contient la totalité du premier message.<br /><br /> **CO**. Conversation en cours. La conversation est établie et ses deux parties peuvent envoyer des messages. L'essentiel de la communication pour un service classique a lieu lorsque la conversation se trouve dans cet état.<br /><br /> **DI**. Déconnecté en entrée. La partie distante de la conversation a émis une instruction END CONVERSATION. La conversation demeure dans cet état jusqu'à ce que la partie locale de la conversation émette une instruction END CONVERSATION. Une application peut encore recevoir des messages pour la conversation. Dans la mesure où la partie distante de la conversation a terminé celle-ci, une application ne peut pas envoyer de messages sur cette conversation. Lorsqu'une application émet une instruction END CONVERSATION, la conversation passe à l'état CD (fermée).<br /><br /> **DO**. Déconnecté en sortie. La partie locale de la conversation a émis une instruction END CONVERSATION. La conversation reste dans cet état jusqu'à ce que le côté distant accuse réception de la commande END CONVERSATION. Une application ne peut pas envoyer ou recevoir des messages pour la conversation. Lorsque la partie distante de la conversation accuse réception de l'instruction END CONVERSATION, la conversation passe en état CD (fermée).<br /><br /> **ER**. Erreur. Une erreur s'est produite sur ce point de terminaison. Les colonnes Error, Severity et State contiennent des informations sur l'erreur spécifique qui s'est produite.<br /><br /> **CD**. Fermé. Le point de terminaison de la conversation n'est plus en cours d'utilisation.| 1|Oui|  
+|**TextData**|`ntext`|État actuel de la conversation. Il peut s'agir :<br /><br /> **SO**. Démarrée en sortie. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a traité une instruction BEGIN CONVERSATION pour cette conversation, mais aucun message n'a été envoyé.<br /><br /> **SI**. Démarré en entrée. Une autre instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] a démarré une nouvelle conversation avec l’instance actuelle, mais cette dernière n’a pas fini de recevoir le premier message. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer la conversation dans cet état si le premier message est fragmenté ou si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reçoit les messages dans le désordre. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer la conversation dans l'état CO si la première transmission reçue pour cette conversation contient la totalité du premier message.<br /><br /> **CO**. Conversation en cours. La conversation est établie et ses deux parties peuvent envoyer des messages. L'essentiel de la communication pour un service classique a lieu lorsque la conversation se trouve dans cet état.<br /><br /> **DI**. Déconnecté en entrée. La partie distante de la conversation a émis une instruction END CONVERSATION. La conversation demeure dans cet état jusqu'à ce que la partie locale de la conversation émette une instruction END CONVERSATION. Une application peut encore recevoir des messages pour la conversation. Dans la mesure où la partie distante de la conversation a terminé celle-ci, une application ne peut pas envoyer de messages sur cette conversation. Lorsqu'une application émet une instruction END CONVERSATION, la conversation passe à l'état CD (fermée).<br /><br /> **DO**. Déconnecté en sortie. La partie locale de la conversation a émis une instruction END CONVERSATION. La conversation reste dans cet état jusqu'à ce que le côté distant accuse réception de la commande END CONVERSATION. Une application ne peut pas envoyer ou recevoir des messages pour la conversation. Lorsque la partie distante de la conversation accuse réception de l'instruction END CONVERSATION, la conversation passe en état CD (fermée).<br /><br /> **ER**. Erreur. Une erreur s'est produite sur ce point de terminaison. Les colonnes Error, Severity et State contiennent des informations sur l'erreur spécifique qui s'est produite.<br /><br /> **CD**. Fermé. Le point de terminaison de la conversation n'est plus en cours d'utilisation.|1|Oui|  
 |**ID de transaction**|`bigint`|ID affecté à la transaction par le système.|4|non|  
   
  Le tableau ci-dessous répertorie les valeurs des sous-classes pour cette classe d'événements.  
   
 |ID|Sous-classe|Description|  
 |--------|--------------|-----------------|  
-| 1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **SEND Message** lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] exécute une instruction SEND.|  
+|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **SEND Message** lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] exécute une instruction SEND.|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **END CONVERSATION** lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] exécute une instruction END CONVERSATION qui ne comporte pas la clause WITH ERROR.|  
 |3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **END CONVERSATION WITH ERROR** lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] exécute une instruction END CONVERSATION qui comporte la clause WITH ERROR.|  
 |4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **Broker Initiated Error** chaque fois que [!INCLUDE[ssSB](../../includes/sssb-md.md)] crée un message d'erreur. Par exemple, lorsque [!INCLUDE[ssSB](../../includes/sssb-md.md)] ne parvient pas à acheminer un message pour un dialogue, il crée un message d'erreur pour celui-ci et génère cet événement. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne génère pas cet événement lorsqu'une application termine une conversation par une erreur.|  

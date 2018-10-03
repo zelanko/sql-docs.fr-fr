@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_repl_schemas (Transact-SQL) | Documents Microsoft
+title: Sys.dm_repl_schemas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_repl_schemas_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9dfbe8ca8cf3261e898731967aeec34e81c010c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2aa0b4e885d586e64c6c613e07d2969d77885715
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467645"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763378"
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +32,7 @@ ms.locfileid: "34467645"
   Retourne des informations sur les colonnes de table publiées par la réplication.  
   
  
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**artcache_schema_address**|**varbinary(8)**|Adresse en mémoire de la structure de schéma du cache pour l'article de table publié.|  
 |**tabid**|**bigint**|ID de la table répliquée.|  
@@ -47,13 +44,13 @@ ms.locfileid: "34467645"
 |**ccTabname**|**smallint**|Longueur en caractères du nom de la table publiée.|  
 |**rowsetid_delete**|**bigint**|ID de la ligne supprimée.|  
 |**rowsetid_insert**|**bigint**|ID de la ligne insérée.|  
-|**num_pk_cols**|**int**|Nombre de colonnes clés primaires.|  
+|**num_pk_cols**|**Int**|Nombre de colonnes clés primaires.|  
 |**pcitee**|**binary(8000)**|Pointeur sur la structure d'expression de requête utilisée pour évaluer la colonne calculée.|  
-|**re_numtextcols**|**int**|Nombre de colonnes d'objets BLOB (Binary Large Object) dans la table répliquée.|  
+|**re_numtextcols**|**Int**|Nombre de colonnes d'objets BLOB (Binary Large Object) dans la table répliquée.|  
 |**re_schema_lsn_begin**|**binary(8000)**|Numéro séquentiel dans le journal de départ pour l'enregistrement de la version du schéma.|  
 |**re_schema_lsn_end**|**binary(8000)**|Dernier numéro séquentiel dans le journal de la version de schéma.|  
-|**re_numcols**|**int**|Nombre de colonnes publiées.|  
-|**re_colid**|**int**|Identificateur de colonne au niveau du serveur de publication.|  
+|**re_numcols**|**Int**|Nombre de colonnes publiées.|  
+|**re_colid**|**Int**|Identificateur de colonne au niveau du serveur de publication.|  
 |**re_awcName**|**nvarchar(510)**|Nom de la colonne publiée.|  
 |**re_ccName**|**smallint**|Nombre de caractères dans le nom de colonne.|  
 |**re_pk**|**tinyint**|Indique si la colonne publiée fait partie d'une clé primaire.|  
@@ -71,8 +68,8 @@ ms.locfileid: "34467645"
 |**se_rowsetid**|**bigint**|ID de l'ensemble de lignes.|  
 |**se_schema_lsn_begin**|**binary(8000)**|Numéro de séquence d'enregistrement de départ pour l'enregistrement de la version du schéma.|  
 |**se_schema_lsn_end**|**binary(8000)**|Dernier numéro séquentiel dans le journal de la version de schéma.|  
-|**se_numcols**|**int**|Nombre de colonnes.|  
-|**se_colid**|**int**|ID de la colonne au niveau de l'abonné.|  
+|**se_numcols**|**Int**|Nombre de colonnes.|  
+|**se_colid**|**Int**|ID de la colonne au niveau de l'abonné.|  
 |**se_maxlen**|**smallint**|Longueur maximale de la colonne.|  
 |**se_prec**|**tinyint**|Précision de la colonne.|  
 |**se_scale**|**tinyint**|Échelle de la colonne.|  
@@ -83,9 +80,9 @@ ms.locfileid: "34467645"
 |**se_fNullable**|**tinyint**|Spécifie si la colonne prend en charge les valeurs NULL.|  
 |**se_fAnsiTrim**|**tinyint**|Indique si la troncature ANSI est utilisée sur la colonne.|  
 |**se_computed**|**smallint**|Indique si la colonne est une colonne calculée.|  
-|**se_nullBitInLeafRows**|**int**|Indique si la valeur de la colonne est NULL.|  
+|**se_nullBitInLeafRows**|**Int**|Indique si la valeur de la colonne est NULL.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l’autorisation VIEW DATABASE STATE sur la base de données de publication pour appeler **dm_repl_schemas**.  
   
 ## <a name="remarks"></a>Notes  

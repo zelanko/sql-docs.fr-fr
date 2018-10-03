@@ -1,13 +1,11 @@
 ---
-title: Vue d’ensemble des données de mise à jour | Documents Microsoft
+title: Vue d’ensemble des données de la mise à jour | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], about updating data
@@ -15,20 +13,20 @@ helpviewer_keywords:
 - updating data [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64f61563836b7deddc65b2dc61307ed686f030ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3edbd41bc5361d864abcc7d631a90521af98ef01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777827"
 ---
-# <a name="updating-data-overview"></a>Vue d’ensemble des données de mise à jour
-Les applications peuvent mettre à jour les données en exécutant des instructions SQL ou en appelant **SQLSetPos** ou **SQLBulkOperations**. **Mise à jour**, **supprimer**, et **insérer** instructions agir directement sur la source de données et sont généralement prises en charge par les pilotes. Recherche des mises à jour et les instructions delete contient une spécification des lignes à modifier. Positionné mise à jour et supprimer des instructions et **SQLSetPos** agissent sur la source de données via un curseur et sont moins couramment pris en charge.  
+# <a name="updating-data-overview"></a>Vue d’ensemble de la mise à jour des données
+Les applications peuvent mettre à jour les données en exécutant des instructions SQL ou en appelant **SQLSetPos** ou **SQLBulkOperations**. **Mise à jour**, **supprimer**, et **insérer** instructions agir directement sur la source de données et sont généralement prises en charge par les pilotes. Rechercher les mises à jour et les instructions delete contient une spécification des lignes à modifier. Positionné de mise à jour et supprimer des instructions et **SQLSetPos** agissent sur la source de données via un curseur et sont moins couramment pris en charge.  
   
- Si les curseurs peuvent détecter les modifications apportées à un jeu de résultats avec les méthodes décrites dans cette section varie selon le type du curseur et comment il est implémenté. Les curseurs avant uniquement ne pas réexaminer des lignes et par conséquent, ne détectent pas les modifications. Pour savoir si les curseurs de défilement peuvent détecter des modifications, consultez [curseurs permettant le défilement](../../../odbc/reference/develop-app/scrollable-cursors.md).  
+ Si les curseurs peuvent détecter les modifications apportées à l’ensemble de résultats avec les méthodes décrites dans cette section varie selon le type du curseur et comment il est implémenté. Curseurs avant uniquement et ne pas réexaminer les lignes et par conséquent ne détectent pas les modifications. Pour savoir si les curseurs avec défilement peuvent détecter des modifications, consultez [curseurs avec défilement](../../../odbc/reference/develop-app/scrollable-cursors.md).  
   
  Cette section contient les rubriques suivantes.  
   

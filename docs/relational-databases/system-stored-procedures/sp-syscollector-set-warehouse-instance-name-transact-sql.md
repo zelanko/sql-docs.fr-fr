@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Documents Microsoft
+title: sp_syscollector_set_warehouse_instance_name (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_instance_name_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_warehouse_instance_name
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8a41db8df8316720f1a88b090de51e39a5d4d5e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0b8d88e1098d9bfddb690685804d29b44730da4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258783"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827497"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*nom_instance*'  
  Est le nom d’instance. *nom_instance* est **sysname** et valeurs par défaut à l’instance locale si elle est NULL.  
   
-> **Remarque :***nom_instance* doit être le nom d’instance complet, constitué du nom de l’ordinateur et le nom d’instance sous la forme *Nom_Ordinateur* \\ *instanceName*.  
+> **Remarque :***nom_instance* doit être le nom d’instance complet, qui se compose du nom de l’ordinateur et le nom d’instance sous la forme *computerName* \\ *instanceName*.    
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -58,7 +54,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
   
  Pour afficher le nom de l’instance actuelle, interrogez la [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) vue système.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'appartenance au rôle de base de données fixe dc_admin (avec autorisation EXECUTE) pour exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

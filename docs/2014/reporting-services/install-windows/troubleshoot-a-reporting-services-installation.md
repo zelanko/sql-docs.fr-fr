@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 447cab185ce02b83b25af160421391ed73bb7cf6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 757ca354179094554beac92486209553e5440866
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224739"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Dépanner une installation de Reporting Services
   Si vous ne parvenez pas à installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] suite à des erreurs qui se produisent durant l'installation, utilisez les instructions fournies dans cette rubrique pour étudier les conditions les plus susceptibles de provoquer des erreurs d'installation.  
@@ -203,7 +200,7 @@ ms.locfileid: "37248339"
   
 2.  Ouvrez une fenêtre de commande et tapez la commande suivante à l'invite de commandes :  
   
-    -   **Exécutez \< ** *répertoire .NET Framework 2.0* **> \InstallUtil.exe \< ** *répertoire Bin Report Server* **> \ReportingServicesLibrary.dll**  
+    -   **Exécutez \<**  *répertoire .NET Framework 2.0* **> \InstallUtil.exe \<**  *répertoire Bin Report Server* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  Remplacez \< *répertoire .NET Framework 2.0*> avec le chemin d’accès physique du .NET Framework 2.0 fichiers et \< *répertoire Bin Report Server*> avec le chemin d’accès physique fichiers de rapports server bin.  
