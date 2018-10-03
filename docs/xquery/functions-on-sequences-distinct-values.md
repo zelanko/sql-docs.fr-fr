@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - distinct-values function
 - fn:distinct-values function
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67534172dc879b7865af535e8a85f4a69d8dfc68
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 480183fb649589869645b3ffc98279b8c9722c8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040507"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618027"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Fonctions sur les séquences : distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

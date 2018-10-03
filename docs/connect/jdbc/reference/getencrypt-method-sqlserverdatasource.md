@@ -1,13 +1,11 @@
 ---
-title: Méthode getEncrypt (SQLServerDataSource) | Documents Microsoft
+title: Méthode getEncrypt (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - getEncrypt Method (SQLServerDataSource)
@@ -15,21 +13,20 @@ apilocation:
 - getEncrypt Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 1cdb12dd-6e6f-4bbd-8f5f-9e630f3ee2c9
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9262c2fb18160f5072d21a71c082bd00d17fc302
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 328bf9921bc4d70ef77862edd1476e2f8f629720
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835004"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637097"
 ---
 # <a name="getencrypt-method-sqlserverdatasource"></a>Méthode getEncrypt (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retourne un **booléenne** valeur qui indique si la propriété encrypt est activée.  
+  Retourne une valeur **booléenne** qui indique si la propriété encrypt est activée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,12 +38,12 @@ public boolean getEncypt()
 ## <a name="return-value"></a>Valeur retournée  
  **true** si chiffrer est activé. Dans le cas contraire, la valeur est **false**.  
   
-## <a name="remarks"></a>Notes  
- Si la propriété encrypt a la valeur **true**, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] garantit que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] utilise le chiffrement SSL pour toutes les données envoyées entre le client et le serveur si le serveur possède un certificat installé.  
+## <a name="remarks"></a>Notes   
+ Si la propriété encrypt est définie sur **true**, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] vérifie que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise le chiffrement SSL pour toutes les données envoyées entre le client et le serveur, si un certificat est installé sur le serveur.  
   
- Si la propriété de chiffrement est n’est pas spécifiée ou la valeur **false**, le pilote ne force pas le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] pour prendre en charge le chiffrement SSL. Si le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instance n’est pas configurée pour forcer le chiffrement SSL, une connexion est établie sans codage. Si le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instance est configurée pour forcer le chiffrement SSL, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] automatiquement activer le chiffrement SSL lors de fonctionne correctement configuration de Machine virtuelle Java (JVM), sinon la connexion est interrompue et le pilote génère une erreur. Si la propriété de chiffrement n’est pas définie, la [getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md) méthode retourne la valeur par défaut **false**.  
+ Si la propriété encrypt n’est pas spécifiée ou si elle est définie sur **false**, le pilote n’impose pas à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la prise en charge du chiffrement SSL. Si l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n’est pas configurée pour imposer le chiffrement SSL, une connexion est établie sans aucun chiffrement. Si l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configurée pour forcer le chiffrement SSL, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] active automatiquement le chiffrement SSL lors de l’exécution sur une machine virtuelle Java (JVM) correctement configurée ; sinon, la connexion est interrompue et le pilote génère une erreur. Si la propriété de chiffrement n’est pas définie, la méthode [getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md) retourne la valeur par défaut **false**.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
