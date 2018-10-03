@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_MESSAGE_TYPE_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - DROP MESSAGE TYPE statement
 - removing message types
 ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
-caps.latest.revision: 24
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e6c06789af949cd6f41e29d6a4a0203966a7df69
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: edfefd091eb82daece541d4b42ee2a9ef54dd908
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789010"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816847"
 ---
 # <a name="drop-message-type-transact-sql"></a>DROP MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ DROP MESSAGE TYPE message_type_name
  *message_type_name*  
  Nom du type de message à supprimer. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L'autorisation de suppression d'un type de message revient par défaut au propriétaire du type de message, aux membres des rôles de base de données fixes db_ddladmin et db_owner et aux membres du rôle serveur fixe sysadmin.  
   
 ## <a name="remarks"></a>Notes   

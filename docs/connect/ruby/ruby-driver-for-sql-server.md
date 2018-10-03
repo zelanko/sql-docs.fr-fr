@@ -1,27 +1,24 @@
 ---
-title: Ruby Driver for SQL Server | Documents Microsoft
+title: Pilote Ruby pour SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 45d1b1b6-363d-4924-bcb1-b2582b60f76b
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8eca6928d28a3126346afc477b8e9c644d09b8c2
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 3f11f3b474bdfb224fff8f563bf04bb30c0b99d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309758"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699646"
 ---
-# <a name="ruby-driver-for-sql-server"></a>Ruby Driver pour SQL Server
+# <a name="ruby-driver-for-sql-server"></a>Pilote Ruby pour SQL Server
 
 ![Téléchargement-bas encerclé](../../ssdt/media/download.png)[pour télécharger le pilote Ruby pour SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -36,9 +33,9 @@ Vous pouvez vous connecter à une base de données SQL à l’aide de Ruby sur W
 [Documentation sur ruby-lang.org](https://www.ruby-lang.org/en/documentation/)  
   
 ## <a name="community"></a>Communauté  
-[Centre de développement Azure Ruby](https://azure.microsoft.com/develop/ruby/)  
+[Centre de développement Ruby Azure](https://azure.microsoft.com/develop/ruby/)  
   
 ## <a name="samples"></a>Exemples
-* [Prise en main de Ruby sur macOS](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
-* [Prise en main de Ruby sur Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
-* [Prise en main de Ruby sur Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)
+* [Bien démarrer avec Ruby sur macOS](https://www.microsoft.com/sql-server/developer-get-started/ruby/mac/)
+* [Mise en route avec Ruby sur Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu/)
+* [Mise en route avec Ruby sur Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/ruby/rhel/)
