@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - granting access to database objects
@@ -14,12 +12,12 @@ ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ca5d79ff168234a069a0afe321573e0c83d10dad
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017914"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209509"
 ---
 # <a name="granting-access-to-a-database-object"></a>Octroi de l'accès à un objet de base de données
   En tant qu’administrateur, vous pouvez exécuter l’instruction SELECT dans la table **Products** et la vue **vw_Names**, et exécuter la procédure **pr_Names**. Toutefois, Mary ne peut pas le faire. Pour lui octroyer les autorisations nécessaires, utilisez l'instruction GRANT.  
