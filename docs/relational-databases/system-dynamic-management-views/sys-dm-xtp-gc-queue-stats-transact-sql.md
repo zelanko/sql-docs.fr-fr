@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xtp_gc_stats
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ef266afcab07fbb9d5bb73a48dafcf8eea59844
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7bb836b93a48317ad6573cace0546cb90fa9f370
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38000831"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603717"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.locfileid: "38000831"
 |maximum_queue_depth|**bigint**|Profondeur maximale de cette file d'attente.|  
 |last_service_ticks|**bigint**|Cycles de l'UC au moment où la file d'attente a été traitée pour la dernière fois.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation VIEW SERVER STATE.  
   
 ## <a name="user-scenario"></a>Scénario d'utilisateur  

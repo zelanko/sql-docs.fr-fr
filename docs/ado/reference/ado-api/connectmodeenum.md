@@ -1,13 +1,11 @@
 ---
-title: ConnectModeEnum | Documents Microsoft
+title: ConnectModeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,25 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94b89e379d85002fc58deb36a1b95d1b7457d4c8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2a5ab00cc6e01b97639ae3f7d353fa2462ef3fd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277088"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637857"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-Spécifie les autorisations disponibles pour la modification des données dans un [connexion](../../../ado/reference/ado-api/connection-object-ado.md), ouvrez un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), ou spécifier des valeurs pour le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété de la  **Enregistrement** et [flux](../../../ado/reference/ado-api/stream-object-ado.md) objets.  
+Spécifie les autorisations disponibles pour la modification des données dans un [connexion](../../../ado/reference/ado-api/connection-object-ado.md), en ouvrant un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), ou spécifier des valeurs pour le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété de la  **Enregistrement** et [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objets.  
   
 |Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adModeRead**| 1|Indique les autorisations en lecture seule.|  
+|**adModeRead**|1|Indique les autorisations en lecture seule.|  
 |**adModeReadWrite**|3|Indique les autorisations de lecture/écriture.|  
-|**adModeRecursive**|0x400000|Utilisé conjointement avec les autres *\*ShareDeny\** valeurs (**adModeShareDenyNone**, **adModeShareDenyWrite**, ou **adModeShareDenyRead**) pour propager les restrictions de partage à tous les sous-enregistrements actuelles **enregistrement**. Il n’a aucun effet si la **enregistrement** n’a pas d’enfants. Une erreur d’exécution est générée s’il est utilisé avec **adModeShareDenyNone** uniquement. Toutefois, il peut être utilisé avec **adModeShareDenyNone** lorsqu’elles sont combinées avec d’autres valeurs. Par exemple, vous pouvez utiliser «**adModeRead** ou **adModeShareDenyNone** ou **encore adModeRecursive**».|  
+|**adModeRecursive**|0x400000|Utilisé conjointement avec les autres *\*ShareDeny\** valeurs (**adModeShareDenyNone**, **adModeShareDenyWrite**, ou **adModeShareDenyRead**) pour propager les restrictions de partage à tous les enregistrements de sous-chemin du courant **enregistrement**. Il n’a aucun effet si le **enregistrement** n’a pas d’enfants. Une erreur d’exécution est générée s’il est utilisé avec **adModeShareDenyNone** uniquement. Toutefois, il peut être utilisé avec **adModeShareDenyNone** lorsqu’elles sont combinées avec d’autres valeurs. Par exemple, vous pouvez utiliser «**adModeRead** ou **adModeShareDenyNone** ou **encore adModeRecursive**».|  
 |**adModeShareDenyNone**|16|Permet à d’autres personnes d’ouvrir une connexion avec des autorisations. Aucun accès en lecture ou en écriture ne peut être refusé à d'autres personnes.|  
 |**adModeShareDenyRead**|4|Empêche d’autres personnes d’ouvrir une connexion avec les autorisations de lecture.|  
 |**adModeShareDenyWrite**|8|Empêche d’autres personnes d’ouvrir une connexion avec des autorisations d’écriture.|  
@@ -41,7 +38,7 @@ Spécifie les autorisations disponibles pour la modification des données dans u
 |**adModeUnknown**|0|Valeur par défaut. Indique que les autorisations n’ont pas encore été définies ou qu’il ne peut pas être déterminées.|  
 |**adModeWrite**|2|Indique les autorisations en écriture seule.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
+## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
  Package : **com.ms.wfc.data**  
   
 |Constante|  

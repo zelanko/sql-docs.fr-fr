@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_net_changes_TSQL
 - fn_net_changes_TSQL
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_net_changes_<capture_instance>
 - sys.fn_net_changes_<capture_instance>
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e787c487e2fb03619346de73234427c3499ef5f4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4eff2dd82db75bf1dc0114477152cb18b9d715d8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393432"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681747"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +94,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de colonne| Description|  
+|Nom de colonne|Type de colonne|Description|  
 |-----------------|-----------------|-----------------|  
 |\<colonnes de @column_list>|**Varie**|Les colonnes qui sont identifiées dans le **column_list** argument de sp_cdc_generate_wrapper_function lorsqu’elle est appelée pour générer le script pour créer le wrapper. Si *column_list* est NULL, toutes les colonnes sources suivies apparaîtront dans le jeu de résultats.|  
 |__CDC_OPERATION|**nvarchar(2)**|Code d'opération qui indique quelle opération est requise pour appliquer la ligne à l'environnement cible. L’opération peut varier en fonction de la valeur de l’argument *row_filter_option* qui est fourni dans l’appel suivant :<br /><br /> *row_filter_option* = 'all', 'all with mask'<br /><br /> 'D' - opération de suppression<br /><br /> 'I' - opération d'insertion<br /><br /> 'UN' - opération de mise à jour<br /><br /> *row_filter_option* = « all with merge »<br /><br /> 'D' - opération de suppression<br /><br /> 'M' – opération d'insertion ou de mise à jour|  

@@ -1,13 +1,11 @@
 ---
-title: Il ne | Documents Microsoft
+title: Il ne | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - EventStatusEnum enumeration [ADO]
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20a5582eb8c8744e5d8a065c5fa8ce29c0d4b793
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 623468be9022a722109f99022df8d8a583888c09
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278058"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678537"
 ---
-# <a name="eventstatusenum"></a>Il n'
+# <a name="eventstatusenum"></a>EventStatusEnum
 Spécifie l’état actuel de l’exécution d’un événement.  
   
 |Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adStatusCancel**|4|Demande l’annulation de l’opération qui a provoqué l’événement se produit.|  
+|**adStatusCancel**|4|Demande l’annulation de l’opération qui a provoqué l’événement se produise.|  
 |**adStatusCantDeny**|3|Indique que l’opération ne peut pas demander l’annulation de l’opération en attente.|  
 |**adStatusErrorsOccurred**|2|Indique que l’opération qui a provoqué l’événement a échoué en raison d’une erreur ou des erreurs.|  
-|**adStatusOK**| 1|Indique que l’opération qui a provoqué l’événement a réussi.|  
-|**adStatusUnwantedEvent**|5|Empêche toute notification avant que la méthode d’événement ait terminé l’exécution.|  
+|**adStatusOK**|1|Indique que l’opération qui a provoqué l’événement a réussi.|  
+|**adStatusUnwantedEvent**|5|Empêche les notifications suivantes avant que la méthode d’événement ait terminé l’exécution.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
+## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
  Package : **com.ms.wfc.data**  
   
 |Constante|  

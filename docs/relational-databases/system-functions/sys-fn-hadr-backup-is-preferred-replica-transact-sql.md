@@ -1,14 +1,11 @@
 ---
-title: Sys.fn_hadr_backup_is_preferred_replica (Transact-SQL) | Documents Microsoft
+title: Sys.fn_hadr_backup_is_preferred_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_hadr_backup_is_preferred_replica_TSQL
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - active secondary replicas [SQL Server], backup on secondary replicas
 - sys.fn_hadr_backup_is_preferred_replica function
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d89528595dc2cec10bd86f9605b8ef55331c8ab5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a6bba59d680a9f7ba1595808eed27762670aab97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597659"
 ---
 # <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>Sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +44,14 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- '*dbname*'  
+ «*dbname*»  
  Nom de la base de données actuellement sauvegardée. *dbname* est de type sysname.  
   
 ## <a name="returns"></a>Valeur renvoyée  
  Retourne 1 si la base de données sur l'instance actuelle est sur le réplica par défaut. Dans le cas contraire, retourne la valeur 0.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez cette fonction dans un script de sauvegarde pour déterminer si la base de données active est sur le réplica préféré pour les sauvegardes. Vous pouvez exécuter un script sur chaque réplica de disponibilité. Chacun de ces travaux recherche les mêmes données pour déterminer quel est le travail à exécuter, une seule des tâches planifiées se poursuit en fait à l’étape de sauvegarde. L'exemple de code devrait ressembler à ce qui suit :  
+ Utilisez cette fonction dans un script de sauvegarde pour déterminer si la base de données active est sur le réplica préféré pour les sauvegardes. Vous pouvez exécuter un script sur chaque réplica de disponibilité. Chacun de ces travaux examine les mêmes données pour déterminer quel travail doit s’exécuter, seul l’un des tâches planifiées se poursuit en fait à l’étape de sauvegarde. L'exemple de code devrait ressembler à ce qui suit :  
   
 ```  
 If sys.fn_hadr_backup_is_preferred_replica( @dbname ) <> 1   
@@ -78,10 +74,10 @@ GO
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
--   [Configurer la sauvegarde sur les réplicas de disponibilité & #40 ; SQL Server & #41 ;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
+-   [Configurer la sauvegarde sur des réplicas de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions de groupes de disponibilité AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [Fonctions de groupes de disponibilité Always On &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   

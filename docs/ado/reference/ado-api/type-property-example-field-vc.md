@@ -1,32 +1,29 @@
 ---
-title: Tapez l’exemple de propriété (champ) (VC ++) | Documents Microsoft
+title: Tapez l’exemple de propriété (objet Field) (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [field] [ADO], VC++ example
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb420e129d36c9172837a9d68e631c9bc26086e7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666233"
 ---
-# <a name="type-property-example-field-vc"></a>Exemple de type de propriété (champ) (VC ++)
-Cet exemple illustre la [Type](../../../ado/reference/ado-api/type-property-ado.md) en affichant le nom de la constante qui correspond à la valeur de propriété de la **Type** propriété de tous les le [champ](../../../ado/reference/ado-api/field-object.md) des objets dans le ***Employés*** table. La fonction FieldType est requise pour exécuter cette procédure.  
+# <a name="type-property-example-field-vc"></a>Type, exemple de propriété (objet Field) (VC++)
+Cet exemple montre la [Type](../../../ado/reference/ado-api/type-property-ado.md) propriété en affichant le nom de la constante qui correspond à la valeur de la **Type** propriété de tous les le [champ](../../../ado/reference/ado-api/field-object.md) des objets dans le ***Employés*** table. La fonction FieldType est requise pour exécuter cette procédure.  
   
 ## <a name="example"></a>Exemple  
   
@@ -175,5 +172,5 @@ void PrintComError(_com_error &e) {
  **Nom : hire_date**  
  **Type : adDBTimeStamp**   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Field](../../../ado/reference/ado-api/field-object.md)   
+ [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
  [Type, propriété (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

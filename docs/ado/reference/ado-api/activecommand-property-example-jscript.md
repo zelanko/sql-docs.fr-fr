@@ -1,32 +1,29 @@
 ---
-title: Exemple de propriété ActiveCommand (JScript) | Documents Microsoft
+title: ActiveCommand, propriété-Exemple (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - ActiveCommand property [ADO], JScript example
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4272cda6ce23406661c216944a155b2de6d61349
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e9f7dfa941d02ac86f31f8d5d93fa55be6130ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275008"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617227"
 ---
-# <a name="activecommand-property-example-jscript"></a>Exemple de propriété ActiveCommand (JScript)
-Cet exemple illustre la [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriété. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous **ActiveCommandJS.asp**.  
+# <a name="activecommand-property-example-jscript"></a>ActiveCommand, exemple de propriété (JScript)
+Cet exemple montre la [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriété. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **ActiveCommandJS.asp**.  
   
 ```  
 <!-- BeginActiveCommandJS -->  
@@ -131,5 +128,5 @@ if (strName.length > 0)
   
 ## <a name="see-also"></a>Voir aussi  
  [ActiveCommand, propriété (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Objet de commande (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Objet Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
