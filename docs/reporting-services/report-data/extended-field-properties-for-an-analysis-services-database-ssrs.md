@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c89595a791ed67dc63730d2591ef0e4ab6ad562d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 28cea40552b79be184c8c600e6be48f2c81fecd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278561"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703037"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriétés de champ étendues pour une base de données Analysis Services (SSRS)
   L’extension pour le traitement des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ étendues. Les propriétés de champs étendues sont des propriétés complémentaires aux propriétés **Value** et **IsMissing** qui sont disponibles sur la source de données et prises en charge par l’extension pour le traitement des données. Les propriétés étendues ne figurent pas dans le volet des données de rapport dans le cadre de la collection de champs pour un dataset de rapport. Vous pouvez inclure des valeurs de propriété de champ étendues dans votre rapport en écrivant des expressions qui en spécifient le nom à l’aide de la collection **Fields** intégrée.  

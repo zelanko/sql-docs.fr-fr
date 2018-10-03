@@ -1,13 +1,11 @@
 ---
-title: 'Commande (Index de la syntaxe Visual C++ avec #import) | Documents Microsoft'
+title: 'Commande (Index de la syntaxe Visual C++ avec #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,16 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - 'Command collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 563dd3504ba6787b69daab4eaaa47df9f16b2b2b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 874c22fa4625ba78af44f19ad328a39d854eb8de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606357"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>Commande (Index de la syntaxe Visual C++ avec #import)
 ## <a name="methods"></a>Méthodes  
@@ -35,7 +32,7 @@ _RecordsetPtr Execute( VARIANT * RecordsAffected, VARIANT * Parameters, long Opt
 _ParameterPtr CreateParameter( _bstr_t Name, enum DataTypeEnum Type, enum ParameterDirectionEnum Direction, long Size, const _variant_t & Value = vtMissing );  
 ```  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
   
 ```  
 _ConnectionPtr GetActiveConnection( );  

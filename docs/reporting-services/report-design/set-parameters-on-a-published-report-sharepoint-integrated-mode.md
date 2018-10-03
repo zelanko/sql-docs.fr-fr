@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 741c377f848c67a71dc34b0191a892e3e1389426
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 80544535b3a45fa11be346b1b35714148f2bd434
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269355"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624487"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Définir les paramètres sur un rapport publié - Mode intégré SharePoint
   Un rapport paramétrable est un rapport qui accepte des valeurs d'entrée afin de filtrer les données lors de l'exécution du rapport. Les paramètres sont définis lors de la création du rapport. Selon les paramètres inclus dans la définition de rapport, ceux-ci peuvent accepter une valeur unique, plusieurs valeurs ou des valeurs dynamiques, qui changent en réponse à une sélection antérieure (par exemple, lorsque vous choisissez une catégorie de produit, votre prochaine sélection peut être un produit spécifique de cette catégorie). Un paramètre peut avoir une valeur par défaut, qui sert à exécuter automatiquement une version filtrée du rapport ou qui est éventuellement remplacée par une autre valeur.  

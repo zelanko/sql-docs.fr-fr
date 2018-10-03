@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f620c9fbf9ad7f1233236f9da193ecf730144f06
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e2bb0f1a92ffd45e4929ed97a5f73f205d3ccf2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407491"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732417"
 ---
 # <a name="cdc-control-task"></a>Tâche de contrôle de capture de données modifiées
   La tâche de contrôle de capture de données modifiées permet de contrôler le cycle de vie des packages de capture de données modifiées. Elle gère la synchronisation des package de capture de données modifiées avec le package de charge initiale et la gestion des plages de numéros séquentiels dans le journal (NSE) qui sont traités lors de l'exécution d'un package de capture de données modifiées. En outre, la tâche de contrôle de capture de données modifiées traite les scénarios d'erreur et la récupération.  
@@ -76,7 +73,7 @@ ms.locfileid: "35407491"
   
 -   [Propriétés personnalisées de la tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Définir une variable d’état](../../integration-services/data-flow/define-a-state-variable.md)  
   
 ## <a name="related-content"></a>Contenu associé  

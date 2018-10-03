@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 60dafbe6f9a25b7a56ec70011bd2c0b2bda8dbe3
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c9437ede8627ee8fb162995cb4e02a454d42a3a6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332073"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727227"
 ---
 # <a name="manage-a-cdc-service"></a>Gérer un service de capture de données modifiées
   Utilisez la console du concepteur CDC pour afficher les services que vous avez créés à l'aide de la console de configuration du service de capture de données modifiées et gérer toutes les instances dans le service de capture de données modifiées Oracle.  

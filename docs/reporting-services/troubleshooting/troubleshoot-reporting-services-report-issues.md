@@ -4,17 +4,16 @@ ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86a841e4e60e0c049bfe1aec0d09960298bb58f0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 22511322e7480b5123b05d2888a90a6032f86b74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668857"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Résoudre les problèmes avec les rapports Reporting Services
 Cette rubrique vous fournit des conseils pour résoudre les problèmes associés à la conception de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , l’affichage de l’aperçu d’un rapport, la publication d’un rapport sur un serveur de rapports en mode natif ou en mode SharePoint, l’affichage d’un rapport sur le serveur de rapports ou l’exportation d’un rapport dans un format de fichier différent.  

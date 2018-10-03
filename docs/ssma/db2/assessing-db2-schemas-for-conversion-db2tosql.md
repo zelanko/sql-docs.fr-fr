@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 14cf02ac294c25204460c2081c402e9afc855de7
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40396084"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608936"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Évaluation des schémas DB2 pour la Conversion (DB2ToSQL)
 Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez déterminer comment complexe sera la migration et combien de temps l’opération prendra. SSMA peut créer un rapport d’évaluation qui affiche le pourcentage d’objets qui seront converties correctement. SSMA vous permet également d’afficher les problèmes spécifiques qui provoquent des échecs de conversion.  

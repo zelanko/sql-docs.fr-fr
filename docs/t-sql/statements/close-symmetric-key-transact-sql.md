@@ -5,9 +5,7 @@ ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CLOSE SYMMETRIC KEY
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - CLOSE SYMMETRIC KEY statement
 - cryptography [SQL Server], symmetric keys
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
-caps.latest.revision: 29
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: aa5b10cd64fbf7d77fe37cf1844d48a582643476
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: a9a2d1e8c952863ae017422acf3842b31c79da91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790730"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695937"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
 ## <a name="remarks"></a>Notes   
  Les clés symétriques ouvertes sont liées à la session et non au contexte de sécurité. Une clé ouverte est disponible tant qu'elle n'a pas été explicitement fermée ou que la session n'a pas été arrêtée. CLOSE ALL SYMMETRIC KEYS ferme toutes les clés principales de base de données qui ont été ouvertes pendant la session actuelle à l’aide de l’instruction [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md).  Des informations relatives aux clés ouvertes sont consultables dans la vue de catalogue [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Aucune autorisation explicite n'est requise pour fermer une clé symétrique.  
   
 ## <a name="examples"></a>Exemples  

@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 824 (Database Engine error)
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - suspect pages [SQL Server]
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
-caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b09fd93843050d71c59f1b7bef9a026bb773f32a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1081ea3a972dea318e7ad7952f313a95f407223
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921811"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621547"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +70,7 @@ ms.locfileid: "32921811"
   
     |Description de l'erreur|Valeur**event_type** |  
     |-----------------------|---------------------------|  
-    |Erreur 823 provoquée par une erreur CRC du système d'exploitation ou erreur 824 autre qu'une somme de contrôle incorrecte ou une page endommagée (par exemple, ID de page incorrect)| 1|  
+    |Erreur 823 provoquée par une erreur CRC du système d'exploitation ou erreur 824 autre qu'une somme de contrôle incorrecte ou une page endommagée (par exemple, ID de page incorrect)|1|  
     |Somme de contrôle incorrecte|2|  
     |Page endommagée|3|  
     |Page restaurée (la page a été restaurée après avoir été marquée comme incorrecte)|4|  

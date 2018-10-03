@@ -6,8 +6,6 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.importschema
@@ -17,16 +15,15 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportDatabaseSummaryDialog.dialog
 - sql.data.tools.importscriptwizard.fileselection
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4fdaca995e96116b1268916d008b565454511489
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 17471823dcc3e77d23423fda3c81dbe8c958ab89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088481"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673257"
 ---
 # <a name="how-to-create-a-new-database-project"></a>Procédure : créer un nouveau projet de base de données
 Vous pouvez créer un nouveau projet de base de données et importer un schéma de base de données à partir d'une base de données existante, d'un fichier de script SQL ou d'une application de la couche Données (.dacpac). Vous pouvez ensuite appeler les mêmes outils du concepteur visuel (Éditeur Transact\-SQL, Concepteur de tables) disponibles pour le développement de base de données connectée afin d'apporter des modifications au projet de base de données en mode hors connexion, et republier les modifications dans la base de données de production. Les modifications peuvent aussi être enregistrées en tant que script pour être publiées ultérieurement. Le volet **Propriétés du projet** permet de modifier la plateforme cible vers différentes versions de SQL Server (y compris SQL Azure).  

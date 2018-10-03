@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca00fb5bce7f97fd76482c89701c5f7144f3f14f
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 4d7e0f84458b7b07c68f502bb40c50a5d37d86d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36925710"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769339"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilité de FILESTREAM avec d'autres fonctionnalités SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +45,7 @@ ms.locfileid: "36925710"
   
 -   [SQL Server Express](#SQLServerExpress)  
   
--   
-  [Bases de données autonomes](#contained)  
+-   [Bases de données autonomes](#contained)  
   
 ##  <a name="ssis"></a> SQL Server Integration Services (SSIS)  
  SQL Server Integration Services (SSIS) gère les données FILESTREAM dans le flux de données comme toutes les autres données BLOB en utilisant le type de données SSIS DT_IMAGE.  
@@ -120,9 +116,7 @@ ms.locfileid: "36925710"
 ##  <a name="SQLServerExpress"></a> SQL Server Express  
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] prend en charge FILESTREAM. La limite de taille de base de données de 10 Go n'inclut pas le conteneur de données FILESTREAM.  
   
-##  
-  <a name="contained">
-  </a> Bases de données autonomes  
+##  <a name="contained"></a> Bases de données autonomes  
  La fonctionnalité FILESTREAM requiert une configuration spécifique hors de la base de données. Par conséquent, une base de données qui utilise FILESTREAM ou FileTable n'est pas entièrement contenue.  
   
  Vous pouvez définir l’autonomie de la base de données sur PARTIAL si vous souhaitez utiliser certaines fonctionnalités des bases de données autonomes, telles que les utilisateurs autonomes. Dans ce cas, toutefois, vous devez savoir qu'une partie des paramètres de la base de données ne sont pas contenus dans la base de données et ne sont pas automatiquement déplacés avec celle-ci.  

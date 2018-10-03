@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29d06a93a797ca312ce4a6e60fabb9a221be4dc7
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4ded4a4ff7298df9d28f5f54997637ec5a5c0b54
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42774311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640737"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Procédure : utilisation des objets de base de données CLR
 Outre le langage de programmation Transact\-SQL, vous pouvez utiliser les langages .NET Framework pour créer des objets de base de données et récupérer et mettre à jour des données pour les bases de données SQL Server. Les objets de base de données écrits en code managé sont appelés objets de base de données Common Language Runtime (CLR) de SQL Server. Pour obtenir une explication des avantages de l'utilisation des objets de base de données CLR hébergés dans SQL Server, ainsi que sur le choix entre Transact\-SQL et CLR, consultez [Avantages de l'intégration du CLR](../relational-databases/clr-integration/clr-integration-overview.md) et [Avantages de l'utilisation du code managé pour créer des objets de base de données](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx).  

@@ -4,26 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Assessment reports
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c29aa85e3f16c3bcec8fea5ee8b83e44bc43a58d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 9983edb500e424be6bbb4f85ff005af00fd65aaf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393145"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664211"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Évaluation des bases de données MySQL pour la conversion (MySQLToSQL)
 Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez déterminer comment complexe sera la migration et combien de temps l’opération prendra. SSMA peut créer un rapport d’évaluation qui affiche le pourcentage d’objets qui seront converties correctement. SSMA vous permet également d’afficher les problèmes spécifiques qui provoquent des échecs de conversion.  

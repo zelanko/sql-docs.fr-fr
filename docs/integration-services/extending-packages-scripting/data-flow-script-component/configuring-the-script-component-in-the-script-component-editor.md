@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - SSIS Script component, configuring
 - Script component [Integration Services], configuring
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc398c3ab6675234fd48987e2f3fd45cb1a1a4c9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a1633811117b65b397f3f961898895b785cb86d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410994"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648797"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configuration du composant Script dans l'éditeur de composant de script
   Avant d’écrire du code personnalisé dans le composant Script, vous devez sélectionner le type de composant de flux de données que vous souhaitez créer (source, transformation ou destination), puis configurer les métadonnées et propriétés du composant dans l’**Éditeur de transformation de script**.  

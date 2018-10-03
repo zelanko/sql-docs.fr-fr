@@ -4,7 +4,6 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -27,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a1f446235811eaf6bf1f01890fedf67f9e800a3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ec6c893548c8353be0ae79f98f47880fe9e3a85b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276428"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756407"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Spécifier des informations d'identification et de connexion pour les sources de données de rapport
   Un serveur de rapports utilise des informations d'identification pour se connecter à des sources de données externes qui fournissent du contenu aux rapports ou des informations de destinataire aux abonnements pilotés par les données. Vous pouvez spécifier des informations d'identification qui utilisent l'authentification Windows, l'authentification de base de données, aucune authentification ou une authentification personnalisée. Lors de l'envoi d'une demande de connexion sur le réseau, le serveur de rapports emprunte l'identité d'un compte d'utilisateur ou du compte d'exécution sans assistance. Pour plus d’informations sur le contexte de sécurité sous lequel une demande de connexion est émise, consultez [Configuration d’une source de données et connexions réseau](#DataSourceConfigurationConnections) plus loin dans cette rubrique.  

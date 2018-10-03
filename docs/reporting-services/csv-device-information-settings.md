@@ -4,7 +4,6 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - CSV [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67173840f194967c605fe77b5703398f9dabb82a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 320ad1972dcf949200b6fafa5eafc4fda3bd2348
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270756"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678597"
 ---
 # <a name="csv-device-information-settings"></a>Paramètres d'informations de périphérique CSV
   Les paramètres d'informations de périphérique de l'extension de rendu CSV permettent de modifier les séparateurs et les qualificateurs et de spécifier la manière de gérer les sauts de ligne. L'extension du fichier peut également être envoyée, ainsi que l'encodage et l'inclusion des lignes d'en-tête dans la sortie. Étant donné que les séparateurs sont probablement des caractères spéciaux, vous devez les encoder dans une section CDATA, si les paramètres sont écrits au format XML.  

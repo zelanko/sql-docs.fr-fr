@@ -5,22 +5,19 @@ ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca04765f81319fee1c6dee09de7ee6834f92ceda
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 81603c1fd153795054897d362d4a2c9df5a88b66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632907"
 ---
 # <a name="data-quality-projects-dqs"></a>Projets de qualité des données (DQS)
 
@@ -59,7 +56,7 @@ ms.locfileid: "35310668"
 ##  <a name="ProfilingNotification"></a> Profilage des données et notifications  
  Tout en exécutant les activités de nettoyage et de correspondance dans un projet de qualité de données, vous pouvez afficher des statistiques et des informations en temps réel sur les données que DQS est en train de traiter. Le profilage des données vous permet d'évaluer l'efficacité des processus de nettoyage et de correspondance, et vous pouvez éventuellement déterminer jusqu'à quel point le nettoyage ou la correspondance des données peuvent améliorer la qualité des données. Le profilage DQS fournit deux dimensions de qualité des données : l' *exhaustivité* (dans quelle mesure les données sont présentes) et la *précision* (dans quelle mesure les données peuvent être utilisées pour l'usage prévu). De plus, selon les informations de profilage des données, les notifications sont affichées à l'utilisateur sur les mesures qui peuvent être prises pour améliorer les opérations de nettoyage et de correspondance des données. Pour plus d'informations sur le profilage des données et les notifications, consultez [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

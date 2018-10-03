@@ -3,7 +3,6 @@ title: Installation de fichiers uniquement (Reporting Services) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - files-only installation [Reporting Services]
@@ -11,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c55108cab5fb57dbcca1e9f1ab2d3fd9d45489d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 510c5dc33aa70f988b5f69e66fd93d5f4aaf4ebd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266277"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666877"
 ---
 # <a name="files-only-installation-reporting-services"></a>Installation de fichiers uniquement (Reporting Services)
   *L’installation de fichiers uniquement* fait référence à une installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans laquelle le programme d’installation crée l’arborescence pour les fichiers programme [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , copie les fichiers sur disque, inscrit le service Report Server sur l’ordinateur local, configure le compte de service, accorde les autorisations de fichiers au compte de service et inscrit le fournisseur WMI [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

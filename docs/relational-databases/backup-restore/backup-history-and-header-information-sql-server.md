@@ -5,9 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backup headers [SQL Server]
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd442f668c272795321a93d23faf2ae832673788
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8c19200923dc21e3000263095438a65b63a019a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922384"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684737"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historique de sauvegarde et informations d'en-tête (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

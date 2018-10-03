@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10d89181165d76e0b48dd7b09f0508d3d9f77419
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f8dd326b588880ca2f095c83c6a2d9ad8f02ac32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408521"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694147"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurer la destination du fichier plat (Assistant Importation et Exportation SQL Server)
   Si vous avez sélectionné une destination de fichier plat, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche la page **Configurer la destination du fichier plat** une fois que vous avez spécifié que vous souhaitiez copier une table ou que vous avez fourni une requête. Dans cette page, vous spécifiez les options de mise en forme du fichier plat de destination. Si vous le souhaitez, vous pouvez passer en revue le mappage des colonnes et afficher un aperçu des exemples de données.  

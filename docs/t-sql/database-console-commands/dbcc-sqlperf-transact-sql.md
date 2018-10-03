@@ -5,9 +5,7 @@ ms.date: 01/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQLPERF
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - space [SQL Server], transaction logs
 - DBCC SQLPERF statement
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
-caps.latest.revision: 43
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 4f8229b7765655bd75c2e0bfa2dc804c56a6fffa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fe8d7ae38915a335276e661e3ce5f28c61b9a40e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261135"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710997"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +82,7 @@ Supprime tous les messages d'information dont les niveaux de gravité sont compr
  
 Le journal de transactions enregistre chaque transaction effectuée dans une base de données. Pour plus d’informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) et [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
 Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’exécution de `DBCC SQLPERF(LOGSPACE)` nécessite l’autorisation `VIEW SERVER STATE` sur le serveur. La réinitialisation des statistiques des verrous et d’attente nécessite l’autorisation `ALTER SERVER STATE` sur le serveur.
   
 Pour les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium et Critique pour l’entreprise, l’autorisation `VIEW DATABASE STATE` est requise dans la base de données. Pour les niveaux [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard, De base et Usage général, le compte administrateur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est requis. La réinitialisation des statistiques de verrous et d’attente n’est pas prise en charge.

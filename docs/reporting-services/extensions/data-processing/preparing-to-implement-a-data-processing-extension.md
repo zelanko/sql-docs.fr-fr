@@ -4,22 +4,19 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 71566266bcd757351f7b79ccbb874aeee9f08684
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0b460481e74ad292148dc40805deea70212ab02d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276592"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702817"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Préparation à l'implémentation d'une extension pour le traitement des données
   Avant d’implémenter votre extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vous devez définir les interfaces à implémenter. Vous pouvez fournir des implémentations spécifiques aux extensions du jeu d’interfaces complet, ou concentrer simplement votre implémentation sur un sous-ensemble, tel que les interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> et <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> dans lesquelles les clients interagissent essentiellement avec un jeu de résultats comme un objet **DataReader** et utilisent votre extension pour le traitement des données [!INCLUDE[ssRS](../../../includes/ssrs.md)] comme un pont entre le jeu de résultats et votre source de données.  

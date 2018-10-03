@@ -1,72 +1,69 @@
 ---
-title: Fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft | Documents Microsoft
+title: Fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Indexing Service provider [ADO]
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 55b13d7349d58db37dc8f8ec649fec3a06cffcec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271308"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613277"
 ---
-# <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Fournisseur Microsoft OLE DB pour l’indexation de vue d’ensemble du Service Microsoft
-Le fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft fournit un accès en lecture seule par programmation pour le système de fichiers et données Web indexées par le Service d’indexation Microsoft. Les applications ADO peuvent émettre des requêtes SQL pour récupérer des informations de propriété de contenu et de fichiers.
+# <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Fournisseur Microsoft OLE DB pour Microsoft, vue d’ensemble du Service d’indexation
+Le fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft fournit un accès en lecture seule par programmation pour le système de fichiers et des données Web indexées par le Service d’indexation Microsoft. Les applications ADO peuvent émettre des requêtes SQL pour récupérer des informations de propriété de contenu et de fichier.
 
  Le fournisseur est libre de threads et UNICODE.
 
 ## <a name="connection-string-parameters"></a>Paramètres de chaîne de connexion
- Pour vous connecter à ce fournisseur, définissez la **fournisseur =** l’argument de la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriété :
+ Pour vous connecter à ce fournisseur, définissez le **fournisseur =** l’argument de la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriété :
 
 ```
 MSIDXS
 ```
 
- La lecture de la [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) propriété retournera également cette chaîne.
+ Lire le [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) propriété retournera cette forme de chaîne.
 
 ## <a name="typical-connection-string"></a>Chaîne de connexion classique
- Une chaîne de connexion par défaut pour ce fournisseur est :
+ Une chaîne de connexion classique pour ce fournisseur est :
 
 ```
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
 ```
 
- La chaîne se compose des mots clés suivants :
+ La chaîne se compose de ces mots clés :
 
 |Mot clé|Description|
 |-------------|-----------------|
-|**Fournisseur**|Spécifie le fournisseur OLE DB pour le Service d’indexation Microsoft. En général, ceci est le seul mot clé spécifié dans la chaîne de connexion.|
+|**Fournisseur**|Spécifie le fournisseur OLE DB pour le Service d’indexation Microsoft. Il s’agit en général, le seul mot clé spécifié dans la chaîne de connexion.|
 |**Source de données**|Spécifie le nom de catalogue du Service d’indexation. Si ce mot clé n’est pas spécifié, le catalogue système par défaut est utilisé.|
 |**Identificateur de paramètres régionaux**|Spécifie un nombre 32 bits unique (par exemple, 1033) qui spécifie les préférences liées à la langue de l’utilisateur. Si ce mot clé n’est pas spécifié, l’identificateur de paramètres régionaux du système par défaut est utilisé.|
 
 ## <a name="command-text"></a>Texte de la commande
- La syntaxe de requête SQL du Service d’indexation se compose des extensions pour le SQL-92 **sélectionnez** instruction et son **FROM** et **où** clauses. Les résultats de la requête sont retournés via les ensembles de lignes OLE DB, qui peuvent être utilisés par ADO et manipulées en tant que [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objets.
+ La syntaxe de requête SQL du Service d’indexation est constitué des extensions pour le SQL-92 **sélectionnez** instruction et son **FROM** et **où** clauses. Les résultats de la requête sont retournés via les ensembles de lignes OLE DB, qui peuvent être utilisés par ADO et manipulées en tant que [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objets.
 
- Vous pouvez rechercher des mots exacts ou des expressions, ou utiliser des caractères génériques pour rechercher des modèles ou des racines de mots. La logique de recherche peut être basée sur des décisions booléennes, des termes pondérés ou proximité d’autres mots. Vous pouvez également rechercher en « texte libre », qui recherche les correspondances basée sur la signification, plutôt que les mots exacts.
+ Vous pouvez rechercher des termes exacts ou des expressions, ou utiliser des caractères génériques pour rechercher des modèles ou des racines de mots. La logique de recherche peut être basée sur des décisions booléennes, des termes pondérés ou proximité d’autres mots. Vous pouvez également rechercher en « texte libre », qui recherche les correspondances basées sur la signification, plutôt que des termes exacts.
 
  Le dialecte de commande spécifique est entièrement documenté dans les langages de requête pour la documentation du Service d’indexation.
 
- Le fournisseur n’accepte pas les appels de procédures stockées ou des noms de table simples (par exemple, le [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propriété sera toujours **adCmdText**).
+ Le fournisseur n’accepte pas les appels de procédures stockées ou des noms de table simple (par exemple, le [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propriété sera toujours **adCmdText**).
 
-## <a name="recordset-behavior"></a>Comportement du jeu d’enregistrements
+## <a name="recordset-behavior"></a>Comportement de jeu d’enregistrements
  Les tableaux suivants répertorient les fonctionnalités disponibles avec un **Recordset** objet ouvert avec ce fournisseur. Seul le type de curseur statique (**adOpenStatic**) est disponible.
 
- Pour plus d’informations sur les **Recordset** comportement de configuration de votre fournisseur, exécutez le [prend en charge](../../../ado/reference/ado-api/supports-method.md) (méthode) et énumérer le [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection de la **Recordset** pour déterminer si les propriétés dynamiques spécifiques au fournisseur sont présentes.
+ Pour plus d’informations sur **Recordset** comportement pour la configuration de votre fournisseur, exécutez le [prend en charge](../../../ado/reference/ado-api/supports-method.md) (méthode) et énumérer les [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection de la **Recordset** pour déterminer si les propriétés dynamiques spécifiques au fournisseur sont présentes.
 
  **Disponibilité des propriétés de jeu d’enregistrements ADO standard :**
 
@@ -111,13 +108,13 @@ MSIDXS
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Oui|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Oui|
 |[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|
-|[Requery)](../../../ado/reference/ado-api/requery-method.md)|Oui|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Oui|
 |[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|Oui|
 |[Prend en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|
 |[Update](../../../ado/reference/ado-api/update-method.md)|non|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|non|
 
- Pour les détails d’implémentation spécifiques et des informations fonctionnelles sur le fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft, consultez le [Guide du programmeur OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), ou consultez la page des Services Web du serveur de site Web Windows NT site.
+ Pour les détails d’implémentation spécifiques et des informations fonctionnelles sur le fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft, consultez le [Guide du programmeur OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), ou visitez la page Services Web du site Web Windows NT Server site.
 
 ## <a name="see-also"></a>Voir aussi
  [CommandType, propriété (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [ConnectionString, propriété (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [fournisseur, propriété (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [ L’objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [prend en charge (méthode)](../../../ado/reference/ado-api/supports-method.md)

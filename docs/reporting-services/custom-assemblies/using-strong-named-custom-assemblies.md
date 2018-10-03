@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-assemblies
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - AllowPartiallyTrustedCallersAttribute attribute
 - strong-named custom assemblies [Reporting Services]
@@ -17,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b8607bd3b1f40daa45f32af865fb58e625213463
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0c315f5c76c13970d5f3555cb3393ca0877116b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754331"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>Utilisation d'assemblys personnalisés avec noms forts
   Un nom fort identifie un assembly et comprend le nom de l'assembly, le numéro de version en quatre parties, les informations de culture (si fournies), une clé publique et une signature numérique stockée dans le manifeste de l'assembly. Un nom fort identifie de façon unique un assembly dans le Common Language Runtime (CLR) et garantit l'intégrité binaire.  

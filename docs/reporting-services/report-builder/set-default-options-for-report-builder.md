@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 389bfa6930841a2395c0b4be82a6fd0355444145
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ee6b34ed594948bd796f589c7ded4b4259062a3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678607"
 ---
 # <a name="set-default-options-for-report-builder"></a>Définir les options par défaut du Générateur de rapports
   Dans le Générateur de rapports, vous pouvez définir un certain nombre de paramètres par défaut utiles pour faciliter et accélérer la création des rapports.  Par exemple, si vous pouvez définir ou modifier le serveur de rapports par défaut, le Générateur de rapports enregistre vos rapports sur le même serveur de rapports automatiquement, sauf indication contraire.  

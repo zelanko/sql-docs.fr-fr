@@ -5,9 +5,7 @@ ms.date: 06/17/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - GRANT statement, endpoints
 - permissions [SQL Server], endpoints
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2b53a1ccaf24a324b99d42bd6b1c88d84d8e9083
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: e9057d518c736f0e7722829febdaaf3c0f782151
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787290"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619837"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT – octroi d'autorisations de point de terminaison (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +91,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation CONTROL sur le point de terminaison ou l'autorisation ALTER ANY ENDPOINT sur le serveur.  
   
 ## <a name="examples"></a>Exemples  

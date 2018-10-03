@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a7729202612face711cd408f25b0a8c1eef212d0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6ba1339184654094e1cd5d8ad249d43dcd645ca1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275738"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699717"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint
   Pour un serveur de rapports qui s'exécute en mode intégré SharePoint, les paramètres de sécurité définis sur le site SharePoint déterminent le mode d'affichage et de gestion des rapports, des modèles de rapport et des sources de données partagées. Si vous utilisez les groupes SharePoint par défaut, les niveaux d'autorisation et les attributions d'autorisations, vous pouvez utiliser les rapports et d'autres documents à l'aide des paramètres de sécurité actuels.  

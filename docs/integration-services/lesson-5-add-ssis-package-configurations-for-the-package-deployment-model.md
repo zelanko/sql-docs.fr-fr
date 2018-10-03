@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 079c271a7f9cb2f33c90fb8c4b0914319ea190f8
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3e627e6d8854971fbc4428588eb648fb0da3f734
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331913"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599497"
 ---
 # <a name="lesson-5-add-ssis-package-configurations-for-the-package-deployment-model"></a>Leçon 5 : Ajouter des configurations de package SSIS pour le modèle de déploiement de package
 Les configurations de package permettent de définir, en dehors de l'environnement de développement, des propriétés et des variables appliquées au moment de l'exécution. Les configurations permettent de développer des packages souples et faciles à déployer et à distribuer. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] offre les types de configuration suivants :  
@@ -45,9 +41,9 @@ Cette leçon contient les tâches suivantes :
   
 -   [Étape 1 : Copie du package de la leçon 4](../integration-services/lesson-5-1-copying-the-lesson-4-package.md)  
   
--   [Étape 2 : activation et configuration des configurations de package](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
+-   [Étape 2 : Activation et configuration des configurations de package](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
--   [Étape 3 : modification de la valeur de configuration de la propriété Directory](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+-   [Étape 3 : Modification de la valeur de configuration de la propriété Directory](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
 -   [Étape 4 : Test de la leçon 5 du Package du didacticiel](../integration-services/lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   

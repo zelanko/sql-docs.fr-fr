@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: be5a40a904389979c1646aab9d8b4420ac71356a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7775ece865eea62aad52f1c942c522ad21ed1108
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686617"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Utilisez Visual Studio Code pour créer et exécuter des scripts Transact-SQL pour SQL Server
 
@@ -28,7 +26,7 @@ Cette rubrique montre comment utiliser l'extension **mssql** pour Visual Studio 
 Visual Studio Code est un éditeur de code graphique pour Linux, MacOS et Windows qui supporte les extensions. [L’extension **mssql** pour VS Code] vous permet de vous connecter à SQL Server, d'effectuer des requêtes via Transact-SQL (T-SQL) et d'afficher les résultats.
 
 ## <a name="install-vs-code"></a>Installer VS Code
-1. Si vous n'avez pas encore installé Visual Studio Code, [téléchargez et installez VS Code] sur votre ordinateur.
+1. Si vous n'avez pas encore installé Visual Studio Code, [Téléchargez et installez Visual Studio Code] sur votre ordinateur.
 
 2. Démarrez VS Code.
 
@@ -50,7 +48,7 @@ Les étapes suivantes expliquent comment installer l’extension mssql.
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-install-success-notification.png" alt="Installation success notification" style="width: 600px;"/>
 
    > [!NOTE]
-   > Pour MacOS, vous devez installer OpenSSL. C'est un pré-requis pour .Net Core utilisé par l'extension mssql. Suivez les étapes **préalables à l'installation** décrites dans les [instructions .Net Core]. Vous pouvez également exécuter les commandes suivantes dans votre Terminal MacOS.
+   > Pour MacOS, vous devez installer OpenSSL. C'est un pré-requis pour .Net Core utilisé par l'extension mssql. Suivez les étapes **préalables à l'installation** décrites dans les [Instructions de.Net Core]. Vous pouvez également exécuter les commandes suivantes dans votre Terminal MacOS.
    >
    >   ```bash
    >   brew update
@@ -259,8 +257,8 @@ Pour plus d’informations sur l’utilisation ou pour contribuer à l’extensi
 Pour plus d’informations sur l’utilisation de Visual Studio Code, consultez la [documentation de Visual Studio Code](https://code.visualstudio.com/docs).
 
 [L’extension **mssql** pour VS Code]:https://aka.ms/mssql-marketplace
-[Téléchargez et installez VS Code]:https://code.visualstudio.com/Download
-[Instructions .Net Core]:https://www.microsoft.com/net/core
+[Téléchargez et installez Visual Studio Code]:https://code.visualstudio.com/Download
+[Instructions de.Net Core]:https://www.microsoft.com/net/core
 [gérer les profils de connexion]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
 [recommandations de dépannage des connexions]:./sql-server-linux-troubleshooting-guide.md#connection
 [personnaliser les raccourcis]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts

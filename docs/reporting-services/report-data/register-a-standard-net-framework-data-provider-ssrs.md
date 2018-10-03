@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 684699b4eed7235ebb236cbc5a7a08bdb0044f6d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fcd1fae7282c03c739abb172304e69c9b1417a3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266431"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613047"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Inscrire un fournisseur de données .NET Framework standard (SSRS)
   Pour utiliser un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tiers afin d’extraire des données pour un dataset de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez déployer et inscrire l’assembly de fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à deux emplacements : sur le client de création de rapports et sur le serveur de rapports. Sur le client de création de rapports, vous devez inscrire le fournisseur de données comme type de source des données et l'associer à un concepteur de requêtes. Vous pouvez ensuite sélectionner ce fournisseur de données comme type de source des données lorsque vous créez un dataset de rapport. Le concepteur de requêtes associé s'ouvre pour vous permettre de créer des requêtes pour ce type de source de données. Sur le serveur de rapports, vous devez inscrire le fournisseur de données comme type de source de données. Vous pouvez ensuite traiter les rapports publiés qui extraient les données d'une source de données à l'aide de ce fournisseur de données.  

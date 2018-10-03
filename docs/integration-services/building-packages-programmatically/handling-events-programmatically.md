@@ -5,12 +5,8 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,16 +22,15 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: caf2d653ced197cc094baa3ef649ab95383c2437
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 1f762d617dd2ae93a786f0c52b1200fee4bd36d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663859"
 ---
 # <a name="handling-events-programmatically"></a>Gestion d'événements par programme
   Le Runtime [!INCLUDE[ssIS](../../includes/ssis-md.md)] fournit une collection d'événements qui se produisent avant, pendant et après la validation et l'exécution d'un package. Ces événements peuvent être capturés de deux manières. La première méthode consiste à implémenter l’interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> dans une classe et à fournir la classe en tant que paramètre aux méthodes **Execute** et **Validate** du package. La deuxième méthode consiste à créer des objets <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, qui peuvent contenir d'autres objets [!INCLUDE[ssIS](../../includes/ssis-md.md)], tels que des tâches et des boucles, exécutés lorsqu'un événement se produit dans <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Cette section décrit ces deux méthodes et fournit des exemples de code pour illustrer leur utilisation.  

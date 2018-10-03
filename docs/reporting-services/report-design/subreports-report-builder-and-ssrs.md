@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c10ceb0ce0135bfd85ce260b54579c8d3cfa718
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: db4c5726d0bcfea62d9e5dad59cbce7771c3592b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266756"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756597"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Sous-rapports (Générateur de rapports et SSRS)
   Un sous-rapport est un élément de rapport qui affiche un autre rapport à l'intérieur du corps d'un rapport principal. D'un point de vue conceptuel, un sous-rapport d'un rapport ressemble à un cadre d'une page Web. Il est utilisé pour incorporer un rapport dans un autre. Vous pouvez utiliser tout rapport comme un sous-rapport. Le rapport affiché en tant que sous-rapport est stocké sur un serveur de rapports, en général dans le même dossier que le rapport parent. Vous pouvez concevoir le rapport parent de sorte qu'il passe des paramètres au sous-rapport. Un sous-rapport peut être répété au sein de régions de données, en utilisant un paramètre pour filtrer les données de chaque instance du sous-rapport.  

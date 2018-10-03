@@ -1,13 +1,11 @@
 ---
-title: Group, objet (ADOX) | Documents Microsoft
+title: Objet (ADOX) groupe | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,18 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - group object [ADOX]
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36c26ab9fd3fc92f0636adaff725ef37b181a081
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 537e0d3b1408a3cb159a79ad4e256fc8b5cf720f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286028"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635187"
 ---
-# <a name="group-object-adox"></a>Objet de groupe (ADOX)
+# <a name="group-object-adox"></a>Group, objet (ADOX)
 Représente un compte de groupe qui dispose des autorisations d’accès au sein d’une base de données sécurisée.  
   
 ## <a name="remarks"></a>Notes  
@@ -36,9 +33,9 @@ Représente un compte de groupe qui dispose des autorisations d’accès au sein
   
 -   Identifier le groupe avec le [nom](../../../ado/reference/adox-api/name-property-adox.md) propriété.  
   
--   Déterminer si un groupe a lire, écrire ou supprimer des autorisations avec la [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) et [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) méthodes.  
+-   Déterminer si un groupe a lire, écrire ou supprimer des autorisations avec le [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) et [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) méthodes.  
   
--   Accéder aux comptes d’utilisateur ayant des appartenances du groupe avec la [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) collection.  
+-   Accéder aux comptes d’utilisateur qui ont des appartenances du groupe avec le [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) collection.  
   
 -   Accéder aux propriétés spécifiques au fournisseur avec le [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
   

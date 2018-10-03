@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 08/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
-caps.latest.revision: 67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c357485b0e482dec6a0d81dfe9fca51676b03fb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e2170bef87a87e05454f6092e5829797808d96c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706557"
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +37,10 @@ ms.lasthandoff: 05/03/2018
  Spécifiez la version la plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prise en charge par la base de données. Pour connaître les valeurs possibles, consultez [Niveau de compatibilité avec ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Quand une base de données SQL Server est mise à niveau, le niveau de compatibilité pour cette base de données est conservé si possible, ou remplacé par le niveau minimal pris en charge pour le nouveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
  **Type de relation contenant-contenu**  
- Spécifiez aucun ou partiel pour indiquer s'il s'agit d'une base de données à relation contenant-contenu. Pour plus d'informations sur les bases de données à relation contenant-contenu, consultez [Contained Databases](../../relational-databases/databases/contained-databases.md). La propriété de serveur **Activer les bases de données à relation contenant-contenu** doit être définie sur **TRUE** pour qu'une base de données puisse être configurée comme étant à relation contenant-contenu.  
+ Spécifiez aucun ou partiel pour indiquer s'il s'agit d'une base de données autonome. Pour plus d'informations sur les bases de données autonomes, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md). La propriété de serveur **Activer les bases de données autonomes** doit être définie sur **TRUE** pour qu'une base de données puisse être configurée comme étant autonome.  
   
 > [!IMPORTANT]  
->  L'activation de bases de données à relation contenant-contenu partielle transfère le contrôle de l'accès à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux propriétaires de la base de données. Pour plus d’informations, voir [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+>  L'activation de bases de données autonomes partielle transfère le contrôle de l'accès à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux propriétaires de la base de données. Pour plus d'informations, consultez [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
 ## <a name="automatic"></a>Automatic  
  **Fermeture automatique**  
@@ -69,13 +66,13 @@ ms.lasthandoff: 05/03/2018
  L'attribution de la valeur **True** à cette option n'a aucun effet, sauf si l'option **Mise à jour automatique des statistiques** a également la valeur **True**.  
   
 ## <a name="containment"></a>Containment  
- Dans une base de données à relation contenant-contenu, certains paramètres généralement configurés au niveau serveur peuvent l’être au niveau de la base de données.  
+ Dans une base de données autonome, certains paramètres généralement configurés au niveau serveur peuvent l’être au niveau de la base de données.  
   
  **LCID de la langue de texte intégral par défaut**  
  Spécifie une langue par défaut pour les colonnes de texte intégral indexées. L'analyse linguistique des données de texte intégral indexées dépend de la langue des données. La valeur par défaut de cette option est la langue du serveur. Pour connaître le langue correspondant au paramètre affiché, consultez [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
  **Langue par défaut**  
- Spécifie la langue par défaut pour tous les nouveaux utilisateurs de base de données à relation contenant-contenu, sauf indication contraire.  
+ Spécifie la langue par défaut pour tous les nouveaux utilisateurs de base de données autonome, sauf indication contraire.  
   
  **Déclencheurs imbriqués activés**  
  Autorise des déclencheurs à en activer d'autres. Les déclencheurs peuvent compter jusqu'à 32 niveaux d'imbrication. Pour plus d’informations, consultez la section « Déclencheurs imbriqués » de [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  

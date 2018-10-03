@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b03fad871589a972a479405adf31bdd1ab9573f5
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 499036e541c213255c1c942ccde741dbd9f5d1f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330753"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767767"
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>Leçon 1-5 : Test des packages mis à jour
 Avant d'aborder la leçon suivante où vous allez créer l'application de déploiement qui sert à installer les packages sur l'ordinateur de destination, vous devez tester les packages. A cours de cette tâche, vous allez exécuter les packages DataTransfer.dtsx et LoadXMLData que vous avez ajoutés au projet Didacticiel de déploiement puis étendus avec des configurations.  

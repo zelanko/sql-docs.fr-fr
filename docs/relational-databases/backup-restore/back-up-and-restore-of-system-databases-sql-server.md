@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server], backing up and restoring
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - database backups [SQL Server], system databases
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
-caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7cdf3056f71609a33910a6c4812127fc78861be5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ad6102a7d6ddef80770d028c5832d1af6fb06f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921934"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598091"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Sauvegarder et restaurer des bases de données système (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

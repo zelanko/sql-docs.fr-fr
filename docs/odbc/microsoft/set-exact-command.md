@@ -1,29 +1,26 @@
 ---
-title: Commande exacte SET | Documents Microsoft
+title: SET EXACT, commande | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SET EXACT command [ODBC]
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6f5576ec5a1275914ee0558cf3fcd151ee3c3cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16651df836ac3fb87c5e28b4b8fa25088e9dd86a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904654"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606798"
 ---
-# <a name="set-exact-command"></a>Commande exacte de jeu
+# <a name="set-exact-command"></a>SET EXACT, commande
 Spécifie les règles de comparaison de deux chaînes de longueurs différentes.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -35,26 +32,26 @@ SET EXACT ON | OFF
   
 ## <a name="arguments"></a>Arguments  
  ON  
- Spécifie que les expressions doivent correspondre au caractère équivalentes. Les espaces de fin dans les expressions sont ignorés pour la comparaison. Pour la comparaison, la plus courte des deux expressions est complétée à droite par des espaces pour correspondre à la longueur de l’expression la plus longue.  
+ Spécifie que les expressions doivent correspondre au caractère équivalent. Les espaces de fin dans les expressions sont ignorés pour la comparaison. Pour la comparaison, la plus courte des deux expressions est complétée à droite avec des espaces pour correspondre à la longueur de l’expression plus longue.  
   
  OFF  
- (Par défaut). Spécifie que, pour être équivalents, expressions doivent correspondre au caractère jusqu'à la fin de l’expression située à droite.  
+ (Valeur par défaut). Spécifie que, comme équivalents, expressions doivent correspondre au caractère jusqu'à la fin de l’expression située à droite.  
   
 ## <a name="remarks"></a>Notes  
- Le paramètre SET EXACT n’a aucun effet si les deux chaînes sont de même longueur.  
+ Le paramètre SET EXACT n’a aucun effet si les deux chaînes ont la même longueur.  
   
 ## <a name="string-comparisons"></a>Comparaisons de chaînes  
- Visual FoxPro comporte deux opérateurs relationnels qui teste l’égalité.  
+ Visual FoxPro a deux opérateurs relationnels qui testent l’égalité.  
   
  Le = opérateur effectue une comparaison entre deux valeurs du même type. Cet opérateur est adapté pour la comparaison de caractère, numérique, date et données logiques.  
   
- Toutefois, lorsque vous comparez des expressions de caractères avec l’opérateur =, les résultats peut-être pas exactement à vos attentes. Expressions de caractères sont comparées caractère pour le caractère de gauche à droite jusqu'à ce que l’une des expressions n’est pas égale à l’autre, jusqu'à la fin de l’expression située à droite de la = opérateur est atteinte (SET EXACT OFF), ou jusqu'à la fin de toutes les expressions est (SET EXACT ON).  
+ Toutefois, lorsque vous comparez des expressions de caractères avec l’opérateur =, les résultats peut-être pas exactement ce que vous attendez. Expressions de caractères sont comparées caractère pour caractère de gauche à droite jusqu'à ce que l’une des expressions n’est pas égale à l’autre, jusqu'à la fin de l’expression sur le côté droit de la = opérateur est atteinte (SET EXACT OFF), ou jusqu'à ce que les terminaisons des deux expressions sont atteinte (SET EXACT ON).  
   
- Le == opérateur peut être utilisé lorsqu’une comparaison exacte des données de caractères est nécessaire. Si deux expressions de caractères sont comparées avec le ==, opérateur, les expressions des deux côtés de la == opérateur doit contenir exactement les mêmes caractères, y compris les espaces, pour être considérées comme égales. Le paramètre SET EXACT est ignoré lors de la comparaison des chaînes de caractères à l’aide de ==.  
+ Le == opérateur peut être utilisé lorsqu’une comparaison exacte des données de caractères est nécessaire. Si deux expressions de caractères sont comparées avec l’opérateur ==, les expressions des deux côtés de la == opérateur doit contenir exactement les mêmes caractères, y compris les espaces, pour être considérées comme égales. Le paramètre SET EXACT est ignoré lors de la comparaison des chaînes de caractères à l’aide de ==.  
   
- Le tableau suivant montre comment le choix de l’opérateur et le paramètre SET EXACT affectent les comparaisons. (Un trait de soulignement représente un espace.)  
+ Le tableau suivant montre comment le choix de l’opérateur et le paramètre SET EXACT affectent les comparaisons. (Un trait de soulignement représente un espace blanc.)  
   
-|Comparaison|= EXACT OFF|= EXACTE SUR|== EXACT ON ou OFF|  
+|Comparaison|= EXACT OFF|= EXACT SUR|== EXACTE ON ou OFF|  
 |----------------|------------------|-----------------|--------------------------|  
 |« abc » = « abc »|Correspondance|Correspondance|Correspondance|  
 |« ab » = « abc »|Aucune correspondance|Aucune correspondance|Aucune correspondance|  

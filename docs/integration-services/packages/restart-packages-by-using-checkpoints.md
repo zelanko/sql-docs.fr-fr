@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2694e985acff1f3d520647f1db171c3b61471b2
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f1f3cf329f879398344ec67090c31ff1d07a1a65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409291"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703197"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Redémarrer des packages à l'aide de points de contrôle
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut redémarrer les packages ayant échoué à partir du point d'échec, au lieu de reprendre l'exécution du package tout entier. Si un package est configuré pour utiliser des points de contrôle, des informations sur l'exécution du package sont écrites dans un fichier de point de contrôle. Lorsque le package ayant échoué est relancé, le fichier de point de contrôle est utilisé pour redémarrer le package à partir du point d'échec. Si le package est exécuté avec succès, le fichier de point de contrôle est supprimé, puis recréé à l’exécution suivante du package.  

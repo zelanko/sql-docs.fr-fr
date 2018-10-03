@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_child_instances
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - sys.dm_os_child_instances dynamic management view
 - monitoring server health
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66f4d8c770cc10c2ba47769576d8f9625edac0cf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 71fc55f996a58fc8ed353405fa9e5fdc9ad845f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38056167"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751087"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ ms.locfileid: "38056167"
 |**heart_beat**|**nvarchar(5)**|État actuel de cette instance utilisateur ; ALIVE ou DEAD.|  
 |**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  

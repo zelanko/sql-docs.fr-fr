@@ -5,9 +5,7 @@ ms.date: 05/01/2016
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_QUEUE_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - unavailable queues [SQL Server]
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-caps.latest.revision: 49
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 24714cc5f1b11774527f26d100c9a2b92a5cd1e0
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 472f70d3f522eabf5d0e901639683a6a9f9ef117
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783620"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697128"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +175,7 @@ Contrairement à REORGANIZE sur les tables utilisateur, REORGANIZE sur une file 
   
  Si une instruction RECEIVE ou GET CONVERSATION GROUP spécifie une file d'attente indisponible, cette instruction échoue et une erreur [!INCLUDE[tsql](../../includes/tsql-md.md)] se produit.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L'autorisation de modification d'une file d'attente est accordée par défaut au propriétaire de la file d'attente, aux membres du rôle de base de données fixe db_ddladmin ou db_owner et aux membres du rôle serveur fixe sysadmin.  
   
 ## <a name="examples"></a>Exemples  

@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.seriesproperties.seriesdata.f1
@@ -19,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8db9d4852c9ec5d346cbb818b31808a9114c89f7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: dc7dac6572ac10d6526fbf4052a046a2093bbd52
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269501"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662817"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Graphiques (Générateur de rapports et SSRS)
 Apprenez à utiliser les régions de données de graphique pour aider les lecteurs de vos rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] à comprendre en un coup d’œil des volumes importants de données agrégées.  
