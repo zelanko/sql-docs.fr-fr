@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo les valeurs renvoyées pour Excel | Documents Microsoft
+title: Valeurs de retournées par SQLGetInfo pour Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
@@ -16,29 +14,28 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d8987a1e6c171ccc4154e71cb4e6a80c964cd5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71eec87e4cdf325a20e6ad213dd8f591a094f825
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904884"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686578"
 ---
-# <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo les valeurs renvoyées pour Excel
-Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes est retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant la liste en langage C# defines **SQLGetInfo** dans les *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez la *de référence du programmeur ODBC*.  
+# <a name="sqlgetinfo-returned-values-for-excel"></a>Valeurs retournées par SQLGetInfo pour Excel
+Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant le répertoriés en langage C# defines à **SQLGetInfo** dans le *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez le *de référence du programmeur ODBC*.  
   
 > [!NOTE]  
 >  Où **SQLGetInfo** retourne un masque de bits 32 bits, une barre verticale (&#124;) représente une opération OR au niveau du bit.  
   
-|InfoType|Valeur renvoyée|  
+|infoType|Valeur renvoyée|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Jeu de toutes les|  
+|SQL_AGGREGATE_FUNCTIONS|Ensemble de tous les|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -100,7 +97,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_DRIVER_HSTMT|Gérée par le Gestionnaire de pilotes.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|« 4.00.*nnnn*» (*nnnn* spécifie la date de la build)|  
+|SQL_DRIVER_VER|« 4.00.*nnnn*» (*nnnn* spécifie la date de génération)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -126,7 +123,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_MAX_COLUMNS_IN_INDEX|0|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
-|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Lorsque vous utilisez le pilote Microsoft Excel, une instruction CREATE TABLE peut permettre de 256 colonnes, mais la limite de 255 colonnes est toujours valide et une instruction insert dans la colonne 256 échouera.|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Lorsque vous utilisez le pilote Microsoft Excel, une instruction CREATE TABLE peut permettre de 256 colonnes, mais la limite de 255 colonnes est toujours valide, et une instruction insert dans la colonne 256 échouera.|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|0|  
 |SQL_MAX_CURSOR_NAME_LEN|64|  
 |SQL_MAX_DRIVER_CONNECTIONS|64|  

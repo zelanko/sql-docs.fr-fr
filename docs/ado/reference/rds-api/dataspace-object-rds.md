@@ -1,47 +1,44 @@
 ---
-title: DataSpace, objet (RDS) | Documents Microsoft
+title: DataSpace, objet (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - DataSpace object [RDS]
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ccaa8f0999e54dce15cc40d5ef773dd16473658
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 078799f90a0241dc29f30693adce95ea2e795ff8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288230"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654267"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace, objet (RDS)
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Crée un proxy côté client à des objets métier personnalisés situés sur la couche intermédiaire.  
+ Crée des proxys côté client pour les objets métier personnalisés situés sur la couche intermédiaire.  
   
- Remote Data Service nécessite des proxys d’objets métier afin que les composants côté client peuvent communiquer avec les objets métiers sur la couche intermédiaire. Les proxys permettent l’empaquetage, 8369Les et de transport (marshaling) de l’application [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) données au-delà des limites de processus ou d’ordinateur.  
+ Remote Data Service nécessite des proxys d’objets métier afin que les composants côté client peuvent communiquer avec les objets métiers sur la couche intermédiaire. Les proxys permettent l’empaquetage, 8369Les et le de transport (marshaling) de l’application [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) données au-delà des limites de processus ou l’ordinateurs.  
   
- Service de données distant utilise le **RDS. DataSpace** l’objet [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) méthode pour créer des proxys d’objets métier. Proxy d’objet métier est créé dynamiquement chaque fois qu’une instance de son équivalent d’objet métier de couche intermédiaire est créée. Service de données distant prend en charge les protocoles suivants : HTTP, HTTPS (HTTP Secure Sockets), DCOM et in-process (composants du client et l’objet métier résident sur le même ordinateur).  
-  
-> [!NOTE]
->  Services Bureau à distance se comporte de manière « sans état » lorsque le **RDS. DataSpace** objet utilise les protocoles HTTP ou HTTPS. Autrement dit, toutes les informations internes sur une demande du client sont ignorées une fois que le serveur retourne une réponse.  
+ Service de données distant utilise le **RDS. DataSpace** l’objet [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) méthode pour créer des proxys d’objets métier. Le proxy de l’objet est créé dynamiquement chaque fois qu’une instance de son équivalent d’objet métier de couche intermédiaire est créée. Service de données distant prend en charge les protocoles suivants : HTTP, HTTPS (HTTP Secure Sockets), DCOM et in-process (composants du client et l’objet métier que résident sur le même ordinateur).  
   
 > [!NOTE]
->  Bien que l’objet métier semble exister pour la durée de vie de proxy d’objet métier, l’objet métier existe réellement uniquement jusqu'à ce qu’une réponse est envoyée à une demande. Lorsqu’une demande est émise (autrement dit, une méthode est appelée sur l’objet métier), le proxy ouvre une nouvelle connexion au serveur et le serveur crée une nouvelle instance de l’objet métier. Une fois que l’objet métier répond à la demande, le serveur détruit l’objet métier et ferme la connexion.  
+>  Services Bureau à distance se comporte de manière « sans état » lorsque le **RDS. DataSpace** objet utilise les protocoles HTTP ou HTTPS. Autrement dit, des informations internes sur une demande du client sont ignorées une fois que le serveur retourne une réponse.  
   
 > [!NOTE]
->  Ce comportement signifie que vous ne peut pas passer des données à partir d’une demande à un autre à l’aide d’une propriété de l’objet métier ou une variable. Vous devez utiliser un autre mécanisme, tel qu’un fichier ou un argument de méthode, pour rendre persistantes les données d’état.  
+>  Bien que l’objet métier semble exister pour la durée de vie du proxy d’objet métier, l’objet métier existe réellement uniquement jusqu'à ce qu’une réponse est envoyée à une demande. Quand une demande est émise (autrement dit, une méthode est appelée sur l’objet métier), le proxy ouvre une nouvelle connexion au serveur et le serveur crée une nouvelle instance de l’objet métier. Une fois que l’objet métier répond à la demande, le serveur détruit l’objet métier et ferme la connexion.  
+  
+> [!NOTE]
+>  Ce comportement signifie que vous ne peut pas passer des données d’une requête à un autre à l’aide d’une propriété de l’objet métier ou une variable. Vous devez utiliser un autre mécanisme, tel qu’un fichier ou un argument de méthode, pour rendre persistantes les données d’état.  
   
  L’ID de classe pour le **RDS. DataSpace** objet est 0-983A-00C04FC29E36 BD96C556 65A3 - 11 D.  
   

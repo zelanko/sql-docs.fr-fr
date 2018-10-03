@@ -1,37 +1,34 @@
 ---
-title: Propriétés de l’objet, les méthodes et les événements de commande | Documents Microsoft
+title: Propriétés de l’objet, méthodes et événements de commande | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], members
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44133617ed912c0b16d6850769838dc1fde879db
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 132d302d994da5de812347f7c4d0396d5b5cf8ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276678"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705507"
 ---
 # <a name="command-object-properties-methods-and-events"></a>Propriétés de l’objet commande, méthodes et événements
-## <a name="propertiescollections"></a>Propriétés et de Collections  
- [Propriété ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+## <a name="propertiescollections"></a>Propriétés et des Collections  
+ [ActiveConnection, propriété](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
- [Propriété CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)  
+ [CommandStream, propriété](../../../ado/reference/ado-api/commandstream-property-ado.md)  
   
- [Propriété CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)  
+ [CommandText, propriété](../../../ado/reference/ado-api/commandtext-property-ado.md)  
   
- [Propriété CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
+ [CommandTimeout, propriété](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
   
  [CommandType, propriété](../../../ado/reference/ado-api/commandtype-property-ado.md)  
   
@@ -39,11 +36,11 @@ ms.locfileid: "35276678"
   
  [Propriété Name](../../../ado/reference/ado-api/name-property-ado.md)  
   
- [Propriété de NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)  
+ [NamedParameters, propriété](../../../ado/reference/ado-api/namedparameters-property-ado.md)  
   
  [Collection de paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
- [Propriété préparée](../../../ado/reference/ado-api/prepared-property-ado.md)  
+ [Prepared, propriété](../../../ado/reference/ado-api/prepared-property-ado.md)  
   
  [Collection de propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)  
   

@@ -4,21 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f4566003ffba708f7c731ffd93198cfbf2829454
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 6d615ad3d0642d2e738359089f2ea51159e7f1b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394209"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669867"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>Installation de SSMA pour Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour Oracle se compose d’une application cliente qui permet d’effectuer une migration d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et base de données SQL Azure. Il contient également un pack d’extension qui prend en charge la migration des données et l’utilisation de fonctions de système Oracle dans vos bases de données migrées.  

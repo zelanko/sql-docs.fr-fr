@@ -1,32 +1,29 @@
 ---
-title: SQLSetConnectOption (pilote du fichier texte) | Documents Microsoft
+title: SQLSetConnectOption (pilote de fichier texte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], Text File Driver
 - text file driver [ODBC], SQLSetConnectOption
 ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d34dc364c339d147b73bdce5258bdaaa62d41e16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ed5c3230a12e79c79624d69b4714a828a865f1dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903074"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645907"
 ---
-# <a name="sqlsetconnectoption-text-file-driver"></a>SQLSetConnectOption (pilote du fichier texte)
+# <a name="sqlsetconnectoption-text-file-driver"></a>SQLSetConnectOption (pilote de fichier texte)
 > [!NOTE]  
->  Cette rubrique fournit des informations spécifiques au pilote fichier texte. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [référence de l’API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Cette rubrique fournit des informations spécifiques au pilote fichier texte. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |fOption|Commentaire|  
 |-------------|-------------|  

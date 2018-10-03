@@ -1,13 +1,11 @@
 ---
-title: Prise en charge de la grammaire de ODBC SQL (le pilote ODBC Visual FoxPro) | Documents Microsoft
+title: Prise en charge de la grammaire SQL ODBC (pilote ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native Visual FoxPro language syntax [ODBC]
@@ -18,34 +16,33 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax
 - FoxPro ODBC driver [ODBC], native Visual FoxPro language syntax
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7eccb1bbdb86ded6b949756b4e5762a83a59fc0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10df35f4f29de4ac3899efa0e86e48af861f1e65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751017"
 ---
-# <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Grammaire de prise en charge ODBC SQL (le pilote ODBC Visual FoxPro)
-Le pilote ODBC Microsoft Visual FoxPro prend en charge les éléments suivants :  
+# <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Grammaire ODBC SQL prise en charge (pilote ODBC Visual FoxPro)
+Le pilote ODBC Visual FoxPro Microsoft prend en charge les éléments suivants :  
   
--   Toutes les instructions SQL et les clauses dans la grammaire SQL minimale d’ODBC  
+-   Toutes les instructions SQL et les clauses dans la grammaire SQL minimale de ODBC  
   
--   Une instruction SQL supplémentaire à partir de la grammaire SQL ODBC core  
+-   Une instruction SQL supplémentaire à partir de la grammaire SQL de base ODBC  
   
- Le tableau suivant répertorie les éléments pris en charge par le pilote, par niveau de grammaire SQL de ODBC.  
+ Le tableau suivant répertorie les éléments pris en charge par le pilote, selon le niveau de grammaire SQL de ODBC.  
   
-|Niveau|Éléments|Élément|  
+|Level|Éléments|Élément|  
 |-----------|--------------|----------|  
 |Minimum|Langage de définition de données (DDL)|CREATE TABLE et DROP TABLE|  
 ||Langage de Manipulation de données (DML)|SÉLECTIONNER, insérer, mettre à jour et supprimer|  
-||Expressions|Simple (par exemple un > B + C)|  
+||Expressions|Simple (tel que A > B + C)|  
 ||Types de données|CHAR, VARCHAR ou LONG VARCHAR|  
   
- En plus de la grammaire SQL ODBC pris en charge, le pilote ODBC Visual FoxPro prend en charge la syntaxe du langage Visual FoxPro native complète pour les commandes de Visual FoxPro suivantes :  
+ En plus de la grammaire SQL ODBC pris en charge, le pilote ODBC Visual FoxPro prend en charge la syntaxe complète du langage Visual FoxPro native pour les commandes de Visual FoxPro suivantes :  
   
  [MODIFICATION DE LA TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   
@@ -53,7 +50,7 @@ Le pilote ODBC Microsoft Visual FoxPro prend en charge les éléments suivants 
   
  [DELETE](../../odbc/microsoft/delete-sql-command.md)  
   
- [SUPPRIMER LA BALISE](../../odbc/microsoft/delete-tag-command.md)  
+ [SUPPRIMER L’ÉTIQUETTE](../../odbc/microsoft/delete-tag-command.md)  
   
  [DROP TABLE](../../odbc/microsoft/drop-table-command.md)  
   

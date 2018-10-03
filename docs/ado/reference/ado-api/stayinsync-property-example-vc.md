@@ -1,34 +1,31 @@
 ---
-title: Exemple de propriété StayInSync (VC ++) | Documents Microsoft
+title: StayInSync, propriété-Exemple (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - StayInSync property [ADO], VC++ example
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 755fcb827a2ee4789beb85f8a4f58666c6176657
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce7a4a2a9cbfefd9ff2c61fcf8ff4fdfeed233c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281938"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729487"
 ---
-# <a name="stayinsync-property-example-vc"></a>Exemple de propriété StayInSync (VC ++)
+# <a name="stayinsync-property-example-vc"></a>StayInSync, exemple de propriété (VC++)
 Cet exemple montre comment la [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriété facilite l’accès aux lignes dans une liste hiérarchique [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- La boucle externe affiche le nom et prénom de chaque auteur, l’état et identification. Ajouté **Recordset** pour chaque ligne est récupérée à partir de la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection et attribué automatiquement aux **affectation** par la **StayInSync**  propriété chaque fois que le parent **Recordset** se déplace vers une nouvelle ligne. La boucle interne affiche quatre champs de chaque ligne dans le jeu d’enregistrements ajouté.  
+ La boucle externe affiche le nom et prénom de chaque auteur, l’état et identification. Ajouté **Recordset** pour chaque ligne est récupérée à partir de la [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection et attribué automatiquement aux **affectation** par le **StayInSync**  propriété chaque fois que le parent **Recordset** se déplace vers une nouvelle ligne. La boucle interne affiche quatre champs de chaque ligne dans l’objet recordset ajouté.  
   
 ```  
 // BeginStayInSyncCpp.cpp  

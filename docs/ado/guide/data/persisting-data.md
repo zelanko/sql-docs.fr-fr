@@ -1,13 +1,11 @@
 ---
-title: Les données persistantes | Documents Microsoft
+title: Conservation des données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
@@ -15,29 +13,28 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 438a09dd8f835653f9b2c76d73b7ce7f4583c1a5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c8fc264df4708b5d6c58c8a87861597d299cdca2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272198"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722987"
 ---
 # <a name="persisting-data"></a>Persistance des données
-Informatique portable (par exemple, à l’aide d’ordinateurs portables) a généré la nécessité pour les applications qui peuvent s’exécuter dans un état connecté et déconnecté. ADO prend également en charge pour ce qui permet au développeur pour enregistrer un curseur client **Recordset** sur le disque et recharger ultérieurement.  
+Informatique portable (par exemple, à l’aide d’ordinateurs portables) a généré la nécessité pour les applications qui peuvent s’exécuter dans un état connecté et déconnecté. ADO a ajouté la prise en charge pour ce en donnant au développeur la possibilité d’enregistrer un curseur client **Recordset** sur le disque et recharger ultérieurement.  
   
- Il existe plusieurs scénarios dans lesquels vous pouvez utiliser ce type de fonctionnalité, notamment les suivantes :  
+ Il existe plusieurs scénarios dans lesquels vous pouvez utiliser ce type de fonctionnalité, y compris les éléments suivants :  
   
--   **Déplacement :** lors de la prise de l’application en déplacement, il est essentiel pour fournir la possibilité d’apporter des modifications et ajouter de nouveaux enregistrements qui peuvent être reconnectées ultérieurement à la base de données et validées.  
+-   **Déplacement :** lors de la création de l’application sur la route, il est essentiel de fournir la possibilité d’apporter des modifications et ajouter de nouveaux enregistrements qui peuvent être reconnectées ultérieurement à la base de données et validées.  
   
--   **Rarement mises à jour des recherches :** souvent dans une application, les tables sont utilisées en tant que recherches — par exemple, les tables de taxe d’état. Ils sont rarement mises à jour et sont en lecture seule. Au lieu de relire ces données à partir du serveur chaque fois que l’application est démarrée, l’application peut simplement les charger à partir de conservé localement **Recordset**.  
+-   **Rarement mis à jour de recherches :** souvent dans une application, les tables sont utilisées en tant que recherches — par exemple, l’état des tables de taxes. Ils sont rarement mises à jour et sont en lecture seule. Plutôt que de relire ces données à partir du serveur chaque fois que l’application est démarrée, l’application peut simplement charger les données à partir d’un conservé localement **Recordset**.  
   
- Dans ADO, pour enregistrer et charger **jeux d’enregistrements**, utilisez le **Recordset.Save** et **Recordset.Open(,,,adCmdFile)** méthodes sur ADO **Recordset**objet.  
+ Dans ADO, pour enregistrer et charger **Recordsets**, utilisez le **Recordset.Save** et **Recordset.Open(,,,adCmdFile)** méthodes sur ADO **Recordset**objet.  
   
- Vous pouvez utiliser la **Recordset Save** méthode conserver votre ADO **Recordset** dans un fichier sur un disque. (Vous pouvez également enregistrer une **Recordset** à ADO **flux** objet. **Flux** les objets sont abordés plus loin dans le guide.) Une version ultérieure, vous pouvez utiliser la **ouvrir** méthode pour rouvrir le **Recordset** quand vous êtes prêt à utiliser. Par défaut, ADO enregistre le **Recordset** au format propriétaire Microsoft Advanced Data TableGram (ADTG). Ce format binaire est spécifié à l’aide de la **adPersistADTG PersistFormatEnum** valeur. Vous pouvez également enregistrer votre **Recordset** sortie au format XML au lieu d’utiliser **adPersistXML**. Pour plus d’informations sur l’enregistrement des jeux d’enregistrements au format XML, consultez [persistance des enregistrements au Format XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
+ Vous pouvez utiliser la **Recordset Save** méthode pour conserver votre ADO **Recordset** dans un fichier sur un disque. (Vous pouvez également enregistrer un **Recordset** à ADO **Stream** objet. **Stream** les objets sont abordés plus loin dans le guide.) Une version ultérieure, vous pouvez utiliser la **Open** méthode pour rouvrir la **Recordset** lorsque vous êtes prêt à l’utiliser. Par défaut, ADO enregistre le **Recordset** au format propriétaire Microsoft Advanced Data TableGram (ADTG). Ce format binaire est spécifié à l’aide de la **adPersistADTG PersistFormatEnum** valeur. Vous pouvez également enregistrer votre **Recordset** la sortie au format XML au lieu d’utiliser **adPersistXML**. Pour plus d’informations sur l’enregistrement des jeux d’enregistrements au format XML, consultez [persistance des enregistrements au Format XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
   
  La syntaxe de la **enregistrer** méthode est la suivante :  
   
@@ -49,25 +46,25 @@ Destination, PersistFormat
   
 ```  
   
- La première fois que vous enregistrez le **Recordset**, il est facultatif spécifier *Destination*. Si vous omettez *Destination*, un nouveau fichier sera créé avec un nom de la valeur de la [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) propriété de la **Recordset**.  
+ La première fois que vous enregistrez le **Recordset**, il est facultatif pour spécifier *Destination*. Si vous omettez *Destination*, un nouveau fichier sera créé avec un nom défini sur la valeur de la [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) propriété de la **Recordset**.  
   
- Omettre *Destination* lorsque vous appelez ensuite **enregistrer** après le premier enregistrement ou une erreur d’exécution se produira. Si vous appelez ensuite **enregistrer** avec un nouveau *Destination*, le **Recordset** est enregistré dans la nouvelle destination. Toutefois, la nouvelle destination et la destination d’origine à la fois sera ouverts.  
+ Omettez *Destination* lorsque vous appelez ensuite **enregistrer** après le premier enregistrement ou une erreur d’exécution se produira. Si vous appelez ensuite **enregistrer** avec un nouveau *Destination*, le **Recordset** est enregistré dans la nouvelle destination. Toutefois, la nouvelle destination et la destination d’origine seront tous deux être ouverts.  
   
- **Enregistrer** ne ferme pas le **Recordset** ou *Destination*, de sorte que vous pouvez continuer à travailler avec les **Recordset** et enregistrer vos modifications les plus récentes. *Destination* reste ouverte jusqu'à ce que le **Recordset** est fermée, au cours de laquelle les autres applications peuvent lire mais non écrire *Destination*.  
+ **Enregistrer** ne ferme pas la **Recordset** ou *Destination*, de sorte que vous pouvez continuer à travailler avec le **Recordset** et enregistrer vos modifications les plus récentes. *Destination* reste ouverte jusqu'à ce que le **Recordset** est fermée, au cours de laquelle les autres applications peuvent lire mais pas y écrire *Destination*.  
   
  Pour des raisons de sécurité, le **enregistrer** méthode autorise uniquement l’utilisation des paramètres de sécurité basse et personnalisée à partir d’un script exécuté par Microsoft Internet Explorer.  
   
- Si le **enregistrer** méthode est appelée en asynchrone **Recordset** fetch, exécuter ou mettre à jour est en cours, **enregistrer** attend jusqu'à ce que l’opération asynchrone est Terminer.  
+ Si le **enregistrer** méthode est appelée lors de l’asynchrone **Recordset** extraire, exécuter ou mettre à jour opération est en cours, **enregistrer** attend jusqu'à ce que l’opération asynchrone est Terminer.  
   
- Enregistrements sont enregistrés en commençant par la première ligne de la **Recordset**. Lorsque le **enregistrer** méthode est terminée, le curseur est déplacé vers la première ligne de la **Recordset**.  
+ Les enregistrements sont enregistrés en commençant par la première ligne de la **Recordset**. Lorsque le **enregistrer** méthode est terminée, le curseur est déplacé vers la première ligne de la **Recordset**.  
   
- Pour de meilleurs résultats, définissez la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété **adUseClient** avec **enregistrer**. Si votre fournisseur ne prend pas en charge toutes les fonctionnalités nécessaires pour enregistrer les **Recordset** des objets, le Service de curseur fournit cette fonctionnalité.  
+ Pour de meilleurs résultats, définissez le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété **adUseClient** avec **enregistrer**. Si votre fournisseur ne prend pas en charge toutes les fonctionnalités nécessaires pour enregistrer les **Recordset** objets, le Service de curseur fournit cette fonctionnalité.  
   
- Lorsqu’un **Recordset** est rendue persistante avec les **CursorLocation** propriété la valeur **adUseServer**, la fonctionnalité de mise à jour pour le **Recordset**est limité. En règle générale, seules les mises à jour de la table unique, des insertions et suppressions sont autorisées (dépendent des fonctionnalités du fournisseur). Le [Resync](../../../ado/reference/ado-api/resync-method.md) méthode n’est également disponible dans cette configuration.  
+ Quand un **Recordset** est rendue persistante avec le **CursorLocation** propriété définie sur **adUseServer**, la fonctionnalité de mise à jour pour le **Recordset**est limité. En règle générale, seules les mises à jour de la table unique, des insertions et suppressions sont autorisées (dépendent des fonctionnalités de fournisseur). Le [Resync](../../../ado/reference/ado-api/resync-method.md) méthode est également pas disponible dans cette configuration.  
   
- Étant donné que la *Destination* paramètre accepte tout objet qui prend en charge OLE DB **IStream** interface, vous pouvez enregistrer un **Recordset** directement à la page ASP  **Réponse** objet.  
+ Étant donné que le *Destination* paramètre peut accepter n’importe quel objet prenant en charge OLE DB **IStream** interface, vous pouvez enregistrer un **Recordset** directement à la page ASP  **Réponse** objet.  
   
- Dans l’exemple suivant, la **enregistrer** et **ouvrir** méthodes sont utilisées pour conserver un **Recordset** et la rouvrir plus tard :  
+ Dans l’exemple suivant, le **enregistrer** et **Open** méthodes sont utilisées pour conserver un **Recordset** et la rouvrir plus tard :  
   
 ```  
 'BeginPersist  

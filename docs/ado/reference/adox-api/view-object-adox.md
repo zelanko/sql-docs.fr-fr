@@ -1,13 +1,11 @@
 ---
-title: Afficher l’objet (ADOX) | Documents Microsoft
+title: Afficher l’objet (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - View object [ADOX]
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2980c92b7980fe2fa6ec16f82bc4d8f7d3aff585
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 61b3f81a23c3bb35921e0374eea44e58a31dcd4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287438"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696858"
 ---
-# <a name="view-object-adox"></a>Objet de vue (ADOX)
-Représente un ensemble filtré d’enregistrements ou une table virtuelle. Lorsqu’il est utilisé conjointement avec ADO [commande](../../../ado/reference/ado-api/command-object-ado.md) objet, le **vue** objet peut être utilisé pour l’ajout, la suppression ou la modification des vues.  
+# <a name="view-object-adox"></a>View, objet (ADOX)
+Représente un ensemble filtré d’enregistrements ou une table virtuelle. Lorsqu’il est utilisé conjointement avec le ADO [commande](../../../ado/reference/ado-api/command-object-ado.md) objet, le **vue** objet peut être utilisé pour l’ajout, la suppression ou la modification des vues.  
   
 ## <a name="remarks"></a>Notes  
  Une vue est une table virtuelle, créée à partir d’autres tables de base de données ou des vues. Le **vue** objet vous permet de créer une vue sans avoir à connaître ou utiliser la syntaxe du fournisseur « CREATE VIEW ».  
@@ -36,7 +33,7 @@ Représente un ensemble filtré d’enregistrements ou une table virtuelle. Lors
   
 -   Identifier la vue avec le [nom](../../../ado/reference/adox-api/name-property-adox.md) propriété.  
   
--   Spécifiez le ADO **commande** objet qui peut être utilisé pour ajouter, supprimer ou modifier les vues avec la [commande](../../../ado/reference/adox-api/command-property-adox.md) propriété.  
+-   Spécifiez le ADO **commande** objet qui peut être utilisé pour ajouter, supprimer ou modifier des vues avec la [commande](../../../ado/reference/adox-api/command-property-adox.md) propriété.  
   
 -   Retourner des informations de date avec la [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) et [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) propriétés.  
   
@@ -45,8 +42,8 @@ Représente un ensemble filtré d’enregistrements ou une table virtuelle. Lors
 -   [Propriétés, méthodes et événements de l’objet View](../../../ado/reference/adox-api/view-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues et exemple de Collections de champs (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
+ [Vues et les Collections de champs exemple (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
  [Views Append, méthode-exemple (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Collection de vues, exemple de propriété CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Exemple de méthode (VB) de suppression de vues](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
+ [Views, Collection, exemple de propriété CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [Vues de supprimer l’exemple de méthode (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

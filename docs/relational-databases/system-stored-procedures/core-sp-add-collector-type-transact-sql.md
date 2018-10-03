@@ -1,14 +1,11 @@
 ---
-title: Core.sp_add_collector_type (Transact-SQL) | Documents Microsoft
+title: Core.sp_add_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_collector_type
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sp_add_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 486a51f5f521c0a3af647bc4d7242f3696727789
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b7bc16db334b6b8f6538a7ee221beb5fd3ccf2a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238366"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727597"
 ---
 # <a name="corespaddcollectortype-transact-sql"></a>core.sp_add_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +49,8 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
-## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **mdw_admin** (avec autorisation EXECUTE) rôle de base de données fixe.  
+## <a name="permissions"></a>Permissions  
+ Nécessite l’appartenance dans le **mdw_admin** (avec autorisation EXECUTE) rôle fixe de base de données.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant ajoute le type de collecteur Requête T-SQL générique à la vue core.supported_collector_types. Par défaut, le type de collecteur Requête T-SQL générique existe déjà. Par conséquent, si vous exécutez ce code sur une installation par défaut, vous recevrez un message indiquant que le type de collecteur existe déjà.  

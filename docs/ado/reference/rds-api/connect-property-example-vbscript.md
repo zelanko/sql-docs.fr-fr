@@ -1,35 +1,32 @@
 ---
-title: Se connecter, propriété-Exemple (VBScript) | Documents Microsoft
+title: Connect, exemple (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55f60063261a600d57667cc94f6c514eb52af6b6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c1d76ff4205e84033542b28938509b4267988163
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287398"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730747"
 ---
-# <a name="connect-property-example-vbscript"></a>Se connecter, propriété-Exemple (VBScript)
+# <a name="connect-property-example-vbscript"></a>Connect, exemple de méthode (VBScript)
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Ce code montre comment définir la [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propriété au moment du design :  
+ Ce code montre comment définir le [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propriété au moment du design :  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -41,9 +38,9 @@ ms.locfileid: "35287398"
 </OBJECT>  
 ```  
   
- L’exemple suivant montre comment définir la **Connect** propriété au moment de l’exécution dans le code VBScript.  
+ L’exemple suivant montre comment définir le **Connect** propriété au moment de l’exécution dans le code VBScript.  
   
- Pour tester cet exemple, coupez et collez le code entre les \<corps > et \</corps > balises dans un code HTML normal de document et nommez-le **ConnectVBS.asp**. Le script ASP identifie votre serveur.  
+ Pour tester cet exemple, coupez et collez le code entre la \<corps > et \</corps > balises dans un HTML normal de document et nommez-le **ConnectVBS.asp**. Le script ASP identifie votre serveur.  
   
 ```  
 <!-- BeginConnectVBS -->  

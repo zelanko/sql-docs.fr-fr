@@ -1,45 +1,42 @@
 ---
-title: Propriétés de l’objet Recordset, méthodes et événements | Documents Microsoft
+title: Propriétés de l’objet Recordset, méthodes et événements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d00e286b1386d51e0bc854d48a14bc2f64555eb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281178"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691317"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Propriétés de l’objet Recordset, méthodes et événements
-## <a name="propertiescollections"></a>Propriétés et de Collections  
+## <a name="propertiescollections"></a>Propriétés et des Collections  
  [AbsolutePage, propriété](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
   
- [Propriété AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
+ [AbsolutePosition, propriété](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
   
  [ActiveCommand, propriété](../../../ado/reference/ado-api/activecommand-property-ado.md)  
   
- [Propriété ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+ [ActiveConnection, propriété](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
  [BOF, EOF, propriétés](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
   
- [Propriété de signet](../../../ado/reference/ado-api/bookmark-property-ado.md)  
+ [Bookmark, propriété](../../../ado/reference/ado-api/bookmark-property-ado.md)  
   
- [Propriété CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)  
+ [CacheSize, propriété](../../../ado/reference/ado-api/cachesize-property-ado.md)  
   
- [Propriété CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
+ [CursorLocation, propriété](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
   
  [CursorType, propriété](../../../ado/reference/ado-api/cursortype-property-ado.md)  
   
@@ -55,19 +52,19 @@ ms.locfileid: "35281178"
   
  [Index, propriété](../../../ado/reference/ado-api/index-property.md)  
   
- [Propriété LockType](../../../ado/reference/ado-api/locktype-property-ado.md)  
+ [LockType, propriété](../../../ado/reference/ado-api/locktype-property-ado.md)  
   
  [MarshalOptions, propriété](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
   
- [Propriété MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
+ [MaxRecords, propriété](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
   
- [Propriété PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)  
+ [PageCount, propriété](../../../ado/reference/ado-api/pagecount-property-ado.md)  
   
- [Propriété PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)  
+ [PageSize, propriété](../../../ado/reference/ado-api/pagesize-property-ado.md)  
   
  [Collection de propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Propriété RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)  
+ [RecordCount, propriété](../../../ado/reference/ado-api/recordcount-property-ado.md)  
   
  [Sort, propriété](../../../ado/reference/ado-api/sort-property.md)  
   
@@ -88,9 +85,9 @@ ms.locfileid: "35281178"
   
  [CancelUpdate, méthode](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
   
- [Clone (méthode)](../../../ado/reference/ado-api/clone-method-ado.md)  
+ [Clone, méthode](../../../ado/reference/ado-api/clone-method-ado.md)  
   
- [Close (méthode)](../../../ado/reference/ado-api/close-method-ado.md)  
+ [Close, méthode](../../../ado/reference/ado-api/close-method-ado.md)  
   
  [CompareBookmarks, méthode](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
@@ -102,9 +99,9 @@ ms.locfileid: "35281178"
   
  [GetString, méthode](../../../ado/reference/ado-api/getstring-method-ado.md)  
   
- [Move (méthode)](../../../ado/reference/ado-api/move-method-ado.md)  
+ [Move, méthode](../../../ado/reference/ado-api/move-method-ado.md)  
   
- [MoveFirst, MoveLast, MoveNext et MovePrevious méthodes](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
+ [MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
   
  [NextRecordset, méthode](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
@@ -125,7 +122,7 @@ ms.locfileid: "35281178"
  [UpdateBatch, méthode](../../../ado/reference/ado-api/updatebatch-method.md)  
   
 ## <a name="events"></a>Événements  
- [Événement EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
+ [EndOfRecordset, événement](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
   
  [FetchComplete, événement](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
   

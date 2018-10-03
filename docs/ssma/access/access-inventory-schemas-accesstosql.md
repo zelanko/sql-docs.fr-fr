@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - columns table
 - databases table
@@ -42,12 +37,12 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b0344fcfa5a5b174ef080a5eac431cebf6372842
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396103"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653716"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Schémas d’inventaire Access (AccessToSQL)
 Les sections suivantes décrivent les tables qui sont créés par SSMA lorsque vous exportez des schémas d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -114,7 +109,7 @@ Métadonnées de l’index sont exportée vers le **SSMA_Access_InventoryIndexes
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient cet index.|  
 |**TableId**|**uniqueidentifier**|Identifie la table qui contient cet index.|  
 |**IndexId**|**Int**|Incrémentation integer qui identifie l’index. Cette colonne est la clé primaire pour la table.|  
-|**IndexName**|**nvarchar(4000)**|Le nom de l’index.|  
+|**IndexName**|**nvarchar(4000)**|Nom de l’index.|  
 |**ColumnsIncluded**|**nvarchar(4000)**|Répertorie les colonnes qui sont incluses dans l’index. Les noms de colonnes sont séparées par un point-virgule.|  
 |**IsUnique**|**bit**|Spécifie si chaque élément dans l’index doit être unique. Sur un index multi-colonne, la combinaison de valeurs doit être unique. Si la valeur est 1, l’index applique des valeurs uniques.|  
 |**IsPK**|**bit**|Spécifie si l’index a été automatiquement créé en tant que partie de la définition de la clé primaire.|  
@@ -128,7 +123,7 @@ Les métadonnées de clé étrangère sont exportée vers le **SSMA_Access_Inven
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient cette clé FOREIGN KEY.|  
 |**TableId**|**uniqueidentifier**|Identifie la table qui contient cette clé FOREIGN KEY.|  
 |**ForeignKeyId**|**Int**|Incrémentation integer qui identifie la clé étrangère. Cette colonne est la clé primaire pour la table.|  
-|**ForeignKeyName**|**nvarchar(4000)**|Le nom de l’index.|  
+|**ForeignKeyName**|**nvarchar(4000)**|Nom de l’index.|  
 |**ReferencedTableId**|**uniqueidentifier**|Identifie la table qui contient les colonnes de la source.|  
 |**SourceColumns**|**nvarchar(4000)**|Répertorie l’ou les colonnes clés étrangères.|  
 |**ReferencedColumns**|**nvarchar(4000)**|Répertorie la colonne de clé primaire ou les colonnes qui sont référencées par la clé étrangère.|  

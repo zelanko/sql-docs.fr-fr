@@ -1,13 +1,11 @@
 ---
-title: CopyTo (méthode) (ADO) | Documents Microsoft
+title: CopyTo, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - CopyTo method [ADO]
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15537df53441d0204a62d19ae38b9105c456cddb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ad973b69d9f85b731e417e502225036ae714ae63
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277168"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658656"
 ---
-# <a name="copyto-method-ado"></a>CopyTo (méthode) (ADO)
-Copie le nombre spécifié de caractères ou d’octets (en fonction de [Type](../../../ado/reference/ado-api/type-property-ado-stream.md)) dans le [flux](../../../ado/reference/ado-api/stream-object-ado.md) vers un autre **flux** objet.  
+# <a name="copyto-method-ado"></a>CopyTo, méthode (ADO)
+Copie le nombre spécifié de caractères ou d’octets (en fonction de [Type](../../../ado/reference/ado-api/type-property-ado-stream.md)) dans le [Stream](../../../ado/reference/ado-api/stream-object-ado.md) vers un autre **Stream** objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,20 +36,20 @@ Stream.CopyTo DestStream, NumChars
   
 #### <a name="parameters"></a>Paramètres  
  *DestStream*  
- Valeur de variable objet qui contient une référence à une ouverture **flux** objet. En cours **flux** est copié vers la destination **flux** spécifié par *DestStream*. La destination **flux** doit déjà être ouvert. Dans le cas contraire, une erreur d’exécution se produit.  
+ Valeur de variable objet qui contient une référence à une ouverture **Stream** objet. Actuel **Stream** est copié vers la destination **Stream** spécifié par *DestStream*. La destination **Stream** doit déjà être ouvert. Dans le cas contraire, une erreur d’exécution se produit.  
   
 > [!NOTE]
->  Le *DestStream* paramètre ne peut pas être un proxy de **flux** , car cela nécessite un accès à une interface privée sur l’objet le **flux** objet ne peut pas être exécutée à distance sur le client.  
+>  Le *DestStream* paramètre ne peut pas être un proxy de **Stream** de l’objet, car cela nécessite un accès à une interface privée sur le **Stream** objet ne peut pas être exécutée à distance sur le client.  
   
  *NumChars*  
- Facultatif. Un **entier** valeur qui spécifie le nombre d’octets ou de caractères à copier à partir de la position actuelle dans la source de **flux** vers la destination **flux**. La valeur par défaut est – 1, qui spécifie que tous les caractères ou octets sont copiés à partir de la position actuelle pour [fin du support](../../../ado/reference/ado-api/eos-property.md).  
+ Facultatif. Un **entier** valeur qui spécifie le nombre d’octets ou de caractères à copier à partir de la position actuelle dans la source **Stream** vers la destination **Stream**. La valeur par défaut est – 1, ce qui spécifie que tous les caractères ou octets sont copiés à partir de la position actuelle pour [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode copie le nombre spécifié de caractères ou d’octets à partir de la position actuelle spécifiée par le [Position](../../../ado/reference/ado-api/position-property-ado.md) propriété. Si le nombre spécifié est supérieur au nombre d’octets jusqu'à disponible **fin du support**, alors que des caractères ou octets à partir de la position actuelle pour **fin du support** sont copiés. Si la valeur de *NumChars* est – 1, ou est omis, tous les caractères ou octets à partir de la position actuelle sont copiés.  
+ Cette méthode copie le nombre spécifié de caractères ou d’octets à partir de la position actuelle spécifiée par le [Position](../../../ado/reference/ado-api/position-property-ado.md) propriété. Si le nombre spécifié est supérieur au nombre d’octets jusqu'à disponible **EOS**, puis uniquement des caractères ou octets à partir de la position actuelle pour **EOS** sont copiés. Si la valeur de *NumChars* est – 1, ou est omis, tous les caractères ou octets à partir de la position actuelle sont copiés.  
   
- Qu’en présence de caractères ou octets dans le flux de destination, tout le contenu au-delà du point où se termine la copie reste et n’est pas tronqué. **Position** devient l’octet suivant immédiatement le dernier octet copié. Si vous voulez tronquer ces octets, appelez [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ S’il existe des caractères ou octets dans le flux de destination, tout le contenu au-delà du point où se termine la copie reste et n’est pas tronqué. **Position** devient l’octet suivant immédiatement le dernier octet copié. Si vous souhaitez tronquer ces octets, appelez [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
- **CopyTo** doit être utilisé pour copier des données vers une destination **flux** du même type que la source de **flux** (leurs **Type** les paramètres de propriété sont les deux **adTypeText** ou les deux **adTypeBinary**). Pour le texte **flux** des objets, vous pouvez modifier le [Charset](../../../ado/reference/ado-api/charset-property-ado.md) définition de la propriété de la destination **flux** permet de convertir un jeu de caractères à un autre. En outre, le texte **flux** objets peuvent être copiés avec succès en binaire **flux** objets mais binaire **flux** objets ne peut pas être copiés dans le texte **flux**  objets.  
+ **CopyTo** doit être utilisé pour copier des données vers une destination **Stream** du même type que la source **Stream** (leurs **Type** paramètres de propriété sont les deux **adTypeText** ou les deux **adTypeBinary**). Pour le texte **Stream** objets, vous pouvez modifier le [Charset](../../../ado/reference/ado-api/charset-property-ado.md) paramètre de propriété de la destination **Stream** permet de convertir un jeu de caractères à un autre. En outre, le texte **Stream** objets peuvent être copiés avec succès en binaire **Stream** objets mais binaire **Stream** objets ne peut pas être copiés dans le texte **Stream**  objets.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

@@ -1,13 +1,11 @@
 ---
-title: BOF, EOF et Bookmark, propriétés-exemple (VC ++) | Documents Microsoft
+title: BOF, EOF et Bookmark, propriétés-exemple (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a09c56981f6884f03551d10d78a51ad8ea3d140
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e2b76cc255748f52feb2235296cc57070f8a9a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276078"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659527"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF et Bookmark, propriétés-exemple (VC ++)
-La première fonction dans cet exemple utilise le [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) et [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriétés pour afficher un message si un utilisateur tente d’aller au-delà du premier ou dernier enregistrement d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Elle utilise le [signet](../../../ado/reference/ado-api/bookmark-property-ado.md) propriété pour permettre à l’utilisateur de marquer un enregistrement dans un **Recordset** et y revenir plus tard.  
+La première fonction dans cet exemple utilise le [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) et [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriétés pour afficher un message si un utilisateur tente de dépasser le premier ou dernier enregistrement d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Il utilise le [signet](../../../ado/reference/ado-api/bookmark-property-ado.md) propriété pour permettre à l’utilisateur de marquer un enregistrement dans un **Recordset** et y revenir plus tard.  
   
- La seconde fonction utilise la propriété de signet pour placer le **signet** de tous les autres enregistrements d’un **Recordset** dans un tableau, puis sur le jeu d’enregistrements à l’aide du tableau de filtres.  
+ La seconde fonction utilise la propriété de signet pour placer le **signet** de tous les enregistrements à partir d’un **Recordset** dans un tableau, puis sur le jeu d’enregistrements à l’aide du tableau de filtres.  
   
 ## <a name="example"></a>Exemple  
   
@@ -210,6 +207,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Début de fichier EOF, propriétés (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [BOF, EOF, propriétés (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Bookmark, propriété (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
