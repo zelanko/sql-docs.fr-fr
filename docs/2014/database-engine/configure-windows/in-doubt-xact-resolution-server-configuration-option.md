@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - distributed transactions [SQL Server], unresolved transactions
 - unresolved transactions
 - in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 181b86ebbf41d95ade8928e47991f2183516961e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c30ca21d997d95058e034dbe36d601b601670a4f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225929"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058619"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution (option de configuration de serveur)
   Utilisez l’option **in-doubt xact resolution** pour contrôler le résultat par défaut des transactions que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) ne peut pas résoudre. L'incapacité à résoudre des transactions peut être liée au temps d'inactivité MS DTC ou à un résultat de transaction inattendu au moment de la récupération.  
@@ -33,7 +30,7 @@ ms.locfileid: "37225929"
 |Valeur du résultat|Description|  
 |-------------------|-----------------|  
 |0|Pas de présomption. La récupération échoue si MS DTC ne peut pas résoudre les transactions incertaines.|  
-| 1|Validation présumée. Toutes les transactions incertaines de MS DTC sont supposées être validées.|  
+|1|Validation présumée. Toutes les transactions incertaines de MS DTC sont supposées être validées.|  
 |2|Abandon présumé. Toutes les transactions incertaines de MS DTC sont supposées avoir échoué.|  
   
  Pour réduire l'éventualité d'un temps d'inactivité prolongé, l'administrateur peut décider de configurer cette option pour présumer la validation ou l'abandon, comme dans l'exemple suivant.  

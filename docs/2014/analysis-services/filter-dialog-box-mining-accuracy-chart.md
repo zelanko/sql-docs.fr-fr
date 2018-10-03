@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272605"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060167"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Filtrer, boîte de dialogue (Graphique d'analyse de précision de l'exploration de données)
   La boîte de dialogue **Filtre** vous permet de générer des conditions que vous pouvez appliquer à un jeu de données. Le jeu de données peut être un jeu de données externe utilisé pour le test, ou les données de cas utilisées pour l'apprentissage d'un modèle d'exploration de données. Cette boîte de dialogue vous permet de générer des critères que vous pouvez enregistrer comme parties intégrantes de critères de filtre plus complexes dans la boîte de dialogue **Filtre de jeu de données** ou dans la boîte de dialogue **Filtre de modèle** .  
@@ -47,7 +44,7 @@ ms.locfileid: "37272605"
 |**et/ou**|Cliquez sur cette option pour spécifier s'il faut appliquer l'opérateur AND ou l'opérateur OR à la condition figurant sur cette ligne. Ces valeurs ne sont disponibles qu’une fois que vous avez sélectionné une colonne dans la liste **Colonne de la structure d’exploration de données** .|  
 |**Colonne de Structure d’exploration de données**|Cliquez sur cette option pour sélectionner une colonne dans la liste des colonnes contenues dans la table que vous avez sélectionnée à partir de la source de données dans la boîte de dialogue **Filtre de jeu de données** .|  
 |**Opérateur**|Sélectionnez un opérateur dans la liste. Les opérateurs disponibles dépendent du type de données de la colonne.<br /><br /> Si la colonne contient des valeurs discrètes, seuls les opérateurs suivants sont disponibles :<br /><br /> = (égal à), <>(différent de), IS NOT NULL, IS NULL.<br /><br /> Si la colonne contient des valeurs continues, les opérateurs utilisés pour les opérations « supérieur à » et « inférieur à » sont également pris en charge.|  
-|**Value**|Tapez une valeur à utiliser comme condition.|  
+|**Valeur**|Tapez une valeur à utiliser comme condition.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   

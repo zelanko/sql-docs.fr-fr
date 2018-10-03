@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 99a414e27b9fb470d8e7ee07589c42e0184b283e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c610f28e0b36e6dcf0ad34345c78868d09a4f1eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252381"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058879"
 ---
 # <a name="integration-services-ssis-packages"></a>Packages Integration Services (SSIS)
   Un package est une collection organisée de connexions, d'éléments de flux de contrôle, d'éléments de flux de données, de gestionnaires d'événements, de variables, de paramètres et de configurations que vous assemblez à l'aide des outils de conception graphiques de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou que vous créez via un programme.  Vous enregistrez le package terminé dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] , ou le système de fichiers, ou vous pouvez déployer le projet ssISnoversion sur le serveur [!INCLUDE[ssIS](../includes/ssis-md.md)] . Le package est l'unité de travail qui est extraite, exécutée et enregistrée.  
@@ -108,7 +105,7 @@ ms.locfileid: "37252381"
   
  Pour plus d’informations sur la définition par programmation de ces propriétés, consultez <xref:Microsoft.SqlServer.Dts.Runtime.Package>.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , [!INCLUDE[ssIS](../includes/ssis-md.md)] met à votre disposition deux outils graphiques : le concepteur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et l'Assistant Importation et Exportation [!INCLUDE[ssIS](../includes/ssis-md.md)] . Consultez les rubriques suivantes pour plus de détails.  
   
 -   [Exécuter l’Assistant Importation et Exportation SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md)  

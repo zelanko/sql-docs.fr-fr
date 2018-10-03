@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.browseforremotepartition.f1
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bbc311b4c096f5f834141084f705fa8bdf50c3e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 691214181386bb5ec82394dfb6aadc1b0b76bf1f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212069"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060051"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Rechercher un dossier distant (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Rechercher un dossier distant** affiche la liste des dossiers de journaux et de données disponibles définis pour une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez sélectionner un dossier répertorié ou spécifier un autre dossier, le cas échéant. La boîte de dialogue **Rechercher un dossier distant** s'ouvre lorsque vous suivez l'une des étapes suivantes :  
