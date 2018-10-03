@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
-caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167150"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152985"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Options (Page de requête d’exécution SQL Server-général)
   Cette page vous permet de spécifier les options d'exécution des requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les modifications de ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options relatives à une requête en cours, cliquez sur **Options de requête** dans le menu **Requête** ou cliquez avec le bouton droit dans une fenêtre Requête de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et sélectionnez **Options de requête**.  
@@ -39,7 +36,7 @@ ms.locfileid: "37167150"
  **Délimiteur de lot**  
  Tapez un mot à utiliser pour séparer les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] en traitements. La valeur par défaut est GO.  
   
- **Par défaut, ouvrir les nouvelles requêtes en Mode SQLCMD**  
+ **Par défaut, ouvrir les nouvelles requêtes en mode SQLCMD**  
  Activez cette case à cocher pour ouvrir les nouvelles requêtes en mode SQLCMD. Pour plus d’informations sur le mode SQLCMD, consultez [Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
   
  Lorsque vous sélectionnez cette option, prenez en compte les limitations suivantes :  
@@ -50,7 +47,7 @@ ms.locfileid: "37167150"
   
 -   L'Éditeur de requête étant incapable de répondre aux invites de système d'exploitation, vous devez prendre soin de ne pas exécuter d'instructions interactives.  
   
- **Réinitialiser les valeurs par défaut**  
+ **Rétablir les valeurs par défaut**  
  Cliquez ici pour rétablir les valeurs par défaut d'origine de toutes les valeurs de cette page.  
   
 ## <a name="see-also"></a>Voir aussi  

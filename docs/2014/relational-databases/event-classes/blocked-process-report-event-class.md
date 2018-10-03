@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Blocked Process Report event class
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42f2ddfeb6df940b03301a731ac2e868423ba112
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2aecd264eac2a6beada1009ae070f1858dd6822c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298461"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141029"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report (classe d'événements)
   La classe d’événements **Blocked Process Report** indique qu’une tâche a été bloquée plus longtemps que la période spécifiée. Elle ne s'applique pas aux tâches système ou aux tâches en attente de ressources à blocage non détectable.  
@@ -48,7 +45,7 @@ ms.locfileid: "37298461"
 |**ObjectID**|**Int**|ID affecté par le système à l'objet sur lequel a été acquis le verrou (si disponible et le cas échéant).|22|Oui|  
 |**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tracée.|26||  
 |**SessionLoginName**|**nvarchar**|Nom d'accès de l'utilisateur qui a créé la session. Par exemple, si vous vous connectez à SQL Server avec le nom Accès1 et que vous exécutez une instruction avec Accès2, **SessionLoginName** affiche Accès1 et **LoginName** affiche Accès2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
-|**TextData**|**ntext**|Valeur texte qui dépend de la classe d'événements capturée dans la trace.| 1|Oui|  
+|**TextData**|**ntext**|Valeur texte qui dépend de la classe d'événements capturée dans la trace.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  

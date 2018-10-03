@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [CLR integration]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - common language runtime [SQL Server], security
 - database objects [CLR integration], security
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
-caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5037f3bb0d77fd25ad17b761f8c7943aef61200c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349591"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181559"
 ---
 # <a name="clr-integration-security"></a>Sécurité de l'intégration du CLR
   Le modèle de sécurité de la [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) gère et sécurise l’accès entre différents types d’objets CLR et non CLR s’exécutant dans [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] instruction ou un autre objet CLR en cours d’exécution sur le serveur. Les appels entre objets portent le nom de liens. Les types de vérifications de sécurité effectués sur ces objets dépendent des types de liens impliqués.  

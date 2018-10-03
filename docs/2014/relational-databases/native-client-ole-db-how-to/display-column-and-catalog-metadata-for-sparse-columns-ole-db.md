@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22b1e8512a1a6bd92416504ee48883715cef9a3b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fa66d85d11c4c99094f554cb1be8c036329b8608
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109279"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Afficher une colonne et des métadonnées de catalogue pour les colonnes éparses (OLE DB)
   Cet exemple crée une table à trois colonnes : une colonne éparse, une colonne non éparse et une colonne de jeu de colonnes. L'exemple affiche ensuite les indicateurs OLE DB indiquant la colonne et les métadonnées de catalogue de la colonne non éparse et de la colonne de jeu de colonnes.  

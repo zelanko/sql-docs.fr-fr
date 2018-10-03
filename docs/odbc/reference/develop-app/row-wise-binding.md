@@ -1,31 +1,29 @@
 ---
-title: Liaison selon les lignes | Documents Microsoft
+title: Liaison selon les lignes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d5f36f33773a10212c37eac5087327935981a9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c596f4924e9859b3ac61d38f68bacbc3ecd54a2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855857"
 ---
 # <a name="row-wise-binding"></a>Liaison selon les lignes
-Lorsque vous utilisez la liaison selon les lignes, une application définit une structure contenant un ou deux, ou dans certains cas, trois éléments pour chaque colonne pour laquelle les données sont à retourner. Le premier élément conserve la valeur de données, et le deuxième élément conserve la mémoire tampon de longueur / d’indicateur. Indicateurs et des valeurs de longueur peuvent être stockés dans les mémoires tampon distincte en définissant les champs de descripteur SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR à des valeurs différentes ; Si cette opération est effectuée, la structure contient un troisième élément. L’application alloue un tableau de ces structures, qui contient autant d’éléments qu’il existe des lignes dans l’ensemble de lignes.  
+Lorsque vous utilisez la liaison selon les lignes, une application définit une structure contenant un ou deux, ou dans certains cas, trois, les éléments pour chaque colonne pour laquelle les données doit être retourné. Le premier élément conserve la valeur de données, et le deuxième élément conserve la mémoire tampon de longueur / d’indicateur. Indicateurs et des valeurs de longueur peuvent être stockées dans les mémoires tampons distinctes en définissant les champs de descripteur SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR sur des valeurs différentes ; Si cette opération est effectuée, la structure contient un troisième élément. L’application puis alloue un tableau de ces structures, qui contient autant d’éléments qu’il existe des lignes dans l’ensemble de lignes.  
   
  L’application déclare la taille de la structure du pilote avec l’attribut d’instruction SQL_ATTR_ROW_BIND_TYPE et lie l’adresse de chaque membre dans le premier élément du tableau. Par conséquent, le pilote peut calculer l’adresse des données pour une ligne particulière et une colonne en tant que  
   
@@ -33,11 +31,11 @@ Lorsque vous utilisez la liaison selon les lignes, une application définit une 
 Address = Bound Address + ((Row Number - 1) * Structure Size)  
 ```  
   
- dans lequel les lignes sont numérotées de 1 à la taille de l’ensemble de lignes. (Une est soustrait le numéro de ligne, car l’indexation dans C du tableau est zéro.) L’illustration suivante montre le fonctionnement selon les lignes de la liaison. En règle générale, seules les colonnes qui seront liés sont incluses dans la structure. La structure peut contenir des champs qui ne sont pas liées de façon à des colonnes de jeu. Les colonnes peuvent être placés dans la structure dans n’importe quel ordre, mais sont affichées dans un ordre séquentiel par souci de clarté.  
+ où les lignes sont numérotées de 1 à la taille de l’ensemble de lignes. (Une est soustrait le numéro de ligne, car l’indexation dans C du tableau est zéro.) L’illustration suivante montre comment la liaison fonctionne. En règle générale, seules les colonnes qui seront liées sont incluses dans la structure. La structure peut contenir des champs qui ne sont pas liées à des colonnes de jeu de résultats. Les colonnes peuvent être placés dans la structure dans n’importe quel ordre, mais sont affichés dans l’ordre séquentiel par souci de clarté.  
   
- ![Affiche ligne&#45;liaison judicieux](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![Ligne de montre&#45;liaison sage](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
- Par exemple, le code suivant crée une structure avec des éléments permettant de retourner des données pour les colonnes OrderID, vendeur et l’état et longueur/indicateurs pour les colonnes vendeur et l’état. Il alloue 10 de ces structures et les lie aux colonnes OrderID, vendeur et l’état.  
+ Par exemple, le code suivant crée une structure avec des éléments dans lequel retourner des données pour les colonnes OrderID, commercial et l’état et longueur/indicateurs pour les colonnes vendeur et l’état. Il alloue 10 de ces structures et les lie aux colonnes OrderID, commercial et l’état.  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

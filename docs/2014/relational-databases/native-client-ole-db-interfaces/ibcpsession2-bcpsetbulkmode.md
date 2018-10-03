@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0c0ec3e7f76da7eb908cf2154cd33a2ee55b40
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5d95910ce8874d2a9eacdc28c6abf5d7d3be6efa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427518"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103389"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode fournit une alternative à [IBCPSession::BCPColFmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md) pour spécifier le format de colonne. Contrairement à IBCPSession::BCPColFmt, qui définit les attributs de format de colonne individuels, IBCPSession2::BCPSetBulkMode définit tous les attributs.  
@@ -60,13 +57,13 @@ HRESULT BCPSetBulkMode (
 |||  
 |-|-|  
 |`S_OK`|S_OK|  
-|`E_FAIL`|Une erreur spécifique au fournisseur s’est produite, pour plus d’informations utilisent l’interface ISQLServerErrorInfo.|  
+|`E_FAIL`|Une erreur spécifique au fournisseur s’est produite. Pour obtenir des informations détaillées, utilisez l’interface ISQLServerErrorInfo.|  
 |`E_UNEXPECTED`|L'appel à la méthode était inattendu. Par exemple, le `IBCPSession2::BCPInit` (méthode) n’a pas été appelée avant d’appeler IBCPSession2::BCPSetBulkMode.|  
 |`E_INVALIDARG`|L'argument n'était pas valide.|  
 |`E_OUTOFMEMORY`|Erreur de mémoire insuffisante.|  
   
 ## <a name="remarks"></a>Notes  
- IBCPSession2::BCPSetBulkMode peut être utilisé pour copier en une requête ou une table de bloc. Lorsque IBCPSession2::BCPSetBulkMode est utilisé pour copier en dehors d’une instruction de requête en bloc, il doit être appelé avant d’appeler `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` pour spécifier l’instruction de requête.  
+ IBCPSession2::BCPSetBulkMode peut être utilisé pour copier en une requête ou une table de bloc. Lorsque IBCPSession2::BCPSetBulkMode est utilisé pour copier en bloc une instruction de requête, il doit être appelé avant d’appeler `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` pour spécifier l’instruction de requête.  
   
  Vous devez éviter de combiner la syntaxe d'appel RPC avec la syntaxe de requête de lot (`{rpc func};SELECT * from Tbl`, par exemple) dans un texte de commande simple.  Cela entraîne ICommandPrepare::Prepare retourner une erreur et vous empêche de récupérer les métadonnées. Utilisez la syntaxe ODBC CALL (`{call func}; SELECT * from Tbl`, par exemple) si vous devez combiner l'exécution d'une procédure stockée et une requête de lot dans un texte de commande simple.  
   

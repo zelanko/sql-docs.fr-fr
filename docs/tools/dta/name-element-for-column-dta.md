@@ -1,31 +1,27 @@
 ---
-title: Nom d’élément de colonne (DTA) | Documents Microsoft
+title: Nom d’élément de colonne (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 051b1285b175cf0fbfae512dcbe2d52b188a36f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47e229143c7780e49cff2b1593e331542982cef2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069726"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844767"
 ---
 # <a name="name-element-for-column-dta"></a>Name, élément pour les colonnes (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,29 +1,23 @@
 ---
-title: Mappage des caractères SQL Server et MySQL définie (MySQLToSQL) | Documents Microsoft
+title: Mappage des caractères SQL Server et MySQL définie (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 94764ed6777b4310ebc38bbf8375089a0ac00c92
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776415"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789027"
 ---
-# <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mappage des caractères SQL Server et MySQL définie (MySQLToSQL)
+# <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mappage des jeux de caractères MySQL et SQL Server (MySQLToSQL)
 Jeu de caractères (jeu de caractères) peut être spécifié pour les types de données caractères, les expressions et les littéraux de MySQL.  
   
 ## <a name="charset-mapping"></a>Mappage de jeu de caractères  
@@ -45,99 +39,99 @@ Mappage de jeu de caractères est défini pour chaque jeu de caractères MySQL e
   
     2.  **varchar**  
   
-3.  Mappage de type autorise uniquement le mappage à **national** types de données caractère. Une fois que le type de données MySQL caractère est converti en fonction de mappage de type, jeu de caractères est appliqué.  
+3.  Mappage de type autorise uniquement le mappage à **national** types de données character. Une fois que le type de données MySQL caractère est converti en fonction de mappage de type, jeu de caractères est appliqué.  
   
 > [!NOTE]  
-> Mappage de jeu de caractères peuvent être définis sur chaque niveau de nœud de l’Explorateur de métadonnées et représenter tous les jeux de caractères lues à partir de MySQL.  
+> Mappage de jeu de caractères peuvent être définies sur chaque niveau de nœud de l’Explorateur d’objets de métadonnées et représentent tous les jeux de caractères lire à partir de MySQL.  
   
 ## <a name="charset-mapping-on-different-node-levels"></a>Mappage de jeu de caractères sur différents niveaux de nœud  
 Mappage de jeu de caractères varie à différents niveaux de nœud, à savoir :  
   
-1.  Sur le niveau de nœud de métadonnées racine  
+1.  Sur le niveau du nœud de métadonnées racine  
   
-2.  Sur la base de données, la catégorie et niveau de nœuds d’objet  
+2.  Sur la base de données, catégorie et par niveau de nœuds d’objet  
   
 > [!NOTE]  
-> L’onglet est sélectionné pour la modification du mappage de jeu de caractères, contient trois boutons, quel que soit le mappage sur les différents niveaux de nœud.  
+> L’onglet sélectionné à modifier le mappage de jeu de caractères, contient trois boutons, quel que soit le mappage sur les différents niveaux de nœud.  
 >   
 > Celles-ci sont les suivantes :  
 >   
-> 1.  **S’appliquent :** applique les modifications apportées par l’utilisateur activé uniquement lorsque le mappage de jeu de caractères est modifié et pas encore été enregistré.  
+> 1.  **S’appliquent :** applique les modifications apportées par l’utilisateur est activée uniquement lorsque le mappage de jeu de caractères est modifié et pas encore enregistré.  
 > 2.  **Annuler :** annule les modifications apportées par l’utilisateur. Le bouton est activé lorsque le mappage de jeu de caractères est modifiée, mais pas enregistré.  
 > 3.  **Réinitialiser les valeurs par défaut :** réinitialise tous les mappages de valeurs par défaut.  
   
 1.  **On racine au niveau du nœud de métadonnées :** grille de mappage de jeu de caractères contient la grille de jeu de caractères avec une colonne distincte pour chaque jeu de caractères. Les colonnes de la grille sont :  
   
-    1.  La première colonne de la grille nommée **nom de jeu de caractères** contient le nom du jeu de caractères.  
+    1.  La première colonne de la grille nommée **nom Charset** contient le nom du jeu de caractères.  
   
-    2.  L’autre nommé **Description du jeu de caractères** contient la description du jeu de caractères.  
+    2.  La deuxième identité nommée **Description du jeu de caractères** contient la description du jeu de caractères.  
   
-    3.  La troisième colonne intitulée **le Type de jeu de caractères cible** contient les paramètres de mappage de jeu de caractères particulier. Les valeurs de cette colonne sont :  
+    3.  La troisième colonne intitulée, **Type de jeu de caractères cible** contient les paramètres de mappage de jeu de caractères particulier. Les valeurs pour cette colonne sont :  
   
         -   CHAR/VARCHAR  
   
         -   NCHAR/NVARCHAR  
   
     > [!IMPORTANT]  
-    > Les valeurs par défaut pour un jeu de caractères particulier ont le préfixe « (valeur par défaut) » après CHAR/VARCHAR, NCHAR/NVARCHAR.  
+    > Les valeurs par défaut pour un jeu de caractères particulier ont le préfixe « (valeur par défaut) » après CHAR/VARCHAR ou NCHAR/NVARCHAR.  
   
-    Le mappage de jeu de caractères entre la base de données MySQL et de la base de données cible au niveau du nœud racine de métadonnées est donné ci-dessous :  
+    Le mappage de jeu de caractères entre la base de données MySQL et de la base de données cible sur le niveau du nœud racine métadonnées est donné ci-dessous :  
   
     ||||  
     |-|-|-|  
     |**Nom du jeu de caractères**|**Description du jeu de caractères**|**Type de jeu de caractères cible (par défaut)**|  
-    |Big5|Chinois traditionnel Big5|NCHAR/NVARCHAR (par défaut)|  
-    |dec8|DEC ouest européenne|CHAR/VARCHAR (par défaut)|  
-    |CP850|Europe de l’ouest de déni de service|CHAR/VARCHAR (par défaut)|  
-    |hp8|HP ouest européenne|CHAR/VARCHAR (par défaut)|  
-    |koi8r|KOI8-R Relcom russe|CHAR/VARCHAR (par défaut)|  
-    |Latin 1|cp1252 ouest européenne|CHAR/VARCHAR (par défaut)|  
-    |Latin2|ISO 8859-2 Europe de l'|CHAR/VARCHAR (par défaut)|  
-    |swe7|7 bits suédois|CHAR/VARCHAR (par défaut)|  
-    |ASCII|US ASCII|CHAR/VARCHAR (par défaut)|  
-    |ujis|EUC-JP japonais|NCHAR/NVARCHAR (par défaut)|  
-    |SJIS|Shift-JIS japonais|NCHAR/NVARCHAR (par défaut)|  
-    |Hébreu|ISO 8859-8 hébreu|CHAR/VARCHAR (par défaut)|  
-    |TIS620|TIS620 thaï|CHAR/VARCHAR (par défaut)|  
-    |eucKR|EUC-KR coréen|NCHAR/NVARCHAR (par défaut)|  
-    |koi8u|KOI8-U ukrainien|CHAR/VARCHAR (par défaut)|  
-    |gb2312|GB2312 En chinois simplifié|NCHAR/NVARCHAR (par défaut)|  
-    |Grec|ISO 8859-7 grec|CHAR/VARCHAR (par défaut)|  
-    |CP 1250|Europe centrale de Windows|CHAR/VARCHAR (par défaut)|  
-    |GBK|Chinois simplifié de GBK|NCHAR/NVARCHAR (par défaut)|  
-    |Latin5|ISO 8859-9 turc|CHAR/VARCHAR (par défaut)|  
-    |armscii8|ARMSCII-8 arménien|CHAR/VARCHAR (par défaut)|  
-    |UTF-8|UTF-8 Unicode|NCHAR/NVARCHAR (par défaut)|  
-    |UCS2|UCS-2 Unicode|NCHAR/NVARCHAR (par défaut)|  
-    |cp866|Russe de déni de service|CHAR/VARCHAR (par défaut)|  
-    |keybcs2|DOS Kamenicky tchèque-slovaque|CHAR/VARCHAR (par défaut)|  
-    |macce|Europe centrale du Mac|CHAR/VARCHAR (par défaut)|  
-    |MacRoman|Mac ouest européenne|CHAR/VARCHAR (par défaut)|  
-    |cp852|Centre de déni de service européenne|CHAR/VARCHAR (par défaut)|  
-    |latin7|ISO 8859-13 Baltique|CHAR/VARCHAR (par défaut)|  
-    |CP 1251|Windows cyrillique|CHAR/VARCHAR (par défaut)|  
-    |CP 1256|Windows arabe|CHAR/VARCHAR (par défaut)|  
-    |CP 1257|Windows : Baltique|CHAR/VARCHAR (par défaut)|  
-    |binary|Jeu de caractères binaires pseudo|CHAR/VARCHAR (par défaut)|  
-    |geostd8|GEOSTD8 géorgien|CHAR/VARCHAR (par défaut)|  
-    |cp932|SJIS pour Windows version japonaise|NCHAR/NVARCHAR (par défaut)|  
-    |eucjpms|UJIS pour Windows version japonaise|NCHAR/NVARCHAR (par défaut)|  
+    |Big5|Chinois traditionnel Big5|NCHAR/NVARCHAR (valeur par défaut)|  
+    |dec8|DEC West Europe|CHAR/VARCHAR (valeur par défaut)|  
+    |CP850|Europe de l’ouest de déni de service|CHAR/VARCHAR (valeur par défaut)|  
+    |hp8|HP West Europe|CHAR/VARCHAR (valeur par défaut)|  
+    |koi8r|KOI8-R Relcom russe|CHAR/VARCHAR (valeur par défaut)|  
+    |Latin 1|Europe de l’ouest cp1252|CHAR/VARCHAR (valeur par défaut)|  
+    |Latin2|Europe centrale ISO 8859-2|CHAR/VARCHAR (valeur par défaut)|  
+    |swe7|7 bits suédois|CHAR/VARCHAR (valeur par défaut)|  
+    |ASCII|US ASCII|CHAR/VARCHAR (valeur par défaut)|  
+    |ujis|EUC-JP japonais|NCHAR/NVARCHAR (valeur par défaut)|  
+    |SJIS|Shift-JIS japonais|NCHAR/NVARCHAR (valeur par défaut)|  
+    |Hébreu|ISO 8859-8 hébreu|CHAR/VARCHAR (valeur par défaut)|  
+    |TIS620|TIS620 thaï|CHAR/VARCHAR (valeur par défaut)|  
+    |eucKR|Coréen EUC-KR|NCHAR/NVARCHAR (valeur par défaut)|  
+    |koi8u|KOI8-U ukrainien|CHAR/VARCHAR (valeur par défaut)|  
+    |gb2312|GB2312 Chinois simplifié|NCHAR/NVARCHAR (valeur par défaut)|  
+    |Grec|ISO 8859-7 grec|CHAR/VARCHAR (valeur par défaut)|  
+    |CP 1250|Europe centrale de Windows|CHAR/VARCHAR (valeur par défaut)|  
+    |GBK|Chinois simplifié de GBK|NCHAR/NVARCHAR (valeur par défaut)|  
+    |Latin5|ISO 8859-9 turc|CHAR/VARCHAR (valeur par défaut)|  
+    |armscii8|ARMSCII-8 arménien|CHAR/VARCHAR (valeur par défaut)|  
+    |UTF-8|UTF-8 Unicode|NCHAR/NVARCHAR (valeur par défaut)|  
+    |UCS2|UCS-2 Unicode|NCHAR/NVARCHAR (valeur par défaut)|  
+    |cp866|Russe de déni de service|CHAR/VARCHAR (valeur par défaut)|  
+    |keybcs2|DOS Kamenicky tchèque-slovaque|CHAR/VARCHAR (valeur par défaut)|  
+    |macce|Europe centrale Mac|CHAR/VARCHAR (valeur par défaut)|  
+    |MacRoman|Europe de l’ouest Mac|CHAR/VARCHAR (valeur par défaut)|  
+    |cp852|Déni de service Central européenne|CHAR/VARCHAR (valeur par défaut)|  
+    |latin7|ISO 8859-13 Baltique|CHAR/VARCHAR (valeur par défaut)|  
+    |CP 1251|Windows cyrillique|CHAR/VARCHAR (valeur par défaut)|  
+    |CP 1256|Arabe de Windows|CHAR/VARCHAR (valeur par défaut)|  
+    |CP 1257|Windows Baltique|CHAR/VARCHAR (valeur par défaut)|  
+    |binary|Jeu de caractères binaires pseudo|CHAR/VARCHAR (valeur par défaut)|  
+    |geostd8|GEOSTD8 géorgien|CHAR/VARCHAR (valeur par défaut)|  
+    |cp932|SJIS pour le japonais de Windows|NCHAR/NVARCHAR (valeur par défaut)|  
+    |eucjpms|UJIS pour le japonais de Windows|NCHAR/NVARCHAR (valeur par défaut)|  
   
-2.  **Sur la base de données, de catégorie ou de niveaux de nœuds d’objet :** au niveau base de données, de catégorie ou de nœuds d’objet, grille de mappage de jeu de caractères contient les mêmes lignes que sur le niveau de métadonnées du nœud racine, notamment. :  
+2.  **Sur la base de données, de catégorie ou de niveaux de nœuds d’objet :** sur le niveau de base de données, catégorie ou les nœuds d’objet, grille de mappage de jeu de caractères contient les mêmes lignes que celle de niveau de métadonnées du nœud racine, reportages. :  
   
-    1.  La première colonne de la grille intitulée **définir un nom de caractère** contient le nom du jeu de caractères.  
+    1.  La première colonne de la grille intitulée, **définir un nom de caractère** contient le nom du jeu de caractères.  
   
-    2.  La deuxième colonne intitulée **caractère définir la Description** contient la description du jeu de caractères.  
+    2.  La deuxième colonne intitulée, **caractère définir la Description** contient la description du jeu de caractères.  
   
-    3.  La seule différence est les valeurs dans la troisième colonne de la grille. La troisième colonne intitulée **Type de données cible** contient les paramètres de mappage de jeu de caractères particulier. Les valeurs de la colonne sont :  
+    3.  La seule différence porte sur les valeurs dans la troisième colonne de la grille. La troisième colonne intitulée, **Type de données cible** contient les paramètres de mappage de jeu de caractères particulier. Les valeurs pour la colonne sont :  
   
-        -   Héritée (CHAR/VARCHAR ou NCHAR/NVARCHAR)  
+        -   Hérité (CHAR/VARCHAR ou NCHAR/NVARCHAR)  
   
         -   CHAR/VARCHAR  
   
         -   NCHAR/NVARCHAR  
   
 > [!IMPORTANT]  
-> -   Dans le mappage de jeu de caractères entre la base de données MySQL et de la base de données cible sur base de données, de catégorie et de niveaux de nœuds d’objet, les valeurs par défaut pour un jeu de caractères particulier sur chaque niveau de la racine de la colonne **Type de données cible** doit être « hérité ».  
-> -   Dans la grille, la valeur **Inherited** est suivi du suffixe avec l’option '(CHAR/VARCHAR)' ou '(NCHAR/NVARCHAR)' en fonction de la valeur a été héritée parent par ce jeu de caractères particulier.  
+> -   Dans le mappage de jeu de caractères entre la base de données MySQL et base de données cible sur la base de données, catégorie et niveaux de nœuds d’objet, les valeurs par défaut pour un jeu de caractères particulier sur chaque niveau autre que de la racine de la colonne **Type de données cible** doit être ' Héritée '.  
+> -   Dans la grille, la valeur **Inherited** est suivi du suffixe soit '(CHAR/VARCHAR)' ou '(NCHAR/NVARCHAR)' selon quelle valeur a été héritée du parent par ce jeu de caractères particulier.  
   

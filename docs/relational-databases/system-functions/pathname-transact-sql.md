@@ -1,14 +1,11 @@
 ---
-title: Chemin d’accès (Transact-SQL) | Documents Microsoft
+title: Chemin d’accès (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PathName_TSQL
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80fc13baa2d538e054ed88607cd4b45c6477cb6e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fe641df85802baab70efa514179f5abbeaea8951
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233610"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852017"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne le chemin d'accès d'un objet blob FILESTREAM. L’API OpenSqlFilestream utilise ce chemin d’accès pour retourner un handle qu’une application peut utiliser pour travailler avec les données BLOB à l’aide des API Win32. PathName est en lecture seule.  
+  Retourne le chemin d'accès d'un objet blob FILESTREAM. L’API OpenSqlFilestream utilise ce chemin d’accès pour retourner un handle auquel une application peut utiliser pour travailler avec les données BLOB à l’aide des API Win32. PathName est en lecture seule.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +43,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *column_name*  
  Est le nom de colonne d’un **varbinary (max)** colonne FILESTREAM. *column_name* doit être un nom de colonne. Il ne peut s'agir d'une expression ou du résultat d'une instruction CAST ou CONVERT.  
   
- Demande de PathName pour une colonne de tout autre type de données ou pour un **varbinary (max)** columnthat n’a pas de provoquer une erreur de compilation de requête de la volonté d’attribut de stockage FILESTREAM.  
+ Demande de PathName pour une colonne de tout autre type de données ou pour un **varbinary (max)** columnthat n’a pas l’attribut de stockage FILESTREAM est provoquent une erreur de compilation de requête.  
   
  *@option*  
  Entier [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui définit comment le composant serveur du chemin d’accès doit être mis en forme. *@option* peut prendre l’une des valeurs suivantes. La valeur par défaut est 0.  
@@ -59,13 +55,13 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 |2|Retourne le chemin d'accès complet du serveur, par exemple : `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
- Une valeur de bit qui définit comment le nom du serveur doit être retourné dans un groupe de disponibilité Always On.  
+ Valeur binaire qui définit la façon dont le nom du serveur doit être retourné dans un groupe de disponibilité Always On.  
   
  Lorsque la base de données n’appartient pas à un groupe de disponibilité Always On, la valeur de cet argument est ignorée. Le nom d'ordinateur est toujours utilisé dans le chemin d'accès.  
   
- Lorsque la base de données appartient à un groupe de disponibilité Always On de groupe, puis la valeur de *use_replica_computer_name* a les effets suivants sur la sortie de la **chemin d’accès** fonction :  
+ Lorsque la base de données appartient à un groupe de disponibilité Always On de groupe, puis la valeur de *use_replica_computer_name* a l’effet suivant sur la sortie de la **PathName** fonction :  
   
-|Valeur| Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |Non spécifié.|La fonction retourne le nom de réseau virtuel (VNN) dans le chemin d'accès.|  
 |0|La fonction retourne le nom de réseau virtuel (VNN) dans le chemin d'accès.|  
@@ -74,7 +70,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-type"></a>Type de retour  
  **nvarchar(max)**  
   
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur de retour  
  La valeur retournée est le chemin d'accès logique complet ou NETBIOS de l'objet blob. PathName ne retourne pas d'adresse IP. Une valeur NULL est retournée lorsque l'objet blob FILESTREAM n'a pas été créé.  
   
 ## <a name="remarks"></a>Notes  

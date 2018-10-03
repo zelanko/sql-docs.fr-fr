@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:Completed event class
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9401dd59c23b08548c3cb5a02770a8dbf7e51450
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1335fdd99afb81be5f67cda57fefc3241a032f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330049"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213611"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed, classe d'événements
   La classe d'événements SP:Completed indique que l'exécution de la procédure stockée s'est terminée.  
@@ -59,7 +56,7 @@ ms.locfileid: "37330049"
 |SourceDatabaseID|`int`|ID de la base de données dans laquelle se trouve l'objet.|62|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|Texte de l’appel de procédure stockée.| 1|Oui|  
+|TextData|`ntext`|Texte de l’appel de procédure stockée.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DSVTableBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DSVTableBinding data type
 ms.assetid: 149e753f-6218-4805-9223-7155b6827e64
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d4748adb2ca6b26c42bee9b0ba5ea502d973679
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b2ceab8524135338aa066837c50170268711a9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195989"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095729"
 ---
 # <a name="dsvtablebinding-data-type-assl"></a>Type de données DSVTableBinding (ASSL)
   Définit un type de données dérivé qui représente la liaison entre une table et un [DataSourceView](../objects/datasourceview-element-assl.md) élément.  

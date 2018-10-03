@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - data-quality-services
@@ -14,7 +13,6 @@ ms.technology:
 - replication
 - reporting-services-native
 - reporting-services-sharepoint
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server, product specifications
@@ -22,18 +20,17 @@ helpviewer_keywords:
 - product specifications [SQL Server]
 - configuration options [SQL Server], product specifications
 ms.assetid: 6445fd53-6844-4170-a86b-7fe76a9f64cb
-caps.latest.revision: 28
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 753c9d6009217e5af83d724a22c9b3ed9d50fdc7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58000d28b4661c246360b2a38cc74ca5d92614c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219919"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123359"
 ---
-# <a name="sql-server-2014-product-specifications"></a>Spécifications de produit SQL Server 2014
+# <a name="sql-server-2014-product-specifications"></a>Spécifications du produit SQL Server 2014
   Les rubriques de la table suivante fournissent des détails de spécification de produit pour cette version :  
   
  [Limites de capacité de calcul par édition de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  

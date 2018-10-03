@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e826f27b2ce6bbb75d4aabc9d8537d0f867a0cce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30576bc7ff9cb2049dc035a9f7b4efa152f5f3b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179556"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192139"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Page des propriétés des sources de données (Gestionnaire de rapports)
   La page de propriétés des sources de données permet de définir la connexion du rapport actif à une source de données externe. Vous pouvez remplacer les informations de connexion à la source de données publiées à l'origine avec le rapport. Si plusieurs sources de données sont utilisées avec un rapport, chacune d'elles possède sa propre section dans la page de propriétés. Les sources de données sont répertoriées dans l'ordre dans lequel elles sont définies dans le rapport.  

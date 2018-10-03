@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.suggestrelatedcolumns.f1
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6007ce4d2eef03ad4a1f416c8c8409d13e4a544b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226429"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196889"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Suggérer les colonnes associées (Assistant Exploration de données)
   Utilisez la page **Suggérer les colonnes associées** pour afficher les recommandations de la fonction **Suggérer**, que vous avez sélectionnée dans la page précédente de l’Assistant. Les colonnes d’entrée seront présélectionnées en fonction de leur association avec la colonne **prédictible** sélectionnée. Si vous acceptez les modifications dans cette boîte de dialogue, les modifications seront transmises à la page **Spécifier les données d’apprentissage**.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
@@ -47,16 +45,15 @@ helpviewer_keywords:
 - CLUSTER_COUNT
 - COMPLEXITY_PENALTY
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a7f640f259375c48584ee33b72e63b082de0a3e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92ff53ae795fa4d0565ca9b1537a7d12bc8f0b5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267675"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147609"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Paramètres d'algorithme (Compléments d'exploration de données SQL Server)
   Lorsque vous effectuez l'exploration de données à l'aide des outils d'analyse de table pour Excel, vous n'avez pas besoin de configurer l'algorithme ou les paramètres d'exploration de données ; chaque outil analyse vos données et sélectionne automatiquement les paramètres optimums. Toutefois, si vous souhaitez modifier le modèle ou créer un modèle d'exploration de données de toutes pièces, le client d'exploration de données pour Excel vous propose plusieurs options de personnalisation.  

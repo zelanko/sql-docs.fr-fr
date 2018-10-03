@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 065491c5bdf2254f6ee356383f7992c6d52b6c0e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8e31a24d54b9f1c8013c67628fbe6e279604a31
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123639"
 ---
 # <a name="sqllogship-application"></a>Application sqllogship
   L’application **sqllogship** effectue une opération de sauvegarde, de copie ou de restauration, ainsi que les tâches de nettoyage associées pour une configuration d’envoi de journaux. L'opération a lieu sur une instance spécifique de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour une base de données spécifique.  
@@ -62,7 +59,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |level|Description|  
 |-----------|-----------------|  
 |0|N'envoie en sortie aucun message de traçage et de débogage.|  
-| 1|Envoie en sortie des messages de gestion des erreurs.|  
+|1|Envoie en sortie des messages de gestion des erreurs.|  
 |2|Envoie en sortie des messages de gestion des erreurs et d'avertissement.|  
 |**3**|Envoie en sortie des messages de gestion des erreurs, d'avertissement et d'information. Il s'agit de la valeur par défaut.|  
 |4|Envoie en sortie tous les messages de traçage et de débogage.|  
@@ -80,10 +77,10 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  Le **sqllogship** application, SqlLogShip.exe, est installée dans le répertoire de x:\Program Files\Microsoft SQL Server\120\Tools\Binn.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  **sqllogship** utilise l'authentification Windows. Le compte d'authentification Windows où s'exécute la commande nécessite un accès au répertoire Windows et des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La configuration requise dépend de l’option spécifiée par la commande **sqllogship** : **-backup**, **-copy**ou **-restore** .  
   
-|Option|Accès au répertoire|Autorisations|  
+|Option|Accès au répertoire|Permissions|  
 |------------|----------------------|-----------------|  
 |**-backup**|Nécessite un accès en lecture/écriture au répertoire de sauvegarde.|Nécessite les mêmes autorisations que l'instruction BACKUP. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).|  
 |**-copy**|Nécessite l'accès en lecture au répertoire de sauvegarde et l'accès en écriture au répertoire de copie.|Nécessite les mêmes autorisations que la procédure stockée [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) .|  

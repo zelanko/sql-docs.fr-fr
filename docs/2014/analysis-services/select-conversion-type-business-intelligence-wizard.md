@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.conversiontype.f1
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34fab6780a6c10601b3f5bf31fbb7cffee3fd888
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97ab8896d13bfb19790148fb6f01bb8e054ab270
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267345"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092313"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Sélectionner le type de conversion (Assistant Business Intelligence)
   La page **Sélectionner le type de conversion** permet de définir la relation entre les devises locales et celles des rapports pour des transactions stockées dans plusieurs devises. Une devise locale est une devise dans laquelle les transactions des mesures sélectionnées dans **Sélectionnez les mesures** sont stockées. Une devise de rapport est celle dans laquelle sont traduites les transactions sélectionnées dans la page **Sélectionnez les mesures** .  
