@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205749"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223881"
 ---
 # <a name="query-options-results-text-page"></a>Options de requête — Résultats de requête (page Texte)
   Utilisez cette page pour définir les options d'affichage d'un jeu de résultats de requête au format texte. Ses paramètres s'appliquent également lorsque **Résultats dans un fichier** est sélectionné.  
@@ -32,28 +29,28 @@ ms.locfileid: "37205749"
  **Séparateur personnalisé**  
  Indiquez le caractère à utiliser pour séparer les colonnes. Cette option n'est disponible que lorsque la case à cocher **Séparateur personnalisé** est activée dans la zone **Format de sortie** .  
   
- **Inclure des en-têtes de colonne dans le jeu de résultats**  
+ **Inclure des en-têtes de colonne dans l'ensemble de résultats**  
  Désactivez cette case à cocher si vous ne voulez pas que chaque colonne soit étiquetée au moyen d'un titre de colonne.  
   
  **Défilement pendant réception des résultats**  
  Activez cette case à cocher pour cibler l'affichage sur les derniers enregistrements retournés au bas de la fenêtre. Désactivez-la pour cibler l'affichage sur les premières lignes retournées.  
   
- **Aligner à droite des valeurs numériques**  
+ **Aligner les valeurs numériques à droite**  
  Activez cette case à cocher pour aligner les valeurs numériques à droite de la colonne. Cela peut faciliter l'analyse de nombres comportant un nombre de décimales invariable.  
   
- **Ignorer les résultats après l’exécution de requête**  
+ **Ignorer les résultats après l'exécution de la requête**  
  Libère de la mémoire en ignorant les résultats de la requête une fois ceux-ci affichés à l'écran.  
   
  **Afficher les résultats dans un onglet séparé**  
  Activez cette case à cocher pour afficher l'ensemble de résultats dans une nouvelle fenêtre de document, et non au bas de la fenêtre de document de la requête.  
   
- **Basculer vers l’onglet des résultats après l’exécution de la requête**  
+ **Basculer vers l'onglet des résultats après l'exécution de la requête**  
  Cliquez sur cette option pour que l'affichage soit automatiquement ciblé sur l'ensemble de résultats.  
   
  **Nombre maximal de caractères affichés dans chaque colonne**  
  Cette valeur est par défaut 256. Augmentez cette valeur pour afficher des jeux de résultats plus grands sans les tronquer.  
   
- **Réinitialiser les valeurs par défaut**  
+ **Rétablir les valeurs par défaut**  
  Rétablit toutes les valeurs par défaut initiales des options de cette page.  
   
 ## <a name="saving-a-text-result-set-with-headers"></a>Enregistrement d'un ensemble de résultats sous la forme de texte avec des en-têtes  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addnestedtable.f1
 helpviewer_keywords:
 - Select a Nested Table Key Column dialog box
 ms.assetid: f68b89a7-17df-45f8-ba7f-b458cd9b1ec3
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae03a58af3dd2781ca670137a77baccae3951482
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7eaccd916ee401ad1b6b82a155e50688b2ff57a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161110"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227535"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>Boîte de dialogue Sélectionner la colonne clé de table imbriquée (vue Structure d'exploration de données)
   Utilisez la boîte de dialogue **Sélectionner la colonne de clé de table imbriquée** pour désigner une colonne qui sera la clé de la nouvelle table imbriquée. Lorsque vous fermez cette boîte de dialogue, une nouvelle table est ajoutée à la structure d'exploration de données qui contient la colonne clé désignée. Vous pouvez ajouter des colonnes supplémentaires à la table imbriquée en cliquant avec le bouton droit sur la structure et en sélectionnant **Ajouter une colonne**. Cette boîte de dialogue contient différentes options, selon que vous utilisez un modèle d'exploration de données OLAP ou relationnel.  

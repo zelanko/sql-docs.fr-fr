@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - customers dimensions [Analysis Services]
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6fe72ba73f73d2c2d87672642e403c5ed0e4f541
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61792f88c028ce1c011b91fb9a5ecbec97b50396
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189046"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212509"
 ---
 # <a name="dimension-types"></a>Types de dimensions
   La valeur de la propriété `Type` fournit des informations sur le contenu d'une dimension aux applications serveur et clientes. Dans certains cas, la valeur de `Type` fournit seulement des informations indicatives aux applications clientes et elle est facultative. Dans d'autres cas, comme pour les dimensions `Accounts` ou `Time`, les paramètres de la propriété `Type` pour la dimension et ses attributs déterminent des fonctionnements spécifiques du serveur et peuvent être nécessaires pour implémenter certains fonctionnements du cube. Par exemple, la propriété `Type` d'une dimension peut être définie à la valeur `Accounts` pour indiquer aux applications clientes que la dimension standard contient des attributs de comptes. Pour plus d’informations sur le temps, le compte et les dimensions de devise, consultez [créer une Dimension de type Date](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [créer un compte Finance de la Dimension de type parent-enfant](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), et [créer une devise type de Dimension](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  

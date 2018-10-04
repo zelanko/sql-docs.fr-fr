@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10130"
 - sql12.rtp.rptdesigner.datasetproperties.options.f1
 ms.assetid: 95299049-71ba-427f-b723-775cb696243f
-caps.latest.revision: 39
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7018038707462c2cf32a733b31cf66d25a275bfb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81a50aa53c41ee0db4b6e9d97f2b96ca58e2649c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319739"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228035"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>Boîte de dialogue Propriétés du dataset, Options
   Sélectionnez **Options** sur le **DatasetProperties** boîte de dialogue pour modifier les options de données, telles que les options de classement et des sous-totaux, pour la requête. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).  

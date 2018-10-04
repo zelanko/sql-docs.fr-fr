@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.securitycontext.f1
 ms.assetid: 238a4a4b-84bd-4b3d-9f02-f3adf57fa3af
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 038f01f4603ed4724b095e5a1593d788fcf93796
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b959a34d9f50a539b14c9c54d77c1dfc696e16ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310359"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049182"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Contexte de sécurité (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Contexte de sécurité** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] permet de modifier l'utilisateur et le rôle utilisé pour analyser les données ou métadonnées d'un objet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour afficher la boîte de dialogue **Contexte de sécurité** , cliquez sur **Contexte de sécurité** dans le volet **Barre d'outils** soit de l'onglet **Calculs** , soit de l'onglet **Navigateur** du Concepteur de cube.  
@@ -35,7 +32,7 @@ ms.locfileid: "37310359"
   
  Le domaine et nom de l'utilisateur ou groupe arborent le format suivant :  
   
- *\<Nom de domaine >* ** \\ ** * \<nom de compte d’utilisateur >*  
+ *\<Nom de domaine >* **\\**  *\<nom de compte d’utilisateur >*  
   
  **Roles**  
  Permet d'utiliser un ou plusieurs rôles spécifiés lors de l'affichage des données et métadonnées de l'objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez sélectionner les rôles à utiliser si plusieurs rôles sont définis dans la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c74c3f21508ce08e6e540dd5c4cc84531b7c744d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 472f830f41c5cc9d250a26b8e2612b7c0a6b68b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393638"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728760"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Bien démarrer avec SSMA pour DB2 Console (DB2ToSQL)
 Cette section décrit la procédure pour lancer et de vous familiariser avec l’application de console DB2. Dans la liste, dans le présent document, sont les conventions utilisées dans une fenêtre de sortie de Console SSMA classique.  
@@ -59,7 +53,7 @@ Lors de l’exécution les commandes de script SSMA et options, le programme de 
   
 Interprétation de couleur de la sortie de console dans le tableau suivant :  
   
-|Couleur| Description|  
+|Couleur|Description|  
 |---------|---------------|  
 |Rouge|Erreur irrécupérable pendant l’exécution|  
 |Gris|Cachet de date et l’heure, le message à l’utilisateur|  

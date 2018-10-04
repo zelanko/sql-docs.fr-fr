@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 49449391408701c16b7b6da9106913a24d084d66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3071399edd3a7138d4cee68a162f0c44cfca29ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218839"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218229"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Boîte de dialogue Options du Générateur de rapports, Paramètres (Générateur de rapports)
   Cliquez sur le **le Générateur de rapports** bouton, puis cliquez sur **Options** pour définir les options d’affichage des connexions et des fichiers récents. Vous pouvez également modifier le serveur de rapports par défaut ou en ajouter un si vous n'en avez pas déjà spécifié un.  

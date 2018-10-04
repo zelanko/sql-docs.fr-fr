@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cb93ac76fb6213817dcef3530387772e099e0e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 014dfb18c0ca2b54486e5bf61420aec903b4a258
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297409"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169709"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Neural Network (réseau neuronal) (Visionneuse du modèle d'exploration de données)
   Utilisez la visionneuse **Neural Net** pour consulter les modèles d’exploration de données basés sur l’algorithme MNN ([!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network) ou l’algorithme MLR ([!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression).  
@@ -44,7 +41,7 @@ ms.locfileid: "37297409"
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Attribute**|Choisissez un attribut d'entrée dans la liste. Si vous conservez la sélection par défaut,  **\<tous les >**, le graphique affiche une liste d’attributs de tous les d’entrée, classée selon leur impact sur l’attribut prédictible.|  
-|**Value**|Choisissez la valeur de l'attribut d'entrée.|  
+|**Valeur**|Choisissez la valeur de l'attribut d'entrée.|  
   
  **Sortie**  
  Utilisez ces contrôles pour choisir un attribut prédictible et une valeur à analyser et comparer dans le graphique à barres. Si vous ne modifiez pas les sélections, le graphique à barres compare les deux états principaux de résultats.  
@@ -61,7 +58,7 @@ ms.locfileid: "37297409"
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Attribute**|Affiche le nom de l’attribut d’entrée que vous avez sélectionné dans **Attribut**.|  
-|**Value**|Affiche la valeur de l'attribut d'entrée sélectionné.|  
+|**Valeur**|Affiche la valeur de l'attribut d'entrée sélectionné.|  
 |**Privilégie \<valeur 1 >**|Affiche une barre indiquant dans quelle proportion cette combinaison particulière attribut-valeur affecte les résultats cibles sélectionnés dans **Valeur 1**.|  
 |**Privilégie \<valeur 2 >**|Affiche une barre indiquant dans quelle proportion cette combinaison particulière attribut-valeur affecte les résultats cibles sélectionnés dans **Valeur 2**.|  
   

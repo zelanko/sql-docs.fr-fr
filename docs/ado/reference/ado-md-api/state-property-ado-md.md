@@ -1,13 +1,11 @@
 ---
-title: State, propriété (ADO MD) | Documents Microsoft
+title: State, propriété (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,22 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - State property [ADO MD]
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 975a9354734e0f6e5d0a2502b89b43c886be5fa3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 812863395c2980f341ed2419eee1d9d661f19dd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284558"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822161"
 ---
 # <a name="state-property-ado-md"></a>State, propriété (ADO MD)
 Indique l’état actuel de l’ensemble de cellules.  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Retourne un **Long** entier qui indique l’état actuel de la [ensemble de cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) de l’objet et est en lecture seule. Les valeurs suivantes sont valides : **adStateClosed** (0) et **adStateOpen** (1).  
+ Retourne un **Long** entier indiquant l’état actuel de la [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) de l’objet et est en lecture seule. Les valeurs suivantes sont valides : **adStateClosed** (0) et **adStateOpen** (1).  
   
 ## <a name="remarks"></a>Notes  
  Pour utiliser le [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) les noms de constantes, vous devez disposer de la bibliothèque de types ADO référencée dans votre projet. Consultez [à l’aide d’ADO avec ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md) pour plus d’informations.  
@@ -40,5 +37,5 @@ Indique l’état actuel de l’ensemble de cellules.
  [Cellset, objet (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Close (méthode) (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
+ [Close, méthode (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
  [Open, méthode (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

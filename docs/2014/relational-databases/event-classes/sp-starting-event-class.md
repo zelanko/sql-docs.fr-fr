@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:Starting event class
 ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84e247df75251ac63ec08cb9c812ac8b718737a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2d16976b78013cf373f8fa7e1895a225b13ff0e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316309"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223909"
 ---
 # <a name="spstarting-event-class"></a>SP:Starting, classe d'événements
   La classe d'événements SP:Starting indique que l'exécution d'une procédure stockée débute.  
@@ -56,7 +53,7 @@ ms.locfileid: "37316309"
 |SourceDatabaseID|`int`|ID de la base de données dans laquelle se trouve l'objet.|62|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|Texte de l’appel de procédure.| 1|Oui|  
+|TextData|`ntext`|Texte de l’appel de procédure.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  
   

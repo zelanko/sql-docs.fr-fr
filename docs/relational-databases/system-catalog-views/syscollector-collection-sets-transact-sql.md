@@ -1,14 +1,11 @@
 ---
-title: syscollector_collection_sets (Transact-SQL) | Documents Microsoft
+title: syscollector_collection_sets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collection_sets_TSQL
@@ -19,32 +16,31 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collection_sets view
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7407828836e4831e313e982111df7f61bd110e8e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dcc027ad80d4bbe1142a9e17add52f8a42d7d404
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221140"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842507"
 ---
 # <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fournit des informations sur un jeu d'éléments de collecte, y compris la planification, le mode de collecte et son état.  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|collection_set_id|**int**|Identificateur local pour le jeu d'éléments de collection. N'accepte pas la valeur NULL.|  
+|collection_set_id|**Int**|Identificateur local pour le jeu d'éléments de collection. N'accepte pas la valeur NULL.|  
 |collection_set_uid|**uniqueidentifier**|Identificateur global unique du jeu d'éléments de collecte. N'accepte pas la valeur NULL.|  
-|name|**nvarchar(4000)**|Nom du jeu d'éléments de collecte. Autorise la valeur NULL.|  
+|NAME|**nvarchar(4000)**|Nom du jeu d'éléments de collecte. Autorise la valeur NULL.|  
 |target|**nvarchar(max)**|Identifie la cible pour le jeu d'éléments de collecte. Autorise la valeur NULL.|  
 |is_system|**bit**|Activé (1) ou désactivé (0) pour indiquer si le jeu d'éléments de collecte a été inclus avec le collecteur de données ou s'il a été ajouté ultérieurement par le dc_admin. Il peut s'agir d'un jeu d'éléments de collecte personnalisé développé en interne ou par un tiers. N'accepte pas la valeur NULL.|  
 |is_running|**bit**|Indique si le jeu d'éléments de collecte est en cours d'exécution ou non. N'accepte pas la valeur NULL.|  
 |collection_mode|**smallint**|Spécifie le mode de collecte pour le jeu d'éléments de collecte. N'accepte pas la valeur NULL.<br /><br /> Le mode de collecte prend l'une des valeurs suivantes :<br /><br /> 0 - Mode mis en cache. La collecte et le téléchargement de données sont sur des planifications séparées.<br /><br /> 1 - Mode non mis en cache. La collecte et le téléchargement de données sont sur la même planification.|  
-|proxy_id|**int**|Identifie le proxy qui est utilisé pour exécuter l'étape du travail du jeu d'éléments de collecte. Autorise la valeur NULL.|  
+|proxy_id|**Int**|Identifie le proxy qui est utilisé pour exécuter l'étape du travail du jeu d'éléments de collecte. Autorise la valeur NULL.|  
 |schedule_uid|**uniqueidentifier**|Fournit un pointeur vers la planification du jeu d'éléments de collecte. Autorise la valeur NULL.|  
 |collection_job_id|**uniqueidentifier**|Identifie le travail de collecte. Autorise la valeur NULL.|  
 |upload_job_id|**uniqueidentifier**|Identifie le travail de téléchargement de collecte. Autorise la valeur NULL.|  
@@ -54,7 +50,7 @@ ms.locfileid: "33221140"
 |dump_on_any_error|**bit**|Activé (1) ou désactivé (0) pour indiquer s’il faut créer un [!INCLUDE[ssIS](../../includes/ssis-md.md)] fichier de vidage en cas d’erreur. N'accepte pas la valeur NULL.|  
 |dump_on_codes|**nvarchar(max)**|Contient la liste des codes d'erreur [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilisés pour déclencher le fichier de vidage. Autorise la valeur NULL.|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Nécessite l'autorisation SELECT pour dc_operator, dc_proxy.  
   
 ## <a name="remarks"></a>Notes  

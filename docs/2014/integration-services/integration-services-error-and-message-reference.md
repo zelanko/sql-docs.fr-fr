@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b681fb6cf46ae61cf8a706925aa8d853baf38532
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a3ae4c2b4742365bc2022e602d15f00a3b37b96c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085721"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106729"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
   Les tableaux suivants répertorient les erreurs, les avertissements et les messages d'information prédéfinis de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par ordre croissant en fonction de leur numéro pour chaque catégorie, avec leurs codes numériques et noms symboliques. Chacune de ces erreurs est définie comme un champ de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> dans l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -1046,7 +1043,7 @@ ms.locfileid: "39085721"
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|Ce tampon est orphelin. Le gestionnaire de tampons s'est arrêté, laissant un tampon en cours d'utilisation. Le tampon ne sera pas nettoyé. Il est possible qu'il y ait des fuites de mémoire et d'autres problèmes.|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|Échec de la recherche de la colonne d'entrée « %1 ». Code d'erreur : 0x%2!8.8X!. La colonne d'entrée spécifiée est introuvable dans la collection de colonnes d'entrée.|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|Échec de la recherche de la colonne d'entrée avec l'ID de lignage %1!d!. Code d’erreur : 0x%2!8.8X!. La colonne d'entrée est introuvable dans la collection de colonnes d'entrée.|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|L'expression contient le jeton non reconnu « %1 ». Si « %1 » est une variable, elle doit être exprimée sous la forme « \@%1 ». Le jeton spécifié n'est pas valide. Si le jeton est destiné à être un nom de variable, il doit être précédé de la \@ symbole.|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|L'expression contient le jeton non reconnu « %1 ». Si « %1 » est une variable, elle doit être exprimée sous la forme « \@%1 ». Le jeton spécifié n'est pas valide. S'il représente un nom de variable, il doit comporter le symbole \@ en préfixe.|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|L'expression contient le jeton non reconnu « #%1!d! ».|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|La variable « %1 » est introuvable dans la collection Variables. Cette variable n'existe peut-être pas dans l'étendue correcte.|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|Échec de l'analyse de l'expression « %1 ». L'expression contient peut-être un jeton non valide, un jeton incomplet ou un élément non valide. Peut-être qu'elle n'est pas formée de manière appropriée ou qu'il manque un élément obligatoire tel qu'une parenthèse.|  
@@ -1093,7 +1090,7 @@ ms.locfileid: "39085721"
 |0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|Le composant « %1 » n'a pas pu mettre en cache la collection de suivi des références d'objets en cours d'exécution et a retourné le code d'erreur 0x%2!8.8X!.|  
 |0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|Il existe plusieurs colonnes d'entrée nommées « %1 ». La colonne d'entrée souhaitée doit être spécifiée de façon unique en tant que [Component Name].[%2] ou référencée par un ID de lignage. Actuellement, la colonne d'entrée spécifiée existe dans plusieurs composants.|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|Échec de la recherche de la colonne d'entrée nommée « [%1].[%2] ». La colonne d'entrée est introuvable dans la collection de colonnes d'entrée.|  
-|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Il existe plusieurs variables nommées « %1 ». La variable souhaitée doit être spécifiée de façon unique en tant que \@[namespace :: % 2]. La variable existe dans plusieurs espaces de noms.|  
+|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Il existe plusieurs variables nommées « %1 ». La variable souhaitée doit être spécifiée de façon unique comme \@[Namespace::%2]. La variable existe dans plusieurs espaces de noms.|  
 |0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|Le planificateur du moteur de flux de données n'a pas pu réduire le plan d'exécution pour le pipeline. Affectez la valeur False à la propriété OptimizedMode.|  
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|La fonction SQRT ne peut pas être exécutée sur des valeurs négatives, or une valeur négative a été transmise à cette fonction.|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|La fonction LN ne peut pas être exécutée sur des valeurs NULL ou négatives, or une valeur NULL ou négative a été transmise à cette fonction.|  

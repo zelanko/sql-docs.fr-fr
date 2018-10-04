@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetStringValue Method (ServerNetworkProtocolProperty Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetStringValue method
 ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bcb4cc8b3c5aee29dca2eee17b34992c93ff2d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 355fdfbec6ec57625410437400474f1f95f70788
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264255"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207329"
 ---
 # <a name="setstringvalue-method-servernetworkprotocolproperty-class"></a>Méthode SetStringValue (classe ServerNetworkProtocolProperty)
   Définit la valeur de chaîne de la propriété référencée.  
@@ -52,7 +49,7 @@ StrValue
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*StrValue*|Valeur de chaîne qui spécifie la nouvelle valeur de la propriété actuelle.|  
+|*strValue*|Valeur de chaîne qui spécifie la nouvelle valeur de la propriété actuelle.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32`, égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

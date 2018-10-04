@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85ded5847bbb2bc1c32336e999b3579925a4e930
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5088c22fed14e099f77f1ddcc1b7158f9e6f04f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325539"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202779"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>Installer des fonctionnalités SQL Server BI avec SharePoint (PowerPivot et Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut être intégré à une batterie de serveurs Microsoft SharePoint pour activer les fonctionnalités de Business Intelligence (BI) dans SharePoint. Les fonctionnalités incluent [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est utilisé pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] accès aux données dans une batterie de serveurs SharePoint. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est le moteur de données des classeurs créés dans [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel et accessibles à partir d'une bibliothèque SharePoint. Une fois que vous enregistrez un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeur sur SharePoint, il vous permet en tant que source de données pour [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] rapports.  
@@ -62,7 +59,7 @@ ms.locfileid: "37325539"
   
 ||Level|Fonctionnalités|Installer ou configurer|  
 |-|-----------|--------------|--------------------------|  
-| 1|SharePoint uniquement|Fonctionnalités natives d'Excel Services|Excel Services et autres services fournis avec SharePoint Server 2013.|  
+|1|SharePoint uniquement|Fonctionnalités natives d'Excel Services|Excel Services et autres services fournis avec SharePoint Server 2013.|  
 |**2**|SharePoint avec Analysis Services en mode SharePoint|Classeurs PowerPivot interactifs dans le navigateur|Installez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint.<br /><br /> Inscrivez le serveur Analysis Services dans Excel Services.|  
 |**3**|SharePoint avec Reporting Services en mode SharePoint|Power View|Installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint.<br /><br /> Installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complément **(rsSharePoint.msi)** pour SharePoint. Pour plus d’informations, consultez [installer ou désinstaller le logiciel complément Reporting Services pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
 |**4**|Toutes les fonctionnalités de PowerPivot|Accédez aux classeurs comme source de données provenant de l'extérieur de la batterie.<br /><br /> Actualisation planifiée des données.<br /><br /> Galerie PowerPivot.<br /><br /> Tableau de bord de gestion.<br /><br /> Type de contenu de fichier de liaison BISM.|Déployez le complément PowerPivot pour SharePoint 2013 **(spPowerPivot.msi)**. Pour plus d'informations, consultez les documents suivants :<br /><br /> [Installer ou désinstaller le PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> Pour plus d'informations sur le téléchargement de **spPowerPivot.msi**, consultez [Télécharger SQL Server 2014 PowerPivot pour SharePoint](http://go.microsoft.com/fwlink/?LinkID=296473).|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data retrieval [ADOMD.NET]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - ADOMD.NET, data retrieval
 - data retrieval [ADOMD.NET], about retrieving data
 ms.assetid: 88358189-28aa-4bc7-8dda-5a92e3a012b8
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4e5595bd4e001b006cb1dfe62cba40cee3bbb30c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cfc0c783e8c61689d8f5b0ca3bab6ded39a57a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196419"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212379"
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>Récupération de données à partir d'une source de données analytiques
   Dès lors que vous avez établi une connexion et que vous avez créé la requête, vous pouvez récupérer tout type de données. Dans ADOMD.NET, vous pouvez récupérer des données par le biais de trois objets différents (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> et <xref:System.Xml.XmlReader>) en appelant l'une des méthodes `Execute` de l'objet <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>.  

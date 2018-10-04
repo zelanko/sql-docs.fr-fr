@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.f1
 helpviewer_keywords:
 - Define Relationship dialog box
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93c76ad9d504e9ec6fc1ba417407a16bd93e8adf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bc1ab86373fc7c3b4b32cdfdbc87f5d5dd4acf8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165500"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196299"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Définir une relation (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Définir une relation** pour définir une relation entre une dimension de cube et un groupe de mesures dans le Concepteur de cube. Pour afficher la boîte de dialogue **Définir une relation** , dans le Concepteur de cube, sous l’onglet **Utilisation de la dimension** , cliquez sur **...** dans une cellule dans le volet **Grille** .  

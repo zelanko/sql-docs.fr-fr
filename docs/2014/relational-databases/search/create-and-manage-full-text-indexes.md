@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 441434839fa15b1f9345ddecf55eef3f7f248724
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 164ddc7f11b37ce7b6325f177713e6d3eca8635b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307459"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054732"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
   Les informations contenues dans les index de recherche en texte intégral sont utilisées par le Moteur d'indexation et de recherche en texte intégral pour compiler des requêtes de texte intégral qui permettent de rechercher rapidement certains mots ou combinaisons de mots dans une table. Un index de recherche en texte intégral stocke les informations se rapportant aux mots significatifs et à leur emplacement dans une ou plusieurs colonnes d'une table de base de données. Un index de recherche en texte intégral est un type spécial d'index fonctionnel par jeton qui est construit et géré par le Moteur d'indexation et de recherche en texte intégral pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le processus de création d'un index de texte intégral diffère du processus de création des autres types d'index. Au lieu de construire une structure d'arbre B (B-tree) en fonction d'une valeur stockée dans une ligne particulière, le Moteur d'indexation et de recherche en texte intégral crée une structure d'index inversée, empilée, compressée et basée sur des jetons individuels provenant du texte indexé.  La taille d’un index de recherche en texte intégral est limitée uniquement par les ressources mémoire dont dispose l’ordinateur sur lequel l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute.  
@@ -56,7 +53,7 @@ ms.locfileid: "37307459"
   
 |DocumentID|Titre|  
 |----------------|-----------|  
-| 1|Crank Arm and Tire Maintenance|  
+|1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
@@ -70,20 +67,20 @@ ms.locfileid: "37307459"
   
 |Mot clé|ColId|DocId|Occurrence|  
 |-------------|-----------|-----------|----------------|  
-|Crank| 1| 1| 1|  
-|Arm| 1| 1|2|  
-|Tire| 1| 1|4|  
-|Maintenance| 1| 1|5|  
-|Front| 1|2| 1|  
-|Front| 1|3| 1|  
-|Reflector| 1|2|2|  
-|Reflector| 1|2|5|  
-|Reflector| 1|3|2|  
-|Bracket| 1|2|3|  
-|Bracket| 1|3|3|  
-|Assembly| 1|2|6|  
-|3| 1|2|7|  
-|Installation| 1|3|4|  
+|Crank|1|1|1|  
+|Arm|1|1|2|  
+|Tire|1|1|4|  
+|Maintenance|1|1|5|  
+|Front|1|2|1|  
+|Front|1|3|1|  
+|Reflector|1|2|2|  
+|Reflector|1|2|5|  
+|Reflector|1|3|2|  
+|Bracket|1|2|3|  
+|Bracket|1|3|3|  
+|Assembly|1|2|6|  
+|3|1|2|7|  
+|Installation|1|3|4|  
   
  La colonne **Keyword** contient la représentation d'un jeton unique extrait au moment de l'indexation. Les analyseurs lexicaux déterminent le contenu d'un jeton.  
   
@@ -108,8 +105,8 @@ ms.locfileid: "37307459"
   
 |Mot clé|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Rear| 1|3| 1|  
-|Reflector| 1|3|2|  
+|Rear|1|3|1|  
+|Reflector|1|3|2|  
   
  Comme on peut le constater d'après Fragment 2, les requêtes de texte intégral doivent interroger chaque fragment en interne et ignorer les entrées plus anciennes. Par conséquent, trop de fragments d'index de recherche en texte intégral dans l'index de texte intégral peut conduire à une dégradation substantielle dans les performances des requêtes. Pour réduire le nombre de fragments, réorganisez le catalogue de texte intégral en utilisant l’option REORGANIZE de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql). Cette instruction effectue une *fusion principale*, c’est-à-dire une fusion de tous les fragments en un fragment unique plus grand, et supprime toutes les entrées obsolètes de l’index de recherche en texte intégral.  
   
@@ -117,18 +114,18 @@ ms.locfileid: "37307459"
   
 |Mot clé|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Crank| 1| 1| 1|  
-|Arm| 1| 1|2|  
-|Tire| 1| 1|4|  
-|Maintenance| 1| 1|5|  
-|Front| 1|2| 1|  
-|Rear| 1|3| 1|  
-|Reflector| 1|2|2|  
-|Reflector| 1|2|5|  
-|Reflector| 1|3|2|  
-|Bracket| 1|2|3|  
-|Assembly| 1|2|6|  
-|3| 1|2|7|  
+|Crank|1|1|1|  
+|Arm|1|1|2|  
+|Tire|1|1|4|  
+|Maintenance|1|1|5|  
+|Front|1|2|1|  
+|Rear|1|3|1|  
+|Reflector|1|2|2|  
+|Reflector|1|2|5|  
+|Reflector|1|3|2|  
+|Bracket|1|2|3|  
+|Assembly|1|2|6|  
+|3|1|2|7|  
   
  [Dans cette rubrique](#top)  
   

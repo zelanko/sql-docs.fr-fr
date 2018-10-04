@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5efe857321a5cbfc20612950227d70d7fe0b6815
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2c0ed3a548ffb67557a9ffb7bdbe932c2187ebc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275345"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205779"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilité de FileTable avec d'autres fonctionnalités SQL Server
   Décrit le fonctionnement des FileTables avec d'autres fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -117,9 +114,7 @@ ms.locfileid: "37275345"
 ##  <a name="readsec"></a> Bases de données secondaires accessibles en lecture  
  Les mêmes remarques s'appliquent aux bases de données secondaires accessibles en lecture et aux instantanés, comme décrit dans la section précédente, [Isolement de capture instantanée et FileTables](#OtherSnapshots).  
   
-##  
-  <a name="CDB">
-  </a> Bases de données autonomes et FileTables  
+##  <a name="CDB"></a> Bases de données autonomes et FileTables  
  La fonctionnalité FILESTREAM, de laquelle la fonctionnalité FileTable dépend, requiert une configuration spécifique hors de la base de données. Par conséquent, une base de données qui utilise FILESTREAM ou FileTable n'est pas entièrement contenue.  
   
  Vous pouvez définir l’autonomie de la base de données sur PARTIAL si vous souhaitez utiliser certaines fonctionnalités des bases de données autonomes, telles que les utilisateurs autonomes. Dans ce cas, toutefois, vous devez savoir qu'une partie des paramètres de la base de données ne sont pas contenus dans la base de données et ne sont pas automatiquement déplacés avec celle-ci.  

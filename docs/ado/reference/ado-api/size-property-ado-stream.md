@@ -1,13 +1,11 @@
 ---
-title: Size, propriété (flux ADO) | Documents Microsoft
+title: Size, propriété (ADO Stream) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - Size property [ADO Stream]
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6d39bb563acfde83a08f08c00fee66cc9b81967
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d35af0315460af8b110c7af38934e5d196a5c895
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281877"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696317"
 ---
-# <a name="size-property-ado-stream"></a>Taille, propriété (flux ADO)
+# <a name="size-property-ado-stream"></a>Size, propriété (objet Stream ADO)
 Indique la taille du flux en nombre d’octets.  
   
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un **Long** valeur qui spécifie la taille du flux en nombre d’octets. La valeur par défaut est la taille de flux, ou -1 si la taille du flux de données n’est pas connue.  
   
 ## <a name="remarks"></a>Notes  
- **Taille** peut être utilisé uniquement avec ouverte [flux](../../../ado/reference/ado-api/stream-object-ado.md) objets.  
+ **Taille** peut être utilisé uniquement avec open [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objets.  
   
 > [!NOTE]
->  N’importe quel nombre de bits peut être stocké dans un **flux** objet, limitée uniquement par les ressources système. Si le **flux** contient plus de bits peut être représenté par un **Long** valeur, **taille** est tronqué et par conséquent ne représentent pas avec précision la longueur de la **Flux**.  
+>  N’importe quel nombre de bits peut être stocké dans un **Stream** objet, limitée uniquement par les ressources système. Si le **Stream** contient plus de bits que peut être représenté par un **Long** valeur, **taille** est tronqué et par conséquent ne représentent pas avec précision la longueur de la **Stream**.  
   
 ## <a name="applies-to"></a>S'applique à  
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

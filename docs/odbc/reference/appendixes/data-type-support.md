@@ -1,13 +1,11 @@
 ---
-title: Prise en charge de Type de données | Documents Microsoft
+title: Prise en charge de Type de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
@@ -15,17 +13,17 @@ helpviewer_keywords:
 - data types [ODBC], ODBC drivers
 - ODBC drivers [ODBC], data types
 ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 820e48a17e397bc9046c8ca431677074e69b8cb2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9a3d63f0bf1923905c5281655aff2af294b8284
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848187"
 ---
 # <a name="data-type-support"></a>Prise en charge du type de données
-ODBC (pilotes) doivent prendre en charge au moins un des SQL_CHAR et SQL_VARCHAR. Prise en charge d’autres types de données est déterminée par le niveau de conformité de la source données ou du pilote SQL-92. Une application doit appeler **SQLGetTypeInfo** pour déterminer les types de données pris en charge par le pilote.  
+Pilotes ODBC doivent prendre en charge au moins une des SQL_CHAR et SQL_VARCHAR. Prise en charge pour les autres types de données est déterminée par le niveau de conformité de la source du pilote ou de données SQL-92. Une application doit appeler **SQLGetTypeInfo** pour déterminer les types de données pris en charge par le pilote.  
   
- Pour plus d’informations sur les types de données, consultez [annexe d : les Types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md).
+ Pour plus d’informations sur les types de données, consultez [annexe d : Types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md).

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
-caps.latest.revision: 23
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d7e3c070c8054378aeae2e3be8e6a2a237c4c3b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfc25b918c9cca50af6ac7c57bfc0ce1c1b4c3c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252651"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088609"
 ---
 # <a name="query-options-execution-ansi-page"></a>Options de requête (page ANSI)
   Utilisez cette page pour spécifier si [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécute les requêtes avec l’ensemble ou une partie des paramètres spécifiés dans la norme ISO (ANSI).  
@@ -57,7 +54,7 @@ ms.locfileid: "37252651"
  **SET ANSI_NULLS**  
  Spécifie le comportement conforme à la norme ISO, des opérateurs d'égalité (`=`) et de différence (`<>`), lorsqu'ils sont utilisés avec des valeurs NULL. Conformément à la norme ISO, quand **SET ANSI_NULLS** est sélectionné, toutes les comparaisons effectuées sur une valeur NULL retournent la valeur UNKNOWN. Quand **SET ANSI_NULLS** n’est pas sélectionné, les comparaisons de toutes les données par rapport à une valeur NULL sont vraies (TRUE) si la valeur des données est NULL. Cette option est activée par défaut.  
   
- **Réinitialiser les valeurs par défaut**  
+ **Rétablir les valeurs par défaut**  
  Rétablit toutes les valeurs par défaut initiales des options de cette page.  
   
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.general.f1
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 54ef8ce15795f8744b8ab7d368c05892a2dc850a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 612a997e51e23c6b8d3b1860fbc74df79de6c73c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170150"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211099"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Général (boîte de dialogue Propriétés de partition) (SSMS)
   Utilisez la page **Général** de la boîte de dialogue **Propriétés de partition** de SQL Server Management Studio pour définir les propriétés générales d'une partition d'un groupe de mesures d'un cube d'une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -43,7 +40,7 @@ ms.locfileid: "37170150"
 |**Nom**|Affiche le nom de la partition.|  
 |**Mode de traitement**|Sélectionnez le mode de traitement à utiliser pour la partition. Pour plus d’informations sur les modes de traitement des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consultez [traitement d’un objet de modèle multidimensionnel](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
 |**ID de Source de données distante**|Affiche l'identificateur de la source de données distante d'où est extraite la partition.<br /><br /> Remarque : cette propriété contient une valeur uniquement pour les partitions distantes.|  
-|**Tranche**|Affiche l'expression qui identifie la tranche de données représentée par la partition.|  
+|**tranche**|Affiche l'expression qui identifie la tranche de données représentée par la partition.|  
 |**Source**|Affiche la table ou la requête qui fournit la source de données pour la partition.|  
 |**État**|Affiche l'état actuel du traitement de la partition.|  
 |**Emplacement de stockage**|Affiche le dossier dans lequel les données de la partition sont stockées.<br /><br /> Remarque : cette propriété contient une valeur uniquement si un emplacement de stockage différent de celui par défaut de l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est spécifié.|  

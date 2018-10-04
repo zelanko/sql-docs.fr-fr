@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managedbackup.configure.f1
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
-caps.latest.revision: 9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d09c001bc7c267b2235377a1312609ee8b7b3fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0403d34b48b74d0517aaf3cb31ea520dbc436f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165599"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configuration de la sauvegarde managée (SQL Server Management Studio)
   Le **sauvegarde managée** boîte de dialogue permet de configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] valeurs par défaut pour l’instance. Cette rubrique explique comment utiliser cette boîte de dialogue pour configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] paramètres par défaut pour l’instance et les options que vous devez prendre en compte lors de cette opération. Lorsque [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est configuré pour l’instance, les paramètres sont appliqués aux nouvelles bases de données créées par la suite.  
@@ -35,7 +32,7 @@ ms.locfileid: "37209829"
 ## <a name="includesssmartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Fonctions utilisant l’interface de sauvegarde managée dans SQL Server Management Studio  
  Dans cette version, vous pouvez uniquement configurer des paramètres par défaut au niveau de l’instance à l’aide de la **Management sauvegarde** interface. Vous ne pouvez pas configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données, suspendre ou reprendre [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] opérations ou des notifications par courrier électronique de programme d’installation. Pour plus d’informations sur la façon d’effectuer des opérations non pris en charge par le biais du **sauvegarde managée** l’interface, consultez [SQL Server Managed Backup pour Windows Azure - paramètres de rétention et stockage](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  **Nœud de sauvegarde vue managé est SQL Server Management Studio :** pour afficher **sauvegarde managée** nœud **Explorateur d’objets**, vous devez être un administrateur système ou disposer des autorisations suivantes spécifiquement accordées à votre compte d’utilisateur :  
   
 -   `db_backupoperator`  

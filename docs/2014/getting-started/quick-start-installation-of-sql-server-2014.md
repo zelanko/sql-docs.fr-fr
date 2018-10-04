@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - data-quality-services
@@ -14,23 +13,21 @@ ms.technology:
 - replication
 - reporting-services-native
 - reporting-services-sharepoint
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - quick start installation [SQL Server]
 - installation [SQL Server]
 - installing SQL Server, quick start installations
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
-caps.latest.revision: 48
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1b7b5a6a8d763c2773e048f2302f874806a8c27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c682b29a4265b9c6955b440dc45e4920ca87d081
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231799"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223379"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Installation de démarrage rapide de SQL Server 2014
     
@@ -81,7 +78,7 @@ ms.locfileid: "37231799"
   
      Consultez [installer des fonctionnalités BI SQL Server 2014](../sql-server/install/install-sql-server-business-intelligence-features.md) pour plus d’informations sur l’installation des fonctionnalités qui font partie de la plateforme Microsoft BI, qui incluent [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]et plusieurs applications clientes servant à créer ou utiliser des données analytiques.  
   
--   **Installation d’un cluster de basculement **  
+-   **Installation d’un cluster de basculement**   
   
      Consultez [Installation de Cluster de basculement SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) pour obtenir des informations sur l’installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cluster de basculement.  
   
@@ -100,7 +97,7 @@ ms.locfileid: "37231799"
   
  Vous pouvez rechercher des explications détaillées de ces tâches dans la section suivante.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 ###  <a name="BKMK_BeforeYouInstall"></a> Planification d’une [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Installation  
  Avant d'installer [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vous devez vérifier les configurations matérielle et logicielle requises, les considérations relatives au réseau et à Internet, ainsi que les considérations relatives à la sécurité pour l'installation et l'exécution de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [planification d’une Installation SQL Server](../../2014/sql-server/install/planning-a-sql-server-installation.md) et également les rubriques suivantes :  

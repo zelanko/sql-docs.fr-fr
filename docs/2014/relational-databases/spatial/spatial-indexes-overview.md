@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e21d0142212541ff41bef6ba76f8e274235b86a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a775ffdbe70eb47214ecb100ad395d37ca79a38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194969"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113629"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les données spatiales et les index spatiaux. Un *index spatial* est un type d'index étendu qui vous permet d'indexer une colonne spatiale. Une colonne spatiale est une colonne de table qui contient des données d'un type de données spatiales, tel que `geometry` ou `geography`.  
@@ -151,7 +148,7 @@ ms.locfileid: "37194969"
   
  L’illustration suivante montre les points définis par le `(` *x-min ***,*** y-min* `)` et `(` *x-max ***,*** y-max* `)` coordonnées du rectangle englobant. Le niveau supérieur de la hiérarchie de grille est illustré comme une grille 4x4. À des fins d'illustration, les niveaux inférieurs sont omis. L'espace en dehors de la zone englobante est indiqué par un zéro (0). Notez que l'objet 'A' s'étend en partie au-delà du cadre et que l'objet 'B' se trouve complètement à l'extérieur du cadre dans la cellule 0.  
   
- ![Rectangle englobant affichant les coordonnées et la cellule 0.] (../../database-engine/media/spndx-bb-4x4-objects.gif "Rectangle englobant affichant les coordonnées et la cellule 0.")  
+ ![Rectangle englobant affichant les coordonnées et la cellule 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Rectangle englobant affichant les coordonnées et la cellule 0.")  
   
  Un cadre englobant correspond à une partie des données spatiales d'une application. Le fait que le cadre englobant de l'index contienne toutes les données stockées dans la colonne spatiale ou uniquement une partie d'entre elles dépend de l'application. Seules les opérations calculées sur des objets qui sont entièrement à l'intérieur de la zone englobante tirent parti de l'index spatial. Par conséquent, pour profiter au plus d'un index spatial sur une colonne `geometry`, vous devez spécifier une zone englobante qui contient tous les objets ou la plupart d'entre eux.  
   

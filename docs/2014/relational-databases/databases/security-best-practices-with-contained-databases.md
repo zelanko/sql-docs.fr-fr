@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f6bc6472ed6e40016448b9088db497c770eaaa09
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 649d92089f8e46a9618e7416ee959d153385f1c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300519"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193669"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Meilleures pratiques de sécurité recommandées avec les bases de données autonomes
   Les bases de données autonomes présentent quelques menaces originales que les administrateurs du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doivent connaître et limiter. La plupart des menaces sont liées à la `USER WITH PASSWORD` processus d’authentification, qui déplace la limite de l’authentification à partir de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] niveau au niveau base de données.  
@@ -90,9 +87,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
  Ne configurez pas de bases de données autonomes pour la fermeture automatique. Si la base de données est fermée, son ouverture pour authentifier un utilisateur consomme des ressources supplémentaires et risque de contribuer à une attaque par déni de service.  
   
 ## <a name="see-also"></a>Voir aussi  
- 
-  [Bases de données autonomes](contained-databases.md)   
- 
-  [Migrer vers une base de données partiellement autonome](migrate-to-a-partially-contained-database.md)  
+ [Bases de données autonomes](contained-databases.md)   
+ [Migrer vers une base de données partiellement autonome](migrate-to-a-partially-contained-database.md)  
   
   
