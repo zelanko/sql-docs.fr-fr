@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 20c212e7829a04e1c6261a8818cebf7534d2529a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df688c3948c30bae3feef03fefbc1171e5c98491
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220725"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Page Rapports générés interactifs (Gestionnaire de rapports)
   Un rapport généré interactif affiche une table de données associées lorsque vous cliquez sur les données interactives contenues dans votre rapport. Ces rapports sont générés par le serveur de rapports à partir des informations contenues dans le modèle utilisé pour créer le rapport. Si vous ne souhaitez pas utiliser les rapports générés interactifs que le serveur de rapports génère, vous pouvez créer des rapports personnalisés que vous publiez sur un serveur de rapports et mappez aux points de données interactifs définis dans le modèle. Les rapports personnalisés doivent être créés dans le Générateur de rapports à partir du même modèle, puis publiés sur le serveur de rapports. Pour mapper des rapports personnalisés aux éléments dans le modèle, utilisez la page Rapports générés interactifs dans le Gestionnaire de rapports.  

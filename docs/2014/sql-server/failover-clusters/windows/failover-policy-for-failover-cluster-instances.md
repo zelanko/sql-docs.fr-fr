@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3b48cf86ed58813c8bcaccea0506e55feb7927a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2114b180a1ecabf3f792437a113b9f4bedef8a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238189"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218219"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Stratégie de basculement pour les instances de cluster de basculement
   Dans une instance de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , un seul nœud peut posséder le groupe de ressources de cluster de basculement Windows Server (WSFC) à un moment donné. Les demandes des clients sont servies par ce nœud dans la FCI. En cas d'échec et d'un redémarrage infructueux, la propriété du groupe est déplacée vers un autre nœud WSFC dans la FCI. Ce processus s'appelle le basculement. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] augmente la fiabilité de la détection de pannes et fournit une stratégie de basculement flexible.  
@@ -98,7 +95,7 @@ ms.locfileid: "37238189"
 |Niveau|Condition|Description|  
 |-----------|---------------|-----------------|  
 |0|Aucun basculement ou redémarrage automatique|Indique qu'aucun basculement ou redémarrage ne sera déclenché automatiquement sur n'importe quelle condition d'échec. Ce niveau existe uniquement à des fins de maintenance système.|  
-| 1|Basculement ou redémarrage sur arrêt du serveur|Indique qu'un redémarrage ou basculement de serveur sera déclenché en fonction de la condition suivante :<br /><br /> Le service SQL Server est fermé.|  
+|1|Basculement ou redémarrage sur arrêt du serveur|Indique qu'un redémarrage ou basculement de serveur sera déclenché en fonction de la condition suivante :<br /><br /> Le service SQL Server est fermé.|  
 |2|Basculement ou redémarrage sur non-réponse du serveur|Indique qu'un redémarrage ou basculement de serveur sera déclenché si l'une des conditions suivantes est rencontrée :<br /><br /> Le service SQL Server est fermé.<br /><br /> L'instance SQL Server ne répond pas (la DLL de ressource ne reçoit pas des données de sp_server_diagnostics dans les paramètres HealthCheckTimeout).|  
 |3|Basculement ou redémarrage sur des erreurs de serveur critiques|Indique qu'un redémarrage ou basculement de serveur sera déclenché si l'une des conditions suivantes est rencontrée :<br /><br /> Le service SQL Server est fermé.<br /><br /> L'instance SQL Server ne répond pas (la DLL de ressource ne reçoit pas des données de sp_server_diagnostics dans les paramètres HealthCheckTimeout).<br /><br /> La procédure stockée système sp_server_diagnostics retourne une « erreur système ».|  
 |4|Basculement ou redémarrage sur des erreurs de serveur modérées|Indique qu'un redémarrage ou basculement de serveur sera déclenché si l'une des conditions suivantes est rencontrée :<br /><br /> Le service SQL Server est fermé.<br /><br /> L'instance SQL Server ne répond pas (la DLL de ressource ne reçoit pas des données de sp_server_diagnostics dans les paramètres HealthCheckTimeout).<br /><br /> La procédure stockée système sp_server_diagnostics retourne une « erreur système ».<br /><br /> La procédure stockée système sp_server_diagnostics retourne une « erreur de ressource ».|  

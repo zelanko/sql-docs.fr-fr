@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - XML for Analysis, properties
 - XMLA, properties
 ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04e2b96df0cc549acadd50d80356a62bf327b7c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d7898c0f7263bf5355934ec072511bfd8483028
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243959"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215919"
 ---
 # <a name="supported-xmla-properties-xmla"></a>Propriétés XMLA prises en charge (XMLA)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge les propriétés répertoriées dans le tableau suivant. Vous utilisez ces propriétés répertoriées dans le [propriétés](properties-element-xmla.md) élément de la [Discover](../xml-elements-methods-discover.md) et [Execute](../xml-elements-methods-execute.md) méthodes.  
@@ -225,7 +222,7 @@ ms.locfileid: "37243959"
 |-----------|-----------------|  
 |*Tabulaire*|Retourne un résultat défini à l’aide du [ensemble de lignes](../xml-data-types/rowset-data-type-xmla.md) type de données.|  
 |*Multidimensionnel*|Retourne un ensemble de lignes à l’aide de la [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) type de données.|  
-|*Natif*|Aucun format n'est spécifié explicitement. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] retourne le format approprié pour la commande. Le type de résultat réel est identifié par l'espace de noms du résultat.|  
+|*natif*|Aucun format n'est spécifié explicitement. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] retourne le format approprié pour la commande. Le type de résultat réel est identifié par l'espace de noms du résultat.|  
   
 |Nom   |Élément|  
 |----------|-------------|  
