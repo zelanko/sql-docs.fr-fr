@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5195df44c591f4c605cfd33aa6bb9934c7d54908
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b2e4feb3f09b8012c17156e085e16dcf39df3088
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163500"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183519"
 ---
 # <a name="database-object-security-master-data-services"></a>Sécurité de l'objet de base de données (Master Data Services)
   Dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , les données sont stockées dans plusieurs tables de base de données et sont visible dans les vues. Les informations que vous avez sécurisées dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sont visibles aux utilisateurs qui ont accès à la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -48,7 +45,7 @@ ms.locfileid: "37163500"
 ##  <a name="Staging"></a> Mise en lots de données  
  Dans le tableau suivant, le nom de chaque élément sécurisable comporte le terme « name ». Il indique le nom de la table de mise en lots spécifié lors de la création d'une entité. Pour plus d’informations, consultez [importation des données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
-|Action|Éléments sécurisables|Autorisations|  
+|Action|Éléments sécurisables|Permissions|  
 |------------|----------------|-----------------|  
 |Chargez les membres feuille et leurs attributs dans la table de mise en lots.|stg.name_Leaf|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
 |Chargez les données de la table de mise en lots Feuille dans les tables de base de données MDS appropriées.|stg.udp_name_Leaf|Exécutez|  
@@ -62,7 +59,7 @@ ms.locfileid: "37163500"
   
 ##  <a name="rules"></a> Validation de données par rapport aux règles d’entreprise  
   
-|Action|Élément sécurisable|Autorisations|  
+|Action|Élément sécurisable|Permissions|  
 |------------|---------------|-----------------|  
 |Valider une version des données par rapport aux règles d'entreprise|mdm.udpValidateModel|Exécutez|  
   
@@ -70,7 +67,7 @@ ms.locfileid: "37163500"
   
 ##  <a name="Versions"></a> Suppression de versions  
   
-|Action|Éléments sécurisables|Autorisations|  
+|Action|Éléments sécurisables|Permissions|  
 |------------|----------------|-----------------|  
 |Déterminer l'ID de la version que vous souhaitez supprimer|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |Supprimer une version d'un modèle|mdm.udpVersionDelete|Exécutez|  
@@ -79,7 +76,7 @@ ms.locfileid: "37163500"
   
 ##  <a name="Hierarchy"></a> Application immédiate des autorisations des membres de la hiérarchie  
   
-|Action|Éléments sécurisables|Autorisations|  
+|Action|Éléments sécurisables|Permissions|  
 |------------|----------------|-----------------|  
 |Application immédiate d'autorisations de membre|mdm.udpSecurityMemberProcessRebuildModel|Exécutez|  
   
@@ -87,7 +84,7 @@ ms.locfileid: "37163500"
   
 ##  <a name="SysAdmin"></a> Modification du compte d’administrateur système  
   
-|Action|Éléments sécurisables|Autorisations|  
+|Action|Éléments sécurisables|Permissions|  
 |------------|----------------|-----------------|  
 |Déterminer le SID du nouvel administrateur|mdm.tblUser|SELECT|  
 |Modifier le compte de l'administrateur système|mdm.udpSecuritySetAdministrator|Exécutez|  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic Analysis Services administration
 - administering Analysis Services
 ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d3d928ceb2fc390ee65ed413b6199965e1684823
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11385dd002acd7b0181422aaa571fe8fe46f188c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300949"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186069"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Tâches d'administration à l'aide de scripts dans Analysis Services
   Vous pouvez automatiser des tâches d'administration [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en écrivant ou en générant des scripts qui peuvent être exécutés manuellement ou planifiés grâce à SQL Server Agent. Le tableau suivant résume les options de script à votre disposition et fournit des liens vers des informations supplémentaires.  
@@ -36,7 +33,7 @@ ms.locfileid: "37300949"
 |||Pour créer un script XMLA, vous pouvez utiliser le générateur de script dans Management Studio. Au niveau de l'objet, cliquez avec le bouton droit sur un objet pour générer un script qui crée, modifie, ou supprime un objet. Au niveau de la commande, comme pour le traitement, la sauvegarde ou la restauration, la conception d'agrégation, ou une autre commande, vous pouvez générer un script à l'aide de la fonctionnalité Script dans la boîte de dialogue, en choisissant les options qui placent le script dans une nouvelle fenêtre, dans un fichier ou dans le Presse-papiers. Vous pouvez également écrire un script XMLA manuellement dans un éditeur de texte ou un éditeur de code, ou utiliser un modèle dans l'Explorateur de modèles. Pour exécuter le script, utilisez l'une de ces approches :<br /><br /> Utilisez Management Studio pour créer ou modifier directement des objets sur une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].<br /><br /> Utilisez SQL Server Agent pour planifier un travail qui inclut une tâche de commande Analysis Services.<br /><br /> Utilisez l'applet de commande Invoke-ASCmd pour exécuter le script dans une session PowerShell.||  
 |Script MDX|.mdx|Le langage MDX (Multidimensional Expression) est un langage de requête standard pour les sources de données analytiques qui fait également partie de la spécification XMLA.<br /><br /> Vous pouvez créer un fichier de script MDX autonome qui interroge des données ou des informations système. Par exemple, des vues de gestion dynamique (DMV) qui exposent des informations sur les opérations du serveur local et l'intégrité du serveur sont accessibles par l'intermédiaire de l'instruction MDX SELECT.<br /><br /> Le script MDX s'exécute sur des serveurs en mode multidimensionnel et tabulaire. Vous pouvez exécuter le script en mode interactif à partir de SQL Server Management Studio, ou à partir d'une session PowerShell avec `Invoke-ASCmd`.|[Principes de base des scripts MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)<br /><br /> [Utiliser des vues de gestion dynamique &#40;DMV&#41; pour surveiller Analysis Services](instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)<br /><br /> [Utiliser des modèles Analysis Services dans SQL Server Management Studio](instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Script DMX|.dmx|DMX (Data Mining Extensions) est un langage de définition de données, de manipulation des données et un langage de requête de données pour les modèles d'exploration de données. Vous pouvez utiliser un modèle comme point de départ.|[Créer une requête DMX dans SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Utiliser des modèles Analysis Services dans SQL Server Management Studio](instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|[!INCLUDE[ssIS](../includes/ssis-md.md)] packages|.dtsx|[!INCLUDE[ssIS](../includes/ssis-md.md)] Fournit des flux de données et les tâches que créer, modifier, supprime et traite des objets Analysis Services, y compris les modèles d’exploration de données. Vous pouvez planifier un package à exécuter à l'aide de SQL Server Agent.|[Tâche DDL d’exécution de SQL Server Analysis Services](../integration-services/control-flow/analysis-services-execute-ddl-task.md)<br /><br /> [Tâche de traitement d’Analysis Services](../integration-services/control-flow/analysis-services-processing-task.md)<br /><br /> [Tâche de requête d’exploration de données](../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Destination d’apprentissage du modèle d’exploration de données](../integration-services/data-flow/data-mining-model-training-destination.md)<br /><br /> [Destination de traitement de dimension](../integration-services/data-flow/dimension-processing-destination.md)<br /><br /> [Destination de traitement de partition](../integration-services/data-flow/partition-processing-destination.md)|  
+|[!INCLUDE[ssIS](../includes/ssis-md.md)] Packages|.dtsx|[!INCLUDE[ssIS](../includes/ssis-md.md)] Fournit des flux de données et les tâches que créer, modifier, supprime et traite des objets Analysis Services, y compris les modèles d’exploration de données. Vous pouvez planifier un package à exécuter à l'aide de SQL Server Agent.|[Tâche DDL d’exécution de SQL Server Analysis Services](../integration-services/control-flow/analysis-services-execute-ddl-task.md)<br /><br /> [Tâche de traitement d’Analysis Services](../integration-services/control-flow/analysis-services-processing-task.md)<br /><br /> [Tâche de requête d’exploration de données](../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Destination d’apprentissage du modèle d’exploration de données](../integration-services/data-flow/data-mining-model-training-destination.md)<br /><br /> [Destination de traitement de dimension](../integration-services/data-flow/dimension-processing-destination.md)<br /><br /> [Destination de traitement de partition](../integration-services/data-flow/partition-processing-destination.md)|  
 |Objets AMO (Analysis Management Objects)||AMO est l'interface gérée que les programmeurs peuvent utiliser pour développer des applications personnalisées qui automatisent des opérations d'administration. À l'aide d'AMO, vous pouvez développer une application personnalisée qui exécute des scripts XMLA, MDX ou DMX que vous fournissez.|[Programmation de tâches d’administration avec AMO](multidimensional-models/analysis-management-objects/programming-administrative-tasks-with-amo.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

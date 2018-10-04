@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.number.f1
@@ -19,16 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.number.f1
 - "10285"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bf89915223f0ee141b77aacc8eec2a87191bfcca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e911f31751ed0ef2d6fedb17c1b79affde79eef3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288335"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166159"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Mise en forme des nombres et des dates (Générateur de rapports et SSRS)
   Vous pouvez mettre en forme les nombres et les dates dans les régions de données en sélectionnant un format dans la page **Nombre** de la boîte de dialogue **Propriétés** de la région de données correspondante.  
@@ -56,7 +53,7 @@ ms.locfileid: "37288335"
   
 -   Si vous spécifiez une chaîne de format non valide, le texte mis en forme est interprété en tant que chaîne littérale qui remplace la mise en forme.  
   
--   Si vous mettez en forme une combinaison de nombres et de caractères dans une même zone de texte, envisagez d'utiliser un espace réservé pour mettre en forme les nombres en les séparant du reste du texte. Pour plus d’informations, consultez [Formatting Text and Placeholders &#40;Report Builder and SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md). Si une chaîne de format non valide est spécifiée pour la propriété Format de la zone de texte, la chaîne de format est ignorée. Si une chaîne de format non valide est spécifiée pour la propriété Format du graphique ou de la jauge, la chaîne de format que vous avez spécifiée est interprétée en tant que chaîne et la mise en forme n’est pas appliquée.  
+-   Si vous mettez en forme une combinaison de nombres et de caractères dans une même zone de texte, envisagez d'utiliser un espace réservé pour mettre en forme les nombres en les séparant du reste du texte. Pour plus d’informations, consultez [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md). Si une chaîne de format non valide est spécifiée pour la propriété Format de la zone de texte, la chaîne de format est ignorée. Si une chaîne de format non valide est spécifiée pour la propriété Format du graphique ou de la jauge, la chaîne de format que vous avez spécifiée est interprétée en tant que chaîne et la mise en forme n’est pas appliquée.  
   
 -   Si vous sélectionnez **Devise** sous **Catégorie** et si vous activez **Afficher les valeurs en**, vous pouvez sélectionner **Milliers**, **Millions**ou **Milliards** pour afficher les nombres au format financier. Par exemple, si la valeur du champ est 1 789 905 394, que vous sélectionnez **Milliards** et spécifiez 2 comme nombre de décimales, la valeur affichée dans le rapport est 1,78.  
   

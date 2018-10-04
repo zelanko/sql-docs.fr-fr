@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Expression Builder [Integration Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SSIS, expressions
 - tools [Integration Services], Expression Builder
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2410b6c9cb601b47f1a55f9601a2bb7afe0cc593
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce809b13c9f9d1efdedea43d097c38ea955076f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193589"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189789"
 ---
 # <a name="expression-builder-integration-services"></a>Générateur d'expressions (Integration Services)
   La boîte de dialogue **Générateur d'expression** offre une interface graphique utilisateur qui permet de générer les expressions utilisées par les expressions de propriété. Vous pouvez accéder à la boîte de dialogue **Générateur d'expression** à partir des boîtes de dialogue des tâches personnalisées du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] et de la fenêtre **Propriétés** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
