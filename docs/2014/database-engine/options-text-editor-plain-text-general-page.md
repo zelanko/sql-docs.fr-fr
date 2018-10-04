@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
-caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b66c8286d3ae062307175e689f222f33ea3be6a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa8ab18d7ca4e44d3b30129c7353c24660cd0b3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150990"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090941"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Éditeur de texte - Texte brut - Page Général)
   Utilisez cette boîte de dialogue pour modifier le comportement d'édition général de l'Éditeur de texte, qui permet de modifier un document non associé à un langage de développement particulier. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils** , développez **Éditeur de texte**, développez **Texte brut** , puis cliquez sur **Général**.  

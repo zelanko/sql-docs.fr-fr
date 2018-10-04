@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], custom extensions
 - delivery extensions [Reporting Services]
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 213113dedeed3e5401081ff8ff7345b5d2fb09f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86c0aa75e73c59980e8de6456556087201d949d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220839"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153099"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Des extensions personnalisées ont été détectées sur le serveur de rapports (Conseiller de mise à niveau)
   Le Conseiller de mise à niveau a détecté des paramètres d'extension personnalisés dans les fichiers de configuration, ce qui indique que votre installation inclut une ou plusieurs extensions personnalisées pour le traitement des données, la remise, le rendu, la sécurité ou l'authentification. La mise à niveau déplacera les paramètres de configuration d'extension avec le serveur de rapports mis à niveau. Toutefois, si les extensions personnalisées sont installées dans le dossier installation du serveur de rapports existant, les fichiers d'assembly pour ces extensions personnalisées ne seront pas déplacés vers le nouveau dossier d'installation pendant la mise à niveau. Une fois la mise à niveau terminée, vous devez déplacer les fichiers d'assembly vers le nouveau dossier d'installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

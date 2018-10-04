@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32d275fd784bac6d5c5ebefe36c640afe6e94726
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1e462ad252406c6841bdd4fefa66aa3ff4bb249
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203309"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108739"
 ---
 # <a name="extended-events-tools"></a>Outils associés aux événements étendus
   Vous pouvez utiliser les outils suivants pour créer et gérer des sessions d’événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -35,7 +32,7 @@ ms.locfileid: "37203309"
   
 -   Fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Il s’agit d’un outil puissant que vous pouvez utiliser pour créer, modifier et gérer des sessions d’événements étendus. Pour plus d’informations, consultez [Utiliser le fournisseur PowerShell pour les événements étendus](use-the-powershell-provider-for-extended-events.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cela vous permet de créer et d'exécuter les exemples de code fournis dans les rubriques Événements étendus. Pour plus d’informations, consultez [Explorateur d’objets](../../ssms/object/object-explorer.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Cela vous permet de créer et d'exécuter les exemples de code fournis dans les rubriques Événements étendus. Pour plus d’informations, consultez [Explorateur d’objets](../../ssms/object/object-explorer.md).  
   
  En plus des sessions que vous créez, une session de l'intégrité du système par défaut existe sur le serveur. Elle recueille des données système qui peuvent vous aider à résoudre des problèmes de performances. Pour plus d’informations, consultez [Utiliser la session system_health](use-the-ssms-xe-profiler.md).  
   

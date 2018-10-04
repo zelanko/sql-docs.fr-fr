@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0488b231-1045-4169-aabb-c1005d86ca30
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22bfe87f9d0cd09d2d7c7f650d500398b936cde0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ad99c202d858bbdf5de47a21fe26070328e2de2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216239"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119629"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Création d'une solution et d'une source de données (Didacticiel sur l'exploration de données intermédiaire)
   Pour travailler avec l’exploration de données, vous devez d’abord créer un projet dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] à l’aide du modèle, **Analysis Services Multidimensional and Data Mining Project**. Lorsque vous ouvrez le modèle, il charge dans le concepteur tous les schémas dont vous pourriez avoir besoin pour l'exploration de données : sources de données, structures et modèles d'exploration de données, et même cubes si votre structure d'exploration de données utilise des données multidimensionnelles.  

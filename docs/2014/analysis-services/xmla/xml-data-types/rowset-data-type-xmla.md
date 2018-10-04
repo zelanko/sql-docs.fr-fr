@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Rowset Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c4ce1858e8274e5ae964c497972b4f2b082a712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279445"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170119"
 ---
 # <a name="rowset-data-type-xmla"></a>Type de données Rowset (XMLA)
   Définit un type de données dérivé qui représente un [racine](../xml-elements-properties/root-element-xmla.md) élément qui retourne des données tabulaires à partir d’un [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) appel de méthode.  
@@ -62,8 +59,8 @@ ms.locfileid: "37279445"
 |Relation|Élément|  
 |------------------|-------------|  
 |Éléments parents|None|  
-|Éléments enfants|[ligne](../xml-elements-properties/row-element-xmla.md)|  
-|Éléments dérivés|[racine](../xml-elements-properties/root-element-xmla.md)|  
+|Éléments enfants|[Ligne](../xml-elements-properties/row-element-xmla.md)|  
+|Éléments dérivés|[Racine](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>Notes  
  XML n'autorise pas certains caractères en tant que noms d'élément et d'attribut. Pour répondre à cette contrainte d’affectation de noms, XML for Analysis (XMLA) prend en charge l’encodage tel que défini par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour les noms de colonnes qui contiennent des caractères de nom XML qui ne sont pas valides après la spécification XML 1.0, XMLA utilise les valeurs hexadécimales correspondantes pour encoder des caractères Unicode qui ne sont pas valides. Les valeurs hexadécimales sont échappés sous la forme _x*HHHH*\_, où *HHHH* représente le code de UCS-2 hexadécimal à quatre chiffres du caractère dans l’ordre premier bit le plus significatif. Par exemple, XMLA encode le nom Order Details sous la forme Order_x0020_Details remplaçant ainsi l'espace par le code hexadécimal correspondant.  

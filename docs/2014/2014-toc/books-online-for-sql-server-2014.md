@@ -4,8 +4,6 @@ ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 f1_keywords:
 - sql12.portal.f1
@@ -21,20 +19,20 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310196"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161759"
 ---
-# Documentation en ligne de SQL Server 2014
+# <a name="books-online-for-sql-server-2014"></a>Documentation en ligne de SQL Server 2014
   Bienvenue dans [!INCLUDE[msCoName](../includes/msconame-md.md)]® la documentation en ligne pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. La documentation en ligne contient les descriptions des tâches et la documentation de référence qui explique comment effectuer le travail de décisionnel et de gestion de données à l’aide de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Essayez :**  
  ![Machine virtuelle Azure de petite taille](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Vous avez un compte Azure ?  Puis accédez **[ici](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** pour lancer une Machine virtuelle avec SQL Server 2014 Service Pack 1 (SP1) déjà installé. Pour plus d’informations sur SQL Server 2014 (SP1), consultez [les informations de version de SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
   
-## Technologies SQL Server  
+## <a name="sql-server-technologies"></a>Technologies SQL Server  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inclut plusieurs technologies de gestion et d'analyse des données. Cliquez sur les liens dans le tableau suivant pour rechercher la fonctionnalité, la tâche et la documentation de référence relative à chaque technologie.  
   
 |||  
@@ -47,7 +45,7 @@ ms.locfileid: "39310196"
 |![Icône réplication](media/replication.gif "icône réplication")|[Réplication](../relational-databases/replication/sql-server-replication.md)<br /><br /> La réplication repose sur un ensemble de technologies qui permettent de copier et de distribuer des données et des objets de base de données d'une base de données vers une autre, puis de synchroniser les bases de données afin de maintenir leur cohérence. Avec la réplication, vous pouvez distribuer des données vers différents emplacements et à des utilisateurs distants ou mobiles par l'intermédiaire de réseaux locaux ou étendus, de connexions d'accès à distance, de connexions sans fil et d'Internet.|  
 |![Icône de Reporting Services](media/reportingservices.gif "icône Reporting Services")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services fournit des fonctionnalités Web de création de rapports d'entreprise qui permettent d'extraire du contenu d'une large gamme de sources de données, de publier des rapports dans différents formats et de gérer de façon centralisée la sécurité et les abonnements.|  
   
-## Informations SQL Server sur le Web  
+## <a name="sql-server-information-on-the-web"></a>Informations SQL Server sur le Web  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] publie des informations supplémentaires sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur plusieurs sites Web.  
   
  **Sites Web de SQL Server**  
@@ -64,7 +62,7 @@ ms.locfileid: "39310196"
   
 -   [Centre de développement XML](http://go.microsoft.com/fwlink/?LinkId=42458)  
   
-## Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Aide sur le Gestionnaire de configuration SQL Server](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 243524a0f073ab1950398eff715bd1f1420144a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0035994dbcc1e0f4aebf01b6dbc4b69dcb7bfb6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291345"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157949"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instances du moteur de base de données (SQL Server)
   Une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] est une copie de la `sqlservr.exe` exécutable qui s’exécute comme un service de système d’exploitation. Chaque instance gère plusieurs bases de données système et une ou plusieurs bases de données utilisateur. Chaque ordinateur peut exécuter plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les applications se connectent à l'instance afin d'effectuer des travaux dans une base de données gérée par l'instance.  
@@ -29,7 +26,7 @@ ms.locfileid: "37291345"
   
  Vous pouvez exécuter plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un même ordinateur. Une instance peut être l'instance par défaut. L'instance par défaut n'a pas de nom. Si une demande de connexion spécifie uniquement le nom de l'ordinateur, la connexion est établie à l'instance par défaut. Une instance nommée se caractérise par la spécification d'un nom d'instance au moment de son installation. Une demande de connexion doit spécifier le nom de l'ordinateur et le nom de l'instance pour pouvoir se connecter à l'instance. L'installation d'une instance par défaut n'est soumise à aucune condition particulière ; toutes les instances s'exécutant sur un ordinateur peuvent être des instances nommées.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

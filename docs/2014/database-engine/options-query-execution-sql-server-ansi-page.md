@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
-caps.latest.revision: 24
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f8c5e7e322358a12db2bfa8aebb0983951053502
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3d8f15f159ea41590c67677c2d020f0a5dbc79a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173360"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149159"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Options (Page de serveur-ANSI SQL de l’exécution de requête)
   Ensemble, ces options SET ANSI (ISO) définissent l'environnement de traitement des requêtes pour la durée de la requête de l'utilisateur, de l'exécution d'un déclencheur ou d'une procédure stockée. Toutefois, ces options SET ne contiennent pas toutes les options requises pour assurer la conformité à la norme ISO. Utilisez cette page pour spécifier si [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécute les requêtes avec l'ensemble ou une partie des paramètres spécifiés dans la norme ISO. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options des requêtes actuelles, cliquez sur **Options de requête** dans le menu **Requête** ou cliquez avec le bouton droit dans la fenêtre Requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et sélectionnez **Options de requête**. Dans la boîte de dialogue **Options de requête** , sous **Exécution**, cliquez sur **ANSI**.  
@@ -57,7 +54,7 @@ ms.locfileid: "37173360"
  **SET ANSI_NULLS**  
  -   Spécifie le comportement conforme à la norme ISO pour les opérateurs de comparaison égal à (=) et différent de (<>), lorsqu'ils sont utilisés avec des valeurs Null. Conformément à la norme ISO, lorsque l'option SET ANSI_NULLS est activée, toutes les comparaisons effectuées par rapport à une valeur NULL renvoient la valeur UNKNOWN (inconnu). Lorsque l'option SET ANSI_NULLS n'est pas activée, toutes les comparaisons effectuées par rapport à une valeur NULL renvoient la valeur TRUE. Cette case à cocher est activée par défaut.  
   
- **Réinitialiser les valeurs par défaut**  
+ **Rétablir les valeurs par défaut**  
  Rétablit toutes les valeurs par défaut initiales des options de cette page.  
   
   

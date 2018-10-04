@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e9f4fb795823b1ce428a43d62f3512ebe9f103ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc294086c960306e5a9ee62d677ecfaeafc3bcba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120370"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>Liste de vérification du déploiement : Reporting Services, Power View et PowerPivot pour SharePoint
   Utilisez la liste de vérification suivante pour installer ces fonctionnalités BI dans la même batterie de serveurs SharePoint : PowerPivot pour SharePoint, le Générateur de rapports et [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Bien que cette liste de vérification recommande un ordre d'installation précis, dans la pratique vous pouvez installer ces fonctionnalités dans presque n'importe quel ordre. Cette liste de vérification suppose l'installation des produits ou des fonctionnalités suivants :  

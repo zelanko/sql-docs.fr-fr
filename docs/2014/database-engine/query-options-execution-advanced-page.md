@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.advanced.f1
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 548f8a0dd6a8c24c91144598f649e3bc564e614c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c598ca2dc2e1fd79e221c0c3d3fc1a5c3592dcb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293039"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139578"
 ---
 # <a name="query-options-execution-advanced-page"></a>Options Exécution de la requête (page Avancé)
   Différentes options sont disponibles à l'aide de l'instruction **SET** . Cette page vous permet de spécifier une option **set** pour exécuter les requêtes Microsoft SQL Server. Pour des informations détaillées sur chacune de ces options, consultez la documentation en ligne de SQL Server.  
@@ -73,7 +70,7 @@ GO
  **Déconnecter après l’exécution de la requête**  
  Lorsque cette case à cocher est activée, il est mis fin à la connexion à SQL Server une fois la requête terminée. Cette option est désactivée par défaut.  
   
- **Réinitialiser les valeurs par défaut**  
+ **Rétablir les valeurs par défaut**  
  Rétablit toutes les valeurs par défaut initiales des options de cette page.  
   
   

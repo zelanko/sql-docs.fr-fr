@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e456296ba1730f38ecba8499788173141be1f104
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 959162fb98d3f3c82f479ed31d8944d2ec806b3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225889"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102948"
 ---
 # <a name="expression-task"></a>Tâche d'expression
   La tâche d'expression crée et évalue les expressions qui définissent les valeurs des variables au moment de l'exécution, à l'aide du Générateur d'expressions. Lorsque vous modifiez la tâche, le [Expression Builder](../expressions/expression-builder.md) est lancé.  
@@ -33,7 +30,7 @@ ms.locfileid: "37225889"
   
  Pour obtenir des exemples d'utilisation des expressions pour définir des propriétés, consultez la section **Exemples d'expressions de propriété** dans [Use Property Expressions in Packages](../expressions/use-property-expressions-in-packages.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Utiliser une expression dans un composant de flux de données](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenu associé  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc6972d90683de658dd0d8104cff138d59960904
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246279"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155419"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Concepteur de cube (Analysis Services - Données multidimensionnelles)
   Le **Concepteur de cube** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] permet de modifier diverses propriétés d’un cube, notamment ses groupes de mesures et ses mesures, ses dimensions et les relations avec ces dimensions, les méthodes de calcul, ses indicateurs de performance clés (KPI, Key Performance Indicator), les actions qui se rattachent au cube, les partitions, ses perspectives et les traductions qui y sont inclus, ainsi que de parcourir les données qu’il contient. Pour afficher la boîte de dialogue du **Concepteur de cube** , vous disposez de deux méthodes :  

@@ -3,17 +3,17 @@ title: Installer SQL Server Machine Learning Services (en base de données) sur 
 description: R dans SQL Server ou Python sur SQL Server est disponible lorsque vous installez SQL Server 2017 Machine Learning Services sur Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/14/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c1c7b9941ecbc36bca5431c7a6cd0ddfc61ebb7e
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 330c21e6eb256bfe398bc707852eb9a66a183fb7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713031"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142659"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installer SQL Server Machine Learning Services sur Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,9 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 
 7. Une fois l’installation terminée, si vous êtes invité à redémarrer l’ordinateur, faites-le maintenant. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-## <a name="bkmk_enableFeature"></a>Activer l’exécution du script
+<a name="bkmk_enableFeature"></a>
+
+## <a name="enable-script-execution"></a>Activer l’exécution du script
 
 1. Ouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
@@ -136,6 +138,8 @@ Le redémarrage du service automatiquement redémarre connexe [!INCLUDE[rsql_lau
 Vous pouvez redémarrer le service à l’aide de clic droit **redémarrer** commande pour l’instance dans SSMS, ou à l’aide de la **Services** dans le panneau de configuration ou à l’aide du Panneau de configuration [Gestionnaire de Configuration SQL Server ](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>Vérifier l'installation
+
+Vérifier l’état d’installation de l’instance dans [des rapports personnalisés](../r/monitor-r-services-using-custom-reports-in-management-studio.md) ou les journaux d’installation.
 
 Utilisez les étapes suivantes pour vérifier que tous les composants utilisés pour lancer le script externe sont en cours d’exécution.
 
@@ -191,6 +195,28 @@ Utilisez les étapes suivantes pour vérifier que tous les composants utilisés 
 > 
 > Par exemple, vous pouvez ajouter la ligne suivante pour générer un nom de colonne arbitraire : `WITH RESULT SETS ((Col1 AS int))`
 
+<a name="apply-cu"></a>
+
+## <a name="apply-updates"></a>Appliquer des mises à jour
+
+Nous vous recommandons d’appliquer la mise à jour cumulative la plus récente pour le moteur de base de données et les composants d’apprentissage.
+
+Sur les appareils connectés à internet, les mises à jour cumulatives sont appliqués en général via Windows Update, mais vous pouvez également utiliser les étapes ci-dessous pour les mises à jour contrôlés. Lorsque vous appliquez la mise à jour pour le moteur de base de données, le programme d’installation extrait les mises à jour cumulatives pour les fonctionnalités de R ou Python que vous avez installé sur la même instance. 
+
+Sur les serveurs hors connexion, des étapes supplémentaires sont nécessaires. Pour plus d’informations, consultez [installer sur des ordinateurs sans accès à internet > appliquer des mises à jour cumulatives](sql-ml-component-install-without-internet-access.md#apply-cu).
+
+1. Démarrer avec une instance de la ligne de base déjà installée : version initiale de SQL Server 2017
+
+2. Accédez à la liste de mise à jour cumulative : [met à jour de SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
+
+3. Sélectionnez la mise à jour cumulative la plus récente. Un fichier exécutable est téléchargé et extrait automatiquement.
+
+4. Exécutez le programme d'installation. Acceptez les termes du contrat de licence et sur la page de sélection de fonctionnalités, passez en revue les fonctionnalités pour lesquelles les mises à jour cumulatives sont appliquées. Vous devez voir toutes les fonctionnalités installées pour l’instance actuelle, y compris les fonctionnalités d’apprentissage automatique. Le programme d’installation télécharge les fichiers CAB nécessaires pour mettre à jour toutes les fonctionnalités.
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. Suivez les instructions de l’Assistant en acceptant les termes du contrat de licence pour les distributions de R et Python. 
+
 ## <a name="additional-configuration"></a>Configuration supplémentaire
 
 Si l’étape de vérification de script externe a réussi, vous pouvez exécuter des commandes R ou Python à partir de SQL Server Management Studio, Visual Studio Code ou tout autre client capable d’envoyer des instructions T-SQL sur le serveur.
@@ -212,7 +238,9 @@ Sur la base de données, vous devrez peut-être les mises à jour de configurati
 > [!NOTE]
 > Si une configuration supplémentaire est requise dépend de votre schéma de sécurité, où vous avez installé SQL Server, et que les utilisateurs pour se connecter à la base de données et exécuter des scripts externes. 
 
-###  <a name="bkmk_configureAccounts"></a> Activer l’authentification implicite pour le groupe de comptes de groupe d’utilisateurs restreint SQL (SQLRUserGroup)
+<a name="bkmk_configureAccounts"></a> 
+
+###  <a name="enable-implied-authentication-for-sql-restricted-user-group-sqlrusergroup-account-group"></a>Activer l’authentification implicite pour le groupe de comptes de groupe d’utilisateurs restreint SQL (SQLRUserGroup)
 
 Si vous avez besoin exécuter des scripts à partir d’un client de science des données distantes et à l’aide de l’authentification Windows, une configuration supplémentaire est nécessaire afin de donner des comptes de travail en cours d’exécution R et Python traite l’autorisation de se connecter à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance en votre nom. Ce comportement est appelé *l’authentification implicite*et est implémenté par le moteur de base de données pour prendre en charge l’exécution sécurisée des scripts externes dans SQL Server 2016 et SQL Server 2017.
 
@@ -235,7 +263,9 @@ Ces comptes sont utilisés comme suit. Lorsqu’un utilisateur envoie un script 
 Dans SQL Server 2019, les comptes de travail sont remplacées par AppContainers, avec les processus qui s’exécutent sous le service Launchpad de SQL Server. Bien que les comptes de travail ne sont plus utilisés, vous devez toujours ajouter une connexion de base de données pour **SQLRUsergroup** si implicite de l’authentification est nécessaire. Tout comme les comptes de travail ne peut pas l’autorisation de connexion, l’identité du service Launchpad ne pas soit. Création d’une connexion pour **SQLRUserGroup**, qui se compose du service Launchpad dans cette version, permet l’authentification implicite fonctionne.
 ::: moniker-end
 
-### <a name="permissions-external-script"></a> Autoriser les utilisateurs à exécuter des scripts externes
+<a name="permissions-external-script"></a> 
+
+### <a name="give-users-permission-to-run-external-scripts"></a>Autoriser les utilisateurs à exécuter des scripts externes
 
 Si vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous-même et que vous exécutez des scripts R ou Python dans votre propre instance, en général, vous exécutez les scripts en tant qu’administrateur. Par conséquent, vous avez une autorisation implicite sur différentes opérations et toutes les données dans la base de données.
 
@@ -250,7 +280,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > [!NOTE]
 > Autorisations ne sont pas spécifiques au langage de script pris en charge. En d’autres termes, il ne sont pas des niveaux d’autorisation distincts pour le script R et le script Python. Si vous avez besoin de mettre à jour les autorisations distinctes pour ces langues, vous devez installer R et Python sur des instances distinctes.
 
-### <a name="permissions-db"></a> Autoriser vos utilisateurs en lecture, écriture ou définition de données (DDL) de langage à bases de données
+<a name="permissions-db"></a> 
+
+### <a name="give-your-users-read-write-or-data-definition-language-ddl-permissions-to-databases"></a>Autoriser vos utilisateurs en lecture, écriture ou définition de données (DDL) de langage à bases de données
 
 Pendant l’exécution de scripts est un utilisateur, l’utilisateur devra peut-être lire les données à partir d’autres bases de données. L’utilisateur peut également besoin créer des tables pour stocker les résultats et écrire des données dans des tables.
 
@@ -305,16 +337,6 @@ Installez les packages que vous souhaitez utiliser à partir de SQL Server dans 
 
 Le processus d’installation et de gestion des packages R est différent dans SQL Server 2016 et SQL Server 2017. Dans SQL Server 2016, un administrateur de base de données doit installer les packages R que les utilisateurs ont besoin. Dans SQL Server 2017, vous pouvez configurer des groupes d’utilisateurs de partager les packages sur un niveau par base de données ou configurer des rôles de base de données pour permettre aux utilisateurs d’installer leurs propres packages. Pour plus d’informations, consultez [installer de nouveaux packages R dans SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
-
-## <a name="get-help"></a>Obtenir de l’aide
-
-Besoin d’aide avec l’installation ou mise à niveau ? Pour obtenir des réponses aux questions courantes et les problèmes connus, consultez l’article suivant :
-
-* [Mise à niveau et installation FAQ - Services Machine Learning](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-Pour vérifier l’état d’installation de l’instance et résoudre les problèmes courants, essayez ces rapports personnalisés.
-
-* [Rapports personnalisés pour SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

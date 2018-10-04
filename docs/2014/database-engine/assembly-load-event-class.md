@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Assembly Load event class
 ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1464f59c227577bc0c81f5f89ac84430c5b59497
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a57ec9e8d1cb6b2559622af339b9e8a6a3d7b29
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207619"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152981"
 ---
 # <a name="assembly-load-event-class"></a>Classe d'événements Assembly Load
   La classe d'événements **Assembly Load** se produit lorsqu'une demande de chargement d'un assembly est exécutée.  
@@ -53,7 +50,7 @@ ms.locfileid: "37207619"
 |**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |**Réussi**|**Int**|Indique si le chargement de l'assembly a réussi (1) ou échoué (0).|23|Oui|  
-|**TextData**|**ntext**|« Chargement d'assembly réussi » si le chargement a réussi ; sinon  « Échec du chargement d'assembly ».| 1|Oui|  
+|**TextData**|**ntext**|« Chargement d'assembly réussi » si le chargement a réussi ; sinon  « Échec du chargement d'assembly ».|1|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../relational-databases/extended-events/extended-events.md)   

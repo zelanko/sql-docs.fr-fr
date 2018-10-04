@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.validate.allsubscriptions.f1
 helpviewer_keywords:
 - Validate All Subscriptions dialog box
 ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6df15aecb19b61bc5cdb22e587177c0cca71da5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb48398e41816c19aedd45ee19db579d77e3d5a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203002"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111964"
 ---
 # <a name="validate-all-subscriptions"></a>Valider tous les abonnements
   La boîte de dialogue **Valider tous les abonnements** permet d'indiquer que tous les abonnements à une publication de fusion doivent être validés lors de la prochaine exécution de l'Agent de fusion de chaque abonnement. Le résultat de la validation figure dans le Moniteur de réplication. Pour plus d’informations, voir [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  

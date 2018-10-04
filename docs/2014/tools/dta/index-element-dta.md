@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9f2efa4761248c94a6db7a2747184808ffce3d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8d334a319807692f099056f0f350c395ecbeeb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299359"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120109"
 ---
 # <a name="index-element-dta"></a>Index, élément (Assistant Paramétrage de base de données)
   Contient les informations sur un index que vous souhaitez créer ou supprimer pour une configuration spécifiée par l'utilisateur.  
@@ -69,8 +66,8 @@ ms.locfileid: "37299359"
   
 |Relation|Éléments|  
 |------------------|--------------|  
-|**Élément parent**|[Créer l’élément &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` Élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
-|**Éléments enfants**|[Nom d’élément pour l’Index &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Élément de colonne pour les Index &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` Élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> `PartitionColumn` Élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> [Élément de groupe de fichiers pour les Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` Élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> `PercentUsage` Élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
+|**Élément parent**|[Créer l’élément &#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
+|**Éléments enfants**|[Nom d’élément pour l’Index &#40;DTA&#41;](name-element-for-index-dta.md)<br /><br /> [Élément de colonne pour les Index &#40;DTA&#41;](column-element-for-index-dta.md)<br /><br /> `PartitionScheme` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> `PartitionColumn` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> [Élément de groupe de fichiers pour les Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)<br /><br /> `NumberOfReferences` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> `PercentUsage` élément. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
   
 ## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez l’[Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;Assistant Paramétrage de base de données&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

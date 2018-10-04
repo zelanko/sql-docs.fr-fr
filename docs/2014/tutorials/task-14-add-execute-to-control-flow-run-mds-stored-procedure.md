@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4b75bed7642e2075b0281cb9f19502ea2bb624b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e2f62236d844a6ded850f33207bad9da082ce62
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260086"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177289"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tâche 14 : Ajout d'une tâche d'exécution SQL au flux de contrôle pour exécuter la procédure stockée pour MDS
   Après le chargement des données dans les tables intermédiaires de MDS, vous allez exécuter une procédure stockée associée à ces tables pour charger les données des tables intermédiaires vers les tables appropriées dans la base de données MDS. Cette procédure stockée nécessite deux paramètres : LogFlag et VersionName. LogFlag spécifie si les transactions sont journalisées pendant le processus intermédiaire et VersionName représente la version du modèle. Consultez [procédure stockée intermédiaire](http://msdn.microsoft.com/library/hh231028.aspx) rubrique pour plus d’informations.  
@@ -42,7 +39,7 @@ ms.locfileid: "37260086"
   
     |Nom   |Type de données|Valeur|  
     |----------|---------------|-----------|  
-    |LogFlag|Int32| 1|  
+    |LogFlag|Int32|1|  
     |VersionName|String|VERSION_1|  
   
      ![Fenêtre Variables SSIS](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-02.jpg "fenêtre Variables SSIS.")  
@@ -69,7 +66,7 @@ ms.locfileid: "37260086"
   
     |Nom de la variable|Type de données (important)|Nom du paramètre|  
     |-------------------|-----------------------------|--------------------|  
-    |User::LogFlag|LONG| 1|  
+    |User::LogFlag|LONG|1|  
     |User::BatchTag|NVARCHAR|2|  
   
      ![Exécuter l’éditeur de tâche SQL - mappage de paramètre](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-04.jpg "exécuter l’éditeur de tâche SQL - mappage de paramètre")  

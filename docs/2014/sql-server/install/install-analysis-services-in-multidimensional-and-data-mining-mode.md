@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, about installing Analysis Services
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Analysis Services, installing
 - SQL Server Analysis Services, installing
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
-caps.latest.revision: 47
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: d90380f1e908c3b0cf1226f94de4a404ae5e65e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92460328b9d85ab5818679b12639618ffe2b0a14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222579"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149899"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Installer Analysis Services en mode multidimensionnel et exploration de données
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : fournit des fonctionnalités OLAP et d'exploration de données pour les applications de décisionnel. Dans cette version, la prise en charge pour les bases de données OLAP et des modèles d’exploration de données est disponible lorsque vous installez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans *mode multidimensionnel*. Le mode multidimensionnel est l'un des trois modes serveur dans lequel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute. Il s'agit du mode par défaut. Si vous installez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avec les valeurs par défaut, vous obtiendrez une instance qui exécute des bases de données multidimensionnelles et des modèles d'exploration de données multidimensionnelles.  

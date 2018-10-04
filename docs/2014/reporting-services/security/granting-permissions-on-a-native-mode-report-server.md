@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], about role-based security
 - security [Reporting Services], role-based
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c9628b3e6393c6fe33bcff6b5bf14933b46c2dd2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0ea2e775edd95ec7a30dc6cbf9f9d04bc62a162
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260125"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161469"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Octroi d'autorisations sur un serveur de rapports en mode natif
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise l'autorisation basée sur les rôles et un sous-système d'authentification pour déterminer qui est habilité à effectuer des opérations et à accéder aux éléments d'un serveur de rapports. L'autorisation basée sur les rôles catégorise en rôles l'ensemble des actions qu'un utilisateur ou groupe peut effectuer. L'authentification repose sur l'authentification Windows intégrée ou sur un module d'authentification personnalisé que vous fournissez. Vous pouvez utiliser des rôles prédéfinis ou personnalisés avec chacun de ces types d'authentifications.  
@@ -69,7 +66,7 @@ ms.locfileid: "37260125"
 ## <a name="tasks-and-tools-for-managing-permissions"></a>Tâches et outils de gestion des autorisations  
  Utilisez les outils suivants pour gérer les définitions et les attributions de rôles.  
   
-|Outil|Tâches|  
+|Tool|Tâches|  
 |----------|-----------|  
 |Management Studio – Permet d'afficher, modifier, créer et supprimer des définitions de rôles.|[Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)|  
 |Gestionnaire de rapports – Permet d'assigner des utilisateurs et des groupes aux rôles.|[Accordez à l’utilisateur l’accès à un serveur de rapports &#40;le Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md)<br /><br /> [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](role-assignments-modify-or-delete.md)|  

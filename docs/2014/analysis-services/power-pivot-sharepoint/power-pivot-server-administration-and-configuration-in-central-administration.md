@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17a0dd962b2cd3bf3515df6151e1ce5d2ed9699b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0522e8e4df8d6e2cbb1a386b89f933c2f7075a53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200289"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168559"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>Administration et configuration d'un serveur PowerPivot dans l'Administration centrale
   L'administration et la configuration du serveur PowerPivot sont gérées par les administrateurs d'application de service SharePoint à l'aide de l'Administration centrale SharePoint.  
@@ -49,7 +46,7 @@ ms.locfileid: "37200289"
   
  [Outils de configuration de PowerPivot](power-pivot-configuration-tools.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Lien|Type|Description de la tâche|  
 |----------|----------|----------------------|  

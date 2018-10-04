@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e480f60aa857506a1d192452b299cede3f7161e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 240230784860e9484ebc03ba6740eaf5d56387fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153150"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089069"
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>Ensemble de lignes DISCOVER_STORAGE_TABLE_COLUMNS
   Fournit des informations au niveau de la colonne concernant les tables de stockage utilisées par une base de données Analysis Services exécutée en mode SharePoint ou tabulaire.  
@@ -41,7 +38,7 @@ ms.locfileid: "37153150"
 |`COLUMN_ID`|`DBTYPE_ WSTR`||ID de la colonne. L'ID de colonne est interne au moteur d'analyse en mémoire xVelocity (VertiPaq) et est uniquement fourni à titre d'information.|  
 |`COLUMN_TYPE`|`DBTYPE_WSTR`||Le type de colonne. Le type de colonne est interne au moteur d'analyse en mémoire xVelocity (VertiPaq) et est uniquement fourni à titre d'information.<br /><br /> -BASIC_DATA<br />-HIERARCHY_DATAID_TO_POSITION<br />-HIERARCHY_POSITION_TO_DATAID<br />-LA RELATION|  
 |`COLUMN_ENCODING`|`DBTYPE_UI8`||Entier qui représente le type d'encodage utilisé pour les données de la colonne.<br /><br /> -   **0**, utilisé avec `COLUMN_TYPE`: HIERARCHY_DATAID_TO_POSITION, HIERARCHY_POSITION_TO_DATAID, relation<br />-   **1**, utilisé avec `COLUMN_TYPE`: BASIC_DATA<br />-   **2**, utilisé avec `COLUMN_TYPE`: BASIC_DATA|  
-|`DATATYPE`|`DBTYPE_WSTR`||Type de données de la colonne. A les valeurs possibles suivantes :<br /><br /> -DBTYPE_BOOL<br />-DBTYPE_CY<br />-DBTYPE_DATE<br />-DBTYPE_I4<br />-DBTYPE_I8<br />-DBTYPE_R8<br />-DBTYPE_WSTR<br />-N/A|  
+|`DATATYPE`|`DBTYPE_WSTR`||Type de données de la colonne. a les valeurs possibles suivantes :<br /><br /> -DBTYPE_BOOL<br />-DBTYPE_CY<br />-DBTYPE_DATE<br />-DBTYPE_I4<br />-DBTYPE_I8<br />-DBTYPE_R8<br />-DBTYPE_WSTR<br />-N/A|  
 |`ISKEY`|`DBTYPE_BOOL`||`True` si la colonne est utilisée comme une clé primaire ou étrangère sinon `false`.|  
 |`ISUNIQUE`|`DBTYPE_BOOL`||`True` si les valeurs dans la colonne sont uniques ; sinon `false`.|  
 |`ISNULLABLE`|`DBTYPE_BOOL`||`True` si la colonne est nullable ; sinon `false`.|  

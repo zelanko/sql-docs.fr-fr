@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5f3ad348ebfc89706eb57dea34f91342550189b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d570104b705c55c926d3cf8e4c15af4111be29b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094449"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Concepts de Reporting Services (SSRS)
   Cette rubrique fournit un bref résumé des concepts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -147,7 +144,7 @@ ms.locfileid: "37236299"
   
 -   Utilisez la fonction `Lookup` pour rechercher des valeurs dans des paires nom/valeur dans un dataset différent.  
   
- **Parties de rapports**  
+ **parties de rapports**  
  Une définition de partie de rapport (.rsc) est un élément de serveur de rapport qui est un fragment XML d'un fichier de définition de rapport. Vous créez des parties de rapports en créant une définition de rapport, puis en sélectionnant séparément des éléments de rapport dans le rapport à publier sous forme de parties de rapports. Les parties de rapports incluent des régions de données, des rectangles et les éléments qu'ils contiennent, ainsi que des images. Vous pouvez enregistrer une partie de rapport avec ses références aux sources de données partagées et ses datasets dépendants, afin de pouvoir le réutiliser dans d'autres rapports. Pour plus d’informations, consultez [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   
  **Alertes de données**  
@@ -203,7 +200,7 @@ ms.locfileid: "37236299"
  ![diagramme de traitement des rapports](media/report-execution.gif "diagramme de traitement des rapports")  
 Illustration du traitement d'un rapport  
   
- **Définition de rapport**  
+ **définition de rapport**  
  Le fichier de définition de rapport (.rdl) stocké sur un serveur de rapports. Pour plus d’informations, consultez [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](reports/report-definition-language-ssrs.md).  
   
  **Rapport compilé et format de rapports intermédiaires**  
@@ -215,7 +212,7 @@ Illustration du traitement d'un rapport
  **Rapport traité**  
  Un rapport totalement traité qui contient des données et des informations relatives à la mise en page.  
   
- **Rapport rendu**  
+ **rapport rendu**  
  Un rapport totalement traité est envoyé vers un rapport rendu pour combiner les données et la mise en page de chaque page du format de rendu ciblé. Les extensions de rendu sont personnalisables et extensibles. Le format de rendu de rapport par défaut est HTML 4.0. Pour plus d’informations, consultez [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](report-design/page-layout-and-rendering-report-builder-and-ssrs.md) et [Extensions &#40;SSRS&#41;](extensions-ssrs.md).  
   
  **Rapport exporté**  

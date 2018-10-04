@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sql12.swb.linkedserver.properties.general.f1
 - sql12.swb.linkedserver.properties.security.f1
@@ -19,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47292d5659b5244a6c318b330b45825ad5408486
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3837e800bc1193a4f72b58bc0d78c0cb314e6076
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294783"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152021"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
   Cette rubrique indique comment créer un serveur lié et accéder aux données provenant d'un autre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. En créant un serveur lié, vous pouvez utiliser des données provenant de plusieurs sources. Il n'est pas nécessaire que le serveur lié soit une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais il s'agit d'un scénario courant.  
@@ -40,7 +35,7 @@ ms.locfileid: "37294783"
   
 ##  <a name="Security"></a> Sécurité  
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
  Lorsque vous utilisez [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, nécessite `ALTER ANY LINKED SERVER` sur le serveur ou l’appartenance dans le **setupadmin** rôle serveur fixe. Lorsque vous utilisez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] requiert `CONTROL SERVER` autorisation ou l’appartenance dans le **sysadmin** rôle serveur fixe.  
   
 ##  <a name="Procedures"></a> Comment créer un serveur lié  

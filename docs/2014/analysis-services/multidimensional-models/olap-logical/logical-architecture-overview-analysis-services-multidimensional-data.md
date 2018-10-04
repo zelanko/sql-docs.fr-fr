@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2d249097413675c4284bc8d19038eebbf88f446
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 525e3d131e5bb2e53d35faa73f1c4c579c59cbd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284115"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091449"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
   Analysis Services s'exécute en mode de déploiement du serveur qui détermine l'architecture de la mémoire et l'environnement d'exécution utilisés par différents types de modèles Analysis Services. Le mode serveur est déterminé lors de l'installation. **Mode multidimensionnel et exploration de données** prend en charge OLAP traditionnel et exploration de données. **En mode tabulaire** prend en charge les modèles tabulaires. **En mode intégré SharePoint** fait référence à une instance d’Analysis Services qui a été installé en tant que PowerPivot pour SharePoint, utilisé pour le chargement et l’interrogation de modèles de données Excel ou PowerPivot à l’intérieur d’un classeur.  
@@ -115,12 +112,12 @@ ms.locfileid: "37284115"
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|.|Dernière|  
-|3516987| 1|6| 1|15|Janvier-10-99|  
-|3554790| 1|6| 1|40|Janvier-19-99|  
-|3572673| 1|6| 1|34|Jan-27-99|  
-|3600974| 1|6| 1|45|Feb-02-99|  
-|3645541| 1|6| 1|20|Feb-09-99|  
-|3674906| 1|6| 1|36|Feb-17-99|  
+|3516987|1|6|1|15|Janvier-10-99|  
+|3554790|1|6|1|40|Janvier-19-99|  
+|3572673|1|6|1|34|Jan-27-99|  
+|3600974|1|6|1|45|Feb-02-99|  
+|3645541|1|6|1|20|Feb-09-99|  
+|3674906|1|6|1|36|Feb-17-99|  
   
  Dans le tableau précédent, chaque ligne a les mêmes valeurs pour le **RouteKey**, **SourceKey**, et **TimeKey** colonnes, indiquant que ces lignes participent à la même cellule de cube.  
   

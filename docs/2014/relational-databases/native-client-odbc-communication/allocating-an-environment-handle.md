@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, environment handles
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - handles [SQL Server Native Client]
 - environment handles [SQLNCLI]
 ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dea32df21f36220959a5c3ed49a7a927b59797ce
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 66afa14ccb1953265f526f8c8861237638f569fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425938"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151269"
 ---
 # <a name="allocating-an-environment-handle"></a>Allocation d'un handle d'environnement
   Avant qu'une application puisse appeler toute fonction ODBC, elle doit initialiser l'environnement ODBC et allouer un handle d'environnement. Il s'agit du handle de contexte global et de l'espace réservé pour les autres handles dans ODBC. Pour cela, vous devez appeler **SQLAllocHandle** avec la *HandleType* paramètre défini à SQL_HANDLE_ENV et *InputHandle* défini à SQL_NULL_HANDLE.  

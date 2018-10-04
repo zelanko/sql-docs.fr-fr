@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 166fae1cb6fb76587b6741b6f47449d2600bf8e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185316"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155858"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Spécifier le type de la dimension (Assistant Dimension)
   La page **Spécifier le type de la dimension** permet de définir le type de dimension et d'ajouter à la dimension des types d'attributs spéciaux associés au type de dimension sélectionné.  
@@ -56,7 +53,7 @@ ms.locfileid: "37185316"
 > [!NOTE]  
 >  Les options de cette section sont uniquement disponibles si le **type de dimension** sélectionné est associé à des types d'attributs spéciaux. Tous les types de dimensions ne sont pas associés à des types d'attributs spéciaux.  
   
- **Inclure**  
+ **inclure**  
  Permet d'inclure le type d'attribut dans la dimension.  
   
  **Type d’attribut**  

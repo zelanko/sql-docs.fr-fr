@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6908998b-9302-4a90-976e-770106b48d18
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac9efd9de461b6ee605b73ed440233b4a0bea020
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28ac0283148f328d75bb341ce7841f5e5da42ee2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196519"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094049"
 ---
 # <a name="data-sources-ssas-tabular"></a>Sources de données (SSAS Tabulaire)
   Les sources de données fournissent les données à inclure dans une solution de modèle tabulaire. Vous pouvez importer des données dans votre modèle à partir d'une grande variété de sources telles que des bases de données relationnelles, des flux de données, des sources de données multidimensionnelles, telles qu'un cube Analysis Services, et de fichiers texte comme un classeur Microsoft Excel. Les rubriques de cette section fournissent des informations sur les types de sources de données à partir desquelles vous pouvez effectuer une importation, les différents types de données que vous pouvez importer et les tâches décrivant l'importation des données de ces sources.  

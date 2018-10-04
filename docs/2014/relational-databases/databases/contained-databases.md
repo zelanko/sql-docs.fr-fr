@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - partially contained database
 - contained database, understanding
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c584cbb736a494ab071dbc570cfcc67bd2e5e32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dde4eb098dd034bf136c9885d3da37305068b016
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129789"
 ---
 # <a name="contained-databases"></a>Bases de données autonomes
   Une *base de données autonome* est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge cette base de données.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aide l'utilisateur à isoler sa base de données de l'instance de 4 manières différentes.  
@@ -51,9 +48,7 @@ ms.locfileid: "37223669"
   
 -   [Identifier la relation contenant-contenu de base de données](#Identifying)  
   
-##  
-  <a name="Concepts">
-  </a> Concepts relatifs aux bases de données partiellement autonomes  
+##  <a name="Concepts"></a> Concepts relatifs aux bases de données partiellement autonomes  
  Une base de données autonome complète inclut tous les paramètres et métadonnées requis pour définir la base de données ; sa configuration ne dépend pas de l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] où la base de données est installée. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la séparation d'une base de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pouvait être fastidieuse et nécessiter une connaissance détaillée de la relation entre la base de données et l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les bases de données partiellement autonomes simplifient la séparation d'une base de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des autres bases de données.  
   
  La base de données autonome considère les fonctionnalités en termes d’autonomie. Toute entité définie par l'utilisateur qui ne s'appuie que sur des fonctions résidant dans la base de données est considérée comme entièrement à relation contenant-contenu. Toute entité définie par l'utilisateur qui s'appuie sur des fonctions résidant hors de la base de données est considérée sans relation contenant-contenu. (Pour plus d’informations, consultez la section [Relation contenant-contenu](#containment) , plus loin dans cette rubrique.)  
@@ -78,8 +73,7 @@ ms.locfileid: "37223669"
  Utilisateur contenu  
  Il existe deux types d'utilisateurs pour les bases de données autonomes.  
   
--   
-  **Utilisateur de base de données autonome avec mot de passe**  
+-   **Utilisateur de base de données autonome avec mot de passe**  
   
      Les utilisateurs de base de données autonome avec mots de passe sont authentifiés par la base de données.  
   
@@ -108,9 +102,7 @@ ms.locfileid: "37223669"
   
 -   Entités d’utilisateur sans relation contenant-contenu (celles qui dépassent la limite de base de données), par exemple sys.server_principals ou un principal de serveur (connexion) lui-même. Tout code qui utilise ces entités ou toute fonction qui les référence est sans relation contenant-contenu.  
   
-###  
-  <a name="partial">
-  </a> Base de données partiellement autonome  
+###  <a name="partial"></a> Base de données partiellement autonome  
  La fonctionnalité de base de données autonome est actuellement disponible uniquement dans un état partiel. Une base de données partiellement autonome est une base de données autonome qui autorise l'utilisation de fonctionnalités sans autonomie.  
   
  Utilisez les vues [sys.dm_db_uncontained_entities](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) et [sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) pour retourner des informations sur des objets ou des fonctionnalités sans relation contenant-contenu. En déterminant l'état de la relation contenant-contenu des éléments de votre base de données, vous pouvez découvrir les objets ou les fonctionnalités qui doivent être remplacés ou modifiés pour promouvoir la relation contenant-contenu.  
@@ -120,9 +112,7 @@ ms.locfileid: "37223669"
   
  Le comportement des bases de données partiellement autonomes est très différent de celui des bases de données non autonomes en termes de classement. Pour plus d'informations sur les problèmes de classement, consultez [Classements de base de données autonome](contained-database-collations.md).  
   
-##  
-  <a name="benefits">
-  </a> Avantages de l'utilisation de bases de données partiellement autonomes  
+##  <a name="benefits"></a> Avantages de l'utilisation de bases de données partiellement autonomes  
  Les problèmes et les complications associés aux bases de données non autonomes peuvent être résolus à l'aide d'une base de données partiellement autonome.  
   
 ### <a name="database-movement"></a>Déplacement de base de données  

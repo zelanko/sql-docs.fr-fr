@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - namespaces [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7697f6bf230b3d37b145e56f6827895b44daa5c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 65eed443f671f18944ce381a011498e3ca23af4e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226999"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102889"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Syntaxe de requête XML pour les données de rapport XML (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]vous permet de créer des datasets pour des sources de données XML. Après avoir défini une source de données, vous devez créer une requête pour le dataset. Selon le type de données XML vers lequel pointés la source de données, vous créez la requête de dataset en incluant un XML `Query` ou un chemin d’accès de l’élément. Un document XML `Query` commence par un  **\<requête >** balise et inclut des espaces de noms et les éléments XML qui varient en fonction de la source de données. Un chemin d'accès à un élément opère indépendamment des espaces de noms ; il précise les nœuds et les attributs de nœud à utiliser à partir des données XML sous-jacentes avec une syntaxe similaire à la syntaxe XPath. Pour plus d’informations sur les chemins d’éléments, consultez [Syntaxe du chemin vers l’élément pour des données de rapport XML &#40;SSRS&#41;](report-data-ssrs.md).  
@@ -92,7 +89,7 @@ ms.locfileid: "37226999"
 |Élément de requête XML|Champs obtenus dans le dataset|  
 |-----------------------|-------------------------------------|  
 |\<Query/>|R : la valeur http://schemas.microsoft.com/...<br /><br /> Valeur b : http://schemas.microsoft.com/...<br /><br /> Valeur C: http://schemas.microsoft.com/...|  
-|\<xmldp:Query xmlns:xmldp = «http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery« xmlns:ns = «http://schemas.microsoft.com/... » ><br /><br /> \<xmldp:ElementPath > racine {}/ns:Element2 / nœud\</xmldp:ElementPath ><br /><br /> \</xmldp:Query >|Valeur D<br /><br /> Valeur E<br /><br /> Valeur F|  
+|\<xmldp:Query xmlns:xmldp = « http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery« xmlns:ns = « http://schemas.microsoft.com/... » ><br /><br /> \<xmldp:ElementPath > racine {}/ns:Element2 / nœud\</xmldp:ElementPath ><br /><br /> \</xmldp:Query >|Valeur D<br /><br /> Valeur E<br /><br /> Valeur F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>Document XML : DPNamespace.xml  
  Vous pouvez copier ce document XML et l'enregistrer dans une URL disponible pour être utilisée en tant que source de données par le Concepteur de rapports : par exemple http://localhost/DPNamespace.xml.  

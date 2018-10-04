@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.showplan.nestedloops.f1
@@ -135,16 +133,15 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 99d305034989f0fdd2f9ca65dae9cef7d0881c2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97130c8e9a0a32a3719ed745565fce4a511d0dd3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160630"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161339"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Guide de référence des opérateurs Showplan logiques et physiques
   Les opérateurs décrivent comment [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécute une requête ou une instruction DML (Data Manipulation Language). L'optimiseur de requête utilise des opérateurs pour construire un plan de requête qui crée le résultat spécifié dans la requête ou pour exécuter l'opération spécifiée dans l'instruction DML. Le plan de requête est une arborescence composée d'opérateurs physiques. Vous pouvez afficher le plan de requête à l'aide des instructions SET SHOWPLAN, des options plan d'exécution graphique dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ou des classes d'événements Showplan de SQL Server Profiler.  

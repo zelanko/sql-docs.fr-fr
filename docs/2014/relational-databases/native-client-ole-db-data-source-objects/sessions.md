@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 060a951bd7fa594e2d16c05f8698d8245174fd2c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f594ace96fc34a77adca244e79c55551f0ddb8d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138249"
 ---
 # <a name="sessions"></a>Sessions
   Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session du fournisseur OLE DB Native Client représente une seule connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -183,10 +180,10 @@ EXIT:
   
  Connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets session du fournisseur OLE DB Native Client à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut générer une surcharge significative pour les applications qui en permanence de créer et de libérer des objets de session. La surcharge peut être réduite en gérant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efficacement les objets session du fournisseur OLE DB Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les applications natives du fournisseur OLE DB du Client peuvent conserver la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion d’un objet de session active en gérant une référence au moins une interface de l’objet.  
   
- Par exemple, la gestion d'un pool de références d'objet de création de commande maintient des connexions actives pour ces objets session dans le pool. Objets session étant requis, le code de maintenance de pool passe valide **IDBCreateCommand** pointeur d’interface vers la méthode d’application qui requiert la session. Lorsque la méthode d'application ne requiert plus la session, la méthode retourne le pointeur d'interface au code de gestion du pool plutôt que de libérer la référence de l'application à l'objet de création de commande.  
+ Par exemple, la gestion d'un pool de références d'objet de création de commande maintient des connexions actives pour ces objets session dans le pool. Les objets session étant obligatoires, le code de gestion du pool passe un pointeur d’interface **IDBCreateCommand** valide à la méthode d’application nécessitant la session. Lorsque la méthode d'application ne requiert plus la session, la méthode retourne le pointeur d'interface au code de gestion du pool plutôt que de libérer la référence de l'application à l'objet de création de commande.  
   
 > [!NOTE]  
->  Dans l’exemple précédent, le **IDBCreateCommand** interface est utilisée, car le **ICommand** interface implémente la **GetDBSession** (méthode), la seule méthode de commande ou de la portée d’ensemble de lignes qui permet à un objet déterminer la session sur lequel il a été créé. Par conséquent, un objet commande, et uniquement un objet commande, permet à une application de récupérer un pointeur d'objet source de données à partir duquel des sessions supplémentaires peuvent être créées.  
+>  Dans l’exemple précédent, l’interface **IDBCreateCommand** est utilisée, car l’interface **ICommand** implémente la méthode **GetDBSession**, la seule méthode dans l’étendue de la commande ou de l’ensemble de lignes qui permet à un objet de déterminer la session au cours de laquelle il a été créé. Par conséquent, un objet commande, et uniquement un objet commande, permet à une application de récupérer un pointeur d'objet source de données à partir duquel des sessions supplémentaires peuvent être créées.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Objets Source de données &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
