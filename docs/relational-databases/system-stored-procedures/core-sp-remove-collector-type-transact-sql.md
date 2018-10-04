@@ -1,14 +1,11 @@
 ---
-title: Core.sp_remove_collector_type (Transact-SQL) | Documents Microsoft
+title: Core.sp_remove_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_remove_collector_type
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sp_remove_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f6e7a6fddad656d183d4993bb6b6f7e065d1ecba
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ef7aa35eea529857072492d4b1d80ddf92c69ef6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236716"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726867"
 ---
 # <a name="corespremovecollectortype-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +51,8 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
-## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **mdw_admin** (avec autorisation EXECUTE) rôle de base de données fixe.  
+## <a name="permissions"></a>Permissions  
+ Nécessite l’appartenance dans le **mdw_admin** (avec autorisation EXECUTE) rôle fixe de base de données.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime le type de collecteur Requête T-SQL générique de la vue core.supported_collector_types.  

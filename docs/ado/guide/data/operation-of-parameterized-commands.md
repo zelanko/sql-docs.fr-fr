@@ -1,35 +1,32 @@
 ---
-title: Fonctionnement des commandes paramétrées | Documents Microsoft
+title: Fonctionnement des commandes paramétrées | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea5f45e5f7fa1b60bb9f6b4884fcb1e480534d00
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7d2d2f8fce7b70c760707bd0d384ffa9b72f7a1d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272168"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751767"
 ---
 # <a name="operation-of-parameterized-commands"></a>Fonctionnement des commandes paramétrées
-Si vous travaillez avec un enfant **Recordset**, en particulier par rapport à la taille du parent **Recordset**, mais avez besoin d’accéder uniquement quelques chapitres enfant, il peut s’avérer plus efficace d’utiliser un commande paramétrable.  
+Si vous travaillez avec un enfant **Recordset**, en particulier par rapport à la taille du parent **Recordset**, mais ont besoin d’accéder uniquement quelques chapitres enfant, il peut s’avérer plus efficace d’utiliser un commande paramétrable.  
   
- A *commande non paramétrée* extrait l’intégralité du parent et enfant **jeux d’enregistrements**, ajoute une colonne de chapitre au parent, puis affecte une référence au chapitre enfant associé pour chaque ligne parente .  
+ Un *commande non paramétrée* extrait l’intégralité du parent et enfant **Recordsets**, ajoute une colonne de chapitre au parent, puis assigne une référence au chapitre enfants connexes pour chaque ligne parente .  
   
- A *commande paramétrable* récupère l’intégralité du parent **Recordset**, mais n’extrait le chapitre **Recordset** lorsque vous accédez à la colonne de chapitre. Cette différence de la stratégie de récupération peut produire des gains de performance significatifs.  
+ Un *commande paramétrable* récupère l’intégralité du parent **Recordset**, mais n’extrait du chapitre **Recordset** lorsque vous accédez à la colonne de chapitre. Cette différence de la stratégie de récupération peut générer des gains de performance significatifs.  
   
  Par exemple, vous pouvez spécifier les éléments suivants :  
   
@@ -39,10 +36,10 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- Les tables parent et enfant partagent un nom de colonne commun, cust_id *.* Le *commande enfant* a un « ? » espace réservé, auquel la clause RELATE fait référence (autrement dit, «... » PARAMÈTRE 0 »).  
+ Les tables parent et enfant partagent un nom de colonne commun, cust_id *.* Le *commande enfant* a un « ? » espace réservé, auquel la clause RELATE fait référence (autrement dit, »... PARAMÈTRE DE « 0 »).  
   
 > [!NOTE]
->  La clause de paramètre se rapporte uniquement à la syntaxe de commande de forme. Il n’est pas associé à un ADO [paramètre](../../../ado/reference/ado-api/parameter-object.md) objet ou le [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  
+>  La clause de paramètre concerne uniquement la syntaxe de commande de forme. Il n’est pas associé à la soit ADO [paramètre](../../../ado/reference/ado-api/parameter-object.md) objet ou le [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  
   
  Lorsque la commande de mise en forme paramétrée est exécutée, les événements suivants se produisent :  
   
@@ -52,13 +49,13 @@ SHAPE {SELECT * FROM customer}
   
 3.  Lorsque vous accédez à la colonne de chapitre d’une ligne parente, le *commande enfant* est exécutée à l’aide de la valeur du champ customer.cust_id comme valeur du paramètre.  
   
-4.  Toutes les lignes dans l’ensemble de lignes de fournisseur de données créé à l’étape 3 sont utilisés pour remplir l’enfant **Recordset**. Dans cet exemple, c'est-à-dire toutes les lignes de la table Orders dans lequel le cust_id est égal à la valeur du champ customer.cust_id. Par défaut, l’enfant **Recordset**s sont mises en cache sur le client jusqu'à ce que toutes les références au parent **Recordset** sont libérés. Pour modifier ce comportement, définissez la **Recordset** [propriété dynamique](../../../ado/reference/ado-api/ado-dynamic-property-index.md) **Cache Child Rows** à **False**.  
+4.  Toutes les lignes dans l’ensemble de lignes de fournisseur de données créé à l’étape 3 sont utilisés pour remplir l’enfant **Recordset**. Dans cet exemple, c'est-à-dire toutes les lignes de la table Orders dans lequel le cust_id a la valeur du champ customer.cust_id. Par défaut, l’enfant **Recordset**s est mise en cache sur le client jusqu'à ce que toutes les références au parent **Recordset** sont libérées. Pour modifier ce comportement, définissez la **Recordset** [propriété dynamique](../../../ado/reference/ado-api/ado-dynamic-property-index.md) **lignes enfants de Cache** à **False**.  
   
 5.  Une référence aux lignes enfant extraites (autrement dit, le chapitre de l’enfant **Recordset**) est placé dans la colonne de chapitre de la ligne actuelle du parent **Recordset**.  
   
 6.  Étapes 3 à 5 sont répétées lors de l’accès à la colonne de chapitre d’une autre ligne.  
   
- Le **Cache Child Rows** dynamique est définie sur **True** par défaut. Le comportement de mise en cache varie en fonction des valeurs de paramètre de la requête. Dans une requête avec un seul paramètre, l’enfant **Recordset** pour un paramètre donné valeur est mises en cache entre les requêtes pour un enfant avec la même valeur. Le code suivant illustre cela :  
+ Le **lignes enfants de Cache** propriété dynamique a la valeur **True** par défaut. Le comportement de mise en cache varie en fonction des valeurs de paramètre de la requête. Dans une requête avec un seul paramètre, l’enfant **Recordset** pour un paramètre donné valeur sera mise en cache entre les demandes pour un enfant avec la même valeur. Le code suivant illustre cela :  
   
 ```  
 SCmd = "SHAPE {select * from customer} " & _  
@@ -74,9 +71,9 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
  Dans une requête avec deux ou plusieurs paramètres, un enfant mis en cache est utilisé uniquement si toutes les valeurs de paramètre correspondent aux valeurs mises en cache.  
   
 ## <a name="parameterized-commands-and-complex-parent-child-relations"></a>Commandes paramétrées et Relations enfant-Parent complexes  
- Outre l’utilisation des commandes paramétrées pour améliorer les performances d’une hiérarchie de type équijointure, les commandes paramétrables peuvent être utilisées pour prendre en charge les relations parent-enfant plus complexes. Par exemple, considérons une base de données et la ligue peu avec deux tables : une comprenant les équipes (team_id, nom_équipe) et l’autre des jeux (date, home_team, visiting_team).  
+ Outre l’utilisation des commandes paramétrées pour améliorer les performances d’une hiérarchie de type équijointure, les commandes paramétrables peuvent être utilisées pour prendre en charge les relations parent-enfant plus complexes. Par exemple, considérez une base de données peu League avec deux tables : une comprenant les équipes (team_id, nom_équipe) et l’autre des jeux (date, home_team, visiting_team).  
   
- À l’aide d’une hiérarchie non paramétrée, il n’existe aucun moyen pour relier les tables de jeux et les équipes de sorte que l’enfant **Recordset** pour chaque équipe contienne sa planification complète. Vous pouvez créer des chapitres contenant le calendrier à domicile ou la planification de la feuille de route, mais pas les deux. Il s’agit, car la clause RELATE vous limite à des relations parent-enfant de l’écran (pc1 = cc1) AND (pc2 = pc2). Par conséquent, si votre commande inclut « RELATE team_id TO home_team, team_id TO visiting_team », vous obtiendrez uniquement les jeux où une équipe lu lui-même. Vous souhaitez "(team_id=home_team) ou (team_id = visiting_team) », mais le fournisseur Shape ne prend pas en charge la clause OR.  
+ À l’aide d’une hiérarchie non paramétrée, il n’existe aucun moyen pour relier les tables de jeux et les équipes de sorte que l’enfant **Recordset** pour chaque équipe contienne son calendrier complet. Vous pouvez créer des chapitres contenant le calendrier à domicile ou la planification de la route, mais pas les deux. Il s’agit, car la clause RELATE vous limite à relations parent-enfant de l’écran (pc1 = cc1) AND (pc2 = pc2). Par conséquent, si votre commande inclut « RELATE team_id TO home_team, team_id TO visiting_team », vous obtiendriez uniquement de jeux où une équipe jouait lui-même. Vous souhaitez, "(team_id=home_team) ou (team_id = visiting_team) », mais le fournisseur Shape ne prend pas en charge la clause OR.  
   
  Pour obtenir le résultat souhaité, vous pouvez utiliser une commande paramétrée. Exemple :  
   
@@ -87,12 +84,12 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
                team_id TO PARAMETER 1)   
 ```  
   
- Cet exemple exploite la plus grande souplesse de la clause SQL WHERE pour obtenir le résultat que vous avez besoin.  
+ Cet exemple exploite la flexibilité de la clause SQL WHERE pour obtenir le résultat que vous avez besoin.  
   
 > [!NOTE]
->  Lorsque à l’aide des clauses WHERE, paramètres ne peuvent pas utiliser les types de données SQL pour text, ntext et image ou une erreur se produit, qui contient la description suivante : `Invalid operator for data type`.  
+>  Quand à l’aide des clauses WHERE, paramètres ne peuvent pas utiliser les types de données SQL pour text, ntext et image ou une erreur se produit, qui contient la description suivante : `Invalid operator for data type`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)   
- [Grammaire de mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Grammaire de la mise en forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
  [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)

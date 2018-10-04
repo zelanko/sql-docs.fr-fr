@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - fast parse [Integration Services]
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
-caps.latest.revision: 49
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7ae98d9bd29b5d6d444c08fa358500d8da066e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41e7848dff95d531db44bef2b45b11d7c3c5f85a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233709"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054289"
 ---
 # <a name="fast-parse"></a>Analyse rapide
   L'analyse rapide propose un ensemble de routines simples et rapides d'analyse des données. Ces routines ne tiennent pas compte des paramètres régionaux et prennent en charge uniquement un sous-ensemble de formats de date, d'heure et d'entier.  
@@ -39,7 +36,7 @@ ms.locfileid: "37233709"
   
  Pour plus d'informations sur les formats de données pris en charge par l'analyse rapide, consultez [Numeric Data Formats](../../2014/integration-services/numeric-data-formats.md) et [Date and Time Formats](../../2014/integration-services/date-and-time-formats.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Définir l’analyse rapide](../../2014/integration-services/set-fast-parse.md)  
   
   

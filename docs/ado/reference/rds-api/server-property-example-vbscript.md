@@ -1,33 +1,30 @@
 ---
-title: Exemple de propriété de serveur (VBScript) | Documents Microsoft
+title: Exemple de propriété de serveur (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Server property [RDS], VBScript example
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d50633d3214f69a46b7de0112a0f3548d622db7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2ccb6bd2b61350c71f44b1580b790ec66cdfff89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288828"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599738"
 ---
-# <a name="server-property-example-vbscript"></a>Exemple de propriété de serveur (VBScript)
+# <a name="server-property-example-vbscript"></a>Server, exemple de propriété (VBScript)
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Le code suivant montre comment définir le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) paramètre lors de la conception et le lier à un contrôle prenant en charge les données à l’aide du fournisseur SQLOLEDB. Coupez et collez ce code dans un document ASP normal et nommez-le **ServerDesignVBS.asp**. Le script ASP identifie votre serveur.  
   
@@ -93,7 +90,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- L’exemple suivant montre comment définir les paramètres nécessaires de **RDS. DataControl** au moment de l’exécution. Pour tester cet exemple, coupez et collez ce code dans un document ASP normal et nommez-le **ServerRuntimeVBS.asp**. Le script ASP identifie votre serveur.  
+ L’exemple suivant montre comment définir les paramètres nécessaires de **RDS. DataControl** en cours d’exécution. Pour tester cet exemple, coupez et collez ce code dans un document ASP normal et nommez-le **ServerRuntimeVBS.asp**. Le script ASP identifie votre serveur.  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  

@@ -1,13 +1,11 @@
 ---
-title: Clone, méthode (ADO) | Documents Microsoft
+title: Clone, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f993cee93bce398020fdb5ae2b43a7911114a270
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b4768c0f01c38ef72735f3577c4d581c019b4595
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276428"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830307"
 ---
 # <a name="clone-method-ado"></a>Clone, méthode (ADO)
-Crée un doublon [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet d’un existant **Recordset** objet. Si vous le souhaitez, spécifie que le clone doit être en lecture seule.  
+Crée un doublon [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet depuis une **Recordset** objet. Si vous le souhaitez, spécifie que le clone doit être en lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,34 +39,34 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
   
 #### <a name="parameters"></a>Paramètres  
  *rstDuplicate*  
- Une variable objet qui identifie le doublon **Recordset** objet à créer.  
+ Une variable objet qui identifie le doublon **Recordset** objet devant être créé.  
   
  *rstOriginal*  
  Une variable objet qui identifie le **Recordset** objet à dupliquer.  
   
  *LockType*  
- Facultatif. A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valeur qui spécifie le type de verrou de l’original **Recordset**, ou en lecture seule **Recordset**. Les valeurs valides sont **adLockUnspecified** ou **adLockReadOnly**.  
+ Facultatif. Un [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valeur qui spécifie le type de verrou de l’original **Recordset**, ou en lecture seule **Recordset**. Les valeurs valides sont **adLockUnspecified** ou **adLockReadOnly**.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le **Clone** dupliqué de la méthode de création de plusieurs **Recordset** des objets, en particulier si vous voulez conserver plusieurs enregistrements en cours dans un ensemble donné d’enregistrements. À l’aide de la **Clone** méthode est plus efficace que la création et l’ouverture d’un nouvel **Recordset** objet qui utilise la même définition que l’original.  
+ Utilisez le **Clone** dupliqué de la méthode de création de plusieurs **Recordset** objets, en particulier si vous voulez conserver plusieurs enregistrements en cours dans un ensemble donné d’enregistrements. À l’aide de la **Clone** méthode est plus efficace que la création et ouverture d’un nouvel **Recordset** objet qui utilise la même définition que l’original.  
   
- Le [filtre](../../../ado/reference/ado-api/filter-property.md) propriété de l’original **Recordset**, le cas échéant, ne seront pas appliquées sur le clone. Définir le **filtre** propriété du nouveau **Recordset** pour filtrer les résultats. La méthode la plus simple pour copier tout existant **filtre** valeur consiste à affecter directement, comme suit.  
+ Le [filtre](../../../ado/reference/ado-api/filter-property.md) propriété de l’original **Recordset**, le cas échéant, ne seront pas appliquées pour le clone. Définir le **filtre** propriété du nouveau **Recordset** pour filtrer les résultats. La méthode la plus simple pour copier tout existant **filtre** valeur consiste à affecter directement, comme suit.  
   
 ```  
 rsNew.Filter = rsOriginal.Filter  
 ```  
   
- L’enregistrement actif d’un clone nouvellement créé est définie sur le premier enregistrement.  
+ L’enregistrement en cours d’un clone nouvellement créé est défini sur le premier enregistrement.  
   
- Modifications apportées à une **Recordset** objet sont visibles dans tous ses clones, quel que soit le type de curseur. Toutefois, après l’exécution de [Requery](../../../ado/reference/ado-api/requery-method.md) sur la version d’origine **Recordset**, les clones seront ne plus être synchronisés à l’original.  
+ Modifications apportées à un **Recordset** objet sont visibles dans tous ses clones, quel que soit le type de curseur. Toutefois, après l’exécution de [Requery](../../../ado/reference/ado-api/requery-method.md) sur l’original **Recordset**, les clones ne seront plus synchronisés à l’original.  
   
- Fermeture de l’original **Recordset** ne ferme pas ses copies, ni est fermeture fermer une copie la version d’origine ou les autres copies.  
+ Fermeture de la version d’origine **Recordset** ne ferme pas ses copies, ni ne le fait fermeture d’une copie de fermer la version d’origine ou les autres copies.  
   
  Vous ne pouvez cloner un **Recordset** objet qui prend en charge des signets. Les valeurs de signet sont interchangeables ; Autrement dit, une référence de signet à partir d’un **Recordset** objet fait référence au même enregistrement dans un de ses clones.  
   
- Certains **Recordset** les événements qui sont déclenchés seront produit également dans toutes les **Recordset** clone. Toutefois, étant donné que l’enregistrement en cours peut différer entre cloné **jeux d’enregistrements**, les événements n’est peut-être pas valides pour le clone. Par exemple, si vous modifiez la valeur d’un champ, un [WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md) événement se produit dans le texte modifié **Recordset** et dans tous les clones. Le *champs* paramètre de la **WillChangeField** l’événement de cloné **Recordset** (où la modification a été apportée pas) fait référence aux champs de l’enregistrement actif du clone, qui peut être un enregistrement différent de celui de l’enregistrement actif d’origine **Recordset** où la modification s’est produite.  
+ Certains **Recordset** événements sont déclenchés seront produit également dans toutes les **Recordset** clone. Toutefois, étant donné que l’enregistrement actif peut différer entre cloné **Recordsets**, les événements ne peuvent pas être valides pour le clone. Par exemple, si vous modifiez une valeur d’un champ, un [WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md) événement se produit dans les modifications **Recordset** et dans tous les clones. Le *champs* paramètre de la **WillChangeField** événement de cloné **Recordset** (où la modification a été effectuée pas) fait référence aux champs de l’enregistrement actif du clone, qui peut être un autre enregistrement à l’enregistrement en cours de l’original **Recordset** où la modification s’est produite.  
   
- Le tableau suivant fournit une liste complète de tous les **Recordset** événements. Il indique si elles sont valides et déclenchées pour tous les clones recordset générés à l’aide de la **Clone** (méthode).  
+ Le tableau suivant fournit une liste complète de tous les **Recordset** événements. Cette propriété indique si elles sont valides et déclenchées pour tous les clones recordset générés à l’aide de la **Clone** (méthode).  
   
 |Événement|Déclenché dans clones ?|  
 |-----------|--------------------------|  
@@ -89,6 +86,6 @@ rsNew.Filter = rsOriginal.Filter
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de méthode Clone (VB)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
- [Clone, méthode-exemple (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
+ [Clone, exemple de méthode (VB)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
+ [Clone, exemple de méthode (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
  [Clone, exemple de méthode (VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   
