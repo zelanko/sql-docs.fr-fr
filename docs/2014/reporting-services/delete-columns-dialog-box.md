@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10139"
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Delete Columns dialog box
 ms.assetid: 44587147-1013-4937-a26c-4fd023eea578
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 80011c1e73366da9562a522534b5cee5f75a4efa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46bc4a7b3767a18ba6e7f3b5869a56dd259e1285
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318009"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094959"
 ---
 # <a name="delete-columns-dialog-box"></a>Boîte de dialogue Supprimer les colonnes
   Utilisez la boîte de dialogue **Supprimer les colonnes** pour supprimer des colonnes d'une région de données de table, de matrice ou de liste. Lorsque des colonnes sont associées à des groupes, vous pouvez également supprimer la définition de groupe.  

@@ -1,28 +1,25 @@
 ---
-title: AVEC les Limitations de Clause | Documents Microsoft
+title: AVOIR de Clause-Limitations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HAVING clause limitations [ODBC]
 - ODBC SQL grammar, HAVING clause limitations
 ms.assetid: 80f3a839-50bb-42cc-b2a4-06a533145edb
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01996c6a36463cd7445cbdf4de85684a8effe4e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c09a6bcc3d16e51f4c64d2749c9ecbcc714dda4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32897914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669269"
 ---
-# <a name="having-clause-limitations"></a>AVEC les Limitations de Clause
+# <a name="having-clause-limitations"></a>HAVING, clause - limitations
 Le nombre maximal de conditions de recherche dans une clause HAVING est 40.

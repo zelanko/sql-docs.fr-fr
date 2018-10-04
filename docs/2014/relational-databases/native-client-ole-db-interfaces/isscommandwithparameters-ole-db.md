@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSCommandWithParameters (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - ISSCommandWithParameters interface
 ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ceca46260d82cc6f9a179a642821aee55e57d6e3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4de7c6a99afcbd7db7c6e233fb737f129b536b8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128229"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
   **ISSCommandWithParameters** expose la prise en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML et les types définis par l’utilisateur (UDT). Il s'agit d'une interface facultative qui hérite de l'interface OLE DB de base **ICommandWithParameters**. Outre les trois méthodes héritées de **ICommandWithParameters**( **GetParameterInfo**, **MapParameterNames**et **SetParameterInfo**) **ISSCommandWithParameters** fournit deux nouvelles méthodes permettant de gérer des types de données spécifiques au serveur.  
@@ -39,7 +36,7 @@ ms.locfileid: "37429988"
   
 ## <a name="see-also"></a>Voir aussi  
  [Interfaces &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)   
- [À l’aide des Types de données XML](../native-client/features/using-xml-data-types.md)   
+ [Utilisation de types de données XML](../native-client/features/using-xml-data-types.md)   
  [Utilisation de types définis par l’utilisateur](../native-client/features/using-user-defined-types.md)  
   
   

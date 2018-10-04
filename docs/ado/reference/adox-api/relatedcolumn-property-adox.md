@@ -1,13 +1,11 @@
 ---
-title: RelatedColumn, propriété (ADOX) | Documents Microsoft
+title: RelatedColumn, propriété (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - RelatedColumn property [ADOX]
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b34b5392fe9d718226a9fd5aba34640befb5ee2a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6939c346283e14848e44a822e05d1a3140656183
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286898"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599862"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn, propriété (ADOX)
-Indique le nom de le [objet de colonne (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) dans la table associée (pour les colonnes clés uniquement).  
+Indique le nom de relation [colonne objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) dans la table associée (pour les colonnes clés uniquement).  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit et renvoie un **chaîne** valeur qui est le nom de la colonne associée dans la table associée.  
@@ -45,5 +42,5 @@ Indique le nom de le [objet de colonne (ADOX)](../../../ado/reference/adox-api/c
  [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule exemple (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Keys Append, méthode, Type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Key, objet (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

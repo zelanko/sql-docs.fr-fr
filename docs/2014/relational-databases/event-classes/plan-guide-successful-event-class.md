@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Plan Guide Successful event class
 ms.assetid: fecfbb6c-56c9-4db4-84d3-00d6e338355a
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e9949ef55c7f7226574ab63eb3e0d0320449c61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d55e6bc30ec2634fd2b782fbb8986ab99c1fc91a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254191"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174950"
 ---
 # <a name="plan-guide-successful-event-class"></a>Plan Guide Successful, classe d'événements
   La classe d'événements Plan Guide Successful indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a produit correctement un plan d'exécution pour une requête ou un lot qui contenait un repère de plan. L'événement est déclenché lorsque les conditions suivantes sont remplies :  
@@ -56,7 +53,7 @@ ms.locfileid: "37254191"
 |SessionLoginName|`nvarchar`|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|`int`|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|`datetime`|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|`ntext`|Nom du repère de plan.| 1|Oui|  
+|TextData|`ntext`|Nom du repère de plan.|1|Oui|  
 |TransactionID|`bigint`|ID affecté par le système à la transaction.|4|Oui|  
 |XactSequence|`bigint`|Jeton qui décrit la transaction en cours.|50|Oui|  
   

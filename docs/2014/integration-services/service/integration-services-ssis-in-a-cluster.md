@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a918816d8fd90624b625ed6107bbdc5e86b2cc08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0846c7bdb0728d79dc3538eb5a46797e1b77e3db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250459"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095979"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) dans un cluster
   Le clustering [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n’est pas recommandé, car le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n’est pas un service cluster ou prenant en charge les clusters. De plus, il ne prend pas en charge le basculement d’un nœud de cluster à un autre. Par conséquent, dans un environnement cluster, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit être installé et démarré en tant que service autonome sur chaque nœud du cluster.  
@@ -39,7 +36,7 @@ ms.locfileid: "37250459"
   
 -   Lorsque plusieurs groupes de ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluent le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans un cluster, un basculement peut avoir des résultats inattendus. Examinez le scénario suivant. Groupe1, qui inclut le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , s’exécute sur le Nœud A. Groupe2, qui inclut également le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , s’exécute sur le Nœud B. Groupe2 bascule sur le Nœud A. La tentative de démarrage d’une autre instance du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur le Nœud A échoue, car le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est un service à instance unique. Le fait que le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essayant de basculer sur le Nœud A échoue également ou non dépend de la configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans Groupe2. Si le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a été configuré pour affecter les autres services dans le groupe de ressources, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui procède au basculement échouera car le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a échoué. Si le service a été configuré pour ne pas affecter les autres services dans le groupe de ressources, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pourra basculer sur le Nœud A. À moins que le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] dans Groupe2 n’ait été configuré pour ne pas affecter les autres services dans le groupe de ressources, l’échec du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui procède au basculement peut aussi provoquer l’échec du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui procède au basculement.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Pour obtenir des instructions détaillées sur la configuration du service Integration Services dans un cluster, consultez [Configurer le service Integration Services en tant que ressource de cluster](../configure-the-integration-services-service-as-a-cluster-resource.md).  
   
   

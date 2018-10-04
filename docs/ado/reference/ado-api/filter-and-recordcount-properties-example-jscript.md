@@ -1,13 +1,11 @@
 ---
-title: Filter et RecordCount, propriétés-exemple (JScript) | Documents Microsoft
+title: Filter et RecordCount, exemple de propriétés (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 656c981dd242ad7f11768aac0bb79c7214845c06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45e3a53bd006302d368b97304a1f6e8eeab438f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278608"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623977"
 ---
-# <a name="filter-and-recordcount-properties-example-jscript"></a>Filter et RecordCount, propriétés-exemple (JScript)
-Cet exemple ouvre un **Recordset** sur la table de sociétés de la base de données Northwind, puis utilise le [filtre](../../../ado/reference/ado-api/filter-property.md) propriété afin de limiter les enregistrements visibles à ceux dont le champ CompanyName commence par la lettre D. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le sous **FilterJS.asp**.  
+# <a name="filter-and-recordcount-properties-example-jscript"></a>Filter et RecordCount, exemple de propriétés (JScript)
+Cet exemple ouvre un **Recordset** sur la table de sociétés de la base de données Northwind, puis utilise le [filtre](../../../ado/reference/ado-api/filter-property.md) propriété afin de limiter les enregistrements visibles à ceux pour lesquels le champ CompanyName commence par la lettre D. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **FilterJS.asp**.  
   
 ```  
 <!-- BeginFilterJS -->  
@@ -153,6 +150,6 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filter, propriété](../../../ado/reference/ado-api/filter-property.md)   
+ [Propriété de filtre](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount, propriété (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

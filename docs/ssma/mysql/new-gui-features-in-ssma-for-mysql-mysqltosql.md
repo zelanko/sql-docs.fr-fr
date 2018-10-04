@@ -1,55 +1,49 @@
 ---
-title: Nouvelles fonctionnalités de l’interface graphique utilisateur de SSMA pour MySQL (MySQLToSQL) | Documents Microsoft
+title: Nouvelles fonctionnalités de l’interface graphique utilisateur de SSMA pour MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b9eb20c4a6a6eb789d7c37f02865fd4f2a7bd24c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 095f8e45c85a74bae9b15af63454846532bbc8c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783853"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>Nouvelles fonctionnalités de l’interface graphique utilisateur de SSMA pour MySQL (MySQLToSQL)
-Ce chapitre décrit les nouvelles fonctionnalités de l’Interface utilisateur SSMA  
+Ce chapitre décrit les nouvelles fonctionnalités de l’Interface utilisateur de SSMA  
   
-## <a name="layouts"></a>Mises en page  
-Cette fonctionnalité vous permet de choisir l’une des deux fenêtres prédéfinie à la sortie de mise en page ou créer votre propre disposition. Pour accéder au sous-menu mise en forme, dans le menu Affichage pointez aux mises en page. Vous pouvez choisir une des dispositions existantes, ajoutez la disposition actuelle ou gérer des dispositions.  
+## <a name="layouts"></a>Dispositions  
+Cette fonctionnalité vous permet de choisir l’une des deux fenêtres prédéfinis mise en page-out ou créer votre propre disposition. Pour accéder au sous-menu de disposition, dans le menu Affichage pointez dispositions. Vous pouvez choisir une des dispositions existantes, ajouter la disposition actuelle ou gérer les dispositions.  
   
 ### <a name="add-current-layout"></a>Ajouter la disposition actuelle  
-Pour enregistrer la disposition actuelle de windows, dans le menu Affichage, pointez sur mises en page, puis cliquez sur Ajouter la disposition actuelle.  
+Pour enregistrer la disposition actuelle de windows, dans le menu Affichage, pointez sur les dispositions, puis cliquez sur Ajouter une disposition actuelle.  
   
-### <a name="choose-predefined-layout"></a>Choisir une mise en page prédéfinie  
-Pour choisir une des dispositions prédéfinies, dans le menu Affichage, pointez aux mises en page, puis cliquez sur par défaut de mise en page ou sans explorateurs. Vous pouvez également utiliser des raccourcis Ctrl + Alt + 1 ou Ctrl + Alt + 2 pour les dispositions prédéfinies dans respectivement.  
+### <a name="choose-predefined-layout"></a>Choisir une disposition prédéfinie  
+Pour choisir une des dispositions prédéfinies, dans le menu Affichage, pointez sur les dispositions, puis cliquez sur disposition par défaut ou sans explorateurs. Vous pouvez également utiliser des raccourcis Ctrl + Alt + 1 ou Ctrl + Alt + 2 pour les dispositions prédéfinies dans respectivement.  
   
-### <a name="choose-user-defined-layout"></a>Choisissez défini par l’utilisateur de mise en page  
-Pour choisir défini par l’utilisateur de mise en page, dans le menu Affichage, pointez sur mises en page, puis cliquez sur un de la mise en page définie par l’utilisateur. Vous pouvez également utiliser les raccourcis définis pour les mises en page.  
+### <a name="choose-user-defined-layout"></a>Choisir la disposition défini par l’utilisateur  
+Pour choisir la disposition défini par l’utilisateur, dans le menu Affichage, pointez sur mises en page, puis cliquez sur un de la mise en page définie par l’utilisateur. Vous pouvez également utiliser des raccourcis définis pour les dispositions.  
   
-### <a name="manage-layouts"></a>Gérer des dispositions  
-Pour ouvrir la boîte de dialogue Gérer les mises en page, dans le menu Affichage, pointez sur mises en page et cliquez sur Gérer les dispositions. Dans la boîte de dialogue Gérer les dispositions, vous trouverez une liste des configurations existantes sur le côté gauche de la boîte de dialogue. Vous pouvez sélectionner la mise en page pour modifier ses paramètres. Vous pouvez également modifier l’ordre de mises en page dans la liste ou supprimer la disposition à l’aide des boutons en haut de la liste. Sur le côté droit de la boîte de dialogue, vous pouvez modifier les paramètres de disposition suivants :  
+### <a name="manage-layouts"></a>Gérer les dispositions  
+Pour ouvrir la boîte de dialogue Gérer les dispositions, dans le menu Affichage, pointez sur les dispositions et cliquez sur Gérer les dispositions. Dans la boîte de dialogue Gérer les dispositions, vous trouverez une liste des configurations existantes sur le côté gauche de la boîte de dialogue. Il vous pouvez sélectionner la mise en page pour modifier ses paramètres. Vous pouvez également modifier l’ordre de dispositions dans la liste ou supprimer la disposition à l’aide des boutons en haut de la liste. Sur le côté droit de la boîte de dialogue, vous pouvez modifier les paramètres de disposition suivants :  
   
--   Nom de la mise en page  
+-   Nom de la disposition  
   
--   Synchronisation des métadonnées des explorateurs  
+-   Synchronisation des explorateurs de métadonnées  
   
--   Visibilité et la largeur des source et cible les explorateurs de métadonnées  
+-   Visibilité et la largeur des explorateurs de métadonnées source et cible  
   
--   Visibilité de la source ou cible windows et leur taille  
+-   Visibilité de leurs tailles et les fenêtres source ou cible  
   
--   Visibilité et la hauteur de fenêtres auxiliaires  
+-   Visibilité et la hauteur de windows auxiliaires  
   
 ## <a name="bookmarks"></a>Signets  
 Cette fonctionnalité vous permet de définir un ou plusieurs signets dans la source ou le code cible, rapide trouvé un signet à l’aide de raccourcis, gérer les signets avec une boîte de dialogue convivial.  
@@ -57,14 +51,14 @@ Cette fonctionnalité vous permet de définir un ou plusieurs signets dans la so
 ### <a name="toggle-bookmark"></a>Basculer le signet  
 Vous pouvez définir/supprimer un signet comme suit :  
   
--   Utilisez le bouton Basculer le signet par-dessus la fenêtre SQL source ou cible  
+-   Utilisez le bouton Masquer le signet en haut de la fenêtre SQL source ou cible  
   
 -   Cliquez sur la zone grise située à gauche de la fenêtre SQL  
   
 -   Utilisez Ctrl + Maj +&lt;0.9&gt; pour définir le signet numéroté  
   
-### <a name="bookmark-navigation"></a>Navigation de signet  
-Vous pouvez parcourir les signets, par le biais de plusieurs manières :  
+### <a name="bookmark-navigation"></a>Navigation vers les signets  
+Vous pouvez visite les signets de plusieurs manières :  
   
 -   Utilisez les boutons signet suivant, le signet précédent en haut de la fenêtre SQL  
   
@@ -80,22 +74,22 @@ Vous pouvez supprimer un signet comme suit :
 -   Utilisez les boutons Supprimer ou supprimer tout dans la boîte de dialogue Gérer les signets  
   
 ### <a name="manage-bookmarks"></a>Gérer les signets  
-Pour ouvrir la boîte de dialogue Gérer les signets, dans le menu Edition, cliquez sur Gérer les signets. Dans la boîte de dialogue, vous verrez une liste des signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.  
+Pour ouvrir la boîte de dialogue Gérer les signets, cliquez sur Gérer les signets dans le menu Edition. Dans la boîte de dialogue, vous verrez une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.  
   
 ## <a name="object-history"></a>Historique de l’objet  
-L’historique de l’interface graphique utilisateur objet vous permet des avantages suivants lorsque vous accédez à objets :  
+L’historique de l’interface graphique utilisateur objet vous permet des avantages suivants lorsque vous naviguez d’objets :  
   
--   Vous pouvez utiliser les boutons Précédent et suivant pour naviguer dans les objets que vous avez déjà visitées  
+-   Vous pouvez utiliser les boutons Précédent et suivant pour parcourir les objets que vous avez déjà consultées  
   
--   Lorsque vous sauvegardez à l’objet, vous sauvegarder sur le même onglet que vous avez laissées  
+-   Lors de la sauvegarde à l’objet, vous sauvegardez sur le même onglet que vous avez laissées  
   
--   Lorsque vous à l’objet et l’onglet est SQL, vous sauvegardez à la même position de curseur que vous avez laissées  
+-   Lorsque vous revenez à l’objet et l’onglet est SQL, vous sauvegardez vers la même position de curseur qui vous avez quitté  
   
 ## <a name="advanced-search-capabilities"></a>Fonctionnalités de recherche avancées  
-Fonctionnalités de recherche avancées fournissent les fonctionnalités de recherche puissantes et flexibles et permettent de trouver la déclaration de l’objet, obtenir des informations sur l’objet, effectuer une recherche rapide, effectuer des objets avancée recherche dans les catégories à l’aide de modèles, etc.  
+Fonctionnalités de recherche avancées fournissent les fonctionnalités de recherche puissantes et flexibles et vous permettent de trouver la déclaration d’objet, obtenir des informations relatives aux objets, effectuer une recherche rapide, effectuer d’objet avancée recherche dans les catégories à l’aide de modèles, etc.  
   
-### <a name="get-quick-information"></a>Obtenir des informations rapides  
-Vous pouvez obtenir rapidement des informations sur l’objet à la position de curseur comme suit :  
+### <a name="get-quick-information"></a>Obtenir rapidement des informations  
+Vous pouvez obtenir rapidement des informations sur l’objet à la position du curseur comme suit :  
   
 -   Cliquez sur le bouton Info Express en haut de la fenêtre SQL  
   
@@ -103,30 +97,30 @@ Vous pouvez obtenir rapidement des informations sur l’objet à la position de 
   
 -   Appuyez sur Ctrl + Maj + espace  
   
-### <a name="find-declaration"></a>Trouver de déclaration  
+### <a name="find-declaration"></a>Recherchez la déclaration  
 Vous pouvez accéder à la déclaration de l’objet à la position du curseur comme suit :  
   
--   Cliquez sur le bouton Atteindre la déclaration au-dessus de la fenêtre SQL  
+-   Cliquez sur le bouton Atteindre la déclaration en haut de la fenêtre SQL  
   
 -   Sélectionnez Atteindre la déclaration dans le menu contextuel  
   
 -   Appuyez sur F12  
   
 ### <a name="quick-search"></a>Recherche rapide  
-Vous pouvez effectuer la recherche de texte rapide à l’aide des fonctionnalités suivantes :  
+Vous pouvez effectuer la recherche en texte rapide à l’aide des fonctionnalités suivantes :  
   
--   Vous pouvez démarrer la recherche à l’aide du raccourci Ctrl + F  
+-   Vous pouvez commencer la recherche à l’aide du raccourci Ctrl + F  
   
 -   Vous pouvez répéter la dernière recherche vers l’avant à l’aide de F3  
   
 -   Vous pouvez répéter la dernière recherche vers l’arrière à l’aide de MAJ + F3  
   
--   Vous pouvez rechercher l’occurrence suivante du mot à la position du curseur à l’aide de Ctrl + F3  
+-   Vous pouvez trouver l’occurrence suivante du mot à la position de curseur à l’aide de Ctrl + F3  
   
--   Vous trouverez l’occurrence précédente du mot à la position du curseur à l’aide de Ctrl + Maj + F3  
+-   Vous pouvez trouver l’occurrence précédente du mot à la position de curseur à l’aide de Ctrl + Maj + F3  
   
 -   Vous pouvez également effectuer toutes ces actions avec les éléments de menu.  
   
 ### <a name="advanced-search"></a>Recherche avancée  
-Pour ouvrir la boîte de dialogue Recherche avancée, sur le point de menu Modifier Rechercher, puis cliquez sur recherche avancée. Dans la boîte de dialogue, vous serez en mesure de trouver un objet à l’aide du modèle. En haut de la boîte de dialogue, vous pouvez rechercher des catégories de zone et d’objet.  
+Pour ouvrir la boîte de dialogue Recherche avancée, sur le point de menu Modifier Rechercher, puis cliquez sur recherche avancée. Dans la boîte de dialogue, vous serez en mesure de trouver n’importe quel objet à l’aide du modèle. En haut de la boîte de dialogue vous pouvez choisir les catégories d’objet et de la zone de recherche.  
   

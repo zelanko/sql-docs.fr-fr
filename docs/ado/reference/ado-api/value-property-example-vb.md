@@ -1,32 +1,29 @@
 ---
-title: Valeur de propriété Exemple (VB) | Documents Microsoft
+title: Valeur de propriété, exemple (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Value property [ADO], Visual Basic example
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 008ac421a9b99f6d0365f84556609ba52b37f0fb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 00f27eafae8dc375d3c4122c093c1f61abe39391
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282725"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758757"
 ---
-# <a name="value-property-example-vb"></a>Exemple de valeur de propriété (VB)
-Cet exemple illustre la [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété avec [champ](../../../ado/reference/ado-api/field-object.md) et [propriété](../../../ado/reference/ado-api/property-object-ado.md) objets en affichant les valeurs de champs et de propriétés pour le ***employés*** table.  
+# <a name="value-property-example-vb"></a>Value, exemple de propriété (VB)
+Cet exemple montre la [valeur](../../../ado/reference/ado-api/value-property-ado.md) propriété avec [champ](../../../ado/reference/ado-api/field-object.md) et [propriété](../../../ado/reference/ado-api/property-object-ado.md) objets en affichant les valeurs de champ et de propriété pour le ***employés*** table.  
   
 ```  
 'BeginValueVB  
@@ -105,6 +102,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet Field](../../../ado/reference/ado-api/field-object.md)   
+ [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
  [Objet de propriété (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value, propriété (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

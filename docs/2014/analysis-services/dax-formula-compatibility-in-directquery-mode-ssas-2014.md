@@ -4,27 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
-caps.latest.revision: 3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68a73fd64b9bba02a917c8538f79062ff85afbdb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189476"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113692"
 ---
-# <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilité des formules DAX en Mode DirectQuery (SSAS 2014)
+# <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilité des formules DAX en mode DirectQuery (SSAS 2014)
 Le langage Data Analysis expressions (DAX) peut être utilisé pour créer des mesures et autres formules personnalisées pour une utilisation dans les modèles tabulaires Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] les modèles de données dans des classeurs Excel et les modèles de données Power BI Desktop. Dans bien des égards, les modèles que vous créez dans ces environnements sont identiques, et vous pouvez utiliser les mesures de même, les relations et les indicateurs de performance clés, etc. Toutefois, si vous créez un modèle tabulaire Analysis Services et le déployez en mode DirectQuery, il existe certaines restrictions sur les formules que vous pouvez utiliser. Cette rubrique fournit une vue d’ensemble de ces différences, répertorie les fonctions qui ne sont pas pris en charge dans le modèle de tabulars SQL Server 2014 Analysis Services au niveau de compatibilité 1100 ou 1103 et en mode DirectQuery, et répertorie les fonctions qui sont prises en charge, mais peut retourner des résultats différents.  
   
 Dans cette rubrique, nous utilisons le terme *modèle en mémoire* pour faire référence aux modèles tabulaires, qui sont entièrement hébergés en mémoire des données mises en cache sur un serveur Analysis Services en cours d’exécution en mode tabulaire. Nous utilisons *les modèles DirectQuery* pour faire référence aux modèles tabulaires qui ont été créés ou déployés en mode DirectQuery. Pour plus d’informations sur le mode DirectQuery, consultez [DirectQuery Mode (SSAS tabulaire)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5).  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b56558bf2e7d49f336d756699f8b5dc59f2ac58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168181"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurer un traitement d'actualisation des données uniquement ou de requêtes uniquement (PowerPivot pour SharePoint)
   En mode intégré SharePoint, une instance de serveur Analysis Services peut être configurée pour prendre en charge un type spécifique de demande de traitement, comme l'actualisation des données ou le traitement des requêtes uniquement. Par défaut, les deux types sont activés. Vous pouvez en désactiver un pour créer un moteur d'interrogation dédié ou un serveur d'actualisation des données.  
@@ -73,8 +70,8 @@ ms.locfileid: "37222299"
   
 |RAM réelle (en gigaoctets)|Valeur par défaut calculée|Nombre réel d'UC|Valeur maximale calculée|Augmenter les travaux simultanés ?|  
 |---------------------------------|------------------------------|------------------------|------------------------------|-------------------------------|  
-|4| 1| 1| 1|Non. Les valeurs par défaut et maximale sont identiques.|  
-|4| 1|4|4|Oui. Vous pouvez augmenter le nombre de travaux simultanés à 2, 3 ou 4.|  
+|4|1|1|1|Non. Les valeurs par défaut et maximale sont identiques.|  
+|4|1|4|4|Oui. Vous pouvez augmenter le nombre de travaux simultanés à 2, 3 ou 4.|  
 |8|2|4|4|Oui. Vous pouvez augmenter le nombre de travaux simultanés à 3 ou 4.|  
 |16|4|4|4|Non. Les valeurs par défaut et maximale sont identiques.|  
 |32|En utilisant la formule qui calcule la valeur par défaut, la valeur par défaut serait 8. Étant donné que la valeur par défaut est plus élevée que la valeur maximale autorisée, la valeur par défaut calculée n'est pas utilisée dans ce cas.|4|4|Non. Bien qu'une RAM importante indiquerait une valeur par défaut de 8 travaux simultanés, un ordinateur comprenant 4 processeurs ne prend en charge qu'un maximum de 4 travaux simultanés.|  

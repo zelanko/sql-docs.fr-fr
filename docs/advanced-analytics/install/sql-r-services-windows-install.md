@@ -3,17 +3,17 @@ title: Installer SQL Server 2016 R Services (en base de données) | Microsoft Do
 description: R dans SQL Server est disponible lorsque vous installez SQL Server 2016 R Services sur Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 92d477434460c9395342e1a522173a301b5a0ad8
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 5c1da774f52f78b67e6adb34f33513930c316991
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713301"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229929"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installer SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,9 @@ Cet article explique comment installer et configurer **SQL Server 2016 R Service
 
 Dans SQL Server 2017, l’intégration de R est disponible en [Machine Learning Services](../r/r-server-standalone.md), qui reflète l’ajout de Python. Si vous voulez une intégration de R et disposez du support d’installation de SQL Server 2017, consultez [installer SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) pour ajouter la fonctionnalité. 
 
-## <a name="bkmk_prereqs"> </a> Liste de vérification de préinstallation
+<a name="bkmk_prereqs"> </a> 
+
+## <a name="pre-install-checklist"></a>Liste de vérification de préinstallation
 
 + Une instance du moteur de base de données est requise. Vous ne pouvez pas installer R simplement, bien que vous pouvez l’ajouter progressivement à une instance existante.
 
@@ -46,11 +48,15 @@ Si vous avez utilisé des versions antérieures de l’environnement de dévelop
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
- ###  <a name="bkmk_ga_instalpatch"></a> Installer le correctif obligatoire 
+<a name="bkmk_ga_instalpatch"></a>
+
+ ### <a name="install-patch-requirement"></a>Installer le correctif obligatoire 
 
 Microsoft a identifié un problème avec la version spécifique des fichiers binaires Microsoft VC++ 2013 Runtime qui sont installés en tant que composants requis par SQL Server. Si cette mise à jour des fichiers binaires du runtime VC n’est pas installée, SQL Server risque de rencontrer des problèmes de stabilité dans certains scénarios. Avant d’installer SQL Server, suivez les instructions données dans [Notes de publication de SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) pour voir si votre ordinateur nécessite un correctif pour les fichiers binaires du runtime VC.  
 
-## <a name="bkmk2016top"></a>Exécutez le programme d’installation
+<a name="bkmk2016top"></a>
+
+## <a name="run-setup"></a>Exécutez le programme d’installation
 
 Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui a les autorisations de lecture et d'exécution sur le partage distant.
 
@@ -85,8 +91,9 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 
 7. Une fois l’installation terminée, si vous êtes invité à redémarrer l’ordinateur, faites-le maintenant. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
+<a name="bkmk_enableFeature"></a>
 
-##  <a name="bkmk_enableFeature"></a>Activer l’exécution du script
+##  <a name="enable-script-execution"></a>Activer l’exécution du script
 
 1. Ouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
@@ -118,6 +125,8 @@ Le redémarrage du service automatiquement redémarre connexe [!INCLUDE[rsql_lau
 Vous pouvez redémarrer le service à l’aide de clic droit **redémarrer** commande pour l’instance dans SSMS, ou à l’aide de la **Services** dans le panneau de configuration ou à l’aide du Panneau de configuration [Gestionnaire de Configuration SQL Server ](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>Vérifier l'installation
+
+Vérifier l’état d’installation de l’instance à l’aide [des rapports personnalisés](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 Utilisez les étapes suivantes pour vérifier que tous les composants utilisés pour lancer le script externe sont en cours d’exécution.
 
@@ -151,7 +160,29 @@ Utilisez les étapes suivantes pour vérifier que tous les composants utilisés 
     |----|
     | 1|
 
-## <a name="bkmk_FollowUp"></a> Configuration supplémentaire
+<a name="apply-cu"></a>
+
+## <a name="apply-updates"></a>Appliquer des mises à jour
+
+Nous vous recommandons d’appliquer la mise à jour cumulative la plus récente pour le moteur de base de données et les composants d’apprentissage.
+
+Sur les appareils connectés à internet, les mises à jour cumulatives sont appliqués en général via Windows Update, mais vous pouvez également utiliser les étapes ci-dessous pour les mises à jour contrôlés. Lorsque vous appliquez la mise à jour pour le moteur de base de données, le programme d’installation extrait les mises à jour cumulatives pour les bibliothèques R que vous avez installé sur la même instance. 
+
+Sur les serveurs hors connexion, des étapes supplémentaires sont nécessaires. Pour plus d’informations, consultez [installer sur des ordinateurs sans accès à internet > appliquer des mises à jour cumulatives](sql-ml-component-install-without-internet-access.md#apply-cu).
+
+1. Démarrer avec une instance de la ligne de base déjà installée : version initiale de SQL Server 2016, SQL Server 2016 Service Pack 1 ou SQL Server 2016 Service Pack 2.
+
+2. Accédez à la liste de mise à jour cumulative : [met à jour de SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. Sélectionnez la mise à jour cumulative la plus récente. Un fichier exécutable est téléchargé et extrait automatiquement.
+
+4. Exécutez le programme d'installation. Acceptez les termes du contrat de licence et sur la page de sélection de fonctionnalités, passez en revue les fonctionnalités pour lesquelles les mises à jour cumulatives sont appliquées. Vous devez voir toutes les fonctionnalités installées pour l’instance actuelle, y compris les Services R. Le programme d’installation télécharge les fichiers CAB nécessaires pour mettre à jour toutes les fonctionnalités.
+
+5. Suivez les instructions de l’Assistant en acceptant les termes du contrat de licence pour la distribution de R. 
+
+<a name="bkmk_FollowUp"></a> 
+
+## <a name="additional-configuration"></a>Configuration supplémentaire
 
 Si l’étape de vérification de script externe a réussi, vous pouvez exécuter des commandes de Python à partir de SQL Server Management Studio, Visual Studio Code ou tout autre client capable d’envoyer des instructions T-SQL sur le serveur.
 
@@ -169,7 +200,9 @@ Scénarios courants qui nécessitent des modifications supplémentaires sont les
 > [!NOTE]
 > Pas toutes les modifications répertoriées sont requises, et aucun peut être requise. Configuration requise dépend de votre schéma de sécurité, où vous avez installé SQL Server, et que les utilisateurs pour se connecter à la base de données et exécuter des scripts externes. Conseils de dépannage supplémentaires, consultez : [FAQ d’installation et de mise à niveau](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-### <a name="bkmk_configureAccounts"></a>Activer l’authentification implicite pour le groupe de comptes Launchpad
+<a name="bkmk_configureAccounts"></a>
+
+### <a name="enable-implied-authentication-for-the-launchpad-account-group"></a>Activer l’authentification implicite pour le groupe de comptes Launchpad
 
 Pendant l’installation, certains nouveaux comptes d’utilisateur Windows sont créés pour l’exécution des tâches situées dans le jeton de sécurité de le [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. Lorsqu’un utilisateur envoie un script R à partir d’un client externe, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Active un compte de travail disponible, est mappé à l’identité de l’utilisateur appelant, et exécute le script R pour le compte de l’utilisateur. Ce nouveau service du moteur de base de données prend en charge l’exécution sécurisée de scripts externes, appelé *l’authentification implicite*.
 
@@ -189,7 +222,9 @@ Toutefois, si vous avez besoin d’exécuter des scripts R à partir d’un clie
 6. Cliquez sur **OK** pour fermer la **sélectionner utilisateur ou groupe** boîte de dialogue.
 7. Dans le **nouvelle connexion** boîte de dialogue, cliquez sur **OK**. Par défaut, la connexion est affectée au rôle **public** et est autorisée à se connecter au moteur de base de données.
 
-### <a name="bkmk_AllowLogon"></a>Autoriser les utilisateurs à exécuter des scripts externes
+<a name="bkmk_AllowLogon"></a>
+
+### <a name="give-users-permission-to-run-external-scripts"></a>Autoriser les utilisateurs à exécuter des scripts externes
 
 > [!NOTE]
 > Si vous utilisez une connexion SQL pour l’exécution des scripts R dans un contexte de calcul de SQL Server, cette étape n’est pas requise.
@@ -209,7 +244,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > 
 > [Surveiller les Services Machine Learning à l’aide de rapports personnalisés](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
-### <a name="permissions-db"></a> Donnez à vos utilisateurs lecture, écriture ou les autorisations DDL pour la base de données
+<a name="permissions-db"></a>
+
+###  <a name="give-your-users-read-write-or-ddl-permissions-to-the-database"></a>Donnez à vos utilisateurs lecture, écriture ou les autorisations DDL pour la base de données
 
 Le compte d’utilisateur qui est utilisé pour exécuter R peut doivent lire les données à partir d’autres bases de données, créer des tables pour stocker les résultats et écrire des données dans des tables. Par conséquent, pour chaque utilisateur qui va exécuter des scripts R, vérifiez que l’utilisateur dispose des autorisations appropriées sur la base de données : *db_datareader*, *db_datawriter*, ou *db_ddladmin*.
 
@@ -240,7 +277,9 @@ Maintenant que vous avez ce que tout fonctionne, vous souhaiterez également opt
 
 Si vous pensez que vous pouvez utiliser largement R, ou si vous prévoyez de nombreux utilisateurs d’être en cours d’exécution de scripts simultanément, vous pouvez augmenter le nombre de comptes de travail qui sont affectés au service Launchpad. Pour plus d’informations, consultez [modifier le pool de comptes d’utilisateur pour SQL Server Machine Learning Services](../r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-### <a name="bkmk_optimize"></a>Optimiser le serveur pour l’exécution du script externe
+<a name="bkmk_optimize"></a>
+
+### <a name="optimize-the-server-for-external-script-execution"></a>Optimiser le serveur pour l’exécution du script externe
 
 Les paramètres par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d’installation sont destinées à optimiser l’équilibre du serveur pour un large éventail de services qui sont pris en charge par le moteur de base de données, ce qui peut inclure extraction, transformation et processus de chargement (ETL), création de rapports, l’audit, et les applications qui utilisent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données. Par conséquent, les paramètres par défaut, vous constaterez peut-être que les ressources pour l’apprentissage sont parfois restreintes ou limitées, en particulier dans les opérations gourmandes en mémoire.
 
@@ -262,17 +301,6 @@ Installez les packages que vous souhaitez utiliser à partir de SQL Server dans 
 
 Le processus d’installation et de gestion des packages R est différent dans SQL Server 2016 et SQL Server 2017. Dans SQL Server 2016, un administrateur de base de données doit installer les packages R que les utilisateurs ont besoin. Dans SQL Server 2017, vous pouvez configurer des groupes d’utilisateurs de partager les packages sur un niveau par base de données ou configurer des rôles de base de données pour permettre aux utilisateurs d’installer leurs propres packages. Pour plus d’informations, consultez [installer de nouveaux packages R](../r/install-additional-r-packages-on-sql-server.md).
 
-
-## <a name="get-help"></a>Obtenir de l’aide
-
-Besoin d’aide avec l’installation ou mise à niveau ? Pour obtenir des réponses aux questions courantes et les problèmes connus, consultez l’article suivant :
-
-* [Mise à niveau et installation FAQ - Services Machine Learning](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-Pour vérifier l’état d’installation de l’instance et résoudre les problèmes courants, essayez ces rapports personnalisés.
-
-* [Rapports personnalisés pour SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
-
 ## <a name="next-steps"></a>Étapes suivantes
 
 Aux développeurs R peuvent démarrer avec des exemples simples et apprendre les bases du fonctionne de R avec SQL Server. Pour votre prochaine étape, consultez les liens suivants :
@@ -281,5 +309,3 @@ Aux développeurs R peuvent démarrer avec des exemples simples et apprendre les
 + [Didacticiel : De base de données analytique pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Pour afficher des exemples d’apprentissage qui sont basées sur des scénarios réels, consultez [d’apprentissage didacticiels](../tutorials/machine-learning-services-tutorials.md).
-
-

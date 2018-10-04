@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d8ab6d3d16cff232107a4e2467d5a7d71dd59e8b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f5776d2a7523f4d56bb48926a8f0bf0929e87f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192979"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118119"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequence Clustering Model Query Examples
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez soit créer une requête de contenu, qui fournit des détails sur les informations stockées dans le modèle, soit créer une requête de prédiction, qui utilise les séquences du modèle pour effectuer des prédictions basées sur les nouvelles données que vous fournissez. Pour un modèle Sequence Clustering, les requêtes de contenu fournissent en général des détails supplémentaires à propos des clusters trouvés ou les transitions dans ces clusters. Vous pouvez également extraire les métadonnées relatives au modèle en utilisant une requête.  
@@ -236,7 +233,7 @@ AS t
   
 |Expression.$Sequence|Expression.Line Number|Expression.Model|  
 |--------------------------|----------------------------|----------------------|  
-| 1||Cycling Cap|  
+|1||Cycling Cap|  
 |2||Cycling Cap|  
 |3||Sport-100|  
 |4||Long-Sleeve Logo Jersey (Pull-over à manches longues)|  

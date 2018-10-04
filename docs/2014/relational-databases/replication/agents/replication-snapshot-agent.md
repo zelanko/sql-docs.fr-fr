@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, executables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: e6b6fe366014bdffce0eeef77c7e2e79872f22e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311689"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087159"
 ---
 # <a name="replication-snapshot-agent"></a>Agent d'instantané de réplication
   L'Agent d'instantané de réplication est un fichier exécutable qui prépare les fichiers d'instantané contenant les schémas ainsi que les données des tables et des objets de base de données publiés, stocke les fichiers dans le dossier d'instantanés, et enregistre les travaux de synchronisation dans la base de données de distribution.  
@@ -197,12 +194,12 @@ ms.locfileid: "44311689"
 |**2**|Tous les messages d'erreur et tous les messages du rapport de progression sont imprimés, ce qui peut s'avérer utile lors du débogage.|  
 
  **-PrefetchTables** [ **0**| **1**]  
- Paramètre facultatif qui spécifie si les objets de table seront lu par anticipation et mis en cache.  Le comportement par défaut consiste à certaines propriétés de la table à l’aide du composant SMO basé sur un calcul interne de récupération.  Ce paramètre peut être utile dans les scénarios où SMO prefetch opération prend beaucoup plus à exécuter. Si ce paramètre n’est pas utilisé, cette décision est prise lors de l’exécution en fonction du pourcentage de tables qui sont ajoutés en tant qu’articles à la publication.  
+ Paramètre facultatif qui spécifie si les objets de table sont prérécupérés et mis en cache.  Le comportement par défaut consiste à prérécupérer certaines propriétés de la table à l’aide du composant SMO suivant un calcul interne.  Ce paramètre peut être utile dans les scénarios où l’opération de prérécupération SMO est considérablement plus longue. S’il n’est pas utilisé, cette décision est prise à l’exécution en fonction du pourcentage de tables ajoutées comme articles à la publication.  
   
 |Valeur OutputVerboseLevel|Description|  
 |------------------------------|-----------------|  
-|**0**|Appel de méthode de prérécupération de composant SMO est désactivé.|  
-|**1**|Agent d’instantané appellera la méthode prérécupération pour mettre en cache certaines propriétés de la table à l’aide de SMO|  
+|**0**|L’appel de la méthode de prérécupération de composant SMO est désactivé.|  
+|**1**|L’Agent d’instantané appellera la méthode prérécupération pour mettre en cache certaines propriétés de la table à l’aide de SMO.|  
   
  **-PacketSize** *packet_size*  
  Taille du paquet (en octets) utilisée par l'Agent d'instantané lors de la connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La valeur par défaut est 8 192 octets.  

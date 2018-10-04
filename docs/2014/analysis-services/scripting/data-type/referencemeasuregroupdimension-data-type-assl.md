@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReferenceMeasureGroupDimension Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ReferenceMeasureGroupDimension data type
 ms.assetid: 81f7b83e-71a3-4eab-b291-0500d05903dc
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8e2134f14ad34f14cbf1b7f6a2858fe14485bbe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 29a3a0a6e396fc3c8d1ff2e94c9f8f0c070e7f36
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159306"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118049"
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>Type de données ReferenceMeasureGroupDimension (ASSL)
   Définit un type de données dérivé représentant une dimension indirectement liée à la table de faits par le biais d'une dimension intermédiaire. (Par exemple, un groupe de mesures Ventes peut référencer une dimension Géographie liée par le biais de la dimension Client.)  

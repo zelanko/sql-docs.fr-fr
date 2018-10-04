@@ -1,32 +1,29 @@
 ---
-title: Instructions SQL construites au moment de l’exécution | Documents Microsoft
+title: Instructions SQL construites au moment de l’exécution | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - run time constructed SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18f5a02bdcec575ac1362d3f656480eb0ab9b4a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0573851ee93bda4aa33e8645148cf2ee66200bee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914294"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848097"
 ---
-# <a name="sql-statements-constructed-at-run-time"></a>Instructions SQL construites au moment de l’exécution
-Les applications qui effectuent une analyse ad hoc couramment construisent des instructions SQL en cours d’exécution. Par exemple, une feuille de calcul peut autoriser un utilisateur de sélectionner les colonnes à partir de laquelle récupérer les données :  
+# <a name="sql-statements-constructed-at-run-time"></a>Construction d’instructions SQL au moment de l’exécution
+Les applications qui effectuent des analyses ad hoc couramment construisent des instructions SQL en cours d’exécution. Par exemple, une feuille de calcul peut autoriser un utilisateur de sélectionner les colonnes à partir duquel récupérer des données :  
   
 ```  
 // SQL_Statements_Constructed_at_Run_Time.cpp  
@@ -72,8 +69,8 @@ int main() {
 }  
 ```  
   
- Une autre classe couramment construit des instructions SQL au moment de l’exécution d’applications sont des environnements de développement. Toutefois, les instructions qu’ils construire sont codés en dur dans l’application qu’ils développent, où ils peuvent généralement être optimisés et testés.  
+ Une autre classe d’applications couramment construit des instructions SQL en cours d’exécution sont des environnements de développement d’application. Toutefois, les instructions qu’ils construisent sont codées en dur dans l’application, qu'ils créent, où ils peuvent généralement être optimisés et testés.  
   
- Les applications qui génèrent des instructions SQL en cours d’exécution peuvent fournir une grande flexibilité pour l’utilisateur. Comme le montre l’exemple précédent, qui ne prend pas encore en charge des opérations courantes telles que **où** clauses, **ORDER BY** clauses ou des jointures, construction d’instructions SQL en cours d’exécution est considérablement plus complexe que les instructions de codage en dur. En outre, ces applications de test est problématique, car ils peuvent construire un nombre arbitraire d’instructions SQL.  
+ Les applications qui génèrent des instructions SQL en cours d’exécution peuvent fournir une flexibilité considérable à l’utilisateur. Comme illustré dans l’exemple précédent, ce qui ne pas encore prennent en charge des opérations courantes telles que **où** clauses, **ORDER BY** clauses ou des jointures, construction d’instructions SQL en cours d’exécution est infiniment plus complexe que les instructions de codage en dur. En outre, ces applications de test est problématique, car leur permet de créer un nombre arbitraire d’instructions SQL.  
   
- Un inconvénient potentiel de construction d’instructions SQL en cours d’exécution est qu’il prend beaucoup plus de temps pour construire une instruction d’utiliser une instruction codé en dur. Heureusement, il est rarement un problème. Ces applications sont susceptibles d’être beaucoup d’interface utilisateur et le temps que l’application consacre à construire des instructions SQL est généralement faible par rapport à l’heure de l’utilisateur est occupé à entrer des critères.
+ Un inconvénient potentiel de construction d’instructions SQL en cours d’exécution est qu’il prend beaucoup plus de temps pour construire une instruction d’utiliser une instruction codées en dur. Heureusement, il est rarement une préoccupation. Ces applications ont tendance à être intensif de l’interface utilisateur et le temps passé par l’application construction d’instructions SQL est généralement faible par rapport à l’heure de critères d’entrée passé par l’utilisateur.

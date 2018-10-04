@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bd4617a057a768522064546806dfd23e99366656
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adcea3ce2134ddfe33a9a11ba06cce028c8fad51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210179"
 ---
 # <a name="udt-utilities"></a>Utilitaires UDT
   L'exemple Utilitaires UDT contient diverses fonctions utilitaires, Celles-ci incluent notamment des fonctions pour afficher les métadonnées d'un assembly dans Transact-SQL, des exemples de fonctions table en continu pour retourner les types dans un assembly sous forme de table, et enfin des fonctions pour retourner les champs, méthodes et propriétés dans un type défini par l'utilisateur. Les technologies illustrées comprennent les fonctions table en continu, les API de réflexion du .NET Framework et l'appel des fonctions table à partir de Transact-SQL.  
