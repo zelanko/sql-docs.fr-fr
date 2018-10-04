@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8196476349cbe6f2e376a4ac651fb6b1eeb65b34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ad46261f10c154c86cd020afdc2c0ca33be7434
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075546"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644358"
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +179,7 @@ dta -d AdventureWorks2012 ...
  Spécifie que les index filtrés soient considérés pour de nouvelles recommandations. Pour plus d'informations, consultez [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Spécifie que les index columnstore doivent être considérés pour les nouvelles recommandations. DTA prend en compte les index cluster et non cluster columnstore. Pour plus d'informations, consultez    
+ Spécifie que les index columnstore doivent être considérés pour les nouvelles recommandations. DTA considère que les index columnstore en cluster et non-cluster. Pour plus d'informations, consultez    
 [Recommandations relatives aux index columnstore dans l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
@@ -221,8 +217,8 @@ dta -d AdventureWorks2012 ...
  **-ip**  
  Spécifie que le cache du plan est utilisé comme charge de travail. Les 1 000 premiers événements du cache du plan pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n** .  
  
-**-sweetiq**  
- Spécifie que le magasin de requêtes est utilisé comme la charge de travail. Les 1 000 premiers événements du magasin de requêtes pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n** .  Pour plus d’informations, consultez [Magasin de requêtes](../../relational-databases/performance/how-query-store-collects-data.md) et [Paramétrage de base de données à l’aide des charges de travail du Magasin de requêtes](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
+**-iq**  
+ Spécifie que la requête Store servir la charge de travail. Les 1 000 premiers événements à partir de la requête Store pour les bases de données explicitement sélectionnées sont analysés. Cette valeur peut être modifiée à l'aide de l'option **-n** .  Pour plus d’informations, consultez [Magasin de requêtes](../../relational-databases/performance/how-query-store-collects-data.md) et [Paramétrage de base de données à l’aide des charges de travail du Magasin de requêtes](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
 |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -271,12 +267,12 @@ dta -n number_of_events -A 0
   
  Dans ce cas, il est important de spécifier une durée de réglage illimitée (`-A 0`). Sinon, l'Assistant Paramétrage du moteur de base de données utilise par défaut une durée de réglage de 8 heures.
  
- **-I** *time_window_in_hours*   
-   Spécifie la fenêtre de temps (en heures) lorsqu’une requête doit avoir exécutée pour être considéré comme en DTA pour le paramétrage lors de l’utilisation **-sweetiq** option (charge de travail à partir du magasin de requêtes). 
+ **-Je** *time_window_in_hours*   
+   Spécifie la fenêtre de temps (en heures) quand une requête doit avoir été exécutée pour être prise en compte par DTA pour le paramétrage lors de l’utilisation **-iq** option (charge de travail à partir de la requête Store). 
 ```  
 dta -iq -I 48  
 ```  
-Dans ce cas, DTA sera utiliser le magasin de requêtes comme source de charge de travail et prendre en compte uniquement des requêtes qui ont exécuté avec les dernières 48 heures.  
+Dans ce cas, DTA sera utiliser Query Store comme source de la charge de travail et prendre en compte uniquement des requêtes qui ont été exécutées avec les dernières 48 heures.  
   ||  
 |-|  
 |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
