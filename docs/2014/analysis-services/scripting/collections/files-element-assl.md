@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Files Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Files element
 ms.assetid: 8a1327cb-1f60-42a7-b8ef-213d45a63e55
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d4ed9199f5b715c00e70da39e1742a2638cf67a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91fd214a87ea266a1c5849211bd30237b4313b20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196039"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078619"
 ---
 # <a name="files-element-assl"></a>Élément Files (ASSL)
   Contient la collection de [fichier](../objects/file-element-assl.md) éléments qui composent un [ClrAssembly](../data-type/assembly-data-type-assl.md) élément.  

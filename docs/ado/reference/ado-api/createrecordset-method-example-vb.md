@@ -1,32 +1,29 @@
 ---
-title: Exemple de méthode CreateRecordset (VB) | Documents Microsoft
+title: Méthode CreateRecordset, exemple (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CreateRecordset method [RDS], Visual Basic example
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ecaf020aaef33580142c7f6dde3fb6eba57b7cb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a924314c4de47a62e835708478e093a72f3b3c57
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277268"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830107"
 ---
-# <a name="createrecordset-method-example-vb"></a>Exemple de méthode CreateRecordset (VB)
-Vous pouvez créer un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de l’objet et spécifiez les informations de colonne. Vous pouvez ensuite insérer des données dans le **Recordset** objet ; les tampons d’ensemble de lignes sous-jacent les insertions.  
+# <a name="createrecordset-method-example-vb"></a>CreateRecordset, exemple de méthode (VB)
+Vous pouvez créer un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de l’objet et spécifiez les informations de colonne. Vous pouvez ensuite insérer des données dans le **Recordset** objet ; l’ensemble de lignes sous-jacent, mémoires tampons les insertions.  
   
  L’exemple de code suivant montre comment définir un **Recordset** à l’aide de la [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objet. Vous pouvez également le faire avec le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet.  
   

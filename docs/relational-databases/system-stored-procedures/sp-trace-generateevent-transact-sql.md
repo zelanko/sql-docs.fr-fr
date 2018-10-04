@@ -1,14 +1,11 @@
 ---
-title: sp_trace_generateevent (Transact-SQL) | Documents Microsoft
+title: sp_trace_generateevent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 398fb058ae7be57cf0c26b26e77d6e82aafd0df3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260655"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826547"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ sp_trace_generateevent [ @eventid = ] event_id
   
 ## <a name="arguments"></a>Arguments  
  [  **@eventid=**] *event_id*  
- ID de l'événement à activer. *event_id* est **int**, sans valeur par défaut. L’ID doit être un des numéros d’événements de 82 à 91, qui représentent les événements définis par l’utilisateur en tant qu’ensemble avec [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ ID de l'événement à activer. *event_id* est **int**, sans valeur par défaut. L’ID doit être un des numéros d’événements de 82 à 91, qui représentent les événements définis par l’utilisateur en tant que jeu avec [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  [ **@userinfo**=] **'***user_info***'**  
  Chaîne facultative, définie par l'utilisateur, qui identifie le motif de l'événement. *user_info* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
@@ -61,7 +57,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Le tableau suivant décrit les valeurs de code que les utilisateurs peuvent recevoir à la fin de l'exécution de la procédure stockée.  
   
-|Code de retour| Description|  
+|Code de retour|Description|  
 |-----------------|-----------------|  
 |**0**|Aucune erreur.|  
 |**1**|Erreur inconnue.|  
@@ -71,11 +67,11 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="remarks"></a>Notes  
  **sp_trace_generateevent** effectue la plupart des actions précédemment exécutées par le **xp_trace_\***  les procédures stockées étendues. Utilisez **sp_trace_generateevent** au lieu de **xp_trace_generate_event**.  
   
- Seuls les numéros d’ID des événements définis par l’utilisateur peuvent être utilisés avec **sp_trace_generateevent**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur si d'autres numéros d'identification des événements sont utilisés.  
+ Seuls les numéros d’ID des événements définis par l’utilisateur peuvent être utilisées avec **sp_trace_generateevent**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur si d'autres numéros d'identification des événements sont utilisés.  
   
- Les paramètres de Trace de SQL toutes les procédures stockées (**sp_trace_xx**) sont de type strict. Si ces paramètres ne sont pas appelés avec des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée renvoie une erreur.  
+ Paramètres de Trace de SQL toutes les procédures stockées (**sp_trace_xx**) sont strictement typés. Si ces paramètres ne sont pas appelés avec des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée renvoie une erreur.  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  L'utilisateur doit disposer de l'autorisation ALTER TRACE.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,18 +1,13 @@
 ---
-title: (XQuery) de la gestion des erreurs | Documents Microsoft
+title: Gestion des erreurs (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - XQuery, error handling
 - dynamic errors [XQuery]
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c7277c122c76ef2aa9ff6c82b4693faed6b409ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 444fa51144535475f67cc0d073b63cb1b8354531
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076942"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687287"
 ---
 # <a name="error-handling-xquery"></a>Gestion des erreurs (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +47,7 @@ ms.locfileid: "33076942"
  Si l'erreur dynamique devait se produire dans un prédicat, il est courant que son non-déclenchement épargne la sémantique car () est mappé à False. Toutefois, dans certains cas, le renvoi de () au lieu d'une erreur dynamique peut générer des résultats inattendus. Les exemples suivants illustrent ce point.  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>Exemple : utilisation de la fonction avg() avec une chaîne  
- Dans l’exemple suivant, la [fonction avg](../xquery/aggregate-functions-avg.md) est appelé pour calculer la moyenne des trois valeurs. L'une de ces valeurs est une chaîne. L'instance XML étant, dans ce cas, non typée, toutes les données qu'elle contient sont de type atomique non typé. Le **avg()** fonction convertit tout d’abord ces valeurs à **xs : double** avant de calculer la moyenne. Toutefois, la valeur, `"Hello"`, ne peut pas être converti en **xs : double** et génère une erreur dynamique. Dans ce cas, au lieu de renvoyer une erreur dynamique, la conversion de `"Hello"` à **xs : double** génère une séquence vide. Le **avg()** fonction ignore cette valeur, calcule la moyenne des deux autres valeurs et renvoie 150.  
+ Dans l’exemple suivant, le [fonction avg](../xquery/aggregate-functions-avg.md) est appelé pour calculer la moyenne des trois valeurs. L'une de ces valeurs est une chaîne. L'instance XML étant, dans ce cas, non typée, toutes les données qu'elle contient sont de type atomique non typé. Le **avg()** fonction convertit tout d’abord ces valeurs à **xs : double** avant de calculer la moyenne. Toutefois, la valeur, `"Hello"`, ne peut pas être casté en **xs : double** et génère une erreur dynamique. Dans ce cas, au lieu de renvoyer une erreur dynamique, la conversion de `"Hello"` à **xs : double** génère une séquence vide. Le **avg()** fonction ignore cette valeur, calcule la moyenne des deux autres valeurs et renvoie 150.  
   
 ```  
 DECLARE @x xml  
@@ -66,7 +60,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>Exemple: utilisation de la fonction not  
- Lorsque vous utilisez la [ne fonctionne pas](../xquery/functions-on-boolean-values-not-function.md) dans un prédicat, par exemple, `/SomeNode[not(Expression)]`, et l’expression provoque une erreur dynamique, une séquence vide est retournée au lieu d’une erreur. Application **not()** à la séquence vide renvoie True, au lieu d’une erreur.  
+ Lorsque vous utilisez le [ne fonctionne pas](../xquery/functions-on-boolean-values-not-function.md) dans un prédicat, par exemple, `/SomeNode[not(Expression)]`, et l’expression provoque une erreur dynamique, une séquence vide est retournée au lieu d’une erreur. Application **not()** à la séquence vide renvoie True, au lieu d’une erreur.  
   
 ### <a name="example-casting-a-string"></a>Exemple: conversion d'une chaîne  
  Dans l'exemple suivant, la chaîne littérale « NaN » est convertie au format xs:string, puis au format xs:double. Le résultat est un ensemble de lignes vide. Le fait que la chaîne « NaN » ne puisse pas être correctement convertie au format xs:double n'est détecté qu'à l'exécution car elle est d'abord convertie au format xs:string.  

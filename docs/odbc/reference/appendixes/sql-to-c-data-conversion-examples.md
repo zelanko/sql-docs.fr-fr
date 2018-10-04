@@ -1,31 +1,28 @@
 ---
-title: SQL aux exemples de Conversion de données C | Documents Microsoft
+title: SQL vers des exemples de Conversion de données C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], examples
 - converting data from SQL to C types [ODBC], examples
 ms.assetid: 0190c76c-7f9b-42f4-be9d-cef7284840fd
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c23e98067cafefbf44c39633aa8c11effa6594f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c528a4a7bf60aae399924d651443e574ba9ae4fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911784"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778727"
 ---
-# <a name="sql-to-c-data-conversion-examples"></a>SQL aux exemples de Conversion de données C
-Les exemples présentés dans le tableau suivant illustrent la façon dont le pilote SQL convertit les données en données C :  
+# <a name="sql-to-c-data-conversion-examples"></a>Exemples de conversion de données SQL en C
+Les exemples présentés dans le tableau suivant illustrent comment le pilote convertit les données SQL aux données de C :  
   
 |Type SQL<br /><br /> identificateur|Données SQL<br /><br /> valeur|Type C<br /><br /> identificateur|Buffer<br /><br /> length|**TargetValuePtr*|SQLSTATE|  
 |-----------------------------|------------------------|---------------------------|-----------------------|------------------------|--------------|  
@@ -47,6 +44,6 @@ SQL_DOUBLE|1.2345678|SQL_C_DOUBLE|ignoré|1.2345678|n/a|
 SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|22|1992-12-31 23:45:55.1\0 [a]|01004|  
 |SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|18|----|22003|  
   
- [a] « \0 » représente un octet de valeur null. Le pilote toujours null-termine les données SQL_C_CHAR.  
+ [a] « \0 » représente un octet de caractère nul de terminaison. Le pilote toujours terminées par null les données SQL_C_CHAR.  
   
  [b] les nombres dans cette liste sont les nombres stockés dans les champs de la structure TIMESTAMP_STRUCT.
