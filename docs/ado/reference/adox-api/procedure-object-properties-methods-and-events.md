@@ -1,35 +1,32 @@
 ---
-title: Propriétés de l’objet procédure, méthodes et événements | Documents Microsoft
+title: Propriétés de l’objet procédure, méthodes et événements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Procedure object [ADOX], members
 ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d20fc56e0698d7e59d06f760643f353bb5524ee5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 73d3eec4f68fbf43481f604b352c8daa92da1356
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602027"
 ---
-# <a name="procedure-object-properties-methods-and-events"></a>Propriétés de l’objet procédure, méthodes et événements
-## <a name="properties"></a>Propriétés  
- [Propriété de commande](../../../ado/reference/adox-api/command-property-adox.md)  
+# <a name="procedure-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Procedure
+## <a name="properties"></a>Properties  
+ [Command, propriété](../../../ado/reference/adox-api/command-property-adox.md)  
   
- [Propriété DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)  
+ [DateCreated, propriété](../../../ado/reference/adox-api/datecreated-property-adox.md)  
   
- [Propriété DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)  
+ [DateModified, propriété](../../../ado/reference/adox-api/datemodified-property-adox.md)  
   
  [Propriété Name](../../../ado/reference/adox-api/name-property-adox.md)  
   

@@ -1,39 +1,36 @@
 ---
-title: Nouveautés d’ODBC ? | Microsoft Docs
+title: Qu’est-ce que ODBC ? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], about ODBC
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eed93c1d5b096e132f6d514057abd73c090519c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27e153fd72c588f81342d74ce1fc851adc6fda91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917407"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622327"
 ---
-# <a name="what-is-odbc"></a>Nouveautés d’ODBC ?
-Nombreuses idées sur ODBC existent dans le monde informatique. À l’utilisateur final, il est une icône dans le panneau de configuration Microsoft® Windows®. Pour les programmeurs d’applications, il est une bibliothèque contenant des routines d’accès aux données. Beaucoup d’autres, il est la réponse à tous les problèmes d’accès de base de données pensiez.  
+# <a name="what-is-odbc"></a>Qu’est-ce que ODBC ?
+Il existe plusieurs idées fausses à propos d’ODBC dans le monde informatique. Il est à l’utilisateur final, une icône dans le panneau de configuration Microsoft® Windows®. Pour les programmeurs d’applications, il est une bibliothèque contenant les routines d’accès aux données. Beaucoup d’autres, il est la réponse à tous les problèmes d’accès de base de données imaginé.  
   
- Tout d’abord, ODBC est une spécification d’une API de base de données. Cette API méthode est indépendante de tout un SGBD ou du système d’exploitation ; Bien que ce manuel utilise C, l’API ODBC est indépendant du langage. L’API ODBC est basée sur les spécifications CLI à partir d’Open Group et de la norme ISO/IEC. ODBC 3. *x* implémente entièrement les deux de ces spécifications : les versions antérieures d’ODBC étaient basées sur des versions préliminaires de ces spécifications, mais s’est pas entièrement les implémenter et ajoute des fonctionnalités fréquemment utilisées par les développeurs d’applications de base de données basée sur l’écran, tels que les curseurs de défilement.  
+ Tout d’abord, ODBC est une spécification pour une API de base de données. Cette API est indépendante de tout un SGBD ou le système d’exploitation ; Bien que ce manuel utilise C, l’API ODBC est indépendant du langage. L’API ODBC est basé sur les spécifications de l’interface CLI à partir d’Open Group et ISO/IEC. ODBC 3. *x* implémente entièrement les deux de ces spécifications, les versions antérieures d’ODBC étaient basées sur des versions préliminaires de ces spécifications, mais n’implémente pas entièrement les — et ajoute des fonctionnalités couramment requises par les développeurs de basée sur l’écran applications de base de données, telles que des curseurs avec défilement.  
   
- Les fonctions de l’API ODBC sont implémentées par les développeurs de pilotes spécifiques au SGBD. Applications appellent les fonctions dans ces pilotes pour accéder aux données d’une manière indépendante de SGBD. Un gestionnaire de pilote gère la communication entre les applications et des pilotes.  
+ Les fonctions de l’API ODBC sont implémentées par les développeurs de pilotes spécifiques au SGBD. Applications appellent les fonctions de ces pilotes pour accéder aux données d’une manière indépendante du SGBD. Un gestionnaire de pilotes gère la communication entre les applications et pilotes.  
   
- Bien que Microsoft fournit un gestionnaire de pilotes pour les ordinateurs exécutant Microsoft Windows® 95 et versions ultérieures, a écrit plusieurs pilotes ODBC et appelle les fonctions ODBC à partir de certaines de ses applications, tout le monde peut écrire des pilotes et des applications ODBC. En fait, la grande majorité des applications ODBC et des pilotes disponibles aujourd'hui sont écrites par des sociétés que Microsoft. En outre, les applications et les pilotes ODBC existent sur le Macintosh® et diverses plateformes UNIX.  
+ Bien que Microsoft fournit un gestionnaire de pilotes pour les ordinateurs exécutant Microsoft Windows® 95 et versions ultérieures, a écrit plusieurs pilotes ODBC et appelle les fonctions ODBC à partir de certaines de ses applications, tout le monde peut écrire des pilotes et les applications ODBC. En fait, la grande majorité des applications ODBC et les pilotes disponibles aujourd'hui sont écrits par des entreprises autres que Microsoft. En outre, les applications et pilotes ODBC existent sur le Macintosh® et une variété de plates-formes UNIX.  
   
- Pour aider les développeurs d’applications et de pilotes, Microsoft propose un Kit de développement de logiciel (SDK) ODBC pour les ordinateurs exécutant Windows 95 et versions ultérieures qui fournit le Gestionnaire de pilotes, DLL, outils de test et installer exemples d’applications. Microsoft a associées à des logiciels Visigenic pour déplacer ces kits de développement logiciel pour les ordinateurs Macintosh et diverses plateformes UNIX.  
+ Pour aider les développeurs d’applications et des pilotes, Microsoft propose un Kit de développement de logiciel (SDK) ODBC pour les ordinateurs exécutant Windows 95 et versions ultérieures qui fournit le Gestionnaire de pilotes, les DLL d’installation, les outils de test et les exemples d’applications. Microsoft s’est associé avec le logiciel Visigenic porter ces kits de développement logiciel pour les ordinateurs Macintosh et une variété de plates-formes UNIX.  
   
- Il est important de comprendre que ODBC est conçu pour exposer les fonctionnalités de base de données, pas les compléter. Par conséquent, créateurs d’applications ne doivent pas attendre que l’utilisation d’ODBC soudainement transforme une base de données simple dans un moteur de base de données relationnelle complet. Ni sont les rédacteurs de pilotes attendus pour implémenter la fonctionnalité introuvable dans la base de données sous-jacente. Une exception à cela est que les développeurs qui écrivent des pilotes qui accèdent directement aux données de fichier (par exemple, les données dans un fichier Xbase) sont requis pour écrire un moteur de base de données qui prend en charge des fonctionnalités SQL au moins minimales. Une autre exception qui est le composant ODBC du SDK Windows, précédemment inclus dans le Kit de développement logiciel Microsoft données Access Components (MDAC), fournit une bibliothèque de curseurs qui simule les curseurs de défilement pour les pilotes qui implémentent un certain niveau de fonctionnalité.  
+ Il est important de comprendre que ODBC est conçu pour exposer les fonctionnalités de base de données, pas les compléter. Par conséquent, les rédacteurs d’application ne doivent pas attendre que l’utilisation d’ODBC soudainement transforme une simple base de données en un moteur de base de données relationnelle complet. Ni sont les rédacteurs de pilotes attendus pour implémenter des fonctionnalités non disponibles dans la base de données sous-jacente. Une exception à cela est que les développeurs qui écrivent des pilotes qui accèdent directement aux données de fichier (par exemple, les données dans un fichier Xbase) sont requis pour écrire un moteur de base de données qui prend en charge des fonctionnalités SQL au moins minimales. Une autre exception qui est le composant ODBC du SDK Windows, précédemment inclus dans le Kit de développement logiciel Microsoft Data Access Components (MDAC), fournit une bibliothèque de curseurs qui simule des curseurs avec défilement pour les pilotes qui implémentent un certain niveau de fonctionnalité.  
   
- Les applications qui utilisent ODBC sont responsables de toutes les fonctionnalités de bases de données croisées. Par exemple, ODBC n’est pas un moteur de jointure hétérogène, ni est-il un processeur de transaction distribuée. Toutefois, comme il est indépendant du SGBD, il peut être utilisé pour construire des outils de ces bases de données croisées.
+ Les applications qui utilisent ODBC sont tenues de toutes les fonctionnalités entre bases de données. Par exemple, ODBC n’est pas un moteur de jointure hétérogène, ni est-il un processeur de transaction distribuée. Toutefois, car il est indépendant du SGBD, il peut servir à générer ces outils de bases de données croisées.

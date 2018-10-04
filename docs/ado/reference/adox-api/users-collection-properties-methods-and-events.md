@@ -1,36 +1,33 @@
 ---
-title: Propriétés de Collection d’utilisateurs, les méthodes et événements | Documents Microsoft
+title: Propriétés de Collection d’utilisateurs, méthodes et événements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Users collection [ADOX], members
 ms.assetid: 1b89a12f-96bc-48b3-a88d-4da74780ea40
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43c98850361dccb4451ed4f65a90aa337c562057
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f652c8d4e00535f69cb4694a1095f266d65ac057
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287219"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612357"
 ---
-# <a name="users-collection-properties-methods-and-events"></a>Propriétés de Collection d’utilisateurs, des méthodes et des événements
-## <a name="properties"></a>Propriétés  
- [Propriété Count](../../../ado/reference/ado-api/count-property-ado.md)  
+# <a name="users-collection-properties-methods-and-events"></a>Propriétés, méthodes et événements de la collection Users
+## <a name="properties"></a>Properties  
+ [Count, propriété](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [Propriété Item](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Méthodes  
- [Append (méthode) (utilisateurs)](../../../ado/reference/adox-api/append-method-adox-users.md)  
+ [Append, méthode (utilisateurs)](../../../ado/reference/adox-api/append-method-adox-users.md)  
   
  [DELETE, méthode (Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   

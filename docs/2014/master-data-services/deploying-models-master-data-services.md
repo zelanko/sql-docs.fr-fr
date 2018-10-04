@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 84274a1c09dd38ada58b45d4242e2599d6704dcd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5e33eca3c4be7d766d85862ccb66a4ab76a9d17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271335"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066329"
 ---
 # <a name="deploying-models-master-data-services"></a>Déploiement de modèles (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un package est un fichier XML qui contient une structure de modèle déployable et, éventuellement, les données du modèle. Utilisez les packages de modèle pour déplacer des copies de modèles d'un environnement MDS vers un autre, ou pour créer de nouveaux modèles dans votre environnement MDS existant.  
@@ -68,7 +65,7 @@ ms.locfileid: "37271335"
 ## <a name="sample-packages"></a>Exemples de packages  
  Des fichiers d'exemple de package sont inclus lorsque vous installez [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Ils se trouvent dans le répertoire Master Data Services\Samples\Packages où vous avez installé [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Lorsque vous déployez ces exemples de packages à l'aide de l'outil MDSModelDeploy, les exemples de modèles sont créés et remplis avec les données.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  

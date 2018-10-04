@@ -1,37 +1,34 @@
 ---
-title: Exemple de propriété de gestionnaire (VC ++) | Documents Microsoft
+title: Handler, exemple de propriété (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Handler property [ADO], VC++ example
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75d23be448bc8e56e701756f159dba34382784b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e9c944535ead264b8ab65b59aa969d0fddf29f10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288353"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696528"
 ---
-# <a name="handler-property-example-vc"></a>Exemple de propriété de gestionnaire (VC ++)
+# <a name="handler-property-example-vc"></a>Handler, exemple de propriété (VC++)
 > [!IMPORTANT]
->  À compter de Windows 8 et Windows Server 2012, les composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (consultez Windows 8 et [Cookbook de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client Bureau à distance seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. La migration vers les applications qui utilisent des services Bureau à distance [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Cet exemple illustre la [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet [gestionnaire](../../../ado/reference/rds-api/handler-property-rds.md) propriété. (Consultez [DataFactory personnalisation](../../../ado/guide/remote-data-service/datafactory-customization.md) pour plus d’informations.)  
+ Cet exemple montre la [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet [gestionnaire](../../../ado/reference/rds-api/handler-property-rds.md) propriété. (Consultez [personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) pour plus d’informations.)  
   
- Supposons que les sections suivantes dans le fichier de paramètres, Msdfmap.ini, situé sur le serveur :  
+ Supposons que les sections suivantes dans le fichier de paramètres Msdfmap.ini, situé sur le serveur :  
   
 ```  
 [connect AuthorDataBase]  
@@ -41,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Votre code ressemble à ceci. La commande associée à la [SQL](../../../ado/reference/rds-api/sql-property.md) propriété correspondra à la ***AuthorById*** identificateur et récupère une ligne pour l’auteur Michael O'Leary. Bien que le [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propriété dans votre code spécifie la source de données Northwind, cette source de données sera remplacée par la Msdfmap.ini *connecter* section. Le **DataControl** objet [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) est affectée à un déconnecté [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet purement commodité de codage.  
+ Votre code ressemble à ceci. La commande associée à la [SQL](../../../ado/reference/rds-api/sql-property.md) propriété correspond à la ***AuthorById*** identificateur et récupère une ligne pour l’auteur Michael O'Leary. Bien que le [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propriété dans votre code spécifie la source de données Northwind, cette source de données est remplacée par les Msdfmap.ini *connecter* section. Le **DataControl** objet [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) propriété est affectée à un déconnecté [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet purement commodité de codage.  
   
 ```  
 // BeginHandlerCpp.cpp  

@@ -1,13 +1,11 @@
 ---
-title: Filter et RecordCount propriétés exemple (VB) | Documents Microsoft
+title: Filter et RecordCount, exemple de propriétés (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d467ae897108f248991bc8eb8ac21461c22065c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675417"
 ---
-# <a name="filter-and-recordcount-properties-example-vb"></a>Filter et RecordCount propriétés exemple (VB)
-Cet exemple montre comment ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sur la table Publishers dans le ***Pubs*** base de données. Il utilise ensuite la [filtre](../../../ado/reference/ado-api/filter-property.md) propriété pour limiter le nombre d’enregistrements visibles aux éditeurs d’un pays/une région particulière. Le **RecordCount** propriété est utilisée pour afficher la différence entre les jeux d’enregistrements filtrés et non filtrés.  
+# <a name="filter-and-recordcount-properties-example-vb"></a>Filter et RecordCount, exemple de propriétés (VB)
+Cet exemple montre comment ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sur la table Publishers dans le ***Pubs*** base de données. Il utilise ensuite le [filtre](../../../ado/reference/ado-api/filter-property.md) propriété pour limiter le nombre d’enregistrements visibles aux éditeurs d’un pays/une région particulière. Le **RecordCount** propriété est utilisée pour afficher la différence entre les jeux d’enregistrements filtrés et non filtrés.  
   
 ```  
 'BeginFilterVB  
@@ -112,13 +109,13 @@ End Sub
 ```  
   
 > [!NOTE]
->  Lorsque vous connaissez les données que vous souhaitez sélectionner, il est généralement plus efficace d’ouvrir un **Recordset** avec une instruction SQL. Cet exemple montre comment vous pouvez créer un seul **Recordset** et obtenir les enregistrements à partir d’un pays particulier.  
+>  Lorsque vous connaissez les données que vous souhaitez sélectionner, il est généralement plus efficace pour ouvrir un **Recordset** avec une instruction SQL. Cet exemple montre comment vous pouvez créer un seul **Recordset** et obtenir les enregistrements à partir d’un pays particulier.  
   
 ```  
 Attribute VB_Name = "Filter"  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filter, propriété](../../../ado/reference/ado-api/filter-property.md)   
+ [Propriété de filtre](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount, propriété (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

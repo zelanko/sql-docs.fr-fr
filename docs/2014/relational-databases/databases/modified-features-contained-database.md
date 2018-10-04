@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, modifications to DBs
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ded072c2ec320ecc85fed183313a361dbdf6bca0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d08eb0368840a6f2850467d13cbe42c5519c7b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152320"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083649"
 ---
 # <a name="modified-features-contained-database"></a>Fonctionnalités modifiées (base de données autonome)
   Les fonctionnalités suivantes ont été modifiées pour être prises en charge par une base de données partiellement autonome. Les fonctionnalités sont généralement modifiées de façon à ce qu'elles ne traversent pas la limite de base de données.  
@@ -55,8 +52,7 @@ ms.locfileid: "37152320"
  Au moment d’activer les bases de données autonomes, l’option [user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) doit avoir la valeur 0 pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- 
-  [Classements de base de données autonome](contained-database-collations.md)   
+ [Classements de base de données autonome](contained-database-collations.md)   
  [Bases de données autonomes](contained-databases.md)  
   
   

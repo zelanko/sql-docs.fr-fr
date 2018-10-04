@@ -1,13 +1,11 @@
 ---
-title: CompareEnum | Documents Microsoft
+title: CompareEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - CompareEnum enumeration [ADO]
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c458b18e4270acecb4abd573a5996442f3f9ef4d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f1f28a5dfc7e8abb15d1adf2f457ab49b4fbdd9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276828"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839599"
 ---
 # <a name="compareenum"></a>CompareEnum
 Spécifie la position relative de deux enregistrements représentée par leur signet.  
   
 |Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adCompareEqual**| 1|Indique que les signets sont égaux.|  
+|**adCompareEqual**|1|Indique que les signets sont égaux.|  
 |**adCompareGreaterThan**|2|Indique que le premier signet est après la deuxième.|  
 |**adCompareLessThan**|0|Indique que le premier signet est que la seconde.|  
 |**adCompareNotComparable**|4|Indique que les signets ne peuvent pas être comparées.|  
 |**adCompareNotEqual**|3|Indique que les signets ne sont pas égales et non ordonnée.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
+## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
  Package : **com.ms.wfc.data**  
   
 |Constante|  

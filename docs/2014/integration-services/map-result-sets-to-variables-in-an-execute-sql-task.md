@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cdd76b3f0b1665fa6336e82536ca474c0b5e1fab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a166c760ecb3dafabbfaa8e131f1a8948429dc61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277375"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069655"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL
   Cette rubrique décrit comment créer un mappage entre un jeu de résultats et une variable dans une tâche d'exécution SQL. Le mappage d'un jeu de résultats à une variable rend le jeu de résultats disponible aux autres éléments du package. Par exemple, un script dans une tâche de script peut lire la variable, puis utiliser les valeurs du jeu de résultats ou une source XML pour consommer le jeu de résultats stocké dans une variable. Si le jeu de résultats est généré par un package parent, il est possible de le rendre disponible à un package enfant appelé par une tâche d'exécution de package en mappant le jeu de résultats à une variable dans le package parent, puis en créant une configuration de variable de package parent dans le package enfant pour stocker la valeur de la variable parent.  

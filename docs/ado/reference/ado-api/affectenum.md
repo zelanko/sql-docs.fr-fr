@@ -1,13 +1,11 @@
 ---
-title: AffectEnum | Documents Microsoft
+title: AffectEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - AffectEnum enumeration [ADO]
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 797ee0a58457848b3dec133c695d1d36dc579bbe
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3a26d1f9b1e8ff7cf9ed127dc78a02827952d411
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275698"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772197"
 ---
 # <a name="affectenum"></a>AffectEnum
-Spécifie quels enregistrements sont affectés par une opération.  
+Spécifie les enregistrements affectés par une opération.  
   
 |Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|S’il n’est pas un [filtre](../../../ado/reference/ado-api/filter-property.md) appliquée à la **Recordset**, affecte tous les enregistrements.<br /><br /> Si le **filtre** est définie sur un critère de chaîne (tel que « auteur = 'Smith' »), l’opération affecte les enregistrements visibles dans le chapitre actuel.<br /><br /> Si le **filtre** est définie sur un membre de la [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) ou un tableau de signets, l’opération affectera toutes les lignes de la **Recordset**. **Remarque :****adAffectAll** est masqué dans l’Explorateur d’objets Visual Basic.|  
+|**adAffectAll**|3|S’il n’est pas un [filtre](../../../ado/reference/ado-api/filter-property.md) appliqué à la **Recordset**, affecte tous les enregistrements.<br /><br /> Si le **filtre** propriété est définie sur un critère de chaîne (tel que « auteur = 'Smith' »), l’opération affecte les enregistrements visibles dans le chapitre actuel.<br /><br /> Si le **filtre** propriété est définie à un membre de la [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) ou un tableau de signets, l’opération affectera toutes les lignes de la **Recordset**. **Remarque :****adAffectAll** est masqué dans l’Explorateur d’objets Visual Basic.  |  
 |**adAffectAllChapters**|4|Affecte tous les enregistrements dans tous les chapitres frère de la **Recordset**, y compris ceux non visibles par les **filtre** qui est actuellement appliqué.|  
-|**adAffectCurrent**| 1|Affecte uniquement l’enregistrement actif.|  
-|**adAffectGroup**|2|Affecte uniquement les enregistrements qui répondent aux actuel [filtre](../../../ado/reference/ado-api/filter-property.md) paramètre de propriété. Vous devez définir le **filtre** propriété un **FilterGroupEnum** valeur ou un tableau de **signets** pour utiliser cette option.|  
+|**adAffectCurrent**|1|Affecte uniquement l’enregistrement actif.|  
+|**adAffectGroup**|2|Affecte uniquement les enregistrements qui répondent à des cours [filtre](../../../ado/reference/ado-api/filter-property.md) paramètre de propriété. Vous devez définir le **filtre** propriété à un **FilterGroupEnum** valeur ou un tableau de **signets** pour utiliser cette option.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
+## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
  Package : **com.ms.wfc.data**  
   
 |Constante|  

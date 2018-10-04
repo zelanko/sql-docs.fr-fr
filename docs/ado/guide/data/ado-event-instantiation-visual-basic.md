@@ -1,30 +1,27 @@
 ---
-title: 'Instanciation des événements ADO : Visual Basic | Documents Microsoft'
+title: 'Instanciation des événements ADO : Visual Basic | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 450d26f4624699b407432e6d7e3713494acf1619
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c0223d4d4346f26ff9339fce3cbc43be9bfcbe82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35269998"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772477"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>Instanciation des événements ADO : Visual Basic
-Afin de gérer les événements ADO dans Microsoft® Visual Basic®, vous devez déclarer une variable au niveau du module à l’aide du **WithEvents** (mot clé). La variable peut être déclarée uniquement dans le cadre d’un module de classe et doit être déclarée au niveau du module. Cela n’est pas aussi restrictif qu’il semble, toutefois, étant donné que Visual Basic **formulaire** objets sont également des classes. Le plus simple pour gérer les événements ADO consiste à déclarer une variable à l’aide **WithEvents**. L’exemple suivant gère le **ConnectComplete** événement pour un **connexion** objet :  
+Pour gérer des événements ADO dans Microsoft® Visual Basic®, vous devez déclarer une variable au niveau du module à l’aide du **WithEvents** mot clé. La variable peut être déclarée uniquement dans le cadre d’un module de classe et doit être déclarée au niveau du module. Ce n’est pas aussi restrictif qu’il y paraît, toutefois, étant donné que Visual Basic **formulaire** objets sont également des classes. Le plus simple pour gérer les événements ADO consiste à déclarer une variable à l’aide **WithEvents**. L’exemple suivant gère la **ConnectComplete** événement pour un **connexion** objet :  
   
 ```  
 ' BeginEventExampleVB02  
@@ -69,4 +66,4 @@ End Sub
 ' EndEventExampleVB02  
 ```  
   
- Le **connexion** objet est déclaré au niveau de la **formulaire** niveau à l’aide de la **WithEvents** (mot clé) pour activer la gestion des événements. Le Gestionnaire d’événements Form_Load crée l’objet en affectant une nouvelle **connexion** objet *connEvent* et ouvre la connexion. Bien entendu, une application réelle est nécessaire d’un traitement supplémentaire dans le Gestionnaire d’événements Form_Load qu’est illustrée ici.
+ Le **connexion** objet est déclaré au niveau du **formulaire** niveau à l’aide de la **WithEvents** mot clé pour activer la gestion des événements. Le Gestionnaire d’événements Form_Load crée l’objet en affectant une nouvelle **connexion** objet *connEvent* , puis ouvre la connexion. Bien sûr, une application réelle feriez d’un traitement supplémentaire dans le Gestionnaire d’événements Form_Load est est présenté ici.

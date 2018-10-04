@@ -1,29 +1,27 @@
 ---
-title: Types de Sources de données | Documents Microsoft
+title: Types de Sources de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], types
 ms.assetid: a5e3f966-3357-4827-afbc-6153682d26bc
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a2b881a940e33b74c0da407e0ead482db5b99ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7c0e4ccc55ce8fe35dc129c6dded889e2923b4f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695713"
 ---
-# <a name="types-of-data-sources"></a>Types de Sources de données
-Il existe deux types de sources de données : sources de données et sources de données de fichier de l’ordinateur. Bien que tous les deux contenir des informations relatives à la source des données similaires, elles se différencient par que ces informations sont stockées. En raison de ces différences, ils sont utilisés de quelque peu différentes manières.  
+# <a name="types-of-data-sources"></a>Types de sources de données
+Il existe deux types de sources de données : sources de données et les fichiers sources de données de l’ordinateur. Bien que les deux contiennent des informations relatives à la source des données similaires, elles se différencient par que ces informations sont stockées. En raison de ces différences, ils sont utilisés de quelque peu différentes manières.  
   
  Cette section contient les rubriques suivantes.  
   

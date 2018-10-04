@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Access databases
 - Access databases, exporting metadata
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6256a21e699f3dbd6714da0e4778b9d00e8d940a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394660"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746447"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportation d’un inventaire Access (AccessToSQL)
 Si vous avez plusieurs bases de données Access et que vous ne savez pas lesquels pour migrer vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez exporter un inventaire de toutes les bases de données Access dans un projet. Vous pouvez ensuite consulter et interroger les métadonnées d’inventaire pour déterminer les bases de données et les objets au sein de ces bases de données à migrer. Cet inventaire vous permet de rapidement trouver les réponses aux questions, telles que les éléments suivants :  

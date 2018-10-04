@@ -1,1 +1,1 @@
-<Token>Microsoft SQL Operations Studio (version préliminaire)</Token>
+Studio de données Azure

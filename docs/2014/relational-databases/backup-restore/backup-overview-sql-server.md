@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], backing up data
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - backups [SQL Server], about
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
-caps.latest.revision: 81
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b48f8c9bbcb39f68aa0e86957c8713b6044216e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163030"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049395"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   Cette rubrique présente le composant de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La sauvegarde de votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est essentielle pour protéger vos données. Cette discussion couvre les types de sauvegardes et les restrictions liées aux sauvegardes. La rubrique présente également les unités et les supports de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -60,7 +57,7 @@ ms.locfileid: "37163030"
   
  **Types de sauvegardes**  
   
- [sauvegarde de copie uniquement](copy-only-backups-sql-server.md)  
+ [Sauvegarde de copie uniquement](copy-only-backups-sql-server.md)  
  Sauvegarde d'utilisation particulière qui est indépendante de la séquence normale des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  sauvegarde de données  
@@ -88,7 +85,7 @@ ms.locfileid: "37163030"
   
  **Définitions et les termes du contrat de support de sauvegarde**  
   
- [unité de sauvegarde](backup-devices-sql-server.md)  
+ [Unité de sauvegarde](backup-devices-sql-server.md)  
  Unité de disque ou de bande sur laquelle les sauvegardes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont écrites et à partir de laquelle elles peuvent être restaurées. Les sauvegardes SQL Server peuvent être écrites dans un service de stockage d'objets blob Windows Azure, et le format d' **URL** est utilisé pour spécifier la destination et le nom du fichier de sauvegarde. Pour plus d'informations, voir [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [support de sauvegarde](media-sets-media-families-and-backup-sets-sql-server.md)  

@@ -1,14 +1,11 @@
 ---
-title: Core.sp_purge_data (Transact-SQL) | Documents Microsoft
+title: Core.sp_purge_data (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_data_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 002ba9d499039651eecdd2d05c92cda63c9dab62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239259"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819237"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ core.sp_purge_data
  [@instance_name =] '*nom_instance*'  
  Nom de l'instance pour le jeu d'éléments de collecte. *nom_instance* est **sysname**, avec NULL comme valeur par défaut.  
   
- *nom_instance* doit être le nom d’instance complet, constitué du nom de l’ordinateur et le nom d’instance sous la forme *Nom_Ordinateur*\\*instancename*. Lorsque la valeur est NULL, l'instance par défaut sur le serveur local est utilisée.  
+ *nom_instance* doit être le nom d’instance complet, qui se compose du nom de l’ordinateur et le nom d’instance sous la forme *computername*\\*instancename*. Lorsque la valeur est NULL, l'instance par défaut sur le serveur local est utilisée.  
   
  [@collection_set_uid =] '*collection_set_uid*'  
  GUID du jeu d'éléments de collecte. *collection_set_uid* est **uniqueidentifier**, avec NULL comme valeur par défaut. Lorsque la valeur est NULL, les lignes éligibles de tous les jeux d'éléments de collecte sont supprimées. Pour obtenir cette valeur, interrogez l'affichage catalogue syscollector_collection_sets.  
@@ -71,12 +67,12 @@ core.sp_purge_data
 ## <a name="remarks"></a>Notes  
  Cette procédure sélectionne des lignes dans la vue core.snapshots qui sont éligibles pour la suppression en fonction d'une période de rétention. Toutes les lignes éligibles pour la suppression sont supprimées de la table core.snapshots_internal. La suppression des lignes précédentes déclenche une action de suppression en cascade dans toutes les tables de l'entrepôt de données de gestion. Cette opération est effectuée en utilisant la clause ON DELETE CASCADE, qui est définie pour toutes les tables stockant des données collectées.  
   
- Chaque instantané et ses données associées sont supprimés dans une transaction explicite, puis validés. Par conséquent, si l’opération de vidage est arrêtée manuellement ou que la valeur spécifiée pour @duration est dépassée, les données non validées demeurent. Ces données peuvent être supprimées lors de la prochaine exécution du travail.  
+ Chaque instantané et ses données associées sont supprimés dans une transaction explicite, puis validés. Par conséquent, si l’opération de vidage est arrêtée manuellement ou la valeur spécifiée pour @duration est dépassée, les données non validées demeurent. Ces données peuvent être supprimées lors de la prochaine exécution du travail.  
   
  La procédure doit être exécutée dans le contexte de la base de données d'entrepôt de données de gestion.  
   
-## <a name="permissions"></a>Autorisations  
- Nécessite l’appartenance dans le **mdw_admin** (avec autorisation EXECUTE) rôle de base de données fixe.  
+## <a name="permissions"></a>Permissions  
+ Nécessite l’appartenance dans le **mdw_admin** (avec autorisation EXECUTE) rôle fixe de base de données.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -99,7 +95,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. Spécification d'un nom d'instance et d'un jeu d'éléments de collecte  
- L'exemple suivant supprime des données de l'entrepôt de données de gestion pour un jeu d'éléments de collecte donné sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Étant donné que @retention_days n’est pas spécifié, la valeur de la colonne valid_through dans la vue core.snapshots est utilisée pour déterminer les lignes qui sont éligibles pour la suppression de l’ensemble de la collection.  
+ L'exemple suivant supprime des données de l'entrepôt de données de gestion pour un jeu d'éléments de collecte donné sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Étant donné que @retention_days n’est pas spécifié, la valeur de la colonne valid_through dans la vue core.snapshots est utilisée pour déterminer les lignes pour le jeu de collections qui sont éligibles pour la suppression.  
   
 ```  
 USE <management_data_warehouse>;  

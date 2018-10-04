@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
 ms.reviewer: ''
-ms.suite: sql
-ms.component: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 966fbd2efde6934f8cfe1b59706dec27b92e301e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c2a1978aeea7ec69ea45bc088bbdff432de3c9f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980680"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621867"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>Sys.dm_pdw_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +35,7 @@ ms.locfileid: "37980680"
 |end_compile_time|**datetime**|Heure à laquelle le moteur a terminé la compilation de la demande.|NULL pour les requêtes qui n’ont pas été compilés encore ; sinon valide **datetime** start_time inférieure et inférieure ou égale à l’heure actuelle.|
 |end_time|**datetime**|Heure à laquelle l’exécution de la requête terminée, a échoué ou a été annulée.|NULL pour les demandes en file d’attente ou actives ; Sinon, valide **datetime** inférieure ou égale à l’heure actuelle.|  
 |total_elapsed_time|**Int**|Temps écoulé dans l’exécution dans la mesure où la demande a été démarrée, en millisecondes.|Comprise entre 0 et la différence entre start_time et end_time.<br /><br /> Si total_elapsed_time dépasse la valeur maximale d’un entier, total_elapsed_time continueront à être la valeur maximale. Cette condition génère l’avertissement « la valeur maximale a été dépassée. »<br /><br /> La valeur maximale en millisecondes est équivalente à 24,8 jours environ.|  
-|étiquette|**nvarchar(255)**|Chaîne d’étiquette facultative associée à des instructions de la requête SELECT.|Toute chaîne contenant 'a-z', 'A-Z','0-9', '_'.|  
+|Étiquette|**nvarchar(255)**|Chaîne d’étiquette facultative associée à des instructions de la requête SELECT.|Toute chaîne contenant 'a-z', 'A-Z','0-9', '_'.|  
 |error_id|**nvarchar(36)**|Id unique de l’erreur associée à la demande, le cas échéant.|Consultez [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); la valeur NULL si aucune erreur ne s’est produite.|  
 |database_id|**Int**|Identificateur de la base de données utilisée par le contexte explicite (par exemple, utilisez DB_X).|Consultez les id dans [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |commande|**nvarchar(4000)**|Contient le texte intégral de la demande et soumis par l’utilisateur.|Tout texte de requête ou de requête valid. Requêtes qui comptent plus de 4 000 octets sont tronquées.|  
@@ -47,7 +43,7 @@ ms.locfileid: "37980680"
   
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez « Minimum et valeurs maximales » dans le [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Requiert l'autorisation VIEW SERVER STATE.  
   
 ## <a name="security"></a>Sécurité  

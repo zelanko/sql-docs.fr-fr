@@ -1,37 +1,34 @@
 ---
-title: La récupération des signets | Documents Microsoft
+title: Récupération des signets | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving bookmarks [ODBC]
 - result sets [ODBC], bookmarks
 - bookmarks [ODBC]
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a78b232a1cdb5564388cdf9b335a5ce06cfcb68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d7d4bd52a5f6e5b03a084cef4402e0a9044f97d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777622"
 ---
-# <a name="retrieving-bookmarks"></a>La récupération des signets
-Si l’application utilise des signets, il doit définir l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS à SQL_UB_VARIABLE avant la préparation ou l’exécution de l’instruction. Cela est nécessaire, car les créer et gérer des signets peuvent être une opération coûteuse, signets doivent être activés uniquement lorsqu’une application peut faire une bonne de les utilisent.  
+# <a name="retrieving-bookmarks"></a>Récupération des signets
+Si l’application utilisera des signets, il doit définir l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS à SQL_UB_VARIABLE avant la préparation ou l’exécution de l’instruction. Cela est nécessaire, car la création et la maintenance des signets peuvent être une opération coûteuse, et signets doivent être activées uniquement quand une application peut faire une bonne de les utilisent.  
   
  Les signets sont retournés en tant que colonne 0 du jeu de résultats. Il existe trois façons qu'une application peut récupérer les :  
   
--   Lier la colonne 0 du jeu de résultats. **SQLFetch** ou **SQLFetchScroll** renvoie les signets pour chaque ligne dans l’ensemble de lignes, ainsi que les données pour d’autres colonnes.  
+-   Lier la colonne 0 du jeu de résultats. **SQLFetch** ou **SQLFetchScroll** retourne les signets pour chaque ligne dans l’ensemble de lignes, ainsi que les données pour d’autres liées aux colonnes.  
   
--   Appelez **SQLSetPos** pour vous positionner sur une ligne dans l’ensemble de lignes, puis appelez **SQLGetData** pour la colonne 0. Si un pilote prend en charge les signets, il doit toujours prendre en charge la possibilité d’appeler **SQLGetData** pour la colonne 0, même si elle n’autorise pas les applications d’appeler **SQLGetData** pour d’autres colonnes avant la dernière colonne dépendante.  
+-   Appelez **SQLSetPos** pour positionner à une ligne dans l’ensemble de lignes, puis appelez **SQLGetData** pour la colonne 0. Si un pilote prend en charge les signets, il doit toujours prendre en charge la possibilité d’appeler **SQLGetData** pour la colonne 0, même s’il n’autorise pas les applications d’appeler **SQLGetData** pour les autres colonnes avant la dernière limite colonne.  
   
--   Appelez **SQLBulkOperations** avec la *opération* SQL_ADD à l’argument et lié à la colonne 0. Le curseur insère la ligne et retourne le signet pour la ligne dans la mémoire tampon liée.
+-   Appelez **SQLBulkOperations** avec la *opération* SQL_ADD à l’argument et la colonne 0 liée. Le curseur insère la ligne et retourne le signet pour la ligne dans la mémoire tampon liée.

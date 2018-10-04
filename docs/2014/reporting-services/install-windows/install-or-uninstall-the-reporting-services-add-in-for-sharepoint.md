@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb82a321cc6110211a0c4e5f84fd049323b3aa7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1b6b360af5bd4e10bff706377caa91927bdd8d00
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224869"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055509"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Installer ou désinstaller le complément Reporting Services pour SharePoint (SharePoint 2010 et SharePoint 2013)
   Exécutez le package d’installation du complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint (rsSharePoint.msi) sur les serveurs SharePoint pour activer les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un déploiement SharePoint. Ces fonctionnalités incluent Power View, un composant WebPart visionneuse de rapports, un point de terminaison de proxy d'URL, des types de contenu et des pages d'application qui vous permettent de créer, d'afficher et de gérer des rapports, des modèles de rapport, des sources de données et tout autre contenu du serveur de rapports sur un site SharePoint. Le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint est un composant requis pour un serveur de rapports qui s'exécute en mode SharePoint. Le complément peut être installé à partir de l'Assistant Installation [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou en téléchargeant le fichier rsSharePoint.msi du Feature Pack [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Pour obtenir la liste des versions du complément et les pages de téléchargement, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
@@ -84,7 +81,7 @@ ms.locfileid: "37224869"
   
 -   Si vous installez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] version de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complément tout d’abord, lorsque vous exécuterez l’outil de préparation des produits SharePoint vous verrez la boîte de dialogue suivante indiquant l’outil de préparation n’avez pas installé la version antérieure du complément, comme étant le plus récent version a été détectée. Ce comportement est attendu.  
   
-     ![Le complément SSRS est déjà installé. ] (../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "Complément SSRS est déjà installé.")  
+     ![Le complément SSRS est déjà installé. ](../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "Complément SSRS est déjà installé.")  
   
  **SharePoint 2013**  
   

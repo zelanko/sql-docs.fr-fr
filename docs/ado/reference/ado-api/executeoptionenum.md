@@ -1,13 +1,11 @@
 ---
-title: ExecuteOptionEnum | Documents Microsoft
+title: ExecuteOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06b6b6bff2c99d13811616a9d1ae5040e904656a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7512f456d1423caf6318903119c2ad55c1938dec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278098"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719117"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Spécifie comment un fournisseur doit exécuter une commande.  
   
 |Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adAsyncExecute**|0x10|Indique que la commande doit s’exécuter de façon asynchrone.<br /><br /> Cette valeur ne peut pas être combinée avec le [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valeur **adCmdTableDirect**.|  
-|**adAsyncFetch**|0x20|Indique que les lignes restantes après la quantité spécifiée dans le [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriété doit être récupérée de façon asynchrone.|  
-|**adAsyncFetchNonBlocking**|0x40|Indique que le thread principal n’est jamais bloqué lors de la récupération. Si la ligne demandée n’a pas été récupérée, la ligne actuelle déplace automatiquement à la fin du fichier.<br /><br /> Si vous ouvrez un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) d’un [flux](../../../ado/reference/ado-api/stream-object-ado.md) contenant un stockés de façon permanente **Recordset**, **adAsyncFetchNonBlocking** n’aura pas un effet ; l’opération sera synchrone et bloquante.<br /><br /> **adAsynchFetchNonBlocking** n’a aucun effet lorsque les [adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md) option permet d’ouvrir le **Recordset**.|  
-|**adExecuteNoRecords**|0x80|Indique que le texte de commande est une commande ou une procédure stockée qui ne retourne pas de lignes (par exemple, une commande qui insère des données uniquement). Si toutes les lignes sont récupérées, elles sont ignorées et pas retournées.<br /><br /> **adExecuteStream** peut être passé comme paramètre facultatif pour la **commande** ou **connexion exécuter** (méthode).|  
-|**adExecuteStream**|0x400|Indique que les résultats d’une exécution de commande doivent être renvoyés en tant que flux.<br /><br /> **adExecuteStream** peut être passé comme paramètre facultatif pour la **commande exécuter** (méthode).|  
+|**adAsyncExecute**|0x10|Indique que la commande doit s’exécuter de façon asynchrone.<br /><br /> Cette valeur ne peut pas être combinée avec la [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valeur **adCmdTableDirect**.|  
+|**adAsyncFetch**|0x20|Indique que les lignes restantes après la quantité spécifiée dans le [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriété doit-elle être récupérée de manière asynchrone.|  
+|**adAsyncFetchNonBlocking**|0x40|Indique que le thread principal ne bloque jamais lors de la récupération. Si la ligne demandée n’a pas été récupérée, la ligne actuelle déplace automatiquement à la fin du fichier.<br /><br /> Si vous ouvrez un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) à partir d’un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) contenant un stocké de façon permanente **Recordset**, **adAsyncFetchNonBlocking** n’aura pas un effet ; l’opération doit être synchrone et bloquante.<br /><br /> **adAsynchFetchNonBlocking** n’a aucun effet lorsque la [adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md) option est utilisée pour ouvrir le **Recordset**.|  
+|**adExecuteNoRecords**|0x80|Indique que le texte de commande est une commande ou une procédure stockée qui ne retourne pas de lignes (par exemple, une commande qui insère des données uniquement). Si toutes les lignes sont récupérées, elles sont ignorées et pas retournées.<br /><br /> **adExecuteStream** peut uniquement être passée comme paramètre facultatif pour le **commande** ou **connexion exécuter** (méthode).|  
+|**adExecuteStream**|0x400|Indique que les résultats d’une exécution de commande doivent être retournés sous forme de flux.<br /><br /> **adExecuteStream** peut uniquement être passée comme paramètre facultatif pour le **Command Execute** (méthode).|  
 |**adExecuteRecord**||Indique que le **CommandText** est une commande ou une procédure stockée qui retourne une seule ligne qui doit être retournée comme un **enregistrement** objet.|  
 |**adOptionUnspecified**|-1|Indique que la commande n’est pas spécifiée.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC équivalent  
+## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
  Package : **com.ms.wfc.data**  
   
 |Constante|  

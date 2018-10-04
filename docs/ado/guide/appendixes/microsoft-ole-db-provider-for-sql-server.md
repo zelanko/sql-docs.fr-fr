@@ -6,24 +6,21 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for SQL Server
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41eae162370ed26a1d84428f1c4e6a5d7eb5e2c7
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 98de1a3a2e03a576b84543bf3578d87e7ad6c655
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980691"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657970"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Fournisseur Microsoft OLE DB pour la présentation de SQL Server
 Le fournisseur Microsoft OLE DB pour SQL Server, SQLOLEDB, permet à ADO pour accéder à Microsoft SQL Server.
@@ -172,7 +169,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Taille de ligne maximale inclut des objets BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Nombre maximal de Tables dans, sélectionnez|DBPROP_MAXTABLESINSELECT|
 |Plusieurs jeux de paramètres|DBPROP_MULTIPLEPARAMSETS|
-|Plusieurs résultats|DBPROP_MULTIPLERESULTS|
+|Résultats multiples|DBPROP_MULTIPLERESULTS|
 |Plusieurs objets de stockage|DBPROP_MULTIPLESTORAGEOBJECTS|
 |Mise à jour de plusieurs Table|DBPROP_MULTITABLEUPDATE|
 |Ordre de classement NULL|DBPROP_NULLCOLLATION|

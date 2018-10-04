@@ -1,13 +1,11 @@
 ---
-title: Recordset (syntaxe ADO pour Visual C++) | Documents Microsoft
+title: Recordset (syntaxe ADO pour Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,16 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Recordset collection [ADO], ADO for Visual C++ syntax
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6063f1b5e63b59ba3f2d4f2f552d4d0b08d22d87
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 806780c69be45983a4021a6e62c8dab15aa61f20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281268"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718883"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>Recordset (syntaxe ADO pour Visual C++)
 ## <a name="methods"></a>Méthodes  
@@ -56,7 +53,7 @@ Update(VARIANT Fields, VARIANT Values)
 UpdateBatch(AffectEnum AffectRecords)  
 ```  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
   
 ```  
 get_AbsolutePage(PositionEnum *pl)  

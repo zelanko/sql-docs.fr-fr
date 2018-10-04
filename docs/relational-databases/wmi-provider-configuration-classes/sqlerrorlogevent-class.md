@@ -1,30 +1,26 @@
 ---
-title: Classe SqlErrorLogEvent | Documents Microsoft
+title: Sqlerrorlogevent, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlErrorLogEvent class
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 724e07a08a0dd08efe47b6a9da8906e3ea49b66d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02bf982b6b154d99c5f3f153550c8531f23afa72
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012686"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669657"
 ---
 # <a name="sqlerrorlogevent-class"></a>Classe SqlErrorLogEvent
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +40,7 @@ class SQLErrorLogEvent
 };  
 ```  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe SQLErrorLogEvent définit les propriétés suivantes.  
   
 |||  
@@ -52,7 +48,7 @@ class SQLErrorLogEvent
 |FileName|Type de données : **chaîne**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Nom du fichier journal des erreurs.|  
 |InstanceName|Type de données : **chaîne**<br /><br /> Type d'accès : Lecture seule<br /><br /> Qualificateurs : Clé<br /><br /> Nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où le fichier journal réside.|  
 |LogDate|Type de données : **datetime**<br /><br /> Type d'accès : Lecture seule<br /><br /> Qualificateurs : Clé<br /><br /> <br /><br /> Date et heure auxquelles l'événement a été enregistré dans le fichier journal.|  
-|Boîte de|Type de données : **chaîne**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Message d'événement.|  
+|Message|Type de données : **chaîne**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Message d'événement.|  
 |ProcessInfo|Type de données : **chaîne**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Informations sur l'ID du processus du serveur source (SPID) pour l'événement.|  
   
 ## <a name="remarks"></a>Notes  
@@ -85,7 +81,7 @@ Next
 ```  
   
 ## <a name="comments"></a>Commentaires  
- Lorsque *InstanceName* ou *nom de fichier* ne sont pas fournies dans l’instruction WQL, la requête retourne des informations sur l’instance par défaut et en cours [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichier journal. Par exemple, l’instruction WQL suivante retournera tous les journaux d’événements à partir du fichier journal actuel (ERRORLOG) sur l’instance par défaut (MSSQLSERVER).  
+ Lorsque *InstanceName* ou *FileName* ne sont pas fournies dans l’instruction WQL, la requête retournera les informations pour l’instance par défaut et actuel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fichier journal. Par exemple, l’instruction WQL suivante retournera tous les événements du journal à partir du fichier journal actuel (ERRORLOG) sur l’instance par défaut (MSSQLSERVER).  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
@@ -98,12 +94,12 @@ Next
   
 -   Autorisation en lecture sur le dossier qui contient les journaux des erreurs. Par défaut, l’erreur journaux sont situés dans le chemin d’accès suivant (où \< *lecteur >* représente le lecteur où vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et \< *InstanceName*> est le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) :  
   
-     **\<Lecteur > : \Program Files\Microsoft SQL Server\MSSQL13** **.\< InstanceName > \MSSQL\Log**  
+     **\<Lecteur > : \Program Files\Microsoft SQL Server\MSSQL13** **.\< Nom_instance > \MSSQL\Log**  
   
- Si vous vous connectez via un pare-feu, vérifiez qu'une exception est définie dans le pare-feu pour WMI sur les ordinateurs cibles distants. Pour plus d’informations, consultez [se connecter à WMI à distance avec Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ Si vous vous connectez via un pare-feu, vérifiez qu'une exception est définie dans le pare-feu pour WMI sur les ordinateurs cibles distants. Pour plus d’informations, consultez [connexion à WMI à distance avec Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe SqlErrorLogFile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
+ [Sqlerrorlogfile, classe](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
  [Afficher les fichiers journaux hors connexion](../../relational-databases/logs/view-offline-log-files.md)  
   
   

@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reporting errors [ADO]
 - errors [ADO]
 - ADO, error handling
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db8900b50f4aa73fe674a6829c384a8956c93619
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5d8f96b28a15258df4b7d093ce14f227f28ad9b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270498"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633517"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
-ADO utilise différentes méthodes pour avertir une application d’erreurs qui se produisent. Cette section présente les types d’erreurs qui peuvent se produire lorsque vous utilisez ADO et comment votre application est notifiée. Il en conclut en faisant des suggestions sur la façon de gérer ces erreurs.  
+ADO utilise différentes méthodes pour avertir une application d’erreurs qui se produisent. Cette section décrit les types d’erreurs qui peuvent se produire lorsque vous utilisez ADO et la façon dont votre application est notifiée. Il conclut en proposant des suggestions sur la façon de gérer ces erreurs.  
   
 ## <a name="how-does-ado-report-errors"></a>Comment ADO ne signale pas les erreurs ?  
  ADO signale les erreurs de plusieurs façons :  
@@ -37,11 +34,11 @@ ADO utilise différentes méthodes pour avertir une application d’erreurs qui 
   
 -   Si l’erreur est spécifique à votre fournisseur de données, un ou plusieurs **erreur** objets sont placés dans le **erreurs** collection de la **connexion** objet qui a été utilisé pour accéder aux données magasin de l’erreur s’est produite.  
   
--   Si le processus qui a déclenché un événement produit également une erreur, les informations d’erreur sont placées dans un **erreur** de l’objet et transmis en tant que paramètre à l’événement. Consultez [gestion des événements ADO](../../../ado/guide/data/handling-ado-events.md) pour plus d’informations sur les événements.  
+-   Si le processus qui a déclenché un événement a également produit une erreur, les informations d’erreur sont placées dans un **erreur** de l’objet et transmis en tant que paramètre à l’événement. Consultez [gestion des événements ADO](../../../ado/guide/data/handling-ado-events.md) pour plus d’informations sur les événements.  
   
--   Des problèmes qui se produisent lors du traitement par lots mises à jour ou autres opérations en bloc implique un **Recordset** peut être indiquée par le **état** propriété de la **Recordset**. Par exemple, les violations de contraintes de schéma ou des autorisations insuffisantes peuvent être spécifiées par **RecordStatusEnum** valeurs.  
+-   Les problèmes qui se produisent lors du traitement par lots mises à jour ou autres opérations en bloc implique un **Recordset** peuvent être indiqués par le **état** propriété de la **Recordset**. Par exemple, les violations de contraintes de schéma ou des autorisations insuffisantes peuvent être spécifiées par **RecordStatusEnum** valeurs.  
   
--   Problèmes impliquant un particulier **champ** dans l’enregistrement actif sont également signalés par le **état** propriété de chaque **champ** dans le **champs**  collection de la **enregistrement** ou **Recordset**. Par exemple, les types de données incompatible ou les mises à jour qui n’a pas pu être effectuées. peuvent être spécifiés par **FieldStatusEnum** valeurs.  
+-   Problèmes impliquant un particulier **champ** dans l’enregistrement actif sont également indiqués par le **état** propriété de chaque **champ** dans le **champs**  collection de la **enregistrement** ou **Recordset**. Par exemple, les types de données incompatibles ou les mises à jour qui n’a pas pu être effectuées. peuvent être spécifiés par **FieldStatusEnum** valeurs.  
   
  Cette section contient les rubriques suivantes.  
   

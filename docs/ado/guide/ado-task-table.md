@@ -1,10 +1,8 @@
 ---
-title: Tableau des tâches ADO | Documents Microsoft
+title: Tableau des tâches ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,41 +11,40 @@ helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e712ed9938037909f589243bf4d7f7ddd2a638e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1186615ccd409ba34f65d3f63dd51c76dfa2fdb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714327"
 ---
 # <a name="ado-programming-task-table"></a>Tableau de tâches de programmation ADO
-Le tableau suivant répertorie les tâches de programmation contenus dans le *Guide du programmeur ADO* et fournit des références pour chaque tâche. Ces références peuvent être des descriptions ou des exemples de code dans laquelle vous trouverez des informations sur la fonctionnalité ADO qui effectue la tâche.
+Le tableau suivant répertorie les tâches de programmation contenues dans le *Guide du programmeur ADO* et fournit des références pour chaque tâche. Ces références peuvent être des descriptions ou des exemples de code dans lequel vous pouvez trouver des informations sur la fonctionnalité ADO qui effectue la tâche.
 
 |Tâche ADO|References|
 |--------------|----------------|
 |Connexion à un fournisseur de données|[Se connecter aux Sources de données](../../ado/guide/data/connecting-to-data-sources.md)|
-|L’exécution de commandes ou appel de procédures stockées|[Préparer et exécuter des commandes](../../ado/guide/data/preparing-and-executing-commands.md)|
-|Ouverture d’un **Recordset**|[Réception des résultats](../../ado/guide/data/receiving-results.md)|
+|L’exécution de commandes ou l’appel de procédures stockées|[Commandes Prepare et Execute](../../ado/guide/data/preparing-and-executing-commands.md)|
+|Ouverture d’un **Recordset**|[Recevoir des résultats](../../ado/guide/data/receiving-results.md)|
 |Déterminer la taille d’un **Recordset**|[Taille du jeu d’enregistrements](../../ado/guide/data/current-record-and-size-of-recordset.md) et [des limites du jeu d’enregistrements](../../ado/guide/data/boundaries-of-a-recordset.md)|
-|Déplacement vers un enregistrement spécifique|[Navigation dans les données](../../ado/guide/data/navigating-through-data.md)|
+|Déplacement vers un enregistrement spécifique|[Naviguer dans les données](../../ado/guide/data/navigating-through-data.md)|
 |L’accès aux valeurs de colonne|[Fields, collection](../../ado/guide/data/the-fields-collection.md)|
 |Recherche de données|[Utilisation des recordsets](../../ado/guide/data/working-with-recordsets.md)|
-|Modification de données et la modification de valeurs|[Modification d’enregistrements existants](../../ado/guide/data/editing-existing-records.md)|
+|Modification des données et la modification de valeurs|[Modification d’enregistrements existants](../../ado/guide/data/editing-existing-records.md)|
 |Ajout de nouvelles données|[Ajout d’enregistrements](../../ado/guide/data/adding-records.md)|
 |La suppression ou la suppression des données|[Suppression d’enregistrements avec la méthode Delete](../../ado/guide/data/deleting-records-using-the-delete-method.md)|
-|Validation des modifications apportées à la source de données|[Mise à jour des données](../../ado/guide/data/updating-data.md)|
-|À compter, validation et annulation de transactions|[Traitement des transactions](../../ado/guide/data/transaction-processing.md)|
+|Publication des modifications dans la source de données|[Mise à jour des données](../../ado/guide/data/updating-data.md)|
+|À compter, la validation et annulation de transactions|[Traitement des transactions](../../ado/guide/data/transaction-processing.md)|
 |L’enregistrement dans un fichier (XML ou binaire)|[Persistance des données](../../ado/guide/data/persisting-data.md)|
 |Gestion des erreurs|[Erreurs ADO](../../ado/guide/data/ado-errors.md)|
 |Gestion des événements, programmation asynchrone|[Présentation rapide du gestionnaire d’événements ADO](../../ado/guide/data/ado-event-handler-summary.md)|
 |En choisissant le type et l’emplacement du curseur|[Types de curseurs](../../ado/guide/data/types-of-cursors-ado.md)|
-|Choix des types de verrou|[Types de verrous](../../ado/guide/data/types-of-locks.md)|
+|Choix des types de verrous|[Types de verrous](../../ado/guide/data/types-of-locks.md)|
 |Renvoi des enregistrements connexes dans un **Recordset**|[Résumé de mise en forme des données](../../ado/guide/data/data-shaping-overview.md)|
 |L’accès aux données semi-structurées|[Enregistrements et flux](../../ado/guide/data/records-and-streams.md)|
 |À l’aide de XML pour les requêtes ou d’entrée de commande|[Flux de commandes](../../ado/guide/data/command-streams.md)|
-|Renvoi de données XML à partir d’un fournisseur|[Récupération de jeux de résultats dans les flux](../../ado/guide/data/retrieving-resultsets-into-streams.md)|
-|Publication dans IIS|[Utilisation d’ADO pour la publication Internet](../../ado/guide/data/using-ado-for-internet-publishing.md)|
+|Données XML renvoyées à partir d’un fournisseur|[Récupération de jeux de résultats dans les flux](../../ado/guide/data/retrieving-resultsets-into-streams.md)|
+|Publication sur IIS|[Utilisation d’ADO pour la publication Internet](../../ado/guide/data/using-ado-for-internet-publishing.md)|

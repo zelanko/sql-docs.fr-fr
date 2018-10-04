@@ -1,13 +1,11 @@
 ---
-title: Fonction de SQLFreeEnv | Documents Microsoft
+title: Sqlfreeenv, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLFreeEnv
@@ -19,26 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLFreeEnv function [ODBC]
 ms.assetid: 32000150-e120-445e-b269-43200f813b2a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a780c8886161c7dc1c4b58d7d7c82f2e64c78977
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba28c2b952874aeea79a1c8104805771afbd494b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916750"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786617"
 ---
-# <a name="sqlfreeenv-function"></a>SQLFreeEnv (fonction)
-**Mise en conformité**  
- Version introduite : Conformité de normes 1.0 ODBC : déconseillé  
+# <a name="sqlfreeenv-function"></a>SQLFreeEnv, fonction
+**Conformité**  
+ Version introduite : La mise en conformité des normes 1.0 ODBC : déconseillé  
   
  **Résumé**  
  Dans ODBC 3 *.x*, la fonction ODBC 2.0 **SQLFreeEnv** a été remplacé par **SQLFreeHandle**. Pour plus d’informations, consultez [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 > [!NOTE]  
->  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction pour lorsqu’un ODBC 2 *.x* application fonctionne avec un ODBC 3 *.x* pilote, consultez [mappage des fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) dans l’annexe g : pilote recommandations pour la compatibilité descendante.  
+>  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2 *.x* application fonctionne avec un ODBC 3 *.x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)dans la section annexe g : pilote instructions pour la compatibilité descendante.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

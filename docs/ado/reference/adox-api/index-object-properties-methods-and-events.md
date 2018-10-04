@@ -1,30 +1,27 @@
 ---
-title: Indexer les propriétés de l’objet, méthodes et événements | Documents Microsoft
+title: Propriétés de l’objet, méthodes et événements d’index | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Index object [ADOX], members
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f6117e5ec4fcf6a044b7351292f337628890a4e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 70ef6dc82f4830f7394cb586e36a22075151b061
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286018"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730377"
 ---
-# <a name="index-object-properties-methods-and-events"></a>Propriétés de l’objet index, méthodes et événements
-## <a name="propertiescollections"></a>Propriétés et de Collections  
+# <a name="index-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Index
+## <a name="propertiescollections"></a>Propriétés et des Collections  
  [Clustered, propriété](../../../ado/reference/adox-api/clustered-property-adox.md)  
   
  [Collection de colonnes](../../../ado/reference/adox-api/columns-collection-adox.md)  
@@ -33,7 +30,7 @@ ms.locfileid: "35286018"
   
  [Propriété Name](../../../ado/reference/adox-api/name-property-adox.md)  
   
- [PrimaryKey, propriété](../../../ado/reference/adox-api/primarykey-property-adox.md)  
+ [PrimaryKey (propriété)](../../../ado/reference/adox-api/primarykey-property-adox.md)  
   
  [Collection de propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)  
   

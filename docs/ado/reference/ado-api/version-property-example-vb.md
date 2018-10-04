@@ -1,34 +1,31 @@
 ---
-title: Exemple de propriété version (VB) | Documents Microsoft
+title: Exemple de propriété version (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Version property [ADO], Visual Basic example
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 686168abddee50063db7f1150120302dea76c08e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f256597bca47a6453dbefa21c528cf57fd245bdf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282898"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645677"
 ---
-# <a name="version-property-example-vb"></a>Exemple de propriété version (VB)
-Cet exemple utilise le [Version](../../../ado/reference/ado-api/version-property-ado.md) propriété d’un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet pour afficher la version ADO actuelle. Il utilise aussi plusieurs propriétés dynamiques pour afficher :  
+# <a name="version-property-example-vb"></a>Version, exemple de propriété (VB)
+Cet exemple utilise le [Version](../../../ado/reference/ado-api/version-property-ado.md) propriété d’un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet pour afficher la version actuelle de ADO. Il utilise également plusieurs propriétés dynamiques pour afficher :  
   
--   le nom du SGBD actuelle et la version.  
+-   le nom actuel de SGBD et la version.  
   
 -   Version de OLE DB.  
   
@@ -82,5 +79,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version, propriété (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

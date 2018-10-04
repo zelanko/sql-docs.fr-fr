@@ -1,13 +1,11 @@
 ---
-title: Attributs et propriétés nom-exemple (VB) | Documents Microsoft
+title: Attributs et des exemples de propriétés de nom (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Attributes property [ADO], Visual Basic example
 - Name property [ADO], Visual Basic example
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 48d96c2afe1018b64933fb96ba8c36d08a93d4e1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eb69a3f9da2ed86411c2a6506cf2ea7a8defcc7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275968"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735147"
 ---
-# <a name="attributes-and-name-properties-example-vb"></a>Attributs et propriétés nom-exemple (VB)
-Cet exemple affiche la valeur de la [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété [connexion](../../../ado/reference/ado-api/connection-object-ado.md), [champ](../../../ado/reference/ado-api/field-object.md), et [propriété](../../../ado/reference/ado-api/property-object-ado.md) objets. Elle utilise le [nom](../../../ado/reference/ado-api/name-property-ado.md) pour afficher le nom de chaque propriété **champ** et **propriété** objet.  
+# <a name="attributes-and-name-properties-example-vb"></a>Attributes et Name, exemple de propriétés (VB)
+Cet exemple affiche la valeur de la [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété pour [connexion](../../../ado/reference/ado-api/connection-object-ado.md), [champ](../../../ado/reference/ado-api/field-object.md), et [propriété](../../../ado/reference/ado-api/property-object-ado.md) objets. Il utilise le [nom](../../../ado/reference/ado-api/name-property-ado.md) propriété pour afficher le nom de chaque **champ** et **propriété** objet.  
   
 ```  
 ' BeginAttributesVB  
@@ -131,8 +128,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs, propriété (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Objet de connexion (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Objet Field](../../../ado/reference/ado-api/field-object.md)   
+ [Attributes, propriété (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
+ [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
  [Nom, propriété (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
  [Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

@@ -1,29 +1,26 @@
 ---
-title: Exemple Visual Basic de mise en forme des données | Documents Microsoft
+title: Exemple Visual Basic de mise en forme des données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Visual Basic example of data shaping[ADO], about data shaping
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e6f7fd8431a189a031b44206b13c711ea74e7b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 772fb84482346402133874ff5e177f4d3c8b30c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273348"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645637"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Exemple Visual Basic de mise en forme des données
 ```  
@@ -100,10 +97,10 @@ End Function
   
 2.  Sélectionnez **composants** à partir de la **projet** menu dans Visual Studio  
   
-3.  Sélectionnez « Microsoft hiérarchique FlexGrid Control 6.0 (OLEDB) » dans le **composants** fenêtre contextuelle, puis cliquez sur **enregistrer**.  
+3.  Sélectionnez « Microsoft hiérarchique FlexGrid contrôle 6.0 (OLEDB) » dans le **composants** fenêtre contextuelle, puis cliquez sur **enregistrer**.  
   
 4.  Double-cliquez sur le contrôle FlexGrid à partir du volet boîte à outils dans l’espace de travail de Visual Basic. Modifier le nom de cette instance à MSHFLEXGRID.  
   
-5.  Copiez le code précédent, puis collez-la dans la **Code** page pour remplacer tout code existant.  
+5.  Copiez le code précédent et collez-la dans la **Code** page pour remplacer n’importe quel code existant.  
   
 6.  Sélectionnez **Démarrer** à partir de la **exécuter** menu pour exécuter l’application.

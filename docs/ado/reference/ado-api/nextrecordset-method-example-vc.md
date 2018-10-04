@@ -1,31 +1,28 @@
 ---
-title: Exemple de méthode NextRecordset (VC ++) | Documents Microsoft
+title: Méthode NextRecordset, exemple (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - NextRecordset method [ADO], VC++ example
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c12be648119f53e5dd9c03544bae3c234cf18e5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 25f77216f31cf6ec15f108aea8bd7634a9008b35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279908"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687997"
 ---
-# <a name="nextrecordset-method-example-vc"></a>Exemple de méthode NextRecordset (VC ++)
+# <a name="nextrecordset-method-example-vc"></a>NextRecordset, exemple de méthode (VC++)
 Cet exemple utilise le [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) méthode pour afficher les données dans un jeu d’enregistrements qui utilise une instruction de commande composée constituée de trois distinct **sélectionnez** instructions.  
   
 ```  

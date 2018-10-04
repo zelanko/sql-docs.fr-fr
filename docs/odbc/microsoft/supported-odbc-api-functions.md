@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC, API functions
 - ODBC SQL grammar, API functions mapped to driver (table) [ODBC]
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bf4b187b4439f6c8739940c657a4d44f44bd0d6
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.openlocfilehash: 460b1cb00f68e9b1940a1680625a173bc92e6f84
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872899"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715207"
 ---
-# <a name="supported-odbc-api-functions"></a>Fonctions API ODBC prises en charge
+# <a name="supported-odbc-api-functions"></a>Fonctions de l’API ODBC prises en charge
 L’objectif de l’audit consiste à informer l’application quelles fonctionnalités sont disponibles à ce dernier à partir du pilote. Les pilotes de base de données de bureau Microsoft ODBC prend en charge toutes les fonctions principales et de niveau 1.  
   
  Pour plus d’informations sur les niveaux de conformité pour les fonctions et de grammaire, consultez [niveaux de conformité](../../odbc/reference/develop-app/conformance-levels.md) dans le *de référence du programmeur ODBC*.  

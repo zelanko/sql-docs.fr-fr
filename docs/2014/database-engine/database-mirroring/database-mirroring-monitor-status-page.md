@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b54eb6377a0d0816d186d612075b678e8eaadb7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef9b125cafb521461bfb17fcdf6fa31a5509411a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067869"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Moniteur de mise en miroir de bases de données (Page État)
   Cette page accessible en lecture seule affiche le dernier état de mise en miroir pour les instances de serveur miroir et de principal de la base de données actuellement sélectionnée dans l'arborescence de navigation. Si les informations d'une instance ne sont pas actuellement disponibles, certaines des cellules de la grille **État** correspondant à cette instance sont grisées et affichent le texte **Inconnu**.  
@@ -43,7 +40,7 @@ ms.locfileid: "37228299"
 |-----------------|-----------------|  
 |**Instance de serveur**|Nom de l'instance de serveur dont l'état est affiché dans la ligne **État** .|  
 |**Rôle actuel**|Rôle actuel de l'instance de serveur : **Principal** ou **Miroir**.|  
-|**État de la mise en miroir**|État de la mise en miroir reportée par l'instance de serveur et icône indiquant la gravité de l'état. Les états possibles et les icônes associées sont les suivants :<br /><br /> — : État **inconnu**. Le moniteur n'est connecté à aucun partenaire. Les seules informations disponibles sont celles qui ont été mises en cache par le moniteur.<br /><br /> Icône d’avertissement : <br />                            État **synchronisation**.<br />                          Le contenu de la base de données en miroir est décalé par rapport à celui de la base de données principale. L'instance de serveur principal envoie des enregistrements de journal à l'instance de serveur miroir, laquelle applique les modifications à la base de données miroir pour la restaurer par progression. Lors du démarrage d'une session de mise en miroir de bases de données, les bases de données miroir et principale se trouvent dans cet état.<br /><br /> Cylindre de base de données standard : état<br />                            **Synchronisé**.<br />                          Lorsque le serveur miroir a rattrapé suffisamment de retard par rapport au serveur principal, l'état de la base de données devient **Synchronisé**. La base de données reste dans cet état aussi longtemps que le serveur principal envoie des modifications au serveur miroir et que le serveur miroir applique les modifications à la base de données miroir. En mode haute sécurité, les deux méthodes de basculement (automatique et manuel) sont possibles, sans perte de données. En mode haute performance, la perte de données peut se produire, même si l’état est **Synchronisé** .<br /><br /> Icône d’avertissement : état<br />                            **Suspendu**.<br />                            La base de données principale est disponible mais n'envoie pas de journaux au serveur miroir.<br /><br /> Icône d’erreur : état <br />                            **Déconnecté**.<br />                          L'instance de serveur ne peut pas se connecter à son partenaire.|  
+|**État de la mise en miroir**|État de la mise en miroir reportée par l'instance de serveur et icône indiquant la gravité de l'état. Les états possibles et les icônes associées sont les suivants :<br /><br /> — : État **inconnu**. Le moniteur n'est connecté à aucun partenaire. Les seules informations disponibles sont celles qui ont été mises en cache par le moniteur.<br /><br /> Icône d’avertissement : <br />                            État **synchronisation**.<br />                          Le contenu de la base de données en miroir est décalé par rapport à celui de la base de données principale. L'instance de serveur principal envoie des enregistrements de journal à l'instance de serveur miroir, laquelle applique les modifications à la base de données miroir pour la restaurer par progression. Lors du démarrage d'une session de mise en miroir de bases de données, les bases de données miroir et principale se trouvent dans cet état.<br /><br /> Cylindre de base de données standard : état<br />                            **Synchronisé**.<br />                          Lorsque le serveur miroir a rattrapé suffisamment de retard par rapport au serveur principal, l'état de la base de données devient **Synchronisé**. La base de données reste dans cet état aussi longtemps que le serveur principal envoie des modifications au serveur miroir et que le serveur miroir applique les modifications à la base de données miroir. En mode haute sécurité, les deux méthodes de basculement (automatique et manuel) sont possibles, sans perte de données. En mode haute performance, la perte de données peut se produire, même si l’état est **Synchronisé** .<br /><br /> Icône d’avertissement : état<br />                            **suspendu**.<br />                            La base de données principale est disponible mais n'envoie pas de journaux au serveur miroir.<br /><br /> Icône d’erreur : état <br />                            **Déconnecté**.<br />                          L'instance de serveur ne peut pas se connecter à son partenaire.|  
 |**Connexion témoin**|État de la connexion du témoin, précédé d'une icône d'état **Inconnu**, **Connecté**ou **Déconnecté**.|  
 |**Historique**|Cliquez sur cette colonne pour afficher l'historique de mise en miroir sur l'instance de serveur. La boîte de dialogue **Historique de la mise en miroir de bases de données** s'ouvre, ce qui affiche l'historique d'état de la mise en miroir ainsi que des statistiques pour une base de données mise en miroir sur une instance de serveur donnée.<br /><br /> Le bouton **Historique** est grisé si le moniteur n'est pas connecté à l'instance de serveur.|  
   

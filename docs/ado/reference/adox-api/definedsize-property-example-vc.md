@@ -1,32 +1,29 @@
 ---
-title: Exemple de propriété DefinedSize (VC ++) | Documents Microsoft
+title: DefinedSize, propriété-Exemple (VC ++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DefinedSize property [ADOX], VC++ example
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2492568dc6e9e62dc3db2ffb914495015e714880
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5c16f76e086dfc78ffed967ef33300a09630a798
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285578"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616597"
 ---
-# <a name="definedsize-property-example-vc"></a>Exemple de propriété DefinedSize (VC ++)
-Cet exemple illustre la [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md). Le code redéfinit la taille de la colonne FirstName de la **employés** table de la *Northwind* base de données. Ensuite, la modification des valeurs du prénom [champ](../../../ado/reference/ado-api/field-object.md) d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basé sur le **employés** table s’affiche. Notez que, par défaut, le champ Prénom est complété avec des espaces après que vous redéfinissez le **DefinedSize** propriété.  
+# <a name="definedsize-property-example-vc"></a>DefinedSize, exemple de propriété (VC++)
+Cet exemple montre la [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md). Le code redéfinit la taille de la colonne FirstName de la **employés** table de la *Northwind* base de données. Ensuite, la modification dans les valeurs de prénom [champ](../../../ado/reference/ado-api/field-object.md) d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) selon le **employés** table s’affiche. Notez que, par défaut, le champ FirstName se remplit d’espaces une fois que vous redéfinissez le **DefinedSize** propriété.  
   
 ```  
 // BeginDefinedSizeCpp.cpp  

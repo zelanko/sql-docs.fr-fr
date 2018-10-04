@@ -1,41 +1,38 @@
 ---
-title: Gestion des événements ADO | Documents Microsoft
+title: Gestion des événements ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - events [ADO]
 - ADO, events
 - event handlers [ADO]
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6203797b27f8cd093e41b34b5507e1dcdba94039
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1738c7432dce6538fe15c4b23f15f5ab7fe6f219
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271428"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606503"
 ---
 # <a name="handling-ado-events"></a>Gestion des événements ADO
-Le modèle d’événement ADO prend en charge certaines opérations synchrones et asynchrones qui émettent des *événements*, ou notifications, avant le démarrage de l’opération, ou après avoir terminé. Un événement est en fait un appel à une routine de gestionnaire d’événements que vous définissez dans votre application.  
+Le modèle d’événement ADO prend en charge certaines opérations synchrones et asynchrones qui émettent *événements*, ou des notifications, avant le démarrage de l’opération ou une fois terminé. Un événement est en fait un appel à une routine de gestionnaire d’événements que vous définissez dans votre application.  
   
- Si vous fournissez des fonctions de gestionnaire ou les procédures pour le groupe d’événements qui se produisent avant le démarrage de l’opération, vous pouvez examiner ou modifier les paramètres qui ont été passés à l’opération. Car il n'a pas encore été exécutée, vous pouvez annuler l’opération ou autoriser qu’elle se termine.  
+ Si vous fournissez des fonctions de gestionnaire ou les procédures pour le groupe d’événements qui se produisent avant le démarrage de l’opération, vous pouvez examiner ou modifier les paramètres qui ont été passés à l’opération. Car il n'a pas encore été exécutée, vous pouvez annuler l’opération ou lui permettre d’effectuer.  
   
  Les événements qui se produisent après qu’une opération se termine sont particulièrement importants si vous utilisez ADO de façon asynchrone. Par exemple, une application qui démarre asynchrone [Recordset.Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) opération est avertie par un événement de fin de l’exécution lorsque l’opération se termine.  
   
- À l’aide du modèle d’événement ADO ajoute une surcharge à votre application, mais fournit plus de souplesse que les autres méthodes de traitement des opérations asynchrones, comme la surveillance du [état](../../../ado/reference/ado-api/state-property-ado.md) propriété d’un objet avec une boucle.  
+ À l’aide du modèle d’événement ADO ajoute une surcharge à votre application, mais fournit plus de souplesse que d’autres méthodes de traitement des opérations asynchrones, comme la surveillance du [état](../../../ado/reference/ado-api/state-property-ado.md) propriété d’un objet avec une boucle.  
   
 > [!NOTE]
->  Pour gérer des événements, ADO doit avoir une pompe de messages ni être utilisée dans un modèle de thread unique cloisonné (STA). Événements ADO sont gérés en interne par la création d’une fenêtre masquée. ADO publie des messages à cette fenêtre lorsque les événements doivent être déclenchés. Cela est fait pour vous assurer que les événements sont envoyés vers le thread qui a appelé **IConnectionPoint::Advise** sur le point de connexion. Cette architecture peut entraîner des problèmes lorsque le thread qui doit recevoir les notifications n’utilise pas les messages de fenêtre. Les problèmes potentiels sont les événements ADO ne pas remises au thread et diffusions fenêtre global expirer et éventuellement ralentir l’ensemble du système, car les fenêtres masquées ne traitent pas les messages. Threads cloisonnés ont généralement une pompe de messages en cours d’exécution pour ce problème ne se produit pas sur les threads cloisonnés. Les threads MTA, toutefois, en général, ont une pompe de messages et le problème se manifeste généralement lui-même sur des threads MTA.  
+>  Pour gérer les événements, ADO doit avoir une pompe de messages ou être utilisée dans un modèle de thread unique cloisonné (STA). Événements ADO sont gérées en interne en créant une fenêtre masquée. ADO publie des messages dans cette fenêtre lorsque des événements doivent être des déclencheurs. Cela permet de vous assurer que les événements sont envoyés au thread qui a appelé **IConnectionPoint::Advise** sur le point de connexion. Cette architecture peut entraîner des problèmes lorsque le thread qui doit recevoir les notifications ne pompe pas les messages de fenêtre. Les problèmes potentiels incluent des événements ADO ne pas remises au thread et les diffusions de fenêtre global n’expire et éventuellement ralentir l’ensemble du système, car les fenêtres masquées ne pas traitent les messages. Threads STA ont généralement une pompe de messages en cours d’exécution pour ce problème ne se produit pas sur des threads STA. Threads MTA, toutefois, en général ont une pompe de messages et le problème est généralement se manifester sur des threads MTA.  
   
  Cette section contient les rubriques suivantes.  
   

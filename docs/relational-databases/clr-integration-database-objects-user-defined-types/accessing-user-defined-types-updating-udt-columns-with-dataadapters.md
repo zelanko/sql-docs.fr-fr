@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -22,18 +20,17 @@ helpviewer_keywords:
 - user-defined types [CLR integration], ADO.NET
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
-caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8bdb8993d93c438dcfc47dd28c3ac90cfd5fcc0d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 96c6b56673b7423629821f588eafb7a6f46591f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358221"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657417"
 ---
-# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Accès aux Types définis par l’utilisateur - mise à jour de colonnes UDT avec DataAdapters
+# <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Accès aux types définis par l’utilisateur - Mise à jour de colonnes UDT avec DataAdapters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Types définis par l’utilisateur (UDT) sont pris en charge en utilisant un **System.Data.DataSet** et un **objet System.Data.SqlClient.SqlDataAdapter** pour extraire et modifier des données.  
   

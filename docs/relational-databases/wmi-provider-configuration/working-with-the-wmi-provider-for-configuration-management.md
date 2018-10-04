@@ -1,14 +1,11 @@
 ---
-title: Utilisation du fournisseur WMI pour la gestion de Configuration | Documents Microsoft
+title: Utilisation du fournisseur WMI pour la gestion de Configuration | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - permissions [WMI]
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, late binding
 - binding [WMI]
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 031370656da517eda6d56db89bdcead7aff799da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7046ff2dfa9033d1caeb633dec1e4c02799257de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010616"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684117"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Utilisation du fournisseur WMI pour la gestion de la configuration
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +34,7 @@ ms.locfileid: "33010616"
 ## <a name="binding"></a>Binding  
  Le fournisseur WMI pour la gestion de la configuration est un modèle objet COM qui prend en charge les liaisons anticipées et tardives. Avec la liaison tardive, vous pouvez utiliser des langages de script, tels que VBScript, pour manipuler par programme les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les paramètres réseau et les alias.  
   
- Pour plus d’informations sur la programmation d’implémentations du fournisseur WMI à l’aide de langages de script, consultez la [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [site Web](http://go.microsoft.com/fwlink/?linkid=15426).  
+ Pour plus d’informations sur la programmation des implémentations du fournisseur WMI à l’aide de langages de script, consultez le [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [site Web](http://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="specifying-a-connection-string"></a>Spécification d'une chaîne de connexion  
  Les applications dirigent le fournisseur WMI pour la gestion de la configuration vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en se connectant à un espace de noms WMI défini par le fournisseur. Le service WMI de Windows mappe cet espace de noms à la DLL de fournisseur et la charge en mémoire. Toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont représentées avec un espace de noms WMI unique. Par défaut, l'espace de noms est  
@@ -49,7 +45,7 @@ ms.locfileid: "33010616"
   
  où `instance_name` a la valeur par défaut `MSSQLSERVER` dans une installation par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Remarque :** si vous vous connectez via le pare-feu Windows vous devez vous assurer que vos ordinateurs sont configurés correctement. Consultez l’article « Connecting Through Windows Firewall » dans la documentation Windows Management Instrumentation sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [site Web](http://go.microsoft.com/fwlink/?linkid=15426).  
+ **Remarque :** si vous vous connectez via le pare-feu Windows vous devez vous assurer que vos ordinateurs sont correctement configurés. Consultez l’article « Connecting Through Windows Firewall » dans la documentation Windows Management Instrumentation sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [site Web](http://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="permissions-and-server-authentication"></a>Autorisations et authentification serveur  
  Pour accéder au fournisseur WMI pour la gestion de la configuration, le script de gestion WMI client doit s'exécuter dans le contexte d'un administrateur sur l'ordinateur cible. Vous devez être membre du groupe Administrateurs Windows local sur l'ordinateur à gérer.  

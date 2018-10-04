@@ -1,13 +1,11 @@
 ---
-title: ParentRow, propriété (ADO) | Documents Microsoft
+title: ParentRow, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - ParentRow property [ADO]
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86122a7cb075816809dd8868c1db94adf1b81612
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9ea31baf4b215a6a516c13b438b526b8e9d8b612
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280558"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606577"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow, propriété (ADO)
 Définit le conteneur d’OLE DB **ligne** de l’objet sur un **ADORecordConstruction** de l’objet, afin que le parent de la ligne est activé dans ADO **enregistrement** objet.  
@@ -44,7 +41,7 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
  Un conteneur d’une ligne.  
   
 ## <a name="return-values"></a>Valeurs de retour  
- Cette méthode de propriété renvoie les valeurs HRESULT standards, notamment S_OK et E_FAIL.  
+ Cette méthode de propriété renvoie les valeurs HRESULT standard, notamment S_OK et E_FAIL.  
   
 ## <a name="applies-to"></a>S'applique à  
  [ADORecordConstruction, interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md)

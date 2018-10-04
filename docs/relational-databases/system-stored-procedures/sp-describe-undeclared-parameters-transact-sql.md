@@ -1,14 +1,11 @@
 ---
 title: sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/15/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -18,20 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b6b17565a12cde0148982f82cf4b84bd1fd8db1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099863"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679631"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Retourne un jeu de résultats qui contient des métadonnées sur les paramètres non déclarés dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considère chaque paramètre qui est utilisé dans le  **\@tsql** du lot, mais non déclaré dans  **\@params**. Le jeu de résultats retourné contient une ligne pour chaque paramètre de ce genre, avec les informations de type déduites pour ce paramètre. La procédure retourne un résultat vide si le  **\@tsql** lot d’entrée n’a aucun paramètre à l’exception de ceux déclarés dans  **\@params**.  
   
@@ -47,11 +43,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **\@tsql =** ] **'***Transact-SQL_batch***'**  
- Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] *Transact-SQL_batch* peut être **nvarchar (***n***)** ou **nvarchar (max)**.  
+ [  **\@tsql =** ] **'**_Transact-SQL\_batch_**'**  
+ Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] *Transact-SQL_batch* peut être **nvarchar (**_n_**)** ou **nvarchar (max)**.  
   
- [  **\@params =** ] **N'***paramètres***'**  
- \@params fournit une chaîne de déclaration pour les paramètres pour le [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctionne de lot, de même façon que sp_executesql. *Paramètres* peut être **nvarchar (***n***)** ou **nvarchar (max)**.  
+ [  **\@params =** ] **N'**_paramètres_**'**  
+ \@params fournit une chaîne de déclaration pour les paramètres pour le [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctionne de lot, de même façon que sp_executesql. *Paramètres* peut être **nvarchar (**_n_**)** ou **nvarchar (max)**.  
   
  Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans *Transact-SQL_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. n correspond à un espace réservé pour d'autres définitions de paramètres. Si l’instruction Transact-SQL ou un lot dans l’instruction ne contient-elle pas de paramètres, \@params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
@@ -106,7 +102,7 @@ sp_describe_undeclared_parameters
   
 -   Si l’entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] lot déclare une variable locale du même nom qu’un paramètre déclaré dans \@params.  
   
--   Si l’instruction fait référence à des tables temporaires.  
+- Si l’instruction fait référence à des tables temporaires.
   
  Si \@tsql n’a aucun paramètre, autres que ceux déclarés dans \@params, la procédure retourne un jeu de résultats vide.  
   

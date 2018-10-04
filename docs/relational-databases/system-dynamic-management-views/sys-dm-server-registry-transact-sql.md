@@ -1,12 +1,10 @@
 ---
-title: Sys.dm_server_registry (Transact-SQL) | Documents Microsoft
+title: Sys.dm_server_registry (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_registry_TSQL
@@ -18,31 +16,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_registry dynamic management view
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4207ee898acec0d0f5f2f00594835ffcef40e9d1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: e4e0b1069977c14216952e537d4bd12b28190529
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788617"
 ---
 # <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne les informations relatives à la configuration et à l'installation qui sont stockées dans le Registre de Windows pour l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Retourne une ligne par clé de Registre. Utilisez cette vue de gestion dynamique pour retourner des informations telles que les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles sur l'ordinateur hôte ou les valeurs de configuration réseau pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nom de colonne|Type de données| Description|  
+|Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar (256)**|Nom de la clé de Registre. Autorise la valeur NULL.|  
-|value_name|**nvarchar (256)**|Nom de la valeur de la clé. Ceci est l’élément affiché dans le **nom** la colonne de l’Éditeur du Registre. Autorise la valeur NULL.|  
-|value_data|**sql_variant**|Valeur des données de la clé. Ceci est la valeur affichée dans le **données** la colonne de l’Éditeur du Registre pour une entrée donnée. Autorise la valeur NULL.|  
+|value_name|**nvarchar (256)**|Nom de la valeur de la clé. Ceci est l’élément indiqué dans le **nom** colonne de l’Éditeur du Registre. Autorise la valeur NULL.|  
+|value_data|**sql_variant**|Valeur des données de la clé. Ceci est la valeur affichée dans le **données** colonne de l’Éditeur du Registre pour une entrée donnée. Autorise la valeur NULL.|  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  

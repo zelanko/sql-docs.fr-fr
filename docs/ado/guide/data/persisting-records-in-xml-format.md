@@ -1,13 +1,11 @@
 ---
-title: Maintien d’enregistrements au Format XML | Documents Microsoft
+title: Persistance des enregistrements au Format XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
@@ -16,24 +14,23 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64041d559dcc680cc72f44f082013c65ef738c27
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c15f4be9d452580cebd6b530f0703f249af17b36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272428"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678457"
 ---
-# <a name="persisting-records-in-xml-format"></a>Maintien d’enregistrements au Format XML
-Comme le format ADTG, **Recordset** persistance au format XML est implémenté avec le fournisseur de persistance Microsoft OLE DB. Ce fournisseur génère un ensemble de lignes avant uniquement en lecture seule à partir d’un fichier XML ou un flux qui contient les informations de schéma générées par ADO enregistré. De même, elle peut prendre un ADO **Recordset**, générer un fichier XML et enregistrez-le dans un fichier ou tout objet qui implémente le modèle COM **IStream** interface. (En fait, un fichier est juste un autre exemple d’un objet qui prend en charge **IStream**.) Pour les versions 2.5 et ultérieures, ADO repose sur l’analyseur Microsoft XML (MSXML) pour charger le code XML dans le **Recordset**; par conséquent msxml.dll est obligatoire.  
+# <a name="persisting-records-in-xml-format"></a>Persistance des enregistrements au format XML
+Comme le format ADTG, **Recordset** persistance au format XML est implémentée avec le fournisseur Microsoft OLE DB de persistance. Ce fournisseur génère un ensemble de lignes avant uniquement et en lecture seule à partir d’un fichier XML ou un flux qui contient les informations de schéma générées par ADO enregistré. De même, il peut prendre un ADO **Recordset**, générer du code XML et enregistrez-le dans un fichier ou de tout objet qui implémente le modèle COM **IStream** interface. (En fait, un fichier est juste un autre exemple d’un objet qui prend en charge **IStream**.) Pour les versions 2.5 et versions ultérieures, ADO repose sur Microsoft XML Parser (MSXML) pour charger le code XML dans le **Recordset**; par conséquent msxml.dll est requise.  
   
 > [!NOTE]
->  Certaines restrictions s’appliquent lors de l’enregistrement hiérarchique **jeux d’enregistrements** (formes de données) au format XML. Vous ne pouvez pas enregistrer au format XML si l’hiérarchique **Recordset** contient en attente de mises à jour, et vous ne pouvez pas enregistrer un paramétrable hiérarchique **Recordset**. Pour plus d’informations, consultez [filtré de persistance et de jeux d’enregistrements](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
+>  Certaines limitations s’appliquent lors de l’enregistrement hiérarchique **Recordsets** (formes de données) au format XML. Vous ne pouvez pas enregistrer au format XML si l’hiérarchique **Recordset** contient en attente de mises à jour, et vous ne pouvez pas enregistrer un paramétrable hiérarchique **Recordset**. Pour plus d’informations, consultez [filtré de persistance et de jeux d’enregistrements](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
   
- Le moyen le plus simple pour conserver les données au format XML et le recharger dans ADO est avec le **enregistrer** et **ouvrir** méthodes, respectivement. L’exemple de code ADO suivant illustre l’enregistrement des données dans le **titres** table dans un fichier nommé titles.sav.  
+ Le moyen le plus simple pour conserver les données au format XML et recharger dans ADO est avec la **enregistrer** et **Open** méthodes, respectivement. L’exemple de code ADO suivant illustre l’enregistrement des données dans le **titres** table dans un fichier nommé titles.sav.  
   
 ```  
 Dim rs as new Recordset  
@@ -63,14 +60,14 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO conserve toujours l’ensemble de **Recordset** objet. Si vous souhaitez conserver un sous-ensemble de lignes de la **Recordset** de l’objet, utilisez le **filtre** méthode pour restreindre les lignes ou de modifier la clause de sélection. Toutefois, vous devez ouvrir une **Recordset** objet avec un curseur côté client (**CursorLocation** = **adUseClient**) à utiliser le **defiltre** méthode pour enregistrer un sous-ensemble de lignes. Par exemple, pour extraire des titres qui commencent par la lettre « b », vous pouvez appliquer un filtre à open **Recordset** objet :  
+ ADO conserve toujours l’intégralité de **Recordset** objet. Si vous souhaitez conserver un sous-ensemble de lignes de la **Recordset** de l’objet, utilisez le **filtre** méthode pour cibler les lignes ou de modifier la clause de sélection. Toutefois, vous devez ouvrir une **Recordset** objet avec un curseur côté client (**CursorLocation** = **adUseClient**) à utiliser le **filtrer** méthode pour enregistrer un sous-ensemble de lignes. Par exemple, pour extraire des titres qui commencent par la lettre « b », vous pouvez appliquer un filtre à une ouverture **Recordset** objet :  
   
 ```  
 rs.Filter "title_id like 'B*'"  
 rs.Save "btitles.sav", adPersistXML  
 ```  
   
- ADO utilise toujours l’ensemble de lignes du moteur de curseur Client pour produire un défilement signet **Recordset** objet par-dessus les données avant uniquement générées par le fournisseur de persistance.  
+ ADO utilise toujours l’ensemble de lignes du moteur de curseur Client pour générer un défilement signet **Recordset** objet par-dessus les données avant uniquement générées par le fournisseur de persistance.  
   
  Cette section contient les rubriques suivantes.  
   

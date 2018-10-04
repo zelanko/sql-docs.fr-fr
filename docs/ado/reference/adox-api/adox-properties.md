@@ -1,36 +1,33 @@
 ---
-title: Propriétés ADOX | Documents Microsoft
+title: Propriétés ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae4cdd06fa7881685aa3eefc499274c0e76b044a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6218ef0c0d39aa1393c5b467c4d8d96960c487f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637227"
 ---
 # <a name="adox-properties"></a>Propriétés ADOX
 |||  
 |-|-|  
-|[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indique l’ADO **connexion** de l’objet auquel appartient le catalogue.|  
+|[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indique le ADO **connexion** de l’objet auquel appartient le catalogue.|  
 |[Attributs](../../../ado/reference/adox-api/attributes-property-adox.md)|Décrit les caractéristiques de la colonne.|  
 |[En cluster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indique si l’index est groupé.|  
-|[Commandee](../../../ado/reference/adox-api/command-property-adox.md)|Spécifie un ADO **commande** objet qui peut être utilisé pour créer ou exécuter la procédure.|  
+|[Commandee](../../../ado/reference/adox-api/command-property-adox.md)|Spécifie une ADO **commande** objet qui peut être utilisé pour créer ou exécuter la procédure.|  
 |[Nombre](../../../ado/reference/ado-api/count-property-ado.md)|Indique le nombre d’objets dans une collection.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indique la date de que création de l’objet.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indique la date de que dernière modification de l’objet.|  
@@ -42,7 +39,7 @@ ms.locfileid: "35284590"
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Indique l’échelle d’une valeur numérique dans la colonne.|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Spécifie le catalogue parent d’une table ou une colonne pour accéder aux propriétés spécifiques au fournisseur.|  
 |[Précision](../../../ado/reference/adox-api/precision-property-adox.md)|Indique la précision maximale de valeurs de données dans la colonne.|  
-|[primaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Indique si l’index représente la clé primaire sur la table.|  
+|[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Indique si l’index représente la clé primaire sur la table.|  
 |[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|Indique le nom de la colonne associée dans la table associée (pour les colonnes clés uniquement).|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|Indique le nom de la table associée.|  
 |[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|Indique l’ordre de tri pour la colonne (colonnes d’index uniquement).|  

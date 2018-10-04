@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -12,16 +11,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], about assemblies
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 02b9011a567eb3a91bf36dfc7d2450dfa9498a60
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 76b861e0cfc6b9c2e747395e1b75a13f33b73f23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37359391"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722547"
 ---
 # <a name="assemblies-database-engine"></a>Assemblys (moteur de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +37,7 @@ ms.locfileid: "37359391"
   
 -   Fonctions d'agrégation définies par l'utilisateur. Pour plus d’informations, consultez [agrégats définis par l’utilisateur de créer](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
   
--   Types définis par l'utilisateur. Pour plus d’informations, consultez [Defined Types](../../relational-databases/native-client/features/using-user-defined-types.md).  
+-   Types définis par l'utilisateur. Pour plus d’informations, consultez [Types CLR définis par l’utilisateur](../../relational-databases/native-client/features/using-user-defined-types.md).  
   
  Les assemblys sont chargés des fonctions suivantes dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   

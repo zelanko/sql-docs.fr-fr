@@ -1,36 +1,30 @@
 ---
-title: Connectez-vous à DB2 (DB2ToSQL) | Documents Microsoft
+title: Se connecter à DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 050c3e5755b86fc1928e6d44292e7e2fb82f5c0e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 74ece76fcb02fe77825d0f08e76b262df195d7b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775125"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768907"
 ---
-# <a name="connect-to-db2-db2tosql"></a>Connectez-vous à DB2 (DB2ToSQL)
-Utilisez le **se connecter à DB2** boîte de dialogue se connecter à la base de données DB2 que vous souhaitez migrer.  
+# <a name="connect-to-db2-db2tosql"></a>Se connecter à DB2 (DB2ToSQL)
+Utilisez le **se connecter à DB2** boîte de dialogue pour vous connecter à la base de données DB2 que vous souhaitez migrer.  
   
-Pour accéder à cette boîte de dialogue, dans le **fichier** menu, sélectionnez **se connecter à DB2**. Si vous êtes déjà connecté, la commande est **se reconnecter à DB2**.  
+Pour accéder à cette boîte de dialogue, dans le **fichier** menu, sélectionnez **se connecter à DB2**. Si vous êtes déjà connecté, la commande est **reconnexion à DB2**.  
   
 ## <a name="options"></a>Options  
 **Fournisseur**  
-Sélectionnez le fournisseur d’accès aux données pour la connexion à la base de données DB2. Les fournisseurs disponibles sont le fournisseur du Client DB2 et du fournisseur OLE DB. La valeur par défaut est le fournisseur du Client DB2.  
+Sélectionnez le fournisseur d’accès aux données pour votre connexion à la base de données DB2. Les fournisseurs disponibles sont le fournisseur de Client DB2 et le fournisseur OLE DB. La valeur par défaut est le fournisseur de Client DB2.  
   
 **Mode**  
 Sélectionnez le mode Standard, TNSNAME ou chaîne de connexion.  
@@ -39,7 +33,7 @@ Sélectionnez le mode Standard, TNSNAME ou chaîne de connexion.
   
 -   En mode TNSNAME, vous entrez l’identificateur de connexion (alias TNS) de la base de données DB2, le nom d’utilisateur et le mot de passe.  
   
--   En mode de la chaîne de connexion, vous fournissez une chaîne de connexion.  
+-   En mode de chaîne de connexion, vous fournissez une chaîne de connexion.  
   
     > [!IMPORTANT]  
     > Nous vous déconseillons d’utiliser le mode de chaîne de connexion, car le texte peut inclure des mots de passe, et il est envoyé en texte clair.  
@@ -50,7 +44,7 @@ La valeur par défaut est en mode Standard.
 Entrez le nom du serveur DB2. Le nom du serveur par défaut est le même que le nom de l’ordinateur. Il s’agit d’une option de mode Standard.  
   
 **Port du serveur**  
-Si vous utilisez un numéro de port autre que 1521 (par défaut) pour les connexions à DB2, entrez le numéro de port. Il s’agit d’une option de mode Standard.  
+Si vous utilisez un numéro de port autre que 1521 (valeur par défaut) pour les connexions à DB2, entrez le numéro de port. Il s’agit d’une option de mode Standard.  
   
 **Identificateur de connexion**  
 Entrez le DB2 identificateur de connexion. Il s’agit de l’alias de la base de données tel que défini dans le fichier tnsnames.ora local.  
@@ -72,11 +66,11 @@ Entrez le mot de passe correspondant au nom d'utilisateur indiqué.
 > [!IMPORTANT]  
 > Nous vous déconseillons d’utiliser le mode de chaîne de connexion, car le texte peut inclure des mots de passe, et il est envoyé en texte clair.  
   
-Si vous utilisez le mode de la chaîne de connexion, entrez la chaîne de connexion complète pour la connexion à DB2.  
+Si vous utilisez le mode de chaîne de connexion, entrez la chaîne de connexion complète pour la connexion à DB2.  
   
 Chaînes de connexion sont constitués de paires nom / valeur de paramètre.  
   
--   Pour plus d’informations de chaîne de connexion OLE DB, consultez [fournisseur Microsoft OLE DB pour DB2](http://go.microsoft.com/fwlink/?LinkId=85640) l’article sur le site MSDN Library.  
+-   Pour plus d’informations de chaîne de connexion OLE DB, consultez [fournisseur Microsoft OLE DB pour DB2](http://go.microsoft.com/fwlink/?LinkId=85640) article dans la bibliothèque MSDN.  
   
 Pour les chaînes de connexion de SSMA, toujours inclure le paramètre de fournisseur. En outre, assurez-vous que vous incluez le paramètre de Port lorsque vous vous connectez à DB2.  
   

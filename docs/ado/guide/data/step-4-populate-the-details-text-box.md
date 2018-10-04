@@ -1,27 +1,24 @@
 ---
-title: 'Étape 4 : Remplir la zone de texte Détails | Documents Microsoft'
+title: 'Étape 4 : Remplir la zone de texte Détails | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da260e3dd3006a56e0be90c2b7e0c33ed0869781
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c5bb2a49043857cfe9278862efd9e540e4597808
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272878"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706838"
 ---
-# <a name="step-4-populate-the-details-text-box"></a>Étape 4 : Remplir la zone de texte de détails
+# <a name="step-4-populate-the-details-text-box"></a>Étape 4 : Remplir la zone de texte Détails
 Pour remplir la zone de texte de détails, créez une nouvelle sous-routine nommée **recFields** et insérez le code suivant :  
   
 ```  
@@ -48,7 +45,7 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- Ce code remplit `lstDetails` avec les champs et les valeurs de l’enregistrement simple transmis à `recFields`. Si la ressource est un fichier texte, un flux de texte est ouvert à partir de l’enregistrement de ressource. Le code détermine si le jeu de caractères est ASCII et copie le contenu du flux dans `txtDetails`.  
+ Ce code remplit `lstDetails` avec les champs et les valeurs de l’enregistrement simple transmis à `recFields`. Si la ressource est un fichier texte, un Stream de texte est ouvert à partir de l’enregistrement de ressource. Le code détermine si le jeu de caractères est ASCII et copie le contenu de Stream dans `txtDetails`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario de publication Internet](../../../ado/guide/data/internet-publishing-scenario.md)   

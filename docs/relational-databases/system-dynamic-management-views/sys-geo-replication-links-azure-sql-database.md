@@ -5,10 +5,7 @@ ms.date: 10/18/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - dm_geo_replication_links_TSQL
@@ -19,19 +16,18 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5e59dcd6550c006b5a1e0f3e3be6440669e05021
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6b37ca384c2d3402a3b9ec01a4b9d6ccbfb7d402
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610107"
 ---
-# <a name="sysgeoreplicationlinks-azure-sql-database"></a>Sys.geo_replication_links (base de données Azure SQL)
+# <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque lien de réplication entre les bases de données primaires et secondaires dans un partenariat de géo-réplication. Cette vue se trouve dans la base de données master logique.  
@@ -51,7 +47,7 @@ ms.locfileid: "37997741"
 |secondary_allow_connections|**tinyint**|Le type secondaire, un des suivants :<br /><br /> 0 = Non. La base de données secondaire n’est pas accessible jusqu’au basculement.<br /><br /> 1 = lecture seule. La base de données secondaire est accessible uniquement aux connexions clientes avec ApplicationIntent = ReadOnly.<br /><br /> 2 = Toutes. La base de données secondaire est accessible à toute connexion cliente.|  
 |secondary_allow_connections _desc|**nvarchar (256)**|non<br /><br /> All<br /><br /> En lecture seule|  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Cette vue est disponible uniquement dans le **master** base de données pour la connexion du principal au niveau du serveur.  
   
 ## <a name="example"></a>Exemple  

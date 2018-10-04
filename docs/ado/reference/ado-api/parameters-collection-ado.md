@@ -1,13 +1,11 @@
 ---
-title: Collection de paramètres (ADO) | Documents Microsoft
+title: Collection de paramètres (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,36 +15,35 @@ f1_keywords:
 helpviewer_keywords:
 - Parameters collection [ADO]
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7c59411e1aeeaa32e2b1904e2503b26a92c829b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 28832f7e96ddbb149db5561654d55ef0003551cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280655"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657847"
 ---
-# <a name="parameters-collection-ado"></a>Collection de paramètres (ADO)
-Contient tous les [paramètre](../../../ado/reference/ado-api/parameter-object.md) les objets d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
+# <a name="parameters-collection-ado"></a>Parameters, collection (ADO)
+Contient tous les [paramètre](../../../ado/reference/ado-api/parameter-object.md) objets d’un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
   
 ## <a name="remarks"></a>Notes  
- A **commande** objet a un **paramètres** collection composée de **paramètre** objets.  
+ Un **commande** objet possède un **paramètres** collection composée de **paramètre** objets.  
   
  À l’aide de la [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) méthode sur un **commande** l’objet **paramètres** collection récupère les informations de paramètre de fournisseur pour la procédure stockée ou d’une requête paramétrable spécifié dans le **commande** objet. Certains fournisseurs ne gèrent pas les appels de procédures stockées ou des requêtes paramétrées ; appel de la **Actualiser** méthode sur le **paramètres** collection lors de l’utilisation de ce type de fournisseur retournera une erreur.  
   
- Si vous n’avez pas défini votre propre **paramètre** objets et vous accédez à la **paramètres** collection avant d’appeler le **Actualiser** (méthode), ADO appelle automatiquement la méthode et remplir la collection.  
+ Si vous n’avez pas défini votre propre **paramètre** objets et que vous accédez à la **paramètres** collection avant d’appeler le **Actualiser** (méthode), ADO appelle automatiquement la méthode et remplir la collection pour vous.  
   
- Vous pouvez réduire les appels au fournisseur pour améliorer les performances si vous connaissez les propriétés des paramètres associés à la procédure stockée ou une requête paramétrable que vous souhaitez appeler. Utiliser le [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) méthode pour créer **paramètre** objets avec les paramètres de propriété appropriés et utilisez la [Append](../../../ado/reference/ado-api/append-method-ado.md) méthode pour les ajouter à la  **Paramètres** collection. Cela vous permet de définir et retourner des valeurs de paramètre sans devoir appeler le fournisseur pour les informations de paramètre. Si vous écrivez un fournisseur qui ne fournit pas d’informations sur les paramètres, vous devez remplir manuellement la **paramètres** collection à l’aide de cette méthode pour pouvoir utiliser des paramètres. Utilisez le [supprimer](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) méthode pour supprimer **paramètre** des objets de la **paramètres** collection si nécessaire.  
+ Vous pouvez réduire les appels au fournisseur pour améliorer les performances si vous connaissez les propriétés des paramètres associés à la procédure stockée ou une requête paramétrable que vous souhaitez appeler. Utiliser le [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) méthode pour créer **paramètre** objets avec les paramètres de propriété approprié et l’utilisation du [Append](../../../ado/reference/ado-api/append-method-ado.md) méthode pour les ajouter à la  **Paramètres** collection. Cela vous permet de définir et retourner des valeurs de paramètre sans devoir appeler le fournisseur pour les informations de paramètre. Si vous écrivez un fournisseur qui ne fournit pas d’informations sur les paramètres, vous devez remplir manuellement la **paramètres** collection à l’aide de cette méthode pour pouvoir utiliser des paramètres. Utilisez le [supprimer](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) méthode pour supprimer **paramètre** objets à partir de la **paramètres** collection si nécessaire.  
   
  Les objets dans le **paramètres** collection d’un **Recordset** accédez hors de portée (ils deviennent donc indisponibles) lorsque le **Recordset** est fermé.  
   
- Lorsque vous appelez une procédure stockée avec **commande**, le paramètre de valeur de retour/sortie d’une procédure stockée est extraite comme suit :  
+ Lors de l’appel d’une procédure stockée avec **commande**, le paramètre de valeur de retour/sortie d’une procédure stockée est extraite comme suit :  
   
-1.  Lorsque vous appelez une procédure stockée qui n’a aucun paramètre, le **Actualiser** méthode sur le **paramètres** collection doit être appelée avant d’appeler le **Execute** méthode sur le **Commande** objet.  
+1.  Lors de l’appel d’une procédure stockée qui n’a aucun paramètre, le **Actualiser** méthode sur le **paramètres** collection doit être appelée avant d’appeler le **Execute** méthode sur le **Commande** objet.  
   
-2.  Lorsque vous appelez une procédure stockée avec des paramètres et explicitement en ajoutant un paramètre à la **paramètres** collection avec **Append**, le paramètre de retour de sortie/valeur doit être ajouté à la **Paramètres** collection. La valeur de retour doit tout d’abord être ajoutée à la **paramètres** collection. Utilisez **Append** pour ajouter les autres paramètres dans le **paramètres** collection dans l’ordre de définition. Par exemple, la procédure stockée SPWithParam a deux paramètres. Le premier paramètre, *InParam*, est un paramètre d’entrée est défini comme adVarChar (20) et le second paramètre, *OutParam*, est un paramètre output défini comme adVarChar (20). Vous pouvez récupérer le paramètre de valeur de retour/sortie par le code suivant.  
+2.  Lors de l’appel d’une procédure stockée avec des paramètres et en ajoutant explicitement un paramètre à la **paramètres** collection avec **Append**, le paramètre de retour de sortie/valeur doit être ajouté à la **Paramètres** collection. La valeur de retour doit tout d’abord être ajoutée à la **paramètres** collection. Utilisez **Append** pour ajouter les autres paramètres dans le **paramètres** collection dans l’ordre de définition. Par exemple, la procédure stockée SPWithParam a deux paramètres. Le premier paramètre, *InParam*, est un paramètre d’entrée défini comme adVarChar (20) et le second paramètre, *OutParam*, est un paramètre output défini comme adVarChar (20). Vous pouvez récupérer le paramètre de valeur de retour/sortie par le code suivant.  
   
     ```  
     ' Open Connection Conn  
@@ -67,7 +64,7 @@ Contient tous les [paramètre](../../../ado/reference/ado-api/parameter-object.m
   
     ```  
   
-3.  Lorsque vous appelez une procédure stockée avec des paramètres et la configuration des paramètres en appelant le **élément** méthode sur le **paramètres** regroupement, le paramètre de valeur de retour/sortie de la procédure stockée peut récupérer à partir de la **paramètres** collection. Par exemple, la procédure stockée SPWithParam a deux paramètres. Le premier paramètre, *InParam*, est un paramètre d’entrée est défini comme adVarChar (20) et le second paramètre, *OutParam*, est un paramètre output défini comme adVarChar (20). Vous pouvez récupérer le paramètre de valeur de retour/sortie par le code suivant.  
+3.  Lors de l’appel d’une procédure stockée avec des paramètres et la configuration des paramètres en appelant le **élément** méthode sur le **paramètres** collection, le paramètre de valeur de retour/sortie de la procédure stockée peut récupérer à partir de la **paramètres** collection. Par exemple, la procédure stockée SPWithParam a deux paramètres. Le premier paramètre, *InParam*, est un paramètre d’entrée défini comme adVarChar (20) et le second paramètre, *OutParam*, est un paramètre output défini comme adVarChar (20). Vous pouvez récupérer le paramètre de valeur de retour/sortie par le code suivant.  
   
     ```  
     ' Open Connection Conn  
@@ -86,9 +83,9 @@ Contient tous les [paramètre](../../../ado/reference/ado-api/parameter-object.m
   
  Cette section contient les rubriques suivantes.  
   
--   [Propriétés de Collection de paramètres, méthodes et événements](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [Événements, méthodes et propriétés de Collection de paramètres](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Append (méthode) (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
+ [Append, méthode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter, méthode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Parameter, objet](../../../ado/reference/ado-api/parameter-object.md)

@@ -1,33 +1,30 @@
 ---
-title: Grammaire de mise en forme formelle | Documents Microsoft
+title: Grammaire de la mise en forme formelle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bb375b0b580bec75b1994a549a1a5815f4e34ec
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3b26eaeb804f8d92a7122814641cadf5889b77b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789267"
 ---
-# <a name="formal-shape-grammar"></a>Grammaire de mise en forme formelle
+# <a name="formal-shape-grammar"></a>Grammaire formelle de la commande SHAPE
 Il s’agit de la grammaire formelle pour la création de n’importe quelle commande de la forme :  
   
--   Les termes grammaticaux obligatoires sont des chaînes de texte délimité par des crochets (« <> »).  
+-   Les termes grammaticaux obligatoires sont des chaînes de texte délimités par des crochets pointus (« <> »).  
   
 -   Termes facultatifs sont délimités par des crochets (« [] »).  
   
@@ -41,38 +38,38 @@ Il s’agit de la grammaire formelle pour la création de n’importe quelle com
   
 -   *Chiffres Unicode* indique une chaîne de chiffres unicode.  
   
- Toutes les autres conditions sont des littéraux.  
+ Tous les autres termes sont des littéraux.  
   
 |Terme|Définition|  
 |----------|----------------|  
-|\<forme-commande >|FORME [\<table-exp > [[AS] \<alias >]] [\<forme action >]|  
-|\<table-exp >|{\<texte de commande fournisseur >}&#124;<br /><br /> (\<forme-commande >)&#124;<br /><br /> TABLE \<quoted-name >&#124;<br /><br /> \<nom entre guillemets >|  
-|\<forme action >|APPEND \<liste de champs d’un alias >&#124;<br /><br /> CALCUL \<liste de champs d’un alias > [BY \<liste de champs >]|  
-|\<liste de champs d’un alias >|\<un alias-champ > [, \<champ alias... >]|  
-|\<champ de l’alias >|\<champ-exp > [[AS] \<alias >]|  
-|\<field-exp>|(\<relation-exp >)&#124;<br /><br /> \<exp calculée >&#124;<br /><br /> \<agrégat-exp >&#124;<br /><br /> \<nouveau-exp >|  
-|< relation_exp >|\<table-exp > [[AS] \<alias >]<br /><br /> ASSOCIER \<relation-conditionnel-list >|  
-|\<relation-cond-list>|\<condition de relation > [, \<conditionnel de relation >...]|  
-|\<condition de relation >|\<nom du champ > TO \<enfant-ref >|  
-|\<enfant-ref >|\<nom du champ >&#124;<br /><br /> PARAMÈTRE \<param-ref >|  
-|\<Param-ref >|\<nombre >|  
-|\<field-list>|\<nom du champ > [, \<-nom du champ >]|  
-|\<aggregate-exp>|SUM (\<nom de champ qualifié >)&#124;<br /><br /> AVG (\<nom de champ qualifié >)&#124;<br /><br /> MIN (\<nom de champ qualifié >)&#124;<br /><br /> MAX (\<nom de champ qualifié >)&#124;<br /><br /> NOMBRE (\<alias qualifié > &#124; \<nom qualifié >)&#124;<br /><br /> STDEV (\<nom de champ qualifié >)&#124;<br /><br /> N’importe quel (\<nom de champ qualifié >)|  
-|\<exp calculée >|CALCUL (\<expression >)|  
+|\<la commande Shape >|FORME [\<table-exp > [[AS] \<alias >]] [\<forme-action >]|  
+|\<table-exp >|{\<texte de commande fournisseur >}&#124;<br /><br /> (\<la commande shape >)&#124;<br /><br /> TABLE \<quoted-name >&#124;<br /><br /> \<nom entre guillemets >|  
+|\<action de la forme >|APPEND \<liste de champs d’un alias >&#124;<br /><br /> CALCUL \<liste de champs d’un alias > [BY \<liste de champs >]|  
+|\<liste de champs d’un alias >|\<champ d’un alias > [, \<champ alias... >]|  
+|\<champ d’un alias >|\<champ-exp > [[AS] \<alias >]|  
+|\<field-exp>|(\<exp de relation >)&#124;<br /><br /> \<exp calculée >&#124;<br /><br /> \<agrégat-exp >&#124;<br /><br /> \<nouveau exp >|  
+|< relation_exp >|\<table-exp > [[AS] \<alias >]<br /><br /> RELATE \<relation-cond-list >|  
+|\<relation-cond-list>|\<cond-relation > [, \<cond-relation >...]|  
+|\<cond-relation >|\<nom de champ > TO \<enfant-ref >|  
+|\<enfant-ref >|\<nom de champ >&#124;<br /><br /> PARAMÈTRE \<-ref param >|  
+|\<ref-param >|\<numéro >|  
+|\<field-list>|\<nom de champ > [, \<-nom du champ >]|  
+|\<aggregate-exp>|Somme (\<qualified-champ-name >)&#124;<br /><br /> AVG (\<qualified-champ-name >)&#124;<br /><br /> MIN (\<qualified-champ-name >)&#124;<br /><br /> MAX (\<qualified-champ-name >)&#124;<br /><br /> NOMBRE (\<alias qualifié > &#124; \<nom qualifié >)&#124;<br /><br /> STDEV (\<qualified-champ-name >)&#124;<br /><br /> N’importe quel (\<qualified-champ-name >)|  
+|\<exp calculée >|CALC (\<expression >)|  
 |\<nom de champ qualifié >|\<alias >. [\<alias >...] \<-nom du champ >|  
 |\<alias >|\<nom entre guillemets >|  
-|\<nom du champ >|\<Quoted-name > [[AS] \<alias >]|  
+|\<nom de champ >|\<nom entre guillemets > [[AS] \<alias >]|  
 |\<nom entre guillemets >|«\<chaîne > »&#124;<br /><br /> '\<chaîne >'&#124;<br /><br /> [\<chaîne >]&#124;<br /><br /> \<Nom >|  
 |\<nom qualifié >|alias [.alias...]|  
 |\<Nom >|alpha [alpha &#124; chiffre &#124; _ &#124; # &#124; : &#124; ...]|  
-|\<nombre >|chiffre [chiffres...]|  
-|\<nouveau-exp >|NOUVELLE \<type de champ > [(\<nombre > [, \<nombre >])]|  
+|\<numéro >|chiffre [chiffre...]|  
+|\<nouveau exp >|NOUVELLE \<type de champ > [(\<nombre > [, \<nombre >])]|  
 |\<field-type>|Un type de données OLE DB ou ADO.|  
-|\<chaîne >|Unicode-char [unicode-char...]|  
+|\<chaîne >|Unicode-char [caractères unicode...]|  
 |\<expression>|Une expression Visual Basic pour Applications dont les opérandes sont d’autres colonnes non calculées dans la même ligne.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’accès aux lignes dans un jeu d’enregistrements hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [Accès aux lignes dans un Recordset hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Vue d’ensemble de la mise en forme des données](../../../ado/guide/data/data-shaping-overview.md)   
  [Fournisseurs requis pour la mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Clause APPEND de forme](../../../ado/guide/data/shape-append-clause.md)   

@@ -1,13 +1,11 @@
 ---
-title: L’objet Procedure (ADOX) | Documents Microsoft
+title: Objet de procédure (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - Procedure object [ADOX]
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4decbe11233f64db4fd51ef0c3a2b923355c375
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 41d8e640d5b85f8adc32e0ce69801accacdc602d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286728"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692717"
 ---
-# <a name="procedure-object-adox"></a>Objet Procedure (ADOX)
-Représente une procédure stockée. Lorsqu’il est utilisé conjointement avec ADO [commande](../../../ado/reference/ado-api/command-object-ado.md) objet, le **procédure** objet peut être utilisé pour l’ajout, suppression ou modification des procédures stockées.  
+# <a name="procedure-object-adox"></a>Procedure, objet (ADOX)
+Représente une procédure stockée. Lorsqu’il est utilisé conjointement avec le ADO [commande](../../../ado/reference/ado-api/command-object-ado.md) objet, le **procédure** objet peut être utilisé pour l’ajout, suppression ou modification des procédures stockées.  
   
 ## <a name="remarks"></a>Notes  
  Le **procédure** objet vous permet de créer une procédure stockée sans avoir à connaître ou utiliser la syntaxe du fournisseur « CREATE PROCEDURE ».  
@@ -45,8 +42,8 @@ Représente une procédure stockée. Lorsqu’il est utilisé conjointement avec
 -   [Propriétés, méthodes et événements de l’objet Procedure](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Commande et un exemple de propriétés CommandText (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
+ [Command et CommandText, exemple de propriétés (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Collection de paramètres, exemple de commande de propriété (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Procédures ajouter l’exemple de méthode (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Exemple de méthode (VB) de suppression de procédures](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [Procedures Append, méthode-exemple (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
+ [Procédures Delete, exemple de méthode (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Procedures, collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
