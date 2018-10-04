@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4364b9c18125b5aa4baa479ae92a2dc688d9fe18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7fa34786d8d939581c5b8fecfb54103229a2a2c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257595"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196579"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implémentation de la sécurité dynamique à l'aide des filtres de lignes
   Dans cette leçon supplémentaire, vous allez créer un rôle supplémentaire qui implémente la sécurité dynamique. La sécurité dynamique permet de définir la sécurité de niveau ligne en fonction du nom d'utilisateur ou de l'ID de connexion de l'utilisateur actuellement connecté. Pour plus d’informations, consultez [Rôles &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
@@ -89,8 +86,8 @@ ms.locfileid: "37257595"
   
     |Employee Id|Sales Territory Id|First Name|Last Name|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    | 1|2|\<nom utilisateur >|\<nom utilisateur >|\<domaine\nom d’utilisateur >|  
-    | 1|3|\<nom utilisateur >|\<nom utilisateur >|\<domaine\nom d’utilisateur >|  
+    |1|2|\<nom utilisateur >|\<nom utilisateur >|\<domaine\nom d’utilisateur >|  
+    |1|3|\<nom utilisateur >|\<nom utilisateur >|\<domaine\nom d’utilisateur >|  
     |2|4|\<nom utilisateur >|\<nom utilisateur >|\<domaine\nom d’utilisateur >|  
     |3|5|\<nom utilisateur >|\<nom utilisateur >|\<domaine\nom d’utilisateur >|  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ac88882120b588599af625852675e9be95031ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77e4b6ba8f70c826dcfdf5a89fc9c577d587a3f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235689"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181369"
 ---
 # <a name="roles-ssas-tabular"></a>Rôles (SSAS Tabulaire)
   Les rôles, dans les modèles tabulaires, définissent des autorisations de membre pour un modèle. Chaque rôle contient des membres, par nom d'utilisateur Windows ou par groupe Windows, ainsi que des autorisations (lecture, traitement, administrateur). Les membres du rôle peuvent effectuer des actions sur le modèle, comme défini par l'autorisation du rôle. Les rôles définis avec des autorisations de lecture peuvent également fournir une sécurité supplémentaire au niveau de la ligne grâce à l'utilisation de filtres au niveau de la ligne.  
@@ -66,7 +63,7 @@ ms.locfileid: "37235689"
   
  Chaque rôle peut avoir l'une des autorisations suivantes définies :  
   
-|Autorisations|Description|Filtres de lignes à l'aide de DAX|  
+|Permissions|Description|Filtres de lignes à l'aide de DAX|  
 |-----------------|-----------------|----------------------------|  
 |None|Les membres ne peuvent pas apporter de modifications au schéma de la base de données model et ne peuvent pas interroger les données.|Les filtres de lignes ne s'appliquent pas. Aucune donnée n'est visible par les utilisateurs de ce rôle|  
 |Lire|Les membres sont autorisés à interroger des données (selon les filtres au niveau de la ligne), mais ils ne peuvent pas modifier la base de données model dans SSMS, apporter des modifications au schéma de la base de données model et l'utilisateur ne peut pas traiter le modèle.|Des filtres de lignes peuvent être appliqués. Seules les données spécifiées dans la formule DAX de filtre de lignes sont visibles par les utilisateurs.|  
@@ -124,7 +121,7 @@ ms.locfileid: "37235689"
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-| 1|Entreprise|  
+|1|Entreprise|  
 |2|Direction générale et administration|  
 |3|Gestion des stocks|  
 |4|Fabrication|  

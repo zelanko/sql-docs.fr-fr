@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - queries [SQLXML], XPath
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50586aca145c18a29cb260c71de578a060f08f36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c3f09dc7aca21e3ca56d86e340f083ea7b26251
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158299"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Utilisation des requêtes XPath dans SQLXML 4.0
   La prise en charge par Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des schémas XSD annotés vous permet de créer des vues XML des données relationnelles stockées dans la base de données. Vous pouvez utiliser un sous-ensemble du langage XPath pour interroger les vues XML créées par un schéma XSD annoté.  

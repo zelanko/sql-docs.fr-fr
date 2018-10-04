@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb5e69c5f65dc92345a3e8b6f33b2c59136d3fef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11356ea0e7bb5b8388867eab330d0849163b6257
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220469"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164336"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valeurs manquantes (Analysis Services - Exploration de données)
   Gérer les *valeurs manquantes* correctement fait partie intégrante d’une modélisation efficace. Cette section explique ce que sont les valeurs manquantes et décrit les fonctionnalités fournies dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour gérer les valeurs manquantes lors de la génération de structures et de modèles d'exploration de données.  
@@ -55,7 +52,7 @@ ms.locfileid: "37220469"
 |Valeur|Cas|  
 |-----------|-----------|  
 |0|9296|  
-| 1|9098|  
+|1|9098|  
 |Manquant|0|  
   
  Cette distribution montre qu'environ la moitié des clients a acheté un vélo et que l'autre moitié n'en n'a pas acheté. Ce jeu de données particulier est très propre ; par conséquent, chaque cas a une valeur dans la colonne [Bike Buyer] et le nombre de valeurs `Missing` est de 0. Toutefois, si un cas comporte une valeur null dans le champ [Bike Buyer], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] compte cette ligne comme un cas avec un `Missing` valeur.  
@@ -71,7 +68,7 @@ ms.locfileid: "37220469"
 |Valeur|Cas|Probabilité|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
-| 1|9098|49.42%|  
+|1|9098|49.42%|  
 |Manquant|0|0.03%|  
   
  Il peut sembler étrange que la probabilité de la `Missing` valeur est calculée comme 0,03 % avec le nombre de cas égal à 0. En fait, ce comportement est normal et représente un ajustement qui permet au modèle de gérer les valeurs inconnues correctement.  
@@ -107,7 +104,7 @@ ms.locfileid: "37220469"
   
  L'effet net de cet ajustement est de maintenir la stabilité de l'arbre.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  Les rubriques suivantes fournissent des informations supplémentaires sur la manière de gérer les valeurs manquantes.  
   
 |Tâches|Liens|  

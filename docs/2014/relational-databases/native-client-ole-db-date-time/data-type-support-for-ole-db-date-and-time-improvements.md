@@ -1,29 +1,26 @@
 ---
-title: Type de données prise en charge pour les améliorations OLE DB Date / heure | Microsoft Docs
+title: Prise en charge des types de données pour les améliorations de date et d’heure OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 915a86b1170809bf1508f0214060fea9e0cf8a79
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2ff3ef6c9fd7347585b4e7df026fdc95bafdd069
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157919"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge du Type de données pour les améliorations OLE DB Date / heure
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge des types de données pour les améliorations de date et d’heure OLE DB
   Cette rubrique fournit des informations sur les types OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) qui prennent en charge les types de données de date/heure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mappage de type de données dans les ensembles de lignes et les paramètres  
@@ -183,6 +180,6 @@ enum SQLVARENUM {
  Lorsqu’une application spécifie DBTYPE_DBTIMESTAMP dans *wType*, il peut remplacer le mappage à `datetime2` en fournissant un nom de type dans *pwszTypeName*. Si `datetime` est spécifié, *bScale* doit être 3. Si `smalldatetime` est spécifié, *bScale* doit être 0. Si *bScale* n’est pas cohérente avec *wType* et *pwszTypeName*, DB_E_BADSCALE est retourné.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorations date / heure &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

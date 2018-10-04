@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e54e07700b7b3ec5ffe43943c6d25b76515fb3ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f4aaba1f67a6b1765057251a23a2b1f3c37ec58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169029"
 ---
 # <a name="use-the-new-instance-wizard"></a>Utiliser l'Assistant Nouvelle instance
   L'Assistant Nouvelle instance est utilisé pour créer une instance d'un service de capture de données modifiées. Vous ouvrez l'Assistant Création d'une instance Oracle CDC à partir de la console du concepteur CDC. Vous pouvez effectuer les opérations suivantes dans l'Assistant Nouvelle instance.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - DiscretizationMethod property
 - EQUAL_AREAS method
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 138f416d6dc7e1408bd65d10da0a8538906da3b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304749"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195559"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Création d'une structure et d'un modèle de réseau neuronal (Didacticiel sur l'exploration de données intermédiaire)
   Pour créer un modèle d'exploration de données, vous devez d'abord utiliser l'Assistant Exploration de données pour créer une nouvelle structure d'exploration de données basée sur la nouvelle vue de source de données. Au cours de cette tâche, vous allez utiliser cet Assistant pour créer une structure d'exploration de données ainsi qu'un modèle d'exploration de données associé basé sur l'algorithme MNN ([!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network).  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2ad40a930192dcaf91afeb14f2d54a7c08db0b7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4b9dbae8d8f746bb2e6325f0081fe554c8aa1f7b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163379"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Authentification Kerberos intégrée (OLE DB)
   Cet exemple montre comment obtenir une authentification mutuelle Kerberos en utilisant OLE DB dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure.  
   
- Pour plus d’informations sur les SPN et l’authentification Kerberos, consultez [nom Principal de Service &#40;SPN&#41; prise en charge dans les connexions clientes](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Pour plus d’informations sur les noms de principaux du service et l’authentification Kerberos, consultez [Prise en charge du nom de principaux du service dans les connexions clientes](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Exemple  
  Vous devez spécifier un serveur. Dans le fichier .cpp, remplacez « MyServer » par un nom d'ordinateur qui possède une instance de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure).  

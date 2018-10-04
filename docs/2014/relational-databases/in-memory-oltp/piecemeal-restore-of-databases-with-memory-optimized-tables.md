@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7e5bb2800d49e047a67634076a44d99f416dc451
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3c9ee00a81dd64ea1fa6093eaccc8d9b96e0aa59
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393448"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170099"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Restauration fragmentaire de bases de données avec des tables mémoire optimisées
   La restauration fragmentaire est prise en charge sur les bases de données avec des tables mémoire optimisées, à l'exception d'une restriction décrite ci-dessous. Pour plus d’informations sur la sauvegarde et restauration fragmentaires, consultez [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) et [Restaurations fragmentaires &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).  

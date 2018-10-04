@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8993c4033112dd81be611bc3e2d36bfb1f30243
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304689"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187479"
 ---
 # <a name="powerpivot-usage-data-collection"></a>Collecte des données d'utilisation PowerPivot
   La collecte des données d'utilisation est une fonctionnalité SharePoint au niveau de la batterie de serveurs. Le service PowerPivot pour SharePoint utilise et étend ce système pour fournir des rapports intégrés dans le tableau de bord de gestion PowerPivot qui indiquent la manière dont les données et services PowerPivot sont utilisés. Selon la façon dont vous avez installé votre serveur SharePoint, la collecte des données d'utilisation peut être désactivée pour la batterie de serveurs. Un administrateur de batterie doit activer la journalisation de l'utilisation pour créer les données d'utilisation qui s'affichent dans le tableau de bord de gestion PowerPivot. Pour plus d’informations sur comment activer et configurer la collecte de données d’utilisation pour PowerPivot consultez événements [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -43,11 +40,11 @@ ms.locfileid: "37304689"
   
  **Remarque :** vérifiez que la collecte des données d'utilisation est activée. Pour le vérifier, accédez à **Analyse** dans l'Administration centrale SharePoint. Pour plus d’informations, consultez [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- ![Composants et les processus de collecte des données d’utilisation. ] (../media/gmni-usagedata.gif "Composants et les processus de collecte des données d’utilisation.")  
+ ![Composants et les processus de collecte des données d’utilisation. ](../media/gmni-usagedata.gif "Composants et les processus de collecte des données d’utilisation.")  
   
 |Phase|Description|  
 |-----------|-----------------|  
-| 1|La collecte des données d'utilisation est déclenchée par des événements générés par les composants PowerPivot et les fournisseurs de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans les déploiements SharePoint. Les événements configurables susceptibles d'être activés ou désactivés sont les suivants : demandes de connexion, demandes de chargement et de déchargement, et événements de temps de réponse aux requêtes qui sont supervisés par le service PowerPivot sur le serveur d'applications. Vous ne pouvez pas désactiver les autres événements qui sont gérés exclusivement par le serveur, tels que les événements d'actualisation des données et d'intégrité des serveurs.<br /><br /> Les données d'utilisation sont tout d'abord collectées et stockées dans les fichiers journaux locaux à l'aide des fonctionnalités de collecte des données du système SharePoint. Les fichiers et leur emplacement font partie du système standard de collecte des données d'utilisation de SharePoint. L'emplacement des fichiers est le même sur chaque serveur de la batterie. Pour afficher ou modifier l'emplacement du répertoire de journalisation, accédez à **Analyse** dans l'Administration centrale de SharePoint, puis cliquez sur **Configurer la collection des données d'utilisation et d'intégrité**.|  
+|1|La collecte des données d'utilisation est déclenchée par des événements générés par les composants PowerPivot et les fournisseurs de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans les déploiements SharePoint. Les événements configurables susceptibles d'être activés ou désactivés sont les suivants : demandes de connexion, demandes de chargement et de déchargement, et événements de temps de réponse aux requêtes qui sont supervisés par le service PowerPivot sur le serveur d'applications. Vous ne pouvez pas désactiver les autres événements qui sont gérés exclusivement par le serveur, tels que les événements d'actualisation des données et d'intégrité des serveurs.<br /><br /> Les données d'utilisation sont tout d'abord collectées et stockées dans les fichiers journaux locaux à l'aide des fonctionnalités de collecte des données du système SharePoint. Les fichiers et leur emplacement font partie du système standard de collecte des données d'utilisation de SharePoint. L'emplacement des fichiers est le même sur chaque serveur de la batterie. Pour afficher ou modifier l'emplacement du répertoire de journalisation, accédez à **Analyse** dans l'Administration centrale de SharePoint, puis cliquez sur **Configurer la collection des données d'utilisation et d'intégrité**.|  
 |2|À intervalles planifiés (par défaut, toutes les heures), le travail du minuteur Importation des données d'utilisation de Microsoft SharePoint Foundation déplace les données d'utilisation des fichiers locaux vers la base de données d'application de service PowerPivot. Si vous disposez de plusieurs applications de service PowerPivot dans une batterie de serveurs, chacune d'elle est dotée de sa propre base de données. Les événements incluent des informations internes qui identifient l'application de service PowerPivot qui a produit l'événement. Les identificateurs d'application vérifient que les données d'utilisation sont liées à l'application qui les a créées.|  
 |3|Les données sont copiées dans une base de données de création de rapports interne, disponible dans le Tableau de bord de gestion PowerPivot dans l'Administration centrale.|  
 |4|La source de données est un classeur PowerPivot auquel vous pouvez accéder pour créer des rapports personnalisés dans Excel. Il existe une seule instance du classeur source. Les rapports localisés sont tous basés sur le même classeur source.|  

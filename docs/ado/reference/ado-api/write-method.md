@@ -1,13 +1,11 @@
 ---
-title: Write, méthode | Documents Microsoft
+title: Écrire la méthode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Write method [ADO]
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62ab48632de559f56f034ca0db10a968a43be32a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 52561b6d240a58e59490d607c8729b5d878b96a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772554"
 ---
 # <a name="write-method"></a>Write, méthode
-Écrit des données binaires à une [flux](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
+Écrit des données binaires à un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,15 +35,15 @@ Stream.Write Buffer
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Mémoire tampon*  
- A **Variant** qui contient un tableau d’octets à écrire.  
+ *mémoire tampon*  
+ Un **Variant** qui contient un tableau d’octets à écrire.  
   
 ## <a name="remarks"></a>Notes  
- Les octets spécifiés sont écrits dans le **flux** objet sans espaces insérés entre chaque octet.  
+ Octets spécifiés sont écrits dans le **Stream** objet sans espaces insérés entre chaque octet.  
   
- En cours [Position](../../../ado/reference/ado-api/position-property-ado.md) est définie par l’octet suivant les données écrites. Le **écrire** méthode ne tronque pas le reste des données dans un flux de données. Si vous voulez tronquer ces octets, appelez [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ Actuel [Position](../../../ado/reference/ado-api/position-property-ado.md) est définie par l’octet suivant les données écrites. Le **écrire** méthode ne tronque pas le reste des données dans un flux de données. Si vous souhaitez tronquer ces octets, appelez [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
- Si vous écrivez après actuel [fin du support](../../../ado/reference/ado-api/eos-property.md) position, la [taille](../../../ado/reference/ado-api/size-property-ado-stream.md) de la **flux** augmente pour contenir les nouveaux octets et **fin du support** déplacera pour le nouveau dernier octet de la **flux**.  
+ Si vous écrivez après actuel [EOS](../../../ado/reference/ado-api/eos-property.md) position, la [taille](../../../ado/reference/ado-api/size-property-ado-stream.md) de la **Stream** augmente pour contenir les nouveaux octets, et **EOS** déplacera pour le nouveau dernier octet de la **Stream**.  
   
 > [!NOTE]
 >  Le **écrire** méthode est utilisée avec des flux binaires ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) est **adTypeBinary**). Pour les flux de texte (**Type** est **adTypeText**), utilisez [WriteText](../../../ado/reference/ado-api/writetext-method.md).  

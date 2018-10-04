@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52aa26064a9a0e80af03649d89140a71a78f41d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f4227b819597573d51b9720006fe6536f774103
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311999"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197979"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Étape 2 : ajout et configuration du conteneur de boucles Foreach
   Dans cette tâche, vous allez activer la fonction qui permet d'effectuer des boucles dans un dossier de fichiers plats et d'appliquer la transformation de flux de données utilisée dans la leçon 1 à chacun de ces fichiers plats. Pour activer cette fonction, vous allez ajouter et configurer un conteneur de boucles Foreach dans le flux de contrôle.  
@@ -69,7 +66,7 @@ ms.locfileid: "37311999"
   
     2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
   
-    3.  Cliquez sur le lien hypertexte «http://msftisprodsamples.codeplex.com/downloads/get/578097» SQL2012. Fichier de Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
+    3.  Cliquez sur le lien hypertexte « http://msftisprodsamples.codeplex.com/downloads/get/578097» SQL2012. Fichier de Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
 6.  Dans la zone **Fichiers**, tapez **Currency_\*.txt**.  
   

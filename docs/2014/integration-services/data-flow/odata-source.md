@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.ODATASOURCE.F1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af382eb9398dc2c8d790f8af1cf72fc89c572959
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 788a644f191fe84bf8bfe2dc580b62fb345493a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250349"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188979"
 ---
 # <a name="odata-source"></a>Source OData
   Utilisez le composant source OData dans un package SSIS pour consommer les données provenant de services OData (Open Data Protocol). Le composant prend en charge les protocoles OData v2 et v3, ainsi que formats de données et ATOM de JSON.  

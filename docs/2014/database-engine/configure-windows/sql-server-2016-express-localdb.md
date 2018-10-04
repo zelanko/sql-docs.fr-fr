@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user instances
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d87a85927751b12e3f86d5ce2bc908da9d063b21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676bc7adc3debb0beaee10d09d6fbe8018d42c2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243249"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158949"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` est un mode d’exécution de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] destiné aux développeurs de programme. `LocalDB` installation copie l’ensemble minimal de fichiers nécessaires pour démarrer le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Une fois `LocalDB` est installé, les développeurs initialisent une connexion à l’aide d’une chaîne de connexion particulière. Lors de la connexion, nécessaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] infrastructure est automatiquement créée et démarrée, l’activation de l’application pour utiliser la base de données sans tâches de configuration complexes ou longues. Les outils de développement incluent un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui permet aux développeurs d'écrire et de tester le code [!INCLUDE[tsql](../../includes/tsql-md.md)] sans devoir gérer une instance de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]complète. Une instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` est géré à l’aide de la `SqlLocalDB.exe` utilitaire. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` doit être utilisé à la place de la [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] fonctionnalité d’instance utilisateur qui est déconseillée.  
@@ -109,7 +106,7 @@ REM Gather information about the instance of LocalDB
 ## <a name="troubleshooting"></a>Dépannage  
  Pour plus d’informations sur le dépannage `LocalDB`, consultez [dépannage de SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).  
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Permissions  
  Une instance de [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` est une instance créée par un utilisateur pour leur utilisation. Tout utilisateur sur l’ordinateur peut créer une base de données à l’aide d’une instance de `LocalDB`, stockant les fichiers sous son profil utilisateur et le processus sous leurs informations d’identification en cours d’exécution. Par défaut, l’accès à l’instance de `LocalDB` est limitée à son propriétaire. Les données contenues dans le `LocalDB` est protégé par l’accès au système de fichiers pour les fichiers de base de données. Si les fichiers de base de données utilisateur sont stockés dans un emplacement partagé, la base de données peut être ouverte par toute personne ayant accès au système de fichiers à cet emplacement à l’aide d’une instance de `LocalDB` qu’ils sont propriétaires. Si les fichiers de base de données sont dans un emplacement protégé, tel que le dossier des données d'utilisateurs, seul cet utilisateur, et tous les administrateurs ayant accès à ce dossier, peuvent ouvrir la base de données. Le `LocalDB` fichiers peuvent uniquement être ouverts par une instance de `LocalDB` à la fois.  
   
 > [!NOTE]  

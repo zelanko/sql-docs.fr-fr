@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server, logging in
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - logging in [SQL Server]
 - logins [SQL Server]
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bf56217a597d97514c5dea81947973d5df260598
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4f3e9da57e718790ac071ebc1411ec8a33d23f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269485"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201779"
 ---
 # <a name="logging-in-to-sql-server"></a>Connexion à SQL Server
   Vous pouvez vous connecter à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de n’importe quel outil d’administration graphique ou d’une invite de commandes.  
@@ -81,7 +78,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tâches associées  
  [Se connecter à une instance de SQL Server &#40;invite de commandes&#41;](log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Les ressources suivantes peuvent vous aider à résoudre un problème de connexion.  

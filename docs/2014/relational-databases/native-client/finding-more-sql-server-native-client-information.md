@@ -4,32 +4,29 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLNCLI, additional resources
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fba30d71b06f0c25de8916f1dbfac7d5edd99d3d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2d6ab3a01c0de578bd226a596c9fbdc3628d04e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156889"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Recherche d'informations supplémentaires concernant SQL Server Native Client
   Pour plus d'informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et d'autres types de programmation d'accès aux données, consultez les ressources en ligne suivantes :  
   
- [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)  
+ [Centre de développement sur l’accès aux données et le stockage](http://go.microsoft.com/fwlink?linkid=4173)  
  Ce site contient des articles techniques, des exemples de code et d'autres ressources pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et d'autres technologies d'accès aux données.  
   
- [Blog de l’accès aux données](http://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Blog Data Access](http://go.microsoft.com/fwlink/?LinkId=48617)  
  Ce site blog fournit des informations à propos des technologies d'accès aux données et vous permet d'interagir directement avec les membres de l'équipe de produit.  
   
  [Windows Data Access Components](http://go.microsoft.com/fwlink/?LinkId=107907)  

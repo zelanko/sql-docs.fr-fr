@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Report Builder
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
-caps.latest.revision: 29
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f6a75e3f558b13b1bd068341249c73649699256
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 284a99d74e8b0aa2e3c3b47cc1f277df537b7e9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311439"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168779"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installer, désinstaller et prendre en charge le Générateur de rapports
   Le Générateur de rapports est un outil de création de rapports permettant de créer, mettre à jour et partager des rapports, des parties de rapports et des datasets partagés. Générateur de rapports est disponible dans deux versions : autonome et [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. La version autonome est installée sur votre ordinateur par vos propres soins ou par un administrateur. Le [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] version est installée automatiquement avec [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] et téléchargé sur votre ordinateur à partir du Gestionnaire de rapports ou un site SharePoint intégré avec [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -132,7 +129,7 @@ ms.locfileid: "37311439"
   
  Pour plus d’informations, consultez [gestion de contenu de serveur de rapports &#40;SSRS en Mode natif&#41; ](report-server/report-server-content-management-ssrs-native-mode.md) dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [la documentation en ligne](http://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
  L'administrateur octroie les autorisations relatives au serveur de rapports. En tant qu'utilisateur du Générateur de rapports, vous devez disposer des autorisations nécessaires pour accéder au contenu et aux fonctionnalités du serveur de rapports. Par exemple, vous pouvez utiliser des parties de rapports stockées sur le serveur de rapports, mettre à jour les rapports et les réenregistrer sur le serveur de rapports, et exécuter des rapports dans le Gestionnaire de rapports. Selon vos besoins et les tâches que vous effectuez, des autorisations de niveau inférieur ou supérieur peuvent être accordées. Par exemple, des autorisations avec un faible niveau de privilège sont accordées aux utilisateurs qui n'ont besoin que d'ouvrir des rapports partagés, par opposition à ceux qui doivent les modifier.  
   
  Lorsque [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est installé en mode natif, un administrateur peut effectuer les tâches suivantes :  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytabletypes.f1
 ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c753554dcab61c10bacaf4c118d1781ba3d157b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84946cd0dadd467e7998106f89868a5e9d401f13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159070"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202639"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Spécifier les types des tables (Assistant Exploration de données)
   Utilisez la page **Spécifier les types des tables** pour identifier la table à utiliser pour définir la structure d'exploration de données. Si une table n'est pas sélectionnée, elle ne sera pas utilisée pour définir la structure d'exploration de données.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
@@ -19,23 +17,22 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1848d19202b8bfe7a7c44b00b9b2e781366ca90e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b3139aa4fab106e048e21847acadafc6bc90b8bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262465"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204729"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Outils d'analyse et de paramétrage des performances
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un ensemble complet d'outils permettant de surveiller les événements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de paramétrer la structure physique de la base de données. Le choix de l'outil dépend du type de surveillance ou de paramétrage à effectuer et des événements spécifiques à contrôler.  
   
  Les outils de surveillance et de paramétrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont les suivants :  
   
-|Outil|Description|  
+|Tool|Description|  
 |----------|-----------------|  
 |[sp_trace_setfilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)|[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] assure le suivi des événements de processus du moteur, notamment le début d’un lot ou d’une transaction, ce qui vous permet de surveiller l’activité du serveur et de la base de données (par exemple les blocages, les erreurs irrécupérables ou les connexions). Vous pouvez capturer les données du [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] dans une table ou un fichier [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en vue d'une analyse ultérieure, et relire les événements capturés sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pas à pas, pour savoir ce qui s'est passé exactement.|  
 |[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay peut utiliser plusieurs ordinateurs pour relire les données de trace, en simulant mieux les charges de travail sensibles.|  
@@ -66,7 +63,7 @@ ms.locfileid: "37262465"
 ## <a name="windows-monitoring-tools"></a>Outils de surveillance Windows  
  Les systèmes d'exploitation Windows et Windows Server 2003 proposent également les outils de surveillance suivants.  
   
-|Outil|Description|  
+|Tool|Description|  
 |----------|-----------------|  
 |Gestionnaire des tâches|Affiche un résumé des processus et des applications en cours d'exécution sur le système.|  
 |Agent de surveillance du réseau|Surveille le trafic réseau.|  

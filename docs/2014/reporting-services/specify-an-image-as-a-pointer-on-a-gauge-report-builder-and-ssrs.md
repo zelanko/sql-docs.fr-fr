@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d96efa70219c841abae8d0129716810645d283d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e2fbf2593ae5f85e12555d469ebe77b11539a20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230139"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178879"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Spécifier une image en tant que pointeur dans une jauge (Générateur de rapports et SSRS)
   La jauge contient trois styles intégrés pouvant être utilisés pour personnaliser l'apparence du pointeur. Pour une jauge radiale, les styles intégrés sont les suivants : Aiguille, Marqueur et Barre. Pour une jauge linéaire, les styles intégrés sont les suivants : Marqueur, Barre et Thermomètre. Si un pointeur unique est requis, l'utilisateur peut créer et spécifier une image qui sera utilisée en tant que pointeur totalement fonctionnel.  

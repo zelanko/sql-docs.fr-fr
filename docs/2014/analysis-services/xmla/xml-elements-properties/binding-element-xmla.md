@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Binding Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Binding element
 ms.assetid: d5acd8d4-8551-449a-ae30-d0ba828cc02d
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec223f5a56ea32388a3485f39db0bbbc494fda85
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 397e02a8aae8978d36be088b792df5edc163c63d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203969"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168249"
 ---
 # <a name="binding-element-xmla"></a>Élément Binding (XMLA)
   Définit une liaison hors ligne pour une [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] un objet, tel qu’un attribut dans une dimension, pour le [liaisons](bindings-element-xmla.md) collection d’un [Batch](../xml-elements-commands/batch-element-xmla.md) ou [ Processus](../xml-elements-commands/process-element-xmla.md) commande.  
@@ -62,7 +59,7 @@ ms.locfileid: "37203969"
   
 |Relation|Élément|  
 |------------------|-------------|  
-|Éléments parents|[Liaisons](bindings-element-xmla.md)|  
+|Éléments parents|[liaisons](bindings-element-xmla.md)|  
 |Éléments enfants|None|  
   
 ## <a name="remarks"></a>Notes  
