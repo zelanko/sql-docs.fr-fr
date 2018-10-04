@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ba6f4bd415f5e418d80b691e2461d08c8b1a8d19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164320"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157039"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)
   Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vous utilisez un navigateur web pour afficher des rapports et exécuter le Gestionnaire de rapports. Certains navigateurs ne prennent pas en charge toutes les fonctionnalités de rapport. Cette rubrique décrit la prise en charge et la configuration requise pour les fonctionnalités de gestion du Gestionnaire de rapports, l'affichage de rapports, les contrôles de la visionneuse de rapports dans Visual Studio. Elle résume également la disponibilité des fonctionnalités pour les navigateurs pris en charge, les conditions requises pour l'authentification et les conditions requises pour les scripts.  

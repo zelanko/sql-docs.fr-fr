@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.MaintenancePlans
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96a513d1ff221b550c53ce31442ae91a9cf5c8dd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5f93bf95e34c377047cb86e47dc02a82b64d5777
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808045"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165271"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>Options (Page des Plans de Maintenance de concepteurs)
   La boîte de dialogue **Options** vous permet de déterminer le comportement par défaut du concepteur lors de l'ajout de nouvelles formes à la surface de dessin. Dans le menu **Outils** , cliquez sur **Options**, développez **Concepteurs**, puis sélectionnez **Plans de maintenance**.  

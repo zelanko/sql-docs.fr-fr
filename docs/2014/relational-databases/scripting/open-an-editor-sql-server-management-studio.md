@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a67b2c268aa269356e1620b8bf3fd5f5998810a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9791e381b9233137055c680efb8bdfcad62929a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199149"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110699"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Ouvrir un éditeur (SQL Server Management Studio)
   Cette rubrique explique comment ouvrir l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ainsi que les éditeurs MDX, DMX et XML/A dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Une fois ouverte, chaque fenêtre d'éditeur s'affiche sous forme d'onglet dans le volet central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -30,7 +27,7 @@ ms.locfileid: "37199149"
 ### <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Si vous partagez des fichiers avec des utilisateurs d'autres sites qui utilisent des pages de codes distinctes, vous devez enregistrer votre fichier avec le code Unicode approprié afin d'éviter les erreurs de lecture du fichier. De même, lorsque vous enregistrez des fichiers pour UNIX ou Macintosh, assurez-vous de les enregistrer au format de document approprié. Dans le menu **Fichier** , cliquez sur **Enregistrer sous**, puis sur **Enregistrer avec encodage** en cliquant sur la flèche en regard du bouton **Enregistrer** , puis choisissez **Unix** ou **Macintosh** sous **Fins de ligne**.  
   
-### <a name="permissions"></a>Autorisations  
+### <a name="permissions"></a>Permissions  
  Les opérations que vous réalisez dans un éditeur de codes sont soumises aux autorisations accordées au compte d'authentification que vous avez utilisé pour vous connecter. Par exemple, si vous ouvrez une fenêtre de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de l'authentification Windows, vous ne pouvez pas exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui font référence à des objets pour lesquels votre compte de connexion Windows ne dispose pas d'autorisation d'accès.  
   
 ## <a name="how-to-open-editors"></a>Procédure : ouvrir les éditeurs  

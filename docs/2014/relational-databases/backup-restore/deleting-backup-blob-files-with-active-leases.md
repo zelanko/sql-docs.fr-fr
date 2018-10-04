@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 491cde35ec200cdacc9c12794d5692d657ad22f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e07b58138f76d44f92cd356fdfc40da801c8637e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256685"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093919"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Suppression de fichiers de sauvegarde d'objets blob avec des baux actifs
   En cas de sauvegarde vers ou de restauration depuis le stockage Windows Azure, SQL Server acquiert un bail infini pour verrouiller l'accès exclusif à l'objet blob. Lorsque le processus de sauvegarde ou de restauration est terminé, le bail est libéré. Si une sauvegarde ou une restauration échoue, le processus de sauvegarde tente de nettoyer tout objet blob non valide. Toutefois, si la sauvegarde échoue en raison d'un problème de connectivité du réseau prolongé, le processus de sauvegarde peut ne pas être à nouveau en mesure d'accéder à l'objet blob et celui-ci peut rester orphelin. Par conséquent, l'objet blob ne peut pas être écrit ou supprimé tant que le bail n'a pas été libéré. Cette rubrique explique comment libérer le bail et supprimer l'objet blob.  
@@ -42,7 +39,7 @@ ms.locfileid: "37256685"
 3.  **Suppression de l’objet blob :** pour supprimer un objet blob dont le bail est actif, vous devez d’abord résilier le bail.  
   
 ###  <a name="Code_Example"></a> Exemple de script PowerShell  
- **\*\* Important \* \* ** si vous exécutez PowerShell 2.0, peut avoir des difficultés pour charger l’assembly Microsoft WindowsAzure.Storage.dll. Nous vous recommandons d'effectuer une mise à niveau vers Powershell 3.0 pour résoudre le problème. Vous pouvez également utiliser la solution de contournement suivante pour PowerShell 2.0 :  
+ **\*\* Important \* \***  si vous exécutez PowerShell 2.0, peut avoir des difficultés pour charger l’assembly Microsoft WindowsAzure.Storage.dll. Nous vous recommandons d'effectuer une mise à niveau vers Powershell 3.0 pour résoudre le problème. Vous pouvez également utiliser la solution de contournement suivante pour PowerShell 2.0 :  
   
 -   Créez ou modifiez le fichier powershell.exe.config pour charger les assemblies .NET 2.0 et .NET 4.0 au moment de l'exécution avec les informations suivantes :  
   

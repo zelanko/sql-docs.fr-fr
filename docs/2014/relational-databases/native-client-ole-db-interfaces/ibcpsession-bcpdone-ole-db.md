@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPDone (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50f7fe4d747692ff11ffa130bf48b88d3252c994
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420708"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137579"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   Valide les lignes restantes à envoyer à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,7 +34,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Notes  
- Aucune autre opération ne peut être appelée sur le [IBCPSession](ibcpsession-ole-db.md) interface après avoir appelé la **BCPDone** (méthode). La seule possibilité consiste à appeler le [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) méthode pour lancer une nouvelle opération de copie en bloc. Cela revient à appeler le [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) (méthode).  
+ Aucune autre opération ne peut être appelée dans l’interface [IBCPSession](ibcpsession-ole-db.md) après avoir appelé la méthode **BCPDone**. La seule possibilité consiste à appeler la méthode [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) pour démarrer une nouvelle opération de copie en bloc. Cela s’apparente à l’appel de la méthode [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md).  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
@@ -65,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Vous pouvez utiliser BCP pour réinsérer ces données dans la table avec la commande suivante :  
   
- **bcp master... fltest dans un fichier outfile.dat - n -T -S** *server*  
+ **bcp master..fltest in outfile.dat -n -T -S** *server*  
   
  Vous devrez indiquer sqlncli11.lib lors de la compilation de cet exemple.  
   

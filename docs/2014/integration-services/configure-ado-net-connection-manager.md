@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetconnection.f1
 helpviewer_keywords:
 - Configure ADO.NET Connection Manager dialog box
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b938f3ab316f63caadb59ba8aa886a453b148a7f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1da34cc7b964824f25939bcbafcecd71ec71a86d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090519"
 ---
 # <a name="configure-adonet-connection-manager"></a>Configurer le gestionnaire de connexions ADO.NET
   Utilisez la boîte de dialogue **Configurer le gestionnaire de connexions ADO.NET** pour ajouter une connexion à une source de données accessible à l'aide d'un fournisseur de données .NET Framework, tel que le fournisseur SqlClient. Le gestionnaire de connexions peut utiliser une connexion existante, ou vous pouvez en créer une nouvelle.  
