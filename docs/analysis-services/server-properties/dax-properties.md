@@ -1,6 +1,6 @@
 ---
 title: Propriétés DAX | Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9150eb13b6c39f74f1e65743b6a79aca0a07676a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 794caf245e0cc3494713991159c5a911a187afae
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033529"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264861"
 ---
 # <a name="dax-properties"></a>Propriétés DAX
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
-   La section DAX de msmdsrv.ini contient les paramètres utilisés pour contrôler certains comportements de requête dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], tels que la limite supérieure du nombre de lignes retournées dans un jeu de résultats de requête DAX.
+   La section DAX de msmdsrv.ini contient les paramètres utilisés pour contrôler certains comportements de requête dans Analysis Services, telles que la limite supérieure sur le nombre de lignes retournées dans un jeu de résultats de requête DAX.
 
   Pour les ensembles de lignes volumineux, tels que ceux retournés dans les modèles DirectQuery, la valeur par défaut d’un million de lignes peut être insuffisante. Vous devez ajuster la limite si vous obtenez une erreur indiquant que le jeu de résultats d’une requête pour la source de données externe a dépassé la taille maximale autorisée d’un million de lignes.
 

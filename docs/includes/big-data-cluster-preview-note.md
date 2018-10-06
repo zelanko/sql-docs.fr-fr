@@ -1,0 +1,2 @@
+> [!NOTE]
+> Clusters de données volumineuses de SQL Server est disponible en version préliminaire publique limitée par le biais du programme d’Adoption anticipée de SQL Server 2019. Pour demander l’accès, vous devez inscrire [ici](https://aka.ms/eapsignup)et spécifiez votre intérêt pour essayer les clusters de données volumineuses de SQL Server. Microsoft trier toutes les demandes et répondre dès que possible.

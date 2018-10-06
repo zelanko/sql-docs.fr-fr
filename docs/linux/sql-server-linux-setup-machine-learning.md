@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b61eb365cc818bafc3e0b584f91dd9e85b09cc24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 150f459a7ab98f39057f9a981ce0c2db50d8d00d
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770937"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782358"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Installer SQL Server 2019 Machine Learning Services (R, Python, Java) sur Linux
 
@@ -273,13 +273,19 @@ GO
 
 Vous pouvez installer et configurer le moteur de base de données et les Services Machine Learning dans une procédure en ajoutant des packages R, Python ou Java et des paramètres sur une commande qui installe le moteur de base de données. 
 
-L’exemple suivant est une illustration de « modèle » de quoi ressemble une installation de package combiné à l’aide du Gestionnaire de package Yum :
+L’exemple suivant est une illustration de « modèle » de quoi ressemble une installation de package combiné à l’aide du Gestionnaire de package Yum. Il installe le moteur de base de données et ajoute l’extension de langage Java, qui extrait le package de framework d’extensibilité en tant que dépendance.
 
 ```bash
-sudo yum install -y mssql-sqlserver mssql-server-extensibility-java 
+sudo yum install -y mssql-server mssql-server-extensibility-java 
 ```
 
-L’exemple installe le moteur de base de données et ajoute l’extension de langage Java, qui extrait le package de framework d’extensibilité en tant que dépendance. Tous les packages utilisés dans cet exemple sont trouvent sur le même chemin. Si vous deviez ajouter des packages R, l’inscription pour le référentiel de package de microsoft-r-open seraient nécessaire.
+Un exemple développé avec toutes les extensions (Java, R, Python) ressemble à ceci :
+
+```bash
+sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
+```
+
+À l’exception de la configuration requise de R, tous les packages utilisés dans cet exemple sont trouvent sur le même chemin. Ajout de R requiert que vous [inscrire le référentiel microsoft-r-open package](#mro) comme une étape supplémentaire pour obtenir MRO. MRO est un prérequis pour l’extensibilité de R. Sur un ordinateur connecté à internet, MRO est récupéré et installé automatiquement dans le cadre de l’extension de R, en supposant que vous avez configuré les deux référentiels.
 
 Après l’installation, n’oubliez pas de l’outil mssql-conf permettent de configurer l’ensemble de l’installation et acceptez les contrats de licence. CLUF non acceptée pour les composants R et Python open source est détectées automatiquement, et vous êtes invité à les accepter, ainsi que le CLUF pour SQL Server.
 

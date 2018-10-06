@@ -1,8 +1,8 @@
 ---
-title: Migrer SQL Server sur site vers Azure SQL Database à l’aide de l’Assistant Migration des données | Microsoft Docs
+title: Migrer SQL Server sur site ou SQL Server sur des machines virtuelles Azure vers Azure SQL Database à l’aide de l’Assistant Migration des données | Microsoft Docs
 description: Découvrez comment utiliser Data Migration Assistant pour migrer un serveur local SQL Server vers Azure SQL Database
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/05/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,14 +15,14 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e8359fa14e474cceaa7316a67831ff8bf2351992
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd2fbf4340978424816ba3b4577e7559d80ea68c
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688027"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782388"
 ---
-# <a name="migrate-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Migrer SQL Server sur site vers SQL Server ou SQL Server sur des machines virtuelles Azure à l’aide de l’Assistant Migration des données
+# <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrer SQL Server sur site ou SQL Server sur des machines virtuelles Azure vers Azure SQL Database à l’aide de l’Assistant Migration des données
 
 Data Migration Assistant fournit des évaluations transparentes de SQL Server en local et mises à niveau vers des versions ultérieures de SQL Server ou des migrations vers SQL Server sur machines virtuelles Azure ou Azure SQL Database.
 

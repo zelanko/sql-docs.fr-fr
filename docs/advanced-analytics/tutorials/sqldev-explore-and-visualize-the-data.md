@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 814e94b955776f1a9c6c0648b0d47b53fa9cabf3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724343"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798587"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Leçon 3 : Explorer et visualiser les données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -92,7 +92,7 @@ Pour créer le tracé, utilisez [rxHistogram](https://docs.microsoft.com/machine
     GO
     ```
 
-La procédure stockée **PlotHistogram2** est identique à une procédure stockée préexistante **PlotHistogram** créé par le `RunSQL_SQL_Walkthrough.ps1` script. 
+La procédure stockée **PlotHistogram2** est identique à une procédure stockée préexistante **PlotHistogram** trouvé dans la base de données NYCTaxi_sample. 
   
 + La variable `@query` définit le texte de requête (`'SELECT tipped FROM nyctaxi_sample'`), qui est transmis au script R comme argument de la variable d’entrée du script, `@input_data_1`.
   
@@ -164,7 +164,7 @@ La procédure stockée retourne l’image sous forme de flux de données varbina
 
 En règle générale, les scientifiques des données génèrent plusieurs visualisations de données pour obtenir des informations sur les données à partir de différentes perspectives. Dans cet exemple, la procédure stockée utilise la fonction de l’historique pour créer l’histogramme, exportation des données binaires vers des formats courants tels que. JPG. PDF, et. PNG. 
 
-1. Utilisez la procédure stockée existante, **PlotInOutputFiles**, pour écrire des histogrammes et nuages de points pour les autres graphiques R. JPG et. Format PDF. Le `RunSQL_SQL_Walkthrough.ps1` crée **PlotInOutputFiles** et l’ajoute à la base de données. Utiliser avec le bouton droit **modifier** pour afficher la source.
+1. Utilisez la procédure stockée existante, **PlotInOutputFiles**, pour écrire des histogrammes et nuages de points pour les autres graphiques R. JPG et. Format PDF. Utiliser avec le bouton droit **modifier** pour afficher la source.
 
 2. Si vous le souhaitez, comme un exercice d’apprentissage, créer votre propre copie de la procédure en tant que **PlotInOutputFiles2**, avec un nom unique pour éviter tout conflit d’affectation de noms.
 

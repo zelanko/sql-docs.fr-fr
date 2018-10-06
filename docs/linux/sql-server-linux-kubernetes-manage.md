@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ad318c0f0967f26f5cfdf2c5ad9af2d94323bf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f713ed7dd5d0260df6441698371b33f94813d7e
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622837"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251976"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>Gérer SQL Server Always On Kubernetes du groupe de disponibilité
 
@@ -23,13 +23,15 @@ Pour gérer un groupe de disponibilité AlwaysOn sur Kubernetes, créez un manif
 
 Les exemples de cet article s’appliquent à tous les clusters Kubernetes. Les scénarios dans ces exemples sont appliquées sur un cluster sur Azure Kubernetes Service.
 
-Voir un exemple du déploiement de bout en bout dans [ce didacticiel](tutorial-sql-server-ag-kubernetes.md).
+Voir un exemple du déploiement complet dans [groupes de disponibilité Always On pour les conteneurs de SQL Server](sql-server-ag-kubernetes.md).
 
 ## <a name="fail-over---sql-server-availability-group-on-kubernetes"></a>Basculer - groupe de disponibilité de SQL Server sur Kubernetes
 
 Pour basculer sur un réplica principal de groupe de disponibilité vers un autre nœud dans Kubernetes, utilisez une tâche. Cet article identifie les variables d’environnement pour cette tâche.
 
-L’exemple suivant d’un fichier manifeste décrit un travail pour basculer manuellement de travail pour un groupe de disponibilité sur un réplica de Kubernetes. Copiez le contenu de l’exemple dans un nouveau fichier appelé `failover.yaml`.
+Le fichier de manifeste suivant décrit un travail pour basculer manuellement un groupe de disponibilité. 
+
+Copiez le contenu de l’exemple dans un nouveau fichier appelé `failover.yaml`.
 
 [Failover.yaml](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/templates/failover.yaml)
 
@@ -39,7 +41,7 @@ Pour déployer le travail, utilisez `Kubectl`.
 kubectl apply -f failover.yaml
 ```
 
-Lorsque vous appliquez le fichier manifeste, Kubernetes exécute la tâche. Lorsque le travail s’exécute, le superviseur choisit un nouveau leader et déplace le réplica principal à l’instance de SQL Server du responsable.
+Après avoir appliqué le fichier manifeste, Kubernetes exécute la tâche. La tâche rend le superviseur élisent une nouvelle et déplace le réplica principal à l’instance de SQL Server du responsable.
 
 Après avoir exécuté le travail, supprimez-le. L’objet de traitement dans Kubernetes reste après la saisie semi-automatique afin que vous puissiez afficher son état. Vous devez supprimer manuellement les anciens travaux après noter leur état. La suppression de la tâche supprime également les journaux de Kubernetes. Si vous ne supprimez pas le travail, les tâches de basculement futures échoue, sauf si vous modifiez le nom du travail et le sélecteur de pod. Pour plus d’informations, consultez [travaux - s’exécute jusqu'à achèvement](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/).
 
