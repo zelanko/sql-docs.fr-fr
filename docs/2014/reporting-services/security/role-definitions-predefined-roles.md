@@ -31,7 +31,7 @@ ms.locfileid: "48167219"
   
 2.  Identifiez les utilisateurs et les groupes qui doivent accéder au serveur de rapports, et à quel niveau. Le rôle **Lecteur** ou le rôle **Générateur de rapports** doit être attribué à la plupart des utilisateurs. Le rôle **Serveur de publication** doit être attribué à un nombre restreint d'utilisateurs. Le rôle **Gestionnaire de contenu**ne doit être attribué qu'à un nombre très limité d'utilisateurs.  
   
-3.  Lorsque vous êtes prêt à assigner des comptes d'utilisateurs et de groupes à des rôles spécifiques, utilisez le Gestionnaire de rapports. Pour plus d’informations, consultez [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
+3.  Lorsque vous êtes prêt à assigner des comptes d'utilisateurs et de groupes à des rôles spécifiques, utilisez le Gestionnaire de rapports. Pour plus d’informations, consultez [accorder l’accès utilisateur à un serveur de rapports &#40;le Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md).  
   
 ##  <a name="bkmk_rolelist"></a> Définition de rôles prédéfinis  
  Les rôles prédéfinis sont définis par les tâches qu'ils prennent en charge. Vous pouvez modifier ces rôles ou les remplacer par des rôles personnalisés.  
