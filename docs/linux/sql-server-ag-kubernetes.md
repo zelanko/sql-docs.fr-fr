@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6df953eed1226e6be62ba694651f3b3244736a5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: cc5a96fd5efc4a2eb0e45a3034d17e98ae3c7172
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626167"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251963"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Groupes de disponibilité Always On pour les conteneurs de SQL Server
 
@@ -58,7 +58,7 @@ Pour déployer un groupe de disponibilité dans Kubernetes :
 
 1. Créer les bases de données et les joindre au groupe de disponibilité
 
-Pour des instructions détaillées, consultez [configurer un groupe de disponibilité SQL Server Always On dans Kubernetes pour la haute disponibilité](tutorial-sql-server-ag-kubernetes.md).
+Pour des instructions détaillées, consultez [groupes de disponibilité Always On pour les conteneurs de SQL Server](sql-server-ag-kubernetes.md).
 
 ## <a name="sql-server-kubernetes-operator"></a>Opérateur de SQL Server Kubernetes
 
