@@ -69,7 +69,7 @@ ms.locfileid: "48148929"
   
 -   [Créer et gérer des abonnements pour les serveurs de rapports en mode Natif](../create-manage-subscriptions-native-mode-report-servers.md)  
   
--   [Create and Manage Subscriptions for SharePoint Mode Report Servers](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+-   [Créer et gérer des abonnements pour les serveurs de rapports en mode Sharepoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
 -   [Analyser les abonnements Reportions Services](monitor-reporting-services-subscriptions.md)  
   

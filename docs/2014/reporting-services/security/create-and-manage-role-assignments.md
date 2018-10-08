@@ -42,7 +42,7 @@ ms.locfileid: "48211009"
   
  Vous devez être membre du groupe local Administrateurs sur l'ordinateur serveur de rapports pour créer une attribution de rôle. Vous pouvez déléguer cette responsabilité en affectant d’autres utilisateurs au rôle **Gestionnaire de contenu** .  
   
- Pour plus d’informations, consultez [Grant User Access to a Report Server &#40;Report Manager&#41;](grant-user-access-to-a-report-server.md).  
+ Pour plus d’informations, consultez [accorder l’accès utilisateur à un serveur de rapports &#40;le Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md).  
   
 ## <a name="creating-a-system-level-role-assignment"></a>Création d'une attribution de rôle au niveau système  
  Pour créer ou gérer une attribution de rôle au niveau système, utilisez le Gestionnaire de rapports et ouvrez la page Paramètres du site.  

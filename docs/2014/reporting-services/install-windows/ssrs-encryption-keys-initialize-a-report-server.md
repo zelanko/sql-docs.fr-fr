@@ -56,7 +56,7 @@ ms.locfileid: "48181939"
   
 ## <a name="how-to-initialize-a-report-server"></a>Initialisation d'un serveur de rapports  
   
--   Pour initialiser un serveur de rapports, utilisez l'outil de configuration de Reporting Services. L'opération s'effectue automatiquement lorsque vous créez et configurez la base de données du serveur de rapports. Pour plus d’informations, consultez [Configure a Report Server Database Connection  &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+-   Pour initialiser un serveur de rapports, utilisez l'outil de configuration de Reporting Services. L'opération s'effectue automatiquement lorsque vous créez et configurez la base de données du serveur de rapports. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 -   Pour initialiser un serveur de rapports en vue de l’intégrer à un déploiement évolutif, utilisez la page d’initialisation de l’outil de configuration de Reporting Services ou l’utilitaire **RSKeymgmt**. Pour obtenir des instructions détaillées, consultez [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](configure-a-native-mode-report-server-scale-out-deployment.md).  
   

@@ -55,7 +55,7 @@ ms.locfileid: "48104502"
   
  Si le Pare-feu Windows est activé, le port que le serveur de rapports est configuré pour utiliser est très probablement fermé. Un port peut être fermé si une page vide apparaît lorsque vous essayez d'ouvrir le Gestionnaire de rapports à partir d'un ordinateur client distant. Pour plus d’informations sur la configuration du pare-feu, consultez [configurer un pare-feu pour accéder au serveur de rapports](configure-a-firewall-for-report-server-access.md).  
   
- Si vous utilisez Windows Vista ou Windows Server 2008, des étapes supplémentaires peuvent être requises avant d'ouvrir le Gestionnaire de rapports en local. Pour plus d’informations, consultez [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ Si vous utilisez Windows Vista ou Windows Server 2008, des étapes supplémentaires peuvent être requises avant d'ouvrir le Gestionnaire de rapports en local. Pour plus d’informations, consultez [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
  Vérifiez votre installation en créant des dossiers, en téléchargeant des éléments, et en exécutant des rapports. Suivez les instructions de [vérifier une Installation Reporting Services](../install-windows/verify-a-reporting-services-installation.md) pour vérifier votre installation.  
   
