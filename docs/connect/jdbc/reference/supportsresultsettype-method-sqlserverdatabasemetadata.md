@@ -1,13 +1,11 @@
 ---
-title: Méthode supportsResultSetType (SQLServerDatabaseMetaData) | Documents Microsoft
+title: Méthode supportsResultSetType (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsResultSetType
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: aded734f-c96e-460f-afaa-8f64a92560d7
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 239d0c24953557d2ba3903d4fc2518dcaaaf6424
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cd5ede69a46e80e71b3beb8ee5a382f49ee200fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850174"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617567"
 ---
 # <a name="supportsresultsettype-method-sqlserverdatabasemetadata"></a>Méthode supportsResultSetType (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +38,7 @@ public boolean supportsResultSetType(int type)
 #### <a name="parameters"></a>Paramètres  
  *type*  
   
- Un **int** qui indique le jeu de résultats type, qui peut prendre l’une des valeurs suivantes comme défini dans java.sql.ResultSet ou SQLServerResultSet :  
+ **Entier** qui indique le type de jeu de résultats, qui peut avoir l’une des valeurs suivantes comme défini dans java.sql.ResultSet ou SQLServerResultSet :  
   
 ## <a name="javasqlresultset-types"></a>Types java.sql.ResultSet  
  TYPE_FORWARD_ONLY  
@@ -67,12 +64,12 @@ public boolean supportsResultSetType(int type)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode supportsResultSetType est spécifiée par la méthode supportsResultSetType dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Membres de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
+ [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
