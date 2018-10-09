@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fb3a60e6a29a07d421a9bbcdb318eaa23048a1dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87152c60afce357cdf1ac63cdf2bd799f810c20a
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852648"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851954"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Afficher ou modifier le mode de récupération d'une base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,8 +99,8 @@ GO
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment modifier le mode de récupération de la base de données `model` en `FULL` à l'aide de l'option `SET RECOVERY` de l'instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
   
 ```sql  
-USE master ;  
-ALTER DATABASE model SET RECOVERY FULL ;  
+USE [master] ;  
+ALTER DATABASE [master] SET RECOVERY FULL ;  
 ```  
   
 ##  <a name="FollowUp"></a> Recommandations : Après avoir modifié le mode de récupération  
