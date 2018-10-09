@@ -37,10 +37,10 @@ ms.locfileid: "48067573"
  Utilisez le volet **Éditeur de formulaire d’action** en mode Formulaire pour modifier les actions standard contenues dans le cube. Pour plus d’informations sur ce volet, consultez [Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Éditeur de formulaire d’Action d’extraction**  
- Utilisez le volet **Éditeur de formulaire d’action d’extraction** pour modifier les actions d’extraction contenues dans le cube. Pour plus d’informations sur ce volet, consultez [Drillthrough Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Utilisez le volet **Éditeur de formulaire d’action d’extraction** pour modifier les actions d’extraction contenues dans le cube. Pour plus d’informations sur ce volet, consultez [Éditeur de formulaire d’Action d’extraction &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Éditeur de formulaire d’Action de rapport**  
- Utilisez le volet **Éditeur de formulaire d’action de rapport** pour modifier les actions de rapport contenues dans le cube. Pour plus d’informations sur ce volet, consultez [Report Action Form Editor &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
+ Utilisez le volet **Éditeur de formulaire d’action de rapport** pour modifier les actions de rapport contenues dans le cube. Pour plus d’informations sur ce volet, consultez [Éditeur de formulaire d’Action de rapport &#40;Actions Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Actions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
@@ -50,7 +50,7 @@ ms.locfileid: "48067573"
  [Outils de calcul &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Éditeur de formulaire d’action &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [Éditeur de formulaire d’Action d’extraction &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Report Action Form Editor &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Éditeur de formulaire d’Action de rapport &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

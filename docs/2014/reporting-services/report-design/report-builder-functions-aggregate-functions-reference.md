@@ -45,7 +45,7 @@ ms.locfileid: "48194115"
   
 -   [Test de l'étendue](#TestingforScope)  
   
- Pour déterminer les étendues valides pour une fonction, consultez la rubrique de référence à la fonction en question Pour plus d’informations et pour obtenir des exemples, consultez [Expression Scope for Totals, Aggregates, and Built-in Collections &#40;Report Builder and SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Pour déterminer les étendues valides pour une fonction, consultez la rubrique de référence à la fonction en question Pour plus d’informations et pour obtenir des exemples, consultez [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
