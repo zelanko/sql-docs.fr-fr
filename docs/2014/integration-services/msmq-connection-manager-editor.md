@@ -28,7 +28,7 @@ ms.locfileid: "48226549"
  Pour en savoir plus sur le gestionnaire de connexions MSMQ, consultez [MSMQ Connection Manager](connection-manager/msmq-connection-manager.md).  
   
 > [!NOTE]  
->  Le gestionnaire de connexions MSMQ prend en charge les files d'attente privées et publiques locales et les files d'attente publiques distantes. Il ne prend pas en charge les files d'attente privées distantes. Pour une solution de contournement qui utilise la tâche de script, consultez [Sending to a Remote Private Message Queue with the Script Task](control-flow/script-task.md).  
+>  Le gestionnaire de connexions MSMQ prend en charge les files d'attente privées et publiques locales et les files d'attente publiques distantes. Il ne prend pas en charge les files d'attente privées distantes. Pour une solution de contournement qui utilise la tâche de script, consultez [Envoi vers une file d'attente de messages privée distante à l'aide de la tâche de script](control-flow/script-task.md).  
   
 ## <a name="options"></a>Options  
  **Nom**  

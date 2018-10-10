@@ -125,7 +125,7 @@ ms.locfileid: "48134544"
   
 -   Pour le deuxième filtre, vous choisissez la dimension Customer, vous sélectionnez l’attribut Gender et vous sélectionnez « Femme » dans la liste des valeurs d’attribut.  
   
- Une fois la structure d'exploration de données créée, vous pouvez modifier la définition des données du cube et les critères de filtre. Pour plus d’informations, consultez [Filter the Source Cube for a Mining Structure](../filter-the-source-cube-for-a-mining-structure.md).  
+ Une fois la structure d'exploration de données créée, vous pouvez modifier la définition des données du cube et les critères de filtre. Pour plus d’informations, consultez [Filtrer le cube source d'une structure d'exploration de données](../filter-the-source-cube-for-a-mining-structure.md).  
   
  Les onglets **Structure d'exploration de données** et **Modèle d'exploration de données** fournissent tous deux une option pour ajouter un filtre à une structure d'exploration de données existante, en cliquant sur **Définir une coupe de cube**. La boîte de dialogue **Découper un cube** vous aide à générer une expression de filtre MDX valide en choisissant une valeur dans les listes déroulantes.  
   
