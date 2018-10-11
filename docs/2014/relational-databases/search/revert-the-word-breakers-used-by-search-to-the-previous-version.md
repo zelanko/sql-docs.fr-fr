@@ -22,7 +22,7 @@ ms.locfileid: "48186445"
   
  Cette rubrique ne couvre pas les langues suivantes :  
   
--   **Anglais**. Pour rétablir ou restaurer les composants anglais, consultez [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+-   **Anglais**. Pour rétablir ou restaurer les composants anglais, consultez [Modifier l’analyseur lexical utilisé pour l’anglais des États-Unis et l’anglais du Royaume-Uni](change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 -   **Danois, polonais et turc**. Les analyseurs lexicaux tiers pour le danois, le polonais et le turc qui étaient inclus avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont été remplacés par les composants [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -377,7 +377,7 @@ ms.locfileid: "48186445"
 |Nom de fichier actuel|MsWb70804.dll|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Modifier l'analyseur lexical utilisé pour l'anglais des États-Unis et l'anglais du Royaume-Uni](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Changements de comportement de la recherche en texte intégral](../../database-engine/behavior-changes-to-full-text-search.md)  
   
   
