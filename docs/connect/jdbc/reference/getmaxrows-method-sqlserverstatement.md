@@ -1,13 +1,11 @@
 ---
-title: getMaxRows (méthode) (SQLServerStatement) | Documents Microsoft
+title: getmaxrows, méthode (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.getMaxRows
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d619f9505d9f6f5e9c2c6db7751ecb224fa2f5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8cb1c317930d97263038d09bd84e8836d5f6f4ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835634"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773637"
 ---
-# <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows (méthode) (SQLServerStatement)
+# <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows, méthode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère le nombre maximal de lignes qui une [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objet qui est généré par ce [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objet peut contenir.  
+  Récupère le nombre maximal de lignes que peut contenir un objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) produit par cet objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,13 +41,13 @@ public final int getMaxRows()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getMaxRows est spécifiée par la méthode getMaxRows dans l’interface java.sql.Statement.  
   
- Cette méthode getMaxRows retourne toujours 0 pour les curseurs dynamiques permettant les défilements.  
+ Cette méthode getMaxRows retourne toujours 0 pour les curseurs dynamiques à défilement.  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

@@ -1,28 +1,25 @@
 ---
-title: 'Comment : spécifier les Types de données PHP | Documents Microsoft'
+title: 'Comment : spécifier des Types de données PHP | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d41612ee46f791ef5a130e82d7f75b7afecea3a9
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307598"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691817"
 ---
 # <a name="how-to-specify-php-data-types"></a>Procédure : spécifier des types de données PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,18 +28,18 @@ Quand vous utilisez le pilote PDO_SQLSRV, vous pouvez spécifier le type de donn
   
 Les étapes suivantes récapitulent la manière de spécifier des types de données PHP lors de la récupération des données à partir du serveur à l’aide du pilote SQLSRV :  
   
-1.  Configurer et exécuter une requête Transact-SQL avec [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou la combinaison de [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
+1.  Configurez et exécutez une requête Transact-SQL avec [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou la combinaison de [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
 2.  Rendez une ligne de données disponible pour la lecture avec [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md).  
   
 3.  Récupérez les données de champ d’une ligne retournée à l’aide de [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) avec le type de données PHP souhaité spécifié en tant que troisième paramètre facultatif. Si le troisième paramètre facultatif n’est pas spécifié, les données sont retournées selon les types PHP par défaut. Pour plus d’informations sur les types de retour PHP par défaut, consultez [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-    Pour plus d’informations sur les constantes utilisées pour spécifier le type de données PHP, consultez la section PHPTYPE de [constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    Pour plus d’informations sur les constantes utilisées pour spécifier le type de données PHP, consultez la section PHPTYPE de [Constantes &#40;pilotes Microsoft pour PHP pour SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-## <a name="example"></a>Exemple  
-L’exemple suivant récupère des lignes de la table *Production.ProductReview* de la base de données AdventureWorks. Dans chaque ligne retournée, le *ReviewDate* champ est récupéré sous forme de chaîne et le *commentaires* champ est récupéré sous la forme d’un flux de données. Les données de flux apparaissent à l’aide de la fonction [fpassthru](http://php.net/manual/en/function.fpassthru.php) PHP.  
+## <a name="example"></a> Exemple  
+L’exemple suivant récupère des lignes de la table *Production.ProductReview* de la base de données AdventureWorks. Dans chaque ligne retournée, le champ *ReviewDate* est récupéré sous forme de chaîne et le champ *Comments* sous forme de flux. Les données de flux apparaissent à l’aide de la fonction [fpassthru](http://php.net/manual/en/function.fpassthru.php) PHP.  
   
-L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -101,14 +98,14 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Dans l’exemple, la récupération du deuxième champ (*ReviewDate*) comme une chaîne préserve la précision à la milliseconde du type de données DATETIME SQL Server. Par défaut, le type de données DATETIME SQL Server est récupéré sous la forme d’un objet DateTime PHP dans lequel la précision à la milliseconde est perdue.  
+Dans l’exemple, le fait de récupérer le deuxième champ (*ReviewDate*) sous forme de chaîne permet de préserver la précision à la milliseconde du type de données DATETIME SQL Server. Par défaut, le type de données DATETIME SQL Server est récupéré sous la forme d’un objet DateTime PHP dans lequel la précision à la milliseconde est perdue.  
   
-La récupération du quatrième champ (*commentaires*) comme un flux de données est à des fins de démonstration. Par défaut, le type de données SQL Server nvarchar(3850) est récupérée sous la forme d’une chaîne, ce qui est acceptable dans la plupart des situations.  
+La récupération du quatrième champ (*Comments*) sous forme de flux est indiquée à des fins de démonstration. Par défaut, le type de données SQL Server nvarchar(3850) est récupérée sous la forme d’une chaîne, ce qui est acceptable dans la plupart des situations.  
   
 > [!NOTE]  
 > La fonction [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) fournit un moyen d’obtenir des informations de champ, ainsi que des informations de type, avant d’exécuter une requête.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)

@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
-caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 377afbebe029add867a2d02cb02a38421dc8d1f2
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a2ddf8f5c03d6f4c6724075e7209d800e10f7e39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785608"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724297"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Configuration requise pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +41,7 @@ ms.locfileid: "42785608"
   
 **Microsoft JDBC Driver 7.0 pour SQL Server :**  
 
-  JDBC Driver 7.0 inclut deux bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-7.0.0.jre8.jar** et **mssql-jdbc-7.0.0.jre10.jar**.
+  JDBC Driver 7.0 comporte deux bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-7.0.0.jre8.jar** et **mssql-jdbc-7.0.0.jre10.jar**.
 
   JDBC Driver 7.0 a été conçu pour être pris en charge par toutes les principales machines virtuelles Java équivalentes à Sun, mais il a été testé uniquement sur Sun JRE 8.0 et 10.0.
   
@@ -68,7 +65,7 @@ ms.locfileid: "42785608"
   
 **Microsoft JDBC Driver 6.4 pour SQL Server :**  
 
-  JDBC Driver 6.4 inclut deux bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-6.4.0.jre7.jar** et **mssql-jdbc-6.4.0.jre8.jar**.
+  JDBC Driver 6.4 comporte trois bibliothèques de classes JAR dans chaque package d’installation : **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** et **mssql-jdbc-6.4.0.jre9.jar**.
 
   JDBC Driver 6.4 a été conçu pour être pris en charge par toutes les principales machines virtuelles Java équivalentes à Sun, mais il a été testé uniquement sur Sun JRE 7.0, 8.0 et 9.0.
   

@@ -5,20 +5,17 @@ ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: 3ee34b40af4f72b32286067e5853c673f62ad240
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: 82a8576365889d02381e3b18b622fd541b5b9235
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268767"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728697"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Pilotes Microsoft PHP pour SQL Server Support Matrix
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +23,7 @@ ms.locfileid: "39268767"
   Cette page contient la matrice de support et la politique de support des pilotes Microsoft PHP pour SQL Server.
 
 ## <a name="microsoft-php-drivers-support-lifecycle-matrix-and-policy"></a>Matrice de cycle de vie de prise en charge de pilotes Microsoft PHP et stratégie
- La politique de support de Microsoft fournit des informations transparentes et prévisibles concernant la politique de support des produits Microsoft. Versions de pilotes PHP 3.x, 4.x et 5.x ont cinq ans de support standard à partir de la date de publication du pilote. Le support standard est défini sur le [site web de la politique de support de Microsoft](https://support.microsoft.com/lifecycle).
+ La politique de support de Microsoft fournit des informations transparentes et prévisibles concernant la politique de support des produits Microsoft. Les versions 3.x, 4.x et 5.x des pilotes PHP bénéficient de cinq ans de support standard à partir de la date de publication du pilote. Le support standard est défini sur le [site web de la politique de support de Microsoft](https://support.microsoft.com/lifecycle).
 
  Les options de support étendu et personnalisé ne sont pas disponibles pour les pilotes Microsoft PHP.
 
@@ -55,7 +52,7 @@ ms.locfileid: "39268767"
 |PHP pour la version du pilote SQL Server&#8594;<br />&#8595; Version de SQL Server|5.2 et 5.3<br />&nbsp;|4.3<br />&nbsp;|4.0<br />&nbsp;|3.2<br />&nbsp;|3.1<br />&nbsp;|3<br />&nbsp;|2<br />&nbsp;|
 |---|---|---|---|---|---|---|---|
 |Azure SQL Managed Instance<br/> (Préversion privée étendue)|O|O| | | | | |
-|Azure SQL Data Warehouse|O|O| | | | | |
+|Azure SQL Data Warehouse.|O|O| | | | | |
 |SQL Server 2017   |O|O| | | | | |
 |SQL Server 2016   |O|O|O| | | | |
 |SQL Server 2014   |O|O|O|O|O| | |

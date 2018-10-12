@@ -1,36 +1,33 @@
 ---
-title: Membres de SQLServerDriver | Documents Microsoft
+title: Les membres de SQLServerDriver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 079c7eb7-71e4-4109-83de-f6d785433c95
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3a8bf94221b81badd94f87a5bacbbb1602afeb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2efb7a32cd9a5fddd3de17aef724eb4555cce79c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846604"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749601"
 ---
 # <a name="sqlserverdriver-members"></a>Membres de SQLServerDriver
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Les tableaux suivants répertorient les membres qui sont exposées par le [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md) classe.  
+  Les tableaux suivants présentent les membres exposés par la classe [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md).  
   
 ## <a name="constructors"></a>Constructeurs  
   
-|Nom| Description|  
+|Nom   |Description|  
 |----------|-----------------|  
-|[SQLServerDriver ()](../../../connect/jdbc/reference/sqlserverdriver-constructor.md)|Initialise une nouvelle instance de la [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md) classe.|  
+|[SQLServerDriver ()](../../../connect/jdbc/reference/sqlserverdriver-constructor.md)|Initialise une nouvelle instance de la classe [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md).|  
   
 ## <a name="fields"></a>Champs  
  Aucun.  
@@ -40,13 +37,13 @@ ms.locfileid: "32846604"
   
 ## <a name="methods"></a>Méthodes  
   
-|Nom| Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |[acceptsURL](../../../connect/jdbc/reference/acceptsurl-method-sqlserverdriver.md)|Vérifie que l'URL donnée est valide.|  
-|[Se connecter](../../../connect/jdbc/reference/connect-method-sqlserverdriver.md)|Établit une connexion à la base de données.|  
+|[connect](../../../connect/jdbc/reference/connect-method-sqlserverdriver.md)|Établit une connexion à la base de données.|  
 |[getMajorVersion](../../../connect/jdbc/reference/getmajorversion-method-sqlserverdriver.md)|Retourne le numéro de version majeure du pilote JDBC.|  
 |[getMinorVersion](../../../connect/jdbc/reference/getminorversion-method-sqlserverdriver.md)|Retourne le numéro de version mineure du pilote JDBC.|  
-|[GetPropertyInfo](../../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)|Utilisée pour découvrir les propriétés requises pour la connexion à une base de données.|  
+|[getPropertyInfo](../../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)|Utilisée pour découvrir les propriétés requises pour la connexion à une base de données.|  
 |[jdbcCompliant](../../../connect/jdbc/reference/jdbccompliant-method-sqlserverdriver.md)|Vérifie si le pilote JDBC est compatible avec la spécification JDBC.|  
   
 ## <a name="inherited-methods"></a>Méthodes héritées  
@@ -55,7 +52,7 @@ ms.locfileid: "32846604"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerDriver, classe](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   

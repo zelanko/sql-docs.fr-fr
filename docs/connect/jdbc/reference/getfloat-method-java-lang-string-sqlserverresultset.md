@@ -1,13 +1,11 @@
 ---
-title: Méthode getFloat (java.lang.String) (SQLServerResultSet) | Documents Microsoft
+title: getFloat, méthode (java.lang.String) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getFloat (java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 09491a8a-1931-411e-9b35-2b269c1b7f12
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f66a1374d6082de91fd7a481ff8e9c84994368a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 00954080561b59f12d098da300ccb9fd3917ce02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834174"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682627"
 ---
-# <a name="getfloat-method-javalangstring-sqlserverresultset"></a>Méthode getFloat (java.lang.String) (SQLServerResultSet)
+# <a name="getfloat-method-javalangstring-sqlserverresultset"></a>getFloat, méthode (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère la valeur du nom de colonne désigné dans la ligne actuelle de ce [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) de l’objet en un **float** dans le langage de programmation Java.  
+  Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme de **float** dans le langage de programmation Java.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,22 +38,22 @@ public float getFloat(java.lang.String columnName)
 #### <a name="parameters"></a>Paramètres  
  *columnName*  
   
- A **chaîne** qui contient le nom de colonne.  
+ Valeur **String** qui contient le nom de la colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
- A **float** valeur.  
+ Un **float** valeur.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getFloat est spécifiée par la méthode getFloat dans l’interface java.sql.ResultSet.  
   
- Cette méthode retourne tous les types de nombres avec Java **float** fidélité.  
+ Cette méthode retourne tous les types numériques avec la fidélité **float** Java.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthode getFloat &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

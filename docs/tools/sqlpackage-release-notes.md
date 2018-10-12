@@ -5,20 +5,17 @@ ms.custom: tools|sos
 ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
-ms.suite: sql
 ms.prod_service: sql-tools
-ms.component: sqlpackage
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 7d05ec161b89e548cf529bc82c6d714a1960fb0f
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
+ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080150"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754330"
 ---
 # <a name="sqlpackage-release-notes"></a>notes de publication de Sqlpackage
 
@@ -35,7 +32,7 @@ La version inclut les correctifs suivants :
 - Ajout MaxParallelism du paramètre de ligne de commande pour spécifier le degré de parallélisme pour les opérations de base de données.
 - Prend en charge la compression des index sur les index de partition unique pour l’importation/exportation.
 - Correction d’un problème d’ingénierie inverse pour les jeux de colonnes XML avec SQL 2017 et versions ultérieures.
-- Correction d’un problème où le niveau de compatibilité de base de données 140 de script a été ignoré pour la base de données SQL Azure.
+- Correction du problème selon lequel les scripts du niveau de compatibilité de la base de données 140 étaient ignorés pour Azure SQL Database.
 
 ## <a name="sqlpackage-1741"></a>sqlpackage 17.4.1
 

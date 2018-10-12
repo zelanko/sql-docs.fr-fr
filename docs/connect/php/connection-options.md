@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 319ada38e07a30fa936608adce4e5c091ba098ec
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e7459e99e64bddaa0e971666edb8bb9c7c67c009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727487"
 ---
 # <a name="connection-options"></a>Options de connexion
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +49,7 @@ Cette rubrique répertorie les options autorisées dans le tableau associatif (d
 |QuotedId|1 ou **true** pour utiliser les règles SQL-92.<br /><br />0 ou **false** pour utiliser les règles héritées.|Spécifie s’il faut utiliser les règles SQL-92 pour les identificateurs entre guillemets (1 ou **true**) ou utiliser les règles Transact-SQL héritées (0 ou **false**).|**true** (1)|  
 |ReturnDatesAsStrings<br /><br />(non pris en charge dans le pilote PDO_SQLSRV)|1 ou **true** pour retourner les types de date et d’heure sous forme de chaînes.<br /><br />0 ou **false** pour retourner les types de date et d’heure comme types PHP **DateTime** .|Récupère les types de date et d’heure (datetime, date, time, datetime2 et datetimeoffset) sous forme de chaînes ou en tant que types PHP. Quand vous utilisez le pilote PDO_SQLSRV, les dates sont retournées sous forme de chaînes. Le pilote PDO_SQLSRV n’a pas de type **datetime**.<br /><br />Pour plus d’informations, consultez [Procédure : récupérer des types de date et heure sous forme de chaînes à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).|**false**|  
 |Défilement|String|“buffered” indique que vous souhaitez un curseur côté client (mis en mémoire tampon), ce qui vous permet de mettre en cache un jeu de résultats entier en mémoire. Pour plus d’informations, consultez [Types de curseur &#40;pilote SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).|Curseur avant uniquement|  
-|Serveur<br /><br />(non pris en charge dans le pilote SQLSRV)|String|Instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle se connecter.<br /><br />Vous pouvez également spécifier un nom de réseau virtuel pour vous connecter à un groupe de disponibilité AlwaysOn. Pour plus d’informations sur [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] prise en charge de [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consultez [prennent en charge pour la haute disponibilité, récupération d’urgence](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Server est un mot clé obligatoire (mais il ne doit pas obligatoirement être le premier mot clé dans la chaîne de connexion). Si aucun nom de serveur n’est passé au mot clé, une tentative de connexion à l’instance locale est effectuée.<br /><br />La valeur transmise à Server peut être le nom d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’adresse IP de l’instance. Si vous le souhaitez, vous pouvez spécifier un numéro de port (par exemple, `sqlsrv:server=(local),1033`).<br /><br />À compter de la version 3.0 du [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] , vous pouvez aussi spécifier une instance de base de données locale avec `server=(localdb)\instancename`. Pour plus d’informations, consultez [prise en charge de la base de données locale](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).|  
+|Serveur<br /><br />(non pris en charge dans le pilote SQLSRV)|String|Instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec laquelle la connexion sera établie.<br /><br />Vous pouvez également spécifier un nom de réseau virtuel pour vous connecter à un groupe de disponibilité AlwaysOn. Pour plus d’informations sur [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] prise en charge de [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consultez [prennent en charge pour la haute disponibilité, récupération d’urgence](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Server est un mot clé obligatoire (mais il ne doit pas obligatoirement être le premier mot clé dans la chaîne de connexion). Si aucun nom de serveur n’est passé au mot clé, une tentative de connexion à l’instance locale est effectuée.<br /><br />La valeur transmise à Server peut être le nom d’une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’adresse IP de l’instance. Si vous le souhaitez, vous pouvez spécifier un numéro de port (par exemple, `sqlsrv:server=(local),1033`).<br /><br />À compter de la version 3.0 du [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] , vous pouvez aussi spécifier une instance de base de données locale avec `server=(localdb)\instancename`. Pour plus d’informations, consultez [prise en charge de la base de données locale](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).|  
 |TraceFile|String|Spécifie le chemin du fichier utilisé pour les données de trace.|Aucune valeur n’est définie.|  
 |TraceOn|1 ou **true** pour activer le traçage.<br /><br />0 ou **false** pour désactiver le traçage.|Spécifie si le traçage ODBC est activé (1 ou **true**) ou désactivé (0 or **false**) pour la connexion établie.|**false** (0)|  
 |TransactionIsolation|Le pilote SQLSRV utilise les valeurs suivantes :<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />Le pilote PDO_SQLSRV utilise les valeurs suivantes :<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Spécifie le niveau d’isolation de la transaction.<br /><br />Pour plus d’informations sur l’isolation des transactions, consultez [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) dans la documentation SQL Server.|SQLSRV_TXN_READ_COMMITTED<br /><br />ou Gestionnaire de configuration<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
@@ -67,7 +64,7 @@ Cette rubrique répertorie les options autorisées dans le tableau associatif (d
 
 3. L’activation de *Encryption* peut avoir un impact sur les performances de certaines applications, en raison de la charge de traitement nécessaire pour chiffrer les données.  
 
-4. Instance de *UID* et *PWD* doivent tous deux être définis lors de la connexion avec l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+4. Les attributs *UID* et *PWD* doivent être tous deux définis en cas de connexion avec l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 Une grande partie des clés prises en charge sont des attributs de chaîne de connexion ODBC. Pour plus d’informations sur les chaînes de connexion ODBC, consultez [Utilisation de mots clés de chaîne de connexion avec SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 

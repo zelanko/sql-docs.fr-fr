@@ -5,30 +5,27 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b2339270e54cd05209e4843c66e3339b9aae270f
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 625b8c6503378341596523d7f1887129c38d6a19
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028028"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827019"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversions de client à serveur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Décrit les conversions de date et d’heure effectuées entre une application cliente écrite avec le pilote OLE DB pour SQL Server et [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou ultérieur).  
+  Cet article décrit les conversions de date/heure effectuées entre une application cliente écrite avec le pilote OLE DB pour SQL Server et [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou une version ultérieure).  
   
 ## <a name="conversions"></a>Conversions  
  Cette rubrique décrit les conversions effectuées sur le client. Si le client spécifie la précision en fractions de seconde pour un paramètre qui diffère de celui défini sur le serveur, la conversion peut provoquer un échec dans les cas où le serveur autoriserait le succès de l'opération. En particulier, le client traite toute troncation des fractions de seconde comme une erreur, alors que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] arrondit les valeurs d’heure à la seconde entière la plus proche.  

@@ -1,13 +1,11 @@
 ---
-title: Méthode getResponseBuffering (SQLServerDataSource) | Documents Microsoft
+title: getresponsebuffering, méthode (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getResponseBuffering()
@@ -15,21 +13,20 @@ apilocation:
 - SQLServerDataSource.getResponseBuffering()
 apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de608f0932c26b4ae0609d5920cb255e247164d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7f63ae057278b996b02b42668c3ad97bcf7b3f50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839064"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645467"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>Méthode getResponseBuffering (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retourne la réponse mise en mémoire tampon de mode pour cette [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) objet.  
+  Retourne le mode de mise en mémoire tampon des réponses pour cet objet [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,17 +36,17 @@ public java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- A **chaîne** qui contient une minuscule **complète** ou **adaptive**.  
+ Un **chaîne** qui contient une minuscule **complète** ou **adaptive**.  
   
-## <a name="remarks"></a>Notes  
- Le **complète** valeur spécifie la lecture de l’ensemble de résultats à partir du serveur en cours d’exécution.  
+## <a name="remarks"></a>Notes   
+ La valeur **full** consiste à lire l’intégralité du résultat du serveur à l’exécution.  
   
- Le **adaptive** valeur spécifie la mise en mémoire tampon minimale des données lorsque cela est nécessaire. Le **adaptive** valeur est la valeur par défaut en mode de mise en mémoire tampon.  
+ La valeur **adaptive** consiste à mettre en mémoire tampon le moins de données possible si nécessaire. La valeur **adaptive** correspond au mode de mise en mémoire tampon par défaut.  
   
- Pour plus d’informations sur l’utilisation du mode de mise en mémoire tampon de réponse, consultez [à l’aide de mise en mémoire tampon adaptative](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Pour plus d’informations sur l’utilisation de la réponse en mode de mise en mémoire tampon, consultez [à l’aide de mise en mémoire tampon adaptative](../../../connect/jdbc/using-adaptive-buffering.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthode setResponseBuffering &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)   
+## <a name="see-also"></a> Voir aussi  
+ [setResponseBuffering, méthode &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)   
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

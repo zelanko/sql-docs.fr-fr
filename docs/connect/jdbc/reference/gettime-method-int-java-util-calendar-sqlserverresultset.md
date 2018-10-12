@@ -1,13 +1,11 @@
 ---
-title: Méthode getTime (int, java.util.Calendar) (SQLServerResultSet) | Documents Microsoft
+title: getTime, méthode (int, java.util.Calendar) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getTime (int, java.util.Calendar)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d21e0c1d-9d6e-468f-8b11-cc7209b2c2e5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97ca0625b77bf8172a81a71cc3f8a5338c552af5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0f81fb4bc93fe7166deaf6a9bac5eaf3ef717280
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840054"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652233"
 ---
-# <a name="gettime-method-int-javautilcalendar-sqlserverresultset"></a>Méthode getTime (int, java.util.Calendar) (SQLServerResultSet)
+# <a name="gettime-method-int-javautilcalendar-sqlserverresultset"></a>getTime, méthode (int, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de ce [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objet comme un objet java.sql.Time dans le langage de programmation, à l’aide de l’objet de calendrier donné.  
+  Récupère la valeur de l’index de la colonne désignée dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant qu’objet java.sql.Time dans le langage de programmation Java, en utilisant l’objet Calendar donné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,24 +41,24 @@ public java.sql.Time getTime(int columnIndex,
   
  Un **int** qui indique l’index de colonne.  
   
- *licences d’accès client*  
+ *licence d’accès client*  
   
  Un objet de calendrier.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet de l’heure.  
+ Un objet de temps.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode getTime est spécifiée par la méthode getTime dans l’interface java.sql.ResultSet.  
+## <a name="remarks"></a>Notes   
+ Cette méthode getTime est spécifiée par la méthode getTime de l’interface java.sql.ResultSet.  
   
- Cette méthode retourne une partie de l’heure valide d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] type de données datetime ou smalldatetime, avec la partie de date définie sur la date de référence Java de 1970/01/01 dans le fuseau horaire du calendrier fourni.  
+ Cette méthode retourne une partie heure valide d’un type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime ou smalldatetime, avec la partie date définie sur la date de référence Java 01/01/1970 dans le fuseau horaire du calendrier fourni.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthode getTime &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: getXAConnection (méthode) (java.lang.String, java.lang.String) | Documents Microsoft
+title: getXAConnection, méthode (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerXADataSource.getXAConnection (java.lang.String, java.lang.String)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8aec959822b00c79031226aaccbaf0085f68f79d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b75d79c0cb211a2d0da7b5e0f026d9ec2171d75d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839324"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694427"
 ---
 # <a name="getxaconnection-method-javalangstring-javalangstring"></a>Méthode getXAConnection (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +39,11 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
 #### <a name="parameters"></a>Paramètres  
  *user*  
   
- A **chaîne** qui contient le nom d’utilisateur.  
+ **Chaîne** qui contient le nom de l’utilisateur.  
   
  *password*  
   
- A **chaîne** qui contient le mot de passe.  
+ **Chaîne** qui contient le mot de passe.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Un objet XAConnection.  
@@ -54,16 +51,16 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
 ## <a name="exceptions"></a>Exceptions  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getXAConnection est spécifiée par la méthode getXAConnection dans l’interface javax.sql.XADataSource.  
   
 > [!NOTE]  
 >  Cette méthode est généralement appelée par les implémentations de regroupement de connexions XA et non par le code d'application JDBC normal.  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthode getXAConnection &#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/getxaconnection-method-sqlserverxadatasource.md)   
- [Méthodes SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
- [Membres de SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [getXAConnection, méthode &#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/getxaconnection-method-sqlserverxadatasource.md)   
+ [SQLServerXADataSource, méthodes](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
+ [SQLServerXADataSource, membres](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [SQLServerXADataSource, classe](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  
   
   

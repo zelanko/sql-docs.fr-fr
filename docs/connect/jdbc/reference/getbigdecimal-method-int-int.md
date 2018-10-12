@@ -1,13 +1,11 @@
 ---
-title: Méthode getBigDecimal (int, int) | Documents Microsoft
+title: Méthode getBigDecimal (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getBigDecimal (int, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: d9351b35-7046-4852-a612-72d4c46b2bbb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f52732b2e6b752713dc62c377e7038d61c4d3b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: db344ebec9a8e1f7aef74bad918a7145514d4881
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833774"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742887"
 ---
 # <a name="getbigdecimal-method-int-int"></a>Méthode getBigDecimal (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +29,7 @@ ms.locfileid: "32833774"
   Récupère la valeur du paramètre désigné en tant que java.math.BigDecimal en fonction de l'index et de l'échelle de paramètre.  
   
 > [!NOTE]  
->  Cette méthode a été déconseillée dans la spécification JDBC. Au lieu de cela, vous devez utiliser le [getBigDecimal (int)](../../../connect/jdbc/reference/getbigdecimal-method-int.md) (méthode).  
+>  Cette méthode a été déconseillée dans la spécification JDBC. Utilisez plutôt la méthode [getBigDecimal (int)](../../../connect/jdbc/reference/getbigdecimal-method-int.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,7 +46,7 @@ public java.math.BigDecimal getBigDecimal(int index,
   
  *scale*  
   
- Un **int** qui indique le nombre de chiffres à droite de la virgule décimale.  
+ **int** indiquant le nombre de chiffres à droite du séparateur décimal.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Un objet BigDecimal.  
@@ -57,12 +54,12 @@ public java.math.BigDecimal getBigDecimal(int index,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getBigDecimal est spécifiée par la méthode getBigDecimal dans l’interface java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthode getBigDecimal &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   
- [Membres de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [getBigDecimal, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   
+ [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

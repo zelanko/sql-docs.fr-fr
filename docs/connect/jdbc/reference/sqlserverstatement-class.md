@@ -1,34 +1,31 @@
 ---
-title: Classe SQLServerStatement | Documents Microsoft
+title: Classe SQLServerStatement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14add0b451947092946129c9388366eb10186dce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7488efcb3392623e6f54cff440a16494c10e0a69
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846274"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705347"
 ---
-# <a name="sqlserverstatement-class"></a>Classe SQLServerStatement
+# <a name="sqlserverstatement-class"></a>SQLServerStatement, classe
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Représente l'implémentation de base de la fonctionnalité d'instruction JDBC.  
   
  **Package :** com.microsoft.sqlserver.jdbc  
   
- **Implémente :** [ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)  
+ **Implémente :** [ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,13 +34,13 @@ ms.locfileid: "32846274"
 public class SQLServerStatement  
 ```  
   
-## <a name="remarks"></a>Notes  
- La classe SQLServerStatement fournit également un nombre de méthodes d’implémentation de classe de base pour l’instruction préparée JDBC et instructions pouvant être appelées. Le rôle de base de la classe SQLServerStatement consiste à exécuter des instructions SQL, et les nombres de mises à jour puis de retourner et le résultat définit à l’application utilisateur.  
+## <a name="remarks"></a>Notes   
+ La classe SQLServerStatement fournit également un certain nombre de méthodes d’implémentation de classe de base pour l’instruction préparée JDBC et les instructions pouvant être appelées. Le rôle de base de la classe SQLServerStatement est d’exécuter des instructions SQL, puis de retourner des nombres de mises à jour et des jeux de résultats à l’application utilisateur.  
   
  Cette classe prend en charge la Désencapsulation dans la classe SQLServerStatement, l’interface ISQLServerStatement et l’interface java.sql.Statement. Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
- [Référence d’API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+ [Informations de référence sur l'API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

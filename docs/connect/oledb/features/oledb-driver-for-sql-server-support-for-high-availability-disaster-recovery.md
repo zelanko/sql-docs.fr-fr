@@ -1,46 +1,43 @@
 ---
-title: Pilote OLE DB SQL Server Support for High Availability, Disaster Recovery | Documents Microsoft
-description: Pilote OLE DB pour SQL Server prend en charge pour la haute disponibilité, la récupération d’urgence
+title: Prise en charge de la reprise d’activité et de la haute disponibilité par OLE DB Driver pour SQL Server | Microsoft Docs
+description: Prise en charge de la reprise d’activité et de la haute disponibilité par OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|features
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 02f6c8da18d94c243ea9c3c07717af5b9750b066
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b50dcb3713ba92e000791a70cc6cb7c8100c36d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612164"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674817"
 ---
-# <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Pilote OLE DB SQL Server Support for High Availability, Disaster Recovery
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Prise en charge de la récupération d’urgence et de la haute disponibilité par OLE DB Driver pour SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cet article explique le pilote OLE DB pour la prise en charge de SQL Server (ajouté dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), et [Secondaires actifs : réplicas secondaires lisibles actifs &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  Cet article décrit le pilote OLE DB pour la prise en charge de SQL Server (ajouté dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Pour plus d’informations sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), et [Secondaires actifs : réplicas secondaires lisibles actifs &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- Vous pouvez spécifier l’écouteur d’un groupe de disponibilité donné dans la chaîne de connexion. Si un pilote OLE DB pour l’application de SQL Server est connecté à une base de données dans un groupe de disponibilité qui bascule, la connexion d’origine est rompue et l’application doit ouvrir une nouvelle connexion pour continuer à fonctionner après le basculement.  
+ Vous pouvez spécifier l’écouteur d’un groupe de disponibilité donné dans la chaîne de connexion. Si une application OLE DB Driver for SQL Server est connectée à une base de données dans un groupe de disponibilité qui bascule, la connexion d’origine est rompue et l’application doit ouvrir une nouvelle connexion pour reprendre le travail après le basculement.  
   
- Si vous ne vous connectez pas à un écouteur de groupe de disponibilité, et si plusieurs adresses IP sont associés à un nom d’hôte, pilote OLE DB pour SQL Server effectue une itération séquentiellement dans toutes les adresses IP associées entrée DNS. Cette opération peut prendre du temps si la première adresse IP retournée par le serveur DNS n'est liée à aucune carte d'interface réseau (NIC). Lors de la connexion à un écouteur de groupe de disponibilité, pilote OLE DB pour SQL Server tente d’établir des connexions à toutes les adresses IP en parallèle et si une tentative de connexion réussit, le pilote ignore toutes les tentatives de connexion en attente.  
+ Si vous ne vous connectez pas à un écouteur du groupe de disponibilité et si plusieurs adresses IP sont associées à un nom d’hôte, OLE DB Driver for SQL Server effectue une itération séquentielle parmi toutes les adresses IP associées à l’entrée DNS. Cette opération peut prendre du temps si la première adresse IP retournée par le serveur DNS n'est liée à aucune carte d'interface réseau (NIC). Lors de la connexion à un écouteur de groupe de disponibilité, OLE DB Driver for SQL Server tente d’établir une connexion à toutes les adresses IP en parallèle. Quand une tentative de connexion réussit, le pilote abandonne toutes les tentatives de connexion en attente.  
   
 > [!NOTE]  
 > L'augmentation du délai de connexion et l'implémentation de la logique de tentative de connexion augmente la probabilité qu'une application se connecte à un groupe de disponibilité. En raison du risque d'échec de connexion en cas de basculement d'un groupe de disponibilité, il est également nécessaire d'implémenter la logique de déclenchement de nouvelles tentatives de connexion, afin de multiplier les tentatives jusqu'à ce qu'une connexion soit établie.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Connexion à MultiSubnetFailover  
- Spécifiez toujours **MultiSubnetFailover = Yes** lors de la connexion à un écouteur SQL Server groupe de disponibilité AlwaysOn ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instance de Cluster de basculement. **MultiSubnetFailover** permet un basculement plus rapide pour tous les groupes de disponibilité AlwaysOn et les Instances de Cluster de basculement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]et réduit considérablement le temps de basculement de sous-réseaux uniques et multiples Always On topologies. Lors d'un basculement de sous-réseaux multiples, le client tente les connexions en parallèle. Lors d’un basculement de sous-réseau, le pilote OLE DB pour SQL Server va réessayer la connexion TCP.  
+ Spécifiez toujours **MultiSubnetFailover=Yes** lors de la connexion à un écouteur du groupe de disponibilité SQL Server AlwaysOn ou à une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **MultiSubnetFailover** permet un basculement plus rapide pour tous les groupes de disponibilité AlwaysOn et les instances de cluster de basculement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], et réduit considérablement le temps de basculement pour les topologies AlwaysOn uniques et de plusieurs sous-réseaux. Lors d'un basculement de sous-réseaux multiples, le client tente les connexions en parallèle. Lors d’un basculement de sous-réseau, OLE DB Driver pour SQL Server va réessayer la connexion TCP.  
   
- Le **MultiSubnetFailover** propriété de connexion indique que l’application est déployée dans un groupe de disponibilité ou d’une Instance de Cluster de basculement, et ce pilote OLE DB pour SQL Server tente de se connecter à la base de données sur le principal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] traite de l’instance en essayant de se connecter à tous les l’adresse IP. Quand **MultiSubnetFailover=Yes** est spécifié dans le cadre d’une connexion, le client retente d’établir une connexion TCP plus rapidement que les intervalles de retransmission TCP par défaut du système d’exploitation. Cela permet une reconnexion plus rapide après le basculement d’un groupe de disponibilité AlwaysOn ou d’une Instance de Cluster de basculement et s’applique à la fois unique et à plusieurs sous-réseaux groupes de disponibilité et Instances de Cluster de basculement.  
+ La propriété de connexion **MultiSubnetFailover** indique que l’application est déployée sur un groupe de disponibilité ou une instance de cluster de basculement et que OLE DB Driver for SQL Server tente de se connecter à la base de données sur l’instance principale de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en essayant toutes les adresses IP. Quand **MultiSubnetFailover=Yes** est spécifié dans le cadre d’une connexion, le client retente d’établir une connexion TCP plus rapidement que les intervalles de retransmission TCP par défaut du système d’exploitation. Ceci permet une reconnexion plus rapide après le basculement d’un groupe de disponibilité AlwaysOn ou d’une instance de cluster de basculement, et s’applique aux groupes de disponibilité et aux instances de cluster de basculement uniques et à plusieurs sous-réseaux.  
   
- Pour plus d’informations sur les mots clés de chaîne de connexion, consultez [à l’aide de mots clés de chaîne de connexion avec le pilote OLE DB pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Pour plus d’informations sur les mots clés de chaîne de connexion, consultez [Utilisation de mots clés de chaîne de connexion avec OLE DB Driver for SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
  La spécification de **MultiSubnetFailover=Yes** quand la connexion n’est pas établie avec un écouteur de groupe de disponibilité ou une instance de cluster de basculement peut avoir un impact négatif sur les performances et n’est pas prise en charge.  
   
@@ -69,7 +66,7 @@ Une connexion échoue si un réplica principal est configuré pour rejeter des c
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Mise à niveau pour utiliser des clusters de sous-réseaux multiples à partir de la mise en miroir de bases de données  
 Une erreur de connexion se produit si les mots clés de connexion **MultiSubnetFailover** et **Failover_Partner** sont présents dans la chaîne de connexion. Une erreur se produit également si **MultiSubnetFailover** est utilisé et si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retourne une réponse de partenaire de basculement qui indique qu’il fait partie d’une paire de mise en miroir de bases de données.  
   
-Si vous mettez à niveau un pilote OLE DB pour l’application de SQL Server qui utilise actuellement la mise en miroir de base de données à un scénario de sous-réseaux multiples, vous devez supprimer la **Failover_Partner** propriété de connexion et remplacez-la par  **MultiSubnetFailover** la valeur **Oui** et remplacez le nom du serveur dans la chaîne de connexion avec un écouteur de groupe de disponibilité. Si une chaîne de connexion utilise **Failover_Partner** et **MultiSubnetFailover=Yes**, le pilote génère une erreur. Toutefois, si une chaîne de connexion utilise **Failover_Partner** et **MultiSubnetFailover=No** (ou **ApplicationIntent=ReadWrite**), l’application utilise la mise en miroir de bases de données.  
+Si vous mettez à niveau une application OLE DB Driver for SQL Server qui utilise actuellement la mise en miroir de bases de données pour un scénario de sous-réseaux multiples, vous devez supprimer la propriété de connexion **Failover_Partner** et la remplacer par **MultiSubnetFailover** définie sur **Yes**, et remplacer le nom du serveur dans la chaîne de connexion par un écouteur du groupe de disponibilité. Si une chaîne de connexion utilise **Failover_Partner** et **MultiSubnetFailover=Yes**, le pilote génère une erreur. Toutefois, si une chaîne de connexion utilise **Failover_Partner** et **MultiSubnetFailover=No** (ou **ApplicationIntent=ReadWrite**), l’application utilise la mise en miroir de bases de données.  
   
 Le pilote retournera une erreur si la mise en miroir de bases de données est utilisée pour la base de données principale au sein du groupe de disponibilité, et si **MultiSubnetFailover=Yes** est utilisé dans la chaîne de connexion qui établit une connexion avec une base de données principale au lieu d’un écouteur de groupe de disponibilité.  
 
@@ -80,12 +77,12 @@ Le pilote retournera une erreur si la mise en miroir de bases de données est ut
 ## <a name="ole-db"></a>OLE DB  
 Le pilote OLE DB pour SQL Server prend en charge la **ApplicationIntent** et **MultiSubnetFailover** mots clés.   
   
-Les mots de clés de chaîne de connexion OLE DB deux ont été ajoutées pour prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans le pilote OLE DB pour SQL Server :  
+Les mots de clés de chaîne de connexion OLE DB deux ont été ajoutées pour prendre en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans OLE DB Driver pour SQL Server :  
   
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
   
- Pour plus d’informations sur les mots clés de chaîne de connexion dans le pilote OLE DB pour SQL Server, consultez [à l’aide de mots clés de chaîne de connexion avec le pilote OLE DB pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Pour plus d’informations sur les mots clés de chaîne de connexion dans le pilote OLE DB pour SQL Server, voir [Utiliser des mots clés de chaîne de connexion avec le pilote OLE DB pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
 ### <a name="application-intent"></a>Intention de l'application 
 
@@ -124,12 +121,12 @@ Un pilote OLE DB pour l’application de SQL Server peut utiliser une des métho
  **IDBInitialize::Initialize** utilise le jeu de propriétés configuré précédemment pour initialiser la source de données et créer l’objet source de données. Spécifiez l'intention de l'application en tant que propriété de fournisseur ou dans le cadre de la chaîne de propriétés étendues.  
   
  -   **IDataInitialize::GetDataSource**  
- **IDataInitialize::GetDataSource** prend une chaîne de connexion d’entrée pouvant contenir le **MultiSubnetFailover** (mot clé).  
+ **IDataInitialize::GetDataSource** accepte en entrée une chaîne de connexion qui peut contenir le mot clé **Application Intent**.  
 
 -   **IDBProperties::SetProperties**  
-Pour définir le **MultiSubnetFailover** valeur de la propriété, appelez **IDBProperties::SetProperties** en passant le **SSPROP_INIT_MULTISUBNETFAILOVER** propriété dont la valeur  **VARIANT_TRUE** ou **VARIANT_FALSE** ou **DBPROP_INIT_PROVIDERSTRING** propriété avec la valeur contenant «**MultiSubnetFailover = Yes** « ou »**MultiSubnetFailover = No**».
+Pour définir le **MultiSubnetFailover** valeur de propriété, appelez **IDBProperties::SetProperties** en passant le **SSPROP_INIT_MULTISUBNETFAILOVER** propriété avec la valeur  **VARIANT_TRUE** ou **VARIANT_FALSE** ou **DBPROP_INIT_PROVIDERSTRING** propriété avec la valeur qui contient «**MultiSubnetFailover = Yes** « ou »**MultiSubnetFailover = No**».
 
-#### <a name="example"></a>Exemple
+#### <a name="example"></a> Exemple
 
 ```
 DBPROP rgPropMultisubnet;
@@ -151,8 +148,8 @@ hr = pIDBInitialize->QueryInterface(IID_IDBProperties, (void **)&pIDBProperties)
 pIDBProperties->SetProperties(1, &PropSet);
 ```
 
-## <a name="see-also"></a>Voir aussi  
- [Pilote de base de données OLE pour les fonctionnalités SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
+## <a name="see-also"></a> Voir aussi  
+ [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [Utilisation de mots clés de chaîne de connexion avec OLE DB Driver pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
   
   

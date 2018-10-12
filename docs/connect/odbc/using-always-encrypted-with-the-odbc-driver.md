@@ -1,25 +1,20 @@
 ---
 title: Utilisation d’Always Encrypted avec ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 10/01/2018
+ms.date: 09/01/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: b32be273b26a163263798c3b6a5312432cc54eb6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: dfe1777044234ec43c13f738fa1b0de896f96616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980681"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828267"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -99,7 +94,7 @@ Cet exemple insère une ligne dans la table Patients. Notez les points suivants�
 
 - L’exemple de code ne contient aucun élément spécifique au chiffrement. Le pilote détecte automatiquement et chiffre les valeurs des paramètres de date et SSN qui ciblent des colonnes chiffrées. Le chiffrement est donc transparent pour l’application.
 
-- Les valeurs insérées dans les colonnes de base de données, y compris les colonnes chiffrées, sont passées comme paramètres liés (consultez [SQLBindParameter, fonction](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). L’utilisation de paramètres est facultative lors de l’envoi de valeurs aux colonnes non chiffrées (même si elle est vivement recommandée, car elle contribue à empêcher l’injection SQL), mais elle est nécessaire pour les valeurs qui ciblent des colonnes chiffrées. Si les valeurs insérées dans les colonnes SSN ou BirthDate ont été passées en tant que littéraux incorporés dans l’instruction de requête, la requête échoue, car le pilote ne tente pas de chiffrer ou traiter des littéraux dans les requêtes. Par conséquent, le serveur les rejettera en les considérant comme incompatibles avec les colonnes chiffrées.
+- Les valeurs insérées dans les colonnes de base de données, y compris les colonnes chiffrées, sont transmises sous forme de paramètres liés (voir [Fonction SQLBindParameter](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)). L’utilisation de paramètres est facultative lors de l’envoi de valeurs aux colonnes non chiffrées (même si elle est vivement recommandée, car elle contribue à empêcher l’injection SQL), mais elle est nécessaire pour les valeurs qui ciblent des colonnes chiffrées. Si les valeurs insérées dans les colonnes SSN ou BirthDate ont été passées en tant que littéraux incorporés dans l’instruction de requête, la requête échoue, car le pilote ne tente pas de chiffrer ou traiter des littéraux dans les requêtes. Par conséquent, le serveur les rejettera en les considérant comme incompatibles avec les colonnes chiffrées.
 
 - Le type SQL du paramètre inséré dans la colonne SSN est défini à SQL_CHAR, qui mappe à la **char** type de données SQL Server (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`). Si le type du paramètre a été défini sur SQL_WCHAR, qui mappe à **nchar**, la requête échoue, car Always Encrypted ne prend pas en charge les conversions de côté serveur à partir de valeurs nchar chiffrées en valeurs char chiffré. Consultez [de référence du programmeur ODBC--annexe d : Types de données](https://msdn.microsoft.com/library/ms713607.aspx) pour plus d’informations sur les mappages de type de données.
 
@@ -144,9 +139,9 @@ Cet exemple insère une ligne dans la table Patients. Notez les points suivants�
 
 L’exemple suivant montre le filtrage de données basé sur des valeurs chiffrées, ainsi que la récupération de données en texte clair à partir de colonnes chiffrées. Notez les points suivants :
 
-- La valeur utilisée dans la clause WHERE pour filtrer sur la colonne SSN doit être transmis à l’aide de SQLBindParameter, afin que le pilote peut chiffrer de manière transparente avant de les envoyer au serveur.
+- La valeur utilisée dans la clause WHERE pour filtrer la colonne SSN doit être transmise avec SQLBindParameter, afin que le pilote puisse la chiffrer de manière transparente avant de l’envoyer au serveur.
 
-- Toutes les valeurs sont imprimées par le programme sera en texte clair, étant donné que le pilote déchiffre de manière transparente les données récupérées à partir des colonnes SSN et BirthDate.
+- Toutes les valeurs imprimées par le programme sont en texte clair, car le pilote déchiffre de manière transparente les données récupérées à partir des colonnes SSN et BirthDate.
 
 > [!NOTE]
 > Les requêtes peuvent effectuer des comparaisons d’égalité sur des colonnes chiffrées uniquement si le chiffrement est déterministe. Pour plus d’informations, consultez [Sélection d’un chiffrement déterministe ou aléatoire](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
@@ -399,7 +394,7 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 
 Aucune autre modification d’application ODBC n’est requis pour utiliser Azure Key VAULT pour le stockage de clés principales de colonne.
 
-### <a name="using-the-windows-certificate-store-provider"></a>L’utilisation du fournisseur de Store de certificat Windows
+### <a name="using-the-windows-certificate-store-provider"></a>Avec le fournisseur du magasin de certificats Windows
 
 Le pilote ODBC pour SQL Server sur Windows inclut un fournisseur de magasin de clé principale de colonne intégré pour le Store de certificat Windows nommé `MSSQL_CERTIFICATE_STORE`. (Ce fournisseur n’est pas disponible sur Mac OS ou Linux). Avec ce fournisseur, la clé principale de colonne sont stockées localement sur l’ordinateur client et aucune configuration supplémentaire par l’application n’est nécessaire pour l’utiliser avec le pilote. Toutefois, l’application doit avoir accès au certificat et sa clé privée dans le magasin. Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted).
 
@@ -574,7 +569,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 |Nom   |Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|Valeurs acceptées sont `Enabled` / `Disabled`.<br>`Enabled` : active la fonctionnalité Always Encrypted pour la connexion.<br>`Disabled` --désactiver la fonctionnalité Always Encrypted pour la connexion. <br><br>La valeur par défaut est `Disabled`.|  
+|`ColumnEncryption`|Valeurs acceptées sont `Enabled` / `Disabled`.<br>`Enabled` : active la fonctionnalité Always Encrypted pour la connexion.<br>`Disabled` : désactive la fonctionnalité Always Encrypted pour la connexion. <br><br>La valeur par défaut est `Disabled`.|  
 |`KeyStoreAuthentication` | Valeurs valides : `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Lorsque `KeyStoreAuthentication`  =  `KeyVaultPassword`, définissez cette valeur sur un nom Principal d’utilisateur Active Directory de Azure valide. <br>Lorsque `KeyStoreAuthetication`  =  `KeyVaultClientSecret` définir cette valeur sur un Azure Active Directory Application ID Client valide |
 |`KeyStoreSecret` | Lorsque `KeyStoreAuthentication`  =  `KeyVaultPassword` définir cette valeur au mot de passe pour le nom d’utilisateur correspondant. <br>Lorsque `KeyStoreAuthentication`  =  `KeyVaultClientSecret` définir cette valeur sur le Secret d’Application associé à un Azure Active Directory Application ID Client valide|

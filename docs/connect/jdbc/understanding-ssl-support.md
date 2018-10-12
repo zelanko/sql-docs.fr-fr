@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec0aabb38edc0446728569648dde0a4f4bafedc
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: bcf632e4953232144b82ba9701c62eb1d226d127
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784894"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697417"
 ---
 # <a name="understanding-ssl-support"></a>Fonctionnement de la prise en charge SSL
 
@@ -82,7 +79,7 @@ Pendant la négociation SSL, le serveur envoie son certificat de clé publique a
   
 - Le nom CN (Nom commun) du sujet ou le nom DNS du nom SAN (Autre nom du sujet) du certificat correspond exactement à la valeur **serverName** de la chaîne de connexion ou, si elle est spécifiée, à la valeur de la propriété **hostNameInCertificate**.  
   
-- Un nom DNS peut comprendre des caractères génériques. En revanche, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ne prend pas en charge la correspondance générique. Par exemple, abc.com ne correspondra pas à *.com, mais \*.com correspondra à \*.com.  
+- Un nom DNS peut comprendre des caractères génériques. En revanche, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ne prend pas en charge la correspondance générique. Par exemple, abc.com ne correspondra pas à \*.com, mais \*.com correspondra à \*.com.  
   
 ## <a name="see-also"></a> Voir aussi
 

@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1acbbfea1c1ce1a477644b64938b3e5c98ff7429
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 386618d9dc6dd0d1fe23fe0480105c3e8f01c914
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785312"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726379"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Résilience de connexion du pilote ODBC Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "42785312"
   
      Vous pouvez modifier le nombre de tentatives de connexion quand vous :  
   
-    -   définissez ou modifiez une source de données qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le contrôle **Nombre de tentatives de connexion** .  
+    -   définissez ou modifiez une source de données qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le contrôle **Nombre de nouvelles tentatives de connexion**.  
   
     -   utilisez le mot clé de chaîne de connexion **ConnectRetryCount** .  
   
@@ -51,7 +48,7 @@ ms.locfileid: "42785312"
   
      Vous pouvez modifier l’intervalle de nouvelle tentative de connexion quand vous :  
   
-    -   définissez ou modifiez une source de données qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le contrôle **Intervalle avant nouvelle tentative de connexion** .  
+    -   définissez ou modifiez une source de données qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le contrôle **Intervalle avant nouvelle tentative de connexion**.  
   
     -   utilisez le mot clé de chaîne de connexion **ConnectRetryInterval** .  
   
@@ -75,7 +72,7 @@ ms.locfileid: "42785312"
 |IMC06|La connexion est interrompue et la récupération n’est pas possible. La connexion est marquée par le pilote du client comme irrécupérable. Aucune tentative n’a été faite pour rétablir la connexion.|  
   
 ## <a name="example"></a> Exemple  
- L’exemple suivant contient deux fonctions. **func1** montre comment se connecter avec un nom de source de données (DSN) qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows. La source de données utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et spécifie l’ID utilisateur. **func1** récupère ensuite le nombre de tentatives de connexion avec **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
+ L’exemple suivant contient deux fonctions. **func1** montre comment se connecter avec un nom de source de données (DSN) qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows. Le nom de source de données utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et spécifie l’identifiant utilisateur. **func1** récupère ensuite le nombre de tentatives de connexion avec **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** utilise **SQLDriverConnect**, le mot clé de chaîne de connexion **ConnectRetryCount** et les attributs de connexion pour récupérer le paramètre pour les tentatives de connexion et l’intervalle avant nouvelle tentative.  
   

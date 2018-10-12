@@ -1,13 +1,11 @@
 ---
-title: Méthode setByte (SQLServerCallableStatement) | Documents Microsoft
+title: SetByte, méthode (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setByte
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0fbb03a5-61ee-4fb8-9dea-dce5cb1a367e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58713170d335b3fa18385bc66f0cb627ad885947
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5149bbd4e1bf85f4a1e1e7ff923f59d1578814de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843694"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667777"
 ---
 # <a name="setbyte-method-sqlservercallablestatement"></a>Méthode setByte (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Définit le paramètre désigné selon la donnée **octets** valeur.  
+  Définit le paramètre désigné selon la valeur **d’octet** donnée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,20 +39,20 @@ public void setByte(java.lang.String sCol,
 #### <a name="parameters"></a>Paramètres  
  *sCol*  
   
- A **chaîne** qui contient le nom du paramètre.  
+ Valeur **chaîne** qui contient le nom du paramètre.  
   
- *B*  
+ *b*  
   
- A **octets** valeur.  
+ Valeur **d’octet**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode setByte est spécifiée par la méthode setByte dans l’interface java.sql.CallableStatement.  
+## <a name="remarks"></a>Notes   
+ Cette méthode setByte est spécifiée par la méthode setByte de l’interface java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

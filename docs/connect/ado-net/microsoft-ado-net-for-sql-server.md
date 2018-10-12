@@ -1,25 +1,22 @@
 ---
-title: Microsoft ADO.NET pour SQL Server | Documents Microsoft
+title: Microsoft ADO.NET pour SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11b52720be2b22b3bef6839623e960f205fe509f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: a237531d89aee072c234f57024a09fd1774f99f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288878"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765527"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET pour SQL Server
 
@@ -36,16 +33,16 @@ ADO.NET est la technologie principale d’accès aux données pour les langages 
 ## <a name="documentation"></a>Documentation  
 * [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
 * [SQL Server et ADO.NET](https://msdn.microsoft.com/library/kb9s9ks0.aspx)  
-* [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
+* [Espace de noms System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## <a name="community"></a>Communauté  
-* [Forum des fournisseurs managés ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
+* [Forum des Fournisseurs managés ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
 * [Forum DataSet ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
   
-## <a name="more-samples"></a>D’autres exemples  
-* [Exemples de Code ADO.NET](https://msdn.microsoft.com/library/dw70f090.aspx)  
-* [Prise en main de .NET Framework sur Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [Prise en main de .NET Core sur macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
-* [Prise en main de .NET Core sur Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
-* [Prise en main de .NET Core sur Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
+## <a name="more-samples"></a>Autres exemples  
+* [Exemples de code ADO.NET](https://msdn.microsoft.com/library/dw70f090.aspx)  
+* [Bien démarrer avec .NET Framework sur Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
+* [Bien démarrer avec .NET Core sur macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
+* [Bien démarrer avec .NET Core sur Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
+* [Bien démarrer avec .NET Core sur Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36380a9201dc7bdae74f2735c21857fc1e2cce20
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 02f767440858a0d32e3977d512485387bfcedd7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787198"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841497"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>Diagnostic de problèmes avec le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Même avec une application conçue et développée correctement, il est inévitable que des problèmes se produiront. Il est par conséquent important de disposer de techniques pour diagnostiquer ces problèmes. Lors de l'utilisation du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], vous pouvez rencontrer certains problèmes usuels, tels que l'utilisation d'une version incorrecte du pilote ou l'impossibilité de se connecter à une base de données.  
+  Même avec une application conçue et développée correctement, il est inévitable que des problèmes se produiront. Il est par conséquent important de disposer de techniques pour diagnostiquer ces problèmes. Voici deux problèmes courants parfois rencontrés avec [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] : ne pas avoir la bonne version du pilote ou ne pas parvenir à se connecter à une base de données.  
   
  Les rubriques de cette section discutent de différentes techniques de diagnostic de ces problèmes et d'autres, y compris la gestion des erreurs, la vérification de la version du pilote, le suivi et la résolution des problèmes de connectivité.  
   

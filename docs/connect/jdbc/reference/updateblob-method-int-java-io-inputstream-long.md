@@ -1,25 +1,22 @@
 ---
-title: Méthode updateBlob (int, java.io.InputStream, long) | Documents Microsoft
+title: updateBlob, méthode (int, java.io.InputStream, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2edf9b51-63e1-4c28-afdf-2d4af593d5f7
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58ad87c579c58eefc3d37ff545c9954d8abde483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e7e59ca60471e89da883b9fbaa4cf269ac33a0e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849704"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654797"
 ---
 # <a name="updateblob-method-int-javaioinputstream-long"></a>Méthode updateBlob (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,17 +43,17 @@ public void updateBlob(int columnIndex,
   
  *length*  
   
- A **long** qui indique la longueur du flux de données.  
+ Un **long** qui indique la longueur du flux.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode updateBlob est spécifiée par la méthode updateBlob dans l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthode updateBlob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [updateBlob, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

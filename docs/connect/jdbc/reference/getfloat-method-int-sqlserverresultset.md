@@ -1,13 +1,11 @@
 ---
-title: Méthode getFloat (int) (SQLServerResultSet) | Documents Microsoft
+title: GetFloat, méthode (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.getFloat (int)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 30863ef5-7a7c-440e-8fbb-426a99266ee1
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08ab7c1d0431c6bb3af9ade14041982d1ada9fad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f50325b245a821b114e7f8d9ca3898f195eae7cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834994"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810657"
 ---
-# <a name="getfloat-method-int-sqlserverresultset"></a>Méthode getFloat (int) (SQLServerResultSet)
+# <a name="getfloat-method-int-sqlserverresultset"></a>getFloat, méthode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de ce [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) de l’objet en un **float** dans le langage de programmation Java.  
+  Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme de **float** dans le langage de programmation Java.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,19 +41,19 @@ public float getFloat(int columnIndex)
  Un **int** qui indique l’index de colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
- A **float** valeur.  
+ Un **float** valeur.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getFloat est spécifiée par la méthode getFloat dans l’interface java.sql.ResultSet.  
   
- Cette méthode retourne tous les types de nombres avec Java **float** fidélité.  
+ Cette méthode retourne tous les types numériques avec la fidélité **float** Java.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthode getFloat &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   
- [Membres de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
+ [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
   

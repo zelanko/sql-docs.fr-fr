@@ -1,38 +1,35 @@
 ---
-title: 'Comment : gérer les erreurs et avertissements à l’aide du pilote SQLSRV | Documents Microsoft'
+title: Guide pratique pour gérer les erreurs et les avertissements avec le pilote SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16791a307fe317aa9495c5b4173cb1ebbb23d719
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: cc7a80e7c63a92863abdbcbba0475fe74f05a3c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307418"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799098"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Procédure : gérer les erreurs et avertissements à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Par défaut, le pilote SQLSRV traite les avertissements comme des erreurs ; un appel à une **sqlsrv** fonction qui génère une erreur ou un avertissement retourne **false**. Cette rubrique montre comment désactiver ce comportement par défaut et comment gérer les avertissements séparément des erreurs.  
+Par défaut, le pilote SQLSRV traite les avertissements comme des erreurs ; un appel à une fonction **sqlsrv** qui génère une erreur ou un avertissement retourne **false**. Cette rubrique montre comment désactiver ce comportement par défaut et comment gérer les avertissements séparément des erreurs.  
   
 > [!NOTE]  
 > Il existe quelques exceptions au comportement par défaut consistant à traiter les avertissements comme des erreurs. Les avertissements qui correspondent aux valeurs SQLSTATE 01000, 01001, 01003 et 01S02 ne sont jamais traités comme des erreurs.  
   
-## <a name="example"></a>Exemple  
-L’exemple de code suivant utilise deux fonctions définies par l’utilisateur, **DisplayErrors** et **DisplayWarnings**, pour gérer les erreurs et avertissements. L’exemple montre comment gérer séparément les avertissements et les erreurs en procédant comme suit :  
+## <a name="example"></a> Exemple  
+L’exemple de code suivant utilise deux fonctions définies par l’utilisateur, **DisplayErrors** et **DisplayWarnings**, pour gérer les erreurs et les avertissements. L’exemple montre comment gérer séparément les avertissements et les erreurs en procédant comme suit :  
   
 1.  Désactive le comportement par défaut consistant à traiter les avertissements comme des erreurs.  
   
@@ -42,11 +39,11 @@ L’exemple de code suivant utilise deux fonctions définies par l’utilisateur
   
 4.  Affiche les heures de congé restantes de chaque employé.  
   
-Dans le premier appel à une **sqlsrv** (fonction) ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), les avertissements sont traités comme des erreurs. Étant donné que les avertissements sont ajoutés à la collection d’erreurs, il est inutile de vérifier les avertissements séparément des erreurs. Dans les appels ultérieurs aux fonctions **sqlsrv** , en revanche, les avertissements ne sont pas traités comme des erreurs, vous devez donc vérifier explicitement et les avertissements et les erreurs.  
+Dans le premier appel d’une fonction **sqlsrv** ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), les avertissements sont traités comme des erreurs. Étant donné que les avertissements sont ajoutés à la collection d’erreurs, il est inutile de vérifier les avertissements séparément des erreurs. Dans les appels ultérieurs aux fonctions **sqlsrv** , en revanche, les avertissements ne sont pas traités comme des erreurs, vous devez donc vérifier explicitement et les avertissements et les erreurs.  
   
 Notez également que l’exemple de code vérifie les erreurs après chaque appel à une fonction **sqlsrv** . Il s’agit de la pratique recommandée.  
   
-Cet exemple suppose que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande. Quand l’exemple est exécuté sur une nouvelle installation de la base de données AdventureWorks, il génère trois avertissements et deux erreurs. Les deux premiers avertissements sont des avertissements standard émis quand vous vous connectez à une base de données. Le troisième avertissement se produit parce que les heures de congé disponibles d’un employé sont mises à jour vers une valeur inférieure à zéro. Les erreurs se produisent parce que les heures de congé disponibles d’un employé sont mises à jour vers une valeur inférieure à -40 heures, ce qui constitue une violation d’une contrainte sur la table.  
+Cet exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande. Quand l’exemple est exécuté sur une nouvelle installation de la base de données AdventureWorks, il génère trois avertissements et deux erreurs. Les deux premiers avertissements sont des avertissements standard émis quand vous vous connectez à une base de données. Le troisième avertissement se produit parce que les heures de congé disponibles d’un employé sont mises à jour vers une valeur inférieure à zéro. Les erreurs se produisent parce que les heures de congé disponibles d’un employé sont mises à jour vers une valeur inférieure à -40 heures, ce qui constitue une violation d’une contrainte sur la table.  
   
 ```  
 <?php  
@@ -203,7 +200,7 @@ function DisplayWarnings()
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Procédure : configurer la gestion des erreurs et avertissements à l’aide du pilote SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  

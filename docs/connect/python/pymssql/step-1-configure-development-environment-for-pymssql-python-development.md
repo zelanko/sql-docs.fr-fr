@@ -1,41 +1,38 @@
 ---
-title: 'Étape 1 : Configurer l’environnement de développement Python pymssql | Documents Microsoft'
+title: 'Étape 1 : Configurer l’environnement de développement Python pymssql | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a4a573ce609bfb5364a1dabac784eb760915b8a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b60c7aa0f53be6d9c9a249c69ace6780a318e6f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309518"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787447"
 ---
-# <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Étape 1 : Configurer l’environnement de développement pour pymssql développement de Python
-Vous devez configurer votre environnement de développement avec les composants requis pour développer une application à l’aide du pilote de Python pour SQL Server.    
+# <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Étape 1 : Configurer l’environnement de développement pour le développement Python pymssql
+Vous devez configurer votre environnement de développement avec la configuration requise pour développer une application en utilisant le pilote Python pour SQL Server.    
   
-Notez que les pilotes SQL Python utilisent le protocole TDS, qui est activé par défaut dans SQL Server et la base de données SQL Azure.  Aucune configuration supplémentaire n’est requise.  
+Notez que les pilotes SQL Python utilisent le protocole TDS, qui est activé par défaut dans SQL Server et de la base de données SQL Azure.  Aucune configuration supplémentaire n’est requise.  
   
 ## <a name="windows"></a>Windows  
   
-1. **Installer le runtime Python et pip Gestionnaire de package**  
+1. **Installer le runtime Python et le Gestionnaire de package pip**  
 A. Accédez à [python.org](https://www.python.org/downloads/)  
 B. Cliquez sur le lien de msi du programme d’installation Windows approprié.   
 c. Exécuter une fois téléchargé le fichier msi pour installer le runtime Python  
   
-2. **Télécharger le module pymssql** de [ici](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
+2. **Télécharger le module de pymssql** de [ici](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
   
-    Assurez-vous que vous choisissez le fichier whl correct.  Par exemple : Si vous utilisez Python 2.7 sur un ordinateur 64 bits : pymssql‑2.1.1‑cp27‑none‑win_amd64.whl. Une fois que vous téléchargez le fichier .whl placez-le dans le dossier C:/Python27.  
+    Veillez à que choisir le fichier whl correct.  Par exemple : Si vous utilisez Python 2.7 sur un ordinateur 64 bits : pymssql‑2.1.1‑cp27‑none‑win_amd64.whl. Une fois que vous téléchargez le fichier .whl placez-le dans le dossier C:/Python27.  
       
 3. **Ouvrez cmd.exe**  
   
@@ -48,12 +45,12 @@ c. Exécuter une fois téléchargé le fichier msi pour installer le runtime Pyt
   
 ## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
-1. **Installer le runtime Python et Gestionnaire de package de pip** Python est préinstallé sur la plupart des distributions de Ubuntu.  Si votre ordinateur ne dispose pas de python installé, vous pouvez obtenir un téléchargement de l’archive tar de source de [python.org](https://www.python.org/downloads/) et générer localement, ou vous pouvez utiliser le Gestionnaire de package :  
+1. **Installer le runtime Python et le Gestionnaire de package pip** Python est préinstallé sur la plupart des distributions d’Ubuntu.  Si votre ordinateur ne dispose pas de python installée, vous pouvez obtenir à télécharger l’archive tar source à partir de [python.org](https://www.python.org/downloads/) et de créer localement, ou vous pouvez utiliser le Gestionnaire de package :  
 ```  
 > sudo apt-get install python   
 ```  
   
-2.  **Ouvrez Terminal Server**  
+2.  **Ouvrir terminal**  
   
 3.  **Installer les dépendances et le module de pymssql**  
 ```  
@@ -65,19 +62,19 @@ c. Exécuter une fois téléchargé le fichier msi pour installer le runtime Pyt
   
 ## <a name="mac"></a>Mac  
   
-1. **Installer le runtime Python et pip Gestionnaire de package**  
+1. **Installer le runtime Python et le Gestionnaire de package pip**  
 A. Accédez à [python.org](https://www.python.org/downloads/)  
-B. Cliquez sur le lien de pkg du programme d’installation Mac approprié.   
-c. Exécuter une fois téléchargé le pkg pour installer le runtime Python  
+B. Cliquez sur le lien de package de programme d’installation Mac approprié.   
+c. Exécuter une fois téléchargé le package pour installer le runtime Python  
   
-2.  **Ouvrez Terminal Server**  
+2.  **Ouvrir terminal**  
   
 3. **Installer le Gestionnaire de package Homebrew**  
 ```  
 > ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 ```  
   
-4.  **Installer le module de FreeTDS**  
+4.  **Installer FreeTDS module**  
 ```  
 > brew install FreeTDS  
 ```  

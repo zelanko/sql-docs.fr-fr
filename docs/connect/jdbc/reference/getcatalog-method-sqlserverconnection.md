@@ -1,13 +1,11 @@
 ---
-title: Méthode (SQLServerConnection) getCatalog | Documents Microsoft
+title: getcatalog, méthode (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.getCatalog
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e87ef65f-4b5a-4e1c-8db5-7f0932390bb0
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6cc3aedba38d3ade6d08e1829d5970c2585cb1b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 04be6bfd2e90c63476ce671ce8e12e1103184f4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830504"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691879"
 ---
-# <a name="getcatalog-method-sqlserverconnection"></a>getCatalog (méthode) (SQLServerConnection)
+# <a name="getcatalog-method-sqlserverconnection"></a>getCatalog, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère le nom de catalogue actuel de ce [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objet.  
+  Récupère le nom de catalogue actuel de cet objet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,18 +36,18 @@ public java.lang.String getCatalog()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- A **chaîne** qui contient le nom du catalogue.  
+ Un **chaîne** qui contient le nom du catalogue.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getCatalog est spécifiée par la méthode getCatalog dans l’interface java.sql.Connection.  
   
- Retourne la propriété de catalogue actuel de l’objet SQLServerConnection, ou null s’il n’est pas défini. La propriété de catalogue est explicitement définie avec la [setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md) (méthode), soit implicitement mise à jour en lisant le changement d’environnement sur TDS pour le catalogue actuel.  
+ Retourne la propriété de catalogue actuel de l’objet SQLServerConnection, ou null si elle n’est pas définie. La propriété catalog est définie explicitement avec la méthode [setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md), ou mise à jour implicitement en lisant le changement d’environnement sur TDS pour le catalogue actuel.  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

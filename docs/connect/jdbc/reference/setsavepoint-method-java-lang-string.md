@@ -1,13 +1,11 @@
 ---
-title: Méthode setSavepoint (java.lang.String) | Documents Microsoft
+title: setsavepoint, méthode (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.setSavepoint (java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a38bd657439dab6c705c176b6bbe90ab5f643546
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5d583ad2b20639f3df9d37de5180b94bb4dc692a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845544"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721327"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>Méthode setSavepoint (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Crée un point d’enregistrement avec le nom donné dans la transaction actuelle et retourne le nouvel [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) objet qui le représente.  
+  Crée un point de sauvegarde avec le nom donné dans la transaction actuelle, puis retourne le nouvel objet [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) qui le représente.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +38,7 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
 #### <a name="parameters"></a>Paramètres  
  *sName*  
   
- A **chaîne** valeur qui contient le nom du point de sauvegarde.  
+ Valeur **String** contenant le nom du point de sauvegarde.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Un objet de point d’enregistrement.  
@@ -49,14 +46,14 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode setSavePoint est spécifiée par la méthode setSavePoint dans l’interface java.sql.Connection.  
   
- Le *sName* argument est automatiquement échappé à le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
+ L’argument *sName* est automatiquement placé dans une séquence d’échappement par [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthode setSavepoint &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   
- [Membres de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [setSavepoint, méthode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   
+ [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

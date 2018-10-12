@@ -1,34 +1,31 @@
 ---
-title: Membres de SQLServerBlob | Documents Microsoft
+title: Les membres de SQLServerBlob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d94397ab783335b64579f1cee93b51051fd8c2f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: be197521f64697973684728290422abd5e64fdca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846924"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731687"
 ---
 # <a name="sqlserverblob-members"></a>Membres de SQLServerBlob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Les tableaux suivants répertorient les membres qui sont exposées par le [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md) classe.  
+  Les tableaux suivants présentent les membres exposés par la classe [SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md).  
   
 ## <a name="constructors"></a>Constructeurs  
   
-|Nom| Description|  
+|Nom   |Description|  
 |----------|-----------------|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|Initialise une nouvelle instance de la classe SQLServerBlob.|  
   
@@ -40,15 +37,15 @@ ms.locfileid: "32846924"
   
 ## <a name="methods"></a>Méthodes  
   
-|Nom| Description|  
+|Nom   |Description|  
 |----------|-----------------|  
-|[Gratuit](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|Cette méthode libère l'objet BLOB, ainsi que les ressources qu'il détient.|  
+|[free](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|Cette méthode libère l'objet BLOB, ainsi que les ressources qu'il détient.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|Retourne un flux d'entrée pour la lecture des données depuis le BLOB.|  
-|[GetBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverblob.md)|Obtient les données de BLOB sous forme de tableau d'octets.|  
+|[getBytes](../../../connect/jdbc/reference/getbytes-method-sqlserverblob.md)|Obtient les données de BLOB sous forme de tableau d'octets.|  
 |[length](../../../connect/jdbc/reference/length-method-sqlserverblob.md)|Retourne le nombre d'octets dans l'objet BLOB.|  
-|[position](../../../connect/jdbc/reference/position-method-sqlserverblob.md)|Retourne la position d’un modèle spécifié dans l’objet BLOB selon le modèle donné et l’index de départ.|  
+|[position](../../../connect/jdbc/reference/position-method-sqlserverblob.md)|Retourne la position d’un modèle spécifié dans le BLOB, en fonction du modèle donné et de l’index de départ.|  
 |[setBinaryStream](../../../connect/jdbc/reference/setbinarystream-method-sqlserverblob.md)|Récupère un flux qui permet d'écrire sur la valeur du BLOB.|  
-|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)|Enregistre le tableau d'octets spécifié dans le BLOB, en démarrant à la position spécifiée, puis retourne le nombre d'octets écrits.|  
+|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)|Enregistre le tableau d'octets spécifié dans le BLOB, en démarrant à la position spécifiée, puis retourne le nombre d'octets écrits.|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlserverblob.md)|Tronque un BLOB selon la longueur.|  
   
 ## <a name="inherited-methods"></a>Méthodes héritées  
@@ -57,7 +54,7 @@ ms.locfileid: "32846924"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerBlob, classe](../../../connect/jdbc/reference/sqlserverblob-class.md)  
   
   

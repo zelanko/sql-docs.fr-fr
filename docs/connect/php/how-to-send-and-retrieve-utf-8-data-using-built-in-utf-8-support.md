@@ -1,29 +1,26 @@
 ---
-title: Guide pratique pour envoyer et récupérer des données UTF-8 à l’aide de la prise en charge UTF-8 intégrée
+title: Guide pratique pour envoyer et récupérer des données UTF-8 avec la prise en charge UTF-8 intégrée | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data, UTF-8 encoded data
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfeb770ad5151216fecbf796851f7eb06da8545f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: db9f2758c2df5585a4d9034df7b309ae4547e52c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784364"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633937"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Procédure : envoyer et récupérer des données UTF-8 à l’aide de la prise en charge UTF-8 intégrée
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,10 +37,10 @@ Pour envoyer ou récupérer des données encodées en UTF-8 sur le serveur :
   
     Quand vous spécifiez un jeu de caractères dans le cadre des options de connexion, le pilote part du principe que les autres chaînes de connexion utilisent ce même jeu de caractères. Les chaînes de nom de serveur et de requête sont également supposées utiliser le même jeu de caractères.  
   
-Notez que vous pouvez passer UTF-8 ou SQLSRV_ENC_CHAR à CharacterSet** (vous ne pouvez pas passer SQLSRV_ENC_BINARY). L’encodage par défaut est SQLSRV_ENC_CHAR.  
+Vous pouvez transmettre UTF-8 ou SQLSRV_ENC_CHAR à **CharacterSet**, mais pas transmettre SQLSRV_ENC_BINARY. L’encodage par défaut est SQLSRV_ENC_CHAR.  
   
 ## <a name="example"></a> Exemple  
-L’exemple suivant montre comment envoyer et récupérer des données encodées en UTF-8 en spécifiant le jeu de caractères UTF-8 au moment de l’établissement de la connexion. L’exemple met à jour la colonne Comments de la table Production.ProductReview pour un ID d’évaluation spécifié. L’exemple récupère également les données qui viennent d’être mises à jour et les affiche. Notez que la colonne Comments est de type nvarcahr(3850)**. Notez également qu’avant que les données ne soient envoyées au serveur, elles sont encodées en UTF-8 à l’aide de la fonction utf8_encode** PHP. Cette opération est effectuée à des fins de démonstration uniquement. Dans un scénario d’application réelle, vous débuteriez avec des données encodées en UTF-8.  
+L’exemple suivant montre comment envoyer et récupérer des données encodées en UTF-8 en spécifiant le jeu de caractères UTF-8 au moment de l’établissement de la connexion. L’exemple met à jour la colonne Comments de la table Production.ProductReview pour un ID d’évaluation spécifié. L’exemple récupère également les données qui viennent d’être mises à jour et les affiche. Notez que la colonne Comments est de type **nvarchar(3850)**. Notez également que, avant d’être envoyées au serveur, les données sont encodées en UTF-8 avec la fonction **utf8_encode** PHP. Cette opération est effectuée à des fins de démonstration uniquement. Dans un scénario d’application réelle, vous débuteriez avec des données encodées en UTF-8.  
   
 L’exemple part du principe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans le navigateur quand l’exemple est exécuté à partir du navigateur.  
   
@@ -129,7 +126,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Pour plus d’informations sur le stockage des données Unicode, consultez [Utilisation de données Unicode](https://msdn.microsoft.com/library/ms175180.aspx).  
+Pour plus d’informations sur le stockage des données Unicode, voir [Utiliser des données Unicode](https://msdn.microsoft.com/library/ms175180.aspx).  
   
 ## <a name="example"></a> Exemple  
 L’exemple suivant est similaire au premier exemple, mais au lieu de spécifier le jeu de caractères UTF-8 sur la connexion, il montre comment spécifier le jeu de caractères UTF-8 sur la colonne.  

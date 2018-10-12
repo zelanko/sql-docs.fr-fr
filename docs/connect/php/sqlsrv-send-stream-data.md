@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_send_stream_data | Documents Microsoft
+title: sqlsrv_send_stream_data | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_send_stream_data
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99be2cc8d56cde6ce960b5fc8d6caa2fab156a74
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c1ce0db099046fb243151a7977823ab0fcf458ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309488"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790607"
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Envoie des données à partir de flux de paramètres vers le serveur. Jusqu'à huit kilo-octets (8 Ko) de données est envoyé à chaque appel à **sqlsrv_send_stream_data**.  
+Envoie des données à partir de flux de paramètres vers le serveur. Jusqu’à huit kilo-octets (8 Ko) de données sont envoyés lors de chaque appel de **sqlsrv_send_stream_data**.  
   
 > [!NOTE]  
 > Par défaut, toutes les données de flux sont envoyées au serveur quand une requête est exécutée. Si vous ne changez pas ce comportement par défaut, vous n’avez pas à utiliser **sqlsrv_send_stream_data** pour envoyer des données de flux au serveur. Pour plus d’informations sur la modification du comportement par défaut, consultez la section Paramètres de [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
@@ -46,11 +43,11 @@ sqlsrv_send_stream_data( resource $stmt)
 #### <a name="parameters"></a>Paramètres  
 *$stmt*: ressource d’instruction correspondant à une instruction exécutée.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 Valeur booléenne : **true** s’il y a davantage de données à envoyer. Dans le cas contraire, la valeur est **false**.  
   
-## <a name="example"></a>Exemple  
-L’exemple suivant ouvre une évaluation de produit sous forme de flux et l’envoie au serveur. Le comportement par défaut qui consiste à envoyer toutes les données de flux au moment de l’exécution est désactivé. L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a> Exemple  
+L’exemple suivant ouvre une évaluation de produit sous forme de flux et l’envoie au serveur. Le comportement par défaut qui consiste à envoyer toutes les données de flux au moment de l’exécution est désactivé. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -98,7 +95,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Mise à jour des données &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

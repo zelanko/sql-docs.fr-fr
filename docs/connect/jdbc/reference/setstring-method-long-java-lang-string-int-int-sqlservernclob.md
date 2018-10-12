@@ -1,30 +1,27 @@
 ---
-title: Méthode setString (long, java.lang.String, int, int) - NClob | Documents Microsoft
+title: SetString, méthode (long, java.lang.String, int, int) - NClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2d5e9f50-15b2-4c76-8bfc-3b5be49c2781
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d38e6265e5516f92155b4e69d7e7b2c61b8f2bd0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 58a26b71787e154acec6add71ecc868b438c2dec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810727"
 ---
 # <a name="setstring-method-long-javalangstring-int-int-sqlservernclob"></a>Méthode setString (long, java.lang.String, int, int) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Écrit la chaîne spécifiée dans le NCLOB en commençant à la position spécifiée, en fonction de l’offset spécifié et la longueur.  
+  Écrit la chaîne spécifiée dans le NCLOB, en commençant à la position spécifiée, en fonction du décalage et de la longueur spécifiés.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,17 +34,17 @@ int setString(long pos,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *bons de commande*  
+ *Points de vente*  
   
- Position à laquelle démarrer l’écriture dans le **NCLOB**; la première position est 1.  
+ Position à laquelle commencera l’écriture dans le **NCLOB** ; la première position est 1.  
   
- *Str*  
+ *str*  
   
- La chaîne à écrire dans le **NCLOB**.  
+ String à écrire sur le **NCLOB**.  
   
  *offset*  
   
- Offset dans *str* pour démarrer la lecture des caractères à écrire.  
+ Décalage dans *str* à respecter pour démarrer la lecture des caractères à écrire.  
   
  *len*  
   
@@ -56,12 +53,12 @@ int setString(long pos,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode setString est spécifiée par la méthode setString dans l’interface java.sql.NClob.  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
- [Membres de SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerNClob, méthodes](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
+ [SQLServerNClob, membres](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob, classe](../../../connect/jdbc/reference/sqlservernclob-class.md)  
   
   

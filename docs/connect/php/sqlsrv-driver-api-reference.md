@@ -1,30 +1,27 @@
 ---
-title: Référence d’API du pilote SQLSRV | Documents Microsoft
+title: Référence API du pilote SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6722c709e016ab0a78b682a022575bbee9b89018
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b1b1b94952006e338b324e7ca1da1d3bcbf8c2a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308998"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756587"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>référence d’API du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Le nom de l’API pour le pilote SQLSRV dans [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] est **sqlsrv**. Tous les **sqlsrv** fonctions commencent par **sqlsrv_** suivi d’un verbe ou d’un substantif. Celles qui sont suivies d’un verbe effectuent une action tandis que celles qui sont suivies d’un substantif retournent des métadonnées.  
+Le nom de l’API pour le pilote SQLSRV dans [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] est **sqlsrv**. Tous les fonctions **sqlsrv** commencent par **sqlsrv_** et sont suivies d’un verbe ou d’un nom. Celles qui sont suivies d’un verbe effectuent une action tandis que celles qui sont suivies d’un substantif retournent des métadonnées.  
   
 ## <a name="in-this-section"></a>Dans cette section  
 Le pilote SQLSRV contient les fonctions suivantes :  
@@ -61,12 +58,12 @@ Le pilote SQLSRV contient les fonctions suivantes :
 ## <a name="reference"></a>Référence  
 [Manuel PHP](http://php.net/manual)  
   
-## <a name="see-also"></a>Voir aussi  
-[Vue d’ensemble des pilotes Microsoft SQL Server pour PHP](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a> Voir aussi  
+[Vue d’ensemble de Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[Mise en route avec les pilotes Microsoft PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Mise en route avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
   

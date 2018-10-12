@@ -1,13 +1,11 @@
 ---
-title: Méthode setString (long, java.lang.String) | Documents Microsoft
+title: Méthode setString (long, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerClob.setString (long, java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7194a8778ecae136d7a70086c5fa2e9353988a93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4a5fd1c9f0f876f024047fab5e28fb31ba29b687
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845304"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839107"
 ---
 # <a name="setstring-method-long-javalangstring"></a>Méthode setString (long, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Écrit la donnée **chaîne** dans le CLOB, en commençant à la position donnée.  
+  Écrit la chaîne **String** donnée dans le CLOB, en commençant à la position donnée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +37,13 @@ public int setString(long pos,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *bons de commande*  
+ *Points de vente*  
   
  Position à laquelle démarrer l'écriture dans l'objet CLOB.  
   
- *S*  
+ *s*  
   
- Le **chaîne** à écrire dans le CLOB.  
+ String à écrire sur le **CLOB**.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Nombre de caractères écrits.  
@@ -54,15 +51,15 @@ public int setString(long pos,
 ## <a name="exceptions"></a>Exceptions  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode setString est spécifiée par la méthode setString dans l’interface java.sql.Clob.  
   
  Les données de caractères sont remplacées en démarrant à la position spécifiée et peuvent dépasser la longueur initiale de l'objet CLOB. La spécification d'une valeur position+1 permet d'ajouter la chaîne. La spécification d'une valeur position+2 ou supérieure (ou de zéro ou d'une valeur inférieure) entraîne la levée d'une erreur de position.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthode setString &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
- [Méthodes SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
- [Membres de SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
+ [SQLServerClob, méthodes](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
+ [SQLServerClob, membres](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob, classe](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   

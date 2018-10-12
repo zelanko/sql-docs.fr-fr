@@ -1,25 +1,22 @@
 ---
-title: Méthode getClientInfo (SQLServerConnection) | Documents Microsoft
+title: getclientinfo, méthode (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 241536e1-fae6-4980-85a5-d8cfcd50b8bd
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1cb2d498c6f8b40ff332a4e6b93a7f1e3df96e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8d6e3d7a9fc9c5706943d7f8cab88d65e5f7c4dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831414"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837683"
 ---
 # <a name="getclientinfo-method-sqlserverconnection"></a>Méthode getClientInfo (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,13 +25,13 @@ ms.locfileid: "32831414"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Nom| Description|  
+|Nom   |Description|  
 |----------|-----------------|  
-|[Méthode getClientInfo&#40;&#41;](../../../connect/jdbc/reference/getclientinfo-method.md)|Récupère une liste contenant le nom et la valeur actuelle de chaque propriété d'informations client prise en charge par le pilote JDBC.|  
-|[Méthode getClientInfo &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getclientinfo-method-java-lang-string.md)|Récupère la valeur de la propriété d'informations client spécifiée.|  
+|[getClientInfo, méthode &#40;&#41;](../../../connect/jdbc/reference/getclientinfo-method.md)|Récupère une liste contenant le nom et la valeur actuelle de chaque propriété d'informations client prise en charge par le pilote JDBC.|  
+|[getClientInfo, méthode &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getclientinfo-method-java-lang-string.md)|Récupère la valeur de la propriété d'informations client spécifiée.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

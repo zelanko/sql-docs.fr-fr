@@ -1,34 +1,31 @@
 ---
-title: Exemple d’Application (pilote PDO_SQLSRV) | Documents Microsoft
+title: Exemple d’Application (pilote PDO_SQLSRV) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a75fd91a8ac3be76198e545a6d73237e976161b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: f0c3f2bd194d211ef3c48aa0fe9e37b09f44bf11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307628"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651977"
 ---
-# <a name="example-application-pdosqlsrv-driver"></a>Exemple d’Application (pilote PDO_SQLSRV)
+# <a name="example-application-pdosqlsrv-driver"></a>Exemple d’application (pilote PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-L’exemple d’application évaluations de produits AdventureWorks est une application Web qui utilise le pilote PDO_SQLSRV de la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. L’application permet à un utilisateur de rechercher des produits en entrant un mot clé, de consulter les évaluations d’un produit sélectionné, de rédiger une évaluation pour un produit sélectionné et de télécharger une image pour un produit sélectionné.  
+L’exemple d’application Évaluations de produits AdventureWorks est une application web qui utilise le pilote PDO_SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. L’application permet à un utilisateur de rechercher des produits en entrant un mot clé, de consulter les évaluations d’un produit sélectionné, de rédiger une évaluation pour un produit sélectionné et de télécharger une image pour un produit sélectionné.  
   
 ### <a name="running-the-example-application"></a>Exécution de l’exemple d’application  
   
-1.  Installez [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations, consultez [prise en main de la Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  Installez [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations, consultez [mise en route avec le Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  Copiez le code répertorié plus loin dans ce document dans deux fichiers : adventureworks_demo.php et photo.php.  
 3.  Placez les fichiers adventureworks_demo.php et photo.php dans le répertoire racine de votre serveur web.  
 4.  Exécutez l’application en démarrant http://localhost/adventureworks_demo.php depuis votre navigateur.  
@@ -38,7 +35,7 @@ Pour exécuter l’exemple d’application Évaluations de produits AdventureWor
   
 -   Votre système répond à la configuration requise pour [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations, consultez [configuration système requise pour le Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
  -   Les fichiers adventureworks_demo.php et photo.php sont dans le répertoire racine de votre serveur web. Les fichiers doivent contenir le code répertorié plus loin dans ce document.  
--   SQL Server 2005 ou SQL Server 2008, avec la [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données attachée, est installé sur l’ordinateur local.  
+-   SQL Server 2005 ou SQL Server 2008, avec la base de données [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) attachée, est installé sur l’ordinateur local.  
 -   Un navigateur web est installé.  
   
 ## <a name="demonstrates"></a>Montre  
@@ -49,10 +46,10 @@ L’exemple d’application Évaluations de produits AdventureWorks illustre ce 
 -   Comment récupérer des données.  
 -   Comment rechercher les erreurs.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple d’application Évaluations de produits AdventureWorks retourne les informations sur les produits à partir de la base de données pour les produits dont les noms contiennent une chaîne entrée par l’utilisateur. Dans la liste des produits retournés, l’utilisateur peut voir les évaluations, voir une image, télécharger une image et rédiger une évaluation pour un produit sélectionné.  
   
-Placez le code suivant dans un fichier nommé adventureworks_demo_pdo.php :  
+Placez le code suivant dans un fichier nommé adventureworks_demo_pdo.php :  
   
 ```  
 <!--=============  
@@ -455,10 +452,10 @@ function PopulateProductsTable( $values )
 </html>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Le script photo.php retourne la photo du produit correspondant au **ProductID**spécifié. Ce script est appelé depuis le script adventureworks_demo.php.  
   
-Placez le code suivant dans un fichier nommé photo_pdo.php :  
+Placez le code suivant dans un fichier nommé photo_pdo.php :  
   
 ```  
 <?php  
@@ -507,7 +504,7 @@ die( print_r( $e->getMessage() ) );
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)
 
 [Comparaison des fonctions d’exécution](../../connect/php/comparing-execution-functions.md)

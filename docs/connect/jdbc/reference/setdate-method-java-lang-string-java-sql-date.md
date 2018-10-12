@@ -1,13 +1,11 @@
 ---
-title: chaîne de méthode à la valeur de date - setDate méthode setDate | Documents Microsoft
+title: Méthode setDate setDate (méthode) à la valeur de date - chaîne | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setDate (java.lang.String, java.sql.Date)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4762e2bd-5e94-4562-97d5-f023ecffc08c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a06dc5093726c43075a4a9bd2c59c9a5843c710
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: da5eedcbdd76e16da87f8e84c35fa07ef2cc5ccc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842854"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683537"
 ---
 # <a name="setdate-method-javalangstring-javasqldate"></a>Méthode setDate (java.lang.String, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Définit le paramètre désigné à la valeur de date donnée.  
+  Définit le paramètre désigné selon la valeur de date donnée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,20 +39,20 @@ public void setDate(java.lang.String sCol,
 #### <a name="parameters"></a>Paramètres  
  *sCol*  
   
- A **chaîne** qui contient le nom du paramètre.  
+ Valeur **chaîne** qui contient le nom du paramètre.  
   
- *D*  
+ *d*  
   
  Un objet Date.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode setDate est spécifiée par la méthode setDate dans l’interface java.sql.CallableStatement.  
+## <a name="remarks"></a>Notes   
+ Cette méthode setDate est spécifiée par la méthode setDate de l’interface java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

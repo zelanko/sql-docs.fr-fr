@@ -1,13 +1,11 @@
 ---
-title: Méthode getBestRowIdentifier (SQLServerDatabaseMetaData) | Documents Microsoft
+title: Méthode getBestRowIdentifier (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getBestRowIdentifier
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c36b69543f5253a4d62c1d4b149933febcf0b4b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 462de181aca55cce38d1e26f7932fe0003a0c323
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832974"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730319"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>Méthode getBestRowIdentifier (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,19 +42,19 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- A **chaîne** qui contient le nom du catalogue.  
+ Un **chaîne** qui contient le nom du catalogue.  
   
  *schema*  
   
- A **chaîne** qui contient le nom du schéma.  
+ **Chaîne** contenant le nom du schéma.  
   
  *table*  
   
- A **chaîne** qui contient le nom de table.  
+ **Chaîne** qui contient le nom de la table.  
   
  *portée*  
   
- Un **int** qui indique l’étendue d’intérêt. Les valeurs peuvent être les suivants :  
+ Un **int** qui indique la portée d’intérêt. Quelques valeurs possibles :  
   
  bestRowTemporary (0)  
   
@@ -65,34 +62,34 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  bestRowSession (2)  
   
- *Accepte les valeurs null*  
+ *nullable*  
   
- **true** pour inclure les colonnes autorisant des valeurs NULL. Dans le cas contraire, la valeur est **false**.  
+ **true** pour inclure des colonnes de type nullable. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="return-value"></a>Valeur retournée  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objet.  
+ Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getBestRowIdentifier est spécifiée par la méthode getBestRowIdentifier dans l’interface java.sql.DatabaseMetaData.  
   
- Le jeu de résultats retourné par la méthode getBestRowIdentifier contient les informations suivantes :  
+ Le jeu de résultats retourné par la méthode getBestRowIdentifier contient les informations suivantes :  
   
-|Nom|Type| Description|  
+|Nom   |Type|Description|  
 |----------|----------|-----------------|  
-|SCOPE|short|Étendue des résultats retournés. Il peut prendre l’une des valeurs suivantes :<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
-|COLUMN_NAME|Chaîne|Nom de la colonne.|  
+|SCOPE|short|Étendue des résultats retournés. Il peut avoir une des valeurs suivantes :<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
+|COLUMN_NAME|String|Nom de la colonne.|  
 |DATA_TYPE|short|Type de données SQL de java.sql.Types.|  
-|TYPE_NAME|Chaîne|Nom du type de données.|  
-|COLUMN_SIZE|int|La précision de la colonne.|  
-|BUFFER_LENGTH|int|Longueur du tampon.|  
-|DECIMAL_DIGITS|short|L’échelle de la colonne.|  
-|PSEUDO_COLUMN|short|Indique si la colonne est une pseudo-colonne. Il peut prendre l’une des valeurs suivantes :<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
+|TYPE_NAME|String|Nom du type de données.|  
+|COLUMN_SIZE|INT|Précision de la colonne.|  
+|BUFFER_LENGTH|INT|Longueur du tampon.|  
+|DECIMAL_DIGITS|short|Échelle de la colonne.|  
+|PSEUDO_COLUMN|short|Indique si la colonne est une pseudo-colonne. Il peut avoir une des valeurs suivantes :<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
   
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser la méthode getBestRowIdentifier pour renvoyer des informations sur le meilleur identificateur de ligne pour la table Person.Contact dans le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] base de données exemple.  
+## <a name="example"></a> Exemple  
+ L’exemple suivant montre comment utiliser la méthode getBestRowIdentifier pour retourner des informations sur le meilleur identificateur de ligne pour la table Person.Contact dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetBestRowIdentifier(Connection con) {  
@@ -117,9 +114,9 @@ public static void executeGetBestRowIdentifier(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Membres de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
+ [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

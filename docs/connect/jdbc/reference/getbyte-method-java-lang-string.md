@@ -1,13 +1,11 @@
 ---
-title: Méthode getByte (java.lang.String) | Documents Microsoft
+title: GetByte, méthode (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getByte (java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2071c1e4-eca0-4ed4-b50f-85d3c861185d
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28466c782ed01fd594720874b8379b3739f72ecd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4a2bf6cbf3f61dc56bde9c1b6804dfb62f8e2bf4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830344"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694817"
 ---
 # <a name="getbyte-method-javalangstring"></a>Méthode getByte (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère la valeur du paramètre désigné en tant qu’un **octets** étant donné le nom du paramètre de valeur.  
+  Récupère la valeur du paramètre désigné sous forme de valeur **d’octet** en fonction du nom de paramètre.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,20 +38,20 @@ public byte getByte(java.lang.String sCol)
 #### <a name="parameters"></a>Paramètres  
  *sCol*  
   
- A **chaîne** qui contient le nom du paramètre.  
+ Valeur **chaîne** qui contient le nom du paramètre.  
   
 ## <a name="return-value"></a>Valeur retournée  
- A **octets** valeur.  
+ Valeur **d’octet**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode getByte est spécifiée par la méthode getByte dans l’interface java.sql.CallableStatement.  
+## <a name="remarks"></a>Notes   
+ Cette méthode getByte est spécifiée par la méthode getByte de l’interface java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthode getByte &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
- [Membres de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [getByte, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbyte-method-sqlservercallablestatement.md)   
+ [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

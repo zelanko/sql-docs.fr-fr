@@ -1,13 +1,11 @@
 ---
-title: getResultSet (méthode) (SQLServerStatement) | Documents Microsoft
+title: getResultSet, méthode (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.getResultSet
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 929a14e2-8e98-4c32-89aa-86733c717ec1
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cfa88e7501f9781507b72132cc4b7fa703726cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4ad973f88cc4a3e8c9cbd7591df69596d7038478
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742167"
 ---
-# <a name="getresultset-method-sqlserverstatement"></a>getResultSet (méthode) (SQLServerStatement)
+# <a name="getresultset-method-sqlserverstatement"></a>getResultSet, méthode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère le résultat actuel en tant qu’un [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objet.  
+  Récupère le résultat actuel sous forme d’objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,11 +41,11 @@ public final java.sql.ResultSet getResultSet()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getResultSet est spécifiée par la méthode getResultSet de l’interface java.sql.Statement.  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: setArray (méthode) (SQLServerPreparedStatement) | Documents Microsoft
+title: setArray, méthode (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setArray
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b7fb66d4-6a42-43d0-ba68-8514816917cb
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64aab9d7796cfcf9ddf209b5473ac0d389d9d29f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1fd6a0b0b0e60543beb6a943d80d5cf0cf40c7b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841674"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811617"
 ---
-# <a name="setarray-method-sqlserverpreparedstatement"></a>setArray (méthode) (SQLServerPreparedStatement)
+# <a name="setarray-method-sqlserverpreparedstatement"></a>setArray, méthode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Définit le nombre de paramètre désigné à l’objet de tableau donné.  
+  Définit le numéro de paramètre désigné selon l’objet Array donné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,9 +37,9 @@ public final void setArray(int i,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *J’ai*  
+ *i*  
   
- Un **int** qui indique le nombre de paramètres.  
+ Un **int** qui indique le numéro de paramètre.  
   
  *x*  
   
@@ -51,10 +48,10 @@ public final void setArray(int i,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode setArray est spécifiée par la méthode setArray dans l’interface java.sql.PreparedStatement.  
+## <a name="remarks"></a>Notes   
+ Cette méthode setArray est spécifiée par la méthode setArray de l’interface java.sql.PreparedStatement.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement, classe](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

@@ -3,19 +3,18 @@ title: Utilisation d’Always Encrypted avec Microsoft Drivers for PHP for SQL S
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 12f0427b4ff23452f244c830c9116913dfb03968
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695677"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Utilisation d’Always Encrypted avec Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "39174966"
 
 Cet article fournit des informations sur la façon de développer des applications PHP avec [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) et [pilotes PHP pour SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md).
 
-Always Encrypted permet aux applications clientes de chiffrer des données sensibles et de ne jamais révéler les données ou les clés de chiffrement à SQL Server ou Azure SQL Database. Un pilote avec Always Encrypted, tels que le pilote ODBC pour SQL Server, en toute transparence chiffre et déchiffre les données sensibles dans l’application cliente. Le pilote détermine automatiquement les paramètres de requêtes qui correspondent aux colonnes de base de données sensibles (protégées avec Always Encrypted) et chiffre les valeurs de ces paramètres avant de transmettre les données à SQL Server ou Azure SQL Database. De même, il déchiffre de manière transparente les données récupérées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête. Pour plus d’informations, consultez [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Les pilotes PHP pour SQL Server utilisent le pilote ODBC pour SQL Server chiffrer les données sensibles.
+Always Encrypted permet aux applications clientes de chiffrer des données sensibles et de ne jamais révéler les données ou les clés de chiffrement à SQL Server ou Azure SQL Database. Un pilote compatible avec Always Encrypted, comme ODBC Driver for SQL Server, chiffre et déchiffre de manière transparente les données sensibles dans l’application cliente. Le pilote détermine automatiquement les paramètres de requêtes qui correspondent aux colonnes de base de données sensibles (protégées avec Always Encrypted) et chiffre les valeurs de ces paramètres avant de transmettre les données à SQL Server ou Azure SQL Database. De même, il déchiffre de manière transparente les données récupérées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête. Pour plus d’informations, consultez [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Les pilotes PHP pour SQL Server utilisent le pilote ODBC pour SQL Server chiffrer les données sensibles.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
@@ -154,7 +153,7 @@ $stmt->execute();
 ### <a name="plaintext-data-retrieval-example"></a>Exemple d’extraction de données en texte clair
 
 Les exemples suivants montrent le filtrage des données en fonction des valeurs chiffrées et la récupération des données de texte en clair de colonnes chiffrées à l’aide les pilotes SQLSRV et PDO_SQLSRV. Notez les points suivants :
- -   La valeur utilisée dans la clause WHERE pour filtrer sur la colonne SSN doit être transmis à l’aide du paramètre de liaison, afin que le pilote peut chiffrer de manière transparente avant de les envoyer au serveur.
+ -   La valeur utilisée dans la clause WHERE pour filtrer la colonne SSN doit être transmise avec un paramètre bind, afin que le pilote puisse la chiffrer de manière transparente avant de l’envoyer au serveur.
  -   Lorsque vous exécutez une requête avec des paramètres liés, les pilotes PHP détermine automatiquement le type SQL pour l’utilisateur, sauf si l’utilisateur spécifie explicitement le type SQL lors de l’utilisation du pilote SQLSRV.
  -   Toutes les valeurs sont imprimées par le programme sont en texte clair, étant donné que le pilote déchiffre de manière transparente les données récupérées à partir des colonnes SSN et BirthDate.
  
@@ -229,7 +228,7 @@ Always Encrypted ne prend en charge que peu de conversions de types de données 
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Erreurs dues au passage de texte en clair au lieu de valeurs chiffrées
 
-Les valeurs qui ciblent une colonne chiffrée doivent être chiffré avant d’être envoyées au serveur. Une tentative d’insertion, de modifier ou de filtrer par une valeur en texte clair sur génère une colonne chiffrée une erreur. Pour éviter ces erreurs, effectuez les vérifications suivantes :
+Les valeurs qui ciblent une colonne chiffrée doivent être chiffré avant d’être envoyées au serveur. Toute tentative d’insertion, de modification ou de filtrage par une valeur en texte clair dans une colonne chiffrée entraîne une erreur. Pour éviter ces erreurs, effectuez les vérifications suivantes :
  -   Always Encrypted est activé (dans la chaîne de connexion, définissez la `ColumnEncryption` mot clé à `Enabled`).
  -   Utilisez un paramètre de liaison pour envoyer des données ciblant des colonnes chiffrées. L’exemple suivant montre une requête qui filtre incorrectement par une littéral ou d’une constante sur une colonne chiffrée (SSN) :
 ```
@@ -238,7 +237,7 @@ $query = "SELET [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients
 
 ## <a name="controlling-performance-impact-of-always-encrypted"></a>Contrôle de l’impact d’Always Encrypted sur les performances
 
-Étant donné qu’Always Encrypted est une technologie de chiffrement côté client, la dégradation des performances s’observe côté client, et non dans la base de données. Outre le coût des opérations de chiffrement et de déchiffrement, les autres sources de dégradation des performances côté client sont les suivantes :
+Always Encrypted étant une technologie de chiffrement côté client, la dégradation des performances s’observe côté client, et non dans la base de données. Outre le coût des opérations de chiffrement et de déchiffrement, les autres sources de dégradation des performances côté client sont les suivantes :
  -   Allers-retours supplémentaires vers la base de données afin de récupérer des métadonnées pour les paramètres de requête.
  -   Appels au magasin de clés principales de colonne pour accéder à une clé principale de colonne.
  
@@ -266,7 +265,7 @@ Pour obtenir la valeur de texte en clair de l’un ECEK, le pilote obtient d’a
 
 Microsoft Driver 5.3.0 for PHP for SQL Server, uniquement Windows Certificate Store Provider et Azure Key Vault sont prises en charge. L’autre fournisseur de magasin de clés pris en charge par le pilote ODBC (fournisseur de magasin de clés personnalisé) n’est pas encore pris en charge.
 
-### <a name="using-the-windows-certificate-store-provider"></a>L’utilisation du fournisseur de Store de certificat Windows
+### <a name="using-the-windows-certificate-store-provider"></a>Avec le fournisseur du magasin de certificats Windows
 
 Le pilote ODBC pour SQL Server sur Windows inclut un fournisseur de magasin de clé principale de colonne intégré pour le Store de certificat Windows nommé `MSSQL_CERTIFICATE_STORE`. (Ce fournisseur n’est pas disponible sur Mac OS ou Linux). Avec ce fournisseur, la clé principale de colonne sont stockées localement sur l’ordinateur client et aucune configuration supplémentaire par l’application n’est nécessaire pour l’utiliser avec le pilote. Toutefois, l’application doit avoir accès au certificat et sa clé privée dans le magasin. Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 

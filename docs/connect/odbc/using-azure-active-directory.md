@@ -5,21 +5,18 @@ ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b1e12a4586cc063f6f4e556894b5da1e7f99eff
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7486e97fb0efe9fffa9fe6eb49ee75cc6d75bfce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983675"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634999"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Utilisation d’Azure Active Directory avec ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,6 +24,9 @@ ms.locfileid: "38983675"
 ## <a name="purpose"></a>Fonction
 
 Le pilote Microsoft ODBC pour SQL Server avec la version 13.1 ou version ultérieure permet les applications ODBC pour se connecter à une instance de SQL Azure à l’aide d’une identité fédérée dans Azure Active Directory avec un nom d’utilisateur/mot de passe, un jeton d’accès Azure Active Directory ou Windows Authentification intégrée (_uniquement les pilotes Windows_). Pour le pilote ODBC version 13.1, l’accès Azure Active Directory est l’authentification par jeton _Windows uniquement_. La version 17 du pilote ODBC et au-dessus de la prise en charge de cette authentification sur toutes les plateformes (Windows, Linux et Mac). Une nouvelle authentification interactive Azure Active Directory avec l’ID de connexion est introduite dans le pilote ODBC version 17.1 pour Windows. Tous ces éléments sont réalisées grâce à l’utilisation de la nouvelle source de données et les mots clés de chaîne de connexion et les attributs de connexion.
+
+> [!NOTE]
+> Le pilote ODBC sur Linux et macOS ne prend pas en charge Active Directory Federation Services. Si vous utilisez l’authentification du nom d’utilisateur/mot de passe Azure Active Directory à partir de Linux ou macOS client et votre configuration Active Directory comprend les Services fédérés, l’authentification peut échouer.
 
 ## <a name="new-andor-modified-dsn-and-connection-string-keywords"></a>DSN nouveaux et/ou modifié et les mots clés de chaîne de connexion
 
@@ -65,7 +65,7 @@ Il est possible d’utiliser le nouveau répertoire Azure AD les options d’aut
 
 ![CreateNewDSN_ADPassword.png](windows/CreateNewDSN_ADPassword.png)
 
-`Authentication=ActiveDirectoryInteractive` pour l’authentification interactive d’Azure Active Directory pour SQL Azure
+`Authentication=ActiveDirectoryInteractive` pour l’authentification interactive Azure Active Directory à SQL Azure
 
 ![CreateNewDSN_ADInteractive.png](windows/CreateNewDSN_ADInteractive.png)
 

@@ -1,13 +1,11 @@
 ---
-title: getTransactionIsolation (méthode) (SQLServerConnection) | Documents Microsoft
+title: getTransactionIsolation, méthode (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.getTransactionIsolation
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 088e931920780ec338caeb889e6c1774e47cddda
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2ede685773480a1651158b2098796f0fd3fffff8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838944"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779057"
 ---
-# <a name="gettransactionisolation-method-sqlserverconnection"></a>getTransactionIsolation (méthode) (SQLServerConnection)
+# <a name="gettransactionisolation-method-sqlserverconnection"></a>getTransactionIsolation, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère le niveau d’isolation de transaction actuel de ce [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objet.  
+  Récupère le niveau d’isolation actuel de la transaction de cet objet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +36,7 @@ public int getTransactionIsolation()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** valeur contenant l’un des niveaux d’isolation suivants :  
+ Valeur **int** contenant l’un des niveaux d’isolation suivants :  
   
  TRANSACTION_NONE  
   
@@ -56,11 +53,11 @@ public int getTransactionIsolation()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode getTransactionIsolation est spécifiée par la méthode getTransactionIsolation dans l’interface java.sql.Connection.  
   
-## <a name="see-also"></a>Voir aussi  
- [Membres de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
