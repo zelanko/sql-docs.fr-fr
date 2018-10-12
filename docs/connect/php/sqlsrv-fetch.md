@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_fetch | Documents Microsoft
+title: sqlsrv_fetch | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_fetch
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - API Reference, sqlsrv_fetch
 - retrieving data, as a single field
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf3aeff30e84deed5f66eb65d778aa4c154eef98
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b03669df3fdfadec0f06f5bd964a16827d1aff2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309028"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604231"
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +43,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 > [!NOTE]  
 > Une instruction doit être exécutée avant que les résultats puissent être récupérés. Pour plus d’informations sur l’exécution d’une instruction, consultez [sqlsrv_query](../../connect/php/sqlsrv-query.md) et [sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
-*ligne* [facultatif] : une des valeurs suivantes, spécifiant la ligne à laquelle accéder dans un jeu de résultats qui utilise un curseur de défilement :  
+*row* [FACULTATIF] : l’une des valeurs suivantes, spécifiant la ligne à lire dans un jeu de résultats qui utilise un curseur de défilement :  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -62,13 +59,13 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 Pour plus d’informations sur ces valeurs, consultez [Spécification d’un type de curseur et sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*décalage* [facultatif] : utilisé avec SQLSRV_SCROLL_ABSOLUTE et SQLSRV_SCROLL_RELATIVE pour spécifier la ligne à récupérer. Le premier enregistrement dans le jeu de résultats est 0.  
+*offset* [FACULTATIF] : utilisé avec SQLSRV_SCROLL_ABSOLUTE et SQLSRV_SCROLL_RELATIVE pour spécifier la ligne à récupérer. Le premier enregistrement dans le jeu de résultats est 0.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur retournée  
 Si la ligne suivante du jeu de résultats a été récupérée avec succès, la valeur **true** est retournée. S’il n’existe plus aucun résultat dans le jeu de résultats, la valeur **null** est retournée. Si une erreur s’est produite, la valeur **false** est retournée.  
   
-## <a name="example"></a>Exemple  
-L’exemple suivant utilise **sqlsrv_fetch** pour récupérer une ligne de données contenant une évaluation de produit et le nom du réviseur. Pour récupérer des données du jeu de résultats, [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) est utilisé. L’exemple part du principe que SQL Server et le [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) base de données sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a> Exemple  
+L’exemple suivant utilise **sqlsrv_fetch** pour récupérer une ligne de données contenant une évaluation de produit et le nom du réviseur. Pour récupérer les données du jeu de résultats, on utilise [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md). L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -126,7 +123,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)  
 
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  

@@ -1,25 +1,22 @@
 ---
-title: À propos des exemples de Code dans la Documentation | Documents Microsoft
+title: À propos des exemples de Code dans la Documentation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d8de0d865584fc45f5da732b5bdf79c6edef650
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 2ff8b884253f43c0b1092eb5ad7244eca7f3e3db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307468"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605817"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>À propos des exemples de code dans la documentation
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +32,7 @@ Il existe plusieurs points à noter quand vous exécutez les exemples de code da
   
 -   Presque tous les exemples de code de cette documentation sont destinés à être exécutés à partir de la ligne de commande, ce qui permet de les tester tous de manière automatisée. Pour plus d’informations sur l’exécution de PHP à partir de la ligne de commande, consultez [Utilisation de PHP à partir de la ligne de commande](http://php.net/manual/en/features.commandline.php).  
   
--   Bien que les exemples sont destinés à être exécutés à partir de la ligne de commande, chaque exemple peut être exécuté en l’appelant à partir d’un navigateur sans apporter de modifications au script. Pour formater la sortie correcte, remplacez chaque « \n » par «\<\/br > » dans chaque exemple avant de l’appeler à partir d’un navigateur.  
+-   Bien que les exemples soient destinés à être exécutés en ligne de commande, vous pouvez appeler chacun d’entre eux avec un navigateur sans apporter de modifications au script. Pour formater la sortie parfaitement, remplacez chaque « \n » par «\<\/br > » dans chaque exemple avant de l’appeler à partir d’un navigateur.  
   
 -   Par souci de concision, la gestion des erreurs appropriée n’est pas effectuée dans tous les exemples. Il est recommandé de vérifier s’il existe des erreurs dans tout appel à une fonction **sqlsrv** ou méthode PDO et de les gérer selon les besoins de l’application.  
   
@@ -54,6 +51,6 @@ Il existe plusieurs points à noter quand vous exécutez les exemples de code da
   
     Pour plus d’informations sur la gestion des erreurs et avertissements, consultez [Gestion des erreurs et des avertissements](../../connect/php/handling-errors-and-warnings.md).  
   
-## <a name="see-also"></a>Voir aussi  
-[Vue d’ensemble des pilotes Microsoft SQL Server pour PHP](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a> Voir aussi  
+[Vue d’ensemble de Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
   

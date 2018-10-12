@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - constants
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
-caps.latest.revision: 72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57c52b218406b658ef3f467ee122d51ed32158ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 28e5394d824a5999aec90cffb21e07e72dea1691
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978691"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605507"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,8 +65,8 @@ Vous pouvez spécifier l’attribut PDO::SQLSRV_ATTR_QUERY_TIMEOUT avec [PDOStat
 ### <a name="direct-or-prepared-execution"></a>Exécution directe ou préparée  
 Vous pouvez sélectionner l’exécution de requête directe ou l’exécution d’instruction préparée avec l’attribut PDO::SQLSRV_ATTR_DIRECT_QUERY. PDO::SQLSRV_ATTR_DIRECT_QUERY peut être défini avec [PDO::prepare](../../connect/php/pdo-prepare.md) ou [PDO::setAttribute](../../connect/php/pdo-setattribute.md). Pour plus d’informations sur PDO::SQLSRV_ATTR_DIRECT_QUERY, consultez [Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
 
-### <a name="handling-numeric-fetches"></a>Gestion des extractions numérique
-L’attribut PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE peut être utilisé pour gérer les extractions numériques à partir de colonnes avec des types numériques SQL (bit, integer, smallint, tinyint, float et real). Lorsque PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE est définie sur true, les résultats à partir d’une colonne d’entiers sont représentés en tant qu’entiers, tandis que SQL flotte et réels sont représentées sous forme de valeurs en virgule flottante. Cet attribut peut être défini avec [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
+### <a name="handling-numeric-fetches"></a>Gestion des extractions numériques
+L’attribut PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE peut être utilisé pour gérer les extractions numériques à partir de colonnes ayant un type SQL numérique (bit, integer, smallint, tinyint, float et real). Lorsque PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE est définie sur true, les résultats à partir d’une colonne d’entiers sont représentés en tant qu’entiers, tandis que SQL flotte et réels sont représentées sous forme de valeurs en virgule flottante. Cet attribut peut être défini avec [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  

@@ -5,19 +5,17 @@ ms.date: 01/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3068d2a796e7e28e4eda58514cc316fe504bbce3
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5030124775a8016fe5ddb716524276365aa47be7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42783876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613079"
 ---
 # <a name="programming-guidelines"></a>Instructions de programmation
 
@@ -114,7 +112,7 @@ Lors de la liaison des paramètres d’entrée avec SQLBindParameter, si un cara
 
 Pour éviter cette perte de données lors de la liaison des paramètres d’entrée, spécifiez un type de caractère SQL Unicode comme SQL_NVARCHAR. Dans ce cas, le pilote convertit à partir du client d’encodage UTF-16, ce qui peut représenter tous les caractères Unicode. En outre, la colonne cible ou du paramètre sur le serveur doit également être un type Unicode (**nchar**, **nvarchar**, **ntext**) ou l’autre avec un classement/encodage, qui peut représenter tous les caractères des données sources d’origine. Pour éviter la perte de données avec les paramètres de sortie, spécifiez un type SQL d’Unicode et soit un Unicode C type (SQL_C_WCHAR), et que le pilote retourner des données au format UTF-16 ; ou un C étroit tapez et vous assurer que le client de codage peut représenter tous les caractères des données source (il est toujours possible avec UTF-8.)
 
-Pour plus d’informations sur les classements et les encodages, consultez [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).
+Pour plus d’informations sur les classements et les codages, voir [Prise en charge d’Unicode et des classements](../../../relational-databases/collations/collation-and-unicode-support.md).
 
 Il existe certaines différences de conversion encodage entre Windows et de plusieurs versions de la bibliothèque iconv sur Linux et macOS. Données de texte dans la page de codes 1255 (hébreu) ont un seul point de code (0xCA) qui se comporte différemment lors de la conversion au format Unicode. Sur Windows, ce caractère convertit le point de code UTF-16 de 0x05BA. Sur macOS et Linux avec libiconv les versions antérieures à 1.15, il convertit en 0x00CA. Sur Linux avec les bibliothèques iconv ne prenant pas en charge la version 2003 de Big5/CP950 (nommé `BIG5-2003`), les caractères ajoutés à cette révision ne convertira pas correctement. Dans la page de codes 932 (japonais, Shift-JIS), le résultat du décodage de caractères pas initialement définis dans la norme de codage est également différente. Par exemple, l’octet 0 x 80 convertit à U + 0080 sur Windows, mais peut devenir 30FB U + sur Linux et macOS, en fonction de la version d’iconv.
 

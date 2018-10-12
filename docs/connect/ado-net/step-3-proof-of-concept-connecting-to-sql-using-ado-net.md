@@ -1,30 +1,27 @@
 ---
-title: 'Étape 3 : Preuve de concept pour la connexion à SQL à l’aide d’ADO.NET | Documents Microsoft'
+title: 'Étape 3 : Preuve de concept pour la connexion à SQL avec ADO.NET | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6933fb1690b11d373974892672b43fe8df218860
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 3f38de8f15e6e14d3822254812f98364104ea603
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603967"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Étape 3 : Preuve de concept pour la connexion à SQL à l’aide d’ADO.NET
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Étape 3 : Preuve de concept pour la connexion à SQL à l’aide d’ADO.NET
 
-- Article précédent :&nbsp;&nbsp;&nbsp;[étape 2 : créer une base de données SQL pour le développement d’ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
-- L’article suivant :&nbsp;&nbsp;&nbsp;[étape 4 : se connecter élastique à SQL avec ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
+- Article précédent :&nbsp;&nbsp;&nbsp;[étape 2 : créer une base de données SQL pour le développement ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
+- Article suivant :&nbsp;&nbsp;&nbsp;[Étape 4 : Connexion résiliente à SQL avec ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
 Cet exemple de code c# doit être considérée comme une preuve de concept uniquement. L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft.  
@@ -68,7 +65,7 @@ La méthode **SqlConnection.Open** est utilisé pour se connecter à votre base 
 ```  
 
 
-## <a name="step-2--execute-a-query"></a>Étape 2 : Exécuter une requête  
+## <a name="step-2--execute-a-query"></a>Étape 2 : Exécuter une requête  
   
 La méthode SqlCommand.ExecuteReader :  
   
@@ -159,7 +156,7 @@ La méthode SqlCommand.ExecuteReader :
   
 Cet exemple montre comment :  
   
-- Exécutez une instruction SQL INSERT en toute sécurité en passant les paramètres.  
+- Exécuter une instruction SQL INSERT en toute sécurité en transmettant les paramètres.  
   - Utilisation de paramètres protège contre les attaques par injection SQL.  
 - Récupérer la valeur générée automatiquement.  
   

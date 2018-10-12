@@ -1,13 +1,11 @@
 ---
-title: Méthode getSchemas () | Documents Microsoft
+title: Méthode getSchemas () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getSchemas
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04066c42fabfd81d5579e4900bd6072c7f767747
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 72ff77a7284368f901667febfd8853fb2bb7f873
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839414"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611996"
 ---
 # <a name="getschemas-method-"></a>Méthode getSchemas ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,28 +36,28 @@ public java.sql.ResultSet getSchemas()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objet.  
+ Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes  
- Cette méthode getSchemas est spécifiée par la méthode getSchemas dans l’interface java.sql.DatabaseMetaData.  
+## <a name="remarks"></a>Notes   
+ Cette méthode getSchemas est spécifiée par la méthode getSchemas de l’interface java.sql.DatabaseMetaData.  
   
- Le jeu de résultats retourné par la méthode getSchemas contient les informations suivantes :  
+ Le jeu de résultats retourné par la méthode getSchemas contient les informations suivantes :  
   
-|Nom|Type| Description|  
+|Nom   |Type|Description|  
 |----------|----------|-----------------|  
-|TABLE_SCHEM|**String**|Le nom du schéma.|  
+|TABLE_SCHEM|**String**|Nom du schéma.|  
 |TABLE_CATALOG|**String**|Nom de catalogue pour le schéma.|  
   
  Les résultats sont classés par TABLE_CATALOG, puis par TABLE_SCHEM. Chaque ligne inclut TABLE_SCHEM comme première colonne et TABLE_CATALOG comme deuxième.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les données retournées par la méthode getSchemas, consultez « sys.schemas (Transact-SQL) » dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] la documentation en ligne.  
+>  Pour plus d’informations sur les données retournées par la méthode getSchemas, consultez la rubrique « sys.schemas (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser la méthode getSchemas pour retourner des informations sur le catalogue et ses noms de schéma associé dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] lorsque l’argument de connexion spécifie la base de données à utiliser.  
+## <a name="example"></a> Exemple  
+ L’exemple suivant montre comment utiliser la méthode getSchemas pour retourner des informations sur le catalogue et ses noms de schémas associés dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quand l’argument de connexion spécifie la base de données à utiliser.  
   
 ```  
 public static void executeGetSchemas(Connection con) {  
@@ -85,9 +82,9 @@ public static void executeGetSchemas(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
- [Membres de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
+## <a name="see-also"></a> Voir aussi  
+ [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
+ [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
